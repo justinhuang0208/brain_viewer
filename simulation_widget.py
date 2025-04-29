@@ -4,6 +4,7 @@ from PySide6.QtWidgets import (
     QPlainTextEdit, QDialogButtonBox, QCheckBox, QMenu, QLineEdit,
     QStackedWidget
 )
+from PySide6.QtCore import Qt, QThread, Signal, QObject, Slot, QPoint
 from PySide6.QtGui import QAction, QColor # Import QColor
 
 class BatchEditDialog(QDialog):
@@ -161,6 +162,10 @@ class SimulationWidget(QWidget):
         # Make the checkbox column narrower
         self.table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents)
         layout.addWidget(self.table)
+        
+        # 添加右鍵選單事件處理
+        self.table.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.table.customContextMenuRequested.connect(self.show_context_menu)
 
         # 按鈕區
         btn_layout = QHBoxLayout() # Combine buttons in one layout
@@ -536,6 +541,39 @@ class SimulationWidget(QWidget):
         if reply == QMessageBox.Yes:
             self.table.setRowCount(0)
             QMessageBox.information(self, "成功", "已刪除所有資料。")
+
+    def show_context_menu(self, position: QPoint):
+        """顯示右鍵選單"""
+        # 獲取選取的項目
+        selected_rows = set()
+        for item in self.table.selectedItems():
+            selected_rows.add(item.row())
+        
+        if not selected_rows:
+            return
+            
+        # 檢查選取的行是否都已勾選
+        all_checked = True
+        for row in selected_rows:
+            item = self.table.item(row, 0)  # 第一欄是 checkbox
+            if item and item.checkState() != Qt.Checked:
+                all_checked = False
+                break
+            
+        # 創建選單並根據當前狀態設定文字
+        context_menu = QMenu(self)
+        check_action = context_menu.addAction("取消勾選" if all_checked else "勾選")
+        
+        # 顯示選單
+        action = context_menu.exec_(self.table.mapToGlobal(position))
+        
+        # 處理選單動作
+        if action == check_action:
+            new_state = Qt.Unchecked if all_checked else Qt.Checked
+            for row in selected_rows:
+                item = self.table.item(row, 0)  # 第一欄是 checkbox
+                if item:
+                    item.setCheckState(new_state)
 
     def get_parameters(self):
         params = []
