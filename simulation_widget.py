@@ -625,6 +625,16 @@ class SimulationWidget(QWidget):
             self.simulation_worker.request_stop() # 呼叫 Worker 的停止方法
             # 禁用按鈕，防止重複點擊，直到 finished 信號觸發重置
             self.sim_btn.setEnabled(False)
+            
+            # 重置所有欄位的背景顏色為白色
+            for row in range(self.table.rowCount()):
+                for col in range(self.table.columnCount()):
+                    cell_item = self.table.item(row, col)
+                    widget = self.table.cellWidget(row, col)
+                    if widget:
+                        widget.setStyleSheet("background-color: white;")
+                    elif cell_item:
+                        cell_item.setBackground(Qt.white)
         else:
             print("無法停止：沒有模擬正在執行或 Worker 不存在。")
             # 如果沒有在執行，確保 UI 狀態正確
@@ -686,6 +696,16 @@ class SimulationWidget(QWidget):
         # 檢查是否是因為停止請求而結束
         stopped_early = self.simulation_worker and self.simulation_worker.stop_requested
 
+        # 重設所有表格顏色為預設（白色）
+        for row in range(self.table.rowCount()):
+            for col in range(self.table.columnCount()):
+                cell_item = self.table.item(row, col)
+                widget = self.table.cellWidget(row, col)
+                if widget:
+                    widget.setStyleSheet("background-color: white;")
+                elif cell_item:
+                    cell_item.setBackground(Qt.white)
+
         if stopped_early:
             self.progress_label.setText("模擬已停止")
             QMessageBox.warning(self, "模擬停止", "模擬已被使用者手動停止。")
@@ -716,56 +736,103 @@ class SimulationWidget(QWidget):
         # 如果是手動停止，標籤已設為 "模擬已停止"，無需再改
 
     def check_login_status(self):
-        """檢查 WorldQuant Brain 的登入狀態"""
-        json_fn = 'credentials.json'
+        """在背景執行緒中檢查 WorldQuant Brain 的登入狀態"""
+        # 禁用檢查按鈕
+        self.check_login_btn.setEnabled(False)
+        
+        # 創建執行緒和 worker
+        self.login_check_thread = QThread()
+        self.login_check_worker = LoginCheckWorker()
+        self.login_check_worker.moveToThread(self.login_check_thread)
+
+        # 連接信號
+        self.login_check_worker.login_success.connect(self.handle_login_success)
+        self.login_check_worker.login_failed.connect(self.handle_login_failed)
+        self.login_check_worker.validation_required.connect(self.handle_validation_required)
+        self.login_check_worker.update_status.connect(self.progress_label.setText)
+        self.login_check_worker.finished.connect(self.login_check_thread.quit)
+        self.login_check_worker.finished.connect(self.login_check_worker.deleteLater)
+        self.login_check_thread.finished.connect(self.login_check_thread.deleteLater)
+        self.login_check_thread.finished.connect(lambda: self.check_login_btn.setEnabled(True))
+
+        # 啟動執行緒
+        self.login_check_thread.started.connect(self.login_check_worker.run)
+        self.login_check_thread.start()
+
+    @Slot()
+    def handle_login_success(self):
+        """處理登入成功的槽函數"""
+        QMessageBox.information(self, "登入成功", "WorldQuant Brain 登入狀態正常。")
+        self.progress_label.setText("登入狀態正常")
+
+    @Slot(str)
+    def handle_login_failed(self, error_message):
+        """處理登入失敗的槽函數"""
+        QMessageBox.critical(self, "登入檢查失敗", error_message)
+        self.progress_label.setText(f"登入檢查失敗: {error_message}")
+
+    @Slot(str)
+    def handle_validation_required(self, persona_url):
+        """處理需要驗證的槽函數"""
+        QMessageBox.warning(self, "需要驗證", f"登入需要生物驗證，請前往:\n{persona_url}")
+        self.progress_label.setText("登入需要驗證")
+
+# LoginCheckWorker class for handling login checks in background
+class LoginCheckWorker(QObject):
+    login_success = Signal()
+    login_failed = Signal(str)  # 傳遞錯誤訊息
+    validation_required = Signal(str)  # 傳遞驗證 URL
+    update_status = Signal(str)  # 用於更新進度標籤
+    finished = Signal()
+
+    def __init__(self, json_fn='credentials.json'):
+        super().__init__()
+        self.json_fn = json_fn
+
+    def run(self):
         try:
-            with open(json_fn, 'r') as f:
-                creds = json.load(f) # Corrected: Pass file object directly
+            # 讀取憑證檔案
+            with open(self.json_fn, 'r') as f:
+                creds = json.load(f)
                 email, password = creds['email'], creds['password']
         except FileNotFoundError:
-            QMessageBox.critical(self, "登入檢查失敗", f"找不到憑證檔案 {json_fn}")
-            self.progress_label.setText("登入檢查失敗 (找不到憑證)")
+            self.login_failed.emit(f"找不到憑證檔案 {self.json_fn}")
+            self.finished.emit()
             return
         except Exception as e:
-            QMessageBox.critical(self, "登入檢查失敗", f"讀取憑證檔案時發生錯誤: {e}")
-            self.progress_label.setText("登入檢查失敗 (讀取憑證錯誤)")
+            self.login_failed.emit(f"讀取憑證檔案時發生錯誤: {e}")
+            self.finished.emit()
             return
 
+        # 建立 session 並執行登入請求
         session = requests.Session()
         session.auth = (email, password)
+        
         try:
-            self.progress_label.setText("正在檢查登入狀態...")
-            self.check_login_btn.setEnabled(False) # Disable button during check
-            # Use a short timeout to avoid blocking the UI for too long
+            self.update_status.emit("正在檢查登入狀態...")
             r = session.post('https://api.worldquantbrain.com/authentication', timeout=10)
-            r.raise_for_status() # Check for HTTP errors like 4xx/5xx
+            r.raise_for_status()
 
             response_json = r.json()
             if 'user' in response_json:
-                QMessageBox.information(self, "登入成功", "WorldQuant Brain 登入狀態正常。")
-                self.progress_label.setText("登入狀態正常")
+                self.login_success.emit()
             elif 'inquiry' in response_json:
-                # Handle persona verification requirement
+                # 需要生物驗證
                 persona_url = f"{r.url}/persona?inquiry={response_json['inquiry']}"
-                QMessageBox.warning(self, "需要驗證", f"登入需要生物驗證，請前往:\n{persona_url}")
-                self.progress_label.setText("登入需要驗證")
+                self.validation_required.emit(persona_url)
             else:
-                # Handle other unexpected login failures
+                # 其他登入失敗情況
                 error_detail = response_json.get('detail', '未知錯誤')
-                QMessageBox.critical(self, "登入失敗", f"登入失敗: {error_detail}")
-                self.progress_label.setText(f"登入失敗: {error_detail}")
+                self.login_failed.emit(f"登入失敗: {error_detail}")
 
         except requests.exceptions.Timeout:
-            QMessageBox.critical(self, "登入檢查超時", "檢查登入狀態時連線超時。")
-            self.progress_label.setText("登入檢查超時")
+            self.login_failed.emit("檢查登入狀態時連線超時")
         except requests.exceptions.RequestException as e:
-            QMessageBox.critical(self, "登入檢查錯誤", f"檢查登入狀態時發生網路錯誤: {e}")
-            self.progress_label.setText(f"登入檢查網路錯誤")
+            self.login_failed.emit(f"檢查登入狀態時發生網路錯誤: {e}")
         except Exception as e:
-            QMessageBox.critical(self, "登入檢查錯誤", f"檢查登入狀態時發生未知錯誤: {e}")
-            self.progress_label.setText("登入檢查未知錯誤")
+            self.login_failed.emit(f"檢查登入狀態時發生未知錯誤: {e}")
         finally:
-            self.check_login_btn.setEnabled(True) # Re-enable button
+            self.finished.emit()
 
 # Worker 類別，用於在背景執行緒中執行模擬
 class SimulationWorker(QObject):
@@ -963,7 +1030,12 @@ class WQSession(requests.Session):
                     message = r_json.get('message', str(e)) if 'r_json' in locals() and isinstance(r_json, dict) else str(e)
                     ok = (False, message)
                     break
-                time.sleep(10)
+                # 將 10 秒 sleep 拆成 50 次 0.2 秒 sleep，每次檢查是否收到停止請求
+                for _ in range(50):
+                    if self.worker_ref and self.worker_ref.stop_requested:
+                        logging.info(f"{thread} -- 偵測到停止請求，中斷等待。")
+                        return {'error': '模擬被手動停止', 'alpha': alpha}
+                    time.sleep(0.2)
 
             if ok != True:
                 error_msg = f"模擬失敗 ({alpha[:20]}...): {ok[1]}"
