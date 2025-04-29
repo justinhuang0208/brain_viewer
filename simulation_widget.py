@@ -1,9 +1,107 @@
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QTableWidget, QTableWidgetItem,
     QPushButton, QLabel, QMessageBox, QHeaderView, QComboBox, QDialog,
-    QPlainTextEdit, QDialogButtonBox, QCheckBox, QMenu
+    QPlainTextEdit, QDialogButtonBox, QCheckBox, QMenu, QLineEdit,
+    QStackedWidget
 )
 from PySide6.QtGui import QAction, QColor # Import QColor
+
+class BatchEditDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("批量調整參數")
+        self.setMinimumWidth(300)
+        layout = QVBoxLayout(self)
+
+        # 選擇要調整的參數
+        self.param_combo = QComboBox(self)
+        # 排除 code 欄位
+        self.param_combo.addItems([p for p in PARAM_COLUMNS if p != "code"])
+        layout.addWidget(QLabel("選擇要調整的參數:"))
+        layout.addWidget(self.param_combo)
+
+        # 輸入新值區域（使用 QStackedWidget 來切換不同的輸入介面）
+        self.value_stack = QStackedWidget(self)
+        
+        # 普通文字輸入
+        self.value_input = QLineEdit(self)
+        value_page = QWidget()
+        value_layout = QVBoxLayout(value_page)
+        value_layout.addWidget(QLabel("輸入新的值:"))
+        value_layout.addWidget(self.value_input)
+        self.value_stack.addWidget(value_page)
+        
+        # Delay 下拉選單
+        self.delay_combo = QComboBox(self)
+        self.delay_combo.addItems(DELAY_OPTIONS)
+        delay_page = QWidget()
+        delay_layout = QVBoxLayout(delay_page)
+        delay_layout.addWidget(QLabel("選擇延遲值:"))
+        delay_layout.addWidget(self.delay_combo)
+        self.value_stack.addWidget(delay_page)
+        
+        # Neutralization 下拉選單
+        self.neutralization_combo = QComboBox(self)
+        self.neutralization_combo.addItems(NEUTRALIZATION_OPTIONS)
+        neutralization_page = QWidget()
+        neutralization_layout = QVBoxLayout(neutralization_page)
+        neutralization_layout.addWidget(QLabel("選擇中性化選項:"))
+        neutralization_layout.addWidget(self.neutralization_combo)
+        self.value_stack.addWidget(neutralization_page)
+        
+        # Universe 下拉選單
+        self.universe_combo = QComboBox(self)
+        self.universe_combo.addItems(UNIVERSE_OPTIONS)
+        universe_page = QWidget()
+        universe_layout = QVBoxLayout(universe_page)
+        universe_layout.addWidget(QLabel("選擇 Universe:"))
+        universe_layout.addWidget(self.universe_combo)
+        self.value_stack.addWidget(universe_page)
+        
+        layout.addWidget(self.value_stack)
+        
+        # 連接參數選擇的信號
+        self.param_combo.currentTextChanged.connect(self.on_param_changed)
+        
+        # 僅套用到已選取的行
+        self.selected_only = QCheckBox("僅套用到已選取的行", self)
+        self.selected_only.setChecked(True)
+        layout.addWidget(self.selected_only)
+
+        # 按鈕
+        buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel, self)
+        layout.addWidget(buttons)
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
+
+    def on_param_changed(self, param):
+        """當選擇的參數改變時，切換到對應的輸入介面"""
+        if param == "delay":
+            self.value_stack.setCurrentIndex(1)
+        elif param == "neutralization":
+            self.value_stack.setCurrentIndex(2)
+        elif param == "universe":
+            self.value_stack.setCurrentIndex(3)
+        else:
+            self.value_stack.setCurrentIndex(0)
+
+    def get_values(self):
+        param = self.param_combo.currentText()
+        if param == "delay":
+            value = self.delay_combo.currentText()
+        elif param == "neutralization":
+            value = self.neutralization_combo.currentText()
+        elif param == "universe":
+            value = self.universe_combo.currentText()
+        else:
+            value = self.value_input.text()
+        
+        return {
+            'param': param,
+            'value': value,
+            'selected_only': self.selected_only.isChecked()
+        }
+
 from PySide6.QtCore import Qt, QThread, Signal, QObject, Slot
 import ast
 import csv
@@ -73,9 +171,11 @@ class SimulationWidget(QWidget):
         add_action = QAction("新增參數", self)
         dup_action = QAction("複製選取", self)
         del_action = QAction("刪除選取", self)
+        batch_edit_action = QAction("批量調整", self)
         edit_menu.addAction(add_action)
         edit_menu.addAction(dup_action)
         edit_menu.addAction(del_action)
+        edit_menu.addAction(batch_edit_action)
         self.edit_btn.setMenu(edit_menu)
         btn_layout.addWidget(self.edit_btn)
 
@@ -97,6 +197,7 @@ class SimulationWidget(QWidget):
         add_action.triggered.connect(self.add_row)
         dup_action.triggered.connect(self.duplicate_selected_rows)
         del_action.triggered.connect(self.delete_selected_rows)
+        batch_edit_action.triggered.connect(self.show_batch_edit_dialog)
         self.del_all_btn.clicked.connect(self.delete_all_rows) # 連接刪除全部按鈕
         self.sim_btn.clicked.connect(self.toggle_simulation) # 改為連接 toggle_simulation
         self.check_login_btn.clicked.connect(self.check_login_status) # Connect new button
@@ -313,6 +414,68 @@ class SimulationWidget(QWidget):
                 current_val = str(val).strip() if val is not None else str(DEFAULT_VALUES[table_col]).strip()
                 item = QTableWidgetItem(current_val)
                 self.table.setItem(row, table_col, item)
+
+    def show_batch_edit_dialog(self):
+        """顯示批量調整對話框"""
+        dlg = BatchEditDialog(self)
+        if dlg.exec() == QDialog.Accepted:
+            values = dlg.get_values()
+            param = values['param']
+            new_value = values['value']
+            selected_only = values['selected_only']
+
+            # 獲取參數所在的列
+            param_col = PARAM_COLUMNS.index(param) + 1  # +1 for checkbox column
+
+            # 驗證輸入值
+            if param == "delay":
+                if new_value not in DELAY_OPTIONS:
+                    QMessageBox.warning(self, "無效的值", f"延遲值必須是以下其中之一: {', '.join(DELAY_OPTIONS)}")
+                    return
+            elif param == "neutralization":
+                if new_value not in NEUTRALIZATION_OPTIONS:
+                    QMessageBox.warning(self, "無效的值", f"中性化選項必須是以下其中之一: {', '.join(NEUTRALIZATION_OPTIONS)}")
+                    return
+            elif param == "universe":
+                if new_value not in UNIVERSE_OPTIONS:
+                    QMessageBox.warning(self, "無效的值", f"universe 選項必須是以下其中之一: {', '.join(UNIVERSE_OPTIONS)}")
+                    return
+            elif param == "decay":
+                try:
+                    int(new_value)
+                except ValueError:
+                    QMessageBox.warning(self, "無效的值", "decay 必須是整數")
+                    return
+            elif param == "truncation":
+                try:
+                    float(new_value)
+                except ValueError:
+                    QMessageBox.warning(self, "無效的值", "truncation 必須是數字")
+                    return
+
+            rows_updated = 0
+            for row in range(self.table.rowCount()):
+                # 檢查是否只更新選取的行
+                if selected_only:
+                    chk_item = self.table.item(row, 0)
+                    if not chk_item or chk_item.checkState() != Qt.Checked:
+                        continue
+
+                # 根據參數類型更新值
+                if param in ["delay", "neutralization", "universe"]:
+                    combo = self.table.cellWidget(row, param_col)
+                    if combo:
+                        combo.setCurrentText(new_value)
+                        rows_updated += 1
+                else:
+                    item = self.table.item(row, param_col)
+                    if not item:
+                        item = QTableWidgetItem()
+                        self.table.setItem(row, param_col, item)
+                    item.setText(new_value)
+                    rows_updated += 1
+
+            QMessageBox.information(self, "更新完成", f"已更新 {rows_updated} 筆資料")
 
     def handle_cell_double_clicked(self, row, col): # Correct indent
         if col == 0: # Ignore double clicks on checkbox column
