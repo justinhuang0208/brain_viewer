@@ -635,33 +635,48 @@ class MainWindow(QMainWindow):
 
         top_right.addWidget(self.column_view_button)
         top_right.addWidget(self.save_selected_button)
-
+        
+        # === 新增「反轉選取」按鈕 ===
+        self.invert_selection_button = QPushButton("反轉選取")
+        self.invert_selection_button.setToolTip("反轉目前表格中所有項目的勾選狀態")
+        self.invert_selection_button.setEnabled(False)
+        self.invert_selection_button.setStyleSheet("padding: 4px 12px;")
+        self.invert_selection_button.clicked.connect(self.invert_selection)
+        top_right.addWidget(self.invert_selection_button)
+        # === 新增結束 ===
+        
         # --- Modification Start: Import Button with Menu ---
         self.import_button = QPushButton("匯入 Code") # Renamed button
         self.import_button.setToolTip("將 Code 匯入到生成器")
         self.import_button.setStyleSheet("padding: 4px 12px;")
         self.import_button.setEnabled(False) # Initially disabled
-
+        
         # Create menu for import options
         self.import_menu = QMenu(self)
         self.import_selected_action = QAction("匯入已選 Code 至生成器", self)
         self.import_all_action = QAction("匯入所有 Code 至生成器", self)
-        self.import_data_to_sim_action = QAction("匯入數據至模擬", self) # New action for simulation
-
+        # 新增：匯入選擇的數據至模擬
+        self.import_selected_data_to_sim_action = QAction("匯入選擇的數據至模擬", self)
+        self.import_data_to_sim_action = QAction("匯入所有數據至模擬", self) # 修改文字
+        
         # Connect actions to handlers
         self.import_selected_action.triggered.connect(self.on_import_selected_code_clicked)
         self.import_all_action.triggered.connect(self.on_import_all_code_clicked)
+        self.import_selected_data_to_sim_action.triggered.connect(self.on_import_selected_data_to_sim_clicked)
         self.import_data_to_sim_action.triggered.connect(self.on_import_data_to_sim_clicked) # Connect new action
-
+        
         # Add actions to menu
         self.import_menu.addAction(self.import_selected_action)
         self.import_menu.addAction(self.import_all_action)
         self.import_menu.addSeparator() # Add separator for clarity
+        
+        # 新增：將匯入選擇的數據至模擬放在數據相關動作區
+        self.import_menu.addAction(self.import_selected_data_to_sim_action)
         self.import_menu.addAction(self.import_data_to_sim_action)
-
+        
         # Set menu for the button
         self.import_button.setMenu(self.import_menu)
-
+        
         top_right.addWidget(self.import_button) # Add the new button with menu
         # --- Modification End ---
 
@@ -894,7 +909,8 @@ class MainWindow(QMainWindow):
             self.save_selected_button.setEnabled(True)
             self.column_view_button.setEnabled(True)
             self.import_button.setEnabled(True) # Enable the new import button
-
+            self.invert_selection_button.setEnabled(True) # 啟用反轉選取按鈕
+            
             self.apply_column_visibility()
 
             # Update chart
@@ -1376,8 +1392,40 @@ class MainWindow(QMainWindow):
             self.status_bar.showMessage(f"匯入所有 Code 失敗: {str(e)}")
 
     @Slot()
+    def on_import_selected_data_to_sim_clicked(self):
+        """處理 '匯入選擇的數據至模擬' 選項"""
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            QMessageBox.warning(self, "無法匯入", "請先載入回測結果文件。")
+            self.status_bar.showMessage("無法匯入：未載入數據")
+            return
+
+        source_model = self.proxy_model.sourceModel()
+        checked_rowids = source_model.get_checked_rows()
+        if not checked_rowids:
+            QMessageBox.information(self, "沒有選取", "請先勾選要匯入的資料列。")
+            self.status_bar.showMessage("未匯入：沒有勾選資料列")
+            return
+
+        try:
+            rowids_str = ",".join(map(str, checked_rowids))
+            cursor = source_model.db_conn.cursor()
+            cursor.execute(f"SELECT * FROM {source_model.table_name} WHERE rowid IN ({rowids_str})")
+            rows = cursor.fetchall()
+
+            if rows:
+                df = pd.DataFrame(rows, columns=source_model.columns)
+                self.import_data_requested.emit(df)
+                self.status_bar.showMessage(f"已請求將 {len(df)} 筆選定的數據追加到模擬器")
+            else:
+                QMessageBox.warning(self, "無數據", "選定的資料列查無數據。")
+                self.status_bar.showMessage("匯入失敗：無可用數據")
+        except Exception as e:
+            QMessageBox.critical(self, "匯入失敗", f"提取選定數據時發生錯誤：\n{str(e)}")
+            self.status_bar.showMessage(f"匯入選定數據失敗: {str(e)}")
+
+    @Slot()
     def on_import_data_to_sim_clicked(self):
-        """處理 '匯入數據至模擬' 選項"""
+        """處理 '匯入所有數據至模擬' 選項"""
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             QMessageBox.warning(self, "無數據", "請先載入回測結果文件。")
             self.status_bar.showMessage("無法匯入：未載入數據")
@@ -1585,6 +1633,33 @@ class MainWindow(QMainWindow):
         else:
              self.status_bar.showMessage("未更新勾選狀態 (可能無效選擇或更新失敗)")
 
+
+    # === 新增：反轉選取功能 ===
+    def invert_selection(self):
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            QMessageBox.warning(self, "無法反轉", "目前沒有有效的回測結果表格。")
+            return
+
+        source_model = self.proxy_model.sourceModel()
+        # 反轉所有 rowid 的勾選狀態
+        for rowid in source_model._check_states:
+            state = source_model._check_states[rowid]
+            if state == Qt.Checked:
+                source_model._check_states[rowid] = Qt.Unchecked
+            else:
+                source_model._check_states[rowid] = Qt.Checked
+
+        # 更新所有可見行的勾選框狀態
+        proxy_row_count = self.proxy_model.rowCount()
+        if proxy_row_count > 0:
+            first_index = self.proxy_model.index(0, 0)
+            last_index = self.proxy_model.index(proxy_row_count - 1, 0)
+            self.proxy_model.dataChanged.emit(first_index, last_index, [Qt.CheckStateRole])
+
+        # 更新狀態列
+        checked_count = len(source_model.get_checked_rows())
+        self.status_bar.showMessage(f"已反轉選取狀態 | 目前共勾選 {checked_count} 項")
+    # === 新增結束 ===
 
 # ... (if __name__ == "__main__": block remains the same) ...
 
