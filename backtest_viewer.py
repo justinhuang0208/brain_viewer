@@ -1277,7 +1277,7 @@ class MainWindow(QMainWindow):
 
         # 只詢問檔名，並儲存在 DATA_DIR
         # 取得 DATA_DIR（與 app.py 保持一致）
-        DATA_DIR = "/Users/justin/Desktop/wq-brain_agent/data"
+        DATA_DIR = "data"
         filename, ok = QInputDialog.getText(self, "儲存選取的資料", "請輸入檔名（不含副檔名）:")
         
         if ok and filename.strip():
