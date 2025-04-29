@@ -1,5 +1,6 @@
 import sys
 import os
+import sqlite3
 import pandas as pd
 from PySide6.QtWidgets import (QApplication, QMainWindow, QTableView, QTreeView,
                               QSplitter, QVBoxLayout, QHBoxLayout, QWidget,
@@ -42,93 +43,164 @@ def set_chinese_font():
 # 嘗試設置中文字體
 set_chinese_font()
 
-# 自定義表格模型
-class DataFrameModel(QAbstractTableModel):
-    def __init__(self, data):
-        super(DataFrameModel, self).__init__()
-        self._data = data
+# 自定義 SQLite 表格模型
+class SqliteTableModel(QAbstractTableModel):
+    def __init__(self, db_path, table_name):
+        super(SqliteTableModel, self).__init__()
+        self.db_path = db_path
+        self.table_name = table_name
+        self.columns = []
+        self.cache = {}  # 用於緩存查詢結果
+        self.total_rows = 0
+        self.conn = None
+        self.setup_connection()
+
+    def setup_connection(self):
+        """建立數據庫連接和初始化"""
+        try:
+            self.conn = sqlite3.connect(self.db_path)
+            cursor = self.conn.cursor()
+            
+            # 獲取列名
+            cursor.execute(f"PRAGMA table_info({self.table_name})")
+            self.columns = [info[1] for info in cursor.fetchall()]
+            
+            # 獲取總行數
+            cursor.execute(f"SELECT COUNT(*) FROM {self.table_name}")
+            self.total_rows = cursor.fetchone()[0]
+            
+        except Exception as e:
+            print(f"數據庫連接錯誤: {str(e)}")
 
     def rowCount(self, parent=None):
-        return self._data.shape[0]
+        return self.total_rows
 
     def columnCount(self, parent=None):
-        return self._data.shape[1]
+        return len(self.columns)
 
     def data(self, index, role=Qt.DisplayRole):
         if not index.isValid():
             return None
 
-        value = self._data.iloc[index.row(), index.column()]
-        column_name = self._data.columns[index.column()]
+        row = index.row()
+        col = index.column()
+        column_name = self.columns[col]
+
+        # 使用緩存系統
+        cache_key = (row, col)
+        if cache_key not in self.cache:
+            try:
+                cursor = self.conn.cursor()
+                cursor.execute(
+                    f"SELECT {column_name} FROM {self.table_name} LIMIT 1 OFFSET {row}"
+                )
+                value = cursor.fetchone()[0]
+                self.cache[cache_key] = value
+            except Exception as e:
+                print(f"數據查詢錯誤: {str(e)}")
+                return None
+        else:
+            value = self.cache[cache_key]
 
         if role == Qt.DisplayRole:
             return str(value)
 
-        # 添加排序角色處理 (使用 EditRole 替代 SortRole for Qt6)
         elif role == Qt.EditRole:
-            row = index.row() # 獲取行號用於調試
             if column_name == 'Coverage':
                 try:
-                    # 移除 '%' 並轉換為浮點數
                     return float(str(value).replace('%', ''))
                 except ValueError:
-                    print(f"警告: 無法將 Coverage 列第 {row} 行的值 '{value}' 轉換為浮點數。排序時將使用 0。")
-                    return 0 # 轉換失敗時返回 0
+                    print(f"警告: 無法將 Coverage 列第 {row} 行的值 '{value}' 轉換為浮點數")
+                    return 0
             elif column_name in ['Users', 'Alphas']:
                 try:
-                    # 轉換為整數
                     return int(value)
                 except (ValueError, TypeError):
-                    print(f"警告: 無法將 {column_name} 列第 {row} 行的值 '{value}' 轉換為整數。排序時將使用 0。")
-                    return 0 # 轉換失敗時返回 0
-            # 對於其他欄位，嘗試轉換為數值，否則返回原始值
+                    print(f"警告: 無法將 {column_name} 列第 {row} 行的值 '{value}' 轉換為整數")
+                    return 0
             try:
-                # 嘗試將其他欄位也轉換為數值進行排序
                 return float(value)
             except (ValueError, TypeError):
-                # 如果無法轉換為數值，則按字符串排序
                 return str(value)
 
-        # 添加工具提示角色
         elif role == Qt.ToolTipRole:
-            # 為所有單元格添加工具提示，特別是Description列
             if column_name == 'Description' and len(str(value)) > 20:
                 return str(value)
             return str(value)
 
         elif role == Qt.BackgroundRole:
-            # 根據覆蓋率添加顏色
             if column_name == 'Coverage':
                 try:
-                    # 提取百分比數值
                     coverage = int(str(value).replace('%', ''))
                     if coverage > 90:
-                        return QColor("#c8e6c9")  # 淺綠色，高覆蓋率
+                        return QColor("#c8e6c9")  # 淺綠色
                     elif coverage > 70:
-                        return QColor("#fff9c4")  # 淺黃色，中等覆蓋率
+                        return QColor("#fff9c4")  # 淺黃色
                     else:
-                        return QColor("#ffccbc")  # 淺紅色，低覆蓋率
+                        return QColor("#ffccbc")  # 淺紅色
                 except:
                     pass
-
-            # 根據Users和Alphas列來著色
-            if column_name in ['Users', 'Alphas']:
+            elif column_name in ['Users', 'Alphas']:
                 try:
                     value_int = int(value)
                     if value_int > 500:
-                        return QColor("#e3f2fd")  # 淺藍色，高使用量
+                        return QColor("#e3f2fd")  # 淺藍色
                 except:
                     pass
-                
         return None
 
     def headerData(self, section, orientation, role):
         if role == Qt.DisplayRole:
             if orientation == Qt.Horizontal:
-                return str(self._data.columns[section])
+                return str(self.columns[section])
             if orientation == Qt.Vertical:
-                return str(self._data.index[section])
+                return str(section + 1)
         return None
+
+    def sort(self, column, order):
+        """實現排序功能"""
+        try:
+            direction = "ASC" if order == Qt.AscendingOrder else "DESC"
+            column_name = self.columns[column]
+            
+            # 根據不同列類型使用不同的排序邏輯
+            if column_name == 'Coverage':
+                order_by = f"CAST(REPLACE({column_name}, '%', '') AS FLOAT)"
+            elif column_name in ['Users', 'Alphas']:
+                order_by = f"CAST({column_name} AS INTEGER)"
+            else:
+                order_by = column_name
+            
+            # 執行排序查詢
+            cursor = self.conn.cursor()
+            cursor.execute(f"""
+                CREATE TEMP TABLE IF NOT EXISTS sorted_rows AS
+                SELECT rowid, *
+                FROM {self.table_name}
+                ORDER BY {order_by} {direction}
+            """)
+            
+            # 清除緩存
+            self.cache.clear()
+            
+            # 通知視圖數據已更改
+            self.layoutAboutToBeChanged.emit()
+            self.layoutChanged.emit()
+            
+        except Exception as e:
+            print(f"排序錯誤: {str(e)}")
+
+    def get_value(self, row, column_name):
+        """獲取指定行和列的值"""
+        try:
+            cursor = self.conn.cursor()
+            cursor.execute(
+                f"SELECT {column_name} FROM {self.table_name} LIMIT 1 OFFSET {row}"
+            )
+            return cursor.fetchone()[0]
+        except Exception as e:
+            print(f"獲取數據錯誤: {str(e)}")
+            return None
 
 # 自定義詳細文本對話框
 class DetailDialog(QDialog):
@@ -328,23 +400,38 @@ class MainWindow(QMainWindow):
         self.load_dataset(self.last_loaded_index)
         self.status_bar.showMessage("已刷新當前資料集")
 
+    def create_sqlite_database(self, df, db_path):
+        """將 DataFrame 轉換為 SQLite 數據庫"""
+        conn = sqlite3.connect(db_path)
+        
+        # 確保Coverage是字符串並包含%
+        if 'Coverage' in df.columns:
+            df['Coverage'] = df['Coverage'].astype(str)
+            df['Coverage'] = df['Coverage'].apply(lambda x: x if '%' in x else f"{x}%")
+        
+        try:
+            # 將數據寫入SQLite
+            df.to_sql('dataset', conn, if_exists='replace', index=False)
+            conn.commit()
+        finally:
+            conn.close()
+
     def load_dataset(self, index):
+        """載入並顯示數據集"""
         # 保存最後載入的索引，用於刷新功能
         self.last_loaded_index = index
         
-        file_path = self.file_model.filePath(index)
+        csv_path = self.file_model.filePath(index)
         try:
-            # 讀取CSV數據
-            df = pd.read_csv(file_path)
+            # 建立對應的SQLite數據庫路徑
+            db_path = csv_path.replace('.csv', '.db')
             
-            # 處理數值欄位
-            if 'Coverage' in df.columns:
-                # 確保Coverage是字符串並包含%
-                df['Coverage'] = df['Coverage'].astype(str)
-                df['Coverage'] = df['Coverage'].apply(lambda x: x if '%' in x else f"{x}%")
-                
-            # 設置數據模型
-            model = DataFrameModel(df)
+            # 讀取CSV數據並創建SQLite數據庫
+            df = pd.read_csv(csv_path)
+            self.create_sqlite_database(df, db_path)
+            
+            # 設置SQLite數據模型
+            model = SqliteTableModel(db_path, 'dataset')
             
             # 設置代理模型用於過濾
             self.proxy_model = QSortFilterProxyModel()
@@ -355,7 +442,7 @@ class MainWindow(QMainWindow):
 
             # --- 開始修改欄位寬度 ---
             header = self.table_view.horizontalHeader()
-            columns = list(df.columns)
+            columns = model.columns
             field_index = -1
             description_index = -1
 
@@ -396,9 +483,9 @@ class MainWindow(QMainWindow):
             self.click_connected = True
             
             # 更新當前數據集和狀態欄
-            self.current_dataset = df
-            file_name = os.path.basename(file_path)
-            self.status_bar.showMessage(f"已載入 {file_name} | 共 {len(df)} 條記錄")
+            self.current_dataset = model
+            file_name = os.path.basename(csv_path)
+            self.status_bar.showMessage(f"已載入 {file_name} | 共 {model.total_rows} 條記錄")
             
             # 更新當前檔案標籤
             self.current_file_label.setText(file_name)
@@ -406,7 +493,7 @@ class MainWindow(QMainWindow):
             # 添加欄位到過濾下拉框
             self.filter_column.clear()
             self.filter_column.addItem("全部欄位")
-            for col in df.columns:
+            for col in model.columns:
                 self.filter_column.addItem(col)
                 
             # 更新圖表
@@ -428,10 +515,10 @@ class MainWindow(QMainWindow):
             self.proxy_model.setFilterKeyColumn(-1)
         else:
             try:
-                column_index = list(self.current_dataset.columns).index(filter_column)
+                column_index = self.current_dataset.columns.index(filter_column)
                 self.proxy_model.setFilterKeyColumn(column_index)
-            except ValueError:
-                # 如果找不到列，默認使用第一列
+            except (ValueError, AttributeError):
+                # 如果找不到列或current_dataset不是SqliteTableModel，默認使用第一列
                 self.proxy_model.setFilterKeyColumn(0)
         
         # 設置過濾文本
@@ -439,7 +526,7 @@ class MainWindow(QMainWindow):
         
         # 更新狀態欄以顯示過濾後的記錄數
         filtered_count = self.proxy_model.rowCount()
-        total_count = len(self.current_dataset)
+        total_count = self.current_dataset.total_rows
         self.status_bar.showMessage(f"顯示 {filtered_count}/{total_count} 條記錄 | 過濾條件: {filter_column} - '{filter_text}'")
         
     def update_chart(self):
@@ -451,77 +538,126 @@ class MainWindow(QMainWindow):
         ax = self.canvas.figure.add_subplot(111)
         
         chart_type = self.chart_type.currentText()
-        df = self.current_dataset
+        model = self.current_dataset
         
         # 增加字體大小使圖表更清晰
         plt.rcParams.update({'font.size': 12})
         
-        if chart_type == "覆蓋率分佈":
-            # 提取覆蓋率數值
-            coverage = df['Coverage'].str.replace('%', '').astype(float)
+        try:
+            cursor = model.conn.cursor()
             
-            # 創建直方圖
-            ax.hist(coverage, bins=10, color='skyblue', edgecolor='black')
-            ax.set_title('覆蓋率分佈')
-            ax.set_xlabel('覆蓋率 (%)')
-            ax.set_ylabel('變數數量')
-            
-        elif chart_type == "使用者數量":
-            # 按使用者數量排序取前15個
-            top_users = df.sort_values('Users', ascending=False).head(15)
-            
-            # 繪製條形圖
-            bars = ax.barh(top_users['Field'], top_users['Users'], color='lightgreen')
-            ax.set_title('使用者數量最多的前15個變數')
-            ax.set_xlabel('使用者數量')
-            ax.set_ylabel('變數名稱')
-            ax.invert_yaxis()  # 反轉Y軸使最大值在頂部
-            
-            # 為條形圖添加數值標籤
-            for bar in bars:
-                width = bar.get_width()
-                label_x_pos = width
-                ax.text(label_x_pos, bar.get_y() + bar.get_height()/2, f' {int(width)}',
-                       va='center')
-            
-        elif chart_type == "Alpha數量":
-            # 按Alpha數量排序取前15個
-            top_alphas = df.sort_values('Alphas', ascending=False).head(15)
-            
-            # 繪製條形圖
-            bars = ax.barh(top_alphas['Field'], top_alphas['Alphas'], color='coral')
-            ax.set_title('Alpha數量最多的前15個變數')
-            ax.set_xlabel('Alpha數量')
-            ax.set_ylabel('變數名稱')
-            ax.invert_yaxis()  # 反轉Y軸使最大值在頂部
-            
-            # 為條形圖添加數值標籤
-            for bar in bars:
-                width = bar.get_width()
-                label_x_pos = width
-                ax.text(label_x_pos, bar.get_y() + bar.get_height()/2, f' {int(width)}',
-                       va='center')
-            
-        elif chart_type == "類型分佈":
-            # 計算每種類型的數量
-            type_counts = df['Type'].value_counts()
-            
-            # 繪製餅圖 - 移除陰影效果並調整圖表參數
-            wedges, texts, autotexts = ax.pie(type_counts, labels=type_counts.index, autopct='%1.1f%%', 
-                  shadow=False, startangle=90, colors=plt.cm.Paired.colors, 
-                  wedgeprops={'edgecolor': 'white', 'linewidth': 1})
-            ax.set_title('變數類型分佈')
-            ax.axis('equal')  # 確保餅圖是圓形的
-            
-            # 增加餅圖標籤的可讀性
-            for text in texts + autotexts:
-                text.set_fontsize(11)
+            if chart_type == "覆蓋率分佈":
+                # 使用SQL查詢獲取Coverage數據
+                cursor.execute("""
+                    SELECT CAST(REPLACE(Coverage, '%', '') AS FLOAT) as coverage_value 
+                    FROM dataset
+                    WHERE Coverage IS NOT NULL
+                """)
+                coverage_values = [row[0] for row in cursor.fetchall()]
+                
+                if coverage_values:
+                    # 創建直方圖
+                    ax.hist(coverage_values, bins=10, color='skyblue', edgecolor='black')
+                    ax.set_title('覆蓋率分佈')
+                    ax.set_xlabel('覆蓋率 (%)')
+                    ax.set_ylabel('變數數量')
+                
+            elif chart_type == "使用者數量":
+                # 獲取前15個最多使用者的記錄
+                cursor.execute("""
+                    SELECT Field, Users 
+                    FROM dataset 
+                    ORDER BY CAST(Users AS INTEGER) DESC 
+                    LIMIT 15
+                """)
+                results = cursor.fetchall()
+                
+                if results:
+                    fields = [row[0] for row in results]
+                    users = [row[1] for row in results]
+                    
+                    # 繪製條形圖
+                    bars = ax.barh(fields, users, color='lightgreen')
+                    ax.set_title('使用者數量最多的前15個變數')
+                    ax.set_xlabel('使用者數量')
+                    ax.set_ylabel('變數名稱')
+                    ax.invert_yaxis()  # 反轉Y軸使最大值在頂部
+                    
+                    # 為條形圖添加數值標籤
+                    for bar in bars:
+                        width = bar.get_width()
+                        ax.text(width, bar.get_y() + bar.get_height()/2, 
+                               f' {int(width)}', va='center')
+                
+            elif chart_type == "Alpha數量":
+                # 獲取前15個最多Alpha的記錄
+                cursor.execute("""
+                    SELECT Field, Alphas 
+                    FROM dataset 
+                    ORDER BY CAST(Alphas AS INTEGER) DESC 
+                    LIMIT 15
+                """)
+                results = cursor.fetchall()
+                
+                if results:
+                    fields = [row[0] for row in results]
+                    alphas = [row[1] for row in results]
+                    
+                    # 繪製條形圖
+                    bars = ax.barh(fields, alphas, color='coral')
+                    ax.set_title('Alpha數量最多的前15個變數')
+                    ax.set_xlabel('Alpha數量')
+                    ax.set_ylabel('變數名稱')
+                    ax.invert_yaxis()  # 反轉Y軸使最大值在頂部
+                    
+                    # 為條形圖添加數值標籤
+                    for bar in bars:
+                        width = bar.get_width()
+                        ax.text(width, bar.get_y() + bar.get_height()/2, 
+                               f' {int(width)}', va='center')
+                
+            elif chart_type == "類型分佈":
+                # 計算每種類型的數量
+                cursor.execute("""
+                    SELECT Type, COUNT(*) as count 
+                    FROM dataset 
+                    GROUP BY Type
+                    ORDER BY count DESC
+                """)
+                results = cursor.fetchall()
+                
+                if results:
+                    types = [row[0] for row in results]
+                    counts = [row[1] for row in results]
+                    
+                    # 計算百分比
+                    total = sum(counts)
+                    percentages = [count/total*100 for count in counts]
+                    
+                    # 繪製餅圖
+                    wedges, texts, autotexts = ax.pie(
+                        counts, 
+                        labels=types, 
+                        autopct='%1.1f%%',
+                        shadow=False, 
+                        startangle=90,
+                        colors=plt.cm.Paired.colors,
+                        wedgeprops={'edgecolor': 'white', 'linewidth': 1}
+                    )
+                    ax.set_title('變數類型分佈')
+                    ax.axis('equal')
+                    
+                    # 增加餅圖標籤的可讀性
+                    for text in texts + autotexts:
+                        text.set_fontsize(11)
+                        
+        except Exception as e:
+            print(f"繪製圖表時發生錯誤: {str(e)}")
             
         # 調整圖表佈局以確保所有元素都顯示
         self.canvas.figure.tight_layout()
         self.canvas.draw()
 
-    # 處理單元格點擊事件
     def handle_cell_click(self, index):
         # 確保當前有數據集和模型
         if self.current_dataset is None or self.proxy_model is None:
@@ -542,12 +678,16 @@ class MainWindow(QMainWindow):
             source_index = self.proxy_model.mapToSource(index)
             source_row = source_index.row()
             
-            if source_row >= len(self.current_dataset):
+            if source_row >= self.current_dataset.total_rows:
                 self.status_bar.showMessage(f"無法處理點擊：行索引 {source_row} 超出範圍")
                 return
                 
-            value = self.current_dataset.iloc[source_row, column_index]
+            value = self.current_dataset.get_value(source_row, column_name)
             
+            if value is None:
+                self.status_bar.showMessage("無法獲取單元格數據")
+                return
+
             # 調試信息
             self.status_bar.showMessage(f"點擊了: 列={column_name}, 行={source_row}, 值長度={len(str(value))}")
             
@@ -555,16 +695,11 @@ class MainWindow(QMainWindow):
             if column_name.lower() == 'description' or 'description' in column_name.lower():
                 try:
                     field_name = "未知字段"
-                    field_index = -1
                     
-                    # 嘗試查找"Field"列，不區分大小寫
-                    for i, col in enumerate(self.current_dataset.columns):
-                        if col.lower() == 'field':
-                            field_index = i
-                            break
-                    
-                    if field_index >= 0:
-                        field_name = self.current_dataset.iloc[source_row, field_index]
+                    # 嘗試從Field列獲取字段名
+                    field_col = next((col for col in self.current_dataset.columns if col.lower() == 'field'), None)
+                    if field_col:
+                        field_name = self.current_dataset.get_value(source_row, field_col)
                     
                     # 使用防重複邏輯：檢查是否已經有相同的對話框打開
                     for child in self.children():
