@@ -788,6 +788,10 @@ class MainWindow(QMainWindow):
         # 顯示初始信息
         self.status_bar.showMessage("選擇左側的回測結果文件以開始瀏覽")
 
+        # 為表格視圖啟用右鍵選單
+        self.table_view.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.table_view.customContextMenuRequested.connect(self.show_table_context_menu)
+
     # 刷新當前文件
     def refresh_current_file(self):
         if not hasattr(self, 'last_loaded_index') or self.last_loaded_index is None:
@@ -1485,6 +1489,101 @@ class MainWindow(QMainWindow):
 
             except Exception as e:
                 QMessageBox.critical(self, "錯誤", f"刪除文件時發生錯誤：\n{str(e)}")
+
+    def show_table_context_menu(self, position):
+        """顯示表格右鍵選單，用於批量勾選/取消勾選"""
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            return
+
+        selected_indexes = self.table_view.selectedIndexes()
+        if not selected_indexes:
+            return
+
+        # 從選取的索引中獲取唯一的、有效的視圖行號
+        view_rows = sorted(list(set(index.row() for index in selected_indexes if index.isValid())))
+        if not view_rows:
+            return
+
+        # 檢查選取行的勾選狀態
+        all_checked = True
+        source_model = self.proxy_model.sourceModel() # Get source model once
+        for view_row in view_rows:
+            view_index_col0 = self.proxy_model.index(view_row, 0)
+            if not view_index_col0.isValid(): continue # 跳過無效索引
+
+            # Map to source index to get correct rowid for check state
+            source_index_col0 = self.proxy_model.mapToSource(view_index_col0)
+            if not source_index_col0.isValid(): continue
+
+            # Get rowid from source model (assuming rowid is needed for _check_states)
+            try:
+                cursor = source_model.db_conn.cursor()
+                # Need to get rowid based on source row, considering filtering/sorting
+                # This requires getting the rowid corresponding to the source_index_col0.row()
+                # The current SqliteTableModel fetches data row by row using LIMIT/OFFSET,
+                # which makes getting the correct rowid for a specific source_index tricky
+                # without fetching all rowids first or modifying the model significantly.
+                # Let's try getting the rowid based on the view_row offset within the current filter/sort
+                cursor.execute(f"SELECT rowid FROM {source_model.table_name} {source_model._get_filter_and_sort_clause()} LIMIT 1 OFFSET {source_index_col0.row()}")
+                result = cursor.fetchone()
+                if result:
+                    rowid = result[0]
+                    check_state = source_model._check_states.get(rowid, Qt.Unchecked)
+                    if check_state != Qt.Checked:
+                        all_checked = False
+                        break
+                else:
+                    # If rowid cannot be fetched, assume not checked for safety
+                    all_checked = False
+                    break
+            except Exception as e:
+                 print(f"Error checking state for row {view_row}: {e}")
+                 all_checked = False # Assume not checked on error
+                 break
+
+
+        # 創建選單
+        context_menu = QMenu(self)
+        target_state = Qt.Unchecked if all_checked else Qt.Checked
+        action_text = "取消勾選選取項" if all_checked else "勾選選取項"
+        toggle_check_action = QAction(action_text, self)
+
+        # 連接動作
+        # Pass view_rows, not source_rows, as setData works with proxy model indices
+        toggle_check_action.triggered.connect(lambda: self.toggle_selected_rows_check_state(view_rows, target_state))
+
+        context_menu.addAction(toggle_check_action)
+
+        # 顯示選單
+        context_menu.exec_(self.table_view.viewport().mapToGlobal(position))
+
+    def toggle_selected_rows_check_state(self, view_rows, target_state):
+        """切換指定視圖行的勾選狀態"""
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            return
+
+        source_model = self.proxy_model.sourceModel()
+        updated_count = 0
+        # Use model's begin/end reset for potentially better performance on large updates
+        # source_model.beginResetModel() # Or use begin/endInsertRows if applicable
+
+        for view_row in view_rows:
+            view_index_col0 = self.proxy_model.index(view_row, 0)
+            if view_index_col0.isValid():
+                # setData on proxy model triggers setData on source model
+                success = self.proxy_model.setData(view_index_col0, target_state, Qt.CheckStateRole)
+                if success:
+                    updated_count += 1
+
+        # source_model.endResetModel()
+
+        # Update status bar after changes
+        if updated_count > 0:
+             # Re-fetch checked count after updates
+             checked_count = len(source_model.get_checked_rows())
+             self.status_bar.showMessage(f"已更新 {updated_count} 項勾選狀態 | 目前共勾選 {checked_count} 項")
+        else:
+             self.status_bar.showMessage("未更新勾選狀態 (可能無效選擇或更新失敗)")
 
 
 # ... (if __name__ == "__main__": block remains the same) ...
