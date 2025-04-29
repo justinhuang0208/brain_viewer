@@ -1,5 +1,6 @@
 import sys
 import os
+import sqlite3
 import pandas as pd
 from PySide6.QtWidgets import (QApplication, QMainWindow, QTableView, QTreeView,
                               QSplitter, QVBoxLayout, QHBoxLayout, QWidget,
@@ -118,6 +119,207 @@ class FileFilterProxyModel(QSortFilterProxyModel):
         if file_name.lower().endswith(".log"):
             return False
         return super().filterAcceptsRow(source_row, source_parent)
+
+# SQLite表格模型
+class SqliteTableModel(QAbstractTableModel):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.db_conn = None
+        self.table_name = None
+        self.columns = []
+        self.row_count = 0
+        self.filter_clause = ""
+        self.sort_clause = ""
+        self._check_states = {}  # 使用字典來儲存勾選狀態，鍵為 rowid
+
+    def setup_model(self, db_conn, table_name):
+        """設置模型的資料庫連接和表格名稱"""
+        self.db_conn = db_conn
+        self.table_name = table_name
+        self.refresh_metadata()
+
+    def refresh_metadata(self):
+        """重新載入表格的元數據（欄位和行數）"""
+        if not self.db_conn or not self.table_name:
+            return
+
+        # 獲取欄位信息
+        cursor = self.db_conn.cursor()
+        cursor.execute(f"PRAGMA table_info({self.table_name})")
+        self.columns = [row[1] for row in cursor.fetchall()]
+
+        # 獲取總行數
+        cursor.execute(f"SELECT COUNT(*) FROM {self.table_name}")
+        self.row_count = cursor.fetchone()[0]
+
+        # 初始化勾選狀態
+        cursor.execute(f"SELECT rowid FROM {self.table_name}")
+        self._check_states = {row[0]: Qt.Unchecked for row in cursor.fetchall()}
+
+    def rowCount(self, parent=None):
+        if not self.db_conn or not self.table_name:
+            return 0
+        
+        cursor = self.db_conn.cursor()
+        query = f"SELECT COUNT(*) FROM {self.table_name}"
+        if self.filter_clause:
+            query += f" WHERE {self.filter_clause}"
+        cursor.execute(query)
+        return cursor.fetchone()[0]
+
+    def columnCount(self, parent=None):
+        # 加1是為了勾選框列
+        return len(self.columns) + 1 if self.columns else 1
+
+    def data(self, index, role=Qt.DisplayRole):
+        if not index.isValid():
+            return None
+
+        row = index.row()
+        col = index.column()
+
+        # 處理勾選框列（第一列）
+        if col == 0:
+            if role == Qt.CheckStateRole:
+                cursor = self.db_conn.cursor()
+                cursor.execute(f"SELECT rowid FROM {self.table_name} {self._get_filter_and_sort_clause()} LIMIT 1 OFFSET {row}")
+                result = cursor.fetchone()
+                if result:
+                    rowid = result[0]
+                    return self._check_states.get(rowid, Qt.Unchecked)
+            return None
+
+        # 獲取實際數據
+        try:
+            cursor = self.db_conn.cursor()
+            # 調整列索引（因為第一列是勾選框）
+            actual_col = self.columns[col - 1]
+            query = f"SELECT {actual_col} FROM {self.table_name} {self._get_filter_and_sort_clause()} LIMIT 1 OFFSET {row}"
+            cursor.execute(query)
+            value = cursor.fetchone()
+            
+            if value is None:
+                return None
+            
+            if role == Qt.DisplayRole:
+                return str(value[0])
+                
+            elif role == Qt.ToolTipRole:
+                if len(str(value[0])) > 30:
+                    return str(value[0])
+                    
+            elif role == Qt.BackgroundRole:
+                # 為特定欄位設置背景色
+                column_name = self.columns[col - 1].lower()
+                if column_name == 'passed':
+                    if str(value[0]).upper() == 'PASS':
+                        return QColor("#c8e6c9")
+                    elif str(value[0]).upper() == 'FAIL':
+                        return QColor("#ffccbc")
+                elif column_name == 'sharpe':
+                    try:
+                        sharpe = float(value[0])
+                        if sharpe > 1.5:
+                            return QColor("#c8e6c9")
+                        elif sharpe > 1.0:
+                            return QColor("#fff9c4")
+                        else:
+                            return QColor("#ffccbc")
+                    except:
+                        pass
+
+        except Exception as e:
+            print(f"Error fetching data: {e}")
+            return None
+
+        return None
+
+    def setData(self, index, value, role=Qt.EditRole):
+        if not index.isValid():
+            return False
+
+        # 處理勾選框狀態變更
+        if index.column() == 0 and role == Qt.CheckStateRole:
+            try:
+                cursor = self.db_conn.cursor()
+                cursor.execute(f"SELECT rowid FROM {self.table_name} {self._get_filter_and_sort_clause()} LIMIT 1 OFFSET {index.row()}")
+                result = cursor.fetchone()
+                if result:
+                    rowid = result[0]
+                    self._check_states[rowid] = Qt.CheckState(value)
+                    self.dataChanged.emit(index, index, [role])
+                    return True
+            except Exception as e:
+                print(f"Error setting check state: {e}")
+                return False
+
+        return False
+
+    def headerData(self, section, orientation, role):
+        if role == Qt.DisplayRole:
+            if orientation == Qt.Horizontal:
+                if section == 0:
+                    return "#"  # 勾選框列標題
+                elif 0 < section <= len(self.columns):
+                    return self.columns[section - 1]
+            elif orientation == Qt.Vertical:
+                return str(section + 1)
+
+        elif role == Qt.TextAlignmentRole and orientation == Qt.Horizontal and section == 0:
+            return Qt.AlignCenter
+
+        return None
+
+    def flags(self, index):
+        if not index.isValid():
+            return Qt.NoItemFlags
+
+        if index.column() == 0:  # 勾選框列
+            return super().flags(index) | Qt.ItemIsUserCheckable | Qt.ItemIsEnabled
+
+        return super().flags(index) | Qt.ItemIsEnabled | Qt.ItemIsSelectable
+
+    def set_filter(self, filter_clause):
+        """設置 SQL WHERE 子句進行過濾"""
+        self.filter_clause = filter_clause
+        self.layoutChanged.emit()
+
+    def set_sort(self, column, order):
+        """設置排序條件"""
+        if column == 0:  # 勾選框列
+            self.sort_clause = ""
+        else:
+            direction = "ASC" if order == Qt.AscendingOrder else "DESC"
+            # 因為第一列是勾選框，所以要調整列索引
+            actual_col = self.columns[column - 1]
+            self.sort_clause = f"ORDER BY {actual_col} {direction}"
+        self.layoutChanged.emit()
+
+    def _get_filter_and_sort_clause(self):
+        """組合過濾和排序子句"""
+        clause = ""
+        if self.filter_clause:
+            clause += f"WHERE {self.filter_clause}"
+        if self.sort_clause:
+            clause += f" {self.sort_clause}"
+        return clause
+
+    def get_checked_rows(self):
+        """獲取已勾選的行的 rowid 列表"""
+        return [rowid for rowid, state in self._check_states.items() if state == Qt.Checked]
+
+    def reset_check_states(self):
+        """重設所有勾選狀態"""
+        cursor = self.db_conn.cursor()
+        cursor.execute(f"SELECT rowid FROM {self.table_name}")
+        self._check_states = {row[0]: Qt.Unchecked for row in cursor.fetchall()}
+        
+        # 發出信號以更新第一列
+        self.dataChanged.emit(
+            self.index(0, 0),
+            self.index(self.rowCount() - 1, 0),
+            [Qt.CheckStateRole]
+        )
 
 # 自定義表格模型
 class DataFrameModel(QAbstractTableModel):
@@ -577,6 +779,8 @@ class MainWindow(QMainWindow):
         
         # 數據相關
         self.current_dataset = None
+        self.db_conn = None  # SQLite 連接
+        self.table_name = "backtest_data"  # 固定使用的表格名稱
         self.proxy_model = None
         self.click_connected = False  # 跟踪點擊事件是否已連接
         self.visible_columns = [] # 新增: 追蹤可見欄位
@@ -603,28 +807,47 @@ class MainWindow(QMainWindow):
         self.last_loaded_index = index
 
         file_path = self.file_model.filePath(source_index)
+        file_name = os.path.basename(file_path)
+
         try:
-            df = pd.read_csv(file_path)
-            self.current_dataset = df # Store original data
+            # 如果已經有資料庫連線，先關閉它
+            if self.db_conn is not None:
+                self.db_conn.close()
+                self.db_conn = None
 
-            # Check if model exists and reset check states, otherwise create new model
-            if self.proxy_model and isinstance(self.proxy_model.sourceModel(), DataFrameModel):
-                 model = self.proxy_model.sourceModel()
-                 model._data = df # Update data in existing model
-                 model.reset_check_states() # Reset checks
-                 # Inform the model layout has changed completely
-                 model.layoutChanged.emit()
-            else:
-                model = DataFrameModel(df)
-                self.proxy_model = NumericFilterProxyModel()
-                self.proxy_model.setSourceModel(model)
-                self.proxy_model.setFilterCaseSensitivity(Qt.CaseInsensitive)
-                self.table_view.setModel(self.proxy_model)
+            # 建立新的記憶體中的 SQLite 資料庫
+            self.db_conn = sqlite3.connect(':memory:')
 
-                # Connect click handler only once
-                if not self.click_connected:
-                    self.table_view.clicked.connect(self.handle_cell_click)
-                    self.click_connected = True
+            # 使用分塊讀取 CSV 檔案
+            chunk_size = 10000  # 每次讀取 10,000 行
+            chunks = pd.read_csv(file_path, chunksize=chunk_size)
+
+            # 讀取第一個區塊來獲取列名和設置表格結構
+            first_chunk = next(chunks)
+            columns = first_chunk.columns
+            self.current_dataset = first_chunk  # 保存第一個區塊用於圖表顯示
+
+            # 創建表格並插入第一個區塊的資料
+            first_chunk.to_sql(self.table_name, self.db_conn, index=False)
+
+            # 讀取並插入剩餘的區塊
+            for chunk in chunks:
+                chunk.to_sql(self.table_name, self.db_conn, if_exists='append', index=False)
+
+            # 創建 SqliteTableModel
+            model = SqliteTableModel()
+            model.setup_model(self.db_conn, self.table_name)
+
+            # 設置代理模型
+            self.proxy_model = NumericFilterProxyModel()
+            self.proxy_model.setSourceModel(model)
+            self.proxy_model.setFilterCaseSensitivity(Qt.CaseInsensitive)
+            self.table_view.setModel(self.proxy_model)
+
+            # Connect click handler only once
+            if not self.click_connected:
+                self.table_view.clicked.connect(self.handle_cell_click)
+                self.click_connected = True
 
             # Set fixed width for checkbox column and resize others
             self.table_view.setColumnWidth(0, 40) # Checkbox column width
@@ -640,36 +863,28 @@ class MainWindow(QMainWindow):
 
             # Update status bar
             file_name = os.path.basename(file_path)
-            self.status_bar.showMessage(f"已載入 {file_name} | 共 {len(df)} 條記錄")
+            self.status_bar.showMessage(f"已載入 {file_name} | 共 {model.row_count} 條記錄")
             self.current_file_label.setText(file_name)
 
-            # Update filter dropdowns
-            self.filter_column.clear()
-            self.filter_column.addItem("全部欄位")
-            self.condition_column.clear()
-            for col in df.columns: # Use original df columns
-                self.filter_column.addItem(col)
-                try:
-                    if pd.to_numeric(df[col], errors='coerce').notna().any():
-                        self.condition_column.addItem(col)
-                except:
-                    pass
-
-            # Enable save button
             # Update filter dropdowns and visible columns tracker
+            cursor = self.db_conn.cursor()
             self.filter_column.clear()
             self.filter_column.addItem("全部欄位")
             self.condition_column.clear()
-            self.visible_columns = list(df.columns) # Initially all columns are visible
+            self.visible_columns = list(model.columns)  # Initially all columns are visible
 
-            for col in df.columns: # Use original df columns
+            for col in model.columns:
                 self.filter_column.addItem(col)
                 try:
-                    # Check if column is numeric for condition filter
-                    if pd.to_numeric(df[col], errors='coerce').notna().any():
+                    # 執行 SQL 查詢來測試欄位是否包含數值
+                    query = f"SELECT CAST({col} AS FLOAT) FROM {self.table_name} LIMIT 1"
+                    cursor = self.db_conn.cursor()
+                    cursor.execute(query)
+                    if cursor.fetchone() is not None:
                         self.condition_column.addItem(col)
                 except:
-                    pass # Ignore columns that cause errors during numeric check
+                    continue  # Skip if column cannot be cast to float
+
 
             # Enable buttons
             self.save_selected_button.setEnabled(True)
@@ -691,75 +906,92 @@ class MainWindow(QMainWindow):
             self.visible_columns = []
 
     def filter_data(self):
-        if self.proxy_model is None or self.current_dataset is None:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
 
         filter_text = self.search_input.text()
         filter_column_name = self.filter_column.currentText()
 
-        if filter_column_name == "全部欄位":
-            self.proxy_model.setFilterKeyColumn(-1) # Filter all columns
+        source_model = self.proxy_model.sourceModel()
+        if not filter_text:
+            source_model.set_filter("")
         else:
-            try:
-                # Find the index in the *original* DataFrame columns
-                column_index_in_df = list(self.current_dataset.columns).index(filter_column_name)
-                # The corresponding column index in the *model* is shifted by 1
-                model_column_index = column_index_in_df + 1
-                self.proxy_model.setFilterKeyColumn(model_column_index)
-            except ValueError:
-                 # Fallback if column name not found (shouldn't happen)
-                self.proxy_model.setFilterKeyColumn(-1) # Filter all columns as fallback
+            # 構建 SQL LIKE 查詢
+            if filter_column_name == "全部欄位":
+                # 搜尋所有列
+                where_clauses = []
+                for col in source_model.columns:
+                    where_clauses.append(f"{col} LIKE '%{filter_text}%'")
+                filter_clause = " OR ".join(where_clauses)
+            else:
+                # 搜尋特定列
+                filter_clause = f"{filter_column_name} LIKE '%{filter_text}%'"
 
-        self.proxy_model.setFilterFixedString(filter_text)
+            source_model.set_filter(filter_clause)
 
         # Update status bar
-        filtered_count = self.proxy_model.rowCount()
-        total_count = len(self.current_dataset)
+        filtered_count = source_model.rowCount()
+        total_count = source_model.row_count
         self.status_bar.showMessage(f"顯示 {filtered_count}/{total_count} 條記錄 | 過濾條件: {filter_column_name} - '{filter_text}'")
 
     def update_chart(self):
-        if self.current_dataset is None:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
-            
+
+        source_model = self.proxy_model.sourceModel()
+        filter_clause = source_model._get_filter_and_sort_clause()
+        cursor = source_model.db_conn.cursor()
+
         # 清除當前圖表
         self.canvas.figure.clear()
         ax = self.canvas.figure.add_subplot(111)
         
         chart_type = self.chart_type.currentText()
-        df = self.current_dataset
         
         # 增加字體大小使圖表更清晰
         plt.rcParams.update({'font.size': 12})
         
         if chart_type == "夏普比率分佈":
-            # 提取夏普比率並轉換為數值
             try:
-                sharpe_values = pd.to_numeric(df['sharpe'], errors='coerce')
-                sharpe_values = sharpe_values.dropna()
+                # 使用 SQL 查詢獲取夏普比率
+                cursor.execute(f"SELECT CAST(sharpe AS FLOAT) FROM {source_model.table_name} {filter_clause}")
+                sharpe_values = [row[0] for row in cursor.fetchall() if row[0] is not None]
                 
-                # 創建直方圖
-                ax.hist(sharpe_values, bins=15, color='skyblue', edgecolor='black')
-                ax.set_title('夏普比率分佈')
-                ax.set_xlabel('夏普比率')
-                ax.set_ylabel('策略數量')
-                
-                # 添加垂直線標記 1.0 和 1.5 的夏普比率
-                ax.axvline(x=1.0, color='orange', linestyle='--', label='夏普=1.0')
-                ax.axvline(x=1.5, color='green', linestyle='--', label='夏普=1.5')
-                ax.legend()
+                if sharpe_values:
+                    # 創建直方圖
+                    ax.hist(sharpe_values, bins=15, color='skyblue', edgecolor='black')
+                    ax.set_title('夏普比率分佈')
+                    ax.set_xlabel('夏普比率')
+                    ax.set_ylabel('策略數量')
+                    
+                    # 添加垂直線標記 1.0 和 1.5 的夏普比率
+                    ax.axvline(x=1.0, color='orange', linestyle='--', label='夏普=1.0')
+                    ax.axvline(x=1.5, color='green', linestyle='--', label='夏普=1.5')
+                    ax.legend()
+                else:
+                    ax.text(0.5, 0.5, '沒有有效的夏普比率數據', ha='center', va='center', transform=ax.transAxes)
             except Exception as e:
-                ax.text(0.5, 0.5, f'無法生成夏普比率分佈圖: {str(e)}', 
-                        ha='center', va='center', transform=ax.transAxes)
+                ax.text(0.5, 0.5, f'無法生成夏普比率分佈圖: {str(e)}', ha='center', va='center', transform=ax.transAxes)
             
         elif chart_type == "參數分析":
             try:
-                # 計算各種decay值對應的平均夏普比率
-                if 'decay' in df.columns and 'sharpe' in df.columns:
-                    decay_sharpe = df.groupby('decay')['sharpe'].mean().reset_index()
-                    decay_sharpe = decay_sharpe.sort_values('decay')
+                # 使用 SQL 查詢計算各個 decay 值的平均夏普比率
+                query = f"""
+                    SELECT decay, AVG(CAST(sharpe AS FLOAT)) as avg_sharpe
+                    FROM {source_model.table_name}
+                    {filter_clause.replace('WHERE', 'WHERE decay IS NOT NULL AND') if filter_clause else 'WHERE decay IS NOT NULL'}
+                    GROUP BY decay
+                    ORDER BY decay
+                """
+                cursor.execute(query)
+                results = cursor.fetchall()
+                
+                if results:
+                    decays = [str(row[0]) for row in results]
+                    avg_sharpes = [row[1] for row in results]
                     
                     # 繪製條形圖
-                    bars = ax.bar(decay_sharpe['decay'].astype(str), decay_sharpe['sharpe'], color='lightgreen')
+                    bars = ax.bar(decays, avg_sharpes, color='lightgreen')
                     ax.set_title('不同衰減參數的平均夏普比率')
                     ax.set_xlabel('衰減參數')
                     ax.set_ylabel('平均夏普比率')
@@ -770,20 +1002,29 @@ class MainWindow(QMainWindow):
                         ax.text(bar.get_x() + bar.get_width()/2., height + 0.01,
                                f'{height:.2f}', ha='center', va='bottom')
                 else:
-                    ax.text(0.5, 0.5, '數據集中缺少必要的列 (decay 或 sharpe)', 
-                           ha='center', va='center', transform=ax.transAxes)
+                    ax.text(0.5, 0.5, '沒有有效的參數分析數據', ha='center', va='center', transform=ax.transAxes)
             except Exception as e:
-                ax.text(0.5, 0.5, f'無法生成參數分析圖: {str(e)}', 
-                       ha='center', va='center', transform=ax.transAxes)
+                ax.text(0.5, 0.5, f'無法生成參數分析圖: {str(e)}', ha='center', va='center', transform=ax.transAxes)
             
         elif chart_type == "中性化方法比較":
             try:
-                # 計算各種中性化方法對應的平均夏普比率
-                if 'neutralization' in df.columns and 'sharpe' in df.columns:
-                    neutral_sharpe = df.groupby('neutralization')['sharpe'].mean().reset_index()
+                # 使用 SQL 查詢計算各個中性化方法的平均夏普比率
+                query = f"""
+                    SELECT neutralization, AVG(CAST(sharpe AS FLOAT)) as avg_sharpe
+                    FROM {source_model.table_name}
+                    {filter_clause.replace('WHERE', 'WHERE neutralization IS NOT NULL AND') if filter_clause else 'WHERE neutralization IS NOT NULL'}
+                    GROUP BY neutralization
+                    ORDER BY avg_sharpe DESC
+                """
+                cursor.execute(query)
+                results = cursor.fetchall()
+                
+                if results:
+                    methods = [str(row[0]) for row in results]
+                    avg_sharpes = [row[1] for row in results]
                     
                     # 繪製條形圖
-                    bars = ax.bar(neutral_sharpe['neutralization'], neutral_sharpe['sharpe'], color='coral')
+                    bars = ax.bar(methods, avg_sharpes, color='coral')
                     ax.set_title('不同中性化方法的平均夏普比率')
                     ax.set_xlabel('中性化方法')
                     ax.set_ylabel('平均夏普比率')
@@ -794,48 +1035,48 @@ class MainWindow(QMainWindow):
                         ax.text(bar.get_x() + bar.get_width()/2., height + 0.01,
                                f'{height:.2f}', ha='center', va='bottom')
                 else:
-                    ax.text(0.5, 0.5, '數據集中缺少必要的列 (neutralization 或 sharpe)', 
-                           ha='center', va='center', transform=ax.transAxes)
+                    ax.text(0.5, 0.5, '沒有有效的中性化方法數據', ha='center', va='center', transform=ax.transAxes)
             except Exception as e:
-                ax.text(0.5, 0.5, f'無法生成中性化方法比較圖: {str(e)}', 
-                       ha='center', va='center', transform=ax.transAxes)
+                ax.text(0.5, 0.5, f'無法生成中性化方法比較圖: {str(e)}', ha='center', va='center', transform=ax.transAxes)
             
         elif chart_type == "截面分析":
             try:
-                # 繪製散點圖，分析夏普比率與換手率的關係
-                if 'sharpe' in df.columns and 'turnover' in df.columns:
-                    ax.scatter(df['turnover'], df['sharpe'], alpha=0.5, c='blue')
+                # 使用 SQL 查詢獲取夏普比率和換手率
+                query = f"""
+                    SELECT CAST(turnover AS FLOAT) as turnover, CAST(sharpe AS FLOAT) as sharpe
+                    FROM {source_model.table_name}
+                    {filter_clause.replace('WHERE', 'WHERE turnover IS NOT NULL AND sharpe IS NOT NULL AND') if filter_clause else 'WHERE turnover IS NOT NULL AND sharpe IS NOT NULL'}
+                """
+                cursor.execute(query)
+                results = cursor.fetchall()
+                
+                if results:
+                    import numpy as np
+                    from scipy import stats
+                    
+                    turnover_values = [row[0] for row in results]
+                    sharpe_values = [row[1] for row in results]
+                    
+                    # 繪製散點圖
+                    ax.scatter(turnover_values, sharpe_values, alpha=0.5, c='blue')
                     ax.set_title('夏普比率與換手率關係')
                     ax.set_xlabel('換手率')
                     ax.set_ylabel('夏普比率')
                     
                     # 添加趨勢線
                     try:
-                        import numpy as np
-                        from scipy import stats
-                        
-                        # 轉換為數值
-                        x = pd.to_numeric(df['turnover'], errors='coerce')
-                        y = pd.to_numeric(df['sharpe'], errors='coerce')
-                        
-                        # 去除缺失值
-                        mask = ~np.isnan(x) & ~np.isnan(y)
-                        x = x[mask]
-                        y = y[mask]
-                        
-                        if len(x) > 1 and len(y) > 1:
-                            slope, intercept, r_value, p_value, std_err = stats.linregress(x, y)
+                        if len(turnover_values) > 1:
+                            slope, intercept, r_value, p_value, std_err = stats.linregress(turnover_values, sharpe_values)
+                            x = np.array([min(turnover_values), max(turnover_values)])
                             ax.plot(x, intercept + slope*x, 'r', 
                                    label=f'趨勢線 (r²={r_value**2:.2f})')
                             ax.legend()
                     except:
                         pass  # 如果無法添加趨勢線，就跳過
                 else:
-                    ax.text(0.5, 0.5, '數據集中缺少必要的列 (sharpe 或 turnover)', 
-                           ha='center', va='center', transform=ax.transAxes)
+                    ax.text(0.5, 0.5, '沒有有效的截面分析數據', ha='center', va='center', transform=ax.transAxes)
             except Exception as e:
-                ax.text(0.5, 0.5, f'無法生成截面分析圖: {str(e)}', 
-                       ha='center', va='center', transform=ax.transAxes)
+                ax.text(0.5, 0.5, f'無法生成截面分析圖: {str(e)}', ha='center', va='center', transform=ax.transAxes)
         
         # 調整圖表佈局以確保所有元素都顯示
         self.canvas.figure.tight_layout()
@@ -843,7 +1084,7 @@ class MainWindow(QMainWindow):
 
     # 處理單元格點擊事件
     def handle_cell_click(self, index):
-        if self.current_dataset is None or self.proxy_model is None:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             self.status_bar.showMessage("無法處理點擊：數據集或模型不存在")
             return
 
@@ -851,7 +1092,6 @@ class MainWindow(QMainWindow):
         if index.column() == 0:
             return
 
-        # --- Start Modification ---
         # Check if the view index is valid before mapping
         if not index.isValid():
             self.status_bar.showMessage("無法處理點擊：無效的視圖索引")
@@ -863,23 +1103,27 @@ class MainWindow(QMainWindow):
         # Check if the source index is valid after mapping
         if not source_index.isValid():
             self.status_bar.showMessage("無法處理點擊：無法映射到有效的源索引")
-            # This might happen during rapid filtering/sorting changes
             return
 
-        source_row = source_index.row()
-        # Adjust model column index to get DataFrame column index
-        actual_column_index = index.column() - 1
-
-        # Basic bounds check for row and column against the original dataset
-        if not (0 <= source_row < len(self.current_dataset) and 0 <= actual_column_index < len(self.current_dataset.columns)):
-            self.status_bar.showMessage(f"無法處理點擊：源索引超出範圍 (Row: {source_row}, Col: {actual_column_index})")
-            return
-        # --- End Modification ---
-
-        column_name = self.current_dataset.columns[actual_column_index]
-        value = self.current_dataset.iloc[source_row, actual_column_index]
+        source_model = self.proxy_model.sourceModel()
+        row = source_index.row()
+        col = source_index.column()
 
         try:
+            cursor = source_model.db_conn.cursor()
+            # 調整列索引（因為第一列是勾選框）
+            column_name = source_model.columns[col - 1]
+
+            # 使用 SQL 查詢獲取當前行的數據
+            query = f"SELECT {column_name} FROM {source_model.table_name} {source_model._get_filter_and_sort_clause()} LIMIT 1 OFFSET {row}"
+            cursor.execute(query)
+            value = cursor.fetchone()
+
+            if value is None:
+                return
+
+            value = str(value[0])
+
             if column_name.lower() == 'link' and value:
                 try:
                     webbrowser.open(value)
@@ -890,28 +1134,28 @@ class MainWindow(QMainWindow):
             elif column_name.lower() == 'code':
                 title = "策略代碼詳細信息"
                 try:
-                    # Find 'link' column index in the original DataFrame
-                    link_col_df_index = list(self.current_dataset.columns).index('link')
-                    link = self.current_dataset.iloc[source_row, link_col_df_index]
-                    if link:
+                    # 使用 SQL 查詢獲取相關的 link
+                    cursor.execute(f"SELECT link FROM {source_model.table_name} {source_model._get_filter_and_sort_clause()} LIMIT 1 OFFSET {row}")
+                    link_result = cursor.fetchone()
+                    if link_result and link_result[0]:
+                        link = str(link_result[0])
                         title = f"策略詳細信息 - {link.split('/')[-1]}"
-                except ValueError: # 'link' column not found
-                    pass
-                except Exception: # Other potential errors accessing link
+                except Exception:
                     pass
 
-                dialog = DetailDialog(title, str(value), self)
+                dialog = DetailDialog(title, value, self)
                 dialog.exec()
 
-            elif len(str(value)) > 30: # Show details for any long text
-                dialog = DetailDialog(f"{column_name} - 詳細內容", str(value), self)
+            elif len(value) > 30:  # Show details for any long text
+                dialog = DetailDialog(f"{column_name} - 詳細內容", value, self)
                 dialog.exec()
+
         except Exception as e:
             self.status_bar.showMessage(f"處理單元格點擊時出錯: {str(e)}")
 
     # 應用數值過濾
     def apply_numeric_filter(self):
-        if self.proxy_model is None or self.current_dataset is None:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             self.status_bar.showMessage("當前沒有數據可過濾")
             return
 
@@ -927,30 +1171,36 @@ class MainWindow(QMainWindow):
             self.status_bar.showMessage("請輸入有效數字進行過濾")
             return
 
-        try:
-            # Find the index in the *original* DataFrame columns
-            column_index_in_df = list(self.current_dataset.columns).index(column_name)
-            # The corresponding column index in the *model* is shifted by 1
-            model_column_index = column_index_in_df + 1
-        except ValueError:
-            self.status_bar.showMessage(f"找不到列：{column_name}")
-            return
+        # 構建 SQL 過濾條件
+        source_model = self.proxy_model.sourceModel()
+        current_filter = source_model.filter_clause
 
-        self.proxy_model.setNumericFilter(model_column_index, operator, value)
+        # 構建數值過濾條件
+        numeric_filter = f"CAST({column_name} AS FLOAT) {operator} {value}"
 
-        # Update status bar
-        filtered_count = self.proxy_model.rowCount()
-        total_count = len(self.current_dataset)
+        # 如果已經有過濾條件，則將新條件與現有條件組合
+        if current_filter:
+            combined_filter = f"({current_filter}) AND ({numeric_filter})"
+        else:
+            combined_filter = numeric_filter
+
+        # 應用過濾
+        source_model.set_filter(combined_filter)
+
+        # 更新狀態欄
+        filtered_count = source_model.rowCount()
+        total_count = source_model.row_count
         self.status_bar.showMessage(f"顯示 {filtered_count}/{total_count} 條記錄 | 數值過濾條件: {column_name} {operator} {value}")
 
     # 清除數值過濾
     def clear_numeric_filter(self):
-        if self.proxy_model is None:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
-            
-        self.proxy_model.clearNumericFilter()
+
+        source_model = self.proxy_model.sourceModel()
+        source_model.set_filter("")
         self.condition_value.clear()
-        # 如果還有文本過濾，重新應用它
+        # 如果有文字搜尋，重新套用
         self.filter_data()
 
     # 修改: 開啟自訂欄位選擇對話框
@@ -1014,35 +1264,40 @@ class MainWindow(QMainWindow):
 
     # 新增: 儲存選取的資料列
     def save_selected_rows(self):
-        if self.proxy_model is None or self.current_dataset is None:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             QMessageBox.warning(self, "無法儲存", "沒有載入的數據集。")
             return
 
         source_model = self.proxy_model.sourceModel()
-        if not isinstance(source_model, DataFrameModel):
-             QMessageBox.warning(self, "錯誤", "無法獲取源數據模型。")
-             return
+        checked_rowids = source_model.get_checked_rows()
 
-        checked_row_indices = source_model.get_checked_rows()
-
-        if not checked_row_indices:
+        if not checked_rowids:
             QMessageBox.information(self, "沒有選取", "請先勾選要儲存的資料列。")
             return
 
-        # Get the selected data from the original DataFrame using the indices
-        selected_data = self.current_dataset.iloc[checked_row_indices]
-
         # 只詢問檔名，並儲存在 DATA_DIR
-        from PySide6.QtWidgets import QInputDialog
         # 取得 DATA_DIR（與 app.py 保持一致）
         DATA_DIR = "/Users/justin/Desktop/wq-brain_agent/data"
         filename, ok = QInputDialog.getText(self, "儲存選取的資料", "請輸入檔名（不含副檔名）:")
+        
         if ok and filename.strip():
             file_path = os.path.join(DATA_DIR, filename.strip() + ".csv")
             try:
-                selected_data.to_csv(file_path, index=False, encoding='utf-8-sig')
-                self.status_bar.showMessage(f"已將 {len(selected_data)} 筆選取的資料儲存至 {os.path.basename(file_path)}")
-                QMessageBox.information(self, "儲存成功", f"已成功儲存 {len(selected_data)} 筆資料至:\n{file_path}")
+                # 構建 SQL 查詢
+                rowids_str = ",".join(map(str, checked_rowids))
+                cursor = source_model.db_conn.cursor()
+                
+                # 獲取所有欄位的數據
+                cursor.execute(f"SELECT * FROM {source_model.table_name} WHERE rowid IN ({rowids_str})")
+                rows = cursor.fetchall()
+                
+                # 使用 pandas 將數據保存為 CSV
+                df = pd.DataFrame(rows, columns=source_model.columns)
+                df.to_csv(file_path, index=False, encoding='utf-8-sig')
+                
+                self.status_bar.showMessage(f"已將 {len(df)} 筆選取的資料儲存至 {os.path.basename(file_path)}")
+                QMessageBox.information(self, "儲存成功", f"已成功儲存 {len(df)} 筆資料至:\n{file_path}")
+                
             except Exception as e:
                 QMessageBox.critical(self, "儲存失敗", f"儲存檔案時發生錯誤：\n{str(e)}")
                 self.status_bar.showMessage(f"儲存檔案失敗: {str(e)}")
@@ -1053,35 +1308,35 @@ class MainWindow(QMainWindow):
     @Slot()
     def on_import_selected_code_clicked(self):
         """處理 '匯入已選 Code' 選項"""
-        if self.proxy_model is None or self.current_dataset is None:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             QMessageBox.warning(self, "無法匯入", "沒有載入的數據集。")
             self.status_bar.showMessage("無法匯入：未載入數據")
             return
 
         source_model = self.proxy_model.sourceModel()
-        if not isinstance(source_model, DataFrameModel):
-             QMessageBox.warning(self, "錯誤", "無法獲取源數據模型。")
-             self.status_bar.showMessage("無法匯入：模型錯誤")
-             return
 
-        if 'code' not in self.current_dataset.columns:
-            QMessageBox.warning(self, "錯誤", "當前數據集中沒有 'code' 欄位。")
-            self.status_bar.showMessage("無法匯入：缺少 'code' 欄位")
-            return
-
-        checked_row_indices = source_model.get_checked_rows()
-
-        if not checked_row_indices:
+        # 獲取已勾選的 rowid 列表
+        checked_rowids = source_model.get_checked_rows()
+        if not checked_rowids:
             QMessageBox.information(self, "沒有選取", "請先勾選要匯入的資料列。")
             self.status_bar.showMessage("未匯入：沒有勾選資料列")
             return
 
         try:
-            # Get the selected codes from the original DataFrame
-            selected_codes = self.current_dataset.iloc[checked_row_indices]['code'].astype(str).tolist()
-            # Emit the signal with the list of selected codes
-            self.import_code_requested.emit(selected_codes)
-            self.status_bar.showMessage(f"已請求將 {len(selected_codes)} 個選取的 Code 匯入生成器")
+            # 構建 SQL 查詢
+            rowids_str = ",".join(map(str, checked_rowids))
+            cursor = source_model.db_conn.cursor()
+            cursor.execute(f"SELECT code FROM {source_model.table_name} WHERE rowid IN ({rowids_str})")
+            selected_codes = [str(row[0]) for row in cursor.fetchall()]
+
+            if selected_codes:
+                # 發送信號
+                self.import_code_requested.emit(selected_codes)
+                self.status_bar.showMessage(f"已請求將 {len(selected_codes)} 個選取的 Code 匯入生成器")
+            else:
+                QMessageBox.warning(self, "無有效代碼", "選取的資料中沒有找到有效的代碼。")
+                self.status_bar.showMessage("匯入失敗：無有效代碼")
+
         except Exception as e:
             QMessageBox.critical(self, "匯入失敗", f"提取選取的 Code 時發生錯誤：\n{str(e)}")
             self.status_bar.showMessage(f"匯入選取的 Code 失敗: {str(e)}")
@@ -1089,22 +1344,29 @@ class MainWindow(QMainWindow):
     @Slot()
     def on_import_all_code_clicked(self):
         """處理 '匯入所有 Code' 選項"""
-        if self.current_dataset is None:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             QMessageBox.warning(self, "無法匯入", "沒有載入的數據集。")
             self.status_bar.showMessage("無法匯入：未載入數據")
             return
 
-        if 'code' not in self.current_dataset.columns:
-            QMessageBox.warning(self, "錯誤", "當前數據集中沒有 'code' 欄位。")
-            self.status_bar.showMessage("無法匯入：缺少 'code' 欄位")
-            return
+        source_model = self.proxy_model.sourceModel()
 
         try:
-            # Get all codes from the 'code' column
-            all_codes = self.current_dataset['code'].astype(str).tolist()
-            # Emit the signal with the list of all codes
-            self.import_code_requested.emit(all_codes)
-            self.status_bar.showMessage(f"已請求將全部 {len(all_codes)} 個 Code 匯入生成器")
+            # 構建 SQL 查詢，包含當前過濾條件
+            filter_clause = source_model._get_filter_and_sort_clause()
+            cursor = source_model.db_conn.cursor()
+            query = f"SELECT code FROM {source_model.table_name} {filter_clause}"
+            cursor.execute(query)
+            all_codes = [str(row[0]) for row in cursor.fetchall()]
+
+            if all_codes:
+                # 發送信號
+                self.import_code_requested.emit(all_codes)
+                self.status_bar.showMessage(f"已請求將全部 {len(all_codes)} 個 Code 匯入生成器")
+            else:
+                QMessageBox.warning(self, "無有效代碼", "當前數據中沒有找到有效的代碼。")
+                self.status_bar.showMessage("匯入失敗：無有效代碼")
+
         except Exception as e:
             QMessageBox.critical(self, "匯入失敗", f"提取所有 Code 時發生錯誤：\n{str(e)}")
             self.status_bar.showMessage(f"匯入所有 Code 失敗: {str(e)}")
@@ -1112,13 +1374,33 @@ class MainWindow(QMainWindow):
     @Slot()
     def on_import_data_to_sim_clicked(self):
         """處理 '匯入數據至模擬' 選項"""
-        if self.current_dataset is not None:
-            # Emit the signal with the entire DataFrame
-            self.import_data_requested.emit(self.current_dataset)
-            self.status_bar.showMessage(f"已請求將 {len(self.current_dataset)} 筆數據匯入模擬")
-        else:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             QMessageBox.warning(self, "無數據", "請先載入回測結果文件。")
             self.status_bar.showMessage("無法匯入：未載入數據")
+            return
+
+        source_model = self.proxy_model.sourceModel()
+        try:
+            # 構建 SQL 查詢，包含當前過濾條件
+            filter_clause = source_model._get_filter_and_sort_clause()
+            cursor = source_model.db_conn.cursor()
+            # 獲取所有列的數據
+            cursor.execute(f"SELECT * FROM {source_model.table_name} {filter_clause}")
+            rows = cursor.fetchall()
+            
+            if rows:
+                # 將數據轉換為 DataFrame
+                df = pd.DataFrame(rows, columns=source_model.columns)
+                # 發送信號
+                self.import_data_requested.emit(df)
+                self.status_bar.showMessage(f"已請求將 {len(df)} 筆數據匯入模擬")
+            else:
+                QMessageBox.warning(self, "無數據", "當前過濾條件下沒有可用的數據。")
+                self.status_bar.showMessage("匯入失敗：無可用數據")
+
+        except Exception as e:
+            QMessageBox.critical(self, "匯入失敗", f"提取數據時發生錯誤：\n{str(e)}")
+            self.status_bar.showMessage(f"匯入數據失敗: {str(e)}")
 
     def show_file_context_menu(self, position):
         """顯示文件右鍵選單"""
