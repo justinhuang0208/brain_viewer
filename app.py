@@ -13,7 +13,7 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QTabWidget, QSplitter,
                               QVBoxLayout, QHBoxLayout, QWidget, QLabel, 
                               QStatusBar, QMessageBox, QFrame)
 from PySide6.QtCore import Qt, QDir, QSize
-from PySide6.QtGui import QIcon, QFont
+from PySide6.QtGui import QIcon, QFont, QPalette, QColor
 
 # 獲取腳本所在目錄的絕對路徑
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -233,6 +233,22 @@ if __name__ == "__main__":
     
     # 設置應用程序樣式
     app.setStyle("Fusion")
+    
+    # 設置固定淺色調色盤
+    palette = QPalette()
+    palette.setColor(QPalette.Window, QColor(240, 240, 240))
+    palette.setColor(QPalette.WindowText, QColor(0, 0, 0))
+    palette.setColor(QPalette.Base, QColor(255, 255, 255))
+    palette.setColor(QPalette.AlternateBase, QColor(245, 245, 245))
+    palette.setColor(QPalette.Text, QColor(0, 0, 0))
+    palette.setColor(QPalette.Button, QColor(240, 240, 240))
+    palette.setColor(QPalette.ButtonText, QColor(0, 0, 0))
+    palette.setColor(QPalette.Link, QColor(0, 120, 230))
+    palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
+    palette.setColor(QPalette.HighlightedText, QColor(255, 255, 255))
+    
+    # 強制使用淺色調色盤
+    app.setPalette(palette)
     
     # 檢查必要的資源
     success, message = check_resources()
