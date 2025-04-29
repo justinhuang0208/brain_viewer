@@ -332,19 +332,18 @@ class SimulationWidget(QWidget):
                  QMessageBox.warning(self, "缺少欄位", "從生成器匯入的數據缺少關鍵的 'code' 欄位，無法載入。")
                  return
 
-            print(f"接收到 {len(df)} 筆策略，準備載入模擬器表格...")
+            print(f"接收到 {len(df)} 筆策略，準備追加到模擬器表格...")
             self.load_parameters_from_dataframe(df)
-            QMessageBox.information(self, "匯入成功", f"已成功從生成器匯入 {len(df)} 筆策略。")
+            QMessageBox.information(self, "匯入成功", f"已成功將 {len(df)} 筆策略追加到表格中。")
 
         except Exception as e:
             QMessageBox.critical(self, "匯入錯誤", f"將策略列表轉換為 DataFrame 或載入時出錯: {e}")
             print(f"將策略列表轉換為 DataFrame 或載入時出錯: {e}")
 
     def load_parameters_from_dataframe(self, df: pd.DataFrame):
-        """從 DataFrame 載入參數到表格中"""
-        # 考慮是否在每次載入時清空表格，或者追加
-        # 目前行為是清空
-        self.table.setRowCount(0) # 清空表格
+        """從 DataFrame 載入參數到表格中（追加模式）"""
+        # 獲取當前表格的行數作為起始位置
+        start_row = self.table.rowCount()
 
         # 確保必要的欄位存在，如果不存在則使用預設值或跳過
         required_cols = set(PARAM_COLUMNS)

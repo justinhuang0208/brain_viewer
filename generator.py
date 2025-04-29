@@ -921,7 +921,7 @@ class GeneratorMainWindow(QMainWindow):
         generate_layout.addStretch()
 
         # Keep the button, maybe rename it slightly
-        self.import_to_simulator_btn = QPushButton("匯入到模擬器") # Renamed button
+        self.import_to_simulator_btn = QPushButton("匯入到模擬")
         self.import_to_simulator_btn.clicked.connect(self.emit_strategies_for_simulation) # Connect to new emitting method
         generate_layout.addWidget(self.import_to_simulator_btn)
 
@@ -993,7 +993,6 @@ class GeneratorMainWindow(QMainWindow):
 
         # Emit the signal with the list of strategy dictionaries
         self.strategies_ready_for_simulation.emit(strategies)
-        QMessageBox.information(self, "匯出成功", f"已生成 {len(strategies)} 個策略，準備匯入模擬器。")
 
 
     def preview_strategies(self):

@@ -1393,7 +1393,7 @@ class MainWindow(QMainWindow):
                 df = pd.DataFrame(rows, columns=source_model.columns)
                 # 發送信號
                 self.import_data_requested.emit(df)
-                self.status_bar.showMessage(f"已請求將 {len(df)} 筆數據匯入模擬")
+                self.status_bar.showMessage(f"已請求將 {len(df)} 筆數據追加到模擬器")
             else:
                 QMessageBox.warning(self, "無數據", "當前過濾條件下沒有可用的數據。")
                 self.status_bar.showMessage("匯入失敗：無可用數據")
