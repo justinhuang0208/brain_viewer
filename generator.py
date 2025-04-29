@@ -22,6 +22,8 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QHBoxLayo
 from PySide6.QtCore import Qt, QDir, Signal, Slot # Keep Signal and Slot
 from PySide6.QtGui import QFont, QColor
 
+import re
+from PySide6.QtGui import QSyntaxHighlighter, QTextCharFormat, QColor, QFont
 # 獲取腳本所在目錄的絕對路徑
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -470,6 +472,102 @@ class FieldSelector(QWidget):
             status_message += f"，跳過 {skipped_count} 個重複或無效項。"
         print(status_message)
         # 可以考慮更新狀態欄或顯示一個短暫的消息框
+class AlphaSyntaxHighlighter(QSyntaxHighlighter):
+    """用於 Alpha 模板編輯器的語法高亮器"""
+
+    def __init__(self, parent=None):
+        super(AlphaSyntaxHighlighter, self).__init__(parent)
+
+        self.highlighting_rules = []
+
+        # 運算符/關鍵字格式 (藍色)
+        keyword_format = QTextCharFormat()
+        keyword_format.setForeground(QColor("blue"))
+        keyword_format.setFontWeight(QFont.Bold)
+        # 使用者提供的運算符列表 + 常用符號
+        keywords = [
+            "abs", "add", "densify", "divide", "inverse", "log", "max", "min",
+            "multiply", "power", "reverse", "sign", "signed_power", "sqrt",
+            "subtract", "and", "if_else", "is_nan", "not", "or",
+            "days_from_last_change", "hum", "kth_element", "last_diff_value",
+            "ts_argmax", "ts_argmin", "ts_av_diff", "ts_backfill", "ts_corr",
+            "ts_count_nans", "ts_covariance", "ts_decay_linear", "ts_delay",
+            "ts_delta", "ts_mean", "ts_product", "ts_quantile", "ts_rank",
+            "ts_regression", "ts_scale", "ts_std_dev", "ts_step", "ts_sum",
+            "ts_zscore", "normalize", "quantile", "rank", "scale", "winsorize",
+            "zscore", "vec_avg", "vec_sum", "bucket", "trade_when",
+            "group_backfill", "group_mean", "group_neutralize", "group_rank",
+            "group_scale", "group_zscore",
+            r'\+', r'\-', r'\*', r'\/', r'<', r'<=', r'==', r'>', r'>=', r'!='
+        ]
+        # 創建關鍵字的正則表達式，使用 \b 來匹配單詞邊界，除非是符號
+        keyword_patterns = [r'\b' + keyword + r'\b' for keyword in keywords if keyword.isalnum()]
+        symbol_patterns = [keyword for keyword in keywords if not keyword.isalnum()] # 處理符號
+        # 將符號的正則表達式轉義，以防它們包含特殊字符
+        escaped_symbol_patterns = [re.escape(p) for p in symbol_patterns]
+        self.highlighting_rules.append((re.compile("|".join(keyword_patterns + escaped_symbol_patterns)), keyword_format))
+
+
+        # 數字格式 (紅色)
+        number_format = QTextCharFormat()
+        number_format.setForeground(QColor("red"))
+        # 匹配整數和浮點數 (包括科學記數法)
+        self.highlighting_rules.append((re.compile(r'\b[+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)?\b'), number_format))
+
+        # 括號/方括號/花括號格式 (預設顏色，加粗)
+        bracket_format = QTextCharFormat()
+        # bracket_format.setForeground(QColor("darkGray")) # 可以自訂顏色
+        bracket_format.setFontWeight(QFont.Bold)
+        self.highlighting_rules.append((re.compile(r'[()\[\]{}]'), bracket_format)) # 注意：這裡不包括花括號，因為下面有特殊處理
+
+        # 佔位符 {field} 格式 (綠色)
+        placeholder_format = QTextCharFormat()
+        placeholder_format.setForeground(QColor("green"))
+        # 精確匹配 {field}
+        self.highlighting_rules.append((re.compile(r'\{field\}'), placeholder_format))
+
+    def highlightBlock(self, text):
+        """對文本塊應用高亮規則"""
+        # 按優先級應用規則（例如，先匹配佔位符，再匹配關鍵字）
+        # 這裡的順序很重要，因為後面的規則可能會覆蓋前面的規則
+        # 1. 佔位符
+        placeholder_pattern, placeholder_format = self.highlighting_rules[3]
+        for match in placeholder_pattern.finditer(text):
+            start, end = match.span()
+            self.setFormat(start, end - start, placeholder_format)
+
+        # 2. 關鍵字/運算符
+        keyword_pattern, keyword_format = self.highlighting_rules[0]
+        for match in keyword_pattern.finditer(text):
+            start, end = match.span()
+            # 檢查當前範圍是否已被佔位符高亮，如果是則跳過
+            if self.format(start).foreground() != placeholder_format.foreground():
+                 self.setFormat(start, end - start, keyword_format)
+
+        # 3. 數字
+        number_pattern, number_format = self.highlighting_rules[1]
+        for match in number_pattern.finditer(text):
+            start, end = match.span()
+            # 檢查是否已被其他規則高亮
+            current_format = self.format(start)
+            if current_format.foreground() != placeholder_format.foreground() and \
+               current_format.foreground() != keyword_format.foreground():
+                self.setFormat(start, end - start, number_format)
+
+        # 4. 括號/方括號 (不包括花括號)
+        bracket_pattern, bracket_format = self.highlighting_rules[2]
+        for match in bracket_pattern.finditer(text):
+            start, end = match.span()
+             # 檢查是否已被其他規則高亮
+            current_format = self.format(start)
+            if current_format.foreground() != placeholder_format.foreground() and \
+               current_format.foreground() != keyword_format.foreground() and \
+               current_format.foreground() != number_format.foreground():
+                self.setFormat(start, end - start, bracket_format)
+
+
+        # 可選：處理多行註釋或字符串等跨塊語法，此處暫不處理
+        self.setCurrentBlockState(0)
         # QMessageBox.information(self, "匯入結果", status_message)
 
 class CodeTemplateEditor(QWidget):
@@ -510,6 +608,8 @@ class CodeTemplateEditor(QWidget):
         
         # 模板編輯區域
         self.editor = QTextEdit()
+# 應用語法高亮
+        self.highlighter = AlphaSyntaxHighlighter(self.editor.document())
         self.editor.setFont(QFont("Consolas", 14))
         self.editor.setPlaceholderText("在此輸入代碼模板，使用{field}作為字段佔位符...")
         
