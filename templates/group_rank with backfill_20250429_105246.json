@@ -1,0 +1,6 @@
+{
+  "name": "group_rank with backfill",
+  "code": "group_rank(ts_backfill({field}, 63), subindustry)",
+  "description": "子行業內排名",
+  "created_at": "2025-04-29T10:52:46.822356"
+}

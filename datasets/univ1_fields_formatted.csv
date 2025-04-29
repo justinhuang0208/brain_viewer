@@ -1,0 +1,6 @@
+Field,Description,Type,Coverage,Users,Alphas
+top1000,universe,Universe,33%,3,3
+top200,universe,Universe,7%,1,5
+top3000,universe,Universe,100%,17,54
+top500,universe,Universe,17%,8,28
+topsp500,universe,Universe,0%,2,2

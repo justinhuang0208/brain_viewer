@@ -1,0 +1,21 @@
+Field,Description,Type,Coverage,Users,Alphas
+adv20,Average daily volume in past 20 days,Matrix,100%,8077,62668
+cap,Daily market capitalization (in millions),Matrix,100%,12379,90367
+close,Daily close price,Matrix,100%,23475,259573
+country,Country grouping,Group,100%,714,9994
+currency,Currency,Group,0%,77,197
+dividend,Dividend,Matrix,100%,2220,6728
+exchange,Exchange grouping,Group,100%,957,44853
+high,Daily high price,Matrix,100%,7389,36930
+industry,Industry grouping,Group,100%,7088,94583
+low,Daily low price,Matrix,100%,7096,31347
+market,Market grouping,Group,100%,4094,39544
+open,Daily open price,Matrix,100%,6740,33858
+returns,Daily returns,Matrix,100%,11831,79329
+sector,Sector grouping,Group,100%,5958,78522
+sedol,Sedol,Group,0%,6,12
+sharesout,Daily outstanding shares (in millions),Matrix,100%,3179,18426
+split,Stock split ratio,Matrix,100%,841,8393
+subindustry,Subindustry grouping,Group,100%,10643,91179
+volume,Daily volume,Matrix,100%,13154,69987
+vwap,Daily volume weighted average price,Matrix,100%,11420,45953

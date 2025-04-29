@@ -1,0 +1,18 @@
+Field,Description,Type,Coverage,Users,Alphas
+snt1_cored1_score,"bearish: score < 5, bullish: score > 5, neutral: score in [-5, 5]",Matrix,63%,273,3034
+snt1_d1_analystcoverage,# of analysts providing an earnings estimate,Matrix,55%,217,3104
+snt1_d1_buyrecpercent,Ratio of (Number ofanalyst buy) over (Number ofall analysts),Matrix,55%,135,2399
+snt1_d1_downtargetpercent,Ratio of (Number ofdown target) over (Number ofall analysts),Matrix,55%,147,3056
+snt1_d1_dtstsespe,Dispersion among analysts' estimates,Matrix,55%,161,2495
+snt1_d1_dynamicfocusrank,"0-100, high values for buy signal and lower values for sell signal",Matrix,56%,158,1554
+snt1_d1_earningsrevision,1 month change in mean of earnings estimate / price,Matrix,55%,165,3128
+snt1_d1_earningssurprise,(Actual earnings - expected earnings) / price,Matrix,55%,106,2486
+snt1_d1_earningstorpedo,(Expected earnings - previous actual earnings) / price,Matrix,55%,94,1856
+snt1_d1_fundamentalfocusrank,"0-100, high values for buy signal and lower values for sell signal",Matrix,56%,119,2155
+snt1_d1_longtermepsgrowthest,The median of analyst expected growth in operating earnings,Matrix,54%,100,1936
+snt1_d1_netearningsrevision,Ratio of (Number ofanalyst raising est earnings) - (Number ofanalyst lowering est earnings) over (Number ofall analysts),Matrix,55%,93,1787
+snt1_d1_netrecpercent,Ratio of (Number ofanalyst buy) - (Number ofanalyst sell) over (Number ofall analysts),Matrix,55%,160,3480
+snt1_d1_nettargetpercent,Ratio of (Number ofup target) - (Number ofdown target) over (Number ofall analysts),Matrix,55%,93,2646
+snt1_d1_sellrecpercent,Ratio of (Number ofanalyst sell) over (Number ofall analysts),Matrix,55%,123,1940
+snt1_d1_stockrank,"0-100, high values for buy signal and lower values for sell signal",Matrix,56%,118,1888
+snt1_d1_uptargetpercent,Ratio of (Number ofup target) over (Number ofall analysts),Matrix,55%,114,2048

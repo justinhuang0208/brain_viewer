@@ -1,0 +1,351 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl4_adjusted_netincome_ft,Adjusted net income - forecast type (revision/new/...),Matrix,87%,5195,10337
+anl4_ads1detailafv110_bk,Broker name (int),Vector,68%,19,45
+anl4_ads1detailafv110_estvalue,Estimation value,Vector,68%,29,57
+anl4_ads1detailafv110_person,Broker Id,Vector,68%,37,81
+anl4_ads1detailafv110_prevval,The Previous Estimation of Financial Item,Vector,68%,20,41
+anl4_ads1detailqfv110_bk,Broker name (int),Vector,62%,19,31
+anl4_ads1detailqfv110_estvalue,Estimation value,Vector,62%,13,79
+anl4_ads1detailqfv110_person,Broker Id,Vector,62%,27,29
+anl4_ads1detailqfv110_prevval,The previous estimation of financial item,Vector,62%,24,42
+anl4_adxqfv110_down,Number of lower estimations,Vector,69%,107,122
+anl4_adxqfv110_high,The highest estimation,Vector,69%,14,18
+anl4_adxqfv110_low,The lowest estimation,Vector,69%,49,57
+anl4_adxqfv110_mean,Mean of estimations,Vector,69%,5,5
+anl4_adxqfv110_median,Median of estimations,Vector,69%,10,10
+anl4_adxqfv110_numest,The number of forecasts counted in aggregation,Vector,69%,136,158
+anl4_adxqfv110_pu,The number of upper estimations,Vector,69%,326,536
+anl4_ady_down,Number of lower estimations,Vector,71%,22,28
+anl4_ady_high,The highest estimation,Vector,71%,16,26
+anl4_ady_low,The lowest estimation,Vector,71%,21,43
+anl4_ady_mean,Mean of estimations,Vector,71%,12,15
+anl4_ady_median,Median of estimations,Vector,71%,5,6
+anl4_ady_numest,The number of forecasts counted in aggregation,Vector,71%,88,113
+anl4_ady_pu,The number of upper estimations,Vector,71%,272,549
+anl4_bac1actualqfv110_actual,Announced financial data,Vector,64%,8,9
+anl4_bac1actualqfv110_item,Financial item,Vector,66%,28,49
+anl4_bac1conafv110_item,Financial item,Vector,73%,29,33
+anl4_bac1conltv110_item,Financial item,Vector,70%,3,4
+anl4_bac1conqfv110_item,Financial item,Vector,72%,10,20
+anl4_bac1conrecv110_item,Financial item,Vector,62%,11,32
+anl4_bac1detailafv110_item,Financial item,Vector,71%,64,83
+anl4_bac1detaillt_item,Financial item,Vector,68%,331,435
+anl4_bac1detailqfv110_item,Financial item,Vector,68%,7,56
+anl4_bac1detailrec_item,Financial item,Vector,71%,171,363
+anl4_basicconafv110_down,Number of lower estimations,Vector,73%,17,85
+anl4_basicconafv110_high,The highest estimation,Vector,73%,11,12
+anl4_basicconafv110_low,The lowest estimation,Vector,73%,5,9
+anl4_basicconafv110_mean,Mean of estimations,Vector,73%,10,20
+anl4_basicconafv110_median,Median of estimations,Vector,73%,13,19
+anl4_basicconafv110_numest,The number of forecasts counted in aggregation,Vector,73%,65,83
+anl4_basicconafv110_pu,The number of upper estimations,Vector,73%,157,250
+anl4_basicconltv110_down,Number of lower estimations,Vector,70%,14,20
+anl4_basicconltv110_high,The highest estimation,Vector,70%,27,82
+anl4_basicconltv110_low,The lowest estimation,Vector,70%,13,17
+anl4_basicconltv110_mean,Mean of estimations,Vector,70%,14,24
+anl4_basicconltv110_median,Median of estimations,Vector,70%,29,60
+anl4_basicconltv110_numest,The number of forecasts counted in aggregation,Vector,70%,141,168
+anl4_basicconltv110_pu,The number of upper estimations,Vector,70%,81,117
+anl4_basicconqfv110_down,Number of lower estimations,Vector,72%,165,189
+anl4_basicconqfv110_high,The highest estimation,Vector,72%,11,18
+anl4_basicconqfv110_low,The lowest estimation,Vector,72%,9,26
+anl4_basicconqfv110_mean,Mean of estimations,Vector,72%,123,133
+anl4_basicconqfv110_median,Median of estimations,Vector,72%,15,21
+anl4_basicconqfv110_numest,The number of forecasts counted in aggregation,Vector,72%,133,169
+anl4_basicconqfv110_pu,The number of upper estimations,Vector,72%,261,408
+anl4_basicdetaillt_bk,Broker name (int),Vector,68%,11,42
+anl4_basicdetaillt_estvalue,Estimation value,Vector,68%,9,12
+anl4_basicdetaillt_person,Broker Id,Vector,68%,11,29
+anl4_basicdetaillt_prevval,The Previous Estimation of Financial Item,Vector,67%,16,41
+anl4_basicdetailqfv110_bk,Broker name (int),Vector,68%,6,8
+anl4_basicdetailqfv110_estvalue,Estimation value,Vector,68%,7,14
+anl4_basicdetailqfv110_person,Broker Id,Vector,68%,7,15
+anl4_basicdetailqfv110_prevval,The previous estimation of financial item,Vector,68%,3,9
+anl4_basicdetailrec_bk,Broker name (int),Vector,71%,13,24
+anl4_basicdetailrec_person,Broker Id,Vector,71%,7,16
+anl4_basicdetailrec_ratingvalue,Score on the given instrument,Vector,71%,46,83
+anl4_baz1v110_bk,Broker name (int),Vector,71%,10,35
+anl4_baz1v110_estvalue,Estimation value,Vector,71%,20,35
+anl4_baz1v110_person,Broker Id,Vector,71%,49,76
+anl4_baz1v110_prevval,The previous estimation of financial item,Vector,71%,8,10
+anl4_buy,The number of recommendations to long the instrument,Vector,62%,55,87
+anl4_bvps_flag,Book value per share - forecast type (revision/new/...),Matrix,82%,1287,2066
+anl4_bvps_high,"Book value - the highest estimation, per share",Matrix,64%,147,638
+anl4_bvps_low,"Book value - the lowest estimation, per share",Matrix,64%,141,541
+anl4_bvps_mean,Book value per share - average of estimations,Matrix,64%,132,638
+anl4_bvps_median,Book value per share - Median value among forecasts,Matrix,64%,133,592
+anl4_bvps_number,Book value per share - number of estimations,Matrix,64%,163,227
+anl4_bvps_value,Book value per share - announced financial value,Matrix,34%,124,209
+anl4_capex_flag,Capital Expenditures - forecast type (revision/new/...),Matrix,85%,438,838
+anl4_capex_high,Capital Expenditures - The highest estimation,Matrix,61%,233,701
+anl4_capex_low,Capital Expenditures - The lowest estimation,Matrix,61%,270,785
+anl4_capex_mean,Capital Expenditures - mean of estimations,Matrix,61%,88,338
+anl4_capex_number,Capital Expenditures - number of estimations,Matrix,61%,63,154
+anl4_capex_std,Capital Expenditures - standard deviation of estimations,Matrix,25%,127,207
+anl4_capex_value,Capital Expenditures - announced financial value,Matrix,37%,278,802
+anl4_cff_flag,Cash Flow From Financing Activities - forecast type (revision/new/...),Matrix,82%,420,679
+anl4_cff_high,Cash Flow From Financing - The highest of forecasted values,Matrix,59%,117,195
+anl4_cff_low,Cash Flow From Financing - The lowest estimation,Matrix,59%,178,438
+anl4_cff_mean,Cash Flow From Financing - mean of estimations,Matrix,59%,56,141
+anl4_cff_median,Cash Flow From Financing Activities - Median value among forecasts,Matrix,59%,60,142
+anl4_cff_number,Cash Flow From Financing - number of estimations,Matrix,59%,94,188
+anl4_cff_value,Cash Flow From Financing - announced financial value,Matrix,27%,123,205
+anl4_cfi_flag,Cash Flow From Investing - forecast type (revision/new/...),Matrix,82%,207,411
+anl4_cfi_high,Cash Flow From Investing - The highest estimation,Matrix,58%,143,253
+anl4_cfi_low,Cash Flow From Investing - The lowest estimation,Matrix,58%,153,364
+anl4_cfi_mean,Cash Flow From Investing - mean of estimations,Matrix,58%,61,149
+anl4_cfi_median,Cash Flow From Investing - median of estimations,Matrix,58%,57,139
+anl4_cfi_number,Cash Flow From Investing - number of estimations,Matrix,58%,62,149
+anl4_cfi_value,Cash Flow From Investing - announced financial value,Matrix,25%,123,206
+anl4_cfo_flag,Cash Flow From Operations - forecast type (revision/new/...),Matrix,82%,290,465
+anl4_cfo_high,Cash Flow From Operations - The highest value among forecasts,Matrix,62%,140,416
+anl4_cfo_low,Cash Flow From Operations - The lowest estimation,Matrix,62%,179,440
+anl4_cfo_mean,Cash Flow From Operations - mean of estimations,Matrix,62%,54,158
+anl4_cfo_median,Cash Flow From Operations - median of estimations,Matrix,62%,153,283
+anl4_cfo_number,Cash Flow From Operations - number of estimations,Matrix,62%,124,226
+anl4_cfo_value,Cash Flow From Operations - announced financial value,Matrix,32%,220,532
+anl4_cuo1actualqfv110_actual,Announced financial data,Vector,63%,72,86
+anl4_cuo1actualqfv110_item,Financial item,Vector,64%,24,29
+anl4_cuo1conafv110_item,Financial item,Vector,71%,20,23
+anl4_cuo1conqfv110_item,Financial item,Vector,69%,88,110
+anl4_cuo1detailafv110_item,Financial item,Vector,68%,206,385
+anl4_cuo1detailqfv110_item,Financial item,Vector,62%,187,275
+anl4_cuo1guidaf_item,Financial item,Vector,29%,3,3
+anl4_cuo1guidaf_maxguidance,Max guidance value,Vector,29%,4,4
+anl4_cuo1guidaf_minguidance,Minimum guidance value,Vector,29%,10,13
+anl4_dei2laf_item,Financial item,Vector,49%,101,119
+anl4_dei2lqfv110_item,Financial item,Vector,43%,234,334
+anl4_dei3lafv110_item,Financial item,Vector,54%,86,127
+anl4_dei3lltv110_item,Financial item,Vector,47%,275,449
+anl4_dei3lqfv110_item,Financial item,Vector,51%,64,70
+anl4_dei3lrec_item,Financial item,Vector,54%,69,82
+anl4_detailltv4v104_est,Estimation value,Vector,79%,23,31
+anl4_detailltv4v104_preest,The previous estimation of financial item,Vector,79%,14,25
+anl4_detailrecv4v104_est,Estimation value,Vector,78%,92,158
+anl4_dez1afv4_est,Estimation value,Vector,78%,54,64
+anl4_dez1afv4_preest,The previous estimation of financial item,Vector,78%,13,27
+anl4_dez1basicafv4v104_est,Estimation value,Vector,80%,21,33
+anl4_dez1basicafv4v104_preest,The previous estimation of financial item,Vector,80%,12,24
+anl4_dez1basicqfv4v104_est,Estimation value,Vector,78%,52,95
+anl4_dez1basicqfv4v104_preest,The previous estimation of financial item,Vector,78%,55,71
+anl4_dez1qfv4_est,Estimation value,Vector,72%,183,235
+anl4_dez1qfv4_preest,The previous estimation of financial item,Vector,72%,102,139
+anl4_dez1safv4_est,Estimation value,Vector,31%,1,1
+anl4_dez1safv4_preest,The previous estimation of financial item,Vector,30%,5,5
+anl4_dts_ptp,Pretax income - std of estimations,Matrix,50%,62,91
+anl4_dts_rspe,Reported Earnings per share - standard deviation of estimations,Matrix,47%,243,765
+anl4_eaz1laf_bk,Broker name (int),Vector,49%,72,81
+anl4_eaz1laf_estvalue,Estimation value,Vector,48%,1,1
+anl4_eaz1laf_person,Broker Id,Vector,49%,59,64
+anl4_eaz1laf_prevval,The previous estimation of financial item,Vector,47%,1,2
+anl4_eaz1lqfv110_bk,Broker name (int),Vector,43%,13,13
+anl4_eaz1lqfv110_estvalue,Estimation value,Vector,41%,3,4
+anl4_eaz1lqfv110_person,Broker Id,Vector,43%,31,35
+anl4_eaz1lqfv110_prevval,The previous estimation of financial item,Vector,41%,4,5
+anl4_eaz2lafv110_bk,Broker name (int),Vector,54%,81,93
+anl4_eaz2lafv110_estvalue,Estimation value,Vector,52%,6,7
+anl4_eaz2lafv110_person,Broker Id,Vector,54%,5,5
+anl4_eaz2lafv110_prevval,The previous estimation of financial item,Vector,52%,4,7
+anl4_eaz2lltv110_bk,Broker name (int),Vector,47%,86,97
+anl4_eaz2lltv110_estvalue,Estimation value,Vector,46%,4,4
+anl4_eaz2lltv110_person,Broker Id,Vector,47%,104,114
+anl4_eaz2lltv110_prevval,The previous estimation of financial item,Vector,45%,10,11
+anl4_eaz2lqfv110_bk,Broker name (int),Vector,51%,15,16
+anl4_eaz2lqfv110_estvalue,Estimation value,Vector,49%,26,28
+anl4_eaz2lqfv110_person,Broker Id,Vector,51%,21,26
+anl4_eaz2lqfv110_prevval,The previous estimation of financial item,Vector,49%,23,23
+anl4_eaz2lrec_bk,Broker name (int),Vector,54%,43,46
+anl4_eaz2lrec_person,Broker Id,Vector,54%,127,163
+anl4_eaz2lrec_ratingvalue,Score on the given instrument,Vector,53%,325,606
+anl4_ebit_high,Earnings before interest and taxes - The highest estimation,Matrix,70%,190,600
+anl4_ebit_low,Earnings before interest and taxes - The lowest estimation,Matrix,70%,150,460
+anl4_ebit_mean,Earnings before interest and taxes - mean of estimations,Matrix,70%,89,332
+anl4_ebit_median,Earnings before interest and taxes - median of estimations,Matrix,70%,131,382
+anl4_ebit_number,Earnings before interest and taxes - number of estimations,Matrix,70%,284,692
+anl4_ebit_std,Earnings before interest and taxes - standard deviation of estimations,Matrix,46%,78,112
+anl4_ebit_value,Earnings before interest and taxes - announced financial value,Matrix,48%,355,1471
+anl4_ebitda_flag,"Earnings before interest, taxes, depreciation and amortization - forecast type (revision/new/...)",Matrix,86%,343,671
+anl4_ebitda_high,"Earnings before interest, taxes, depreciation, and amortization - the highest estimation",Matrix,58%,180,412
+anl4_ebitda_low,"Earnings before interest, taxes, depreciation and amortization - The lowest estimation",Matrix,58%,176,445
+anl4_ebitda_mean,"Earnings before interest, taxes, depreciation and amortization - mean of estimations",Matrix,58%,70,191
+anl4_ebitda_number,"Earnings before interest, taxes, depreciation and amortization - number of estimations",Matrix,58%,53,172
+anl4_ebitda_std,"Earnings before interest, taxes, depreciation, and amortization - standard deviation of estimations",Matrix,35%,41,48
+anl4_ebitda_value,"Earnings before interest, taxes, depreciation and amortization - announced financial value",Matrix,44%,291,966
+anl4_epsa_flag,Earnings per share adjusted by excluding extraordinary items and stock option expenses - forecast type (revision/new/...),Matrix,100%,148,501
+anl4_epsr_flag,"GAAP Earnings - estimation type (revision/new/...), per share",Matrix,87%,701,1465
+anl4_epsr_high,GAAP Earnings per share - The highest estimation,Matrix,71%,165,476
+anl4_epsr_low,GAAP Earnings per share - The lowest estimation,Matrix,71%,195,566
+anl4_epsr_mean,GAAP Earnings per share - mean of estimations,Matrix,71%,127,457
+anl4_epsr_number,GAAP Earnings per share - number of estimations,Matrix,71%,430,813
+anl4_epsr_value,GAAP Earnings per share - announced financial value,Matrix,56%,122,303
+anl4_fcf_flag,Free cash flow - forecast type (revision/new/...),Matrix,85%,546,892
+anl4_fcf_high,"Free cash flow - aggregation on estimations, max",Matrix,55%,80,131
+anl4_fcf_low,Free Cash Flow - The lowest estimation,Matrix,55%,133,247
+anl4_fcf_mean,Free Cash Flow - mean of estimations,Matrix,55%,51,161
+anl4_fcf_median,"Free cash flow - aggregation on estimations, 50th percentile",Matrix,55%,93,183
+anl4_fcf_number,Free Cash Flow - number of estimations,Matrix,55%,93,171
+anl4_fcf_value,Free cash flow - announced financial value,Matrix,28%,288,503
+anl4_fcfps_flag,Free cash flow per share - forecast type (revision/new/...),Matrix,89%,175,354
+anl4_fcfps_high,Free Cash Flow Per Share - the highest estimation,Matrix,43%,47,143
+anl4_fcfps_low,Free Cash Flow Per Share - the lowest estimation,Matrix,43%,51,80
+anl4_fcfps_mean,Free cash flow per share - mean of estimations,Matrix,43%,32,93
+anl4_fcfps_median,"Free cash flow - summary on estimations, 50th-percentile, per share",Matrix,43%,47,106
+anl4_fcfps_number,Free Cash Flow per Share - number of estimations,Matrix,43%,556,745
+anl4_ffo_flag,Funds from Operation - forecast type (revision/new/...),Matrix,100%,182,427
+anl4_flag_erbfintax,Earnings before interest and taxes - forecast type (revision/new/...),Matrix,81%,894,1876
+anl4_fsactualafv4_actual,Announced financial data,Vector,76%,9,12
+anl4_fsactualafv4_item,Financial item,Vector,78%,250,335
+anl4_fsactualqfv4_actual,Announced financial data,Vector,76%,14,14
+anl4_fsactualqfv4_item,Financial item,Vector,77%,31,54
+anl4_fsdetailltv4v104_item,Financial item,Vector,79%,343,477
+anl4_fsdetailrecv4v104_item,Financial item,Vector,80%,240,652
+anl4_fsdtlestmtafv4_item,Financial item,Vector,79%,354,612
+anl4_fsdtlestmtbscqv104_item,Financial item,Vector,79%,95,186
+anl4_fsdtlestmtbscv104_item,Financial item,Vector,80%,52,79
+anl4_fsdtlestmtqfv4_item,Financial item,Vector,72%,49,57
+anl4_fsdtlestmtsafv4_item,Financial item,Vector,31%,5,7
+anl4_fsgdncbscv4_maxguidance,Max guidance value,Vector,32%,94,101
+anl4_fsgdncbscv4_minguidance,Minimum guidance value,Vector,32%,115,133
+anl4_fsguidanceafv4_item,Financial item,Vector,45%,1,1
+anl4_fsguidanceafv4_maxguidance,Maximum guidance value,Vector,45%,37,42
+anl4_fsguidanceafv4_minguidance,Min guidance value,Vector,45%,17,24
+anl4_fsguidancebasicqfv4_item,Financial item,Vector,32%,376,595
+anl4_fsguidanceqfv4_item,Financial item,Vector,30%,160,177
+anl4_fsguidanceqfv4_maxguidance,Max guidance value,Vector,30%,235,276
+anl4_fsguidanceqfv4_minguidance,Min guidance value,Vector,30%,130,163
+anl4_gric_flag,Gross income - forecast type (revision/new/...),Matrix,89%,659,1289
+anl4_gric_high,Gross income - The highest estimation,Matrix,60%,90,304
+anl4_gric_low,Gross income - The lowest estimation,Matrix,60%,115,299
+anl4_gric_mean,Gross income - mean of estimations,Matrix,60%,70,223
+anl4_gric_median,Gross income - median of estimations,Matrix,60%,69,216
+anl4_gric_number,Gross income - number of estimations,Matrix,60%,160,325
+anl4_gric_std,Gross income - std of estimations,Matrix,40%,194,286
+anl4_gric_value,Gross Income - announced financial value,Matrix,35%,184,546
+anl4_guiafv4_est,Estimation value,Vector,45%,7,10
+anl4_guibasicqfv4_est,Estimation value,Vector,32%,89,112
+anl4_guiqfv4_est,Estimation value,Vector,30%,58,67
+anl4_hold,The number of recommendations not clear about short or long the instrument,Vector,62%,86,99
+anl4_mark,Recommendation consensus score,Vector,62%,76,225
+anl4_median_capexp,Capital Expenditures - median of estimations,Matrix,61%,55,142
+anl4_median_epsreported,GAAP Earnings per share - median of estimations,Matrix,71%,201,448
+anl4_medianepsbfam,"Earnings before interest, taxes, depreciation and amortization - median of estimations",Matrix,58%,68,149
+anl4_netdebt_flag,Net debt - forecast type (revision/new/...),Matrix,86%,568,875
+anl4_netdebt_high,Net debt - the highest estimation,Matrix,51%,23,49
+anl4_netdebt_low,Net debt - the lowest estimation,Matrix,51%,40,120
+anl4_netdebt_mean,Net debt - mean of estimations,Matrix,51%,53,135
+anl4_netdebt_median,Net Debt - median of estimations,Matrix,51%,26,60
+anl4_netdebt_number,Net debt - Number of estimations,Matrix,51%,50,87
+anl4_netprofit_flag,Net profit - forecast type (revision/new/...),Matrix,87%,599,1474
+anl4_netprofit_high,Net Profit - The highest estimation,Matrix,76%,126,267
+anl4_netprofit_low,Net Profit - The Lowest Estimation,Matrix,76%,152,302
+anl4_netprofit_mean,Net profit - mean of estimations,Matrix,76%,121,280
+anl4_netprofit_median,Net profit - Median of estimations,Matrix,76%,132,241
+anl4_netprofit_number,Net profit - number of estimations,Matrix,76%,416,856
+anl4_netprofit_std,Net profit - standard deviation of estimations,Matrix,59%,27,88
+anl4_netprofit_value,Net profit - announced financial value,Matrix,58%,122,400
+anl4_netprofita_high,Adjusted Net Income - the highest estimation,Matrix,75%,83,246
+anl4_netprofita_low,Adjusted net income - the lowest estimation,Matrix,75%,130,364
+anl4_netprofita_mean,Adjusted net income - mean of estimations,Matrix,75%,54,129
+anl4_netprofita_median,Adjusted net income - median of estimations,Matrix,75%,52,116
+anl4_netprofita_number,Adjusted net income - number of estimations,Matrix,75%,202,407
+anl4_netprofita_std,Adjusted net income - std of estimations,Matrix,50%,26,98
+anl4_netprofita_value,Adjusted net income - announced financial value,Matrix,47%,100,287
+anl4_norec,The number of brokers with no recommendation,Vector,62%,6,8
+anl4_ptp_flag,Pretax income - forecast type (revision/new/...),Matrix,82%,1138,2684
+anl4_ptp_high,Pretax income - the highest estimation,Matrix,73%,368,657
+anl4_ptp_low,Pretax income - the lowest estimation,Matrix,73%,168,498
+anl4_ptp_mean,Pretax income - mean of estimations,Matrix,73%,70,266
+anl4_ptp_median,Pretax income - median of estimations,Matrix,73%,74,272
+anl4_ptp_number,Pretax Income - number of estimations,Matrix,73%,508,1087
+anl4_ptp_value,Pretax income - announced financial value,Matrix,51%,119,397
+anl4_ptpr_flag,Reported Pretax income - forecast type (revision/new/...),Matrix,90%,361,611
+anl4_ptpr_high,Reported pretax income - the highest estimation,Matrix,40%,31,59
+anl4_ptpr_low,Reported Pretax Income - The Lowest Estimation,Matrix,40%,116,211
+anl4_ptpr_mean,Reported Pretax income - mean of estimations,Matrix,40%,44,77
+anl4_ptpr_median,Reported pretax income - Median of estimations,Matrix,40%,42,56
+anl4_ptpr_number,Reported Pretax Income - number of estimations,Matrix,40%,574,1156
+anl4_qf_az_cfps_mean,Cash Flow Per Share - average of estimations,Matrix,32%,52,152
+anl4_qf_az_cfps_median,Cash Flow Per Share - Median value among forecasts,Matrix,32%,29,85
+anl4_qf_az_cfps_number,Cash Flow Per Share - number of estimations,Matrix,32%,14,31
+anl4_qf_az_div_mean,Dividend per share - average of estimations,Matrix,48%,9,26
+anl4_qf_az_div_median,Dividend per share - median of estimations,Matrix,48%,19,28
+anl4_qf_az_div_number,Dividend per share - number of estimations,Matrix,48%,8,15
+anl4_qf_az_dts_spe,Earnings per share - std of estimations,Matrix,57%,73,226
+anl4_qf_az_eps,"EPS - aggregation on estimations, 50th percentile",Matrix,78%,56,225
+anl4_qf_az_eps_mean,Earnings per share - mean of estimations,Matrix,78%,217,569
+anl4_qf_az_eps_number,Earnings per share - number of estimations,Matrix,78%,446,879
+anl4_qf_az_hgih_spe,Earnings per share - The highest estimation,Matrix,78%,68,256
+anl4_qf_az_hgih_spfc,"Cash Flow - The highest estimation, per share",Matrix,32%,37,198
+anl4_qf_az_hgih_vid,Dividend per share - The highest estimation,Matrix,48%,22,55
+anl4_qf_az_wol_spe,Earnings per share - The lowest estimation,Matrix,78%,77,277
+anl4_qf_az_wol_spfc,Cash Flow Per Share - The lowest estimation,Matrix,32%,25,69
+anl4_qf_az_wol_vid,Dividend per share - The lowest value among forecasts,Matrix,48%,23,39
+anl4_qfd1_az_cfps_median,Cash Flow Per Share - Median value among forecasts,Matrix,32%,29,123
+anl4_qfd1_az_cfps_number,Cash Flow Per Share - number of estimations,Matrix,32%,15,24
+anl4_qfd1_az_div_median,Dividend per share - median of estimations,Matrix,48%,17,42
+anl4_qfd1_az_div_number,Dividend per share - number of estimations,Matrix,48%,16,28
+anl4_qfd1_az_dts_spe,Earnings per share - std of estimations,Matrix,57%,67,185
+anl4_qfd1_az_eps_number,Earnings per share - number of estimations,Matrix,78%,520,1048
+anl4_qfd1_az_hgih_spe,Earnings per share - The highest estimation,Matrix,78%,92,393
+anl4_qfd1_az_hgih_spfc,"Cash Flow - The highest estimation, per share",Matrix,32%,30,94
+anl4_qfd1_az_hgih_vid,Dividend per share - The highest estimation,Matrix,48%,20,45
+anl4_qfd1_az_wol_spe,Earnings per share - The lowest estimation,Matrix,78%,88,243
+anl4_qfd1_az_wol_spfc,Cash Flow Per Share - The lowest estimation,Matrix,32%,21,47
+anl4_qfd1_az_wol_vid,Dividend per share - The lowest value among forecasts,Matrix,48%,13,38
+anl4_qfd1_azeps,"EPS - aggregation on estimations, 50th percentile",Matrix,78%,60,236
+anl4_rd_exp_flag,Research and Development Expense - forecast type (revision/new/...),Matrix,97%,297,704
+anl4_rd_exp_high,Research and Development Expense - the highest estimation,Matrix,29%,49,111
+anl4_rd_exp_low,Research and Development Expense - the lowest estimation,Matrix,29%,112,214
+anl4_rd_exp_mean,Research and Development Expense - mean of estimations,Matrix,29%,300,426
+anl4_rd_exp_median,Research and Development Expense - Median of estimations,Matrix,29%,29,73
+anl4_rd_exp_number,Research and Development Expense - Number of Estimations,Matrix,29%,36,106
+anl4_tbve_ft,Tangible Book Value per Share - forecast type (revision/new/...),Matrix,93%,661,1286
+anl4_tbvps_high,Tangible Book Value per Share - The highest estimation,Matrix,33%,34,63
+anl4_tbvps_low,Tangible Book Value per Share - The lowest estimation,Matrix,33%,84,150
+anl4_tbvps_mean,Tangible Book Value per Share - mean of estimations,Matrix,33%,79,143
+anl4_tbvps_median,Tangible Book Value per Share - median of estimations,Matrix,33%,32,81
+anl4_tbvps_number,Tangible Book Value per Share - number of estimations,Matrix,33%,235,282
+anl4_tot_gw_ft,Total Goodwill - forecast type (revision/new/...),Matrix,85%,138,400
+anl4_total_rec,The total number of recommendations,Vector,62%,175,245
+anl4_totassets_flag,Total Assets - forecast type (revision/new/...),Matrix,81%,598,916
+anl4_totassets_high,Total Assets - The highest estimation,Matrix,72%,86,226
+anl4_totassets_low,Total Assets - The lowest estimation,Matrix,72%,109,265
+anl4_totassets_mean,Total Assets - mean of estimations,Matrix,72%,54,163
+anl4_totassets_median,Total Assets - median of estimations,Matrix,72%,75,192
+anl4_totassets_number,Total Assets - number of estimations,Matrix,72%,492,754
+anl4_totassets_std,Total Assets - standard deviation of estimations,Matrix,32%,87,129
+anl4_totassets_value,Total Assets - actual value,Matrix,36%,95,244
+anl4_totgw_high,Total Goodwill - The highest estimation,Matrix,53%,39,77
+anl4_totgw_low,Total Goodwill - The lowest estimation,Matrix,53%,40,71
+anl4_totgw_mean,Total Goodwill - mean of estimations,Matrix,53%,44,96
+anl4_totgw_median,Total Goodwill - median of estimations,Matrix,53%,26,69
+anl4_totgw_number,Total Goodwill - number of estimations,Matrix,53%,49,130
+anl4_under,The number of Underweight recommendations,Vector,62%,9,12
+est_bookvalue_ps,Book value per share - average of estimations,Matrix,67%,191,676
+est_capex,Capital Expenditures - mean of estimations,Matrix,64%,208,2577
+est_cashflow_fin,Cash Flow From Financing - mean of estimations,Matrix,62%,98,348
+est_cashflow_invst,Cash Flow From Investing - mean of estimations,Matrix,61%,90,239
+est_cashflow_op,Cash Flow From Operations - mean of estimations,Matrix,65%,133,504
+est_cashflow_ps,Cash Flow Per Share - average of estimations,Matrix,32%,66,142
+est_dividend_ps,Dividend per share - average of estimations,Matrix,48%,61,129
+est_ebit,Earnings before interest and taxes - mean of estimations,Matrix,73%,111,1210
+est_ebitda,"Earnings before interest, taxes, depreciation, and amortization - mean of estimations",Matrix,60%,109,1112
+est_eps,Earnings per share - mean of estimations,Matrix,78%,621,1824
+est_epsa,Earnings per share adjusted by excluding extraordinary items and stock option expenses - average of estimations,Matrix,15%,146,245
+est_epsr,GAAP Earnings per share - mean of estimations,Matrix,74%,276,1487
+est_fcf,Free Cash Flow - Mean of Estimations,Matrix,57%,72,231
+est_fcf_ps,Free Cash Flow Per Share - Mean of Estimations,Matrix,46%,51,92
+est_ffo,"Funds From Operation - Summary on Estimations, Mean",Matrix,4%,11,18
+est_grossincome,Gross income - Mean of estimations,Matrix,62%,111,471
+est_netdebt,Net debt - mean of estimations,Matrix,54%,55,131
+est_netprofit,Net profit - mean of estimations,Matrix,78%,241,700
+est_netprofit_adj,Adjusted net income - Mean of estimations,Matrix,77%,72,283
+est_ptp,Pretax income - mean of estimations,Matrix,75%,118,633
+est_ptpr,Reported pretax income - mean of estimations,Matrix,43%,71,160
+est_rd_expense,Research and Development Expense - mean of estimations,Matrix,31%,358,901
+est_sales,Sales - mean of estimations,Matrix,74%,245,997
+est_sga,SGA - mean of estimations,Matrix,51%,67,210
+est_shequity,Mean of SH Equity segment - mean of estimations,Matrix,75%,127,521
+est_tbv_ps,Tangible Book Value per Share - mean of estimations,Matrix,34%,51,90
+est_tot_assets,Total Assets - mean of estimations,Matrix,75%,151,395
+est_tot_goodwill,Total Goodwill - mean of estimations,Matrix,56%,81,186

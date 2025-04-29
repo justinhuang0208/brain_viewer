@@ -1,0 +1,75 @@
+Field,Description,Type,Coverage,Users,Alphas
+call_breakeven_10,Price at which a stock's call options with expiration 10 days in the future break even based on its recent bid/ask mean.,Matrix,70%,799,1732
+call_breakeven_1080,Price at which a stock's call options with expiration 1080 days in the future break even based on its recent bid/ask mean.,Matrix,70%,302,752
+call_breakeven_120,Price at which a stock's call options with expiration 120 days in the future break even based on its recent bid/ask mean.,Matrix,70%,195,593
+call_breakeven_150,Price at which a stock's call options with expiration 150 days in the future break even based on its recent bid/ask mean.,Matrix,70%,115,403
+call_breakeven_180,Price at which a stock's call options with expiration 180 days in the future break even based on its recent bid/ask mean.,Matrix,70%,143,458
+call_breakeven_20,Price at which a stock's call options with expiration 20 days in the future break even based on its recent bid/ask mean.,Matrix,70%,569,1033
+call_breakeven_270,Price at which a stock's call options with expiration 270 days in the future break even based on its recent bid/ask mean.,Matrix,70%,101,359
+call_breakeven_30,Price at which a stock's call options with expiration 30 days in the future break even based on its recent bid/ask mean.,Matrix,70%,187,526
+call_breakeven_360,Price at which a stock's call options with expiration 360 days in the future break even based on its recent bid/ask mean.,Matrix,70%,114,278
+call_breakeven_60,Price at which a stock's call options with expiration 60 days in the future break even based on its recent bid/ask mean.,Matrix,70%,126,379
+call_breakeven_720,Price at which a stock's call options with expiration 720 days in the future break even based on its recent bid/ask mean.,Matrix,70%,154,342
+call_breakeven_90,Price at which a stock's call options with expiration 90 days in the future break even based on its recent bid/ask mean.,Matrix,70%,126,227
+forward_price_10,Forward price at 10 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,195,404
+forward_price_1080,Forward price at 1080 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,95,258
+forward_price_120,Forward price at 120 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,82,143
+forward_price_150,Forward price at 150 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,72,200
+forward_price_180,"Forward price at 180 days derived from a synthetic long option with payoff similar to long stock + option dynamics. combination of long ATM call, and short ATM put.",Matrix,70%,63,199
+forward_price_20,Forward price at 20 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,113,264
+forward_price_270,Forward price at 270 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,70,218
+forward_price_30,Forward price at 30 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,94,230
+forward_price_360,Forward price at 360 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,63,301
+forward_price_60,Forward price at 60 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,64,155
+forward_price_720,Forward price at 720 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,62,248
+forward_price_90,Forward price at 90 days derived from a synthetic long option with payoff similar to long stock + option dynamics. Combination of long ATM call and short ATM put.,Matrix,70%,70,149
+option_breakeven_10,Price at which a stock's options with expiration 10 days in the future break even based on its recent bid/ask mean.,Matrix,70%,151,420
+option_breakeven_1080,Price at which a stock's options with expiration 1080 days in the future break even based on its recent bid/ask mean.,Matrix,70%,80,217
+option_breakeven_120,Price at which a stock's options with expiration 120 days in the future break even based on its recent bid/ask mean.,Matrix,70%,87,344
+option_breakeven_150,Price at which a stock's options with expiration 150 days in the future break even based on its recent bid/ask mean.,Matrix,70%,57,164
+option_breakeven_180,Price at which a stock's options with expiration 180 days in the future break even based on its recent bid/ask mean.,Matrix,70%,79,257
+option_breakeven_20,Price at which a stock's options with expiration 20 days in the future break even based on its recent bid/ask mean.,Matrix,70%,82,177
+option_breakeven_270,Price at which a stock's options with expiration 270 days in the future break even based on its recent bid/ask mean.,Matrix,70%,79,388
+option_breakeven_30,Price at which a stock's options with expiration 30 days in the future break even based on its recent bid/ask mean.,Matrix,70%,66,145
+option_breakeven_360,Price at which a stock's options with expiration 360 days in the future break even based on its recent bid/ask mean.,Matrix,70%,55,217
+option_breakeven_60,Price at which a stock's options with expiration 60 days in the future break even based on its recent bid/ask mean.,Matrix,70%,54,126
+option_breakeven_720,Price at which a stock's options with expiration 720 days in the future break even based on its recent bid/ask mean.,Matrix,70%,54,141
+option_breakeven_90,Price at which a stock's options with expiration 90 days in the future break even based on its recent bid/ask mean.,Matrix,70%,56,168
+pcr_oi_10,Ratio of put open interest to call open interest on a stock's options with expiration 10 days in the future.,Matrix,70%,242,597
+pcr_oi_1080,Ratio of put open interest to call open interest on a stock's options with expiration 1080 days in the future.,Matrix,70%,144,429
+pcr_oi_120,Ratio of put open interest to call open interest on a stock's options with expiration 120 days in the future.,Matrix,70%,139,569
+pcr_oi_150,Ratio of put open interest to call open interest on a stock's options with expiration 150 days in the future.,Matrix,70%,150,267
+pcr_oi_180,Ratio of put open interest to call open interest on a stock's options with expiration 180 days in the future.,Matrix,70%,297,454
+pcr_oi_20,Ratio of put open interest to call open interest on a stock's options with expiration 20 days in the future.,Matrix,70%,137,258
+pcr_oi_270,Ratio of put open interest to call open interest on a stock's options with expiration 270 days in the future.,Matrix,70%,3054,3993
+pcr_oi_30,Ratio of put open interest to call open interest on a stock's options with expiration 30 days in the future.,Matrix,70%,90,246
+pcr_oi_360,Ratio of put open interest to call open interest on a stock's options with expiration 360 days in the future.,Matrix,70%,85,255
+pcr_oi_60,Ratio of put open interest to call open interest on a stock's options with expiration 60 days in the future.,Matrix,70%,87,209
+pcr_oi_720,Ratio of put open interest to call open interest on a stock's options with expiration 720 days in the future.,Matrix,70%,83,209
+pcr_oi_90,Ratio of put open interest to call open interest on a stock's options with expiration 90 days in the future.,Matrix,70%,92,391
+pcr_oi_all,Ratio of put open interest to call open interest for all maturities on stock's options.,Matrix,70%,185,542
+pcr_vol_10,Ratio of put volume to call volume on a stock's options with expiration 10 days in the future.,Matrix,70%,90,178
+pcr_vol_1080,Ratio of put volume to call volume on a stock's options with expiration 1080 days in the future.,Matrix,70%,68,206
+pcr_vol_120,Ratio of put volume to call volume on a stock's options with expiration 120 days in the future.,Matrix,70%,45,104
+pcr_vol_150,Ratio of put volume to call volume on a stock's options with expiration 150 days in the future.,Matrix,70%,45,141
+pcr_vol_180,Ratio of put volume to call volume on a stock's options with expiration 180 days in the future.,Matrix,70%,56,147
+pcr_vol_20,Ratio of put volume to call volume on a stock's options with expiration 20 days in the future.,Matrix,70%,46,83
+pcr_vol_270,Ratio of put volume to call volume on a stock's options with expiration 270 days in the future.,Matrix,70%,55,203
+pcr_vol_30,Ratio of put volume to call volume on a stock's options with expiration 30 days in the future.,Matrix,70%,52,102
+pcr_vol_360,Ratio of put volume to call volume on a stock's options with expiration 360 days in the future.,Matrix,70%,64,164
+pcr_vol_60,Ratio of put volume to call volume on a stock's options with expiration 60 days in the future.,Matrix,70%,51,95
+pcr_vol_720,Ratio of put volume to call volume on a stock's options with expiration 720 days in the future.,Matrix,70%,52,92
+pcr_vol_90,Ratio of put volume to call volume on a stock's options with expiration 90 days in the future.,Matrix,70%,27,43
+pcr_vol_all,Ratio of put volume to call volume for all maturities on stock's options.,Matrix,70%,77,157
+put_breakeven_10,Price at which a stock's put options with expiration 10 days in the future break even based on its recent bid/ask mean.,Matrix,70%,201,401
+put_breakeven_1080,Price at which a stock's put options with expiration 1080 days in the future break even based on its recent bid/ask mean.,Matrix,70%,236,379
+put_breakeven_120,Price at which a stock's put options with expiration 120 days in the future break even based on its recent bid/ask mean.,Matrix,70%,127,221
+put_breakeven_150,Price at which a stock's put options with expiration 150 days in the future break even based on its recent bid/ask mean.,Matrix,70%,72,186
+put_breakeven_180,Price at which a stock's put options with expiration 180 days in the future break even based on its recent bid/ask mean.,Matrix,70%,86,170
+put_breakeven_20,Price at which a stock's put options with expiration 20 days in the future break even based on its recent bid/ask mean.,Matrix,70%,99,190
+put_breakeven_270,Price at which a stock's put options with expiration 270 days in the future break even based on its recent bid/ask mean.,Matrix,70%,78,231
+put_breakeven_30,Price at which a stock's put options with expiration 30 days in the future break even based on its recent bid/ask mean.,Matrix,70%,85,196
+put_breakeven_360,Price at which a stock's put options with expiration 360 days in the future break even based on its recent bid/ask mean.,Matrix,70%,96,170
+put_breakeven_60,Price at which a stock's put options with expiration 60 days in the future break even based on its recent bid/ask mean.,Matrix,70%,64,180
+put_breakeven_720,Price at which a stock's put options with expiration 720 days in the future break even based on its recent bid/ask mean.,Matrix,70%,123,227
+put_breakeven_90,Price at which a stock's put options with expiration 90 days in the future break even based on its recent bid/ask mean.,Matrix,70%,108,251

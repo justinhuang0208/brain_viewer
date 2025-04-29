@@ -1,0 +1,169 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv13_1l_scibr,grouping fields,Group,92%,33,61
+pv13_2l_scibr,grouping fields,Group,100%,16,34
+pv13_3l_scibr,grouping fields,Group,100%,14,21
+pv13_4l_scibr,grouping fields,Group,100%,19,27
+pv13_5l_scibr,grouping fields,Group,100%,15,26
+pv13_6l_scibr,grouping fields,Group,100%,65,93
+pv13_com_page_rank,the PageRank of competitors,Matrix,89%,238,626
+pv13_com_rk_au,the HITS authority score of competitors,Matrix,89%,277,684
+pv13_custretsig_retsig,Sign of customer return,Matrix,100%,115,370
+pv13_di_5l,grouping fields,Group,100%,1,1
+pv13_di_6l,grouping fields,Group,100%,2,2
+pv13_h2_min2_1k_sector,Grouping fields for top 1000,Group,36%,50,190
+pv13_h2_sector,grouping fields,Group,100%,279,1101
+pv13_h_f1_sector,grouping fields,Group,100%,363,1130
+pv13_h_f3_sector,grouping fields,Group,100%,81,448
+pv13_h_min10_all_sector,grouping fields,Group,100%,101,649
+pv13_h_min10_top3000_sector,grouping fields,Group,100%,85,471
+pv13_h_min20_top3000_sector,grouping fields,Group,100%,104,667
+pv13_h_min22_1000_sector,Grouping fields for top 1000,Group,36%,44,220
+pv13_h_min24_500_sector,Grouping fields for top 500,Group,18%,39,55
+pv13_h_min2_3000_sector,grouping fields,Group,100%,740,2970
+pv13_h_min2_focused_pureplay_3000_sector,grouping fields,Group,100%,675,2101
+pv13_h_min2_focused_sector,Grouping fields for top 200,Group,18%,16,18
+pv13_h_min30_3000_mapped_sector,grouping fields,Group,100%,56,379
+pv13_h_min51_f3_sector,grouping fields,Group,100%,81,609
+pv13_h_min52_1k_sector,Grouping fields for top 1000,Group,36%,25,171
+pv13_h_min52_3000_sector,grouping fields,Group,100%,55,370
+pv13_h_min5_3000_sector,grouping fields,Group,100%,60,366
+pv13_h_min5_500_sector,Grouping fields,Group,18%,28,42
+pv13_hierarchy23_513_sector,grouping fields,Group,99%,11,16
+pv13_hierarchy23_sector,grouping fields,Group,100%,49,58
+pv13_hierarchy2_513_sector,grouping fields,Group,99%,4,4
+pv13_hierarchy2_min2_1k_513_sector,grouping fields,Group,35%,0,0
+pv13_hierarchy_f1_513_sector,grouping fields,Group,99%,5,8
+pv13_hierarchy_f2_513_sector,grouping fields,Group,99%,10,10
+pv13_hierarchy_f2_sector,grouping fields,Group,100%,13,15
+pv13_hierarchy_f3_513_sector,grouping fields,Group,99%,1,1
+pv13_hierarchy_f4_513_sector,grouping fields,Group,99%,2,2
+pv13_hierarchy_f4_sector,grouping fields,Group,100%,3,3
+pv13_hierarchy_min100_2000_513_sector,grouping fields,Group,69%,3,3
+pv13_hierarchy_min100_corr21_513_sector,grouping fields,Group,62%,7,12
+pv13_hierarchy_min100_corr21_sector,grouping fields,Group,64%,0,0
+pv13_hierarchy_min10_1000_513_sector,grouping fields,Group,35%,0,0
+pv13_hierarchy_min10_2k_513_sector,grouping fields,Group,69%,2,2
+pv13_hierarchy_min10_2k_sector,grouping fields,Group,71%,0,0
+pv13_hierarchy_min10_3k_all_sector,grouping fields,Group,100%,1,2
+pv13_hierarchy_min10_513_sector,grouping fields,Group,69%,1,1
+pv13_hierarchy_min10_industry_3000_513_sector,grouping fields,Group,99%,5,5
+pv13_hierarchy_min10_industry_3000_sector,grouping fields,Group,100%,6,8
+pv13_hierarchy_min10_sector,grouping fields,Group,71%,4,9
+pv13_hierarchy_min10_sector_3000_513_sector,grouping fields,Group,99%,1,1
+pv13_hierarchy_min10_sector_3000_sector,grouping fields,Group,100%,3,5
+pv13_hierarchy_min10_top3000_513_sector,grouping fields,Group,99%,1,1
+pv13_hierarchy_min20_3k_513_sector,grouping fields,Group,99%,2,2
+pv13_hierarchy_min20_3k_sector,grouping fields,Group,100%,2,2
+pv13_hierarchy_min20_513_sector,grouping fields,Group,69%,2,2
+pv13_hierarchy_min20_f3_513_sector,grouping fields,Group,99%,1,1
+pv13_hierarchy_min20_sector,grouping fields,Group,71%,1,1
+pv13_hierarchy_min20_top3000_513_sector,grouping fields,Group,99%,3,5
+pv13_hierarchy_min22_1000_513_sector,grouping fields,Group,35%,1,1
+pv13_hierarchy_min22_513_sector,grouping fields,Group,69%,0,0
+pv13_hierarchy_min22_sector,grouping fields,Group,71%,1,2
+pv13_hierarchy_min25_513_sector,grouping fields,Group,69%,0,0
+pv13_hierarchy_min25_sector,grouping fields,Group,71%,0,0
+pv13_hierarchy_min2_1000_513_sector,grouping fields,Group,35%,1,1
+pv13_hierarchy_min2_3000_513_sector,grouping fields,Group,99%,3,3
+pv13_hierarchy_min2_513_sector,grouping fields,Group,69%,3,3
+pv13_hierarchy_min2_focused_only_513_sector,grouping fields,Group,69%,1,1
+pv13_hierarchy_min2_focused_only_sector,grouping fields,Group,71%,5,5
+pv13_hierarchy_min2_focused_pureplay_3000_513_sector,grouping fields,Group,99%,226,284
+pv13_hierarchy_min2_focused_pureplay_513_sector,grouping fields,Group,69%,4,4
+pv13_hierarchy_min2_focused_pureplay_sector,grouping fields,Group,71%,4,4
+pv13_hierarchy_min2_pureplay_only_513_sector,grouping fields,Group,69%,0,0
+pv13_hierarchy_min2_pureplay_only_sector,grouping fields,Group,71%,0,0
+pv13_hierarchy_min2_sector,grouping fields,Group,71%,7,9
+pv13_hierarchy_min30_3000_513_sector,grouping fields,Group,99%,2,3
+pv13_hierarchy_min30_3000_mapped_513_sector,grouping fields,Group,99%,2,3
+pv13_hierarchy_min30_513_sector,grouping fields,Group,69%,1,1
+pv13_hierarchy_min30_sector,grouping fields,Group,71%,0,0
+pv13_hierarchy_min40_3000_513_sector,grouping fields,Group,99%,4,6
+pv13_hierarchy_min50_f3_513_sector,grouping fields,Group,99%,4,4
+pv13_hierarchy_min51_f1_513_sector,grouping fields,Group,99%,3,4
+pv13_hierarchy_min51_f1_sector,grouping fields,Group,100%,9,16
+pv13_hierarchy_min51_f2_513_sector,grouping fields,Group,99%,1,1
+pv13_hierarchy_min51_f2_sector,grouping fields,Group,100%,0,0
+pv13_hierarchy_min51_f3_513_sector,grouping fields,Group,99%,1,1
+pv13_hierarchy_min51_f4_513_sector,grouping fields,Group,99%,1,2
+pv13_hierarchy_min51_f4_sector,grouping fields,Group,100%,8,8
+pv13_hierarchy_min52_1k_513_sector,grouping fields,Group,35%,1,1
+pv13_hierarchy_min52_2k_513_sector,grouping fields,Group,69%,0,0
+pv13_hierarchy_min52_2k_sector,grouping fields,Group,71%,2,2
+pv13_hierarchy_min52_513_sector,grouping fields,Group,99%,0,0
+pv13_hierarchy_min52_sector,grouping fields,Group,100%,1,1
+pv13_hierarchy_min54_3000_sector,grouping fields,Group,100%,3,3
+pv13_hierarchy_min5_1000_513_sector,grouping fields,Group,35%,3,3
+pv13_hierarchy_min5_3000_513_sector,grouping fields,Group,99%,3,3
+pv13_hierarchy_min5_513_sector,grouping fields,Group,69%,1,1
+pv13_hierarchy_min5_corr21_1000_513_sector,grouping fields,Group,35%,0,0
+pv13_hierarchy_min5_f3g2_sector,grouping fields,Group,100%,10,12
+pv13_hierarchy_min5_sector,grouping fields,Group,71%,3,3
+pv13_hierarchy_sector,grouping fields,Group,100%,14,19
+pv13_hierarchys32_513_sector,grouping fields,Group,99%,4,4
+pv13_hierarchys32_sector,grouping fields,Group,100%,6,10
+pv13_new_1l_scibr,grouping fields,Group,87%,5,5
+pv13_new_2l_scibr,grouping fields,Group,100%,7,9
+pv13_new_3l_scibr,grouping fields,Group,100%,8,9
+pv13_new_4l_scibr,grouping fields,Group,100%,6,6
+pv13_new_5l_scibr,grouping fields,Group,100%,20,23
+pv13_new_6l_scibr,grouping fields,Group,100%,12,33
+pv13_ompetitorgraphrank_hub_rank,the HITS hub score of competitors,Matrix,89%,139,437
+pv13_percentregion,Exposure percentage,Vector,98%,0,0
+pv13_r2_liquid_min10_sector,grouping fields,Group,18%,227,473
+pv13_r2_liquid_min2_sector,grouping fields,Group,18%,32,51
+pv13_r2_liquid_min5_sector,grouping fields,Group,18%,44,91
+pv13_r2_min10_1000_sector,grouping fields,Group,36%,29,166
+pv13_r2_min10_3000_sector,grouping fields,Group,100%,128,527
+pv13_r2_min20_1000_sector,grouping fields,Group,36%,74,232
+pv13_r2_min20_3000_sector,grouping fields,Group,100%,1100,2971
+pv13_r2_min2_1000_sector,grouping fields,Group,36%,34,162
+pv13_r2_min2_3000_sector,grouping fields,Group,100%,1293,3474
+pv13_r2_min5_1000_sector,grouping fields,Group,36%,39,164
+pv13_r2_min5_3000_sector,grouping fields,Group,100%,137,665
+pv13_rcsed_6l,grouping fields,Group,100%,0,0
+pv13_region,Unique code of the region,Vector,98%,0,0
+pv13_reportperiodend,Stated end date for the report,Vector,99%,0,0
+pv13_reportperiodlen,The number of units which the report covers prior to the stated end date,Vector,99%,0,0
+pv13_reporttype,Type of report,Vector,99%,0,0
+pv13_revere_city,City code,Matrix,99%,69,195
+pv13_revere_company_total,Total number of companies in the sector,Matrix,62%,40,55
+pv13_revere_comproduct_company,Company product,Matrix,40%,9,9
+pv13_revere_country,Country code,Matrix,100%,50,144
+pv13_revere_index_cap,Company market capitalization,Matrix,100%,180,246
+pv13_revere_index_value,Value of specified index for the date,Matrix,100%,40,51
+pv13_revere_key_sector_total,Number of key focus sectors for the company,Matrix,100%,143,349
+pv13_revere_level,Level of the sector within the hierarchy,Matrix,62%,62,117
+pv13_revere_parent,Code of parent sector,Matrix,62%,10,12
+pv13_revere_term,"Indicates when a sector is the terminal sector (i.e., no sub-sectors)",Matrix,41%,68,173
+pv13_revere_term_sector_total,Number of terminal sectors for the company,Matrix,100%,96,202
+pv13_revere_zipcode,Zip code,Matrix,92%,58,196
+pv13_reveremap,Mapping data,Matrix,100%,109,268
+pv13_rha2_min10_1000_513_sector,grouping fields,Group,35%,0,0
+pv13_rha2_min10_3000_513_sector,grouping fields,Group,99%,7,9
+pv13_rha2_min10_513_sector,grouping fields,Group,69%,1,1
+pv13_rha2_min10_sector,grouping fields,Group,72%,2,2
+pv13_rha2_min20_3000_513_sector,grouping fields,Group,99%,5,5
+pv13_rha2_min20_513_sector,grouping fields,Group,69%,2,5
+pv13_rha2_min20_sector,grouping fields,Group,72%,1,2
+pv13_rha2_min2_1000_513_sector,grouping fields,Group,35%,1,1
+pv13_rha2_min2_3000_513_sector,grouping fields,Group,99%,5,5
+pv13_rha2_min2_513_sector,grouping fields,Group,69%,0,0
+pv13_rha2_min2_sector,grouping fields,Group,72%,2,3
+pv13_rha2_min30_3000_513_sector,grouping fields,Group,99%,1,1
+pv13_rha2_min40_3000_513_sector,grouping fields,Group,99%,2,3
+pv13_rha2_min5_1000_513_sector,grouping fields,Group,35%,2,2
+pv13_rha2_min5_3000_513_sector,grouping fields,Group,99%,6,6
+pv13_rha2_min5_513_sector,grouping fields,Group,69%,0,0
+pv13_rha2_min5_sector,grouping fields,Group,72%,7,7
+pv13_ustomergraphrank_auth_rank,the HITS authority score of customers,Matrix,79%,115,236
+pv13_ustomergraphrank_hub_rank,the HITS hub score of customers,Matrix,79%,197,477
+pv13_ustomergraphrank_page_rank,the PageRank of customers,Matrix,79%,145,355
+rel_num_all,number of the companies whose product overlapped with the instrument,Matrix,99%,221,710
+rel_num_comp,number of the instrument's competitors,Matrix,89%,323,775
+rel_num_cust,number of the instrument's customers,Matrix,50%,282,790
+rel_num_part,number of the instrument's partners,Matrix,78%,304,764
+rel_ret_all,Averaged one-day return of the companies whose product overlapped with the instrument,Matrix,96%,221,797
+rel_ret_comp,Averaged one-day return of the competing companies,Matrix,82%,709,1172
+rel_ret_cust,averaged one-day-return of the instrument's customers,Matrix,49%,135,394
+rel_ret_part,Averaged one-day return of the instrument's partners,Matrix,70%,260,765

@@ -1,0 +1,13 @@
+Field,Description,Type,Coverage,Users,Alphas
+scl12_alltype_buzzvec,sentiment volume,Vector,95%,1709,2528
+scl12_alltype_sentvec,sentiment,Vector,95%,114,193
+scl12_alltype_typevec,instrument type index,Vector,95%,58,103
+scl12_buzz,relative sentiment volume,Matrix,95%,7435,10942
+scl12_cubealltype_buzzvec,sentiment volume,Vector,99%,3,5
+scl12_cubealltype_sentvec,sentiment,Vector,99%,14,21
+scl12_cubealltype_typevec,instrument type index,Vector,99%,5,8
+scl12_sentiment,sentiment,Matrix,94%,485,1840
+snt_buzz,"negative relative sentiment volume, fill nan with 0",Matrix,95%,712,2511
+snt_buzz_bfl,"negative relative sentiment volume, fill nan with 1",Matrix,100%,787,2249
+snt_buzz_ret,negative return of relative sentiment volume,Matrix,95%,1049,2541
+snt_value,"negative sentiment, fill nan with 0",Matrix,94%,332,1591

@@ -1,0 +1,17 @@
+Field,Description,Type,Coverage,Users,Alphas
+beta_last_30_days_spy,Beta to SPY in 30 Days,Matrix,78%,256,699
+beta_last_360_days_spy,Beta to SPY in 360 Days,Matrix,76%,302,653
+beta_last_60_days_spy,Beta to SPY in 60 Days,Matrix,77%,444,947
+beta_last_90_days_spy,Beta to SPY in 90 Days,Matrix,77%,197,758
+correlation_last_30_days_spy,Correlation to SPY in 30 Days,Matrix,78%,222,626
+correlation_last_360_days_spy,Correlation to SPY in 360 Days,Matrix,76%,147,375
+correlation_last_60_days_spy,Correlation to SPY in 60 Days,Matrix,77%,592,1080
+correlation_last_90_days_spy,Correlation to SPY in 90 Days,Matrix,77%,165,437
+systematic_risk_last_30_days,Systematic Risk Last 30 Days,Matrix,77%,175,470
+systematic_risk_last_360_days,Systematic Risk Last 360 Days,Matrix,75%,208,469
+systematic_risk_last_60_days,Systematic Risk Last 60 Days,Matrix,77%,479,787
+systematic_risk_last_90_days,Systematic Risk Last 90 Days,Matrix,77%,152,384
+unsystematic_risk_last_30_days,Unsystematic Risk Last 30 Days - Relative to SPY,Matrix,77%,180,538
+unsystematic_risk_last_360_days,Unsystematic Risk Last 360 Days - Relative to SPY,Matrix,75%,440,1270
+unsystematic_risk_last_60_days,Unsystematic Risk Last 60 Days - Relative to SPY,Matrix,77%,544,1194
+unsystematic_risk_last_90_days,Unsystematic Risk Last 90 Days - Relative to SPY,Matrix,77%,289,757
