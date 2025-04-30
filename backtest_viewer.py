@@ -13,6 +13,7 @@ from PySide6.QtCore import Qt, QDir, QModelIndex, QSortFilterProxyModel, Signal,
 from PySide6.QtGui import QColor, QFont, QPalette, QIcon, QAction # Added QAction
 import pandas as pd
 import matplotlib.pyplot as plt
+from PySide6.QtGui import QGuiApplication
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib
 import webbrowser
@@ -651,8 +652,8 @@ class MainWindow(QMainWindow):
         # === 合併選取操作下拉按鈕結束 ===
         
         # --- Modification Start: Import Button with Menu ---
-        self.import_button = QPushButton("匯入 Code") # Renamed button
-        self.import_button.setToolTip("將 Code 匯入到生成器")
+        self.import_button = QPushButton("匯入 Code 至...") # Renamed button
+        self.import_button.setToolTip("將 Code 匯入到生成器，或匯入數據至模擬表格")
         self.import_button.setStyleSheet("padding: 4px 12px;")
         self.import_button.setEnabled(False) # Initially disabled
         
@@ -684,6 +685,14 @@ class MainWindow(QMainWindow):
         
         top_right.addWidget(self.import_button) # Add the new button with menu
         # --- Modification End ---
+        
+        # === 新增：匯出 Code 為 List 按鈕 ===
+        self.export_code_list_button = QPushButton("匯出 Code 為 List")
+        self.export_code_list_button.setToolTip("將目前檢視的 CSV 'code' 欄位轉為 Python list 並複製到剪貼簿")
+        self.export_code_list_button.setStyleSheet("padding: 4px 12px;")
+        self.export_code_list_button.setEnabled(False)
+        self.export_code_list_button.clicked.connect(self.export_code_column_as_list)
+        top_right.addWidget(self.export_code_list_button)
 
         # 組合左右兩側到頂部布局
         top_layout.addLayout(top_left, 1)
@@ -919,7 +928,8 @@ class MainWindow(QMainWindow):
             self.selection_menu_button.setEnabled(True)
             self.column_view_button.setEnabled(True)
             self.import_button.setEnabled(True) # Enable the new import button
-            
+            self.export_code_list_button.setEnabled(True) # Enable export button
+                         
             self.apply_column_visibility()
 
             # Update chart
@@ -935,6 +945,48 @@ class MainWindow(QMainWindow):
             self.visible_columns = []
             self.visible_columns = []
 
+    def export_code_column_as_list(self):
+        # 匯出目前載入的 CSV 檔案的 'code' 欄位為 Python list 並複製到剪貼簿
+        try:
+            # 檢查是否有載入檔案
+            if not hasattr(self, 'last_loaded_index') or self.last_loaded_index is None:
+                QMessageBox.warning(self, "無法匯出", "請先載入回測結果檔案。")
+                return
+    
+            # 取得目前檔案路徑
+            if isinstance(self.last_loaded_index.model(), QSortFilterProxyModel):
+                source_index = self.last_loaded_index.model().mapToSource(self.last_loaded_index)
+            else:
+                source_index = self.last_loaded_index
+            file_path = self.file_model.filePath(source_index)
+    
+            if not os.path.exists(file_path):
+                QMessageBox.critical(self, "錯誤", f"找不到檔案：{file_path}")
+                return
+    
+            # 讀取 CSV 並提取 'code' 欄位
+            import pandas as pd
+            try:
+                df = pd.read_csv(file_path, usecols=['code'])
+            except ValueError as ve:
+                # 欄位不存在
+                QMessageBox.critical(self, "錯誤", f"CSV 檔案中找不到 'code' 欄位。")
+                return
+            except Exception as e:
+                QMessageBox.critical(self, "錯誤", f"讀取 CSV 檔案時發生錯誤：{str(e)}")
+                return
+    
+            code_list = df['code'].dropna().astype(str).tolist()
+            py_list_str = str(code_list)
+    
+            # 複製到剪貼簿（使用 Qt 內建 clipboard）
+            clipboard = QGuiApplication.clipboard()
+            clipboard.setText(py_list_str)
+    
+            QMessageBox.information(self, "匯出成功", "CSV 'code' 欄位內容已轉換為 Python list 並複製到剪貼板")
+        except Exception as e:
+            QMessageBox.critical(self, "錯誤", f"匯出時發生未預期錯誤：{str(e)}")
+    
     def filter_data(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
