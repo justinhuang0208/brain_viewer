@@ -909,6 +909,11 @@ class MainWindow(QMainWindow):
                 except:
                     continue  # Skip if column cannot be cast to float
 
+            # Reset filters and input fields after loading a new file
+            self._text_filter = ""
+            self._numeric_filter = ""
+            self.search_input.clear()
+            self.condition_value.clear()
 
             # Enable buttons
             self.selection_menu_button.setEnabled(True)
@@ -927,6 +932,7 @@ class MainWindow(QMainWindow):
             self.import_button.setEnabled(False) # Disable import button on error
             self.current_dataset = None
             self.proxy_model = None
+            self.visible_columns = []
             self.visible_columns = []
 
     def filter_data(self):
@@ -1195,37 +1201,21 @@ class MainWindow(QMainWindow):
             self.status_bar.showMessage("請輸入有效數字進行過濾")
             return
 
-        # 構建 SQL 過濾條件
-        source_model = self.proxy_model.sourceModel()
-        current_filter = source_model.filter_clause
+        # 構建 SQL 數值過濾條件（安全處理欄位名）
+        numeric_filter = f'CAST("{column_name}" AS REAL) {operator} {value}'
+        self._numeric_filter = numeric_filter
 
-        # 構建數值過濾條件
-        numeric_filter = f"CAST({column_name} AS FLOAT) {operator} {value}"
-
-        # 如果已經有過濾條件，則將新條件與現有條件組合
-        if current_filter:
-            combined_filter = f"({current_filter}) AND ({numeric_filter})"
-        else:
-            combined_filter = numeric_filter
-
-        # 應用過濾
-        source_model.set_filter(combined_filter)
-
-        # 更新狀態欄
-        filtered_count = source_model.rowCount()
-        total_count = source_model.row_count
-        self.status_bar.showMessage(f"顯示 {filtered_count}/{total_count} 條記錄 | 數值過濾條件: {column_name} {operator} {value}")
+        self._apply_combined_filter()
 
     # 清除數值過濾
     def clear_numeric_filter(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
 
-        source_model = self.proxy_model.sourceModel()
-        source_model.set_filter("")
+        self._numeric_filter = ""
         self.condition_value.clear()
-        # 如果有文字搜尋，重新套用
-        self.filter_data()
+        self._apply_combined_filter()
+        self.status_bar.showMessage("已清除數值過濾")
 
     # 修改: 開啟自訂欄位選擇對話框
     def open_custom_column_selector(self): # Renamed method
@@ -1664,6 +1654,26 @@ class MainWindow(QMainWindow):
         checked_count = len(source_model.get_checked_rows())
         self.status_bar.showMessage(f"已反轉選取狀態 | 目前共勾選 {checked_count} 項")
     # === 新增結束 ===
+
+    # 組合並應用文字與數值過濾條件
+    def _apply_combined_filter(self):
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            return
+        source_model = self.proxy_model.sourceModel()
+        filters = []
+        if self._text_filter:
+            filters.append(f"({self._text_filter})")
+        if self._numeric_filter:
+            filters.append(f"({self._numeric_filter})")
+        combined_filter = " AND ".join(filters) if filters else ""
+        source_model.set_filter(combined_filter)
+
+        # 狀態欄顯示
+        filtered_count = source_model.rowCount()
+        total_count = source_model.row_count
+        text_status = f"文字過濾: {self.search_input.text()}" if self._text_filter else "文字過濾: 無"
+        numeric_status = f"數值過濾: {self._numeric_filter}" if self._numeric_filter else "數值過濾: 無"
+        self.status_bar.showMessage(f"顯示 {filtered_count}/{total_count} 條記錄 | {text_status} | {numeric_status}")
 
 # ... (if __name__ == "__main__": block remains the same) ...
 
