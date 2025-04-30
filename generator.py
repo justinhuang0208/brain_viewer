@@ -12,13 +12,14 @@ import csv
 import json
 import pandas as pd
 import datetime
-from PySide6.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, 
+import ast # 新增導入
+from PySide6.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QHBoxLayout,
                              QWidget, QLabel, QComboBox, QLineEdit, QTextEdit,
                              QPushButton, QFileDialog, QMessageBox, QTabWidget,
-                             QGroupBox, QFormLayout, QCheckBox, QSpinBox, 
+                             QGroupBox, QFormLayout, QCheckBox, QSpinBox,
                              QDoubleSpinBox, QListWidget, QListWidgetItem,
                               QSplitter, QFrame, QTableWidget, QTableWidgetItem,
-                              QHeaderView, QAbstractItemView, QInputDialog)
+                              QHeaderView, QAbstractItemView, QInputDialog) # QInputDialog 已存在
 from PySide6.QtCore import Qt, QDir, Signal, Slot # Keep Signal and Slot
 from PySide6.QtGui import QFont, QColor
 
@@ -128,11 +129,16 @@ class FieldSelector(QWidget):
         self.clear_field_btn = QPushButton("清空")
         self.clear_field_btn.clicked.connect(self.clear_selected_fields)
         selected_buttons.addWidget(self.clear_field_btn)
-        
+
+        # 新增「輸入自訂字段」按鈕
+        self.custom_field_btn = QPushButton("輸入自訂字段")
+        self.custom_field_btn.clicked.connect(self.open_custom_field_dialog)
+        selected_buttons.addWidget(self.custom_field_btn)
+
         selected_layout.addWidget(self.selected_field_list)
         selected_layout.addLayout(selected_buttons)
         self.selected_group.setLayout(selected_layout)
-        
+
         field_layout.addLayout(type_layout)
         field_layout.addLayout(search_layout)
         field_layout.addWidget(QLabel("可用字段:"))
@@ -229,7 +235,7 @@ class FieldSelector(QWidget):
         type_index = self.type_combo.currentIndex()
         
         # 設置列表項的文本格式
-        self.field_list.setFont(QFont("Consolas", 9))
+        self.field_list.setFont(QFont("Consolas", 14))
         
         for field, data in self.field_data.items():
             field_type = data.get('type', '')
@@ -472,6 +478,80 @@ class FieldSelector(QWidget):
             status_message += f"，跳過 {skipped_count} 個重複或無效項。"
         print(status_message)
         # 可以考慮更新狀態欄或顯示一個短暫的消息框
+
+    def open_custom_field_dialog(self):
+        """打開對話框以輸入自訂字段列表"""
+        default_text = """[
+  "field1 / field2", # 註解 1
+  "field3",          # 註解 2
+]"""
+        text, ok = QInputDialog.getMultiLineText(
+            self,
+            "輸入自訂字段",
+            "請輸入字段列表 (Python list 格式):",
+            default_text
+        )
+
+        if ok and text:
+            try:
+                # 使用 ast.literal_eval 安全解析列表
+                raw_list = ast.literal_eval(text)
+                if not isinstance(raw_list, list):
+                    raise ValueError("輸入的不是有效的 Python 列表")
+
+                added_count = 0
+                skipped_count = 0
+                invalid_count = 0
+
+                for item in raw_list:
+                    if isinstance(item, str):
+                        # 提取字段表達式，忽略 # 後的註解
+                        field_expr = item.split('#')[0].strip()
+                        if field_expr:
+                            # 檢查是否已存在於已選列表
+                            already_exists = False
+                            for i in range(self.selected_field_list.count()):
+                                item_data = self.selected_field_list.item(i).data(Qt.UserRole)
+                                if item_data == field_expr:
+                                    already_exists = True
+                                    break
+
+                            if not already_exists:
+                                # 嘗試使用 add_field_to_selected (如果字段存在於當前加載的數據集)
+                                # 否則，直接添加純文本
+                                if field_expr in self.field_data:
+                                    self.add_field_to_selected(field_expr)
+                                    added_count += 1
+                                else:
+                                    # 如果 Code 不在當前 FieldSelector 加載的數據集字段中，
+                                    # 仍然將其作為純文本添加到已選列表
+                                    new_item = QListWidgetItem(field_expr)
+                                    new_item.setData(Qt.UserRole, field_expr) # 保存原始名稱
+                                    new_item.setToolTip(f"自訂輸入的 Code: {field_expr}\n(不在當前數據集字段列表中)")
+                                    self.selected_field_list.addItem(new_item)
+                                    added_count += 1
+                            else:
+                                skipped_count += 1 # 如果已存在則跳過
+                        else:
+                            invalid_count += 1 # 空字符串或只有註解
+                    else:
+                        invalid_count += 1 # 非字符串項
+
+                status_message = f"自訂字段處理完成：成功添加 {added_count} 個"
+                if skipped_count > 0:
+                    status_message += f"，跳過 {skipped_count} 個重複項"
+                if invalid_count > 0:
+                     status_message += f"，忽略 {invalid_count} 個無效或空項。"
+                print(status_message)
+                # 可以考慮顯示一個消息框
+                # QMessageBox.information(self, "處理結果", status_message)
+
+            except (SyntaxError, ValueError) as e:
+                QMessageBox.warning(self, "解析錯誤", f"無法解析輸入的文字為 Python 列表:\n{str(e)}")
+            except Exception as e:
+                QMessageBox.critical(self, "處理錯誤", f"處理自訂字段時發生意外錯誤:\n{str(e)}")
+
+
 class AlphaSyntaxHighlighter(QSyntaxHighlighter):
     """用於 Alpha 模板編輯器的語法高亮器"""
 
@@ -1038,7 +1118,7 @@ class GeneratorMainWindow(QMainWindow):
         
         self.preview_text = QTextEdit()
         self.preview_text.setReadOnly(True)
-        self.preview_text.setFont(QFont("Consolas", 10))
+        self.preview_text.setFont(QFont("Consolas", 14))
         
         preview_layout.addWidget(self.preview_text)
         preview_group.setLayout(preview_layout)
