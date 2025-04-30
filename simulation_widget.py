@@ -171,18 +171,14 @@ class SimulationWidget(QWidget):
         btn_layout = QHBoxLayout() # Combine buttons in one layout
 
         # 資料編輯按鈕與下拉選單
-        self.edit_btn = QPushButton("編輯資料")
-        edit_menu = QMenu(self)
-        add_action = QAction("新增參數", self)
-        dup_action = QAction("複製選取", self)
-        del_action = QAction("刪除選取", self)
-        batch_edit_action = QAction("批量調整", self)
-        edit_menu.addAction(add_action)
-        edit_menu.addAction(dup_action)
-        edit_menu.addAction(del_action)
-        edit_menu.addAction(batch_edit_action)
-        self.edit_btn.setMenu(edit_menu)
+        self.edit_btn = QPushButton("新增參數")
+        self.edit_btn.clicked.connect(self.add_row)
         btn_layout.addWidget(self.edit_btn)
+
+        # 將原本 edit_menu 的三個 action 設為實例屬性，供右鍵選單使用
+        self.dup_action = QAction("複製選取", self)
+        self.del_action = QAction("刪除選取", self)
+        self.batch_edit_action = QAction("批量調整", self)
 
         # 新增：刪除全部資料按鈕
         self.del_all_btn = QPushButton("刪除全部資料")
@@ -199,10 +195,9 @@ class SimulationWidget(QWidget):
         layout.addLayout(btn_layout) # Add the combined button layout
 
         # 連接信號
-        add_action.triggered.connect(self.add_row)
-        dup_action.triggered.connect(self.duplicate_selected_rows)
-        del_action.triggered.connect(self.delete_selected_rows)
-        batch_edit_action.triggered.connect(self.show_batch_edit_dialog)
+        self.dup_action.triggered.connect(self.duplicate_selected_rows)
+        self.del_action.triggered.connect(self.delete_selected_rows)
+        self.batch_edit_action.triggered.connect(self.show_batch_edit_dialog)
         self.del_all_btn.clicked.connect(self.delete_all_rows) # 連接刪除全部按鈕
         self.sim_btn.clicked.connect(self.toggle_simulation) # 改為連接 toggle_simulation
         self.check_login_btn.clicked.connect(self.check_login_status) # Connect new button
@@ -547,10 +542,10 @@ class SimulationWidget(QWidget):
         selected_rows = set()
         for item in self.table.selectedItems():
             selected_rows.add(item.row())
-        
+
         if not selected_rows:
             return
-            
+
         # 檢查選取的行是否都已勾選
         all_checked = True
         for row in selected_rows:
@@ -558,14 +553,23 @@ class SimulationWidget(QWidget):
             if item and item.checkState() != Qt.Checked:
                 all_checked = False
                 break
-            
+
         # 創建選單並根據當前狀態設定文字
         context_menu = QMenu(self)
         check_action = context_menu.addAction("取消勾選" if all_checked else "勾選")
-        
+
+        # 加入複製/刪除/批量調整功能到右鍵選單
+        # 只有在有選取列時才啟用
+        self.dup_action.setEnabled(bool(selected_rows))
+        self.del_action.setEnabled(bool(selected_rows))
+        self.batch_edit_action.setEnabled(bool(selected_rows))
+        context_menu.addAction(self.dup_action)
+        context_menu.addAction(self.del_action)
+        context_menu.addAction(self.batch_edit_action)
+
         # 顯示選單
         action = context_menu.exec_(self.table.mapToGlobal(position))
-        
+
         # 處理選單動作
         if action == check_action:
             new_state = Qt.Unchecked if all_checked else Qt.Checked
