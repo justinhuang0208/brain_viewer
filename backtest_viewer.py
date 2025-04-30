@@ -584,11 +584,22 @@ class MainWindow(QMainWindow):
         self.selection_menu_button.setEnabled(False) # Initially disabled
         self.selection_menu = QMenu(self)
         self.action_invert_selection = QAction("反轉選取", self)
-        self.action_save_selected = QAction("儲存選取", self)
+        self.action_save_selected = QAction("儲存選取為新檔案", self)
         self.action_invert_selection.triggered.connect(self.invert_selection)
         self.action_save_selected.triggered.connect(self.save_selected_rows)
         self.selection_menu.addAction(self.action_invert_selection)
         self.selection_menu.addAction(self.action_save_selected)
+
+        # 新增「附加選取至檔案」動作
+        self.action_append_selected = QAction("附加選取至檔案", self)
+        self.action_append_selected.triggered.connect(self.append_selected_rows)
+        self.selection_menu.addAction(self.action_append_selected)
+
+        # 新增「刪除選取」動作
+        self.action_delete_selected = QAction("刪除選取", self)
+        self.action_delete_selected.triggered.connect(self.delete_selected_rows)
+        self.selection_menu.addAction(self.action_delete_selected)
+        
         self.selection_menu_button.setMenu(self.selection_menu)
 
         # 合併「應用過濾」與「清除過濾」為下拉按鈕
@@ -1369,6 +1380,90 @@ class MainWindow(QMainWindow):
                 self.status_bar.showMessage(f"儲存檔案失敗: {str(e)}")
         else:
             self.status_bar.showMessage("已取消儲存選取的資料")
+
+    # 新增：附加選取至檔案
+    def append_selected_rows(self):
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            QMessageBox.warning(self, "無法附加", "沒有載入的數據集。")
+            return
+
+        source_model = self.proxy_model.sourceModel()
+        checked_rowids = source_model.get_checked_rows()
+
+        if not checked_rowids:
+            QMessageBox.information(self, "沒有選取", "請先勾選要附加的資料列。")
+            return
+
+        file_path, _ = QFileDialog.getOpenFileName(
+            self,
+            "選擇要附加的 CSV 檔案",
+            "",
+            "CSV 檔案 (*.csv)"
+        )
+
+        if not file_path:
+            self.status_bar.showMessage("已取消附加操作")
+            return
+
+        try:
+            rowids_str = ",".join(map(str, checked_rowids))
+            cursor = source_model.db_conn.cursor()
+            cursor.execute(f"SELECT * FROM {source_model.table_name} WHERE rowid IN ({rowids_str})")
+            rows = cursor.fetchall()
+
+            if not rows:
+                QMessageBox.information(self, "沒有資料", "選取的資料列查無資料。")
+                self.status_bar.showMessage("附加失敗：查無資料")
+                return
+
+            df = pd.DataFrame(rows, columns=source_model.columns)
+            df.to_csv(file_path, mode='a', header=False, index=False, encoding='utf-8-sig')
+
+            self.status_bar.showMessage(f"已將 {len(df)} 筆選取的資料附加至 {os.path.basename(file_path)}")
+            QMessageBox.information(self, "附加成功", f"已成功將 {len(df)} 筆資料附加至:\n{file_path}")
+
+        except Exception as e:
+            self.status_bar.showMessage(f"附加檔案失敗: {str(e)}")
+            QMessageBox.critical(self, "附加失敗", f"附加檔案時發生錯誤：\n{str(e)}")
+
+    # 新增：刪除選取的資料列
+    def delete_selected_rows(self):
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            QMessageBox.warning(self, "無法刪除", "沒有載入的數據集。")
+            return
+
+        source_model = self.proxy_model.sourceModel()
+        checked_rowids = source_model.get_checked_rows()
+
+        if not checked_rowids:
+            QMessageBox.information(self, "沒有選取", "請先勾選要刪除的資料列。")
+            return
+
+        reply = QMessageBox.question(
+            self,
+            "確認刪除",
+            f"確定要刪除已勾選的 {len(checked_rowids)} 筆資料嗎？此操作無法復原。",
+            QMessageBox.Yes | QMessageBox.No,
+            QMessageBox.No
+        )
+
+        if reply != QMessageBox.Yes:
+            self.status_bar.showMessage("已取消刪除操作")
+            return
+
+        try:
+            rowids_str = ",".join(map(str, checked_rowids))
+            cursor = source_model.db_conn.cursor()
+            cursor.execute(f"DELETE FROM {source_model.table_name} WHERE rowid IN ({rowids_str})")
+            source_model.db_conn.commit()
+            # 刷新元數據與勾選狀態
+            source_model.refresh_metadata()
+            self.proxy_model.invalidate()
+            self.status_bar.showMessage(f"已刪除 {len(checked_rowids)} 筆資料")
+            QMessageBox.information(self, "刪除成功", f"已成功刪除 {len(checked_rowids)} 筆資料。")
+        except Exception as e:
+            self.status_bar.showMessage(f"刪除資料失敗: {str(e)}")
+            QMessageBox.critical(self, "刪除失敗", f"刪除資料時發生錯誤：\n{str(e)}")
 
     # --- New Methods for Import Actions ---
     @Slot()
