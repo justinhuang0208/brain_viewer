@@ -576,11 +576,32 @@ class MainWindow(QMainWindow):
         refresh_button.setStyleSheet("padding: 4px 12px;")
 
         # 添加儲存選取按鈕
-        self.save_selected_button = QPushButton("儲存選取")
-        self.save_selected_button.setToolTip("將勾選的資料儲存為新的CSV檔案")
-        self.save_selected_button.clicked.connect(self.save_selected_rows)
-        self.save_selected_button.setStyleSheet("padding: 4px 12px;")
-        self.save_selected_button.setEnabled(False) # Initially disabled
+        # 合併「反轉選取」與「儲存選取」為下拉按鈕
+        self.selection_menu_button = QPushButton("選取操作")
+        self.selection_menu_button.setToolTip("選取相關操作")
+        self.selection_menu_button.setStyleSheet("padding: 4px 12px;")
+        self.selection_menu_button.setEnabled(False) # Initially disabled
+        self.selection_menu = QMenu(self)
+        self.action_invert_selection = QAction("反轉選取", self)
+        self.action_save_selected = QAction("儲存選取", self)
+        self.action_invert_selection.triggered.connect(self.invert_selection)
+        self.action_save_selected.triggered.connect(self.save_selected_rows)
+        self.selection_menu.addAction(self.action_invert_selection)
+        self.selection_menu.addAction(self.action_save_selected)
+        self.selection_menu_button.setMenu(self.selection_menu)
+
+        # 合併「應用過濾」與「清除過濾」為下拉按鈕
+        self.filter_menu_button = QPushButton("過濾操作")
+        self.filter_menu_button.setToolTip("數值過濾相關操作")
+        self.filter_menu_button.setStyleSheet("padding: 4px 12px;")
+        self.filter_menu = QMenu(self)
+        self.action_apply_filter = QAction("應用過濾", self)
+        self.action_clear_filter = QAction("清除過濾", self)
+        self.action_apply_filter.triggered.connect(self.apply_numeric_filter)
+        self.action_clear_filter.triggered.connect(self.clear_numeric_filter)
+        self.filter_menu.addAction(self.action_apply_filter)
+        self.filter_menu.addAction(self.action_clear_filter)
+        self.filter_menu_button.setMenu(self.filter_menu)
 
         # 添加條件過濾元素
         self.condition_label = QLabel("條件過濾:")
@@ -590,13 +611,6 @@ class MainWindow(QMainWindow):
         self.condition_value = QLineEdit()  # 輸入過濾值
         self.condition_value.setPlaceholderText("輸入數值...")
         self.condition_value.setMaximumWidth(100)
-        
-        apply_filter_button = QPushButton("應用過濾")
-        apply_filter_button.clicked.connect(self.apply_numeric_filter)
-        
-        clear_filter_button = QPushButton("清除過濾")
-        clear_filter_button.clicked.connect(self.clear_numeric_filter)
-        
         # 布局左側標籤區域
         top_left.addWidget(file_label)
         top_left.addWidget(self.current_file_label)
@@ -611,8 +625,7 @@ class MainWindow(QMainWindow):
         top_right.addWidget(self.condition_column)
         top_right.addWidget(self.condition_operator)
         top_right.addWidget(self.condition_value)
-        top_right.addWidget(apply_filter_button)
-        top_right.addWidget(clear_filter_button)
+        top_right.addWidget(self.filter_menu_button)
         top_right.addWidget(refresh_button)
 
         # 添加欄位顯示選項按鈕及選單
@@ -634,16 +647,8 @@ class MainWindow(QMainWindow):
         self.column_view_button.setMenu(self.column_menu)
 
         top_right.addWidget(self.column_view_button)
-        top_right.addWidget(self.save_selected_button)
-        
-        # === 新增「反轉選取」按鈕 ===
-        self.invert_selection_button = QPushButton("反轉選取")
-        self.invert_selection_button.setToolTip("反轉目前表格中所有項目的勾選狀態")
-        self.invert_selection_button.setEnabled(False)
-        self.invert_selection_button.setStyleSheet("padding: 4px 12px;")
-        self.invert_selection_button.clicked.connect(self.invert_selection)
-        top_right.addWidget(self.invert_selection_button)
-        # === 新增結束 ===
+        top_right.addWidget(self.selection_menu_button)
+        # === 合併選取操作下拉按鈕結束 ===
         
         # --- Modification Start: Import Button with Menu ---
         self.import_button = QPushButton("匯入 Code") # Renamed button
@@ -906,10 +911,9 @@ class MainWindow(QMainWindow):
 
 
             # Enable buttons
-            self.save_selected_button.setEnabled(True)
+            self.selection_menu_button.setEnabled(True)
             self.column_view_button.setEnabled(True)
             self.import_button.setEnabled(True) # Enable the new import button
-            self.invert_selection_button.setEnabled(True) # 啟用反轉選取按鈕
             
             self.apply_column_visibility()
 
@@ -1531,7 +1535,7 @@ class MainWindow(QMainWindow):
                         model = self.proxy_model.sourceModel()
                         model._data = pd.DataFrame()  # Empty the data
                         model.layoutChanged.emit()
-                    self.save_selected_button.setEnabled(False)
+                    self.selection_menu_button.setEnabled(False)
                     self.column_view_button.setEnabled(False)
                     self.import_button.setEnabled(False)
 
