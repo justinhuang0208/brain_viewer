@@ -25,6 +25,8 @@ from PySide6.QtGui import QFont, QColor
 
 import re
 from PySide6.QtGui import QSyntaxHighlighter, QTextCharFormat, QColor, QFont
+# 匯入模擬參數預設值
+from simulation_widget import PARAM_COLUMNS, DEFAULT_VALUES
 # 獲取腳本所在目錄的絕對路徑
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -966,59 +968,67 @@ class StrategySettingsWidget(QWidget):
         
     def init_ui(self):
         layout = QVBoxLayout(self)
-        
+
+        # 取得 simulation_widget.py 的預設值（去除 checkbox 的 None）
+        sim_defaults = DEFAULT_VALUES[1:]
+
         # 組織各種參數設置
         form_layout = QFormLayout()
-        
+
         # 中性化設置
         self.neutralization_combo = QComboBox()
         self.neutralization_combo.addItems(["SUBINDUSTRY", "INDUSTRY", "SECTOR", "MARKET", "NONE"])
+        # simulation_widget.py 預設值為 sim_defaults[3]，但 simulation_widget.py 的 neutralization 是 index 3
+        self.neutralization_combo.setCurrentText(str(sim_defaults[3]))
         form_layout.addRow("中性化 (Neutralization):", self.neutralization_combo)
-        
+
         # 衰減設置
         self.decay_spin = QSpinBox()
         self.decay_spin.setRange(0, 252)
-        self.decay_spin.setValue(0)
+        self.decay_spin.setValue(int(sim_defaults[1]))
         form_layout.addRow("衰減 (Decay):", self.decay_spin)
-        
+
         # 截斷設置
         self.truncation_spin = QDoubleSpinBox()
         self.truncation_spin.setRange(0, 0.5)
         self.truncation_spin.setSingleStep(0.01)
-        self.truncation_spin.setValue(0.01)
+        self.truncation_spin.setValue(float(sim_defaults[5]))
         form_layout.addRow("截斷 (Truncation):", self.truncation_spin)
-        
+
         # 延遲設置
         self.delay_spin = QSpinBox()
         self.delay_spin.setRange(1, 10)
-        self.delay_spin.setValue(1)
+        self.delay_spin.setValue(int(sim_defaults[2]))
         form_layout.addRow("延遲 (Delay):", self.delay_spin)
-        
+
         # 宇宙設置
         self.universe_combo = QComboBox()
         self.universe_combo.addItems(["TOP3000", "TOP500", "TOP1000", "TOP200"])
+        # simulation_widget.py 預設值為 sim_defaults[6]
+        self.universe_combo.setCurrentText(str(sim_defaults[6]))
         form_layout.addRow("宇宙 (Universe):", self.universe_combo)
-        
+
         # 區域設置
         self.region_combo = QComboBox()
         self.region_combo.addItems(["USA", "GLOBAL", "JAPAN", "CHINA", "EUROPE"])
+        self.region_combo.setCurrentText(str(sim_defaults[4]))
         form_layout.addRow("區域 (Region):", self.region_combo)
-        
+
         # 巴氏殺菌設置
         self.pasteurization_combo = QComboBox()
         self.pasteurization_combo.addItems(["ON", "OFF"])
         form_layout.addRow("巴氏殺菌 (Pasteurization):", self.pasteurization_combo)
-        
+
         # NaN處理設置
         self.nan_handling_combo = QComboBox()
         self.nan_handling_combo.addItems(["ON", "OFF"])
         form_layout.addRow("NaN處理 (NaN Handling):", self.nan_handling_combo)
-        
+
         # 單位處理設置
         self.unit_handling_combo = QComboBox()
         self.unit_handling_combo.addItems(["VERIFY", "IGNORE"])
         form_layout.addRow("單位處理 (Unit Handling):", self.unit_handling_combo)
-        
+
         # 添加表單佈局
         layout.addLayout(form_layout)
         layout.addStretch()
