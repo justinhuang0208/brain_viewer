@@ -143,13 +143,26 @@ class CodeEditDialog(QDialog):
         return self.editor.toPlainText()
 
 class SimulationWidget(QWidget):
+    def _reset_table_colors(self):
+        """重設所有表格儲存格（包含 QTableWidgetItem 與 cellWidget）的背景顏色為預設白色"""
+        for row in range(self.table.rowCount()):
+            for col in range(self.table.columnCount()):
+                cell_item = self.table.item(row, col)
+                widget = self.table.cellWidget(row, col)
+                if widget:
+                    widget.setStyleSheet("background-color: white;")
+                elif cell_item:
+                    cell_item.setBackground(Qt.white)
+
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("模擬參數編輯與執行")
         # self.process = None # Removed QProcess attribute
 
-        layout = QVBoxLayout(self)
+        self.active_wq_session = None  # 儲存已登入的 session
 
+        layout = QVBoxLayout(self)
+        ...
         # 進度顯示
         self.progress_label = QLabel("尚未開始模擬")
         layout.addWidget(self.progress_label)
@@ -631,14 +644,7 @@ class SimulationWidget(QWidget):
             self.sim_btn.setEnabled(False)
             
             # 重置所有欄位的背景顏色為白色
-            for row in range(self.table.rowCount()):
-                for col in range(self.table.columnCount()):
-                    cell_item = self.table.item(row, col)
-                    widget = self.table.cellWidget(row, col)
-                    if widget:
-                        widget.setStyleSheet("background-color: white;")
-                    elif cell_item:
-                        cell_item.setBackground(Qt.white)
+            self._reset_table_colors()
         else:
             print("無法停止：沒有模擬正在執行或 Worker 不存在。")
             # 如果沒有在執行，確保 UI 狀態正確
@@ -649,6 +655,13 @@ class SimulationWidget(QWidget):
                  self.check_login_btn.setEnabled(True)
 
     def start_simulation_thread(self):
+        # --- 修復閃退：檢查舊執行緒是否仍在運行 ---
+        if self.simulation_thread and self.simulation_thread.isRunning():
+            QMessageBox.warning(self, "操作過快", "上一個模擬執行緒仍在清理中，請稍後再試。")
+            return
+        # --- 修復結束 ---
+
+        self._reset_table_colors()  # 新增：重置所有表格顏色
         params = self.get_parameters()
         if not params:
             QMessageBox.warning(self, "無參數", "請至少新增一組模擬參數")
@@ -660,11 +673,11 @@ class SimulationWidget(QWidget):
         self.edit_btn.setEnabled(False) # 禁用編輯按鈕
         self.check_login_btn.setEnabled(False) # 禁用檢查登入按鈕
         # self.sim_btn.setEnabled(False) # 保持按鈕啟用以便停止
-        self.progress_label.setText("模擬準備中...")
+        self.progress_label.setText("模擬進行中...")
 
         # 創建執行緒和 Worker
         self.simulation_thread = QThread()
-        self.simulation_worker = SimulationWorker(params)
+        self.simulation_worker = SimulationWorker(params, session=self.active_wq_session)
         self.simulation_worker.moveToThread(self.simulation_thread)
 
         # 連接信號和槽
@@ -687,28 +700,27 @@ class SimulationWidget(QWidget):
         self.progress_label.setText(message)
 
     def handle_simulation_error(self, error_message):
+        self._reset_table_colors()  # 重設所有表格顏色
+        # 若為登入/憑證相關錯誤，清除 session
+        if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
+            self.active_wq_session = None
         self.progress_label.setText("模擬失敗")
         QMessageBox.critical(self, "模擬失敗", error_message)
-        # 重置 UI 狀態
+        # --- 修復閃退：先重置狀態再啟用按鈕 ---
         self.is_simulating = False
+        # 重置 UI 狀態
         self.sim_btn.setText("執行模擬")
         self.sim_btn.setEnabled(True)
         self.edit_btn.setEnabled(True)
         self.check_login_btn.setEnabled(True)
+        # --- 修復結束 ---
 
     def handle_simulation_finished(self):
         # 檢查是否是因為停止請求而結束
         stopped_early = self.simulation_worker and self.simulation_worker.stop_requested
 
         # 重設所有表格顏色為預設（白色）
-        for row in range(self.table.rowCount()):
-            for col in range(self.table.columnCount()):
-                cell_item = self.table.item(row, col)
-                widget = self.table.cellWidget(row, col)
-                if widget:
-                    widget.setStyleSheet("background-color: white;")
-                elif cell_item:
-                    cell_item.setBackground(Qt.white)
+        self._reset_table_colors()
 
         if stopped_early:
             self.progress_label.setText("模擬已停止")
@@ -717,12 +729,14 @@ class SimulationWidget(QWidget):
             self.progress_label.setText("模擬完成")
             QMessageBox.information(self, "模擬完成", "模擬已成功完成！請檢查 data 資料夾中的 CSV 和 LOG 檔案。")
 
-        # 重置 UI 狀態
+        # --- 修復閃退：先重置狀態再啟用按鈕 ---
         self.is_simulating = False
+        # 重置 UI 狀態
         self.sim_btn.setText("執行模擬")
         self.sim_btn.setEnabled(True)
         self.edit_btn.setEnabled(True)
         self.check_login_btn.setEnabled(True)
+        # --- 修復結束 ---
 
         # 只有在模擬正常完成時才詢問是否清空表格
         if not stopped_early:
@@ -763,15 +777,19 @@ class SimulationWidget(QWidget):
         self.login_check_thread.started.connect(self.login_check_worker.run)
         self.login_check_thread.start()
 
-    @Slot()
-    def handle_login_success(self):
-        """處理登入成功的槽函數"""
+    @Slot(object)
+    def handle_login_success(self, session):
+        """處理登入成功的槽函數，儲存 session"""
+        self.active_wq_session = session
         QMessageBox.information(self, "登入成功", "WorldQuant Brain 登入狀態正常。")
         self.progress_label.setText("登入狀態正常")
 
     @Slot(str)
     def handle_login_failed(self, error_message):
         """處理登入失敗的槽函數"""
+        # 若為登入/憑證相關錯誤，清除 session
+        if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
+            self.active_wq_session = None
         QMessageBox.critical(self, "登入檢查失敗", error_message)
         self.progress_label.setText(f"登入檢查失敗: {error_message}")
 
@@ -783,7 +801,7 @@ class SimulationWidget(QWidget):
 
 # LoginCheckWorker class for handling login checks in background
 class LoginCheckWorker(QObject):
-    login_success = Signal()
+    login_success = Signal(object)  # 改為可傳遞 session 物件
     login_failed = Signal(str)  # 傳遞錯誤訊息
     validation_required = Signal(str)  # 傳遞驗證 URL
     update_status = Signal(str)  # 用於更新進度標籤
@@ -819,7 +837,7 @@ class LoginCheckWorker(QObject):
 
             response_json = r.json()
             if 'user' in response_json:
-                self.login_success.emit()
+                self.login_success.emit(session)  # 傳遞 session
             elif 'inquiry' in response_json:
                 # 需要生物驗證
                 persona_url = f"{r.url}/persona?inquiry={response_json['inquiry']}"
@@ -846,9 +864,10 @@ class SimulationWorker(QObject):
     simulation_row_completed = Signal(list) # New signal for completed row
     simulation_row_started = Signal(dict) # New signal for starting row (emit simulation dict)
 
-    def __init__(self, params):
+    def __init__(self, params, session=None):
         super().__init__()
         self.params = params
+        self.session = session  # 可選的 session
         self.stop_requested = False # 加入停止標誌
 
     def request_stop(self):
@@ -858,9 +877,8 @@ class SimulationWorker(QObject):
 
     def run(self):
         try:
-            # Pass worker_ref during initialization
-            # WQSession can access self.stop_requested via worker_ref
-            wq = WQSession(worker_ref=self)
+            # Pass worker_ref and session during initialization
+            wq = WQSession(worker_ref=self, existing_session=self.session)
             wq.simulate(self.params) # WQSession.simulate will check the flag
 
             # Emit finished signal only if not stopped prematurely
@@ -874,31 +892,53 @@ class SimulationWorker(QObject):
 
 # 將 WQSession 移到類別外部，使其成為獨立的類別
 class WQSession(requests.Session):
-    def __init__(self, json_fn='credentials.json', worker_ref=None): # Add worker_ref parameter
-        super().__init__()
-        self.worker_ref = worker_ref # Assign worker_ref immediately
-        for handler in logging.root.handlers:
-            logging.root.removeHandler(handler)
-        logging.basicConfig(encoding='utf-8', level=logging.INFO, format='%(asctime)s: %(message)s')
-        self.json_fn = json_fn
-        from datetime import datetime
-        self.first_run = True
-        self.csv_file = f"data/{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
-        self.log_file = self.csv_file.replace('.csv','.log')
-        self.login()
-        old_get, old_post = self.get, self.post
-        def new_get(*args, **kwargs):
-            try:    return old_get(*args, **kwargs)
-            except: return new_get(*args, **kwargs)
-        def new_post(*args, **kwargs):
-            try:    return old_post(*args, **kwargs)
-            except: return new_post(*args, **kwargs)
-        self.get, self.post = new_get, new_post
-        self.login_expired = False
-        self.rows_processed = []
-        self.latest_csv_file = None
-        # self.worker_ref = None # Reference to the worker for emitting signals - Removed, set in __init__
-        self._csv_lock = Lock() # Lock for thread-safe CSV writing
+    def __init__(self, json_fn='credentials.json', worker_ref=None, existing_session=None):
+        if existing_session is not None:
+            # 直接複製 existing_session 的屬性
+            super().__init__()
+            self.__dict__.update(existing_session.__dict__)
+            # 複製 cookies
+            self.cookies = requests.cookies.cookiejar_from_dict(requests.utils.dict_from_cookiejar(existing_session.cookies))
+            # 複製 headers
+            self.headers = existing_session.headers.copy()
+            # 複製 auth
+            self.auth = getattr(existing_session, 'auth', None)
+            # 其他必要屬性可依需求補充
+            self.worker_ref = worker_ref
+            self.json_fn = json_fn
+            from datetime import datetime
+            self.first_run = True
+            self.csv_file = f"data/{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+            self.log_file = self.csv_file.replace('.csv','.log')
+            self.login_expired = False
+            self.rows_processed = []
+            self.latest_csv_file = None
+            self._csv_lock = Lock()
+            # 跳過 self.login()
+        else:
+            super().__init__()
+            self.worker_ref = worker_ref # Assign worker_ref immediately
+            for handler in logging.root.handlers:
+                logging.root.removeHandler(handler)
+            logging.basicConfig(encoding='utf-8', level=logging.INFO, format='%(asctime)s: %(message)s')
+            self.json_fn = json_fn
+            from datetime import datetime
+            self.first_run = True
+            self.csv_file = f"data/{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+            self.log_file = self.csv_file.replace('.csv','.log')
+            self.login()
+            old_get, old_post = self.get, self.post
+            def new_get(*args, **kwargs):
+                try:    return old_get(*args, **kwargs)
+                except: return new_get(*args, **kwargs)
+            def new_post(*args, **kwargs):
+                try:    return old_post(*args, **kwargs)
+                except: return new_post(*args, **kwargs)
+            self.get, self.post = new_get, new_post
+            self.login_expired = False
+            self.rows_processed = []
+            self.latest_csv_file = None
+            self._csv_lock = Lock() # Lock for thread-safe CSV writing
 
     def login(self):
         try:
@@ -964,7 +1004,15 @@ class WQSession(requests.Session):
             pasteurization = simulation.get('pasteurization', 'ON')
             nan = simulation.get('nanHandling', 'OFF')
             logging.info(f"{thread} -- Simulating alpha: {alpha}")
-            while True:
+            # --- 修復 429：加入重試邏輯 (POST) ---
+            max_retries = 3
+            retry_delay = 15 # seconds
+            for attempt in range(max_retries):
+                # 檢查停止請求
+                if self.worker_ref and self.worker_ref.stop_requested:
+                    logging.info(f"{thread} -- 偵測到停止請求，取消模擬請求。")
+                    return {'error': '模擬被手動停止', 'alpha': alpha}
+
                 try:
                     r = self.post('https://api.worldquantbrain.com/simulations', json={
                         'regular': alpha,
@@ -984,19 +1032,46 @@ class WQSession(requests.Session):
                             "visualization":False
                         }
                     })
-                    r.raise_for_status() # Check for HTTP errors
+                    r.raise_for_status() # Check for HTTP errors (including 429 initially)
                     nxt = r.headers['Location']
-                    break
-                except requests.exceptions.RequestException as req_err:
+                    break # Success, exit retry loop
+                except requests.exceptions.HTTPError as http_err:
+                    if http_err.response.status_code == 429:
+                        retry_msg = f"請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
+                        logging.warning(f"{thread} -- {retry_msg}")
+                        # --- 更新進度標籤 ---
+                        if self.worker_ref:
+                            self.worker_ref.progress_updated.emit(retry_msg)
+                        # --- 更新結束 ---
+                        if attempt < max_retries - 1:
+                            # 等待時檢查停止請求
+                            for _ in range(retry_delay * 5): # Check every 0.2 seconds
+                                if self.worker_ref and self.worker_ref.stop_requested:
+                                    logging.info(f"{thread} -- 偵測到停止請求，中斷重試等待。")
+                                    return {'error': '模擬被手動停止', 'alpha': alpha}
+                                time.sleep(0.2)
+                            continue # Continue to the next retry attempt
+                        else:
+                            logging.error(f"{thread} -- 達到最大重試次數 ({max_retries})，放棄模擬請求。")
+                            error_msg = f"API 請求過多 (429)，達到最大重試次數 ({max_retries})。"
+                            if self.worker_ref:
+                                self.worker_ref.error_occurred.emit(error_msg) # Emit error signal
+                            return {'error': error_msg, 'alpha': alpha}
+                    else:
+                        # Handle other HTTP errors
+                        logging.error(f"{thread} -- Simulation request failed with HTTP error: {http_err}")
+                        if self.worker_ref:
+                            self.worker_ref.error_occurred.emit(f"模擬請求失敗: {http_err}")
+                        return {'error': f"模擬請求失敗: {http_err}", 'alpha': alpha}
+                except requests.exceptions.RequestException as req_err: # Handle non-HTTP request errors (e.g., connection error)
                     logging.error(f"{thread} -- Simulation request failed: {req_err}")
                     if self.worker_ref:
                         self.worker_ref.error_occurred.emit(f"模擬請求失敗: {req_err}")
-                    # Return an error indicator instead of just returning
                     return {'error': f"模擬請求失敗: {req_err}", 'alpha': alpha}
-                except Exception as e: # Catch other potential errors like missing headers
+                except Exception as e: # Catch other potential errors like missing headers or JSON parsing
                     logging.error(f"{thread} -- Error during simulation request: {e}")
                     error_msg = f"模擬請求時發生未知錯誤: {e}"
-                    if 'credentials' in str(e) or (hasattr(r, 'json') and 'credentials' in r.json().get('detail', '')):
+                    if 'credentials' in str(e) or (hasattr(r, 'json') and 'credentials' in r.json().get('detail', '')): # Check if it's a credential error
                         self.login_expired = True
                         error_msg = "登入憑證可能已過期，請重新登入或檢查憑證。"
                         if self.worker_ref:
@@ -1009,39 +1084,101 @@ class WQSession(requests.Session):
 
             logging.info(f'{thread} -- Obtained simulation link: {nxt}')
             ok = True
-            while True:
-                try:
-                    r = self.get(nxt)
-                    r.raise_for_status()
-                    r_json = r.json()
-                    if 'alpha' in r_json:
-                        alpha_link = r_json['alpha']
-                        break
+            # --- 修復 429：加入重試邏輯 (GET 狀態) ---
+            max_retries = 3
+            retry_delay = 15 # seconds
+            while True: # Loop for checking simulation status
+                # 檢查停止請求 (在每次嘗試獲取狀態之前)
+                if self.worker_ref and self.worker_ref.stop_requested:
+                    logging.info(f"{thread} -- 偵測到停止請求，中斷狀態檢查。")
+                    return {'error': '模擬被手動停止', 'alpha': alpha}
+
+                for attempt in range(max_retries):
+                    # 再次檢查停止請求 (在每次重試之前)
+                    if self.worker_ref and self.worker_ref.stop_requested:
+                        logging.info(f"{thread} -- 偵測到停止請求，中斷狀態檢查重試。")
+                        return {'error': '模擬被手動停止', 'alpha': alpha}
+
+                    try:
+                        r = self.get(nxt)
+                        r.raise_for_status() # Check for HTTP errors (including 429)
+                        r_json = r.json()
+                        status_check_success = True # Flag success for this attempt
+                        break # Success, exit retry loop for this status check
+                    except requests.exceptions.HTTPError as http_err:
+                        if http_err.response.status_code == 429:
+                            retry_msg = f"檢查狀態請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
+                            logging.warning(f"{thread} -- {retry_msg}")
+                            # --- 更新進度標籤 ---
+                            if self.worker_ref:
+                                self.worker_ref.progress_updated.emit(retry_msg)
+                            # --- 更新結束 ---
+                            if attempt < max_retries - 1:
+                                # 等待時檢查停止請求
+                                for _ in range(retry_delay * 5): # Check every 0.2 seconds
+                                    if self.worker_ref and self.worker_ref.stop_requested:
+                                        logging.info(f"{thread} -- 偵測到停止請求，中斷重試等待。")
+                                        return {'error': '模擬被手動停止', 'alpha': alpha}
+                                    time.sleep(0.2)
+                                status_check_success = False # Mark attempt as failed due to 429
+                                continue # Continue to the next retry attempt
+                            else:
+                                logging.error(f"{thread} -- 達到最大重試次數 ({max_retries})，放棄檢查狀態。")
+                                ok = (False, f"API 請求過多 (429)，達到最大重試次數 ({max_retries})。")
+                                status_check_success = False # Mark as failed
+                                break # Exit retry loop, ok is set to error
+                        else:
+                            # Handle other HTTP errors
+                            logging.error(f"{thread} -- Failed to get simulation status with HTTP error: {http_err}")
+                            ok = (False, f"無法取得模擬狀態: {http_err}")
+                            status_check_success = False # Mark as failed
+                            break # Exit retry loop, ok is set to error
+                    except requests.exceptions.RequestException as req_err: # Handle non-HTTP request errors
+                        logging.error(f"{thread} -- Failed to get simulation status: {req_err}")
+                        ok = (False, f"無法取得模擬狀態: {req_err}")
+                        status_check_success = False # Mark as failed
+                        break # Exit retry loop, ok is set to error
+                    except Exception as e: # Handle other errors like JSON parsing
+                        logging.error(f"{thread} -- Error checking simulation status: {e}")
+                        message = r_json.get('message', str(e)) if 'r_json' in locals() and isinstance(r_json, dict) else str(e)
+                        ok = (False, message)
+                        status_check_success = False # Mark as failed
+                        break # Exit retry loop, ok is set to error
+
+                # --- 重試邏輯結束 ---
+
+                if not status_check_success: # If all retries failed for status check
+                    break # Exit the outer while loop for status checking
+
+                # --- 原有狀態處理邏輯 ---
+                if 'alpha' in r_json:
+                    alpha_link = r_json['alpha']
+                    break
+                else: # Added else for clarity and correct indentation
                     # Correct indentation for these lines
                     progress = r_json.get('progress', 0)
                     logging.info(f"{thread} -- Waiting for simulation to end ({int(100*progress)}%)")
                     # Comment out the individual alpha progress update to avoid flickering with the overall count
                     # if self.worker_ref:
                     #     self.worker_ref.progress_updated.emit(f"模擬進行中 ({alpha[:20]}...): {int(100*progress)}%")
-                # Correct indentation for the except block
-                except requests.exceptions.RequestException as req_err:
-                    logging.error(f"{thread} -- Failed to get simulation status: {req_err}")
-                    ok = (False, f"無法取得模擬狀態: {req_err}")
-                    break
-                except Exception as e:
-                    logging.error(f"{thread} -- Error checking simulation status: {e}")
-                    # Use r_json if available, otherwise just the exception
-                    message = r_json.get('message', str(e)) if 'r_json' in locals() and isinstance(r_json, dict) else str(e)
-                    ok = (False, message)
-                    break
+                # --- 原有狀態處理邏輯結束 ---
+
+                # 如果模擬尚未完成，則等待並繼續檢查狀態
                 # 將 10 秒 sleep 拆成 50 次 0.2 秒 sleep，每次檢查是否收到停止請求
-                for _ in range(50):
+                wait_interval = 0.2
+                total_wait_time = 10 # seconds
+                num_intervals = int(total_wait_time / wait_interval)
+
+                for _ in range(num_intervals):
                     if self.worker_ref and self.worker_ref.stop_requested:
                         logging.info(f"{thread} -- 偵測到停止請求，中斷等待。")
                         return {'error': '模擬被手動停止', 'alpha': alpha}
-                    time.sleep(0.2)
+                    time.sleep(wait_interval)
+                # Loop back to check status again
 
-            if ok != True:
+            # --- 狀態檢查循環結束 ---
+
+            if ok != True: # Check if status checking failed after retries
                 error_msg = f"模擬失敗 ({alpha[:20]}...): {ok[1]}"
                 logging.info(f'{thread} -- Issue when sending simulation request: {ok[1]}')
                 if self.worker_ref:
@@ -1052,10 +1189,60 @@ class WQSession(requests.Session):
                     0, 0, 0, 'FAIL', 0, -1, universe, nxt, alpha
                 ]
             else:
-                try:
-                    r = self.get(f'https://api.worldquantbrain.com/alphas/{alpha_link}')
-                    r.raise_for_status()
-                    r_json = r.json()
+                # --- 修復 429：加入重試邏輯 (GET Alpha 詳細資訊) ---
+                max_retries = 3
+                retry_delay = 15 # seconds
+                alpha_details_fetched = False
+                for attempt in range(max_retries):
+                     # 檢查停止請求
+                    if self.worker_ref and self.worker_ref.stop_requested:
+                        logging.info(f"{thread} -- 偵測到停止請求，取消獲取 Alpha 詳細資訊。")
+                        return {'error': '模擬被手動停止', 'alpha': alpha}
+
+                    try:
+                        r = self.get(f'https://api.worldquantbrain.com/alphas/{alpha_link}')
+                        r.raise_for_status() # Check for HTTP errors (including 429)
+                        r_json = r.json()
+                        alpha_details_fetched = True
+                        break # Success, exit retry loop
+                    except requests.exceptions.HTTPError as http_err:
+                        if http_err.response.status_code == 429:
+                            retry_msg = f"獲取 Alpha 詳細請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
+                            logging.warning(f"{thread} -- {retry_msg}")
+                            # --- 更新進度標籤 ---
+                            if self.worker_ref:
+                                self.worker_ref.progress_updated.emit(retry_msg)
+                            # --- 更新結束 ---
+                            if attempt < max_retries - 1:
+                                # 等待時檢查停止請求
+                                for _ in range(retry_delay * 5): # Check every 0.2 seconds
+                                    if self.worker_ref and self.worker_ref.stop_requested:
+                                        logging.info(f"{thread} -- 偵測到停止請求，中斷重試等待。")
+                                        return {'error': '模擬被手動停止', 'alpha': alpha}
+                                    time.sleep(0.2)
+                                continue # Continue to the next retry attempt
+                            else:
+                                logging.error(f"{thread} -- 達到最大重試次數 ({max_retries})，放棄獲取 Alpha 詳細資訊。")
+                                error_msg = f"API 請求過多 (429)，達到最大重試次數 ({max_retries})。"
+                                # Fall through to handle as error below
+                        else:
+                            # Handle other HTTP errors
+                            logging.error(f"{thread} -- Failed to get alpha details with HTTP error: {http_err}")
+                            error_msg = f"無法取得 Alpha 詳細資訊: {http_err}"
+                            # Fall through to handle as error below
+                        break # Exit retry loop after error or max retries
+                    except requests.exceptions.RequestException as req_err: # Handle non-HTTP request errors
+                        logging.error(f"{thread} -- Failed to get alpha details: {req_err}")
+                        error_msg = f"無法取得 Alpha 詳細資訊: {req_err}"
+                        break # Exit retry loop
+                    except Exception as e: # Handle other errors like JSON parsing
+                        logging.error(f"{thread} -- Error getting alpha details: {e}")
+                        error_msg = f"處理 Alpha 詳細資訊時出錯: {e}"
+                        break # Exit retry loop
+
+                # --- 重試邏輯結束 ---
+
+                if alpha_details_fetched:
                     logging.info(f'{thread} -- Obtained alpha link: https://platform.worldquantbrain.com/alpha/{alpha_link}')
                     passed = 0
                     weight_check = 'N/A'
@@ -1076,20 +1263,16 @@ class WQSession(requests.Session):
                         weight_check, subsharpe, -1,
                         universe, f'https://platform.worldquantbrain.com/alpha/{alpha_link}', alpha
                     ]
-                except requests.exceptions.RequestException as req_err:
-                    logging.error(f"{thread} -- Failed to get alpha details: {req_err}")
-                    error_msg = f"無法取得 Alpha 詳細資訊: {req_err}"
+                else: # Handle failure to fetch alpha details after retries
+                    # error_msg is set in the except blocks above
                     row = [0, delay, region, neutralization, decay, truncation, 0, 0, 0, 'FAIL', 0, -1, universe, f'alpha/{alpha_link}', alpha]
                     if self.worker_ref:
-                        self.worker_ref.error_occurred.emit(error_msg)
-                except Exception as e:
-                    error_msg = f"處理 Alpha 詳細資訊時出錯: {e}"
-                    logging.error(f"{thread} -- Error getting alpha details: {e}")
-                    row = [0, delay, region, neutralization, decay, truncation, 0, 0, 0, 'FAIL', 0, -1, universe, f'alpha/{alpha_link}', alpha]
-                    if self.worker_ref:
-                        self.worker_ref.error_occurred.emit(error_msg)
+                        self.worker_ref.error_occurred.emit(error_msg) # Emit error signal
 
-            # Return the processed row data
+            # Return the processed row data (or error if applicable)
+            # Ensure 'row' key exists even on error for consistent handling later
+            if 'row' not in locals():
+                 row = [0, delay, region, neutralization, decay, truncation, 0, 0, 0, 'FAIL', 0, -1, universe, 'N/A', alpha] # Default error row
             return {'row': row, 'simulation': simulation}
 
         except Exception as e:

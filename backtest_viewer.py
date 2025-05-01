@@ -528,6 +528,8 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         self.setWindowTitle("WorldQuant Brain 回測結果瀏覽器")
         self.setMinimumSize(1200, 800)
+        # 新增：載入狀態旗標
+        self.loading = False
 
         # 確定要使用的數據路徑
         if data_path is None:
@@ -842,18 +844,57 @@ class MainWindow(QMainWindow):
         self.status_bar.showMessage("已刷新當前回測結果")
 
     def load_file(self, index):
-        # 將 proxy index 轉為 source index
-        if isinstance(index.model(), QSortFilterProxyModel):
-            source_index = index.model().mapToSource(index)
-        else:
-            source_index = index
-        # 保存最後載入的索引，用於刷新功能
-        self.last_loaded_index = index
-
-        file_path = self.file_model.filePath(source_index)
-        file_name = os.path.basename(file_path)
-
+        # 防止重複載入
+        if self.loading:
+            self.status_bar.showMessage("檔案正在載入中，請稍候...")
+            return
+        self.loading = True
         try:
+            # 將 proxy index 轉為 source index
+            if isinstance(index.model(), QSortFilterProxyModel):
+                source_index = index.model().mapToSource(index)
+            else:
+                source_index = index
+            # 保存最後載入的索引，用於刷新功能
+            self.last_loaded_index = index
+
+            file_path = self.file_model.filePath(source_index)
+            file_name = os.path.basename(file_path)
+
+            # 檢查檔案大小
+            try:
+                file_size = os.path.getsize(file_path)
+            except OSError as e:
+                self.status_bar.showMessage(f"無法讀取檔案大小：{str(e)}")
+                self.current_dataset = None
+                self.proxy_model = None
+                self.visible_columns = []
+                self.selection_menu_button.setEnabled(False)
+                self.column_view_button.setEnabled(False)
+                self.import_button.setEnabled(False)
+                self.export_code_list_button.setEnabled(False)
+                self.current_file_label.setText(file_name)
+                self.db_conn = None
+                self.loading = False
+                return
+
+            if file_size == 0:
+                QMessageBox.information(self, "空檔案", "此 CSV 檔案為空，無法載入資料。")
+                self.current_dataset = None
+                self.proxy_model = None
+                self.visible_columns = []
+                self.selection_menu_button.setEnabled(False)
+                self.column_view_button.setEnabled(False)
+                self.import_button.setEnabled(False)
+                self.export_code_list_button.setEnabled(False)
+                self.current_file_label.setText(file_name)
+                self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
+                if self.db_conn is not None:
+                    self.db_conn.close()
+                self.db_conn = None
+                self.loading = False
+                return
+
             # 如果已經有資料庫連線，先關閉它
             if self.db_conn is not None:
                 self.db_conn.close()
@@ -867,7 +908,42 @@ class MainWindow(QMainWindow):
             chunks = pd.read_csv(file_path, chunksize=chunk_size)
 
             # 讀取第一個區塊來獲取列名和設置表格結構
-            first_chunk = next(chunks)
+            try:
+                first_chunk = next(chunks)
+            except StopIteration:
+                QMessageBox.information(self, "空檔案", "此 CSV 檔案為空，無法載入資料。")
+                self.current_dataset = None
+                self.proxy_model = None
+                self.visible_columns = []
+                self.selection_menu_button.setEnabled(False)
+                self.column_view_button.setEnabled(False)
+                self.import_button.setEnabled(False)
+                self.export_code_list_button.setEnabled(False)
+                self.current_file_label.setText(file_name)
+                self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
+                if self.db_conn is not None:
+                    self.db_conn.close()
+                self.db_conn = None
+                self.loading = False
+                return
+
+            if first_chunk.empty:
+                QMessageBox.information(self, "空檔案", "此 CSV 檔案不包含任何資料列。")
+                self.current_dataset = None
+                self.proxy_model = None
+                self.visible_columns = []
+                self.selection_menu_button.setEnabled(False)
+                self.column_view_button.setEnabled(False)
+                self.import_button.setEnabled(False)
+                self.export_code_list_button.setEnabled(False)
+                self.current_file_label.setText(file_name)
+                self.status_bar.showMessage(f"{file_name} 不包含任何資料列，未載入任何資料。")
+                if self.db_conn is not None:
+                    self.db_conn.close()
+                self.db_conn = None
+                self.loading = False
+                return
+
             columns = first_chunk.columns
             self.current_dataset = first_chunk  # 保存第一個區塊用於圖表顯示
 
@@ -903,7 +979,6 @@ class MainWindow(QMainWindow):
                 header.setSectionResizeMode(i, QHeaderView.Interactive)
             header.setSectionResizeMode(0, QHeaderView.Fixed) # Keep checkbox column fixed width
             header.setStretchLastSection(False) # Adjust if needed
-
 
             # Update status bar
             file_name = os.path.basename(file_path)
@@ -945,16 +1020,19 @@ class MainWindow(QMainWindow):
 
             # Update chart
             self.update_chart()
+            self.loading = False
 
         except Exception as e:
             QMessageBox.critical(self, "錯誤", f"載入回測結果時發生錯誤：{str(e)}")
-            self.save_selected_button.setEnabled(False)
+            if hasattr(self, "save_selected_button"):
+                self.save_selected_button.setEnabled(False)
             self.column_view_button.setEnabled(False)
             self.import_button.setEnabled(False) # Disable import button on error
             self.current_dataset = None
             self.proxy_model = None
             self.visible_columns = []
             self.visible_columns = []
+            self.loading = False
 
     def export_code_column_as_list(self):
         # 匯出目前載入的 CSV 檔案的 'code' 欄位為 Python list 並複製到剪貼簿
