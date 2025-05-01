@@ -6,6 +6,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import Qt, QThread, Signal, QObject, Slot, QPoint
 from PySide6.QtGui import QAction, QColor # Import QColor
+import uuid
 
 class BatchEditDialog(QDialog):
     def __init__(self, parent=None):
@@ -143,6 +144,23 @@ class CodeEditDialog(QDialog):
         return self.editor.toPlainText()
 
 class SimulationWidget(QWidget):
+    def update_single_simulation_progress(self, uuid: str, percentage: int):
+        """根據 uuid 更新對應行的進度 (%) 欄"""
+        progress_col = self.progress_col_index
+        found = False
+        for row in range(self.table.rowCount()):
+            chk_item = self.table.item(row, 0)
+            if chk_item and chk_item.data(Qt.UserRole) == uuid:
+                progress_item = self.table.item(row, progress_col)
+                if not progress_item:
+                    progress_item = QTableWidgetItem()
+                    self.table.setItem(row, progress_col, progress_item)
+                progress_item.setText(f"{percentage}%")
+                progress_item.setTextAlignment(Qt.AlignCenter)
+                found = True
+                break
+        if not found:
+            print(f"警告: 在表格中未找到與進度更新 uuid '{uuid}' 匹配的行")
     def _reset_table_colors(self):
         """重設所有表格儲存格（包含 QTableWidgetItem 與 cellWidget）的背景顏色為預設白色"""
         for row in range(self.table.rowCount()):
@@ -168,12 +186,29 @@ class SimulationWidget(QWidget):
         layout.addWidget(self.progress_label)
 
         # 參數表格 - 增加一欄給 checkbox
-        self.table = QTableWidget(0, len(PARAM_COLUMNS) + 1) # +1 for checkbox column
-        header_labels = ["選取"] + PARAM_COLUMNS # Add header for checkbox
+        # 新增進度欄: "選取" + "進度 (%)" + 其餘 PARAM_COLUMNS
+        self.progress_col_index = 1  # 進度欄固定為索引 1
+        self.table = QTableWidget(0, len(PARAM_COLUMNS) + 2) # +1 for checkbox, +1 for progress
+        header_labels = ["選取", "進度 (%)"] + PARAM_COLUMNS
         self.table.setHorizontalHeaderLabels(header_labels)
         self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         # Make the checkbox column narrower
         self.table.horizontalHeader().setSectionResizeMode(0, QHeaderView.ResizeToContents)
+        # 設定進度欄寬
+        self.table.horizontalHeader().setSectionResizeMode(self.progress_col_index, QHeaderView.ResizeToContents)
+        # 設定 decay 欄寬
+        try:
+            decay_col_index = PARAM_COLUMNS.index("decay") + 2  # +2: checkbox+progress
+            self.table.horizontalHeader().setSectionResizeMode(decay_col_index, QHeaderView.ResizeToContents)
+        except ValueError:
+            pass
+        # 設定 delay, region, truncation, universe, neutralization 欄寬
+        for col_name in ["delay", "region", "truncation", "universe", "neutralization"]:
+            try:
+                col_index = PARAM_COLUMNS.index(col_name) + 2
+                self.table.horizontalHeader().setSectionResizeMode(col_index, QHeaderView.ResizeToContents)
+            except ValueError:
+                pass
         layout.addWidget(self.table)
         
         # 添加右鍵選單事件處理
@@ -220,107 +255,65 @@ class SimulationWidget(QWidget):
         self.is_simulating = False # 追蹤模擬狀態
         # Store the index of the 'code' column for faster lookup
         try:
-            self._code_col_index = PARAM_COLUMNS.index('code') + 1 # +1 for checkbox column
+            self._code_col_index = PARAM_COLUMNS.index('code') + 2 # +2 for checkbox+progress
         except ValueError:
             self._code_col_index = -1 # Should not happen if PARAM_COLUMNS is correct
 
-    @Slot(list)
-    def highlight_completed_row(self, row_data: list):
-        """根據完成的 row_data 標示對應的表格行"""
-        # Check if the table's code column index is valid
-        if self._code_col_index == -1:
-            print("錯誤：無法確定表格中的 'code' 欄位索引")
-            return
-
-        # The row_data comes from the CSV structure, where 'code' is the last element.
-        if not row_data:
-             print("錯誤：收到的 row_data 為空")
-             return
-        # Ensure row_data has enough elements before accessing the last one
-        if len(row_data) == 0:
-             print("錯誤: 收到的 row_data 列表為空")
-             return
-        completed_code = str(row_data[-1]) # Get the code from the LAST element of the CSV row data
-
-        light_green = QColor("#e8f5e9") # Define light green color
-        # Define light orange color - Moved definition here for clarity
-        # light_orange = QColor("#fff3e0") # Already defined in highlight_processing_row
-
-        # Find the row in the table with the matching code in the correct table column
+    @Slot(str, list)
+    def highlight_completed_row(self, uuid: str, row_data: list):
+        """根據完成的 uuid 標示對應的表格行"""
+        light_green = QColor("#e8f5e9")
         found = False
         for row in range(self.table.rowCount()):
-            # Access the 'code' column item in the TABLE (index self._code_col_index) # Correct indent
-            item = self.table.item(row, self._code_col_index)
-            # Compare the table item's text with the completed code, using strip()
-            if item and item.text().strip() == completed_code.strip(): # Add strip() here
-                # Highlight the entire row
-                for col in range(self.table.columnCount()):
-                    cell_item = self.table.item(row, col)
-                    if not cell_item: # Create item if it doesn't exist (e.g., for checkbox or empty cells) # Correct indent
-                        # For widgets like ComboBox, we cannot set background directly on item
-                        widget = self.table.cellWidget(row, col) # Correct indent
-                        if widget: # Correct indent
-                            # Attempt to set background for widgets (might not work for all styles)
-                            try:
-                                widget.setStyleSheet("background-color: #e8f5e9;")
-                            except AttributeError: # Correct indent
-                                pass # Ignore if widget doesn't support setStyleSheet
-                        else:
-                            # Create item for non-widget cells
-                             cell_item = QTableWidgetItem()
-                             self.table.setItem(row, col, cell_item)
-                             cell_item.setBackground(light_green)
-                    else:
-                         cell_item.setBackground(light_green)
-                found = True
-                break # Stop searching once the row is found and highlighted
-
-        if not found:
-             print(f"警告: 在表格中未找到與完成的 code '{completed_code[:30]}...' 匹配的行")
-
-    @Slot(dict)
-    def highlight_processing_row(self, simulation_data: dict):
-        """根據開始處理的 simulation_data 標示對應的表格行為淺橘色"""
-        if self._code_col_index == -1:
-            print("錯誤：無法確定表格中的 'code' 欄位索引")
-            return
-
-        processing_code = simulation_data.get('code', '').strip()
-        if not processing_code:
-            print("錯誤: 收到的 simulation_data 中缺少 'code'")
-            return
-
-        light_orange = QColor("#fff3e0") # Define light orange color
-
-        # Find the row in the table with the matching code
-        found = False
-        for row in range(self.table.rowCount()):
-            item = self.table.item(row, self._code_col_index)
-            if item and item.text().strip() == processing_code:
-                # Highlight the entire row with light orange
+            chk_item = self.table.item(row, 0)
+            if chk_item and chk_item.data(Qt.UserRole) == uuid:
                 for col in range(self.table.columnCount()):
                     cell_item = self.table.item(row, col)
                     if not cell_item:
                         widget = self.table.cellWidget(row, col)
                         if widget:
                             try:
-                                # Set background for widgets (might need adjustments based on widget type/style)
+                                widget.setStyleSheet("background-color: #e8f5e9;")
+                            except AttributeError:
+                                pass
+                        else:
+                            cell_item = QTableWidgetItem()
+                            self.table.setItem(row, col, cell_item)
+                            cell_item.setBackground(light_green)
+                    else:
+                        cell_item.setBackground(light_green)
+                found = True
+                break
+        if not found:
+            print(f"警告: 在表格中未找到與完成的 uuid '{uuid}' 匹配的行")
+
+    @Slot(str, dict)
+    def highlight_processing_row(self, uuid: str, simulation_data: dict):
+        """根據開始處理的 uuid 標示對應的表格行為淺橘色"""
+        light_orange = QColor("#fff3e0")
+        found = False
+        for row in range(self.table.rowCount()):
+            chk_item = self.table.item(row, 0)
+            if chk_item and chk_item.data(Qt.UserRole) == uuid:
+                for col in range(self.table.columnCount()):
+                    cell_item = self.table.item(row, col)
+                    if not cell_item:
+                        widget = self.table.cellWidget(row, col)
+                        if widget:
+                            try:
                                 widget.setStyleSheet("background-color: #fff3e0;")
                             except AttributeError:
-                                pass # Ignore if widget doesn't support setStyleSheet
+                                pass
                         else:
-                            # Create item for non-widget cells
                             cell_item = QTableWidgetItem()
                             self.table.setItem(row, col, cell_item)
                             cell_item.setBackground(light_orange)
                     else:
-                        # Set background for existing items
                         cell_item.setBackground(light_orange)
                 found = True
-                break # Stop searching once the row is found and highlighted
-
+                break
         if not found:
-            print(f"警告: 在表格中未找到與正在處理的 code '{processing_code[:30]}...' 匹配的行")
+            print(f"警告: 在表格中未找到與正在處理的 uuid '{uuid}' 匹配的行")
 
     @Slot(list) # Decorator to mark this as a slot
     def load_strategies_from_generator(self, strategies: list):
@@ -389,41 +382,46 @@ class SimulationWidget(QWidget):
         row = self.table.rowCount()
         self.table.insertRow(row)
 
-        # Add checkbox item to the first column
+        # 產生 UUID 並存入 checkbox 欄
+        row_uuid = uuid.uuid4().hex
         chk_item = QTableWidgetItem()
         chk_item.setFlags(Qt.ItemIsUserCheckable | Qt.ItemIsEnabled)
         chk_item.setCheckState(Qt.Unchecked)
+        chk_item.setData(Qt.UserRole, row_uuid)
         self.table.setItem(row, 0, chk_item)
+
+        # 新增進度欄 (預設為 "-")
+        progress_item = QTableWidgetItem("-")
+        progress_item.setTextAlignment(Qt.AlignCenter)
+        self.table.setItem(row, 1, progress_item)
 
         # Use provided data or defaults for other columns
         values_to_set = data if data else DEFAULT_VALUES[1:] # Skip the None placeholder for checkbox
 
         for col_idx, val in enumerate(values_to_set):
-            table_col = col_idx + 1 # Actual table column index (starts from 1)
+            table_col = col_idx + 2 # +2: 跳過 checkbox 與進度欄
             param_key = PARAM_COLUMNS[col_idx]
 
             if param_key == "delay":
                 combo = QComboBox()
                 combo.addItems(DELAY_OPTIONS)
-                # Set current text based on provided data or default
-                current_val = str(val) if val is not None else str(DEFAULT_VALUES[table_col])
+                current_val = str(val) if val is not None else str(DEFAULT_VALUES[table_col-1])
                 combo.setCurrentText(current_val)
                 self.table.setCellWidget(row, table_col, combo)
             elif param_key == "neutralization":
                 combo = QComboBox()
                 combo.addItems(NEUTRALIZATION_OPTIONS)
-                current_val = str(val) if val is not None else str(DEFAULT_VALUES[table_col])
+                current_val = str(val) if val is not None else str(DEFAULT_VALUES[table_col-1])
                 combo.setCurrentText(current_val)
                 self.table.setCellWidget(row, table_col, combo)
             elif param_key == "universe":
                 combo = QComboBox()
                 combo.addItems(UNIVERSE_OPTIONS)
-                current_val = str(val) if val is not None else str(DEFAULT_VALUES[table_col])
+                current_val = str(val) if val is not None else str(DEFAULT_VALUES[table_col-1])
                 combo.setCurrentText(current_val)
-                self.table.setCellWidget(row, table_col, combo) # Correct indent
+                self.table.setCellWidget(row, table_col, combo)
             else:
-                # Add strip() when setting item text, especially for 'code'
-                current_val = str(val).strip() if val is not None else str(DEFAULT_VALUES[table_col]).strip()
+                current_val = str(val).strip() if val is not None else str(DEFAULT_VALUES[table_col-1]).strip()
                 item = QTableWidgetItem(current_val)
                 self.table.setItem(row, table_col, item)
 
@@ -437,7 +435,7 @@ class SimulationWidget(QWidget):
             selected_only = values['selected_only']
 
             # 獲取參數所在的列
-            param_col = PARAM_COLUMNS.index(param) + 1  # +1 for checkbox column
+            param_col = PARAM_COLUMNS.index(param) + 2  # +2: 跳過「選取」和「進度 (%)」兩欄
 
             # 驗證輸入值
             if param == "delay":
@@ -492,8 +490,8 @@ class SimulationWidget(QWidget):
     def handle_cell_double_clicked(self, row, col): # Correct indent
         if col == 0: # Ignore double clicks on checkbox column
              return
-        param_col_index = col - 1 # Adjust column index for PARAM_COLUMNS
-        if PARAM_COLUMNS[param_col_index] == "code":
+        param_col_index = col - 2  # 修正：跳過「選取」和「進度 (%)」兩欄
+        if param_col_index >= 0 and PARAM_COLUMNS[param_col_index] == "code":
             item = self.table.item(row, col) # Use original 'col' for table access
             code_text = item.text() if item else ""
             dlg = CodeEditDialog(code_text, self)
@@ -510,7 +508,7 @@ class SimulationWidget(QWidget):
             chk_item = self.table.item(row, 0)
             if chk_item and chk_item.checkState() == Qt.Checked:
                 row_data = []
-                for col in range(1, self.table.columnCount()): # Start from col 1
+                for col in range(2, self.table.columnCount()): # Start from col 2 (skip 進度 %)
                     widget = self.table.cellWidget(row, col)
                     if widget: # Handle widgets (ComboBox)
                          if isinstance(widget, QComboBox):
@@ -595,8 +593,14 @@ class SimulationWidget(QWidget):
         params = []
         for row in range(self.table.rowCount()):
             entry = {}
+            chk_item = self.table.item(row, 0)
+            if chk_item is not None:
+                row_uuid = chk_item.data(Qt.UserRole)
+            else:
+                row_uuid = None
+            entry['uuid'] = row_uuid
             for col_idx, key in enumerate(PARAM_COLUMNS):
-                table_col = col_idx + 1 # Actual table column index
+                table_col = col_idx + 2 # 修正：考慮「選取」和「進度 (%)」兩欄
                 if key == "delay":
                     widget = self.table.cellWidget(row, table_col)
                     entry[key] = int(widget.currentText()) if widget else 1
@@ -645,6 +649,11 @@ class SimulationWidget(QWidget):
             
             # 重置所有欄位的背景顏色為白色
             self._reset_table_colors()
+            # 重設所有進度欄
+            for row in range(self.table.rowCount()):
+                progress_item = self.table.item(row, self.progress_col_index)
+                if progress_item:
+                    progress_item.setText("-")
         else:
             print("無法停止：沒有模擬正在執行或 Worker 不存在。")
             # 如果沒有在執行，確保 UI 狀態正確
@@ -660,13 +669,24 @@ class SimulationWidget(QWidget):
             QMessageBox.warning(self, "操作過快", "上一個模擬執行緒仍在清理中，請稍後再試。")
             return
         # --- 修復結束 ---
-
+    
         self._reset_table_colors()  # 新增：重置所有表格顏色
+    
+        # 重設所有進度欄
+        for row in range(self.table.rowCount()):
+            progress_item = self.table.item(row, self.progress_col_index)
+            if not progress_item:
+                progress_item = QTableWidgetItem("-")
+                progress_item.setTextAlignment(Qt.AlignCenter)
+                self.table.setItem(row, self.progress_col_index, progress_item)
+            else:
+                progress_item.setText("-")
+    
         params = self.get_parameters()
         if not params:
             QMessageBox.warning(self, "無參數", "請至少新增一組模擬參數")
             return
-
+    
         # 更新狀態和 UI
         self.is_simulating = True
         self.sim_btn.setText("停止模擬")
@@ -674,12 +694,12 @@ class SimulationWidget(QWidget):
         self.check_login_btn.setEnabled(False) # 禁用檢查登入按鈕
         # self.sim_btn.setEnabled(False) # 保持按鈕啟用以便停止
         self.progress_label.setText("模擬進行中...")
-
+    
         # 創建執行緒和 Worker
         self.simulation_thread = QThread()
         self.simulation_worker = SimulationWorker(params, session=self.active_wq_session)
         self.simulation_worker.moveToThread(self.simulation_thread)
-
+    
         # 連接信號和槽
         self.simulation_worker.progress_updated.connect(self.update_progress_label)
         self.simulation_worker.error_occurred.connect(self.handle_simulation_error)
@@ -692,7 +712,9 @@ class SimulationWidget(QWidget):
         self.simulation_worker.simulation_row_completed.connect(self.highlight_completed_row)
         # Connect the new signal for row starting
         self.simulation_worker.simulation_row_started.connect(self.highlight_processing_row) # Add this connection
-
+        # 連接個別進度信號
+        self.simulation_worker.single_simulation_progress.connect(self.update_single_simulation_progress)
+    
         # 啟動執行緒
         self.simulation_thread.start()
 
@@ -701,6 +723,11 @@ class SimulationWidget(QWidget):
 
     def handle_simulation_error(self, error_message):
         self._reset_table_colors()  # 重設所有表格顏色
+        # 重設所有進度欄
+        for row in range(self.table.rowCount()):
+            progress_item = self.table.item(row, self.progress_col_index)
+            if progress_item:
+                progress_item.setText("-")
         # 若為登入/憑證相關錯誤，清除 session
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
             self.active_wq_session = None
@@ -718,17 +745,22 @@ class SimulationWidget(QWidget):
     def handle_simulation_finished(self):
         # 檢查是否是因為停止請求而結束
         stopped_early = self.simulation_worker and self.simulation_worker.stop_requested
-
+    
         # 重設所有表格顏色為預設（白色）
         self._reset_table_colors()
-
+        # 重設所有進度欄
+        for row in range(self.table.rowCount()):
+            progress_item = self.table.item(row, self.progress_col_index)
+            if progress_item:
+                progress_item.setText("-")
+    
         if stopped_early:
             self.progress_label.setText("模擬已停止")
             QMessageBox.warning(self, "模擬停止", "模擬已被使用者手動停止。")
         else:
             self.progress_label.setText("模擬完成")
             QMessageBox.information(self, "模擬完成", "模擬已成功完成！請檢查 data 資料夾中的 CSV 和 LOG 檔案。")
-
+    
         # --- 修復閃退：先重置狀態再啟用按鈕 ---
         self.is_simulating = False
         self.simulation_thread = None
@@ -739,13 +771,13 @@ class SimulationWidget(QWidget):
         self.edit_btn.setEnabled(True)
         self.check_login_btn.setEnabled(True)
         # --- 修復結束 ---
-
+    
         # 只有在模擬正常完成時才詢問是否清空表格
         if not stopped_early:
             reply = QMessageBox.question(self, '清空表格?',
                                            "模擬已完成，您想要清空模擬參數表格嗎？",
                                            QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-
+    
             if reply == QMessageBox.Yes:
                 self.table.setRowCount(0)
                 # 更新標籤，即使不清空也要顯示完成
@@ -863,8 +895,9 @@ class SimulationWorker(QObject):
     finished = Signal()
     progress_updated = Signal(str)
     error_occurred = Signal(str)
-    simulation_row_completed = Signal(list) # New signal for completed row
-    simulation_row_started = Signal(dict) # New signal for starting row (emit simulation dict)
+    simulation_row_completed = Signal(str, list) # uuid, csv_row_data
+    simulation_row_started = Signal(str, dict) # uuid, simulation_data
+    single_simulation_progress = Signal(str, int) # uuid, percentage
 
     def __init__(self, params, session=None):
         super().__init__()
@@ -1002,6 +1035,7 @@ class WQSession(requests.Session):
             neutralization = simulation.get('neutralization', 'SUBINDUSTRY').upper()
             pasteurization = simulation.get('pasteurization', 'ON')
             nan = simulation.get('nanHandling', 'OFF')
+            row_uuid = simulation.get('uuid', None)
             logging.info(f"{thread} -- Simulating alpha: {alpha}")
             # --- 修復 429：加入重試邏輯 (POST) ---
             max_retries = 3
@@ -1010,12 +1044,12 @@ class WQSession(requests.Session):
                 # 檢查停止請求
                 if self.worker_ref and self.worker_ref.stop_requested:
                     logging.info(f"{thread} -- 偵測到停止請求，取消模擬請求。")
-                    return {'error': '模擬被手動停止', 'alpha': alpha}
+                    return {'uuid': row_uuid, 'error': '模擬被手動停止', 'alpha': alpha}
 
                 try:
                     # 在真正開始發送 API 請求前才 emit started
                     if self.worker_ref:
-                        self.worker_ref.simulation_row_started.emit(simulation)
+                        self.worker_ref.simulation_row_started.emit(row_uuid, simulation)
                     r = self.post('https://api.worldquantbrain.com/simulations', json={
                         'regular': alpha,
                         'type': 'REGULAR',
@@ -1160,6 +1194,9 @@ class WQSession(requests.Session):
                     # Correct indentation for these lines
                     progress = r_json.get('progress', 0)
                     logging.info(f"{thread} -- Waiting for simulation to end ({int(100*progress)}%)")
+                    # 個別進度更新
+                    if self.worker_ref:
+                        self.worker_ref.single_simulation_progress.emit(row_uuid, int(100*progress))
                     # Comment out the individual alpha progress update to avoid flickering with the overall count
                     # if self.worker_ref:
                     #     self.worker_ref.progress_updated.emit(f"模擬進行中 ({alpha[:20]}...): {int(100*progress)}%")
@@ -1265,6 +1302,9 @@ class WQSession(requests.Session):
                         weight_check, subsharpe, -1,
                         universe, f'https://platform.worldquantbrain.com/alpha/{alpha_link}', alpha
                     ]
+                    # 新增：成功取得 Alpha 詳細資訊後，進度設為 100%
+                    if self.worker_ref:
+                        self.worker_ref.single_simulation_progress.emit(row_uuid, 100)
                 else: # Handle failure to fetch alpha details after retries
                     # error_msg is set in the except blocks above
                     row = [0, delay, region, neutralization, decay, truncation, 0, 0, 0, 'FAIL', 0, -1, universe, f'alpha/{alpha_link}', alpha]
@@ -1275,7 +1315,7 @@ class WQSession(requests.Session):
             # Ensure 'row' key exists even on error for consistent handling later
             if 'row' not in locals():
                  row = [0, delay, region, neutralization, decay, truncation, 0, 0, 0, 'FAIL', 0, -1, universe, 'N/A', alpha] # Default error row
-            return {'row': row, 'simulation': simulation}
+            return {'uuid': row_uuid, 'row': row, 'simulation': simulation}
 
         except Exception as e:
             # Catch any unexpected error during the process
@@ -1284,7 +1324,7 @@ class WQSession(requests.Session):
             if self.worker_ref:
                 self.worker_ref.error_occurred.emit(error_msg)
             # Return an error indicator
-            return {'error': error_msg, 'alpha': simulation.get('code', 'N/A')}
+            return {'uuid': row_uuid, 'error': error_msg, 'alpha': simulation.get('code', 'N/A')}
 
     def simulate(self, data):
         if self.login_expired: # 如果登入失敗，直接返回
@@ -1336,7 +1376,7 @@ class WQSession(requests.Session):
                                 self.completed_count += 1
                                 logging.info(f'Result added to CSV for alpha: {result["simulation"]["code"][:20]}...')
                                 if self.worker_ref:
-                                    self.worker_ref.simulation_row_completed.emit(result['row'])
+                                    self.worker_ref.simulation_row_completed.emit(result['uuid'], result['row'])
                             if self.worker_ref:
                                 self.worker_ref.progress_updated.emit(f"{self.completed_count}/{self.total_rows}")
                         elif result and 'error' in result:
