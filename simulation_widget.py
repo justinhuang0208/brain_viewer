@@ -992,10 +992,7 @@ class WQSession(requests.Session):
             thread = "worker"
 
         try: # Wrap the entire simulation logic in a try block
-            # Emit the started signal before processing
-            if self.worker_ref:
-                self.worker_ref.simulation_row_started.emit(simulation) # Emit the signal here
-
+            # 將 simulation_row_started.emit 的時機延後到實際開始模擬（API 請求前）
             alpha = simulation['code'].strip()
             delay = simulation.get('delay', 1)
             universe = simulation.get('universe', 'TOP3000')
@@ -1016,6 +1013,9 @@ class WQSession(requests.Session):
                     return {'error': '模擬被手動停止', 'alpha': alpha}
 
                 try:
+                    # 在真正開始發送 API 請求前才 emit started
+                    if self.worker_ref:
+                        self.worker_ref.simulation_row_started.emit(simulation)
                     r = self.post('https://api.worldquantbrain.com/simulations', json={
                         'regular': alpha,
                         'type': 'REGULAR',
@@ -1318,45 +1318,43 @@ class WQSession(requests.Session):
                     self.first_run = False
 
                 # Use ThreadPoolExecutor to run simulations concurrently
+                from concurrent.futures import as_completed
                 with ThreadPoolExecutor(max_workers=3) as executor:
-                    # Map simulations to the processing method
-                    results = executor.map(self._process_single_simulation, data)
+                    futures = []
+                    for simulation in data:
+                        future = executor.submit(self._process_single_simulation, simulation)
+                        futures.append(future)
 
-                    # Process results as they complete
-                    for result in results:
-                        # Check for stop request before processing each result
-                        if self.worker_ref and self.worker_ref.stop_requested:
-                            logging.info("停止請求已收到，停止處理剩餘結果。")
-                            break # Exit the loop processing results
-
-                        if self.login_expired: break # Stop processing if login expired during execution
-
+                    def done_callback(fut):
+                        # 處理完成時的 UI 更新與進度
+                        result = fut.result()
                         if result and 'row' in result:
-                            # Check for stop request again before writing (optional, but safer)
-                            if self.worker_ref and self.worker_ref.stop_requested:
-                                logging.info("停止請求已收到，跳過寫入 CSV。")
-                                break
-                            # Write row to CSV using lock for thread safety
                             with self._csv_lock:
                                 writer.writerow(result['row'])
-                                f.flush() # Ensure data is written to disk
+                                f.flush()
                                 self.rows_processed.append(result['simulation'])
                                 self.completed_count += 1
                                 logging.info(f'Result added to CSV for alpha: {result["simulation"]["code"][:20]}...')
-                                # Emit signal for the completed row via worker_ref
-                                if self.worker_ref: # Check if worker_ref exists
+                                if self.worker_ref:
                                     self.worker_ref.simulation_row_completed.emit(result['row'])
-
-                            # Update overall progress using the desired format
                             if self.worker_ref:
                                 self.worker_ref.progress_updated.emit(f"{self.completed_count}/{self.total_rows}")
                         elif result and 'error' in result:
-                            # Error already logged and emitted by _process_single_simulation
                             logging.warning(f"Skipping result for alpha {result['alpha'][:20]} due to error: {result['error']}")
-                        # Handle case where result is None (e.g., initial login failure)
                         elif result is None and not self.login_expired:
-                             logging.warning("Received None result from simulation processing.")
+                            logging.warning("Received None result from simulation processing.")
 
+                    for fut in futures:
+                        fut.add_done_callback(done_callback)
+
+                    # 等待所有 future 完成或遇到停止請求
+                    for fut in as_completed(futures):
+                        if self.worker_ref and self.worker_ref.stop_requested:
+                            logging.info("停止請求已收到，停止處理剩餘結果。")
+                            break
+                        if self.login_expired:
+                            break
+                    # 注意：done_callback 會自動處理每個完成的結果
         except Exception as e:
             logging.exception("模擬執行或檔案寫入錯誤") # Log the full traceback
             if self.worker_ref:
