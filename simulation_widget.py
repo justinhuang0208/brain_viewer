@@ -731,6 +731,8 @@ class SimulationWidget(QWidget):
 
         # --- 修復閃退：先重置狀態再啟用按鈕 ---
         self.is_simulating = False
+        self.simulation_thread = None
+        self.simulation_worker = None
         # 重置 UI 狀態
         self.sim_btn.setText("執行模擬")
         self.sim_btn.setEnabled(True)
