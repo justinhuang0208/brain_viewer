@@ -580,29 +580,7 @@ class MainWindow(QMainWindow):
 
         # 添加儲存選取按鈕
         # 合併「反轉選取」與「儲存選取」為下拉按鈕
-        self.selection_menu_button = QPushButton("選取操作")
-        self.selection_menu_button.setToolTip("選取相關操作")
-        self.selection_menu_button.setStyleSheet("padding: 4px 12px;")
-        self.selection_menu_button.setEnabled(False) # Initially disabled
-        self.selection_menu = QMenu(self)
-        self.action_invert_selection = QAction("反轉選取", self)
-        self.action_save_selected = QAction("儲存選取為新檔案", self)
-        self.action_invert_selection.triggered.connect(self.invert_selection)
-        self.action_save_selected.triggered.connect(self.save_selected_rows)
-        self.selection_menu.addAction(self.action_invert_selection)
-        self.selection_menu.addAction(self.action_save_selected)
-
-        # 新增「附加選取至檔案」動作
-        self.action_append_selected = QAction("附加選取至檔案", self)
-        self.action_append_selected.triggered.connect(self.append_selected_rows)
-        self.selection_menu.addAction(self.action_append_selected)
-
-        # 新增「刪除選取」動作
-        self.action_delete_selected = QAction("刪除選取", self)
-        self.action_delete_selected.triggered.connect(self.delete_selected_rows)
-        self.selection_menu.addAction(self.action_delete_selected)
-        
-        self.selection_menu_button.setMenu(self.selection_menu)
+        # (移除選取操作相關程式碼)
 
         # 合併「應用過濾」與「清除過濾」為下拉按鈕
         self.filter_menu_button = QPushButton("過濾操作")
@@ -661,7 +639,6 @@ class MainWindow(QMainWindow):
         self.column_view_button.setMenu(self.column_menu)
 
         top_right.addWidget(self.column_view_button)
-        top_right.addWidget(self.selection_menu_button)
         # === 合併選取操作下拉按鈕結束 ===
         
         # --- Modification Start: Import Button with Menu ---
@@ -675,7 +652,7 @@ class MainWindow(QMainWindow):
         self.import_selected_action = QAction("匯入已選 Code 至生成器", self)
         self.import_all_action = QAction("匯入所有 Code 至生成器", self)
         # 新增：匯入選擇的數據至模擬
-        self.import_selected_data_to_sim_action = QAction("匯入選擇的數據至模擬", self)
+        self.import_selected_data_to_sim_action = QAction("匯入已選數據至模擬", self)
         self.import_data_to_sim_action = QAction("匯入所有數據至模擬", self) # 修改文字
         
         # Connect actions to handlers
@@ -700,11 +677,22 @@ class MainWindow(QMainWindow):
         # --- Modification End ---
         
         # === 新增：匯出 Code 為 List 按鈕 ===
-        self.export_code_list_button = QPushButton("匯出 Code 為 List")
-        self.export_code_list_button.setToolTip("將目前檢視的 CSV 'code' 欄位轉為 Python list 並複製到剪貼簿")
+        # === 修改：匯出 Code 為 List 按鈕改為下拉選單按鈕 ===
+        self.export_code_list_button = QPushButton("匯出參數為...")
+        self.export_code_list_button.setToolTip("將目前檢視的 CSV 轉成特定格式複製到剪貼板")
         self.export_code_list_button.setStyleSheet("padding: 4px 12px;")
         self.export_code_list_button.setEnabled(False)
-        self.export_code_list_button.clicked.connect(self.export_code_column_as_list)
+
+        self.export_code_menu = QMenu(self)
+        self.action_export_code_list = QAction("匯出 Code 為 List 格式", self)
+        self.action_export_code_list.triggered.connect(self.export_code_column_as_list)
+        self.export_code_menu.addAction(self.action_export_code_list)
+
+        self.action_export_params_list = QAction("匯出參數為 Parameters 格式", self)
+        self.action_export_params_list.triggered.connect(self.export_params_as_data_list)
+        self.export_code_menu.addAction(self.action_export_params_list)
+
+        self.export_code_list_button.setMenu(self.export_code_menu)
         top_right.addWidget(self.export_code_list_button)
 
         # 組合左右兩側到頂部布局
@@ -869,10 +857,12 @@ class MainWindow(QMainWindow):
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
-                self.selection_menu_button.setEnabled(False)
+                # (移除選取操作相關程式碼)
                 self.column_view_button.setEnabled(False)
                 self.import_button.setEnabled(False)
                 self.export_code_list_button.setEnabled(False)
+                self.action_export_code_list.setEnabled(False)
+                self.action_export_params_list.setEnabled(False)
                 self.current_file_label.setText(file_name)
                 self.db_conn = None
                 self.loading = False
@@ -883,10 +873,12 @@ class MainWindow(QMainWindow):
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
-                self.selection_menu_button.setEnabled(False)
+                # (移除選取操作相關程式碼)
                 self.column_view_button.setEnabled(False)
                 self.import_button.setEnabled(False)
                 self.export_code_list_button.setEnabled(False)
+                self.action_export_code_list.setEnabled(False)
+                self.action_export_params_list.setEnabled(False)
                 self.current_file_label.setText(file_name)
                 self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
                 if self.db_conn is not None:
@@ -905,39 +897,79 @@ class MainWindow(QMainWindow):
 
             # 使用分塊讀取 CSV 檔案
             chunk_size = 10000  # 每次讀取 10,000 行
-            chunks = pd.read_csv(file_path, chunksize=chunk_size)
-
-            # 讀取第一個區塊來獲取列名和設置表格結構
             try:
-                first_chunk = next(chunks)
-            except StopIteration:
-                QMessageBox.information(self, "空檔案", "此 CSV 檔案為空，無法載入資料。")
+                chunks = pd.read_csv(file_path, chunksize=chunk_size)
+                # 讀取第一個區塊來獲取列名和設置表格結構
+                try:
+                    first_chunk = next(chunks)
+                except StopIteration:
+                    QMessageBox.information(self, "空檔案", "此 CSV 檔案為空，無法載入資料。")
+                    self.current_dataset = None
+                    self.proxy_model = None
+                    self.visible_columns = []
+                    # (移除選取操作相關程式碼)
+                    self.column_view_button.setEnabled(False)
+                    self.import_button.setEnabled(False)
+                    self.export_code_list_button.setEnabled(False)
+                    self.action_export_code_list.setEnabled(False)
+                    self.action_export_params_list.setEnabled(False)
+                    self.current_file_label.setText(file_name)
+                    self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
+                    if self.db_conn is not None:
+                        self.db_conn.close()
+                    self.db_conn = None
+                    self.loading = False
+                    return
+
+                if first_chunk.empty:
+                    QMessageBox.information(self, "空檔案", "此 CSV 檔案不包含任何資料列。")
+                    self.current_dataset = None
+                    self.proxy_model = None
+                    self.visible_columns = []
+                    # (移除選取操作相關程式碼)
+                    self.column_view_button.setEnabled(False)
+                    self.import_button.setEnabled(False)
+                    self.export_code_list_button.setEnabled(False)
+                    self.action_export_code_list.setEnabled(False)
+                    self.action_export_params_list.setEnabled(False)
+                    self.current_file_label.setText(file_name)
+                    self.status_bar.showMessage(f"{file_name} 不包含任何資料列，未載入任何資料。")
+                    if self.db_conn is not None:
+                        self.db_conn.close()
+                    self.db_conn = None
+                    self.loading = False
+                    return
+            except pd.errors.EmptyDataError:
+                QMessageBox.information(self, "空檔案", "此 CSV 檔案為空或無有效資料。")
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
-                self.selection_menu_button.setEnabled(False)
+                # (移除選取操作相關程式碼)
                 self.column_view_button.setEnabled(False)
                 self.import_button.setEnabled(False)
                 self.export_code_list_button.setEnabled(False)
+                self.action_export_code_list.setEnabled(False)
+                self.action_export_params_list.setEnabled(False)
                 self.current_file_label.setText(file_name)
-                self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
+                self.status_bar.showMessage(f"{file_name} 為空檔案或無有效資料，未載入任何資料。")
                 if self.db_conn is not None:
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
                 return
-
-            if first_chunk.empty:
-                QMessageBox.information(self, "空檔案", "此 CSV 檔案不包含任何資料列。")
+            except (pd.errors.ParserError, UnicodeDecodeError) as e:
+                QMessageBox.critical(self, "格式錯誤", f"CSV 檔案格式錯誤或無法解析：{str(e)}")
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
-                self.selection_menu_button.setEnabled(False)
+                # (移除選取操作相關程式碼)
                 self.column_view_button.setEnabled(False)
                 self.import_button.setEnabled(False)
                 self.export_code_list_button.setEnabled(False)
+                self.action_export_code_list.setEnabled(False)
+                self.action_export_params_list.setEnabled(False)
                 self.current_file_label.setText(file_name)
-                self.status_bar.showMessage(f"{file_name} 不包含任何資料列，未載入任何資料。")
+                self.status_bar.showMessage(f"{file_name} 格式錯誤，未載入任何資料。")
                 if self.db_conn is not None:
                     self.db_conn.close()
                 self.db_conn = None
@@ -1011,10 +1043,12 @@ class MainWindow(QMainWindow):
             self.condition_value.clear()
 
             # Enable buttons
-            self.selection_menu_button.setEnabled(True)
+            # (移除選取操作相關程式碼)
             self.column_view_button.setEnabled(True)
             self.import_button.setEnabled(True) # Enable the new import button
             self.export_code_list_button.setEnabled(True) # Enable export button
+            self.action_export_code_list.setEnabled(True)
+            self.action_export_params_list.setEnabled(True)
                          
             self.apply_column_visibility()
 
@@ -1076,6 +1110,71 @@ class MainWindow(QMainWindow):
         except Exception as e:
             QMessageBox.critical(self, "錯誤", f"匯出時發生未預期錯誤：{str(e)}")
     
+    def export_params_as_data_list(self):
+        # 匯出目前載入的 CSV 檔案的參數欄位為 Python list of dict 並複製到剪貼簿
+        try:
+            # 檢查是否有載入資料
+            if self.proxy_model is None or self.db_conn is None:
+                QMessageBox.warning(self, "無法匯出", "請先載入回測結果檔案。")
+                return
+
+            source_model = self.proxy_model.sourceModel()
+            if not hasattr(source_model, "columns") or not hasattr(source_model, "db_conn"):
+                QMessageBox.warning(self, "無法匯出", "目前資料模型不支援此操作。")
+                return
+
+            # 必要欄位
+            required_fields = ['code', 'decay', 'delay', 'neutralization', 'region', 'truncation', 'universe']
+            available_fields = [col for col in required_fields if col in getattr(source_model, "columns", [])]
+            missing_fields = [col for col in required_fields if col not in available_fields]
+            if missing_fields:
+                QMessageBox.critical(self, "欄位缺失", f"資料中缺少必要欄位：{', '.join(missing_fields)}")
+                return
+
+            # 查詢目前過濾條件下的資料
+            filter_clause = source_model._get_filter_and_sort_clause()
+            cursor = source_model.db_conn.cursor()
+            fields_sql = ", ".join(available_fields)
+            query = f"SELECT {fields_sql} FROM {source_model.table_name} {filter_clause}"
+            try:
+                cursor.execute(query)
+                rows = cursor.fetchall()
+            except Exception as e:
+                QMessageBox.critical(self, "查詢錯誤", f"查詢資料庫時發生錯誤：{str(e)}")
+                return
+
+            # 組成 Python list of dict 格式
+            data_list = []
+            for row in rows:
+                item = {}
+                for idx, col in enumerate(available_fields):
+                    val = row[idx]
+                    # 字串欄位用 repr()，數值直接輸出
+                    if col in ['code', 'neutralization', 'region', 'universe']:
+                        item[col] = repr(str(val)) if val is not None else "''"
+                    else:
+                        # 處理 None
+                        item[col] = val if val is not None else "None"
+                data_list.append(item)
+
+            # 格式化為 Python 變數
+            lines = ["DATA = ["]
+            for d in data_list:
+                line = "    {"
+                line += ", ".join(f"'{k}': {v}" for k, v in d.items())
+                line += "},"
+                lines.append(line)
+            lines.append("]")
+            py_data_str = "\n".join(lines)
+
+            # 複製到剪貼簿
+            clipboard = QGuiApplication.clipboard()
+            clipboard.setText(py_data_str)
+
+            QMessageBox.information(self, "匯出成功", "參數資料已轉換為 Python list 並複製到剪貼簿。")
+        except Exception as e:
+            QMessageBox.critical(self, "錯誤", f"匯出參數時發生未預期錯誤：{str(e)}")
+
     def filter_data(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
@@ -1091,7 +1190,7 @@ class MainWindow(QMainWindow):
             if filter_column_name == "全部欄位":
                 # 搜尋所有列
                 where_clauses = []
-                for col in source_model.columns:
+                for col in getattr(source_model, "columns", []):
                     where_clauses.append(f"{col} LIKE '%{filter_text}%'")
                 filter_clause = " OR ".join(where_clauses)
             else:
@@ -1112,16 +1211,17 @@ class MainWindow(QMainWindow):
         source_model = self.proxy_model.sourceModel()
         filter_clause = source_model._get_filter_and_sort_clause()
         cursor = source_model.db_conn.cursor()
-
         # 清除當前圖表
+        if self.proxy_model is None or not hasattr(self, "canvas") or self.db_conn is None:
+            return
         self.canvas.figure.clear()
         ax = self.canvas.figure.add_subplot(111)
-        
+
         chart_type = self.chart_type.currentText()
-        
+
         # 增加字體大小使圖表更清晰
         plt.rcParams.update({'font.size': 12})
-        
+
         if chart_type == "夏普比率分佈":
             try:
                 # 使用 SQL 查詢獲取夏普比率
@@ -1239,7 +1339,7 @@ class MainWindow(QMainWindow):
                         if len(turnover_values) > 1:
                             slope, intercept, r_value, p_value, std_err = stats.linregress(turnover_values, sharpe_values)
                             x = np.array([min(turnover_values), max(turnover_values)])
-                            ax.plot(x, intercept + slope*x, 'r', 
+                            ax.plot(x, intercept + slope*x, 'r',
                                    label=f'趨勢線 (r²={r_value**2:.2f})')
                             ax.legend()
                     except:
@@ -1248,7 +1348,7 @@ class MainWindow(QMainWindow):
                     ax.text(0.5, 0.5, '沒有有效的截面分析數據', ha='center', va='center', transform=ax.transAxes)
             except Exception as e:
                 ax.text(0.5, 0.5, f'無法生成截面分析圖: {str(e)}', ha='center', va='center', transform=ax.transAxes)
-        
+
         # 調整圖表佈局以確保所有元素都顯示
         self.canvas.figure.tight_layout()
         self.canvas.draw()
@@ -1389,7 +1489,7 @@ class MainWindow(QMainWindow):
 
     # 新增: 應用欄位可見性
     def apply_column_visibility(self):
-        if self.proxy_model is None or self.current_dataset is None:
+        if self.proxy_model is None or self.current_dataset is None or self.db_conn is None:
             return
 
         header = self.table_view.horizontalHeader()
@@ -1532,13 +1632,57 @@ class MainWindow(QMainWindow):
         try:
             rowids_str = ",".join(map(str, checked_rowids))
             cursor = source_model.db_conn.cursor()
+            # 1. 先查詢要刪除的所有欄位資料
+            cursor.execute(f"SELECT * FROM {source_model.table_name} WHERE rowid IN ({rowids_str})")
+            rows = cursor.fetchall()
+            if not rows:
+                QMessageBox.information(self, "查無資料", "選取的資料列查無資料。")
+                return
+            df_to_delete = pd.DataFrame(rows, columns=source_model.columns)
+
+            # 2. 取得目前載入的 CSV 檔案路徑
+            if not hasattr(self, 'last_loaded_index') or self.last_loaded_index is None:
+                raise Exception("找不到目前載入的 CSV 檔案索引。")
+            if isinstance(self.last_loaded_index.model(), QSortFilterProxyModel):
+                source_index = self.last_loaded_index.model().mapToSource(self.last_loaded_index)
+            else:
+                source_index = self.last_loaded_index
+            file_path = self.file_model.filePath(source_index)
+
+            # 3. 讀取 CSV 檔案
+            try:
+                df_csv = pd.read_csv(file_path, dtype=str, keep_default_na=False)
+            except Exception as e:
+                QMessageBox.critical(self, "讀取 CSV 失敗", f"讀取原始 CSV 檔案時發生錯誤：\n{str(e)}")
+                return
+
+            # 4. 型態與欄位順序對齊
+            df_to_delete = df_to_delete.astype(str)
+            df_to_delete = df_to_delete[df_csv.columns]
+
+            # 5. 進行 anti-join，移除完全匹配的行
+            try:
+                df_merged = df_csv.merge(df_to_delete, how='left', indicator=True)
+                df_csv_updated = df_merged[df_merged['_merge'] == 'left_only'].drop(columns=['_merge'])
+            except Exception as e:
+                QMessageBox.critical(self, "資料處理錯誤", f"比對刪除資料時發生錯誤：\n{str(e)}")
+                return
+
+            # 6. 覆蓋寫回 CSV
+            try:
+                df_csv_updated.to_csv(file_path, index=False, encoding='utf-8-sig')
+            except Exception as e:
+                QMessageBox.critical(self, "寫入 CSV 失敗", f"寫回原始 CSV 檔案時發生錯誤：\n{str(e)}")
+                return
+
+            # 7. 刪除 SQLite 資料
             cursor.execute(f"DELETE FROM {source_model.table_name} WHERE rowid IN ({rowids_str})")
             source_model.db_conn.commit()
-            # 刷新元數據與勾選狀態
+            # 8. 刷新元數據與勾選狀態
             source_model.refresh_metadata()
             self.proxy_model.invalidate()
-            self.status_bar.showMessage(f"已刪除 {len(checked_rowids)} 筆資料")
-            QMessageBox.information(self, "刪除成功", f"已成功刪除 {len(checked_rowids)} 筆資料。")
+            self.status_bar.showMessage(f"已刪除 {len(checked_rowids)} 筆資料（含永久刪除 CSV）")
+            QMessageBox.information(self, "刪除成功", f"已成功永久刪除 {len(checked_rowids)} 筆資料。")
         except Exception as e:
             self.status_bar.showMessage(f"刪除資料失敗: {str(e)}")
             QMessageBox.critical(self, "刪除失敗", f"刪除資料時發生錯誤：\n{str(e)}")
@@ -1750,7 +1894,7 @@ class MainWindow(QMainWindow):
                         model = self.proxy_model.sourceModel()
                         model._data = pd.DataFrame()  # Empty the data
                         model.layoutChanged.emit()
-                    self.selection_menu_button.setEnabled(False)
+                    # (移除選取操作相關程式碼)
                     self.column_view_button.setEnabled(False)
                     self.import_button.setEnabled(False)
 
@@ -1758,7 +1902,7 @@ class MainWindow(QMainWindow):
                 QMessageBox.critical(self, "錯誤", f"刪除文件時發生錯誤：\n{str(e)}")
 
     def show_table_context_menu(self, position):
-        """顯示表格右鍵選單，用於批量勾選/取消勾選"""
+        """顯示表格右鍵選單，包含批次勾選/取消勾選與選取操作"""
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
 
@@ -1773,24 +1917,16 @@ class MainWindow(QMainWindow):
 
         # 檢查選取行的勾選狀態
         all_checked = True
-        source_model = self.proxy_model.sourceModel() # Get source model once
+        source_model = self.proxy_model.sourceModel()
         for view_row in view_rows:
             view_index_col0 = self.proxy_model.index(view_row, 0)
-            if not view_index_col0.isValid(): continue # 跳過無效索引
-
-            # Map to source index to get correct rowid for check state
+            if not view_index_col0.isValid():
+                continue
             source_index_col0 = self.proxy_model.mapToSource(view_index_col0)
-            if not source_index_col0.isValid(): continue
-
-            # Get rowid from source model (assuming rowid is needed for _check_states)
+            if not source_index_col0.isValid():
+                continue
             try:
                 cursor = source_model.db_conn.cursor()
-                # Need to get rowid based on source row, considering filtering/sorting
-                # This requires getting the rowid corresponding to the source_index_col0.row()
-                # The current SqliteTableModel fetches data row by row using LIMIT/OFFSET,
-                # which makes getting the correct rowid for a specific source_index tricky
-                # without fetching all rowids first or modifying the model significantly.
-                # Let's try getting the rowid based on the view_row offset within the current filter/sort
                 cursor.execute(f"SELECT rowid FROM {source_model.table_name} {source_model._get_filter_and_sort_clause()} LIMIT 1 OFFSET {source_index_col0.row()}")
                 result = cursor.fetchone()
                 if result:
@@ -1800,26 +1936,44 @@ class MainWindow(QMainWindow):
                         all_checked = False
                         break
                 else:
-                    # If rowid cannot be fetched, assume not checked for safety
                     all_checked = False
                     break
             except Exception as e:
-                 print(f"Error checking state for row {view_row}: {e}")
-                 all_checked = False # Assume not checked on error
-                 break
+                print(f"Error checking state for row {view_row}: {e}")
+                all_checked = False
+                break
 
-
-        # 創建選單
+        # 建立右鍵選單
         context_menu = QMenu(self)
+        # 1. 批次勾選/取消勾選
         target_state = Qt.Unchecked if all_checked else Qt.Checked
         action_text = "取消勾選選取項" if all_checked else "勾選選取項"
         toggle_check_action = QAction(action_text, self)
-
-        # 連接動作
-        # Pass view_rows, not source_rows, as setData works with proxy model indices
         toggle_check_action.triggered.connect(lambda: self.toggle_selected_rows_check_state(view_rows, target_state))
-
         context_menu.addAction(toggle_check_action)
+
+        # 分隔線
+        context_menu.addSeparator()
+
+        # 2. 反轉選取
+        action_invert = QAction("反轉選取", self)
+        action_invert.triggered.connect(self.invert_selection)
+        context_menu.addAction(action_invert)
+
+        # 3. 儲存選取為新檔案
+        action_save = QAction("儲存選取為新檔案", self)
+        action_save.triggered.connect(self.save_selected_rows)
+        context_menu.addAction(action_save)
+
+        # 4. 附加選取至檔案
+        action_append = QAction("附加選取至檔案", self)
+        action_append.triggered.connect(self.append_selected_rows)
+        context_menu.addAction(action_append)
+
+        # 5. 刪除選取
+        action_delete = QAction("刪除選取", self)
+        action_delete.triggered.connect(self.delete_selected_rows)
+        context_menu.addAction(action_delete)
 
         # 顯示選單
         context_menu.exec_(self.table_view.viewport().mapToGlobal(position))
