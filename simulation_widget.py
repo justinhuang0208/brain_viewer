@@ -721,18 +721,46 @@ class SimulationWidget(QWidget):
     def update_progress_label(self, message):
         self.progress_label.setText(message)
 
-    def handle_simulation_error(self, error_message):
+    @Slot(str, str)
+    def handle_simulation_error(self, uuid: str, error_message: str):
+        """處理模擬錯誤，包含標示失敗的行並重置 UI 狀態"""
         self._reset_table_colors()  # 重設所有表格顏色
+        
+        # 如果有指定 uuid，找到對應行並標示為紅色
+        if uuid:
+            light_red = QColor("#f8d7da")
+            for row in range(self.table.rowCount()):
+                chk_item = self.table.item(row, 0)
+                if chk_item and chk_item.data(Qt.UserRole) == uuid:
+                    for col in range(self.table.columnCount()):
+                        cell_item = self.table.item(row, col)
+                        widget = self.table.cellWidget(row, col)
+                        if widget:
+                            try:
+                                widget.setStyleSheet("background-color: #f8d7da;")
+                            except AttributeError:
+                                pass
+                        elif cell_item:
+                            cell_item.setBackground(light_red)
+                        else:
+                            cell_item = QTableWidgetItem()
+                            self.table.setItem(row, col, cell_item)
+                            cell_item.setBackground(light_red)
+                    break
+        
         # 重設所有進度欄
         for row in range(self.table.rowCount()):
             progress_item = self.table.item(row, self.progress_col_index)
             if progress_item:
                 progress_item.setText("-")
+        
         # 若為登入/憑證相關錯誤，清除 session
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
             self.active_wq_session = None
+        
         self.progress_label.setText("模擬失敗")
         QMessageBox.critical(self, "模擬失敗", error_message)
+        
         # --- 修復閃退：先重置狀態再啟用按鈕 ---
         self.is_simulating = False
         # 重置 UI 狀態
@@ -894,7 +922,7 @@ class LoginCheckWorker(QObject):
 class SimulationWorker(QObject):
     finished = Signal()
     progress_updated = Signal(str)
-    error_occurred = Signal(str)
+    error_occurred = Signal(str, str)  # uuid, error_message
     simulation_row_completed = Signal(str, list) # uuid, csv_row_data
     simulation_row_started = Signal(str, dict) # uuid, simulation_data
     single_simulation_progress = Signal(str, int) # uuid, percentage
@@ -922,7 +950,7 @@ class SimulationWorker(QObject):
             self.finished.emit()
         except Exception as e:
             logging.exception("模擬執行緒錯誤") # 記錄詳細錯誤到日誌
-            self.error_occurred.emit(f'模擬過程中發生錯誤: {type(e).__name__}: {e}')
+            self.error_occurred.emit("", f'模擬過程中發生錯誤: {type(e).__name__}: {e}')
             self.finished.emit() # 確保 finished 信號被發送
 
 # 將 WQSession 移到類別外部，使其成為獨立的類別
@@ -1141,6 +1169,24 @@ class WQSession(requests.Session):
                         r_json = r.json()
                         status_check_success = True # Flag success for this attempt
                         break # Success, exit retry loop for this status check
+                    except requests.exceptions.ConnectionError as conn_err:
+                        retry_msg = f"連接錯誤，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
+                        logging.warning(f"{thread} -- {retry_msg}")
+                        if self.worker_ref:
+                            self.worker_ref.progress_updated.emit(retry_msg)
+                        if attempt < max_retries - 1:
+                            for _ in range(retry_delay * 5):
+                                if self.worker_ref and self.worker_ref.stop_requested:
+                                    logging.info(f"{thread} -- 偵測到停止請求，中斷重試等待。")
+                                    return {'uuid': row_uuid, 'error': '模擬被手動停止', 'alpha': alpha}
+                                time.sleep(0.2)
+                            status_check_success = False
+                            continue
+                        else:
+                            logging.error(f"{thread} -- 連接錯誤重試失敗，放棄檢查狀態。")
+                            ok = (False, f"無法連接到伺服器，請稍後再試。")
+                            status_check_success = False
+                            break
                     except requests.exceptions.HTTPError as http_err:
                         if http_err.response.status_code == 429:
                             retry_msg = f"檢查狀態請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
@@ -1244,6 +1290,22 @@ class WQSession(requests.Session):
                         r_json = r.json()
                         alpha_details_fetched = True
                         break # Success, exit retry loop
+                    except requests.exceptions.ConnectionError as conn_err:
+                        retry_msg = f"獲取 Alpha 詳細資訊時連接錯誤，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
+                        logging.warning(f"{thread} -- {retry_msg}")
+                        if self.worker_ref:
+                            self.worker_ref.progress_updated.emit(retry_msg)
+                        if attempt < max_retries - 1:
+                            for _ in range(retry_delay * 5):
+                                if self.worker_ref and self.worker_ref.stop_requested:
+                                    logging.info(f"{thread} -- 偵測到停止請求，中斷重試等待。")
+                                    return {'uuid': row_uuid, 'error': '模擬被手動停止', 'alpha': alpha}
+                                time.sleep(0.2)
+                            continue
+                        else:
+                            logging.error(f"{thread} -- 連接錯誤重試失敗，放棄獲取 Alpha 詳細資訊。")
+                            error_msg = f"無法連接到伺服器，請稍後再試。"
+                            break
                     except requests.exceptions.HTTPError as http_err:
                         if http_err.response.status_code == 429:
                             retry_msg = f"獲取 Alpha 詳細請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
@@ -1381,6 +1443,8 @@ class WQSession(requests.Session):
                                 self.worker_ref.progress_updated.emit(f"{self.completed_count}/{self.total_rows}")
                         elif result and 'error' in result:
                             logging.warning(f"Skipping result for alpha {result['alpha'][:20]} due to error: {result['error']}")
+                            if self.worker_ref:
+                                self.worker_ref.error_occurred.emit(result.get('uuid', ''), result['error'])
                         elif result is None and not self.login_expired:
                             logging.warning("Received None result from simulation processing.")
 
