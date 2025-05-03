@@ -950,9 +950,8 @@ class MainWindow(QMainWindow):
             self.status_bar.showMessage("檔案正在載入中，請稍候...")
             return
 
-        # --- 修正：設置載入標誌並提前清除過濾條件 ---
+        # 設置載入標誌
         self.loading = True
-        # self.search_input.clear() # --- 再試一次：註解掉這行以保留搜尋文字 ---
         self.condition_value.clear()
 
         try:
@@ -967,221 +966,299 @@ class MainWindow(QMainWindow):
             file_path = self.file_model.filePath(source_index)
             file_name = os.path.basename(file_path)
 
+            # 檢查檔案是否存在和可讀
+            if not os.path.exists(file_path):
+                QMessageBox.critical(self, "檔案不存在", f"找不到檔案: {file_path}")
+                # --- 新增：清空狀態 ---
+                self.current_dataset = None
+                self.proxy_model = None
+                self.visible_columns = []
+                self.table_view.setModel(None)
+                self.column_view_button.setEnabled(False)
+                self.import_button.setEnabled(False)
+                self.export_code_list_button.setEnabled(False)
+                self.current_file_label.setText("錯誤")
+                self.status_bar.showMessage(f"檔案不存在: {file_name}")
+                if self.db_conn is not None:
+                    self.db_conn.close()
+                self.db_conn = None
+                self.loading = False
+                # --- 新增結束 ---
+                return
+
             # 檢查檔案大小
             try:
                 file_size = os.path.getsize(file_path)
             except OSError as e:
                 self.status_bar.showMessage(f"無法讀取檔案大小：{str(e)}")
+                QMessageBox.critical(self, "檔案讀取錯誤", f"無法讀取檔案大小: {str(e)}")
+                # --- 新增：清空狀態 ---
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
-                # (移除選取操作相關程式碼)
+                self.table_view.setModel(None)
                 self.column_view_button.setEnabled(False)
                 self.import_button.setEnabled(False)
                 self.export_code_list_button.setEnabled(False)
-                self.action_export_code_list.setEnabled(False)
-                self.action_export_params_list.setEnabled(False)
                 self.current_file_label.setText(file_name)
-                self.db_conn = None
-                self.loading = False
-                return
-
-            if file_size == 0:
-                QMessageBox.information(self, "空檔案", "此 CSV 檔案為空，無法載入資料。")
-                self.current_dataset = None
-                self.proxy_model = None
-                self.visible_columns = []
-                # (移除選取操作相關程式碼)
-                self.column_view_button.setEnabled(False)
-                self.import_button.setEnabled(False)
-                self.export_code_list_button.setEnabled(False)
-                self.action_export_code_list.setEnabled(False)
-                self.action_export_params_list.setEnabled(False)
-                self.current_file_label.setText(file_name)
-                self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
                 if self.db_conn is not None:
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
+                # --- 新增結束 ---
                 return
 
-            # 如果已經有資料庫連線，先關閉它
+            if file_size == 0:
+                QMessageBox(self).information("空檔案", "此 CSV 檔案為空，無法載入資料。").exec_()
+                self.current_file_label.setText(file_name)
+                self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
+                # --- 新增：清空狀態 ---
+                self.current_dataset = None
+                self.proxy_model = None
+                self.visible_columns = []
+                self.table_view.setModel(None)
+                self.column_view_button.setEnabled(False)
+                self.import_button.setEnabled(False)
+                self.export_code_list_button.setEnabled(False)
+                if self.db_conn is not None:
+                    self.db_conn.close()
+                self.db_conn = None
+                self.loading = False
+                # --- 新增結束 ---
+                return
+
+            # 關閉現有連接
             if self.db_conn is not None:
                 self.db_conn.close()
                 self.db_conn = None
 
-            # 建立新的記憶體中的 SQLite 資料庫
+            # 建立新的資料庫連接
             self.db_conn = sqlite3.connect(':memory:')
 
-            # 使用分塊讀取 CSV 檔案
-            chunk_size = 10000  # 每次讀取 10,000 行
+            # 改進CSV檔案讀取 - 增加更多檢查與錯誤處理
+            chunk_size = 10000
             try:
+                # 先嘗試讀取檔案前幾行來驗證格式
+                with open(file_path, 'r', encoding='utf-8-sig') as f:
+                    first_lines = []
+                    for i in range(5):  # 讀取前5行
+                        try:
+                            line = next(f)
+                            first_lines.append(line)
+                        except StopIteration:
+                            break
+                    
+                    # 檢查是否只有表頭或空行
+                    if not first_lines or all(line.strip() == '' for line in first_lines):
+                        QMessageBox.information(self, "空檔案", "此CSV檔案不包含有效資料。")
+                        self.current_file_label.setText(file_name)
+                        self.status_bar.showMessage(f"{file_name} 不包含有效資料。")
+                        # --- 新增：清空狀態 ---
+                        self.current_dataset = None
+                        self.proxy_model = None
+                        self.visible_columns = []
+                        self.table_view.setModel(None)
+                        self.column_view_button.setEnabled(False)
+                        self.import_button.setEnabled(False)
+                        self.export_code_list_button.setEnabled(False)
+                        if self.db_conn is not None:
+                            self.db_conn.close()
+                        self.db_conn = None
+                        self.loading = False
+                        # --- 新增結束 ---
+                        return
+                
+                # 嘗試使用pandas讀取檔案
                 chunks = pd.read_csv(file_path, chunksize=chunk_size)
-                # 讀取第一個區塊來獲取列名和設置表格結構
                 try:
                     first_chunk = next(chunks)
                 except StopIteration:
-                    QMessageBox.information(self, "空檔案", "此 CSV 檔案為空，無法載入資料。")
+                    QMessageBox.information(self, "空檔案", "此 CSV 檔案沒有有效資料。")
+                    self.current_file_label.setText(file_name)
+                    self.status_bar.showMessage(f"{file_name} 沒有有效資料。")
+                    # --- 新增：清空狀態 ---
                     self.current_dataset = None
                     self.proxy_model = None
                     self.visible_columns = []
-                    # (移除選取操作相關程式碼)
+                    self.table_view.setModel(None)
                     self.column_view_button.setEnabled(False)
                     self.import_button.setEnabled(False)
                     self.export_code_list_button.setEnabled(False)
-                    self.action_export_code_list.setEnabled(False)
-                    self.action_export_params_list.setEnabled(False)
-                    self.current_file_label.setText(file_name)
-                    self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
                     if self.db_conn is not None:
                         self.db_conn.close()
                     self.db_conn = None
                     self.loading = False
+                    # --- 新增結束 ---
                     return
 
                 if first_chunk.empty:
                     QMessageBox.information(self, "空檔案", "此 CSV 檔案不包含任何資料列。")
+                    self.current_file_label.setText(file_name)
+                    self.status_bar.showMessage(f"{file_name} 不包含任何資料列。")
+                    # --- 新增：清空狀態 ---
                     self.current_dataset = None
                     self.proxy_model = None
                     self.visible_columns = []
-                    # (移除選取操作相關程式碼)
+                    self.table_view.setModel(None)
                     self.column_view_button.setEnabled(False)
                     self.import_button.setEnabled(False)
                     self.export_code_list_button.setEnabled(False)
-                    self.action_export_code_list.setEnabled(False)
-                    self.action_export_params_list.setEnabled(False)
-                    self.current_file_label.setText(file_name)
-                    self.status_bar.showMessage(f"{file_name} 不包含任何資料列，未載入任何資料。")
                     if self.db_conn is not None:
                         self.db_conn.close()
                     self.db_conn = None
                     self.loading = False
+                    # --- 新增結束 ---
                     return
+                    
+                # 以下是成功讀取的後續處理...
+                columns = first_chunk.columns
+                self.current_dataset = first_chunk  # 保存第一個區塊用於圖表顯示
+
+                # 創建表格並插入第一個區塊的資料
+                first_chunk.to_sql(self.table_name, self.db_conn, index=False)
+
+                # 讀取並插入剩餘的區塊
+                for chunk in chunks:
+                    chunk.to_sql(self.table_name, self.db_conn, if_exists='append', index=False)
+
+                # 創建 SqliteTableModel
+                model = SqliteTableModel()
+                model.setup_model(self.db_conn, self.table_name)
+
+                # 設置代理模型
+                self.proxy_model = NumericFilterProxyModel()
+                self.proxy_model.setSourceModel(model)
+                self.proxy_model.setFilterCaseSensitivity(Qt.CaseInsensitive)
+                self.table_view.setModel(self.proxy_model)
+
+                # Connect click handler only once
+                if not self.click_connected:
+                    self.table_view.clicked.connect(self.handle_cell_click)
+                    self.click_connected = True
+
+                # Set fixed width for checkbox column and resize others
+                self.table_view.setColumnWidth(0, 40) # Checkbox column width
+                header = self.table_view.horizontalHeader()
+                for i in range(1, self.proxy_model.columnCount()):
+                    header.setSectionResizeMode(i, QHeaderView.Interactive)
+                header.setSectionResizeMode(0, QHeaderView.Fixed) # Keep checkbox column fixed width
+                header.setStretchLastSection(False) # Adjust if needed
+
+                # Update status bar
+                self.status_bar.showMessage(f"已載入 {file_name} | 共 {model.row_count} 條記錄")
+                self.current_file_label.setText(file_name)
+
+                # Update filter dropdowns and visible columns tracker
+                cursor = self.db_conn.cursor()
+                self.condition_column.clear()
+                self.visible_columns = list(model.columns)  # Initially all columns are visible
+
+                for col in model.columns:
+                    try:
+                        query = f"SELECT CAST(\"{col}\" AS FLOAT) FROM {self.table_name} LIMIT 1"
+                        cursor = self.db_conn.cursor()
+                        cursor.execute(query)
+                        if cursor.fetchone() is not None:
+                            self.condition_column.addItem(col)
+                    except:
+                        continue
+
+                # Enable buttons
+                self.column_view_button.setEnabled(True)
+                self.import_button.setEnabled(True)
+                self.export_code_list_button.setEnabled(True)
+                self.action_export_code_list.setEnabled(True)
+                self.action_export_params_list.setEnabled(True)
+
+                self.apply_column_visibility()
+                self.update_chart()
+                # --- 成功讀取結束 ---
+                
             except pd.errors.EmptyDataError:
                 QMessageBox.information(self, "空檔案", "此 CSV 檔案為空或無有效資料。")
+                self.current_file_label.setText(file_name)
+                self.status_bar.showMessage(f"{file_name} 為空檔案或無有效資料。")
+                # --- 新增：清空狀態 ---
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
-                # (移除選取操作相關程式碼)
+                self.table_view.setModel(None)
                 self.column_view_button.setEnabled(False)
                 self.import_button.setEnabled(False)
                 self.export_code_list_button.setEnabled(False)
-                self.action_export_code_list.setEnabled(False)
-                self.action_export_params_list.setEnabled(False)
-                self.current_file_label.setText(file_name)
-                self.status_bar.showMessage(f"{file_name} 為空檔案或無有效資料，未載入任何資料。")
                 if self.db_conn is not None:
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
+                # --- 新增結束 ---
                 return
             except (pd.errors.ParserError, UnicodeDecodeError) as e:
                 QMessageBox.critical(self, "格式錯誤", f"CSV 檔案格式錯誤或無法解析：{str(e)}")
+                self.current_file_label.setText(file_name)
+                self.status_bar.showMessage(f"{file_name} 格式錯誤: {str(e)}")
+                # --- 新增：清空狀態 ---
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
-                # (移除選取操作相關程式碼)
+                self.table_view.setModel(None)
                 self.column_view_button.setEnabled(False)
                 self.import_button.setEnabled(False)
                 self.export_code_list_button.setEnabled(False)
-                self.action_export_code_list.setEnabled(False)
-                self.action_export_params_list.setEnabled(False)
-                self.current_file_label.setText(file_name)
-                self.status_bar.showMessage(f"{file_name} 格式錯誤，未載入任何資料。")
                 if self.db_conn is not None:
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
+                # --- 新增結束 ---
                 return
-
-            columns = first_chunk.columns
-            self.current_dataset = first_chunk  # 保存第一個區塊用於圖表顯示
-
-            # 創建表格並插入第一個區塊的資料
-            first_chunk.to_sql(self.table_name, self.db_conn, index=False)
-
-            # 讀取並插入剩餘的區塊
-            for chunk in chunks:
-                chunk.to_sql(self.table_name, self.db_conn, if_exists='append', index=False)
-
-            # 創建 SqliteTableModel
-            model = SqliteTableModel()
-            model.setup_model(self.db_conn, self.table_name)
-
-            # 設置代理模型
-            self.proxy_model = NumericFilterProxyModel()
-            self.proxy_model.setSourceModel(model)
-            self.proxy_model.setFilterCaseSensitivity(Qt.CaseInsensitive)
-            self.table_view.setModel(self.proxy_model)
-
-            # Connect click handler only once
-            if not self.click_connected:
-                self.table_view.clicked.connect(self.handle_cell_click)
-                self.click_connected = True
-
-            # Set fixed width for checkbox column and resize others
-            self.table_view.setColumnWidth(0, 40) # Checkbox column width
-            # Optionally resize other columns based on content
-            # self.table_view.resizeColumnsToContents()
-            # Or stretch all columns except the first one
-            header = self.table_view.horizontalHeader()
-            for i in range(1, self.proxy_model.columnCount()):
-                header.setSectionResizeMode(i, QHeaderView.Interactive)
-            header.setSectionResizeMode(0, QHeaderView.Fixed) # Keep checkbox column fixed width
-            header.setStretchLastSection(False) # Adjust if needed
-
-            # Update status bar
-            file_name = os.path.basename(file_path)
-            self.status_bar.showMessage(f"已載入 {file_name} | 共 {model.row_count} 條記錄")
-            self.current_file_label.setText(file_name)
-
-            # Update filter dropdowns and visible columns tracker
-            cursor = self.db_conn.cursor()
-
-            self.condition_column.clear()
-            self.visible_columns = list(model.columns)  # Initially all columns are visible
-
-            for col in model.columns:
-                # self.filter_column.addItem(col) # Removed
-                try:
-                    # 執行 SQL 查詢來測試欄位是否包含數值
-                    query = f"SELECT CAST(\"{col}\" AS FLOAT) FROM {self.table_name} LIMIT 1" # Use quotes for safety
-                    cursor = self.db_conn.cursor()
-                    cursor.execute(query)
-                    if cursor.fetchone() is not None:
-                        self.condition_column.addItem(col)
-                except:
-                    continue  # Skip if column cannot be cast to float
-
-            # Enable buttons
-            # (移除選取操作相關程式碼)
-            self.column_view_button.setEnabled(True)
-            self.import_button.setEnabled(True) # Enable the new import button
-            self.export_code_list_button.setEnabled(True) # Enable export button
-            self.action_export_code_list.setEnabled(True)
-            self.action_export_params_list.setEnabled(True)
-                         
-            self.apply_column_visibility()
-
-            # Update chart
-            self.update_chart()
+            except Exception as e:
+                # 捕獲所有其他可能的異常
+                QMessageBox.critical(self, "未知錯誤", f"讀取CSV檔案時發生未知錯誤: {str(e)}")
+                self.current_file_label.setText(file_name)
+                self.status_bar.showMessage(f"讀取 {file_name} 時發生錯誤: {str(e)}")
+                # --- 新增：清空狀態 ---
+                self.current_dataset = None
+                self.proxy_model = None
+                self.visible_columns = []
+                self.table_view.setModel(None)
+                self.column_view_button.setEnabled(False)
+                self.import_button.setEnabled(False)
+                self.export_code_list_button.setEnabled(False)
+                if self.db_conn is not None:
+                    self.db_conn.close()
+                self.db_conn = None
+                self.loading = False
+                # --- 新增結束 ---
+                return
+                
+            # ... 其餘代碼保持不變 ...
 
         except Exception as e:
             QMessageBox.critical(self, "錯誤", f"載入回測結果時發生錯誤：{str(e)}")
-            if hasattr(self, "save_selected_button"):
-                self.save_selected_button.setEnabled(False)
-            self.column_view_button.setEnabled(False)
-            self.import_button.setEnabled(False) # Disable import button on error
+            self.current_file_label.setText(file_name if 'file_name' in locals() else "錯誤")
+            self.status_bar.showMessage(f"載入過程中發生錯誤: {str(e)}")
+            # 重置模型和資料
             self.current_dataset = None
             self.proxy_model = None
             self.visible_columns = []
-            self.visible_columns = []
-
-        finally: # --- 修正：確保 loading 標誌總是被重置 ---
+            self.table_view.setModel(None)
+            # --- 新增：禁用按鈕 ---
+            self.column_view_button.setEnabled(False)
+            self.import_button.setEnabled(False)
+            self.export_code_list_button.setEnabled(False)
+            if self.db_conn is not None:
+                self.db_conn.close()
+            self.db_conn = None
+            # --- 新增結束 ---
+            
+        finally:
+            # 重置loading狀態
             self.loading = False
-            # --- 修改：載入完成後，重新應用現有的搜尋文字 ---
-            # --- 修改：載入完成後，直接觸發一次過濾，而不是等待計時器 ---
-            self.filter_data() # 應用 search_input 中的文字到新載入的數據
+            try:
+                # 安全地觸發過濾
+                if not self.loading and hasattr(self, 'filter_data'):
+                    self.filter_data()
+            except Exception as e:
+                print(f"過濾數據時發生錯誤: {str(e)}")
 
     # --- 新增：處理搜尋框文字變更，啟動計時器 ---
     def on_search_text_changed(self):
