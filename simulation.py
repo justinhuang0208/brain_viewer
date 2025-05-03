@@ -5,7 +5,7 @@ from PySide6.QtWidgets import (
     QStackedWidget
 )
 from PySide6.QtCore import Qt, QThread, Signal, QObject, Slot, QPoint
-from PySide6.QtGui import QAction, QColor # Import QColor
+from PySide6.QtGui import QAction, QColor
 import uuid
 
 class BatchEditDialog(QDialog):
@@ -185,8 +185,6 @@ class SimulationWidget(QWidget):
         self.progress_label = QLabel("尚未開始模擬")
         layout.addWidget(self.progress_label)
 
-        # 參數表格 - 增加一欄給 checkbox
-        # 新增進度欄: "選取" + "進度 (%)" + 其餘 PARAM_COLUMNS
         self.progress_col_index = 1  # 進度欄固定為索引 1
         self.table = QTableWidget(0, len(PARAM_COLUMNS) + 2) # +1 for checkbox, +1 for progress
         header_labels = ["選取", "進度 (%)"] + PARAM_COLUMNS
@@ -228,7 +226,6 @@ class SimulationWidget(QWidget):
         self.del_action = QAction("刪除選取", self)
         self.batch_edit_action = QAction("批量調整", self)
 
-        # 新增：刪除全部資料按鈕
         self.del_all_btn = QPushButton("刪除全部資料")
         btn_layout.addWidget(self.del_all_btn)
 
@@ -246,16 +243,15 @@ class SimulationWidget(QWidget):
         self.dup_action.triggered.connect(self.duplicate_selected_rows)
         self.del_action.triggered.connect(self.delete_selected_rows)
         self.batch_edit_action.triggered.connect(self.show_batch_edit_dialog)
-        self.del_all_btn.clicked.connect(self.delete_all_rows) # 連接刪除全部按鈕
-        self.sim_btn.clicked.connect(self.toggle_simulation) # 改為連接 toggle_simulation
-        self.check_login_btn.clicked.connect(self.check_login_status) # Connect new button
+        self.del_all_btn.clicked.connect(self.delete_all_rows)
+        self.sim_btn.clicked.connect(self.toggle_simulation)
+        self.check_login_btn.clicked.connect(self.check_login_status)
         self.table.cellDoubleClicked.connect(self.handle_cell_double_clicked)
         self.simulation_thread = None
         self.simulation_worker = None
-        self.is_simulating = False # 追蹤模擬狀態
-        # Store the index of the 'code' column for faster lookup
+        self.is_simulating = False
         try:
-            self._code_col_index = PARAM_COLUMNS.index('code') + 2 # +2 for checkbox+progress
+            self._code_col_index = PARAM_COLUMNS.index('code') + 2
         except ValueError:
             self._code_col_index = -1 # Should not happen if PARAM_COLUMNS is correct
 
@@ -368,11 +364,11 @@ class SimulationWidget(QWidget):
                 else:
                     # 如果欄位缺失，嘗試從 DEFAULT_VALUES 獲取預設值
                     try:
-                        default_index = PARAM_COLUMNS.index(col_name) + 1 # +1 because DEFAULT_VALUES includes None for checkbox
+                        default_index = PARAM_COLUMNS.index(col_name) + 1
                         row_data.append(DEFAULT_VALUES[default_index])
                         print(f"警告: 欄位 '{col_name}' 缺失，使用預設值: {DEFAULT_VALUES[default_index]}")
                     except (ValueError, IndexError):
-                        row_data.append("") # Fallback to empty string if no default found
+                        row_data.append("")
                         print(f"警告: 欄位 '{col_name}' 缺失且找不到預設值，使用空字串。")
 
             self.add_row(data=row_data)
@@ -399,7 +395,7 @@ class SimulationWidget(QWidget):
         values_to_set = data if data else DEFAULT_VALUES[1:] # Skip the None placeholder for checkbox
 
         for col_idx, val in enumerate(values_to_set):
-            table_col = col_idx + 2 # +2: 跳過 checkbox 與進度欄
+            table_col = col_idx + 2
             param_key = PARAM_COLUMNS[col_idx]
 
             if param_key == "delay":
@@ -435,7 +431,7 @@ class SimulationWidget(QWidget):
             selected_only = values['selected_only']
 
             # 獲取參數所在的列
-            param_col = PARAM_COLUMNS.index(param) + 2  # +2: 跳過「選取」和「進度 (%)」兩欄
+            param_col = PARAM_COLUMNS.index(param) + 2
 
             # 驗證輸入值
             if param == "delay":
@@ -487,19 +483,19 @@ class SimulationWidget(QWidget):
 
             QMessageBox.information(self, "更新完成", f"已更新 {rows_updated} 筆資料")
 
-    def handle_cell_double_clicked(self, row, col): # Correct indent
-        if col == 0: # Ignore double clicks on checkbox column
+    def handle_cell_double_clicked(self, row, col):
+        if col == 0:
              return
-        param_col_index = col - 2  # 修正：跳過「選取」和「進度 (%)」兩欄
+        param_col_index = col - 2
         if param_col_index >= 0 and PARAM_COLUMNS[param_col_index] == "code":
-            item = self.table.item(row, col) # Use original 'col' for table access
+            item = self.table.item(row, col)
             code_text = item.text() if item else ""
             dlg = CodeEditDialog(code_text, self)
             if dlg.exec() == QDialog.Accepted:
                 new_code = dlg.get_code()
                 if not item:
                     item = QTableWidgetItem()
-                    self.table.setItem(row, col, item) # Use original 'col'
+                    self.table.setItem(row, col, item)
                 item.setText(new_code)
 
     def duplicate_selected_rows(self):
@@ -508,9 +504,9 @@ class SimulationWidget(QWidget):
             chk_item = self.table.item(row, 0)
             if chk_item and chk_item.checkState() == Qt.Checked:
                 row_data = []
-                for col in range(2, self.table.columnCount()): # Start from col 2 (skip 進度 %)
+                for col in range(2, self.table.columnCount()):
                     widget = self.table.cellWidget(row, col)
-                    if widget: # Handle widgets (ComboBox)
+                    if widget:
                          if isinstance(widget, QComboBox):
                              row_data.append(widget.currentText())
                          # Add other widget types here if needed

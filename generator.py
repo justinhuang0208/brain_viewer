@@ -26,7 +26,7 @@ from PySide6.QtGui import QFont, QColor
 import re
 from PySide6.QtGui import QSyntaxHighlighter, QTextCharFormat, QColor, QFont
 # 匯入模擬參數預設值
-from simulation_widget import PARAM_COLUMNS, DEFAULT_VALUES
+from simulation import PARAM_COLUMNS, DEFAULT_VALUES
 # 獲取腳本所在目錄的絕對路徑
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 

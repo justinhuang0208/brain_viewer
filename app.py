@@ -127,7 +127,7 @@ class StrategyGeneratorWidget(QWidget):
         """獲取當前狀態欄消息"""
         return "策略生成模式"
 
-from simulation_widget import SimulationWidget
+from simulation import SimulationWidget
 
 # 主應用程序窗口
 class MainWindow(QMainWindow):
