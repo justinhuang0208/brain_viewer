@@ -12,7 +12,7 @@ import csv
 import json
 import pandas as pd
 import datetime
-import ast # 新增導入
+import ast
 from PySide6.QtWidgets import (QApplication, QMainWindow, QVBoxLayout, QHBoxLayout,
                              QWidget, QLabel, QComboBox, QLineEdit, QTextEdit,
                              QPushButton, QFileDialog, QMessageBox, QTabWidget,
@@ -105,20 +105,35 @@ class SelectedFieldsWidget(QWidget):
             self.field_list.takeItem(self.field_list.row(item))
             
     def add_custom_field(self):
-        """手動輸入字段"""
+        """手動輸入字段，支援逗號分隔或 Python 列表格式"""
         text, ok = QInputDialog.getText(
             self,
             "添加字段",
-            "請輸入字段名稱(多個字段可用逗號分隔):",
+            "請輸入字段名稱 (多個字段可用逗號分隔，或輸入 Python 列表格式的字串):",
             QLineEdit.Normal,
             ""
         )
-        
+
         if ok and text.strip():
-            # 分割輸入的文本，處理可能的多個字段
-            fields = [f.strip() for f in text.split(',') if f.strip()]
-            self.add_fields(fields)
-            
+            fields = []
+            try:
+                # 嘗試解析 Python 列表格式
+                parsed_input = ast.literal_eval(text.strip())
+                if isinstance(parsed_input, list):
+                    # 確保列表中的元素都是字串
+                    fields = [str(item).strip() for item in parsed_input if str(item).strip()]
+                else:
+                    # 如果解析結果不是列表，則按逗號分隔處理
+                    QMessageBox.warning(self, "格式錯誤", "輸入的不是有效的 Python 列表，將嘗試按逗號分隔處理。")
+                    fields = [f.strip() for f in text.split(',') if f.strip()]
+            except (ValueError, SyntaxError):
+                # 解析失敗，回退到逗號分隔
+                fields = [f.strip() for f in text.split(',') if f.strip()]
+
+            if fields:
+                self.add_fields(fields)
+            else:
+                QMessageBox.warning(self, "輸入無效", "未能從輸入中提取有效的字段名稱。")
     @Slot(list)
     def add_fields_from_list(self, fields):
         """從列表添加多個字段 (Slot for external signals)"""

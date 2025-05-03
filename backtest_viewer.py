@@ -1253,12 +1253,12 @@ class MainWindow(QMainWindow):
                 return
 
             # 查詢目前過濾條件下的資料
-            filter_clause = source_model._get_filter_and_sort_clause()
+            filter_clause, params = source_model._get_filter_and_sort_clause() # 修改：接收參數
             cursor = source_model.db_conn.cursor()
             fields_sql = ", ".join(available_fields)
             query = f"SELECT {fields_sql} FROM {source_model.table_name} {filter_clause}"
             try:
-                cursor.execute(query)
+                cursor.execute(query, params) # 修改：傳入參數
                 rows = cursor.fetchall()
             except Exception as e:
                 QMessageBox.critical(self, "查詢錯誤", f"查詢資料庫時發生錯誤：{str(e)}")
@@ -2009,10 +2009,10 @@ class MainWindow(QMainWindow):
         source_model = self.proxy_model.sourceModel()
         try:
             # 構建 SQL 查詢，包含當前過濾條件
-            filter_clause = source_model._get_filter_and_sort_clause()
+            filter_clause, params = source_model._get_filter_and_sort_clause() # 修改：接收參數
             cursor = source_model.db_conn.cursor()
             # 獲取所有列的數據
-            cursor.execute(f"SELECT * FROM {source_model.table_name} {filter_clause}")
+            cursor.execute(f"SELECT * FROM {source_model.table_name} {filter_clause}", params) # 修改：傳入參數
             rows = cursor.fetchall()
             
             if rows:
