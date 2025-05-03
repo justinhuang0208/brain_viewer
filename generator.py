@@ -35,523 +35,159 @@ DATASETS_DIR = os.path.join(SCRIPT_DIR, "datasets")
 TEMPLATES_DIR = os.path.join(SCRIPT_DIR, "templates")
 ALPHAS_DIR = os.path.join(SCRIPT_DIR, "alphas")
 
-class FieldSelector(QWidget):
-    """用於選擇數據字段的小部件"""
-    
-    field_selected = Signal(str)  # 字段選擇信號
+class SelectedFieldsWidget(QWidget):
+    """用於顯示和管理已選字段的小部件"""
     
     def __init__(self, parent=None):
-        super(FieldSelector, self).__init__(parent)
-        
-        self.csv_file_path = None  # 當前選擇的CSV文件路徑
-        self.field_data = {}       # 用於存儲字段信息
-        
-        # 確保目錄存在
-        if not os.path.exists(DATASETS_DIR):
-            os.makedirs(DATASETS_DIR)
-        if not os.path.exists(TEMPLATES_DIR):
-            os.makedirs(TEMPLATES_DIR)
+        super(SelectedFieldsWidget, self).__init__(parent)
+        # 確保輸出目錄存在
         if not os.path.exists(ALPHAS_DIR):
             os.makedirs(ALPHAS_DIR)
             
         self.init_ui()
-        self.load_dataset_list()
         
     def init_ui(self):
+        """初始化界面"""
         layout = QVBoxLayout(self)
         
-        # CSV文件選擇區域
-        file_group = QGroupBox("數據集選擇")
-        file_layout = QVBoxLayout()
-        
-        # 數據集下拉選擇框
-        file_select_layout = QHBoxLayout()
-        file_select_layout.addWidget(QLabel("選擇數據集:"))
-        self.dataset_combo = QComboBox()
-        self.dataset_combo.currentIndexChanged.connect(self.on_dataset_selected)
-        file_select_layout.addWidget(self.dataset_combo, 1)
-        
-        self.refresh_btn = QPushButton("刷新列表")
-        self.refresh_btn.clicked.connect(self.load_dataset_list)
-        file_select_layout.addWidget(self.refresh_btn)
-        
-        file_layout.addLayout(file_select_layout)
-        file_group.setLayout(file_layout)
-        
-        # 添加字段選擇區域
-        field_group = QGroupBox("選擇的字段")
-        field_layout = QVBoxLayout()
-        
-        # 字段類型選擇
-        type_layout = QHBoxLayout()
-        type_layout.addWidget(QLabel("字段類型:"))
-        self.type_combo = QComboBox()
-        self.type_combo.addItems(["矩陣(MATRIX)", "向量(VECTOR)", "全部"])
-        self.type_combo.currentIndexChanged.connect(self.filter_fields_by_type)
-        type_layout.addWidget(self.type_combo)
-        
-        # 搜索框
-        search_layout = QHBoxLayout()
-        search_layout.addWidget(QLabel("搜索:"))
-        self.search_input = QLineEdit()
-        self.search_input.setPlaceholderText("輸入字段名或描述...")
-        self.search_input.textChanged.connect(self.filter_fields)
-        search_layout.addWidget(self.search_input)
+        # 已選字段組
+        group = QGroupBox("已選字段")
+        group_layout = QVBoxLayout()
         
         # 字段列表
         self.field_list = QListWidget()
-        self.field_list.setSelectionMode(QAbstractItemView.ExtendedSelection)
-        self.field_list.itemDoubleClicked.connect(self.on_field_double_click)
-        
-        # 字段列表操作按鈕
-        field_list_buttons = QHBoxLayout()
-        self.select_all_btn = QPushButton("全選/取消全選")
-        self.select_all_btn.clicked.connect(self.toggle_select_all)
-        field_list_buttons.addWidget(self.select_all_btn)
-        
-        self.add_all_btn = QPushButton("加入全部可見字段")
-        self.add_all_btn.clicked.connect(self.add_all_visible_fields)
-        field_list_buttons.addWidget(self.add_all_btn)
-        
-        # 已選字段列表
-        self.selected_group = QGroupBox("已選字段")
-        selected_layout = QVBoxLayout()
-        self.selected_field_list = QListWidget()
-        self.selected_field_list.itemDoubleClicked.connect(self.remove_selected_field)
-        
-        selected_buttons = QHBoxLayout()
-        self.add_field_btn = QPushButton("添加 >>>")
-        self.add_field_btn.clicked.connect(self.add_selected_fields)
-        selected_buttons.addWidget(self.add_field_btn)
-        
-        self.remove_field_btn = QPushButton("<<< 移除")
-        self.remove_field_btn.clicked.connect(self.remove_selected_fields)
-        selected_buttons.addWidget(self.remove_field_btn)
-        
-        self.clear_field_btn = QPushButton("清空")
-        self.clear_field_btn.clicked.connect(self.clear_selected_fields)
-        selected_buttons.addWidget(self.clear_field_btn)
-
-        # 新增「輸入自訂字段」按鈕
-        self.custom_field_btn = QPushButton("輸入自訂字段")
-        self.custom_field_btn.clicked.connect(self.open_custom_field_dialog)
-        selected_buttons.addWidget(self.custom_field_btn)
-
-        selected_layout.addWidget(self.selected_field_list)
-        selected_layout.addLayout(selected_buttons)
-        self.selected_group.setLayout(selected_layout)
-
-        field_layout.addLayout(type_layout)
-        field_layout.addLayout(search_layout)
-        field_layout.addWidget(QLabel("可用字段:"))
-        field_layout.addLayout(field_list_buttons)  # 添加按鈕行
-        field_layout.addWidget(self.field_list, 2)
-        field_layout.addWidget(self.selected_group, 1)
-        field_group.setLayout(field_layout)
-        
-        # 布局添加
-        layout.addWidget(file_group)
-        layout.addWidget(field_group, 1)
-    
-    def load_dataset_list(self):
-        """載入datasets目錄中的CSV文件列表"""
-        self.dataset_combo.clear()
-        
-        if not os.path.exists(DATASETS_DIR):
-            os.makedirs(DATASETS_DIR)
-        
-        csv_files = []
-        for file in os.listdir(DATASETS_DIR):
-            if file.endswith("_fields_formatted.csv"):
-                csv_files.append(file)
-        
-        # 按字母順序排序
-        csv_files.sort()
-        
-        # 添加到下拉框
-        for file in csv_files:
-            self.dataset_combo.addItem(file)
-            
-        # 如果有文件，選擇第一個
-        if self.dataset_combo.count() > 0:
-            self.dataset_combo.setCurrentIndex(0)
-        
-    def on_dataset_selected(self, index):
-        """當選擇數據集時觸發"""
-        if index >= 0:
-            file_name = self.dataset_combo.currentText()
-            self.csv_file_path = os.path.join(DATASETS_DIR, file_name)
-            self.load_fields_from_csv()
-        
-    def select_csv_file(self):
-        """選擇CSV文件"""
-        file_dialog = QFileDialog()
-        file_path, _ = file_dialog.getOpenFileName(
-            self, "選擇CSV文件", "", "CSV文件 (*.csv)"
-        )
-        
-        if file_path:
-            self.csv_file_path = file_path
-            self.file_path_label.setText(file_path)
-            self.load_fields_from_csv()
-            
-    def load_fields_from_csv(self):
-        """從CSV文件加載字段"""
-        self.field_list.clear()
-        self.field_data = {}
-        
-        if not self.csv_file_path or not os.path.exists(self.csv_file_path):
-            return
-            
-        try:
-            df = pd.read_csv(self.csv_file_path)
-            
-            # 檢查必要列是否存在
-            if 'Field' not in df.columns or 'Type' not in df.columns:
-                QMessageBox.warning(self, "無效的CSV格式", 
-                                  "CSV文件必須包含'Field'和'Type'列")
-                return
-                
-            # 處理每一行
-            for _, row in df.iterrows():
-                field = row.get('Field', '')
-                field_type = str(row.get('Type', '')).upper()
-                
-                # 只收集矩陣和向量類型字段
-                if field and field_type in ['MATRIX', 'VECTOR']:
-                    self.field_data[field] = {
-                        'type': field_type,
-                        'description': row.get('Description', ''),
-                        'coverage': row.get('Coverage', '')
-                    }
-                    
-            # 更新字段列表
-            self.filter_fields_by_type()
-            
-        except Exception as e:
-            QMessageBox.critical(self, "錯誤", f"讀取CSV文件時出錯: {str(e)}")
-            
-    def filter_fields_by_type(self):
-        """根據所選類型過濾字段"""
-        self.field_list.clear()
-        type_index = self.type_combo.currentIndex()
-        
-        # 設置列表項的文本格式
         self.field_list.setFont(QFont("Consolas", 14))
+        self.field_list.setSelectionMode(QAbstractItemView.ExtendedSelection)
+        self.field_list.itemDoubleClicked.connect(self.edit_field)
+        group_layout.addWidget(self.field_list)
         
-        for field, data in self.field_data.items():
-            field_type = data.get('type', '')
-            
-            # 根據選擇的類型過濾
-            if (type_index == 0 and field_type == 'MATRIX') or \
-               (type_index == 1 and field_type == 'VECTOR') or \
-               (type_index == 2):  # 全部
-                # 獲取覆蓋率信息
-                coverage = data.get('coverage', '')
-                coverage_str = str(coverage).strip()
-                
-                # 準備右側顯示的信息
-                right_part = ""
-                if coverage_str:
-                    right_part = coverage_str
-                if field_type:
-                    type_short = "M" if field_type == "MATRIX" else "V"
-                    if right_part:
-                        right_part = f"{right_part} {type_short}"
-                    else:
-                        right_part = type_short
-                
-                # 創建顯示文本，使字段名靠左，覆蓋率和類型完全靠右
-                total_width = 54  # 總顯示寬度
-                # 先決定右側部分的長度
-                right_width = len(right_part)
-                # 計算應該填充多少空格
-                field_max_width = total_width - right_width - 1  # 減1為中間空格
-                
-                # 如果字段名過長，則截斷
-                if len(field) > field_max_width:
-                    display_field = field[:field_max_width-3] + "..."
-                else:
-                    display_field = field
-                
-                # 創建顯示文本，使用格式化確保右對齊
-                padding = total_width - len(display_field) - right_width
-                display_text = f"{display_field}{' ' * padding}{right_part}"
-                    
-                item = QListWidgetItem(display_text)
-                
-                # 設置詳細提示信息
-                description = data.get('description', '')
-                tooltip = f"字段：{field}\n"
-                tooltip += f"類型：{field_type}\n"
-                tooltip += f"覆蓋率：{coverage_str}\n"
-                if description:
-                    tooltip += f"描述：{description}"
-                item.setToolTip(tooltip)
-                
-                # 設置項目數據 - 用於後續處理
-                item.setData(Qt.UserRole, field)  # 保存原始字段名
-                
-                # 設置顏色 - 根據覆蓋率
-                try:
-                    cov_value = float(str(coverage).replace('%', ''))
-                    if cov_value > 75:
-                        item.setBackground(QColor("#e8f5e9"))  # 淺綠色
-                    elif cov_value > 50:
-                        item.setBackground(QColor("#fff9c4"))  # 淺黃色
-                    else:
-                        item.setBackground(QColor("#ffebee"))  # 淺紅色
-                except:
-                    pass
-                    
-                self.field_list.addItem(item)
-                
-        # 應用搜索過濾
-        self.filter_fields()
-                
-    def filter_fields(self):
-        """根據搜索文本過濾字段"""
-        search_text = self.search_input.text().lower()
+        # 按鈕區域
+        buttons = QHBoxLayout()
         
-        for i in range(self.field_list.count()):
-            item = self.field_list.item(i)
-            field = item.text().lower()
-            desc = item.toolTip().lower()
-            
-            if search_text in field or search_text in desc:
-                item.setHidden(False)
-            else:
-                item.setHidden(True)
-                
-    def on_field_double_click(self, item):
-        """字段雙擊事件"""
-        # 從項目數據中獲取原始字段名
-        field_name = item.data(Qt.UserRole)
-        self.add_field_to_selected(field_name)
+        # 清空按鈕
+        self.clear_btn = QPushButton("清空所有")
+        self.clear_btn.setToolTip("清空所有已選字段")
+        self.clear_btn.clicked.connect(self.clear_fields)
+        buttons.addWidget(self.clear_btn)
         
-    def add_selected_fields(self):
-        """添加選中的字段到已選列表"""
-        for item in self.field_list.selectedItems():
-            field_name = item.data(Qt.UserRole)  # 使用原始字段名
-            self.add_field_to_selected(field_name)
-            
-    def add_field_to_selected(self, field_name):
-        """添加字段到已選列表"""
-        # 檢查是否已經在已選列表中
-        for i in range(self.selected_field_list.count()):
-            item_data = self.selected_field_list.item(i).data(Qt.UserRole)
-            if item_data == field_name:
-                return
-                
-        # 創建新的列表項
-        field_data = self.field_data.get(field_name, {})
-        field_type = field_data.get('type', '')
-        coverage = field_data.get('coverage', '')
+        buttons.addStretch()
         
-        # 準備右側顯示的信息
-        right_part = ""
-        if coverage:
-            right_part = coverage
-        if field_type:
-            type_short = "M" if field_type == "MATRIX" else "V"
-            if right_part:
-                right_part = f"{right_part} {type_short}"
-            else:
-                right_part = type_short
+        # 移除按鈕
+        self.remove_btn = QPushButton("移除選中")
+        self.remove_btn.setToolTip("移除選中的字段")
+        self.remove_btn.clicked.connect(self.remove_selected)
+        buttons.addWidget(self.remove_btn)
         
-        # 創建顯示文本，使字段名靠左，覆蓋率和類型完全靠右
-        total_width = 50  # 總顯示寬度
-        # 先決定右側部分的長度
-        right_width = len(right_part)
-        # 計算應該填充多少空格
-        field_max_width = total_width - right_width - 1  # 減1為中間空格
+        # 手動輸入按鈕
+        self.custom_btn = QPushButton("手動輸入")
+        self.custom_btn.setToolTip("手動輸入字段名稱")
+        self.custom_btn.clicked.connect(self.add_custom_field)
+        buttons.addWidget(self.custom_btn)
         
-        # 如果字段名過長，則截斷
-        if len(field_name) > field_max_width:
-            display_field = field_name[:field_max_width-3] + "..."
-        else:
-            display_field = field_name
+        group_layout.addLayout(buttons)
+        group.setLayout(group_layout)
+        layout.addWidget(group)
         
-        # 創建顯示文本，使用格式化確保右對齊
-        padding = total_width - len(display_field) - right_width
-        display_text = f"{display_field}{' ' * padding}{right_part}"
-            
-        # 添加到已選列表
-        item = QListWidgetItem(display_text)
-        item.setData(Qt.UserRole, field_name)  # 保存原始字段名
-        self.selected_field_list.addItem(item)
-        
-    def remove_selected_field(self, item):
-        """從已選列表移除字段"""
-        row = self.selected_field_list.row(item)
-        self.selected_field_list.takeItem(row)
-        
-    def remove_selected_fields(self):
-        """移除選中的已選字段"""
-        selected_items = self.selected_field_list.selectedItems()
-        for item in selected_items:
-            row = self.selected_field_list.row(item)
-            self.selected_field_list.takeItem(row)
-            
-    def clear_selected_fields(self):
-        """清空已選字段列表"""
-        self.selected_field_list.clear()
+    def clear_fields(self):
+        """清空所有字段"""
+        self.field_list.clear()
         
     def get_selected_fields(self):
         """獲取所有已選字段"""
-        selected_fields = []
-        for i in range(self.selected_field_list.count()):
-            # 從項目數據中獲取原始字段名
-            field_name = self.selected_field_list.item(i).data(Qt.UserRole)
-            selected_fields.append(field_name)
-        return selected_fields
+        fields = []
+        for i in range(self.field_list.count()):
+            fields.append(self.field_list.item(i).text())
+        return fields
         
-    def toggle_select_all(self):
-        """全選或取消全選字段列表中的所有可見項目"""
-        all_selected = True
+    def remove_selected(self):
+        """移除選中的字段"""
+        for item in self.field_list.selectedItems():
+            self.field_list.takeItem(self.field_list.row(item))
+            
+    def add_custom_field(self):
+        """手動輸入字段"""
+        text, ok = QInputDialog.getText(
+            self,
+            "添加字段",
+            "請輸入字段名稱(多個字段可用逗號分隔):",
+            QLineEdit.Normal,
+            ""
+        )
         
-        # 檢查是否所有可見項目都已選中
-        for i in range(self.field_list.count()):
-            item = self.field_list.item(i)
-            if not item.isHidden() and not item.isSelected():
-                all_selected = False
-                break
-                
-        # 切換選擇狀態
-        for i in range(self.field_list.count()):
-            item = self.field_list.item(i)
-            if not item.isHidden():
-                item.setSelected(not all_selected)
-                
-    def add_all_visible_fields(self):
-        """添加所有可見字段到已選列表"""
-        for i in range(self.field_list.count()):
-            item = self.field_list.item(i)
-            if not item.isHidden():
-                field_name = item.data(Qt.UserRole)
-                self.add_field_to_selected(field_name)
-
-    # --- New Slot to receive codes from backtest_viewer ---
+        if ok and text.strip():
+            # 分割輸入的文本，處理可能的多個字段
+            fields = [f.strip() for f in text.split(',') if f.strip()]
+            self.add_fields(fields)
+            
     @Slot(list)
-    def add_fields_from_list(self, field_names):
-        """從列表添加多個字段到已選列表 (Slot for external signals)"""
-        if not isinstance(field_names, list):
-            print(f"錯誤: add_fields_from_list 預期接收列表，但收到 {type(field_names)}")
-            QMessageBox.warning(self, "匯入錯誤", f"預期接收列表，但收到 {type(field_names)}")
-            return
+    def add_fields_from_list(self, fields):
+        """從列表添加多個字段 (Slot for external signals)"""
+        if isinstance(fields, list):
+            self.add_fields(fields)
+        else:
+            QMessageBox.warning(self, "匯入錯誤", "預期接收字段列表")
+            
+    def edit_field(self, item):
+        """編輯選中的字段"""
+        old_text = item.text()
+        new_text, ok = QInputDialog.getText(
+            self,
+            "編輯字段",
+            "修改字段名稱:",
+            QLineEdit.Normal,
+            old_text
+        )
+        
+        if ok and new_text.strip() and new_text != old_text:
+            # 檢查是否與其他字段重複
+            exists = False
+            for i in range(self.field_list.count()):
+                if i != self.field_list.row(item) and self.field_list.item(i).text() == new_text:
+                    exists = True
+                    break
+            
+            if not exists:
+                item.setText(new_text.strip())
+                item.setToolTip(new_text.strip())
+            else:
+                QMessageBox.warning(self, "錯誤", "此字段名稱已存在")
 
+    def add_fields(self, fields):
+        """添加一個或多個字段到列表"""
+        if not fields:
+            return
+            
+        if isinstance(fields, str):
+            fields = [fields]
+            
         added_count = 0
         skipped_count = 0
-        for field_name in field_names:
-            if isinstance(field_name, str) and field_name.strip():
-                clean_field_name = field_name.strip()
-                # 檢查是否已存在於已選列表
-                already_exists = False
-                for i in range(self.selected_field_list.count()):
-                    item_data = self.selected_field_list.item(i).data(Qt.UserRole)
-                    if item_data == clean_field_name:
-                        already_exists = True
+        
+        for field in fields:
+            if isinstance(field, str) and field.strip():
+                field = field.strip()
+                # 檢查是否已存在
+                exists = False
+                for i in range(self.field_list.count()):
+                    if self.field_list.item(i).text() == field:
+                        exists = True
                         break
-
-                if not already_exists:
-                    # 嘗試使用 add_field_to_selected (如果字段存在於當前加載的數據集)
-                    # 否則，直接添加純文本
-                    if clean_field_name in self.field_data:
-                        self.add_field_to_selected(clean_field_name)
-                        added_count += 1
-                    else:
-                        # 如果 Code 不在當前 FieldSelector 加載的數據集字段中，
-                        # 仍然將其作為純文本添加到已選列表
-                        item = QListWidgetItem(clean_field_name)
-                        item.setData(Qt.UserRole, clean_field_name) # 保存原始名稱
-                        # 可以考慮設置不同的背景色或提示
-                        # item.setBackground(QColor("#f0f0f0")) # 例如灰色背景
-                        item.setToolTip(f"匯入的 Code: {clean_field_name}\n(不在當前數據集字段列表中)")
-                        self.selected_field_list.addItem(item)
-                        added_count += 1
+                        
+                if not exists:
+                    item = QListWidgetItem(field)
+                    item.setToolTip(field)  # 設置提示文字
+                    self.field_list.addItem(item)
+                    added_count += 1
                 else:
-                    skipped_count += 1 # 如果已存在則跳過
-            else:
-                print(f"跳過無效的匯入項: {field_name}")
-                skipped_count += 1
-
-        status_message = f"匯入完成：成功添加 {added_count} 個 Code"
-        if skipped_count > 0:
-            status_message += f"，跳過 {skipped_count} 個重複或無效項。"
-        print(status_message)
-        # 可以考慮更新狀態欄或顯示一個短暫的消息框
-
-    def open_custom_field_dialog(self):
-        """打開對話框以輸入自訂字段列表"""
-        default_text = """[
-  "field1 / field2", # 註解 1
-  "field3",          # 註解 2
-]"""
-        text, ok = QInputDialog.getMultiLineText(
-            self,
-            "輸入自訂字段",
-            "請輸入字段列表 (Python list 格式):",
-            default_text
-        )
-
-        if ok and text:
-            try:
-                # 使用 ast.literal_eval 安全解析列表
-                raw_list = ast.literal_eval(text)
-                if not isinstance(raw_list, list):
-                    raise ValueError("輸入的不是有效的 Python 列表")
-
-                added_count = 0
-                skipped_count = 0
-                invalid_count = 0
-
-                for item in raw_list:
-                    if isinstance(item, str):
-                        # 提取字段表達式，忽略 # 後的註解
-                        field_expr = item.split('#')[0].strip()
-                        if field_expr:
-                            # 檢查是否已存在於已選列表
-                            already_exists = False
-                            for i in range(self.selected_field_list.count()):
-                                item_data = self.selected_field_list.item(i).data(Qt.UserRole)
-                                if item_data == field_expr:
-                                    already_exists = True
-                                    break
-
-                            if not already_exists:
-                                # 嘗試使用 add_field_to_selected (如果字段存在於當前加載的數據集)
-                                # 否則，直接添加純文本
-                                if field_expr in self.field_data:
-                                    self.add_field_to_selected(field_expr)
-                                    added_count += 1
-                                else:
-                                    # 如果 Code 不在當前 FieldSelector 加載的數據集字段中，
-                                    # 仍然將其作為純文本添加到已選列表
-                                    new_item = QListWidgetItem(field_expr)
-                                    new_item.setData(Qt.UserRole, field_expr) # 保存原始名稱
-                                    new_item.setToolTip(f"自訂輸入的 Code: {field_expr}\n(不在當前數據集字段列表中)")
-                                    self.selected_field_list.addItem(new_item)
-                                    added_count += 1
-                            else:
-                                skipped_count += 1 # 如果已存在則跳過
-                        else:
-                            invalid_count += 1 # 空字符串或只有註解
-                    else:
-                        invalid_count += 1 # 非字符串項
-
-                status_message = f"自訂字段處理完成：成功添加 {added_count} 個"
-                if skipped_count > 0:
-                    status_message += f"，跳過 {skipped_count} 個重複項"
-                if invalid_count > 0:
-                     status_message += f"，忽略 {invalid_count} 個無效或空項。"
-                print(status_message)
-                # 可以考慮顯示一個消息框
-                # QMessageBox.information(self, "處理結果", status_message)
-
-            except (SyntaxError, ValueError) as e:
-                QMessageBox.warning(self, "解析錯誤", f"無法解析輸入的文字為 Python 列表:\n{str(e)}")
-            except Exception as e:
-                QMessageBox.critical(self, "處理錯誤", f"處理自訂字段時發生意外錯誤:\n{str(e)}")
+                    skipped_count += 1
+                    
+        if added_count > 0:
+            status = f"已添加 {added_count} 個字段"
+            if skipped_count > 0:
+                status += f"，跳過 {skipped_count} 個重複字段"
+            QMessageBox.information(self, "添加成功", status)
+        elif skipped_count > 0:
+            QMessageBox.information(self, "提示", f"所選的 {skipped_count} 個字段已存在")
 
 
 class AlphaSyntaxHighlighter(QSyntaxHighlighter):
@@ -1069,15 +705,12 @@ class GeneratorMainWindow(QMainWindow):
         
         main_layout = QVBoxLayout(central_widget)
         
-        # 創建分割器，左側為字段選擇，右側為策略編輯
-        splitter = QSplitter(Qt.Horizontal)
-        
-        # 左側：字段選擇器
-        self.field_selector = FieldSelector()
-        
         # 右側：策略編輯區
         right_panel = QWidget()
         right_layout = QVBoxLayout(right_panel)
+        
+        # 左側：已選字段列表
+        self.selected_fields_widget = SelectedFieldsWidget()
         
         # 標籤頁：模板編輯和策略設置
         tabs = QTabWidget()
@@ -1135,12 +768,13 @@ class GeneratorMainWindow(QMainWindow):
         
         right_layout.addWidget(preview_group)
         
-        # 添加到分割器
-        splitter.addWidget(self.field_selector)
+        # 創建分割器
+        splitter = QSplitter(Qt.Horizontal)
+        splitter.addWidget(self.selected_fields_widget)
         splitter.addWidget(right_panel)
         
-        # 設置初始大小比例
-        splitter.setSizes([400, 800])
+        # 設置初始大小比例 (調整比例以適應新的佈局)
+        splitter.setSizes([300, 900])
         
         main_layout.addWidget(splitter)
 
@@ -1150,9 +784,9 @@ class GeneratorMainWindow(QMainWindow):
     def emit_strategies_for_simulation(self):
         """生成策略列表並通過信號發送"""
         # 獲取字段數據
-        selected_fields = self.field_selector.get_selected_fields()
+        selected_fields = self.selected_fields_widget.get_selected_fields()
         if not selected_fields:
-            QMessageBox.warning(self, "警告", "未選擇任何字段，請先在左側選擇字段")
+            QMessageBox.warning(self, "警告", "未選擇任何字段")
             return
             
         # 獲取模板代碼
@@ -1188,9 +822,9 @@ class GeneratorMainWindow(QMainWindow):
     def preview_strategies(self):
         """預覽將要生成的策略"""
         # 獲取字段數據
-        selected_fields = self.field_selector.get_selected_fields()
+        selected_fields = self.selected_fields_widget.get_selected_fields()
         if not selected_fields:
-            QMessageBox.warning(self, "警告", "未選擇任何字段，請先在左側選擇字段")
+            QMessageBox.warning(self, "警告", "未選擇任何字段")
             return
             
         # 獲取模板代碼
@@ -1210,7 +844,7 @@ class GeneratorMainWindow(QMainWindow):
             
             # 生成文件名
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-            dataset_name = os.path.basename(self.field_selector.csv_file_path).split("_fields_formatted.csv")[0]
+            dataset_name = "custom"  # 由於不再依賴 CSV 文件，使用固定名稱
             file_name = f"alpha_{dataset_name}_{timestamp}.py"
             file_path = os.path.join(ALPHAS_DIR, file_name)
             
@@ -1239,9 +873,9 @@ class GeneratorMainWindow(QMainWindow):
     def generate_strategies_file(self):
         """生成策略文件"""
         # 獲取字段數據
-        selected_fields = self.field_selector.get_selected_fields()
+        selected_fields = self.selected_fields_widget.get_selected_fields()
         if not selected_fields:
-            QMessageBox.warning(self, "警告", "未選擇任何字段，請先在左側選擇字段")
+            QMessageBox.warning(self, "警告", "未選擇任何字段")
             return
             
         # 獲取模板代碼
@@ -1277,7 +911,7 @@ class GeneratorMainWindow(QMainWindow):
             
         # 生成文件名
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        dataset_name = os.path.basename(self.field_selector.csv_file_path).split("_fields_formatted.csv")[0]
+        dataset_name = "custom"  # 由於不再依賴 CSV 文件，使用固定名稱
         file_name = f"alpha_{dataset_name}_{timestamp}.py"
         file_path = os.path.join(ALPHAS_DIR, file_name)
             

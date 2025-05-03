@@ -190,9 +190,11 @@ class MainWindow(QMainWindow):
         # 連接回測查看器的匯入信號到處理槽 (用於模擬)
         self.backtest_viewer.viewer.import_data_requested.connect(self.handle_import_request)
         # 連接回測查看器的匯入 Code 信號到生成器的槽
-        self.backtest_viewer.viewer.import_code_requested.connect(self.strategy_generator.generator.field_selector.add_fields_from_list)
+        self.backtest_viewer.viewer.import_code_requested.connect(self.strategy_generator.generator.selected_fields_widget.add_fields)
         # 新增：連接策略生成器的匯出信號到模擬器的匯入槽
         self.strategy_generator.generator.strategies_ready_for_simulation.connect(self.simulation_widget.load_strategies_from_generator)
+        # 新增：連接數據集查看器的匯出信號到生成器的匯入槽
+        self.dataset_viewer.viewer.fields_selected_for_generator.connect(self.strategy_generator.generator.selected_fields_widget.add_fields_from_list)
 
     def on_tab_changed(self, index):
         """處理標籤頁切換事件"""

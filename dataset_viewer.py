@@ -6,7 +6,8 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QTableView, QTreeView,
                               QSplitter, QVBoxLayout, QHBoxLayout, QWidget,
                               QLineEdit, QLabel, QComboBox, QFileSystemModel,
                               QHeaderView, QPushButton, QStatusBar, QTabWidget,
-                              QMessageBox, QDialog, QTextEdit, QVBoxLayout, QFrame)
+                              QMessageBox, QDialog, QTextEdit, QVBoxLayout, QFrame,
+                              QMenu)
 from PySide6.QtCore import Qt, QDir, QModelIndex, QSortFilterProxyModel, Signal, Slot, QAbstractTableModel
 from PySide6.QtGui import QColor, QFont, QPalette, QIcon
 import matplotlib.pyplot as plt
@@ -49,10 +50,12 @@ class SqliteTableModel(QAbstractTableModel):
         super(SqliteTableModel, self).__init__()
         self.db_path = db_path
         self.table_name = table_name
-        self.columns = []
+        self.columns = ["Select"]  # 添加一個 checkbox 列
+        self.checked_rows = set()  # 存儲被勾選的行
         self.cache = {}  # 用於緩存查詢結果
         self.total_rows = 0
         self.conn = None
+        self.original_columns = []  # 存儲原始列名
         self.setup_connection()
 
     def setup_connection(self):
@@ -63,7 +66,8 @@ class SqliteTableModel(QAbstractTableModel):
             
             # 獲取列名
             cursor.execute(f"PRAGMA table_info({self.table_name})")
-            self.columns = [info[1] for info in cursor.fetchall()]
+            self.original_columns = [info[1] for info in cursor.fetchall()]
+            self.columns.extend(self.original_columns)  # 將原始列名添加到 checkbox 列之後
             
             # 獲取總行數
             cursor.execute(f"SELECT COUNT(*) FROM {self.table_name}")
@@ -84,7 +88,16 @@ class SqliteTableModel(QAbstractTableModel):
 
         row = index.row()
         col = index.column()
-        column_name = self.columns[col]
+
+        if role == Qt.CheckStateRole and col == 0:  # 第一列是 checkbox
+            is_checked = row in self.checked_rows
+            # print(f"Data requested: row {row}, col {col}, role CheckStateRole. Is checked? {is_checked}. Returning: {'Checked' if is_checked else 'Unchecked'}") # Debug print removed
+            return Qt.Checked if is_checked else Qt.Unchecked
+
+        if col == 0:  # 第一列不顯示文字
+            return None
+
+        column_name = self.original_columns[col - 1]  # 因為第一列是 checkbox，所以要減 1
 
         # 使用緩存系統
         cache_key = (row, col)
@@ -102,7 +115,7 @@ class SqliteTableModel(QAbstractTableModel):
         else:
             value = self.cache[cache_key]
 
-        if role == Qt.DisplayRole:
+        if role == Qt.DisplayRole and col > 0:
             return str(value)
 
         elif role == Qt.EditRole:
@@ -152,9 +165,13 @@ class SqliteTableModel(QAbstractTableModel):
     def headerData(self, section, orientation, role):
         if role == Qt.DisplayRole:
             if orientation == Qt.Horizontal:
+                if section == 0:
+                    return ""  # Checkbox 列的標題為空
                 return str(self.columns[section])
             if orientation == Qt.Vertical:
                 return str(section + 1)
+        elif role == Qt.ToolTipRole and orientation == Qt.Horizontal and section == 0:
+            return "點擊勾選要匯入到策略生成器的字段"
         return None
 
     def sort(self, column, order):
@@ -192,6 +209,9 @@ class SqliteTableModel(QAbstractTableModel):
 
     def get_value(self, row, column_name):
         """獲取指定行和列的值"""
+        # 修正: 如果查詢的是虛擬 Select 欄位，直接返回 None
+        if column_name == "Select":
+            return None
         try:
             cursor = self.conn.cursor()
             cursor.execute(
@@ -201,6 +221,67 @@ class SqliteTableModel(QAbstractTableModel):
         except Exception as e:
             print(f"獲取數據錯誤: {str(e)}")
             return None
+
+    def setData(self, index, value, role=Qt.EditRole):
+        """處理資料更改，特別是 checkbox 的狀態改變"""
+        if not index.isValid():
+            return False
+
+        if role == Qt.CheckStateRole and index.column() == 0:
+            # Note: 'index.row()' here refers to the source model row index
+            row = index.row()
+            if value == Qt.Checked:
+                self.checked_rows.add(row)
+                # print(f"Checked row {row}, total checked: {len(self.checked_rows)}") # Debug print removed
+            else:
+                self.checked_rows.discard(row)
+                # print(f"Unchecked row {row}, total checked: {len(self.checked_rows)}") # Debug print removed
+            # Emit dataChanged specifically for the CheckStateRole
+            self.dataChanged.emit(index, index, [Qt.CheckStateRole])
+            return True
+
+        # Return False for unhandled roles/columns
+        return False
+
+    def flags(self, index):
+        """設定單元格的屬性，使第一列可被勾選"""
+        if not index.isValid():
+            return Qt.NoItemFlags
+        if index.column() == 0:
+            return Qt.ItemIsEnabled | Qt.ItemIsSelectable | Qt.ItemIsUserCheckable
+        return Qt.ItemIsEnabled | Qt.ItemIsSelectable
+    
+    def get_checked_fields(self):
+        """獲取所有被勾選的字段名稱"""
+        checked_fields = []
+        try:
+            cursor = self.conn.cursor()
+            field_col_index = self.original_columns.index('Field')
+            for row in sorted(self.checked_rows):
+                cursor.execute(
+                    f"SELECT Field FROM {self.table_name} LIMIT 1 OFFSET {row}"
+                )
+                field = cursor.fetchone()[0]
+                checked_fields.append(field)
+        except Exception as e:
+            print(f"獲取勾選字段時出錯: {str(e)}")
+        return checked_fields
+
+# Custom Proxy Model to handle flags correctly
+class CheckableSortFilterProxyModel(QSortFilterProxyModel):
+    def flags(self, index):
+        if not index.isValid():
+            return Qt.NoItemFlags
+
+        # Ensure the checkbox column (column 0 in the proxy) remains checkable
+        if index.column() == 0:
+            # Get flags from source, but ensure ItemIsUserCheckable is set
+            source_index = self.mapToSource(index)
+            source_flags = self.sourceModel().flags(source_index)
+            return source_flags | Qt.ItemIsUserCheckable # Explicitly add checkable flag
+        else:
+            # For other columns, return the default flags provided by the proxy
+            return super(CheckableSortFilterProxyModel, self).flags(index)
 
 # 自定義詳細文本對話框
 class DetailDialog(QDialog):
@@ -228,6 +309,9 @@ class DetailDialog(QDialog):
 
 # 主窗口
 class MainWindow(QMainWindow):
+    # 定義新的信號，用於將選中的字段發送到生成器
+    fields_selected_for_generator = Signal(list)
+
     def __init__(self):
         super(MainWindow, self).__init__()
         self.setWindowTitle("WorldQuant Brain 數據集瀏覽器")
@@ -283,9 +367,17 @@ class MainWindow(QMainWindow):
         # 布局右側搜索區域
         top_right.addWidget(search_label)
         top_right.addWidget(self.search_input)
+        # 添加匯出按鈕
+        self.export_button = QPushButton("匯入選中字段到生成器")
+        self.export_button.clicked.connect(self.export_checked_fields)
+        self.export_button.setEnabled(False)  # 初始時禁用
+        self.export_button.setStyleSheet("padding: 4px 12px;")
+        self.export_button.setToolTip("請先勾選要匯入的字段")
+
         top_right.addWidget(field_label)
         top_right.addWidget(self.filter_column)
         top_right.addWidget(refresh_button)
+        top_right.addWidget(self.export_button)
         
         # 組合左右兩側到頂部布局
         top_layout.addLayout(top_left, 1)  # 1:2 比例
@@ -341,6 +433,8 @@ class MainWindow(QMainWindow):
         self.table_view.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.table_view.setAlternatingRowColors(True)
         self.table_view.setSortingEnabled(True)
+        self.table_view.setContextMenuPolicy(Qt.CustomContextMenu)
+        self.table_view.customContextMenuRequested.connect(self.show_context_menu)
         
         # 數據圖表標籤頁
         self.chart_widget = QWidget()
@@ -433,12 +527,15 @@ class MainWindow(QMainWindow):
             # 設置SQLite數據模型
             model = SqliteTableModel(db_path, 'dataset')
             
-            # 設置代理模型用於過濾
-            self.proxy_model = QSortFilterProxyModel()
+            # 設置代理模型用於過濾 - 使用自定義的子類
+            self.proxy_model = CheckableSortFilterProxyModel()
             self.proxy_model.setSourceModel(model)
             self.proxy_model.setFilterCaseSensitivity(Qt.CaseInsensitive)
 
             self.table_view.setModel(self.proxy_model)
+
+            # 連接數據變更信號（用於追蹤 checkbox 狀態變化）
+            model.dataChanged.connect(self.on_data_changed)
 
             # --- 開始修改欄位寬度 ---
             header = self.table_view.horizontalHeader()
@@ -467,21 +564,33 @@ class MainWindow(QMainWindow):
                     header.setSectionResizeMode(i, QHeaderView.Interactive)
                     header.resizeSection(i, fixed_description_width)
                 else:
-                    # 其他欄位保持自動拉伸
-                    header.setSectionResizeMode(i, QHeaderView.Stretch)
+                   # 設置 checkbox 欄位的固定寬度
+                   if i == 0:  # checkbox 列
+                       header.setSectionResizeMode(i, QHeaderView.Fixed)
+                       header.resizeSection(i, 30)  # 設置為 30 像素寬
+                   else:
+                       # 其他欄位保持自動拉伸
+                       header.setSectionResizeMode(i, QHeaderView.Stretch)
             # --- 結束修改欄位寬度 ---
 
             # 連接表格點擊事件 - 先斷開之前的連接
             if self.click_connected:
                 try:
-                    self.table_view.clicked.disconnect()
-                except TypeError:
-                    # 如果還沒有連接，忽略錯誤
+                    # 斷開單擊事件連接
+                    self.table_view.clicked.disconnect(self.handle_table_click)
+                except (TypeError, RuntimeError): # RuntimeError if not connected
                     pass
-                    
-            self.table_view.clicked.connect(self.handle_cell_click)
-            self.click_connected = True
-            
+                try:
+                    # 斷開雙擊事件連接
+                    self.table_view.doubleClicked.disconnect(self.handle_cell_click)
+                except (TypeError, RuntimeError):
+                    pass
+
+            # 重新連接事件
+            self.table_view.clicked.connect(self.handle_table_click) # 連接單擊事件
+            self.table_view.doubleClicked.connect(self.handle_cell_click) # 連接雙擊事件
+            self.click_connected = True # 更新標記
+
             # 更新當前數據集和狀態欄
             self.current_dataset = model
             file_name = os.path.basename(csv_path)
@@ -658,69 +767,237 @@ class MainWindow(QMainWindow):
         self.canvas.figure.tight_layout()
         self.canvas.draw()
 
-    def handle_cell_click(self, index):
+    def handle_cell_click(self, index): # Renamed conceptually, now handles double-click
+        """處理單元格雙擊事件，顯示詳細信息"""
         # 確保當前有數據集和模型
         if self.current_dataset is None or self.proxy_model is None:
-            self.status_bar.showMessage("無法處理點擊：數據集或模型不存在")
+            self.status_bar.showMessage("無法處理雙擊：數據集或模型不存在")
             return
-            
-        # 獲取列名
-        column_index = index.column()
-        if column_index >= len(self.current_dataset.columns):
-            self.status_bar.showMessage(f"無法處理點擊：列索引 {column_index} 超出範圍")
+
+        # 獲取視圖列索引
+        view_column_index = index.column()
+
+        # 雙擊 Checkbox 列不做任何事
+        if view_column_index == 0:
             return
-            
-        column_name = self.current_dataset.columns[column_index]
-        
+
+        # --- 以下是處理非 Checkbox 列雙擊的邏輯 ---
+
+        # 獲取源模型的索引和列名
+        source_index = self.proxy_model.mapToSource(index)
+        if not source_index.isValid():
+             self.status_bar.showMessage("無法處理雙擊：無效的源索引")
+             return
+
+        source_column_index = source_index.column()
+        if source_column_index == 0: # Checkbox 列
+             return
+        original_col_idx = source_column_index - 1
+        if original_col_idx < 0 or original_col_idx >= len(self.current_dataset.original_columns):
+             self.status_bar.showMessage(f"無法處理雙擊：計算出的原始列索引 {original_col_idx} 超出範圍")
+             return
+
+        column_name = self.current_dataset.original_columns[original_col_idx]
+
         # 獲取數據
         try:
-            # 由於使用了代理模型，需要先映射到源模型的索引
-            source_index = self.proxy_model.mapToSource(index)
             source_row = source_index.row()
-            
+
             if source_row >= self.current_dataset.total_rows:
-                self.status_bar.showMessage(f"無法處理點擊：行索引 {source_row} 超出範圍")
-                return
-                
-            value = self.current_dataset.get_value(source_row, column_name)
-            
-            if value is None:
-                self.status_bar.showMessage("無法獲取單元格數據")
+                self.status_bar.showMessage(f"無法處理雙擊：行索引 {source_row} 超出範圍")
                 return
 
+            value = self.current_dataset.get_value(source_row, column_name)
+
+            if value is None:
+                 self.status_bar.showMessage("無法獲取單元格數據")
+                 return
+
             # 調試信息
-            self.status_bar.showMessage(f"點擊了: 列={column_name}, 行={source_row}, 值長度={len(str(value))}")
-            
-            # 如果是描述欄位或包含"description"的欄位（不區分大小寫），顯示詳細信息對話框
+            self.status_bar.showMessage(f"雙擊了: 列={column_name}, 行={source_row}, 值長度={len(str(value))}")
+
+            # 只有當內容超過一定長度或特定列時才顯示詳細信息
+            show_detail = False
             if column_name.lower() == 'description' or 'description' in column_name.lower():
+                show_detail = True
+            elif len(str(value)) > 15: # 閾值可以調整
+                show_detail = True
+
+            if show_detail:
                 try:
-                    field_name = "未知字段"
-                    
-                    # 嘗試從Field列獲取字段名
-                    field_col = next((col for col in self.current_dataset.columns if col.lower() == 'field'), None)
-                    if field_col:
-                        field_name = self.current_dataset.get_value(source_row, field_col)
-                    
+                    title = f"{column_name} - 詳細內容"
+                    # 如果是 Description 列，嘗試獲取 Field 名稱作為標題的一部分
+                    if column_name.lower() == 'description' or 'description' in column_name.lower():
+                        field_name = "未知字段"
+                        field_col_name = next((col for col in self.current_dataset.original_columns if col.lower() == 'field'), None)
+                        if field_col_name:
+                            field_name_val = self.current_dataset.get_value(source_row, field_col_name)
+                            if field_name_val: # 確保字段名不是 None 或空
+                                field_name = str(field_name_val)
+                        title = f"{field_name} - 詳細描述"
+
                     # 使用防重複邏輯：檢查是否已經有相同的對話框打開
                     for child in self.children():
                         if isinstance(child, DetailDialog) and child.isVisible():
                             child.close()  # 關閉之前的對話框
                             break
-                            
-                    dialog = DetailDialog(f"{field_name} - 詳細描述", str(value), self)
+
+                    dialog = DetailDialog(title, str(value), self)
                     dialog.exec()
                 except Exception as e:
                     self.status_bar.showMessage(f"顯示詳細信息時出錯: {str(e)}")
-            # 對其他任何欄位，只要內容超過特定長度，也顯示詳細信息
-            elif len(str(value)) > 15:
-                try:
-                    # 使用欄位名作為標題
-                    dialog = DetailDialog(f"{column_name} - 詳細內容", str(value), self)
-                    dialog.exec()
-                except Exception as e:
-                    self.status_bar.showMessage(f"顯示詳細信息時出錯: {str(e)}")
+            # else: # 如果不需要顯示詳細信息，可以在這裡添加其他雙擊行為，或保持不變
+            #     pass
+
         except Exception as e:
-            self.status_bar.showMessage(f"處理單元格點擊時出錯: {str(e)}")
+            self.status_bar.showMessage(f"處理單元格雙擊時出錯: {str(e)}")
+
+    def handle_table_click(self, index):
+        """處理表格單擊事件，主要用於切換 checkbox 狀態"""
+        if not index.isValid():
+            return
+
+        # 檢查是否點擊了第一列 (checkbox 列)
+        if index.column() == 0:
+            # 獲取源模型索引
+            source_index = self.proxy_model.mapToSource(index)
+            if not source_index.isValid():
+                return
+
+            # 獲取源模型和當前狀態
+            source_model = self.proxy_model.sourceModel()
+            current_state = source_model.data(source_index, Qt.CheckStateRole)
+
+            # 切換狀態
+            new_state = Qt.Unchecked if current_state == Qt.Checked else Qt.Checked
+
+            # 更新模型數據
+            source_model.setData(source_index, new_state, Qt.CheckStateRole)
+            # setData 會自動觸發 dataChanged 信號，無需手動發送
+
+    def show_context_menu(self, pos):
+        """顯示右鍵選單，根據選中行的勾選狀態動態顯示選項"""
+        menu = QMenu(self)
+        selected_indexes = self.table_view.selectedIndexes()
+        if not selected_indexes:
+            return
+
+        # 取得唯一行 (視圖行)
+        view_rows = set(index.row() for index in selected_indexes)
+        if not view_rows:
+            return
+
+        # 檢查是否所有選中行都已勾選
+        source_model = self.proxy_model.sourceModel()
+        all_checked = True
+        some_checked = False # 新增: 檢查是否有任何一個被勾選
+        valid_source_rows = [] # 儲存有效的源行號
+
+        for view_row in view_rows:
+            source_index = self.proxy_model.mapToSource(self.proxy_model.index(view_row, 0))
+            if source_index.isValid():
+                source_row = source_index.row()
+                valid_source_rows.append(source_row) # 記錄有效的源行
+                if source_row in source_model.checked_rows:
+                    some_checked = True
+                else:
+                    all_checked = False
+            else:
+                 # 如果有任何一個選中的視圖行無法映射到有效的源行，則不認為全部勾選
+                 all_checked = False
+
+
+        # 如果沒有有效的源行，則不顯示選單
+        if not valid_source_rows:
+             return
+
+        if all_checked:
+            # 如果全都已勾選，顯示「取消勾選選中項目」
+            action = menu.addAction("取消勾選選中項目")
+            action.triggered.connect(lambda: self.check_selected_items(False, view_rows)) # 傳遞 view_rows
+        elif some_checked:
+             # 如果部分勾選，也顯示「取消勾選選中項目」(優先取消勾選)
+             action = menu.addAction("取消勾選選中項目")
+             action.triggered.connect(lambda: self.check_selected_items(False, view_rows)) # 傳遞 view_rows
+        else:
+            # 如果全都未勾選，顯示「勾選選中項目」
+            action = menu.addAction("勾選選中項目")
+            action.triggered.connect(lambda: self.check_selected_items(True, view_rows)) # 傳遞 view_rows
+
+        menu.exec_(self.table_view.viewport().mapToGlobal(pos))
+
+    def check_selected_items(self, check=True, view_rows=None):
+        """勾選或取消勾選指定的視圖行項目"""
+        # 如果沒有傳遞 view_rows，則從當前選擇獲取
+        if view_rows is None:
+            selected_indexes = self.table_view.selectedIndexes()
+            if not selected_indexes:
+                return
+            view_rows = set(index.row() for index in selected_indexes)
+
+        if not view_rows:
+            return
+
+        source_model = self.proxy_model.sourceModel()
+        min_row = float('inf')
+        max_row = float('-inf')
+
+        for view_row in view_rows:
+            source_index = self.proxy_model.mapToSource(self.proxy_model.index(view_row, 0))
+            if source_index.isValid():
+                source_row = source_index.row()
+                if check:
+                    source_model.checked_rows.add(source_row)
+                else:
+                    source_model.checked_rows.discard(source_row)
+                min_row = min(min_row, source_row)
+                max_row = max(max_row, source_row)
+
+        # 優化 dataChanged 信號發送範圍
+        if min_row <= max_row:
+            source_model.dataChanged.emit(
+                source_model.index(min_row, 0),
+                source_model.index(max_row, 0),
+                [Qt.CheckStateRole] # 只更新 CheckStateRole
+            )
+        else:
+             # 如果沒有有效的行被更改，可能需要刷新整個視圖或特定區域
+             # 這裡我們選擇刷新第一列，以防萬一
+             source_model.dataChanged.emit(
+                 source_model.index(0, 0),
+                 source_model.index(source_model.rowCount()-1, 0),
+                 [Qt.CheckStateRole]
+             )
+
+    def on_data_changed(self, topLeft, bottomRight):
+        """當數據變更時（如 checkbox 狀態改變）更新 UI 狀態"""
+        if self.current_dataset:
+            checked_count = len(self.current_dataset.checked_rows)
+            if checked_count > 0:
+                self.export_button.setEnabled(True)
+                self.export_button.setToolTip(f"已選擇 {checked_count} 個字段")
+            else:
+                self.export_button.setEnabled(False)
+                self.export_button.setToolTip("請先勾選要匯入的字段")
+
+    def export_checked_fields(self):
+        """匯出已勾選的字段到策略生成器"""
+        if not self.current_dataset:
+            return
+            
+        checked_fields = self.current_dataset.get_checked_fields()
+        if checked_fields:
+            self.fields_selected_for_generator.emit(checked_fields)
+            # QMessageBox.information(self, "成功", f"已將 {len(checked_fields)} 個字段匯入到策略生成器")
+            # 取消所有勾選
+            self.current_dataset.checked_rows.clear()
+            # 更新表格顯示
+            self.current_dataset.dataChanged.emit(
+                self.current_dataset.index(0, 0),
+                self.current_dataset.index(self.current_dataset.rowCount()-1, 0)
+            )
+        else:
+            QMessageBox.warning(self, "警告", "未勾選任何字段")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
@@ -736,3 +1013,4 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
+
