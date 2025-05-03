@@ -791,7 +791,7 @@ class MainWindow(QMainWindow):
         
         # === 新增：匯出 Code 為 List 按鈕 ===
         # === 修改：匯出 Code 為 List 按鈕改為下拉選單按鈕 ===
-        self.export_code_list_button = QPushButton("匯出參數為...")
+        self.export_code_list_button = QPushButton("匯出...")
         self.export_code_list_button.setToolTip("將目前檢視的 CSV 轉成特定格式複製到剪貼板")
         self.export_code_list_button.setStyleSheet("padding: 4px 12px;")
         self.export_code_list_button.setEnabled(False)
@@ -1333,7 +1333,7 @@ class MainWindow(QMainWindow):
             return
 
         source_model = self.proxy_model.sourceModel()
-        filter_clause = source_model._get_filter_and_sort_clause()
+        full_clause, params = source_model._get_filter_and_sort_clause() # 修改：獲取子句和參數
         cursor = source_model.db_conn.cursor()
         # 清除當前圖表
         if self.proxy_model is None or not hasattr(self, "canvas") or self.db_conn is None:
@@ -1349,9 +1349,9 @@ class MainWindow(QMainWindow):
         if chart_type == "夏普比率分佈":
             try:
                 # 使用 SQL 查詢獲取夏普比率
-                cursor.execute(f"SELECT CAST(sharpe AS FLOAT) FROM {source_model.table_name} {filter_clause}")
+                cursor.execute(f"SELECT CAST(sharpe AS FLOAT) FROM {source_model.table_name} {full_clause}", params) # 修改：使用 full_clause 和 params
                 sharpe_values = [row[0] for row in cursor.fetchall() if row[0] is not None]
-                
+
                 if sharpe_values:
                     # 創建直方圖
                     ax.hist(sharpe_values, bins=15, color='skyblue', edgecolor='black')
@@ -1371,16 +1371,33 @@ class MainWindow(QMainWindow):
         elif chart_type == "參數分析":
             try:
                 # 使用 SQL 查詢計算各個 decay 值的平均夏普比率
+                # 組合 WHERE 子句
+                extra_where = "decay IS NOT NULL"
+                query_clause = ""
+                if not full_clause:
+                    query_clause = f"WHERE {extra_where}"
+                elif "WHERE" in full_clause.upper():
+                     # 確保只替換第一個 WHERE
+                    parts = full_clause.split("WHERE", 1)
+                    if len(parts) == 1: # 如果 WHERE 在開頭
+                         parts = full_clause.split("where", 1) # 嘗試小寫
+                    if len(parts) == 2:
+                         query_clause = f"{parts[0]}WHERE {extra_where} AND {parts[1]}"
+                    else: # 無法分割，可能 WHERE 不在預期位置，保守處理
+                         query_clause = f"{full_clause} AND {extra_where}" # 可能產生無效 SQL，但比 replace 安全
+                else: # 沒有 WHERE，但 full_clause 不為空 (例如只有 ORDER BY)
+                    query_clause = f"WHERE {extra_where} {full_clause}"
+
                 query = f"""
                     SELECT decay, AVG(CAST(sharpe AS FLOAT)) as avg_sharpe
                     FROM {source_model.table_name}
-                    {filter_clause.replace('WHERE', 'WHERE decay IS NOT NULL AND') if filter_clause else 'WHERE decay IS NOT NULL'}
+                    {query_clause}
                     GROUP BY decay
                     ORDER BY decay
                 """
-                cursor.execute(query)
+                cursor.execute(query, params) # 修改：傳入 params
                 results = cursor.fetchall()
-                
+
                 if results:
                     decays = [str(row[0]) for row in results]
                     avg_sharpes = [row[1] for row in results]
@@ -1404,16 +1421,31 @@ class MainWindow(QMainWindow):
         elif chart_type == "中性化方法比較":
             try:
                 # 使用 SQL 查詢計算各個中性化方法的平均夏普比率
+                # 組合 WHERE 子句
+                extra_where = "neutralization IS NOT NULL"
+                query_clause = ""
+                if not full_clause:
+                    query_clause = f"WHERE {extra_where}"
+                elif "WHERE" in full_clause.upper():
+                    parts = full_clause.split("WHERE", 1)
+                    if len(parts) == 1: parts = full_clause.split("where", 1)
+                    if len(parts) == 2:
+                         query_clause = f"{parts[0]}WHERE {extra_where} AND {parts[1]}"
+                    else:
+                         query_clause = f"{full_clause} AND {extra_where}"
+                else:
+                    query_clause = f"WHERE {extra_where} {full_clause}"
+
                 query = f"""
                     SELECT neutralization, AVG(CAST(sharpe AS FLOAT)) as avg_sharpe
                     FROM {source_model.table_name}
-                    {filter_clause.replace('WHERE', 'WHERE neutralization IS NOT NULL AND') if filter_clause else 'WHERE neutralization IS NOT NULL'}
+                    {query_clause}
                     GROUP BY neutralization
                     ORDER BY avg_sharpe DESC
                 """
-                cursor.execute(query)
+                cursor.execute(query, params) # 修改：傳入 params
                 results = cursor.fetchall()
-                
+
                 if results:
                     methods = [str(row[0]) for row in results]
                     avg_sharpes = [row[1] for row in results]
@@ -1437,14 +1469,29 @@ class MainWindow(QMainWindow):
         elif chart_type == "截面分析":
             try:
                 # 使用 SQL 查詢獲取夏普比率和換手率
+                # 組合 WHERE 子句
+                extra_where = "turnover IS NOT NULL AND sharpe IS NOT NULL"
+                query_clause = ""
+                if not full_clause:
+                    query_clause = f"WHERE {extra_where}"
+                elif "WHERE" in full_clause.upper():
+                    parts = full_clause.split("WHERE", 1)
+                    if len(parts) == 1: parts = full_clause.split("where", 1)
+                    if len(parts) == 2:
+                         query_clause = f"{parts[0]}WHERE {extra_where} AND {parts[1]}"
+                    else:
+                         query_clause = f"{full_clause} AND {extra_where}"
+                else:
+                    query_clause = f"WHERE {extra_where} {full_clause}"
+
                 query = f"""
                     SELECT CAST(turnover AS FLOAT) as turnover, CAST(sharpe AS FLOAT) as sharpe
                     FROM {source_model.table_name}
-                    {filter_clause.replace('WHERE', 'WHERE turnover IS NOT NULL AND sharpe IS NOT NULL AND') if filter_clause else 'WHERE turnover IS NOT NULL AND sharpe IS NOT NULL'}
+                    {query_clause}
                 """
-                cursor.execute(query)
+                cursor.execute(query, params) # 修改：傳入 params
                 results = cursor.fetchall()
-                
+
                 if results:
                     import numpy as np
                     from scipy import stats
@@ -1901,10 +1948,10 @@ class MainWindow(QMainWindow):
 
         try:
             # 構建 SQL 查詢，包含當前過濾條件
-            filter_clause = source_model._get_filter_and_sort_clause()
+            full_clause, params = source_model._get_filter_and_sort_clause() # 修改：接收參數
             cursor = source_model.db_conn.cursor()
-            query = f"SELECT code FROM {source_model.table_name} {filter_clause}"
-            cursor.execute(query)
+            query = f"SELECT code FROM {source_model.table_name} {full_clause}" # 修改：使用完整子句
+            cursor.execute(query, params) # 修改：傳入參數
             all_codes = [str(row[0]) for row in cursor.fetchall()]
 
             if all_codes:

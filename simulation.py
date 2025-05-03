@@ -145,32 +145,43 @@ class CodeEditDialog(QDialog):
 
 class SimulationWidget(QWidget):
     def update_single_simulation_progress(self, uuid: str, percentage: int):
-        """根據 uuid 更新對應行的進度 (%) 欄"""
+        """根據 uuid 更新對應行的進度 (%) 欄 (優化：使用映射查找)"""
         progress_col = self.progress_col_index
-        found = False
-        for row in range(self.table.rowCount()):
-            chk_item = self.table.item(row, 0)
-            if chk_item and chk_item.data(Qt.UserRole) == uuid:
-                progress_item = self.table.item(row, progress_col)
-                if not progress_item:
-                    progress_item = QTableWidgetItem()
-                    self.table.setItem(row, progress_col, progress_item)
-                progress_item.setText(f"{percentage}%")
-                progress_item.setTextAlignment(Qt.AlignCenter)
-                found = True
-                break
-        if not found:
-            print(f"警告: 在表格中未找到與進度更新 uuid '{uuid}' 匹配的行")
+        row = self.uuid_row_map.get(uuid) # 優化：使用映射查找行號
+
+        if row is not None and row < self.table.rowCount(): # 檢查行號是否有效
+            progress_item = self.table.item(row, progress_col)
+            if not progress_item:
+                progress_item = QTableWidgetItem()
+                self.table.setItem(row, progress_col, progress_item)
+            progress_item.setText(f"{percentage}%")
+            progress_item.setTextAlignment(Qt.AlignCenter)
+        else:
+            print(f"警告: 在表格中未找到與進度更新 uuid '{uuid}' 匹配的行或行號已失效")
+
     def _reset_table_colors(self):
-        """重設所有表格儲存格（包含 QTableWidgetItem 與 cellWidget）的背景顏色為預設白色"""
-        for row in range(self.table.rowCount()):
-            for col in range(self.table.columnCount()):
-                cell_item = self.table.item(row, col)
-                widget = self.table.cellWidget(row, col)
-                if widget:
-                    widget.setStyleSheet("background-color: white;")
-                elif cell_item:
-                    cell_item.setBackground(Qt.white)
+        """優化：只重設先前高亮過的行的背景顏色為預設白色"""
+        self.table.setUpdatesEnabled(False) # 優化：禁用更新以提高性能
+        try:
+            # 只遍歷記錄中高亮過的行
+            rows_to_reset = list(self.highlighted_rows) # 複製集合以便迭代時修改
+            for row in rows_to_reset:
+                 if row < self.table.rowCount(): # 確保行仍然存在
+                    for col in range(self.table.columnCount()):
+                        widget = self.table.cellWidget(row, col)
+                        if widget:
+                            try:
+                                widget.setStyleSheet("") # 重設樣式表為預設
+                            except AttributeError:
+                                pass
+                        else:
+                            cell_item = self.table.item(row, col)
+                            if cell_item:
+                                cell_item.setBackground(Qt.white) # 重設 item 背景色
+            self.highlighted_rows.clear() # 清空高亮記錄
+        finally:
+            self.table.setUpdatesEnabled(True) # 優化：重新啟用更新
+
 
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -255,61 +266,65 @@ class SimulationWidget(QWidget):
         except ValueError:
             self._code_col_index = -1 # Should not happen if PARAM_COLUMNS is correct
 
+        # 優化：用於快速查找行的 UUID 映射 和 記錄高亮行
+        self.uuid_row_map = {}
+        self.highlighted_rows = set()
+
     @Slot(str, list)
     def highlight_completed_row(self, uuid: str, row_data: list):
-        """根據完成的 uuid 標示對應的表格行"""
+        """根據完成的 uuid 標示對應的表格行 (優化：使用映射查找)"""
         light_green = QColor("#e8f5e9")
-        found = False
-        for row in range(self.table.rowCount()):
-            chk_item = self.table.item(row, 0)
-            if chk_item and chk_item.data(Qt.UserRole) == uuid:
-                for col in range(self.table.columnCount()):
-                    cell_item = self.table.item(row, col)
-                    if not cell_item:
-                        widget = self.table.cellWidget(row, col)
-                        if widget:
-                            try:
-                                widget.setStyleSheet("background-color: #e8f5e9;")
-                            except AttributeError:
-                                pass
-                        else:
-                            cell_item = QTableWidgetItem()
-                            self.table.setItem(row, col, cell_item)
-                            cell_item.setBackground(light_green)
-                    else:
-                        cell_item.setBackground(light_green)
-                found = True
-                break
-        if not found:
-            print(f"警告: 在表格中未找到與完成的 uuid '{uuid}' 匹配的行")
+        row = self.uuid_row_map.get(uuid) # 優化：使用映射查找行號
+
+        if row is not None and row < self.table.rowCount(): # 檢查行號是否有效
+            self.highlighted_rows.add(row) # 優化：記錄高亮行
+            for col in range(self.table.columnCount()):
+                cell_item = self.table.item(row, col)
+                widget = self.table.cellWidget(row, col) # 獲取 widget
+                if widget:
+                    try:
+                        # 嘗試設置樣式表，如果 widget 不支持則忽略
+                        widget.setStyleSheet("background-color: #e8f5e9;")
+                    except AttributeError:
+                        pass # 忽略不支持 setStyleSheet 的 widget
+                elif cell_item:
+                    cell_item.setBackground(light_green)
+                else:
+                    # 如果 widget 和 item 都不存在，創建一個 item 來設置背景色
+                    cell_item = QTableWidgetItem()
+                    self.table.setItem(row, col, cell_item)
+                    cell_item.setBackground(light_green)
+        else:
+            print(f"警告: 在表格中未找到與完成的 uuid '{uuid}' 匹配的行或行號已失效")
+
 
     @Slot(str, dict)
     def highlight_processing_row(self, uuid: str, simulation_data: dict):
-        """根據開始處理的 uuid 標示對應的表格行為淺橘色"""
+        """根據開始處理的 uuid 標示對應的表格行為淺橘色 (優化：使用映射查找)"""
         light_orange = QColor("#fff3e0")
-        found = False
-        for row in range(self.table.rowCount()):
-            chk_item = self.table.item(row, 0)
-            if chk_item and chk_item.data(Qt.UserRole) == uuid:
-                for col in range(self.table.columnCount()):
-                    cell_item = self.table.item(row, col)
-                    if not cell_item:
-                        widget = self.table.cellWidget(row, col)
-                        if widget:
-                            try:
-                                widget.setStyleSheet("background-color: #fff3e0;")
-                            except AttributeError:
-                                pass
-                        else:
-                            cell_item = QTableWidgetItem()
-                            self.table.setItem(row, col, cell_item)
-                            cell_item.setBackground(light_orange)
-                    else:
-                        cell_item.setBackground(light_orange)
-                found = True
-                break
-        if not found:
-            print(f"警告: 在表格中未找到與正在處理的 uuid '{uuid}' 匹配的行")
+        row = self.uuid_row_map.get(uuid) # 優化：使用映射查找行號
+
+        if row is not None and row < self.table.rowCount(): # 檢查行號是否有效
+            self.highlighted_rows.add(row) # 優化：記錄高亮行
+            for col in range(self.table.columnCount()):
+                cell_item = self.table.item(row, col)
+                widget = self.table.cellWidget(row, col) # 獲取 widget
+                if widget:
+                    try:
+                        # 嘗試設置樣式表，如果 widget 不支持則忽略
+                        widget.setStyleSheet("background-color: #fff3e0;")
+                    except AttributeError:
+                        pass # 忽略不支持 setStyleSheet 的 widget
+                elif cell_item:
+                    cell_item.setBackground(light_orange)
+                else:
+                    # 如果 widget 和 item 都不存在，創建一個 item 來設置背景色
+                    cell_item = QTableWidgetItem()
+                    self.table.setItem(row, col, cell_item)
+                    cell_item.setBackground(light_orange)
+        else:
+            print(f"警告: 在表格中未找到與正在處理的 uuid '{uuid}' 匹配的行或行號已失效")
+
 
     @Slot(list) # Decorator to mark this as a slot
     def load_strategies_from_generator(self, strategies: list):
@@ -385,6 +400,7 @@ class SimulationWidget(QWidget):
         chk_item.setCheckState(Qt.Unchecked)
         chk_item.setData(Qt.UserRole, row_uuid)
         self.table.setItem(row, 0, chk_item)
+        self.uuid_row_map[row_uuid] = row # 優化：記錄 UUID 到行號的映射
 
         # 新增進度欄 (預設為 "-")
         progress_item = QTableWidgetItem("-")
@@ -527,7 +543,16 @@ class SimulationWidget(QWidget):
 
         # Delete rows in reverse order to avoid index issues
         for row in sorted(rows_to_delete, reverse=True):
+            # 優化：在刪除行前移除 UUID 映射
+            chk_item = self.table.item(row, 0)
+            if chk_item:
+                row_uuid = chk_item.data(Qt.UserRole)
+                if row_uuid in self.uuid_row_map:
+                    del self.uuid_row_map[row_uuid]
             self.table.removeRow(row)
+        # 優化：刪除後需要更新後續行的映射，但更簡單的方法是完全重建映射
+        self._rebuild_uuid_row_map()
+
 
     def delete_all_rows(self):
         """刪除表格中的所有資料"""
@@ -541,7 +566,19 @@ class SimulationWidget(QWidget):
 
         if reply == QMessageBox.Yes:
             self.table.setRowCount(0)
+            self.uuid_row_map.clear() # 優化：清空 UUID 映射
+            self.highlighted_rows.clear() # 優化：清空高亮行記錄
             QMessageBox.information(self, "成功", "已刪除所有資料。")
+
+    def _rebuild_uuid_row_map(self):
+        """優化：重新建立 UUID 到行號的映射"""
+        self.uuid_row_map.clear()
+        for row in range(self.table.rowCount()):
+            chk_item = self.table.item(row, 0)
+            if chk_item:
+                row_uuid = chk_item.data(Qt.UserRole)
+                if row_uuid:
+                    self.uuid_row_map[row_uuid] = row
 
     def show_context_menu(self, position: QPoint):
         """顯示右鍵選單"""
@@ -666,18 +703,22 @@ class SimulationWidget(QWidget):
             return
         # --- 修復結束 ---
     
-        self._reset_table_colors()  # 新增：重置所有表格顏色
-    
-        # 重設所有進度欄
-        for row in range(self.table.rowCount()):
-            progress_item = self.table.item(row, self.progress_col_index)
-            if not progress_item:
-                progress_item = QTableWidgetItem("-")
-                progress_item.setTextAlignment(Qt.AlignCenter)
-                self.table.setItem(row, self.progress_col_index, progress_item)
-            else:
-                progress_item.setText("-")
-    
+        self._reset_table_colors()  # 調用優化後的顏色重置
+
+        # 優化：批次重設所有進度欄
+        self.table.setUpdatesEnabled(False)
+        try:
+            for row in range(self.table.rowCount()):
+                progress_item = self.table.item(row, self.progress_col_index)
+                if not progress_item:
+                    progress_item = QTableWidgetItem("-")
+                    progress_item.setTextAlignment(Qt.AlignCenter)
+                    self.table.setItem(row, self.progress_col_index, progress_item)
+                else:
+                    progress_item.setText("-")
+        finally:
+            self.table.setUpdatesEnabled(True)
+
         params = self.get_parameters()
         if not params:
             QMessageBox.warning(self, "無參數", "請至少新增一組模擬參數")
@@ -719,32 +760,38 @@ class SimulationWidget(QWidget):
 
     @Slot(str, str)
     def handle_simulation_error(self, uuid: str, error_message: str):
-        """處理模擬錯誤，包含標示失敗的行並重置 UI 狀態"""
-        self._reset_table_colors()  # 重設所有表格顏色
-        
+        """處理模擬錯誤，包含標示失敗的行並重置 UI 狀態 (優化：使用映射查找)"""
+        # 注意：這裡先不調用 _reset_table_colors()，因為可能只需要標紅單行
+        # self._reset_table_colors()
+
         # 如果有指定 uuid，找到對應行並標示為紅色
         if uuid:
             light_red = QColor("#f8d7da")
-            for row in range(self.table.rowCount()):
-                chk_item = self.table.item(row, 0)
-                if chk_item and chk_item.data(Qt.UserRole) == uuid:
-                    for col in range(self.table.columnCount()):
-                        cell_item = self.table.item(row, col)
-                        widget = self.table.cellWidget(row, col)
-                        if widget:
-                            try:
-                                widget.setStyleSheet("background-color: #f8d7da;")
-                            except AttributeError:
-                                pass
-                        elif cell_item:
-                            cell_item.setBackground(light_red)
-                        else:
-                            cell_item = QTableWidgetItem()
-                            self.table.setItem(row, col, cell_item)
-                            cell_item.setBackground(light_red)
-                    break
-        
-        # 重設所有進度欄
+            row = self.uuid_row_map.get(uuid) # 優化：使用映射查找行號
+
+            if row is not None and row < self.table.rowCount(): # 檢查行號是否有效
+                self.highlighted_rows.add(row) # 優化：記錄高亮行
+                for col in range(self.table.columnCount()):
+                    cell_item = self.table.item(row, col)
+                    widget = self.table.cellWidget(row, col) # 獲取 widget
+                    if widget:
+                        try:
+                            widget.setStyleSheet("background-color: #f8d7da;")
+                        except AttributeError:
+                            pass
+                    elif cell_item:
+                        cell_item.setBackground(light_red)
+                    else:
+                        cell_item = QTableWidgetItem()
+                        self.table.setItem(row, col, cell_item)
+                        cell_item.setBackground(light_red)
+            else:
+                 print(f"警告: 在表格中未找到與錯誤 uuid '{uuid}' 匹配的行或行號已失效")
+        else:
+            # 如果沒有 uuid (可能是全局錯誤)，則重置所有顏色
+             self._reset_table_colors()
+
+        # 重設所有進度欄 (這個操作可能仍然需要遍歷，但相對顏色設置開銷較小)
         for row in range(self.table.rowCount()):
             progress_item = self.table.item(row, self.progress_col_index)
             if progress_item:
@@ -770,14 +817,19 @@ class SimulationWidget(QWidget):
         # 檢查是否是因為停止請求而結束
         stopped_early = self.simulation_worker and self.simulation_worker.stop_requested
     
-        # 重設所有表格顏色為預設（白色）
+        # 調用優化後的顏色重置
         self._reset_table_colors()
-        # 重設所有進度欄
-        for row in range(self.table.rowCount()):
-            progress_item = self.table.item(row, self.progress_col_index)
-            if progress_item:
-                progress_item.setText("-")
-    
+
+        # 優化：批次重設所有進度欄
+        self.table.setUpdatesEnabled(False)
+        try:
+            for row in range(self.table.rowCount()):
+                progress_item = self.table.item(row, self.progress_col_index)
+                if progress_item:
+                    progress_item.setText("-")
+        finally:
+            self.table.setUpdatesEnabled(True)
+
         if stopped_early:
             self.progress_label.setText("模擬已停止")
             QMessageBox.warning(self, "模擬停止", "模擬已被使用者手動停止。")
