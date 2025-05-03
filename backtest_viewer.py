@@ -9,7 +9,7 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QTableView, QTreeView,
                               QMessageBox, QDialog, QTextEdit, QFrame,
                               QFileDialog, QCheckBox, QScrollArea, QMenu, # Added QMenu
                               QInputDialog) # Added QInputDialog for save dialog
-from PySide6.QtCore import Qt, QDir, QModelIndex, QSortFilterProxyModel, Signal, Slot, QAbstractTableModel, QRegularExpression
+from PySide6.QtCore import Qt, QDir, QModelIndex, QSortFilterProxyModel, Signal, Slot, QAbstractTableModel, QRegularExpression, QTimer # Added QTimer
 from PySide6.QtGui import QColor, QFont, QPalette, QIcon, QAction # Added QAction
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -129,7 +129,11 @@ class SqliteTableModel(QAbstractTableModel):
         self.table_name = None
         self.columns = []
         self.row_count = 0
-        self.filter_clause = ""
+        # self.filter_clause = "" # 移除舊的 filter_clause
+        # --- 修改：使用字典儲存不同類型的過濾條件 ---
+        self.filter_conditions = {'text': None, 'numeric': None, 'raw': None, 'rowid': None}
+        self._raw_filter_clause = "" # 臨時：用於 '全部欄位' 的 raw SQL
+        # -----------------------------------------
         self.sort_clause = ""
         self._check_states = {}  # 使用字典來儲存勾選狀態，鍵為 rowid
 
@@ -162,11 +166,14 @@ class SqliteTableModel(QAbstractTableModel):
             return 0
         
         cursor = self.db_conn.cursor()
-        query = f"SELECT COUNT(*) FROM {self.table_name}"
-        if self.filter_clause:
-            query += f" WHERE {self.filter_clause}"
-        cursor.execute(query)
-        return cursor.fetchone()[0]
+        clause, params = self._get_filter_and_sort_clause() # 修改：獲取子句和參數
+        query = f"SELECT COUNT(*) FROM {self.table_name} {clause}"
+        try:
+            cursor.execute(query, params) # 修改：使用參數化查詢
+            return cursor.fetchone()[0]
+        except Exception as e:
+            print(f"Error counting rows: {e}")
+            return 0
 
     def columnCount(self, parent=None):
         # 加1是為了勾選框列
@@ -182,23 +189,27 @@ class SqliteTableModel(QAbstractTableModel):
         # 處理勾選框列（第一列）
         if col == 0:
             if role == Qt.CheckStateRole:
-                cursor = self.db_conn.cursor()
-                cursor.execute(f"SELECT rowid FROM {self.table_name} {self._get_filter_and_sort_clause()} LIMIT 1 OFFSET {row}")
-                result = cursor.fetchone()
-                if result:
-                    rowid = result[0]
+                # --- 修改：先獲取 rowid ---
+                rowid = self._get_rowid_for_row(row)
+                if rowid is not None:
                     return self._check_states.get(rowid, Qt.Unchecked)
             return None
 
         # 獲取實際數據
         try:
+            # --- 修改：先獲取 rowid ---
+            rowid = self._get_rowid_for_row(row)
+            if rowid is None:
+                return None
+
             cursor = self.db_conn.cursor()
             # 調整列索引（因為第一列是勾選框）
             actual_col = self.columns[col - 1]
-            query = f"SELECT {actual_col} FROM {self.table_name} {self._get_filter_and_sort_clause()} LIMIT 1 OFFSET {row}"
-            cursor.execute(query)
+            # --- 修改：使用 rowid 獲取數據 ---
+            query = f'SELECT "{actual_col}" FROM {self.table_name} WHERE rowid = ?'
+            cursor.execute(query, (rowid,))
             value = cursor.fetchone()
-            
+
             if value is None:
                 return None
             
@@ -242,11 +253,9 @@ class SqliteTableModel(QAbstractTableModel):
         # 處理勾選框狀態變更
         if index.column() == 0 and role == Qt.CheckStateRole:
             try:
-                cursor = self.db_conn.cursor()
-                cursor.execute(f"SELECT rowid FROM {self.table_name} {self._get_filter_and_sort_clause()} LIMIT 1 OFFSET {index.row()}")
-                result = cursor.fetchone()
-                if result:
-                    rowid = result[0]
+                # --- 修改：先獲取 rowid ---
+                rowid = self._get_rowid_for_row(index.row())
+                if rowid is not None:
                     self._check_states[rowid] = Qt.CheckState(value)
                     self.dataChanged.emit(index, index, [role])
                     return True
@@ -280,10 +289,52 @@ class SqliteTableModel(QAbstractTableModel):
 
         return super().flags(index) | Qt.ItemIsEnabled | Qt.ItemIsSelectable
 
-    def set_filter(self, filter_clause):
-        """設置 SQL WHERE 子句進行過濾"""
-        self.filter_clause = filter_clause
+    # --- 新增：獨立更新不同類型過濾器的方法 ---
+    def update_text_filter(self, column, text):
+        """更新文字過濾條件"""
+        self.filter_conditions['text'] = {'col': column, 'op': 'LIKE', 'val': f'%{text}%'}
+        self.filter_conditions['raw'] = None # 清除 raw SQL
+        self.filter_conditions['rowid'] = None # 清除 rowid 過濾
         self.layoutChanged.emit()
+
+    def update_numeric_filter(self, column, operator, value):
+        """更新數值過濾條件"""
+        self.filter_conditions['numeric'] = {'col': column, 'op': operator, 'val': value}
+        self.filter_conditions['raw'] = None # 清除 raw SQL
+        self.filter_conditions['rowid'] = None # 清除 rowid 過濾
+        self.layoutChanged.emit()
+
+    def clear_text_filter(self):
+        """清除文字過濾條件"""
+        if self.filter_conditions['text'] is not None:
+            self.filter_conditions['text'] = None
+            self.layoutChanged.emit()
+
+    def clear_numeric_filter(self):
+        """清除數值過濾條件"""
+        if self.filter_conditions['numeric'] is not None:
+            self.filter_conditions['numeric'] = None
+            self.layoutChanged.emit()
+
+    def set_filter_raw_sql(self, sql_clause):
+        """設置原始 SQL WHERE 子句 (用於 '全部欄位' 臨時方案)"""
+        # 警告：此方法不使用參數化查詢，可能存在風險和效能問題
+        self.filter_conditions = {'text': None, 'numeric': None, 'raw': sql_clause, 'rowid': None}
+        self._raw_filter_clause = sql_clause # 保存 raw SQL 以便狀態欄顯示
+        self.layoutChanged.emit()
+
+    def set_filter_by_rowids(self, rowids):
+        """根據 rowid 列表設置過濾"""
+        if rowids is None or not isinstance(rowids, (list, tuple)):
+             self.filter_conditions['rowid'] = None
+        else:
+             self.filter_conditions['rowid'] = {'col': 'rowid', 'op': 'IN', 'val': tuple(rowids)}
+        # 清除其他過濾器
+        self.filter_conditions['text'] = None
+        self.filter_conditions['numeric'] = None
+        self.filter_conditions['raw'] = None
+        self.layoutChanged.emit()
+    # --- 新增結束 ---
 
     def set_sort(self, column, order):
         """設置排序條件"""
@@ -296,14 +347,75 @@ class SqliteTableModel(QAbstractTableModel):
             self.sort_clause = f"ORDER BY {actual_col} {direction}"
         self.layoutChanged.emit()
 
+    def _build_where_clause(self):
+        """(私有) 根據 filter_conditions 建立 WHERE 子句和參數列表"""
+        clauses = []
+        params = []
+
+        # 優先級：raw > rowid > text/numeric
+        if self.filter_conditions.get('raw'):
+            # 警告：Raw SQL 不使用參數化
+            print("警告：正在使用 raw SQL 過濾，未進行參數化。")
+            return f"WHERE {self.filter_conditions['raw']}", []
+        elif self.filter_conditions.get('rowid'):
+            cond = self.filter_conditions['rowid']
+            val = cond.get('val')
+            if isinstance(val, (list, tuple)) and val:
+                placeholders = ','.join('?' * len(val))
+                clauses.append(f'rowid IN ({placeholders})')
+                params.extend(val)
+            else: # 如果 rowid 列表為空，則不返回任何結果
+                 clauses.append('1 = 0') # False condition
+        else:
+            # 組合 text 和 numeric 過濾
+            text_cond = self.filter_conditions.get('text')
+            numeric_cond = self.filter_conditions.get('numeric')
+
+            if text_cond:
+                col = text_cond.get('col')
+                op = text_cond.get('op', 'LIKE')
+                val = text_cond.get('val')
+                if col and col in self.columns:
+                    clauses.append(f'"{col}" {op} ?')
+                    params.append(val)
+
+            if numeric_cond:
+                col = numeric_cond.get('col')
+                op = numeric_cond.get('op', '=')
+                val = numeric_cond.get('val')
+                if col and col in self.columns:
+                    # 數值比較通常不需要 CAST，除非欄位類型是 TEXT
+                    # 為了安全起見，可以加上 CAST
+                    clauses.append(f'CAST("{col}" AS REAL) {op} ?')
+                    params.append(val)
+
+        if not clauses:
+            return "", []
+
+        return "WHERE " + " AND ".join(clauses), params
+
     def _get_filter_and_sort_clause(self):
-        """組合過濾和排序子句"""
-        clause = ""
-        if self.filter_clause:
-            clause += f"WHERE {self.filter_clause}"
+        """(私有) 組合過濾和排序子句及參數"""
+        where_clause, params = self._build_where_clause()
+        full_clause = where_clause
         if self.sort_clause:
-            clause += f" {self.sort_clause}"
-        return clause
+            full_clause += f" {self.sort_clause}"
+        return full_clause, params
+
+    def _get_rowid_for_row(self, view_row):
+        """(私有) 根據視圖行號獲取對應的 rowid"""
+        if not self.db_conn or not self.table_name:
+            return None
+        try:
+            cursor = self.db_conn.cursor()
+            clause, params = self._get_filter_and_sort_clause()
+            query = f"SELECT rowid FROM {self.table_name} {clause} LIMIT 1 OFFSET {view_row}"
+            cursor.execute(query, params)
+            result = cursor.fetchone()
+            return result[0] if result else None
+        except Exception as e:
+            print(f"Error getting rowid for view_row {view_row}: {e}")
+            return None
 
     def get_checked_rows(self):
         """獲取已勾選的行的 rowid 列表"""
@@ -561,17 +673,18 @@ class MainWindow(QMainWindow):
         search_label.setStyleSheet("margin-left: 15px;")
         self.search_input = QLineEdit()
         self.search_input.setPlaceholderText("輸入關鍵字...")
-        self.search_input.textChanged.connect(self.filter_data)
+        # --- 修改：使用計時器延遲過濾 ---
+        # self.search_input.textChanged.connect(self.filter_data) # Removed direct connection
+        self.search_input.textChanged.connect(self.on_search_text_changed) # Connect to timer handler
         self.search_input.setMinimumWidth(250)
         self.search_input.setStyleSheet("padding: 4px; border: 1px solid #bdbdbd; border-radius: 4px;")
-        
-        # 欄位選擇下拉框
-        field_label = QLabel("欄位:")
-        self.filter_column = QComboBox()
-        self.filter_column.addItem("全部欄位")
-        self.filter_column.currentIndexChanged.connect(self.filter_data)
-        self.filter_column.setMinimumWidth(120)
-        
+
+        # 創建用於延遲過濾的計時器
+        self.filter_timer = QTimer(self)
+        self.filter_timer.setSingleShot(True)
+        self.filter_timer.setInterval(300) # 300 毫秒延遲
+        self.filter_timer.timeout.connect(self.filter_data)
+        # --- 修改結束 ---
         # 添加刷新按鈕
         refresh_button = QPushButton("刷新")
         refresh_button.setToolTip("重新載入目前選擇的回測結果")
@@ -611,8 +724,8 @@ class MainWindow(QMainWindow):
         # 布局右側搜索區域
         top_right.addWidget(search_label)
         top_right.addWidget(self.search_input)
-        top_right.addWidget(field_label)
-        top_right.addWidget(self.filter_column)
+        # top_right.addWidget(field_label) # Removed
+        # top_right.addWidget(self.filter_column) # Removed
         top_right.addWidget(self.condition_label)
         top_right.addWidget(self.condition_column)
         top_right.addWidget(self.condition_operator)
@@ -836,7 +949,12 @@ class MainWindow(QMainWindow):
         if self.loading:
             self.status_bar.showMessage("檔案正在載入中，請稍候...")
             return
+
+        # --- 修正：設置載入標誌並提前清除過濾條件 ---
         self.loading = True
+        # self.search_input.clear() # --- 再試一次：註解掉這行以保留搜尋文字 ---
+        self.condition_value.clear()
+
         try:
             # 將 proxy index 轉為 source index
             if isinstance(index.model(), QSortFilterProxyModel):
@@ -1019,28 +1137,21 @@ class MainWindow(QMainWindow):
 
             # Update filter dropdowns and visible columns tracker
             cursor = self.db_conn.cursor()
-            self.filter_column.clear()
-            self.filter_column.addItem("全部欄位")
+
             self.condition_column.clear()
             self.visible_columns = list(model.columns)  # Initially all columns are visible
 
             for col in model.columns:
-                self.filter_column.addItem(col)
+                # self.filter_column.addItem(col) # Removed
                 try:
                     # 執行 SQL 查詢來測試欄位是否包含數值
-                    query = f"SELECT CAST({col} AS FLOAT) FROM {self.table_name} LIMIT 1"
+                    query = f"SELECT CAST(\"{col}\" AS FLOAT) FROM {self.table_name} LIMIT 1" # Use quotes for safety
                     cursor = self.db_conn.cursor()
                     cursor.execute(query)
                     if cursor.fetchone() is not None:
                         self.condition_column.addItem(col)
                 except:
                     continue  # Skip if column cannot be cast to float
-
-            # Reset filters and input fields after loading a new file
-            self._text_filter = ""
-            self._numeric_filter = ""
-            self.search_input.clear()
-            self.condition_value.clear()
 
             # Enable buttons
             # (移除選取操作相關程式碼)
@@ -1054,7 +1165,6 @@ class MainWindow(QMainWindow):
 
             # Update chart
             self.update_chart()
-            self.loading = False
 
         except Exception as e:
             QMessageBox.critical(self, "錯誤", f"載入回測結果時發生錯誤：{str(e)}")
@@ -1066,7 +1176,18 @@ class MainWindow(QMainWindow):
             self.proxy_model = None
             self.visible_columns = []
             self.visible_columns = []
+
+        finally: # --- 修正：確保 loading 標誌總是被重置 ---
             self.loading = False
+            # --- 修改：載入完成後，重新應用現有的搜尋文字 ---
+            # --- 修改：載入完成後，直接觸發一次過濾，而不是等待計時器 ---
+            self.filter_data() # 應用 search_input 中的文字到新載入的數據
+
+    # --- 新增：處理搜尋框文字變更，啟動計時器 ---
+    def on_search_text_changed(self):
+        """當搜尋框文字改變時，重新啟動過濾計時器"""
+        self.filter_timer.start()
+    # --- 新增結束 ---
 
     def export_code_column_as_list(self):
         # 匯出目前載入的 CSV 檔案的 'code' 欄位為 Python list 並複製到剪貼簿
@@ -1176,33 +1297,36 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, "錯誤", f"匯出參數時發生未預期錯誤：{str(e)}")
 
     def filter_data(self):
+        # --- 修正：防止在載入時觸發過濾 ---
+        if self.loading:
+            return
+        # ---------------------------------
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
 
         filter_text = self.search_input.text()
-        filter_column_name = self.filter_column.currentText()
 
         source_model = self.proxy_model.sourceModel()
-        if not filter_text:
-            source_model.set_filter("")
-        else:
-            # 構建 SQL LIKE 查詢
-            if filter_column_name == "全部欄位":
-                # 搜尋所有列
-                where_clauses = []
-                for col in getattr(source_model, "columns", []):
-                    where_clauses.append(f"{col} LIKE '%{filter_text}%'")
-                filter_clause = " OR ".join(where_clauses)
-            else:
-                # 搜尋特定列
-                filter_clause = f"{filter_column_name} LIKE '%{filter_text}%'"
+        target_column = 'code' # 固定搜尋 code 欄位
 
-            source_model.set_filter(filter_clause)
+        # 檢查 'code' 欄位是否存在
+        if target_column not in getattr(source_model, "columns", []):
+             self.status_bar.showMessage("錯誤：資料中缺少 'code' 欄位，無法進行搜尋。")
+             # 如果 'code' 不存在，也清除現有文字過濾（如果有的話）
+             source_model.clear_text_filter()
+             self._update_status_bar()
+             return
+
+        if not filter_text:
+             # 清除文字過濾
+             source_model.clear_text_filter()
+        else:
+             # 更新 'code' 欄位的文字過濾
+             source_model.update_text_filter(target_column, filter_text)
+        # --- 修改結束 ---
 
         # Update status bar
-        filtered_count = source_model.rowCount()
-        total_count = source_model.row_count
-        self.status_bar.showMessage(f"顯示 {filtered_count}/{total_count} 條記錄 | 過濾條件: {filter_column_name} - '{filter_text}'")
+        self._update_status_bar() # 更新狀態欄
 
     def update_chart(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
@@ -1355,7 +1479,20 @@ class MainWindow(QMainWindow):
 
     # 處理單元格點擊事件
     def handle_cell_click(self, index):
+        # --- 新增：更嚴格的索引檢查 ---
+        if not index.isValid():
+             # print("Debug: handle_cell_click received invalid index") # 可選的調試信息
+             return # 無效索引，直接返回
+
+        # 檢查索引是否來自正確的代理模型
+        if index.model() is not self.proxy_model:
+             print(f"警告: handle_cell_click 收到來自錯誤模型的索引 (預期: {self.proxy_model}, 收到: {index.model()})")
+             self.status_bar.showMessage("內部錯誤：處理點擊時模型不匹配")
+             return
+        # --- 新增結束 ---
+
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            # 這個檢查理論上可以移除，因為上面的檢查更嚴格，但保留也無妨
             self.status_bar.showMessage("無法處理點擊：數據集或模型不存在")
             return
 
@@ -1381,19 +1518,21 @@ class MainWindow(QMainWindow):
         col = source_index.column()
 
         try:
-            cursor = source_model.db_conn.cursor()
+            # --- 修改：直接使用 source_model.data() 獲取值 ---
             # 調整列索引（因為第一列是勾選框）
             column_name = source_model.columns[col - 1]
 
-            # 使用 SQL 查詢獲取當前行的數據
-            query = f"SELECT {column_name} FROM {source_model.table_name} {source_model._get_filter_and_sort_clause()} LIMIT 1 OFFSET {row}"
-            cursor.execute(query)
-            value = cursor.fetchone()
+            # 使用 source_model.data() 獲取值
+            value = source_model.data(source_index, Qt.DisplayRole) # 使用 source_index
 
             if value is None:
-                return
+                 # 嘗試獲取 ToolTipRole 作為備用 (如果 DisplayRole 為空但有 ToolTip)
+                 value = source_model.data(source_index, Qt.ToolTipRole)
+                 if value is None:
+                     return # 如果兩個 Role 都沒有值，則返回
 
-            value = str(value[0])
+            value = str(value) # 確保是字串
+            # --- 修改結束 ---
 
             if column_name.lower() == 'link' and value:
                 try:
@@ -1405,14 +1544,32 @@ class MainWindow(QMainWindow):
             elif column_name.lower() == 'code':
                 title = "策略代碼詳細信息"
                 try:
-                    # 使用 SQL 查詢獲取相關的 link
-                    cursor.execute(f"SELECT link FROM {source_model.table_name} {source_model._get_filter_and_sort_clause()} LIMIT 1 OFFSET {row}")
-                    link_result = cursor.fetchone()
-                    if link_result and link_result[0]:
-                        link = str(link_result[0])
-                        title = f"策略詳細信息 - {link.split('/')[-1]}"
-                except Exception:
-                    pass
+                    # --- 修改：嘗試從同一行獲取 link (如果存在) ---
+                    link_col_index = -1
+                    try:
+                        # 找到 'link' 欄位在 source_model.columns 中的索引
+                        link_df_index = source_model.columns.index('link')
+                        # 轉換為 source_model 的列索引 (+1 因為勾選框)
+                        link_col_index = link_df_index + 1
+                    except ValueError:
+                        pass # 'link' 欄位不存在
+
+                    if link_col_index != -1:
+                        # 創建 'link' 欄位的 source_index
+                        link_source_index = source_model.index(source_index.row(), link_col_index)
+                        if link_source_index.isValid():
+                             link_value = source_model.data(link_source_index, Qt.DisplayRole)
+                             if link_value:
+                                 link = str(link_value)
+                                 try:
+                                     # 嘗試從連結提取標題部分
+                                     title = f"策略詳細信息 - {link.split('/')[-1]}"
+                                 except:
+                                     pass # 如果連結格式不符，保持預設標題
+                    # --- 修改結束 ---
+                except Exception as e:
+                     print(f"獲取 link 時出錯: {e}") # 打印錯誤以便調試
+                     pass # 即使獲取 link 失敗，也要顯示 code
 
                 dialog = DetailDialog(title, value, self)
                 dialog.exec()
@@ -1426,6 +1583,10 @@ class MainWindow(QMainWindow):
 
     # 應用數值過濾
     def apply_numeric_filter(self):
+        # --- 修正：防止在載入時觸發過濾 ---
+        if self.loading:
+            return
+        # ---------------------------------
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             self.status_bar.showMessage("當前沒有數據可過濾")
             return
@@ -1436,27 +1597,31 @@ class MainWindow(QMainWindow):
             return
 
         operator = self.condition_operator.currentText()
+        value_text = self.condition_value.text()
         try:
-            value = float(self.condition_value.text())
+             # 嘗試轉換為浮點數
+             value = float(value_text)
         except ValueError:
-            self.status_bar.showMessage("請輸入有效數字進行過濾")
-            return
+             # 如果不能轉為浮點數，則視為字串處理 (雖然下拉選單限制了欄位，但以防萬一)
+             # 或者直接報錯？在此情境下報錯更合理
+             self.status_bar.showMessage("請輸入有效數字進行過濾")
+             return
 
-        # 構建 SQL 數值過濾條件（安全處理欄位名）
-        numeric_filter = f'CAST("{column_name}" AS REAL) {operator} {value}'
-        self._numeric_filter = numeric_filter
-
-        self._apply_combined_filter()
+        # --- 修改：調用模型的 update_numeric_filter ---
+        source_model = self.proxy_model.sourceModel()
+        source_model.update_numeric_filter(column_name, operator, value)
+        self._update_status_bar() # 更新狀態欄
 
     # 清除數值過濾
     def clear_numeric_filter(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
 
-        self._numeric_filter = ""
-        self.condition_value.clear()
-        self._apply_combined_filter()
-        self.status_bar.showMessage("已清除數值過濾")
+        # --- 修改：調用模型的 clear_numeric_filter ---
+        self.condition_value.clear() # 清除輸入框
+        source_model = self.proxy_model.sourceModel()
+        source_model.clear_numeric_filter()
+        self._update_status_bar() # 更新狀態欄
 
     # 修改: 開啟自訂欄位選擇對話框
     def open_custom_column_selector(self): # Renamed method
@@ -2034,25 +2199,64 @@ class MainWindow(QMainWindow):
         self.status_bar.showMessage(f"已反轉選取狀態 | 目前共勾選 {checked_count} 項")
     # === 新增結束 ===
 
-    # 組合並應用文字與數值過濾條件
-    def _apply_combined_filter(self):
-        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            return
-        source_model = self.proxy_model.sourceModel()
-        filters = []
-        if self._text_filter:
-            filters.append(f"({self._text_filter})")
-        if self._numeric_filter:
-            filters.append(f"({self._numeric_filter})")
-        combined_filter = " AND ".join(filters) if filters else ""
-        source_model.set_filter(combined_filter)
+    # --- 移除舊的組合過濾方法 ---
+    # def _apply_combined_filter(self): ... (已移除) ...
 
-        # 狀態欄顯示
-        filtered_count = source_model.rowCount()
-        total_count = source_model.row_count
-        text_status = f"文字過濾: {self.search_input.text()}" if self._text_filter else "文字過濾: 無"
-        numeric_status = f"數值過濾: {self._numeric_filter}" if self._numeric_filter else "數值過濾: 無"
-        self.status_bar.showMessage(f"顯示 {filtered_count}/{total_count} 條記錄 | {text_status} | {numeric_status}")
+    # --- 新增/修改：統一更新狀態欄的方法 ---
+    def _update_status_bar(self):
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            # 考慮在沒有模型時顯示更清晰的狀態
+            file_label_text = self.current_file_label.text()
+            if file_label_text == "未載入檔案":
+                 self.status_bar.showMessage("選擇左側的回測結果文件以開始瀏覽")
+            else:
+                 # 可能檔案載入失敗或為空
+                 self.status_bar.showMessage(f"檔案: {file_label_text} | 無有效數據或載入失敗")
+            return
+
+        source_model = self.proxy_model.sourceModel()
+        # 確保 total_count 已被設置
+        total_count = getattr(source_model, 'row_count', 0)
+        filtered_count = source_model.rowCount() # rowCount 現在會考慮 filter_conditions
+
+        # 獲取過濾條件描述
+        filter_desc = []
+        conditions = getattr(source_model, 'filter_conditions', {})
+        raw_sql_active = conditions.get('raw')
+        rowid_filter_active = conditions.get('rowid')
+
+        if raw_sql_active:
+             # 假設 raw SQL 只用於 '全部欄位' 文字過濾
+             filter_desc.append(f"文字過濾(全部): '{self.search_input.text()}'")
+             # 數值過濾在 raw SQL 模式下被忽略
+             filter_desc.append("數值過濾: 無 (因使用全部欄位文字過濾)")
+        elif rowid_filter_active:
+             num_rowids = len(rowid_filter_active.get('val', []))
+             filter_desc.append(f"RowID 過濾: {num_rowids} 個")
+             filter_desc.append("文字過濾: 無")
+             filter_desc.append("數值過濾: 無")
+        else:
+             # 處理參數化條件
+             text_filter = conditions.get('text')
+             numeric_filter = conditions.get('numeric')
+
+             if text_filter:
+                 # --- 修改：狀態欄固定顯示搜尋 'code' ---
+                 search_term = str(text_filter.get('val', '')).strip('%')
+                 # filter_desc.append(f"文字過濾({text_filter.get('col')}): '{search_term}'") # Old
+                 filter_desc.append(f"Code 搜尋: '{search_term}'") # New
+                 # --- 修改結束 ---
+             else:
+                 filter_desc.append("Code 搜尋: 無") # Update label
+
+             if numeric_filter:
+                 filter_desc.append(f"數值過濾({numeric_filter.get('col')} {numeric_filter.get('op')} {numeric_filter.get('val')})")
+             else:
+                 filter_desc.append("數值過濾: 無")
+
+        status_text = f"顯示 {filtered_count}/{total_count} 條記錄 | {' | '.join(filter_desc)}"
+        self.status_bar.showMessage(status_text)
+
 
 # ... (if __name__ == "__main__": block remains the same) ...
 

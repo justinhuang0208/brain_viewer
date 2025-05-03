@@ -185,6 +185,32 @@ class SimulationWidget(QWidget):
         self.progress_label = QLabel("尚未開始模擬")
         layout.addWidget(self.progress_label)
 
+        # 按鈕區
+        btn_layout = QHBoxLayout() # Combine buttons in one layout
+
+        # 資料編輯按鈕與下拉選單
+        self.edit_btn = QPushButton("新增參數")
+        self.edit_btn.clicked.connect(self.add_row)
+        btn_layout.addWidget(self.edit_btn)
+
+        # 將原本 edit_menu 的三個 action 設為實例屬性，供右鍵選單使用
+        self.dup_action = QAction("複製選取", self)
+        self.del_action = QAction("刪除選取", self)
+        self.batch_edit_action = QAction("批量調整", self)
+
+        self.del_all_btn = QPushButton("刪除全部資料")
+        btn_layout.addWidget(self.del_all_btn)
+
+        # 模擬按鈕
+        self.sim_btn = QPushButton("執行模擬")
+        btn_layout.addWidget(self.sim_btn) # Add sim button to the same layout
+
+        # 檢查登入按鈕
+        self.check_login_btn = QPushButton("檢查登入")
+        btn_layout.addWidget(self.check_login_btn)
+
+        layout.addLayout(btn_layout) # Add the combined button layout
+
         self.progress_col_index = 1  # 進度欄固定為索引 1
         self.table = QTableWidget(0, len(PARAM_COLUMNS) + 2) # +1 for checkbox, +1 for progress
         header_labels = ["選取", "進度 (%)"] + PARAM_COLUMNS
@@ -212,32 +238,6 @@ class SimulationWidget(QWidget):
         # 添加右鍵選單事件處理
         self.table.setContextMenuPolicy(Qt.CustomContextMenu)
         self.table.customContextMenuRequested.connect(self.show_context_menu)
-
-        # 按鈕區
-        btn_layout = QHBoxLayout() # Combine buttons in one layout
-
-        # 資料編輯按鈕與下拉選單
-        self.edit_btn = QPushButton("新增參數")
-        self.edit_btn.clicked.connect(self.add_row)
-        btn_layout.addWidget(self.edit_btn)
-
-        # 將原本 edit_menu 的三個 action 設為實例屬性，供右鍵選單使用
-        self.dup_action = QAction("複製選取", self)
-        self.del_action = QAction("刪除選取", self)
-        self.batch_edit_action = QAction("批量調整", self)
-
-        self.del_all_btn = QPushButton("刪除全部資料")
-        btn_layout.addWidget(self.del_all_btn)
-
-        # 模擬按鈕
-        self.sim_btn = QPushButton("執行模擬")
-        btn_layout.addWidget(self.sim_btn) # Add sim button to the same layout
-
-        # 檢查登入按鈕
-        self.check_login_btn = QPushButton("檢查登入")
-        btn_layout.addWidget(self.check_login_btn)
-
-        layout.addLayout(btn_layout) # Add the combined button layout
 
         # 連接信號
         self.dup_action.triggered.connect(self.duplicate_selected_rows)
