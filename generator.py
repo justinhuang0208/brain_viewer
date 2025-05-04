@@ -106,29 +106,26 @@ class SelectedFieldsWidget(QWidget):
             
     def add_custom_field(self):
         """手動輸入字段，支援逗號分隔或 Python 列表格式"""
-        text, ok = QInputDialog.getText(
+        text, ok = QInputDialog.getMultiLineText(
             self,
             "添加字段",
             "請輸入字段名稱 (多個字段可用逗號分隔，或輸入 Python 列表格式的字串):",
-            QLineEdit.Normal,
             ""
         )
 
         if ok and text.strip():
             fields = []
+            raw = text.strip()
             try:
-                # 嘗試解析 Python 列表格式
-                parsed_input = ast.literal_eval(text.strip())
+                parsed_input = ast.literal_eval(raw)
                 if isinstance(parsed_input, list):
-                    # 確保列表中的元素都是字串
                     fields = [str(item).strip() for item in parsed_input if str(item).strip()]
                 else:
-                    # 如果解析結果不是列表，則按逗號分隔處理
-                    QMessageBox.warning(self, "格式錯誤", "輸入的不是有效的 Python 列表，將嘗試按逗號分隔處理。")
-                    fields = [f.strip() for f in text.split(',') if f.strip()]
+                    # 不是列表，回退到逗號分隔
+                    fields = [f.strip() for f in raw.split(',') if f.strip()]
             except (ValueError, SyntaxError):
                 # 解析失敗，回退到逗號分隔
-                fields = [f.strip() for f in text.split(',') if f.strip()]
+                fields = [f.strip() for f in raw.split(',') if f.strip()]
 
             if fields:
                 self.add_fields(fields)
