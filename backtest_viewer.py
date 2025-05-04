@@ -1154,6 +1154,8 @@ class MainWindow(QMainWindow):
                 self.visible_columns = list(model.columns)  # Initially all columns are visible
 
                 for col in model.columns:
+                    if col.lower() in ['link', 'code', 'region']:
+                        continue
                     try:
                         query = f"SELECT CAST(\"{col}\" AS FLOAT) FROM {self.table_name} LIMIT 1"
                         cursor = self.db_conn.cursor()
