@@ -531,6 +531,10 @@ class MainWindow(QMainWindow):
             self.proxy_model = CheckableSortFilterProxyModel()
             self.proxy_model.setSourceModel(model)
             self.proxy_model.setFilterCaseSensitivity(Qt.CaseInsensitive)
+            # 使用 EditRole 作為排序依據，以保留 % 顯示
+            self.proxy_model.setSortRole(Qt.EditRole)
+            # Use EditRole for sorting so DisplayRole can show '%' correctly
+            self.proxy_model.setSortRole(Qt.EditRole)
 
             self.table_view.setModel(self.proxy_model)
 
