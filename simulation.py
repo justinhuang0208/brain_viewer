@@ -802,7 +802,9 @@ class SimulationWidget(QWidget):
             self.active_wq_session = None
         
         self.progress_label.setText("模擬失敗")
-        QMessageBox.critical(self, "模擬失敗", error_message)
+        # 若為手動停止，不彈出錯誤視窗
+        if error_message not in ["模擬被手動停止", "模擬被手動終止"]:
+            QMessageBox.critical(self, "模擬失敗", error_message)
         
         # --- 修復閃退：先重置狀態再啟用按鈕 ---
         self.is_simulating = False
