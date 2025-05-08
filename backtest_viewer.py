@@ -108,6 +108,18 @@ class NumericFilterProxyModel(QSortFilterProxyModel):
             
         return True
 
+    def mapFromSource(self, sourceIndex):
+        # 避免非來源模型的索引引發錯誤警告
+        if sourceIndex.model() is not self.sourceModel():
+            return QModelIndex()
+        return super(NumericFilterProxyModel, self).mapFromSource(sourceIndex)
+
+    def mapToSource(self, proxyIndex):
+        # 避免非本代理模型的索引引發錯誤警告
+        if proxyIndex.model() is not self:
+            return QModelIndex()
+        return super(NumericFilterProxyModel, self).mapToSource(proxyIndex)
+
 # 新增: 過濾檔案的 ProxyModel
 class FileFilterProxyModel(QSortFilterProxyModel):
     def filterAcceptsRow(self, source_row, source_parent):
@@ -120,6 +132,16 @@ class FileFilterProxyModel(QSortFilterProxyModel):
         if file_name.lower().endswith(".log"):
             return False
         return super().filterAcceptsRow(source_row, source_parent)
+
+    def mapFromSource(self, sourceIndex):
+        if sourceIndex.model() is not self.sourceModel():
+            return QModelIndex()
+        return super(FileFilterProxyModel, self).mapFromSource(sourceIndex)
+
+    def mapToSource(self, proxyIndex):
+        if proxyIndex.model() is not self:
+            return QModelIndex()
+        return super(FileFilterProxyModel, self).mapToSource(proxyIndex)
 
 # SQLite表格模型
 class SqliteTableModel(QAbstractTableModel):
@@ -2201,41 +2223,56 @@ class MainWindow(QMainWindow):
         if not selected_indexes:
             return
 
-        # 從選取的索引中獲取唯一的、有效的視圖行號
         view_rows = sorted(list(set(index.row() for index in selected_indexes if index.isValid())))
         if not view_rows:
             return
 
-        # 檢查選取行的勾選狀態
         all_checked = True
         source_model = self.proxy_model.sourceModel()
-        for view_row in view_rows:
-            view_index_col0 = self.proxy_model.index(view_row, 0)
-            if not view_index_col0.isValid():
-                continue
-            source_index_col0 = self.proxy_model.mapToSource(view_index_col0)
-            if not source_index_col0.isValid():
-                continue
+
+        for view_row in view_rows: # view_row is a row number in the proxy model
             try:
-                cursor = source_model.db_conn.cursor()
-                clause, params = source_model._get_filter_and_sort_clause()
-                query = f"SELECT rowid FROM {source_model.table_name} {clause} LIMIT 1 OFFSET {source_index_col0.row()}"
-                cursor.execute(query, params)
-                result = cursor.fetchone()
-                if result:
-                    rowid = result[0]
+                # Get the QModelIndex for column 0 of the current proxy_model view_row
+                proxy_model_index_col0 = self.proxy_model.index(view_row, 0)
+                if not proxy_model_index_col0.isValid():
+                    # This case should ideally not happen if view_row comes from valid selectedIndexes
+                    all_checked = False
+                    break
+
+                # Map the proxy model index to the source model index
+                source_model_index_col0 = self.proxy_model.mapToSource(proxy_model_index_col0)
+                if not source_model_index_col0.isValid():
+                    # This can occur if the source model structure has changed and the proxy
+                    # hasn't fully updated, or if the row is filtered out by the proxy
+                    # but was somehow part of selected_indexes.
+                    print(f"Warning: mapToSource returned invalid source index for proxy row {view_row} in show_table_context_menu.")
+                    all_checked = False
+                    break # Or use 'continue' if you want to check other rows
+
+                # source_model_index_col0.row() is the row number in the source model's
+                # current internal view (after its own filtering/sorting).
+                # Use the source model's helper to get the rowid.
+                rowid = source_model._get_rowid_for_row(source_model_index_col0.row())
+
+                if rowid is not None:
                     check_state = source_model._check_states.get(rowid, Qt.Unchecked)
                     if check_state != Qt.Checked:
                         all_checked = False
-                        break
+                        break  # Exit the loop as soon as one non-checked item is found
                 else:
+                    # _get_rowid_for_row failed to find a rowid for this source_model_row.
+                    # This indicates a potential inconsistency or an edge case.
+                    print(f"Warning: _get_rowid_for_row returned None for source model row {source_model_index_col0.row()} (derived from proxy row {view_row}).")
                     all_checked = False
-                    break
-            except Exception as e:
-                print(f"Error checking state for row {view_row}: {e}")
-                all_checked = False
-                break
+                    break # Exit the loop
 
+            except Exception as e:
+                import traceback
+                print(f"Error checking state for proxy row {view_row} in show_table_context_menu: {type(e).__name__} - {str(e)}")
+                print(traceback.format_exc()) # Print full traceback for detailed debugging
+                all_checked = False
+                break # Exit the loop on any error
+        
         # 建立右鍵選單
         context_menu = QMenu(self)
         # 1. 批次勾選/取消勾選
