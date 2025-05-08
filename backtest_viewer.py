@@ -2218,7 +2218,9 @@ class MainWindow(QMainWindow):
                 continue
             try:
                 cursor = source_model.db_conn.cursor()
-                cursor.execute(f"SELECT rowid FROM {source_model.table_name} {source_model._get_filter_and_sort_clause()} LIMIT 1 OFFSET {source_index_col0.row()}")
+                clause, params = source_model._get_filter_and_sort_clause()
+                query = f"SELECT rowid FROM {source_model.table_name} {clause} LIMIT 1 OFFSET {source_index_col0.row()}"
+                cursor.execute(query, params)
                 result = cursor.fetchone()
                 if result:
                     rowid = result[0]

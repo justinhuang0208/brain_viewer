@@ -270,6 +270,11 @@ class SimulationWidget(QWidget):
         self.uuid_row_map = {}
         self.highlighted_rows = set()
 
+    @Slot() # 新增槽函數，用於執行緒結束後清除參考
+    def _clear_simulation_thread_ref(self):
+        logging.info("QThread finished signal received. Clearing simulation_thread reference.")
+        self.simulation_thread = None
+
     @Slot(str, list)
     def highlight_completed_row(self, uuid: str, row_data: list):
         """根據完成的 uuid 標示對應的表格行 (優化：使用映射查找)"""
@@ -400,7 +405,7 @@ class SimulationWidget(QWidget):
         chk_item.setCheckState(Qt.Unchecked)
         chk_item.setData(Qt.UserRole, row_uuid)
         self.table.setItem(row, 0, chk_item)
-        self.uuid_row_map[row_uuid] = row # 優化：記錄 UUID 到行號的映射
+        self.uuid_row_map[row_uuid] = row
 
         # 新增進度欄 (預設為 "-")
         progress_item = QTableWidgetItem("-")
@@ -408,7 +413,7 @@ class SimulationWidget(QWidget):
         self.table.setItem(row, 1, progress_item)
 
         # Use provided data or defaults for other columns
-        values_to_set = data if data else DEFAULT_VALUES[1:] # Skip the None placeholder for checkbox
+        values_to_set = data if data else DEFAULT_VALUES[1:] 
 
         for col_idx, val in enumerate(values_to_set):
             table_col = col_idx + 2
@@ -566,12 +571,12 @@ class SimulationWidget(QWidget):
 
         if reply == QMessageBox.Yes:
             self.table.setRowCount(0)
-            self.uuid_row_map.clear() # 優化：清空 UUID 映射
-            self.highlighted_rows.clear() # 優化：清空高亮行記錄
+            self.uuid_row_map.clear()
+            self.highlighted_rows.clear()
             QMessageBox.information(self, "成功", "已刪除所有資料。")
 
     def _rebuild_uuid_row_map(self):
-        """優化：重新建立 UUID 到行號的映射"""
+        """重新建立 UUID 到行號的映射"""
         self.uuid_row_map.clear()
         for row in range(self.table.rowCount()):
             chk_item = self.table.item(row, 0)
@@ -582,7 +587,6 @@ class SimulationWidget(QWidget):
 
     def show_context_menu(self, position: QPoint):
         """顯示右鍵選單"""
-        # 獲取選取的項目
         selected_rows = set()
         for item in self.table.selectedItems():
             selected_rows.add(item.row())
@@ -618,7 +622,7 @@ class SimulationWidget(QWidget):
         if action == check_action:
             new_state = Qt.Unchecked if all_checked else Qt.Checked
             for row in selected_rows:
-                item = self.table.item(row, 0)  # 第一欄是 checkbox
+                item = self.table.item(row, 0)
                 if item:
                     item.setCheckState(new_state)
 
@@ -633,7 +637,7 @@ class SimulationWidget(QWidget):
                 row_uuid = None
             entry['uuid'] = row_uuid
             for col_idx, key in enumerate(PARAM_COLUMNS):
-                table_col = col_idx + 2 # 修正：考慮「選取」和「進度 (%)」兩欄
+                table_col = col_idx + 2
                 if key == "delay":
                     widget = self.table.cellWidget(row, table_col)
                     entry[key] = int(widget.currentText()) if widget else 1
@@ -674,9 +678,9 @@ class SimulationWidget(QWidget):
     def stop_simulation_thread(self):
         """請求停止正在執行的模擬執行緒"""
         if self.simulation_thread and self.simulation_thread.isRunning() and self.simulation_worker:
-            print("請求停止模擬...") # Debug message
+            print("請求停止模擬...")
             self.progress_label.setText("正在請求停止模擬...")
-            self.simulation_worker.request_stop() # 呼叫 Worker 的停止方法
+            self.simulation_worker.request_stop()
             # 禁用按鈕，防止重複點擊，直到 finished 信號觸發重置
             self.sim_btn.setEnabled(False)
             
@@ -697,13 +701,11 @@ class SimulationWidget(QWidget):
                  self.check_login_btn.setEnabled(True)
 
     def start_simulation_thread(self):
-        # --- 修復閃退：檢查舊執行緒是否仍在運行 ---
         if self.simulation_thread and self.simulation_thread.isRunning():
             QMessageBox.warning(self, "操作過快", "上一個模擬執行緒仍在清理中，請稍後再試。")
             return
-        # --- 修復結束 ---
     
-        self._reset_table_colors()  # 調用優化後的顏色重置
+        self._reset_table_colors()
 
         # 優化：批次重設所有進度欄
         self.table.setUpdatesEnabled(False)
@@ -729,7 +731,6 @@ class SimulationWidget(QWidget):
         self.sim_btn.setText("停止模擬")
         self.edit_btn.setEnabled(False) # 禁用編輯按鈕
         self.check_login_btn.setEnabled(False) # 禁用檢查登入按鈕
-        # self.sim_btn.setEnabled(False) # 保持按鈕啟用以便停止
         self.progress_label.setText("模擬進行中...")
     
         # 創建執行緒和 Worker
@@ -742,13 +743,13 @@ class SimulationWidget(QWidget):
         self.simulation_worker.error_occurred.connect(self.handle_simulation_error)
         self.simulation_worker.finished.connect(self.handle_simulation_finished)
         self.simulation_thread.started.connect(self.simulation_worker.run)
-        self.simulation_thread.finished.connect(self.simulation_thread.deleteLater) # 清理執行緒
         self.simulation_worker.finished.connect(self.simulation_thread.quit)
-        self.simulation_worker.finished.connect(self.simulation_worker.deleteLater) # 清理 Worker
+        self.simulation_worker.finished.connect(self.simulation_worker.deleteLater)
+        self.simulation_thread.finished.connect(self._clear_simulation_thread_ref)
         # Connect the new signal for row completion
         self.simulation_worker.simulation_row_completed.connect(self.highlight_completed_row)
         # Connect the new signal for row starting
-        self.simulation_worker.simulation_row_started.connect(self.highlight_processing_row) # Add this connection
+        self.simulation_worker.simulation_row_started.connect(self.highlight_processing_row)
         # 連接個別進度信號
         self.simulation_worker.single_simulation_progress.connect(self.update_single_simulation_progress)
     
@@ -761,13 +762,11 @@ class SimulationWidget(QWidget):
     @Slot(str, str)
     def handle_simulation_error(self, uuid: str, error_message: str):
         """處理模擬錯誤，包含標示失敗的行並重置 UI 狀態 (優化：使用映射查找)"""
-        # 注意：這裡先不調用 _reset_table_colors()，因為可能只需要標紅單行
-        # self._reset_table_colors()
 
         # 如果有指定 uuid，找到對應行並標示為紅色
         if uuid:
             light_red = QColor("#f8d7da")
-            row = self.uuid_row_map.get(uuid) # 優化：使用映射查找行號
+            row = self.uuid_row_map.get(uuid)
 
             if row is not None and row < self.table.rowCount(): # 檢查行號是否有效
                 self.highlighted_rows.add(row) # 優化：記錄高亮行
@@ -806,23 +805,26 @@ class SimulationWidget(QWidget):
         if error_message not in ["模擬被手動停止", "模擬被手動終止"]:
             QMessageBox.critical(self, "模擬失敗", error_message)
         
-        # --- 修復閃退：先重置狀態再啟用按鈕 ---
         self.is_simulating = False
-        # 重置 UI 狀態
         self.sim_btn.setText("執行模擬")
         self.sim_btn.setEnabled(True)
         self.edit_btn.setEnabled(True)
         self.check_login_btn.setEnabled(True)
-        # --- 修復結束 ---
+
 
     def handle_simulation_finished(self):
+        logging.info("handle_simulation_finished started.")
         # 檢查是否是因為停止請求而結束
         stopped_early = self.simulation_worker and self.simulation_worker.stop_requested
-    
-        # 調用優化後的顏色重置
-        self._reset_table_colors()
+        logging.info(f"handle_simulation_finished: stopped_early={stopped_early}")
 
-        # 優化：批次重設所有進度欄
+        # 調用優化後的顏色重置
+        logging.info("handle_simulation_finished: Calling _reset_table_colors.")
+        self._reset_table_colors()
+        logging.info("handle_simulation_finished: _reset_table_colors finished.")
+
+        # 批次重設所有進度欄
+        logging.info("handle_simulation_finished: Resetting progress columns.")
         self.table.setUpdatesEnabled(False)
         try:
             for row in range(self.table.rowCount()):
@@ -831,6 +833,7 @@ class SimulationWidget(QWidget):
                     progress_item.setText("-")
         finally:
             self.table.setUpdatesEnabled(True)
+        logging.info("handle_simulation_finished: Progress columns reset.")
 
         if stopped_early:
             self.progress_label.setText("模擬已停止")
@@ -838,32 +841,36 @@ class SimulationWidget(QWidget):
         else:
             self.progress_label.setText("模擬完成")
             QMessageBox.information(self, "模擬完成", "模擬已成功完成！請檢查 data 資料夾中的 CSV 和 LOG 檔案。")
-    
-        # --- 修復閃退：先重置狀態再啟用按鈕 ---
+
+        logging.info("handle_simulation_finished: Resetting simulation state and UI.")
         self.is_simulating = False
-        self.simulation_thread = None
         self.simulation_worker = None
-        # 重置 UI 狀態
         self.sim_btn.setText("執行模擬")
         self.sim_btn.setEnabled(True)
         self.edit_btn.setEnabled(True)
         self.check_login_btn.setEnabled(True)
-        # --- 修復結束 ---
-    
+        logging.info("handle_simulation_finished: Simulation state and UI reset.")
+
         # 只有在模擬正常完成時才詢問是否清空表格
         if not stopped_early:
+            logging.info("handle_simulation_finished: Asking to clear table.")
             reply = QMessageBox.question(self, '清空表格?',
                                            "模擬已完成，您想要清空模擬參數表格嗎？",
                                            QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-    
+
             if reply == QMessageBox.Yes:
                 self.table.setRowCount(0)
+                self.uuid_row_map.clear() # 清空映射
+                self.highlighted_rows.clear() # 清空高亮記錄
                 # 更新標籤，即使不清空也要顯示完成
                 self.progress_label.setText("模擬完成 (表格已清空)")
+                logging.info("handle_simulation_finished: Table cleared.")
             else:
                 # 更新標籤，即使不清空也要顯示完成
                 self.progress_label.setText("模擬完成 (表格保留)")
+                logging.info("handle_simulation_finished: Table kept.")
         # 如果是手動停止，標籤已設為 "模擬已停止"，無需再改
+        logging.info("handle_simulation_finished finished.")
 
     def check_login_status(self):
         """在背景執行緒中檢查 WorldQuant Brain 的登入狀態"""
@@ -994,14 +1001,11 @@ class SimulationWorker(QObject):
             wq = WQSession(worker_ref=self, existing_session=self.session)
             wq.simulate(self.params) # WQSession.simulate will check the flag
 
-            # Emit finished signal only if not stopped prematurely
-            # (or always emit, and let the handler check the flag)
-            # Let's always emit finished, and handle the stop state in the widget
-            self.finished.emit()
+            pass # 不再在這裡發送 finished
         except Exception as e:
             logging.exception("模擬執行緒錯誤") # 記錄詳細錯誤到日誌
+            # 錯誤信號仍然在這裡發送
             self.error_occurred.emit("", f'模擬過程中發生錯誤: {type(e).__name__}: {e}')
-            self.finished.emit() # 確保 finished 信號被發送
 
 # 將 WQSession 移到類別外部，使其成為獨立的類別
 class WQSession(requests.Session):
@@ -1115,7 +1119,6 @@ class WQSession(requests.Session):
             nan = simulation.get('nanHandling', 'OFF')
             row_uuid = simulation.get('uuid', None)
             logging.info(f"{thread} -- Simulating alpha: {alpha}")
-            # --- 修復 429：加入重試邏輯 (POST) ---
             max_retries = 3
             retry_delay = 15 # seconds
             for attempt in range(max_retries):
@@ -1153,10 +1156,8 @@ class WQSession(requests.Session):
                     if http_err.response.status_code == 429:
                         retry_msg = f"請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
                         logging.warning(f"{thread} -- {retry_msg}")
-                        # --- 更新進度標籤 ---
                         if self.worker_ref:
                             self.worker_ref.progress_updated.emit(retry_msg)
-                        # --- 更新結束 ---
                         if attempt < max_retries - 1:
                             # 等待時檢查停止請求
                             for _ in range(retry_delay * 5): # Check every 0.2 seconds
@@ -1198,7 +1199,6 @@ class WQSession(requests.Session):
 
             logging.info(f'{thread} -- Obtained simulation link: {nxt}')
             ok = True
-            # --- 修復 429：加入重試邏輯 (GET 狀態) ---
             max_retries = 3
             retry_delay = 15 # seconds
             while True: # Loop for checking simulation status
@@ -1241,10 +1241,8 @@ class WQSession(requests.Session):
                         if http_err.response.status_code == 429:
                             retry_msg = f"檢查狀態請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
                             logging.warning(f"{thread} -- {retry_msg}")
-                            # --- 更新進度標籤 ---
                             if self.worker_ref:
                                 self.worker_ref.progress_updated.emit(retry_msg)
-                            # --- 更新結束 ---
                             if attempt < max_retries - 1:
                                 # 等待時檢查停止請求
                                 for _ in range(retry_delay * 5): # Check every 0.2 seconds
@@ -1277,12 +1275,10 @@ class WQSession(requests.Session):
                         status_check_success = False # Mark as failed
                         break # Exit retry loop, ok is set to error
 
-                # --- 重試邏輯結束 ---
 
                 if not status_check_success: # If all retries failed for status check
                     break # Exit the outer while loop for status checking
 
-                # --- 原有狀態處理邏輯 ---
                 if 'alpha' in r_json:
                     alpha_link = r_json['alpha']
                     break
@@ -1293,10 +1289,6 @@ class WQSession(requests.Session):
                     # 個別進度更新
                     if self.worker_ref:
                         self.worker_ref.single_simulation_progress.emit(row_uuid, int(100*progress))
-                    # Comment out the individual alpha progress update to avoid flickering with the overall count
-                    # if self.worker_ref:
-                    #     self.worker_ref.progress_updated.emit(f"模擬進行中 ({alpha[:20]}...): {int(100*progress)}%")
-                # --- 原有狀態處理邏輯結束 ---
 
                 # 如果模擬尚未完成，則等待並繼續檢查狀態
                 # 將 10 秒 sleep 拆成 50 次 0.2 秒 sleep，每次檢查是否收到停止請求
@@ -1311,7 +1303,6 @@ class WQSession(requests.Session):
                     time.sleep(wait_interval)
                 # Loop back to check status again
 
-            # --- 狀態檢查循環結束 ---
 
             if ok != True: # Check if status checking failed after retries
                 error_msg = f"模擬失敗 ({alpha[:20]}...): {ok[1]}"
@@ -1324,7 +1315,6 @@ class WQSession(requests.Session):
                     0, 0, 0, 'FAIL', 0, -1, universe, nxt, alpha
                 ]
             else:
-                # --- 修復 429：加入重試邏輯 (GET Alpha 詳細資訊) ---
                 max_retries = 3
                 retry_delay = 15 # seconds
                 alpha_details_fetched = False
@@ -1360,10 +1350,8 @@ class WQSession(requests.Session):
                         if http_err.response.status_code == 429:
                             retry_msg = f"獲取 Alpha 詳細請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
                             logging.warning(f"{thread} -- {retry_msg}")
-                            # --- 更新進度標籤 ---
                             if self.worker_ref:
                                 self.worker_ref.progress_updated.emit(retry_msg)
-                            # --- 更新結束 ---
                             if attempt < max_retries - 1:
                                 # 等待時檢查停止請求
                                 for _ in range(retry_delay * 5): # Check every 0.2 seconds
@@ -1391,7 +1379,6 @@ class WQSession(requests.Session):
                         error_msg = f"處理 Alpha 詳細資訊時出錯: {e}"
                         break # Exit retry loop
 
-                # --- 重試邏輯結束 ---
 
                 if alpha_details_fetched:
                     logging.info(f'{thread} -- Obtained alpha link: https://platform.worldquantbrain.com/alpha/{alpha_link}')
@@ -1414,7 +1401,6 @@ class WQSession(requests.Session):
                         weight_check, subsharpe, -1,
                         universe, f'https://platform.worldquantbrain.com/alpha/{alpha_link}', alpha
                     ]
-                    # 新增：成功取得 Alpha 詳細資訊後，進度設為 100%
                     if self.worker_ref:
                         self.worker_ref.single_simulation_progress.emit(row_uuid, 100)
                 else: # Handle failure to fetch alpha details after retries
@@ -1478,41 +1464,83 @@ class WQSession(requests.Session):
                         futures.append(future)
 
                     def done_callback(fut):
-                        # 處理完成時的 UI 更新與進度
-                        result = fut.result()
-                        if result and 'row' in result:
-                            with self._csv_lock:
-                                writer.writerow(result['row'])
-                                f.flush()
-                                self.rows_processed.append(result['simulation'])
-                                self.completed_count += 1
-                                logging.info(f'Result added to CSV for alpha: {result["simulation"]["code"][:20]}...')
+                        logging.info(f"done_callback started for future: {fut}")
+                        try:
+                            result = fut.result()
+                            if result and 'row' in result:
+                                with self._csv_lock:
+                                    logging.info(f"Acquired CSV lock for {result.get('uuid', 'N/A')}")
+                                    writer.writerow(result['row'])
+                                    f.flush()
+                                    self.rows_processed.append(result['simulation'])
+                                    self.completed_count += 1
+                                    logging.info(f'Result added to CSV for alpha: {result["simulation"]["code"][:20]}...')
+                                    if self.worker_ref:
+                                        logging.info(f"Emitting simulation_row_completed for {result.get('uuid', 'N/A')}")
+                                        self.worker_ref.simulation_row_completed.emit(result['uuid'], result['row'])
+                                    logging.info(f"Released CSV lock for {result.get('uuid', 'N/A')}")
                                 if self.worker_ref:
-                                    self.worker_ref.simulation_row_completed.emit(result['uuid'], result['row'])
-                            if self.worker_ref:
-                                self.worker_ref.progress_updated.emit(f"{self.completed_count}/{self.total_rows}")
-                        elif result and 'error' in result:
-                            logging.warning(f"Skipping result for alpha {result['alpha'][:20]} due to error: {result['error']}")
-                            if self.worker_ref:
-                                self.worker_ref.error_occurred.emit(result.get('uuid', ''), result['error'])
-                        elif result is None and not self.login_expired:
-                            logging.warning("Received None result from simulation processing.")
+                                    logging.info(f"Emitting progress_updated: {self.completed_count}/{self.total_rows}")
+                                    self.worker_ref.progress_updated.emit(f"{self.completed_count}/{self.total_rows}")
+                            elif result and 'error' in result:
+                                logging.warning(f"Skipping result for alpha {result['alpha'][:20]} due to error: {result['error']}")
+                                if self.worker_ref:
+                                    logging.info(f"Emitting error_occurred for {result.get('uuid', 'N/A')}")
+                                    self.worker_ref.error_occurred.emit(result.get('uuid', ''), result['error'])
+                            elif result is None and not self.login_expired:
+                                logging.warning("Received None result from simulation processing.")
+                        except Exception as e:
+                            logging.exception(f"Error in done_callback for future {fut}")
+                        finally:
+                            logging.info(f"done_callback finished for future: {fut}")
 
                     for fut in futures:
                         fut.add_done_callback(done_callback)
 
+                    logging.info("Starting as_completed loop.")
                     # 等待所有 future 完成或遇到停止請求
                     for fut in as_completed(futures):
+                        logging.info(f"Future completed in as_completed loop: {fut}")
+                        # 檢查停止請求或登入過期
                         if self.worker_ref and self.worker_ref.stop_requested:
-                            logging.info("停止請求已收到，停止處理剩餘結果。")
+                            logging.info("Stop requested detected in as_completed loop. Breaking.")
+                            # 如果收到停止請求，也需要關閉執行緒池，但不一定需要等待
+                            executor.shutdown(wait=False, cancel_futures=True) # 嘗試取消未開始的任務
                             break
                         if self.login_expired:
+                            logging.info("Login expired detected in as_completed loop. Breaking.")
+                            executor.shutdown(wait=False, cancel_futures=True) # 嘗試取消未開始的任務
                             break
-                    # 注意：done_callback 會自動處理每個完成的結果
+                        try:
+                            # 只是為了觸發可能的例外（雖然已在回呼處理）
+                            fut.result(timeout=0.1)
+                        except Exception as e:
+                            # 這個例外應該已經在 done_callback 中被捕捉和記錄了
+                            logging.debug(f"Exception caught in as_completed loop (likely handled in callback): {e}")
+                            pass
+
+                    logging.info("Finished as_completed loop.")
+
+                # 在 with 區塊結束後，executor 會自動調用 shutdown(wait=True)
+                # 但為了更明確，我們可以在這裡顯式調用，確保所有任務及其回呼完成
+                logging.info("Waiting for executor shutdown...")
+
         except Exception as e:
-            logging.exception("模擬執行或檔案寫入錯誤") # Log the full traceback
+            logging.exception("模擬執行或檔案寫入錯誤")
             if self.worker_ref:
-                self.worker_ref.error_occurred.emit(f'檔案寫入或處理時發生錯誤: {type(e).__name__}: {e}')
-        # Ensure finished signal is emitted even if file writing fails
-        # The actual return value might not be critical if errors are handled via signals
-        return [sim for sim in data if sim not in self.rows_processed]
+                self.worker_ref.error_occurred.emit("", f'檔案寫入或處理時發生錯誤: {type(e).__name__}: {e}')
+        finally: # 使用 finally 確保 finished 信號總是被發送
+             # 確保在發送 finished 前所有任務都結束
+            logging.info("SimulationWorker.run: Exiting main try block or exception occurred.")
+            # 檢查 executor 是否存在且尚未關閉 (如果 try 區塊提前退出)
+            if 'executor' in locals() and not executor._shutdown:
+                 logging.info("Explicitly shutting down executor in finally block.")
+                 executor.shutdown(wait=True)
+
+            # 現在可以安全地發送 finished 信號
+            logging.info("WQSession.simulate: About to emit finished signal via worker_ref in finally block.")
+            if self.worker_ref:
+                self.worker_ref.finished.emit()
+                logging.info("WQSession.simulate: Finished signal emitted via worker_ref in finally block.")
+            else:
+                logging.warning("WQSession.simulate: worker_ref is None, cannot emit finished signal.")

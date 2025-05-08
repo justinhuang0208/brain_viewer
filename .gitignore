@@ -4,3 +4,4 @@ data
 alphas
 *.db
 templates
+.cursor/rules/structure.mdc
