@@ -1946,7 +1946,6 @@ class MainWindow(QMainWindow):
             source_model.refresh_metadata()
             self.proxy_model.invalidate()
             self.status_bar.showMessage(f"已刪除 {len(checked_rowids)} 筆資料（含永久刪除 CSV）")
-            QMessageBox.information(self, "刪除成功", f"已成功永久刪除 {len(checked_rowids)} 筆資料。")
         except Exception as e:
             self.status_bar.showMessage(f"刪除資料失敗: {str(e)}")
             QMessageBox.critical(self, "刪除失敗", f"刪除資料時發生錯誤：\n{str(e)}")
@@ -2364,7 +2363,7 @@ class MainWindow(QMainWindow):
         self.status_bar.showMessage(status_text)
 
 
-
+google/gemini-2.0-flash-001
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     
