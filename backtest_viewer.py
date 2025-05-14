@@ -151,13 +151,10 @@ class SqliteTableModel(QAbstractTableModel):
         self.table_name = None
         self.columns = []
         self.row_count = 0
-        # self.filter_clause = "" # 移除舊的 filter_clause
-        # --- 修改：使用字典儲存不同類型的過濾條件 ---
         self.filter_conditions = {'text': None, 'numeric': None, 'raw': None, 'rowid': None}
-        self._raw_filter_clause = "" # 臨時：用於 '全部欄位' 的 raw SQL
-        # -----------------------------------------
+        self._raw_filter_clause = ""
         self.sort_clause = ""
-        self._check_states = {}  # 使用字典來儲存勾選狀態，鍵為 rowid
+        self._check_states = {}
 
     def setup_model(self, db_conn, table_name):
         """設置模型的資料庫連接和表格名稱"""
@@ -188,10 +185,10 @@ class SqliteTableModel(QAbstractTableModel):
             return 0
         
         cursor = self.db_conn.cursor()
-        clause, params = self._get_filter_and_sort_clause() # 修改：獲取子句和參數
+        clause, params = self._get_filter_and_sort_clause()
         query = f"SELECT COUNT(*) FROM {self.table_name} {clause}"
         try:
-            cursor.execute(query, params) # 修改：使用參數化查詢
+            cursor.execute(query, params)
             return cursor.fetchone()[0]
         except Exception as e:
             print(f"Error counting rows: {e}")
@@ -211,7 +208,6 @@ class SqliteTableModel(QAbstractTableModel):
         # 處理勾選框列（第一列）
         if col == 0:
             if role == Qt.CheckStateRole:
-                # --- 修改：先獲取 rowid ---
                 rowid = self._get_rowid_for_row(row)
                 if rowid is not None:
                     return self._check_states.get(rowid, Qt.Unchecked)
@@ -219,7 +215,6 @@ class SqliteTableModel(QAbstractTableModel):
 
         # 獲取實際數據
         try:
-            # --- 修改：先獲取 rowid ---
             rowid = self._get_rowid_for_row(row)
             if rowid is None:
                 return None
@@ -227,7 +222,6 @@ class SqliteTableModel(QAbstractTableModel):
             cursor = self.db_conn.cursor()
             # 調整列索引（因為第一列是勾選框）
             actual_col = self.columns[col - 1]
-            # --- 修改：使用 rowid 獲取數據 ---
             query = f'SELECT "{actual_col}" FROM {self.table_name} WHERE rowid = ?'
             cursor.execute(query, (rowid,))
             value = cursor.fetchone()
@@ -275,7 +269,6 @@ class SqliteTableModel(QAbstractTableModel):
         # 處理勾選框狀態變更
         if index.column() == 0 and role == Qt.CheckStateRole:
             try:
-                # --- 修改：先獲取 rowid ---
                 rowid = self._get_rowid_for_row(index.row())
                 if rowid is not None:
                     self._check_states[rowid] = Qt.CheckState(value)
@@ -311,7 +304,6 @@ class SqliteTableModel(QAbstractTableModel):
 
         return super().flags(index) | Qt.ItemIsEnabled | Qt.ItemIsSelectable
 
-    # --- 新增：獨立更新不同類型過濾器的方法 ---
     def update_text_filter(self, column, text):
         """更新文字過濾條件"""
         self.filter_conditions['text'] = {'col': column, 'op': 'LIKE', 'val': f'%{text}%'}
@@ -358,7 +350,6 @@ class SqliteTableModel(QAbstractTableModel):
         self.filter_conditions['numeric'] = None
         self.filter_conditions['raw'] = None
         self.layoutChanged.emit()
-    # --- 新增結束 ---
 
     def set_sort(self, column, order):
         """設置排序條件"""
@@ -993,7 +984,6 @@ class MainWindow(QMainWindow):
             # 檢查檔案是否存在和可讀
             if not os.path.exists(file_path):
                 QMessageBox.critical(self, "檔案不存在", f"找不到檔案: {file_path}")
-                # --- 新增：清空狀態 ---
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1007,7 +997,6 @@ class MainWindow(QMainWindow):
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
-                # --- 新增結束 ---
                 return
 
             # 檢查檔案大小
@@ -1016,7 +1005,6 @@ class MainWindow(QMainWindow):
             except OSError as e:
                 self.status_bar.showMessage(f"無法讀取檔案大小：{str(e)}")
                 QMessageBox.critical(self, "檔案讀取錯誤", f"無法讀取檔案大小: {str(e)}")
-                # --- 新增：清空狀態 ---
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1029,14 +1017,12 @@ class MainWindow(QMainWindow):
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
-                # --- 新增結束 ---
                 return
 
             if file_size == 0:
                 QMessageBox.information(self, "空檔案", "此 CSV 檔案為空，無法載入資料。")
                 self.current_file_label.setText(file_name)
                 self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
-                # --- 新增：清空狀態 ---
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1048,7 +1034,6 @@ class MainWindow(QMainWindow):
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
-                # --- 新增結束 ---
                 return
 
             # 關閉現有連接
@@ -1077,7 +1062,6 @@ class MainWindow(QMainWindow):
                         QMessageBox.information(self, "空檔案", "此CSV檔案不包含有效資料。")
                         self.current_file_label.setText(file_name)
                         self.status_bar.showMessage(f"{file_name} 不包含有效資料。")
-                        # --- 新增：清空狀態 ---
                         self.current_dataset = None
                         self.proxy_model = None
                         self.visible_columns = []
@@ -1089,7 +1073,6 @@ class MainWindow(QMainWindow):
                             self.db_conn.close()
                         self.db_conn = None
                         self.loading = False
-                        # --- 新增結束 ---
                         return
                 
                 # 嘗試使用pandas讀取檔案
@@ -1100,7 +1083,6 @@ class MainWindow(QMainWindow):
                     QMessageBox.information(self, "空檔案", "此 CSV 檔案沒有有效資料。")
                     self.current_file_label.setText(file_name)
                     self.status_bar.showMessage(f"{file_name} 沒有有效資料。")
-                    # --- 新增：清空狀態 ---
                     self.current_dataset = None
                     self.proxy_model = None
                     self.visible_columns = []
@@ -1112,14 +1094,12 @@ class MainWindow(QMainWindow):
                         self.db_conn.close()
                     self.db_conn = None
                     self.loading = False
-                    # --- 新增結束 ---
                     return
 
                 if first_chunk.empty:
                     QMessageBox.information(self, "空檔案", "此 CSV 檔案不包含任何資料列。")
                     self.current_file_label.setText(file_name)
                     self.status_bar.showMessage(f"{file_name} 不包含任何資料列。")
-                    # --- 新增：清空狀態 ---
                     self.current_dataset = None
                     self.proxy_model = None
                     self.visible_columns = []
@@ -1131,7 +1111,6 @@ class MainWindow(QMainWindow):
                         self.db_conn.close()
                     self.db_conn = None
                     self.loading = False
-                    # --- 新增結束 ---
                     return
                     
                 # 以下是成功讀取的後續處理...
@@ -1198,13 +1177,11 @@ class MainWindow(QMainWindow):
 
                 self.apply_column_visibility()
                 self.update_chart()
-                # --- 成功讀取結束 ---
                 
             except pd.errors.EmptyDataError:
                 QMessageBox.information(self, "空檔案", "此 CSV 檔案為空或無有效資料。")
                 self.current_file_label.setText(file_name)
                 self.status_bar.showMessage(f"{file_name} 為空檔案或無有效資料。")
-                # --- 新增：清空狀態 ---
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1216,13 +1193,11 @@ class MainWindow(QMainWindow):
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
-                # --- 新增結束 ---
                 return
             except (pd.errors.ParserError, UnicodeDecodeError) as e:
                 QMessageBox.critical(self, "格式錯誤", f"CSV 檔案格式錯誤或無法解析：{str(e)}")
                 self.current_file_label.setText(file_name)
                 self.status_bar.showMessage(f"{file_name} 格式錯誤: {str(e)}")
-                # --- 新增：清空狀態 ---
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1234,14 +1209,12 @@ class MainWindow(QMainWindow):
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
-                # --- 新增結束 ---
                 return
             except Exception as e:
                 # 捕獲所有其他可能的異常
                 QMessageBox.critical(self, "未知錯誤", f"讀取CSV檔案時發生未知錯誤: {str(e)}")
                 self.current_file_label.setText(file_name)
                 self.status_bar.showMessage(f"讀取 {file_name} 時發生錯誤: {str(e)}")
-                # --- 新增：清空狀態 ---
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1253,11 +1226,8 @@ class MainWindow(QMainWindow):
                     self.db_conn.close()
                 self.db_conn = None
                 self.loading = False
-                # --- 新增結束 ---
                 return
                 
-            # ... 其餘代碼保持不變 ...
-
         except Exception as e:
             QMessageBox.critical(self, "錯誤", f"載入回測結果時發生錯誤：{str(e)}")
             self.current_file_label.setText(file_name if 'file_name' in locals() else "錯誤")
@@ -1267,14 +1237,12 @@ class MainWindow(QMainWindow):
             self.proxy_model = None
             self.visible_columns = []
             self.table_view.setModel(None)
-            # --- 新增：禁用按鈕 ---
             self.column_view_button.setEnabled(False)
             self.import_button.setEnabled(False)
             self.export_code_list_button.setEnabled(False)
             if self.db_conn is not None:
                 self.db_conn.close()
             self.db_conn = None
-            # --- 新增結束 ---
             
         finally:
             # 重置loading狀態
@@ -1286,11 +1254,9 @@ class MainWindow(QMainWindow):
             except Exception as e:
                 print(f"過濾數據時發生錯誤: {str(e)}")
 
-    # --- 新增：處理搜尋框文字變更，啟動計時器 ---
     def on_search_text_changed(self):
         """當搜尋框文字改變時，重新啟動過濾計時器"""
         self.filter_timer.start()
-    # --- 新增結束 ---
 
     def export_code_column_as_list(self):
         # 匯出目前載入的 CSV 檔案的 'code' 欄位為 Python list 並複製到剪貼簿
@@ -1400,10 +1366,8 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, "錯誤", f"匯出參數時發生未預期錯誤：{str(e)}")
 
     def filter_data(self):
-        # --- 修正：防止在載入時觸發過濾 ---
         if self.loading:
             return
-        # ---------------------------------
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
 
@@ -1661,7 +1625,6 @@ class MainWindow(QMainWindow):
         col = source_index.column()
 
         try:
-            # --- 修改：直接使用 source_model.data() 獲取值 ---
             # 調整列索引（因為第一列是勾選框）
             column_name = source_model.columns[col - 1]
 
@@ -1675,7 +1638,6 @@ class MainWindow(QMainWindow):
                      return # 如果兩個 Role 都沒有值，則返回
 
             value = str(value) # 確保是字串
-            # --- 修改結束 ---
 
             if column_name.lower() == 'link' and value:
                 try:
@@ -1687,7 +1649,6 @@ class MainWindow(QMainWindow):
             elif column_name.lower() == 'code':
                 title = "策略代碼詳細信息"
                 try:
-                    # --- 修改：嘗試從同一行獲取 link (如果存在) ---
                     link_col_index = -1
                     try:
                         # 找到 'link' 欄位在 source_model.columns 中的索引
@@ -1709,7 +1670,6 @@ class MainWindow(QMainWindow):
                                      title = f"策略詳細信息 - {link.split('/')[-1]}"
                                  except:
                                      pass # 如果連結格式不符，保持預設標題
-                    # --- 修改結束 ---
                 except Exception as e:
                      print(f"獲取 link 時出錯: {e}") # 打印錯誤以便調試
                      pass # 即使獲取 link 失敗，也要顯示 code
@@ -1726,10 +1686,8 @@ class MainWindow(QMainWindow):
 
     # 應用數值過濾
     def apply_numeric_filter(self):
-        # --- 修正：防止在載入時觸發過濾 ---
         if self.loading:
             return
-        # ---------------------------------
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             self.status_bar.showMessage("當前沒有數據可過濾")
             return
@@ -1750,7 +1708,6 @@ class MainWindow(QMainWindow):
              self.status_bar.showMessage("請輸入有效數字進行過濾")
              return
 
-        # --- 修改：調用模型的 update_numeric_filter ---
         source_model = self.proxy_model.sourceModel()
         source_model.update_numeric_filter(column_name, operator, value)
         self._update_status_bar() # 更新狀態欄
@@ -1760,7 +1717,6 @@ class MainWindow(QMainWindow):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
 
-        # --- 修改：調用模型的 clear_numeric_filter ---
         self.condition_value.clear() # 清除輸入框
         source_model = self.proxy_model.sourceModel()
         source_model.clear_numeric_filter()
@@ -1995,7 +1951,6 @@ class MainWindow(QMainWindow):
             self.status_bar.showMessage(f"刪除資料失敗: {str(e)}")
             QMessageBox.critical(self, "刪除失敗", f"刪除資料時發生錯誤：\n{str(e)}")
 
-    # --- New Methods for Import Actions ---
     @Slot()
     def on_import_selected_code_clicked(self):
         """處理 '匯入已選 Code' 選項"""
@@ -2153,32 +2108,27 @@ class MainWindow(QMainWindow):
     def rename_file(self, file_path):
         """重命名文件"""
         old_name = os.path.basename(file_path)
-        # --- 獲取檔名和副檔名 ---
         name_without_ext, ext = os.path.splitext(old_name)
-        # -----------------------
         new_name, ok = QInputDialog.getText(
             self,
             "重命名文件",
             "請輸入新的文件名稱：",
-            text=name_without_ext # --- 只顯示檔名 ---
+            text=name_without_ext
         )
 
-        if ok and new_name and new_name != name_without_ext: # --- 比較修改後的檔名 ---
+        if ok and new_name and new_name != name_without_ext:
             try:
-                # --- 組成新的文件路徑，保留原始副檔名 ---
                 new_path = os.path.join(os.path.dirname(file_path), new_name + ext)
-                # --------------------------------------
-                # 檢查新文件名是否已存在
                 if os.path.exists(new_path):
-                    QMessageBox.warning(self, "錯誤", f"文件 '{os.path.basename(new_path)}' 已存在。") # --- 顯示完整的重命名後檔案名稱 ---
+                    QMessageBox.warning(self, "錯誤", f"文件 '{os.path.basename(new_path)}' 已存在。")
                     return
 
                 os.rename(file_path, new_path)
-                self.status_bar.showMessage(f"已將文件 '{old_name}' 重命名為 '{os.path.basename(new_path)}'") # --- 顯示完整的重命名前後檔案名稱 ---
+                self.status_bar.showMessage(f"已將文件 '{old_name}' 重命名為 '{os.path.basename(new_path)}'")
 
                 # 如果重命名的是當前載入的文件，更新標籤
                 if hasattr(self, 'current_file_label') and old_name == self.current_file_label.text():
-                    self.current_file_label.setText(os.path.basename(new_path)) # --- 更新為新的檔案名稱(含副檔名) ---
+                    self.current_file_label.setText(os.path.basename(new_path))
 
             except Exception as e:
                 QMessageBox.critical(self, "錯誤", f"重命名文件時發生錯誤：\\n{str(e)}")
@@ -2337,7 +2287,6 @@ class MainWindow(QMainWindow):
              self.status_bar.showMessage("未更新勾選狀態 (可能無效選擇或更新失敗)")
 
 
-    # === 新增：反轉選取功能 ===
     def invert_selection(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             QMessageBox.warning(self, "無法反轉", "目前沒有有效的回測結果表格。")
@@ -2362,12 +2311,7 @@ class MainWindow(QMainWindow):
         # 更新狀態列
         checked_count = len(source_model.get_checked_rows())
         self.status_bar.showMessage(f"已反轉選取狀態 | 目前共勾選 {checked_count} 項")
-    # === 新增結束 ===
 
-    # --- 移除舊的組合過濾方法 ---
-    # def _apply_combined_filter(self): ... (已移除) ...
-
-    # --- 新增/修改：統一更新狀態欄的方法 ---
     def _update_status_bar(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             # 考慮在沒有模型時顯示更清晰的狀態
@@ -2406,11 +2350,8 @@ class MainWindow(QMainWindow):
              numeric_filter = conditions.get('numeric')
 
              if text_filter:
-                 # --- 修改：狀態欄固定顯示搜尋 'code' ---
                  search_term = str(text_filter.get('val', '')).strip('%')
-                 # filter_desc.append(f"文字過濾({text_filter.get('col')}): '{search_term}'") # Old
-                 filter_desc.append(f"Code 搜尋: '{search_term}'") # New
-                 # --- 修改結束 ---
+                 filter_desc.append(f"Code 搜尋: '{search_term}'")
              else:
                  filter_desc.append("Code 搜尋: 無") # Update label
 
@@ -2423,7 +2364,6 @@ class MainWindow(QMainWindow):
         self.status_bar.showMessage(status_text)
 
 
-# ... (if __name__ == "__main__": block remains the same) ...
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

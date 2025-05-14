@@ -686,11 +686,6 @@ class SimulationWidget(QWidget):
             
             # 重置所有欄位的背景顏色為白色
             self._reset_table_colors()
-            # 重設所有進度欄
-            for row in range(self.table.rowCount()):
-                progress_item = self.table.item(row, self.progress_col_index)
-                if progress_item:
-                    progress_item.setText("-")
         else:
             print("無法停止：沒有模擬正在執行或 Worker 不存在。")
             # 如果沒有在執行，確保 UI 狀態正確
@@ -784,17 +779,16 @@ class SimulationWidget(QWidget):
                         cell_item = QTableWidgetItem()
                         self.table.setItem(row, col, cell_item)
                         cell_item.setBackground(light_red)
+                # 只重設該行的進度欄
+                progress_item = self.table.item(row, self.progress_col_index)
+                if progress_item:
+                    progress_item.setText("-")
             else:
                  print(f"警告: 在表格中未找到與錯誤 uuid '{uuid}' 匹配的行或行號已失效")
         else:
             # 如果沒有 uuid (可能是全局錯誤)，則重置所有顏色
              self._reset_table_colors()
 
-        # 重設所有進度欄 (這個操作可能仍然需要遍歷，但相對顏色設置開銷較小)
-        for row in range(self.table.rowCount()):
-            progress_item = self.table.item(row, self.progress_col_index)
-            if progress_item:
-                progress_item.setText("-")
         
         # 若為登入/憑證相關錯誤，清除 session
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
