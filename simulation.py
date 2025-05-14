@@ -1201,6 +1201,8 @@ class WQSession(requests.Session):
             ok = True
             max_retries = 3
             retry_delay = 15 # seconds
+            simulation_start_time = time.time() # 新增：記錄模擬開始時間（用於超時判斷）
+
             while True: # Loop for checking simulation status
                 # 檢查停止請求 (在每次嘗試獲取狀態之前)
                 if self.worker_ref and self.worker_ref.stop_requested:
@@ -1289,6 +1291,18 @@ class WQSession(requests.Session):
                     # 個別進度更新
                     if self.worker_ref:
                         self.worker_ref.single_simulation_progress.emit(row_uuid, int(100*progress))
+
+                    # 新增：檢查超時邏輯
+                    elapsed_time = time.time() - simulation_start_time
+                    if elapsed_time > 120 and progress == 0: # 超過 2 分鐘且進度為 0
+                        error_msg = f"模擬 '{alpha[:20]}...' 超時 (超過 2 分鐘，進度仍為 0%)。"
+                        logging.warning(f"{thread} -- {error_msg}")
+                        if self.worker_ref:
+                            # 使用 error_occurred 信號，SimulationWidget 會將其標紅
+                            self.worker_ref.error_occurred.emit(row_uuid, error_msg)
+                        # 返回錯誤，以便終止此特定模擬並繼續其他模擬
+                        return {'uuid': row_uuid, 'error': error_msg, 'alpha': alpha}
+                    # 新增結束
 
                 # 如果模擬尚未完成，則等待並繼續檢查狀態
                 # 將 10 秒 sleep 拆成 50 次 0.2 秒 sleep，每次檢查是否收到停止請求
