@@ -317,7 +317,8 @@ class SqliteTableModel(QAbstractTableModel):
         self.filter_conditions['text'] = {'col': column, 'op': 'LIKE', 'val': f'%{text}%'}
         self.filter_conditions['raw'] = None # 清除 raw SQL
         self.filter_conditions['rowid'] = None # 清除 rowid 過濾
-        self.layoutChanged.emit()
+        self.beginResetModel()
+        self.endResetModel()
 
     def update_numeric_filter(self, column, operator, value):
         """更新數值過濾條件"""
@@ -330,7 +331,8 @@ class SqliteTableModel(QAbstractTableModel):
         """清除文字過濾條件"""
         if self.filter_conditions['text'] is not None:
             self.filter_conditions['text'] = None
-            self.layoutChanged.emit()
+            self.beginResetModel()
+            self.endResetModel()
 
     def clear_numeric_filter(self):
         """清除數值過濾條件"""
@@ -1405,28 +1407,21 @@ class MainWindow(QMainWindow):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
 
-        filter_text = self.search_input.text()
-
+        filter_text = self.search_input.text().strip()
         source_model = self.proxy_model.sourceModel()
-        target_column = 'code' # 固定搜尋 code 欄位
-
-        # 檢查 'code' 欄位是否存在
-        if target_column not in getattr(source_model, "columns", []):
-             self.status_bar.showMessage("錯誤：資料中缺少 'code' 欄位，無法進行搜尋。")
-             # 如果 'code' 不存在，也清除現有文字過濾（如果有的話）
-             source_model.clear_text_filter()
-             self._update_status_bar()
-             return
-
+        if 'code' not in source_model.columns:
+            self.status_bar.showMessage("錯誤：資料中缺少 'code' 欄位，無法進行搜尋。")
+            self.proxy_model.setFilterRegularExpression(QRegularExpression())
+            self._update_status_bar()
+            return
         if not filter_text:
-             # 清除文字過濾
-             source_model.clear_text_filter()
+            self.proxy_model.setFilterRegularExpression(QRegularExpression())
         else:
-             # 更新 'code' 欄位的文字過濾
-             source_model.update_text_filter(target_column, filter_text)
-        # --- 修改結束 ---
+            code_col = source_model.columns.index('code') + 1
+            self.proxy_model.setFilterKeyColumn(code_col)
+            regex = QRegularExpression(filter_text, QRegularExpression.CaseInsensitiveOption)
+            self.proxy_model.setFilterRegularExpression(regex)
 
-        # Update status bar
         self._update_status_bar() # 更新狀態欄
 
     def update_chart(self):
@@ -2158,30 +2153,35 @@ class MainWindow(QMainWindow):
     def rename_file(self, file_path):
         """重命名文件"""
         old_name = os.path.basename(file_path)
+        # --- 獲取檔名和副檔名 ---
+        name_without_ext, ext = os.path.splitext(old_name)
+        # -----------------------
         new_name, ok = QInputDialog.getText(
-            self, 
+            self,
             "重命名文件",
             "請輸入新的文件名稱：",
-            text=old_name
+            text=name_without_ext # --- 只顯示檔名 ---
         )
 
-        if ok and new_name and new_name != old_name:
+        if ok and new_name and new_name != name_without_ext: # --- 比較修改後的檔名 ---
             try:
-                new_path = os.path.join(os.path.dirname(file_path), new_name)
+                # --- 組成新的文件路徑，保留原始副檔名 ---
+                new_path = os.path.join(os.path.dirname(file_path), new_name + ext)
+                # --------------------------------------
                 # 檢查新文件名是否已存在
                 if os.path.exists(new_path):
-                    QMessageBox.warning(self, "錯誤", f"文件 '{new_name}' 已存在。")
+                    QMessageBox.warning(self, "錯誤", f"文件 '{os.path.basename(new_path)}' 已存在。") # --- 顯示完整的重命名後檔案名稱 ---
                     return
 
                 os.rename(file_path, new_path)
-                self.status_bar.showMessage(f"已將文件 '{old_name}' 重命名為 '{new_name}'")
+                self.status_bar.showMessage(f"已將文件 '{old_name}' 重命名為 '{os.path.basename(new_path)}'") # --- 顯示完整的重命名前後檔案名稱 ---
 
                 # 如果重命名的是當前載入的文件，更新標籤
                 if hasattr(self, 'current_file_label') and old_name == self.current_file_label.text():
-                    self.current_file_label.setText(new_name)
+                    self.current_file_label.setText(os.path.basename(new_path)) # --- 更新為新的檔案名稱(含副檔名) ---
 
             except Exception as e:
-                QMessageBox.critical(self, "錯誤", f"重命名文件時發生錯誤：\n{str(e)}")
+                QMessageBox.critical(self, "錯誤", f"重命名文件時發生錯誤：\\n{str(e)}")
 
     def delete_file(self, file_path):
         """刪除文件"""

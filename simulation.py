@@ -1000,8 +1000,8 @@ class SimulationWorker(QObject):
             # Pass worker_ref and session during initialization
             wq = WQSession(worker_ref=self, existing_session=self.session)
             wq.simulate(self.params) # WQSession.simulate will check the flag
+            pass
 
-            pass # 不再在這裡發送 finished
         except Exception as e:
             logging.exception("模擬執行緒錯誤") # 記錄詳細錯誤到日誌
             # 錯誤信號仍然在這裡發送
