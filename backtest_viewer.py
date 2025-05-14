@@ -1033,7 +1033,7 @@ class MainWindow(QMainWindow):
                 return
 
             if file_size == 0:
-                QMessageBox(self).information("空檔案", "此 CSV 檔案為空，無法載入資料。").exec_()
+                QMessageBox.information(self, "空檔案", "此 CSV 檔案為空，無法載入資料。")
                 self.current_file_label.setText(file_name)
                 self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
                 # --- 新增：清空狀態 ---
