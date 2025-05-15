@@ -2363,7 +2363,6 @@ class MainWindow(QMainWindow):
         self.status_bar.showMessage(status_text)
 
 
-google/gemini-2.0-flash-001
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     
