@@ -1383,7 +1383,8 @@ class MainWindow(QMainWindow):
         else:
             code_col = source_model.columns.index('code') + 1
             self.proxy_model.setFilterKeyColumn(code_col)
-            regex = QRegularExpression(filter_text, QRegularExpression.CaseInsensitiveOption)
+            escaped_text = QRegularExpression.escape(filter_text)
+            regex = QRegularExpression(escaped_text, QRegularExpression.CaseInsensitiveOption)
             self.proxy_model.setFilterRegularExpression(regex)
 
         self._update_status_bar() # 更新狀態欄

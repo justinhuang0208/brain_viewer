@@ -696,6 +696,8 @@ class SimulationWidget(QWidget):
                  self.check_login_btn.setEnabled(True)
 
     def start_simulation_thread(self):
+        if self.simulation_thread and not self.simulation_thread.isRunning():
+            self._clear_simulation_thread_ref()
         if self.simulation_thread and self.simulation_thread.isRunning():
             QMessageBox.warning(self, "操作過快", "上一個模擬執行緒仍在清理中，請稍後再試。")
             return
