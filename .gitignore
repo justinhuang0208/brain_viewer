@@ -5,3 +5,4 @@ alphas
 *.db
 templates
 .cursor/rules/structure.mdc
+.env

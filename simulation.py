@@ -11,62 +11,62 @@ import uuid
 class BatchEditDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setWindowTitle("批量調整參數")
+        self.setWindowTitle("Batch Edit Parameters")
         self.setMinimumWidth(300)
         layout = QVBoxLayout(self)
 
-        # 選擇要調整的參數
+        # Select parameter to edit
         self.param_combo = QComboBox(self)
         # 排除 code 欄位
         self.param_combo.addItems([p for p in PARAM_COLUMNS if p != "code"])
-        layout.addWidget(QLabel("選擇要調整的參數:"))
+        layout.addWidget(QLabel("Select parameter to edit:"))
         layout.addWidget(self.param_combo)
 
-        # 輸入新值區域（使用 QStackedWidget 來切換不同的輸入介面）
+        # Input area (stacked for different parameter editors)
         self.value_stack = QStackedWidget(self)
         
-        # 普通文字輸入
+        # Plain text input
         self.value_input = QLineEdit(self)
         value_page = QWidget()
         value_layout = QVBoxLayout(value_page)
-        value_layout.addWidget(QLabel("輸入新的值:"))
+        value_layout.addWidget(QLabel("Enter new value:"))
         value_layout.addWidget(self.value_input)
         self.value_stack.addWidget(value_page)
         
-        # Delay 下拉選單
+        # Delay combo
         self.delay_combo = QComboBox(self)
         self.delay_combo.addItems(DELAY_OPTIONS)
         delay_page = QWidget()
         delay_layout = QVBoxLayout(delay_page)
-        delay_layout.addWidget(QLabel("選擇延遲值:"))
+        delay_layout.addWidget(QLabel("Select delay:"))
         delay_layout.addWidget(self.delay_combo)
         self.value_stack.addWidget(delay_page)
         
-        # Neutralization 下拉選單
+        # Neutralization combo
         self.neutralization_combo = QComboBox(self)
         self.neutralization_combo.addItems(NEUTRALIZATION_OPTIONS)
         neutralization_page = QWidget()
         neutralization_layout = QVBoxLayout(neutralization_page)
-        neutralization_layout.addWidget(QLabel("選擇中性化選項:"))
+        neutralization_layout.addWidget(QLabel("Select neutralization:"))
         neutralization_layout.addWidget(self.neutralization_combo)
         self.value_stack.addWidget(neutralization_page)
         
-        # Universe 下拉選單
+        # Universe combo
         self.universe_combo = QComboBox(self)
         self.universe_combo.addItems(UNIVERSE_OPTIONS)
         universe_page = QWidget()
         universe_layout = QVBoxLayout(universe_page)
-        universe_layout.addWidget(QLabel("選擇 Universe:"))
+        universe_layout.addWidget(QLabel("Select Universe:"))
         universe_layout.addWidget(self.universe_combo)
         self.value_stack.addWidget(universe_page)
         
         layout.addWidget(self.value_stack)
         
-        # 連接參數選擇的信號
+        # Connect parameter change
         self.param_combo.currentTextChanged.connect(self.on_param_changed)
         
-        # 僅套用到已選取的行
-        self.selected_only = QCheckBox("僅套用到已選取的行", self)
+        # Apply to selected rows only
+        self.selected_only = QCheckBox("Apply to selected rows only", self)
         self.selected_only.setChecked(True)
         layout.addWidget(self.selected_only)
 
@@ -77,7 +77,7 @@ class BatchEditDialog(QDialog):
         buttons.rejected.connect(self.reject)
 
     def on_param_changed(self, param):
-        """當選擇的參數改變時，切換到對應的輸入介面"""
+        """Switch input UI when parameter changes"""
         if param == "delay":
             self.value_stack.setCurrentIndex(1)
         elif param == "neutralization":
@@ -129,7 +129,7 @@ UNIVERSE_OPTIONS = ["TOP3000", "TOP1000", "TOP500", "TOP200", "TOPSP500"]
 class CodeEditDialog(QDialog):
     def __init__(self, code_text, parent=None):
         super().__init__(parent)
-        self.setWindowTitle("編輯 Code")
+        self.setWindowTitle("Edit Code")
         self.resize(600, 300)
         layout = QVBoxLayout(self)
         self.editor = QPlainTextEdit(self)
@@ -145,7 +145,7 @@ class CodeEditDialog(QDialog):
 
 class SimulationWidget(QWidget):
     def update_single_simulation_progress(self, uuid: str, percentage: int):
-        """根據 uuid 更新對應行的進度 (%) 欄 (優化：使用映射查找)"""
+        """Update progress (%) cell for the row by uuid"""
         progress_col = self.progress_col_index
         row = self.uuid_row_map.get(uuid) # 優化：使用映射查找行號
 
@@ -157,10 +157,10 @@ class SimulationWidget(QWidget):
             progress_item.setText(f"{percentage}%")
             progress_item.setTextAlignment(Qt.AlignCenter)
         else:
-            print(f"警告: 在表格中未找到與進度更新 uuid '{uuid}' 匹配的行或行號已失效")
+            print(f"Warning: Row for progress uuid '{uuid}' not found or invalid")
 
     def _reset_table_colors(self):
-        """優化：只重設先前高亮過的行的背景顏色為預設白色"""
+        """Reset background color for previously highlighted rows only"""
         self.table.setUpdatesEnabled(False) # 優化：禁用更新以提高性能
         try:
             # 只遍歷記錄中高亮過的行
@@ -177,7 +177,7 @@ class SimulationWidget(QWidget):
                         else:
                             cell_item = self.table.item(row, col)
                             if cell_item:
-                                cell_item.setBackground(Qt.white) # 重設 item 背景色
+                                 cell_item.setBackground(Qt.white)
             self.highlighted_rows.clear() # 清空高亮記錄
         finally:
             self.table.setUpdatesEnabled(True) # 優化：重新啟用更新
@@ -185,46 +185,46 @@ class SimulationWidget(QWidget):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setWindowTitle("模擬參數編輯與執行")
+        self.setWindowTitle("Simulation Parameters & Execution")
         # self.process = None # Removed QProcess attribute
 
         self.active_wq_session = None  # 儲存已登入的 session
 
         layout = QVBoxLayout(self)
         ...
-        # 進度顯示
-        self.progress_label = QLabel("尚未開始模擬")
+        # Progress label
+        self.progress_label = QLabel("Simulation not started")
         layout.addWidget(self.progress_label)
 
-        # 按鈕區
+        # Buttons area
         btn_layout = QHBoxLayout() # Combine buttons in one layout
 
-        # 資料編輯按鈕與下拉選單
-        self.edit_btn = QPushButton("新增參數")
+        # Data edit buttons
+        self.edit_btn = QPushButton("Add Row")
         self.edit_btn.clicked.connect(self.add_row)
         btn_layout.addWidget(self.edit_btn)
 
-        # 將原本 edit_menu 的三個 action 設為實例屬性，供右鍵選單使用
-        self.dup_action = QAction("複製選取", self)
-        self.del_action = QAction("刪除選取", self)
-        self.batch_edit_action = QAction("批量調整", self)
+        # Actions for context menu
+        self.dup_action = QAction("Duplicate Selected", self)
+        self.del_action = QAction("Delete Selected", self)
+        self.batch_edit_action = QAction("Batch Edit", self)
 
-        self.del_all_btn = QPushButton("刪除全部資料")
+        self.del_all_btn = QPushButton("Delete All Rows")
         btn_layout.addWidget(self.del_all_btn)
 
-        # 模擬按鈕
-        self.sim_btn = QPushButton("執行模擬")
+        # Simulation button
+        self.sim_btn = QPushButton("Run Simulation")
         btn_layout.addWidget(self.sim_btn) # Add sim button to the same layout
 
-        # 檢查登入按鈕
-        self.check_login_btn = QPushButton("檢查登入")
+        # Check login button
+        self.check_login_btn = QPushButton("Check Login")
         btn_layout.addWidget(self.check_login_btn)
 
         layout.addLayout(btn_layout) # Add the combined button layout
 
-        self.progress_col_index = 1  # 進度欄固定為索引 1
+        self.progress_col_index = 1
         self.table = QTableWidget(0, len(PARAM_COLUMNS) + 2) # +1 for checkbox, +1 for progress
-        header_labels = ["選取", "進度 (%)"] + PARAM_COLUMNS
+        header_labels = ["Select", "Progress (%)"] + PARAM_COLUMNS
         self.table.setHorizontalHeaderLabels(header_labels)
         self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         # Make the checkbox column narrower
@@ -346,15 +346,15 @@ class SimulationWidget(QWidget):
 
             # 檢查必要的 'code' 列是否存在
             if 'code' not in df.columns:
-                 QMessageBox.warning(self, "缺少欄位", "從生成器匯入的數據缺少關鍵的 'code' 欄位，無法載入。")
+                 QMessageBox.warning(self, "Missing Column", "Imported strategies missing required 'code' column.")
                  return
 
-            print(f"接收到 {len(df)} 筆策略，準備追加到模擬器表格...")
+            print(f"接收到 {len(df)} 策略，準備追加到模擬器表格...")
             self.load_parameters_from_dataframe(df)
-            QMessageBox.information(self, "匯入成功", f"已成功將 {len(df)} 筆策略追加到表格中。")
+            QMessageBox.information(self, "Imported", f"Successfully appended {len(df)} strategies to the table.")
 
         except Exception as e:
-            QMessageBox.critical(self, "匯入錯誤", f"將策略列表轉換為 DataFrame 或載入時出錯: {e}")
+            QMessageBox.critical(self, "Import Error", f"Failed to convert/load strategies: {e}")
             print(f"將策略列表轉換為 DataFrame 或載入時出錯: {e}")
 
     def load_parameters_from_dataframe(self, df: pd.DataFrame):
@@ -368,14 +368,14 @@ class SimulationWidget(QWidget):
 
         missing_cols = required_cols - available_cols
         if missing_cols:
-            print(f"警告: 傳入的 DataFrame 缺少以下欄位: {', '.join(missing_cols)}")
+            print(f"Warning: Input DataFrame missing columns: {', '.join(missing_cols)}")
             # 可以選擇在這裡返回或繼續處理（使用預設值）
             # 如果缺少 'code'，可能無法繼續
             if 'code' in missing_cols:
-                 QMessageBox.warning(self, "缺少欄位", f"匯入的數據缺少關鍵的 'code' 欄位，無法載入。")
+                 QMessageBox.warning(self, "Missing Column", f"Imported data missing required 'code' column.")
                  return
 
-        print(f"正在從 DataFrame 載入 {len(df)} 筆參數...")
+        print(f"Loading {len(df)} parameter rows from DataFrame...")
         for _, row_series in df.iterrows():
             row_data = []
             for col_name in PARAM_COLUMNS:
@@ -386,13 +386,13 @@ class SimulationWidget(QWidget):
                     try:
                         default_index = PARAM_COLUMNS.index(col_name) + 1
                         row_data.append(DEFAULT_VALUES[default_index])
-                        print(f"警告: 欄位 '{col_name}' 缺失，使用預設值: {DEFAULT_VALUES[default_index]}")
+                        print(f"Warning: Column '{col_name}' missing, using default: {DEFAULT_VALUES[default_index]}")
                     except (ValueError, IndexError):
                         row_data.append("")
-                        print(f"警告: 欄位 '{col_name}' 缺失且找不到預設值，使用空字串。")
+                        print(f"Warning: Column '{col_name}' missing and has no default, using empty string.")
 
             self.add_row(data=row_data)
-        print(f"已成功載入 {self.table.rowCount()} 筆參數到表格。")
+        print(f"Loaded {self.table.rowCount()} parameters into the table successfully.")
 
     def add_row(self, data=None): # Allow passing data for duplication
         row = self.table.rowCount()
@@ -560,20 +560,20 @@ class SimulationWidget(QWidget):
 
 
     def delete_all_rows(self):
-        """刪除表格中的所有資料"""
+        """Delete all rows in the table"""
         if self.table.rowCount() == 0:
-            QMessageBox.information(self, "提示", "表格已經是空的。")
+            QMessageBox.information(self, "Info", "The table is already empty.")
             return
 
-        reply = QMessageBox.question(self, '確認刪除',
-                                       "您確定要刪除表格中的所有資料嗎？此操作無法復原。",
+        reply = QMessageBox.question(self, 'Confirm Delete',
+                                       "Delete all rows in the table? This cannot be undone.",
                                        QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
         if reply == QMessageBox.Yes:
             self.table.setRowCount(0)
             self.uuid_row_map.clear()
             self.highlighted_rows.clear()
-            QMessageBox.information(self, "成功", "已刪除所有資料。")
+            QMessageBox.information(self, "Success", "All rows have been deleted.")
 
     def _rebuild_uuid_row_map(self):
         """重新建立 UUID 到行號的映射"""
@@ -586,7 +586,7 @@ class SimulationWidget(QWidget):
                     self.uuid_row_map[row_uuid] = row
 
     def show_context_menu(self, position: QPoint):
-        """顯示右鍵選單"""
+        """Show context menu"""
         selected_rows = set()
         for item in self.table.selectedItems():
             selected_rows.add(item.row())
@@ -594,7 +594,7 @@ class SimulationWidget(QWidget):
         if not selected_rows:
             return
 
-        # 檢查選取的行是否都已勾選
+        # Check if all selected rows are checked
         all_checked = True
         for row in selected_rows:
             item = self.table.item(row, 0)  # 第一欄是 checkbox
@@ -602,12 +602,12 @@ class SimulationWidget(QWidget):
                 all_checked = False
                 break
 
-        # 創建選單並根據當前狀態設定文字
+        # Create menu and set text based on state
         context_menu = QMenu(self)
-        check_action = context_menu.addAction("取消勾選" if all_checked else "勾選")
+        check_action = context_menu.addAction("Uncheck" if all_checked else "Check")
 
-        # 加入複製/刪除/批量調整功能到右鍵選單
-        # 只有在有選取列時才啟用
+        # Add duplicate/delete/batch edit actions
+        # Enable only when rows are selected
         self.dup_action.setEnabled(bool(selected_rows))
         self.del_action.setEnabled(bool(selected_rows))
         self.batch_edit_action.setEnabled(bool(selected_rows))
@@ -669,17 +669,17 @@ class SimulationWidget(QWidget):
         return params
 
     def toggle_simulation(self):
-        """根據模擬狀態啟動或停止模擬"""
+        """Start or stop simulation depending on current state"""
         if not self.is_simulating:
             self.start_simulation_thread()
         else:
             self.stop_simulation_thread()
 
     def stop_simulation_thread(self):
-        """請求停止正在執行的模擬執行緒"""
+        """Request to stop the running simulation thread"""
         if self.simulation_thread and self.simulation_thread.isRunning() and self.simulation_worker:
-            print("請求停止模擬...")
-            self.progress_label.setText("正在請求停止模擬...")
+            print("Requesting to stop simulation...")
+            self.progress_label.setText("Requesting to stop simulation...")
             self.simulation_worker.request_stop()
             # 禁用按鈕，防止重複點擊，直到 finished 信號觸發重置
             self.sim_btn.setEnabled(False)
@@ -687,10 +687,10 @@ class SimulationWidget(QWidget):
             # 重置所有欄位的背景顏色為白色
             self._reset_table_colors()
         else:
-            print("無法停止：沒有模擬正在執行或 Worker 不存在。")
+            print("Cannot stop: no simulation is running or worker missing.")
             # 如果沒有在執行，確保 UI 狀態正確
             if not self.is_simulating:
-                 self.sim_btn.setText("執行模擬")
+                 self.sim_btn.setText("Run Simulation")
                  self.sim_btn.setEnabled(True)
                  self.edit_btn.setEnabled(True)
                  self.check_login_btn.setEnabled(True)
@@ -699,7 +699,7 @@ class SimulationWidget(QWidget):
         if self.simulation_thread and not self.simulation_thread.isRunning():
             self._clear_simulation_thread_ref()
         if self.simulation_thread and self.simulation_thread.isRunning():
-            QMessageBox.warning(self, "操作過快", "上一個模擬執行緒仍在清理中，請稍後再試。")
+            QMessageBox.warning(self, "Too Fast", "Previous simulation thread still cleaning up. Please try again shortly.")
             return
     
         self._reset_table_colors()
@@ -720,15 +720,15 @@ class SimulationWidget(QWidget):
 
         params = self.get_parameters()
         if not params:
-            QMessageBox.warning(self, "無參數", "請至少新增一組模擬參數")
+            QMessageBox.warning(self, "No Parameters", "Please add at least one parameter set")
             return
     
         # 更新狀態和 UI
         self.is_simulating = True
-        self.sim_btn.setText("停止模擬")
+        self.sim_btn.setText("Stop Simulation")
         self.edit_btn.setEnabled(False) # 禁用編輯按鈕
-        self.check_login_btn.setEnabled(False) # 禁用檢查登入按鈕
-        self.progress_label.setText("模擬進行中...")
+        self.check_login_btn.setEnabled(False)
+        self.progress_label.setText("Simulation running...")
     
         # 創建執行緒和 Worker
         self.simulation_thread = QThread()
@@ -758,7 +758,7 @@ class SimulationWidget(QWidget):
 
     @Slot(str, str)
     def handle_simulation_error(self, uuid: str, error_message: str):
-        """處理模擬錯誤，包含標示失敗的行並重置 UI 狀態 (優化：使用映射查找)"""
+        """Handle simulation error, highlight row and reset UI (uses row map)"""
 
         # 如果有指定 uuid，找到對應行並標示為紅色
         if uuid:
@@ -786,7 +786,7 @@ class SimulationWidget(QWidget):
                 if progress_item:
                     progress_item.setText("-")
             else:
-                 print(f"警告: 在表格中未找到與錯誤 uuid '{uuid}' 匹配的行或行號已失效")
+                  print(f"Warning: Error uuid '{uuid}' row not found or invalid")
         else:
             # 如果沒有 uuid (可能是全局錯誤)，則重置所有顏色
              self._reset_table_colors()
@@ -796,13 +796,13 @@ class SimulationWidget(QWidget):
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
             self.active_wq_session = None
         
-        self.progress_label.setText("模擬失敗")
+        self.progress_label.setText("Simulation failed")
         # 若為手動停止，不彈出錯誤視窗
         if error_message not in ["模擬被手動停止", "模擬被手動終止"]:
-            QMessageBox.critical(self, "模擬失敗", error_message)
+            QMessageBox.critical(self, "Simulation Failed", error_message)
         
         self.is_simulating = False
-        self.sim_btn.setText("執行模擬")
+        self.sim_btn.setText("Run Simulation")
         self.sim_btn.setEnabled(True)
         self.edit_btn.setEnabled(True)
         self.check_login_btn.setEnabled(True)
@@ -832,16 +832,16 @@ class SimulationWidget(QWidget):
         logging.info("handle_simulation_finished: Progress columns reset.")
 
         if stopped_early:
-            self.progress_label.setText("模擬已停止")
-            QMessageBox.warning(self, "模擬停止", "模擬已被使用者手動停止。")
+            self.progress_label.setText("Simulation stopped")
+            QMessageBox.warning(self, "Simulation Stopped", "Simulation was manually stopped.")
         else:
-            self.progress_label.setText("模擬完成")
-            QMessageBox.information(self, "模擬完成", "模擬已成功完成！請檢查 data 資料夾中的 CSV 和 LOG 檔案。")
+            self.progress_label.setText("Simulation completed")
+            QMessageBox.information(self, "Simulation Completed", "Simulation finished successfully! Please check CSV and LOG files under the data folder.")
 
         logging.info("handle_simulation_finished: Resetting simulation state and UI.")
         self.is_simulating = False
         self.simulation_worker = None
-        self.sim_btn.setText("執行模擬")
+        self.sim_btn.setText("Run Simulation")
         self.sim_btn.setEnabled(True)
         self.edit_btn.setEnabled(True)
         self.check_login_btn.setEnabled(True)
@@ -850,8 +850,8 @@ class SimulationWidget(QWidget):
         # 只有在模擬正常完成時才詢問是否清空表格
         if not stopped_early:
             logging.info("handle_simulation_finished: Asking to clear table.")
-            reply = QMessageBox.question(self, '清空表格?',
-                                           "模擬已完成，您想要清空模擬參數表格嗎？",
+            reply = QMessageBox.question(self, 'Clear Table?',
+                                           "Simulation completed. Do you want to clear the parameter table?",
                                            QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
 
             if reply == QMessageBox.Yes:
@@ -859,18 +859,18 @@ class SimulationWidget(QWidget):
                 self.uuid_row_map.clear() # 清空映射
                 self.highlighted_rows.clear() # 清空高亮記錄
                 # 更新標籤，即使不清空也要顯示完成
-                self.progress_label.setText("模擬完成 (表格已清空)")
+                self.progress_label.setText("Simulation completed (table cleared)")
                 logging.info("handle_simulation_finished: Table cleared.")
             else:
                 # 更新標籤，即使不清空也要顯示完成
-                self.progress_label.setText("模擬完成 (表格保留)")
+                self.progress_label.setText("Simulation completed (table kept)")
                 logging.info("handle_simulation_finished: Table kept.")
         # 如果是手動停止，標籤已設為 "模擬已停止"，無需再改
         logging.info("handle_simulation_finished finished.")
 
     def check_login_status(self):
-        """在背景執行緒中檢查 WorldQuant Brain 的登入狀態"""
-        # 禁用檢查按鈕
+        """Check WorldQuant Brain login status in background"""
+        # Disable the button while checking
         self.check_login_btn.setEnabled(False)
         
         # 創建執行緒和 worker
@@ -894,25 +894,25 @@ class SimulationWidget(QWidget):
 
     @Slot(object)
     def handle_login_success(self, session):
-        """處理登入成功的槽函數，儲存 session"""
+        """Handle login success and store session"""
         self.active_wq_session = session
-        QMessageBox.information(self, "登入成功", "WorldQuant Brain 登入狀態正常。")
-        self.progress_label.setText("登入狀態正常")
+        QMessageBox.information(self, "Login Success", "WorldQuant Brain login OK.")
+        self.progress_label.setText("Login OK")
 
     @Slot(str)
     def handle_login_failed(self, error_message):
-        """處理登入失敗的槽函數"""
+        """Handle login failure"""
         # 若為登入/憑證相關錯誤，清除 session
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
             self.active_wq_session = None
-        QMessageBox.critical(self, "登入檢查失敗", error_message)
-        self.progress_label.setText(f"登入檢查失敗: {error_message}")
+        QMessageBox.critical(self, "Login Check Failed", error_message)
+        self.progress_label.setText(f"Login check failed: {error_message}")
 
     @Slot(str)
     def handle_validation_required(self, persona_url):
-        """處理需要驗證的槽函數"""
-        QMessageBox.warning(self, "需要驗證", f"登入需要生物驗證，請前往:\n{persona_url}")
-        self.progress_label.setText("登入需要驗證")
+        """Handle biometric validation required"""
+        QMessageBox.warning(self, "Verification Required", f"Biometric verification required, please visit:\n{persona_url}")
+        self.progress_label.setText("Verification required")
 
 # LoginCheckWorker class for handling login checks in background
 class LoginCheckWorker(QObject):

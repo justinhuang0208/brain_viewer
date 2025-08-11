@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-WorldQuant Brain 工具箱
-整合數據集瀏覽、回測結果分析和策略生成功能
+WorldQuant Brain Toolbox
+Integrates dataset browser, backtest analysis, strategy generator, and simulation
 """
 
 import sys
@@ -18,19 +18,19 @@ from PySide6.QtGui import QIcon, QFont, QPalette, QColor
 # 獲取腳本所在目錄的絕對路徑
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# 定義資源目錄常量 - 使用絕對路徑
+# Define resource directories - use absolute paths
 DATASETS_DIR = os.path.join(SCRIPT_DIR, "datasets")
 DATA_DIR = "data"
 TEMPLATES_DIR = os.path.join(SCRIPT_DIR, "templates")
 ALPHAS_DIR = os.path.join(SCRIPT_DIR, "alphas")
 
-# 資源檢查函數
+# Resource checking function
 def check_resources():
     resources = {
-        DATASETS_DIR: "數據集目錄",
-        DATA_DIR: "回測結果目錄",
-        TEMPLATES_DIR: "模板目錄",
-        ALPHAS_DIR: "策略輸出目錄"
+        DATASETS_DIR: "Datasets directory",
+        DATA_DIR: "Backtest data directory",
+        TEMPLATES_DIR: "Templates directory",
+        ALPHAS_DIR: "Alphas output directory"
     }
     
     missing = []
@@ -38,13 +38,13 @@ def check_resources():
         if not os.path.exists(path):
             try:
                 os.makedirs(path)
-                print(f"已創建 {desc} ({path})")
+                print(f"Created {desc} ({path})")
             except:
                 missing.append(f"{desc} ({path})")
     
     if missing:
-        return False, f"找不到必要的資源: {', '.join(missing)}"
-    return True, "資源檢查通過"
+        return False, f"Required resources not found: {', '.join(missing)}"
+    return True, "Resources OK"
 
 # 重構DatasetViewer為Widget
 class DatasetViewerWidget(QWidget):
@@ -71,7 +71,7 @@ class DatasetViewerWidget(QWidget):
         self.status_bar = self.viewer.statusBar()
             
     def get_status_message(self):
-        """獲取當前狀態欄消息"""
+        """Get current status bar message"""
         return self.status_bar.currentMessage()
 
 # 重構BacktestViewer為Widget
@@ -99,7 +99,7 @@ class BacktestViewerWidget(QWidget):
         self.status_bar = self.viewer.statusBar()
             
     def get_status_message(self):
-        """獲取當前狀態欄消息"""
+        """Get current status bar message"""
         return self.status_bar.currentMessage()
 
 # 重構StrategyGenerator為Widget
@@ -124,16 +124,16 @@ class StrategyGeneratorWidget(QWidget):
         layout.addWidget(central_widget)
         
     def get_status_message(self):
-        """獲取當前狀態欄消息"""
-        return "策略生成模式"
+        """Get current status bar message"""
+        return "Strategy Generator Mode"
 
 from simulation import SimulationWidget
 
-# 主應用程序窗口
+# Main application window
 class MainWindow(QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-        self.setWindowTitle("WorldQuant Brain 工具箱")
+        self.setWindowTitle("WorldQuant Brain Toolbox")
         self.setMinimumSize(1280, 900)
         
         # 創建中央窗口和主布局
@@ -142,7 +142,7 @@ class MainWindow(QMainWindow):
         main_layout = QVBoxLayout(central_widget)
         main_layout.setContentsMargins(0, 0, 0, 0)  # 減少邊距
         
-        # 創建標籤頁
+        # Create tabs
         self.tab_widget = QTabWidget()
         self.tab_widget.setTabPosition(QTabWidget.North)
         self.tab_widget.setStyleSheet("""
@@ -162,17 +162,17 @@ class MainWindow(QMainWindow):
             }
         """)
         
-        # 創建數據集查看器、回測結果查看器和策略生成器和模擬器
+        # Create widgets for datasets, backtests, generator, and simulation
         self.dataset_viewer = DatasetViewerWidget()
         self.backtest_viewer = BacktestViewerWidget()
         self.strategy_generator = StrategyGeneratorWidget()
         self.simulation_widget = SimulationWidget()
         
-        # 添加標籤頁
-        self.tab_widget.addTab(self.dataset_viewer, "數據集")
-        self.tab_widget.addTab(self.backtest_viewer, "回測結果")
-        self.tab_widget.addTab(self.strategy_generator, "策略生成")
-        self.tab_widget.addTab(self.simulation_widget, "模擬")
+        # Add tabs
+        self.tab_widget.addTab(self.dataset_viewer, "Datasets")
+        self.tab_widget.addTab(self.backtest_viewer, "Backtests")
+        self.tab_widget.addTab(self.strategy_generator, "Strategy Generator")
+        self.tab_widget.addTab(self.simulation_widget, "Simulation")
         
         # 連接標籤切換信號
         self.tab_widget.currentChanged.connect(self.on_tab_changed)
@@ -180,12 +180,12 @@ class MainWindow(QMainWindow):
         # 將標籤頁添加到主布局
         main_layout.addWidget(self.tab_widget)
         
-        # 創建狀態欄
+        # Create status bar
         self.status_bar = QStatusBar()
         self.setStatusBar(self.status_bar)
         
-        # 顯示初始狀態
-        self.status_bar.showMessage("應用程序已準備就緒 - 數據集模式")
+        # Initial status
+        self.status_bar.showMessage("App ready - Datasets Mode")
 
         # 連接回測查看器的匯入信號到處理槽 (用於模擬)
         self.backtest_viewer.viewer.import_data_requested.connect(self.handle_import_request)
@@ -197,43 +197,40 @@ class MainWindow(QMainWindow):
         self.dataset_viewer.viewer.fields_selected_for_generator.connect(self.strategy_generator.generator.selected_fields_widget.add_fields_from_list)
 
     def on_tab_changed(self, index):
-        """處理標籤頁切換事件"""
+        """Handle tab change"""
         if index == 0:
-            # 切換到數據集標籤
             status_msg = self.dataset_viewer.get_status_message()
             if status_msg:
-                self.status_bar.showMessage(f"數據集模式 - {status_msg}")
+                self.status_bar.showMessage(f"Datasets Mode - {status_msg}")
             else:
-                self.status_bar.showMessage("數據集模式")
+                self.status_bar.showMessage("Datasets Mode")
         elif index == 1:
-            # 切換到回測結果標籤
             status_msg = self.backtest_viewer.get_status_message()
             if status_msg:
-                self.status_bar.showMessage(f"回測結果模式 - {status_msg}")
+                self.status_bar.showMessage(f"Backtests Mode - {status_msg}")
             else:
-                self.status_bar.showMessage("回測結果模式")
+                self.status_bar.showMessage("Backtests Mode")
         elif index == 2:
-            # 切換到策略生成標籤
-            self.status_bar.showMessage("策略生成模式")
+            self.status_bar.showMessage("Strategy Generator Mode")
         elif index == 3:
-            self.status_bar.showMessage("模擬模式")
+            self.status_bar.showMessage("Simulation Mode")
 
     def handle_import_request(self, df: pd.DataFrame):
-        """處理從回測結果匯入數據的請求"""
+        """Handle request to import data from backtests into simulation"""
         try:
             self.simulation_widget.load_parameters_from_dataframe(df)
-            self.status_bar.showMessage(f"已成功將 {len(df)} 筆數據匯入模擬參數")
+            self.status_bar.showMessage(f"Successfully imported {len(df)} rows into simulation parameters")
             # 切換到模擬標籤頁
             self.tab_widget.setCurrentIndex(3)
         except Exception as e:
-            QMessageBox.critical(self, "匯入錯誤", f"將數據匯入模擬時發生錯誤:\n{str(e)}")
-            self.status_bar.showMessage(f"匯入模擬參數失敗: {str(e)}")
+            QMessageBox.critical(self, "Import Error", f"Error importing data into simulation:\n{str(e)}")
+            self.status_bar.showMessage(f"Failed to import simulation parameters: {str(e)}")
 
 # 應用程序入口點
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     
-    # 設置應用程序樣式
+    # Application style
     app.setStyle("Fusion")
     
     # 設置固定淺色調色盤
@@ -249,15 +246,15 @@ if __name__ == "__main__":
     palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
     palette.setColor(QPalette.HighlightedText, QColor(255, 255, 255))
     
-    # 強制使用淺色調色盤
+    # Force light palette
     app.setPalette(palette)
     
-    # 檢查必要的資源
+    # Check required resources
     success, message = check_resources()
     if not success:
-        QMessageBox.warning(None, "資源缺失", message + "\n部分功能可能無法正常使用。")
+        QMessageBox.warning(None, "Missing Resources", message + "\nSome features may not work properly.")
     
-    # 創建並顯示主窗口
+    # Create and show main window
     window = MainWindow()
     window.show()
     

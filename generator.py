@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-WorldQuant Brain 策略生成器
-GUI工具，用於設計策略模板並生成策略文件
+WorldQuant Brain Strategy Generator
+GUI tool for designing strategy templates and generating strategy files
 """
 
 import sys
@@ -36,7 +36,7 @@ TEMPLATES_DIR = os.path.join(SCRIPT_DIR, "templates")
 ALPHAS_DIR = os.path.join(SCRIPT_DIR, "alphas")
 
 class SelectedFieldsWidget(QWidget):
-    """用於顯示和管理已選字段的小部件"""
+    """Widget to display and manage selected fields"""
     
     def __init__(self, parent=None):
         super(SelectedFieldsWidget, self).__init__(parent)
@@ -47,11 +47,11 @@ class SelectedFieldsWidget(QWidget):
         self.init_ui()
         
     def init_ui(self):
-        """初始化界面"""
+        """Initialize UI"""
         layout = QVBoxLayout(self)
         
         # 已選字段組
-        group = QGroupBox("已選字段")
+        group = QGroupBox("Selected Fields")
         group_layout = QVBoxLayout()
         
         # 字段列表
@@ -64,23 +64,23 @@ class SelectedFieldsWidget(QWidget):
         # 按鈕區域
         buttons = QHBoxLayout()
         
-        # 清空按鈕
-        self.clear_btn = QPushButton("清空所有")
-        self.clear_btn.setToolTip("清空所有已選字段")
+        # Clear button
+        self.clear_btn = QPushButton("Clear All")
+        self.clear_btn.setToolTip("Clear all selected fields")
         self.clear_btn.clicked.connect(self.clear_fields)
         buttons.addWidget(self.clear_btn)
         
         buttons.addStretch()
         
-        # 移除按鈕
-        self.remove_btn = QPushButton("移除選中")
-        self.remove_btn.setToolTip("移除選中的字段")
+        # Remove button
+        self.remove_btn = QPushButton("Remove Selected")
+        self.remove_btn.setToolTip("Remove selected fields")
         self.remove_btn.clicked.connect(self.remove_selected)
         buttons.addWidget(self.remove_btn)
         
-        # 手動輸入按鈕
-        self.custom_btn = QPushButton("手動輸入")
-        self.custom_btn.setToolTip("手動輸入字段名稱")
+        # Manual input button
+        self.custom_btn = QPushButton("Add Manually")
+        self.custom_btn.setToolTip("Enter field names manually")
         self.custom_btn.clicked.connect(self.add_custom_field)
         buttons.addWidget(self.custom_btn)
         
@@ -89,27 +89,27 @@ class SelectedFieldsWidget(QWidget):
         layout.addWidget(group)
         
     def clear_fields(self):
-        """清空所有字段"""
+        """Clear all fields"""
         self.field_list.clear()
         
     def get_selected_fields(self):
-        """獲取所有已選字段"""
+        """Get all selected fields"""
         fields = []
         for i in range(self.field_list.count()):
             fields.append(self.field_list.item(i).text())
         return fields
         
     def remove_selected(self):
-        """移除選中的字段"""
+        """Remove selected fields"""
         for item in self.field_list.selectedItems():
             self.field_list.takeItem(self.field_list.row(item))
             
     def add_custom_field(self):
-        """手動輸入字段，支援逗號分隔或 Python 列表格式"""
+        """Manually input fields; support comma-separated or Python list format"""
         text, ok = QInputDialog.getMultiLineText(
             self,
-            "添加字段",
-            "請輸入字段名稱 (多個字段可用逗號分隔，或輸入 Python 列表格式的字串):",
+            "Add Fields",
+            "Enter field names (comma-separated or Python list string):",
             ""
         )
 
@@ -130,22 +130,22 @@ class SelectedFieldsWidget(QWidget):
             if fields:
                 self.add_fields(fields)
             else:
-                QMessageBox.warning(self, "輸入無效", "未能從輸入中提取有效的字段名稱。")
+                QMessageBox.warning(self, "Invalid Input", "Could not parse valid field names from input.")
     @Slot(list)
     def add_fields_from_list(self, fields):
-        """從列表添加多個字段 (Slot for external signals)"""
+        """Add multiple fields from list (Slot for external signals)"""
         if isinstance(fields, list):
             self.add_fields(fields)
         else:
-            QMessageBox.warning(self, "匯入錯誤", "預期接收字段列表")
+            QMessageBox.warning(self, "Import Error", "Expected a list of fields")
             
     def edit_field(self, item):
-        """編輯選中的字段"""
+        """Edit selected field"""
         old_text = item.text()
         new_text, ok = QInputDialog.getText(
             self,
-            "編輯字段",
-            "修改字段名稱:",
+            "Edit Field",
+            "Modify field name:",
             QLineEdit.Normal,
             old_text
         )
@@ -162,10 +162,10 @@ class SelectedFieldsWidget(QWidget):
                 item.setText(new_text.strip())
                 item.setToolTip(new_text.strip())
             else:
-                QMessageBox.warning(self, "錯誤", "此字段名稱已存在")
+                QMessageBox.warning(self, "Error", "Field name already exists")
 
     def add_fields(self, fields):
-        """添加一個或多個字段到列表"""
+        """Add one or more fields to the list"""
         if not fields:
             return
             
@@ -194,12 +194,12 @@ class SelectedFieldsWidget(QWidget):
                     skipped_count += 1
                     
         if added_count > 0:
-            status = f"已添加 {added_count} 個字段"
+            status = f"Added {added_count} field(s)"
             if skipped_count > 0:
-                status += f"，跳過 {skipped_count} 個重複字段"
-            QMessageBox.information(self, "添加成功", status)
+                status += f", skipped {skipped_count} duplicate(s)"
+            QMessageBox.information(self, "Added", status)
         elif skipped_count > 0:
-            QMessageBox.information(self, "提示", f"所選的 {skipped_count} 個字段已存在")
+            QMessageBox.information(self, "Info", f"{skipped_count} selected field(s) already exist")
 
 
 class AlphaSyntaxHighlighter(QSyntaxHighlighter):
@@ -228,7 +228,7 @@ class AlphaSyntaxHighlighter(QSyntaxHighlighter):
             "zscore", "vec_avg", "vec_sum", "bucket", "trade_when",
             "group_backfill", "group_mean", "group_neutralize", "group_rank",
             "group_scale", "group_zscore",
-            r'\+', r'\-', r'\*', r'\/', r'<', r'<=', r'==', r'>', r'>=', r'!='
+            r'\+', r'\-', r'\*', r'\/', r'<', r'<=', r'==', r'>', r'>=', r'!=', "vector_neut"
         ]
         # 創建關鍵字的正則表達式，使用 \b 來匹配單詞邊界，除非是符號
         keyword_patterns = [r'\b' + keyword + r'\b' for keyword in keywords if keyword.isalnum()]
@@ -301,7 +301,7 @@ class AlphaSyntaxHighlighter(QSyntaxHighlighter):
         # QMessageBox.information(self, "匯入結果", status_message)
 
 class CodeTemplateEditor(QWidget):
-    """代碼模板編輯器"""
+    """Code template editor"""
     
     def __init__(self, parent=None):
         super(CodeTemplateEditor, self).__init__(parent)
@@ -316,23 +316,23 @@ class CodeTemplateEditor(QWidget):
     def init_ui(self):
         layout = QVBoxLayout(self)
         
-        # 模板選擇和管理
+        # Template selection and management
         template_header = QHBoxLayout()
         
-        template_header.addWidget(QLabel("模板:"))
+        template_header.addWidget(QLabel("Template:"))
         self.template_combo = QComboBox()
         self.template_combo.currentIndexChanged.connect(self.load_selected_template)
         template_header.addWidget(self.template_combo, 1)
         
-        self.save_btn = QPushButton("保存")
+        self.save_btn = QPushButton("Save")
         self.save_btn.clicked.connect(self.save_template)
         template_header.addWidget(self.save_btn)
         
-        self.new_btn = QPushButton("新建")
+        self.new_btn = QPushButton("New")
         self.new_btn.clicked.connect(self.new_template)
         template_header.addWidget(self.new_btn)
         
-        self.delete_btn = QPushButton("刪除")
+        self.delete_btn = QPushButton("Delete")
         self.delete_btn.clicked.connect(self.delete_template)
         template_header.addWidget(self.delete_btn)
         
@@ -341,22 +341,22 @@ class CodeTemplateEditor(QWidget):
 # 應用語法高亮
         self.highlighter = AlphaSyntaxHighlighter(self.editor.document())
         self.editor.setFont(QFont("Consolas", 14))
-        self.editor.setPlaceholderText("在此輸入代碼模板，使用{field}作為字段佔位符...")
+        self.editor.setPlaceholderText("Enter code template here; use {field} as placeholder...")
         
-        # 模板描述
+        # Template description
         desc_layout = QHBoxLayout()
-        desc_layout.addWidget(QLabel("描述:"))
+        desc_layout.addWidget(QLabel("Description:"))
         self.description_edit = QLineEdit()
-        self.description_edit.setPlaceholderText("(可選) 描述此模板的用途")
+        self.description_edit.setPlaceholderText("(Optional) Describe the purpose of this template")
         desc_layout.addWidget(self.description_edit)
         
-        # 說明文本
+        # Help text
         help_text = """
-        <b>模板使用說明:</b>
+        <b>Template Usage:</b>
         <ul>
-          <li>使用 <code>{field}</code> 作為字段名稱佔位符</li>
-          <li>支持 ts_rank, rank, zscore 等所有算子</li>
-          <li>模板將保存到 templates/ 目錄中</li>
+          <li>Use <code>{field}</code> as the field placeholder</li>
+          <li>Supports all operators like ts_rank, rank, zscore, ...</li>
+          <li>Templates are saved under the templates/ directory</li>
         </ul>
         """
         help_label = QLabel(help_text)
@@ -368,34 +368,34 @@ class CodeTemplateEditor(QWidget):
         layout.addWidget(help_label)
         
     def load_templates(self):
-        """載入預設和保存的模板"""
+        """Load default and saved templates"""
         self.template_combo.clear()
         
-        # 預設模板
+        # Default templates
         default_templates = {
-            "基本 ts_rank": {
+            "Basic ts_rank": {
                 "code": "ts_rank({field}, 126)",
-                "description": "計算126天的時序排名"
+                "description": "Time-series rank over 126 days"
             },
-            "基本 rank": {
+            "Basic rank": {
                 "code": "rank({field})",
-                "description": "橫截面排名"
+                "description": "Cross-sectional rank"
             },
-            "基本 zscore": {
+            "Basic zscore": {
                 "code": "zscore({field})",
-                "description": "標準化得分"
+                "description": "Standardized score"
             },
-            "同行業比較": {
+            "Industry comparison": {
                 "code": "group_rank({field}, industry)",
-                "description": "行業內排名"
+                "description": "Rank within industry"
             },
-            "同子行業比較": {
+            "Subindustry comparison": {
                 "code": "group_rank({field}, subindustry)",
-                "description": "子行業內排名"
+                "description": "Rank within subindustry"
             },
-            "複雜動量": {
+            "Complex momentum": {
                 "code": "ts_rank(ts_delta({field}, 5) / ts_delay({field}, 5), 21)",
-                "description": "5天變化率的21天排名"
+                "description": "21-day rank of 5-day rate of change"
             }
         }
         
@@ -416,13 +416,13 @@ class CodeTemplateEditor(QWidget):
                                         'file_path': file_path
                                     }
                         except Exception as e:
-                            print(f"讀取模板文件 {file_path} 時出錯: {str(e)}")
+                            print(f"Error reading template file {file_path}: {str(e)}")
         except Exception as e:
-            print(f"掃描模板目錄時出錯: {str(e)}")
+            print(f"Error scanning templates directory: {str(e)}")
         
         # 先添加預設模板
         for name, data in default_templates.items():
-            self.template_combo.addItem(f"[預設] {name}", data)
+            self.template_combo.addItem(f"[Default] {name}", data)
             
         # 再添加自定義模板
         for name, data in custom_templates.items():
@@ -433,7 +433,7 @@ class CodeTemplateEditor(QWidget):
             self.template_combo.setCurrentIndex(0)
             
     def load_selected_template(self):
-        """載入選擇的模板到編輯器"""
+        """Load selected template into editor"""
         index = self.template_combo.currentIndex()
         if index >= 0:
             template_data = self.template_combo.itemData(index)
@@ -441,21 +441,21 @@ class CodeTemplateEditor(QWidget):
             self.description_edit.setText(template_data.get('description', ''))
             
     def save_template(self):
-        """保存當前模板"""
+        """Save current template"""
         code = self.editor.toPlainText().strip()
         description = self.description_edit.text().strip()
         
         if not code:
-            QMessageBox.warning(self, "錯誤", "模板不能為空")
+            QMessageBox.warning(self, "Error", "Template cannot be empty")
             return
             
         # 檢查是否是編輯預設模板
         current_index = self.template_combo.currentIndex()
         current_text = self.template_combo.itemText(current_index)
         
-        if current_text.startswith("[預設]"):
+        if current_text.startswith("[Default]"):
             # 建立新的自定義模板而不是修改預設的
-            name, ok = QInputDialog.getText(self, "保存模板", "請輸入模板名稱:")
+            name, ok = QInputDialog.getText(self, "Save Template", "Enter template name:")
             if not ok or not name:
                 return
                 
@@ -486,11 +486,11 @@ class CodeTemplateEditor(QWidget):
                 # 如果找不到文件路徑，則當作新模板保存
                 self._save_template_to_file(current_text, code, description)
             
-        QMessageBox.information(self, "成功", "模板已保存")
+            QMessageBox.information(self, "Success", "Template saved")
             
     def new_template(self):
-        """創建新模板"""
-        name, ok = QInputDialog.getText(self, "新建模板", "請輸入模板名稱:")
+        """Create new template"""
+        name, ok = QInputDialog.getText(self, "New Template", "Enter template name:")
         if ok and name:
             # 清空編輯器和描述
             self.editor.clear()
@@ -503,18 +503,18 @@ class CodeTemplateEditor(QWidget):
             self.editor.setFocus()
             
     def delete_template(self):
-        """刪除當前選中的模板"""
+        """Delete currently selected template"""
         current_index = self.template_combo.currentIndex()
         current_text = self.template_combo.itemText(current_index)
         
         # 不允許刪除預設模板
-        if current_text.startswith("[預設]"):
-            QMessageBox.warning(self, "無法刪除", "預設模板不能被刪除！")
+        if current_text.startswith("[Default]"):
+            QMessageBox.warning(self, "Cannot Delete", "Default templates cannot be deleted!")
             return
             
         reply = QMessageBox.question(
-            self, "確認刪除", 
-            f"確定要刪除模板 '{current_text}' 嗎？此操作不可恢復！",
+            self, "Confirm Delete", 
+            f"Delete template '{current_text}'? This cannot be undone!",
             QMessageBox.Yes | QMessageBox.No, QMessageBox.No
         )
         
@@ -529,16 +529,16 @@ class CodeTemplateEditor(QWidget):
             try:
                 os.remove(file_path)
             except Exception as e:
-                QMessageBox.critical(self, "刪除失敗", f"無法刪除模板文件: {str(e)}")
+                QMessageBox.critical(self, "Delete Failed", f"Unable to delete template file: {str(e)}")
                 return
                 
         # 從下拉框中移除
         self.template_combo.removeItem(current_index)
         
-        QMessageBox.information(self, "成功", f"模板 '{current_text}' 已被刪除")
+        QMessageBox.information(self, "Success", f"Template '{current_text}' deleted")
             
     def _save_template_to_file(self, name, code, description=''):
-        """將模板保存到文件"""
+        """Save template to file"""
         # 生成唯一的文件名
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         file_name = f"{self._sanitize_filename(name)}_{timestamp}.json"
@@ -558,11 +558,11 @@ class CodeTemplateEditor(QWidget):
                 json.dump(template_data, f, ensure_ascii=False, indent=2)
             return file_path
         except Exception as e:
-            QMessageBox.critical(self, "保存失敗", f"無法保存模板文件: {str(e)}")
+            QMessageBox.critical(self, "Save Failed", f"Unable to save template file: {str(e)}")
             return None
             
     def _update_template_file(self, file_path, name, code, description=''):
-        """更新現有模板文件"""
+        """Update existing template file"""
         try:
             # 讀取原始數據
             with open(file_path, 'r', encoding='utf-8') as f:
@@ -583,11 +583,11 @@ class CodeTemplateEditor(QWidget):
                 
             return True
         except Exception as e:
-            QMessageBox.critical(self, "更新失敗", f"無法更新模板文件: {str(e)}")
+            QMessageBox.critical(self, "Update Failed", f"Unable to update template file: {str(e)}")
             return False
     
     def _sanitize_filename(self, name):
-        """處理文件名，去除不合法字符"""
+        """Sanitize file name by removing invalid characters"""
         # 替換不合法字符
         invalid_chars = '<>:"/\\|?*'
         for char in invalid_chars:
@@ -607,7 +607,7 @@ class CodeTemplateEditor(QWidget):
         return self.editor.toPlainText().strip()
 
 class StrategySettingsWidget(QWidget):
-    """策略設置小部件"""
+    """Strategy settings widget"""
     
     def __init__(self, parent=None):
         super(StrategySettingsWidget, self).__init__(parent)
@@ -623,59 +623,59 @@ class StrategySettingsWidget(QWidget):
         # 組織各種參數設置
         form_layout = QFormLayout()
 
-        # 中性化設置
+        # Neutralization
         self.neutralization_combo = QComboBox()
         self.neutralization_combo.addItems(["SUBINDUSTRY", "INDUSTRY", "SECTOR", "MARKET", "NONE"])
         # simulation_widget.py 預設值為 sim_defaults[3]，但 simulation_widget.py 的 neutralization 是 index 3
         self.neutralization_combo.setCurrentText(str(sim_defaults[3]))
-        form_layout.addRow("中性化 (Neutralization):", self.neutralization_combo)
+        form_layout.addRow("Neutralization:", self.neutralization_combo)
 
-        # 衰減設置
+        # Decay
         self.decay_spin = QSpinBox()
         self.decay_spin.setRange(0, 252)
         self.decay_spin.setValue(int(sim_defaults[1]))
-        form_layout.addRow("衰減 (Decay):", self.decay_spin)
+        form_layout.addRow("Decay:", self.decay_spin)
 
-        # 截斷設置
+        # Truncation
         self.truncation_spin = QDoubleSpinBox()
         self.truncation_spin.setRange(0, 0.5)
         self.truncation_spin.setSingleStep(0.01)
         self.truncation_spin.setValue(float(sim_defaults[5]))
-        form_layout.addRow("截斷 (Truncation):", self.truncation_spin)
+        form_layout.addRow("Truncation:", self.truncation_spin)
 
-        # 延遲設置
+        # Delay
         self.delay_spin = QSpinBox()
         self.delay_spin.setRange(1, 10)
         self.delay_spin.setValue(int(sim_defaults[2]))
-        form_layout.addRow("延遲 (Delay):", self.delay_spin)
+        form_layout.addRow("Delay:", self.delay_spin)
 
-        # 宇宙設置
+        # Universe
         self.universe_combo = QComboBox()
         self.universe_combo.addItems(["TOP3000", "TOP500", "TOP1000", "TOP200"])
         # simulation_widget.py 預設值為 sim_defaults[6]
         self.universe_combo.setCurrentText(str(sim_defaults[6]))
-        form_layout.addRow("宇宙 (Universe):", self.universe_combo)
+        form_layout.addRow("Universe:", self.universe_combo)
 
-        # 區域設置
+        # Region
         self.region_combo = QComboBox()
         self.region_combo.addItems(["USA", "GLOBAL", "JAPAN", "CHINA", "EUROPE"])
         self.region_combo.setCurrentText(str(sim_defaults[4]))
-        form_layout.addRow("區域 (Region):", self.region_combo)
+        form_layout.addRow("Region:", self.region_combo)
 
-        # 巴氏殺菌設置
+        # Pasteurization
         self.pasteurization_combo = QComboBox()
         self.pasteurization_combo.addItems(["ON", "OFF"])
-        form_layout.addRow("巴氏殺菌 (Pasteurization):", self.pasteurization_combo)
+        form_layout.addRow("Pasteurization:", self.pasteurization_combo)
 
-        # NaN處理設置
+        # NaN Handling
         self.nan_handling_combo = QComboBox()
         self.nan_handling_combo.addItems(["ON", "OFF"])
-        form_layout.addRow("NaN處理 (NaN Handling):", self.nan_handling_combo)
+        form_layout.addRow("NaN Handling:", self.nan_handling_combo)
 
-        # 單位處理設置
+        # Unit Handling
         self.unit_handling_combo = QComboBox()
         self.unit_handling_combo.addItems(["VERIFY", "IGNORE"])
-        form_layout.addRow("單位處理 (Unit Handling):", self.unit_handling_combo)
+        form_layout.addRow("Unit Handling:", self.unit_handling_combo)
 
         # 添加表單佈局
         layout.addLayout(form_layout)
@@ -696,14 +696,14 @@ class StrategySettingsWidget(QWidget):
         }
 
 class GeneratorMainWindow(QMainWindow):
-    """策略生成器主窗口"""
+    """Strategy Generator main window"""
     # Define the signal to emit the generated strategies
     strategies_ready_for_simulation = Signal(list)
 
     def __init__(self):
         super(GeneratorMainWindow, self).__init__()
 
-        self.setWindowTitle("WorldQuant Brain 策略生成器")
+        self.setWindowTitle("WorldQuant Brain Strategy Generator")
         self.resize(1200, 800)
 
         # Remove initialization of the local simulation_table
@@ -721,19 +721,19 @@ class GeneratorMainWindow(QMainWindow):
         right_panel = QWidget()
         right_layout = QVBoxLayout(right_panel)
         
-        # 左側：已選字段列表
+        # Left: Selected fields list
         self.selected_fields_widget = SelectedFieldsWidget()
         
-        # 標籤頁：模板編輯和策略設置
+        # Tabs: template editor and strategy settings
         tabs = QTabWidget()
         
-        # 模板編輯標籤頁
+        # Template editor tab
         self.template_editor = CodeTemplateEditor()
-        tabs.addTab(self.template_editor, "代碼模板")
+        tabs.addTab(self.template_editor, "Code Template")
         
-        # 策略設置標籤頁
+        # Strategy settings tab
         self.settings_widget = StrategySettingsWidget()
-        tabs.addTab(self.settings_widget, "策略設置")
+        tabs.addTab(self.settings_widget, "Strategy Settings")
 
         # Remove the local simulation table tab
         # self.simulation_table = QTableWidget()
@@ -743,32 +743,32 @@ class GeneratorMainWindow(QMainWindow):
 
         right_layout.addWidget(tabs) # Add the tabs widget directly
         
-        # 預覽和生成區域
+        # Preview and generate area
         generate_layout = QHBoxLayout()
         
-        self.preview_btn = QPushButton("預覽策略")
+        self.preview_btn = QPushButton("Preview Strategies")
         self.preview_btn.clicked.connect(self.preview_strategies)
         generate_layout.addWidget(self.preview_btn)
         
-        self.generate_count_label = QLabel("生成 0 個策略")
+        self.generate_count_label = QLabel("Generate 0 strategies")
         generate_layout.addWidget(self.generate_count_label)
         
         generate_layout.addStretch()
 
         # Keep the button, maybe rename it slightly
-        self.import_to_simulator_btn = QPushButton("匯入到模擬")
+        self.import_to_simulator_btn = QPushButton("Import to Simulation")
         self.import_to_simulator_btn.clicked.connect(self.emit_strategies_for_simulation) # Connect to new emitting method
         generate_layout.addWidget(self.import_to_simulator_btn)
 
-        self.generate_btn = QPushButton("生成策略文件")
+        self.generate_btn = QPushButton("Generate Strategy File")
         self.generate_btn.setStyleSheet("background-color: #4caf50; color: white; font-weight: bold; padding: 8px 16px;")
         self.generate_btn.clicked.connect(self.generate_strategies_file)
         generate_layout.addWidget(self.generate_btn)
         
         right_layout.addLayout(generate_layout)
         
-        # 預覽區域
-        preview_group = QGroupBox("策略預覽")
+        # Preview area
+        preview_group = QGroupBox("Strategy Preview")
         preview_layout = QVBoxLayout()
         
         self.preview_text = QTextEdit()
@@ -780,7 +780,7 @@ class GeneratorMainWindow(QMainWindow):
         
         right_layout.addWidget(preview_group)
         
-        # 創建分割器
+        # Splitter
         splitter = QSplitter(Qt.Horizontal)
         splitter.addWidget(self.selected_fields_widget)
         splitter.addWidget(right_panel)
@@ -794,23 +794,23 @@ class GeneratorMainWindow(QMainWindow):
         # self.tabs_widget = right_panel.findChild(QTabWidget)
 
     def emit_strategies_for_simulation(self):
-        """生成策略列表並通過信號發送"""
-        # 獲取字段數據
+        """Generate strategy list and emit via signal"""
+        # Get fields
         selected_fields = self.selected_fields_widget.get_selected_fields()
         if not selected_fields:
-            QMessageBox.warning(self, "警告", "未選擇任何字段")
+            QMessageBox.warning(self, "Warning", "No fields selected")
             return
             
-        # 獲取模板代碼
+        # Get template code
         template_code = self.template_editor.get_current_template()
         if not template_code:
-            QMessageBox.warning(self, "警告", "模板代碼為空")
+            QMessageBox.warning(self, "Warning", "Template code is empty")
             return
             
-        # 獲取策略設置
+        # Get settings
         settings = self.settings_widget.get_settings()
         
-        # 構建策略列表
+        # Build strategies list
         strategies = []
         for field in selected_fields:
             try:
@@ -824,7 +824,7 @@ class GeneratorMainWindow(QMainWindow):
                 print(f"為字段 {field} 生成策略時出錯: {str(e)}")
 
         if not strategies:
-            QMessageBox.warning(self, "錯誤", "未能生成任何策略")
+            QMessageBox.warning(self, "Error", "Failed to generate any strategy")
             return
 
         # Emit the signal with the list of strategy dictionaries
@@ -832,23 +832,23 @@ class GeneratorMainWindow(QMainWindow):
 
 
     def preview_strategies(self):
-        """預覽將要生成的策略"""
-        # 獲取字段數據
+        """Preview strategies to be generated"""
+        # Get fields
         selected_fields = self.selected_fields_widget.get_selected_fields()
         if not selected_fields:
-            QMessageBox.warning(self, "警告", "未選擇任何字段")
+            QMessageBox.warning(self, "Warning", "No fields selected")
             return
             
-        # 獲取模板代碼
+        # Get template code
         template_code = self.template_editor.get_current_template()
         if not template_code or '{' not in template_code:
-            QMessageBox.warning(self, "警告", "模板代碼為空或缺少佔位符")
+            QMessageBox.warning(self, "Warning", "Template code is empty or missing placeholder")
             return
             
-        # 獲取策略設置
+        # Get settings
         settings = self.settings_widget.get_settings()
         
-        # 預覽第一個策略
+        # Preview first strategy
         if selected_fields:
             first_field = selected_fields[0]
             # 確保使用原始字段名，移除可能包含的格式信息
@@ -856,14 +856,14 @@ class GeneratorMainWindow(QMainWindow):
             
             # 生成文件名
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-            dataset_name = "custom"  # 由於不再依賴 CSV 文件，使用固定名稱
+            dataset_name = "custom"  # Fixed name (no longer based on CSV)
             file_name = f"alpha_{dataset_name}_{timestamp}.py"
             file_path = os.path.join(ALPHAS_DIR, file_name)
             
-            preview = f"""# 將為 {len(selected_fields)} 個字段生成策略
-# 輸出文件路徑: {file_path}
-            
-策略示例 (使用字段: {first_field}):
+            preview = f"""# Will generate strategies for {len(selected_fields)} fields
+# Output file: {file_path}
+
+Strategy example (field: {first_field}):
 {{
     'neutralization': '{settings["neutralization"]}',
     'decay': {settings["decay"]},
@@ -880,26 +880,26 @@ class GeneratorMainWindow(QMainWindow):
 }}
 """
             self.preview_text.setText(preview)
-            self.generate_count_label.setText(f"生成 {len(selected_fields)} 個策略")
+            self.generate_count_label.setText(f"Generate {len(selected_fields)} strategies")
             
     def generate_strategies_file(self):
-        """生成策略文件"""
-        # 獲取字段數據
+        """Generate strategy file"""
+        # Get fields
         selected_fields = self.selected_fields_widget.get_selected_fields()
         if not selected_fields:
-            QMessageBox.warning(self, "警告", "未選擇任何字段")
+            QMessageBox.warning(self, "Warning", "No fields selected")
             return
             
-        # 獲取模板代碼
+        # Get template code
         template_code = self.template_editor.get_current_template()
         if not template_code:
-            QMessageBox.warning(self, "警告", "模板代碼為空")
+            QMessageBox.warning(self, "Warning", "Template code is empty")
             return
             
-        # 獲取策略設置
+        # Get settings
         settings = self.settings_widget.get_settings()
         
-        # 構建策略列表
+        # Build strategies list
         strategies = []
         for field in selected_fields:
             try:
@@ -914,32 +914,32 @@ class GeneratorMainWindow(QMainWindow):
                 print(f"為字段 {field} 生成策略時出錯: {str(e)}")
         
         if not strategies:
-            QMessageBox.warning(self, "錯誤", "未能生成任何策略")
+            QMessageBox.warning(self, "Error", "Failed to generate any strategy")
             return
         
-        # 確保輸出目錄存在
+        # Ensure output directory exists
         if not os.path.exists(ALPHAS_DIR):
             os.makedirs(ALPHAS_DIR)
             
-        # 生成文件名
+        # Generate file name
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        dataset_name = "custom"  # 由於不再依賴 CSV 文件，使用固定名稱
+        dataset_name = "custom"  # Fixed name (no longer CSV-based)
         file_name = f"alpha_{dataset_name}_{timestamp}.py"
         file_path = os.path.join(ALPHAS_DIR, file_name)
             
-        # 將策略保存到Python文件
+        # Write strategies to Python file
         try:
             with open(file_path, "w", encoding="utf-8") as f:
                 f.write("#!/usr/bin/env python\n")
                 f.write("# -*- coding: utf-8 -*-\n\n")
-                f.write("# 自動生成的策略列表\n")
-                f.write(f"# 基於 {dataset_name} 數據集的 {len(strategies)} 個策略\n")
-                f.write(f"# 生成時間: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+                f.write("# Auto-generated strategies\n")
+                f.write(f"# {len(strategies)} strategies based on {dataset_name}\n")
+                f.write(f"# Generated at: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
                 
                 f.write("DATA = [\n")
                 
                 for i, strategy in enumerate(strategies):
-                    f.write(f"    # 策略{i+1}: {strategy['code'].strip()}\n")
+                    f.write(f"    # Strategy {i+1}: {strategy['code'].strip()}\n")
                     f.write("    {\n")
                     for key, value in strategy.items():
                         if isinstance(value, str):
@@ -956,10 +956,10 @@ class GeneratorMainWindow(QMainWindow):
                 f.write("]\n")
                 
             QMessageBox.information(
-                self, "成功", f"成功生成 {len(strategies)} 個策略並保存到:\n{file_path}"
+                self, "Success", f"Generated {len(strategies)} strategies and saved to:\n{file_path}"
             )
         except Exception as e:
-            QMessageBox.critical(self, "錯誤", f"保存策略文件時出錯: {str(e)}")
+            QMessageBox.critical(self, "Error", f"Error saving strategy file: {str(e)}")
 
 
 def main():

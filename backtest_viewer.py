@@ -587,7 +587,7 @@ class DetailDialog(QDialog):
         layout.addWidget(text_edit)
         
         # 添加關閉按鈕
-        close_button = QPushButton("關閉")
+        close_button = QPushButton("Close")
         close_button.clicked.connect(self.accept)
         
         layout.addWidget(close_button)
@@ -630,8 +630,8 @@ class ColumnSelectionDialog(QDialog):
 
         # OK and Cancel buttons
         button_layout = QHBoxLayout()
-        ok_button = QPushButton("確定")
-        cancel_button = QPushButton("取消")
+        ok_button = QPushButton("OK")
+        cancel_button = QPushButton("Cancel")
         ok_button.clicked.connect(self.accept)
         cancel_button.clicked.connect(self.reject)
         button_layout.addStretch()
@@ -653,7 +653,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self, data_path=None):
         super(MainWindow, self).__init__()
-        self.setWindowTitle("WorldQuant Brain 回測結果瀏覽器")
+        self.setWindowTitle("WorldQuant Brain Backtest Viewer")
         self.setMinimumSize(1200, 800)
         # 新增：載入狀態旗標
         self.loading = False
@@ -677,17 +677,17 @@ class MainWindow(QMainWindow):
         top_right = QHBoxLayout()
         
         # 檔案標籤
-        file_label = QLabel("回測檔案:")
+        file_label = QLabel("Backtest File:")
         
         # 當前檔案標籤
-        self.current_file_label = QLabel("未載入檔案")
+        self.current_file_label = QLabel("No file loaded")
         self.current_file_label.setStyleSheet("font-weight: bold; color: #1976D2;")
         
         # 搜尋元素
-        search_label = QLabel("搜尋:")
+        search_label = QLabel("Search:")
         search_label.setStyleSheet("margin-left: 15px;")
         self.search_input = QLineEdit()
-        self.search_input.setPlaceholderText("輸入關鍵字...")
+        self.search_input.setPlaceholderText("Enter keyword...")
         # --- 修改：使用計時器延遲過濾 ---
         # self.search_input.textChanged.connect(self.filter_data) # Removed direct connection
         self.search_input.textChanged.connect(self.on_search_text_changed) # Connect to timer handler
@@ -701,8 +701,8 @@ class MainWindow(QMainWindow):
         self.filter_timer.timeout.connect(self.filter_data)
         # --- 修改結束 ---
         # 添加刷新按鈕
-        refresh_button = QPushButton("刷新")
-        refresh_button.setToolTip("重新載入目前選擇的回測結果")
+        refresh_button = QPushButton("Refresh")
+        refresh_button.setToolTip("Reload the currently selected backtest file")
         refresh_button.clicked.connect(self.refresh_current_file)
         refresh_button.setStyleSheet("padding: 4px 12px;")
 
@@ -711,12 +711,12 @@ class MainWindow(QMainWindow):
         # (移除選取操作相關程式碼)
 
         # 合併「應用過濾」與「清除過濾」為下拉按鈕
-        self.filter_menu_button = QPushButton("過濾操作")
-        self.filter_menu_button.setToolTip("數值過濾相關操作")
+        self.filter_menu_button = QPushButton("Filter Actions")
+        self.filter_menu_button.setToolTip("Numeric filter operations")
         self.filter_menu_button.setStyleSheet("padding: 4px 12px;")
         self.filter_menu = QMenu(self)
-        self.action_apply_filter = QAction("應用過濾", self)
-        self.action_clear_filter = QAction("清除過濾", self)
+        self.action_apply_filter = QAction("Apply Filter", self)
+        self.action_clear_filter = QAction("Clear Filter", self)
         self.action_apply_filter.triggered.connect(self.apply_numeric_filter)
         self.action_clear_filter.triggered.connect(self.clear_numeric_filter)
         self.filter_menu.addAction(self.action_apply_filter)
@@ -724,12 +724,12 @@ class MainWindow(QMainWindow):
         self.filter_menu_button.setMenu(self.filter_menu)
 
         # 添加條件過濾元素
-        self.condition_label = QLabel("條件過濾:")
+        self.condition_label = QLabel("Numeric Filter:")
         self.condition_column = QComboBox()  # 選擇要過濾的欄位
         self.condition_operator = QComboBox()  # 選擇操作符 >, <, =, >=, <=
         self.condition_operator.addItems([">", "<", "=", ">=", "<="])
         self.condition_value = QLineEdit()  # 輸入過濾值
-        self.condition_value.setPlaceholderText("輸入數值...")
+        self.condition_value.setPlaceholderText("Enter value...")
         self.condition_value.setMaximumWidth(100)
         # 布局左側標籤區域
         top_left.addWidget(file_label)
@@ -749,15 +749,15 @@ class MainWindow(QMainWindow):
         top_right.addWidget(refresh_button)
 
         # 添加欄位顯示選項按鈕及選單
-        self.column_view_button = QPushButton("欄位視圖") # Renamed button
-        self.column_view_button.setToolTip("選擇表格欄位的顯示方式")
+        self.column_view_button = QPushButton("Column View")
+        self.column_view_button.setToolTip("Choose which columns to show")
         self.column_view_button.setStyleSheet("padding: 4px 12px;")
         self.column_view_button.setEnabled(False) # Initially disabled
 
         # 創建選單
         self.column_menu = QMenu(self)
-        custom_action = QAction("自訂顯示...", self)
-        results_only_action = QAction("只顯示結果欄位", self)
+        custom_action = QAction("Custom Columns...", self)
+        results_only_action = QAction("Results-only Columns", self)
         custom_action.triggered.connect(self.open_custom_column_selector) # Renamed handler
         results_only_action.triggered.connect(self.show_results_only_columns) # New handler
         self.column_menu.addAction(custom_action)
@@ -770,18 +770,18 @@ class MainWindow(QMainWindow):
         # === 合併選取操作下拉按鈕結束 ===
         
         # --- Modification Start: Import Button with Menu ---
-        self.import_button = QPushButton("匯入 Code 至...") # Renamed button
-        self.import_button.setToolTip("將 Code 匯入到生成器，或匯入數據至模擬表格")
+        self.import_button = QPushButton("Import to...")
+        self.import_button.setToolTip("Import Code to Generator, or import data to Simulation table")
         self.import_button.setStyleSheet("padding: 4px 12px;")
         self.import_button.setEnabled(False) # Initially disabled
         
         # Create menu for import options
         self.import_menu = QMenu(self)
-        self.import_selected_action = QAction("匯入已選 Code 至生成器", self)
-        self.import_all_action = QAction("匯入所有 Code 至生成器", self)
+        self.import_selected_action = QAction("Import Selected Code to Generator", self)
+        self.import_all_action = QAction("Import All Code to Generator", self)
         # 新增：匯入選擇的數據至模擬
-        self.import_selected_data_to_sim_action = QAction("匯入已選數據至模擬", self)
-        self.import_data_to_sim_action = QAction("匯入所有數據至模擬", self) # 修改文字
+        self.import_selected_data_to_sim_action = QAction("Import Selected Rows to Simulation", self)
+        self.import_data_to_sim_action = QAction("Import All Rows to Simulation", self)
         
         # Connect actions to handlers
         self.import_selected_action.triggered.connect(self.on_import_selected_code_clicked)
@@ -806,17 +806,17 @@ class MainWindow(QMainWindow):
         
         # === 新增：匯出 Code 為 List 按鈕 ===
         # === 修改：匯出 Code 為 List 按鈕改為下拉選單按鈕 ===
-        self.export_code_list_button = QPushButton("匯出...")
-        self.export_code_list_button.setToolTip("將目前檢視的 CSV 轉成特定格式複製到剪貼板")
+        self.export_code_list_button = QPushButton("Export...")
+        self.export_code_list_button.setToolTip("Export current CSV in specific format to clipboard")
         self.export_code_list_button.setStyleSheet("padding: 4px 12px;")
         self.export_code_list_button.setEnabled(False)
 
         self.export_code_menu = QMenu(self)
-        self.action_export_code_list = QAction("匯出 Code 為 List 格式", self)
+        self.action_export_code_list = QAction("Export 'code' as Python List", self)
         self.action_export_code_list.triggered.connect(self.export_code_column_as_list)
         self.export_code_menu.addAction(self.action_export_code_list)
 
-        self.action_export_params_list = QAction("匯出參數為 Parameters 格式", self)
+        self.action_export_params_list = QAction("Export parameters as DATA list", self)
         self.action_export_params_list.triggered.connect(self.export_params_as_data_list)
         self.export_code_menu.addAction(self.action_export_params_list)
 
@@ -846,7 +846,7 @@ class MainWindow(QMainWindow):
         
         # 添加文件列表標題
         files_header = QHBoxLayout()
-        files_title = QLabel("回測結果文件")
+        files_title = QLabel("Backtest Files")
         files_title.setStyleSheet("font-weight: bold; font-size: 14px;")
         files_header.addWidget(files_title)
         files_header.addStretch()
@@ -902,10 +902,10 @@ class MainWindow(QMainWindow):
         chart_controls = QHBoxLayout()
         
         self.chart_type = QComboBox()
-        self.chart_type.addItems(["夏普比率分佈", "參數分析", "中性化方法比較", "截面分析"])
+        self.chart_type.addItems(["Sharpe Distribution", "Parameter Analysis", "Neutralization Comparison", "Cross-sectional Analysis"])
         self.chart_type.currentIndexChanged.connect(self.update_chart)
         
-        chart_controls.addWidget(QLabel("圖表類型:"))
+        chart_controls.addWidget(QLabel("Chart Type:"))
         chart_controls.addWidget(self.chart_type)
         chart_controls.addStretch()
         
@@ -914,8 +914,8 @@ class MainWindow(QMainWindow):
         self.chart_widget.setLayout(chart_layout)
         
         # 添加標籤頁
-        self.tab_widget.addTab(self.table_view, "回測結果表格")
-        self.tab_widget.addTab(self.chart_widget, "回測結果視覺化")
+        self.tab_widget.addTab(self.table_view, "Backtest Table")
+        self.tab_widget.addTab(self.chart_widget, "Backtest Visualization")
         
         # 佈局左右兩側
         splitter = QSplitter(Qt.Horizontal)
@@ -944,7 +944,7 @@ class MainWindow(QMainWindow):
         self.visible_columns = [] # 新增: 追蹤可見欄位
         
         # 顯示初始信息
-        self.status_bar.showMessage("選擇左側的回測結果文件以開始瀏覽")
+        self.status_bar.showMessage("Select a backtest CSV on the left to begin")
 
         # 為表格視圖啟用右鍵選單
         self.table_view.setContextMenuPolicy(Qt.CustomContextMenu)
@@ -953,16 +953,16 @@ class MainWindow(QMainWindow):
     # 刷新當前文件
     def refresh_current_file(self):
         if not hasattr(self, 'last_loaded_index') or self.last_loaded_index is None:
-            self.status_bar.showMessage("沒有已載入的回測結果可刷新")
+            self.status_bar.showMessage("No loaded backtest to refresh")
             return
             
         self.load_file(self.last_loaded_index)
-        self.status_bar.showMessage("已刷新當前回測結果")
+        self.status_bar.showMessage("Refreshed current backtest")
 
     def load_file(self, index):
         # 防止重複載入
         if self.loading:
-            self.status_bar.showMessage("檔案正在載入中，請稍候...")
+            self.status_bar.showMessage("File is loading, please wait...")
             return
 
         # 設置載入標誌
@@ -983,7 +983,7 @@ class MainWindow(QMainWindow):
 
             # 檢查檔案是否存在和可讀
             if not os.path.exists(file_path):
-                QMessageBox.critical(self, "檔案不存在", f"找不到檔案: {file_path}")
+                QMessageBox.critical(self, "File Not Found", f"Cannot find file: {file_path}")
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -991,8 +991,8 @@ class MainWindow(QMainWindow):
                 self.column_view_button.setEnabled(False)
                 self.import_button.setEnabled(False)
                 self.export_code_list_button.setEnabled(False)
-                self.current_file_label.setText("錯誤")
-                self.status_bar.showMessage(f"檔案不存在: {file_name}")
+                self.current_file_label.setText("Error")
+                self.status_bar.showMessage(f"File not found: {file_name}")
                 if self.db_conn is not None:
                     self.db_conn.close()
                 self.db_conn = None
@@ -1003,8 +1003,8 @@ class MainWindow(QMainWindow):
             try:
                 file_size = os.path.getsize(file_path)
             except OSError as e:
-                self.status_bar.showMessage(f"無法讀取檔案大小：{str(e)}")
-                QMessageBox.critical(self, "檔案讀取錯誤", f"無法讀取檔案大小: {str(e)}")
+                self.status_bar.showMessage(f"Cannot read file size: {str(e)}")
+                QMessageBox.critical(self, "File Read Error", f"Cannot read file size: {str(e)}")
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1020,9 +1020,9 @@ class MainWindow(QMainWindow):
                 return
 
             if file_size == 0:
-                QMessageBox.information(self, "空檔案", "此 CSV 檔案為空，無法載入資料。")
+                QMessageBox.information(self, "Empty File", "This CSV file is empty.")
                 self.current_file_label.setText(file_name)
-                self.status_bar.showMessage(f"{file_name} 為空檔案，未載入任何資料。")
+                self.status_bar.showMessage(f"{file_name} is empty. Nothing loaded.")
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1059,9 +1059,9 @@ class MainWindow(QMainWindow):
                     
                     # 檢查是否只有表頭或空行
                     if not first_lines or all(line.strip() == '' for line in first_lines):
-                        QMessageBox.information(self, "空檔案", "此CSV檔案不包含有效資料。")
+                        QMessageBox.information(self, "Empty File", "This CSV does not contain valid data.")
                         self.current_file_label.setText(file_name)
-                        self.status_bar.showMessage(f"{file_name} 不包含有效資料。")
+                        self.status_bar.showMessage(f"{file_name} contains no valid data.")
                         self.current_dataset = None
                         self.proxy_model = None
                         self.visible_columns = []
@@ -1080,9 +1080,9 @@ class MainWindow(QMainWindow):
                 try:
                     first_chunk = next(chunks)
                 except StopIteration:
-                    QMessageBox.information(self, "空檔案", "此 CSV 檔案沒有有效資料。")
+                    QMessageBox.information(self, "Empty File", "This CSV file has no valid data.")
                     self.current_file_label.setText(file_name)
-                    self.status_bar.showMessage(f"{file_name} 沒有有效資料。")
+                    self.status_bar.showMessage(f"{file_name} has no valid data.")
                     self.current_dataset = None
                     self.proxy_model = None
                     self.visible_columns = []
@@ -1097,9 +1097,9 @@ class MainWindow(QMainWindow):
                     return
 
                 if first_chunk.empty:
-                    QMessageBox.information(self, "空檔案", "此 CSV 檔案不包含任何資料列。")
+                    QMessageBox.information(self, "Empty File", "This CSV file contains no rows.")
                     self.current_file_label.setText(file_name)
-                    self.status_bar.showMessage(f"{file_name} 不包含任何資料列。")
+                    self.status_bar.showMessage(f"{file_name} contains no rows.")
                     self.current_dataset = None
                     self.proxy_model = None
                     self.visible_columns = []
@@ -1148,7 +1148,7 @@ class MainWindow(QMainWindow):
                 header.setStretchLastSection(False) # Adjust if needed
 
                 # Update status bar
-                self.status_bar.showMessage(f"已載入 {file_name} | 共 {model.row_count} 條記錄")
+                self.status_bar.showMessage(f"Loaded {file_name} | {model.row_count} rows")
                 self.current_file_label.setText(file_name)
 
                 # Update filter dropdowns and visible columns tracker
@@ -1179,9 +1179,9 @@ class MainWindow(QMainWindow):
                 self.update_chart()
                 
             except pd.errors.EmptyDataError:
-                QMessageBox.information(self, "空檔案", "此 CSV 檔案為空或無有效資料。")
+                QMessageBox.information(self, "Empty File", "This CSV is empty or invalid.")
                 self.current_file_label.setText(file_name)
-                self.status_bar.showMessage(f"{file_name} 為空檔案或無有效資料。")
+                self.status_bar.showMessage(f"{file_name} is empty or invalid.")
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1195,9 +1195,9 @@ class MainWindow(QMainWindow):
                 self.loading = False
                 return
             except (pd.errors.ParserError, UnicodeDecodeError) as e:
-                QMessageBox.critical(self, "格式錯誤", f"CSV 檔案格式錯誤或無法解析：{str(e)}")
+                QMessageBox.critical(self, "Format Error", f"CSV format error or cannot parse: {str(e)}")
                 self.current_file_label.setText(file_name)
-                self.status_bar.showMessage(f"{file_name} 格式錯誤: {str(e)}")
+                self.status_bar.showMessage(f"{file_name} format error: {str(e)}")
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1211,10 +1211,10 @@ class MainWindow(QMainWindow):
                 self.loading = False
                 return
             except Exception as e:
-                # 捕獲所有其他可能的異常
-                QMessageBox.critical(self, "未知錯誤", f"讀取CSV檔案時發生未知錯誤: {str(e)}")
+                # Unexpected
+                QMessageBox.critical(self, "Unknown Error", f"Unknown error while reading CSV: {str(e)}")
                 self.current_file_label.setText(file_name)
-                self.status_bar.showMessage(f"讀取 {file_name} 時發生錯誤: {str(e)}")
+                self.status_bar.showMessage(f"Error reading {file_name}: {str(e)}")
                 self.current_dataset = None
                 self.proxy_model = None
                 self.visible_columns = []
@@ -1229,9 +1229,9 @@ class MainWindow(QMainWindow):
                 return
                 
         except Exception as e:
-            QMessageBox.critical(self, "錯誤", f"載入回測結果時發生錯誤：{str(e)}")
-            self.current_file_label.setText(file_name if 'file_name' in locals() else "錯誤")
-            self.status_bar.showMessage(f"載入過程中發生錯誤: {str(e)}")
+            QMessageBox.critical(self, "Error", f"Error loading backtest: {str(e)}")
+            self.current_file_label.setText(file_name if 'file_name' in locals() else "Error")
+            self.status_bar.showMessage(f"Error during load: {str(e)}")
             # 重置模型和資料
             self.current_dataset = None
             self.proxy_model = None
@@ -1252,7 +1252,7 @@ class MainWindow(QMainWindow):
                 if not self.loading and hasattr(self, 'filter_data'):
                     self.filter_data()
             except Exception as e:
-                print(f"過濾數據時發生錯誤: {str(e)}")
+                print(f"Error filtering data: {str(e)}")
 
     def on_search_text_changed(self):
         """當搜尋框文字改變時，重新啟動過濾計時器"""
@@ -1263,7 +1263,7 @@ class MainWindow(QMainWindow):
         try:
             # 檢查是否有載入檔案
             if not hasattr(self, 'last_loaded_index') or self.last_loaded_index is None:
-                QMessageBox.warning(self, "無法匯出", "請先載入回測結果檔案。")
+                QMessageBox.warning(self, "Cannot Export", "Please load a backtest CSV first.")
                 return
     
             # 取得目前檔案路徑
@@ -1274,7 +1274,7 @@ class MainWindow(QMainWindow):
             file_path = self.file_model.filePath(source_index)
     
             if not os.path.exists(file_path):
-                QMessageBox.critical(self, "錯誤", f"找不到檔案：{file_path}")
+                QMessageBox.critical(self, "Error", f"File not found: {file_path}")
                 return
     
             # 讀取 CSV 並提取 'code' 欄位
@@ -1283,10 +1283,10 @@ class MainWindow(QMainWindow):
                 df = pd.read_csv(file_path, usecols=['code'])
             except ValueError as ve:
                 # 欄位不存在
-                QMessageBox.critical(self, "錯誤", f"CSV 檔案中找不到 'code' 欄位。")
+                QMessageBox.critical(self, "Error", f"Column 'code' not found in CSV.")
                 return
             except Exception as e:
-                QMessageBox.critical(self, "錯誤", f"讀取 CSV 檔案時發生錯誤：{str(e)}")
+                QMessageBox.critical(self, "Error", f"Error reading CSV: {str(e)}")
                 return
     
             code_list = df['code'].dropna().astype(str).tolist()
@@ -1296,21 +1296,21 @@ class MainWindow(QMainWindow):
             clipboard = QGuiApplication.clipboard()
             clipboard.setText(py_list_str)
     
-            QMessageBox.information(self, "匯出成功", "CSV 'code' 欄位內容已轉換為 Python list 並複製到剪貼板")
+            QMessageBox.information(self, "Exported", "CSV 'code' column has been copied as Python list to clipboard")
         except Exception as e:
-            QMessageBox.critical(self, "錯誤", f"匯出時發生未預期錯誤：{str(e)}")
+            QMessageBox.critical(self, "Error", f"Unexpected error during export: {str(e)}")
     
     def export_params_as_data_list(self):
         # 匯出目前載入的 CSV 檔案的參數欄位為 Python list of dict 並複製到剪貼簿
         try:
             # 檢查是否有載入資料
             if self.proxy_model is None or self.db_conn is None:
-                QMessageBox.warning(self, "無法匯出", "請先載入回測結果檔案。")
+                QMessageBox.warning(self, "Cannot Export", "Please load a backtest CSV first.")
                 return
 
             source_model = self.proxy_model.sourceModel()
             if not hasattr(source_model, "columns") or not hasattr(source_model, "db_conn"):
-                QMessageBox.warning(self, "無法匯出", "目前資料模型不支援此操作。")
+                QMessageBox.warning(self, "Cannot Export", "Current model does not support this operation.")
                 return
 
             # 必要欄位
@@ -1318,7 +1318,7 @@ class MainWindow(QMainWindow):
             available_fields = [col for col in required_fields if col in getattr(source_model, "columns", [])]
             missing_fields = [col for col in required_fields if col not in available_fields]
             if missing_fields:
-                QMessageBox.critical(self, "欄位缺失", f"資料中缺少必要欄位：{', '.join(missing_fields)}")
+                QMessageBox.critical(self, "Missing Columns", f"Required columns missing: {', '.join(missing_fields)}")
                 return
 
             # 查詢目前過濾條件下的資料
@@ -1330,7 +1330,7 @@ class MainWindow(QMainWindow):
                 cursor.execute(query, params) # 修改：傳入參數
                 rows = cursor.fetchall()
             except Exception as e:
-                QMessageBox.critical(self, "查詢錯誤", f"查詢資料庫時發生錯誤：{str(e)}")
+                QMessageBox.critical(self, "Query Error", f"Database query failed: {str(e)}")
                 return
 
             # 組成 Python list of dict 格式
@@ -1361,9 +1361,9 @@ class MainWindow(QMainWindow):
             clipboard = QGuiApplication.clipboard()
             clipboard.setText(py_data_str)
 
-            QMessageBox.information(self, "匯出成功", "參數資料已轉換為 Python list 並複製到剪貼簿。")
+            QMessageBox.information(self, "Exported", "Parameters have been copied as Python list to clipboard.")
         except Exception as e:
-            QMessageBox.critical(self, "錯誤", f"匯出參數時發生未預期錯誤：{str(e)}")
+            QMessageBox.critical(self, "Error", f"Unexpected error during export: {str(e)}")
 
     def filter_data(self):
         if self.loading:
@@ -1374,7 +1374,7 @@ class MainWindow(QMainWindow):
         filter_text = self.search_input.text().strip()
         source_model = self.proxy_model.sourceModel()
         if 'code' not in source_model.columns:
-            self.status_bar.showMessage("錯誤：資料中缺少 'code' 欄位，無法進行搜尋。")
+            self.status_bar.showMessage("Error: missing 'code' column; cannot search.")
             self.proxy_model.setFilterRegularExpression(QRegularExpression())
             self._update_status_bar()
             return
@@ -1407,7 +1407,7 @@ class MainWindow(QMainWindow):
         # 增加字體大小使圖表更清晰
         plt.rcParams.update({'font.size': 12})
 
-        if chart_type == "夏普比率分佈":
+        if chart_type == "Sharpe Distribution":
             try:
                 # 使用 SQL 查詢獲取夏普比率
                 cursor.execute(f"SELECT CAST(sharpe AS FLOAT) FROM {source_model.table_name} {full_clause}", params) # 修改：使用 full_clause 和 params
@@ -1416,20 +1416,20 @@ class MainWindow(QMainWindow):
                 if sharpe_values:
                     # 創建直方圖
                     ax.hist(sharpe_values, bins=15, color='skyblue', edgecolor='black')
-                    ax.set_title('夏普比率分佈')
-                    ax.set_xlabel('夏普比率')
-                    ax.set_ylabel('策略數量')
+                    ax.set_title('Sharpe Ratio Distribution')
+                    ax.set_xlabel('Sharpe Ratio')
+                    ax.set_ylabel('Strategy Count')
                     
                     # 添加垂直線標記 1.0 和 1.5 的夏普比率
-                    ax.axvline(x=1.0, color='orange', linestyle='--', label='夏普=1.0')
-                    ax.axvline(x=1.5, color='green', linestyle='--', label='夏普=1.5')
+                    ax.axvline(x=1.0, color='orange', linestyle='--', label='Sharpe=1.0')
+                    ax.axvline(x=1.5, color='green', linestyle='--', label='Sharpe=1.5')
                     ax.legend()
                 else:
-                    ax.text(0.5, 0.5, '沒有有效的夏普比率數據', ha='center', va='center', transform=ax.transAxes)
+                    ax.text(0.5, 0.5, 'No valid Sharpe values', ha='center', va='center', transform=ax.transAxes)
             except Exception as e:
-                ax.text(0.5, 0.5, f'無法生成夏普比率分佈圖: {str(e)}', ha='center', va='center', transform=ax.transAxes)
+                ax.text(0.5, 0.5, f'Failed to render Sharpe distribution: {str(e)}', ha='center', va='center', transform=ax.transAxes)
             
-        elif chart_type == "參數分析":
+        elif chart_type == "Parameter Analysis":
             try:
                 # 使用 SQL 查詢計算各個 decay 值的平均夏普比率
                 # 組合 WHERE 子句
@@ -1465,9 +1465,9 @@ class MainWindow(QMainWindow):
                     
                     # 繪製條形圖
                     bars = ax.bar(decays, avg_sharpes, color='lightgreen')
-                    ax.set_title('不同衰減參數的平均夏普比率')
-                    ax.set_xlabel('衰減參數')
-                    ax.set_ylabel('平均夏普比率')
+                    ax.set_title('Average Sharpe by Decay')
+                    ax.set_xlabel('Decay')
+                    ax.set_ylabel('Average Sharpe')
                     
                     # 為條形圖添加數值標籤
                     for bar in bars:
@@ -1475,11 +1475,11 @@ class MainWindow(QMainWindow):
                         ax.text(bar.get_x() + bar.get_width()/2., height + 0.01,
                                f'{height:.2f}', ha='center', va='bottom')
                 else:
-                    ax.text(0.5, 0.5, '沒有有效的參數分析數據', ha='center', va='center', transform=ax.transAxes)
+                    ax.text(0.5, 0.5, 'No valid data for parameter analysis', ha='center', va='center', transform=ax.transAxes)
             except Exception as e:
-                ax.text(0.5, 0.5, f'無法生成參數分析圖: {str(e)}', ha='center', va='center', transform=ax.transAxes)
+                ax.text(0.5, 0.5, f'Failed to render parameter analysis: {str(e)}', ha='center', va='center', transform=ax.transAxes)
             
-        elif chart_type == "中性化方法比較":
+        elif chart_type == "Neutralization Comparison":
             try:
                 # 使用 SQL 查詢計算各個中性化方法的平均夏普比率
                 # 組合 WHERE 子句
@@ -1513,9 +1513,9 @@ class MainWindow(QMainWindow):
                     
                     # 繪製條形圖
                     bars = ax.bar(methods, avg_sharpes, color='coral')
-                    ax.set_title('不同中性化方法的平均夏普比率')
-                    ax.set_xlabel('中性化方法')
-                    ax.set_ylabel('平均夏普比率')
+                    ax.set_title('Average Sharpe by Neutralization')
+                    ax.set_xlabel('Neutralization')
+                    ax.set_ylabel('Average Sharpe')
                     
                     # 為條形圖添加數值標籤
                     for bar in bars:
@@ -1523,11 +1523,11 @@ class MainWindow(QMainWindow):
                         ax.text(bar.get_x() + bar.get_width()/2., height + 0.01,
                                f'{height:.2f}', ha='center', va='bottom')
                 else:
-                    ax.text(0.5, 0.5, '沒有有效的中性化方法數據', ha='center', va='center', transform=ax.transAxes)
+                    ax.text(0.5, 0.5, 'No valid data for neutralization methods', ha='center', va='center', transform=ax.transAxes)
             except Exception as e:
-                ax.text(0.5, 0.5, f'無法生成中性化方法比較圖: {str(e)}', ha='center', va='center', transform=ax.transAxes)
+                ax.text(0.5, 0.5, f'Failed to render neutralization comparison: {str(e)}', ha='center', va='center', transform=ax.transAxes)
             
-        elif chart_type == "截面分析":
+        elif chart_type == "Cross-sectional Analysis":
             try:
                 # 使用 SQL 查詢獲取夏普比率和換手率
                 # 組合 WHERE 子句
@@ -1562,9 +1562,9 @@ class MainWindow(QMainWindow):
                     
                     # 繪製散點圖
                     ax.scatter(turnover_values, sharpe_values, alpha=0.5, c='blue')
-                    ax.set_title('夏普比率與換手率關係')
-                    ax.set_xlabel('換手率')
-                    ax.set_ylabel('夏普比率')
+                    ax.set_title('Sharpe vs Turnover')
+                    ax.set_xlabel('Turnover')
+                    ax.set_ylabel('Sharpe')
                     
                     # 添加趨勢線
                     try:
@@ -1572,14 +1572,14 @@ class MainWindow(QMainWindow):
                             slope, intercept, r_value, p_value, std_err = stats.linregress(turnover_values, sharpe_values)
                             x = np.array([min(turnover_values), max(turnover_values)])
                             ax.plot(x, intercept + slope*x, 'r',
-                                   label=f'趨勢線 (r²={r_value**2:.2f})')
+                                   label=f'Trend (r²={r_value**2:.2f})')
                             ax.legend()
                     except:
                         pass  # 如果無法添加趨勢線，就跳過
                 else:
-                    ax.text(0.5, 0.5, '沒有有效的截面分析數據', ha='center', va='center', transform=ax.transAxes)
+                    ax.text(0.5, 0.5, 'No valid data for cross-sectional analysis', ha='center', va='center', transform=ax.transAxes)
             except Exception as e:
-                ax.text(0.5, 0.5, f'無法生成截面分析圖: {str(e)}', ha='center', va='center', transform=ax.transAxes)
+                ax.text(0.5, 0.5, f'Failed to render cross-sectional analysis: {str(e)}', ha='center', va='center', transform=ax.transAxes)
 
         # 調整圖表佈局以確保所有元素都顯示
         self.canvas.figure.tight_layout()
@@ -1594,14 +1594,14 @@ class MainWindow(QMainWindow):
 
         # 檢查索引是否來自正確的代理模型
         if index.model() is not self.proxy_model:
-             print(f"警告: handle_cell_click 收到來自錯誤模型的索引 (預期: {self.proxy_model}, 收到: {index.model()})")
-             self.status_bar.showMessage("內部錯誤：處理點擊時模型不匹配")
-             return
+            print(f"警告: handle_cell_click 收到來自錯誤模型的索引 (預期: {self.proxy_model}, 收到: {index.model()})")
+            self.status_bar.showMessage("Internal error: model mismatch while handling click")
+            return
         # --- 新增結束 ---
 
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             # 這個檢查理論上可以移除，因為上面的檢查更嚴格，但保留也無妨
-            self.status_bar.showMessage("無法處理點擊：數據集或模型不存在")
+            self.status_bar.showMessage("Cannot handle click: model not ready")
             return
 
         # Ignore clicks on the checkbox column itself for link/code actions
@@ -1610,7 +1610,7 @@ class MainWindow(QMainWindow):
 
         # Check if the view index is valid before mapping
         if not index.isValid():
-            self.status_bar.showMessage("無法處理點擊：無效的視圖索引")
+            self.status_bar.showMessage("Cannot handle click: invalid view index")
             return
 
         # Map view index (proxy) to source model index
@@ -1618,7 +1618,7 @@ class MainWindow(QMainWindow):
 
         # Check if the source index is valid after mapping
         if not source_index.isValid():
-            self.status_bar.showMessage("無法處理點擊：無法映射到有效的源索引")
+            self.status_bar.showMessage("Cannot handle click: cannot map to valid source index")
             return
 
         source_model = self.proxy_model.sourceModel()
@@ -1643,12 +1643,12 @@ class MainWindow(QMainWindow):
             if column_name.lower() == 'link' and value:
                 try:
                     webbrowser.open(value)
-                    self.status_bar.showMessage(f"已在瀏覽器中打開: {value}")
+                    self.status_bar.showMessage(f"Opened in browser: {value}")
                 except Exception as e:
-                    self.status_bar.showMessage(f"無法打開連結: {str(e)}")
+                    self.status_bar.showMessage(f"Failed to open link: {str(e)}")
 
             elif column_name.lower() == 'code':
-                title = "策略代碼詳細信息"
+                title = "Strategy Code Details"
                 try:
                     link_col_index = -1
                     try:
@@ -1668,7 +1668,7 @@ class MainWindow(QMainWindow):
                                  link = str(link_value)
                                  try:
                                      # 嘗試從連結提取標題部分
-                                     title = f"策略詳細信息 - {link.split('/')[-1]}"
+                                      title = f"Strategy Details - {link.split('/')[-1]}"
                                  except:
                                      pass # 如果連結格式不符，保持預設標題
                 except Exception as e:
@@ -1679,23 +1679,23 @@ class MainWindow(QMainWindow):
                 dialog.exec()
 
             elif len(value) > 30:  # Show details for any long text
-                dialog = DetailDialog(f"{column_name} - 詳細內容", value, self)
+                dialog = DetailDialog(f"{column_name} - Details", value, self)
                 dialog.exec()
 
         except Exception as e:
-            self.status_bar.showMessage(f"處理單元格點擊時出錯: {str(e)}")
+            self.status_bar.showMessage(f"Error handling cell click: {str(e)}")
 
     # 應用數值過濾
     def apply_numeric_filter(self):
         if self.loading:
             return
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            self.status_bar.showMessage("當前沒有數據可過濾")
+            self.status_bar.showMessage("No data to filter")
             return
 
         column_name = self.condition_column.currentText()
         if not column_name:
-            self.status_bar.showMessage("請先選擇要過濾的數值欄位")
+            self.status_bar.showMessage("Please choose a numeric column to filter")
             return
 
         operator = self.condition_operator.currentText()
@@ -1706,7 +1706,7 @@ class MainWindow(QMainWindow):
         except ValueError:
              # 如果不能轉為浮點數，則視為字串處理 (雖然下拉選單限制了欄位，但以防萬一)
              # 或者直接報錯？在此情境下報錯更合理
-             self.status_bar.showMessage("請輸入有效數字進行過濾")
+             self.status_bar.showMessage("Enter a valid number for filtering")
              return
 
         source_model = self.proxy_model.sourceModel()
@@ -1726,7 +1726,7 @@ class MainWindow(QMainWindow):
     # 修改: 開啟自訂欄位選擇對話框
     def open_custom_column_selector(self): # Renamed method
         if self.current_dataset is None:
-            QMessageBox.warning(self, "無數據", "請先載入回測結果文件。")
+            QMessageBox.warning(self, "No Data", "Please load a backtest file first.")
             return
 
         # Pass current columns and currently visible columns to the dialog
@@ -1734,12 +1734,12 @@ class MainWindow(QMainWindow):
         if dialog.exec():
             self.visible_columns = dialog.get_selected_columns()
             self.apply_column_visibility()
-            self.status_bar.showMessage(f"已更新顯示欄位，顯示 {len(self.visible_columns)} 個欄位")
+            self.status_bar.showMessage(f"Updated visible columns: {len(self.visible_columns)} shown")
 
     # 新增: 只顯示結果相關欄位
     def show_results_only_columns(self):
         if self.current_dataset is None:
-             QMessageBox.warning(self, "無數據", "請先載入回測結果文件。")
+             QMessageBox.warning(self, "No Data", "Please load a backtest file first.")
              return
 
         # Predefined list of columns for "results only" view
@@ -1749,7 +1749,7 @@ class MainWindow(QMainWindow):
         self.visible_columns = [col for col in results_columns if col in self.current_dataset.columns]
 
         self.apply_column_visibility()
-        self.status_bar.showMessage(f"已切換為只顯示結果欄位，顯示 {len(self.visible_columns)} 個欄位")
+        self.status_bar.showMessage(f"Switched to results-only view: {len(self.visible_columns)} columns")
 
 
     # 新增: 應用欄位可見性
@@ -1785,20 +1785,20 @@ class MainWindow(QMainWindow):
     # 新增: 儲存選取的資料列
     def save_selected_rows(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            QMessageBox.warning(self, "無法儲存", "沒有載入的數據集。")
+            QMessageBox.warning(self, "Cannot Save", "No dataset loaded.")
             return
 
         source_model = self.proxy_model.sourceModel()
         checked_rowids = source_model.get_checked_rows()
 
         if not checked_rowids:
-            QMessageBox.information(self, "沒有選取", "請先勾選要儲存的資料列。")
+            QMessageBox.information(self, "No Selection", "Please check rows to save.")
             return
 
         # 只詢問檔名，並儲存在 DATA_DIR
         # 取得 DATA_DIR（與 app.py 保持一致）
         DATA_DIR = "data"
-        filename, ok = QInputDialog.getText(self, "儲存選取的資料", "請輸入檔名（不含副檔名）:")
+        filename, ok = QInputDialog.getText(self, "Save Selected Rows", "Enter file name (without extension):")
         
         if ok and filename.strip():
             file_path = os.path.join(DATA_DIR, filename.strip() + ".csv")
@@ -1815,37 +1815,37 @@ class MainWindow(QMainWindow):
                 df = pd.DataFrame(rows, columns=source_model.columns)
                 df.to_csv(file_path, index=False, encoding='utf-8-sig')
                 
-                self.status_bar.showMessage(f"已將 {len(df)} 筆選取的資料儲存至 {os.path.basename(file_path)}")
-                QMessageBox.information(self, "儲存成功", f"已成功儲存 {len(df)} 筆資料至:\n{file_path}")
+                self.status_bar.showMessage(f"Saved {len(df)} rows to {os.path.basename(file_path)}")
+                QMessageBox.information(self, "Saved", f"Successfully saved {len(df)} rows to:\n{file_path}")
                 
             except Exception as e:
-                QMessageBox.critical(self, "儲存失敗", f"儲存檔案時發生錯誤：\n{str(e)}")
-                self.status_bar.showMessage(f"儲存檔案失敗: {str(e)}")
+                QMessageBox.critical(self, "Save Failed", f"Error saving file:\n{str(e)}")
+                self.status_bar.showMessage(f"Save failed: {str(e)}")
         else:
-            self.status_bar.showMessage("已取消儲存選取的資料")
+            self.status_bar.showMessage("Save canceled")
 
     # 新增：附加選取至檔案
     def append_selected_rows(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            QMessageBox.warning(self, "無法附加", "沒有載入的數據集。")
+            QMessageBox.warning(self, "Cannot Append", "No dataset loaded.")
             return
 
         source_model = self.proxy_model.sourceModel()
         checked_rowids = source_model.get_checked_rows()
 
         if not checked_rowids:
-            QMessageBox.information(self, "沒有選取", "請先勾選要附加的資料列。")
+            QMessageBox.information(self, "No Selection", "Please check rows to append.")
             return
 
         file_path, _ = QFileDialog.getOpenFileName(
             self,
-            "選擇要附加的 CSV 檔案",
+            "Choose CSV to append to",
             "",
-            "CSV 檔案 (*.csv)"
+            "CSV Files (*.csv)"
         )
 
         if not file_path:
-            self.status_bar.showMessage("已取消附加操作")
+            self.status_bar.showMessage("Append canceled")
             return
 
         try:
@@ -1855,43 +1855,43 @@ class MainWindow(QMainWindow):
             rows = cursor.fetchall()
 
             if not rows:
-                QMessageBox.information(self, "沒有資料", "選取的資料列查無資料。")
-                self.status_bar.showMessage("附加失敗：查無資料")
+                QMessageBox.information(self, "No Data", "No data found for selected rows.")
+                self.status_bar.showMessage("Append failed: no data")
                 return
 
             df = pd.DataFrame(rows, columns=source_model.columns)
             df.to_csv(file_path, mode='a', header=False, index=False, encoding='utf-8-sig')
 
-            self.status_bar.showMessage(f"已將 {len(df)} 筆選取的資料附加至 {os.path.basename(file_path)}")
-            QMessageBox.information(self, "附加成功", f"已成功將 {len(df)} 筆資料附加至:\n{file_path}")
+            self.status_bar.showMessage(f"Appended {len(df)} rows to {os.path.basename(file_path)}")
+            QMessageBox.information(self, "Appended", f"Successfully appended {len(df)} rows to:\n{file_path}")
 
         except Exception as e:
-            self.status_bar.showMessage(f"附加檔案失敗: {str(e)}")
-            QMessageBox.critical(self, "附加失敗", f"附加檔案時發生錯誤：\n{str(e)}")
+            self.status_bar.showMessage(f"Append failed: {str(e)}")
+            QMessageBox.critical(self, "Append Failed", f"Error while appending:\n{str(e)}")
 
     # 新增：刪除選取的資料列
     def delete_selected_rows(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            QMessageBox.warning(self, "無法刪除", "沒有載入的數據集。")
+            QMessageBox.warning(self, "Cannot Delete", "No dataset loaded.")
             return
 
         source_model = self.proxy_model.sourceModel()
         checked_rowids = source_model.get_checked_rows()
 
         if not checked_rowids:
-            QMessageBox.information(self, "沒有選取", "請先勾選要刪除的資料列。")
+            QMessageBox.information(self, "No Selection", "Please check rows to delete.")
             return
 
         reply = QMessageBox.question(
             self,
-            "確認刪除",
-            f"確定要刪除已勾選的 {len(checked_rowids)} 筆資料嗎？此操作無法復原。",
+            "Confirm Delete",
+            f"Delete {len(checked_rowids)} selected rows? This cannot be undone.",
             QMessageBox.Yes | QMessageBox.No,
             QMessageBox.No
         )
 
         if reply != QMessageBox.Yes:
-            self.status_bar.showMessage("已取消刪除操作")
+            self.status_bar.showMessage("Deletion canceled")
             return
 
         try:
@@ -1918,7 +1918,7 @@ class MainWindow(QMainWindow):
             try:
                 df_csv = pd.read_csv(file_path, dtype=str, keep_default_na=False)
             except Exception as e:
-                QMessageBox.critical(self, "讀取 CSV 失敗", f"讀取原始 CSV 檔案時發生錯誤：\n{str(e)}")
+                QMessageBox.critical(self, "Read CSV Failed", f"Error reading original CSV:\n{str(e)}")
                 return
 
             # 4. 型態與欄位順序對齊
@@ -1930,14 +1930,14 @@ class MainWindow(QMainWindow):
                 df_merged = df_csv.merge(df_to_delete, how='left', indicator=True)
                 df_csv_updated = df_merged[df_merged['_merge'] == 'left_only'].drop(columns=['_merge'])
             except Exception as e:
-                QMessageBox.critical(self, "資料處理錯誤", f"比對刪除資料時發生錯誤：\n{str(e)}")
+                QMessageBox.critical(self, "Data Error", f"Error during anti-join for deletion:\n{str(e)}")
                 return
 
             # 6. 覆蓋寫回 CSV
             try:
                 df_csv_updated.to_csv(file_path, index=False, encoding='utf-8-sig')
             except Exception as e:
-                QMessageBox.critical(self, "寫入 CSV 失敗", f"寫回原始 CSV 檔案時發生錯誤：\n{str(e)}")
+                QMessageBox.critical(self, "Write CSV Failed", f"Error writing back to original CSV:\n{str(e)}")
                 return
 
             # 7. 刪除 SQLite 資料
@@ -1946,17 +1946,17 @@ class MainWindow(QMainWindow):
             # 8. 刷新元數據與勾選狀態
             source_model.refresh_metadata()
             self.proxy_model.invalidate()
-            self.status_bar.showMessage(f"已刪除 {len(checked_rowids)} 筆資料（含永久刪除 CSV）")
+            self.status_bar.showMessage(f"Deleted {len(checked_rowids)} rows (and updated CSV)")
         except Exception as e:
-            self.status_bar.showMessage(f"刪除資料失敗: {str(e)}")
-            QMessageBox.critical(self, "刪除失敗", f"刪除資料時發生錯誤：\n{str(e)}")
+            self.status_bar.showMessage(f"Delete failed: {str(e)}")
+            QMessageBox.critical(self, "Delete Failed", f"Error deleting rows:\n{str(e)}")
 
     @Slot()
     def on_import_selected_code_clicked(self):
         """處理 '匯入已選 Code' 選項"""
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            QMessageBox.warning(self, "無法匯入", "沒有載入的數據集。")
-            self.status_bar.showMessage("無法匯入：未載入數據")
+            QMessageBox.warning(self, "Cannot Import", "No dataset loaded.")
+            self.status_bar.showMessage("Cannot import: no data loaded")
             return
 
         source_model = self.proxy_model.sourceModel()
@@ -1964,8 +1964,8 @@ class MainWindow(QMainWindow):
         # 獲取已勾選的 rowid 列表
         checked_rowids = source_model.get_checked_rows()
         if not checked_rowids:
-            QMessageBox.information(self, "沒有選取", "請先勾選要匯入的資料列。")
-            self.status_bar.showMessage("未匯入：沒有勾選資料列")
+            QMessageBox.information(self, "No Selection", "Please check rows to import.")
+            self.status_bar.showMessage("Not imported: no rows checked")
             return
 
         try:
@@ -1978,21 +1978,21 @@ class MainWindow(QMainWindow):
             if selected_codes:
                 # 發送信號
                 self.import_code_requested.emit(selected_codes)
-                self.status_bar.showMessage(f"已請求將 {len(selected_codes)} 個選取的 Code 匯入生成器")
+                self.status_bar.showMessage(f"Requested to import {len(selected_codes)} selected codes to Generator")
             else:
-                QMessageBox.warning(self, "無有效代碼", "選取的資料中沒有找到有效的代碼。")
-                self.status_bar.showMessage("匯入失敗：無有效代碼")
+                QMessageBox.warning(self, "No Valid Codes", "No valid code found in selection.")
+                self.status_bar.showMessage("Import failed: no valid code")
 
         except Exception as e:
-            QMessageBox.critical(self, "匯入失敗", f"提取選取的 Code 時發生錯誤：\n{str(e)}")
-            self.status_bar.showMessage(f"匯入選取的 Code 失敗: {str(e)}")
+            QMessageBox.critical(self, "Import Failed", f"Error extracting selected codes:\n{str(e)}")
+            self.status_bar.showMessage(f"Import selected codes failed: {str(e)}")
 
     @Slot()
     def on_import_all_code_clicked(self):
         """處理 '匯入所有 Code' 選項"""
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            QMessageBox.warning(self, "無法匯入", "沒有載入的數據集。")
-            self.status_bar.showMessage("無法匯入：未載入數據")
+            QMessageBox.warning(self, "Cannot Import", "No dataset loaded.")
+            self.status_bar.showMessage("Cannot import: no data loaded")
             return
 
         source_model = self.proxy_model.sourceModel()
@@ -2008,28 +2008,28 @@ class MainWindow(QMainWindow):
             if all_codes:
                 # 發送信號
                 self.import_code_requested.emit(all_codes)
-                self.status_bar.showMessage(f"已請求將全部 {len(all_codes)} 個 Code 匯入生成器")
+                self.status_bar.showMessage(f"Requested to import all {len(all_codes)} codes to Generator")
             else:
-                QMessageBox.warning(self, "無有效代碼", "當前數據中沒有找到有效的代碼。")
-                self.status_bar.showMessage("匯入失敗：無有效代碼")
+                QMessageBox.warning(self, "No Valid Codes", "No valid code found in dataset.")
+                self.status_bar.showMessage("Import failed: no valid code")
 
         except Exception as e:
-            QMessageBox.critical(self, "匯入失敗", f"提取所有 Code 時發生錯誤：\n{str(e)}")
-            self.status_bar.showMessage(f"匯入所有 Code 失敗: {str(e)}")
+            QMessageBox.critical(self, "Import Failed", f"Error extracting all codes:\n{str(e)}")
+            self.status_bar.showMessage(f"Import all codes failed: {str(e)}")
 
     @Slot()
     def on_import_selected_data_to_sim_clicked(self):
         """處理 '匯入選擇的數據至模擬' 選項"""
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            QMessageBox.warning(self, "無法匯入", "請先載入回測結果文件。")
-            self.status_bar.showMessage("無法匯入：未載入數據")
+            QMessageBox.warning(self, "Cannot Import", "Please load a backtest file first.")
+            self.status_bar.showMessage("Cannot import: no data loaded")
             return
 
         source_model = self.proxy_model.sourceModel()
         checked_rowids = source_model.get_checked_rows()
         if not checked_rowids:
-            QMessageBox.information(self, "沒有選取", "請先勾選要匯入的資料列。")
-            self.status_bar.showMessage("未匯入：沒有勾選資料列")
+            QMessageBox.information(self, "No Selection", "Please check rows to import.")
+            self.status_bar.showMessage("Not imported: no rows checked")
             return
 
         try:
@@ -2041,20 +2041,20 @@ class MainWindow(QMainWindow):
             if rows:
                 df = pd.DataFrame(rows, columns=source_model.columns)
                 self.import_data_requested.emit(df)
-                self.status_bar.showMessage(f"已請求將 {len(df)} 筆選定的數據追加到模擬器")
+                self.status_bar.showMessage(f"Requested to import {len(df)} selected rows to Simulation")
             else:
-                QMessageBox.warning(self, "無數據", "選定的資料列查無數據。")
-                self.status_bar.showMessage("匯入失敗：無可用數據")
+                QMessageBox.warning(self, "No Data", "No data found for selected rows.")
+                self.status_bar.showMessage("Import failed: no data")
         except Exception as e:
-            QMessageBox.critical(self, "匯入失敗", f"提取選定數據時發生錯誤：\n{str(e)}")
-            self.status_bar.showMessage(f"匯入選定數據失敗: {str(e)}")
+            QMessageBox.critical(self, "Import Failed", f"Error extracting selected rows:\n{str(e)}")
+            self.status_bar.showMessage(f"Import selected rows failed: {str(e)}")
 
     @Slot()
     def on_import_data_to_sim_clicked(self):
         """處理 '匯入所有數據至模擬' 選項"""
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            QMessageBox.warning(self, "無數據", "請先載入回測結果文件。")
-            self.status_bar.showMessage("無法匯入：未載入數據")
+            QMessageBox.warning(self, "No Data", "Please load a backtest file first.")
+            self.status_bar.showMessage("Cannot import: no data loaded")
             return
 
         source_model = self.proxy_model.sourceModel()
@@ -2071,14 +2071,14 @@ class MainWindow(QMainWindow):
                 df = pd.DataFrame(rows, columns=source_model.columns)
                 # 發送信號
                 self.import_data_requested.emit(df)
-                self.status_bar.showMessage(f"已請求將 {len(df)} 筆數據追加到模擬器")
+                self.status_bar.showMessage(f"Requested to import all {len(df)} rows to Simulation")
             else:
-                QMessageBox.warning(self, "無數據", "當前過濾條件下沒有可用的數據。")
-                self.status_bar.showMessage("匯入失敗：無可用數據")
+                QMessageBox.warning(self, "No Data", "No rows available under current filters.")
+                self.status_bar.showMessage("Import failed: no data available")
 
         except Exception as e:
-            QMessageBox.critical(self, "匯入失敗", f"提取數據時發生錯誤：\n{str(e)}")
-            self.status_bar.showMessage(f"匯入數據失敗: {str(e)}")
+            QMessageBox.critical(self, "Import Failed", f"Error extracting rows:\n{str(e)}")
+            self.status_bar.showMessage(f"Import all rows failed: {str(e)}")
 
     def show_file_context_menu(self, position):
         """顯示文件右鍵選單"""
@@ -2094,8 +2094,8 @@ class MainWindow(QMainWindow):
 
         # 創建選單
         menu = QMenu()
-        rename_action = menu.addAction("重命名")
-        delete_action = menu.addAction("刪除")
+        rename_action = menu.addAction("Rename")
+        delete_action = menu.addAction("Delete")
 
         # 執行選單並取得選擇的動作
         action = menu.exec_(self.file_view.viewport().mapToGlobal(position))
@@ -2106,13 +2106,13 @@ class MainWindow(QMainWindow):
             self.delete_file(file_path)
 
     def rename_file(self, file_path):
-        """重命名文件"""
+        """Rename file"""
         old_name = os.path.basename(file_path)
         name_without_ext, ext = os.path.splitext(old_name)
         new_name, ok = QInputDialog.getText(
             self,
-            "重命名文件",
-            "請輸入新的文件名稱：",
+            "Rename File",
+            "Enter new file name:",
             text=name_without_ext
         )
 
@@ -2120,26 +2120,26 @@ class MainWindow(QMainWindow):
             try:
                 new_path = os.path.join(os.path.dirname(file_path), new_name + ext)
                 if os.path.exists(new_path):
-                    QMessageBox.warning(self, "錯誤", f"文件 '{os.path.basename(new_path)}' 已存在。")
+                    QMessageBox.warning(self, "Error", f"File '{os.path.basename(new_path)}' already exists.")
                     return
 
                 os.rename(file_path, new_path)
-                self.status_bar.showMessage(f"已將文件 '{old_name}' 重命名為 '{os.path.basename(new_path)}'")
+                self.status_bar.showMessage(f"Renamed '{old_name}' to '{os.path.basename(new_path)}'")
 
                 # 如果重命名的是當前載入的文件，更新標籤
                 if hasattr(self, 'current_file_label') and old_name == self.current_file_label.text():
                     self.current_file_label.setText(os.path.basename(new_path))
 
             except Exception as e:
-                QMessageBox.critical(self, "錯誤", f"重命名文件時發生錯誤：\\n{str(e)}")
+                QMessageBox.critical(self, "Error", f"Failed to rename file:\\n{str(e)}")
 
     def delete_file(self, file_path):
-        """刪除文件"""
+        """Delete file"""
         file_name = os.path.basename(file_path)
         reply = QMessageBox.question(
             self,
-            "確認刪除",
-            f"確定要刪除文件 '{file_name}' 嗎？\n此操作無法恢復。",
+            "Confirm Delete",
+            f"Delete file '{file_name}'?\nThis action cannot be undone.",
             QMessageBox.Yes | QMessageBox.No,
             QMessageBox.No
         )
@@ -2147,11 +2147,11 @@ class MainWindow(QMainWindow):
         if reply == QMessageBox.Yes:
             try:
                 os.remove(file_path)
-                self.status_bar.showMessage(f"已刪除文件 '{file_name}'")
+                self.status_bar.showMessage(f"Deleted file '{file_name}'")
 
                 # 如果刪除的是當前載入的文件，清空顯示
                 if hasattr(self, 'current_file_label') and file_name == self.current_file_label.text():
-                    self.current_file_label.setText("未載入檔案")
+                    self.current_file_label.setText("No file loaded")
                     self.current_dataset = None
                     if self.proxy_model and isinstance(self.proxy_model.sourceModel(), DataFrameModel):
                         model = self.proxy_model.sourceModel()
@@ -2162,10 +2162,10 @@ class MainWindow(QMainWindow):
                     self.import_button.setEnabled(False)
 
             except Exception as e:
-                QMessageBox.critical(self, "錯誤", f"刪除文件時發生錯誤：\n{str(e)}")
+                QMessageBox.critical(self, "Error", f"Failed to delete file:\n{str(e)}")
 
     def show_table_context_menu(self, position):
-        """顯示表格右鍵選單，包含批次勾選/取消勾選與選取操作"""
+        """Show table context menu including batch check/uncheck and selection ops"""
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             return
 
@@ -2227,7 +2227,7 @@ class MainWindow(QMainWindow):
         context_menu = QMenu(self)
         # 1. 批次勾選/取消勾選
         target_state = Qt.Unchecked if all_checked else Qt.Checked
-        action_text = "取消勾選選取項" if all_checked else "勾選選取項"
+        action_text = "Uncheck Selected" if all_checked else "Check Selected"
         toggle_check_action = QAction(action_text, self)
         toggle_check_action.triggered.connect(lambda: self.toggle_selected_rows_check_state(view_rows, target_state))
         context_menu.addAction(toggle_check_action)
@@ -2236,22 +2236,22 @@ class MainWindow(QMainWindow):
         context_menu.addSeparator()
 
         # 2. 反轉選取
-        action_invert = QAction("反轉選取", self)
+        action_invert = QAction("Invert Selection", self)
         action_invert.triggered.connect(self.invert_selection)
         context_menu.addAction(action_invert)
 
         # 3. 儲存選取為新檔案
-        action_save = QAction("儲存選取為新檔案", self)
+        action_save = QAction("Save Selected as New CSV", self)
         action_save.triggered.connect(self.save_selected_rows)
         context_menu.addAction(action_save)
 
         # 4. 附加選取至檔案
-        action_append = QAction("附加選取至檔案", self)
+        action_append = QAction("Append Selected to CSV", self)
         action_append.triggered.connect(self.append_selected_rows)
         context_menu.addAction(action_append)
 
         # 5. 刪除選取
-        action_delete = QAction("刪除選取", self)
+        action_delete = QAction("Delete Selected", self)
         action_delete.triggered.connect(self.delete_selected_rows)
         context_menu.addAction(action_delete)
 
@@ -2282,14 +2282,14 @@ class MainWindow(QMainWindow):
         if updated_count > 0:
              # Re-fetch checked count after updates
              checked_count = len(source_model.get_checked_rows())
-             self.status_bar.showMessage(f"已更新 {updated_count} 項勾選狀態 | 目前共勾選 {checked_count} 項")
+             self.status_bar.showMessage(f"Updated {updated_count} check states | {checked_count} rows checked")
         else:
-             self.status_bar.showMessage("未更新勾選狀態 (可能無效選擇或更新失敗)")
+             self.status_bar.showMessage("No check state updated (invalid selection?)")
 
 
     def invert_selection(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
-            QMessageBox.warning(self, "無法反轉", "目前沒有有效的回測結果表格。")
+            QMessageBox.warning(self, "Cannot Invert", "No valid backtest table.")
             return
 
         source_model = self.proxy_model.sourceModel()
@@ -2310,17 +2310,17 @@ class MainWindow(QMainWindow):
 
         # 更新狀態列
         checked_count = len(source_model.get_checked_rows())
-        self.status_bar.showMessage(f"已反轉選取狀態 | 目前共勾選 {checked_count} 項")
+        self.status_bar.showMessage(f"Inverted selection | {checked_count} rows checked")
 
     def _update_status_bar(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             # 考慮在沒有模型時顯示更清晰的狀態
             file_label_text = self.current_file_label.text()
-            if file_label_text == "未載入檔案":
-                 self.status_bar.showMessage("選擇左側的回測結果文件以開始瀏覽")
+            if file_label_text == "No file loaded":
+                 self.status_bar.showMessage("Select a backtest CSV on the left to begin")
             else:
                  # 可能檔案載入失敗或為空
-                 self.status_bar.showMessage(f"檔案: {file_label_text} | 無有效數據或載入失敗")
+                 self.status_bar.showMessage(f"File: {file_label_text} | No valid data or load failed")
             return
 
         source_model = self.proxy_model.sourceModel()
@@ -2336,14 +2336,14 @@ class MainWindow(QMainWindow):
 
         if raw_sql_active:
              # 假設 raw SQL 只用於 '全部欄位' 文字過濾
-             filter_desc.append(f"文字過濾(全部): '{self.search_input.text()}'")
+             filter_desc.append(f"Text filter (All): '{self.search_input.text()}'")
              # 數值過濾在 raw SQL 模式下被忽略
-             filter_desc.append("數值過濾: 無 (因使用全部欄位文字過濾)")
+             filter_desc.append("Numeric filter: None (using All-columns text filter)")
         elif rowid_filter_active:
              num_rowids = len(rowid_filter_active.get('val', []))
-             filter_desc.append(f"RowID 過濾: {num_rowids} 個")
-             filter_desc.append("文字過濾: 無")
-             filter_desc.append("數值過濾: 無")
+             filter_desc.append(f"RowID filter: {num_rowids}")
+             filter_desc.append("Text filter: None")
+             filter_desc.append("Numeric filter: None")
         else:
              # 處理參數化條件
              text_filter = conditions.get('text')
@@ -2351,31 +2351,31 @@ class MainWindow(QMainWindow):
 
              if text_filter:
                  search_term = str(text_filter.get('val', '')).strip('%')
-                 filter_desc.append(f"Code 搜尋: '{search_term}'")
+                 filter_desc.append(f"Code Search: '{search_term}'")
              else:
-                 filter_desc.append("Code 搜尋: 無") # Update label
+                 filter_desc.append("Code Search: None")
 
              if numeric_filter:
-                 filter_desc.append(f"數值過濾({numeric_filter.get('col')} {numeric_filter.get('op')} {numeric_filter.get('val')})")
+                 filter_desc.append(f"Numeric Filter({numeric_filter.get('col')} {numeric_filter.get('op')} {numeric_filter.get('val')})")
              else:
-                 filter_desc.append("數值過濾: 無")
+                 filter_desc.append("Numeric filter: None")
 
-        status_text = f"顯示 {filtered_count}/{total_count} 條記錄 | {' | '.join(filter_desc)}"
+        status_text = f"Showing {filtered_count}/{total_count} rows | {' | '.join(filter_desc)}"
         self.status_bar.showMessage(status_text)
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     
-    # 設置應用程序樣式
+    # App style
     app.setStyle("Fusion")
     
-    # 檢查 *預設* 數據目錄是否存在 (因為直接運行時使用預設路徑)
+    # Check default data directory exists
     default_data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
     if not os.path.exists(default_data_path):
-        QMessageBox.warning(None, "警告", f"找不到預設數據目錄: {default_data_path}\n請確保程式所在目錄中存在data資料夾。")
+        QMessageBox.warning(None, "Warning", f"Default data directory not found: {default_data_path}\nEnsure a 'data' folder exists in the app directory.")
     
-    # 創建 MainWindow 時不傳遞 data_path，讓它使用預設值
+    # Create MainWindow without data_path to use default
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
