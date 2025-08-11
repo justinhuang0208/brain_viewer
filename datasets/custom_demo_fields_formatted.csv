@@ -1,0 +1,8 @@
+Field,Description,Type,Coverage,Users,Alphas
+demo_close,Daily close price,Vector,95%,120,300
+demo_volume,Daily volume,Vector,92%,110,280
+demo_return_5d,5-day return,Vector,88%,90,250
+demo_beta,Market beta estimate,Scalar,80%,60,180
+demo_inst_density,Institutional density,Matrix,75%,40,120
+
+
