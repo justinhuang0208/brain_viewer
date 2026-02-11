@@ -113,6 +113,8 @@ import json
 import time
 import pandas as pd
 import os
+import webbrowser
+from urllib.parse import urljoin
 from concurrent.futures import ThreadPoolExecutor
 from threading import Lock # Import Lock for thread-safe writing
 
@@ -701,6 +703,15 @@ class SimulationWidget(QWidget):
         if self.simulation_thread and self.simulation_thread.isRunning():
             QMessageBox.warning(self, "Too Fast", "Previous simulation thread still cleaning up. Please try again shortly.")
             return
+
+        if self.active_wq_session is None:
+            QMessageBox.warning(
+                self,
+                "Login Required",
+                "請先按下 Check Login 完成登入與 Persona 生物辨識驗證，再執行模擬。"
+            )
+            self.progress_label.setText("尚未登入，請先完成 Check Login")
+            return
     
         self._reset_table_colors()
 
@@ -908,17 +919,59 @@ class SimulationWidget(QWidget):
         QMessageBox.critical(self, "Login Check Failed", error_message)
         self.progress_label.setText(f"Login check failed: {error_message}")
 
-    @Slot(str)
-    def handle_validation_required(self, persona_url):
+    @Slot(object, str)
+    def handle_validation_required(self, session, persona_url):
         """Handle biometric validation required"""
-        QMessageBox.warning(self, "Verification Required", f"Biometric verification required, please visit:\n{persona_url}")
-        self.progress_label.setText("Verification required")
+        browser_opened = webbrowser.open(persona_url)
+        browser_msg = "已嘗試自動開啟瀏覽器。" if browser_opened else "無法自動開啟瀏覽器，請手動複製連結開啟。"
+
+        msg_box = QMessageBox(self)
+        msg_box.setIcon(QMessageBox.Warning)
+        msg_box.setWindowTitle("Verification Required")
+        msg_box.setText("偵測到 Persona 生物辨識驗證。")
+        msg_box.setInformativeText(
+            f"{browser_msg}\n\n請在瀏覽器完成驗證後，回到程式按「我已完成驗證」。\n\n{persona_url}"
+        )
+        complete_btn = msg_box.addButton("我已完成驗證", QMessageBox.AcceptRole)
+        msg_box.addButton("取消", QMessageBox.RejectRole)
+        msg_box.setDefaultButton(complete_btn)
+        msg_box.exec()
+
+        if msg_box.clickedButton() != complete_btn:
+            self.active_wq_session = None
+            self.progress_label.setText("驗證已取消，請重新點選 Check Login")
+            return
+
+        self._start_persona_completion(session, persona_url)
+
+    def _start_persona_completion(self, session, persona_url):
+        active_thread = getattr(self, "persona_completion_thread", None)
+        if active_thread and active_thread.isRunning():
+            QMessageBox.information(self, "驗證進行中", "目前正在確認 Persona 驗證結果，請稍候。")
+            return
+
+        self.check_login_btn.setEnabled(False)
+        self.progress_label.setText("正在確認 Persona 驗證結果...")
+
+        self.persona_completion_thread = QThread()
+        self.persona_completion_worker = PersonaCompletionWorker(session, persona_url)
+        self.persona_completion_worker.moveToThread(self.persona_completion_thread)
+
+        self.persona_completion_worker.login_success.connect(self.handle_login_success)
+        self.persona_completion_worker.login_failed.connect(self.handle_login_failed)
+        self.persona_completion_worker.update_status.connect(self.progress_label.setText)
+        self.persona_completion_worker.finished.connect(self.persona_completion_thread.quit)
+        self.persona_completion_worker.finished.connect(self.persona_completion_worker.deleteLater)
+        self.persona_completion_thread.finished.connect(self.persona_completion_thread.deleteLater)
+        self.persona_completion_thread.finished.connect(lambda: self.check_login_btn.setEnabled(True))
+        self.persona_completion_thread.started.connect(self.persona_completion_worker.run)
+        self.persona_completion_thread.start()
 
 # LoginCheckWorker class for handling login checks in background
 class LoginCheckWorker(QObject):
     login_success = Signal(object)  # 改為可傳遞 session 物件
     login_failed = Signal(str)  # 傳遞錯誤訊息
-    validation_required = Signal(str)  # 傳遞驗證 URL
+    validation_required = Signal(object, str)  # 傳遞 session 和驗證 URL
     update_status = Signal(str)  # 用於更新進度標籤
     finished = Signal()
 
@@ -948,19 +1001,34 @@ class LoginCheckWorker(QObject):
         try:
             self.update_status.emit("正在檢查登入狀態...")
             r = session.post('https://api.worldquantbrain.com/authentication', timeout=10)
-            r.raise_for_status()
+            response_json = {}
+            if r.text:
+                try:
+                    response_json = r.json()
+                except ValueError:
+                    response_json = {}
 
-            response_json = r.json()
-            if 'user' in response_json:
+            if r.status_code == 200 and 'user' in response_json:
                 self.login_success.emit(session)  # 傳遞 session
-            elif 'inquiry' in response_json:
-                # 需要生物驗證
+                return
+
+            persona_url = None
+            if r.status_code == 401 and (r.headers.get("WWW-Authenticate") or "").lower() == "persona":
+                location = r.headers.get("Location")
+                if location:
+                    persona_url = urljoin(r.url, location)
+
+            if not persona_url and 'inquiry' in response_json:
                 persona_url = f"{r.url}/persona?inquiry={response_json['inquiry']}"
-                self.validation_required.emit(persona_url)
-            else:
-                # 其他登入失敗情況
-                error_detail = response_json.get('detail', '未知錯誤')
-                self.login_failed.emit(f"登入失敗: {error_detail}")
+
+            if persona_url:
+                self.validation_required.emit(session, persona_url)
+                return
+
+            error_detail = response_json.get('detail') if isinstance(response_json, dict) else None
+            if not error_detail:
+                error_detail = f"HTTP {r.status_code}"
+            self.login_failed.emit(f"登入失敗: {error_detail}")
 
         except requests.exceptions.Timeout:
             self.login_failed.emit("檢查登入狀態時連線超時")
@@ -970,6 +1038,39 @@ class LoginCheckWorker(QObject):
             self.login_failed.emit(f"檢查登入狀態時發生未知錯誤: {e}")
         finally:
             self.finished.emit()
+
+
+class PersonaCompletionWorker(QObject):
+    login_success = Signal(object)  # 傳遞已完成驗證的 session
+    login_failed = Signal(str)
+    update_status = Signal(str)
+    finished = Signal()
+
+    def __init__(self, session, persona_url):
+        super().__init__()
+        self.session = session
+        self.persona_url = persona_url
+
+    def run(self):
+        try:
+            self.update_status.emit("正在提交 Persona 驗證結果...")
+            # Align with open_machine flow: treat persona completion POST success as login success.
+            complete_response = self.session.post(self.persona_url)
+            if not complete_response.ok:
+                self.login_failed.emit(f"Persona 驗證提交失敗: HTTP {complete_response.status_code}")
+                return
+
+            self.update_status.emit("Persona 驗證完成，正在建立登入狀態...")
+            self.login_success.emit(self.session)
+        except requests.exceptions.Timeout:
+            self.login_failed.emit("驗證確認逾時，請重新執行 Check Login。")
+        except requests.exceptions.RequestException as e:
+            self.login_failed.emit(f"驗證確認時發生網路錯誤: {e}")
+        except Exception as e:
+            self.login_failed.emit(f"驗證確認時發生未知錯誤: {e}")
+        finally:
+            self.finished.emit()
+
 
 # Worker 類別，用於在背景執行緒中執行模擬
 class SimulationWorker(QObject):
@@ -1064,22 +1165,22 @@ class WQSession(requests.Session):
                 if 'inquiry' in r.json():
                     # 在背景執行緒中無法直接顯示 QMessageBox，需要透過信號通知主執行緒
                     if self.worker_ref:
-                        self.worker_ref.error_occurred.emit(f"需要驗證: 請先至 {r.url}/persona?inquiry={r.json()['inquiry']} 完成生物驗證")
+                        self.worker_ref.error_occurred.emit("", f"需要驗證: 請先至 {r.url}/persona?inquiry={r.json()['inquiry']} 完成生物驗證")
                     self.login_expired = True # 標記登入失敗
                     return
                 else:
                     if self.worker_ref:
-                        self.worker_ref.error_occurred.emit(f'登入失敗: WARNING! {r.json()}')
+                        self.worker_ref.error_occurred.emit("", f'登入失敗: WARNING! {r.json()}')
                     self.login_expired = True # 標記登入失敗
                     return
             logging.info('Logged in to WQBrain!')
         except FileNotFoundError:
             if self.worker_ref:
-                self.worker_ref.error_occurred.emit(f"登入失敗: 找不到憑證檔案 {self.json_fn}")
+                self.worker_ref.error_occurred.emit("", f"登入失敗: 找不到憑證檔案 {self.json_fn}")
             self.login_expired = True
         except Exception as e:
             if self.worker_ref:
-                self.worker_ref.error_occurred.emit(f"登入失敗: {type(e).__name__}: {e}")
+                self.worker_ref.error_occurred.emit("", f"登入失敗: {type(e).__name__}: {e}")
             self.login_expired = True
 
     def simulate(self, data):
@@ -1166,18 +1267,18 @@ class WQSession(requests.Session):
                             logging.error(f"{thread} -- 達到最大重試次數 ({max_retries})，放棄模擬請求。")
                             error_msg = f"API 請求過多 (429)，達到最大重試次數 ({max_retries})。"
                             if self.worker_ref:
-                                self.worker_ref.error_occurred.emit(error_msg) # Emit error signal
+                                self.worker_ref.error_occurred.emit(row_uuid, error_msg) # Emit error signal
                             return {'error': error_msg, 'alpha': alpha}
                     else:
                         # Handle other HTTP errors
                         logging.error(f"{thread} -- Simulation request failed with HTTP error: {http_err}")
                         if self.worker_ref:
-                            self.worker_ref.error_occurred.emit(f"模擬請求失敗: {http_err}")
+                            self.worker_ref.error_occurred.emit(row_uuid, f"模擬請求失敗: {http_err}")
                         return {'error': f"模擬請求失敗: {http_err}", 'alpha': alpha}
                 except requests.exceptions.RequestException as req_err: # Handle non-HTTP request errors (e.g., connection error)
                     logging.error(f"{thread} -- Simulation request failed: {req_err}")
                     if self.worker_ref:
-                        self.worker_ref.error_occurred.emit(f"模擬請求失敗: {req_err}")
+                        self.worker_ref.error_occurred.emit(row_uuid, f"模擬請求失敗: {req_err}")
                     return {'error': f"模擬請求失敗: {req_err}", 'alpha': alpha}
                 except Exception as e: # Catch other potential errors like missing headers or JSON parsing
                     logging.error(f"{thread} -- Error during simulation request: {e}")
@@ -1186,11 +1287,11 @@ class WQSession(requests.Session):
                         self.login_expired = True
                         error_msg = "登入憑證可能已過期，請重新登入或檢查憑證。"
                         if self.worker_ref:
-                            self.worker_ref.error_occurred.emit(error_msg)
+                            self.worker_ref.error_occurred.emit(row_uuid, error_msg)
                         return {'error': error_msg, 'alpha': alpha} # Return error
                     else:
                          if self.worker_ref:
-                            self.worker_ref.error_occurred.emit(error_msg)
+                            self.worker_ref.error_occurred.emit(row_uuid, error_msg)
                     return {'error': error_msg, 'alpha': alpha} # Return error
 
             logging.info(f'{thread} -- Obtained simulation link: {nxt}')
@@ -1318,7 +1419,7 @@ class WQSession(requests.Session):
                 error_msg = f"模擬失敗 ({alpha[:20]}...): {ok[1]}"
                 logging.info(f'{thread} -- Issue when sending simulation request: {ok[1]}')
                 if self.worker_ref:
-                    self.worker_ref.error_occurred.emit(error_msg)
+                    self.worker_ref.error_occurred.emit(row_uuid, error_msg)
                 row = [
                     0, delay, region,
                     neutralization, decay, truncation,
@@ -1417,7 +1518,7 @@ class WQSession(requests.Session):
                     # error_msg is set in the except blocks above
                     row = [0, delay, region, neutralization, decay, truncation, 0, 0, 0, 'FAIL', 0, -1, universe, f'alpha/{alpha_link}', alpha]
                     if self.worker_ref:
-                        self.worker_ref.error_occurred.emit(error_msg) # Emit error signal
+                        self.worker_ref.error_occurred.emit(row_uuid, error_msg) # Emit error signal
 
             # Return the processed row data (or error if applicable)
             # Ensure 'row' key exists even on error for consistent handling later
@@ -1430,7 +1531,7 @@ class WQSession(requests.Session):
             error_msg = f"處理模擬 '{simulation.get('code', 'N/A')[:20]}...' 時發生未預期錯誤: {e}"
             logging.exception(f"{thread} -- Unexpected error in _process_single_simulation")
             if self.worker_ref:
-                self.worker_ref.error_occurred.emit(error_msg)
+                self.worker_ref.error_occurred.emit(row_uuid, error_msg)
             # Return an error indicator
             return {'uuid': row_uuid, 'error': error_msg, 'alpha': simulation.get('code', 'N/A')}
 

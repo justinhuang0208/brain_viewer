@@ -163,7 +163,10 @@ The Simulation tab interacts with the WorldQuant Brain API. Create a `credential
 ```
 
 Notes:
-- On first use or when required by risk controls, the API may return a URL for biometric verification (persona). Open the link per the UI prompt to complete verification.
+- Use `Check Login` in the Simulation tab before running simulations.
+- When biometric verification (persona) is required, the app will try to open the persona page automatically in your browser.
+- After finishing the scan in browser, return to the app and click `我已完成驗證` to complete login confirmation.
+- If login is not completed, `Run Simulation` will be blocked and ask you to finish `Check Login` first.
 - If credentials are expired/invalid, the UI will notify you and stop subsequent simulations.
 
 ---
@@ -196,5 +199,4 @@ python app.py
 
 - Generated strategy files: `alphas/alpha_custom_YYYYmmdd_HHMMSS.py`
 - Simulation outputs: `data/YYYYmmdd_HHMMSS.csv` and the corresponding `.log`
-
 
