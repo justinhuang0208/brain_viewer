@@ -1,0 +1,1486 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""
+cli_services.py — Pure-Python service layer for brain_cli.py.
+
+Zero Qt / GUI dependencies.  All public functions return plain dicts, lists,
+or DataFrames so the CLI can easily serialise to JSON or plain text.
+"""
+
+from __future__ import annotations
+
+import csv
+import datetime
+import itertools
+import json
+import logging
+import os
+import re
+import sys
+import time
+import uuid as _uuid_mod
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
+from threading import Lock
+from typing import Any, Dict, List, Optional, Tuple
+from urllib.parse import urljoin
+
+import pandas as pd
+import requests
+
+# ---------------------------------------------------------------------------
+# Paths / constants
+# ---------------------------------------------------------------------------
+
+SCRIPT_DIR      = os.path.dirname(os.path.abspath(__file__))
+DATASETS_DIR    = os.path.join(SCRIPT_DIR, "datasets")
+TEMPLATES_DIR   = os.path.join(SCRIPT_DIR, "templates")
+ALPHAS_DIR      = os.path.join(SCRIPT_DIR, "alphas")
+DATA_DIR        = os.path.join(SCRIPT_DIR, "data")
+CREDS_PATH      = os.path.join(SCRIPT_DIR, "credentials.json")
+CLI_STATE_DIR   = os.path.join(SCRIPT_DIR, ".brain_cli")
+JOBS_DIR        = os.path.join(CLI_STATE_DIR, "jobs")
+STOP_DIR        = os.path.join(CLI_STATE_DIR, "stop")
+
+BRAIN_API_BASE  = "https://api.worldquantbrain.com"
+
+# Simulation CSV header (matches WQSession output in simulation.py)
+SIM_CSV_HEADER = [
+    "passed", "delay", "region", "neutralization", "decay", "truncation",
+    "sharpe", "fitness", "turnover", "weight", "subsharpe", "correlation",
+    "universe", "link", "code",
+]
+
+PARAM_COLUMNS = ["code", "decay", "delay", "neutralization", "region", "truncation", "universe"]
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _ensure_dirs():
+    for d in [CLI_STATE_DIR, JOBS_DIR, STOP_DIR, DATA_DIR, TEMPLATES_DIR, ALPHAS_DIR, DATASETS_DIR]:
+        os.makedirs(d, exist_ok=True)
+
+_ensure_dirs()
+
+
+def _sanitize_filename(name: str) -> str:
+    for ch in '<>:"/\\|?*':
+        name = name.replace(ch, "_")
+    return name.strip() or "template"
+
+
+# ---------------------------------------------------------------------------
+# Job state store (file-backed)
+# ---------------------------------------------------------------------------
+
+class JobStore:
+    """Simple file-backed job state manager under .brain_cli/jobs/."""
+
+    @staticmethod
+    def create(job_type: str, params: dict) -> str:
+        job_id = _uuid_mod.uuid4().hex[:12]
+        now    = datetime.datetime.now().isoformat()
+        job    = {
+            "id":         job_id,
+            "type":       job_type,
+            "status":     "pending",
+            "created_at": now,
+            "updated_at": now,
+            "params":     params,
+            "result_file": None,
+            "error":      None,
+            "pid":        None,
+        }
+        JobStore._write(job_id, job)
+        return job_id
+
+    @staticmethod
+    def get(job_id: str) -> Optional[dict]:
+        p = os.path.join(JOBS_DIR, f"{job_id}.json")
+        if not os.path.exists(p):
+            return None
+        with open(p, "r", encoding="utf-8") as fh:
+            return json.load(fh)
+
+    @staticmethod
+    def update(job_id: str, **kwargs):
+        job = JobStore.get(job_id)
+        if job is None:
+            return
+        job.update(kwargs)
+        job["updated_at"] = datetime.datetime.now().isoformat()
+        JobStore._write(job_id, job)
+
+    @staticmethod
+    def list_jobs(job_type: Optional[str] = None) -> List[dict]:
+        jobs = []
+        for fn in os.listdir(JOBS_DIR):
+            if fn.endswith(".json"):
+                p = os.path.join(JOBS_DIR, fn)
+                try:
+                    with open(p, "r", encoding="utf-8") as fh:
+                        j = json.load(fh)
+                    if job_type is None or j.get("type") == job_type:
+                        jobs.append(j)
+                except Exception:
+                    pass
+        jobs.sort(key=lambda x: x.get("created_at", ""), reverse=True)
+        return jobs
+
+    @staticmethod
+    def _write(job_id: str, job: dict):
+        p = os.path.join(JOBS_DIR, f"{job_id}.json")
+        with open(p, "w", encoding="utf-8") as fh:
+            json.dump(job, fh, indent=2)
+
+    @staticmethod
+    def request_stop(job_id: str):
+        Path(STOP_DIR, f"{job_id}.stop").touch()
+
+    @staticmethod
+    def is_stop_requested(job_id: str) -> bool:
+        return os.path.exists(os.path.join(STOP_DIR, f"{job_id}.stop"))
+
+    @staticmethod
+    def clear_stop(job_id: str):
+        p = os.path.join(STOP_DIR, f"{job_id}.stop")
+        if os.path.exists(p):
+            os.remove(p)
+
+
+# ---------------------------------------------------------------------------
+# Auth service
+# ---------------------------------------------------------------------------
+
+def wq_authenticate(credentials_path: str = CREDS_PATH) -> Tuple[Optional[requests.Session], Optional[str], Optional[str]]:
+    """
+    Attempt WQ Brain authentication.
+
+    Returns
+    -------
+    (session, None, None)          – on success
+    (session, "persona", url)      – on Persona challenge
+    (None, "error", message)       – on failure
+    """
+    try:
+        with open(credentials_path, "r") as fh:
+            creds = json.load(fh)
+        email, password = creds["email"], creds["password"]
+    except FileNotFoundError:
+        return None, "error", f"Credentials file not found: {credentials_path}"
+    except Exception as exc:
+        return None, "error", f"Error reading credentials: {exc}"
+
+    session = requests.Session()
+    session.auth = (email, password)
+    try:
+        r = session.post(f"{BRAIN_API_BASE}/authentication", timeout=15)
+        body = {}
+        if r.text:
+            try:
+                body = r.json()
+            except ValueError:
+                pass
+
+        if r.status_code == 200 and "user" in body:
+            return session, None, None
+
+        # Persona challenge
+        persona_url = None
+        if r.status_code == 401 and (r.headers.get("WWW-Authenticate") or "").lower() == "persona":
+            loc = r.headers.get("Location")
+            if loc:
+                persona_url = urljoin(r.url, loc)
+        if not persona_url and "inquiry" in body:
+            persona_url = f"{r.url}/persona?inquiry={body['inquiry']}"
+        if persona_url:
+            return session, "persona", persona_url
+
+        detail = body.get("detail", f"HTTP {r.status_code}") if isinstance(body, dict) else f"HTTP {r.status_code}"
+        return None, "error", f"Login failed: {detail}"
+
+    except requests.exceptions.Timeout:
+        return None, "error", "Connection timed out."
+    except requests.exceptions.RequestException as exc:
+        return None, "error", f"Network error: {exc}"
+
+
+def auth_login_status(credentials_path: str = CREDS_PATH) -> dict:
+    """Return a dict with login status information."""
+    session, kind, detail = wq_authenticate(credentials_path)
+    if kind is None:
+        return {"status": "logged_in", "message": "Authentication successful."}
+    if kind == "persona":
+        return {"status": "persona_required", "persona_url": detail,
+                "message": "Persona biometric verification required."}
+    return {"status": "failed", "message": detail}
+
+
+def auth_persona_complete(session: requests.Session, persona_url: str,
+                          poll_interval: int = 5, max_attempts: int = 60,
+                          progress_cb=None) -> Tuple[bool, str]:
+    """
+    Poll persona completion.  Returns (success, message).
+    Caller should open *persona_url* in a browser before calling this.
+    """
+    for attempt in range(max_attempts):
+        if progress_cb:
+            progress_cb(f"Polling persona verification ({attempt + 1}/{max_attempts})…")
+        try:
+            r = session.post(persona_url, timeout=15)
+            if r.ok:
+                return True, "Persona verification complete."
+            time.sleep(poll_interval)
+        except requests.exceptions.RequestException as exc:
+            time.sleep(poll_interval)
+    return False, "Persona verification timed out."
+
+
+def auth_complete_from_credentials(credentials_path: str = CREDS_PATH,
+                                   poll_interval: int = 5,
+                                   progress_cb=None) -> dict:
+    """
+    Full login flow including persona polling.  Suitable for CLI --wait mode.
+    Returns dict with keys: status, session (or None), message.
+    """
+    session, kind, detail = wq_authenticate(credentials_path)
+    if kind is None:
+        return {"status": "logged_in", "session": session, "message": "Authentication successful."}
+    if kind == "persona":
+        if progress_cb:
+            progress_cb(f"Persona required. Open this URL in a browser:\n  {detail}\nThen wait…")
+        ok, msg = auth_persona_complete(session, detail, poll_interval=poll_interval,
+                                        progress_cb=progress_cb)
+        if ok:
+            return {"status": "logged_in", "session": session, "message": msg}
+        return {"status": "failed", "session": None, "message": msg}
+    return {"status": "failed", "session": None, "message": detail}
+
+
+# ---------------------------------------------------------------------------
+# Dataset service
+# ---------------------------------------------------------------------------
+
+def datasets_list(datasets_dir: str = DATASETS_DIR) -> List[dict]:
+    """List available local dataset CSVs."""
+    out = []
+    if not os.path.isdir(datasets_dir):
+        return out
+    for fn in sorted(os.listdir(datasets_dir)):
+        if fn.endswith("_fields_formatted.csv"):
+            ds_id = fn.replace("_fields_formatted.csv", "")
+            fp    = os.path.join(datasets_dir, fn)
+            size  = os.path.getsize(fp)
+            try:
+                df = pd.read_csv(fp, nrows=0)
+                rows = sum(1 for _ in open(fp, encoding="utf-8")) - 1
+            except Exception:
+                rows = -1
+            out.append({"dataset_id": ds_id, "file": fn, "rows": rows, "size_bytes": size})
+    return out
+
+
+def datasets_refresh(datasets_dir: str = DATASETS_DIR,
+                     credentials_path: str = CREDS_PATH,
+                     progress_cb=None) -> dict:
+    """Fetch all dataset field metadata from WQ Brain API and save locally."""
+    session, kind, detail = wq_authenticate(credentials_path)
+    if kind == "persona":
+        return {"status": "error", "message": f"Persona verification required: {detail}"}
+    if kind == "error":
+        return {"status": "error", "message": detail}
+
+    os.makedirs(datasets_dir, exist_ok=True)
+    refreshed = []
+    errors    = []
+
+    # Fetch dataset IDs
+    ids   = []
+    limit = 50
+    offset = 0
+    while True:
+        try:
+            r = session.get(f"{BRAIN_API_BASE}/datasets",
+                            params={"limit": limit, "offset": offset}, timeout=15)
+            r.raise_for_status()
+            body    = r.json()
+            results = body.get("results", [])
+            for ds in results:
+                ds_id = ds.get("id")
+                if ds_id:
+                    ids.append(ds_id)
+            if offset + limit >= body.get("count", 0) or not results:
+                break
+            offset += limit
+        except Exception as exc:
+            return {"status": "error", "message": f"Error fetching dataset list: {exc}"}
+
+    if progress_cb:
+        progress_cb(f"Found {len(ids)} datasets. Fetching fields…")
+
+    for i, ds_id in enumerate(ids):
+        if progress_cb:
+            progress_cb(f"Fetching {ds_id} ({i+1}/{len(ids)})…")
+        try:
+            rows  = []
+            lim   = 100
+            off   = 0
+            while True:
+                r = session.get(f"{BRAIN_API_BASE}/datasets/{ds_id}/fields",
+                                params={"limit": lim, "offset": off}, timeout=20)
+                r.raise_for_status()
+                body    = r.json()
+                results = body.get("results", [])
+                for field in results:
+                    cov_raw = field.get("coverage", 0)
+                    try:
+                        cov = f"{int(round(float(cov_raw) * 100))}%"
+                    except Exception:
+                        cov = str(cov_raw)
+                    rows.append({
+                        "Field":       field.get("id", ""),
+                        "Description": field.get("description", ""),
+                        "Type":        field.get("type", ""),
+                        "Coverage":    cov,
+                        "Users":       field.get("userCount", 0),
+                        "Alphas":      field.get("alphaCount", 0),
+                    })
+                if off + lim >= body.get("count", 0) or not results:
+                    break
+                off += lim
+            if rows:
+                df  = pd.DataFrame(rows, columns=["Field", "Description", "Type", "Coverage", "Users", "Alphas"])
+                out = os.path.join(datasets_dir, f"{ds_id}_fields_formatted.csv")
+                df.to_csv(out, index=False)
+                refreshed.append(ds_id)
+        except Exception as exc:
+            errors.append(f"{ds_id}: {exc}")
+
+    return {"status": "ok", "refreshed": refreshed, "errors": errors, "total": len(ids)}
+
+
+def datasets_show(dataset_id: str, datasets_dir: str = DATASETS_DIR) -> Optional[pd.DataFrame]:
+    """Return DataFrame of fields for *dataset_id*, or None if not found."""
+    fp = os.path.join(datasets_dir, f"{dataset_id}_fields_formatted.csv")
+    if not os.path.exists(fp):
+        return None
+    return pd.read_csv(fp)
+
+
+def datasets_search(query: str, datasets_dir: str = DATASETS_DIR,
+                    dataset_id: Optional[str] = None) -> List[dict]:
+    """Simple text search across field names and descriptions."""
+    results = []
+    if dataset_id:
+        targets = [dataset_id]
+    else:
+        targets = [e["dataset_id"] for e in datasets_list(datasets_dir)]
+
+    q = query.lower()
+    for ds_id in targets:
+        df = datasets_show(ds_id, datasets_dir)
+        if df is None:
+            continue
+        for _, row in df.iterrows():
+            field = str(row.get("Field", "")).lower()
+            desc  = str(row.get("Description", "")).lower()
+            if q in field or q in desc:
+                results.append({
+                    "dataset_id":  ds_id,
+                    "field":       row.get("Field", ""),
+                    "description": row.get("Description", ""),
+                    "type":        row.get("Type", ""),
+                    "coverage":    row.get("Coverage", ""),
+                })
+    return results
+
+
+def datasets_export_fields(dataset_id: str, output_path: str,
+                           datasets_dir: str = DATASETS_DIR) -> dict:
+    """Export dataset fields CSV to *output_path*."""
+    df = datasets_show(dataset_id, datasets_dir)
+    if df is None:
+        return {"status": "error", "message": f"Dataset '{dataset_id}' not found locally."}
+    df.to_csv(output_path, index=False)
+    return {"status": "ok", "rows": len(df), "output": output_path}
+
+
+# ---------------------------------------------------------------------------
+# Template service
+# ---------------------------------------------------------------------------
+
+DEFAULT_TEMPLATES = {
+    "[Default] Basic ts_rank": {
+        "code": "ts_rank({field}, 126)",
+        "description": "Time-series rank over 126 days",
+    },
+    "[Default] Basic rank": {
+        "code": "rank({field})",
+        "description": "Cross-sectional rank",
+    },
+    "[Default] Basic zscore": {
+        "code": "zscore({field})",
+        "description": "Standardized score",
+    },
+    "[Default] Industry comparison": {
+        "code": "group_rank({field}, industry)",
+        "description": "Rank within industry",
+    },
+    "[Default] Complex momentum": {
+        "code": "ts_rank(ts_delta({field}, 5) / ts_delay({field}, 5), 21)",
+        "description": "21-day rank of 5-day rate of change",
+    },
+}
+
+
+def templates_list(templates_dir: str = TEMPLATES_DIR) -> List[dict]:
+    """List all templates (defaults + saved)."""
+    out = []
+    for name, data in DEFAULT_TEMPLATES.items():
+        out.append({"name": name, "description": data["description"],
+                    "source": "default", "file": None})
+    if os.path.isdir(templates_dir):
+        for fn in sorted(os.listdir(templates_dir)):
+            if fn.endswith(".json"):
+                fp = os.path.join(templates_dir, fn)
+                try:
+                    with open(fp, "r", encoding="utf-8") as fh:
+                        t = json.load(fh)
+                    if "name" in t and "code" in t:
+                        out.append({"name": t["name"],
+                                    "description": t.get("description", ""),
+                                    "source": "custom", "file": fn})
+                except Exception:
+                    pass
+    return out
+
+
+def templates_show(name: str, templates_dir: str = TEMPLATES_DIR) -> Optional[dict]:
+    """Return template data dict for *name* (default or custom)."""
+    if name in DEFAULT_TEMPLATES:
+        d = dict(DEFAULT_TEMPLATES[name])
+        d["name"] = name
+        d["source"] = "default"
+        return d
+    if os.path.isdir(templates_dir):
+        for fn in os.listdir(templates_dir):
+            if fn.endswith(".json"):
+                fp = os.path.join(templates_dir, fn)
+                try:
+                    with open(fp, "r", encoding="utf-8") as fh:
+                        t = json.load(fh)
+                    if t.get("name") == name:
+                        t["source"] = "custom"
+                        t["file"]   = fn
+                        return t
+                except Exception:
+                    pass
+    return None
+
+
+def templates_save(name: str, code: str, description: str = "",
+                   templates_dir: str = TEMPLATES_DIR) -> dict:
+    """Save or update a custom template. Returns dict with path info."""
+    os.makedirs(templates_dir, exist_ok=True)
+    # Check if it already exists (update)
+    if os.path.isdir(templates_dir):
+        for fn in os.listdir(templates_dir):
+            if fn.endswith(".json"):
+                fp = os.path.join(templates_dir, fn)
+                try:
+                    with open(fp, "r", encoding="utf-8") as fh:
+                        t = json.load(fh)
+                    if t.get("name") == name:
+                        t["code"]        = code
+                        t["description"] = description
+                        t["updated_at"]  = datetime.datetime.now().isoformat()
+                        with open(fp, "w", encoding="utf-8") as fh:
+                            json.dump(t, fh, ensure_ascii=False, indent=2)
+                        return {"status": "updated", "name": name, "file": fn}
+                except Exception:
+                    pass
+    # New template
+    ts   = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    fn   = f"{_sanitize_filename(name)}_{ts}.json"
+    fp   = os.path.join(templates_dir, fn)
+    data = {
+        "name":        name,
+        "code":        code,
+        "description": description,
+        "created_at":  datetime.datetime.now().isoformat(),
+    }
+    with open(fp, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, ensure_ascii=False, indent=2)
+    return {"status": "created", "name": name, "file": fn}
+
+
+def templates_delete(name: str, templates_dir: str = TEMPLATES_DIR) -> dict:
+    """Delete a custom template by name."""
+    if name in DEFAULT_TEMPLATES:
+        return {"status": "error", "message": "Cannot delete a default template."}
+    if os.path.isdir(templates_dir):
+        for fn in os.listdir(templates_dir):
+            if fn.endswith(".json"):
+                fp = os.path.join(templates_dir, fn)
+                try:
+                    with open(fp, "r", encoding="utf-8") as fh:
+                        t = json.load(fh)
+                    if t.get("name") == name:
+                        os.remove(fp)
+                        return {"status": "deleted", "name": name, "file": fn}
+                except Exception:
+                    pass
+    return {"status": "error", "message": f"Template '{name}' not found."}
+
+
+def templates_placeholders(name: str, templates_dir: str = TEMPLATES_DIR) -> dict:
+    """List {placeholder} names found in a template."""
+    t = templates_show(name, templates_dir)
+    if t is None:
+        return {"status": "error", "message": f"Template '{name}' not found."}
+    placeholders = list(dict.fromkeys(re.findall(r'\{(\w+)\}', t["code"])))
+    return {"name": name, "placeholders": placeholders}
+
+
+# ---------------------------------------------------------------------------
+# Generate service
+# ---------------------------------------------------------------------------
+
+def _eliminate_dead_code(code: str) -> str:
+    """Remove demonstrably unreachable variable assignments from alpha code."""
+    _assign_pat = re.compile(r'^\s*([A-Za-z_]\w*)\s*=\s*(.+)$')
+    _ident_pat  = re.compile(r'\b([A-Za-z_]\w*)\b')
+
+    lines      = code.split('\n')
+    stripped   = [(i, ln.rstrip()) for i, ln in enumerate(lines)]
+    non_empty  = [(i, ln) for i, ln in stripped if ln.strip()]
+
+    if not non_empty:
+        return code
+
+    assignments: dict = {}
+    for orig_idx, ln in non_empty:
+        m = _assign_pat.match(ln)
+        if m:
+            assignments[m.group(1)] = (orig_idx, ln)
+
+    if not assignments:
+        return code
+
+    def refs(text: str) -> set:
+        return set(_ident_pat.findall(text))
+
+    used_vars: set = set()
+    has_output_expr = False
+    for _, ln in non_empty:
+        if not _assign_pat.match(ln):
+            used_vars |= refs(ln)
+            has_output_expr = True
+
+    if not has_output_expr and non_empty:
+        last_m = _assign_pat.match(non_empty[-1][1])
+        if last_m:
+            used_vars.add(last_m.group(1))
+
+    changed = True
+    while changed:
+        changed = False
+        for var, (_, ln) in assignments.items():
+            if var in used_vars:
+                m = _assign_pat.match(ln)
+                if m:
+                    new = refs(m.group(2)) - {var}
+                    before = len(used_vars)
+                    used_vars |= new
+                    if len(used_vars) > before:
+                        changed = True
+
+    dead_indices = {
+        orig_idx for var, (orig_idx, _) in assignments.items() if var not in used_vars
+    }
+    if not dead_indices:
+        return code
+    return '\n'.join(ln for i, ln in enumerate(lines) if i not in dead_indices)
+
+
+def generate_preview(template: str, pools: Dict[str, List[str]],
+                     limit: int = 20, eliminate_dead: bool = True) -> List[dict]:
+    """
+    Generate strategy previews from a template + placeholder value pools.
+
+    Returns list of dicts with keys: code, candidate (placeholder map), index.
+    """
+    placeholders = list(dict.fromkeys(re.findall(r'\{(\w+)\}', template)))
+    active       = [p for p in placeholders if p in pools]
+    if not active:
+        # Template has no active placeholders — render as-is
+        code = _eliminate_dead_code(template) if eliminate_dead else template
+        return [{"index": 0, "code": code, "candidate": {}}]
+
+    all_combos = list(itertools.product(*[pools[p] for p in active]))
+    if len(all_combos) > limit:
+        import random
+        all_combos = random.sample(all_combos, limit)
+
+    results = []
+    for i, combo in enumerate(all_combos):
+        candidate = dict(zip(active, combo))
+        code      = template
+        for k, v in candidate.items():
+            code = code.replace(f'{{{k}}}', str(v))
+        if eliminate_dead:
+            code = _eliminate_dead_code(code)
+        results.append({"index": i, "code": code, "candidate": candidate})
+    return results
+
+
+def generate_file(strategies: List[dict], output_path: str,
+                  sim_params: Optional[dict] = None) -> dict:
+    """
+    Write a list of strategy dicts to a Python file in parameters.py format.
+
+    Each strategy dict should have at least a ``code`` key.  Additional keys
+    become simulation parameters (decay, delay, etc.).
+    """
+    defaults = {
+        "decay": 4, "delay": 1, "neutralization": "SUBINDUSTRY",
+        "region": "USA", "truncation": 0.08, "universe": "TOP3000",
+    }
+    if sim_params:
+        defaults.update(sim_params)
+
+    lines = ["# Auto-generated by brain_cli generate file\n",
+             "DATA = [\n"]
+    for s in strategies:
+        entry = {k: v for k, v in defaults.items()}
+        entry["code"] = s.get("code", "")
+        for k in PARAM_COLUMNS:
+            if k in s and k != "code":
+                entry[k] = s[k]
+        lines.append(f"    {json.dumps(entry, ensure_ascii=False)},\n")
+    lines.append("]\n")
+
+    os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as fh:
+        fh.writelines(lines)
+    return {"status": "ok", "strategies": len(strategies), "output": output_path}
+
+
+# ---------------------------------------------------------------------------
+# Backtest service
+# ---------------------------------------------------------------------------
+
+def backtest_list(data_dir: str = DATA_DIR) -> List[dict]:
+    """List backtest CSV files in *data_dir*."""
+    out = []
+    if not os.path.isdir(data_dir):
+        return out
+    for fn in sorted(os.listdir(data_dir)):
+        if fn.endswith(".csv") and fn not in ("_header1.csv", "_header2.csv"):
+            fp = os.path.join(data_dir, fn)
+            sz = os.path.getsize(fp)
+            try:
+                rows = sum(1 for _ in open(fp, encoding="utf-8-sig")) - 1
+            except Exception:
+                rows = -1
+            out.append({"file": fn, "path": fp, "rows": rows, "size_bytes": sz})
+    return out
+
+
+def backtest_load(filename: str, data_dir: str = DATA_DIR) -> Optional[pd.DataFrame]:
+    """Load a backtest CSV and return a DataFrame."""
+    fp = filename if os.path.isabs(filename) else os.path.join(data_dir, filename)
+    if not os.path.exists(fp):
+        return None
+    try:
+        df = pd.read_csv(fp, encoding="utf-8-sig")
+        return df
+    except Exception:
+        return None
+
+
+def backtest_show(filename: str, limit: int = 50,
+                  data_dir: str = DATA_DIR) -> Optional[dict]:
+    """Return summary + first *limit* rows of a backtest file."""
+    df = backtest_load(filename, data_dir)
+    if df is None:
+        return None
+    numeric_cols = df.select_dtypes(include="number").columns.tolist()
+    summary = {}
+    for col in numeric_cols:
+        summary[col] = {
+            "mean":  round(float(df[col].mean()), 4),
+            "min":   round(float(df[col].min()),  4),
+            "max":   round(float(df[col].max()),  4),
+        }
+    if "passed" in df.columns:
+        pass_vals = df["passed"].astype(str).str.upper()
+        summary["pass_rate"] = round((pass_vals == "PASS").mean(), 4)
+
+    return {
+        "file":    filename,
+        "rows":    len(df),
+        "columns": df.columns.tolist(),
+        "summary": summary,
+        "head":    df.head(limit).to_dict(orient="records"),
+    }
+
+
+def backtest_filter(filename: str,
+                    sharpe_min:   Optional[float] = None,
+                    fitness_min:  Optional[float] = None,
+                    passed_only:  bool = False,
+                    universe:     Optional[str] = None,
+                    neutralization: Optional[str] = None,
+                    data_dir:     str = DATA_DIR) -> Optional[pd.DataFrame]:
+    """Filter a backtest DataFrame by common criteria."""
+    df = backtest_load(filename, data_dir)
+    if df is None:
+        return None
+    if sharpe_min is not None and "sharpe" in df.columns:
+        df = df[pd.to_numeric(df["sharpe"], errors="coerce") >= sharpe_min]
+    if fitness_min is not None and "fitness" in df.columns:
+        df = df[pd.to_numeric(df["fitness"], errors="coerce") >= fitness_min]
+    if passed_only and "passed" in df.columns:
+        df = df[df["passed"].astype(str).str.upper() == "PASS"]
+    if universe and "universe" in df.columns:
+        df = df[df["universe"].astype(str).str.upper() == universe.upper()]
+    if neutralization and "neutralization" in df.columns:
+        df = df[df["neutralization"].astype(str).str.upper() == neutralization.upper()]
+    return df.reset_index(drop=True)
+
+
+def _compute_composite_score(row: dict,
+                              sharpe_weight:    float = 0.40,
+                              fitness_weight:   float = 0.30,
+                              subsharpe_weight: float = 0.20,
+                              turnover_weight:  float = 0.10) -> float:
+    """Compute scalar composite score for one backtest row (mirrors evolution.py)."""
+    def _f(key: str, default: float = 0.0) -> float:
+        try:
+            return float(row.get(key, default) or default)
+        except (ValueError, TypeError):
+            return float(default)
+
+    sharpe    = _f("sharpe")
+    fitness   = _f("fitness")
+    subsharpe = _f("subsharpe")
+    turnover  = _f("turnover", 50.0)
+    passed    = str(row.get("passed", "")).strip().upper() == "PASS"
+
+    sharpe_score    = max(0.0, sharpe)    / 2.0
+    fitness_score   = max(0.0, fitness)
+    subsharpe_score = max(0.0, subsharpe) / 1.5
+    turnover_score  = max(0.0, 1.0 - abs(turnover - 10.0) / 30.0)
+
+    score = (sharpe_weight    * sharpe_score
+           + fitness_weight   * fitness_score
+           + subsharpe_weight * subsharpe_score
+           + turnover_weight  * turnover_score)
+    if passed:
+        score *= 1.10
+    return round(score, 6)
+
+
+def backtest_score(filename: str, top_n: int = 0,
+                   data_dir: str = DATA_DIR) -> Optional[pd.DataFrame]:
+    """Add composite_score column to a backtest DataFrame, sorted descending."""
+    df = backtest_load(filename, data_dir)
+    if df is None:
+        return None
+    df["composite_score"] = df.apply(lambda r: _compute_composite_score(r.to_dict()), axis=1)
+    df = df.sort_values("composite_score", ascending=False).reset_index(drop=True)
+    if top_n > 0:
+        df = df.head(top_n)
+    return df
+
+
+def backtest_diversity_filter(filename: str, top_n: int = 20,
+                               min_hamming: float = 0.5,
+                               data_dir: str = DATA_DIR) -> Optional[pd.DataFrame]:
+    """
+    Return up to *top_n* rows that are diverse in code content.
+
+    Uses character-level jaccard similarity on code tokens to filter near-duplicates.
+    Rows are first sorted by composite_score so the best are kept.
+    """
+    df = backtest_score(filename, data_dir=data_dir)
+    if df is None or "code" not in df.columns:
+        return df
+
+    def _tokenset(code: str) -> set:
+        return set(re.findall(r'\b\w+\b', str(code).lower()))
+
+    def _jaccard(s1: set, s2: set) -> float:
+        if not s1 and not s2:
+            return 1.0
+        return len(s1 & s2) / len(s1 | s2)
+
+    selected = []
+    tok_sets: List[set] = []
+    for _, row in df.iterrows():
+        ts = _tokenset(row.get("code", ""))
+        if not selected:
+            selected.append(row)
+            tok_sets.append(ts)
+            continue
+        # Accept row if it is sufficiently different from all already-selected rows
+        max_sim = max(_jaccard(ts, s) for s in tok_sets)
+        if max_sim < (1.0 - min_hamming):
+            selected.append(row)
+            tok_sets.append(ts)
+        if len(selected) >= top_n:
+            break
+
+    return pd.DataFrame(selected).reset_index(drop=True)
+
+
+def backtest_export(filename: str, output_path: str,
+                    format: str = "csv",
+                    data_dir: str = DATA_DIR) -> dict:
+    """Export backtest data to a file."""
+    df = backtest_load(filename, data_dir)
+    if df is None:
+        return {"status": "error", "message": f"File '{filename}' not found."}
+    if format == "json":
+        df.to_json(output_path, orient="records", force_ascii=False, indent=2)
+    else:
+        df.to_csv(output_path, index=False)
+    return {"status": "ok", "rows": len(df), "output": output_path}
+
+
+# ---------------------------------------------------------------------------
+# CLI WQ Session (no Qt dependencies)
+# ---------------------------------------------------------------------------
+
+class _StopFlag:
+    def __init__(self, job_id: Optional[str] = None):
+        self._job_id = job_id
+        self.stop_requested = False
+
+    def check(self):
+        if self._job_id and JobStore.is_stop_requested(self._job_id):
+            self.stop_requested = True
+        return self.stop_requested
+
+
+class CLISimulationSession(requests.Session):
+    """
+    Headless version of WQSession from simulation.py.
+    Writes results to CSV and updates job state. No Qt signals.
+    """
+
+    def __init__(self, credentials_path: str = CREDS_PATH,
+                 existing_session: Optional[requests.Session] = None,
+                 job_id: Optional[str] = None,
+                 output_csv: Optional[str] = None,
+                 progress_cb=None):
+        super().__init__()
+        self._job_id     = job_id
+        self._stop_flag  = _StopFlag(job_id)
+        self._progress_cb = progress_cb
+        self._csv_lock   = Lock()
+        self._csv_file   = output_csv or os.path.join(
+            DATA_DIR, f"{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+        )
+        self._log_file   = self._csv_file.replace(".csv", ".log")
+        self.login_expired = False
+
+        if existing_session is not None:
+            self.__dict__.update({k: v for k, v in existing_session.__dict__.items()
+                                   if not k.startswith("_") or k in ("_cookies",)})
+            self.cookies = requests.cookies.cookiejar_from_dict(
+                requests.utils.dict_from_cookiejar(existing_session.cookies))
+            self.headers = existing_session.headers.copy()
+            self.auth    = getattr(existing_session, "auth", None)
+        else:
+            self._login(credentials_path)
+
+    def _login(self, credentials_path: str):
+        try:
+            with open(credentials_path, "r") as fh:
+                creds = json.load(fh)
+            self.auth = (creds["email"], creds["password"])
+            r = self.post(f"{BRAIN_API_BASE}/authentication", timeout=15)
+            body = r.json() if r.text else {}
+            if r.status_code == 200 and "user" in body:
+                return
+            detail = body.get("detail", f"HTTP {r.status_code}") if isinstance(body, dict) else str(r.status_code)
+            self._emit(f"Login failed: {detail}")
+            self.login_expired = True
+        except Exception as exc:
+            self._emit(f"Login error: {exc}")
+            self.login_expired = True
+
+    def _emit(self, msg: str):
+        if self._progress_cb:
+            self._progress_cb(msg)
+        else:
+            print(f"[simulate] {msg}", file=sys.stderr)
+
+    def simulate(self, params: List[dict]) -> List[dict]:
+        """Run all simulations and write to CSV.  Returns list of result rows."""
+        if self.login_expired:
+            return []
+
+        os.makedirs(DATA_DIR, exist_ok=True)
+        completed: List[dict] = []
+
+        with open(self._csv_file, "w", newline="", encoding="utf-8") as csv_fh:
+            writer = csv.writer(csv_fh)
+            writer.writerow(SIM_CSV_HEADER)
+
+            with ThreadPoolExecutor(max_workers=3) as executor:
+                futures = {
+                    executor.submit(self._process_one, sim): sim
+                    for sim in params
+                }
+                for fut in as_completed(futures):
+                    if self._stop_flag.check():
+                        executor.shutdown(wait=False, cancel_futures=True)
+                        break
+                    try:
+                        result = fut.result()
+                        if result and "row" in result:
+                            with self._csv_lock:
+                                writer.writerow(result["row"])
+                                csv_fh.flush()
+                            completed.append(result)
+                            self._emit(f"Completed {len(completed)}/{len(params)}: "
+                                       f"{str(result['row'][14])[:40]}")
+                        elif result and "error" in result:
+                            self._emit(f"Error: {result['error']}")
+                    except Exception as exc:
+                        self._emit(f"Future error: {exc}")
+
+        if JobStore.get(self._job_id) is not None:
+            JobStore.update(self._job_id, result_file=self._csv_file)
+        return completed
+
+    def _process_one(self, simulation: dict) -> Optional[dict]:
+        """Submit one alpha simulation, poll for completion, fetch details."""
+        if self.login_expired or self._stop_flag.check():
+            return None
+
+        alpha        = simulation.get("code", "").strip()
+        delay        = simulation.get("delay", 1)
+        universe     = simulation.get("universe", "TOP3000")
+        truncation   = simulation.get("truncation", 0.1)
+        region       = simulation.get("region", "USA")
+        decay        = simulation.get("decay", 6)
+        neutralization = simulation.get("neutralization", "SUBINDUSTRY").upper()
+        pasteurization = simulation.get("pasteurization", "ON")
+        nan_handling   = simulation.get("nanHandling", "OFF")
+        row_uuid       = simulation.get("uuid", _uuid_mod.uuid4().hex)
+
+        max_retries = 3
+        nxt         = None
+
+        for attempt in range(max_retries):
+            if self._stop_flag.check():
+                return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
+            try:
+                r = self.post(f"{BRAIN_API_BASE}/simulations", json={
+                    "regular": alpha,
+                    "type":    "REGULAR",
+                    "settings": {
+                        "nanHandling":    nan_handling,
+                        "instrumentType": "EQUITY",
+                        "delay":          delay,
+                        "universe":       universe,
+                        "truncation":     truncation,
+                        "unitHandling":   "VERIFY",
+                        "pasteurization": pasteurization,
+                        "region":         region,
+                        "language":       "FASTEXPR",
+                        "decay":          decay,
+                        "neutralization": neutralization,
+                        "visualization":  False,
+                    },
+                })
+                r.raise_for_status()
+                nxt = r.headers["Location"]
+                break
+            except requests.exceptions.HTTPError as exc:
+                if exc.response.status_code == 429 and attempt < max_retries - 1:
+                    self._emit(f"429 rate-limit, retrying in 15s ({attempt+1}/{max_retries})…")
+                    time.sleep(15)
+                    continue
+                return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
+            except Exception as exc:
+                return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
+
+        if nxt is None:
+            return {"uuid": row_uuid, "error": "Failed to submit simulation.", "alpha": alpha}
+
+        # Poll for completion
+        sim_start = time.time()
+        alpha_link = None
+        while True:
+            if self._stop_flag.check():
+                return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
+            try:
+                r    = self.get(nxt, timeout=30)
+                r.raise_for_status()
+                rj   = r.json()
+                if "alpha" in rj:
+                    alpha_link = rj["alpha"]
+                    break
+                progress = rj.get("progress", 0)
+                self._emit(f"  Progress {int(100 * progress)}% — {alpha[:30]}")
+                elapsed = time.time() - sim_start
+                if elapsed > 120 and progress == 0:
+                    return {"uuid": row_uuid, "error": "Simulation timed out (>2 min at 0%).", "alpha": alpha}
+            except requests.exceptions.HTTPError as exc:
+                if exc.response.status_code == 429:
+                    time.sleep(15)
+                    continue
+                return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
+            except Exception as exc:
+                return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
+
+            for _ in range(50):  # 10-second wait in 0.2s chunks
+                if self._stop_flag.check():
+                    return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
+                time.sleep(0.2)
+
+        # Fetch alpha details
+        try:
+            r  = self.get(f"{BRAIN_API_BASE}/alphas/{alpha_link}", timeout=30)
+            r.raise_for_status()
+            rj = r.json()
+        except Exception as exc:
+            row = [0, delay, region, neutralization, decay, truncation,
+                   0, 0, 0, "FAIL", 0, -1, universe,
+                   f"https://platform.worldquantbrain.com/alpha/{alpha_link}", alpha]
+            return {"uuid": row_uuid, "row": row, "simulation": simulation}
+
+        passed     = 0
+        weight_chk = "N/A"
+        subsharpe  = -1
+        for chk in rj.get("is", {}).get("checks", []):
+            passed += chk.get("result") == "PASS"
+            if chk.get("name") == "CONCENTRATED_WEIGHT":
+                weight_chk = chk.get("result", "N/A")
+            if chk.get("name") == "LOW_SUB_UNIVERSE_SHARPE":
+                subsharpe = chk.get("value", -1)
+
+        row = [
+            passed, delay, region, neutralization, decay, truncation,
+            rj.get("is", {}).get("sharpe", 0),
+            rj.get("is", {}).get("fitness", 0),
+            round(100 * rj.get("is", {}).get("turnover", 0), 2),
+            weight_chk, subsharpe, -1,
+            universe,
+            f"https://platform.worldquantbrain.com/alpha/{alpha_link}",
+            alpha,
+        ]
+        return {"uuid": row_uuid, "row": row, "simulation": simulation}
+
+
+# ---------------------------------------------------------------------------
+# Simulate service
+# ---------------------------------------------------------------------------
+
+def simulate_enqueue(params: List[dict], credentials_path: str = CREDS_PATH) -> str:
+    """Create a new simulation job and return its job_id."""
+    job_id = JobStore.create("simulate", {
+        "params":           params,
+        "credentials_path": credentials_path,
+    })
+    return job_id
+
+
+def simulate_run(job_id: str, progress_cb=None) -> dict:
+    """
+    Execute a queued simulation job synchronously.
+    Updates job state file throughout.
+    Returns final job dict.
+    """
+    job = JobStore.get(job_id)
+    if job is None:
+        return {"status": "error", "message": f"Job {job_id} not found."}
+    if job["status"] not in ("pending",):
+        return {"status": "error", "message": f"Job {job_id} is already {job['status']}."}
+
+    JobStore.update(job_id, status="running", pid=os.getpid())
+    JobStore.clear_stop(job_id)
+
+    params           = job["params"]["params"]
+    credentials_path = job["params"].get("credentials_path", CREDS_PATH)
+    output_csv       = os.path.join(DATA_DIR,
+                                    f"job_{job_id}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv")
+
+    try:
+        session = CLISimulationSession(
+            credentials_path=credentials_path,
+            job_id=job_id,
+            output_csv=output_csv,
+            progress_cb=progress_cb,
+        )
+        if session.login_expired:
+            JobStore.update(job_id, status="failed", error="Login failed.")
+            return JobStore.get(job_id)
+
+        results = session.simulate(params)
+        stopped = JobStore.is_stop_requested(job_id)
+        JobStore.update(
+            job_id,
+            status="stopped" if stopped else "done",
+            result_file=output_csv,
+        )
+    except Exception as exc:
+        JobStore.update(job_id, status="failed", error=str(exc))
+
+    return JobStore.get(job_id)
+
+
+def simulate_status(job_id: str) -> Optional[dict]:
+    return JobStore.get(job_id)
+
+
+def simulate_stop(job_id: str) -> dict:
+    job = JobStore.get(job_id)
+    if job is None:
+        return {"status": "error", "message": f"Job {job_id} not found."}
+    JobStore.request_stop(job_id)
+    return {"status": "ok", "message": f"Stop requested for job {job_id}."}
+
+
+def simulate_results(job_id: str, limit: int = 100) -> Optional[dict]:
+    """Return results from a completed simulation job."""
+    job = JobStore.get(job_id)
+    if job is None:
+        return None
+    result_file = job.get("result_file")
+    if not result_file or not os.path.exists(result_file):
+        return {"job": job, "rows": [], "message": "No result file found."}
+    df = pd.read_csv(result_file)
+    return {"job": job, "rows": df.head(limit).to_dict(orient="records"), "total": len(df)}
+
+
+def simulate_list() -> List[dict]:
+    """List all simulation jobs."""
+    return JobStore.list_jobs("simulate")
+
+
+# ---------------------------------------------------------------------------
+# Evolution service
+# ---------------------------------------------------------------------------
+
+def _parse_placeholders(template: str) -> List[str]:
+    return list(dict.fromkeys(re.findall(r'\{(\w+)\}', template)))
+
+
+def _render_candidate(template: str, candidate: Dict[str, str]) -> str:
+    result = template
+    for k, v in candidate.items():
+        result = result.replace(f'{{{k}}}', str(v))
+    return result
+
+
+def _candidate_key(candidate: Dict[str, str]) -> tuple:
+    return tuple(sorted(candidate.items()))
+
+
+def _hamming_diversity(candidate: Dict[str, str], population: List[Dict[str, str]]) -> float:
+    if len(population) <= 1:
+        return 1.0
+    keys = list(candidate.keys())
+    if not keys:
+        return 0.0
+    total = 0.0
+    for other in population:
+        if other is candidate:
+            continue
+        diffs = sum(1 for k in keys if candidate.get(k) != other.get(k))
+        total += diffs / len(keys)
+    return total / (len(population) - 1)
+
+
+def _uniqueness(candidate: Dict[str, str], population: List[Dict[str, str]]) -> float:
+    key  = _candidate_key(candidate)
+    dups = sum(1 for c in population if _candidate_key(c) == key) - 1
+    return max(0.0, 1.0 - dups * 0.5)
+
+
+def _normalize_code(code: str) -> str:
+    return ' '.join(code.split())
+
+
+def evolution_run(template: str, pools: Dict[str, List[str]],
+                  pop_size: int = 40, generations: int = 10,
+                  mutation_rate: float = 0.4,
+                  diversity_weight: float = 0.7,
+                  top_k: int = 20,
+                  seed_population: Optional[List[Dict[str, str]]] = None,
+                  known_real_fitness: Optional[Dict[tuple, float]] = None,
+                  progress_cb=None) -> List[dict]:
+    """
+    Run the evolution engine and return top-k unique candidates as dicts.
+
+    Reuses the pure-Python EvolutionEngine from evolution.py without importing
+    the GUI module.  Returns list of {score, code, candidate} dicts.
+    """
+    placeholders = _parse_placeholders(template)
+    active       = [p for p in placeholders if p in pools]
+
+    if not active:
+        code = _eliminate_dead_code(template)
+        return [{"score": 1.0, "code": code, "candidate": {}}]
+
+    pop_size    = max(pop_size, 4)
+    parent_num  = max(2, int(pop_size * 0.3))
+    known_rf    = dict(known_real_fitness or {})
+
+    def _random_cand():
+        return {p: __import__("random").choice(pools[p]) for p in active}
+
+    import random
+
+    def _initial_pop():
+        all_combos = list(itertools.product(*[pools[p] for p in active]))
+        if len(all_combos) <= pop_size:
+            pop = [dict(zip(active, c)) for c in all_combos]
+            while len(pop) < pop_size:
+                pop.append(_random_cand())
+        else:
+            sampled = random.sample(all_combos, pop_size)
+            pop = [dict(zip(active, c)) for c in sampled]
+        return pop
+
+    def _fitness(cand, pop):
+        div   = _hamming_diversity(cand, pop)
+        uniq  = _uniqueness(cand, pop)
+        struct = diversity_weight * div + (1.0 - diversity_weight) * uniq
+        real  = known_rf.get(_candidate_key(cand))
+        if real is None:
+            return struct
+        return 0.65 * real + 0.35 * struct
+
+    def _score_pop(pop):
+        scored = [(_fitness(c, pop), c) for c in pop]
+        scored.sort(key=lambda x: -x[0])
+        return scored
+
+    def _crossover(p1, p2):
+        n = len(active)
+        if n <= 1:
+            return p1.copy()
+        split = random.randint(1, n - 1)
+        return {ph: (p1[ph] if i < split else p2[ph]) for i, ph in enumerate(active)}
+
+    def _mutate(cand):
+        mutant = cand.copy()
+        for ph in active:
+            if random.random() < mutation_rate:
+                mutant[ph] = random.choice(pools[ph])
+        return mutant
+
+    # Build population
+    if seed_population:
+        population = [
+            {p: c[p] for p in active}
+            for c in seed_population if all(p in c for p in active)
+        ]
+        while len(population) < pop_size:
+            population.append(_random_cand())
+        population = population[:pop_size]
+    else:
+        population = _initial_pop()
+
+    for gen in range(generations):
+        scored  = _score_pop(population)
+        parents = [c for _, c in scored[:parent_num]]
+        kids    = []
+        attempts = 0
+        while len(kids) < pop_size - len(parents) and attempts < pop_size * 20:
+            if len(parents) < 2:
+                child = _mutate(parents[0])
+            else:
+                p1, p2 = random.sample(parents, 2)
+                child  = _mutate(_crossover(p1, p2))
+            kids.append(child)
+            attempts += 1
+        population = (parents + kids)[:pop_size]
+        if progress_cb:
+            progress_cb(gen + 1, generations)
+
+    scored = _score_pop(population)
+    seen:  set = set()
+    results = []
+    for score, cand in scored:
+        key = _candidate_key(cand)
+        if key not in seen:
+            seen.add(key)
+            code = _render_candidate(template, cand)
+            code = _eliminate_dead_code(code)
+            results.append({"score": round(score, 6), "code": code, "candidate": cand})
+        if len(results) >= top_k:
+            break
+    return results
+
+
+def evolution_run_job(job_id: str, progress_cb=None) -> dict:
+    """Execute a queued evolution job synchronously."""
+    job = JobStore.get(job_id)
+    if job is None:
+        return {"status": "error", "message": f"Job {job_id} not found."}
+    if job["status"] not in ("pending",):
+        return {"status": "error", "message": f"Job {job_id} is already {job['status']}."}
+
+    JobStore.update(job_id, status="running", pid=os.getpid())
+    p = job["params"]
+
+    def _pcb(gen, total):
+        msg = f"Generation {gen}/{total}"
+        if progress_cb:
+            progress_cb(msg)
+        else:
+            print(f"[evolution] {msg}", file=sys.stderr)
+        # Check stop
+        if JobStore.is_stop_requested(job_id):
+            raise RuntimeError("Stop requested")
+
+    try:
+        results = evolution_run(
+            template          = p["template"],
+            pools             = p["pools"],
+            pop_size          = p.get("pop_size", 40),
+            generations       = p.get("generations", 10),
+            mutation_rate     = p.get("mutation_rate", 0.4),
+            diversity_weight  = p.get("diversity_weight", 0.7),
+            top_k             = p.get("top_k", 20),
+            seed_population   = p.get("seed_population"),
+            known_real_fitness= p.get("known_real_fitness"),
+            progress_cb       = _pcb,
+        )
+        ts          = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+        result_file = os.path.join(CLI_STATE_DIR, f"evo_{job_id}_{ts}.json")
+        with open(result_file, "w", encoding="utf-8") as fh:
+            json.dump(results, fh, ensure_ascii=False, indent=2)
+        JobStore.update(job_id, status="done", result_file=result_file)
+    except RuntimeError as exc:
+        if "Stop requested" in str(exc):
+            JobStore.update(job_id, status="stopped")
+        else:
+            JobStore.update(job_id, status="failed", error=str(exc))
+    except Exception as exc:
+        JobStore.update(job_id, status="failed", error=str(exc))
+
+    return JobStore.get(job_id)
+
+
+def evolution_from_backtest(template: str, pools: Dict[str, List[str]],
+                             backtest_csv: str, top_seed: int = 10,
+                             pop_size: int = 40, generations: int = 10,
+                             top_k: int = 20,
+                             data_dir: str = DATA_DIR) -> dict:
+    """
+    Load backtest CSV, match to template+pools candidates, seed evolution from
+    best performers, run evolution, and return results.
+    """
+    df = backtest_load(backtest_csv, data_dir)
+    if df is None:
+        return {"status": "error", "message": f"Backtest file '{backtest_csv}' not found."}
+
+    if "code" not in df.columns:
+        return {"status": "error", "message": "Backtest CSV missing 'code' column."}
+
+    # Build norm_code index of backtest rows
+    csv_index: Dict[str, dict] = {}
+    for _, row in df.iterrows():
+        code = str(row.get("code", "")).strip()
+        if code:
+            csv_index[_normalize_code(code)] = row.to_dict()
+
+    # Enumerate pool combos, find matches
+    placeholders = _parse_placeholders(template)
+    active       = [p for p in placeholders if p in pools]
+    matched: List[Tuple[float, Dict[str, str], str]] = []
+    seen_norm: set = set()
+
+    all_combos = list(itertools.product(*[pools[p] for p in active]))
+    if len(all_combos) > 20_000:
+        import random
+        all_combos = random.sample(all_combos, 20_000)
+
+    for combo in all_combos:
+        cand = dict(zip(active, combo))
+        code = _render_candidate(template, cand)
+        norm = _normalize_code(code)
+        if norm in csv_index and norm not in seen_norm:
+            seen_norm.add(norm)
+            score = _compute_composite_score(csv_index[norm])
+            matched.append((score, cand, code))
+
+    matched.sort(key=lambda x: -x[0])
+    seeds         = [c for _, c, _ in matched[:top_seed]]
+    known_rf_map  = {_candidate_key(c): s for s, c, _ in matched}
+
+    results = evolution_run(
+        template         = template,
+        pools            = pools,
+        pop_size         = pop_size,
+        generations      = generations,
+        top_k            = top_k,
+        seed_population  = seeds,
+        known_real_fitness = known_rf_map,
+    )
+    return {
+        "status":   "ok",
+        "matched":  len(matched),
+        "seeds":    len(seeds),
+        "results":  results,
+    }
+
+
+def evolution_enqueue(template: str, pools: Dict[str, List[str]],
+                      pop_size: int = 40, generations: int = 10,
+                      mutation_rate: float = 0.4,
+                      diversity_weight: float = 0.7,
+                      top_k: int = 20,
+                      seed_population: Optional[List[dict]] = None,
+                      known_real_fitness: Optional[dict] = None) -> str:
+    """Create a queued evolution job and return job_id."""
+    return JobStore.create("evolution", {
+        "template":           template,
+        "pools":              pools,
+        "pop_size":           pop_size,
+        "generations":        generations,
+        "mutation_rate":      mutation_rate,
+        "diversity_weight":   diversity_weight,
+        "top_k":              top_k,
+        "seed_population":    seed_population,
+        "known_real_fitness": known_real_fitness,
+    })
+
+
+def evolution_status(job_id: str) -> Optional[dict]:
+    return JobStore.get(job_id)
+
+
+def evolution_stop(job_id: str) -> dict:
+    job = JobStore.get(job_id)
+    if job is None:
+        return {"status": "error", "message": f"Job {job_id} not found."}
+    JobStore.request_stop(job_id)
+    return {"status": "ok", "message": f"Stop requested for evolution job {job_id}."}
+
+
+def evolution_results(job_id: str) -> Optional[dict]:
+    """Return results from a completed evolution job."""
+    job = JobStore.get(job_id)
+    if job is None:
+        return None
+    result_file = job.get("result_file")
+    if not result_file or not os.path.exists(result_file):
+        return {"job": job, "results": [], "message": "No result file found."}
+    with open(result_file, "r", encoding="utf-8") as fh:
+        results = json.load(fh)
+    return {"job": job, "results": results}
+
+
+def evolution_list() -> List[dict]:
+    return JobStore.list_jobs("evolution")

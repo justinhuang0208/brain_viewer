@@ -171,12 +171,114 @@ Notes:
 
 ---
 
+### CLI Interface (`brain_cli.py`)
+
+A fully-featured headless CLI is available for AI-agent and scripting use. It has no Qt dependency and can be used independently of the desktop app.
+
+#### Quick overview
+
+```
+python brain_cli.py <group> <command> [options]
+
+Groups:
+  auth       Login status, login, persona completion
+  datasets   List, refresh, show, search, export-fields
+  template   List, show, save, delete, placeholders
+  generate   Preview strategies, generate file
+  simulate   Enqueue, run, status, stop, results, list
+  backtest   List, show, filter, score, diversity, export
+  evolution  Run, from-backtest, auto-run, status, stop, results, list
+```
+
+#### Global flags (usable anywhere in the command line)
+
+| Flag | Description |
+|---|---|
+| `--json` | Output as JSON (machine-readable) |
+| `--credentials FILE` | Path to `credentials.json` (default: project root) |
+
+#### Examples
+
+```bash
+# Check templates
+python brain_cli.py template list --json
+
+# Show a specific template
+python brain_cli.py template show "[Default] Basic ts_rank"
+
+# Save a new template
+python brain_cli.py template save my_alpha --code "rank(close / open)"
+
+# Preview generated strategies from a template + pools
+python brain_cli.py generate preview \
+  --template-name "[Default] Basic ts_rank" \
+  --pool "field=close,open,volume" \
+  --pool "window=5,10,20"
+
+# List backtest files
+python brain_cli.py backtest list
+
+# Score and show top rows from a backtest CSV
+python brain_cli.py backtest score 20250417_231939.csv --top 10 --json
+
+# Diversity-filtered top candidates
+python brain_cli.py backtest diversity 20250417_231939.csv --top 20 --min-hamming 0.5
+
+# Run a single simulation (inline code)
+python brain_cli.py simulate run \
+  --code "rank(ts_mean(close, 20) / close)" \
+  --universe TOP3000 --region USA
+
+# Enqueue a batch from a CSV file, then run
+python brain_cli.py simulate enqueue --params-file alphas/my_strategies.py --json
+python brain_cli.py simulate run --job-id <job_id>
+
+# Check job status and get results
+python brain_cli.py simulate status <job_id>
+python brain_cli.py simulate results <job_id> --json
+
+# Run evolution to generate diverse candidates
+python brain_cli.py evolution run \
+  --template-name "[Default] Basic ts_rank" \
+  --pool "field=close,open,volume,returns" \
+  --pool "window=5,10,20,40" \
+  --generations 20 --pop-size 50 --top-k 10
+
+# Seed evolution from an existing backtest CSV
+python brain_cli.py evolution from-backtest \
+  --template-name "[Default] Basic ts_rank" \
+  --pool "field=close,open" \
+  20250417_231939.csv --top-seed 5
+
+# Multiple evolution rounds (auto-run)
+python brain_cli.py evolution auto-run \
+  --template-name "[Default] Basic ts_rank" \
+  --pool "field=close,volume" \
+  --rounds 3 --generations 10 --json
+
+# Auth check
+python brain_cli.py auth login-status --json
+python brain_cli.py auth login
+```
+
+#### CLI job state
+
+Background jobs (simulate, evolution) are stored under `.brain_cli/jobs/<job_id>.json`. Use `simulate list` / `evolution list` to view all jobs. Stop a running job with `simulate stop <job_id>` or `evolution stop <job_id>`.
+
+---
+
 ### How to Run
 
 - Integrated app (recommended):
 
 ```bash
 python app.py
+```
+
+- Headless CLI (no Qt required):
+
+```bash
+python brain_cli.py --help
 ```
 
 - Run individually (for debugging or split work only):
