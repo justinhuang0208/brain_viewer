@@ -33,6 +33,94 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 # 定義常量 - 使用絕對路徑
 DATASETS_DIR = os.path.join(SCRIPT_DIR, "datasets")
 TEMPLATES_DIR = os.path.join(SCRIPT_DIR, "templates")
+
+
+def eliminate_dead_code(code: str) -> str:
+    """Remove provably unused variable definitions from a multi-line alpha expression.
+
+    A "variable definition" is any line of the form ``identifier = expression``.
+    A variable is considered *used* if it appears as an identifier in:
+      - any non-assignment line (the final output expression), or
+      - the RHS of any other *used* variable's definition (transitive closure).
+
+    Only definitions that are demonstrably unreachable are removed; the function
+    is conservative and never removes code it cannot prove is dead.
+
+    Example
+    -------
+    Input::
+
+        tmp1 = ts_rank(close, 10)
+        unused = ts_mean(close, 5)   # never referenced below
+        tmp1
+
+    Output::
+
+        tmp1 = ts_rank(close, 10)
+        tmp1
+    """
+    _assign_pat = re.compile(r'^\s*([A-Za-z_]\w*)\s*=\s*(.+)$')
+    _ident_pat = re.compile(r'\b([A-Za-z_]\w*)\b')
+
+    lines = code.split('\n')
+    stripped = [(i, ln.rstrip()) for i, ln in enumerate(lines)]
+    non_empty = [(i, ln) for i, ln in stripped if ln.strip()]
+
+    if not non_empty:
+        return code
+
+    # Classify lines
+    assignments: dict[str, tuple[int, str]] = {}  # var -> (line_idx, full_line)
+    for orig_idx, ln in non_empty:
+        m = _assign_pat.match(ln)
+        if m:
+            assignments[m.group(1)] = (orig_idx, ln)
+
+    if not assignments:
+        return code  # no assignments — nothing to eliminate
+
+    def refs(text: str) -> set:
+        return set(_ident_pat.findall(text))
+
+    # Seed used_vars from non-assignment lines (output expressions)
+    used_vars: set[str] = set()
+    has_output_expr = False
+    for _, ln in non_empty:
+        if not _assign_pat.match(ln):
+            used_vars |= refs(ln)
+            has_output_expr = True
+
+    # If every non-empty line is an assignment, the last assignment's LHS is the output
+    if not has_output_expr and non_empty:
+        last_m = _assign_pat.match(non_empty[-1][1])
+        if last_m:
+            used_vars.add(last_m.group(1))
+
+    # Transitive closure: if var is used, its RHS dependencies are also used
+    changed = True
+    while changed:
+        changed = False
+        for var, (_, ln) in assignments.items():
+            if var in used_vars:
+                m = _assign_pat.match(ln)
+                if m:
+                    new = refs(m.group(2)) - {var}
+                    before = len(used_vars)
+                    used_vars |= new
+                    if len(used_vars) > before:
+                        changed = True
+
+    # Identify dead assignment lines
+    dead_indices = {
+        orig_idx
+        for var, (orig_idx, _) in assignments.items()
+        if var not in used_vars
+    }
+
+    if not dead_indices:
+        return code  # nothing to remove
+
+    return '\n'.join(ln for i, ln in enumerate(lines) if i not in dead_indices)
 ALPHAS_DIR = os.path.join(SCRIPT_DIR, "alphas")
 
 class SelectedFieldsWidget(QWidget):
@@ -735,11 +823,16 @@ class GeneratorMainWindow(QMainWindow):
         self.settings_widget = StrategySettingsWidget()
         tabs.addTab(self.settings_widget, "Strategy Settings")
 
-        # Remove the local simulation table tab
-        # self.simulation_table = QTableWidget()
-        # self.simulation_table.setEditTriggers(QAbstractItemView.NoEditTriggers) # 設置為不可編輯
-        # self.simulation_table.setAlternatingRowColors(True)
-        # tabs.addTab(self.simulation_table, "模擬表格")
+        # Auto Evolution tab
+        from evolution import EvolutionWidget
+        self.evolution_widget = EvolutionWidget(
+            self.template_editor,
+            self.selected_fields_widget,
+            self.settings_widget,
+        )
+        tabs.addTab(self.evolution_widget, "🧬 Auto Evolution")
+        # Wire evolution output to the same simulation signal
+        self.evolution_widget.candidates_ready.connect(self.strategies_ready_for_simulation)
 
         right_layout.addWidget(tabs) # Add the tabs widget directly
         
@@ -814,8 +907,8 @@ class GeneratorMainWindow(QMainWindow):
         strategies = []
         for field in selected_fields:
             try:
-                # 替換模板中的字段佔位符
-                code = template_code.replace("{field}", field)
+                # Substitute placeholder then strip dead variable definitions
+                code = eliminate_dead_code(template_code.replace("{field}", field))
                 strategy = settings.copy()
                 strategy['code'] = code
                 # Keep the generated strategy dictionary as is
@@ -851,8 +944,8 @@ class GeneratorMainWindow(QMainWindow):
         # Preview first strategy
         if selected_fields:
             first_field = selected_fields[0]
-            # 確保使用原始字段名，移除可能包含的格式信息
-            code = template_code.replace("{field}", first_field)
+            # Substitute placeholder then strip dead variable definitions
+            code = eliminate_dead_code(template_code.replace("{field}", first_field))
             
             # 生成文件名
             timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -903,8 +996,8 @@ Strategy example (field: {first_field}):
         strategies = []
         for field in selected_fields:
             try:
-                # 替換模板中的字段佔位符，確保使用原始字段名
-                code = template_code.replace("{field}", field)
+                # Substitute placeholder then strip dead variable definitions
+                code = eliminate_dead_code(template_code.replace("{field}", field))
                     
                 # 創建策略字典
                 strategy = settings.copy()
