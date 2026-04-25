@@ -721,6 +721,10 @@ class MainWindow(QMainWindow):
         self.action_clear_filter.triggered.connect(self.clear_numeric_filter)
         self.filter_menu.addAction(self.action_apply_filter)
         self.filter_menu.addAction(self.action_clear_filter)
+        self.filter_menu.addSeparator()
+        self.action_diversity_filter = QAction("Diversity Filter...", self)
+        self.action_diversity_filter.triggered.connect(self.run_diversity_filter)
+        self.filter_menu.addAction(self.action_diversity_filter)
         self.filter_menu_button.setMenu(self.filter_menu)
 
         # 添加條件過濾元素
@@ -1167,6 +1171,9 @@ class MainWindow(QMainWindow):
                             self.condition_column.addItem(col)
                     except:
                         continue
+
+                # Compute composite scores and add to SQLite table
+                self._compute_composite_scores(model)
 
                 # Enable buttons
                 self.column_view_button.setEnabled(True)
@@ -1725,12 +1732,13 @@ class MainWindow(QMainWindow):
 
     # 修改: 開啟自訂欄位選擇對話框
     def open_custom_column_selector(self): # Renamed method
-        if self.current_dataset is None:
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
             QMessageBox.warning(self, "No Data", "Please load a backtest file first.")
             return
 
-        # Pass current columns and currently visible columns to the dialog
-        dialog = ColumnSelectionDialog(list(self.current_dataset.columns), self.visible_columns, self)
+        source_model = self.proxy_model.sourceModel()
+        all_cols = list(source_model.columns)
+        dialog = ColumnSelectionDialog(all_cols, self.visible_columns, self)
         if dialog.exec():
             self.visible_columns = dialog.get_selected_columns()
             self.apply_column_visibility()
@@ -1742,11 +1750,15 @@ class MainWindow(QMainWindow):
              QMessageBox.warning(self, "No Data", "Please load a backtest file first.")
              return
 
-        # Predefined list of columns for "results only" view
-        results_columns = ['passed', 'sharpe', 'fitness', 'turnover', 'weight', 'subsharpe', 'correlation', 'link', 'code']
+        # Predefined list of columns for "results only" view; composite_score included
+        results_columns = ['composite_score', 'passed', 'sharpe', 'fitness', 'turnover', 'weight', 'subsharpe', 'correlation', 'link', 'code']
 
-        # Filter the list to include only columns that actually exist in the current dataset
-        self.visible_columns = [col for col in results_columns if col in self.current_dataset.columns]
+        # Filter the list to include only columns that actually exist in the current SQLite model
+        if self.proxy_model and isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            db_cols = self.proxy_model.sourceModel().columns
+        else:
+            db_cols = list(self.current_dataset.columns)
+        self.visible_columns = [col for col in results_columns if col in db_cols]
 
         self.apply_column_visibility()
         self.status_bar.showMessage(f"Switched to results-only view: {len(self.visible_columns)} columns")
@@ -1754,32 +1766,29 @@ class MainWindow(QMainWindow):
 
     # 新增: 應用欄位可見性
     def apply_column_visibility(self):
-        if self.proxy_model is None or self.current_dataset is None or self.db_conn is None:
+        if self.proxy_model is None or self.db_conn is None:
             return
 
-        header = self.table_view.horizontalHeader()
-        # Remember model has +1 column (checkbox) compared to DataFrame
-        model_column_count = self.proxy_model.columnCount()
-        df_columns = list(self.current_dataset.columns)
+        if not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            return
 
-        # Iterate through all potential model columns
+        source_model = self.proxy_model.sourceModel()
+        db_columns = source_model.columns  # reflects all columns including composite_score
+
+        header = self.table_view.horizontalHeader()
+        model_column_count = self.proxy_model.columnCount()
+
         for model_col_index in range(model_column_count):
-            # Checkbox column (index 0) is always visible
             if model_col_index == 0:
                 header.setSectionHidden(model_col_index, False)
                 continue
 
-            # Map model column index back to DataFrame column index
             df_col_index = model_col_index - 1
-
-            # Check if the DataFrame column index is valid
-            if 0 <= df_col_index < len(df_columns):
-                column_name = df_columns[df_col_index]
-                # Hide column if its name is not in the visible_columns list
+            if 0 <= df_col_index < len(db_columns):
+                column_name = db_columns[df_col_index]
                 is_hidden = column_name not in self.visible_columns
                 header.setSectionHidden(model_col_index, is_hidden)
             else:
-                # Hide any unexpected extra columns in the model
                 header.setSectionHidden(model_col_index, True)
 
     # 新增: 儲存選取的資料列
@@ -2311,6 +2320,192 @@ class MainWindow(QMainWindow):
         # 更新狀態列
         checked_count = len(source_model.get_checked_rows())
         self.status_bar.showMessage(f"Inverted selection | {checked_count} rows checked")
+
+    def _compute_composite_scores(self, model):
+        """Add a composite_score column to the SQLite table.
+
+        Formula: rank-percentile-weighted combination of sharpe (0.5), fitness (0.3),
+        subsharpe (0.2), and negated turnover (-0.1), all normalised to [0, 1].
+        Missing metrics are gracefully skipped.  The column is made sortable and is
+        included in the numeric-filter dropdown.
+        """
+        if self.db_conn is None:
+            return
+
+        # Skip if already present (e.g. refresh on same file)
+        if 'composite_score' in model.columns:
+            self.visible_columns = list(model.columns)
+            if 'composite_score' not in [self.condition_column.itemText(i) for i in range(self.condition_column.count())]:
+                self.condition_column.addItem('composite_score')
+            return
+
+        metric_weights = [('sharpe', 0.5), ('fitness', 0.3), ('subsharpe', 0.2), ('turnover', -0.1)]
+        available = [(col, w) for col, w in metric_weights if col in model.columns]
+        if not available:
+            return
+
+        try:
+            cursor = self.db_conn.cursor()
+            col_sql = ', '.join([f'CAST("{col}" AS REAL)' for col, _ in available])
+            cursor.execute(f'SELECT rowid, {col_sql} FROM {self.table_name}')
+            rows = cursor.fetchall()
+            if not rows:
+                return
+
+            import numpy as np
+
+            rowids = [r[0] for r in rows]
+            # Build arrays per metric
+            arrays = {}
+            for i, (col, _) in enumerate(available):
+                vals = [r[i + 1] for r in rows]
+                arrays[col] = vals
+
+            # Rank-percentile normalise each metric
+            def rank_pct(vals):
+                arr = np.array(vals, dtype=float)
+                n = len(arr)
+                valid = ~np.isnan(arr)
+                result = np.full(n, np.nan)
+                if valid.sum() == 0:
+                    return result
+                order = np.argsort(arr[valid])
+                rank = np.empty_like(order)
+                rank[order] = np.arange(valid.sum())
+                result[valid] = rank / max(valid.sum() - 1, 1)
+                return result
+
+            total_abs_weight = sum(abs(w) for _, w in available)
+            composite = np.zeros(len(rows))
+            weight_used = np.zeros(len(rows))
+
+            for col, w in available:
+                pct = rank_pct(arrays[col])
+                # For negative weight (turnover), flip so low = good = high score
+                if w < 0:
+                    pct = 1.0 - pct
+                    eff_w = abs(w)
+                else:
+                    eff_w = w
+                valid = ~np.isnan(pct)
+                composite[valid] += eff_w * pct[valid]
+                weight_used[valid] += eff_w
+
+            # Normalise by actual weight used per row; rows with no valid metrics get NaN
+            with np.errstate(invalid='ignore', divide='ignore'):
+                composite = np.where(weight_used > 0, composite / weight_used, np.nan)
+
+            composite = np.round(composite, 4)
+
+            cursor.execute(f'ALTER TABLE {self.table_name} ADD COLUMN composite_score REAL')
+            updates = [
+                (None if np.isnan(composite[i]) else float(composite[i]), rowids[i])
+                for i in range(len(rowids))
+            ]
+            cursor.executemany(
+                f'UPDATE {self.table_name} SET composite_score = ? WHERE rowid = ?', updates
+            )
+            self.db_conn.commit()
+
+            # Refresh model so new column is visible
+            model.refresh_metadata()
+            self.visible_columns = list(model.columns)
+            self.condition_column.addItem('composite_score')
+
+        except Exception as e:
+            print(f'composite_score computation failed: {e}')
+
+    def run_diversity_filter(self):
+        """Greedy diversity filter: keep the highest-Sharpe alpha from each similarity
+        cluster, where similarity is Jaccard overlap of code expression tokens.
+
+        Limitation: this is a structural-similarity proxy, not true return-series
+        correlation (daily P&L is not stored in the CSV).  Two alphas with identical
+        operator structure but different field names may or may not be correlated in
+        practice.  The threshold is therefore best treated as a code-deduplication
+        control rather than a strict IC-correlation bound.
+        """
+        if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):
+            QMessageBox.warning(self, "No Data", "Please load a backtest file first.")
+            return
+
+        source_model = self.proxy_model.sourceModel()
+        if 'code' not in source_model.columns:
+            QMessageBox.warning(self, "Missing Column", "No 'code' column found in data.")
+            return
+
+        threshold, ok = QInputDialog.getDouble(
+            self, "Diversity Filter",
+            "Max allowed code-token Jaccard similarity (0 = totally different, 1 = identical).\n"
+            "Only one alpha per similarity cluster above this threshold is kept.\n"
+            "Rows are evaluated best-Sharpe-first.\n\nThreshold:",
+            value=0.7, min=0.0, max=1.0, decimals=2
+        )
+        if not ok:
+            return
+
+        cursor = source_model.db_conn.cursor()
+        full_clause, params = source_model._get_filter_and_sort_clause()
+
+        # Fetch rowid, sharpe, code; sort best sharpe first so we keep the better alpha
+        has_sharpe = 'sharpe' in source_model.columns
+        if has_sharpe:
+            order = 'ORDER BY CAST(sharpe AS REAL) DESC'
+            # Merge with existing sort: strip existing ORDER BY, then append ours
+            clause_no_sort = full_clause.split('ORDER BY')[0].strip()
+            fetch_clause = f'{clause_no_sort} {order}' if clause_no_sort else order
+        else:
+            fetch_clause = full_clause
+
+        try:
+            cursor.execute(
+                f'SELECT rowid, code FROM {source_model.table_name} {fetch_clause}', params
+            )
+            rows = cursor.fetchall()
+        except Exception as e:
+            QMessageBox.critical(self, "Query Error", str(e))
+            return
+
+        if not rows:
+            QMessageBox.information(self, "No Data", "No rows available under current filters.")
+            return
+
+        import re
+
+        def tokenize(code_str):
+            return set(re.findall(r'[A-Za-z_]\w*', str(code_str)))
+
+        def jaccard(a, b):
+            if not a and not b:
+                return 1.0
+            union = len(a | b)
+            return len(a & b) / union if union > 0 else 1.0
+
+        selected_rowids = []
+        selected_tokens = []
+
+        for rowid, code_val in rows:
+            tokens = tokenize(code_val)
+            max_sim = max((jaccard(tokens, st) for st in selected_tokens), default=0.0)
+            if max_sim < threshold:
+                selected_rowids.append(rowid)
+                selected_tokens.append(tokens)
+
+        if not selected_rowids:
+            QMessageBox.information(
+                self, "No Results",
+                "No strategies pass the diversity filter at the given threshold.\n"
+                "Try raising the threshold."
+            )
+            return
+
+        n_total = len(rows)
+        source_model.set_filter_by_rowids(selected_rowids)
+        self._update_status_bar()
+        self.status_bar.showMessage(
+            f"Diversity filter applied: {len(selected_rowids)}/{n_total} strategies kept "
+            f"(Jaccard < {threshold:.2f})"
+        )
 
     def _update_status_bar(self):
         if self.proxy_model is None or not isinstance(self.proxy_model.sourceModel(), SqliteTableModel):

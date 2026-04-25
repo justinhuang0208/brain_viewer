@@ -146,6 +146,12 @@ class CodeEditDialog(QDialog):
         return self.editor.toPlainText()
 
 class SimulationWidget(QWidget):
+    # Emitted when a full simulation batch completes (non-stopped), carrying all result rows.
+    # Each row is the list [passed, delay, region, neutralization, decay, truncation,
+    #                       sharpe, fitness, turnover, weight, subsharpe, correlation,
+    #                       universe, link, code]
+    simulation_completed_with_results = Signal(list)
+
     def update_single_simulation_progress(self, uuid: str, percentage: int):
         """Update progress (%) cell for the row by uuid"""
         progress_col = self.progress_col_index
@@ -272,6 +278,11 @@ class SimulationWidget(QWidget):
         self.uuid_row_map = {}
         self.highlighted_rows = set()
 
+        # Auto-loop support: accumulated result rows for current batch
+        self._pending_results: list = []
+        # Set True by EvolutionWidget via auto_loop_mode_changed signal
+        self.auto_loop_active: bool = False
+
     @Slot() # 新增槽函數，用於執行緒結束後清除參考
     def _clear_simulation_thread_ref(self):
         logging.info("QThread finished signal received. Clearing simulation_thread reference.")
@@ -280,6 +291,9 @@ class SimulationWidget(QWidget):
     @Slot(str, list)
     def highlight_completed_row(self, uuid: str, row_data: list):
         """根據完成的 uuid 標示對應的表格行 (優化：使用映射查找)"""
+        # Accumulate result for auto loop / external consumers
+        self._pending_results.append(row_data)
+
         light_green = QColor("#e8f5e9")
         row = self.uuid_row_map.get(uuid) # 優化：使用映射查找行號
 
@@ -713,6 +727,8 @@ class SimulationWidget(QWidget):
             self.progress_label.setText("尚未登入，請先完成 Check Login")
             return
     
+        # Clear accumulated results for the new batch
+        self._pending_results = []
         self._reset_table_colors()
 
         # 優化：批次重設所有進度欄
@@ -806,32 +822,35 @@ class SimulationWidget(QWidget):
         # 若為登入/憑證相關錯誤，清除 session
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
             self.active_wq_session = None
-        
+
+        # Row-level errors should not tear down the whole batch. Mark the row,
+        # update status, and let the worker finish the remaining simulations.
+        if uuid:
+            self.progress_label.setText(f"Simulation row failed: {error_message}")
+            if (not self.auto_loop_active and
+                error_message not in ["模擬被手動停止", "模擬被手動終止"]):
+                QMessageBox.warning(self, "Simulation Row Failed", error_message)
+            return
+
         self.progress_label.setText("Simulation failed")
-        # 若為手動停止，不彈出錯誤視窗
-        if error_message not in ["模擬被手動停止", "模擬被手動終止"]:
+        # 若為手動停止，不彈出錯誤視窗；auto loop 也自行接管錯誤處理
+        if (not self.auto_loop_active and
+            error_message not in ["模擬被手動停止", "模擬被手動終止"]):
             QMessageBox.critical(self, "Simulation Failed", error_message)
-        
+
         self.is_simulating = False
         self.sim_btn.setText("Run Simulation")
         self.sim_btn.setEnabled(True)
         self.edit_btn.setEnabled(True)
         self.check_login_btn.setEnabled(True)
 
-
     def handle_simulation_finished(self):
         logging.info("handle_simulation_finished started.")
-        # 檢查是否是因為停止請求而結束
         stopped_early = self.simulation_worker and self.simulation_worker.stop_requested
         logging.info(f"handle_simulation_finished: stopped_early={stopped_early}")
 
-        # 調用優化後的顏色重置
-        logging.info("handle_simulation_finished: Calling _reset_table_colors.")
         self._reset_table_colors()
-        logging.info("handle_simulation_finished: _reset_table_colors finished.")
 
-        # 批次重設所有進度欄
-        logging.info("handle_simulation_finished: Resetting progress columns.")
         self.table.setUpdatesEnabled(False)
         try:
             for row in range(self.table.rowCount()):
@@ -840,44 +859,55 @@ class SimulationWidget(QWidget):
                     progress_item.setText("-")
         finally:
             self.table.setUpdatesEnabled(True)
-        logging.info("handle_simulation_finished: Progress columns reset.")
 
-        if stopped_early:
-            self.progress_label.setText("Simulation stopped")
-            QMessageBox.warning(self, "Simulation Stopped", "Simulation was manually stopped.")
+        # Always emit results so auto loop (and other observers) can react.
+        # On a clean finish, emit accumulated rows; on early stop emit empty list
+        # so the auto loop knows to abort gracefully.
+        if not stopped_early:
+            self.simulation_completed_with_results.emit(list(self._pending_results))
         else:
-            self.progress_label.setText("Simulation completed")
-            QMessageBox.information(self, "Simulation Completed", "Simulation finished successfully! Please check CSV and LOG files under the data folder.")
+            self.simulation_completed_with_results.emit([])
 
-        logging.info("handle_simulation_finished: Resetting simulation state and UI.")
         self.is_simulating = False
         self.simulation_worker = None
         self.sim_btn.setText("Run Simulation")
         self.sim_btn.setEnabled(True)
         self.edit_btn.setEnabled(True)
         self.check_login_btn.setEnabled(True)
-        logging.info("handle_simulation_finished: Simulation state and UI reset.")
 
-        # 只有在模擬正常完成時才詢問是否清空表格
-        if not stopped_early:
-            logging.info("handle_simulation_finished: Asking to clear table.")
-            reply = QMessageBox.question(self, 'Clear Table?',
-                                           "Simulation completed. Do you want to clear the parameter table?",
-                                           QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-
-            if reply == QMessageBox.Yes:
-                self.table.setRowCount(0)
-                self.uuid_row_map.clear() # 清空映射
-                self.highlighted_rows.clear() # 清空高亮記錄
-                # 更新標籤，即使不清空也要顯示完成
-                self.progress_label.setText("Simulation completed (table cleared)")
-                logging.info("handle_simulation_finished: Table cleared.")
+        if self.auto_loop_active:
+            # Suppress all dialogs — auto loop UI owns the feedback
+            if stopped_early:
+                self.progress_label.setText("Simulation stopped (auto loop interrupted)")
             else:
-                # 更新標籤，即使不清空也要顯示完成
-                self.progress_label.setText("Simulation completed (table kept)")
-                logging.info("handle_simulation_finished: Table kept.")
-        # 如果是手動停止，標籤已設為 "模擬已停止"，無需再改
+                self.progress_label.setText("Simulation completed (auto loop)")
+        else:
+            if stopped_early:
+                self.progress_label.setText("Simulation stopped")
+                QMessageBox.warning(self, "Simulation Stopped", "Simulation was manually stopped.")
+            else:
+                self.progress_label.setText("Simulation completed")
+                QMessageBox.information(self, "Simulation Completed",
+                    "Simulation finished successfully! Please check CSV and LOG files under the data folder.")
+                reply = QMessageBox.question(self, 'Clear Table?',
+                    "Simulation completed. Do you want to clear the parameter table?",
+                    QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+                if reply == QMessageBox.Yes:
+                    self.table.setRowCount(0)
+                    self.uuid_row_map.clear()
+                    self.highlighted_rows.clear()
+                    self.progress_label.setText("Simulation completed (table cleared)")
+                else:
+                    self.progress_label.setText("Simulation completed (table kept)")
+
         logging.info("handle_simulation_finished finished.")
+
+    def clear_for_auto_loop(self):
+        """Clear the parameter table without user confirmation (used by auto loop)."""
+        self.table.setRowCount(0)
+        self.uuid_row_map.clear()
+        self.highlighted_rows.clear()
+        self._pending_results = []
 
     def check_login_status(self):
         """Check WorldQuant Brain login status in background"""

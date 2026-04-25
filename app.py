@@ -196,6 +196,15 @@ class MainWindow(QMainWindow):
         # 新增：連接數據集查看器的匯出信號到生成器的匯入槽
         self.dataset_viewer.viewer.fields_selected_for_generator.connect(self.strategy_generator.generator.selected_fields_widget.add_fields_from_list)
 
+        # Auto Evolution loop connections
+        evo = self.strategy_generator.generator.evolution_widget
+        self.simulation_widget.simulation_completed_with_results.connect(evo.on_simulation_completed)
+        evo.request_simulation_start.connect(self.simulation_widget.start_simulation_thread)
+        evo.request_clear_simulation.connect(self.simulation_widget.clear_for_auto_loop)
+        evo.auto_loop_mode_changed.connect(
+            lambda active: setattr(self.simulation_widget, 'auto_loop_active', active)
+        )
+
     def on_tab_changed(self, index):
         """Handle tab change"""
         if index == 0:

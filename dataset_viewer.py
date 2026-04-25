@@ -4,6 +4,7 @@ import sqlite3
 import pandas as pd
 import json
 import threading
+import requests
 from dotenv import load_dotenv
 import google.generativeai as genai
 from PySide6.QtWidgets import (QApplication, QMainWindow, QTableView, QTreeView,
@@ -213,6 +214,184 @@ class SemanticSearchWorker(QThread):
         except Exception as e:
             print(f"解析過程中發生其他錯誤: {str(e)}")
             return []
+
+
+BRAIN_API_BASE = "https://api.worldquantbrain.com"
+
+
+class DatasetRefreshWorker(QThread):
+    """Fetches dataset field metadata from the WQ Brain API and writes local CSV files."""
+
+    progress = Signal(str)        # status text
+    finished = Signal(list)       # list of dataset IDs that were refreshed
+    error = Signal(str)
+
+    def __init__(self, datasets_dir, credentials_path='credentials.json'):
+        super().__init__()
+        self.datasets_dir = datasets_dir
+        self.credentials_path = credentials_path
+        self._cancelled = False
+
+    def cancel(self):
+        self._cancelled = True
+
+    def run(self):
+        try:
+            session = self._authenticate()
+            if session is None:
+                return
+
+            dataset_ids = self._fetch_all_dataset_ids(session)
+            if not dataset_ids:
+                self.error.emit("No datasets returned from API.")
+                return
+
+            refreshed = []
+            for i, ds_id in enumerate(dataset_ids):
+                if self._cancelled:
+                    self.progress.emit("Refresh cancelled.")
+                    break
+                self.progress.emit(f"Fetching fields for {ds_id} ({i+1}/{len(dataset_ids)})…")
+                try:
+                    df = self._fetch_fields(session, ds_id)
+                    if df is not None and not df.empty:
+                        out_path = os.path.join(
+                            self.datasets_dir, f"{ds_id}_fields_formatted.csv"
+                        )
+                        df.to_csv(out_path, index=False)
+                        refreshed.append(ds_id)
+                except Exception as e:
+                    self.progress.emit(f"  Warning: could not fetch {ds_id}: {e}")
+
+            self.finished.emit(refreshed)
+
+        except Exception as e:
+            self.error.emit(f"Refresh failed: {e}")
+
+    # ------------------------------------------------------------------
+    # Private helpers
+    # ------------------------------------------------------------------
+
+    def _authenticate(self):
+        try:
+            with open(self.credentials_path, 'r') as f:
+                creds = json.load(f)
+            email = creds['email']
+            password = creds['password']
+        except FileNotFoundError:
+            self.error.emit(f"Credentials file not found: {self.credentials_path}")
+            return None
+        except Exception as e:
+            self.error.emit(f"Error reading credentials: {e}")
+            return None
+
+        self.progress.emit("Authenticating with WQ Brain API…")
+        session = requests.Session()
+        session.auth = (email, password)
+        try:
+            r = session.post(f"{BRAIN_API_BASE}/authentication", timeout=15)
+            body = {}
+            if r.text:
+                try:
+                    body = r.json()
+                except ValueError:
+                    pass
+            if r.status_code == 200 and 'user' in body:
+                self.progress.emit("Authentication successful.")
+                return session
+            # Persona / additional verification required
+            if r.status_code == 401:
+                self.error.emit(
+                    "Login requires additional verification (Persona). "
+                    "Please use the Simulation tab to log in first."
+                )
+                return None
+            detail = body.get('detail', f"HTTP {r.status_code}")
+            self.error.emit(f"Authentication failed: {detail}")
+            return None
+        except requests.exceptions.Timeout:
+            self.error.emit("Authentication timed out. Check your network connection.")
+            return None
+        except requests.exceptions.RequestException as e:
+            self.error.emit(f"Network error during authentication: {e}")
+            return None
+
+    def _fetch_all_dataset_ids(self, session):
+        """Return list of all dataset IDs accessible to the user."""
+        self.progress.emit("Fetching dataset list…")
+        ids = []
+        limit = 50
+        offset = 0
+        while True:
+            if self._cancelled:
+                break
+            params = {
+                'limit': limit,
+                'offset': offset,
+            }
+            try:
+                r = session.get(f"{BRAIN_API_BASE}/datasets", params=params, timeout=15)
+                r.raise_for_status()
+                body = r.json()
+            except Exception as e:
+                self.error.emit(f"Error fetching dataset list: {e}")
+                return ids
+
+            results = body.get('results', [])
+            for ds in results:
+                ds_id = ds.get('id')
+                if ds_id:
+                    ids.append(ds_id)
+
+            if offset + limit >= body.get('count', 0) or not results:
+                break
+            offset += limit
+
+        self.progress.emit(f"Found {len(ids)} datasets.")
+        return ids
+
+    def _fetch_fields(self, session, dataset_id):
+        """Fetch all fields for one dataset and return a formatted DataFrame."""
+        rows = []
+        limit = 100
+        offset = 0
+        while True:
+            if self._cancelled:
+                break
+            params = {'limit': limit, 'offset': offset}
+            r = session.get(
+                f"{BRAIN_API_BASE}/datasets/{dataset_id}/fields",
+                params=params,
+                timeout=20,
+            )
+            r.raise_for_status()
+            body = r.json()
+            results = body.get('results', [])
+
+            for field in results:
+                coverage_raw = field.get('coverage', 0)
+                try:
+                    coverage_pct = f"{int(round(float(coverage_raw) * 100))}%"
+                except (TypeError, ValueError):
+                    coverage_pct = str(coverage_raw)
+
+                rows.append({
+                    'Field': field.get('id', ''),
+                    'Description': field.get('description', ''),
+                    'Type': field.get('type', ''),
+                    'Coverage': coverage_pct,
+                    'Users': field.get('userCount', 0),
+                    'Alphas': field.get('alphaCount', 0),
+                })
+
+            if offset + limit >= body.get('count', 0) or not results:
+                break
+            offset += limit
+
+        if not rows:
+            return None
+        return pd.DataFrame(rows, columns=['Field', 'Description', 'Type', 'Coverage', 'Users', 'Alphas'])
+
 
 # 自定義 SQLite 表格模型
 class SqliteTableModel(QAbstractTableModel):
@@ -613,6 +792,29 @@ class MainWindow(QMainWindow):
         files_title.setStyleSheet("font-weight: bold; font-size: 14px;")
         files_header.addWidget(files_title)
         files_header.addStretch()
+
+        # Refresh from API button
+        self.api_refresh_btn = QPushButton("⟳ Refresh from API")
+        self.api_refresh_btn.setToolTip(
+            "Fetch latest dataset field metadata from the WQ Brain API "
+            "and update local CSV files in the datasets/ folder"
+        )
+        self.api_refresh_btn.setStyleSheet(
+            "padding: 3px 8px; background-color: #1565C0; color: white; "
+            "border: none; border-radius: 4px; font-size: 11px;"
+        )
+        self.api_refresh_btn.clicked.connect(self.start_api_refresh)
+        files_header.addWidget(self.api_refresh_btn)
+
+        # Progress bar for API refresh (hidden by default)
+        self.api_refresh_progress = QProgressBar()
+        self.api_refresh_progress.setVisible(False)
+        self.api_refresh_progress.setMaximum(0)
+        self.api_refresh_progress.setFixedHeight(6)
+        self.api_refresh_progress.setStyleSheet(
+            "QProgressBar { border: none; border-radius: 3px; background: #e0e0e0; } "
+            "QProgressBar::chunk { background-color: #1565C0; border-radius: 3px; }"
+        )
         
         self.file_model = QFileSystemModel()
         self.file_model.setRootPath(QDir.currentPath() + "/datasets")
@@ -630,6 +832,7 @@ class MainWindow(QMainWindow):
             self.file_view.hideColumn(i)
             
         left_layout.addLayout(files_header)
+        left_layout.addWidget(self.api_refresh_progress)
         left_layout.addWidget(self.file_view)
         
         # 右側內容標籤頁
@@ -696,6 +899,9 @@ class MainWindow(QMainWindow):
         self.semantic_search_worker = None
         self.semantic_search_results = []  # 存儲語意搜索結果
         self.is_semantic_search_active = False  # 標記是否正在進行語意搜索
+
+        # API refresh worker (None when idle)
+        self._api_refresh_worker = None
         
         # 顯示初始信息
         self.status_bar.showMessage("Select a dataset file on the left to begin")
@@ -708,7 +914,74 @@ class MainWindow(QMainWindow):
             
         self.load_dataset(self.last_loaded_index)
         self.status_bar.showMessage("已刷新當前資料集")
-    
+
+    # ------------------------------------------------------------------
+    # API refresh
+    # ------------------------------------------------------------------
+
+    def start_api_refresh(self):
+        """Launch DatasetRefreshWorker to pull field metadata from the WQ Brain API."""
+        if self._api_refresh_worker is not None and self._api_refresh_worker.isRunning():
+            QMessageBox.information(self, "In Progress", "An API refresh is already running.")
+            return
+
+        # Resolve the datasets directory the same way the file model does
+        datasets_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "datasets")
+        credentials_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "credentials.json")
+
+        if not os.path.exists(credentials_path):
+            QMessageBox.critical(
+                self, "Missing Credentials",
+                f"credentials.json not found at:\n{credentials_path}\n\n"
+                "Please create it with your WQ Brain email and password."
+            )
+            return
+
+        self.api_refresh_btn.setEnabled(False)
+        self.api_refresh_btn.setText("Refreshing…")
+        self.api_refresh_progress.setVisible(True)
+        self.status_bar.showMessage("Starting API refresh…")
+
+        self._api_refresh_worker = DatasetRefreshWorker(datasets_dir, credentials_path)
+        self._api_refresh_worker.progress.connect(self._on_api_refresh_progress)
+        self._api_refresh_worker.finished.connect(self._on_api_refresh_finished)
+        self._api_refresh_worker.error.connect(self._on_api_refresh_error)
+        self._api_refresh_worker.start()
+
+    def _on_api_refresh_progress(self, message):
+        self.status_bar.showMessage(message)
+
+    def _on_api_refresh_finished(self, refreshed_ids):
+        self.api_refresh_btn.setEnabled(True)
+        self.api_refresh_btn.setText("⟳ Refresh from API")
+        self.api_refresh_progress.setVisible(False)
+
+        if refreshed_ids:
+            self.status_bar.showMessage(
+                f"API refresh complete — updated {len(refreshed_ids)} dataset(s): "
+                + ", ".join(refreshed_ids[:5])
+                + ("…" if len(refreshed_ids) > 5 else "")
+            )
+            # Reload the file model so new/updated CSVs appear immediately
+            datasets_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "datasets")
+            self.file_model.setRootPath(datasets_dir)
+            self.file_view.setRootIndex(self.file_model.index(datasets_dir))
+            QMessageBox.information(
+                self, "Refresh Complete",
+                f"Successfully refreshed {len(refreshed_ids)} dataset(s).\n\n"
+                "The dataset list on the left has been updated."
+            )
+        else:
+            self.status_bar.showMessage("API refresh finished — no datasets were updated.")
+
+    def _on_api_refresh_error(self, error_message):
+        self.api_refresh_btn.setEnabled(True)
+        self.api_refresh_btn.setText("⟳ Refresh from API")
+        self.api_refresh_progress.setVisible(False)
+        self.status_bar.showMessage(f"API refresh error: {error_message}")
+        QMessageBox.critical(self, "API Refresh Error", error_message)
+
+
     def set_search_mode(self, mode):
         """Set search mode"""
         self.current_search_mode = mode

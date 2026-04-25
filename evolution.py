@@ -8,10 +8,14 @@ Implements a template-based genetic algorithm that evolves combinations of
 placeholder values (e.g. {field}, {window}) for maximum coverage/diversity,
 then ranks candidates and feeds them into the existing simulation workflow.
 
-No simulation feedback is required — fitness is a deterministic diversity proxy.
+Supports closed-loop feedback: load a backtest CSV, match result rows back
+to generated candidates, compute real fitness from Sharpe/fitness/subsharpe,
+and seed the next generation from the top performers.
 """
 
 import re
+import csv
+import os
 import random
 import itertools
 from typing import Dict, List, Tuple, Any, Optional
@@ -21,7 +25,7 @@ from PySide6.QtWidgets import (
     QTableWidget, QTableWidgetItem, QGroupBox, QFormLayout,
     QLineEdit, QSpinBox, QDoubleSpinBox, QMessageBox,
     QHeaderView, QAbstractItemView, QScrollArea, QCheckBox,
-    QFrame, QSizePolicy,
+    QFrame, QSizePolicy, QFileDialog,
 )
 from PySide6.QtCore import Qt, Signal, Slot, QThread, QObject
 from PySide6.QtGui import QFont, QColor
@@ -75,6 +79,131 @@ def _uniqueness(candidate: Dict[str, str],
     return max(0.0, 1.0 - dups * 0.5)
 
 
+# ---------------------------------------------------------------------------
+# Backtest feedback helpers  (zero Qt dependencies)
+# ---------------------------------------------------------------------------
+
+def _normalize_code(code: str) -> str:
+    """Collapse all whitespace for code-string comparison."""
+    return ' '.join(code.split())
+
+
+def compute_real_fitness(row: Dict[str, Any],
+                         sharpe_weight: float = 0.40,
+                         fitness_weight: float = 0.30,
+                         subsharpe_weight: float = 0.20,
+                         turnover_weight: float = 0.10) -> float:
+    """Compute a scalar fitness from one backtest result row.
+
+    Uses sharpe, fitness, subsharpe, turnover, and a pass-bonus.
+    Returns a non-negative float; higher is better.
+    """
+    def _f(key: str, default: float = 0.0) -> float:
+        try:
+            return float(row.get(key, default) or default)
+        except (ValueError, TypeError):
+            return float(default)
+
+    sharpe     = _f('sharpe')
+    fitness    = _f('fitness')
+    subsharpe  = _f('subsharpe')
+    turnover   = _f('turnover', 50.0)
+    passed     = str(row.get('passed', '')).strip().upper() == 'PASS'
+
+    # Normalise each metric toward [0, 1]
+    sharpe_score    = max(0.0, sharpe)    / 2.0   # 2.0 → 1.0
+    fitness_score   = max(0.0, fitness)            # already ~[0,1]
+    subsharpe_score = max(0.0, subsharpe) / 1.5   # 1.5 → 1.0
+    # Prefer turnover in the 3–20 % range; penalise extremes
+    turnover_score  = max(0.0, 1.0 - abs(turnover - 10.0) / 30.0)
+
+    score = (sharpe_weight    * sharpe_score
+           + fitness_weight   * fitness_score
+           + subsharpe_weight * subsharpe_score
+           + turnover_weight  * turnover_score)
+
+    if passed:
+        score *= 1.10   # 10 % bonus for a passing alpha
+
+    return round(score, 6)
+
+
+def load_backtest_csv(path: str) -> List[Dict[str, Any]]:
+    """Load a backtest CSV and return list of row dicts.
+
+    Each row gets an extra ``_norm_code`` key (normalised code string).
+    Rows without a non-empty ``code`` column are skipped.
+    """
+    rows: List[Dict[str, Any]] = []
+    with open(path, newline='', encoding='utf-8') as fh:
+        reader = csv.DictReader(fh)
+        for row in reader:
+            code = row.get('code', '').strip()
+            if code:
+                row['_norm_code'] = _normalize_code(code)
+                rows.append(row)
+    return rows
+
+
+def match_results_to_csv(
+    results: List[Tuple[float, Dict[str, str], str]],
+    csv_rows: List[Dict[str, Any]],
+) -> List[Tuple[float, Dict[str, str], str]]:
+    """Match evolved candidates to CSV backtest rows by normalised code.
+
+    Returns ``(real_fitness, candidate_dict, code)`` tuples for matched
+    candidates, sorted by real_fitness descending.
+    """
+    index = {row['_norm_code']: row for row in csv_rows}
+    matched: List[Tuple[float, Dict[str, str], str]] = []
+    for _score, candidate, code in results:
+        row = index.get(_normalize_code(code))
+        if row is not None:
+            matched.append((compute_real_fitness(row), candidate, code))
+    matched.sort(key=lambda x: -x[0])
+    return matched
+
+
+def reverse_match_csv_to_template(
+    template: str,
+    pools: Dict[str, List[str]],
+    csv_rows: List[Dict[str, Any]],
+    max_combos: int = 20_000,
+) -> List[Tuple[float, Dict[str, str], str]]:
+    """Enumerate pool combinations and check each against CSV backtest codes.
+
+    Useful when no prior ``_results`` exist yet — it finds any CSV row whose
+    code is reproducible from the current template + pools.
+
+    Returns ``(real_fitness, candidate_dict, code)`` sorted by real_fitness desc.
+    """
+    placeholders = parse_placeholders(template)
+    active = [p for p in placeholders if p in pools]
+    if not active:
+        return []
+
+    csv_index = {row['_norm_code']: row for row in csv_rows}
+    if not csv_index:
+        return []
+
+    all_combos = list(itertools.product(*[pools[p] for p in active]))
+    if len(all_combos) > max_combos:
+        all_combos = random.sample(all_combos, max_combos)
+
+    matched: List[Tuple[float, Dict[str, str], str]] = []
+    seen: set = set()
+    for combo in all_combos:
+        candidate = dict(zip(active, combo))
+        code = render_candidate(template, candidate)
+        norm = _normalize_code(code)
+        if norm in csv_index and norm not in seen:
+            seen.add(norm)
+            matched.append((compute_real_fitness(csv_index[norm]), candidate, code))
+
+    matched.sort(key=lambda x: -x[0])
+    return matched
+
+
 class EvolutionEngine:
     """
     Genetic algorithm that evolves placeholder value combinations for
@@ -96,6 +225,14 @@ class EvolutionEngine:
         Fraction of population kept as parents each generation.
     diversity_weight : float
         Weight on the diversity term vs uniqueness term in fitness.
+    seed_population : list, optional
+        Pre-selected candidate dicts (e.g. best from backtest) to use as
+        the starting population.  Padded with random individuals to
+        ``pop_size`` if shorter.
+    known_real_fitness : dict, optional
+        Mapping of candidate keys to real backtest fitness. When present, the
+        GA blends known real fitness into selection so matched backtest winners
+        are genuinely favoured during evolution rather than only used as seeds.
     """
 
     def __init__(self,
@@ -105,7 +242,9 @@ class EvolutionEngine:
                  generations: int = 10,
                  mutation_rate: float = 0.4,
                  parent_ratio: float = 0.3,
-                 diversity_weight: float = 0.7):
+                 diversity_weight: float = 0.7,
+                 seed_population: Optional[List[Dict[str, str]]] = None,
+                 known_real_fitness: Optional[Dict[tuple, float]] = None):
         self.template = template
         self.pools = pools
         self.pop_size = max(pop_size, 4)
@@ -113,9 +252,18 @@ class EvolutionEngine:
         self.mutation_rate = mutation_rate
         self.parent_num = max(2, int(self.pop_size * parent_ratio))
         self.diversity_weight = diversity_weight
+        self.known_real_fitness = dict(known_real_fitness or {})
 
         template_phs = parse_placeholders(template)
         self.active_placeholders = [p for p in template_phs if p in pools]
+
+        # Validate and store seed candidates (filter to only active placeholders)
+        self.seed_population: List[Dict[str, str]] = []
+        for cand in (seed_population or []):
+            if all(p in cand for p in self.active_placeholders):
+                self.seed_population.append(
+                    {p: cand[p] for p in self.active_placeholders}
+                )
 
     # ------------------------------------------------------------------
     # Internal helpers
@@ -141,7 +289,11 @@ class EvolutionEngine:
                  population: List[Dict[str, str]]) -> float:
         div = _hamming_diversity(candidate, population)
         uniq = _uniqueness(candidate, population)
-        return self.diversity_weight * div + (1.0 - self.diversity_weight) * uniq
+        structural = self.diversity_weight * div + (1.0 - self.diversity_weight) * uniq
+        real = self.known_real_fitness.get(_candidate_key(candidate))
+        if real is None:
+            return structural
+        return 0.65 * real + 0.35 * structural
 
     def _score_population(self,
                           population: List[Dict[str, str]]
@@ -185,7 +337,13 @@ class EvolutionEngine:
         if not self.active_placeholders:
             return []
 
-        population = self._initial_population()
+        if self.seed_population:
+            population = list(self.seed_population)
+            while len(population) < self.pop_size:
+                population.append(self._random_candidate())
+            population = population[: self.pop_size]
+        else:
+            population = self._initial_population()
 
         for gen in range(self.generations):
             scored = self._score_population(population)
@@ -268,6 +426,10 @@ class EvolutionWidget(QWidget):
 
     # Emits list of strategy dicts — same format expected by SimulationWidget
     candidates_ready = Signal(list)
+    # Auto-loop control signals (connected by app.py)
+    request_simulation_start = Signal()    # → SimulationWidget.start_simulation_thread
+    request_clear_simulation = Signal()    # → SimulationWidget.clear_for_auto_loop
+    auto_loop_mode_changed = Signal(bool)  # → sets SimulationWidget.auto_loop_active
 
     def __init__(self, template_editor, fields_widget, settings_widget,
                  parent=None):
@@ -280,6 +442,16 @@ class EvolutionWidget(QWidget):
         self._pool_editors: Dict[str, QLineEdit] = {}
         self._thread: Optional[QThread] = None
         self._worker: Optional[_EvolutionWorker] = None
+        # Backtest feedback state
+        self._bt_fitness_map: Dict[str, float] = {}   # norm_code → real fitness
+        self._seed_candidates: List[Dict[str, str]] = []  # seeds for next run
+        self._bt_source_label_text: str = ""
+
+        # Auto-loop state
+        self._auto_active: bool = False
+        self._auto_stop_requested: bool = False
+        self._auto_remaining: int = 0
+        self._auto_total: int = 0
 
         self._init_ui()
 
@@ -295,9 +467,12 @@ class EvolutionWidget(QWidget):
         desc = QLabel(
             "<b>Auto Evolution</b> evolves combinations of "
             "<code>{placeholder}</code> values from the current template "
-            "for maximum diversity. "
-            "Click <i>Refresh Placeholders</i> whenever you edit the "
-            "template, define value pools, configure the GA, then run."
+            "for maximum diversity.  "
+            "Click <i>Refresh Placeholders</i> whenever you edit the template, "
+            "define value pools, configure the GA, then run.  "
+            "Use <i>Evolve From Backtest…</i> to load a backtest CSV, match "
+            "result rows back to candidates and seed the next generation from "
+            "the best performers."
         )
         desc.setWordWrap(True)
         layout.addWidget(desc)
@@ -372,9 +547,25 @@ class EvolutionWidget(QWidget):
             "background-color: #1565c0; color: white; "
             "font-weight: bold; padding: 7px 18px;"
         )
-        self._run_btn.setToolTip("Evolve candidates using the GA and rank by diversity.")
+        self._run_btn.setToolTip(
+            "Evolve candidates using the GA and rank by diversity.  "
+            "Clears any backtest seeds — use for a fresh diversity run."
+        )
         self._run_btn.clicked.connect(self.run_evolution)
         action_bar.addWidget(self._run_btn)
+
+        self._bt_btn = QPushButton("📊  Evolve From Backtest…")
+        self._bt_btn.setStyleSheet(
+            "background-color: #6a1b9a; color: white; "
+            "font-weight: bold; padding: 7px 18px;"
+        )
+        self._bt_btn.setToolTip(
+            "Load a backtest CSV, match result rows to candidates via code, "
+            "compute real fitness (Sharpe/fitness/subsharpe/turnover), and "
+            "seed the next evolution from the top performers."
+        )
+        self._bt_btn.clicked.connect(self._evolve_from_backtest)
+        action_bar.addWidget(self._bt_btn)
 
         self._progress_label = QLabel("Ready.")
         self._progress_label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
@@ -394,13 +585,24 @@ class EvolutionWidget(QWidget):
 
         layout.addLayout(action_bar)
 
+        # Seed-status banner (shown only when backtest seeds are loaded)
+        self._seed_label = QLabel("")
+        self._seed_label.setStyleSheet(
+            "color: #6a1b9a; font-style: italic; padding: 2px 4px;"
+        )
+        self._seed_label.setWordWrap(True)
+        self._seed_label.hide()
+        layout.addWidget(self._seed_label)
+
         # ── Results table ──────────────────────────────────────────────
-        results_group = QGroupBox("Evolved Candidates  (ranked by diversity score ↓)")
+        results_group = QGroupBox(
+            "Evolved Candidates  (diversity score ↓ · BT Fitness = real backtest score)"
+        )
         results_layout = QVBoxLayout(results_group)
 
-        self._results_table = QTableWidget(0, 4)
+        self._results_table = QTableWidget(0, 5)
         self._results_table.setHorizontalHeaderLabels(
-            ["✔", "Score", "Parameters", "Rendered Code"]
+            ["✔", "Diversity", "BT Fitness", "Parameters", "Rendered Code"]
         )
         self._results_table.horizontalHeader().setSectionResizeMode(
             0, QHeaderView.ResizeToContents
@@ -412,7 +614,10 @@ class EvolutionWidget(QWidget):
             2, QHeaderView.ResizeToContents
         )
         self._results_table.horizontalHeader().setSectionResizeMode(
-            3, QHeaderView.Stretch
+            3, QHeaderView.ResizeToContents
+        )
+        self._results_table.horizontalHeader().setSectionResizeMode(
+            4, QHeaderView.Stretch
         )
         self._results_table.setFont(QFont("Consolas", 11))
         self._results_table.setEditTriggers(QAbstractItemView.NoEditTriggers)
@@ -420,6 +625,56 @@ class EvolutionWidget(QWidget):
         results_layout.addWidget(self._results_table)
 
         layout.addWidget(results_group, 1)
+
+        # ── Auto Loop section ──────────────────────────────────────────
+        auto_sep = QFrame()
+        auto_sep.setFrameShape(QFrame.HLine)
+        auto_sep.setFrameShadow(QFrame.Sunken)
+        layout.addWidget(auto_sep)
+
+        auto_group = QGroupBox("🔁  Unattended Auto Loop")
+        auto_outer = QVBoxLayout(auto_group)
+
+        auto_cfg_row = QHBoxLayout()
+        auto_cfg_row.addWidget(QLabel("Loop count:"))
+        self._auto_loops_spin = QSpinBox()
+        self._auto_loops_spin.setRange(1, 50)
+        self._auto_loops_spin.setValue(3)
+        self._auto_loops_spin.setToolTip(
+            "Number of evolve → simulate → seed cycles to run unattended."
+        )
+        auto_cfg_row.addWidget(self._auto_loops_spin)
+        auto_cfg_row.addStretch()
+
+        self._auto_btn = QPushButton("▶▶  Start Auto Loop")
+        self._auto_btn.setStyleSheet(
+            "background-color: #e65100; color: white; font-weight: bold; padding: 7px 18px;"
+        )
+        self._auto_btn.setToolTip(
+            "Run the full evolve → simulate → seed cycle automatically.\n"
+            "Requires the Simulation tab to be logged in first (Check Login).\n\n"
+            "Each cycle:\n"
+            "  1. Evolve candidates with GA\n"
+            "  2. Send top-K to Simulation tab and run\n"
+            "  3. Wait for all simulations to finish\n"
+            "  4. Compute real fitness (Sharpe/fitness/subsharpe/turnover)\n"
+            "  5. Seed next generation from top performers\n\n"
+            "Click again to stop safely after the current simulation batch."
+        )
+        self._auto_btn.clicked.connect(self._toggle_auto_loop)
+        auto_cfg_row.addWidget(self._auto_btn)
+
+        auto_outer.addLayout(auto_cfg_row)
+
+        self._auto_status_label = QLabel("Auto loop: idle")
+        self._auto_status_label.setStyleSheet(
+            "color: #444; font-style: italic; padding: 3px 4px; "
+            "background: #fff8e1; border: 1px solid #ffe082; border-radius: 3px;"
+        )
+        self._auto_status_label.setWordWrap(True)
+        auto_outer.addWidget(self._auto_status_label)
+
+        layout.addWidget(auto_group)
 
         # Populate pools on first show
         self.refresh_placeholders()
@@ -501,6 +756,16 @@ class EvolutionWidget(QWidget):
     # ------------------------------------------------------------------
 
     def run_evolution(self):
+        """Run a fresh diversity-based evolution.  Clears any backtest seeds."""
+        self._seed_candidates = []
+        self._bt_fitness_map = {}
+        self._seed_label.hide()
+        self._start_evolution()
+
+    def _start_evolution(self,
+                         seeds: Optional[List[Dict[str, str]]] = None,
+                         known_real_fitness: Optional[Dict[tuple, float]] = None):
+        """Internal: build engine and launch background thread."""
         template = self.template_editor.get_current_template()
         if not template:
             QMessageBox.warning(self, "No Template", "The template editor is empty.")
@@ -516,6 +781,8 @@ class EvolutionWidget(QWidget):
             pop_size=self._pop_size_spin.value(),
             generations=self._gen_spin.value(),
             mutation_rate=self._mutation_spin.value(),
+            seed_population=seeds or [],
+            known_real_fitness=known_real_fitness or {},
         )
 
         if not engine.active_placeholders:
@@ -527,6 +794,7 @@ class EvolutionWidget(QWidget):
             return
 
         self._run_btn.setEnabled(False)
+        self._bt_btn.setEnabled(False)
         self._send_btn.setEnabled(False)
         self._progress_label.setText("Starting evolution…")
         self._results_table.setRowCount(0)
@@ -561,17 +829,28 @@ class EvolutionWidget(QWidget):
         top_k = self._top_k_spin.value()
         self._populate_table(results[:top_k])
         shown = min(top_k, len(results))
+        seed_note = ""
+        if self._seed_candidates:
+            seed_note = f"  (seeded from {len(self._seed_candidates)} backtest match(es))"
         self._progress_label.setText(
-            f"Done — {len(results)} unique candidates, showing top {shown}."
+            f"Done — {len(results)} unique candidates, showing top {shown}.{seed_note}"
         )
         self._run_btn.setEnabled(True)
+        self._bt_btn.setEnabled(True)
         self._send_btn.setEnabled(bool(results))
+
+        if self._auto_active:
+            self._auto_on_evolution_done(results)
 
     @Slot(str)
     def _on_error(self, msg: str):
         self._progress_label.setText(f"Error: {msg}")
-        QMessageBox.critical(self, "Evolution Error", msg)
+        if self._auto_active:
+            self._auto_abort(f"Evolution error: {msg}")
+        else:
+            QMessageBox.critical(self, "Evolution Error", msg)
         self._run_btn.setEnabled(True)
+        self._bt_btn.setEnabled(True)
 
     # ------------------------------------------------------------------
     # Results table
@@ -583,7 +862,7 @@ class EvolutionWidget(QWidget):
             row = self._results_table.rowCount()
             self._results_table.insertRow(row)
 
-            # Checkbox column
+            # col 0 — Checkbox
             cb = QCheckBox()
             cb.setChecked(True)
             cb_container = QWidget()
@@ -593,21 +872,38 @@ class EvolutionWidget(QWidget):
             cb_layout.setContentsMargins(0, 0, 0, 0)
             self._results_table.setCellWidget(row, 0, cb_container)
 
-            # Score
+            # col 1 — Diversity score
             score_item = QTableWidgetItem(f"{score:.3f}")
             score_item.setTextAlignment(Qt.AlignCenter)
             self._results_table.setItem(row, 1, score_item)
 
-            # Compact parameter summary
+            # col 2 — Real BT fitness (if this code was matched to backtest data)
+            norm = _normalize_code(code)
+            bt_score = self._bt_fitness_map.get(norm)
+            if bt_score is not None:
+                bt_item = QTableWidgetItem(f"{bt_score:.3f}")
+                bt_item.setTextAlignment(Qt.AlignCenter)
+                bt_item.setForeground(QColor("#6a1b9a"))
+                bt_item.setToolTip(
+                    "Real fitness from backtest: "
+                    "0.4×Sharpe + 0.3×fitness + 0.2×subsharpe + 0.1×turnover_score"
+                )
+            else:
+                bt_item = QTableWidgetItem("—")
+                bt_item.setTextAlignment(Qt.AlignCenter)
+                bt_item.setForeground(QColor("#aaaaaa"))
+            self._results_table.setItem(row, 2, bt_item)
+
+            # col 3 — Compact parameter summary
             params_str = "  ".join(f"{k}={v}" for k, v in sorted(candidate.items()))
             params_item = QTableWidgetItem(params_str)
             params_item.setForeground(QColor("#555555"))
-            self._results_table.setItem(row, 2, params_item)
+            self._results_table.setItem(row, 3, params_item)
 
-            # Rendered code — store candidate dict for retrieval
+            # col 4 — Rendered code; store candidate dict in UserRole
             code_item = QTableWidgetItem(code.strip())
             code_item.setData(Qt.UserRole, candidate)
-            self._results_table.setItem(row, 3, code_item)
+            self._results_table.setItem(row, 4, code_item)
 
     # ------------------------------------------------------------------
     # Send to simulation
@@ -616,11 +912,6 @@ class EvolutionWidget(QWidget):
     def send_to_simulation(self):
         """Collect checked candidates and emit as strategy dicts."""
         settings = self.settings_widget.get_settings()
-        base = {
-            k: v for k, v in settings.items()
-            if k in ("neutralization", "decay", "truncation", "delay",
-                     "universe", "region")
-        }
 
         strategies = []
         for row in range(self._results_table.rowCount()):
@@ -628,9 +919,9 @@ class EvolutionWidget(QWidget):
             if cb_container:
                 cb = cb_container.findChild(QCheckBox)
                 if cb and cb.isChecked():
-                    code_item = self._results_table.item(row, 3)
+                    code_item = self._results_table.item(row, 4)
                     if code_item:
-                        strategy = base.copy()
+                        strategy = settings.copy()
                         strategy["code"] = code_item.text().strip()
                         strategies.append(strategy)
 
@@ -646,3 +937,330 @@ class EvolutionWidget(QWidget):
             self, "Sent to Simulation",
             f"{len(strategies)} evolved candidate(s) appended to the Simulation tab."
         )
+
+    # ------------------------------------------------------------------
+    # Backtest-driven evolution
+    # ------------------------------------------------------------------
+
+    def _evolve_from_backtest(self):
+        """Load a backtest CSV, match rows to candidates, seed next evolution."""
+        template = self.template_editor.get_current_template()
+        if not template:
+            QMessageBox.warning(self, "No Template", "The template editor is empty.")
+            return
+
+        pools = self._parse_pools()
+        if pools is None:
+            return
+
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        default_dir = os.path.join(script_dir, "data")
+        path, _ = QFileDialog.getOpenFileName(
+            self, "Load Backtest CSV", default_dir, "CSV files (*.csv)"
+        )
+        if not path:
+            return
+
+        # Load CSV
+        try:
+            csv_rows = load_backtest_csv(path)
+        except Exception as exc:
+            QMessageBox.critical(
+                self, "Load Error", f"Failed to read CSV:\n{exc}"
+            )
+            return
+
+        if not csv_rows:
+            QMessageBox.warning(
+                self, "Empty File",
+                "The selected CSV has no rows with a non-empty 'code' column."
+            )
+            return
+
+        # ── Step 1: direct match against already-evolved results ────────
+        matched = match_results_to_csv(self._results, csv_rows) if self._results else []
+
+        # ── Step 2: reverse-match all pool combinations against CSV ─────
+        reverse = reverse_match_csv_to_template(template, pools, csv_rows)
+        # Merge without duplicates (prefer direct-match scores if both hit the same code)
+        matched_norms = {_normalize_code(code) for _, _, code in matched}
+        for rf, cand, code in reverse:
+            if _normalize_code(code) not in matched_norms:
+                matched.append((rf, cand, code))
+                matched_norms.add(_normalize_code(code))
+        matched.sort(key=lambda x: -x[0])
+
+        if not matched:
+            QMessageBox.warning(
+                self, "No Matches Found",
+                f"Could not match any of the {len(csv_rows)} CSV row(s) to the "
+                f"current template and pools.\n\n"
+                "Tips:\n"
+                "• Make sure the CSV was generated from the same template\n"
+                "• Ensure all relevant values are listed in the pool fields\n"
+                "• Try clicking 'Refresh Placeholders' and checking the pools"
+            )
+            return
+
+        # ── Step 3: store seeds and fitness map ─────────────────────────
+        top_k = self._top_k_spin.value()
+        seeds = [cand for _, cand, _ in matched[:top_k]]
+        self._seed_candidates = seeds
+        self._bt_fitness_map = {
+            _normalize_code(code): rf for rf, _, code in matched
+        }
+        known_real_fitness = {
+            _candidate_key(cand): rf for rf, cand, _ in matched[:top_k]
+        }
+
+        n_total   = len(csv_rows)
+        n_matched = len(matched)
+        top_rf    = matched[0][0]
+
+        self._seed_label.setText(
+            f"🌱 Backtest seed: {n_matched} match(es) from {n_total} CSV row(s) · "
+            f"top real fitness: {top_rf:.3f} · "
+            f"seeding next generation from top {len(seeds)} and blending real fitness into selection"
+        )
+        self._seed_label.show()
+
+        # ── Step 4: launch seeded evolution ─────────────────────────────
+        self._start_evolution(seeds=seeds, known_real_fitness=known_real_fitness)
+
+    # ------------------------------------------------------------------
+    # Auto Loop
+    # ------------------------------------------------------------------
+
+    def _toggle_auto_loop(self):
+        if self._auto_active:
+            self._stop_auto_loop()
+        else:
+            self._start_auto_loop()
+
+    def _start_auto_loop(self):
+        """Validate and start the unattended evolve→simulate→seed loop."""
+        if self._thread is not None:
+            QMessageBox.warning(self, "Busy",
+                "An evolution is already running. Wait for it to finish before starting the auto loop.")
+            return
+
+        template = self.template_editor.get_current_template()
+        if not template:
+            QMessageBox.warning(self, "No Template", "The template editor is empty.")
+            return
+        if self._parse_pools() is None:
+            return
+
+        n = self._auto_loops_spin.value()
+        self._auto_active = True
+        self._auto_stop_requested = False
+        self._auto_total = n
+        self._auto_remaining = n
+        self._seed_candidates = []
+        self._bt_fitness_map = {}
+
+        self._auto_btn.setText("⏹  Stop Auto Loop")
+        self._auto_btn.setStyleSheet(
+            "background-color: #b71c1c; color: white; font-weight: bold; padding: 7px 18px;"
+        )
+        self._run_btn.setEnabled(False)
+        self._bt_btn.setEnabled(False)
+        self._auto_loops_spin.setEnabled(False)
+        self.auto_loop_mode_changed.emit(True)
+
+        cycle = self._auto_total - self._auto_remaining + 1
+        self._auto_status_label.setText(
+            f"⏳ Loop {cycle}/{self._auto_total}: running evolution…"
+        )
+        self._start_evolution(seeds=[], known_real_fitness={})
+
+    def _stop_auto_loop(self):
+        """Request a graceful stop; the current evolution/sim is allowed to finish."""
+        self._auto_stop_requested = True
+        self._auto_status_label.setText(
+            "Auto loop: stop requested. Will stop after the current evolution/simulation cycle."
+        )
+        self._auto_btn.setEnabled(False)
+
+    def _auto_abort(self, reason: str):
+        """Abort the auto loop with an error message."""
+        self._auto_active = False
+        self._auto_stop_requested = False
+        self._auto_remaining = 0
+        self.auto_loop_mode_changed.emit(False)
+        self._auto_btn.setText("▶▶  Start Auto Loop")
+        self._auto_btn.setStyleSheet(
+            "background-color: #e65100; color: white; font-weight: bold; padding: 7px 18px;"
+        )
+        self._run_btn.setEnabled(True)
+        self._bt_btn.setEnabled(True)
+        self._auto_loops_spin.setEnabled(True)
+        self._auto_btn.setEnabled(True)
+        self._auto_status_label.setText(f"❌ Auto loop aborted: {reason}")
+        QMessageBox.critical(self, "Auto Loop Aborted", reason)
+
+    def _auto_on_evolution_done(self, results: List[Tuple[float, Dict[str, str], str]]):
+        """Called after GA finishes during auto loop. Sends candidates to simulation."""
+        if not self._auto_active:
+            return
+        if self._auto_stop_requested:
+            self._auto_finish(stopped=True)
+            return
+
+        top_k = self._top_k_spin.value()
+        candidates = results[:top_k]
+        if not candidates:
+            self._auto_abort("Evolution produced no candidates. Check template and pool settings.")
+            return
+
+        settings = self.settings_widget.get_settings()
+        strategies = []
+        for _score, _candidate, code in candidates:
+            strategy = settings.copy()
+            strategy["code"] = code.strip()
+            strategies.append(strategy)
+
+        cycle = self._auto_total - self._auto_remaining + 1
+        self._auto_status_label.setText(
+            f"⏳ Loop {cycle}/{self._auto_total}: sending {len(strategies)} candidates to Simulation…"
+        )
+
+        # Clear any leftover rows, load the new batch, then start simulation
+        self.request_clear_simulation.emit()
+        self.candidates_ready.emit(strategies)
+        self.request_simulation_start.emit()
+
+    @Slot(list)
+    def on_simulation_completed(self, row_results: list):
+        """
+        Slot called by SimulationWidget.simulation_completed_with_results.
+
+        ``row_results`` is a list of row-data lists with columns:
+          [passed, delay, region, neutralization, decay, truncation,
+           sharpe, fitness, turnover, weight, subsharpe, correlation,
+           universe, link, code]
+        """
+        if not self._auto_active:
+            return
+
+        cycle = self._auto_total - self._auto_remaining + 1
+
+        if not row_results:
+            # Simulation was stopped or had no results — abort the loop
+            self._auto_abort(
+                f"Loop {cycle}/{self._auto_total}: simulation returned no results "
+                "(was it stopped manually, or is the Simulation tab not logged in?)."
+            )
+            return
+
+        # Build result dicts and match back to evolved candidates
+        ROW_COL = {'passed': 0, 'sharpe': 6, 'fitness': 7,
+                   'turnover': 8, 'subsharpe': 10, 'code': 14}
+        matched: List[Tuple[float, Dict[str, str], str]] = []
+        for row_data in row_results:
+            try:
+                if len(row_data) <= ROW_COL['code']:
+                    continue
+                code = str(row_data[ROW_COL['code']])
+                if not code.strip():
+                    continue
+                result_dict = {
+                    'passed':    'PASS' if int(row_data[ROW_COL['passed']]) >= 1 else 'FAIL',
+                    'sharpe':    row_data[ROW_COL['sharpe']],
+                    'fitness':   row_data[ROW_COL['fitness']],
+                    'turnover':  row_data[ROW_COL['turnover']],
+                    'subsharpe': row_data[ROW_COL['subsharpe']],
+                    'code':      code,
+                }
+                rf = compute_real_fitness(result_dict)
+                norm = _normalize_code(code)
+                candidate = None
+                for _sc, cand, ccode in self._results:
+                    if _normalize_code(ccode) == norm:
+                        candidate = cand
+                        break
+                if candidate is not None:
+                    matched.append((rf, candidate, code))
+            except Exception:
+                continue
+
+        matched.sort(key=lambda x: -x[0])
+
+        # Update fitness map so table shows real BT scores
+        self._bt_fitness_map = {_normalize_code(code): rf for rf, _, code in matched}
+        top_k = self._top_k_spin.value()
+        self._populate_table(self._results[:top_k])
+
+        n_matched = len(matched)
+        top_rf = matched[0][0] if matched else 0.0
+        self._auto_status_label.setText(
+            f"✅ Loop {cycle}/{self._auto_total} done — "
+            f"{n_matched} matched, top fitness {top_rf:.3f}"
+        )
+
+        # Decrement and decide whether to continue
+        self._auto_remaining -= 1
+        if self._auto_stop_requested:
+            self._auto_finish(stopped=True)
+            return
+
+        if self._auto_remaining > 0:
+            self._auto_seed_and_continue(matched)
+        else:
+            self._auto_finish()
+
+    def _auto_seed_and_continue(self, matched: List[Tuple[float, Dict[str, str], str]]):
+        """Seed the next generation from the best simulation results and evolve."""
+        top_k = self._top_k_spin.value()
+        seeds = [cand for _, cand, _ in matched[:top_k]]
+        known_real_fitness = {
+            _candidate_key(cand): rf for rf, cand, _ in matched[:top_k]
+        }
+        self._seed_candidates = seeds
+        if seeds:
+            top_rf = matched[0][0]
+            self._seed_label.setText(
+                f"🌱 Auto loop seed: {len(seeds)} candidate(s) · top fitness {top_rf:.3f}"
+            )
+            self._seed_label.show()
+
+        cycle = self._auto_total - self._auto_remaining + 1
+        self._auto_status_label.setText(
+            f"⏳ Loop {cycle}/{self._auto_total}: running evolution (seeded from real fitness)…"
+        )
+        self._start_evolution(seeds=seeds, known_real_fitness=known_real_fitness)
+
+    def _auto_finish(self, stopped: bool = False):
+        """Called when the auto loop finishes or stops gracefully."""
+        self._auto_active = False
+        self._auto_stop_requested = False
+        self.auto_loop_mode_changed.emit(False)
+        self._auto_btn.setText("▶▶  Start Auto Loop")
+        self._auto_btn.setStyleSheet(
+            "background-color: #e65100; color: white; font-weight: bold; padding: 7px 18px;"
+        )
+        self._run_btn.setEnabled(True)
+        self._bt_btn.setEnabled(True)
+        self._send_btn.setEnabled(bool(self._results))
+        self._auto_loops_spin.setEnabled(True)
+        self._auto_btn.setEnabled(True)
+        if stopped:
+            self._auto_status_label.setText(
+                "Auto loop stopped after the current cycle. Results shown above."
+            )
+            QMessageBox.information(
+                self, "Auto Loop Stopped",
+                "The auto loop stopped after completing the current cycle.\n\n"
+                "The current evolved candidates remain available above."
+            )
+        else:
+            self._auto_status_label.setText(
+                f"🏁 Auto loop complete — {self._auto_total} cycle(s) finished. "
+                "Results shown above; use 'Send Selected → Simulation' to re-submit top candidates."
+            )
+            QMessageBox.information(
+                self, "Auto Loop Complete",
+                f"All {self._auto_total} auto loop cycle(s) finished.\n\n"
+                "The evolved candidates table now shows real backtest fitness scores.\n"
+                "Use 'Send Selected → Simulation' to re-submit the best candidates."
+            )
