@@ -3,7 +3,7 @@
 """
 brain_cli.py — WorldQuant Brain Toolbox Command-Line Interface.
 
-Provides eight command groups for AI-agent usage:
+Provides nine command groups for AI-agent usage:
   auth       Login status, login, persona completion
   datasets   List, refresh, show, search, export-fields
   template   List, show, save, delete, placeholders
@@ -12,6 +12,7 @@ Provides eight command groups for AI-agent usage:
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
   telegram   Run Telegram bot polling and send status notifications
+  worker     Run the persistent worker that watches Telegram and pending jobs
 
 All commands support --json for machine-readable output.
 
@@ -35,6 +36,7 @@ if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
 import cli_services as svc
+import brain_worker as worker
 import telegram_integration as tg
 
 # ---------------------------------------------------------------------------
@@ -662,6 +664,28 @@ def cmd_telegram(args):
 
 
 # ---------------------------------------------------------------------------
+# worker group
+# ---------------------------------------------------------------------------
+
+def cmd_worker(args):
+    sub = args.worker_cmd
+
+    if sub == "run":
+        print("Starting persistent brain worker…", file=sys.stderr)
+        runner = worker.BrainWorker(
+            credentials_path=args.credentials,
+            poll_interval=getattr(args, "poll_interval", worker.DEFAULT_POLL_INTERVAL),
+        )
+        runner.run_forever()
+
+    elif sub == "status":
+        _out(worker.worker_status(), args.json)
+
+    else:
+        _err(f"Unknown worker sub-command: {sub}")
+
+
+# ---------------------------------------------------------------------------
 # Argument parser construction
 # ---------------------------------------------------------------------------
 
@@ -929,6 +953,17 @@ def build_parser() -> argparse.ArgumentParser:
 
     tg_sub.add_parser("status", help="Send the current system status to the configured Telegram chat.")
 
+    # ── worker ────────────────────────────────────────────────────────────────
+    p_worker = sub_root.add_parser("worker", help="Persistent worker commands.")
+    worker_sub = p_worker.add_subparsers(dest="worker_cmd", metavar="<cmd>")
+    worker_sub.required = True
+
+    p_worker_run = worker_sub.add_parser("run", help="Run the persistent worker loop.")
+    p_worker_run.add_argument("--poll-interval", type=int, default=worker.DEFAULT_POLL_INTERVAL, dest="poll_interval",
+                              help="Seconds between pending-job scans (default: 3).")
+
+    worker_sub.add_parser("status", help="Show whether the persistent worker is running.")
+
     return root
 
 
@@ -945,6 +980,7 @@ DISPATCH = {
     "backtest":  cmd_backtest,
     "evolution": cmd_evolution,
     "telegram":  cmd_telegram,
+    "worker":    cmd_worker,
 }
 
 

@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (
     QPlainTextEdit, QDialogButtonBox, QCheckBox, QMenu, QLineEdit,
     QStackedWidget
 )
-from PySide6.QtCore import Qt, QThread, Signal, QObject, Slot, QPoint
+from PySide6.QtCore import Qt, QThread, Signal, QObject, Slot, QPoint, QTimer
 from PySide6.QtGui import QAction, QColor
 import uuid
 
@@ -104,7 +104,7 @@ class BatchEditDialog(QDialog):
             'selected_only': self.selected_only.isChecked()
         }
 
-from PySide6.QtCore import Qt, QThread, Signal, QObject, Slot
+from PySide6.QtCore import Qt, QThread, Signal, QObject, Slot, QTimer
 import ast
 import csv
 import logging
@@ -116,6 +116,8 @@ import os
 import webbrowser
 from concurrent.futures import ThreadPoolExecutor
 from threading import Lock # Import Lock for thread-safe writing
+import cli_services as svc
+from brain_worker import ensure_background_worker_running
 from wq_session import (
     authenticate_with_brain,
     build_session_from_credentials,
@@ -291,6 +293,13 @@ class SimulationWidget(QWidget):
         self._pending_results: list = []
         # Set True by EvolutionWidget via auto_loop_mode_changed signal
         self.auto_loop_active: bool = False
+        self.current_job_id = None
+        self._job_poll_timer = QTimer(self)
+        self._job_poll_timer.setInterval(1000)
+        self._job_poll_timer.timeout.connect(self._poll_worker_job_status)
+        self._seen_completed_rows = 0
+        self._seen_failed_items = 0
+        self._worker_job_stop_requested = False
 
     @Slot() # 新增槽函數，用於執行緒結束後清除參考
     def _clear_simulation_thread_ref(self):
@@ -700,49 +709,7 @@ class SimulationWidget(QWidget):
         else:
             self.stop_simulation_thread()
 
-    def stop_simulation_thread(self):
-        """Request to stop the running simulation thread"""
-        if self.simulation_thread and self.simulation_thread.isRunning() and self.simulation_worker:
-            print("Requesting to stop simulation...")
-            self.progress_label.setText("Requesting to stop simulation...")
-            self.simulation_worker.request_stop()
-            # 禁用按鈕，防止重複點擊，直到 finished 信號觸發重置
-            self.sim_btn.setEnabled(False)
-            
-            # 重置所有欄位的背景顏色為白色
-            self._reset_table_colors()
-        else:
-            print("Cannot stop: no simulation is running or worker missing.")
-            # 如果沒有在執行，確保 UI 狀態正確
-            if not self.is_simulating:
-                 self.sim_btn.setText("Run Simulation")
-                 self.sim_btn.setEnabled(True)
-                 self.edit_btn.setEnabled(True)
-                 self.check_login_btn.setEnabled(True)
-
-    def start_simulation_thread(self):
-        if self.active_wq_session is None:
-            self.active_wq_session = load_persisted_session(self.credentials_path)
-        if self.simulation_thread and not self.simulation_thread.isRunning():
-            self._clear_simulation_thread_ref()
-        if self.simulation_thread and self.simulation_thread.isRunning():
-            QMessageBox.warning(self, "Too Fast", "Previous simulation thread still cleaning up. Please try again shortly.")
-            return
-
-        if self.active_wq_session is None:
-            QMessageBox.warning(
-                self,
-                "Login Required",
-                "請先按下 Check Login 完成登入與 Persona 生物辨識驗證，再執行模擬。"
-            )
-            self.progress_label.setText("尚未登入，請先完成 Check Login")
-            return
-    
-        # Clear accumulated results for the new batch
-        self._pending_results = []
-        self._reset_table_colors()
-
-        # 優化：批次重設所有進度欄
+    def _reset_progress_cells(self):
         self.table.setUpdatesEnabled(False)
         try:
             for row in range(self.table.rowCount()):
@@ -756,40 +723,184 @@ class SimulationWidget(QWidget):
         finally:
             self.table.setUpdatesEnabled(True)
 
+    def _apply_job_updates(self, job: dict):
+        completed_rows = job.get("completed_rows", []) or []
+        failed_items = job.get("failed_items", []) or []
+
+        while self._seen_completed_rows < len(completed_rows):
+            item = completed_rows[self._seen_completed_rows]
+            row_uuid = item.get("uuid")
+            row_data = item.get("row", [])
+            if row_uuid:
+                self.update_single_simulation_progress(row_uuid, 100)
+                self.highlight_completed_row(row_uuid, row_data)
+            self._seen_completed_rows += 1
+
+        while self._seen_failed_items < len(failed_items):
+            item = failed_items[self._seen_failed_items]
+            self.handle_simulation_error(item.get("uuid", ""), item.get("error", "Unknown error"))
+            self._seen_failed_items += 1
+
+    def _complete_simulation_ui(self, stopped_early: bool):
+        logging.info("Completing simulation UI. stopped_early=%s", stopped_early)
+
+        self._reset_table_colors()
+        self._reset_progress_cells()
+
+        if not stopped_early:
+            self.simulation_completed_with_results.emit(list(self._pending_results))
+        else:
+            self.simulation_completed_with_results.emit([])
+
+        self.is_simulating = False
+        self.simulation_worker = None
+        self.current_job_id = None
+        self._worker_job_stop_requested = False
+        self.sim_btn.setText("Run Simulation")
+        self.sim_btn.setEnabled(True)
+        self.edit_btn.setEnabled(True)
+        self.check_login_btn.setEnabled(True)
+
+        if self.auto_loop_active:
+            self.progress_label.setText(
+                "Simulation stopped (auto loop interrupted)" if stopped_early
+                else "Simulation completed (auto loop)"
+            )
+            return
+
+        if stopped_early:
+            self.progress_label.setText("Simulation stopped")
+            QMessageBox.warning(self, "Simulation Stopped", "Simulation was manually stopped.")
+            return
+
+        self.progress_label.setText("Simulation completed")
+        QMessageBox.information(
+            self,
+            "Simulation Completed",
+            "Simulation finished successfully! Please check CSV and LOG files under the data folder.",
+        )
+        reply = QMessageBox.question(
+            self,
+            'Clear Table?',
+            "Simulation completed. Do you want to clear the parameter table?",
+            QMessageBox.Yes | QMessageBox.No,
+            QMessageBox.No,
+        )
+        if reply == QMessageBox.Yes:
+            self.table.setRowCount(0)
+            self.uuid_row_map.clear()
+            self.highlighted_rows.clear()
+            self.progress_label.setText("Simulation completed (table cleared)")
+        else:
+            self.progress_label.setText("Simulation completed (table kept)")
+
+    def _finalize_worker_job(self, job: dict):
+        self._job_poll_timer.stop()
+        self._apply_job_updates(job)
+        status = job.get("status")
+        self.current_job_id = None
+
+        if status == "failed":
+            message = job.get("error") or job.get("progress_message") or "Simulation failed"
+            self.handle_simulation_error("", message)
+            if self.auto_loop_active:
+                self.simulation_completed_with_results.emit([])
+            return
+
+        self._complete_simulation_ui(stopped_early=(status == "stopped"))
+
+    def _poll_worker_job_status(self):
+        if not self.current_job_id:
+            return
+
+        job = svc.simulate_status(self.current_job_id)
+        if job is None:
+            self._job_poll_timer.stop()
+            self.handle_simulation_error("", f"Simulation job '{self.current_job_id}' not found.")
+            if self.auto_loop_active:
+                self.simulation_completed_with_results.emit([])
+            self.current_job_id = None
+            return
+
+        self._apply_job_updates(job)
+        processed = job.get("processed_count", 0)
+        total = job.get("total_count", 0)
+        status = job.get("status", "unknown")
+        if status in ("pending", "running"):
+            if total:
+                self.progress_label.setText(f"Simulation job {self.current_job_id}: {processed}/{total} ({status})")
+            else:
+                self.progress_label.setText(job.get("progress_message") or f"Simulation job {self.current_job_id}: {status}")
+            return
+
+        self._finalize_worker_job(job)
+
+    def stop_simulation_thread(self):
+        """Request to stop the worker-backed simulation job."""
+        if self.current_job_id:
+            self.progress_label.setText("Requesting to stop simulation...")
+            svc.simulate_stop(self.current_job_id)
+            self._worker_job_stop_requested = True
+            self.sim_btn.setEnabled(False)
+            return
+
+        print("Cannot stop: no simulation is running.")
+        if not self.is_simulating:
+            self.sim_btn.setText("Run Simulation")
+            self.sim_btn.setEnabled(True)
+            self.edit_btn.setEnabled(True)
+            self.check_login_btn.setEnabled(True)
+
+    def start_simulation_thread(self):
+        if self.active_wq_session is None:
+            self.active_wq_session = load_persisted_session(self.credentials_path)
+        if self.current_job_id:
+            QMessageBox.warning(self, "Too Fast", "A simulation job is already running.")
+            return
+
+        if self.active_wq_session is None:
+            QMessageBox.warning(
+                self,
+                "Login Required",
+                "請先按下 Check Login 完成登入與 Persona 生物辨識驗證，再執行模擬。"
+            )
+            self.progress_label.setText("尚未登入，請先完成 Check Login")
+            return
+
+        # Clear accumulated results for the new batch
+        self._pending_results = []
+        self._reset_table_colors()
+        self._reset_progress_cells()
+
         params = self.get_parameters()
         if not params:
             QMessageBox.warning(self, "No Parameters", "Please add at least one parameter set")
             return
-    
+
+        try:
+            status = ensure_background_worker_running(credentials_path=self.credentials_path)
+        except Exception as exc:
+            QMessageBox.critical(self, "Worker Error", f"Unable to start background worker:\n{exc}")
+            self.progress_label.setText("Unable to start background worker")
+            return
+        if not status.get("running"):
+            QMessageBox.critical(self, "Worker Error", "Background worker did not start correctly.")
+            self.progress_label.setText("Background worker not running")
+            return
+
+        job_id = svc.simulate_enqueue(params, credentials_path=self.credentials_path)
+
         # 更新狀態和 UI
         self.is_simulating = True
+        self.current_job_id = job_id
+        self._worker_job_stop_requested = False
+        self._seen_completed_rows = 0
+        self._seen_failed_items = 0
         self.sim_btn.setText("Stop Simulation")
         self.edit_btn.setEnabled(False) # 禁用編輯按鈕
         self.check_login_btn.setEnabled(False)
-        self.progress_label.setText("Simulation running...")
-    
-        # 創建執行緒和 Worker
-        self.simulation_thread = QThread()
-        self.simulation_worker = SimulationWorker(params, session=self.active_wq_session)
-        self.simulation_worker.moveToThread(self.simulation_thread)
-    
-        # 連接信號和槽
-        self.simulation_worker.progress_updated.connect(self.update_progress_label)
-        self.simulation_worker.error_occurred.connect(self.handle_simulation_error)
-        self.simulation_worker.finished.connect(self.handle_simulation_finished)
-        self.simulation_thread.started.connect(self.simulation_worker.run)
-        self.simulation_worker.finished.connect(self.simulation_thread.quit)
-        self.simulation_worker.finished.connect(self.simulation_worker.deleteLater)
-        self.simulation_thread.finished.connect(self._clear_simulation_thread_ref)
-        # Connect the new signal for row completion
-        self.simulation_worker.simulation_row_completed.connect(self.highlight_completed_row)
-        # Connect the new signal for row starting
-        self.simulation_worker.simulation_row_started.connect(self.highlight_processing_row)
-        # 連接個別進度信號
-        self.simulation_worker.single_simulation_progress.connect(self.update_single_simulation_progress)
-    
-        # 啟動執行緒
-        self.simulation_thread.start()
+        self.progress_label.setText(f"Simulation queued via worker (job {job_id})")
+        self._job_poll_timer.start()
 
     def update_progress_label(self, message):
         self.progress_label.setText(message)
@@ -855,6 +966,9 @@ class SimulationWidget(QWidget):
             error_message not in ["模擬被手動停止", "模擬被手動終止"]):
             QMessageBox.critical(self, "Simulation Failed", error_message)
 
+        self._job_poll_timer.stop()
+        self.current_job_id = None
+        self._worker_job_stop_requested = False
         self.is_simulating = False
         self.sim_btn.setText("Run Simulation")
         self.sim_btn.setEnabled(True)
@@ -863,60 +977,8 @@ class SimulationWidget(QWidget):
 
     def handle_simulation_finished(self):
         logging.info("handle_simulation_finished started.")
-        stopped_early = self.simulation_worker and self.simulation_worker.stop_requested
-        logging.info(f"handle_simulation_finished: stopped_early={stopped_early}")
-
-        self._reset_table_colors()
-
-        self.table.setUpdatesEnabled(False)
-        try:
-            for row in range(self.table.rowCount()):
-                progress_item = self.table.item(row, self.progress_col_index)
-                if progress_item:
-                    progress_item.setText("-")
-        finally:
-            self.table.setUpdatesEnabled(True)
-
-        # Always emit results so auto loop (and other observers) can react.
-        # On a clean finish, emit accumulated rows; on early stop emit empty list
-        # so the auto loop knows to abort gracefully.
-        if not stopped_early:
-            self.simulation_completed_with_results.emit(list(self._pending_results))
-        else:
-            self.simulation_completed_with_results.emit([])
-
-        self.is_simulating = False
-        self.simulation_worker = None
-        self.sim_btn.setText("Run Simulation")
-        self.sim_btn.setEnabled(True)
-        self.edit_btn.setEnabled(True)
-        self.check_login_btn.setEnabled(True)
-
-        if self.auto_loop_active:
-            # Suppress all dialogs — auto loop UI owns the feedback
-            if stopped_early:
-                self.progress_label.setText("Simulation stopped (auto loop interrupted)")
-            else:
-                self.progress_label.setText("Simulation completed (auto loop)")
-        else:
-            if stopped_early:
-                self.progress_label.setText("Simulation stopped")
-                QMessageBox.warning(self, "Simulation Stopped", "Simulation was manually stopped.")
-            else:
-                self.progress_label.setText("Simulation completed")
-                QMessageBox.information(self, "Simulation Completed",
-                    "Simulation finished successfully! Please check CSV and LOG files under the data folder.")
-                reply = QMessageBox.question(self, 'Clear Table?',
-                    "Simulation completed. Do you want to clear the parameter table?",
-                    QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-                if reply == QMessageBox.Yes:
-                    self.table.setRowCount(0)
-                    self.uuid_row_map.clear()
-                    self.highlighted_rows.clear()
-                    self.progress_label.setText("Simulation completed (table cleared)")
-                else:
-                    self.progress_label.setText("Simulation completed (table kept)")
-
+        stopped_early = bool(self.simulation_worker and self.simulation_worker.stop_requested)
+        self._complete_simulation_ui(stopped_early=stopped_early)
         logging.info("handle_simulation_finished finished.")
 
     def clear_for_auto_loop(self):

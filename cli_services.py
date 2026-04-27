@@ -139,6 +139,16 @@ class JobStore:
         JobStore._write(job_id, job)
 
     @staticmethod
+    def mutate(job_id: str, mutator):
+        job = JobStore.get(job_id)
+        if job is None:
+            return None
+        mutator(job)
+        job["updated_at"] = datetime.datetime.now().isoformat()
+        JobStore._write(job_id, job)
+        return job
+
+    @staticmethod
     def list_jobs(job_type: Optional[str] = None) -> List[dict]:
         jobs = []
         for fn in os.listdir(JOBS_DIR):
@@ -990,6 +1000,19 @@ class CLISimulationSession(requests.Session):
 
         os.makedirs(DATA_DIR, exist_ok=True)
         completed: List[dict] = []
+        total = len(params)
+
+        if self._job_id:
+            JobStore.update(
+                self._job_id,
+                total_count=total,
+                processed_count=0,
+                completed_count=0,
+                failed_count=0,
+                progress_message=f"Running 0/{total}",
+                completed_rows=[],
+                failed_items=[],
+            )
 
         with open(self._csv_file, "w", newline="", encoding="utf-8") as csv_fh:
             writer = csv.writer(csv_fh)
@@ -1011,9 +1034,40 @@ class CLISimulationSession(requests.Session):
                                 writer.writerow(result["row"])
                                 csv_fh.flush()
                             completed.append(result)
+                            if self._job_id:
+                                def _mark_completed(job):
+                                    completed_rows = list(job.get("completed_rows", []))
+                                    failed_items = list(job.get("failed_items", []))
+                                    completed_rows.append({
+                                        "uuid": result.get("uuid"),
+                                        "row": result["row"],
+                                    })
+                                    processed = len(completed_rows) + len(failed_items)
+                                    job["completed_rows"] = completed_rows
+                                    job["completed_count"] = len(completed_rows)
+                                    job["failed_count"] = len(failed_items)
+                                    job["processed_count"] = processed
+                                    job["progress_message"] = f"Running {processed}/{total}"
+                                JobStore.mutate(self._job_id, _mark_completed)
                             self._emit(f"Completed {len(completed)}/{len(params)}: "
                                        f"{str(result['row'][14])[:40]}")
                         elif result and "error" in result:
+                            if self._job_id:
+                                def _mark_failed(job):
+                                    completed_rows = list(job.get("completed_rows", []))
+                                    failed_items = list(job.get("failed_items", []))
+                                    failed_items.append({
+                                        "uuid": result.get("uuid"),
+                                        "error": result["error"],
+                                        "alpha": result.get("alpha"),
+                                    })
+                                    processed = len(completed_rows) + len(failed_items)
+                                    job["failed_items"] = failed_items
+                                    job["completed_count"] = len(completed_rows)
+                                    job["failed_count"] = len(failed_items)
+                                    job["processed_count"] = processed
+                                    job["progress_message"] = f"Running {processed}/{total}"
+                                JobStore.mutate(self._job_id, _mark_failed)
                             self._emit(f"Error: {result['error']}")
                     except Exception as exc:
                         self._emit(f"Future error: {exc}")
@@ -1216,7 +1270,18 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
     if job["status"] not in ("pending",):
         return {"status": "error", "message": f"Job {job_id} is already {job['status']}."}
 
-    JobStore.update(job_id, status="running", pid=os.getpid())
+    JobStore.update(
+        job_id,
+        status="running",
+        pid=os.getpid(),
+        total_count=len(job["params"]["params"]),
+        processed_count=0,
+        completed_count=0,
+        failed_count=0,
+        progress_message="Queued for worker execution.",
+        completed_rows=[],
+        failed_items=[],
+    )
     JobStore.clear_stop(job_id)
 
     params           = job["params"]["params"]
@@ -1232,7 +1297,7 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
             progress_cb=progress_cb,
         )
         if session.login_expired:
-            JobStore.update(job_id, status="failed", error="Login failed.")
+            JobStore.update(job_id, status="failed", error="Login failed.", progress_message="Login failed.")
             return JobStore.get(job_id)
 
         results = session.simulate(params)
@@ -1241,9 +1306,10 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
             job_id,
             status="stopped" if stopped else "done",
             result_file=output_csv,
+            progress_message="Stopped." if stopped else "Completed.",
         )
     except Exception as exc:
-        JobStore.update(job_id, status="failed", error=str(exc))
+        JobStore.update(job_id, status="failed", error=str(exc), progress_message=str(exc))
 
     return JobStore.get(job_id)
 

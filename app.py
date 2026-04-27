@@ -9,6 +9,7 @@ Integrates dataset browser, backtest analysis, strategy generator, and simulatio
 import sys
 import os
 import pandas as pd
+from brain_worker import ensure_background_worker_running
 from PySide6.QtWidgets import (QApplication, QMainWindow, QTabWidget, QSplitter,
                               QVBoxLayout, QHBoxLayout, QWidget, QLabel, 
                               QStatusBar, QMessageBox, QFrame)
@@ -237,6 +238,11 @@ class MainWindow(QMainWindow):
 
 # 應用程序入口點
 if __name__ == "__main__":
+    try:
+        ensure_background_worker_running()
+    except Exception as exc:
+        print(f"Warning: unable to start background worker automatically: {exc}")
+
     app = QApplication(sys.argv)
     
     # Application style

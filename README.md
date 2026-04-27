@@ -95,6 +95,9 @@ python app.py
   - Run batch simulations for strategies imported from the Generator, with progress display and row-by-row highlight
   - Outputs CSV and LOG files under the `data/` directory (filenames include timestamps)
   - Requires WorldQuant Brain login credentials (see the next section)
+- **Background Worker**
+  - A persistent worker can monitor Telegram commands and continuously drain pending simulation jobs from `.brain_cli/jobs/`
+  - Launching the GUI will also auto-start this worker in the background
 
 ---
 
@@ -190,6 +193,7 @@ Groups:
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
   telegram   Run Telegram bot polling and send status notifications
+  worker     Run the persistent worker loop
 ```
 
 #### Global flags (usable anywhere in the command line)
@@ -265,6 +269,12 @@ python brain_cli.py auth login
 
 # Start Telegram bot polling
 python brain_cli.py telegram run
+
+# Start the persistent worker
+python brain_cli.py worker run
+
+# Check worker status
+python brain_cli.py worker status --json
 ```
 
 #### CLI job state
@@ -294,6 +304,19 @@ Supported Telegram commands:
 - `/help` / `/start`: show available commands
 
 When GUI/CLI dataset refresh or simulation flows detect invalid login or expired session state, the app also sends Telegram notifications to the configured chat.
+
+#### Persistent worker behavior
+
+`brain_cli.py worker run` starts a long-lived process that does two things at the same time:
+
+1. Starts Telegram monitoring (if Telegram is configured)
+2. Repeatedly scans `.brain_cli/jobs/` for pending simulation jobs and runs them
+
+This mirrors the open_machine-style worker pattern: one always-on process watches commands and pending work together.
+
+The desktop GUI auto-starts this worker on launch, so opening `app.py` also brings up the same background processing model.
+
+The Simulation tab now follows the same architecture: clicking **Run Simulation** enqueues a simulation job into `.brain_cli/jobs/`, and the persistent worker executes it. The GUI no longer runs the simulation request loop directly; instead, it polls the job state and updates the table/result flow from worker-owned job progress.
 
 ---
 
