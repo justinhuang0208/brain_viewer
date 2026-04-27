@@ -23,10 +23,19 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 from typing import Any, Dict, List, Optional, Tuple
-from urllib.parse import urljoin
 
 import pandas as pd
 import requests
+from wq_session import (
+    BRAIN_API_BASE,
+    authenticate_with_brain,
+    build_session_from_credentials,
+    clear_login_state,
+    extract_persona_url,
+    get_session_for_request,
+    load_persisted_session,
+    save_login_cookies,
+)
 
 # ---------------------------------------------------------------------------
 # Paths / constants
@@ -41,8 +50,6 @@ CREDS_PATH      = os.path.join(SCRIPT_DIR, "credentials.json")
 CLI_STATE_DIR   = os.path.join(SCRIPT_DIR, ".brain_cli")
 JOBS_DIR        = os.path.join(CLI_STATE_DIR, "jobs")
 STOP_DIR        = os.path.join(CLI_STATE_DIR, "stop")
-
-BRAIN_API_BASE  = "https://api.worldquantbrain.com"
 
 # Simulation CSV header (matches WQSession output in simulation.py)
 SIM_CSV_HEADER = [
@@ -68,6 +75,16 @@ def _sanitize_filename(name: str) -> str:
     for ch in '<>:"/\\|?*':
         name = name.replace(ch, "_")
     return name.strip() or "template"
+
+
+def _row_passed_bool(value: Any) -> bool:
+    text = str(value).strip().upper()
+    if text == "PASS":
+        return True
+    try:
+        return float(value) > 0
+    except (TypeError, ValueError):
+        return False
 
 
 # ---------------------------------------------------------------------------
@@ -164,42 +181,14 @@ def wq_authenticate(credentials_path: str = CREDS_PATH) -> Tuple[Optional[reques
     (None, "error", message)       – on failure
     """
     try:
-        with open(credentials_path, "r") as fh:
-            creds = json.load(fh)
-        email, password = creds["email"], creds["password"]
+        session = load_persisted_session(credentials_path) or build_session_from_credentials(credentials_path)
     except FileNotFoundError:
         return None, "error", f"Credentials file not found: {credentials_path}"
     except Exception as exc:
         return None, "error", f"Error reading credentials: {exc}"
 
-    session = requests.Session()
-    session.auth = (email, password)
     try:
-        r = session.post(f"{BRAIN_API_BASE}/authentication", timeout=15)
-        body = {}
-        if r.text:
-            try:
-                body = r.json()
-            except ValueError:
-                pass
-
-        if r.status_code == 200 and "user" in body:
-            return session, None, None
-
-        # Persona challenge
-        persona_url = None
-        if r.status_code == 401 and (r.headers.get("WWW-Authenticate") or "").lower() == "persona":
-            loc = r.headers.get("Location")
-            if loc:
-                persona_url = urljoin(r.url, loc)
-        if not persona_url and "inquiry" in body:
-            persona_url = f"{r.url}/persona?inquiry={body['inquiry']}"
-        if persona_url:
-            return session, "persona", persona_url
-
-        detail = body.get("detail", f"HTTP {r.status_code}") if isinstance(body, dict) else f"HTTP {r.status_code}"
-        return None, "error", f"Login failed: {detail}"
-
+        return authenticate_with_brain(session)
     except requests.exceptions.Timeout:
         return None, "error", "Connection timed out."
     except requests.exceptions.RequestException as exc:
@@ -230,9 +219,10 @@ def auth_persona_complete(session: requests.Session, persona_url: str,
         try:
             r = session.post(persona_url, timeout=15)
             if r.ok:
+                save_login_cookies(session)
                 return True, "Persona verification complete."
             time.sleep(poll_interval)
-        except requests.exceptions.RequestException as exc:
+        except requests.exceptions.RequestException:
             time.sleep(poll_interval)
     return False, "Persona verification timed out."
 
@@ -285,7 +275,12 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
                      credentials_path: str = CREDS_PATH,
                      progress_cb=None) -> dict:
     """Fetch all dataset field metadata from WQ Brain API and save locally."""
-    session, kind, detail = wq_authenticate(credentials_path)
+    try:
+        session, kind, detail = get_session_for_request(credentials_path)
+    except FileNotFoundError:
+        return {"status": "error", "message": f"Credentials file not found: {credentials_path}"}
+    except Exception as exc:
+        return {"status": "error", "message": f"Error preparing session: {exc}"}
     if kind == "persona":
         return {"status": "error", "message": f"Persona verification required: {detail}"}
     if kind == "error":
@@ -303,6 +298,12 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
         try:
             r = session.get(f"{BRAIN_API_BASE}/datasets",
                             params={"limit": limit, "offset": offset}, timeout=15)
+            if r.status_code == 401:
+                clear_login_state()
+                persona_url = extract_persona_url(r)
+                if persona_url:
+                    return {"status": "error", "message": f"Persona verification required: {persona_url}"}
+                return {"status": "error", "message": "Unauthorized while fetching dataset list."}
             r.raise_for_status()
             body    = r.json()
             results = body.get("results", [])
@@ -329,6 +330,12 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
             while True:
                 r = session.get(f"{BRAIN_API_BASE}/datasets/{ds_id}/fields",
                                 params={"limit": lim, "offset": off}, timeout=20)
+                if r.status_code == 401:
+                    clear_login_state()
+                    persona_url = extract_persona_url(r)
+                    if persona_url:
+                        return {"status": "error", "message": f"Persona verification required: {persona_url}"}
+                    return {"status": "error", "message": f"Unauthorized while fetching fields for {ds_id}."}
                 r.raise_for_status()
                 body    = r.json()
                 results = body.get("results", [])
@@ -715,8 +722,7 @@ def backtest_show(filename: str, limit: int = 50,
             "max":   round(float(df[col].max()),  4),
         }
     if "passed" in df.columns:
-        pass_vals = df["passed"].astype(str).str.upper()
-        summary["pass_rate"] = round((pass_vals == "PASS").mean(), 4)
+        summary["pass_rate"] = round(df["passed"].apply(_row_passed_bool).mean(), 4)
 
     return {
         "file":    filename,
@@ -743,7 +749,7 @@ def backtest_filter(filename: str,
     if fitness_min is not None and "fitness" in df.columns:
         df = df[pd.to_numeric(df["fitness"], errors="coerce") >= fitness_min]
     if passed_only and "passed" in df.columns:
-        df = df[df["passed"].astype(str).str.upper() == "PASS"]
+        df = df[df["passed"].apply(_row_passed_bool)]
     if universe and "universe" in df.columns:
         df = df[df["universe"].astype(str).str.upper() == universe.upper()]
     if neutralization and "neutralization" in df.columns:
@@ -767,7 +773,7 @@ def _compute_composite_score(row: dict,
     fitness   = _f("fitness")
     subsharpe = _f("subsharpe")
     turnover  = _f("turnover", 50.0)
-    passed    = str(row.get("passed", "")).strip().upper() == "PASS"
+    passed    = _row_passed_bool(row.get("passed", ""))
 
     sharpe_score    = max(0.0, sharpe)    / 2.0
     fitness_score   = max(0.0, fitness)
@@ -899,15 +905,19 @@ class CLISimulationSession(requests.Session):
 
     def _login(self, credentials_path: str):
         try:
-            with open(credentials_path, "r") as fh:
-                creds = json.load(fh)
-            self.auth = (creds["email"], creds["password"])
-            r = self.post(f"{BRAIN_API_BASE}/authentication", timeout=15)
-            body = r.json() if r.text else {}
-            if r.status_code == 200 and "user" in body:
+            session, kind, detail = get_session_for_request(credentials_path)
+            if kind is None and session is not None:
+                self.__dict__.update({k: v for k, v in session.__dict__.items()
+                                       if not k.startswith("_") or k in ("_cookies",)})
+                self.cookies = requests.cookies.cookiejar_from_dict(
+                    requests.utils.dict_from_cookiejar(session.cookies))
+                self.headers = session.headers.copy()
+                self.auth = getattr(session, "auth", None)
                 return
-            detail = body.get("detail", f"HTTP {r.status_code}") if isinstance(body, dict) else str(r.status_code)
-            self._emit(f"Login failed: {detail}")
+            if kind == "persona":
+                self._emit(f"Persona verification required: {detail}")
+            else:
+                self._emit(f"Login failed: {detail}")
             self.login_expired = True
         except Exception as exc:
             self._emit(f"Login error: {exc}")
@@ -999,6 +1009,12 @@ class CLISimulationSession(requests.Session):
                         "visualization":  False,
                     },
                 })
+                if r.status_code == 401:
+                    clear_login_state()
+                    persona_url = extract_persona_url(r)
+                    if persona_url:
+                        return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
+                    return {"uuid": row_uuid, "error": "Unauthorized while submitting simulation.", "alpha": alpha}
                 r.raise_for_status()
                 nxt = r.headers["Location"]
                 break
@@ -1022,6 +1038,12 @@ class CLISimulationSession(requests.Session):
                 return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
             try:
                 r    = self.get(nxt, timeout=30)
+                if r.status_code == 401:
+                    clear_login_state()
+                    persona_url = extract_persona_url(r)
+                    if persona_url:
+                        return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
+                    return {"uuid": row_uuid, "error": "Unauthorized while polling simulation.", "alpha": alpha}
                 r.raise_for_status()
                 rj   = r.json()
                 if "alpha" in rj:
@@ -1048,6 +1070,12 @@ class CLISimulationSession(requests.Session):
         # Fetch alpha details
         try:
             r  = self.get(f"{BRAIN_API_BASE}/alphas/{alpha_link}", timeout=30)
+            if r.status_code == 401:
+                clear_login_state()
+                persona_url = extract_persona_url(r)
+                if persona_url:
+                    return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
+                return {"uuid": row_uuid, "error": "Unauthorized while fetching alpha details.", "alpha": alpha}
             r.raise_for_status()
             rj = r.json()
         except Exception as exc:
@@ -1320,6 +1348,165 @@ def evolution_run(template: str, pools: Dict[str, List[str]],
         if len(results) >= top_k:
             break
     return results
+
+
+def evolution_auto_run(template: str, pools: Dict[str, List[str]],
+                       rounds: int = 3,
+                       pop_size: int = 40, generations: int = 10,
+                       mutation_rate: float = 0.4,
+                       diversity_weight: float = 0.7,
+                       top_k: int = 20,
+                       credentials_path: str = CREDS_PATH,
+                       sim_params: Optional[Dict[str, object]] = None,
+                       progress_cb=None) -> dict:
+    """
+    Run a closed loop:
+      evolution -> simulation -> backtest-style fitness feedback -> next round
+    """
+    sim_defaults = {
+        "decay": 4,
+        "delay": 1,
+        "neutralization": "SUBINDUSTRY",
+        "region": "USA",
+        "truncation": 0.08,
+        "universe": "TOP3000",
+    }
+    if sim_params:
+        sim_defaults.update(sim_params)
+
+    seed_population: Optional[List[Dict[str, str]]] = None
+    known_real_fitness: Dict[tuple, float] = {}
+    history: List[dict] = []
+    final_candidates: List[dict] = []
+    final_status = "ok"
+    final_error: Optional[str] = None
+
+    for round_idx in range(1, max(1, rounds) + 1):
+        if progress_cb:
+            progress_cb(f"[auto-run] Evolution round {round_idx}/{rounds}")
+
+        candidates = evolution_run(
+            template=template,
+            pools=pools,
+            pop_size=pop_size,
+            generations=generations,
+            mutation_rate=mutation_rate,
+            diversity_weight=diversity_weight,
+            top_k=top_k,
+            seed_population=seed_population,
+            known_real_fitness=known_real_fitness,
+            progress_cb=(lambda gen, total: progress_cb(
+                f"[auto-run] round {round_idx}: generation {gen}/{total}"
+            )) if progress_cb else None,
+        )
+        final_candidates = candidates
+        if not candidates:
+            history.append({
+                "round": round_idx,
+                "candidate_count": 0,
+                "simulation_job_id": None,
+                "matched_results": 0,
+                "top_results": [],
+            })
+            break
+
+        round_params: List[dict] = []
+        candidate_by_code: Dict[str, Dict[str, str]] = {}
+        for item in candidates:
+            strategy = dict(sim_defaults)
+            strategy["code"] = item["code"]
+            round_params.append(strategy)
+            candidate_by_code[_normalize_code(item["code"])] = item["candidate"]
+
+        sim_job_id = simulate_enqueue(round_params, credentials_path=credentials_path)
+        if progress_cb:
+            progress_cb(f"[auto-run] round {round_idx}: simulate job {sim_job_id}")
+        sim_job = simulate_run(
+            sim_job_id,
+            progress_cb=(lambda msg: progress_cb(
+                f"[auto-run] round {round_idx}: {msg}"
+            )) if progress_cb else None,
+        )
+        sim_status = (sim_job or {}).get("status")
+        if sim_status != "done":
+            final_status = sim_status or "failed"
+            final_error = (sim_job or {}).get("error") or f"Simulation job {sim_job_id} ended with status {sim_status}."
+            history.append({
+                "round": round_idx,
+                "candidate_count": len(candidates),
+                "simulation_job_id": sim_job_id,
+                "simulation_status": sim_status,
+                "matched_results": 0,
+                "top_results": final_candidates[:min(5, len(final_candidates))],
+                "error": final_error,
+            })
+            break
+
+        sim_output = simulate_results(sim_job_id, limit=max(1000, top_k * 5)) or {}
+        rows = sim_output.get("rows", [])
+
+        matched: List[Tuple[float, Dict[str, str], dict]] = []
+        next_known_real_fitness: Dict[tuple, float] = {}
+        row_by_code: Dict[str, dict] = {}
+        for row in rows:
+            code = str(row.get("code", "")).strip()
+            if not code:
+                continue
+            norm_code = _normalize_code(code)
+            candidate = candidate_by_code.get(norm_code)
+            if candidate is None:
+                continue
+            score = _compute_composite_score(row)
+            matched.append((score, candidate, row))
+            next_known_real_fitness[_candidate_key(candidate)] = score
+            row_by_code[norm_code] = row
+
+        matched.sort(key=lambda x: -x[0])
+        if not matched:
+            final_status = "failed"
+            final_error = f"Simulation job {sim_job_id} produced no feedback rows for evolution."
+            history.append({
+                "round": round_idx,
+                "candidate_count": len(candidates),
+                "simulation_job_id": sim_job_id,
+                "simulation_status": sim_status,
+                "matched_results": 0,
+                "top_results": final_candidates[:min(5, len(final_candidates))],
+                "error": final_error,
+            })
+            break
+
+        seed_population = [candidate for _, candidate, _ in matched[:max(2, min(top_k, pop_size))]]
+        known_real_fitness = next_known_real_fitness
+
+        for item in final_candidates:
+            matched_row = row_by_code.get(_normalize_code(item["code"]))
+            if matched_row is not None:
+                item["real_fitness"] = round(_compute_composite_score(matched_row), 6)
+                item["simulation"] = {
+                    "passed": matched_row.get("passed"),
+                    "sharpe": matched_row.get("sharpe"),
+                    "fitness": matched_row.get("fitness"),
+                    "turnover": matched_row.get("turnover"),
+                    "subsharpe": matched_row.get("subsharpe"),
+                    "link": matched_row.get("link"),
+                }
+
+        history.append({
+            "round": round_idx,
+            "candidate_count": len(candidates),
+            "simulation_job_id": sim_job_id,
+            "matched_results": len(matched),
+            "top_results": final_candidates[:min(5, len(final_candidates))],
+        })
+
+    return {
+        "status": final_status,
+        "rounds_completed": len(history),
+        "history": history,
+        "final_results": final_candidates,
+        "error": final_error,
+    }
 
 
 def evolution_run_job(job_id: str, progress_cb=None) -> dict:

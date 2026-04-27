@@ -6,3 +6,5 @@ alphas
 templates
 .cursor/rules/structure.mdc
 .env
+session.pkl
+login_time.pkl

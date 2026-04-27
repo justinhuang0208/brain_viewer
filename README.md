@@ -166,6 +166,7 @@ Notes:
 - Use `Check Login` in the Simulation tab before running simulations.
 - When biometric verification (persona) is required, the app will try to open the persona page automatically in your browser.
 - After finishing the scan in browser, return to the app and click `我已完成驗證` to complete login confirmation.
+- Successful GUI or CLI login persists WQ cookies into `session.pkl` / `login_time.pkl`, so later Simulation and Dataset refresh flows can reuse the same login state.
 - If login is not completed, `Run Simulation` will be blocked and ask you to finish `Check Login` first.
 - If credentials are expired/invalid, the UI will notify you and stop subsequent simulations.
 
@@ -229,7 +230,7 @@ python brain_cli.py simulate run \
   --code "rank(ts_mean(close, 20) / close)" \
   --universe TOP3000 --region USA
 
-# Enqueue a batch from a CSV file, then run
+# Enqueue a batch from a generated .py/.csv/.json strategy file, then run
 python brain_cli.py simulate enqueue --params-file alphas/my_strategies.py --json
 python brain_cli.py simulate run --job-id <job_id>
 
@@ -250,11 +251,12 @@ python brain_cli.py evolution from-backtest \
   --pool "field=close,open" \
   20250417_231939.csv --top-seed 5
 
-# Multiple evolution rounds (auto-run)
+# Closed-loop auto evolution: evolve -> simulate -> feed results back
 python brain_cli.py evolution auto-run \
   --template-name "[Default] Basic ts_rank" \
   --pool "field=close,volume" \
-  --rounds 3 --generations 10 --json
+  --rounds 3 --generations 10 \
+  --universe TOP3000 --region USA --json
 
 # Auth check
 python brain_cli.py auth login-status --json
@@ -263,7 +265,9 @@ python brain_cli.py auth login
 
 #### CLI job state
 
-Background jobs (simulate, evolution) are stored under `.brain_cli/jobs/<job_id>.json`. Use `simulate list` / `evolution list` to view all jobs. Stop a running job with `simulate stop <job_id>` or `evolution stop <job_id>`.
+CLI job state for `simulate` and `evolution` is stored under `.brain_cli/jobs/<job_id>.json`. Use `simulate list` / `evolution list` to view all jobs. Stop a running job from another terminal with `simulate stop <job_id>` or `evolution stop <job_id>`.
+
+CLI authentication reuses the same persisted WQ cookie files as the GUI (`session.pkl` / `login_time.pkl`), matching the open_machine-style login flow.
 
 ---
 
@@ -301,4 +305,3 @@ python brain_cli.py --help
 
 - Generated strategy files: `alphas/alpha_custom_YYYYmmdd_HHMMSS.py`
 - Simulation outputs: `data/YYYYmmdd_HHMMSS.csv` and the corresponding `.log`
-

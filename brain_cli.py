@@ -22,6 +22,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import ast
 import json
 import os
 import sys
@@ -335,6 +336,18 @@ def _load_params_from_arg(args) -> list:
         if fp.endswith(".json"):
             with open(fp, "r", encoding="utf-8") as fh:
                 return json.load(fh)
+        elif fp.endswith(".py"):
+            with open(fp, "r", encoding="utf-8") as fh:
+                module_ast = ast.parse(fh.read(), filename=fp)
+            for node in module_ast.body:
+                if isinstance(node, ast.Assign):
+                    for target in node.targets:
+                        if isinstance(target, ast.Name) and target.id == "DATA":
+                            value = ast.literal_eval(node.value)
+                            if not isinstance(value, list):
+                                _err("Python strategy file DATA must be a list of strategy dicts.")
+                            return value
+            _err("Python strategy file is missing a top-level DATA = [...] assignment.")
         else:  # CSV
             import pandas as pd
             df = pd.read_csv(fp)
@@ -557,38 +570,28 @@ def cmd_evolution(args):
                 print(f"    {r['code'][:100]}")
 
     elif sub == "auto-run":
-        # Iterate evolution → (user handles simulation externally) multiple rounds
         template   = _resolve_template(args)
         pools      = _parse_pools(getattr(args, "pool", []) or [])
-        rounds     = getattr(args, "rounds", 3)
-        all_results = []
-
-        for rd in range(1, rounds + 1):
-            print(f"\n[auto-run] Round {rd}/{rounds}…", file=sys.stderr)
-            job_id = svc.evolution_enqueue(
-                template     = template,
-                pools        = pools,
-                pop_size     = getattr(args, "pop_size", 40),
-                generations  = getattr(args, "generations", 10),
-                mutation_rate= getattr(args, "mutation_rate", 0.4),
-                top_k        = getattr(args, "top_k", 20),
-            )
-            jresult = svc.evolution_run_job(job_id, progress_cb=_progress)
-            if jresult and jresult.get("status") == "done":
-                rfile = jresult.get("result_file")
-                if rfile and os.path.exists(rfile):
-                    with open(rfile, "r", encoding="utf-8") as fh:
-                        round_results = json.load(fh)
-                    all_results.extend(round_results)
-            if jresult and jresult.get("status") == "stopped":
-                print(f"[auto-run] Stopped at round {rd}.", file=sys.stderr)
-                break
-
-        summary = {
-            "rounds_completed": rd,
-            "total_candidates": len(all_results),
-            "top10": all_results[:10],
-        }
+        summary = svc.evolution_auto_run(
+            template          = template,
+            pools             = pools,
+            rounds            = getattr(args, "rounds", 3),
+            pop_size          = getattr(args, "pop_size", 40),
+            generations       = getattr(args, "generations", 10),
+            mutation_rate     = getattr(args, "mutation_rate", 0.4),
+            diversity_weight  = getattr(args, "diversity_weight", 0.7),
+            top_k             = getattr(args, "top_k", 20),
+            credentials_path  = args.credentials,
+            sim_params        = {
+                "decay": getattr(args, "decay", 4),
+                "delay": getattr(args, "delay", 1),
+                "neutralization": getattr(args, "neutralization", "SUBINDUSTRY"),
+                "region": getattr(args, "region", "USA"),
+                "truncation": getattr(args, "truncation", 0.08),
+                "universe": getattr(args, "universe", "TOP3000"),
+            },
+            progress_cb       = _progress,
+        )
         _out(summary, args.json)
 
     elif sub == "status":
@@ -868,6 +871,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_evo_auto = evo_sub.add_parser("auto-run",
         help="Run multiple evolution rounds and accumulate candidates.")
     _add_evo_args(p_evo_auto)
+    _add_sim_param_args(p_evo_auto)
     p_evo_auto.add_argument("--rounds", type=int, default=3)
 
     p_evo_status = evo_sub.add_parser("status", help="Check evolution job status.")

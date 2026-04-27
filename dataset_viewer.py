@@ -18,6 +18,13 @@ from PySide6.QtGui import QColor, QFont, QPalette, QIcon, QAction
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import matplotlib
+from wq_session import (
+    authenticate_with_brain,
+    build_session_from_credentials,
+    clear_login_state,
+    extract_persona_url,
+    load_persisted_session,
+)
 
 # 載入環境變數
 load_dotenv()
@@ -274,10 +281,11 @@ class DatasetRefreshWorker(QThread):
 
     def _authenticate(self):
         try:
-            with open(self.credentials_path, 'r') as f:
-                creds = json.load(f)
-            email = creds['email']
-            password = creds['password']
+            session = load_persisted_session(self.credentials_path)
+            if session is not None:
+                self.progress.emit("Loaded saved WQ Brain session.")
+                return session
+            session = build_session_from_credentials(self.credentials_path)
         except FileNotFoundError:
             self.error.emit(f"Credentials file not found: {self.credentials_path}")
             return None
@@ -286,27 +294,17 @@ class DatasetRefreshWorker(QThread):
             return None
 
         self.progress.emit("Authenticating with WQ Brain API…")
-        session = requests.Session()
-        session.auth = (email, password)
         try:
-            r = session.post(f"{BRAIN_API_BASE}/authentication", timeout=15)
-            body = {}
-            if r.text:
-                try:
-                    body = r.json()
-                except ValueError:
-                    pass
-            if r.status_code == 200 and 'user' in body:
+            authed_session, kind, detail = authenticate_with_brain(session)
+            if kind is None and authed_session is not None:
                 self.progress.emit("Authentication successful.")
-                return session
-            # Persona / additional verification required
-            if r.status_code == 401:
+                return authed_session
+            if kind == "persona":
                 self.error.emit(
                     "Login requires additional verification (Persona). "
                     "Please use the Simulation tab to log in first."
                 )
                 return None
-            detail = body.get('detail', f"HTTP {r.status_code}")
             self.error.emit(f"Authentication failed: {detail}")
             return None
         except requests.exceptions.Timeout:
@@ -331,6 +329,17 @@ class DatasetRefreshWorker(QThread):
             }
             try:
                 r = session.get(f"{BRAIN_API_BASE}/datasets", params=params, timeout=15)
+                if r.status_code == 401:
+                    clear_login_state()
+                    persona_url = extract_persona_url(r)
+                    if persona_url:
+                        self.error.emit(
+                            "Saved session expired and Persona verification is required again. "
+                            f"Please complete login in the Simulation tab first:\n{persona_url}"
+                        )
+                    else:
+                        self.error.emit("Unauthorized while fetching dataset list.")
+                    return ids
                 r.raise_for_status()
                 body = r.json()
             except Exception as e:
@@ -364,6 +373,17 @@ class DatasetRefreshWorker(QThread):
                 params=params,
                 timeout=20,
             )
+            if r.status_code == 401:
+                clear_login_state()
+                persona_url = extract_persona_url(r)
+                if persona_url:
+                    self.error.emit(
+                        "Saved session expired and Persona verification is required again. "
+                        f"Please complete login in the Simulation tab first:\n{persona_url}"
+                    )
+                else:
+                    self.error.emit(f"Unauthorized while fetching fields for {dataset_id}.")
+                return None
             r.raise_for_status()
             body = r.json()
             results = body.get('results', [])
@@ -1961,4 +1981,3 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     sys.exit(app.exec())
-

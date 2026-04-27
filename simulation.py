@@ -114,9 +114,16 @@ import time
 import pandas as pd
 import os
 import webbrowser
-from urllib.parse import urljoin
 from concurrent.futures import ThreadPoolExecutor
 from threading import Lock # Import Lock for thread-safe writing
+from wq_session import (
+    authenticate_with_brain,
+    build_session_from_credentials,
+    clear_login_state,
+    extract_persona_url,
+    load_persisted_session,
+    save_login_cookies,
+)
 
 PARAM_COLUMNS = [
     "code", "decay", "delay", "neutralization", "region", "truncation", "universe"
@@ -196,7 +203,8 @@ class SimulationWidget(QWidget):
         self.setWindowTitle("Simulation Parameters & Execution")
         # self.process = None # Removed QProcess attribute
 
-        self.active_wq_session = None  # 儲存已登入的 session
+        self.credentials_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "credentials.json")
+        self.active_wq_session = load_persisted_session(self.credentials_path)  # 儲存已登入的 session
 
         layout = QVBoxLayout(self)
         ...
@@ -712,6 +720,8 @@ class SimulationWidget(QWidget):
                  self.check_login_btn.setEnabled(True)
 
     def start_simulation_thread(self):
+        if self.active_wq_session is None:
+            self.active_wq_session = load_persisted_session(self.credentials_path)
         if self.simulation_thread and not self.simulation_thread.isRunning():
             self._clear_simulation_thread_ref()
         if self.simulation_thread and self.simulation_thread.isRunning():
@@ -822,6 +832,7 @@ class SimulationWidget(QWidget):
         # 若為登入/憑證相關錯誤，清除 session
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
             self.active_wq_session = None
+            clear_login_state()
 
         # Row-level errors should not tear down the whole batch. Mark the row,
         # update status, and let the worker finish the remaining simulations.
@@ -936,6 +947,7 @@ class SimulationWidget(QWidget):
     @Slot(object)
     def handle_login_success(self, session):
         """Handle login success and store session"""
+        save_login_cookies(session)
         self.active_wq_session = session
         QMessageBox.information(self, "Login Success", "WorldQuant Brain login OK.")
         self.progress_label.setText("Login OK")
@@ -946,6 +958,7 @@ class SimulationWidget(QWidget):
         # 若為登入/憑證相關錯誤，清除 session
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
             self.active_wq_session = None
+            clear_login_state()
         QMessageBox.critical(self, "Login Check Failed", error_message)
         self.progress_label.setText(f"Login check failed: {error_message}")
 
@@ -969,6 +982,7 @@ class SimulationWidget(QWidget):
 
         if msg_box.clickedButton() != complete_btn:
             self.active_wq_session = None
+            clear_login_state()
             self.progress_label.setText("驗證已取消，請重新點選 Check Login")
             return
 
@@ -1011,10 +1025,9 @@ class LoginCheckWorker(QObject):
 
     def run(self):
         try:
-            # 讀取憑證檔案
-            with open(self.json_fn, 'r') as f:
-                creds = json.load(f)
-                email, password = creds['email'], creds['password']
+            session = load_persisted_session(self.json_fn)
+            if session is None:
+                session = build_session_from_credentials(self.json_fn)
         except FileNotFoundError:
             self.login_failed.emit(f"找不到憑證檔案 {self.json_fn}")
             self.finished.emit()
@@ -1024,41 +1037,16 @@ class LoginCheckWorker(QObject):
             self.finished.emit()
             return
 
-        # 建立 session 並執行登入請求
-        session = requests.Session()
-        session.auth = (email, password)
-        
         try:
             self.update_status.emit("正在檢查登入狀態...")
-            r = session.post('https://api.worldquantbrain.com/authentication', timeout=10)
-            response_json = {}
-            if r.text:
-                try:
-                    response_json = r.json()
-                except ValueError:
-                    response_json = {}
-
-            if r.status_code == 200 and 'user' in response_json:
-                self.login_success.emit(session)  # 傳遞 session
+            authed_session, kind, detail = authenticate_with_brain(session, timeout=10)
+            if kind is None and authed_session is not None:
+                self.login_success.emit(authed_session)
                 return
-
-            persona_url = None
-            if r.status_code == 401 and (r.headers.get("WWW-Authenticate") or "").lower() == "persona":
-                location = r.headers.get("Location")
-                if location:
-                    persona_url = urljoin(r.url, location)
-
-            if not persona_url and 'inquiry' in response_json:
-                persona_url = f"{r.url}/persona?inquiry={response_json['inquiry']}"
-
-            if persona_url:
-                self.validation_required.emit(session, persona_url)
+            if kind == "persona":
+                self.validation_required.emit(session, detail)
                 return
-
-            error_detail = response_json.get('detail') if isinstance(response_json, dict) else None
-            if not error_detail:
-                error_detail = f"HTTP {r.status_code}"
-            self.login_failed.emit(f"登入失敗: {error_detail}")
+            self.login_failed.emit(detail or "登入失敗")
 
         except requests.exceptions.Timeout:
             self.login_failed.emit("檢查登入狀態時連線超時")
@@ -1084,12 +1072,12 @@ class PersonaCompletionWorker(QObject):
     def run(self):
         try:
             self.update_status.emit("正在提交 Persona 驗證結果...")
-            # Align with open_machine flow: treat persona completion POST success as login success.
-            complete_response = self.session.post(self.persona_url)
+            complete_response = self.session.post(self.persona_url, timeout=15)
             if not complete_response.ok:
                 self.login_failed.emit(f"Persona 驗證提交失敗: HTTP {complete_response.status_code}")
                 return
 
+            save_login_cookies(self.session)
             self.update_status.emit("Persona 驗證完成，正在建立登入狀態...")
             self.login_success.emit(self.session)
         except requests.exceptions.Timeout:
@@ -1186,23 +1174,36 @@ class WQSession(requests.Session):
 
     def login(self):
         try:
-            with open(self.json_fn, 'r') as f:
-                creds = json.loads(f.read())
-                email, password = creds['email'], creds['password']
-                self.auth = (email, password)
-                r = self.post('https://api.worldquantbrain.com/authentication')
-            if 'user' not in r.json():
-                if 'inquiry' in r.json():
-                    # 在背景執行緒中無法直接顯示 QMessageBox，需要透過信號通知主執行緒
-                    if self.worker_ref:
-                        self.worker_ref.error_occurred.emit("", f"需要驗證: 請先至 {r.url}/persona?inquiry={r.json()['inquiry']} 完成生物驗證")
-                    self.login_expired = True # 標記登入失敗
-                    return
-                else:
-                    if self.worker_ref:
-                        self.worker_ref.error_occurred.emit("", f'登入失敗: WARNING! {r.json()}')
-                    self.login_expired = True # 標記登入失敗
-                    return
+            persisted = load_persisted_session(self.json_fn)
+            if persisted is not None:
+                self.__dict__.update(persisted.__dict__)
+                self.cookies = requests.cookies.cookiejar_from_dict(
+                    requests.utils.dict_from_cookiejar(persisted.cookies)
+                )
+                self.headers = persisted.headers.copy()
+                self.auth = getattr(persisted, 'auth', None)
+                logging.info('Loaded saved WQBrain session cookies.')
+                return
+
+            session = build_session_from_credentials(self.json_fn)
+            authed_session, kind, detail = authenticate_with_brain(session)
+            if kind is None and authed_session is not None:
+                self.__dict__.update(authed_session.__dict__)
+                self.cookies = requests.cookies.cookiejar_from_dict(
+                    requests.utils.dict_from_cookiejar(authed_session.cookies)
+                )
+                self.headers = authed_session.headers.copy()
+                self.auth = getattr(authed_session, 'auth', None)
+            elif kind == 'persona':
+                if self.worker_ref:
+                    self.worker_ref.error_occurred.emit("", f"需要驗證: 請先至 {detail} 完成生物驗證")
+                self.login_expired = True
+                return
+            else:
+                if self.worker_ref:
+                    self.worker_ref.error_occurred.emit("", f'登入失敗: {detail}')
+                self.login_expired = True
+                return
             logging.info('Logged in to WQBrain!')
         except FileNotFoundError:
             if self.worker_ref:
