@@ -87,6 +87,15 @@ def _row_passed_bool(value: Any) -> bool:
         return False
 
 
+def _notify_login_issue(reason: str, detail: str = "", cooldown_key: str = "auth-issue"):
+    try:
+        from telegram_integration import send_login_issue_notification
+
+        send_login_issue_notification(reason, detail=detail, cooldown_key=cooldown_key)
+    except Exception as exc:
+        logging.warning("Unable to send Telegram auth notification: %s", exc)
+
+
 # ---------------------------------------------------------------------------
 # Job state store (file-backed)
 # ---------------------------------------------------------------------------
@@ -282,8 +291,18 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
     except Exception as exc:
         return {"status": "error", "message": f"Error preparing session: {exc}"}
     if kind == "persona":
+        _notify_login_issue(
+            "Dataset refresh requires Persona verification.",
+            detail,
+            cooldown_key="datasets-persona-required",
+        )
         return {"status": "error", "message": f"Persona verification required: {detail}"}
     if kind == "error":
+        _notify_login_issue(
+            "Dataset refresh failed because login is invalid.",
+            detail,
+            cooldown_key="datasets-login-invalid",
+        )
         return {"status": "error", "message": detail}
 
     os.makedirs(datasets_dir, exist_ok=True)
@@ -302,7 +321,17 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
                 clear_login_state()
                 persona_url = extract_persona_url(r)
                 if persona_url:
+                    _notify_login_issue(
+                        "Saved session expired during dataset list refresh.",
+                        persona_url,
+                        cooldown_key="datasets-list-session-expired",
+                    )
                     return {"status": "error", "message": f"Persona verification required: {persona_url}"}
+                _notify_login_issue(
+                    "Saved session expired during dataset list refresh.",
+                    "Unauthorized while fetching dataset list.",
+                    cooldown_key="datasets-list-unauthorized",
+                )
                 return {"status": "error", "message": "Unauthorized while fetching dataset list."}
             r.raise_for_status()
             body    = r.json()
@@ -334,7 +363,17 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
                     clear_login_state()
                     persona_url = extract_persona_url(r)
                     if persona_url:
+                        _notify_login_issue(
+                            f"Saved session expired while refreshing dataset fields for {ds_id}.",
+                            persona_url,
+                            cooldown_key=f"dataset-fields-persona-{ds_id}",
+                        )
                         return {"status": "error", "message": f"Persona verification required: {persona_url}"}
+                    _notify_login_issue(
+                        f"Saved session expired while refreshing dataset fields for {ds_id}.",
+                        f"Unauthorized while fetching fields for {ds_id}.",
+                        cooldown_key=f"dataset-fields-unauthorized-{ds_id}",
+                    )
                     return {"status": "error", "message": f"Unauthorized while fetching fields for {ds_id}."}
                 r.raise_for_status()
                 body    = r.json()
@@ -915,11 +954,26 @@ class CLISimulationSession(requests.Session):
                 self.auth = getattr(session, "auth", None)
                 return
             if kind == "persona":
+                _notify_login_issue(
+                    "CLI simulation requires Persona verification.",
+                    detail,
+                    cooldown_key="cli-sim-persona-required",
+                )
                 self._emit(f"Persona verification required: {detail}")
             else:
+                _notify_login_issue(
+                    "CLI simulation login failed.",
+                    detail or "Login failed.",
+                    cooldown_key="cli-sim-login-failed",
+                )
                 self._emit(f"Login failed: {detail}")
             self.login_expired = True
         except Exception as exc:
+            _notify_login_issue(
+                "CLI simulation login errored.",
+                str(exc),
+                cooldown_key="cli-sim-login-error",
+            )
             self._emit(f"Login error: {exc}")
             self.login_expired = True
 
@@ -1013,7 +1067,17 @@ class CLISimulationSession(requests.Session):
                     clear_login_state()
                     persona_url = extract_persona_url(r)
                     if persona_url:
+                        _notify_login_issue(
+                            "Saved session expired while submitting a simulation.",
+                            persona_url,
+                            cooldown_key="cli-sim-submit-persona",
+                        )
                         return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
+                    _notify_login_issue(
+                        "Saved session expired while submitting a simulation.",
+                        "Unauthorized while submitting simulation.",
+                        cooldown_key="cli-sim-submit-unauthorized",
+                    )
                     return {"uuid": row_uuid, "error": "Unauthorized while submitting simulation.", "alpha": alpha}
                 r.raise_for_status()
                 nxt = r.headers["Location"]
@@ -1042,7 +1106,17 @@ class CLISimulationSession(requests.Session):
                     clear_login_state()
                     persona_url = extract_persona_url(r)
                     if persona_url:
+                        _notify_login_issue(
+                            "Saved session expired while polling simulation status.",
+                            persona_url,
+                            cooldown_key="cli-sim-poll-persona",
+                        )
                         return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
+                    _notify_login_issue(
+                        "Saved session expired while polling simulation status.",
+                        "Unauthorized while polling simulation.",
+                        cooldown_key="cli-sim-poll-unauthorized",
+                    )
                     return {"uuid": row_uuid, "error": "Unauthorized while polling simulation.", "alpha": alpha}
                 r.raise_for_status()
                 rj   = r.json()
@@ -1074,7 +1148,17 @@ class CLISimulationSession(requests.Session):
                 clear_login_state()
                 persona_url = extract_persona_url(r)
                 if persona_url:
+                    _notify_login_issue(
+                        "Saved session expired while fetching alpha details.",
+                        persona_url,
+                        cooldown_key="cli-sim-alpha-persona",
+                    )
                     return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
+                _notify_login_issue(
+                    "Saved session expired while fetching alpha details.",
+                    "Unauthorized while fetching alpha details.",
+                    cooldown_key="cli-sim-alpha-unauthorized",
+                )
                 return {"uuid": row_uuid, "error": "Unauthorized while fetching alpha details.", "alpha": alpha}
             r.raise_for_status()
             rj = r.json()

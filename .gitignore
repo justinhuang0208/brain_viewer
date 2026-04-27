@@ -8,3 +8,4 @@ templates
 .env
 session.pkl
 login_time.pkl
+.brain_cli/

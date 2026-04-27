@@ -124,6 +124,7 @@ from wq_session import (
     load_persisted_session,
     save_login_cookies,
 )
+from telegram_integration import send_login_issue_notification
 
 PARAM_COLUMNS = [
     "code", "decay", "delay", "neutralization", "region", "truncation", "universe"
@@ -833,6 +834,11 @@ class SimulationWidget(QWidget):
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
             self.active_wq_session = None
             clear_login_state()
+            send_login_issue_notification(
+                "Simulation encountered an authentication or session-expiry error.",
+                detail=error_message,
+                cooldown_key="gui-simulation-auth-error",
+            )
 
         # Row-level errors should not tear down the whole batch. Mark the row,
         # update status, and let the worker finish the remaining simulations.
@@ -959,6 +965,11 @@ class SimulationWidget(QWidget):
         if any(x in error_message for x in ["憑證", "401", "Unauthorized", "驗證", "expired", "過期", "登入失敗"]):
             self.active_wq_session = None
             clear_login_state()
+            send_login_issue_notification(
+                "GUI login check failed because the login is invalid or expired.",
+                detail=error_message,
+                cooldown_key="gui-login-failed",
+            )
         QMessageBox.critical(self, "Login Check Failed", error_message)
         self.progress_label.setText(f"Login check failed: {error_message}")
 

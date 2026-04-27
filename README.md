@@ -189,6 +189,7 @@ Groups:
   simulate   Enqueue, run, status, stop, results, list
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
+  telegram   Run Telegram bot polling and send status notifications
 ```
 
 #### Global flags (usable anywhere in the command line)
@@ -261,6 +262,9 @@ python brain_cli.py evolution auto-run \
 # Auth check
 python brain_cli.py auth login-status --json
 python brain_cli.py auth login
+
+# Start Telegram bot polling
+python brain_cli.py telegram run
 ```
 
 #### CLI job state
@@ -268,6 +272,28 @@ python brain_cli.py auth login
 CLI job state for `simulate` and `evolution` is stored under `.brain_cli/jobs/<job_id>.json`. Use `simulate list` / `evolution list` to view all jobs. Stop a running job from another terminal with `simulate stop <job_id>` or `evolution stop <job_id>`.
 
 CLI authentication reuses the same persisted WQ cookie files as the GUI (`session.pkl` / `login_time.pkl`), matching the open_machine-style login flow.
+
+#### Telegram integration
+
+Telegram support is optional and uses direct Bot API HTTP calls (no extra SDK required). Add these variables to `.env`:
+
+```bash
+TELEGRAM_BOT_API_TOKEN=your_bot_token
+TELEGRAM_CHAT_ID=your_chat_id
+```
+
+After that, start the polling loop:
+
+```bash
+python brain_cli.py telegram run
+```
+
+Supported Telegram commands:
+- `/refresh` / `/refresh_session`: refresh the saved WQ session, including Persona verification handoff with an inline confirmation button
+- `/status` / `/stat`: send the current session state plus simulation/evolution job counts
+- `/help` / `/start`: show available commands
+
+When GUI/CLI dataset refresh or simulation flows detect invalid login or expired session state, the app also sends Telegram notifications to the configured chat.
 
 ---
 

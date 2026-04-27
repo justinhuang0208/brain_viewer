@@ -25,6 +25,7 @@ from wq_session import (
     extract_persona_url,
     load_persisted_session,
 )
+from telegram_integration import send_login_issue_notification
 
 # 載入環境變數
 load_dotenv()
@@ -300,11 +301,21 @@ class DatasetRefreshWorker(QThread):
                 self.progress.emit("Authentication successful.")
                 return authed_session
             if kind == "persona":
+                send_login_issue_notification(
+                    "Dataset refresh requires Persona verification.",
+                    detail=detail,
+                    cooldown_key="gui-datasets-persona-required",
+                )
                 self.error.emit(
                     "Login requires additional verification (Persona). "
                     "Please use the Simulation tab to log in first."
                 )
                 return None
+            send_login_issue_notification(
+                "Dataset refresh login failed.",
+                detail=detail,
+                cooldown_key="gui-datasets-login-failed",
+            )
             self.error.emit(f"Authentication failed: {detail}")
             return None
         except requests.exceptions.Timeout:
@@ -333,11 +344,21 @@ class DatasetRefreshWorker(QThread):
                     clear_login_state()
                     persona_url = extract_persona_url(r)
                     if persona_url:
+                        send_login_issue_notification(
+                            "Saved session expired during dataset list refresh.",
+                            detail=persona_url,
+                            cooldown_key="gui-datasets-list-persona",
+                        )
                         self.error.emit(
                             "Saved session expired and Persona verification is required again. "
                             f"Please complete login in the Simulation tab first:\n{persona_url}"
                         )
                     else:
+                        send_login_issue_notification(
+                            "Saved session expired during dataset list refresh.",
+                            detail="Unauthorized while fetching dataset list.",
+                            cooldown_key="gui-datasets-list-unauthorized",
+                        )
                         self.error.emit("Unauthorized while fetching dataset list.")
                     return ids
                 r.raise_for_status()
@@ -377,11 +398,21 @@ class DatasetRefreshWorker(QThread):
                 clear_login_state()
                 persona_url = extract_persona_url(r)
                 if persona_url:
+                    send_login_issue_notification(
+                        f"Saved session expired while refreshing dataset fields for {dataset_id}.",
+                        detail=persona_url,
+                        cooldown_key=f"gui-dataset-fields-persona-{dataset_id}",
+                    )
                     self.error.emit(
                         "Saved session expired and Persona verification is required again. "
                         f"Please complete login in the Simulation tab first:\n{persona_url}"
                     )
                 else:
+                    send_login_issue_notification(
+                        f"Saved session expired while refreshing dataset fields for {dataset_id}.",
+                        detail=f"Unauthorized while fetching fields for {dataset_id}.",
+                        cooldown_key=f"gui-dataset-fields-unauthorized-{dataset_id}",
+                    )
                     self.error.emit(f"Unauthorized while fetching fields for {dataset_id}.")
                 return None
             r.raise_for_status()

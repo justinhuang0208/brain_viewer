@@ -3,7 +3,7 @@
 """
 brain_cli.py — WorldQuant Brain Toolbox Command-Line Interface.
 
-Provides seven command groups for AI-agent usage:
+Provides eight command groups for AI-agent usage:
   auth       Login status, login, persona completion
   datasets   List, refresh, show, search, export-fields
   template   List, show, save, delete, placeholders
@@ -11,6 +11,7 @@ Provides seven command groups for AI-agent usage:
   simulate   Enqueue, run, status, stop, results, list
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
+  telegram   Run Telegram bot polling and send status notifications
 
 All commands support --json for machine-readable output.
 
@@ -34,6 +35,7 @@ if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
 import cli_services as svc
+import telegram_integration as tg
 
 # ---------------------------------------------------------------------------
 # Output helpers
@@ -631,6 +633,35 @@ def cmd_evolution(args):
 
 
 # ---------------------------------------------------------------------------
+# telegram group
+# ---------------------------------------------------------------------------
+
+def cmd_telegram(args):
+    sub = args.telegram_cmd
+
+    if sub == "run":
+        try:
+            runner = tg.TelegramBotRunner(
+                credentials_path=args.credentials,
+                poll_timeout=getattr(args, "poll_timeout", tg.DEFAULT_POLL_TIMEOUT),
+            )
+        except tg.TelegramConfigError as exc:
+            _err(str(exc))
+        print("Starting Telegram bot polling…", file=sys.stderr)
+        runner.run(once=getattr(args, "once", False))
+
+    elif sub == "status":
+        try:
+            result = tg.send_status_message(credentials_path=args.credentials)
+        except tg.TelegramConfigError as exc:
+            _err(str(exc))
+        _out(result, args.json)
+
+    else:
+        _err(f"Unknown telegram sub-command: {sub}")
+
+
+# ---------------------------------------------------------------------------
 # Argument parser construction
 # ---------------------------------------------------------------------------
 
@@ -885,6 +916,19 @@ def build_parser() -> argparse.ArgumentParser:
 
     evo_sub.add_parser("list", help="List all evolution jobs.")
 
+    # ── telegram ──────────────────────────────────────────────────────────────
+    p_tg = sub_root.add_parser("telegram", help="Telegram bot and notification commands.")
+    tg_sub = p_tg.add_subparsers(dest="telegram_cmd", metavar="<cmd>")
+    tg_sub.required = True
+
+    p_tg_run = tg_sub.add_parser("run", help="Run the Telegram bot polling loop.")
+    p_tg_run.add_argument("--poll-timeout", type=int, default=tg.DEFAULT_POLL_TIMEOUT, dest="poll_timeout",
+                          help="Long-poll timeout in seconds (default: 60).")
+    p_tg_run.add_argument("--once", action="store_true",
+                          help="Process at most one polling cycle and exit.")
+
+    tg_sub.add_parser("status", help="Send the current system status to the configured Telegram chat.")
+
     return root
 
 
@@ -900,6 +944,7 @@ DISPATCH = {
     "simulate":  cmd_simulate,
     "backtest":  cmd_backtest,
     "evolution": cmd_evolution,
+    "telegram":  cmd_telegram,
 }
 
 
