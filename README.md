@@ -270,6 +270,12 @@ python brain_cli.py auth login
 # Start Telegram bot polling
 python brain_cli.py telegram run
 
+# Discover chat IDs from recent bot updates
+python brain_cli.py telegram chat-id --json
+
+# Discover and write the latest chat ID into .env
+python brain_cli.py telegram chat-id --write-env
+
 # Start the persistent worker
 python brain_cli.py worker run
 
@@ -302,6 +308,20 @@ Supported Telegram commands:
 - `/refresh` / `/refresh_session`: refresh the saved WQ session, including Persona verification handoff with an inline confirmation button
 - `/status` / `/stat`: send the current session state plus simulation/evolution job counts
 - `/help` / `/start`: show available commands
+
+To discover `TELEGRAM_CHAT_ID`, first send a message like `/start` to your bot, then run:
+
+```bash
+python brain_cli.py telegram chat-id --json
+```
+
+If you want the tool to automatically write the newest discovered chat ID into `.env`, run:
+
+```bash
+python brain_cli.py telegram chat-id --write-env
+```
+
+If multiple chats have interacted with the bot, the tool will list them and use the most recent one when `--write-env` is set.
 
 When GUI/CLI dataset refresh or simulation flows detect invalid login or expired session state, the app also sends Telegram notifications to the configured chat.
 

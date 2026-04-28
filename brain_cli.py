@@ -659,6 +659,16 @@ def cmd_telegram(args):
             _err(str(exc))
         _out(result, args.json)
 
+    elif sub == "chat-id":
+        try:
+            result = tg.discover_chat_id(
+                limit=getattr(args, "limit", 20),
+                write_env=getattr(args, "write_env", False),
+            )
+        except tg.TelegramConfigError as exc:
+            _err(str(exc))
+        _out(result, args.json)
+
     else:
         _err(f"Unknown telegram sub-command: {sub}")
 
@@ -952,6 +962,12 @@ def build_parser() -> argparse.ArgumentParser:
                           help="Process at most one polling cycle and exit.")
 
     tg_sub.add_parser("status", help="Send the current system status to the configured Telegram chat.")
+
+    p_tg_chat = tg_sub.add_parser("chat-id", help="Discover recent Telegram chat IDs from getUpdates.")
+    p_tg_chat.add_argument("--limit", type=int, default=20,
+                           help="Maximum number of recent updates to inspect (default: 20).")
+    p_tg_chat.add_argument("--write-env", action="store_true", dest="write_env",
+                           help="Write the most recent discovered chat ID into .env as TELEGRAM_CHAT_ID.")
 
     # ── worker ────────────────────────────────────────────────────────────────
     p_worker = sub_root.add_parser("worker", help="Persistent worker commands.")

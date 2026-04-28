@@ -8,7 +8,7 @@ import time
 from typing import Any, Dict, Optional, Tuple
 
 import requests
-from dotenv import load_dotenv
+from dotenv import load_dotenv, set_key
 
 from wq_session import (
     BRAIN_API_BASE,
@@ -62,13 +62,21 @@ def _load_config() -> Tuple[str, str]:
     return token, str(chat_id)
 
 
+def _load_token() -> str:
+    load_dotenv()
+    token = os.getenv("TELEGRAM_BOT_API_TOKEN") or os.getenv("TELEGRAM_BOT_TOKEN")
+    if not token:
+        raise TelegramConfigError("Missing TELEGRAM_BOT_API_TOKEN (or TELEGRAM_BOT_TOKEN) in environment.")
+    return token
+
+
 def _api_request(method: str,
                  *,
                  http_method: str = "GET",
                  params: Optional[dict] = None,
                  payload: Optional[dict] = None,
                  timeout: int = 30) -> Any:
-    token, _ = _load_config()
+    token = _load_token()
     url = f"https://api.telegram.org/bot{token}/{method}"
     request = requests.get if http_method == "GET" else requests.post
     response = request(url, params=params, json=payload, timeout=timeout)
@@ -195,6 +203,78 @@ def send_status_message(credentials_path: str) -> dict:
     text = build_status_message(credentials_path)
     send_telegram_message(text)
     return {"status": "sent", "message": text}
+
+
+def _extract_chat_from_update(update: dict) -> Optional[dict]:
+    candidates = [
+        update.get("message", {}).get("chat"),
+        update.get("edited_message", {}).get("chat"),
+        update.get("channel_post", {}).get("chat"),
+        update.get("edited_channel_post", {}).get("chat"),
+        update.get("my_chat_member", {}).get("chat"),
+        update.get("chat_member", {}).get("chat"),
+        update.get("callback_query", {}).get("message", {}).get("chat"),
+    ]
+    for chat in candidates:
+        if isinstance(chat, dict) and "id" in chat:
+            return chat
+    return None
+
+
+def set_telegram_chat_id(chat_id: str, env_path: Optional[str] = None) -> dict:
+    target = env_path or os.path.join(SCRIPT_DIR, ".env")
+    if not os.path.exists(target):
+        with open(target, "a", encoding="utf-8"):
+            pass
+    set_key(target, "TELEGRAM_CHAT_ID", str(chat_id))
+    return {"status": "updated", "env_path": target, "chat_id": str(chat_id)}
+
+
+def discover_chat_id(*, limit: int = 20, write_env: bool = False, env_path: Optional[str] = None) -> dict:
+    updates = _api_request(
+        "getUpdates",
+        params={"limit": limit, "timeout": 0},
+        timeout=30,
+    )
+    seen_ids = set()
+    chats = []
+    for update in reversed(updates or []):
+        chat = _extract_chat_from_update(update)
+        if not chat:
+            continue
+        chat_id = str(chat.get("id"))
+        if chat_id in seen_ids:
+            continue
+        seen_ids.add(chat_id)
+        chats.append({
+            "chat_id": chat_id,
+            "type": chat.get("type"),
+            "title": chat.get("title") or chat.get("username") or chat.get("first_name") or "",
+            "username": chat.get("username"),
+            "update_id": update.get("update_id"),
+        })
+
+    if not chats:
+        return {
+            "status": "no_updates",
+            "message": "No Telegram updates found. Send a message like /start to the bot first.",
+            "chats": [],
+            "selected_chat_id": None,
+            "env_updated": False,
+        }
+
+    selected_chat_id = chats[0]["chat_id"]
+    result = {
+        "status": "ok",
+        "message": "Found recent Telegram chat IDs.",
+        "chats": chats,
+        "selected_chat_id": selected_chat_id,
+        "env_updated": False,
+    }
+    if write_env:
+        result["env_write_result"] = set_telegram_chat_id(selected_chat_id, env_path=env_path)
+        result["env_updated"] = True
+    return result
 
 
 def send_login_issue_notification(reason: str,
