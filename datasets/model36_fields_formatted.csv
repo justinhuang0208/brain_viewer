@@ -1,0 +1,33 @@
+Field,Description,Type,Coverage,Users,Alphas
+credit_risk_coverage_score,"Numeric component score for coverage (e.g., interest coverage); higher indicates stronger ability to service obligations",MATRIX,100%,0,0
+credit_risk_growth_score,Numeric component score for growth/stability factors used in the SmartRatios model; higher indicates a stronger growth profile supportive of credit quality,MATRIX,100%,2,3
+credit_risk_leverage_score,Percentile score reflecting leverage factors in credit risk assessment.,MATRIX,100%,4,4
+credit_risk_liquidity_score,Numeric component score for liquidity factors; higher indicates stronger liquidity and financial flexibility,MATRIX,100%,3,3
+credit_risk_profitability_score,Numeric component score for profitability factors; higher indicates stronger profitability,MATRIX,100%,1,1
+creditworthiness_letter_rating_numeric,Continuous implied rating score mapped from the SmartRatios default probability; higher values indicate lower 1-year default risk,MATRIX,100%,2,2
+default_risk_country_percentile_2,Float percentile rank (0–100) of financial health within the company’s country; higher is better/safer,MATRIX,100%,1,1
+default_risk_global_percentile_2,Float percentile rank (0–100) of financial health relative to global peers; higher is better/safer,MATRIX,100%,1,1
+default_risk_industry_percentile_2,Float percentile rank (0–100) of financial health within the TRBC industry; higher is better/safer,MATRIX,100%,1,1
+default_risk_region_percentile_2,Float percentile rank (0–100) of financial health within the company’s region; higher is better/safer,MATRIX,100%,1,2
+default_risk_sector_percentile_2,Float percentile rank (0–100) of financial health within the TRBC sector; higher is better/safer,MATRIX,100%,1,1
+mdl36_index_rating,Financial health rating,MATRIX,82%,78,620
+star_sr_country_rank,Financial health rank in this country,MATRIX,81%,2,31
+star_sr_coverage,Financial health score: coverage,MATRIX,81%,3,46
+star_sr_global_rank,Financial health rank,MATRIX,81%,3,34
+star_sr_growth,Financial health score: growth,MATRIX,81%,4,49
+star_sr_industr_rank,Financial health rank in this industry,MATRIX,81%,5,24
+star_sr_leverage,Financial health score: leverage,MATRIX,81%,5,43
+star_sr_liquidity,Financial health score: liquidity,MATRIX,81%,6,42
+star_sr_profitability,Financial health score: profitability,MATRIX,81%,2,21
+star_sr_region_rank,Financial health rank in this region,MATRIX,81%,3,18
+star_sr_sector_rank,Financial health rank in this sector,MATRIX,81%,2,28
+star_v14_sr_country_rank,Integer percentile rank (1–100) of financial health within the company’s country; higher is better/safer,MATRIX,100%,67,547
+star_v14_sr_coverage,Component score for coverage; higher indicates better ability to meet debt service,MATRIX,100%,76,680
+star_v14_sr_global_rank,Integer percentile rank (1–100) of financial health relative to global peers; higher is better/safer,MATRIX,100%,70,609
+star_v14_sr_growth,Component score for growth factors; higher indicates a better growth profile for credit health,MATRIX,100%,95,652
+star_v14_sr_industr_rank,Integer percentile rank (1–100) of financial health within the TRBC industry; higher is better/safer,MATRIX,100%,74,551
+star_v14_sr_leverage,Financial health score: leverage,MATRIX,100%,81,778
+star_v14_sr_liquidity,Component score for liquidity; higher indicates better liquidity,MATRIX,100%,89,627
+star_v14_sr_profitability,Component score for profitability; higher indicates better profitability,MATRIX,100%,83,693
+star_v14_sr_region_rank,Integer percentile rank (1–100) of financial health within the company’s region; higher is better/safer,MATRIX,100%,66,499
+star_v14_sr_sector_rank,Integer percentile rank (1–100) of financial health within the TRBC sector; higher is better/safer,MATRIX,100%,60,538

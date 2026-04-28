@@ -1,0 +1,311 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl354_group_pt11yf_dlyspe,Computed by dividing estimated normalized median earnings per share for next fiscal year by price.,VECTOR,100%,2,2
+mdl354_group_pt11yf_ep,Computed by dividing price by normalized expected earnings per share for next fiscal year.,VECTOR,100%,2,4
+mdl354_group_pt12yf_dlyspe,Computed by dividing estimated normalized median earnings per share for next second fiscal year by price.,VECTOR,100%,1,2
+mdl354_group_pt12yf_ep,Computed by dividing price by normalized expected earnings per share for second fiscal year.,VECTOR,100%,2,2
+mdl354_group_pt1ac_5y_sale,Historical 5Y revenue growth acceleration,VECTOR,100%,2,3
+mdl354_group_pt1b_mtl_dlyspe,Ratio of earnings per share for last 12 months to price.,VECTOR,100%,0,0
+mdl354_group_pt1b_mtl_ep,Price divided by earnings per share for last 12 months.,VECTOR,100%,12,12
+mdl354_group_pt1bookp,Book-to-market,VECTOR,100%,1,1
+mdl354_group_pt1bookp_fy1,"Book-to-market, FY1",VECTOR,100%,0,0
+mdl354_group_pt1cfoyld,Computed by dividing the operating net cash flow by price and the number of common shares outstanding.,VECTOR,100%,1,1
+mdl354_group_pt1cfoyld_fy1,Calculated by dividing the estimated operating cash flow per share for the next fiscal year by price.,VECTOR,100%,1,1
+mdl354_group_pt1country,2-digit ISO Country Code,VECTOR,100%,1,2
+mdl354_group_pt1d1ntr,"Total return, past 1D",VECTOR,100%,1,1
+mdl354_group_pt1d_mtl_dlyspe,Ratio of diluted earnings per share for last 12 months to price.,VECTOR,100%,1,1
+mdl354_group_pt1d_mtl_ep,Price divided by diluted earnings per share for last 12 months.,VECTOR,100%,3,3
+mdl354_group_pt1divyld_exp,Computed by dividing the expected dividends paid over next 12 months by price.,VECTOR,100%,1,1
+mdl354_group_pt1divyld_fy1,Computed by dividing the expected median dividends paid over next fiscal year by price.,VECTOR,100%,1,1
+mdl354_group_pt1divyld_sh,Computed by subtracting the difference between buyback and issuance over market cap from trailing dividend yield.,VECTOR,100%,0,0
+mdl354_group_pt1divyld_trl,Computed by dividing the dividends paid over last 12 months by price.,VECTOR,100%,1,1
+mdl354_group_pt1dly_lf_org,Ratio of sum of net income and R&D expenses to price multiplied by common shares outstanding.,VECTOR,100%,1,1
+mdl354_group_pt1dlyfcf,Free cash flow (unlevered) yield,VECTOR,100%,0,0
+mdl354_group_pt1ebit_ev,EBIT/TEV,VECTOR,100%,0,0
+mdl354_group_pt1ebitda_ev,EBITDA/TEV,VECTOR,100%,0,0
+mdl354_group_pt1es_ebitda_fy1_d1m,"FY1 EBITDA diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1es_ebitda_fy1_d3m,"FY1 EBITDA diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1es_ebitda_fy1_r1m,"FY1 EBITDA revision, 1M",VECTOR,100%,0,0
+mdl354_group_pt1es_ebitda_fy1_r3m,"FY1 EBITDA revision, 3M",VECTOR,100%,0,0
+mdl354_group_pt1es_ebitda_ntm_d1m,"NTM EBITDA diffusion (up/down ratio), 1M",VECTOR,100%,2,2
+mdl354_group_pt1es_ebitda_ntm_d3m,"NTM EBITDA diffusion (up/down ratio), 3M",VECTOR,100%,1,2
+mdl354_group_pt1es_ebitda_ntm_r1m,"NTM EBITDA revision, 1M",VECTOR,100%,3,3
+mdl354_group_pt1es_ebitda_ntm_r3m,"NTM EBITDA revision, 3M",VECTOR,100%,0,0
+mdl354_group_pt1es_roe_fy1_d1m,"FY1 ROE diffusion (up/down ratio), 1M",VECTOR,100%,1,1
+mdl354_group_pt1es_roe_fy1_d3m,"FY1 ROE diffusion (up/down ratio), 3M",VECTOR,100%,1,1
+mdl354_group_pt1es_roe_fy1_r1m,"FY1 ROE revision, 1M",VECTOR,100%,1,2
+mdl354_group_pt1es_roe_fy1_r3m,"FY1 ROE revision, 3M",VECTOR,100%,1,1
+mdl354_group_pt1es_roe_ntm_d1m,"NTM ROE diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1es_roe_ntm_d3m,"NTM ROE diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1es_roe_ntm_r1m,"NTM ROE revision, 1M",VECTOR,100%,1,1
+mdl354_group_pt1es_roe_ntm_r3m,"NTM ROE revision, 3M",VECTOR,100%,0,0
+mdl354_group_pt1es_sale_fy1_d1m,"FY1 revenue diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1es_sale_fy1_d3m,"FY1 revenue diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1es_sale_fy1_r1m,"FY1 revenue revision, 1M",VECTOR,100%,1,1
+mdl354_group_pt1es_sale_fy1_r3m,"FY1 revenue revision, 3M",VECTOR,100%,0,0
+mdl354_group_pt1es_sale_ntm_d1m,"NTM revenue diffusion (up/down ratio), 1M",VECTOR,100%,1,3
+mdl354_group_pt1es_sale_ntm_d3m,"NTM revenue diffusion (up/down ratio), 3M",VECTOR,100%,1,1
+mdl354_group_pt1es_sale_ntm_r1m,"NTM revenue revision, 1M",VECTOR,100%,0,0
+mdl354_group_pt1es_sale_ntm_r3m,"NTM revenue revision, 3M",VECTOR,100%,0,0
+mdl354_group_pt1gr_5y_sale,Historical 5Y revenue growth trend,VECTOR,100%,0,0
+mdl354_group_pt1gr_fy1_sale,FY1 Revenue growth,VECTOR,100%,1,1
+mdl354_group_pt1gr_fy2_sale,FY2 Revenue growth,VECTOR,100%,1,3
+mdl354_group_pt1gr_intr_sale,Historical YoY interim revenue growth,VECTOR,100%,3,4
+mdl354_group_pt1gva_mmocer_se,Mean recommendation,VECTOR,100%,0,0
+mdl354_group_pt1item,"Computed Item (Agg, Median, Count)",VECTOR,100%,0,0
+mdl354_group_pt1m1d_1yf_spb_se,"FY1 BPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1d_1yf_spd_se,"FY1 DPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1d_1yf_spe_se,"FY1 EPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1d_1yf_spfc_se,"FY1 CFPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1d_cer_se,"Recommendation diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1d_mtn_spb_se,"NTM BPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1d_mtn_spd_se,"NTM DPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1d_mtn_spe_se,"NTM EPS diffusion (up/down ratio), 1M",VECTOR,100%,1,1
+mdl354_group_pt1m1d_mtn_spfc_se,"NTM CFPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1d_pt_se,"Target price diffusion (up/down ratio), 1M",VECTOR,100%,1,1
+mdl354_group_pt1m1r_1yf_spb_se,"FY1 BPS revision, 1M",VECTOR,100%,1,1
+mdl354_group_pt1m1r_1yf_spd_se,"FY1 DPS revision, 1M",VECTOR,100%,1,1
+mdl354_group_pt1m1r_1yf_spe_se,"FY1 EPS revision, 1M",VECTOR,100%,1,1
+mdl354_group_pt1m1r_1yf_spfc_se,"FY1 CFPS revision, 1M",VECTOR,100%,1,1
+mdl354_group_pt1m1r_cer_se,"Recommendation revision, 1M",VECTOR,100%,1,1
+mdl354_group_pt1m1r_mtn_spb_se,"NTM BPS revision, 1M",VECTOR,100%,1,1
+mdl354_group_pt1m1r_mtn_spd_se,"NTM DPS revision, 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1r_mtn_spe_se,"NTM EPS revision, 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1r_mtn_spfc_se,"NTM CFPS revision, 1M",VECTOR,100%,0,0
+mdl354_group_pt1m1r_pt_se,"Target price revision, 1M",VECTOR,100%,1,1
+mdl354_group_pt1m21yf_ep,Computed by dividing price by expected median earnings per share for next 12 months.,VECTOR,100%,0,0
+mdl354_group_pt1m3d_1yf_spb_se,"FY1 BPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3d_1yf_spd_se,"FY1 DPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3d_1yf_spe_se,"FY1 EPS diffusion (up/down ratio), 3M",VECTOR,100%,2,2
+mdl354_group_pt1m3d_1yf_spfc_se,"FY1 CFPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3d_cer_se,"Recommendation diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3d_mtn_spb_se,"NTM BPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3d_mtn_spd_se,"NTM DPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3d_mtn_spe_se,"NTM EPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3d_mtn_spfc_se,"NTM CFPS diffusion (up/down ratio), 3M",VECTOR,100%,1,1
+mdl354_group_pt1m3d_pt_se,"Target price diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3r_1yf_spb_se,"FY1 BPS revision, 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3r_1yf_spd_se,"FY1 DPS revision, 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3r_1yf_spe_se,"FY1 EPS revision, 3M",VECTOR,100%,1,1
+mdl354_group_pt1m3r_1yf_spfc_se,"FY1 CFPS revision, 3M",VECTOR,100%,2,2
+mdl354_group_pt1m3r_cer_se,"Recommendation revision, 3M",VECTOR,100%,3,3
+mdl354_group_pt1m3r_mtn_spb_se,"NTM BPS revision, 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3r_mtn_spd_se,"NTM DPS revision, 3M",VECTOR,100%,1,1
+mdl354_group_pt1m3r_mtn_spe_se,"NTM EPS revision, 3M",VECTOR,100%,0,0
+mdl354_group_pt1m3r_mtn_spfc_se,"NTM CFPS revision, 3M",VECTOR,100%,1,1
+mdl354_group_pt1m3r_pt_se,"Target price revision, 3M",VECTOR,100%,1,1
+mdl354_group_pt1mtn_dlyspe,Computed by dividing normalized median earnings per share for next 12 months by price.,VECTOR,100%,0,0
+mdl354_group_pt1ntr_pt,Target price implied return,VECTOR,100%,0,0
+mdl354_group_pt1pbt,Tangible book-to-market,VECTOR,100%,0,0
+mdl354_group_pt1psale,Price-to-sales,VECTOR,100%,0,0
+mdl354_group_pt1psale_fy1,"Price-to-sales, FY1",VECTOR,100%,0,0
+mdl354_group_pt1sale_ev,Revenue/TEV,VECTOR,100%,1,1
+mdl354_group_pt1spd_1yf_rg,FY1 DPS growth,VECTOR,100%,1,1
+mdl354_group_pt1spd_2yf_rg,FY2 DPS growth,VECTOR,100%,0,0
+mdl354_group_pt1spd_rtni_rg,Historical YoY interim DPS growth,VECTOR,100%,0,0
+mdl354_group_pt1spd_y5_ca,Historical 5Y DPS growth acceleration,VECTOR,100%,1,2
+mdl354_group_pt1spd_y5_rg,Historical 5Y DPS growth trend,VECTOR,100%,1,2
+mdl354_group_pt1spe_1yf_rg,FY1 EPS growth,VECTOR,100%,0,0
+mdl354_group_pt1spe_2yf_rg,FY2 EPS growth,VECTOR,100%,0,0
+mdl354_group_pt1spe_rtni_rg,Historical YoY interim EPS growth,VECTOR,100%,0,0
+mdl354_group_pt1spe_y5_ca,Historical 5Y EPS growth acceleration,VECTOR,100%,0,0
+mdl354_group_pt1spe_y5_rg,Historical 5Y EPS growth trend,VECTOR,100%,0,0
+mdl354_group_pt1speo_y5_ca,Historical 5Y operating EPS growth acceleration,VECTOR,100%,0,0
+mdl354_group_pt1speo_y5_rg,Historical 5Y operating EPS growth trend,VECTOR,100%,0,0
+mdl354_group_pt1spfc_1yf_rg,FY1 CFPS growth,VECTOR,100%,0,0
+mdl354_group_pt1spfc_2yf_rg,FY2 CFPS growth,VECTOR,100%,0,0
+mdl354_group_pt1spfc_rtni_rg,Historical YoY interim CFPS growth,VECTOR,100%,0,0
+mdl354_group_pt1spfc_y5_ca,Historical 5Y CFPS growth acceleration,VECTOR,100%,0,0
+mdl354_group_pt1spfc_y5_rg,Historical 5Y CFPS growth trend,VECTOR,100%,0,0
+mdl354_group_pt1ve_fcf,FCF (levered)/TEV,VECTOR,100%,1,1
+mdl354_sector_pt11yf_dlyspe,Computed by dividing estimated normalized median earnings per share for next fiscal year by price.,VECTOR,100%,0,0
+mdl354_sector_pt11yf_ep,Computed by dividing price by normalized expected earnings per share for next fiscal year.,VECTOR,100%,2,2
+mdl354_sector_pt12yf_dlyspe,Computed by dividing estimated normalized median earnings per share for next second fiscal year by price.,VECTOR,100%,0,0
+mdl354_sector_pt12yf_ep,Computed by dividing price by normalized expected earnings per share for second fiscal year.,VECTOR,100%,0,0
+mdl354_sector_pt1ac_5y_sale,Historical 5Y revenue growth acceleration,VECTOR,100%,0,0
+mdl354_sector_pt1b_mtl_dlyspe,Ratio of earnings per share for last 12 months to price.,VECTOR,100%,0,0
+mdl354_sector_pt1b_mtl_ep,Price divided by earnings per share for last 12 months.,VECTOR,100%,0,0
+mdl354_sector_pt1bookp,Book-to-market,VECTOR,100%,0,0
+mdl354_sector_pt1bookp_fy1,"Book-to-market, FY1",VECTOR,100%,0,0
+mdl354_sector_pt1cfoyld,Computed by dividing the operating net cash flow by price and the number of common shares outstanding.,VECTOR,100%,1,3
+mdl354_sector_pt1cfoyld_fy1,Calculated by dividing the estimated operating cash flow per share for the next fiscal year by price.,VECTOR,100%,0,0
+mdl354_sector_pt1country,2-digit ISO Country Code,VECTOR,100%,0,0
+mdl354_sector_pt1d1ntr,"Total return, past 1D",VECTOR,100%,0,0
+mdl354_sector_pt1d_mtl_dlyspe,Ratio of diluted earnings per share for last 12 months to price.,VECTOR,100%,0,0
+mdl354_sector_pt1d_mtl_ep,Price divided by diluted earnings per share for last 12 months.,VECTOR,100%,0,0
+mdl354_sector_pt1divyld_exp,Computed by dividing the expected dividends paid over next 12 months by price.,VECTOR,100%,2,2
+mdl354_sector_pt1divyld_fy1,Computed by dividing the expected median dividends paid over next fiscal year by price.,VECTOR,100%,0,0
+mdl354_sector_pt1divyld_sh,Computed by subtracting the difference between buyback and issuance over market cap from trailing dividend yield.,VECTOR,100%,1,1
+mdl354_sector_pt1divyld_trl,Computed by dividing the dividends paid over last 12 months by price.,VECTOR,100%,0,0
+mdl354_sector_pt1dly_lf_org,Ratio of sum of net income and R&D expenses to price multiplied by common shares outstanding.,VECTOR,100%,0,0
+mdl354_sector_pt1dlyfcf,Free cash flow (unlevered) yield,VECTOR,100%,2,2
+mdl354_sector_pt1ebit_ev,EBIT/TEV,VECTOR,100%,0,0
+mdl354_sector_pt1ebitda_ev,EBITDA/TEV,VECTOR,100%,0,0
+mdl354_sector_pt1es_ebitda_fy1_d1m,"FY1 EBITDA diffusion (up/down ratio), 1M",VECTOR,100%,1,1
+mdl354_sector_pt1es_ebitda_fy1_d3m,"FY1 EBITDA diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1es_ebitda_fy1_r1m,"FY1 EBITDA revision, 1M",VECTOR,100%,0,0
+mdl354_sector_pt1es_ebitda_fy1_r3m,"FY1 EBITDA revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1es_ebitda_ntm_d1m,"NTM EBITDA diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1es_ebitda_ntm_d3m,"NTM EBITDA diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1es_ebitda_ntm_r1m,"NTM EBITDA revision, 1M",VECTOR,100%,0,0
+mdl354_sector_pt1es_ebitda_ntm_r3m,"NTM EBITDA revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1es_roe_fy1_d1m,"FY1 ROE diffusion (up/down ratio), 1M",VECTOR,100%,1,2
+mdl354_sector_pt1es_roe_fy1_d3m,"FY1 ROE diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1es_roe_fy1_r1m,"FY1 ROE revision, 1M",VECTOR,100%,2,2
+mdl354_sector_pt1es_roe_fy1_r3m,"FY1 ROE revision, 3M",VECTOR,100%,1,1
+mdl354_sector_pt1es_roe_ntm_d1m,"NTM ROE diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1es_roe_ntm_d3m,"NTM ROE diffusion (up/down ratio), 3M",VECTOR,100%,2,2
+mdl354_sector_pt1es_roe_ntm_r1m,"NTM ROE revision, 1M",VECTOR,100%,0,0
+mdl354_sector_pt1es_roe_ntm_r3m,"NTM ROE revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1es_sale_fy1_d1m,"FY1 revenue diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1es_sale_fy1_d3m,"FY1 revenue diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1es_sale_fy1_r1m,"FY1 revenue revision, 1M",VECTOR,100%,0,0
+mdl354_sector_pt1es_sale_fy1_r3m,"FY1 revenue revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1es_sale_ntm_d1m,"NTM revenue diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1es_sale_ntm_d3m,"NTM revenue diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1es_sale_ntm_r1m,"NTM revenue revision, 1M",VECTOR,100%,1,1
+mdl354_sector_pt1es_sale_ntm_r3m,"NTM revenue revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1gr_5y_sale,Historical 5Y revenue growth trend,VECTOR,100%,0,0
+mdl354_sector_pt1gr_fy1_sale,FY1 Revenue growth,VECTOR,100%,0,0
+mdl354_sector_pt1gr_fy2_sale,FY2 Revenue growth,VECTOR,100%,1,1
+mdl354_sector_pt1gr_intr_sale,Historical YoY interim revenue growth,VECTOR,100%,0,0
+mdl354_sector_pt1gva_mmocer_se,Mean recommendation,VECTOR,100%,0,0
+mdl354_sector_pt1item,"Computed Item (Agg, Median, Count)",VECTOR,100%,1,1
+mdl354_sector_pt1m1d_1yf_spb_se,"FY1 BPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1d_1yf_spd_se,"FY1 DPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1d_1yf_spe_se,"FY1 EPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1d_1yf_spfc_se,"FY1 CFPS diffusion (up/down ratio), 1M",VECTOR,100%,1,1
+mdl354_sector_pt1m1d_cer_se,"Recommendation diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1d_mtn_spb_se,"NTM BPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1d_mtn_spd_se,"NTM DPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1d_mtn_spe_se,"NTM EPS diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1d_mtn_spfc_se,"NTM CFPS diffusion (up/down ratio), 1M",VECTOR,100%,1,1
+mdl354_sector_pt1m1d_pt_se,"Target price diffusion (up/down ratio), 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1r_1yf_spb_se,"FY1 BPS revision, 1M",VECTOR,100%,1,1
+mdl354_sector_pt1m1r_1yf_spd_se,"FY1 DPS revision, 1M",VECTOR,100%,1,1
+mdl354_sector_pt1m1r_1yf_spe_se,"FY1 EPS revision, 1M",VECTOR,100%,2,2
+mdl354_sector_pt1m1r_1yf_spfc_se,"FY1 CFPS revision, 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1r_cer_se,"Recommendation revision, 1M",VECTOR,100%,1,1
+mdl354_sector_pt1m1r_mtn_spb_se,"NTM BPS revision, 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1r_mtn_spd_se,"NTM DPS revision, 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1r_mtn_spe_se,"NTM EPS revision, 1M",VECTOR,100%,1,1
+mdl354_sector_pt1m1r_mtn_spfc_se,"NTM CFPS revision, 1M",VECTOR,100%,0,0
+mdl354_sector_pt1m1r_pt_se,"Target price revision, 1M",VECTOR,100%,1,1
+mdl354_sector_pt1m21yf_ep,Computed by dividing price by expected median earnings per share for next 12 months.,VECTOR,100%,1,3
+mdl354_sector_pt1m3d_1yf_spb_se,"FY1 BPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3d_1yf_spd_se,"FY1 DPS diffusion (up/down ratio), 3M",VECTOR,100%,2,2
+mdl354_sector_pt1m3d_1yf_spe_se,"FY1 EPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3d_1yf_spfc_se,"FY1 CFPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3d_cer_se,"Recommendation diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3d_mtn_spb_se,"NTM BPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3d_mtn_spd_se,"NTM DPS diffusion (up/down ratio), 3M",VECTOR,100%,1,1
+mdl354_sector_pt1m3d_mtn_spe_se,"NTM EPS diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3d_mtn_spfc_se,"NTM CFPS diffusion (up/down ratio), 3M",VECTOR,100%,1,1
+mdl354_sector_pt1m3d_pt_se,"Target price diffusion (up/down ratio), 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3r_1yf_spb_se,"FY1 BPS revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3r_1yf_spd_se,"FY1 DPS revision, 3M",VECTOR,100%,1,1
+mdl354_sector_pt1m3r_1yf_spe_se,"FY1 EPS revision, 3M",VECTOR,100%,1,1
+mdl354_sector_pt1m3r_1yf_spfc_se,"FY1 CFPS revision, 3M",VECTOR,100%,1,1
+mdl354_sector_pt1m3r_cer_se,"Recommendation revision, 3M",VECTOR,100%,2,2
+mdl354_sector_pt1m3r_mtn_spb_se,"NTM BPS revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3r_mtn_spd_se,"NTM DPS revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3r_mtn_spe_se,"NTM EPS revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1m3r_mtn_spfc_se,"NTM CFPS revision, 3M",VECTOR,100%,1,1
+mdl354_sector_pt1m3r_pt_se,"Target price revision, 3M",VECTOR,100%,0,0
+mdl354_sector_pt1mtn_dlyspe,Computed by dividing normalized median earnings per share for next 12 months by price.,VECTOR,100%,2,2
+mdl354_sector_pt1ntr_pt,Target price implied return,VECTOR,100%,0,0
+mdl354_sector_pt1pbt,Tangible book-to-market,VECTOR,100%,0,0
+mdl354_sector_pt1psale,Price-to-sales,VECTOR,100%,4,4
+mdl354_sector_pt1psale_fy1,"Price-to-sales, FY1",VECTOR,100%,0,0
+mdl354_sector_pt1sale_ev,Revenue/TEV,VECTOR,100%,0,0
+mdl354_sector_pt1spd_1yf_rg,FY1 DPS growth,VECTOR,100%,2,2
+mdl354_sector_pt1spd_2yf_rg,FY2 DPS growth,VECTOR,100%,0,0
+mdl354_sector_pt1spd_rtni_rg,Historical YoY interim DPS growth,VECTOR,100%,1,1
+mdl354_sector_pt1spd_y5_ca,Historical 5Y DPS growth acceleration,VECTOR,100%,0,0
+mdl354_sector_pt1spd_y5_rg,Historical 5Y DPS growth trend,VECTOR,100%,0,0
+mdl354_sector_pt1spe_1yf_rg,FY1 EPS growth,VECTOR,100%,0,0
+mdl354_sector_pt1spe_2yf_rg,FY2 EPS growth,VECTOR,100%,1,1
+mdl354_sector_pt1spe_rtni_rg,Historical YoY interim EPS growth,VECTOR,100%,0,0
+mdl354_sector_pt1spe_y5_ca,Historical 5Y EPS growth acceleration,VECTOR,100%,1,1
+mdl354_sector_pt1spe_y5_rg,Historical 5Y EPS growth trend,VECTOR,100%,1,2
+mdl354_sector_pt1speo_y5_ca,Historical 5Y operating EPS growth acceleration,VECTOR,100%,0,0
+mdl354_sector_pt1speo_y5_rg,Historical 5Y operating EPS growth trend,VECTOR,100%,1,1
+mdl354_sector_pt1spfc_1yf_rg,FY1 CFPS growth,VECTOR,100%,0,0
+mdl354_sector_pt1spfc_2yf_rg,FY2 CFPS growth,VECTOR,100%,0,0
+mdl354_sector_pt1spfc_rtni_rg,Historical YoY interim CFPS growth,VECTOR,100%,1,1
+mdl354_sector_pt1spfc_y5_ca,Historical 5Y CFPS growth acceleration,VECTOR,100%,0,0
+mdl354_sector_pt1spfc_y5_rg,Historical 5Y CFPS growth trend,VECTOR,100%,0,0
+mdl354_sector_pt1ve_fcf,FCF (levered)/TEV,VECTOR,100%,0,0
+mdl354_sector_pt2accruals,Accruals (Sloan 1996),VECTOR,100%,0,0
+mdl354_sector_pt2aor,"ROA, LTM",VECTOR,100%,3,3
+mdl354_sector_pt2asset_gr,"Asset growth anomaly (Cooper, Gulen, Schill [2008])",VECTOR,100%,1,1
+mdl354_sector_pt2asset_ps_gr,"Asset growth anomaly, per share total assets",VECTOR,100%,0,0
+mdl354_sector_pt2cfo_curr_liab,Operating cash flow to current liabilities,VECTOR,100%,0,0
+mdl354_sector_pt2cfps_sur,CFPS surprise (vs consensus),VECTOR,100%,0,0
+mdl354_sector_pt2cfrnoa,Cash flow return on net operating assets,VECTOR,100%,0,0
+mdl354_sector_pt2cfroa,Cash flow return on asset,VECTOR,100%,0,0
+mdl354_sector_pt2cfroe,Cash flow return on equity,VECTOR,100%,0,0
+mdl354_sector_pt2cfroe_fy1,"Cash flow return on equity, FY1",VECTOR,100%,0,0
+mdl354_sector_pt2country,2-digit ISO Country Code,VECTOR,100%,0,0
+mdl354_sector_pt2current_r,Current ratio,VECTOR,100%,0,0
+mdl354_sector_pt2debt_capital,Total debt/total capital,VECTOR,100%,0,0
+mdl354_sector_pt2debt_chg,YoY change in debt outstanding,VECTOR,100%,1,1
+mdl354_sector_pt2debt_equity,Total debt/total equity,VECTOR,100%,1,1
+mdl354_sector_pt2debt_mktcapital,Total debt/total capital at market value,VECTOR,100%,0,0
+mdl354_sector_pt2div_payout,"Dividend payout ratio, trailing",VECTOR,100%,0,0
+mdl354_sector_pt2dps_sur,DPS surprise (vs consensus),VECTOR,100%,0,0
+mdl354_sector_pt2ebitda_sur,EBITDA surprise (vs consensus),VECTOR,100%,0,0
+mdl354_sector_pt2eps_disp,FY1 EPS dispersion,VECTOR,100%,0,0
+mdl354_sector_pt2eps_stab,"Historical EPS stability, coef of determination",VECTOR,100%,0,0
+mdl354_sector_pt2eps_varia,FY1 EPS coefficient of variation,VECTOR,100%,0,0
+mdl354_sector_pt2es_roe_fy1_me,"ROE, FY1",VECTOR,100%,1,1
+mdl354_sector_pt2ext_fin_noa,Net external financing/net operating assets,VECTOR,100%,0,0
+mdl354_sector_pt2ghc_aor,YoY change in ROA,VECTOR,100%,0,0
+mdl354_sector_pt2gross_margin,Gross profit margin,VECTOR,100%,0,0
+mdl354_sector_pt2gross_margin_chg,YoY change in gross profit margin,VECTOR,100%,0,0
+mdl354_sector_pt2int_cover,Interest coverage (EBIT/Interest Expense),VECTOR,100%,1,1
+mdl354_sector_pt2invent_to,Inventory turnover,VECTOR,100%,1,1
+mdl354_sector_pt2item,"Computed Item (Agg, Median, Count)",VECTOR,100%,1,1
+mdl354_sector_pt2log_asset,Log of total assets,VECTOR,100%,0,0
+mdl354_sector_pt2log_float,Log float-adjusted market capitalization,VECTOR,100%,0,0
+mdl354_sector_pt2log_mktcap,Log total market capitalization,VECTOR,100%,0,0
+mdl354_sector_pt2log_sale,Calculated by taking the log of revenue over the last twelve months.,VECTOR,100%,0,0
+mdl354_sector_pt2lt_dt_capital,Long-term debt/total capital,VECTOR,100%,1,1
+mdl354_sector_pt2lt_dt_equity,Long-term debt/common equity,VECTOR,100%,2,2
+mdl354_sector_pt2margin_stab,"Gross margin stability, 5Y",VECTOR,100%,0,0
+mdl354_sector_pt2net_margin,Net income margin,VECTOR,100%,0,0
+mdl354_sector_pt2oeps_stab,"Historical operating EPS stability, coef of determination",VECTOR,100%,0,0
+mdl354_sector_pt2oeps_sur,Normalized EPS surprise (vs consensus),VECTOR,100%,1,1
+mdl354_sector_pt2op_margin,Operating profit margin (EBIT margin),VECTOR,100%,0,0
+mdl354_sector_pt2op_margin_chg,YoY change in operating profit margin,VECTOR,100%,0,0
+mdl354_sector_pt2payable_to,Accounts payable turnover,VECTOR,100%,1,1
+mdl354_sector_pt2perc_accru,Percent accruals,VECTOR,100%,0,0
+mdl354_sector_pt2qep1ntr,Aggregated by taking individual security returns in the universe and equally weighting them,VECTOR,100%,0,0
+mdl354_sector_pt2quick_r,Quick ratio,VECTOR,100%,0,0
+mdl354_sector_pt2receiva_to,Accounts receivable turnover,VECTOR,100%,1,1
+mdl354_sector_pt2rg_ac,Growth in current assets,VECTOR,100%,0,0
+mdl354_sector_pt2rg_ao,Growth in other assets,VECTOR,100%,0,0
+mdl354_sector_pt2rg_epp,"Growth in property, plan, and equipment",VECTOR,100%,0,0
+mdl354_sector_pt2rg_et,Growth in total shareholders' equity,VECTOR,100%,1,1
+mdl354_sector_pt2rg_lc,Growth in current liabilities,VECTOR,100%,0,0
+mdl354_sector_pt2rg_lt,Growth in total liabilities,VECTOR,100%,1,1
+mdl354_sector_pt2rg_sp_ac,Growth in per share current assets,VECTOR,100%,0,0
+mdl354_sector_pt2rg_sp_ao,Growth in per share other assets,VECTOR,100%,0,0
+mdl354_sector_pt2rg_sp_epp,"Growth in per share property, plan, and equipment",VECTOR,100%,0,0
+mdl354_sector_pt2rg_sp_et,Growth in per share total shareholders' equity,VECTOR,100%,0,0
+mdl354_sector_pt2rg_sp_lc,Growth in per share current liabilities,VECTOR,100%,2,2
+mdl354_sector_pt2rg_sp_lt,Growth in per share total liabilities,VECTOR,100%,0,0
+mdl354_sector_pt2rnoa,"Return on net operating assets (RNOA), LTM",VECTOR,100%,0,0
+mdl354_sector_pt2roa_stab,"ROA stability, 5Y",VECTOR,100%,2,18
+mdl354_sector_pt2roe,"ROE, LTM",VECTOR,100%,0,0
+mdl354_sector_pt2roe_chg,YoY change in ROE,VECTOR,100%,1,1
+mdl354_sector_pt2roe_stab,"ROE stability, 5Y",VECTOR,100%,1,1
+mdl354_sector_pt2roic,"ROIC, LTM",VECTOR,100%,2,2
+mdl354_sector_pt2rtn1pcap,Aggregated by taking individual security returns in the universe and weight them using the Float Market Cap,VECTOR,100%,1,1
+mdl354_sector_pt2sale_asset,Sales to total assets (asset turnover),VECTOR,100%,0,0
+mdl354_sector_pt2sale_asset_chg,YoY change in asset turnover,VECTOR,100%,0,0
+mdl354_sector_pt2sale_asset_fy1,"Asset turnover, FY1",VECTOR,100%,0,0
+mdl354_sector_pt2sale_empl,Revenue per employee,VECTOR,100%,0,0
+mdl354_sector_pt2sale_stab,"Historical revenue stability, coef of determination",VECTOR,100%,0,0
+mdl354_sector_pt2sale_sur,Revenue surprise (vs consensus),VECTOR,100%,1,1
+mdl354_sector_pt2sale_varia,FY1 revenue coefficient of variation,VECTOR,100%,1,1
+mdl354_sector_pt2share_chg,YoY change in share count,VECTOR,100%,0,0

@@ -1,0 +1,4 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth436_disc,"Model output: predicted probability (between 0 and 1) that the company will cut, suspend, or terminate its dividend",VECTOR,45%,5,6
+oth436_divyld,"Dividend yield for the company (likely annualized, may be trailing or forward; only available for updates)",VECTOR,45%,20,33
+oth436_mktcap,"Market capitalization of the company (likely in USD or local currency, not explicitly defined)",VECTOR,45%,8,11

@@ -1,0 +1,16 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth83_company_sentiment,News sentiment of the company,VECTOR,61%,34,79
+oth83_insider_holdings,Equity holdings of insider after the transaction,VECTOR,61%,21,78
+oth83_insider_level,Ranking of the insider within the company,VECTOR,61%,16,49
+oth83_market_cap,Total market value of a company's outstanding shares of stock in Local currency,VECTOR,60%,9,33
+oth83_market_cap_eur,Total market value of a company's outstanding shares of stock in EUR,VECTOR,60%,11,58
+oth83_market_cap_usd,Total market value of a company's outstanding shares of stock in USD,VECTOR,60%,11,147
+oth83_revision,"Revision 1"" is the first entry for the transaction, ""2"" is the first revision/update""",VECTOR,61%,14,32
+oth83_share_count,Number of shares involved in the transaction,VECTOR,61%,19,69
+oth83_shares_outstanding,Shares outstanding refer to a company's stock currently held by all its shareholders,VECTOR,60%,11,49
+oth83_timestamp_utc,Date/Time at which data was received by vendor,VECTOR,61%,11,48
+oth83_transaction_significance,"Ranking of deal significance (3 being highest, 1 being lowest)",VECTOR,61%,15,64
+oth83_transaction_unit_price,Price of transaction execution,VECTOR,60%,17,76
+oth83_transaction_value,Value of the transaction in respective currency,VECTOR,60%,11,50
+oth83_transaction_value_eur,Value of the transaction in EUR,VECTOR,60%,15,70
+oth83_transaction_value_usd,Value of the transaction in USD,VECTOR,60%,15,73

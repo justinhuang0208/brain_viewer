@@ -1,0 +1,229 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl219_1_actrtn1m,1-month active return representing the percent change in stock price.,MATRIX,100%,19,20
+mdl219_1_altmanz,Altman Z Score used to assess bankruptcy risk based on financial ratios.,MATRIX,92%,14,15
+mdl219_1_aspanratio,Attention span ratio measuring operating assets minus liabilities scaled by total assets.,MATRIX,100%,6,6
+mdl219_1_astcomp,Asset composition ratio representing current assets divided by total assets.,MATRIX,93%,3,3
+mdl219_1_astto,Asset turnover ratio calculated as sales divided by total assets.,MATRIX,100%,6,6
+mdl219_1_atmcallvol,Implied volatility of at-the-money call options averaged over nearest expirations.,MATRIX,100%,11,42
+mdl219_1_capacq,Capital acquisition ratio measuring operating cash flow less dividends divided by expenditures.,MATRIX,100%,5,6
+mdl219_1_cashsev,Cash-to-enterprise value ratio representing total cash divided by enterprise value.,MATRIX,100%,11,11
+mdl219_1_ccacw,Working capital accruals calculated as changes in current assets minus liabilities.,MATRIX,100%,1,1
+mdl219_1_ccaghc_avq,Change in net operating working capital scaled by total assets.,MATRIX,92%,12,14
+mdl219_1_chgnoa,Change in net operating assets scaled by total assets.,MATRIX,99%,2,2
+mdl219_1_chgollev,Change in operating liability leverage over the last year.,MATRIX,100%,0,0
+mdl219_1_chgsgasale,Change in SG&A expenses relative to sales over the last year.,MATRIX,99%,4,4
+mdl219_1_curratio,Current ratio calculated as current assets divided by current liabilities.,MATRIX,93%,2,2
+mdl219_1_divcov,Dividend coverage ratio calculated as operating earnings divided by dividends.,MATRIX,97%,2,2
+mdl219_1_ebitdaev,EBITDA-to-enterprise value ratio used for valuation.,MATRIX,100%,16,21
+mdl219_1_equityto,Equity turnover ratio calculated as sales divided by average book equity.,MATRIX,100%,0,0
+mdl219_1_fc_y2repsg,2-year projected EPS growth relative to reported earnings.,MATRIX,100%,0,0
+mdl219_1_fcfroi,Free cash flow return on invested capital calculated over trailing 12 months.,MATRIX,100%,0,0
+mdl219_1_fixastto,Fixed asset turnover ratio calculated as sales divided by fixed assets.,MATRIX,100%,3,7
+mdl219_1_flowratio,Flow ratio measuring liquidity as current assets minus cash divided by liabilities minus debt.,MATRIX,93%,1,1
+mdl219_1_gspea2y_cf,2-year projected EPS growth based on analyst forecasts.,MATRIX,100%,4,4
+mdl219_1_lumqca,Acquisition multiple calculated as invested capital divided by EBITDA.,MATRIX,100%,4,4
+mdl219_1_monchgsip,Monthly change in short interest position scaled by shares outstanding.,MATRIX,100%,5,5
+mdl219_1_mpnghc,Year-over-year change in net profit margin.,MATRIX,100%,4,4
+mdl219_1_netcashp,Net cash-to-price ratio calculated as cash minus debt divided by market price.,MATRIX,100%,1,1
+mdl219_1_nlvolcap,Logarithm of trading volume divided by market capitalization.,MATRIX,100%,2,2
+mdl219_1_nnastp,Net net current assets-to-price ratio calculated as current assets minus liabilities divided by price.,MATRIX,93%,4,4
+mdl219_1_ocfast,Operating cash flow-to-assets ratio calculated over trailing 12 months.,MATRIX,100%,3,4
+mdl219_1_ocfratio,Operating cash flow ratio calculated as cash flow divided by current liabilities.,MATRIX,93%,1,1
+mdl219_1_ollev,Operating liability leverage calculated as liabilities divided by operating assets.,MATRIX,100%,5,7
+mdl219_1_past,Price-to-total assets ratio calculated as market price divided by total assets per share.,MATRIX,100%,6,7
+mdl219_1_pb,Book-to-market ratio calculated as book value divided by market price.,MATRIX,100%,10,16
+mdl219_1_pedwf_cf,Forward earnings yield based on consensus estimates divided by price.,MATRIX,100%,25,25
+mdl219_1_pfcf_cf,Free cash flow-to-price ratio calculated over trailing 12 months.,MATRIX,100%,5,5
+mdl219_1_pfcfmtt,Free cash flow-to-price ratio calculated over trailing 12 months.,MATRIX,100%,2,2
+mdl219_1_pfcfy3ghc,3-year change in free cash flow per share scaled by price.,MATRIX,100%,1,1
+mdl219_1_pfcoghc,1-year change in operating cash flow per share scaled by price.,MATRIX,100%,2,2
+mdl219_1_pge_cf,Inverse PEG ratio adjusted for dividend yield.,MATRIX,100%,4,4
+mdl219_1_ppa,Average payable period calculated as accounts payable times 365 divided by cost of goods sold.,MATRIX,92%,3,3
+mdl219_1_qva_alertrank,Alert rank measuring company buybacks and short interest sentiment.,MATRIX,100%,7,30
+mdl219_1_qva_capexdep,Capital expenditures-to-depreciation ratio used to assess investment efficiency.,MATRIX,100%,3,3
+mdl219_1_qva_cashflow,Cash flow rank evaluating liquidity and operational efficiency.,MATRIX,100%,13,16
+mdl219_1_qva_chgato,Year-over-year change in asset turnover ratio.,MATRIX,100%,2,2
+mdl219_1_qva_chginv,Year-over-year change in inventory scaled by total assets.,MATRIX,98%,2,2
+mdl219_1_qva_composite,"Composite rank aggregating valuation, earnings quality, and sentiment factors.",MATRIX,100%,34,63
+mdl219_1_qva_earnquality,Earnings quality rank assessing reliability and sustainability of reported earnings.,MATRIX,100%,3,3
+mdl219_1_qva_earnval,Earnings valuation rank based on cyclicality and PEGY metrics.,MATRIX,100%,4,4
+mdl219_1_qva_epmodule,Earnings cyclicality rank aggregating multiple earnings-related factors.,MATRIX,100%,2,2
+mdl219_1_qva_finstmt,"Financial statement rank evaluating income, balance sheet, and cash flow metrics.",MATRIX,100%,30,76
+mdl219_1_qva_invsentiment,Investor sentiment rank based on short interest and ownership metrics.,MATRIX,100%,3,4
+mdl219_1_qva_mgtsignaling,Management signaling rank evaluating changes in shares and debt issuance.,MATRIX,100%,0,0
+mdl219_1_qva_pegy,"PEGY rank combining price, earnings, growth rate, and dividend yield metrics.",MATRIX,100%,1,1
+mdl219_1_qva_shortfall,Earnings shortfall rank measuring the gap between operating income and earnings.,MATRIX,100%,8,9
+mdl219_1_qva_valuation,Valuation rank aggregating financial statement and earnings valuation metrics.,MATRIX,100%,9,44
+mdl219_1_qva_yoychgdebt,Year-over-year change in total debt issuance.,MATRIX,100%,2,2
+mdl219_1_qva_yoychgshares,Year-over-year change in shares outstanding.,MATRIX,100%,2,2
+mdl219_1_ratrev6m,6-month average of analyst rating revisions.,MATRIX,100%,0,0
+mdl219_1_rel5ycfp,5-year relative cash flow-to-price ratio compared to historical averages.,MATRIX,99%,0,0
+mdl219_1_rel5ycoreepsp,5-year relative core earnings-to-price ratio compared to historical averages.,MATRIX,99%,4,5
+mdl219_1_rel5yebitdap,5-year relative EBITDA-to-price ratio compared to historical averages.,MATRIX,96%,1,1
+mdl219_1_rel5yfcfp,5-year relative free cash flow-to-price ratio compared to historical averages.,MATRIX,96%,2,2
+mdl219_1_rel5yocfp,5-year relative operating cash flow-to-price ratio compared to historical averages.,MATRIX,97%,2,2
+mdl219_1_rerror60m,Regression error of 60-month CAPM used for trend analysis.,MATRIX,100%,2,2
+mdl219_1_rq,Quick ratio calculated as current assets minus inventory divided by current liabilities.,MATRIX,93%,0,0
+mdl219_1_rsqr4qsales3y,R-squared of 3-year trailing sales trend line.,MATRIX,100%,0,0
+mdl219_1_saleicap,Sales-to-invested capital ratio calculated over trailing 12 months.,MATRIX,100%,10,17
+mdl219_1_sighc,Year-over-year change in inventory as a percentage of sales.,MATRIX,97%,1,1
+mdl219_1_tmtscni_avq,Income statement rank measuring operating income relative to enterprise value.,MATRIX,100%,10,10
+mdl219_1_totalcov,Total coverage ratio measuring operating cash flow divided by debt payments.,MATRIX,100%,4,4
+mdl219_1_vefcfmtt,Free cash flow-to-enterprise value ratio calculated over trailing 12 months.,MATRIX,100%,5,10
+mdl219_1_vesspem21f_cf,Forward EPS-to-enterprise value ratio based on consensus estimates.,MATRIX,100%,3,3
+mdl219_1_voldiff_pc,Difference in implied volatility between at-the-money put and call options.,MATRIX,100%,0,0
+mdl219_1_y3fcq4vc,Stability of 3-year trailing cash flow measured by standard deviation divided by mean.,MATRIX,100%,1,1
+mdl219_1_ydp_cf,Predicted dividend yield based on payout ratio and forward EPS estimates.,MATRIX,99%,5,7
+mdl219_1_yoychggpm,Year-over-year change in gross profit margin.,MATRIX,97%,1,1
+mdl219_2_actrtn1m,1-month active return representing the percent change in stock price for the second module.,MATRIX,100%,16,17
+mdl219_2_altmanz,Altman Z Score used to assess bankruptcy risk based on financial ratios for the second module.,MATRIX,74%,1,1
+mdl219_2_aspanratio,Attention span ratio measuring operating assets minus liabilities scaled by total assets for the second module.,MATRIX,87%,0,0
+mdl219_2_astcomp,Asset composition ratio representing current assets divided by total assets for the second module.,MATRIX,77%,4,6
+mdl219_2_astto,Asset turnover ratio calculated as sales divided by total assets for the second module.,MATRIX,95%,1,1
+mdl219_2_atmcallvol,Implied volatility of at-the-money call options averaged over nearest expirations for the second module.,MATRIX,88%,2,3
+mdl219_2_capacq,Capital acquisition ratio measuring operating cash flow less dividends divided by expenditures for the second module.,MATRIX,92%,0,0
+mdl219_2_cashsev,Cash-to-enterprise value ratio representing total cash divided by enterprise value for the second module.,MATRIX,87%,1,1
+mdl219_2_ccacw,Working capital accruals calculated as changes in current assets minus liabilities for the second module.,MATRIX,87%,1,1
+mdl219_2_ccaghc_avq,Change in net operating working capital scaled by total assets for the second module.,MATRIX,78%,9,9
+mdl219_2_chgnoa,Change in net operating assets scaled by total assets for the second module.,MATRIX,87%,2,2
+mdl219_2_chgollev,Change in operating liability leverage over the last year for the second module.,MATRIX,96%,1,1
+mdl219_2_chgsgasale,Change in SG&A expenses relative to sales over the last year for the second module.,MATRIX,83%,0,0
+mdl219_2_curratio,Current ratio calculated as current assets divided by current liabilities for the second module.,MATRIX,77%,1,1
+mdl219_2_divcov,Dividend coverage ratio calculated as operating earnings divided by dividends for the second module.,MATRIX,50%,2,2
+mdl219_2_ebitdaev,EBITDA-to-enterprise value ratio used for valuation for the second module.,MATRIX,94%,0,0
+mdl219_2_equityto,Equity turnover ratio calculated as sales divided by average book equity for the second module.,MATRIX,96%,1,1
+mdl219_2_fc_y2repsg,2-year projected EPS growth relative to reported earnings for the second module.,MATRIX,92%,3,3
+mdl219_2_fcfroi,Free cash flow return on invested capital calculated over trailing 12 months for the second module.,MATRIX,95%,2,2
+mdl219_2_fixastto,Fixed asset turnover ratio calculated as sales divided by fixed assets for the second module.,MATRIX,92%,0,0
+mdl219_2_flowratio,Flow ratio measuring liquidity as current assets minus cash divided by liabilities minus debt for the second module.,MATRIX,78%,0,0
+mdl219_2_gspea2y_cf,2-year projected EPS growth based on analyst forecasts for the second module.,MATRIX,96%,1,1
+mdl219_2_lumqca,Acquisition multiple calculated as invested capital divided by EBITDA for the second module.,MATRIX,82%,1,1
+mdl219_2_monchgsip,Monthly change in short interest position scaled by shares outstanding for the second module.,MATRIX,100%,1,1
+mdl219_2_mpnghc,Year-over-year change in net profit margin for the second module.,MATRIX,94%,1,1
+mdl219_2_netcashp,Net cash-to-price ratio calculated as cash minus debt divided by market price for the second module.,MATRIX,85%,4,4
+mdl219_2_nlvolcap,Logarithm of trading volume divided by market capitalization for the second module.,MATRIX,91%,1,1
+mdl219_2_nnastp,Net net current assets-to-price ratio calculated as current assets minus liabilities divided by price for the second module.,MATRIX,77%,0,0
+mdl219_2_ocfast,Operating cash flow-to-assets ratio calculated over trailing 12 months for the second module.,MATRIX,96%,2,2
+mdl219_2_ocfratio,Operating cash flow ratio calculated as cash flow divided by current liabilities for the second module.,MATRIX,79%,2,2
+mdl219_2_ollev,Operating liability leverage calculated as liabilities divided by operating assets for the second module.,MATRIX,96%,5,5
+mdl219_2_past,Price-to-total assets ratio calculated as market price divided by total assets per share for the second module.,MATRIX,95%,11,11
+mdl219_2_pb,Book-to-market ratio calculated as book value divided by market price for the second module.,MATRIX,96%,2,2
+mdl219_2_pedwf_cf,Forward earnings yield based on consensus estimates divided by price for the second module.,MATRIX,95%,24,35
+mdl219_2_pfcf_cf,Free cash flow-to-price ratio calculated over trailing 12 months for the second module.,MATRIX,93%,2,2
+mdl219_2_pfcfmtt,Free cash flow-to-price ratio calculated over trailing 12 months for the second module.,MATRIX,96%,2,3
+mdl219_2_pfcfy3ghc,3-year change in free cash flow per share scaled by price for the second module.,MATRIX,89%,3,3
+mdl219_2_pfcoghc,1-year change in operating cash flow per share scaled by price for the second module.,MATRIX,95%,6,6
+mdl219_2_pge_cf,Inverse PEG ratio adjusted for dividend yield for the second module.,MATRIX,77%,1,1
+mdl219_2_ppa,Average payable period calculated as accounts payable times 365 divided by cost of goods sold for the second module.,MATRIX,74%,1,1
+mdl219_2_qva_alertrank,Alert rank measuring company buybacks and short interest sentiment for the second module.,MATRIX,98%,1,1
+mdl219_2_qva_capexdep,Capital expenditures-to-depreciation ratio used to assess investment efficiency for the second module.,MATRIX,92%,1,1
+mdl219_2_qva_cashflow,Cash flow rank evaluating liquidity and operational efficiency for the second module.,MATRIX,92%,3,4
+mdl219_2_qva_chgato,Year-over-year change in asset turnover ratio for the second module.,MATRIX,95%,0,0
+mdl219_2_qva_chginv,Year-over-year change in inventory scaled by total assets for the second module.,MATRIX,86%,1,1
+mdl219_2_qva_composite,"Composite rank aggregating valuation, earnings quality, and sentiment factors for the second module.",MATRIX,98%,1,2
+mdl219_2_qva_earnquality,Earnings quality rank assessing reliability and sustainability of reported earnings for the second module.,MATRIX,97%,0,0
+mdl219_2_qva_earnval,Earnings valuation rank based on cyclicality and PEGY metrics for the second module.,MATRIX,98%,2,2
+mdl219_2_qva_epmodule,Earnings cyclicality rank aggregating multiple earnings-related factors for the second module.,MATRIX,97%,1,1
+mdl219_2_qva_finstmt,"Financial statement rank evaluating income, balance sheet, and cash flow metrics for the second module.",MATRIX,96%,9,10
+mdl219_2_qva_invsentiment,Investor sentiment rank based on short interest and ownership metrics for the second module.,MATRIX,98%,5,6
+mdl219_2_qva_mgtsignaling,Management signaling rank evaluating changes in shares and debt issuance for the second module.,MATRIX,97%,2,3
+mdl219_2_qva_pegy,"PEGY rank combining price, earnings, growth rate, and dividend yield metrics for the second module.",MATRIX,98%,2,2
+mdl219_2_qva_shortfall,Earnings shortfall rank measuring the gap between operating income and earnings for the second module.,MATRIX,93%,3,3
+mdl219_2_qva_valuation,Valuation rank aggregating financial statement and earnings valuation metrics for the second module.,MATRIX,98%,1,1
+mdl219_2_qva_yoychgdebt,Year-over-year change in total debt issuance for the second module.,MATRIX,96%,0,0
+mdl219_2_qva_yoychgshares,Year-over-year change in shares outstanding for the second module.,MATRIX,96%,0,0
+mdl219_2_ratrev6m,6-month average of analyst rating revisions for the second module.,MATRIX,94%,2,6
+mdl219_2_rel5ycfp,5-year relative cash flow-to-price ratio compared to historical averages for the second module.,MATRIX,75%,0,0
+mdl219_2_rel5ycoreepsp,5-year relative core earnings-to-price ratio compared to historical averages for the second module.,MATRIX,71%,1,1
+mdl219_2_rel5yebitdap,5-year relative EBITDA-to-price ratio compared to historical averages for the second module.,MATRIX,64%,2,2
+mdl219_2_rel5yfcfp,5-year relative free cash flow-to-price ratio compared to historical averages for the second module.,MATRIX,67%,0,0
+mdl219_2_rel5yocfp,5-year relative operating cash flow-to-price ratio compared to historical averages for the second module.,MATRIX,68%,1,1
+mdl219_2_rerror60m,Regression error of 60-month CAPM used for trend analysis for the second module.,MATRIX,76%,0,0
+mdl219_2_rq,Quick ratio calculated as current assets minus inventory divided by current liabilities for the second module.,MATRIX,77%,2,2
+mdl219_2_rsqr4qsales3y,R-squared of 3-year trailing sales trend line for the second module.,MATRIX,85%,1,1
+mdl219_2_saleicap,Sales-to-invested capital ratio calculated over trailing 12 months for the second module.,MATRIX,95%,8,8
+mdl219_2_sighc,Year-over-year change in inventory as a percentage of sales for the second module.,MATRIX,84%,0,0
+mdl219_2_tmtscni_avq,Income statement rank measuring operating income relative to enterprise value for the second module.,MATRIX,95%,7,8
+mdl219_2_totalcov,Total coverage ratio measuring operating cash flow divided by debt payments for the second module.,MATRIX,87%,0,0
+mdl219_2_vefcfmtt,Free cash flow-to-enterprise value ratio calculated over trailing 12 months for the second module.,MATRIX,96%,1,1
+mdl219_2_vesspem21f_cf,Forward EPS-to-enterprise value ratio based on consensus estimates for the second module.,MATRIX,94%,4,5
+mdl219_2_voldiff_pc,Difference in implied volatility between at-the-money put and call options for the second module.,MATRIX,89%,1,1
+mdl219_2_y3fcq4vc,Stability of 3-year trailing cash flow measured by standard deviation divided by mean for the second module.,MATRIX,81%,0,0
+mdl219_2_ydp_cf,Predicted dividend yield based on payout ratio and forward EPS estimates for the second module.,MATRIX,74%,2,2
+mdl219_2_yoychggpm,Year-over-year change in gross profit margin for the second module.,MATRIX,82%,2,2
+mdl219_3_actrtn1m,1-month active return representing the percent change in stock price for the third module.,MATRIX,100%,2,2
+mdl219_3_altmanz,Altman Z Score used to assess bankruptcy risk based on financial ratios for the third module.,MATRIX,77%,2,2
+mdl219_3_aspanratio,Attention span ratio measuring operating assets minus liabilities scaled by total assets for the third module.,MATRIX,90%,0,0
+mdl219_3_astcomp,Asset composition ratio representing current assets divided by total assets for the third module.,MATRIX,82%,2,2
+mdl219_3_astto,Asset turnover ratio calculated as sales divided by total assets for the third module.,MATRIX,99%,10,11
+mdl219_3_atmcallvol,Implied volatility of at-the-money call options averaged over nearest expirations for the third module.,MATRIX,89%,0,0
+mdl219_3_capacq,Capital acquisition ratio measuring operating cash flow less dividends divided by expenditures for the third module.,MATRIX,96%,1,1
+mdl219_3_cashsev,Cash-to-enterprise value ratio representing total cash divided by enterprise value for the third module.,MATRIX,90%,3,4
+mdl219_3_ccacw,Working capital accruals calculated as changes in current assets minus liabilities for the third module.,MATRIX,88%,1,1
+mdl219_3_ccaghc_avq,Change in net operating working capital scaled by total assets for the third module.,MATRIX,80%,3,3
+mdl219_3_chgnoa,Change in net operating assets scaled by total assets for the third module.,MATRIX,90%,5,5
+mdl219_3_chgollev,Change in operating liability leverage over the last year for the third module.,MATRIX,99%,0,0
+mdl219_3_chgsgasale,Change in SG&A expenses relative to sales over the last year for the third module.,MATRIX,86%,0,0
+mdl219_3_curratio,Current ratio calculated as current assets divided by current liabilities for the third module.,MATRIX,82%,1,1
+mdl219_3_divcov,Dividend coverage ratio calculated as operating earnings divided by dividends for the third module.,MATRIX,51%,3,3
+mdl219_3_ebitdaev,EBITDA-to-enterprise value ratio used for valuation for the third module.,MATRIX,97%,12,39
+mdl219_3_equityto,Equity turnover ratio calculated as sales divided by average book equity for the third module.,MATRIX,99%,5,5
+mdl219_3_fc_y2repsg,2-year projected EPS growth relative to reported earnings for the third module.,MATRIX,95%,2,2
+mdl219_3_fcfroi,Free cash flow return on invested capital calculated over trailing 12 months for the third module.,MATRIX,98%,2,2
+mdl219_3_fixastto,Fixed asset turnover ratio calculated as sales divided by fixed assets for the third module.,MATRIX,96%,0,0
+mdl219_3_flowratio,Flow ratio measuring liquidity as current assets minus cash divided by liabilities minus debt for the third module.,MATRIX,81%,1,1
+mdl219_3_gspea2y_cf,2-year projected EPS growth based on analyst forecasts for the third module.,MATRIX,99%,8,8
+mdl219_3_lumqca,Acquisition multiple calculated as invested capital divided by EBITDA for the third module.,MATRIX,85%,1,1
+mdl219_3_monchgsip,Monthly change in short interest position scaled by shares outstanding for the third module.,MATRIX,100%,1,1
+mdl219_3_mpnghc,Year-over-year change in net profit margin for the third module.,MATRIX,96%,0,0
+mdl219_3_netcashp,Net cash-to-price ratio calculated as cash minus debt divided by market price for the third module.,MATRIX,90%,3,3
+mdl219_3_nlvolcap,Logarithm of trading volume divided by market capitalization for the third module.,MATRIX,97%,0,0
+mdl219_3_nnastp,Net net current assets-to-price ratio calculated as current assets minus liabilities divided by price for the third module.,MATRIX,82%,1,1
+mdl219_3_ocfast,Operating cash flow-to-assets ratio calculated over trailing 12 months for the third module.,MATRIX,99%,4,4
+mdl219_3_ocfratio,Operating cash flow ratio calculated as cash flow divided by current liabilities for the third module.,MATRIX,81%,3,3
+mdl219_3_ollev,Operating liability leverage calculated as liabilities divided by operating assets for the third module.,MATRIX,100%,11,18
+mdl219_3_past,Price-to-total assets ratio calculated as market price divided by total assets per share for the third module.,MATRIX,99%,36,85
+mdl219_3_pb,Book-to-market ratio calculated as book value divided by market price for the third module.,MATRIX,99%,29,35
+mdl219_3_pedwf_cf,Forward earnings yield based on consensus estimates divided by price for the third module.,MATRIX,97%,10,19
+mdl219_3_pfcf_cf,Free cash flow-to-price ratio calculated over trailing 12 months for the third module.,MATRIX,95%,4,4
+mdl219_3_pfcfmtt,Free cash flow-to-price ratio calculated over trailing 12 months for the third module.,MATRIX,99%,2,2
+mdl219_3_pfcfy3ghc,3-year change in free cash flow per share scaled by price for the third module.,MATRIX,91%,0,0
+mdl219_3_pfcoghc,1-year change in operating cash flow per share scaled by price for the third module.,MATRIX,98%,3,3
+mdl219_3_pge_cf,Inverse PEG ratio adjusted for dividend yield for the third module.,MATRIX,79%,1,1
+mdl219_3_ppa,Average payable period calculated as accounts payable times 365 divided by cost of goods sold for the third module.,MATRIX,77%,4,4
+mdl219_3_qva_alertrank,Alert rank measuring company buybacks and short interest sentiment for the third module.,MATRIX,100%,4,5
+mdl219_3_qva_capexdep,Capital expenditures-to-depreciation ratio used to assess investment efficiency for the third module.,MATRIX,95%,1,1
+mdl219_3_qva_cashflow,Cash flow rank evaluating liquidity and operational efficiency for the third module.,MATRIX,94%,3,3
+mdl219_3_qva_chgato,Year-over-year change in asset turnover ratio for the third module.,MATRIX,97%,0,0
+mdl219_3_qva_chginv,Year-over-year change in inventory scaled by total assets for the third module.,MATRIX,88%,1,1
+mdl219_3_qva_composite,"Composite rank aggregating valuation, earnings quality, and sentiment factors for the third module.",MATRIX,99%,5,5
+mdl219_3_qva_earnquality,Earnings quality rank assessing reliability and sustainability of reported earnings for the third module.,MATRIX,99%,3,3
+mdl219_3_qva_earnval,Earnings valuation rank based on cyclicality and PEGY metrics for the third module.,MATRIX,99%,0,0
+mdl219_3_qva_epmodule,Earnings cyclicality rank aggregating multiple earnings-related factors for the third module.,MATRIX,98%,17,63
+mdl219_3_qva_finstmt,"Financial statement rank evaluating income, balance sheet, and cash flow metrics for the third module.",MATRIX,98%,38,81
+mdl219_3_qva_invsentiment,Investor sentiment rank based on short interest and ownership metrics for the third module.,MATRIX,99%,2,2
+mdl219_3_qva_mgtsignaling,Management signaling rank evaluating changes in shares and debt issuance for the third module.,MATRIX,99%,0,0
+mdl219_3_qva_pegy,"PEGY rank combining price, earnings, growth rate, and dividend yield metrics for the third module.",MATRIX,99%,0,0
+mdl219_3_qva_shortfall,Earnings shortfall rank measuring the gap between operating income and earnings for the third module.,MATRIX,96%,21,22
+mdl219_3_qva_valuation,Valuation rank aggregating financial statement and earnings valuation metrics for the third module.,MATRIX,100%,4,4
+mdl219_3_qva_yoychgdebt,Year-over-year change in total debt issuance for the third module.,MATRIX,98%,2,2
+mdl219_3_qva_yoychgshares,Year-over-year change in shares outstanding for the third module.,MATRIX,99%,1,1
+mdl219_3_ratrev6m,6-month average of analyst rating revisions for the third module.,MATRIX,95%,1,1
+mdl219_3_rel5ycfp,5-year relative cash flow-to-price ratio compared to historical averages for the third module.,MATRIX,77%,0,0
+mdl219_3_rel5ycoreepsp,5-year relative core earnings-to-price ratio compared to historical averages for the third module.,MATRIX,73%,4,5
+mdl219_3_rel5yebitdap,5-year relative EBITDA-to-price ratio compared to historical averages for the third module.,MATRIX,65%,0,0
+mdl219_3_rel5yfcfp,5-year relative free cash flow-to-price ratio compared to historical averages for the third module.,MATRIX,68%,0,0
+mdl219_3_rel5yocfp,5-year relative operating cash flow-to-price ratio compared to historical averages for the third module.,MATRIX,69%,3,3
+mdl219_3_rerror60m,Regression error of 60-month CAPM used for trend analysis for the third module.,MATRIX,80%,1,1
+mdl219_3_rq,Quick ratio calculated as current assets minus inventory divided by current liabilities for the third module.,MATRIX,82%,2,2
+mdl219_3_rsqr4qsales3y,R-squared of 3-year trailing sales trend line for the third module.,MATRIX,88%,1,1
+mdl219_3_saleicap,Sales-to-invested capital ratio calculated over trailing 12 months for the third module.,MATRIX,98%,29,39
+mdl219_3_sighc,Year-over-year change in inventory as a percentage of sales for the third module.,MATRIX,85%,0,0
+mdl219_3_tmtscni_avq,Income statement rank measuring operating income relative to enterprise value for the third module.,MATRIX,97%,29,77
+mdl219_3_totalcov,Total coverage ratio measuring operating cash flow divided by debt payments for the third module.,MATRIX,88%,3,3
+mdl219_3_vefcfmtt,Free cash flow-to-enterprise value ratio calculated over trailing 12 months for the third module.,MATRIX,98%,3,3
+mdl219_3_vesspem21f_cf,Forward EPS-to-enterprise value ratio based on consensus estimates for the third module.,MATRIX,95%,5,10
+mdl219_3_voldiff_pc,Difference in implied volatility between at-the-money put and call options for the third module.,MATRIX,89%,2,2
+mdl219_3_y3fcq4vc,Stability of 3-year trailing cash flow measured by standard deviation divided by mean for the third module.,MATRIX,85%,0,0
+mdl219_3_ydp_cf,Predicted dividend yield based on payout ratio and forward EPS estimates for the third module.,MATRIX,75%,6,6
+mdl219_3_yoychggpm,Year-over-year change in gross profit margin for the third module.,MATRIX,84%,1,3

@@ -1,0 +1,6 @@
+Field,Description,Type,Coverage,Users,Alphas
+event_secondary_topic_code,Code representing the second-tier subcategory of the event; must be decoded via overlay,VECTOR,98%,1,1
+event_tertiary_topic_code,"Third-level event topic/category code (integer), for further sub-classification, must decode",VECTOR,98%,0,0
+nws29_full_frontpage,Binary indicator (1/0) for whether the event/news was featured on Reuters front page,VECTOR,98%,4,4
+nws29_full_significance,"Event importance level code: High, Medium, Low relevance to market (must decode)",VECTOR,98%,4,4
+nws29_full_topic1,"Code representing the main category of the event; must be decoded via overlay (e.g. M&A, regulatory, etc.)",VECTOR,98%,7,7

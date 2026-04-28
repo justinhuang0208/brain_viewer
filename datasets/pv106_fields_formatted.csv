@@ -1,0 +1,7 @@
+Field,Description,Type,Coverage,Users,Alphas
+bid_ask_price_gap,Difference between the best bid and ask prices for a security.,MATRIX,100%,26,50
+transaction_cost_estimate,Estimated cost incurred when executing a trade.,MATRIX,100%,0,0
+transaction_cost_maximum,Maximum estimated transaction cost for a trade.,MATRIX,100%,8,10
+transaction_cost_median,Median estimated transaction cost for a trade.,MATRIX,100%,7,9
+transaction_cost_percentile_10,Estimated transaction cost at the 10th percentile for a trade.,MATRIX,100%,6,8
+transaction_cost_percentile_25,Estimated transaction cost at the 25th percentile for a trade.,MATRIX,100%,7,8

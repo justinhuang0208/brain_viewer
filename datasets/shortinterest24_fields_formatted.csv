@@ -1,0 +1,2 @@
+Field,Description,Type,Coverage,Users,Alphas
+shrt24_triggertime_2,Time when the short sale circuit breaker was triggered for the security (D1 - previous day),MATRIX,26%,159,394

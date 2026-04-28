@@ -1,0 +1,108 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl16_1scermun,the number of recommendations with a value of 1,VECTOR,57%,87,154
+anl16_2scermun,the number of recommendations with a value of 2,VECTOR,59%,56,129
+anl16_3scermun,the number of recommendations with a value of 3,VECTOR,63%,69,103
+anl16_actchgnorm_estcomsplitadj,Split adjusted change of actual value in fiscal report.,VECTOR,77%,59,195
+anl16_actchgnorm_estnormcuradj,currency adjusted change of actual value in fiscal report,VECTOR,77%,29,37
+anl16_actgrowth,The growth of actual value in the fiscal report during the past several years.,VECTOR,60%,14,17
+anl16_actnorm_estcomsplitadj,split adjusted normalized actual value in fiscal report,VECTOR,78%,117,267
+anl16_actnorm_estnormcuradj,Currency-adjusted normalized actual value in the fiscal report.,VECTOR,78%,75,111
+anl16_actstability,the stability of actual value in fiscal report,VECTOR,60%,14,22
+anl16_actsuescore,Sentiment score of actual value surprise,VECTOR,73%,49,88
+anl16_actsurprise,actual value surprise in fiscal report,VECTOR,77%,54,102
+anl16_actunit_scale,Unit scale.,VECTOR,78%,56,95
+anl16_actunit_scale_ascontrib,unit scale contributed by the broker,VECTOR,78%,65,162
+anl16_actunit_scale_normal,normalized unit scale,VECTOR,78%,78,153
+anl16_actvalue,actual value in fiscal report,VECTOR,78%,43,80
+anl16_actvalue_ascontrib,"Count of unique IDs of industry participants. Industry stands for an aggregate view of all  equity clearance activity for the date, symbol, and transaction type in question.",VECTOR,78%,32,69
+anl16_actvalue_normal,Normalized actual value in the fiscal report.,VECTOR,78%,38,85
+anl16_aftercons_difference,Difference between consensus values after and before the event (after change value minus before change value),VECTOR,95%,27,51
+anl16_aftercons_high,Highest value in the consensus after the change,VECTOR,96%,22,29
+anl16_aftercons_low,Lowest value in the consensus after the event,VECTOR,96%,20,31
+anl16_aftercons_mean,Mean value in the consensus after the change,VECTOR,96%,17,25
+anl16_aftercons_median,Median value in the consensus after the change,VECTOR,96%,16,31
+anl16_aftercons_numitems,Number of estimated values in the consensus after the event,VECTOR,96%,22,29
+anl16_aftercons_percentage,Relative change in consensus value: (after change value minus before change value) divided by before change value,VECTOR,95%,29,64
+anl16_aftercons_stddev,Standard deviation of the estimated values in the consensus after the change,VECTOR,93%,10,10
+anl16_afterest_difference,Difference between estimate values after and before the event (after change value minus before change value),VECTOR,95%,24,32
+anl16_afterest_percentage,Relative change in the earnings estimate: (after change value minus before change value) divided by before change value,VECTOR,95%,18,39
+anl16_afterest_stdvalue,Standard deviation of the earning estimates’ values after the event,VECTOR,64%,6,11
+anl16_afterest_value,Value of the earnings estimate after the change,VECTOR,96%,8,15
+anl16_beforecons_high,Highest value in the consensus before the change,VECTOR,96%,24,39
+anl16_beforecons_low,Lowest value in the consensus before the change,VECTOR,96%,18,47
+anl16_beforecons_mean,Mean value in the consensus before the event,VECTOR,96%,12,13
+anl16_beforecons_median,Median value in the consensus before the change,VECTOR,96%,12,18
+anl16_beforecons_numitems,number of values included in the consensus multiply multiplier,VECTOR,96%,24,34
+anl16_beforecons_numitems_orig,number of individual estimates included in the consensus before the change,VECTOR,96%,23,43
+anl16_beforecons_stddev,Standard deviation of the estimated values in the consensus before the change,VECTOR,93%,8,10
+anl16_beforeest_stdvalue,Standard deviation of the value of the earnings estimate before the change,VECTOR,60%,9,11
+anl16_beforeest_value,Value of the earnings estimate before the event,VECTOR,96%,12,16
+anl16_clusterestsdown,The number of analysts revising down during the initial detection window of the revision cluster,VECTOR,83%,429,1237
+anl16_clusterestsup,The number of analysts revising up during the initial detection window of the revision cluster,VECTOR,82%,781,3200
+anl16_estimate_d1_estnorm_estcomsplitadj,split adjusted normalized estimate value,VECTOR,88%,85,164
+anl16_estimate_d1_estnorm_estnormcuradj,currency adjusted normalized estimate value,VECTOR,88%,68,102
+anl16_estimate_d1_estunit_scale,unit_scale,VECTOR,88%,37,75
+anl16_estimate_d1_estunit_scale_ascontrib,unit scale contributed by the broker,VECTOR,88%,49,116
+anl16_estimate_d1_estunit_scale_normal,normalized unit scale,VECTOR,88%,39,78
+anl16_estimate_d1_estvalue,estimate value,VECTOR,88%,38,103
+anl16_estimate_d1_estvalue_ascontrib,"Count of unique IDs of industry participants. Industry stands for an aggregate view of all  equity clearance activity for the date, symbol, and transaction type in question.",VECTOR,88%,35,89
+anl16_estimate_d1_estvalue_normal,the normalized estimate value,VECTOR,88%,39,93
+anl16_estnotetext,"free text field explaining the footnote (for example, earnings before goodwill amortization).",VECTOR,70%,71,112
+anl16_estorgnotenorm_estcomsplitadj,split adjusted value of the footnote,VECTOR,58%,165,334
+anl16_estorgnotenorm_estnormcuradj,Currency-adjusted value of the footnote.,VECTOR,58%,22,34
+anl16_estorgnotetext,Estimate orgnote text from company footnote.,VECTOR,58%,35,69
+anl16_estorgnoteunit_scale,Unit scale.,VECTOR,58%,15,21
+anl16_estorgnoteunit_scale_ascontrib,Unit scale contributed by the broker.,VECTOR,58%,18,50
+anl16_estorgnoteunit_scale_normal,normalized unit scale,VECTOR,58%,18,38
+anl16_estorgnotevalue,the value of the footnote,VECTOR,43%,10,11
+anl16_estorgnotevalue_ascontrib,the value of the footnote contributed by the broker,VECTOR,43%,8,11
+anl16_estorgnotevalue_normal,Normalized value of the footnote.,VECTOR,43%,11,12
+anl16_estsdown,the number of brokers revising their estimates downward during the comparison window,VECTOR,84%,51,125
+anl16_eststddev,the standard deviation of all estimates in the summary.,VECTOR,83%,31,64
+anl16_eststddev_normal,the normalized standard deviation of all estimates in the summary.,VECTOR,83%,33,75
+anl16_estsup,The number of brokers revising their estimates upward during the comparison window.,VECTOR,84%,68,168
+anl16_highest,the highest estimate in the summary,VECTOR,86%,30,67
+anl16_highest_normal,the normalized highest estimate in the summary,VECTOR,86%,33,95
+anl16_highrec,The highest recommendation in the summary.,VECTOR,68%,42,94
+anl16_interimperiodend,The date when the interim fiscal period ends for the company,VECTOR,96%,14,19
+anl16_interimperiodnum,"Number assigned to an interim period (e.g., 1=Q1, 2=Q2, 3=Q3, 4=Q4)",VECTOR,96%,21,54
+anl16_lowest,The lowest estimate value in the summary.,VECTOR,86%,32,76
+anl16_lowest_normal,the normalized lowest of estimate value in the summary,VECTOR,86%,23,52
+anl16_lowrec,the lowest of rec value in the summary,VECTOR,68%,19,30
+anl16_meanest,the mean of estimate value in the summary,VECTOR,86%,40,88
+anl16_meanest_normal,normalized mean of estimate value in the summary,VECTOR,86%,43,107
+anl16_meanestnorm_estcomsplitadj,split adjusted mean of estimate value in the summary,VECTOR,86%,103,172
+anl16_meanestnorm_estnormcuradj,Currency adjusted mean of estimate value in the summary,VECTOR,86%,36,51
+anl16_meanestunit_scale,unit_scale,VECTOR,86%,46,103
+anl16_meanestunit_scale_normal,normalized unit scale,VECTOR,86%,31,63
+anl16_meanrec,the mean of rec value in the summary,VECTOR,68%,32,63
+anl16_medianest,The median estimate value in the summary.,VECTOR,86%,23,57
+anl16_medianest_normal,normalized median of estimate value in the summary,VECTOR,86%,34,92
+anl16_medianrec,The median of REC value in the summary.,VECTOR,68%,19,37
+anl16_numests,the total number of active estimates on the current security/period/measure,VECTOR,86%,42,114
+anl16_numincests,the number of estimates used to generate the summary analytic values,VECTOR,86%,38,74
+anl16_pctchangefrommean,the percent change in the mean estimate,VECTOR,85%,239,456
+anl16_preliminaryestimate_d1_estvalue,estimate value,VECTOR,98%,53,136
+anl16_preliminaryrecommendation_d1_reccode,The recommendation code.,VECTOR,66%,35,54
+anl16_preliminaryrecommendation_d1_recvalue,the recommendation value,VECTOR,66%,32,67
+anl16_presurprise,The predicted amount of surprises.,VECTOR,93%,36,98
+anl16_presurprise_normal,The normalized predicted surprises as a percentage of the mean estimate,VECTOR,93%,32,56
+anl16_presurprisepct,The predicted surprises as a percentage of the mean estimate,VECTOR,93%,48,114
+anl16_recommendation_d1_reccode,the recommendation code,VECTOR,75%,79,252
+anl16_recommendation_d1_recvalue,The recommendation value.,VECTOR,75%,68,133
+anl16_recsdown,the number of brokers revising their ratings downward during the comparison window,VECTOR,33%,18,26
+anl16_recsup,the number of brokers revising their ratings upward during the comparison window,VECTOR,31%,39,65
+anl16_scermun,the number of recommendations in the mean.,VECTOR,68%,23,39
+anl16_senorm_estcomsplitadj,split adjusted summary relative accuracy score,VECTOR,96%,108,167
+anl16_senorm_estnormcuradj,currency adjusted summary relative accuracy score,VECTOR,96%,58,73
+anl16_senumincests,"Count of unique IDs of industry participants. Industry stands for an aggregate view of all  equity clearance activity for the date, symbol, and transaction type in question.",VECTOR,96%,69,159
+anl16_seunit_scale,unit scale,VECTOR,96%,35,90
+anl16_seunit_scale_normal,normalized unit scale,VECTOR,96%,28,46
+anl16_smartest,Estimate value based on the smart model.,VECTOR,96%,33,75
+anl16_smartest_normal,Normalized estimate value based on smart model.,VECTOR,96%,39,104
+anl16_sranaeststock,srana estimate,VECTOR,99%,64,166
+anl16_sranarecstock1through5t12,SRANA recommendations that range from 1 to 5 (trailing 12 months),VECTOR,99%,57,94
+anl16_sranarecstock1through5t24,SRANA recommendations that range from 1 to 5 (trailing 24 months),VECTOR,99%,69,149
+anl16_sranarecstockt12,srana recommendations that range from 1 to 100 (trailing 12 months).,VECTOR,99%,64,127
+anl16_sranarecstockt24,srana recommendations that range from 1 to 100 (trailing 24 months).,VECTOR,99%,62,133
+anl16_sranastockest1through5,SRANA recommendations on a scale of 1 to 5.,VECTOR,99%,69,183

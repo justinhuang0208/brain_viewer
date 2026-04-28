@@ -1,76 +1,76 @@
 Field,Description,Type,Coverage,Users,Alphas
-nws18_acb,News sentiment specializing in corporate action announcements,Vector,100%,79,349
-nws18_bam,News sentiment specializing in mergers and acquisitions,Vector,100%,58,194
-nws18_bee,News sentiment specializing in growth of earnings,Vector,100%,58,239
-nws18_ber,News sentiment specializing in earnings result,Vector,100%,58,276
-nws18_event_relevance,Relevance of the event to the story,Vector,100%,115,284
-nws18_event_similarity_days,Days since a similar event was detected,Vector,100%,36,166
-nws18_ghc_lna,Change in analyst recommendation,Vector,100%,92,656
-nws18_nip,Degree of impact of the news,Vector,100%,43,551
-nws18_qcm,News sentiment of relevant news with high confidence,Vector,100%,49,254
-nws18_qep,News sentiment based on positive and negative words on global equity,Vector,100%,46,363
-nws18_qmb,News sentiment specializing in editorials on global markets,Vector,100%,37,277
-nws18_relevance,Relevance of news to the company,Vector,100%,51,316
-nws18_ssc,Sentiment of the news calculated using multiple techniques,Vector,100%,30,223
-nws18_sse,Sentiment of phrases impacting the company,Vector,100%,38,203
-rp_css_assets,Composite sentiment score of assets news,Matrix,74%,165,534
-rp_css_business,Composite sentiment score of business-related news,Matrix,100%,237,1137
-rp_css_credit,Composite sentiment score of credit news,Matrix,28%,62,171
-rp_css_credit_ratings,Composite sentiment score of credit ratings news,Matrix,22%,69,331
-rp_css_dividends,Composite sentiment score of dividends news,Matrix,51%,56,146
-rp_css_earnings,Composite sentiment score of earnings news,Matrix,97%,163,719
-rp_css_equity,Composite sentiment score of equity action news,Matrix,86%,104,412
-rp_css_insider,Composite sentiment score of insider trading news,Matrix,67%,106,379
-rp_css_inverstor,Composite sentiment score of investor relations news,Matrix,92%,196,1059
-rp_css_labor,Composite sentiment score of labor issues news,Matrix,56%,59,229
-rp_css_legal,Composite sentiment score of legal news,Matrix,21%,53,133
-rp_css_marketing,Composite sentiment score of marketing news,Matrix,36%,86,358
-rp_css_mna,Composite sentiment score of mergers and acquisitions-related news,Matrix,67%,92,420
-rp_css_partner,Composite sentiment score of partnership news,Matrix,42%,67,171
-rp_css_price,Composite sentiment score of stock price news,Matrix,83%,115,465
-rp_css_product,Composite sentiment score of product and service-related news,Matrix,76%,92,352
-rp_css_ptg,Composite sentiment score of price target news,Matrix,38%,83,217
-rp_css_ratings,Composite sentiment score of analyst ratings-related news,Matrix,75%,84,289
-rp_css_revenue,Composite sentiment score of revenue news,Matrix,94%,127,523
-rp_css_society,Composite sentiment score of society-related news,Matrix,25%,38,82
-rp_css_technical,Composite sentiment score based on technical analysis,Matrix,31%,26,76
-rp_ess_assets,Event sentiment score of assets news,Matrix,74%,84,267
-rp_ess_business,Event sentiment score of business-related news,Matrix,100%,130,615
-rp_ess_credit,Event sentiment score of credit news,Matrix,28%,33,56
-rp_ess_credit_ratings,Event sentiment score of credit ratings news,Matrix,22%,35,78
-rp_ess_dividends,Event sentiment score of dividends news,Matrix,51%,40,84
-rp_ess_earnings,Event sentiment score of earnings news,Matrix,97%,198,827
-rp_ess_equity,Event sentiment score of equity action news,Matrix,86%,76,288
-rp_ess_insider,Event sentiment score of insider trading news,Matrix,67%,92,315
-rp_ess_labor,Event sentiment score of labor issues news,Matrix,56%,75,266
-rp_ess_legal,Event sentiment score of legal news,Matrix,21%,61,126
-rp_ess_mna,Event sentiment score of mergers and acquisitions-related news,Matrix,67%,132,437
-rp_ess_partner,Event sentiment score of partnership news,Matrix,42%,99,231
-rp_ess_price,Event sentiment score of stock price news,Matrix,83%,98,506
-rp_ess_product,Event sentiment score of product and service-related news,Matrix,76%,92,371
-rp_ess_ptg,Event sentiment score of price target news,Matrix,38%,71,147
-rp_ess_ratings,Event sentiment score of analyst ratings-related news,Matrix,75%,85,368
-rp_ess_revenue,Event sentiment score of revenue news,Matrix,94%,88,343
-rp_ess_society,Event sentiment score of society-related news,Matrix,25%,45,110
-rp_ess_technical,Event sentiment score based on technical analysis,Matrix,31%,31,83
-rp_nip_assets,News impact projection of assets news,Matrix,74%,93,426
-rp_nip_business,News impact projection of business-related news,Matrix,100%,148,768
-rp_nip_credit,News impact projection of credit news,Matrix,28%,36,74
-rp_nip_credit_ratings,News impact projection of credit ratings news,Matrix,22%,26,65
-rp_nip_dividends,News impact projection of dividends news,Matrix,51%,48,113
-rp_nip_earnings,News impact projection of earnings news,Matrix,97%,127,608
-rp_nip_equity,News impact projection of equity action news,Matrix,86%,110,470
-rp_nip_insider,News impact projection of insider trading news,Matrix,67%,85,407
-rp_nip_inverstor,News impact projection of investor relations news,Matrix,92%,211,1208
-rp_nip_labor,News impact projection of labor issues news,Matrix,56%,55,221
-rp_nip_legal,News impact projection of legal news,Matrix,21%,38,110
-rp_nip_marketing,News impact projection of marketing news,Matrix,36%,75,401
-rp_nip_mna,News impact projection of mergers and acquisitions-related news,Matrix,67%,78,302
-rp_nip_partner,News impact projection of partnership news,Matrix,42%,62,188
-rp_nip_price,News impact projection of stock price news,Matrix,83%,92,362
-rp_nip_product,News impact projection of product and service-related news,Matrix,76%,76,411
-rp_nip_ptg,News impact projection of price target news,Matrix,38%,56,132
-rp_nip_ratings,News impact projection of analyst ratings-related news,Matrix,75%,99,271
-rp_nip_revenue,News impact projection of revenue news,Matrix,94%,94,342
-rp_nip_society,News impact projection of society-related news,Matrix,25%,37,111
-rp_nip_technical,News impact projection based on technical analysis,Matrix,31%,33,104
+nws18_acb,News sentiment specializing in corporate action announcements,VECTOR,50%,172,502
+nws18_bam,"Mergers and acquisitions sentiment indicator (e.g., -1 negative, 0 neutral, +1 positive)",VECTOR,50%,344,956
+nws18_bee,"Earnings evaluation score indicating positive, neutral, or negative assessment (-1, 0, +1)",VECTOR,50%,235,489
+nws18_ber,Earnings Release Indicator flag for earnings release events,VECTOR,50%,248,588
+nws18_event_relevance,Integer from 0 to 100 indicating the event’s relevance within the story,VECTOR,50%,452,871
+nws18_event_similarity_days,"Number of days since a similar event was last detected within the past 365 days, up to 5 decimals",VECTOR,50%,286,586
+nws18_ghc_lna,Change in analyst recommendation,VECTOR,50%,500,1379
+nws18_nip,"Narrative impact score in [-1, 1] estimating the news item’s short-term market impact (e.g., next two hours)",VECTOR,50%,310,1235
+nws18_qcm,News sentiment of relevant news with high confidence,VECTOR,50%,260,616
+nws18_qep,"Equities sentiment polarity score derived from positive/negative words in news (typically -1, 0, +1)",VECTOR,50%,283,965
+nws18_qmb,"Editorials and commentary score indicating stance or sentiment (-1, 0, +1)",VECTOR,50%,155,469
+nws18_relevance,Score from 0 to 100 indicating how strongly the entity is related to the story higher is more relevant,VECTOR,50%,255,644
+nws18_ssc,"Granular sentiment score from -1.00 to +1.00 for the story, combining multiple sentiment analysis techniques",VECTOR,50%,309,716
+nws18_sse,Continuous sentiment score between -1.00 and +1.00 for the entity-event,VECTOR,50%,129,364
+rp_css_assets,Composite sentiment score of assets news,MATRIX,50%,522,1045
+rp_css_business,Composite sentiment score of business-related news,MATRIX,50%,987,3142
+rp_css_credit,Composite sentiment score of credit news,MATRIX,50%,118,252
+rp_css_credit_ratings,Composite sentiment score of credit ratings news,MATRIX,50%,270,1180
+rp_css_dividends,Composite sentiment score of dividends news,MATRIX,50%,81,191
+rp_css_earnings,Composite sentiment score of earnings news,MATRIX,50%,714,1616
+rp_css_equity,Composite sentiment score of equity action news,MATRIX,50%,354,923
+rp_css_insider,Composite sentiment score of insider trading news,MATRIX,50%,246,552
+rp_css_inverstor,Composite sentiment score of investor relations news,MATRIX,50%,660,1719
+rp_css_labor,Composite sentiment score of labor issues news,MATRIX,50%,139,351
+rp_css_legal,Composite sentiment score of legal news,MATRIX,50%,174,274
+rp_css_marketing,Composite sentiment score of marketing news,MATRIX,50%,174,481
+rp_css_mna,Composite sentiment score of mergers and acquisitions-related news,MATRIX,50%,200,549
+rp_css_partner,Composite sentiment score of partnership news,MATRIX,50%,334,660
+rp_css_price,Composite sentiment score of stock price news,MATRIX,50%,563,1126
+rp_css_product,Composite sentiment score of product and service-related news,MATRIX,50%,375,708
+rp_css_ptg,Composite sentiment score of price target news,MATRIX,50%,422,768
+rp_css_ratings,Composite sentiment score of analyst ratings-related news,MATRIX,50%,954,1796
+rp_css_revenue,Composite sentiment score of revenue news,MATRIX,50%,563,1159
+rp_css_society,Composite sentiment score of society-related news,MATRIX,50%,84,136
+rp_css_technical,Composite sentiment score based on technical analysis,MATRIX,50%,234,316
+rp_ess_assets,Event sentiment score of assets news,MATRIX,50%,452,694
+rp_ess_business,Event sentiment score of business-related news,MATRIX,50%,267,868
+rp_ess_credit,Event sentiment score of credit news,MATRIX,50%,100,156
+rp_ess_credit_ratings,Event sentiment score of credit ratings news,MATRIX,50%,101,156
+rp_ess_dividends,Event sentiment score of dividends news,MATRIX,50%,59,106
+rp_ess_earnings,Event sentiment score of earnings news,MATRIX,50%,635,1486
+rp_ess_equity,Event sentiment score of equity action news,MATRIX,50%,305,573
+rp_ess_insider,Event sentiment score of insider trading news,MATRIX,50%,277,542
+rp_ess_labor,Event sentiment score of labor issues news,MATRIX,50%,191,392
+rp_ess_legal,Event sentiment score of legal news,MATRIX,50%,365,514
+rp_ess_mna,Event sentiment score of mergers and acquisitions-related news,MATRIX,50%,549,1178
+rp_ess_partner,Event sentiment score of partnership news,MATRIX,50%,631,1481
+rp_ess_price,Event sentiment score of stock price news,MATRIX,50%,474,1008
+rp_ess_product,Event sentiment score of product and service-related news,MATRIX,50%,563,989
+rp_ess_ptg,Event sentiment score of price target news,MATRIX,50%,176,286
+rp_ess_ratings,Event sentiment score of analyst ratings-related news,MATRIX,50%,915,1859
+rp_ess_revenue,Event sentiment score of revenue news,MATRIX,50%,427,781
+rp_ess_society,Event sentiment score of society-related news,MATRIX,50%,91,180
+rp_ess_technical,Event sentiment score based on technical analysis,MATRIX,50%,166,232
+rp_nip_assets,News impact projection of assets news,MATRIX,50%,461,868
+rp_nip_business,News impact projection of business-related news,MATRIX,50%,318,1062
+rp_nip_credit,News impact projection of credit news,MATRIX,50%,259,435
+rp_nip_credit_ratings,News impact projection of credit ratings news,MATRIX,50%,57,130
+rp_nip_dividends,News impact projection of dividends news,MATRIX,50%,76,145
+rp_nip_earnings,News impact projection of earnings news,MATRIX,50%,402,1057
+rp_nip_equity,News impact projection of equity action news,MATRIX,50%,321,766
+rp_nip_insider,News impact projection of insider trading news,MATRIX,50%,305,681
+rp_nip_inverstor,News impact projection of investor relations news,MATRIX,50%,753,2198
+rp_nip_labor,News impact projection of labor issues news,MATRIX,50%,123,304
+rp_nip_legal,News impact projection of legal news,MATRIX,50%,82,174
+rp_nip_marketing,News impact projection of marketing news,MATRIX,50%,121,471
+rp_nip_mna,News impact projection of mergers and acquisitions-related news,MATRIX,50%,189,448
+rp_nip_partner,News impact projection of partnership news,MATRIX,50%,181,366
+rp_nip_price,News impact projection of stock price news,MATRIX,50%,292,628
+rp_nip_product,News impact projection of product and service-related news,MATRIX,50%,369,800
+rp_nip_ptg,News impact projection of price target news,MATRIX,50%,217,387
+rp_nip_ratings,News impact projection of analyst ratings-related news,MATRIX,50%,993,1763
+rp_nip_revenue,News impact projection of revenue news,MATRIX,50%,300,583
+rp_nip_society,News impact projection of society-related news,MATRIX,50%,59,142
+rp_nip_technical,News impact projection based on technical analysis,MATRIX,50%,63,142

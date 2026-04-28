@@ -1,0 +1,53 @@
+Field,Description,Type,Coverage,Users,Alphas
+eps_change_absolute_value,The absolute change in earnings per share compared to the previous period.,VECTOR,93%,2,2
+eps_change_percentage_value,The percentage change in earnings per share compared to the previous period.,VECTOR,93%,1,2
+ern6_1q,Earnings date for the 1st quarter (may be historical),VECTOR,98%,59,75
+ern6_2q,Earnings date for the 2nd quarter (may be historical),VECTOR,98%,78,149
+ern6_3q,Earnings date for the 3rd quarter (may be historical),VECTOR,98%,92,179
+ern6_4q,Earnings date for the 4th quarter (may be historical),VECTOR,98%,54,63
+ern6_actual_currenty,Actual Currency,VECTOR,100%,76,107
+ern6_actual_eps,Reported non-GAAP diluted (or basic if diluted unavailable) EPS,VECTOR,93%,86,127
+ern6_actual_fiscal_year,Fiscal year corresponding to the actual earnings release (YYYY),VECTOR,93%,66,102
+ern6_actual_period,The actual quarter or half year as reported in the earnings announcement,VECTOR,100%,112,151
+ern6_actual_source,"Possible values are PR (press release), WEBSITE, SEC-SEDAR, OTHER or nulls",VECTOR,100%,91,127
+ern6_actual_url,The link to the earnings announcement press release or SEC filing,VECTOR,100%,80,124
+ern6_board_of_directors_meeting,Date of Board/Shareholder Meeting,VECTOR,98%,20,27
+ern6_company_name,Name of the company,VECTOR,100%,70,98
+ern6_company_names,Name of the company,VECTOR,100%,76,170
+ern6_conferencecalltime,Published time of the earnings conference call,VECTOR,98%,88,124
+ern6_confnumber,Publicly available phone number for replay conference call,VECTOR,100%,53,67
+ern6_confpasscode,Passcode for replay conference call,VECTOR,100%,32,37
+ern6_div_freq,"Identifies payment frequency of announced dividend. ""ANNUAL"", ""SEMI-ANNUAL"", ""QUARTERLY"", ""MONTHLY"" or ""SPECIAL""",VECTOR,100%,32,44
+ern6_dividend_status,"P - Pays, X - Does not pay, S - Suspended, R - Resumed",VECTOR,100%,42,53
+ern6_eps6stock_symbol,This is the stock ticker symbol. A “CA.” prefix is used for companies WSH tracks as Canadian,VECTOR,100%,54,66
+ern6_eps6ww_status,Denotes whether the security trades on a North American stock exchange (NA) or not (WW),VECTOR,100%,27,30
+ern6_estimated_eps,Estimize weighted EPS estimate for the last completed period,VECTOR,93%,104,150
+ern6_estimated_etype,"This indicates the status of scheduled earnings date; ""Verified"" or ""Unconfirmed""",VECTOR,100%,59,69
+ern6_estimated_fiscal_year,Fiscal year associated with the scheduled (estimated) earnings period,VECTOR,93%,60,73
+ern6_estimated_period,The scheduled earnings quarter or half year we have a date for,VECTOR,100%,107,190
+ern6_estimated_tod,"This indicates the scheduled time of earnings announcement; ""Unspecified"" or ""Before Market"" or ""During Market"" or ""After Market""",VECTOR,100%,81,111
+ern6_estimated_url,The link to the company website,VECTOR,100%,52,64
+ern6_etype,"T - Tentative date, V - Verified date I - Inferred date See Earnings Date Status Definitions section for additional information",VECTOR,100%,148,314
+ern6_goto_broadcast,Website link for Conference Call recording,VECTOR,100%,162,298
+ern6_isin,"This is a unique security identifier structured to include the country in which the issuing company is headquartered, the specific security identification number and a final character acting as a check digit",VECTOR,100%,37,60
+ern6_meeting_status,"Possible values are PENDING, INPROCESS, HELD, CANCEL or POSTPONED.",VECTOR,100%,68,105
+ern6_mtg_type,Identifies whether it’s a BoD (B) or Shareholder (S) meeting,VECTOR,100%,25,32
+ern6_next_ed,Next earnings date (interpret using Etype status),VECTOR,98%,32,40
+ern6_next_ed_fiscal_year,Fiscal year associated with Next_ED and Next_ED_QUARTER,VECTOR,98%,38,46
+ern6_next_ed_quarter,Corresponds to the Next ED,VECTOR,100%,39,53
+ern6_prelim_earnings_link,The link to the preliminary earnings announcement press release,VECTOR,100%,61,69
+ern6_quarter,"The letter ""Q"" followed by the quarter number the earnings information applies to",VECTOR,100%,36,45
+ern6_split_status,Possible values are PENDINGor APPROVED,VECTOR,100%,140,217
+ern6_stock_exchange,This is the exchange the stock is traded on,VECTOR,100%,48,60
+ern6_stock_split_ratio,"Split parameters (typically #:#) where the first number is the amount of the new shares, the second number is original shares",VECTOR,100%,71,81
+ern6_time_of_day,"Indicates the time of the announcement: Before Market, During Market, After Market, Unspecified",VECTOR,100%,56,107
+ern6_time_zone,Time zone for conference call,VECTOR,100%,10,16
+ern6_transcript_fiscal_year,Fiscal year in YYYY format for the earnings transcript,VECTOR,98%,47,58
+ern6_transcript_quarter,The letter “Q” followed by the quarter number the earnings transcript applies to,VECTOR,100%,77,120
+ern6_wqreceivetimestamp,Ingestion timestamp added at file end in a fixed format,VECTOR,98%,38,46
+ern6_x_dividend,"Amount of dividend in US dollars; if converted, uses the exchange rate at time of entry",VECTOR,98%,19,21
+ern6_x_dividend_oc,The amount of the dividend in the currency specified by X_Dividend_currency,VECTOR,98%,23,26
+ern6stock_symbol,This is the stock ticker symbol. A “CA.” prefix is used for companies WSH tracks as Canadian,VECTOR,100%,43,69
+ern6ww_status,Denotes whether the security trades on a North American stock exchange (NA) or not (WW),VECTOR,100%,18,21
+preliminary_eps_range_lower_bound,Preliminary EPS or the low end of the preliminary EPS range reported by the company,VECTOR,93%,24,30
+preliminary_eps_range_upper_bound,"High end of the preliminary EPS range, or same as prelim_amount_from if single value",VECTOR,93%,24,31

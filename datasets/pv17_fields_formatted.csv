@@ -1,0 +1,9 @@
+Field,Description,Type,Coverage,Users,Alphas
+sta3_2_sector,"Statistical industry classification code assigned to each stock in the GLOBAL universe, representing its categorical grouping according to a static, point-in-time logic intended for industry/sector-based research and peer neutralization",GROUP,100%,124,304
+sta3_3_sector,"Statistical industry group assignment for each stock on each date in the GLOBAL universe, based on a static classification algorithm",GROUP,100%,90,245
+sta3_news_sector,"An integer code indicating the statistical industry classification group assigned to a US-listed equity on a specific date, based on a static, news-driven regime logic",GROUP,100%,84,207
+sta3_peer_sector,"Unordered categorical code representing the statistical industry/peer group assignment for each global stock on each date, based on fundamental similarity within the GLOBAL_companyGrouping_Peer module",GROUP,100%,74,209
+sta3_pvgroup1_sector,A categorical code representing the point-in-time assignment of a stock to a statistically derived industry group (based on price-volume clustering) within the global universe,GROUP,100%,136,390
+sta3_pvgroup2_sector,"Unordered categorical code indicating the statistical industry group assignment for each stock, based on price-volume clustering within the GLOBAL region, as of a specific date",GROUP,100%,199,854
+sta3_pvgroup3_sector,"Categorical code representing a statistically-derived industry or peer grouping assignment for each stock on each date within the GLOBAL universe, using price-volume based clustering logic (pvgroup3)",GROUP,100%,124,326
+sta3_sec_sector,"Point-in-time categorical code representing the statistical industry sector classification for a given global equity, using a stable, audit-grade taxonomy such as SEC or equivalent, with values specific to each date and stock",GROUP,100%,73,251

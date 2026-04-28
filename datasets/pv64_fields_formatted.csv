@@ -1,0 +1,240 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv64_cins_dif_nfields,Number of fields,VECTOR,61%,4,8
+pv64_cins_dif_rcode,"A return of 0 indicates a valid security. A return of -1 indicates a removal record due to maturity, expiration, delisting, etc.",VECTOR,61%,1,1
+pv64_cins_out_nfields,Number of fields,VECTOR,100%,0,0
+pv64_cins_out_rcode,"A return of 0 indicates a valid security. A return of -1 indicates a removal record due to maturity, expiration, delisting, etc.",VECTOR,100%,2,2
+pv64_cins_out_stal_nfields,The number of fields present in the data record for this module,VECTOR,97%,6,12
+pv64_cins_out_stal_rcode,"Processing status code for the security record; 0 means valid, -1 means removal due to maturity, expiration, or delisting",VECTOR,97%,2,3
+pv64_dif_dvd_declared_dt,Date when the dividend was officially announced or declared by the fund,VECTOR,90%,4,6
+pv64_dif_dvd_pay_dt,The date when the dividend is paid to shareholders,VECTOR,90%,6,11
+pv64_dif_dvd_record_dt,Date on which shareholders must be on record to receive the dividend,VECTOR,90%,7,8
+pv64_dif_dvd_sh_last,Net amount of the most recently declared or paid dividend per share,VECTOR,90%,16,42
+pv64_dif_eqy_dvd_sh_12m_net,The total net dividends paid per share by the security over the past 12 months,VECTOR,90%,21,42
+pv64_dif_eqy_sh_out,Current total number of shares outstanding for the fund or security (may include treasury shares),VECTOR,94%,7,17
+pv64_dif_eqy_sh_out_dt,Date as-of which current shares outstanding are reported for the fund's equity holdings,VECTOR,91%,21,30
+pv64_dif_eqy_split_dt,The effective date when the fund's shares begin trading on a split-adjusted basis due to a stock split,VECTOR,90%,1,1
+pv64_dif_fd_initial_val,"The initial base value or price of a single fund share on its first day of trading (excluding any front-end load; for Japanese funds, this is the initial net total assets in millions)",VECTOR,90%,10,22
+pv64_dif_front_load,Current fee charged when purchasing shares of the fund; displays maximum front-end fee if more than one schedule applies,VECTOR,90%,2,3
+pv64_dif_fund_12b_fee,"Fee paid by the fund for marketing expenses, known as 12b-1 Fee in the US or marketing fee elsewhere",VECTOR,90%,6,16
+pv64_dif_fund_asset_alloc_cash_other,"Percentage of fund assets allocated to cash and other investments not categorized as government, municipal, corporate, equity, mortgage, or preferred securities",VECTOR,90%,17,192
+pv64_dif_fund_asset_alloc_corp,"Represents the percentage of the fund's assets invested in corporate securities, based on filings provided by fund management",VECTOR,90%,2,2
+pv64_dif_fund_asset_alloc_equity,"The percentage of the fund’s investments allocated to equities, calculated based on current fund holdings",VECTOR,90%,9,20
+pv64_dif_fund_asset_alloc_govt,Percentage of the fund's assets allocated to government securities,VECTOR,90%,13,39
+pv64_dif_fund_asset_alloc_mtge,"The percentage of the fund’s portfolio invested in mortgage-backed securities, based on its disclosed holdings",VECTOR,90%,0,0
+pv64_dif_fund_asset_alloc_muni,"Percentage of fund assets allocated to municipal securities, calculated from fund filings",VECTOR,90%,0,0
+pv64_dif_fund_asset_alloc_pfd,"Percentage of fund assets allocated to preferred securities, calculated from fund filings",VECTOR,90%,3,6
+pv64_dif_fund_creation_unit_size,Specifies the specific unit size in which authorized participants can create or redeem shares of the ETF (typically the minimum aggregation size for ETF share creation/redemption),VECTOR,90%,6,10
+pv64_dif_fund_deferred_load,"The maximum fee charged to investors when selling the fund, representing the deferred (back-end) load; varies by country and is a flat fee",VECTOR,90%,1,1
+pv64_dif_fund_early_withdraw_fee,"Fee charged by the fund for early withdrawal of investment, may be embedded in NAV",VECTOR,90%,2,2
+pv64_dif_fund_expense_ratio,"The expense ratio—annual cost percentage that investors pay for fund operating expenses after waivers; for Japan ETFs, the stated fund manager fee excluding specific other fees",VECTOR,90%,3,3
+pv64_dif_fund_incept_dt,The date on which the fund was officially launched or began operations,VECTOR,90%,2,5
+pv64_dif_fund_income_ratio,"Amount of income generated from fund investments, usually expressed as a percentage of average net assets",VECTOR,90%,4,4
+pv64_dif_fund_ira_invest,"The minimum monetary amount required to invest in the fund through an IRA (Individual Retirement Account), typically for US and Canadian funds",VECTOR,90%,7,17
+pv64_dif_fund_mgr_stated_fee,"The stated annual management fee (usually as a percentage) that the fund manager charges, most often as disclosed in the prospectus",VECTOR,90%,11,24
+pv64_dif_fund_min_invest,Minimum amount of money required to open an account or make an initial investment in the fund,VECTOR,90%,3,3
+pv64_dif_fund_port_dt,Date as of which the fund portfolio information is reported,VECTOR,90%,6,26
+pv64_dif_fund_redemp_dt,"The predetermined date the fund is set to close or liquidate (such as target, wind-up, or termination date)",VECTOR,94%,4,5
+pv64_dif_fund_turnover,The percentage of a fund’s portfolio that is replaced or changed in one fiscal year (turnover ratio),VECTOR,90%,10,20
+pv64_dif_id_bb_parent_co,Bloomberg identifier for the parent company controlling the fund,VECTOR,90%,5,10
+pv64_dif_last_dps_gross,"The most recently announced gross dividend per share, adjusted for share count, FX rate, and index divisor",VECTOR,90%,8,15
+pv64_dif_m21_hs_dvd,The gross amount of dividends per share paid out by the fund over the past 12 months,VECTOR,90%,3,3
+pv64_dif_max_redemp_fee,Maximum early redemption fee charged when selling the fund; penalty for early withdrawal,VECTOR,90%,7,51
+pv64_dif_min_subsequent_invest,Minimum required amount for subsequent investments in the fund after the initial investment,VECTOR,90%,9,19
+pv64_dif_nfields,Number of data fields present in the data record for this fund on a given date,VECTOR,90%,3,3
+pv64_dif_px_trade_lot_size,"Minimum number of shares or units that can be traded in a single transaction, as set by the exchange’s rules for the fund",VECTOR,90%,2,4
+pv64_dif_rcode,"A code indicating the processing status of the record: 0 for valid, -1 for a removal record due to events like maturity or delisting",VECTOR,90%,2,2
+pv64_dif_stal_dvd_declared_dt,Date on which a dividend for the fund was declared or announced,VECTOR,87%,2,2
+pv64_dif_stal_dvd_pay_dt,The date on which the fund begins distributing dividends to shareholders,VECTOR,87%,0,0
+pv64_dif_stal_dvd_record_dt,"The date used to determine which holders of the fund's security are entitled to receive the dividend payment, i.e., the official dividend record date",VECTOR,87%,0,0
+pv64_dif_stal_dvd_sh_last,"The net amount of the most recently paid or announced dividend per share, denominated in the dividend currency",VECTOR,87%,3,3
+pv64_dif_stal_eqy_dvd_sh_12m_net,Net dividend per share paid by the fund over the last 12 months,VECTOR,87%,1,2
+pv64_dif_stal_eqy_sh_out,"The current total number of shares outstanding for the fund, quoted in millions and may include treasury shares unless excluded",VECTOR,85%,1,1
+pv64_dif_stal_eqy_sh_out_dt,Latest confirmed date of the Current Shares Outstanding,VECTOR,87%,0,0
+pv64_dif_stal_eqy_split_dt,The effective date on which a company's shares begin trading on a split-adjusted basis.,VECTOR,87%,1,1
+pv64_dif_stal_fd_initial_val,"The initial base value or price of a single share/participation unit of the fund on its first trading day, not including front-end sales loads or fees; for Japanese funds, this refers to total initial net assets in millions",VECTOR,87%,1,1
+pv64_dif_stal_front_load,Current fee charged for purchase of fund shares; displays the maximum front-end fee for digressive schedules,VECTOR,87%,2,2
+pv64_dif_stal_fund_12b_fee,Fee paid to fund for marketing expenses; known as the 12b-1 Fee in the US or marketing fee in other countries,VECTOR,87%,0,0
+pv64_dif_stal_fund_asset_alloc_cash_other,"The percentage of the fund's holdings allocated to cash and other non-core assets, excluding government, municipal, corporate, equity, mortgage, and preferred securities",VECTOR,87%,0,0
+pv64_dif_stal_fund_asset_alloc_corp,"Percentage of fund assets allocated to corporate securities, as disclosed in latest filings by fund management",VECTOR,87%,1,1
+pv64_dif_stal_fund_asset_alloc_equity,"Percentage of fund assets allocated to equity securities, as reported by fund management in disclosures",VECTOR,87%,0,0
+pv64_dif_stal_fund_asset_alloc_govt,Percentage of fund assets allocated to government securities according to public filings,VECTOR,87%,1,1
+pv64_dif_stal_fund_asset_alloc_mtge,"The percentage allocation of the fund’s portfolio invested in mortgage securities, based on the fund’s reported holdings",VECTOR,87%,1,1
+pv64_dif_stal_fund_asset_alloc_muni,Percentage of fund’s portfolio allocated to municipal securities,VECTOR,87%,0,0
+pv64_dif_stal_fund_asset_alloc_pfd,"The percentage of the fund's holdings invested in preferred securities, based on public filings",VECTOR,87%,0,0
+pv64_dif_stal_fund_creation_unit_size,The unit size aggregation in which an authorized participant can create or redeem ETF shares.,VECTOR,87%,0,0
+pv64_dif_stal_fund_deferred_load,"The maximum back-end fee charged when selling fund shares, often known as the deferred sales charge, applicable to US/Canadian funds and as a flat fee in other regions",VECTOR,87%,0,0
+pv64_dif_stal_fund_early_withdraw_fee,"Fee paid to the fund for early withdrawal by investors, sometimes included in the NAV, and for Japanese funds referred to as ""Shintaku Zaisan Ryuho Gaku""",VECTOR,87%,0,0
+pv64_dif_stal_fund_expense_ratio,"The percentage of fund assets paid as operating expenses, net of waivers; for Japan ETFs, the base annual management fee excluding certain other fees",VECTOR,87%,1,1
+pv64_dif_stal_fund_incept_dt,"Start date of the fund, typically after initial subscription period; fund inception date",VECTOR,87%,0,0
+pv64_dif_stal_fund_income_ratio,"The ratio of income generated by fund investments, typically expressed as a percentage of average net assets, indicating how much income the fund produces relative to its size",VECTOR,87%,0,0
+pv64_dif_stal_fund_ira_invest,Minimum investment amount required for IRA or RSA accounts; applies to US and Canadian funds,VECTOR,87%,0,0
+pv64_dif_stal_fund_mgr_stated_fee,"The annual management fee for the fund as stated by the fund manager, usually sourced from the fund’s prospectus",VECTOR,87%,1,1
+pv64_dif_stal_fund_min_invest,Minimum investment amount required to open an account/position in the fund,VECTOR,87%,0,0
+pv64_dif_stal_fund_port_dt,"The ""as of"" date for which the fund's portfolio composition and holdings are reported; typically relevant for mutual funds",VECTOR,87%,1,1
+pv64_dif_stal_fund_redemp_dt,"The predetermined date that the fund is set to close/liquidate. (Target date, wind-up date, Termination date)",VECTOR,85%,0,0
+pv64_dif_stal_fund_turnover,Percentage of the fund's portfolio assets that have been replaced with new holdings over a one-year period (annual portfolio turnover rate),VECTOR,87%,0,0
+pv64_dif_stal_id_bb_parent_co,Bloomberg identifier for the controlling or parent company of the fund,VECTOR,87%,0,0
+pv64_dif_stal_industry_group_num,Industry group number,VECTOR,32%,0,0
+pv64_dif_stal_industry_sector_num,Industry sector number,VECTOR,32%,0,0
+pv64_dif_stal_industry_subgroup_num,Industry subgroup number,VECTOR,32%,0,0
+pv64_dif_stal_last_dps_gross,"Most recently announced gross dividend per share for the fund or index; total distribution adjusted for share count, FX rate, and index divisor",VECTOR,87%,0,0
+pv64_dif_stal_m21_hs_dvd,"Total gross (pre-tax, pre-withholding) dividends paid per share by the fund in the past 12 months",VECTOR,87%,1,1
+pv64_dif_stal_max_redemp_fee,Maximum early redemption fee charged to investors for selling or redeeming fund shares before a specified holding period ends,VECTOR,87%,0,0
+pv64_dif_stal_min_subsequent_invest,Minimum additional money required to be invested in the fund after the initial investment,VECTOR,87%,1,1
+pv64_dif_stal_nfields,Total number of fields present in the data record for the fund on the specified date,VECTOR,87%,0,0
+pv64_dif_stal_px_trade_lot_size,"The minimum number of shares that can be purchased, as regulated by an exchange.",VECTOR,87%,0,0
+pv64_dif_stal_rcode,"Status code indicating validity of the record (0 = valid, -1 = removed due to expiration/delisting/maturity)",VECTOR,87%,0,0
+pv64_dif_stal_td_xe_dvd,The date when shares of the fund begin trading without the right to receive the next declared dividend (ex-dividend date),VECTOR,87%,0,0
+pv64_dif_td_xe_dvd,The date on which the fund trades without entitlement to the current dividend (ex-dividend date),VECTOR,90%,4,9
+pv64_eqy_beta,"Estimated (adjusted) beta of the security, representing its sensitivity to market movements based on historical data",VECTOR,92%,1,1
+pv64_fund_class_assets,Net assets (in millions) invested in a specific share class of the fund,VECTOR,92%,1,1
+pv64_fund_class_assets_dt,Date when the class net assets are effective,VECTOR,92%,0,0
+pv64_fund_total_assets,"Total net assets of the fund, including cash and securities (likely in millions)",VECTOR,92%,3,5
+pv64_fund_total_assets_dt,The date on which the fund's total net assets were last calculated,VECTOR,92%,1,1
+pv64_fund_yield,Provides the yield for the money market fund.,VECTOR,90%,1,1
+pv64_high_52week,Highest price traded in the last 52 weeks,VECTOR,92%,1,1
+pv64_high_dt_52week,Date on which the 52 week high price occurred,VECTOR,92%,0,0
+pv64_hist_trr_prev_1month,Previous 1 month historical return total return is total return between last business day of previous 1 calendar month and last business day of the calendar month before.,VECTOR,98%,4,5
+pv64_hist_trr_prev_1qtr,"Total return for a single calendar quarter, 1 quarter ago.",VECTOR,98%,11,76
+pv64_hist_trr_prev_1yr,"Total return for the previous calendar year, 1 year ago.",VECTOR,98%,0,0
+pv64_hist_trr_prev_2qtr,"Total return for a single calendar quarter, 2 quarters ago.",VECTOR,98%,4,4
+pv64_hist_trr_prev_2yr,"Total return for the calendar year, 2 years ago.",VECTOR,98%,4,15
+pv64_hist_trr_prev_3qtr,"Total return for a single calendar quarter, 3 quarters ago.",VECTOR,98%,3,5
+pv64_hist_trr_prev_3yr,"Total return for the calendar year, 3 years ago.",VECTOR,98%,5,9
+pv64_hist_trr_prev_4qtr,"Total return is for a single calendar quarter, 4 quarters ago.",VECTOR,98%,1,1
+pv64_hist_trr_prev_4yr,"Total return for the calendar year, 4 years ago.",VECTOR,98%,3,7
+pv64_hist_trr_prev_5yr,"Total return for the calendar year, 5 years ago.",VECTOR,98%,0,0
+pv64_id_bb_company,Number that is assigned to all companies that issue securities.,VECTOR,98%,8,13
+pv64_id_bb_security,Serial number that is assigned to a specific security type.,VECTOR,98%,1,1
+pv64_jp_last_close_trr_ytd,Japan Fiscal Year-to-date Total Return for Last Close.,VECTOR,98%,3,8
+pv64_last_close_trr_1d,1-day total return as of date of last close price.,VECTOR,98%,1,1
+pv64_last_close_trr_1mo,1 month total return as of date of last close price.,VECTOR,98%,1,2
+pv64_last_close_trr_1wk,1-week total return as of date of last close price.,VECTOR,98%,1,1
+pv64_last_close_trr_1yr,1-year total return as of date of last close price.,VECTOR,98%,3,6
+pv64_last_close_trr_3mo,3-month total return as of the date of the last close price.,VECTOR,98%,5,14
+pv64_last_close_trr_3yr,3-year total return as of the date of the last close price.,VECTOR,98%,1,1
+pv64_last_close_trr_5yr,5-year total return as of date of last close price.,VECTOR,98%,8,13
+pv64_last_close_trr_6mo,6-month total return as of date of last close price.,VECTOR,98%,0,0
+pv64_last_close_trr_dt,Date of last close price for current return.,VECTOR,98%,8,26
+pv64_last_close_trr_mtd,Month-to-date total return as of date of last close price.,VECTOR,98%,2,2
+pv64_last_close_trr_qtd,Quarter-to-date total return as of the date of the last close price.,VECTOR,98%,3,7
+pv64_last_close_trr_ytd,Year-to-date total return as of date of last close price.,VECTOR,98%,3,5
+pv64_low_52week,Lowest traded price of the fund in the last 52 weeks,VECTOR,92%,1,2
+pv64_low_dt_52week,Date on which the 52 week low price occurred,VECTOR,92%,8,9
+pv64_out_stal_dvd_declared_dt,The date on which a company announces a dividend distribution for the security or fund,VECTOR,92%,1,1
+pv64_out_stal_dvd_pay_dt,The date when the company or fund begins distributing the earlier-declared dividend to shareholders/unitholders,VECTOR,92%,0,0
+pv64_out_stal_dvd_record_dt,Date on which holders of the security or fund are determined to be entitled to the dividend payment (record date),VECTOR,92%,1,1
+pv64_out_stal_dvd_sh_last,"Net amount per share/unit of the most recently announced or paid dividend for the security/fund, in dividend currency",VECTOR,92%,0,0
+pv64_out_stal_eqy_dvd_sh_12m_net,Net dividend amount per share/unit paid over the past 12 months for the security or fund,VECTOR,92%,0,0
+pv64_out_stal_eqy_sh_out,"Total current number of shares outstanding for the fund, typically quoted in millions and may include treasury shares",VECTOR,90%,0,0
+pv64_out_stal_eqy_sh_out_dt,Latest confirmed date of the Current Shares Outstanding.,VECTOR,91%,2,3
+pv64_out_stal_eqy_split_dt,The effective date on which a company's shares begin trading on a split-adjusted basis.,VECTOR,92%,0,0
+pv64_out_stal_fd_initial_val,"Initial value per share at first trading day, excluding front-end load; for Japanese funds, this is total initial net assets in millions",VECTOR,92%,1,1
+pv64_out_stal_front_load,Current fee charged for purchasing shares of the fund; displays the maximum front-end fee if the fee schedule is digressive,VECTOR,92%,0,0
+pv64_out_stal_fund_12b_fee,12b-1 Fee paid by the fund for marketing expenses; known as 12b1 Fee in US or marketing fee in other regions,VECTOR,92%,0,0
+pv64_out_stal_fund_asset_alloc_cash_other,"Percentage of fund assets allocated to cash and other categories not covered by government, municipal, corporate, equity, mortgage or preferred securities",VECTOR,92%,2,3
+pv64_out_stal_fund_asset_alloc_corp,"Percentage of fund assets allocated to corporate securities, as disclosed by fund filings",VECTOR,92%,1,2
+pv64_out_stal_fund_asset_alloc_equity,Percentage of fund assets allocated to equity securities (stocks),VECTOR,92%,1,1
+pv64_out_stal_fund_asset_alloc_govt,Percentage of fund assets allocated to government securities,VECTOR,92%,2,2
+pv64_out_stal_fund_asset_alloc_mtge,"Calculated percentage of the fund’s portfolio invested in mortgage securities, based on public filings by fund management",VECTOR,92%,0,0
+pv64_out_stal_fund_asset_alloc_muni,"Calculated percentage of fund's assets invested in municipal securities, based on holdings from public filings",VECTOR,92%,1,1
+pv64_out_stal_fund_asset_alloc_pfd,"Calculated percentage of the fund’s portfolio invested in preferred securities, based on public filings by fund management",VECTOR,92%,0,0
+pv64_out_stal_fund_creation_unit_size,The unit size aggregation in which an authorized participant can create or redeem ETF shares.,VECTOR,92%,0,0
+pv64_out_stal_fund_deferred_load,"Maximum back-end load (deferred fee) for US/Canadian funds, a flat fee charged upon sale of shares regardless of holding period or amount",VECTOR,92%,0,0
+pv64_out_stal_fund_early_withdraw_fee,"Fee paid for withdrawing from the fund before a specified holding period, deducted from NAV (known as “Shintaku Zaisan Ryuho Gaku” in Japan)",VECTOR,92%,0,0
+pv64_out_stal_fund_expense_ratio,Fund’s expense ratio; the annual percentage of average net assets paid for fund operating expenses after waivers,VECTOR,92%,0,0
+pv64_out_stal_fund_incept_dt,"Date the fund began operations, usually after the initial subscription period",VECTOR,92%,0,0
+pv64_out_stal_fund_income_ratio,"Ratio representing the amount of income generated from fund investments; for US funds, given as a percentage of average net assets when available",VECTOR,92%,2,3
+pv64_out_stal_fund_ira_invest,Minimum investment requirement for IRA (Individual Retirement Account) or RSA accounts related to the fund; relevant to US and Canadian funds,VECTOR,92%,0,0
+pv64_out_stal_fund_mgr_stated_fee,"The current base annual management fee stated by the fund manager, typically sourced from the prospectus or similar disclosure documents",VECTOR,92%,1,1
+pv64_out_stal_fund_min_invest,The minimum amount of money required to open an account or make an initial investment in the fund,VECTOR,92%,0,0
+pv64_out_stal_fund_port_dt,"Date corresponding to when the fund's portfolio holdings are reported, typically used for mutual funds",VECTOR,92%,1,1
+pv64_out_stal_fund_redemp_dt,"The predetermined date that the fund is set to close/liquidate. (Target date, wind-up date, Termination date)",VECTOR,90%,0,0
+pv64_out_stal_fund_turnover,The percentage of the fund's portfolio that has been changed or replaced over one fiscal year,VECTOR,92%,0,0
+pv64_out_stal_id_bb_parent_co,The Bloomberg ID of the parent company that controls or owns the fund,VECTOR,92%,1,1
+pv64_out_stal_industry_group_num,Industry group number,VECTOR,33%,0,0
+pv64_out_stal_industry_sector_num,Industry sector number,VECTOR,33%,1,1
+pv64_out_stal_industry_subgroup_num,Industry subgroup number,VECTOR,33%,0,0
+pv64_out_stal_last_dps_gross,"Most recently announced gross dividend per share for the fund or index, aggregated and adjusted based on share count, FX rate, and index divisor",VECTOR,92%,0,0
+pv64_out_stal_m21_hs_dvd,Gross dividends per share paid by the fund over the last 12 months,VECTOR,92%,1,1
+pv64_out_stal_max_redemp_fee,"Maximum redemption fee applied for early withdrawal/sale of the fund, expressed as a percentage or monetary value",VECTOR,92%,0,0
+pv64_out_stal_min_subsequent_invest,Minimum amount required for subsequent (additional) investments in the fund after the initial investment,VECTOR,92%,1,1
+pv64_out_stal_nfields,Number of fields present in the current data record,VECTOR,92%,0,0
+pv64_out_stal_px_trade_lot_size,"The minimum number of shares that can be purchased, as regulated by an exchange.",VECTOR,92%,0,0
+pv64_out_stal_rcode,"A return of 0 indicates a valid security. A return of -1 indicates a removal record due to maturity, expiration, delisting, etc.",VECTOR,92%,0,0
+pv64_out_stal_td_xe_dvd,First date the security or fund trades without entitlement to the current dividend (ex-dividend date),VECTOR,92%,1,2
+pv64_px_quote_lot_size,"Quotation lot size, representing the standard trading unit size on the exchange for the fund",VECTOR,92%,0,0
+pv64_px_stal_cur_mkt_cap,"Current monetary value of all outstanding shares stated in the pricing currency, in millions.",VECTOR,92%,0,0
+pv64_px_stal_eqy_sh_out,"Total current number of shares outstanding for the fund, quoted in millions",VECTOR,92%,1,1
+pv64_px_stal_eqy_sh_out_dt,Latest confirmed date of the Current Shares Outstanding.,VECTOR,90%,0,0
+pv64_px_stal_fund_nav_dt,Date on which the displayed net asset value (NAV) was measured/calculated,VECTOR,92%,0,0
+pv64_px_stal_fund_net_asset_val,"Fund's net asset value per share as calculated for the relevant date, i.e. portfolio value minus liabilities, divided by shares",VECTOR,92%,1,1
+pv64_px_stal_fund_pct_premium,This is the difference between the fund's closing price on the day of the most recent Net Asset Value (NAV) and the NAV of the fund on that day. The value is displayed on a percentage basis.,VECTOR,92%,2,2
+pv64_px_stal_nfields,Number of fields in the given data record,VECTOR,92%,0,0
+pv64_px_stal_px_ask,The current ask price for the fund as of the reporting date; the lowest price at which sellers are willing to sell,VECTOR,92%,1,1
+pv64_px_stal_px_eval,"Evaluation price for the fund as of the reporting date; typically based on last trade, bid, or ask",VECTOR,92%,2,2
+pv64_px_stal_px_high,"Highest price the security reached during the current trading day. If the market is closed, then it is the highest price the security reached on the last day the market was open.",VECTOR,92%,0,0
+pv64_px_stal_px_last,"Last traded price of the fund as-of the reference date, typical daily close",VECTOR,92%,0,0
+pv64_px_stal_px_low,Lowest price the security reached during the current trading day.,VECTOR,92%,1,1
+pv64_px_stal_px_open,Price at which the security first traded on the current day,VECTOR,92%,0,0
+pv64_px_stal_px_trade_lot_size,"The minimum number of shares that can be purchased, as regulated by an exchange.",VECTOR,92%,1,1
+pv64_px_stal_px_volume,Total trading volume for the fund on the given day,VECTOR,92%,0,0
+pv64_px_stal_quote_typ,"Indicates how the price quote for the fund is expressed (e.g., as a price, discount, or yield), using codes: '1' = Price Quoted, '2' = Discount Quoted, '3' = Yield Quoted",VECTOR,86%,4,5
+pv64_px_stal_rcode,"Return code showing processing status; 0 = valid security, -1 = removal due to maturity/expiration/delisting",VECTOR,92%,0,0
+pv64_rpx_stal_eqy_sh_out,"The current number of shares outstanding for the equity security, usually in millions, and may include treasury shares",VECTOR,92%,0,0
+pv64_rpx_stal_eqy_sh_out_dt,Latest confirmed date of the Current Shares Outstanding.,VECTOR,92%,0,0
+pv64_rpx_stal_fund_nav_dt,Date for which the reported Net Asset Value (NAV) is effective,VECTOR,92%,0,0
+pv64_rpx_stal_fund_net_asset_val,"Net Asset Value (NAV) per share/unit, reflecting assets minus liabilities",VECTOR,92%,0,0
+pv64_rpx_stal_fund_pct_premium,This is the difference between the fund's closing price on the day of the most recent Net Asset Value (NAV) and the NAV of the fund on that day. The value is displayed on a percentage basis.,VECTOR,92%,0,0
+pv64_rpx_stal_nfields,Count of the number of fields present in the data record,VECTOR,92%,3,12
+pv64_rpx_stal_px_ask,"The current ask price for the security—i.e., the lowest price a seller is willing to accept",VECTOR,92%,0,0
+pv64_rpx_stal_px_eval,"Evaluation price of the fund/security, determined by market activity (e.g., last trade, bid, or ask)",VECTOR,92%,0,0
+pv64_rpx_stal_px_high,"Highest price the security reached during the current trading day. If the market is closed, then it is the highest price the security reached on the last day the market was open.",VECTOR,92%,0,0
+pv64_rpx_stal_px_last,The last price at which the security traded,VECTOR,92%,1,1
+pv64_rpx_stal_px_low,Lowest price the security reached during the current trading day.,VECTOR,92%,0,0
+pv64_rpx_stal_px_open,Price at which the security first traded on the current day.,VECTOR,92%,1,1
+pv64_rpx_stal_px_trade_lot_size,"The minimum number of shares that can be purchased, as regulated by an exchange.",VECTOR,92%,0,0
+pv64_rpx_stal_px_volume,Total number of shares or units of the security traded on the current or most recent trading day,VECTOR,92%,0,0
+pv64_rpx_stal_quote_typ,"Specifies how the security is quoted: price, discount, or yield, using predefined code values",VECTOR,88%,1,2
+pv64_rpx_stal_rcode,"Response code indicating validity (0 = valid; -1 = removal record due to maturity, expiration, or delisting, etc.)",VECTOR,92%,1,1
+pv64_stal_hist_trr_prev_1month,"Total return for the previous calendar month (from last day of previous month to last day of month before), with dividends reinvested",VECTOR,92%,0,0
+pv64_stal_hist_trr_prev_1qtr,"Total return for the fund for the previous calendar quarter, including reinvested dividends",VECTOR,92%,0,0
+pv64_stal_hist_trr_prev_1yr,"Total return for the fund for the previous calendar year, including reinvested dividends",VECTOR,92%,0,0
+pv64_stal_hist_trr_prev_2qtr,"Total return for the calendar quarter two quarters ago, with dividends reinvested",VECTOR,92%,7,8
+pv64_stal_hist_trr_prev_2yr,"Total return for the calendar year two years ago, with dividends reinvested",VECTOR,92%,0,0
+pv64_stal_hist_trr_prev_3qtr,"Total return for the fund during the calendar quarter three quarters ago, including reinvested dividends",VECTOR,92%,0,0
+pv64_stal_hist_trr_prev_3yr,"Total return for the fund in the calendar year three years ago, including reinvested dividends",VECTOR,92%,1,1
+pv64_stal_hist_trr_prev_4qtr,"Total return for the calendar quarter four quarters ago, with dividends reinvested",VECTOR,92%,0,0
+pv64_stal_hist_trr_prev_4yr,"Total return for the calendar year four years ago, including reinvested dividends",VECTOR,92%,0,0
+pv64_stal_hist_trr_prev_5yr,"Total return for the fund in the calendar year five years ago, including reinvested dividends",VECTOR,92%,0,0
+pv64_stal_id_bb_company,The unique 8-character Bloomberg company identifier assigned to the fund’s issuer or management company,VECTOR,92%,0,0
+pv64_stal_id_bb_security,Bloomberg Security Identifier; Bloomberg serial number for the security (usually used to join to other Bloomberg datasets),VECTOR,92%,1,1
+pv64_stal_jp_last_close_trr_ytd,"Fiscal year-to-date total return (total return since the start of Japan’s fiscal year, April 1) for the fund as of the last close, including dividends",VECTOR,92%,1,1
+pv64_stal_last_close_trr_1d,"1 Day Total Return as of the last close price, with dividends reinvested",VECTOR,92%,3,4
+pv64_stal_last_close_trr_1mo,"1 Month Total Return as of the last close price, with dividends reinvested; based on end-of-month convention if date is month end",VECTOR,92%,2,5
+pv64_stal_last_close_trr_1wk,"1 Week Total Return as of the last close price, with dividends reinvested",VECTOR,92%,1,1
+pv64_stal_last_close_trr_1yr,"The fund's 1-year total return as of the last close date, with applicable end-of-month conventions and dividends reinvested",VECTOR,92%,0,0
+pv64_stal_last_close_trr_3mo,"The fund's 3-month total return as of the last close date, applying end-of-month conventions and reinvested dividends",VECTOR,92%,1,1
+pv64_stal_last_close_trr_3yr,Not found in the BBO Field Dictionary,VECTOR,92%,0,0
+pv64_stal_last_close_trr_5yr,Not found in the BBO Field Dictionary,VECTOR,92%,0,0
+pv64_stal_last_close_trr_6mo,"The fund's 6-month total return as of the last close date, applying end-of-month conventions and reinvested dividends",VECTOR,92%,0,0
+pv64_stal_last_close_trr_dt,The date corresponding to the most recent close for which the total return was calculated,VECTOR,92%,1,1
+pv64_stal_last_close_trr_mtd,"Month-to-date total return for the fund as of the last close, including reinvested dividends, based on the current month and up to the latest available close date",VECTOR,92%,0,0
+pv64_stal_last_close_trr_qtd,"Quarter-to-date total return for the fund as of the last close, including reinvested dividends, calculated from the start of the current quarter",VECTOR,92%,0,0
+pv64_stal_last_close_trr_ytd,"Year to Date Total Return as of the last close price, with dividends reinvested",VECTOR,92%,1,1
+pv64_trr_cur_mkt_cap,"Current monetary value of all outstanding shares stated in the pricing currency, in millions. Capitalization is a measure of corporate size.",VECTOR,98%,0,0
+pv64_trr_fund_incept_dt,Inception Date. The start date of the fund.,VECTOR,98%,1,1
+pv64_trr_fund_nav_dt,The date that corresponds to the displayed NAV (Net Asset Value).,VECTOR,98%,6,7
+pv64_trr_fund_net_asset_val,"Net Asset Value (NAV). Determined by subtracting the liabilities from the portfolio value of the fund's securities, and dividing that figure by the number of outstanding shares.",VECTOR,98%,4,25
+pv64_trr_nfields,Number of fields,VECTOR,98%,4,11
+pv64_trr_px_last,Last price for the security.,VECTOR,98%,2,2
+pv64_trr_px_volume,Total number of shares traded on a security on the current day.,VECTOR,98%,0,0
+pv64_trr_rcode,"A return of 0 indicates a valid security. A return of -1 indicates a removal record due to maturity, expiration, delisting, etc.",VECTOR,98%,0,0
+pv64_trr_stal_cur_mkt_cap,"Current monetary value of all outstanding shares stated in the pricing currency, in millions. Capitalization is a measure of corporate size.",VECTOR,92%,1,1
+pv64_trr_stal_fund_incept_dt,Date the fund began operations (inception date),VECTOR,92%,0,0
+pv64_trr_stal_fund_nav_dt,The date corresponding to the displayed Net Asset Value (NAV) for the fund,VECTOR,92%,0,0
+pv64_trr_stal_fund_net_asset_val,"Net Asset Value (NAV); value per share calculated as total fund assets minus liabilities, divided by total shares outstanding",VECTOR,92%,0,0
+pv64_trr_stal_nfields,Number of fields included in the data record,VECTOR,92%,0,0
+pv64_trr_stal_px_last,The most recent price at which the fund traded on its primary exchange (last price),VECTOR,92%,0,0
+pv64_trr_stal_px_volume,Total number of shares or units traded for the fund on the current or most recent trading day,VECTOR,92%,1,4
+pv64_trr_stal_rcode,"Return code indicating processing status for the record: 0 = valid security; -1 = removal (maturity, expiration, delisting, etc.)",VECTOR,92%,3,12

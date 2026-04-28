@@ -1,0 +1,101 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl27_accuracy_analyst_analyst,"Masked or anonymized identifier for a specific analyst, unique and non-revealing",VECTOR,88%,55,186
+anl27_accuracy_estimator_analyst,Number of analysts who belong to this estimator (broker/institution) and have made forecasts on this stock,VECTOR,88%,19,23
+anl27_analyst_accuracy1,"Ratio of correct_forecast_times1 to total_forecast_times1, measuring ""ever-hit"" forecast accuracy of the analyst",VECTOR,85%,25,58
+anl27_analyst_accuracy2,"Ratio of correct_forecast_times2 to total_forecast_times2, measuring ""horizon-hit"" forecast accuracy of the analyst",VECTOR,77%,12,20
+anl27_analyst_consistency,"Negative standard deviation of (forecast value - actual value); less negative value means more consistent forecasts (for price targets, actual is horizon close price)",VECTOR,82%,15,16
+anl27_analyst_correct_forecast_times1,"Number of forecasts in total_forecast_times1 where the price target was ever hit between day after forecast and today (""ever-hit"" rule)",VECTOR,85%,8,11
+anl27_analyst_correct_forecast_times2,"Number of forecasts in total_forecast_times2 where price target was hit exactly on the horizon date (""horizon-hit"" rule)",VECTOR,77%,12,19
+anl27_analyst_correct_revision_ratio,Proportion of correct revisions out of total revisions (correct_revision_times divided by total_revision_times),VECTOR,82%,19,21
+anl27_analyst_correct_revision_times,Number of forecast revisions by the analyst that moved closer to the eventually realized/actual value,VECTOR,82%,13,15
+anl27_analyst_relative_accuracy1,Rank of the analyst’s accuracy1 among all analysts covering the same stock,VECTOR,88%,18,55
+anl27_analyst_relative_accuracy2,Normalized accuracy1 score for the analyst: (accuracy1 - min)/(max - min) among analysts covering the same stock,VECTOR,77%,6,8
+anl27_analyst_relative_accuracy3,Rank of the analyst’s accuracy2 among all analysts covering the same stock,VECTOR,88%,9,10
+anl27_analyst_relative_accuracy4,Normalized accuracy2 score for the analyst: (accuracy2 - min)/(max - min) among analysts covering the same stock,VECTOR,74%,6,6
+anl27_analyst_relative_consistency1,Rank of the analyst's consistency among analysts covering the same stock (lower rank indicates higher consistency),VECTOR,82%,11,14
+anl27_analyst_relative_consistency2,"Normalized consistency score for the analyst: (consistency - min(consistency)) / (max(consistency) - min(consistency)), range [0,1] among peer analysts on the same stock",VECTOR,74%,3,8
+anl27_analyst_relative_ratio1,Rank (ordinal position) of the analyst's correct_revision_ratio relative to other analysts covering the same equity on that date,VECTOR,86%,12,19
+anl27_analyst_relative_ratio2,"Normalized score of the analyst's correct_revision_ratio in the context of the peer set, on a 0–1 scale based on the minimum and maximum among peers",VECTOR,76%,15,23
+anl27_analyst_total_forecast_times1,"Total number of forecasts made by the analyst in the lookback window, counted for the ""ever-hit"" (rule 1) accuracy calculation",VECTOR,88%,15,19
+anl27_analyst_total_forecast_times2,"Total number of forecasts made by the analyst in the lookback window, considered for the ""horizon-hit"" (rule 2) accuracy calculation",VECTOR,88%,7,9
+anl27_analyst_total_revision_times,Total number of forecast revisions (updates) made by the analyst over the period considered,VECTOR,86%,11,13
+anl27_consistency_analyst_analyst,"An anonymized, masked identifier code for the individual analyst",VECTOR,89%,15,20
+anl27_consistency_analyst_total_forecast_times,"Total number of forecasts the analyst made in the lookback period: [Today-504, min{Today-126, Today-horizon_days}]",VECTOR,89%,12,16
+anl27_consistency_estimator_analyst,Number of distinct analysts within the estimator who have made forecasts for this stock,VECTOR,89%,13,25
+anl27_consistency_estimator_total_forecast_times,"Total number of forecasts made by the estimator for the stock over the lookback window ([Today-504, min{Today-126, Today-horizon_days}])",VECTOR,89%,11,18
+anl27_correv_analyst_analyst,Anonymized/masked unique code identifying the individual analyst,VECTOR,88%,15,38
+anl27_correv_estimator_analyst,Number of analysts within the estimator who have made forecasts for the given stock,VECTOR,88%,6,10
+anl27_estimator_accuracy1,"Ratio of correct_forecast_times1 to total_forecast_times1, measuring realized “ever-hit” accuracy of the estimator’s analysts for the stock",VECTOR,85%,6,6
+anl27_estimator_accuracy2,"Ratio of correct_forecast_times2 to total_forecast_times2, measuring realized strict “horizon-hit” accuracy of the estimator’s analysts for the stock",VECTOR,78%,4,6
+anl27_estimator_consistency,"Negative realized standard deviation of (forecast value - actual value) for the estimator's forecasts, with actual value as the close price at the horizon date; less negative indicates greater consistency",VECTOR,83%,10,11
+anl27_estimator_correct_forecast_times1,Number of those forecasts where the equity price at any point since the next day of forecast until today hit the price target (rule 1#),VECTOR,85%,15,21
+anl27_estimator_correct_forecast_times2,Number of those forecasts where the equity price hit the price target on exactly the horizon date (rule 2#),VECTOR,78%,6,9
+anl27_estimator_correct_revision_ratio,"Fraction of revisions that were correct, calculated as correct_revision_times divided by total_revision_times",VECTOR,82%,8,13
+anl27_estimator_correct_revision_times,"Number of forecast revisions judged to be correct (i.e., moved closer to the realized value)",VECTOR,82%,11,18
+anl27_estimator_relative_accuracy1,Rank of estimator’s accuracy1 compared to other estimators covering the same stock,VECTOR,88%,6,18
+anl27_estimator_relative_accuracy2,Min-max normalized score of estimator’s accuracy1 relative to other estimators for the same stock,VECTOR,76%,5,8
+anl27_estimator_relative_accuracy3,Rank of estimator’s accuracy2 compared to other estimators covering the same stock,VECTOR,88%,9,14
+anl27_estimator_relative_accuracy4,Min-max normalized score of estimator’s accuracy2 relative to other estimators for the same stock,VECTOR,75%,7,9
+anl27_estimator_relative_consistency1,rank(consistency) over analysts covering the same stock,VECTOR,83%,7,7
+anl27_estimator_relative_consistency2,Normalized consistency score for the estimator: (consistency - min) / (max - min) across estimators covering the same stock,VECTOR,75%,12,19
+anl27_estimator_relative_ratio1,Peer-relative rank of the estimator's correct_revision_ratio compared to other estimators covering the same equity,VECTOR,86%,11,12
+anl27_estimator_relative_ratio2,Peer-relative normalized score for the estimator's correct_revision_ratio scaled between 0 and 1 based on cross-sectional minimum and maximum values for the equity,VECTOR,76%,11,13
+anl27_estimator_total_forecast_times1,Total number of forecasts made by analysts of this estimator for this stock over a specific historical period (permissive/ever-hit rule 1#),VECTOR,88%,13,24
+anl27_estimator_total_forecast_times2,Total number of forecasts made by analysts of this estimator for the stock over a specific historical period (strict horizon-hit rule 2#),VECTOR,88%,14,21
+anl27_estimator_total_revision_times,Total number of forecast revisions or updates made by the estimator for the given stock,VECTOR,86%,9,11
+anl27_profitabilityprev_analyst_analyst,Masked (anonymized) code uniquely identifying the analyst within the dataset,VECTOR,91%,18,96
+anl27_profitabilityprev_analyst_profitability1,"Average daily return achieved by following the analyst’s forecast during the last period, measured relative to the analyst’s previous forecast price",VECTOR,89%,36,70
+anl27_profitabilityprev_analyst_profitability1_120d,"Average daily return by following the analyst's forecasts over the past 120 days, measured using comparison to previous forecast price",VECTOR,89%,28,36
+anl27_profitabilityprev_analyst_profitability1_20d,"Average daily return by following the analyst's forecasts over the past 20 days, measured using comparison to previous forecast price",VECTOR,89%,17,29
+anl27_profitabilityprev_analyst_profitability1_60d,"Average daily return by following the analyst's forecasts over the past 60 days, measured using comparison to previous forecast price",VECTOR,89%,13,17
+anl27_profitabilityprev_analyst_profitability2,"Average daily return achieved by following the analyst’s forecast during the last period, measured relative to the stock’s closing price at the time of the forecast",VECTOR,91%,13,20
+anl27_profitabilityprev_analyst_profitability2_120d,"Average daily return over the past 120 days from following the analyst's forecast, measured against the closing price at the end of the period",VECTOR,91%,13,15
+anl27_profitabilityprev_analyst_profitability2_20d,"Average daily return by following the analyst's forecasts over the past 20 days, measured using comparison to current close price",VECTOR,91%,8,12
+anl27_profitabilityprev_analyst_profitability2_60d,"Average daily return over the past 60 days from following the analyst's forecast, where performance is measured relative to the closing price at the end of the period",VECTOR,91%,9,10
+anl27_profitabilityprev_analyst_relative_profitability1,Rank of profitability1 among all analysts covering the same stock (lower rank means greater profitability),VECTOR,89%,16,23
+anl27_profitabilityprev_analyst_relative_profitability2,"Normalized score (0 to 1) of profitability1 for the analyst relative to other analysts covering the same stock, using min-max scaling",VECTOR,83%,11,13
+anl27_profitabilityprev_analyst_relative_profitability3,Rank of profitability2 among all analysts covering the same stock (lower rank means greater profitability),VECTOR,91%,13,24
+anl27_profitabilityprev_analyst_relative_profitability4,"Normalized score (0 to 1) of profitability2 for the analyst relative to other analysts covering the same stock, using min-max scaling",VECTOR,88%,9,9
+anl27_profitabilityprev_analyst_total_forecast_times,"Total number of forecasts made by the analyst over the specified historical period ([Today-504, min{Today-126, Today-horizon_days}])",VECTOR,91%,16,28
+anl27_profitabilityprev_estimator_analyst,Number of analysts belonging to this estimator who have made forecasts on this stock,VECTOR,91%,10,12
+anl27_profitabilityprev_estimator_profitability1,"Average daily return from following the estimator's forecasts in the recent period, measured versus their previous forecast",VECTOR,89%,36,67
+anl27_profitabilityprev_estimator_profitability1_120d,"Average daily return by following the estimator's forecast over the past 120 days, compared to their previous forecast",VECTOR,89%,14,39
+anl27_profitabilityprev_estimator_profitability1_20d,"Average daily return by following the estimator's forecast over the past 20 days, compared to their previous forecast",VECTOR,89%,10,13
+anl27_profitabilityprev_estimator_profitability1_60d,"Average daily return by following the estimator's forecast over the past 60 days, compared to their previous forecast",VECTOR,89%,15,20
+anl27_profitabilityprev_estimator_profitability2,"Average daily return from following the estimator's forecasts in the last period, measured versus the current close price",VECTOR,91%,15,22
+anl27_profitabilityprev_estimator_profitability2_120d,"Average daily return generated by following the estimator's forecast over the past 120 days, using the closing price to evaluate returns as the benchmark",VECTOR,91%,4,4
+anl27_profitabilityprev_estimator_profitability2_20d,"Average daily return by following the estimator's forecast over the past 20 days, compared to the current close price",VECTOR,91%,7,10
+anl27_profitabilityprev_estimator_profitability2_60d,"Average daily return generated by following the estimator's forecast over the past 60 days, calculated using the difference between forecast and the actual closing price as the benchmark",VECTOR,91%,8,38
+anl27_profitabilityprev_estimator_relative_profitability1,Rank of profitability1 among all estimators covering the same stock (higher rank = higher profitability),VECTOR,89%,19,40
+anl27_profitabilityprev_estimator_relative_profitability2,"Normalized score of profitability1 among estimators for the same stock, scaled between 0 and 1",VECTOR,83%,11,16
+anl27_profitabilityprev_estimator_relative_profitability3,Rank of profitability2 among all estimators covering the same stock (higher rank = higher profitability),VECTOR,91%,22,33
+anl27_profitabilityprev_estimator_relative_profitability4,"Normalized score of profitability2 among estimators for the same stock, scaled between 0 and 1",VECTOR,87%,11,12
+anl27_profitabilityprev_estimator_total_forecast_times,Total number of forecasts made by analysts under this estimator for the stock over the specified lookback period,VECTOR,91%,24,34
+anl27_recprofitabilityprev_analyst_analyst,Anonymized coded identifier (maskcode) of the individual analyst,VECTOR,90%,17,57
+anl27_recprofitabilityprev_analyst_profitability1,"Average daily return by following the estimator's recommendation in the last period, using comparison to their previous recommendation",VECTOR,71%,4,5
+anl27_recprofitabilityprev_analyst_profitability1_120d,"Average daily return by following the analyst's recommendation over the past 120 days, using comparison to their previous recommendation",VECTOR,71%,7,7
+anl27_recprofitabilityprev_analyst_profitability1_20d,"Average daily return by following the analyst's recommendation over the past 20 days, using comparison to their previous recommendation",VECTOR,71%,1,1
+anl27_recprofitabilityprev_analyst_profitability1_60d,"Average daily return by following the analyst's recommendation over the past 60 days, using comparison to their previous recommendation",VECTOR,71%,9,15
+anl27_recprofitabilityprev_analyst_profitability2,"Average daily return by following the analyst's recommendation in the last period, using comparison to the current close price",VECTOR,88%,25,42
+anl27_recprofitabilityprev_analyst_profitability2_120d,"Average daily return by following the analyst's recommendation over the past 120 days, comparing it to the current close price",VECTOR,88%,15,24
+anl27_recprofitabilityprev_analyst_profitability2_20d,"Average daily return by following the analyst's recommendation over the past 20 days, using comparison to the current close price",VECTOR,88%,8,9
+anl27_recprofitabilityprev_analyst_profitability2_60d,"Average daily return by following the analyst's recommendation over the past 60 days, using comparison to the current close price",VECTOR,88%,10,13
+anl27_recprofitabilityprev_analyst_relative_profitability1,Rank of the analyst’s profitability1 (average daily return compared to previous recommendation) among all analysts covering the same stock,VECTOR,71%,11,18
+anl27_recprofitabilityprev_analyst_relative_profitability2,"Peer-relative normalized score for profitability1 (mean realized daily PnL vs. previous forecast price on recommendation-driven events), scaled between 0 and 1 across all analysts covering the same equity on the same date",VECTOR,52%,6,8
+anl27_recprofitabilityprev_analyst_relative_profitability3,Rank of the analyst’s profitability2 (average daily return compared to current close price) among all analysts covering the same stock,VECTOR,88%,16,20
+anl27_recprofitabilityprev_analyst_relative_profitability4,"Peer-relative normalized score for profitability2 (mean realized daily PnL vs. closing price on recommendation-driven events), scaled between 0 and 1 across all analysts covering the same equity on the same date",VECTOR,80%,10,22
+anl27_recprofitabilityprev_analyst_total_forecast_times,Total recommendation events made by the analyst within a defined historical window,VECTOR,90%,9,10
+anl27_recprofitabilityprev_estimator_analyst,Number of analysts within the estimator who have made at least one recommendation for this stock,VECTOR,90%,12,23
+anl27_recprofitabilityprev_estimator_profitability1,"Average daily return from following the estimator's recommendations in the last period, calculated using the difference between the new and previous recommendations' prices",VECTOR,71%,12,19
+anl27_recprofitabilityprev_estimator_profitability1_120d,"Average daily return from following the estimator's recommendations over the past 120 days, using comparison to the previous recommendation price",VECTOR,71%,16,18
+anl27_recprofitabilityprev_estimator_profitability1_20d,"Average daily return from following the estimator's recommendations over the past 20 days, using comparison to the previous recommendation price",VECTOR,71%,7,11
+anl27_recprofitabilityprev_estimator_profitability1_60d,"Average daily return from following the estimator's recommendations over the past 60 days, using comparison to the previous recommendation price",VECTOR,71%,6,11
+anl27_recprofitabilityprev_estimator_profitability2,"Average daily return from following the estimator's recommendations in the last period, using the difference between the recommendation price and the current closing price",VECTOR,88%,27,44
+anl27_recprofitabilityprev_estimator_profitability2_120d,"Average daily return over the past 120 days achieved by following the estimator's investment recommendations, measured against the closing price at each day",VECTOR,88%,11,12
+anl27_recprofitabilityprev_estimator_profitability2_20d,"Average daily return from following the estimator's recommendations over the past 20 days, using comparison to the current closing price",VECTOR,88%,13,20
+anl27_recprofitabilityprev_estimator_profitability2_60d,"Average daily return over the past 60 days achieved by following the estimator's investment recommendations, measured against the closing price at each day",VECTOR,88%,6,7
+anl27_recprofitabilityprev_estimator_relative_profitability1,"Rank of the estimator's profitability1 among all estimators covering the same stock for the period, where a lower rank likely represents higher profitability",VECTOR,71%,14,15
+anl27_recprofitabilityprev_estimator_relative_profitability2,"Peer-normalized score of profitability1 for the estimator covering the equity, scaled between 0 and 1 within the cross-section",VECTOR,51%,7,8
+anl27_recprofitabilityprev_estimator_relative_profitability3,Rank of the estimator's profitability2 among all estimators covering the same stock for the period,VECTOR,88%,15,18
+anl27_recprofitabilityprev_estimator_relative_profitability4,"Peer-normalized score of profitability2 for the estimator covering the equity, scaled between 0 and 1 within the cross-section",VECTOR,79%,17,31
+anl27_recprofitabilityprev_estimator_total_forecast_times,"Total number of recommendation events made by the estimator over the rolling period defined by [Today-504, min{Today-126, Today-horizon_days}]",VECTOR,90%,14,25

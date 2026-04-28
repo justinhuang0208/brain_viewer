@@ -1,0 +1,8 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth580_mv_cusum,Cumulative sum of the stock's cubed market value within the ETF.,MATRIX,88%,13,15
+oth580_mv_mean,Equal-weight mean across ETFs of the 1-day absolute change (delta) in ETF shares held of the stock,MATRIX,88%,17,42
+oth580_mv_sisum,Total market value of the stock's position within the ETF.,MATRIX,88%,19,19
+oth580_mv_skew,Skewness of the stock's market value distribution within the ETF.,MATRIX,86%,7,8
+oth580_mv_sqsum,Sum of the squared market value of the stock's position within the ETF.,MATRIX,88%,3,3
+oth580_rav_vm,The stock's value-weighted mean risk-adjusted value within the ETF.,MATRIX,86%,9,9
+oth580_tnc_vm,The stock's value-weighted mean turnover within the ETF.,MATRIX,88%,16,21

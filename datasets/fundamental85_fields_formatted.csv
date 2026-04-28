@@ -1,0 +1,354 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd85_groupindustry_aat_stocks,"Number of stocks included in the calculation of Aggregate Asset Turnover (%) for the specified period, industry, and indicator",MATRIX,92%,12,13
+fnd85_groupindustry_abm_stocks,"Number of stocks used to calculate the Aggregate Book to Market Value (%) for the specific time period, industry and indicator",MATRIX,92%,5,8
+fnd85_groupindustry_acr_stocks,"Number of stocks used to calculate Aggregate Current Ratio for a specific time period, industry, and indicator",MATRIX,90%,1,1
+fnd85_groupindustry_acs_stocks,Number of stocks included in calculating the Aggregate CAPEX / Sales Ratio (%) for the specified period and industry,MATRIX,92%,4,6
+fnd85_groupindustry_adc_stocks,"Number of stocks used to calculate the Aggregate Dividend Coverage (%) for the specific time period, industry and indicator",MATRIX,92%,2,2
+fnd85_groupindustry_adcx_stocks,"Number of stocks used to calculate Aggregate Dividend Coverage excluding nonpayers (%) for a specific time period, industry, and indicator",MATRIX,92%,0,0
+fnd85_groupindustry_ade_20pctl,20th percentile value of Aggregate Debt-to-Equity Ratio (%) for stocks in the industry,MATRIX,54%,1,1
+fnd85_groupindustry_ade_50pctl,50th percentile value of Aggregate Debt / Equity Ratio (%) for the stock industry,MATRIX,92%,0,0
+fnd85_groupindustry_ade_80pctl,80th percentile value of Aggregate Debt to Equity Ratio (%) for stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ade_mcwa,Market Capitalization Weighted Average of Aggregate Debt to Equity Ratio (%) for all stocks within the industry,MATRIX,92%,3,6
+fnd85_groupindustry_ade_stocks,Number of stocks included in calculating the Aggregate Debt / Equity Ratio (%) for the specified period and industry,MATRIX,92%,1,1
+fnd85_groupindustry_ady_50pctl,The median (50th percentile) Aggregate Dividend Yield (%) for stocks in the industry for the specified period,MATRIX,38%,1,1
+fnd85_groupindustry_ady_80pctl,80th percentile value of Aggregate Dividend Yield (%) for stocks in the industry,MATRIX,74%,3,3
+fnd85_groupindustry_ady_mcwa,Market Capitalization Weighted Average of Aggregate Dividend Yield (%) for all stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ady_stocks,Number of stocks included in calculating the Aggregate Dividend Yield (%) for the specified period and industry,MATRIX,92%,1,1
+fnd85_groupindustry_adyx_20pctl,"20th percentile value of Aggregate Dividend Yield, excluding non-dividend payers (%) for stocks in the industry",MATRIX,92%,1,1
+fnd85_groupindustry_adyx_50pctl,50th percentile value of Aggregate Dividend Yield excluding Nonpayers (%) for the stock industry,MATRIX,92%,4,4
+fnd85_groupindustry_adyx_80pctl,80th percentile value of Aggregate Dividend Yield excluding Nonpayers (%) for the stock industry,MATRIX,92%,0,0
+fnd85_groupindustry_adyx_mcwa,Market Capitalization Weighted Average of Aggregate Dividend Yield excluding non-dividend payers (%) for all stocks in the industry,MATRIX,92%,3,3
+fnd85_groupindustry_adyx_stocks,"Number of stocks used to calculate the Aggregate Dividend Yield excluding Nonpayers (%) for the specific time period, industry and indicator",MATRIX,92%,0,0
+fnd85_groupindustry_aee_stocks,"Number of stocks used to calculate Aggregate EBITDA / Enterprise Value (%) for a specific time period, industry, and indicator",MATRIX,92%,0,0
+fnd85_groupindustry_aey_stocks,"Number of stocks used to calculate Aggregate Earnings Yield (%) for a specific time period, industry, and indicator",MATRIX,92%,0,0
+fnd85_groupindustry_afs_stocks,"Number of stocks included in the calculation of Aggregate Free Cash Flow to Sales Ratio (%) for the specified period, industry, and indicator",MATRIX,92%,1,1
+fnd85_groupindustry_agm_stocks,"Number of stocks used to calculate the Aggregate Gross Margin (%) for the specific time period, industry and indicator",MATRIX,92%,0,0
+fnd85_groupindustry_aom_stocks,Number of stocks included in calculating the Aggregate Operating Margin (%) for the specified period and industry,MATRIX,92%,0,0
+fnd85_groupindustry_aroc_20pctl,The 20th percentile Aggregate Return on Capital (%) for stocks in the industry for the period,MATRIX,92%,0,0
+fnd85_groupindustry_aroc_50pctl,50th percentile value of Aggregate Return on Capital (%) for the stock industry,MATRIX,92%,0,0
+fnd85_groupindustry_aroc_80pctl,The 80th percentile Aggregate Return on Capital (%) for stocks in the industry for the period,MATRIX,92%,0,0
+fnd85_groupindustry_aroc_mcwa,Market Capitalization Weighted Average of Aggregate Return on Capital (%) for all stocks in the industry,MATRIX,92%,1,1
+fnd85_groupindustry_aroc_stocks,"Number of stocks used to calculate the Aggregate Return on Capital (%) for the specific time period, industry and indicator",MATRIX,92%,0,0
+fnd85_groupindustry_aroe_20pctl,20th percentile value of Aggregate Return on Equity (%) for stocks in the industry,MATRIX,89%,0,0
+fnd85_groupindustry_aroe_50pctl,50th percentile value of Aggregate Return on Equity (%) for stocks in the industry,MATRIX,91%,0,0
+fnd85_groupindustry_aroe_80pctl,80th percentile value of Aggregate Return on Equity (%) for stocks within the industry,MATRIX,91%,5,7
+fnd85_groupindustry_aroe_mcwa,Market Capitalization Weighted Average of Aggregate Return on Equity (%) for all stocks in the industry,MATRIX,92%,0,0
+fnd85_groupindustry_aroe_stocks,"Number of stocks included in the calculation of Aggregate Return on Equity (%) for the specified period, industry, and indicator",MATRIX,92%,1,1
+fnd85_groupindustry_ase_20pctl,20th percentile value of Aggregate Sales / Enterprise Value (%) for the stock industry,MATRIX,88%,2,2
+fnd85_groupindustry_ase_50pctl,50th percentile value of Aggregate Sales to Enterprise Value (%) for stocks within the industry,MATRIX,92%,2,3
+fnd85_groupindustry_ase_80pctl,80th percentile value of Aggregate Sales to Enterprise Value (%) for stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ase_mcwa,Market Capitalization Weighted Average of Aggregate Sales to Enterprise Value (%) for all stocks within the industry,MATRIX,92%,4,4
+fnd85_groupindustry_ase_stocks,"Number of stocks included in the calculation of Aggregate Sales to Enterprise Value (%) for the specified period, industry, and indicator",MATRIX,92%,3,3
+fnd85_groupindustry_atr_stocks,"Number of stocks used to calculate Aggregate Tax Rate (%) for a specific time period, industry, and indicator",MATRIX,92%,1,2
+fnd85_groupindustry_awcm_cda,Market Capitalization Weighted Average of Aggregate Dividend Coverage (%) for all stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_awcm_eea,Market Capitalization Weighted Average of Aggregate EBITDA to Enterprise Value (%) for all stocks within the industry,MATRIX,92%,1,1
+fnd85_groupindustry_awcm_mba,Market Capitalization Weighted Average of Aggregate Book-to-Market Value (%) for all stocks in the industry,MATRIX,92%,1,1
+fnd85_groupindustry_awcm_mga,Market Capitalization Weighted Average of Aggregate Gross Margin (%) for all stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_awcm_moa,Market Capitalization Weighted Average of Aggregate Operating Margin (%) for all stocks within the industry,MATRIX,92%,3,4
+fnd85_groupindustry_awcm_rca,Market Capitalization Weighted Average of Aggregate Current Ratio for all stocks in the industry,MATRIX,85%,1,1
+fnd85_groupindustry_awcm_rta,Market Capitalization Weighted Average of Aggregate Tax Rate (%) for all stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_awcm_sca,Market Capitalization Weighted Average of Aggregate CAPEX / Sales Ratio (%) for all stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_awcm_sfa,Market Capitalization Weighted Average of Aggregate Free Cash Flow to Sales Ratio (%) for all stocks in the industry,MATRIX,92%,1,1
+fnd85_groupindustry_awcm_taa,Market Capitalization Weighted Average of Aggregate Asset Turnover (%) for all stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_awcm_xcda,Market Capitalization Weighted Average of Aggregate Dividend Coverage excluding Nonpayers (%) for all stocks within the industry,MATRIX,92%,1,1
+fnd85_groupindustry_awcm_yea,Market Capitalization Weighted Average of Aggregate Earnings Yield (%) for all stocks within the industry,MATRIX,92%,2,2
+fnd85_groupindustry_ltcp02_eea,20th percentile value of Aggregate EBITDA to Enterprise Value (%) for stocks in the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp02_mba,20th percentile value of Aggregate Book / Market Value (%) for the stock industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp02_mga,20th percentile value of Aggregate Gross Margin (%) for stocks in the industry,MATRIX,90%,0,0
+fnd85_groupindustry_ltcp02_moa,20th percentile value of Aggregate Operating Margin (%) for stocks in the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp02_rca,20th percentile value of Aggregate Current Ratio for stocks within the industry,MATRIX,84%,2,3
+fnd85_groupindustry_ltcp02_sca,20th percentile value of Aggregate CAPEX / Sales Ratio (%) for the stock industry,MATRIX,82%,1,1
+fnd85_groupindustry_ltcp02_sfa,20th percentile value of Aggregate Free Cash Flow to Sales Ratio (%) for stocks within the industry,MATRIX,92%,3,4
+fnd85_groupindustry_ltcp02_taa,20th percentile value of Aggregate Asset Turnover (%) for stocks in the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp02_xcda,20th percentile value of Aggregate Dividend Coverage excluding Nonpayers (%) for stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp02_yea,20th percentile value of Aggregate Earnings Yield (%) for stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp05_cda,The median (50th percentile) Aggregate Dividend Coverage (%) for the stock industry for the specified period,MATRIX,31%,1,1
+fnd85_groupindustry_ltcp05_eea,50th percentile value of Aggregate EBITDA to Enterprise Value (%) for stocks in the industry,MATRIX,92%,1,8
+fnd85_groupindustry_ltcp05_mba,50th percentile value of Aggregate Book / Market Value (%) for the stock industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp05_mga,50th percentile value of Aggregate Gross Margin (%) for stocks in the industry,MATRIX,90%,0,0
+fnd85_groupindustry_ltcp05_moa,The median (50th percentile) Aggregate Operating Margin (%) for stocks in the industry for the specified period,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp05_rca,50th percentile value of Aggregate Current Ratio for the stock industry,MATRIX,84%,0,0
+fnd85_groupindustry_ltcp05_rta,The median (50th percentile) Aggregate Tax Rate (%) for the stock industry over the specified period,MATRIX,68%,0,0
+fnd85_groupindustry_ltcp05_sca,50th percentile value of Aggregate CAPEX to Sales Ratio (%) for stocks within the industry,MATRIX,92%,1,1
+fnd85_groupindustry_ltcp05_sfa,50th percentile value of Aggregate Free Cash Flow to Sales Ratio (%) for stocks within the industry,MATRIX,92%,7,7
+fnd85_groupindustry_ltcp05_taa,The median (50th percentile) Aggregate Asset Turnover (%) for stocks in the industry for the specified period,MATRIX,92%,1,1
+fnd85_groupindustry_ltcp05_xcda,50th percentile value of Aggregate Dividend Coverage excluding Nonpayers (%) for stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp05_yea,50th percentile value of Aggregate Earnings Yield (%) for stocks within the industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp08_cda,The 80th percentile Aggregate Dividend Coverage (%) for stocks in the industry for the specified period,MATRIX,69%,1,1
+fnd85_groupindustry_ltcp08_eea,80th percentile value of Aggregate EBITDA / Enterprise Value (%) for the stock industry,MATRIX,92%,1,1
+fnd85_groupindustry_ltcp08_mba,80th percentile value of Aggregate Book / Market Value (%) for the stock industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp08_mga,80th percentile value of Aggregate Gross Margin (%) for the stock industry,MATRIX,90%,1,1
+fnd85_groupindustry_ltcp08_moa,80th percentile value of Aggregate Operating Margin (%) for the stock industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp08_rca,80th percentile value of Aggregate Current Ratio for stocks in the industry,MATRIX,84%,0,0
+fnd85_groupindustry_ltcp08_rta,80th percentile value of Aggregate Tax Rate (%) for stocks within the industry,MATRIX,87%,1,1
+fnd85_groupindustry_ltcp08_sca,80th percentile value of Aggregate CAPEX to Sales Ratio (%) for stocks within the industry,MATRIX,92%,1,1
+fnd85_groupindustry_ltcp08_sfa,80th percentile value of Aggregate Free Cash Flow to Sales Ratio (%) for the stock industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp08_taa,80th percentile value of Aggregate Asset Turnover (%) for the stock industry,MATRIX,92%,0,0
+fnd85_groupindustry_ltcp08_xcda,"80th percentile value of Aggregate Dividend Coverage, excluding non-dividend payers (%) for the industry",MATRIX,92%,1,2
+fnd85_groupindustry_ltcp08_yea,80th percentile value of Aggregate Earnings Yield (%) for stocks in the industry,MATRIX,92%,0,0
+fnd85_industry_aat_stocks,"Number of stocks used to calculate the Aggregate Asset Turnover (%) for the specific time period, industry and indicator",MATRIX,94%,0,0
+fnd85_industry_abm_stocks,Number of stocks in ABM (Average Book to Market) metric,MATRIX,94%,0,0
+fnd85_industry_acr_stocks,"Number of stocks used to calculate the Aggregate Current Ratio for the specific time period, industry and indicator",MATRIX,89%,0,0
+fnd85_industry_acs_stocks,"Number of stocks used to calculate the Aggregate CAPEX / Sales Ratio (%) for the specific time period, industry and indicator",MATRIX,94%,0,0
+fnd85_industry_adc_stocks,"Number of stocks used to calculate the Aggregate Dividend Coverage (%) for the specific time period, industry and indicator",MATRIX,94%,1,1
+fnd85_industry_adcx_stocks,"Number of stocks used to calculate the Aggregate Dividend Coverage excl Nonpayers (%) for the specific time period, industry and indicator",MATRIX,93%,0,0
+fnd85_industry_ade_20pctl,20th percentile value of Aggregate Debt / Equity Ratio (%) for the stock industry,MATRIX,60%,4,4
+fnd85_industry_ade_50pctl,Median (50th percentile) of the ADE indicator among constituents of the GICS Industry group on that date,MATRIX,89%,1,1
+fnd85_industry_ade_80pctl,80th percentile value of Aggregate Debt / Equity Ratio (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ade_mcwa,Market Capitalization Weighted Average of Aggregate Debt / Equity Ratio (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_ade_stocks,"Number of stocks used to calculate the Aggregate Debt / Equity Ratio (%) for the specific time period, industry and indicator",MATRIX,94%,1,1
+fnd85_industry_ady_50pctl,50th percentile value of Aggregate Dividend Yield (%) for the stock industry,MATRIX,37%,1,1
+fnd85_industry_ady_80pctl,80th percentile value of Aggregate Dividend Yield (%) for the stock industry,MATRIX,71%,0,0
+fnd85_industry_ady_mcwa,Market Capitalization Weighted Average of Aggregate Dividend Yield (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_ady_stocks,"Number of stocks used to calculate the Aggregate Dividend Yield (%) for the specific time period, industry and indicator",MATRIX,94%,0,0
+fnd85_industry_adyx_20pctl,20th percentile value of Aggregate Dividend Yield excl Nonpayers (%) for the stock industry,MATRIX,83%,1,1
+fnd85_industry_adyx_50pctl,50th percentile value of Aggregate Dividend Yield excl Nonpayers (%) for the stock industry,MATRIX,83%,0,0
+fnd85_industry_adyx_80pctl,80th percentile value of Aggregate Dividend Yield excl Nonpayers (%) for the stock industry,MATRIX,83%,0,0
+fnd85_industry_adyx_mcwa,Market Capitalization Weighted Average of Aggregate Dividend Yield excl Nonpayers (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_adyx_stocks,"Number of stocks used to calculate the Aggregate Dividend Yield excl Nonpayers (%) for the specific time period, industry and indicator",MATRIX,93%,0,0
+fnd85_industry_aee_stocks,"Number of stocks used to calculate the Aggregate EBITDA / Enterprise Value (%) for the specific time period, industry and indicator",MATRIX,94%,1,1
+fnd85_industry_aey_stocks,"Number of stocks used to calculate the Aggregate Earnings Yield (%) for the specific time period, industry and indicator",MATRIX,94%,2,2
+fnd85_industry_afs_stocks,"Number of stocks used to calculate the Aggregate Free Cash FLow / Sales Ratio (%) for the specific time period, industry and indicator",MATRIX,94%,0,0
+fnd85_industry_agm_stocks,"Number of stocks used to calculate the Aggregate Gross Margin (%) for the specific time period, industry and indicator",MATRIX,94%,0,0
+fnd85_industry_aom_stocks,"Number of stocks used to calculate the Aggregate Operating Margin (%) for the specific time period, industry and indicator",MATRIX,94%,0,0
+fnd85_industry_aroc_20pctl,20th percentile value of Aggregate Return on Capital (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_aroc_50pctl,50th percentile value of Aggregate Return on Capital (%) for the stock industry,MATRIX,92%,2,3
+fnd85_industry_aroc_80pctl,80th percentile value of Aggregate Return on Capital (%) for the stock industry,MATRIX,92%,1,1
+fnd85_industry_aroc_mcwa,Market Capitalization Weighted Average of Aggregate Return on Capital (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_aroc_stocks,"Number of stocks used to calculate the Aggregate Return on Capital (%) for the specific time period, industry and indicator",MATRIX,94%,0,0
+fnd85_industry_aroe_20pctl,20th percentile value of Aggregate Return on Equity (%) for the stock industry,MATRIX,89%,0,0
+fnd85_industry_aroe_50pctl,50th percentile value of Aggregate Return on Equity (%) for the stock industry,MATRIX,91%,0,0
+fnd85_industry_aroe_80pctl,80th percentile value of Aggregate Return on Equity (%) for the stock industry,MATRIX,91%,0,0
+fnd85_industry_aroe_mcwa,Market Capitalization Weighted Average of Aggregate Return on Equity (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_aroe_stocks,"Number of stocks used to calculate the Aggregate Return on Equity (%) for the specific time period, industry and indicator",MATRIX,94%,1,1
+fnd85_industry_ase_20pctl,20th percentile of the ASE indicator among constituents of the GICS Industry group on that date,MATRIX,88%,0,0
+fnd85_industry_ase_50pctl,50th percentile value of Aggregate Sales / Enterprise Value (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ase_80pctl,80th percentile of the ASE indicator among constituents of the GICS Industry group on that date,MATRIX,92%,0,0
+fnd85_industry_ase_mcwa,Market Capitalization Weighted Average of Aggregate Sales / Enterprise Value (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_ase_stocks,"Number of stocks used to calculate the Aggregate Sales / Enterprise Value (%) for the specific time period, industry and indicator",MATRIX,94%,0,0
+fnd85_industry_atr_stocks,"Number of stocks used to calculate the Aggregate Tax Rate (%) for the specific time period, industry and indicator",MATRIX,94%,0,0
+fnd85_industry_awcm_cda,Market Capitalization Weighted Average of Aggregate Dividend Coverage (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_awcm_eea,Market-cap weighted average of the AEE indicator across the industry’s constituents on that date,MATRIX,93%,3,3
+fnd85_industry_awcm_mba,Market Capitalization Weighted Average of Aggregate Book / Market Value (%) for all stocks within the industry,MATRIX,93%,1,1
+fnd85_industry_awcm_mga,Market Capitalization Weighted Average of Aggregate Gross Margin (%) for all stocks within the industry,MATRIX,87%,0,0
+fnd85_industry_awcm_moa,Market Capitalization Weighted Average of Aggregate Operating Margin (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_awcm_rca,Market Capitalization Weighted Average of Aggregate Current Ratio for all stocks within the industry,MATRIX,85%,1,1
+fnd85_industry_awcm_rta,Market Capitalization Weighted Average of Aggregate Tax Rate (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_awcm_sca,Market Capitalization Weighted Average of Aggregate CAPEX / Sales Ratio (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_awcm_sfa,Market Capitalization Weighted Average of Aggregate Free Cash FLow / Sales Ratio (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_awcm_taa,Market Capitalization Weighted Average of Aggregate Asset Turnover (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_awcm_xcda,Market Capitalization Weighted Average of Aggregate Dividend Coverage excl Nonpayers (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_awcm_yea,Market Capitalization Weighted Average of Aggregate Earnings Yield (%) for all stocks within the industry,MATRIX,93%,0,0
+fnd85_industry_ltcp02_eea,20th percentile of the AEE indicator among constituents of the GICS Industry group on that date,MATRIX,92%,0,0
+fnd85_industry_ltcp02_mba,20th percentile value of Aggregate Book / Market Value (%)) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp02_mga,20th percentile value of Aggregate Gross Margin (%) for the stock industry,MATRIX,85%,0,0
+fnd85_industry_ltcp02_moa,20th percentile of the AOM indicator among constituents of the GICS Industry group on that date,MATRIX,92%,0,0
+fnd85_industry_ltcp02_rca,20th percentile value of Aggregate Current Ratio for the stock industry,MATRIX,83%,0,0
+fnd85_industry_ltcp02_rta,20th percentile value of Aggregate Tax Rate (%) for the stock industry,MATRIX,28%,0,0
+fnd85_industry_ltcp02_sca,20th percentile value of Aggregate CAPEX / Sales Ratio (%) for the stock industry,MATRIX,82%,1,1
+fnd85_industry_ltcp02_sfa,20th percentile value of Aggregate Free Cash FLow / Sales Ratio (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp02_taa,20th percentile value of Aggregate Asset Turnover (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp02_xcda,20th percentile value of Aggregate Dividend Coverage excl Nonpayers (%) for the stock industry,MATRIX,83%,0,0
+fnd85_industry_ltcp02_yea,20th percentile value of Aggregate Earnings Yield (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp05_cda,Median (50th percentile) of the ADC indicator among constituents of the GICS Industry group on that date,MATRIX,32%,0,0
+fnd85_industry_ltcp05_eea,50th percentile value of Aggregate EBITDA / Enterprise Value (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp05_mba,50th percentile (median) value of the ABM (Average Book to Market) metric for stocks in the industry,MATRIX,92%,1,1
+fnd85_industry_ltcp05_mga,50th percentile value of Aggregate Gross Margin (%) for the stock industry,MATRIX,85%,0,0
+fnd85_industry_ltcp05_moa,Median (50th percentile) of the AOM indicator among constituents of the GICS Industry group on that date,MATRIX,92%,0,0
+fnd85_industry_ltcp05_rca,50th percentile value of Aggregate Current Ratio for the stock industry,MATRIX,83%,0,0
+fnd85_industry_ltcp05_rta,50th percentile value of Aggregate Tax Rate (%) for the stock industry,MATRIX,67%,0,0
+fnd85_industry_ltcp05_sca,50th percentile value of Aggregate CAPEX / Sales Ratio (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp05_sfa,50th percentile value of Aggregate Free Cash FLow / Sales Ratio (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp05_taa,Median (50th percentile) of the AAT indicator among constituents of the GICS Industry group on that date,MATRIX,92%,0,0
+fnd85_industry_ltcp05_xcda,50th percentile value of Aggregate Dividend Coverage excl Nonpayers (%) for the stock industry,MATRIX,83%,0,0
+fnd85_industry_ltcp05_yea,Median (50th percentile) of the AEY indicator among constituents of the GICS Industry group on that date,MATRIX,92%,1,3
+fnd85_industry_ltcp08_cda,80th percentile value of Aggregate Dividend Coverage (%) for the stock industry,MATRIX,68%,1,1
+fnd85_industry_ltcp08_eea,80th percentile of the AEE indicator among constituents of the GICS Industry group on that date,MATRIX,92%,0,0
+fnd85_industry_ltcp08_mba,80th percentile value of Aggregate Book / Market Value (%) for the stock industry,MATRIX,92%,1,1
+fnd85_industry_ltcp08_mga,80th percentile value of Aggregate Gross Margin (%) for the stock industry,MATRIX,85%,0,0
+fnd85_industry_ltcp08_moa,80th percentile value of Aggregate Operating Margin (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp08_rca,80th percentile value of Aggregate Current Ratio for the stock industry,MATRIX,83%,0,0
+fnd85_industry_ltcp08_rta,80th percentile value of Aggregate Tax Rate (%) for the stock industry,MATRIX,85%,0,0
+fnd85_industry_ltcp08_sca,80th percentile value of Aggregate CAPEX / Sales Ratio (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp08_sfa,80th percentile value of Aggregate Free Cash FLow / Sales Ratio (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp08_taa,80th percentile value of Aggregate Asset Turnover (%) for the stock industry,MATRIX,92%,0,0
+fnd85_industry_ltcp08_xcda,80th percentile value of Aggregate Dividend Coverage excl Nonpayers (%) for the stock industry,MATRIX,83%,0,0
+fnd85_industry_ltcp08_yea,80th percentile value of Aggregate Earnings Yield (%) for the stock industry,MATRIX,92%,1,1
+fnd85_sector_aat_stocks,"Number of stocks used to calculate the Aggregate Asset Turnover (%) for the specific time period, industry and indicator",MATRIX,100%,0,0
+fnd85_sector_abm_stocks,"Number of stocks used to calculate Aggregate Book to Market Value (%) for the specified time period, industry, and indicator",MATRIX,100%,2,2
+fnd85_sector_acr_stocks,"Number of stocks used to calculate the Aggregate Current Ratio for the specific time period, industry, and indicator",MATRIX,100%,1,1
+fnd85_sector_acs_stocks,"Number of stocks used to calculate the Aggregate CAPEX / Sales Ratio (%) for the specific time period, industry and indicator",MATRIX,100%,0,0
+fnd85_sector_adc_stocks,Number of stocks used to compute the Aggregate Dividend Coverage (%) for the specified period and industry; informs sample size and calculation basis,MATRIX,100%,0,0
+fnd85_sector_adcx_stocks,"Number of stocks used to calculate Aggregate Dividend Coverage excluding non-dividend payers (%) for the specified time period, industry, and indicator",MATRIX,100%,2,2
+fnd85_sector_ade_20pctl,20th percentile value of Aggregate Debt / Equity Ratio (%) for the stock industry,MATRIX,67%,0,0
+fnd85_sector_ade_50pctl,50th percentile value of Aggregate Debt / Equity Ratio (%) for the stock industry,MATRIX,100%,2,2
+fnd85_sector_ade_80pctl,80th percentile value of Aggregate Debt / Equity Ratio (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ade_mcwa,Market Capitalization Weighted Average of Aggregate Debt/Equity Ratio (%) for all stocks within the industry,MATRIX,100%,0,0
+fnd85_sector_ade_stocks,"Number of stocks used to calculate the Aggregate Debt to Equity Ratio (%) for the specified time period, industry, and indicator",MATRIX,100%,0,0
+fnd85_sector_ady_50pctl,50th percentile value of Aggregate Dividend Yield (%) for the stock industry,MATRIX,47%,0,0
+fnd85_sector_ady_80pctl,The 80th percentile value of Aggregate Dividend Yield (%) for the stock industry within the sector,MATRIX,79%,0,0
+fnd85_sector_ady_mcwa,Market Capitalization Weighted Average of Aggregate Dividend Yield (%) for all stocks within the industry,MATRIX,100%,0,0
+fnd85_sector_ady_stocks,"Number of stocks used to calculate the Aggregate Dividend Yield (%) for the specific time period, industry, and indicator",MATRIX,100%,0,0
+fnd85_sector_adyx_20pctl,20th percentile value of Aggregate Dividend Yield excluding non-dividend payers (%) for the stock industry,MATRIX,100%,1,3
+fnd85_sector_adyx_50pctl,50th percentile value of Aggregate Dividend Yield excluding Nonpayers (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_adyx_80pctl,The 80th percentile value of Aggregate Dividend Yield excluding non-dividend payers (%) for the stock industry within the sector,MATRIX,100%,0,0
+fnd85_sector_adyx_mcwa,Market Capitalization Weighted Average of Aggregate Dividend Yield excluding non-dividend payers (%) for all stocks within the industry,MATRIX,100%,0,0
+fnd85_sector_adyx_stocks,"Number of stocks used to calculate the Aggregate Dividend Yield excluding non-dividend payers for the specified time period, industry, and indicator",MATRIX,100%,0,0
+fnd85_sector_aee_stocks,"Number of stocks used to calculate Aggregate EBITDA to Enterprise Value (%) for the specified time period, industry, and indicator",MATRIX,100%,1,1
+fnd85_sector_aey_stocks,"Number of stocks used to calculate the Aggregate Earnings Yield (%) for the specific time period, industry and indicator",MATRIX,100%,1,1
+fnd85_sector_afs_stocks,"Number of stocks used to calculate the Aggregate Free Cash Flow / Sales Ratio (%) for the specific time period, industry and indicator",MATRIX,100%,4,4
+fnd85_sector_agm_stocks,"Number of stocks used to calculate the Aggregate Gross Margin (%) for the specific time period, industry, and indicator",MATRIX,100%,0,0
+fnd85_sector_aom_stocks,"Number of stocks used to calculate the Aggregate Operating Margin (%) for the specific time period, industry, and indicator",MATRIX,100%,1,1
+fnd85_sector_aroc_20pctl,20th percentile value of Aggregate Return on Capital (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_aroc_50pctl,50th percentile value of Aggregate Return on Capital (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_aroc_80pctl,80th percentile value of Aggregate Return on Capital (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_aroc_mcwa,Market Capitalization Weighted Average of Aggregate Return on Capital (%) across all stocks in the industry; emphasizes larger companies' returns,MATRIX,100%,0,0
+fnd85_sector_aroc_stocks,"Number of stocks used to calculate the Aggregate Return on Capital (%) for the specified time period, industry, and indicator",MATRIX,100%,0,0
+fnd85_sector_aroe_20pctl,The 20th percentile value of Aggregate Return on Equity (%) for the stock industry within the sector,MATRIX,100%,0,0
+fnd85_sector_aroe_50pctl,The 50th percentile value (median) of Aggregate Return on Equity (%) for the stock industry within the sector,MATRIX,99%,0,0
+fnd85_sector_aroe_80pctl,80th percentile value of Aggregate Return on Equity (%) for the stock industry,MATRIX,100%,1,1
+fnd85_sector_aroe_mcwa,Market Capitalization Weighted Average of Aggregate Return on Equity (%) for all stocks within the industry,MATRIX,100%,0,0
+fnd85_sector_aroe_stocks,"Number of stocks used to calculate the Aggregate Return on Equity (%) for the specific time period, industry, and indicator",MATRIX,100%,0,0
+fnd85_sector_ase_20pctl,20th percentile value of Aggregate Sales / Enterprise Value (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ase_50pctl,50th percentile (median) value of Aggregate Sales to Enterprise Value Ratio (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ase_80pctl,The 80th percentile value of Aggregate Sales to Enterprise Value (%) for the stock industry within the sector,MATRIX,100%,1,1
+fnd85_sector_ase_mcwa,Market Capitalization Weighted Average of Aggregate Sales-to-Enterprise Value Ratio (%) for all stocks in the industry; average weighted by company market size,MATRIX,100%,2,2
+fnd85_sector_ase_stocks,"Number of stocks used to calculate the Aggregate Sales / Enterprise Value (%) for the specific time period, industry and indicator",MATRIX,100%,0,0
+fnd85_sector_atr_stocks,"Number of stocks used to calculate the Aggregate Tax Rate (%) for the specific time period, industry, and indicator",MATRIX,100%,0,0
+fnd85_sector_awcm_cda,Market Capitalization Weighted Average of Aggregate Dividend Coverage (%) for all stocks within the industry,MATRIX,100%,2,4
+fnd85_sector_awcm_eea,Market Capitalization Weighted Average of Aggregate EBITDA to Enterprise Value (%) for all stocks within the industry,MATRIX,100%,1,1
+fnd85_sector_awcm_mba,Market Capitalization Weighted Average of Aggregate Book / Market Value (%) for all stocks within the industry,MATRIX,100%,0,0
+fnd85_sector_awcm_mga,Market Capitalization Weighted Average of Aggregate Gross Margin (%) for all stocks within the industry,MATRIX,100%,0,0
+fnd85_sector_awcm_moa,Market Capitalization Weighted Average of Aggregate Operating Margin (%) for all stocks within the industry,MATRIX,100%,3,4
+fnd85_sector_awcm_rca,Market Capitalization Weighted Average of Aggregate Current Ratio for all stocks within the industry,MATRIX,100%,1,1
+fnd85_sector_awcm_rta,Market Capitalization Weighted Average of Aggregate Tax Rate (%) for all stocks within the industry,MATRIX,100%,0,0
+fnd85_sector_awcm_sca,"Market Capitalization Weighted Average of Aggregate CAPEX-to-Sales Ratio (%) for stocks in the industry; reflects average capital investment relative to sales, weighted by size",MATRIX,100%,5,5
+fnd85_sector_awcm_sfa,Market Capitalization Weighted Average of Aggregate Free Cash Flow to Sales Ratio (%) across all stocks in the industry,MATRIX,100%,0,0
+fnd85_sector_awcm_taa,Market Capitalization Weighted Average of Aggregate Asset Turnover (%) for all stocks within the industry,MATRIX,100%,0,0
+fnd85_sector_awcm_xcda,Market Capitalization Weighted Average of Aggregate Dividend Coverage excluding Nonpayers (%) for all stocks within the industry,MATRIX,100%,0,0
+fnd85_sector_awcm_yea,Market Capitalization Weighted Average of Aggregate Earnings Yield (%) for all stocks in the industry; average weighted by company size,MATRIX,100%,1,1
+fnd85_sector_ltcp02_eea,20th percentile value of Aggregate EBITDA to Enterprise Value Ratio (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp02_mba,20th percentile value of Aggregate Book to Market Value Ratio (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp02_mga,20th percentile value of Aggregate Gross Margin (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp02_moa,20th percentile value of Aggregate Operating Margin (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp02_rca,20th percentile value of Aggregate Current Ratio for the stock industry,MATRIX,100%,3,6
+fnd85_sector_ltcp02_rta,20th percentile value of Aggregate Tax Rate (%) for all stocks within the industry; indicates that 20% of stocks have an aggregate tax rate below this value,MATRIX,30%,0,0
+fnd85_sector_ltcp02_sca,The 20th percentile value of Aggregate CAPEX to Sales Ratio (%) for the stock industry within the sector,MATRIX,93%,0,0
+fnd85_sector_ltcp02_sfa,20th percentile value of Aggregate Free Cash Flow / Sales Ratio (%) for the stock industry,MATRIX,100%,1,1
+fnd85_sector_ltcp02_taa,20th percentile value of Aggregate Asset Turnover (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp02_xcda,20th percentile value of Aggregate Dividend Coverage excluding non-dividend payers (%) for the stock industry,MATRIX,100%,4,6
+fnd85_sector_ltcp02_yea,The 20th percentile value of Aggregate Earnings Yield (%) for the stock industry within the sector,MATRIX,100%,0,0
+fnd85_sector_ltcp05_cda,50th percentile (median) value of Aggregate Dividend Coverage (%) for the stock industry,MATRIX,40%,1,3
+fnd85_sector_ltcp05_eea,50th percentile value of Aggregate EBITDA / Enterprise Value (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp05_mba,50th percentile value of Aggregate Book / Market Value (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp05_mga,The 50th percentile value (median) of Aggregate Gross Margin (%) for the stock industry within the sector,MATRIX,100%,0,0
+fnd85_sector_ltcp05_moa,50th percentile (median) value of Aggregate Operating Margin (%) for the stock industry,MATRIX,100%,1,1
+fnd85_sector_ltcp05_rca,The 50th percentile value (median) of Aggregate Current Ratio for the stock industry within the sector,MATRIX,100%,1,1
+fnd85_sector_ltcp05_rta,50th percentile (median) value of Aggregate Tax Rate (%) for stocks in the industry; divides the data so half of stocks have lower and half have higher tax rates,MATRIX,78%,1,1
+fnd85_sector_ltcp05_sca,50th percentile (median) value of Aggregate CAPEX to Sales Ratio (%) for the stock industry,MATRIX,100%,1,2
+fnd85_sector_ltcp05_sfa,50th percentile (median) of Aggregate Free Cash Flow to Sales Ratio (%) for all stocks in the industry; central tendency measure for this metric,MATRIX,100%,0,0
+fnd85_sector_ltcp05_taa,The 50th percentile value (median) of Aggregate Asset Turnover (%) for the stock industry within the sector,MATRIX,100%,2,3
+fnd85_sector_ltcp05_xcda,The 50th percentile value (median) of Aggregate Dividend Coverage excluding non-dividend payers (%) for the stock industry within the sector,MATRIX,100%,2,2
+fnd85_sector_ltcp05_yea,50th percentile value of Aggregate Earnings Yield (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp08_cda,80th percentile value of Aggregate Dividend Coverage (%) for the stock industry,MATRIX,78%,0,0
+fnd85_sector_ltcp08_eea,80th percentile value of Aggregate EBITDA / Enterprise Value (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp08_mba,The 80th percentile value of Aggregate Book to Market Value (%) for the stock industry within the sector,MATRIX,100%,3,5
+fnd85_sector_ltcp08_mga,80th percentile value of Aggregate Gross Margin (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp08_moa,The 80th percentile value of Aggregate Operating Margin (%) for the stock industry within the sector,MATRIX,100%,1,1
+fnd85_sector_ltcp08_rca,The 80th percentile value of Aggregate Current Ratio for the stock industry within the sector,MATRIX,100%,0,0
+fnd85_sector_ltcp08_rta,The 80th percentile value of Aggregate Tax Rate (%) for the stock industry within the sector,MATRIX,100%,0,0
+fnd85_sector_ltcp08_sca,80th percentile value of Aggregate CAPEX to Sales Ratio (%) for the stock industry,MATRIX,100%,1,1
+fnd85_sector_ltcp08_sfa,80th percentile value of Aggregate Free Cash Flow / Sales Ratio (%) for the stock industry,MATRIX,100%,1,1
+fnd85_sector_ltcp08_taa,The 80th percentile value of Aggregate Asset Turnover (%) for the stock industry within the sector,MATRIX,100%,2,2
+fnd85_sector_ltcp08_xcda,80th percentile value of Aggregate Dividend Coverage excluding non-dividend payers (%) for the stock industry,MATRIX,100%,0,0
+fnd85_sector_ltcp08_yea,80th percentile value of Aggregate Earnings Yield (%) for stocks in the industry; indicates 80% of stocks have earnings yield below this value,MATRIX,100%,0,0
+fnd85_subindustry_aat_stocks,"Number of stocks used to calculate Aggregate Asset Turnover (%) for a specific period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_abm_stocks,Number of stocks in the Average Book to Market (ABM) metric within the sub-industry,MATRIX,84%,0,0
+fnd85_subindustry_acr_stocks,"Number of stocks used to calculate Aggregate Current Ratio for a specific period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_acs_stocks,"Number of stocks used to calculate the Aggregate CAPEX to Sales Ratio (%) for the specific time period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_adc_stocks,"Number of stocks used to calculate the Aggregate Dividend Coverage (%) for the specific time period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_adcx_stocks,"Number of stocks used to calculate Aggregate Dividend Coverage, excluding non-dividend payers, (%) for a period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_ade_20pctl,20th percentile value of Aggregate Debt to Equity Ratio (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ade_50pctl,50th percentile value of Aggregate Debt to Equity Ratio (%) for the stock industry,MATRIX,84%,1,2
+fnd85_subindustry_ade_80pctl,80th percentile value of Aggregate Debt to Equity Ratio (%) for the stock industry,MATRIX,84%,1,1
+fnd85_subindustry_ade_mcwa,Market Cap Weighted Average of Aggregate Debt to Equity Ratio (%) for all stocks in the industry,MATRIX,84%,1,1
+fnd85_subindustry_ade_stocks,Number of stocks used to calculate Aggregate Debt/Equity Ratio (%) for the sub-industry and specific period,MATRIX,84%,0,0
+fnd85_subindustry_ady_20pctl,20th percentile value of Aggregate Dividend Yield (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ady_50pctl,50th percentile value of Aggregate Dividend Yield (%) for the stock industry,MATRIX,84%,2,5
+fnd85_subindustry_ady_80pctl,80th percentile value of Aggregate Dividend Yield (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ady_mcwa,Market Capitalization Weighted Average of Aggregate Dividend Yield (%) for all stocks within the industry,MATRIX,84%,0,0
+fnd85_subindustry_ady_stocks,"Number of stocks used to calculate Aggregate Dividend Yield (%) for a specific period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_adyx_20pctl,20th percentile value of Aggregate Dividend Yield excluding Nonpayers (%) for the stock industry,MATRIX,84%,4,4
+fnd85_subindustry_adyx_50pctl,"50th percentile value of Aggregate Dividend Yield, excluding non-dividend payers, (%) for the stock industry",MATRIX,84%,0,0
+fnd85_subindustry_adyx_80pctl,80th percentile value of Aggregate Dividend Yield excluding nonpayers (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_adyx_mcwa,Market Capitalization Weighted Average of Aggregate Dividend Yield excluding Nonpayers (%) for all stocks within the sub-industry,MATRIX,84%,0,0
+fnd85_subindustry_adyx_stocks,"Number of stocks used to calculate Aggregate Dividend Yield excluding non-dividend payers (%) for a specific period, industry, and indicator",MATRIX,84%,1,1
+fnd85_subindustry_aee_stocks,"Number of stocks used to calculate the Aggregate EBITDA to Enterprise Value (%) for the specific time period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_aey_stocks,"Number of stocks used to calculate Aggregate Earnings Yield (%) for a specific period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_afs_stocks,"Number of stocks used to calculate Aggregate Free Cash Flow / Sales Ratio (%) for a specific period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_agm_stocks,"Number of stocks used to calculate the Aggregate Gross Margin (%) for the specific time period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_aom_stocks,"Number of stocks used to calculate the Aggregate Operating Margin (%) for the specific time period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_aroc_20pctl,20th percentile value of Aggregate Return on Capital (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_aroc_50pctl,Median (50th percentile) value of Aggregate Return on Capital (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_aroc_80pctl,80th percentile value of Aggregate Return on Capital (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_aroc_mcwa,Market Capitalization Weighted Average of Aggregate Return on Capital (%) for all stocks within the industry,MATRIX,84%,0,0
+fnd85_subindustry_aroc_stocks,Number of stocks used to calculate Aggregate Return on Capital (%) for the sub-industry and specific period,MATRIX,84%,0,0
+fnd85_subindustry_aroe_20pctl,20th percentile value of Aggregate Return on Equity (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_aroe_50pctl,50th percentile value of Aggregate Return on Equity (%) for all stocks within the sub-industry,MATRIX,84%,1,1
+fnd85_subindustry_aroe_80pctl,80th percentile value of Aggregate Return on Equity (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_aroe_mcwa,Market Cap Weighted Average of Aggregate Return on Equity (%) for all stocks within the industry,MATRIX,84%,0,0
+fnd85_subindustry_aroe_stocks,"Number of stocks used to calculate the Aggregate Return on Equity (%) for the specific time period, industry and indicator",MATRIX,84%,0,0
+fnd85_subindustry_ase_20pctl,20th percentile value of Aggregate Sales to Enterprise Value Ratio (%) for the stock industry,MATRIX,84%,4,4
+fnd85_subindustry_ase_50pctl,50th percentile value of Aggregate Sales / Enterprise Value (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ase_80pctl,80th percentile value of Aggregate Sales to Enterprise Value (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ase_mcwa,Market Cap Weighted Average of Aggregate Sales to Enterprise Value (%) for all stocks within the industry,MATRIX,84%,0,0
+fnd85_subindustry_ase_stocks,"Number of stocks used to calculate the Aggregate Sales to Enterprise Value (%) for the specific time period, industry, and indicator",MATRIX,84%,0,0
+fnd85_subindustry_atr_stocks,"Number of stocks used to calculate the Aggregate Tax Rate (%) for the specific time period, industry, and indicator",MATRIX,84%,1,1
+fnd85_subindustry_awcm_cda,Market Cap Weighted Average of Aggregate Dividend Coverage (%) for all stocks within the industry,MATRIX,84%,0,0
+fnd85_subindustry_awcm_eea,Market Capitalization Weighted Average of Aggregate EBITDA / Enterprise Value (%) for all stocks in the industry,MATRIX,84%,0,0
+fnd85_subindustry_awcm_mba,Market Cap Weighted Average of Aggregate Book to Market Value (%) for all stocks within the industry,MATRIX,84%,0,0
+fnd85_subindustry_awcm_mga,Market Capitalization Weighted Average of Aggregate Gross Margin (%) for all stocks within the industry,MATRIX,84%,0,0
+fnd85_subindustry_awcm_moa,Market Capitalization Weighted Average of Aggregate Operating Margin (%) for all stocks in the industry,MATRIX,84%,0,0
+fnd85_subindustry_awcm_rca,Market Cap Weighted Average of Aggregate Current Ratio for all stocks within the industry,MATRIX,84%,0,0
+fnd85_subindustry_awcm_rta,Market Capitalization Weighted Average of Aggregate Tax Rate (%) for all stocks within the industry,MATRIX,84%,1,1
+fnd85_subindustry_awcm_sca,Market Cap Weighted Average of Aggregate CAPEX to Sales Ratio (%) for all stocks in the industry,MATRIX,84%,0,0
+fnd85_subindustry_awcm_sfa,Market Capitalization Weighted Average of Aggregate Free Cash Flow / Sales Ratio (%) for all stocks in the industry,MATRIX,84%,1,1
+fnd85_subindustry_awcm_taa,Market Capitalization Weighted Average of Aggregate Asset Turnover (%) for all stocks within the sub-industry,MATRIX,84%,1,2
+fnd85_subindustry_awcm_xcda,Market Cap Weighted Average of Aggregate Dividend Coverage excluding nonpayers (%) for all stocks within the industry,MATRIX,84%,0,0
+fnd85_subindustry_awcm_yea,Market Capitalization Weighted Average of the Aggregate Earnings Yield (%) for all stocks in the industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp02_cda,20th percentile value of Aggregate Dividend Coverage (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp02_eea,20th percentile value of Aggregate EBITDA / Enterprise Value (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp02_mba,20th percentile value of Aggregate Book/Market Value (%) for all stocks within the sub-industry,MATRIX,84%,1,1
+fnd85_subindustry_ltcp02_mga,20th percentile value of Aggregate Gross Margin (%) for all stocks within the sub-industry,MATRIX,84%,2,2
+fnd85_subindustry_ltcp02_moa,20th percentile value of Aggregate Operating Margin (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp02_rca,20th percentile value of Aggregate Current Ratio for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp02_rta,20th percentile value of Aggregate Tax Rate (%) for all stocks within the sub-industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp02_sca,20th percentile value of Aggregate CAPEX (Capital Expenditures) / Sales Ratio (%) for the stock industry,MATRIX,84%,2,3
+fnd85_subindustry_ltcp02_sfa,20th percentile value of Aggregate Free Cash Flow to Sales Ratio (%) for all stocks within the sub-industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp02_taa,20th percentile value of Aggregate Asset Turnover (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp02_xcda,"20th percentile value of Aggregate Dividend Coverage, excluding non-dividend payers, (%) for the stock industry",MATRIX,84%,0,0
+fnd85_subindustry_ltcp02_yea,20th percentile value of Aggregate Earnings Yield (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp05_cda,50th percentile value of Aggregate Dividend Coverage (%) for the stock industry,MATRIX,84%,2,2
+fnd85_subindustry_ltcp05_eea,50th percentile value of Aggregate EBITDA / Enterprise Value (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp05_mba,50th percentile value of Aggregate Book to Market Value (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp05_mga,Median (50th percentile) value of Aggregate Gross Margin (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp05_moa,50th percentile value of Aggregate Operating Margin (%) for all stocks within the sub-industry,MATRIX,84%,1,1
+fnd85_subindustry_ltcp05_rca,50th percentile value of Aggregate Current Ratio for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp05_rta,50th percentile value of Aggregate Tax Rate (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp05_sca,Median (50th percentile) value of Aggregate CAPEX to Sales Ratio (%) for the stock industry,MATRIX,84%,1,1
+fnd85_subindustry_ltcp05_sfa,50th percentile value of Aggregate Free Cash Flow to Sales Ratio (%) for the stock industry,MATRIX,84%,1,2
+fnd85_subindustry_ltcp05_taa,50th percentile value of Aggregate Asset Turnover (%) for the stock industry,MATRIX,84%,3,3
+fnd85_subindustry_ltcp05_xcda,Median (50th percentile) value of Aggregate Dividend Coverage excluding nonpayers (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp05_yea,50th percentile value of Aggregate Earnings Yield (%) for all stocks within the sub-industry,MATRIX,84%,1,8
+fnd85_subindustry_ltcp08_cda,80th percentile value of Aggregate Dividend Coverage (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp08_eea,80th percentile value of Aggregate EBITDA / Enterprise Value (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp08_mba,80th percentile value of Aggregate Book to Market Value (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp08_mga,80th percentile value of Aggregate Gross Margin (%) for the stock industry,MATRIX,84%,3,4
+fnd85_subindustry_ltcp08_moa,80th percentile value of Aggregate Operating Margin (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp08_rca,80th percentile value of Aggregate Current Ratio for all stocks within the sub-industry,MATRIX,84%,1,1
+fnd85_subindustry_ltcp08_rta,80th percentile value of Aggregate Tax Rate (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp08_sca,80th percentile value of Aggregate CAPEX to Sales Ratio (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp08_sfa,80th percentile value of Aggregate Free Cash Flow to Sales Ratio (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp08_taa,80th percentile value of Aggregate Asset Turnover (%) for all stocks within the sub-industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp08_xcda,80th percentile value of Aggregate Dividend Coverage excluding Nonpayers (%) for the stock industry,MATRIX,84%,0,0
+fnd85_subindustry_ltcp08_yea,80th percentile value of Aggregate Earnings Yield (%) for the stock industry,MATRIX,84%,0,0

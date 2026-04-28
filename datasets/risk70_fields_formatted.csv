@@ -1,0 +1,103 @@
+Field,Description,Type,Coverage,Users,Alphas
+aerospace_defense_exposure_score,Exposure or sensitivity to the aerospace and defense sector factor.,MATRIX,100%,14,24
+airlines_exposure_score,Exposure or sensitivity to the airlines industry factor.,MATRIX,100%,3,3
+aluminum_steel_exposure_score,Exposure or sensitivity to the aluminum and steel industry factor.,MATRIX,100%,6,7
+apparel_industry_exposure_score,Exposure or sensitivity to the apparel and clothing sector factor.,MATRIX,100%,2,2
+automobiles_exposure_score,Exposure or sensitivity to the automobiles and auto parts sector factor.,MATRIX,100%,7,7
+banking_sector_exposure_score_2,USCR industry factor for Banks in the MFM2 US model,MATRIX,100%,2,2
+beverages_tobacco_exposure_score,Exposure or sensitivity to the beverages and tobacco industry factor.,MATRIX,100%,6,7
+biotechnology_life_sciences_exposure_score,Exposure or sensitivity to the biotechnology and life sciences sector factor.,MATRIX,100%,6,8
+broad_market_factor_score,"Exposure to the broad market factor, representing overall market movements.",MATRIX,100%,16,28
+building_products_exposure_score,Exposure or sensitivity to the building products industry factor.,MATRIX,100%,10,13
+chemicals_exposure_score,USCR industry factor for Chemicals in the MFM2 US model,MATRIX,100%,1,1
+commercial_equipment_exposure_score,Exposure or sensitivity to the commercial equipment and supplies sector factor.,MATRIX,100%,3,4
+commercial_services_exposure_score,Exposure or sensitivity to the commercial services and supplies sector factor.,MATRIX,100%,2,2
+conglomerates_exposure_score,US industry factor dummy: Conglomerates,MATRIX,100%,3,5
+construction_engineering_exposure_score,Exposure or sensitivity to the construction and engineering sector factor.,MATRIX,100%,5,6
+construction_machinery_exposure_score,US industry factor dummy: Construction Machinery & Heavy Trucks,MATRIX,100%,3,4
+construction_materials_exposure_score,Exposure or sensitivity to the construction materials sector factor.,MATRIX,100%,5,8
+consumer_electronics_exposure_score,Exposure or sensitivity to the consumer electronics sector factor.,MATRIX,100%,6,8
+container_packaging_exposure_score,US industry factor dummy: Containers & Packaging,MATRIX,100%,5,8
+current_market_cap_usd,The current market capitalization of the company in US dollars.,MATRIX,100%,31,54
+daily_specific_return,"Daily specific (idiosyncratic) returns for each stock in the MFM2 US-centric universe, expressed in percent per day",MATRIX,100%,53,90
+distribution_services_exposure_score,Exposure or sensitivity to the distribution services sector factor.,MATRIX,100%,1,1
+diversified_financials_exposure_score,Exposure or sensitivity to the diversified financials industry factor.,MATRIX,100%,2,2
+electric_utilities_exposure_score,Exposure or sensitivity to the electric utilities sector factor.,MATRIX,100%,1,1
+electrical_equipment_exposure_score,Exposure or sensitivity to the electrical equipment sector factor.,MATRIX,100%,2,2
+food_products_exposure_score,US industry factor dummy: Food Products,MATRIX,100%,3,3
+food_retail_exposure_score,Exposure or sensitivity to the food retail sector factor.,MATRIX,100%,2,2
+gas_utilities_exposure_score,Exposure or sensitivity to the gas utilities sector factor.,MATRIX,100%,6,8
+health_services_exposure_score,US industry factor dummy: Health Care Providers & Services,MATRIX,100%,2,3
+healthcare_equipment_exposure_score,Exposure or sensitivity to the healthcare equipment and supplies sector factor.,MATRIX,100%,8,12
+hedge_fund_ownership_count,Ownership: number of owners (count) from HFOWN data used as a factor/exposure in the USCR model,MATRIX,100%,131,631
+hedge_fund_ownership_percent,"Percent ownership from the Hfown dataset for the US universe, expressed as percentage of shares owned",MATRIX,100%,259,916
+homebuilding_exposure_score,Exposure or sensitivity to the homebuilding sector factor.,MATRIX,100%,6,10
+household_durables_exposure_score,Exposure or sensitivity to the household durables sector factor.,MATRIX,100%,3,3
+industrial_machinery_exposure_score,Exposure or sensitivity to the industrial machinery sector factor.,MATRIX,100%,2,2
+insurance_sector_exposure_score,Exposure or sensitivity to the insurance industry factor.,MATRIX,100%,0,0
+internet_services_exposure_score,Exposure or sensitivity to the internet services and infrastructure sector factor.,MATRIX,100%,2,2
+leisure_products_exposure_score,Exposure or sensitivity to the leisure products industry factor.,MATRIX,100%,2,2
+leisure_services_exposure_score,Exposure or sensitivity to the leisure services industry factor.,MATRIX,100%,7,8
+life_insurance_exposure_score,Exposure or sensitivity to the life insurance sector factor.,MATRIX,100%,5,5
+managed_healthcare_exposure_score,Exposure or sensitivity to the managed healthcare sector factor.,MATRIX,100%,4,12
+media_industry_exposure_score_2,Exposure or sensitivity to the media and publishing sector factor.,MATRIX,100%,5,6
+multi_utilities_exposure_score,Exposure or sensitivity to the multi-utilities sector factor.,MATRIX,100%,3,3
+net_retail_exposure_score,Exposure or sensitivity to the net retail sector factor.,MATRIX,100%,10,12
+oil_gas_consumers_exposure_score,Exposure or sensitivity to the oil and gas consumer sector factor.,MATRIX,100%,4,23
+oil_gas_drilling_exposure_score,Exposure or sensitivity to the oil and gas drilling sector factor.,MATRIX,100%,5,5
+oil_gas_equipment_exposure_score,US industry factor dummy: Oil & Gas Equipment & Services,MATRIX,100%,3,6
+oil_gas_exploration_exposure_score_2,Exposure or sensitivity to the oil and gas exploration and production sector factor.,MATRIX,100%,8,8
+paper_products_exposure_score,Exposure or sensitivity to the paper products industry factor.,MATRIX,100%,3,7
+personal_products_exposure_score,Exposure or sensitivity to the personal products industry factor.,MATRIX,100%,5,5
+pharmaceuticals_exposure_score,Exposure or sensitivity to the pharmaceuticals industry factor.,MATRIX,100%,3,3
+precious_metals_exposure_score,Exposure or sensitivity to the precious metals industry factor.,MATRIX,100%,2,2
+price_momentum_factor_score,Style factor exposure: Momentum (price trend),MATRIX,100%,6,7
+real_estate_exposure_score,Exposure or sensitivity to the real estate sector factor.,MATRIX,100%,6,10
+restaurant_industry_exposure_score,Exposure or sensitivity to the restaurant and food service sector factor.,MATRIX,100%,4,9
+road_rail_transport_exposure_score,Exposure or sensitivity to the road and rail transportation sector factor.,MATRIX,100%,7,10
+rsk70_mfm2_usfast_1drevrsl,Style factor loading,MATRIX,100%,1087,5931
+rsk70_mfm2_usfast_beta,Beta style factor loading,MATRIX,100%,250,1116
+rsk70_mfm2_usfast_divyild,Dividend Yield Style Factor Loading,MATRIX,100%,652,2548
+rsk70_mfm2_usfast_dsrt,Specific returns,MATRIX,100%,595,2678
+rsk70_mfm2_usfast_dwnrisk,Down Risk Style Factor Loading,MATRIX,100%,173,588
+rsk70_mfm2_usfast_earnqlty,Earnings Quality Style Factor Loading,MATRIX,95%,267,1576
+rsk70_mfm2_usfast_earnyild,Earnings Yield Style Factor Loading,MATRIX,100%,420,1537
+rsk70_mfm2_usfast_growth,Growth Style Factor Loading,MATRIX,93%,286,2089
+rsk70_mfm2_usfast_indmom,Industrial Momentum Style Factor Loading,MATRIX,98%,194,691
+rsk70_mfm2_usfast_leverage,Leverage Style Factor Loading,MATRIX,100%,248,1265
+rsk70_mfm2_usfast_ltrevrsl,Long-Term Reversal Style Factor Loading,MATRIX,99%,144,766
+rsk70_mfm2_usfast_market,Market Market Factor Loading,MATRIX,100%,146,695
+rsk70_mfm2_usfast_mgmtqlty,Management Quality Style Factor Loading,MATRIX,88%,182,878
+rsk70_mfm2_usfast_midcap,Midcap Style Factor Loading,MATRIX,100%,117,719
+rsk70_mfm2_usfast_momentum,Momentum Style Factor Loading,MATRIX,100%,126,554
+rsk70_mfm2_usfast_profit,Profit Style Factor Loading,MATRIX,98%,354,2559
+rsk70_mfm2_usfast_prospect,Prospect Style Factor Loading,MATRIX,100%,141,501
+rsk70_mfm2_usfast_prospect_specret_daily,Prospect Style Factor Loading,MATRIX,100%,316,2548
+rsk70_mfm2_usfast_prospect_specret_monthly,Prospect Style Factor Loading,MATRIX,100%,252,1540
+rsk70_mfm2_usfast_regmom,Regional Momentum Style Factor Loading,MATRIX,100%,353,1754
+rsk70_mfm2_usfast_resvol,Residual Volatility Style Factor Loading,MATRIX,100%,247,1828
+rsk70_mfm2_usfast_season,Season Style Factor Loading,MATRIX,84%,229,1690
+rsk70_mfm2_usfast_sentmt,Sentiment Style Factor Loading,MATRIX,100%,685,3028
+rsk70_mfm2_usfast_shortint,Short Interest Style Factor Loading,MATRIX,100%,333,1881
+rsk70_mfm2_usfast_size,Size Style Factor Loading,MATRIX,100%,140,639
+rsk70_mfm2_usfast_specret_daily_htcri,Industry factor loading,MATRIX,100%,370,2527
+rsk70_mfm2_usfast_specret_daily_lpmi,Industry factor loading,MATRIX,100%,373,2294
+rsk70_mfm2_usfast_srisk,Final specific risk annualized in units of %-squared,MATRIX,100%,165,1305
+rsk70_mfm2_usfast_srisku,Unadjusted initial specific risk annualized in units of %-squared,MATRIX,100%,150,955
+rsk70_mfm2_usfast_sriskv,Intermediate specific risk annualized in units of %-squared,MATRIX,100%,138,1278
+rsk70_mfm2_usfast_strevrsl,Short-Term Reversal Style Factor Loading,MATRIX,100%,250,1334
+rsk70_mfm2_usfast_value,VALUE style factor loading,MATRIX,99%,394,1843
+semiconductor_equipment_exposure_score,Exposure or sensitivity to the semiconductor equipment sector factor.,MATRIX,100%,12,13
+semiconductors_exposure_score,Exposure or sensitivity to the semiconductors industry factor.,MATRIX,100%,9,12
+short_interest_factor_score,"Exposure to the short interest factor, reflecting the level of short selling activity in the stock.",MATRIX,100%,61,95
+software_services_exposure_score,USCR industry factor for Software (exposure/return for that industry in the MFM2 US model),MATRIX,100%,3,3
+specialty_chemicals_exposure_score,US industry factor dummy: Specialty Chemicals,MATRIX,100%,7,9
+specialty_retail_exposure_score,Exposure or sensitivity to the specialty retail sector factor.,MATRIX,100%,10,16
+specialty_stores_exposure_score,Exposure or sensitivity to the specialty stores sector factor.,MATRIX,100%,3,6
+specific_risk_uncertainty,"Unadjusted initial specific (idiosyncratic) risk per stock for the USCR model, annualized in percent-squared units",MATRIX,100%,12,15
+specific_risk_value_2,"Final specific (idiosyncratic) risk per stock for the USCR model, annualized in percent-squared units",MATRIX,100%,13,13
+specific_risk_variance,The variance of the specific (idiosyncratic) risk for the security.,MATRIX,100%,11,16
+telecommunications_exposure_score,Exposure or sensitivity to the telecommunications services sector factor.,MATRIX,100%,3,3
+trading_companies_exposure_score,Exposure or sensitivity to the trading companies and distributors sector factor.,MATRIX,100%,1,1
+transportation_services_exposure_score,Exposure or sensitivity to the transportation services sector factor.,MATRIX,100%,3,3
+wireless_communications_exposure_score,US industry factor dummy: Wireless Telecommunication Services,MATRIX,100%,3,3

@@ -1,0 +1,30 @@
+Field,Description,Type,Coverage,Users,Alphas
+event_effect_magnitude,"Future feature: This is not yet populated. Impact magnitude on entities affected by the event. < 0.1 = minor impact, 0.1 - 0.9 = moderate impact, > 0.9 high impact.",VECTOR,0%,0,0
+mws36_key_event_confidence,Confidence score of the key event classification for this story,VECTOR,100%,17,33
+mws36_key_event_confidence_fast_d1,Confidence score of the key event classification for this story,VECTOR,100%,2,2
+mws36_novelty,"Novelty score within subscribed content sets (100 novel, 50 partially novel, 0 not novel)",VECTOR,100%,7,8
+mws36_novelty_fast_d1,"Novelty score within subscribed content sets (100 novel, 50 partially novel, 0 not novel)",VECTOR,100%,1,1
+mws36_novelty_newest_span,Milliseconds between this story and the most recent older similar story; empty if first,VECTOR,93%,7,14
+mws36_novelty_newest_span_fast_d1,Milliseconds between this story and the most recent older similar story; empty if first,VECTOR,93%,4,4
+mws36_novelty_oldest_span,Milliseconds between this story and the oldest known similar story starting the novelty sequence; empty if first,VECTOR,93%,6,7
+mws36_novelty_oldest_span_fast_d1,Milliseconds between this story and the oldest known similar story starting the novelty sequence; empty if first,VECTOR,93%,3,3
+mws36_relevance,"Overall relevance score of the news story to the referenced entity/entities, on a 0–100 scale where higher means more relevant (e.g., ~100 highly relevant, ~10 marginal)",VECTOR,100%,5,9
+mws36_relevance_fast_d1,"Overall relevance score of the news story to the referenced entity/entities, on a 0–100 scale where higher means more relevant (e.g., ~100 highly relevant, ~10 marginal)",VECTOR,100%,1,1
+mws36_sentiment_negative_confidence,Confidence score that the story is negative; higher means more confident negative classification,VECTOR,100%,17,55
+mws36_sentiment_negative_confidence_fast_d1,Confidence score that the story is negative; higher means more confident negative classification,VECTOR,100%,3,3
+mws36_sentiment_phrase_negative,Count of negative sentiment phrases detected by the bigram classifier,VECTOR,100%,6,22
+mws36_sentiment_phrase_negative_fast_d1,Count of negative sentiment phrases detected by the bigram classifier,VECTOR,100%,1,1
+mws36_sentiment_phrase_positive,Count of positive sentiment phrases detected by the bigram classifier,VECTOR,100%,4,12
+mws36_sentiment_phrase_positive_fast_d1,Count of positive sentiment phrases detected by the bigram classifier,VECTOR,100%,1,1
+mws36_sentiment_positive_confidence,Confidence score that the story is positive; higher means more confident positive classification,VECTOR,100%,9,22
+mws36_sentiment_positive_confidence_fast_d1,Confidence score that the story is positive; higher means more confident positive classification,VECTOR,100%,2,3
+mws36_sentiment_words_negative,Count of negative sentiment tokens detected by the unigram classifier,VECTOR,100%,7,25
+mws36_sentiment_words_negative_fast_d1,Count of negative sentiment tokens detected by the unigram classifier,VECTOR,100%,5,5
+mws36_sentiment_words_positive,Count of positive sentiment tokens detected by the unigram classifier,VECTOR,100%,6,16
+mws36_sentiment_words_positive_fast_d1,Count of positive sentiment tokens detected by the unigram classifier,VECTOR,100%,3,3
+mws36_timestamp_time,"Time component of the story’s publication timestamp as an integer (e.g., HHMMSS or milliseconds)",VECTOR,100%,11,22
+mws36_timestamp_time_fast_d1,"Time component of the story’s publication timestamp as an integer (e.g., HHMMSS or milliseconds)",VECTOR,100%,4,4
+mws36_title,The article title text,VECTOR,100%,6,25
+mws36_title_fast_d1,The article title text,VECTOR,100%,1,1
+mws36_total_words,Total tokens examined by the unigram classifier,VECTOR,100%,5,15
+mws36_total_words_fast_d1,Total tokens examined by the unigram classifier,VECTOR,100%,1,1

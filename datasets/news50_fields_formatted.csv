@@ -1,0 +1,84 @@
+Field,Description,Type,Coverage,Users,Alphas
+analyst_recommendation_change_score_2,Analyst Recommendations & Changes score representing a change in recommendation by an analyst firm,MATRIX,100%,5,5
+composite_story_sentiment_score_2,Composite Sentiment Score (0–100) combining multiple sentiment analysis techniques for the story,MATRIX,100%,5,5
+corporate_action_report_sentiment_score,Sentiment score from the BCA classifier specializing in reports on corporate action announcements,MATRIX,100%,1,1
+earnings_evaluation_sentiment_score,Earnings Evaluations classifier sentiment score for earnings evaluation stories,MATRIX,100%,1,1
+earnings_release_sentiment_score,Sentiment score from the BER classifier specializing in earnings releases,MATRIX,100%,6,13
+editorial_commentary_sentiment_score_2,Sentiment score from the BMQ classifier specializing in short commentary and editorials on global equity markets,MATRIX,100%,2,2
+entity_record_count_per_story,Total number of entity records RavenPack publishes for a given news story,MATRIX,100%,1,1
+entity_relevance_score_2,A score between 0 and 100 indicating how strongly related the entity is to the news story; 100 means the entity plays a key role and is highly relevant,MATRIX,100%,2,2
+event_novelty_score,Event Novelty Score (0–100) indicating how new a story is within a 24-hour window in a specific package,MATRIX,100%,2,2
+event_sentiment_score_2,"Event Sentiment Score (0–100) measuring entity sentiment based on proxies; higher values are more positive, below 50 negative",MATRIX,100%,1,1
+global_equities_sentiment_score,Sentiment score from the PEQ classifier specializing in detecting positive/negative phrases in global equities articles,MATRIX,100%,1,1
+global_event_novelty_score,Global Event Novelty Score (0–100) indicating novelty across all providers within a 24-hour window,MATRIX,100%,2,2
+global_novelty_elapsed_milliseconds,Global event novelty elapsed time in milliseconds between the first story and the current story across all providers,MATRIX,100%,3,3
+global_novelty_similarity_gap_days,"Number of days since a similar story was detected across all RavenPack editions (Dow Jones, Web, PR)",MATRIX,100%,4,4
+merger_acquisition_sentiment_score_4,"Sentiment score from the BAM classifier specializing in venture, company, mergers and acquisitions news",MATRIX,100%,3,3
+multi_classifier_equity_sentiment_score,"Multi Classifier for Equities sentiment score derived from BMQ, BEE, BCA, and ANL_CHG, applied to the most relevant companies in a story",MATRIX,100%,2,2
+mws50_acb,Score representing sentiment according to the corporate actions classifier,VECTOR,91%,9,13
+mws50_acb_2,A sentiment score from the BCA classifier specialized in reports on corporate action announcements,VECTOR,100%,0,0
+mws50_aes,"Score from 0 to 100 measuring the ratio of positive to total non-neutral events over a rolling 91-day window within the package, based on ESS>50 as positive and ESS<50 as negative",VECTOR,91%,5,5
+mws50_aes_2,0–100 ratio of positive events (ESS>50) to total non-neutral events over a rolling 91-day window within the package,VECTOR,100%,0,0
+mws50_bam,Score representing sentiment according to the mergers and acquisitions classifier,VECTOR,91%,5,10
+mws50_bam_2,"A sentiment score from the BAM classifier specialized in mergers, acquisitions, and takeovers for equities news stories",VECTOR,100%,0,0
+mws50_bee,Earnings evaluations sentiment score from the BEE classifier,VECTOR,91%,4,7
+mws50_bee_2,Sentiment score from the BEE classifier focused on earnings evaluations,VECTOR,100%,0,0
+mws50_ber,Earnings releases sentiment score from the BER classifier specialized in earnings release news,VECTOR,91%,3,3
+mws50_ber_2,A sentiment score from the BER classifier specialized in earnings releases,VECTOR,100%,0,0
+mws50_category,"A unique tag to label, identify, and recognize a particular type and property of an entity-specific news event",VECTOR,91%,4,4
+mws50_country_code,"Two-character ISO-3166 country code associated with the entity (companies by incorporation, currencies by central bank; commodities may be XX)",VECTOR,91%,9,9
+mws50_country_code_2,Two-letter ISO-3166 country code associated with the entity (companies by incorporation; currencies by central bank; commodities use XX),VECTOR,100%,1,2
+mws50_ens,Event Novelty Score (0–100) indicating how new the story is within a 24-hour window for this package,VECTOR,91%,5,13
+mws50_ens_2,Event Novelty Score between 0 and 100 indicating how new a story is within a 24-hour window in the package,VECTOR,100%,1,1
+mws50_ens_elapsed,Milliseconds elapsed between the first story and the current story within the event novelty chain for this package (first story = 0),VECTOR,91%,3,5
+mws50_ens_elapsed_2,Milliseconds elapsed since the first story in the event novelty chain within the package (first story = 0),VECTOR,100%,0,0
+mws50_ens_key,An alphanumeric identifier that provides a way to chain or relate stories about the same categorized event for the same entities.,VECTOR,91%,4,4
+mws50_ens_similarity_gap,"Number of days since a similar story was detected in this RPNA edition, from 0.00000 to 100.00000 where 100.00000 means 100+ days and 0.00000 means an identical timestamp",VECTOR,100%,45,102
+mws50_ens_similarity_gap_2,"Days since a similar story in this edition; 0.00000–100.00000 (100 = 100+ days, 0 = identical timestamp)",VECTOR,100%,1,1
+mws50_ess,"Granular sentiment score from 0 to 100 for the entity in the story; higher values indicate more positive short-term financial/economic sentiment and values below 50 indicate negative sentiment, derived from expert-labeled patterns",VECTOR,91%,16,22
+mws50_ess_2,"Event Sentiment Score (0–100) indicating short-term sentiment for the entity; higher is more positive, below 50 is negative",VECTOR,100%,0,0
+mws50_evaluation_method,A period of time used to measure changes from previous levels in an event.,VECTOR,91%,33,51
+mws50_g_ens,Global event novelty score from 0 to 100 indicating how new the story is within a 24 hour window across providers,VECTOR,91%,4,8
+mws50_g_ens_2,Global Event Novelty Score (0–100) measuring how new a story is within a 24-hour window across all providers,VECTOR,100%,0,0
+mws50_g_ens_elapsed,Milliseconds elapsed between the first and current story in the global event novelty chain across all news providers,VECTOR,91%,4,4
+mws50_g_ens_elapsed_2,Milliseconds elapsed since the first story in the global event novelty chain across all providers,VECTOR,100%,0,0
+mws50_g_ens_key,An alphanumeric identifier that provides a way to chain or relate stories about the same categorized event for the same entities across all news providers.,VECTOR,91%,3,4
+mws50_g_ens_similarity_gap,Number of days since a similar story was detected across all product editions,VECTOR,100%,41,98
+mws50_g_ens_similarity_gap_2,Group-level novelty similarity gap metric (0–1); lower values indicate greater similarity/possible echoes,VECTOR,100%,1,1
+mws50_ghc_lna,Score representing changes in analyst recommendations,VECTOR,91%,9,10
+mws50_ghc_lna_2,A numerical score representing analyst recommendation changes in the Equities package,VECTOR,100%,0,0
+mws50_group,A collection of related events.,VECTOR,91%,4,5
+mws50_maturity,"For events related to debt, this named attribute indicates the period of time for which a financial instrument remains outstanding.",VECTOR,91%,19,32
+mws50_news_type,"Code classifying the type of news story or document (e.g., news, press release), per module codebook",VECTOR,91%,5,5
+mws50_news_type_2,"Categorical classification of the news document type, resolved via the module-local codebook",VECTOR,100%,0,0
+mws50_nip,"News Impact Projections score (0–100) estimating market impact over the following two hours, conditional on time of arrival",VECTOR,91%,0,0
+mws50_nip_2,"News Impact Projections score from 0 to 100 estimating market impact over the next two hours, with time-of-day dependent thresholds",VECTOR,100%,1,1
+mws50_position_name,The position held by an individual within the entity involved in a specific news event.,VECTOR,86%,29,44
+mws50_product_key,Identifies which subscription package contains the record,VECTOR,96%,3,4
+mws50_property,"A named attribute of an event such as an entity, role, or string extracted from a matched event type. When applicable, the role played by the entity in the story is detected and tagged",VECTOR,91%,3,4
+mws50_qcm,"Multi-classifier for equities sentiment score combining outputs from BMQ, BEE, BCA, and ANL-CHG, applied to the most relevant companies mentioned in a story",VECTOR,91%,5,5
+mws50_qcm_2,"Multi-classifier equities sentiment score derived from BMQ, BEE, BCA, and ANL_CHG, applied to the most relevant companies in a story",VECTOR,100%,0,0
+mws50_qep,PEQ classifier score for global equities sentiment based on words/phrases in the article,VECTOR,91%,1,1
+mws50_qep_2,"Sentiment score from the PEQ classifier for global equities news, indicating the positive/negative tone of the item",VECTOR,100%,0,0
+mws50_qmb,Editorials & Commentary classifier score for the story (equities package),VECTOR,91%,2,5
+mws50_qmb_2,Score representing editorials and commentary content in the news,VECTOR,100%,1,1
+mws50_relevance,"Score from 0 to 100 indicating how strongly the entity is related to the news story, with 100 meaning the entity plays a key role",VECTOR,91%,3,3
+mws50_relevance_2,"0–100 score indicating how strongly the entity is related to the news story; higher means more central, 100 indicates a key role",VECTOR,100%,1,1
+mws50_rp_story_event_count,Total number of entity records (events) published by RavenPack for the given news story,VECTOR,91%,5,5
+mws50_rp_story_event_count_2,Total number of events in the story chain,VECTOR,100%,0,0
+mws50_rp_story_event_index,"Ordinal position of the entity record within a story, less than or equal to RP_STORY_EVENT_COUNT",VECTOR,91%,2,2
+mws50_rp_story_event_index_2,"Ordinal position of this entity record within the story, less than or equal to RP_STORY_EVENT_COUNT",VECTOR,100%,1,1
+mws50_ssc,Composite sentiment score from 0 to 100 representing overall story sentiment,VECTOR,91%,30,49
+mws50_ssc_2,Composite Sentiment Score from 0 to 100 combining multiple sentiment analysis techniques for the story,VECTOR,100%,1,1
+mws50_sub_type,A subdivision of a particular class of events,VECTOR,91%,3,3
+mws50_time,Time component of the record timestamp,VECTOR,91%,2,2
+mws50_time_2,Time of the record or event within the day,VECTOR,100%,0,0
+mws50_topic,A subject or theme of events detected,VECTOR,91%,2,3
+mws50_type,"A class of events, the constituents of which share similar characteristics",VECTOR,91%,7,10
+mws50_vea,"Aggregate Event Volume over the past 91 days for an entity, counting non-neutral events (ESS ≠ 50) from qualifying news that received an ESS score, signaling volume of highly relevant news",VECTOR,91%,7,18
+mws50_vea_2,"Count of non-neutral events for the entity over a rolling 91-day window within the package, including events with ESS above or below 50 and excluding ESS=50",VECTOR,100%,1,1
+news_volatility_projection_score,"News Impact Projections score (0-100) estimating the market impact over the next two hours, dependent on time of day",MATRIX,100%,3,3
+non_neutral_event_count_rolling_window,"Count of non-neutral events for an entity over a rolling 91-day window within a package; counts events with ESS above and below 50, excludes ESS=50",MATRIX,100%,2,2
+novelty_elapsed_milliseconds,Event novelty elapsed time in milliseconds between the first story and the current story within a specific package; first story is 0,MATRIX,100%,3,3
+novelty_similarity_gap_days,"Days since a similar story was detected in this specific edition; 0 means identical timestamp, 100 means 100 or more days",MATRIX,100%,3,4
+positive_event_ratio_score,"Granular 0–100 score: ratio of positive to total non-neutral events over a rolling 91-day window within a package; ESS>50 positive, ESS<50 negative, ESS=50 excluded",MATRIX,100%,1,1

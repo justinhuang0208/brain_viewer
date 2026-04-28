@@ -1,0 +1,51 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl46_average3monthreturnbuys,"Mean forward 3-month stock return following the insider’s buy transactions, averaged across their historical buys",VECTOR,67%,18,57
+mdl46_average3monthreturnsells,"Mean forward 3-month stock return following the insider’s sell transactions, averaged across their historical sells",VECTOR,71%,8,12
+mdl46_average6monthreturnbuys,"Mean forward 6-month stock return following the insider’s buy transactions, averaged across their historical buys",VECTOR,66%,6,8
+mdl46_average6monthreturnsells,"Mean forward 6-month stock return following the insider’s sell transactions, averaged across their historical sells",VECTOR,70%,4,4
+mdl46_conversionexerciseprice,Per-unit conversion/exercise price to convert the derivative into the underlying security,VECTOR,42%,2,2
+mdl46_conversionexercisepriceadjust,Split-adjusted per-unit exercise or conversion price of the derivative,VECTOR,42%,3,4
+mdl46_derivativetype,Index of an abbreviated description of the derivative type exchanged in the transaction,VECTOR,49%,7,19
+mdl46_expirationdate,Number of shares the insider intends to sell within 90 days after vendor data-cleaning,VECTOR,31%,3,3
+mdl46_form144_ncd,Index of a unique number assigned to each document that allows the information to be tracked back to the original source,VECTOR,31%,2,16
+mdl46_form144_rolecode01,Index of the insider's roles or positions belonging to directors within the company,VECTOR,31%,1,1
+mdl46_form144_rolecode02,Index of the insider's roles or positions belonging to committees within the company,VECTOR,31%,2,2
+mdl46_form144_rolecode03,Index of the insider's roles or positions belonging to officers within the company,VECTOR,31%,2,6
+mdl46_form144_rolecode04,Index of the insider's roles or positions belonging to affiliates within the company,VECTOR,31%,0,0
+mdl46_marketvalueoftransaction,Total market value of the proposed sale after vendor’s data-cleaning,VECTOR,31%,1,1
+mdl46_marketvalueoftransaction_ar,Total market value of the proposed sale as originally reported,VECTOR,31%,3,3
+mdl46_numberofderivatives,"Quantity of derivative instruments transacted (raw, unadjusted)",VECTOR,49%,2,3
+mdl46_numberofderivativesadjust,Split-adjusted number of derivative instruments transacted,VECTOR,49%,3,4
+mdl46_numberofshares,Number of shares involved in the transaction,VECTOR,71%,12,19
+mdl46_numberofsharesadjust,Split-adjusted number of shares exchanged in the transaction,VECTOR,71%,14,25
+mdl46_one_epytmrof,Index of The form type which the insider filed,VECTOR,71%,14,29
+mdl46_one_transactioncode,Index of a code that describes the character of the transaction after the vendor's data-cleaning process,VECTOR,71%,13,24
+mdl46_one_transactioncode_ar,Index of a code that describes the character of the transaction as reported,VECTOR,71%,13,23
+mdl46_proposednumberofshares_ar,Proposed number of shares to sell within 90 days as originally reported,VECTOR,31%,0,0
+mdl46_proposednumberofsharesadjust,Proposed number of shares to sell within 90 days after split-adjustment,VECTOR,31%,1,2
+mdl46_resultingderivativesheld,Post-transaction number of derivative securities the insider holds (direct or indirect) at the time of the event,VECTOR,46%,1,1
+mdl46_resultingderivativesheldadjust,Split-adjusted number of derivative securities the insider holds after the transaction (direct or indirect),VECTOR,46%,2,4
+mdl46_resultingsharesheld,Post-transaction shares held by the insider (direct or indirect),VECTOR,71%,8,14
+mdl46_resultingsharesheldadjust,Insider’s split-adjusted holdings (direct or indirect) after the transaction,VECTOR,71%,10,29
+mdl46_tableone_ncd,Index of a unique number assigned to each document that allows the information to be tracked back to the original source,VECTOR,71%,9,22
+mdl46_tableone_rolecode01,Index of the insider's roles or positions belonging to directors within the company,VECTOR,71%,16,43
+mdl46_tableone_rolecode02,Index of the insider's roles or positions belonging to committees within the company,VECTOR,71%,7,9
+mdl46_tableone_rolecode03,Index of the insider's roles or positions belonging to officers within the company,VECTOR,71%,6,9
+mdl46_tableone_rolecode04,Index of the insider's roles or positions belonging to affiliates within the company,VECTOR,71%,8,20
+mdl46_tabletwo_ncd,Index of a unique number assigned to each document that allows the information to be tracked back to the original source,VECTOR,49%,4,11
+mdl46_tabletwo_rolecode01,Index of the insider's roles or positions belonging to directors within the company,VECTOR,49%,1,1
+mdl46_tabletwo_rolecode02,Index of the insider's roles or positions belonging to committees within the company,VECTOR,49%,4,4
+mdl46_tabletwo_rolecode03,Index of the insider's roles or positions belonging to officers within the company,VECTOR,49%,1,1
+mdl46_tabletwo_rolecode04,Index of the insider's roles or positions belonging to affiliates within the company,VECTOR,49%,2,2
+mdl46_tnuocyub,Number of historical buy transactions by the insider used in the analytics,VECTOR,78%,4,4
+mdl46_transactionprice,Per-share transaction price after vendor data cleaning,VECTOR,67%,4,5
+mdl46_transactionprice_ar,Per-share transaction price as reported in the filing,VECTOR,67%,8,10
+mdl46_transactionpriceadjust,Split-adjusted per-share transaction price,VECTOR,67%,4,4
+mdl46_two_epytmrof,Index of the form type which the insider filed.,VECTOR,49%,1,2
+mdl46_two_transactioncode,Index of a code that describes the character of the transaction after vendor's data-cleaning process,VECTOR,49%,0,0
+mdl46_two_transactioncode_ar,Index of a code that describes the character of the transaction as reported,VECTOR,49%,4,14
+mdl46_underlyingmarketprice,Market price per share/unit of the underlying security at the relevant date,VECTOR,27%,0,0
+mdl46_underlyingmarketpriceadjust,Split-adjusted market price per share of the underlying security at the relevant date,VECTOR,27%,1,5
+mdl46_underlyingsecuritytitle,"Index of a brief description of the security underlying the derivative transaction, such as common or preferred",VECTOR,49%,4,4
+mdl46_underlyingshares,Number of underlying non-derivative shares represented or affected by the derivative transaction,VECTOR,49%,4,5
+mdl46_underlyingsharesadjust,Split-adjusted number of underlying non-derivative shares tied to the derivative transaction,VECTOR,49%,5,5

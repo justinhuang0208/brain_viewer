@@ -1,0 +1,42 @@
+Field,Description,Type,Coverage,Users,Alphas
+daily_event_announcement_time,Time of the announcement in the announcedDateTimeZoneId time zone,VECTOR,90%,0,0
+daily_event_announcement_time_utc,Time the event was announced (UTC),VECTOR,90%,0,0
+daily_event_earnings_release_time,Time of the earnings release,VECTOR,90%,0,0
+daily_event_entry_time,The time when the event was entered in the dataset.,VECTOR,90%,1,1
+daily_event_entry_time_utc,Time the record was first entered into the system (UTC),VECTOR,90%,0,0
+daily_event_last_update_time,Time the event record was last modified,VECTOR,90%,2,2
+daily_event_last_update_time_utc,Time the record was last modified (UTC),VECTOR,90%,1,1
+daily_event_record_end_time,The time when the current record for the daily event ceased to be active.,VECTOR,90%,0,0
+daily_event_record_start_time,The time when the current record for the daily event became active.,VECTOR,90%,0,0
+daily_event_relevant_time_utc,Time in UTC of the event’s key moment (often the event time; otherwise announcement time),VECTOR,90%,1,1
+event_announcement_time,The UTC time at which the event was announced,VECTOR,100%,2,2
+event_entry_time,The time when the event record was entered into the system,VECTOR,100%,0,0
+event_last_update_time,The time when the event record was last modified,VECTOR,100%,2,2
+event_relevant_time_utc,"UTC time of the key moment for the event (usually the announced time; for scheduled events, the event time)",VECTOR,100%,0,0
+future_event_announcement_time,"Time the announcement is scheduled to be made, in UTC",VECTOR,100%,1,1
+future_event_announcement_time_utc,Time the announcement is scheduled/made in UTC,VECTOR,100%,0,0
+future_event_entry_time,Time when this Future Event was entered,VECTOR,100%,0,0
+future_event_entry_time_utc,"Time the Future Event was entered, in UTC",VECTOR,100%,0,0
+future_event_last_update_time,Time of the last modification to the Future Event,VECTOR,100%,0,0
+future_event_last_update_time_utc,Time of the last modification in UTC,VECTOR,100%,0,0
+future_event_record_end_time,End time of the S&P effective window during which this record is valid,VECTOR,72%,0,0
+future_event_record_start_time,Start time of the S&P effective window for this record,VECTOR,100%,0,0
+future_event_relevant_time_utc,Time the event occurs in UTC time zone,VECTOR,100%,0,0
+mws54_eventcallbasicinfo_cancelledflag,"Flag indicating whether the event call was cancelled, 0=no, 1=yes",VECTOR,90%,16,27
+mws54_eventcallbasicinfo_fiscalquarter,Fiscal quarter associated with the event,VECTOR,90%,10,12
+mws54_eventcallbasicinfo_fiscalyear,Fiscal year pertaining to the event call,VECTOR,90%,11,24
+mws54_eventcallbasicinfo_postponedflag,"Indicator whether the event call was postponed; 0=no, 1=yes",VECTOR,90%,8,13
+mws54_eventerinfo_calendarmonth,Calendar month of the earnings release,VECTOR,90%,3,3
+mws54_eventerinfo_calendaryear,Calendar year of the earnings release,VECTOR,90%,5,7
+mws54_eventerinfo_cancelledflag,Indicator that the earnings event was canceled,VECTOR,90%,4,4
+mws54_eventerinfo_fiscalquarter,Fiscal quarter associated with the earnings release,VECTOR,90%,7,9
+mws54_eventerinfo_fiscalyear,Fiscal year of the earnings release,VECTOR,90%,10,29
+mws54_eventerinfo_fullyearflag,"Flag indicating the earnings release covers a full fiscal year, 0=no, 1=yes",VECTOR,90%,4,4
+mws54_eventsdaily_headline,Headline text for the event,VECTOR,90%,10,34
+mws54_eventsdaily_situation,Additional descriptive text for the event,VECTOR,90%,17,43
+mws54_factor,"Numeric amount/factor associated with the event, e.g., dividend amount or stock split ratio",VECTOR,47%,7,20
+mws54_futureeventmkt_headline,Headline for the event,VECTOR,100%,11,15
+mws54_futureeventmkt_situation,Additional descriptive text/details for the event,VECTOR,100%,11,59
+mws54_keydevelopments_headline,Headline text describing the event,VECTOR,100%,7,11
+mws54_keydevelopments_situation,Additional descriptive narrative text about the event,VECTOR,100%,10,14
+superevent_is_historical,Boolean flag indicating if the record corresponds to a past (historical) event as opposed to a scheduled (future) event,VECTOR,100%,11,16

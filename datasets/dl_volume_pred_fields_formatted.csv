@@ -1,0 +1,9 @@
+Field,Description,Type,Coverage,Users,Alphas
+predicted_daily_volume_from_news_image,Estimated daily trading volume based on news count chart image analysis.,MATRIX,100%,6,6
+predicted_daily_volume_from_ohlcv_image,"As-of T-1 predicted next-day trading volume normalized as specified by the USA_IMG_pred_OHLCV_D1 module, using only OHLCV inputs without event or news overlays, typically normalized to volume relative to ADV20",MATRIX,100%,8,11
+predicted_daily_volume_from_pva20_image,Estimated daily trading volume derived from price-volume average 20-day chart image.,MATRIX,100%,3,3
+predicted_daily_volume_from_volume_image,Estimated daily trading volume based on direct volume chart image analysis.,MATRIX,100%,3,3
+volume_ratio_prediction_from_news_image,Predicted ratio of future to current volume using news count chart image analysis.,MATRIX,100%,1,1
+volume_ratio_prediction_from_ohlcv_image,"As-of T–1 predicted next-day trading volume normalized (usually volume/ADV20), using only OHLCV inputs without event or news overlays",MATRIX,100%,1,1
+volume_ratio_prediction_from_pva20_image,Predicted ratio of future to current volume using price-volume average 20-day chart image.,MATRIX,100%,1,1
+volume_ratio_prediction_from_volume_image,Predicted ratio of future to current volume using direct volume chart image analysis.,MATRIX,100%,1,1

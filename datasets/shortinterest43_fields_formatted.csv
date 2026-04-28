@@ -1,0 +1,29 @@
+Field,Description,Type,Coverage,Users,Alphas
+shrt43_batssh_sumsize_m_data1,data1,MATRIX,100%,37,90
+shrt43_batssh_sumsize_m_data2,data2,MATRIX,100%,26,30
+shrt43_batssh_sumsize_s_data1,data1,MATRIX,100%,33,59
+shrt43_batssh_sumsize_s_data2,data2,MATRIX,100%,26,40
+shrt43_batsshvol_marketcenter,Bats operated stock exchanges,MATRIX,100%,17,30
+shrt43_batsshvol_svol,Number of shares sold short on BZX (BATS) for the symbol on that day,MATRIX,100%,66,90
+shrt43_batsshvol_totalvolume,Total shares traded on BZX (BATS) for the symbol on that day,MATRIX,100%,111,175
+shrt43_byxxsh_sumsize_m_data1,data1,MATRIX,93%,21,48
+shrt43_byxxsh_sumsize_m_data2,data2,MATRIX,93%,12,19
+shrt43_byxxsh_sumsize_s_data1,data1,MATRIX,100%,25,60
+shrt43_byxxsh_sumsize_s_data2,data2,MATRIX,100%,11,26
+shrt43_byxxshvol_marketcenter,Bats operated stock exchanges,MATRIX,100%,12,21
+shrt43_byxxshvol_svol,Total shares sold short for the symbol on the BYX venue for the day,MATRIX,100%,37,51
+shrt43_byxxshvol_totalvolume,Total shares traded for the symbol on the BYX venue for the day,MATRIX,100%,45,67
+shrt43_edgash_sumsize_m_data1,data1,MATRIX,96%,23,30
+shrt43_edgash_sumsize_m_data2,data2,MATRIX,96%,15,29
+shrt43_edgash_sumsize_s_data1,data1,MATRIX,100%,27,41
+shrt43_edgash_sumsize_s_data2,data2,MATRIX,100%,11,15
+shrt43_edgashvol_marketcenter,Bats operated stock exchanges,MATRIX,100%,11,12
+shrt43_edgashvol_svol,Total number of shares sold short for the symbol on EDGA for the given day,MATRIX,100%,27,35
+shrt43_edgashvol_totalvolume,Total number of shares traded for the symbol on EDGA for the given day,MATRIX,100%,18,21
+shrt43_edgxsh_sumsize_m_data1,data1,MATRIX,99%,23,25
+shrt43_edgxsh_sumsize_m_data2,data2,MATRIX,99%,64,103
+shrt43_edgxsh_sumsize_s_data1,data1,MATRIX,100%,22,28
+shrt43_edgxsh_sumsize_s_data2,data2,MATRIX,100%,25,26
+shrt43_edgxshvol_marketcenter,Bats operated stock exchanges,MATRIX,100%,6,9
+shrt43_edgxshvol_svol,Number of shares sold short for the symbol on EDGX during the reported day,MATRIX,100%,48,124
+shrt43_edgxshvol_totalvolume,Total shares traded for the symbol on EDGX during the reported day,MATRIX,100%,85,203

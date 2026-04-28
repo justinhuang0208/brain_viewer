@@ -1,0 +1,4 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth327_mktcap,"Market capitalization of the company, typically measured in US Dollars; represents the total market value of the company’s outstanding shares",MATRIX,79%,36,66
+oth327_sirc_lev,Numeric value quantifying the stock's sensitivity to parallel (level) shifts in the US Treasury yield curve,MATRIX,79%,15,81
+oth327_sirc_sl,Numeric value quantifying the stock's sensitivity to slope (twist/steepening/flattening) changes in the US Treasury yield curve,MATRIX,79%,20,68

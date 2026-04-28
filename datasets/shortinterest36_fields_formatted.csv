@@ -1,0 +1,5 @@
+Field,Description,Type,Coverage,Users,Alphas
+shrt36_mkt,Market,MATRIX,100%,150,355
+shrt36_sexemptvol,Number of shares sold short under regulatory exemptions (such as bona fide market making or Rule 201/SSR) on NYSE Arca on the given date,MATRIX,100%,218,647
+shrt36_svol,"Number of shares sold short on NYSE Arca on the given date, excluding short exempt trades",MATRIX,100%,208,456
+shrt36_totalvolume,"Total number of shares traded for the symbol on NYSE Arca on the given date, including all executed shares (long, short—both exempt and non-exempt, market maker, and odd-lot transactions)",MATRIX,100%,257,1035

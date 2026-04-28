@@ -1,0 +1,49 @@
+Field,Description,Type,Coverage,Users,Alphas
+is_parent_company_flag,"Indicator whether the entity is a parent company (1 = parent, 0 = otherwise)",MATRIX,96%,2,2
+mdl30_numnly_fq1_eps,Number of analysts included in the StarMine SmartEstimate for EPS for Fiscal Quarter 1,MATRIX,96%,156,936
+mdl30_numnly_fq2_eps,Number of analysts included in the StarMine SmartEstimate for EPS for Fiscal Quarter 2,MATRIX,96%,110,700
+mdl30_numnly_fy1_eps,Number of analysts included in the StarMine SmartEstimate for EPS for Fiscal Year 1,MATRIX,96%,141,867
+mdl30_numnly_fy2_eps,Number of analysts included in the StarMine SmartEstimate for EPS for Fiscal Year 2,MATRIX,96%,122,592
+mdl30_psprise_pct_f12m_eps,Predicted percent surprise in EPS for forward 12 months (SmartEstimate versus consensus mean),MATRIX,95%,105,626
+mdl30_psprise_pct_fq1_eps,Predicted percent surprise in EPS for Fiscal Quarter 1 (SmartEstimate versus consensus mean),MATRIX,93%,102,554
+mdl30_psprise_pct_fq2_eps,Predicted percent surprise in EPS for Fiscal Quarter 2 (SmartEstimate versus consensus mean),MATRIX,92%,86,753
+mdl30_psprise_pct_fy1_eps,Predicted percent surprise in EPS for Fiscal Year 1 (SmartEstimate versus consensus mean),MATRIX,95%,100,609
+mdl30_psprise_pct_fy2_eps,Predicted percent surprise in EPS for Fiscal Year 2 (SmartEstimate versus consensus mean),MATRIX,95%,94,538
+mdl30_smartestimate_f12m_eps,StarMine SmartEstimate (analyst-weighted) EPS forecast for Forward 12 Months,MATRIX,95%,102,611
+mdl30_smartestimate_fq1_eps,StarMine SmartEstimate (analyst-weighted) EPS forecast for Fiscal Quarter 1,MATRIX,93%,155,902
+mdl30_smartestimate_fq2_eps,StarMine SmartEstimate (analyst-weighted) EPS forecast for Fiscal Quarter 2,MATRIX,92%,111,763
+mdl30_smartestimate_fy1_eps,StarMine SmartEstimate (analyst-weighted) EPS forecast for Fiscal Year 1,MATRIX,95%,92,594
+mdl30_smartestimate_fy2_eps,StarMine SmartEstimate (analyst-weighted) EPS forecast for Fiscal Year 2,MATRIX,95%,100,663
+parent_company_indicator,"Indicator if the entity is a parent company (1 parent, 0 otherwise)",MATRIX,96%,3,3
+period_end_fq1_date,End date for the first projected fiscal quarter.,SYMBOL,95%,2,2
+period_end_fq2_date,End date for the second projected fiscal quarter.,SYMBOL,95%,1,1
+period_end_fy1_date,End date for the first projected fiscal year.,SYMBOL,96%,0,0
+period_end_fy2_date,End date for the second projected fiscal year.,SYMBOL,96%,0,0
+star_eps_analyst_number_fq1,Number of SmartEstimate Analysts FQ1 EPS,MATRIX,79%,6,18
+star_eps_analyst_number_fq2,Number of SmartEstimate Analysts FQ2 EPS,MATRIX,79%,2,16
+star_eps_analyst_number_fy1,Number of SmartEstimate Analysts FY1 EPS,MATRIX,80%,3,33
+star_eps_analyst_number_fy2,Number of SmartEstimate Analysts FY2 EPS,MATRIX,80%,2,18
+star_eps_smart_estimate_12m,SmartEstimate F12M EPS,MATRIX,78%,3,22
+star_eps_smart_estimate_fq1,SmartEstimate FQ1 EPS,MATRIX,76%,5,37
+star_eps_smart_estimate_fq2,SmartEstimate FQ2 EPS,MATRIX,75%,3,23
+star_eps_smart_estimate_fy1,SmartEstimate FY1 EPS,MATRIX,79%,3,17
+star_eps_smart_estimate_fy2,SmartEstimate FY2 EPS,MATRIX,78%,5,20
+star_eps_surprise_prediction_12m,Predicted Surprise % F12M EPS,MATRIX,79%,4,19
+star_eps_surprise_prediction_fq1,Predicted Surprise % FQ1 EPS,MATRIX,77%,3,14
+star_eps_surprise_prediction_fq2,Predicted Surprise % FQ2 EPS,MATRIX,76%,1,9
+star_eps_surprise_prediction_fy1,Predicted Surprise % FY1 EPS,MATRIX,80%,2,13
+star_eps_surprise_prediction_fy2,Predicted Surprise % FY2 EPS,MATRIX,79%,3,15
+star_new_eps_analyst_number_fq1,Number of analysts included in the StarMine SmartEstimate for EPS for Fiscal Quarter 1,MATRIX,96%,142,522
+star_new_eps_analyst_number_fq2,Number of analysts included in the StarMine SmartEstimate for EPS for Fiscal Quarter 2,MATRIX,96%,109,567
+star_new_eps_analyst_number_fy1,Number of analysts included in the StarMine SmartEstimate for EPS for Fiscal Year 1,MATRIX,96%,141,621
+star_new_eps_analyst_number_fy2,Number of analysts included in the StarMine SmartEstimate for EPS for Fiscal Year 2,MATRIX,96%,112,586
+star_new_eps_smart_estimate_12m,StarMine SmartEstimate (analyst-weighted) EPS forecast for the forward 12 months,MATRIX,95%,143,768
+star_new_eps_smart_estimate_fq1,StarMine SmartEstimate (analyst-weighted) EPS forecast for Fiscal Quarter 1,MATRIX,93%,191,1283
+star_new_eps_smart_estimate_fq2,StarMine SmartEstimate (analyst-weighted) EPS forecast for Fiscal Quarter 2,MATRIX,92%,118,772
+star_new_eps_smart_estimate_fy1,StarMine SmartEstimate (analyst-weighted) EPS forecast for Fiscal Year 1,MATRIX,95%,124,614
+star_new_eps_smart_estimate_fy2,StarMine SmartEstimate (analyst-weighted) EPS forecast for Fiscal Year 2,MATRIX,95%,126,773
+star_new_eps_surprise_prediction_12m,"Predicted surprise percentage for EPS over the forward 12 months, as the deviation of SmartEstimate from the consensus mean",MATRIX,95%,105,540
+star_new_eps_surprise_prediction_fq1,"Predicted surprise percentage for EPS for Fiscal Quarter 1, as the deviation of SmartEstimate from the consensus mean",MATRIX,93%,115,676
+star_new_eps_surprise_prediction_fq2,"Predicted surprise percentage for EPS for Fiscal Quarter 2, as the deviation of SmartEstimate from the consensus mean",MATRIX,92%,80,396
+star_new_eps_surprise_prediction_fy1,"Predicted surprise percentage for EPS for Fiscal Year 1, as the deviation of SmartEstimate from the consensus mean",MATRIX,95%,105,583
+star_new_eps_surprise_prediction_fy2,"Predicted surprise percentage for EPS for Fiscal Year 2, as the deviation of SmartEstimate from the consensus mean",MATRIX,95%,109,607

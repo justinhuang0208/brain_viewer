@@ -1,0 +1,15 @@
+Field,Description,Type,Coverage,Users,Alphas
+inst18_fundownershipv2_cur_holding,Current number of shares held by the fund,MATRIX,100%,202,405
+inst18_fundownershipv2_cur_mv,Current market value of shares held by the fund,MATRIX,100%,206,443
+inst18_fundownershipv2_num_held,Number of shareholding positions (distinct funds or entities) reported for the security,MATRIX,100%,117,239
+inst18_fundownershipv2_pct_held,Current percentage of outstanding shares held by the fund,MATRIX,100%,174,319
+inst18_fundownershipv2_pre_holding,Previous number of shares held by the fund,MATRIX,99%,140,362
+inst18_fundownershipv2_vm_erp,Previous market value of shares held by the fund,MATRIX,99%,127,262
+inst18_instownership_cur_holding,Number of shares currently held by the entity at the current reported time,MATRIX,87%,63,92
+inst18_instownership_cur_mv,Total market value of shares currently held by the entity at the reported time,MATRIX,87%,39,57
+inst18_instownership_num_held,Total number of entities (holders) that own the security at the reported time,MATRIX,87%,81,197
+inst18_instownership_pct_held,Percentage of total shares outstanding held by all filing entities in aggregate,MATRIX,95%,59,87
+inst18_instownership_pre_holding,Number of shares held by the entity at the previous (last reported) time,MATRIX,86%,32,49
+inst18_instownership_vm_erp,Total market value of shares held by the entity at the previous (last reported) time,MATRIX,86%,24,37
+inst18_lionshares_insider,Identifier for an insider transaction involving equity ownership (such as purchase or sale by executives or major shareholders),MATRIX,61%,32,39
+inst18_lionshares_insider_num,Number of shares held or transacted by the insider in a given transaction,MATRIX,62%,39,74

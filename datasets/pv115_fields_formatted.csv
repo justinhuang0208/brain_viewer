@@ -1,0 +1,13 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv115_all_sv,Short_Volume,MATRIX,100%,17,17
+pv115_all_tv,Total_Volume,MATRIX,100%,23,71
+pv115_cc,Indicator (integer) of whether a Nasdaq Closing Cross (closing auction) occurred for the symbol on that day; treat any positive value as occurred and zero or missing as no event,MATRIX,74%,8,9
+pv115_cc_qdsn,"Closing Cross price, the Nasdaq Official Closing Price set by the closing auction in USD",MATRIX,75%,3,8
+pv115_co_qdsn,"Opening Cross price, the Nasdaq Official Opening Price set by the opening auction in USD",MATRIX,92%,6,11
+pv115_nasdaq_sv,Short_Volume,MATRIX,100%,9,13
+pv115_nasdaq_tv,Total_Volume,MATRIX,100%,13,28
+pv115_oc,Indicator (integer) of whether a Nasdaq Opening Cross (opening auction) occurred for the symbol on that day; treat any positive value as occurred and zero or missing as no event,MATRIX,91%,6,7
+pv115_scc_qdsn,Closing Cross matched shares executed during the closing auction,MATRIX,75%,4,6
+pv115_sco_qdsn,Opening Cross matched shares executed during the opening auction,MATRIX,92%,8,14
+pv115_vcc_qdsn,"Closing Cross matched notional value in USD, approximately closing price multiplied by closing matched shares",MATRIX,75%,16,61
+pv115_vco_qdsn,"Opening Cross matched notional value in USD, approximately opening price multiplied by opening matched shares",MATRIX,92%,4,7

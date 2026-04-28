@@ -1,0 +1,37 @@
+Field,Description,Type,Coverage,Users,Alphas
+snt26_avgranking,Mean DNS popularity rank across all mapped domains for the issuer on the observation date; lower means more popular overall,VECTOR,77%,19,41
+snt26_avgranking_7,Average of rankings,VECTOR,94%,3,3
+snt26_dltcc,Country code top-level domain,VECTOR,95%,11,24
+snt26_kurtosis,Kurtosis of the issuer’s domain rank distribution on the observation date,VECTOR,77%,24,56
+snt26_kurtosis_15,Kurtosis of ranking,VECTOR,88%,5,5
+snt26_rank,Cisco Umbrella DNS popularity rank for the domain on data_date (lower means more popular),VECTOR,77%,13,30
+snt26_relpopularity08,Composite attention metric approximately equal to the sum over domains of 1/rank^0.8 (alpha=0.8); reduces dominance of top ranks,VECTOR,77%,55,86
+snt26_relpopularity08_11,Relative popularity calculated with alpha=0.8,VECTOR,94%,9,9
+snt26_relpopularity1,"Composite attention breadth score, approximately the sum over domains of 1/rank (alpha=1); higher indicates broader/stronger attention",VECTOR,77%,58,95
+snt26_relpopularity1_6,Relative popularity calculated with alpha=1,VECTOR,94%,8,8
+snt26_skewness,Skewness of the issuer’s domain rank distribution on the observation date,VECTOR,77%,16,22
+snt26_skewness_9,Skewness of ranking,VECTOR,88%,3,3
+snt26_top10pctranking,Rank threshold (cutpoint) below which the top 10% best-ranked mapped domains for the issuer fall on the observation date; lower is more popular,VECTOR,77%,32,57
+snt26_top10pctranking_8,The top 10% percentile ranking,VECTOR,94%,9,15
+snt26_top10pctrankingavg,Average rank among the top 10% best-ranked mapped domains for the issuer on the observation date; lower values indicate stronger concentration of popularity at the top,VECTOR,77%,34,46
+snt26_top10pctrankingavg_14,The average ranking of the top 10% percentile,VECTOR,94%,10,10
+snt26_top25pctranking,Rank threshold (cutpoint) for the top 25% best-ranked mapped domains for the issuer on the observation date; lower is more popular,VECTOR,77%,15,23
+snt26_top25pctranking_17,The top 25% percentile ranking,VECTOR,94%,2,2
+snt26_top25pctrankingavg,Average rank among the top 25% best-ranked mapped domains for the issuer on the observation date; lower values indicate stronger popularity within that slice,VECTOR,77%,28,53
+snt26_top25pctrankingavg_1,The average ranking of the top 25% percentile,VECTOR,94%,6,6
+snt26_top50pctranking,Rank threshold (cutpoint) for the top 50% best-ranked mapped domains for the issuer on the observation date; lower is more popular,VECTOR,77%,11,26
+snt26_top50pctranking_2,The top 50% percentile ranking,VECTOR,94%,5,5
+snt26_top50pctrankingavg,Average rank among the top 50% best-ranked mapped domains for the issuer on the observation date; lower values indicate stronger popularity within that half,VECTOR,77%,10,19
+snt26_top50pctrankingavg_4,The average ranking of the top 50% percentile,VECTOR,94%,2,3
+snt26_top75pctranking,Rank threshold (cutpoint) for the top 75% best-ranked mapped domains for the issuer on the observation date; lower is more popular,VECTOR,77%,12,20
+snt26_top75pctranking_12,The top 75% percentile ranking,VECTOR,94%,1,1
+snt26_top75pctrankingavg,Average rank among the top 75% best-ranked mapped domains for the issuer on the observation date; lower values indicate stronger popularity within that broad slice,VECTOR,77%,9,31
+snt26_top75pctrankingavg_3,The average ranking of the top 75% percentile,VECTOR,94%,2,3
+snt26_topranking,Best (lowest) DNS popularity rank among all mapped domains for the issuer on the observation date,VECTOR,77%,13,21
+snt26_topranking_10,The top ranking,VECTOR,94%,3,3
+snt26_totalcountrydomains,Count of mapped domains with country-code TLDs (ccTLDs) for the issuer on the observation date; excludes generic TLDs like .com,VECTOR,77%,10,24
+snt26_totalcountrydomains_13,Total number of country-code TLDs,VECTOR,94%,3,3
+snt26_totaldomains,Total count of mapped domains for the issuer on the observation date,VECTOR,77%,30,176
+snt26_totaldomains_5,Total number of sub-domains,VECTOR,94%,9,9
+snt26_wq_pit,"For ongoing data it is wq_append_time, for history data it simulated from PIT simulation field in the MCD input settings. MCD builder can disable auto-filled value of wq_pit for ongoing, by checking the flag ""Always simulate PIT"" in MCD Output Config",VECTOR,77%,16,28
+snt26_wq_pit_16,"For ongoing data it is wq_append_time, for history data it simulated from PIT simulation field in the MCD input settings. MCD builder can disable auto-filled value of wq_pit for ongoing, by checking the flag ""Always simulate PIT"" in MCD Output Config",VECTOR,94%,2,2

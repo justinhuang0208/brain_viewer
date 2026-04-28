@@ -1,0 +1,1156 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl230_allcap_sedol_60dsigma,Standard deviation of monthly price returns (volatility sigma),MATRIX,82%,166,648
+mdl230_allcap_sedol_6351_rp,Moving average of prices in the last 15 weeks divided by the moving average of prices in the last 36 weeks,MATRIX,79%,91,464
+mdl230_allcap_sedol_actrtn12m,Percent change in the stock’s price from month t-13 to month t-1 (twelve-month trailing return excluding the current month),MATRIX,78%,74,243
+mdl230_allcap_sedol_actrtn18m,Percent change in price from month t-19 to month t-1,MATRIX,77%,97,846
+mdl230_allcap_sedol_actrtn1m,Percent change in price from month t-1 to month t,MATRIX,83%,60,159
+mdl230_allcap_sedol_actrtn24m,Percent change in price from month t-25 to month t-1,MATRIX,75%,118,747
+mdl230_allcap_sedol_actrtn2m,Percent change in price from month t-2 to month t,MATRIX,83%,73,232
+mdl230_allcap_sedol_actrtn36m,Percent change in price from month t−37 to month t−1 (36-month trailing return excluding the current month),MATRIX,71%,223,4422
+mdl230_allcap_sedol_actrtn3m,It is defined as the percent change in price for a stock from month t-3 to month t,MATRIX,82%,59,136
+mdl230_allcap_sedol_actrtn60m,Percent change in price from month t-61 to month t-1,MATRIX,65%,152,2625
+mdl230_allcap_sedol_actrtn60m12lag,Percent change in price from month t-72 to month t-12,MATRIX,63%,78,311
+mdl230_allcap_sedol_actrtn6m,Percent change in the stock’s price from month t-7 to month t-1 (six-month trailing return excluding the current month),MATRIX,80%,63,270
+mdl230_allcap_sedol_actrtn9m,Price percent change from month t-10 to month t-1,MATRIX,78%,51,397
+mdl230_allcap_sedol_ad,Most recent total debt divided by total assets (debt-to-assets ratio),MATRIX,71%,24,44
+mdl230_allcap_sedol_adpmoc,"Most recent sum of long-term debt, short-term debt, underfunded pension liabilities, operating lease expense, and preferred stock, divided by total assets",MATRIX,81%,29,91
+mdl230_allcap_sedol_ags,"TTM selling, general and administrative expenses divided by TTM sales",MATRIX,74%,37,94
+mdl230_allcap_sedol_alpha60m,Intercept from a regression of the stock’s monthly returns on S&P 500 monthly returns over the last 60 months,MATRIX,65%,60,545
+mdl230_allcap_sedol_altmanz,"Altman Z-score, a formula used to measure a company’s bankruptcy risk based on multiple balance sheet metrics",MATRIX,69%,78,723
+mdl230_allcap_sedol_aoer,"Retained earnings to assets, defined as most recent quarter cumulative retained earnings divided by total assets",MATRIX,82%,16,42
+mdl230_allcap_sedol_aor,"Return on Assets, typically net income divided by total assets",MATRIX,82%,24,35
+mdl230_allcap_sedol_apemtt,Most recently reported TTM EPS after extraordinary items divided by month-end trading price,MATRIX,82%,95,1893
+mdl230_allcap_sedol_apg,"Gross profit to assets ratio, defined as TTM sales minus COGS divided by total assets",MATRIX,72%,29,208
+mdl230_allcap_sedol_apgghcy1_,Difference between most recent quarterly gross profit to assets and the same quarter one year ago; GPA = TTM (Sales − COGS) / total assets,MATRIX,72%,14,17
+mdl230_allcap_sedol_apgghcy3_,Difference between the most recent quarterly gross profit-to-assets ratio and that of the same quarter three years ago; gross profit-to-assets = TTM (Sales - COGS) / total assets,MATRIX,69%,34,232
+mdl230_allcap_sedol_aspanratio,"Quarterly operating assets minus operating liabilities, scaled by lagged total assets",MATRIX,76%,25,88
+mdl230_allcap_sedol_aspemtty3gc,Three-year geometric growth rate of the most recently reported TTM EPS after extraordinary items,MATRIX,78%,72,943
+mdl230_allcap_sedol_astcomp,Total current assets from the most recent quarter divided by total assets from the most recent quarter,MATRIX,69%,25,65
+mdl230_allcap_sedol_astto,Asset turnover: TTM sales divided by the most recently reported quarterly total assets,MATRIX,79%,15,25
+mdl230_allcap_sedol_avg10yep,Average earnings over the past 10 years divided by current price,MATRIX,72%,20,52
+mdl230_allcap_sedol_beta,"Beta, a standard measure of a stock's systematic risk or sensitivity to market movements",MATRIX,74%,16,31
+mdl230_allcap_sedol_betasigma,Product of the adjusted 60-month beta and the 60-month sigma (standard deviation of monthly price returns),MATRIX,65%,15,26
+mdl230_allcap_sedol_bmpo,Most recent quarterly operating income divided by the corresponding quarterly sales (operating margin),MATRIX,78%,19,30
+mdl230_allcap_sedol_booklev,Most recent quarterly total assets divided by book equity,MATRIX,82%,16,26
+mdl230_allcap_sedol_bpemtt,TTM EPS before extraordinary items divided by month-end price (earnings-to-price),MATRIX,82%,41,151
+mdl230_allcap_sedol_capacq,"Trailing 12-month operating cash flow minus trailing 12-month cash dividends, divided by total expenditures in the same period",MATRIX,79%,19,23
+mdl230_allcap_sedol_capexast,Trailing 12-month capital expenditures divided by total assets from the most recent quarter,MATRIX,79%,21,36
+mdl230_allcap_sedol_capexdeplink,Absolute value of the difference between ranked (1–1000) quarterly capital expenditures to assets and ranked (1–1000) quarterly depreciation to assets,MATRIX,79%,20,32
+mdl230_allcap_sedol_capexsale,TTM capital expenditures divided by TTM sales (CapEx-to-sales),MATRIX,77%,18,41
+mdl230_allcap_sedol_cashburnrate,Negative of (Cash From Operations + Cash from Investments) divided by (Cash + Short‑term Investments),MATRIX,76%,14,23
+mdl230_allcap_sedol_cashc,"Cash conversion cycle in days, defined as average inventory days plus average collection days minus average payable days",MATRIX,61%,13,33
+mdl230_allcap_sedol_cashp,Most recently reported cash and equivalents per share divided by the month-end trading price,MATRIX,76%,15,30
+mdl230_allcap_sedol_cashratio,Most recent quarterly cash and equivalents divided by current liabilities,MATRIX,69%,14,45
+mdl230_allcap_sedol_cashsale,Average cash and equivalents in the trailing 12 months divided by the trailing 12-month sales,MATRIX,73%,14,19
+mdl230_allcap_sedol_cashsev,Total cash and equivalents divided by (market value of common equity + book value of long-term debt),MATRIX,76%,12,15
+mdl230_allcap_sedol_ccacw,Working capital accruals equal to increase in accounts receivable plus increase in inventory plus decrease in accounts payable and accrued liabilities plus decrease in accrued income taxes plus net increase in other assets or decrease in other liabilities,MATRIX,67%,31,108
+mdl230_allcap_sedol_ceroe,Trailing 12-month funds from operations divided by the average of current and previous year equity value,MATRIX,74%,24,34
+mdl230_allcap_sedol_cfita,Trailing 12‑month cash flow from investing activities divided by the average total assets over the last four quarters,MATRIX,82%,8,13
+mdl230_allcap_sedol_cfleverage,Total liabilities divided by the trailing 12-month operating cash flow,MATRIX,63%,14,15
+mdl230_allcap_sedol_cfroi,Trailing 12‑month cash flow divided by average invested capital (common equity + long‑term debt + minority interest + preferred stock),MATRIX,80%,16,17
+mdl230_allcap_sedol_cg3yroic,"3-year geometric growth rate of ROIC, where ROIC = (TTM net income + interest expenses) divided by average invested capital; invested capital = common equity + long-term debt + minority interest + preferred stock",MATRIX,71%,14,15
+mdl230_allcap_sedol_cg3ysales,Compound annual growth rate of sales over the past 3 years,MATRIX,75%,3,6
+mdl230_allcap_sedol_chg12mtotdebt,"Twelve-month relative change in total debt, where total debt equals long-term plus short-term debt",MATRIX,71%,118,1171
+mdl230_allcap_sedol_chg3ycfast,"Most recent TTM operating cash flow minus comparable TTM cash flow from 12 quarters ago, scaled by average total assets over the period",MATRIX,76%,20,36
+mdl230_allcap_sedol_chg3yepsast,"TTM EPS before extraordinary items minus EPS 12 quarters ago, scaled by average total assets per share",MATRIX,78%,6,9
+mdl230_allcap_sedol_chg3yepsp,"Difference between the trailing 12-month earnings per share and that of 12 quarters ago, divided by the month-end trading price",MATRIX,79%,7,7
+mdl230_allcap_sedol_chg3yfcfast,(TTM free cash flow − TTM free cash flow 12 quarters ago) divided by average total assets,MATRIX,77%,9,13
+mdl230_allcap_sedol_chg3yocfast,"Most recent TTM operating cash flow minus operating cash flow 12 quarters ago, scaled by average total assets",MATRIX,78%,13,45
+mdl230_allcap_sedol_chg6malpha18m,Six‑month change in the 18‑month alpha (intercept from regressing monthly stock returns on S&P 500 monthly returns over the last 18 months),MATRIX,75%,14,19
+mdl230_allcap_sedol_chgalpha12m,6-month change in the 12-month alpha (intercept from regression of stock monthly returns on S&P 500 monthly returns over the last 12 months),MATRIX,77%,16,69
+mdl230_allcap_sedol_chgalpha36m,Six‑month change in the 36‑month alpha (intercept from regressing monthly stock returns on S&P 500 monthly returns over the last 36 months),MATRIX,69%,16,24
+mdl230_allcap_sedol_chgars,Change between the latest accounts receivable as a percentage of trailing 12-month sales and the same percentage four quarters earlier,MATRIX,71%,22,95
+mdl230_allcap_sedol_chginvavgast,12-month change in quarterly total inventories scaled by the average of assets at the most recent quarter end and 4 quarters prior,MATRIX,48%,9,15
+mdl230_allcap_sedol_chgnoa,"Year-over-year change of net operating assets to total assets, where net operating assets equal the most recent quarterly short-term debt plus long-term debt plus preferred equity plus common equity minus cash",MATRIX,76%,24,92
+mdl230_allcap_sedol_chgollev,Change in operating liability leverage from current quarter to 4 quarters ago; OLL = 1 − (ST debt + LT debt + common equity + preferred equity − cash)/(total assets − cash),MATRIX,82%,11,12
+mdl230_allcap_sedol_chgqtrepssurp,"Change in quarterly earnings surprise (Actual EPS − consensus EPS), scaled by the most recent closing price",MATRIX,73%,3,4
+mdl230_allcap_sedol_chgreccast,Percent change in the ratio of accounts receivable to current assets versus the same fiscal quarter one year ago,MATRIX,65%,10,15
+mdl230_allcap_sedol_chgsgasale,Yearly change in SG&A expenses minus yearly change in sales,MATRIX,72%,5,5
+mdl230_allcap_sedol_chgshare,It is defined as the percent change in a company's current number of outstanding shares as compared to the number of shares outstanding one year ago.,MATRIX,79%,9,9
+mdl230_allcap_sedol_chgvolpre4y,Change in the most recent 6-month moving average of monthly turnover ratio compared to the 12-month moving average of monthly turnover ratio four years ago,MATRIX,67%,9,11
+mdl230_allcap_sedol_cogsinvt,Absolute value of the difference between the yearly percent change in trailing 12-month cost of goods sold and the yearly percent change in inventory level,MATRIX,46%,6,13
+mdl230_allcap_sedol_coreepsp,"TTM core earnings per share from operations, excluding accounting changes, discontinued operations, extraordinary and special items, divided by month-end trading price",MATRIX,82%,4,4
+mdl230_allcap_sedol_covol,Slope of the least-squares regression line of the last 60 months of monthly trading volume against time,MATRIX,74%,12,23
+mdl230_allcap_sedol_cpgspea2y,"Consensus FY2 EPS minus consensus FY1 EPS, divided by consensus FY1 EPS (analyst estimated EPS growth from FY1 to FY2)",MATRIX,81%,4,4
+mdl230_allcap_sedol_curindbp_,"Industry-standardized BP: a stock's current book-to-price ratio minus the industry average, scaled by the cross-sectional standard deviation within the relative universe",MATRIX,82%,3,6
+mdl230_allcap_sedol_curindcfp_,"Industry-standardized CFP: a stock's TTM cash flow-to-price ratio minus the industry average, scaled by the cross-sectional standard deviation within the relative universe",MATRIX,81%,3,3
+mdl230_allcap_sedol_curinddivp_,"Stock’s trailing 12-month dividend yield minus the industry average, divided by the cross-sectional standard deviation within the relative universe",MATRIX,79%,5,23
+mdl230_allcap_sedol_curindebitdap_,"Current industry-normalized (probably z-scored) ratio of EBITDA to Price, standardizing a stock’s EBITDA/Price relative to its industry",MATRIX,81%,7,8
+mdl230_allcap_sedol_curindep_,"Industry-standardized deviation of trailing 12-month earnings per share before extraordinary items to price (E/P) from the industry average, scaled by the industry standard deviation (i.e., an industry z-score of E/P)",MATRIX,82%,3,4
+mdl230_allcap_sedol_curindfcfp_,"Stock’s trailing 12-month free cash flow-to-price ratio minus the industry average, divided by the cross-sectional standard deviation within the relative universe",MATRIX,82%,3,4
+mdl230_allcap_sedol_curindocfp_,"Industry-standardized OCFP: a stock's TTM operating cash flow-to-price ratio minus the industry average, scaled by the cross-sectional standard deviation within the relative universe",MATRIX,82%,7,10
+mdl230_allcap_sedol_curindocfta_,"Industry-normalized z-score of OCFTA: TTM operating cash flow-to-total assets minus industry average, divided by the industry standard deviation within the relative universe",MATRIX,82%,11,19
+mdl230_allcap_sedol_curindsp_,It is defined as a stock's trailing 12-month sales-to-price ratio (SP) less the average of the SPs of all stocks in the same industry deflated by the standard deviation of the SPs of all stocks in the same relative universe,MATRIX,82%,2,2
+mdl230_allcap_sedol_curratio,"Current Ratio (current assets divided by current liabilities), a measure of liquidity",MATRIX,69%,7,7
+mdl230_allcap_sedol_cvvolp20d,Ratio of the coefficient of variation of the last 20 days of closing prices to the coefficient of variation of daily trading volume over the same period,MATRIX,83%,6,6
+mdl230_allcap_sedol_cws,Average working capital over the trailing 12 months divided by total sales in the same period; working capital = inventory + accounts receivable − accounts payable,MATRIX,66%,3,6
+mdl230_allcap_sedol_d41isr,"Relative Strength Index measuring average up/down price moves over the prior 14 days, used to identify overbought/oversold conditions",MATRIX,83%,6,17
+mdl230_allcap_sedol_dcc,"Most recently reported quarterly cash flow from operations less cash dividends, divided by current interest-bearing debt",MATRIX,64%,16,30
+mdl230_allcap_sedol_debtcf,TTM cash flow divided by the sum of most recent long-term debt and short-term interest-bearing debt,MATRIX,72%,7,9
+mdl230_allcap_sedol_debtmktcap,Long-term debt plus short-term debt divided by market capitalization,MATRIX,71%,9,10
+mdl230_allcap_sedol_div5yg,Five-year growth in dividends paid by the company,MATRIX,37%,4,8
+mdl230_allcap_sedol_divcf,Trailing 12-month cash dividends divided by trailing 12-month cash flow; cash dividends include both common and preferred dividends,MATRIX,38%,5,5
+mdl230_allcap_sedol_divcov,Trailing 12-month earnings from operations divided by indicated annual dividends,MATRIX,40%,5,6
+mdl230_allcap_sedol_divgp,"Total dividends paid divided by (revenue − cost of goods sold), i.e., dividends to gross profit",MATRIX,32%,6,12
+mdl230_allcap_sedol_divyield,Trailing 12‑month dividends per share divided by month‑end trading price,MATRIX,40%,13,13
+mdl230_allcap_sedol_dpcapex,Absolute difference between the yearly percent change in TTM depreciation expense and the yearly percent change in TTM capital expenditures,MATRIX,77%,11,23
+mdl230_allcap_sedol_dsu,"Beta coefficient to change in US Dollar value, estimated by a 60-month multiple regression of returns on several macroeconomic factors",MATRIX,78%,10,12
+mdl230_allcap_sedol_dtsm1_rd,Standard deviation of the stock’s daily total return over the trailing one month,MATRIX,83%,17,22
+mdl230_allcap_sedol_earningstorpedo,"(Next 4-quarter EPS estimate plus TTM real earnings surprise) divided by TTM EPS, where TTM earnings surprise is the sum over the last 4 quarters of actual EPS minus estimated EPS",MATRIX,76%,33,122
+mdl230_allcap_sedol_earnshortfall,Reported accounting earnings minus free cash flow scaled by average assets,MATRIX,82%,6,7
+mdl230_allcap_sedol_ebitdadebt,"It is defined as trailing-twelve-month earnings before interest, taxes, depreciation and amortization divided by current total debt",MATRIX,70%,6,8
+mdl230_allcap_sedol_ebitdadebtchg,"It is defined as annual change in the ratio of trailing-twelve-month earnings before interest, taxes, depreciation and amortization divided by current total debt",MATRIX,68%,5,5
+mdl230_allcap_sedol_ebitdaev,Trailing 12-month EBITDA divided by enterprise value,MATRIX,81%,5,5
+mdl230_allcap_sedol_ebitdap,Trailing 12-month EBITDA divided by the month-end trading price,MATRIX,81%,6,7
+mdl230_allcap_sedol_ed,Debt to equity ratio,MATRIX,69%,6,8
+mdl230_allcap_sedol_epschgetr,Trailing 12-month pre-tax income per share multiplied by the change in effective tax rate from four quarters ago to the most recent trailing 12 months; effective tax rate = total tax expense divided by pre-tax income,MATRIX,56%,9,20
+mdl230_allcap_sedol_equityto,Trailing 12-month sales divided by the average of trailing 12-month reported book equity,MATRIX,79%,4,5
+mdl230_allcap_sedol_fc_curindfwdep_,It is defined as a stock's next 4-quarter's analysts consensus earnings estimates-to-price ratio (FwdEP) less the average of the FwdEPs of all stocks in the same industry deflated by the standard deviation of these FwdEPs,MATRIX,81%,11,17
+mdl230_allcap_sedol_fc_dypeg,Reciprocal of a stock's forward 12-month P E ratio divided by the total growth rate; the total growth rate is the sum of the I B E S forecasted long-term growth rate and the indicated dividend yield,MATRIX,56%,7,8
+mdl230_allcap_sedol_fc_ebop,It is defined as a stock's valuation based on Edwards-Bell-Ohlson (EBO) model deflated by its month-end trading price. EBO is a modified dividend discount model that measures a firm's intrinsic value by comparing generated earnings to the cost of capital,MATRIX,72%,3,3
+mdl230_allcap_sedol_fc_estep,Most recent First Call next four quarters median earnings estimate divided by month-end trading price,MATRIX,81%,6,9
+mdl230_allcap_sedol_fc_fcfroey1p,It is defined as the trailing 12-month free cash flow per share for a stock times its First Call consensus next 4-quarter earnings forecasts divided by the most recently reported book value per share scaled by its month-end trading price,MATRIX,76%,7,8
+mdl230_allcap_sedol_fc_fqsurstd,Most recent quarterly earnings surprise (actual EPS minus First Call consensus) standardized by the SD of analysts’ individual forecasts,MATRIX,66%,5,13
+mdl230_allcap_sedol_fc_fwdroe,Analysts’ EPS estimate for the next four quarters divided by the most recent common equity per share (forward ROE),MATRIX,76%,11,15
+mdl230_allcap_sedol_fc_numest,Number of First Call analysts’ earnings estimates for fiscal year 1 for the stock,MATRIX,81%,8,9
+mdl230_allcap_sedol_fc_numrevy1,Number of analyst estimate revisions for forecasted year 1,MATRIX,76%,8,12
+mdl230_allcap_sedol_fc_rel5yfwdep,"Z-score of forward earnings-to-price ratio over 5 years defined as current next 4 quarters consensus EPS to price minus the 60-month average, scaled by the 60-month standard deviation",MATRIX,80%,2,2
+mdl230_allcap_sedol_fc_rev3y1,"Change in the current analysts mean earnings estimate for fiscal year 1 versus three months ago, scaled by the month-end trading price",MATRIX,79%,5,5
+mdl230_allcap_sedol_fc_rev3y2,It is defined as the change in a stock's current First Call analysts mean earnings estimate for fiscal year 2 less that of three months ago deflated by its month-end trading price,MATRIX,78%,4,4
+mdl230_allcap_sedol_fc_rev6,"Average of the prior six months’ monthly changes in FY1 consensus earnings forecasts from First Call, scaled by previous month-end price",MATRIX,76%,10,13
+mdl230_allcap_sedol_fc_stdevfy1epsp,Standard deviation of analysts' FY1 EPS forecasts scaled by month-end closing price,MATRIX,80%,3,3
+mdl230_allcap_sedol_fc_stdevfy2epsp,"Standard deviation of First Call analysts' individual forecasts for fiscal year 2 earnings, scaled by the month-end closing price",MATRIX,80%,2,3
+mdl230_allcap_sedol_fc_y2repsg,"FY2 consensus EPS forecast minus the most recent reported fiscal-year actual EPS, divided by the stock’s month-end price",MATRIX,79%,13,18
+mdl230_allcap_sedol_fcfequity,Trailing 12-month free cash flow divided by the average book equity value over the same period,MATRIX,79%,6,6
+mdl230_allcap_sedol_fcfghc,"TTM free cash flow minus TTM free cash flow from 4 quarters ago, divided by average total assets",MATRIX,82%,4,4
+mdl230_allcap_sedol_fcfroi,Trailing 12-month free cash flow divided by the average invested capital over the same period; invested capital equals common equity plus long-term debt plus minority interest plus preferred stock,MATRIX,81%,4,4
+mdl230_allcap_sedol_fcfsale,TTM free cash flow divided by TTM sales (free cash flow margin),MATRIX,79%,4,8
+mdl230_allcap_sedol_fcfy3gc,3-year geometric growth rate of free cash flow,MATRIX,78%,5,7
+mdl230_allcap_sedol_fcghc,"TTM cash flow minus comparable TTM cash flow from 4 quarters ago, scaled by average total assets",MATRIX,81%,5,6
+mdl230_allcap_sedol_fcoghc,"Most recent TTM operating cash flow minus TTM OCF from four quarters ago, divided by average total assets",MATRIX,82%,5,5
+mdl230_allcap_sedol_fixastto,Trailing 12-month sales divided by the average total fixed assets over the same period,MATRIX,78%,10,12
+mdl230_allcap_sedol_flowratio,"(Current assets − cash and equivalents) divided by (current liabilities − short-term debt), most recent quarter",MATRIX,69%,14,30
+mdl230_allcap_sedol_fqsurstd60dlag,"Most recent actual fiscal quarter EPS minus the consensus EPS estimate from 60 days ago, standardized by the standard deviation of analyst forecasts 60 days ago",MATRIX,69%,6,6
+mdl230_allcap_sedol_fwdebitdaev,FY1 EBITDA estimate divided by enterprise value (forward EBITDA/EV),MATRIX,73%,6,6
+mdl230_allcap_sedol_gear,It is defined as the long-term debt divided by the difference between total assets and current liability,MATRIX,69%,7,8
+mdl230_allcap_sedol_grahamnum,"Graham Number, a valuation metric representing the fair value per share per Benjamin Graham’s formula (sqrt of 22.5 × EPS × book value per share)",MATRIX,50%,3,3
+mdl230_allcap_sedol_gspea2y_cf,It is defined as a stock's most recent First Call consensus analysts earnings forecast for fiscal year 2 minus the consensus forecast for year 1 and then divided by its month-end trading price,MATRIX,81%,6,14
+mdl230_allcap_sedol_gtl,"I/B/E/S mean long-term growth forecast, representing expected annual increase in operating earnings over the company’s next full business cycle",MATRIX,67%,2,3
+mdl230_allcap_sedol_gtlm6ghc,Percent change in the mean long-term growth forecast (I/B/E/S) versus 6 months earlier,MATRIX,33%,4,5
+mdl230_allcap_sedol_high52w,It is defined as the month-end price divided by the highest monthly closing price in the past 12-month.,MATRIX,83%,20,23
+mdl230_allcap_sedol_ica,Change in the most recent TTM capital investment intensity relative to the average of the prior three years,MATRIX,73%,6,7
+mdl230_allcap_sedol_idb,Baltic Dry Index,MATRIX,73%,4,4
+mdl230_allcap_sedol_indrelcroe_,"A stock’s lagged quarterly ROE minus the industry average ROE, scaled by the cross-sectional standard deviation of ROEs within the industry (industry-relative standardized ROE)",MATRIX,78%,9,10
+mdl230_allcap_sedol_indrelrecd_,"Industry-relative standardized doubtful receivables (asset-adjusted): own value minus industry average, divided by industry standard deviation",MATRIX,49%,4,4
+mdl230_allcap_sedol_indrelrtn4w_,Industry-relative standardized 4-week return: (stock’s 4-week return − industry average) divided by the industry standard deviation,MATRIX,82%,6,7
+mdl230_allcap_sedol_indrelrtn5d_,"Industry-relative z‑score of 5‑day return: stock’s 5‑day return minus industry average, divided by the standard deviation of industry returns",MATRIX,82%,1,1
+mdl230_allcap_sedol_inflation,"Beta coefficient to changes in Inflation, estimated via a 60‑month multi-factor regression of stock returns on macro factors",MATRIX,78%,3,3
+mdl230_allcap_sedol_invast,Current inventory divided by total assets from the most recent quarter,MATRIX,47%,5,8
+mdl230_allcap_sedol_iqa,Year-over-year change in [1 − (current assets + PP&E) / total assets],MATRIX,68%,0,0
+mdl230_allcap_sedol_irttmsalesev,"Industry-relative z-score of TTM Sales/Enterprise Value: own TTM Sales/EV minus industry average, divided by the industry standard deviation within the universe",MATRIX,82%,9,15
+mdl230_allcap_sedol_lagegp,"TTM EPS before extraordinary items times the change in yearly TTM sales per share growth rate, divided by month-end price",MATRIX,79%,4,4
+mdl230_allcap_sedol_lfd,Sum of the trailing 12-month pretax income and trailing 12-month interest expense divided by the trailing 12-month pretax income,MATRIX,81%,11,14
+mdl230_allcap_sedol_liqcoeff,Slope from a regression of monthly turnover ratio on contemporaneous monthly returns liquidity sensitivity,MATRIX,78%,4,4
+mdl230_allcap_sedol_lumqca,Most recent quarterly invested capital divided by trailing 12-month EBITDA,MATRIX,57%,6,6
+mdl230_allcap_sedol_m42rav,Variance (statistical measure of variability) of returns or prices over the previous 24 months,MATRIX,75%,0,0
+mdl230_allcap_sedol_m6dn2ntr,Price return from month t-12 to month t-7,MATRIX,78%,0,0
+mdl230_allcap_sedol_md,"Financial distress score per the Campbell, Hilscher and Szilagyi model as used by Campbell et al. 2008 and Chen and Zhang 2009",MATRIX,67%,4,5
+mdl230_allcap_sedol_milliq,Monthly average of the ratio of daily absolute return to daily dollar trading volume (a liquidity/price impact proxy),MATRIX,83%,1,1
+mdl230_allcap_sedol_mktcappera,Current month-end market capitalization divided by the number of analysts providing FY1 earnings estimates to I B E S,MATRIX,81%,7,8
+mdl230_allcap_sedol_mktlev,Market leverage ratio defined as month-end market value plus most recent book debt divided by market value,MATRIX,82%,1,1
+mdl230_allcap_sedol_mpg,"Trailing twelve-month gross profit margin, calculated as (Sales − COGS) / Sales",MATRIX,72%,9,13
+mdl230_allcap_sedol_mpgghcy3_,Most recent quarterly gross profit margin minus the margin of the same quarter three years ago gross margin defined as TTM Sales minus COGS over Sales,MATRIX,64%,8,8
+mdl230_allcap_sedol_mpgy3gc,Three-year geometric growth rate of gross margins,MATRIX,64%,1,1
+mdl230_allcap_sedol_mpn,Most recently reported quarterly net income after tax divided by the corresponding quarterly sales (net profit margin),MATRIX,79%,6,6
+mdl230_allcap_sedol_mpnghc,Most recent quarterly net profit margin minus the NPM 4 quarters ago (NPM = net income divided by total sales),MATRIX,78%,5,5
+mdl230_allcap_sedol_mpoghc,Most recent quarterly operating profit margin minus that from four quarters ago; operating profit margin = income from operations divided by total sales,MATRIX,77%,6,6
+mdl230_allcap_sedol_mpoy3gc,"3-year geometric growth rate of operating profit margin, where margin = most recent quarterly operating income divided by quarterly sales",MATRIX,74%,18,249
+mdl230_allcap_sedol_mrspe_cf,"3-month change in First Call median FY1 earnings forecast, scaled by the current mean estimate",MATRIX,59%,10,19
+mdl230_allcap_sedol_nasales,Annual aggregate sales for North America as reported by the company divided by total annual sales,MATRIX,71%,10,12
+mdl230_allcap_sedol_netcashp,Quarterly cash and equivalents minus long-term and current debt divided by month-end market value,MATRIX,76%,4,5
+mdl230_allcap_sedol_netdebt,"Net debt share of total capitalization, defined as net debt divided by net debt plus preferred stock plus common stock, using most recent quarter",MATRIX,82%,4,6
+mdl230_allcap_sedol_netdebtebitda,"Net debt divided by EBITDA, where net debt = long-term debt + short-term debt - cash and equivalents",MATRIX,66%,2,2
+mdl230_allcap_sedol_nfaldebt,Most recent quarterly net fixed assets divided by total long-term debt,MATRIX,68%,5,6
+mdl230_allcap_sedol_niper,Income after taxes for the trailing 12 months divided by the number of employees at the end of the last reported fiscal year,MATRIX,81%,11,48
+mdl230_allcap_sedol_nlassets,Natural logarithm of the most recent quarterly total assets,MATRIX,82%,3,5
+mdl230_allcap_sedol_nlassetsusd,It is defined as the natural logarithm of the most recent quarterly reported total assets in USD.,MATRIX,82%,6,8
+mdl230_allcap_sedol_nlmktcap,It is defined as the natural logarithm of the cube of a stock's total market value.,MATRIX,83%,4,6
+mdl230_allcap_sedol_nlmktcapusd,It is defined as the natural logarithm of the cubic of a stock's total market value in USD.,MATRIX,83%,11,41
+mdl230_allcap_sedol_nlprice,Natural logarithm of the cubic of the stock’s month-end unadjusted closing price,MATRIX,83%,9,10
+mdl230_allcap_sedol_nlprice_usd,It is defined as the natural logarithm of the cubic of a stock's unadjusted closing price in USD,MATRIX,83%,3,3
+mdl230_allcap_sedol_nlsales,"Natural logarithm of the cube of the company’s trailing 12-month sales (i.e., ln(sales^3))",MATRIX,79%,8,8
+mdl230_allcap_sedol_nlsales_usd,It is defined as the natural logarithm of the cubic of a company's trailing 12-month sales in USD,MATRIX,79%,7,10
+mdl230_allcap_sedol_nlvolcap,Natural log of (12-month average monthly trading volume divided by 12-month average monthly market capitalization),MATRIX,81%,5,5
+mdl230_allcap_sedol_nnastp,Net current assets per share (current assets per share minus total liabilities per share) divided by month-end price,MATRIX,69%,3,5
+mdl230_allcap_sedol_noato,"Trailing 12-month sales divided by the last 4-quarters average net operating assets, where net operating assets equal short-term debt plus long-term debt plus preferred equity plus common equity minus cash",MATRIX,79%,7,8
+mdl230_allcap_sedol_nopatmargin,TTM (Net income + Interest expense × (1 − effective tax rate)) divided by net sales; effective tax rate = TTM income taxes / TTM income before taxes,MATRIX,75%,6,6
+mdl230_allcap_sedol_ntrm01ff,Percent change in a stock’s price from 12 months ago to 2 months ago,MATRIX,78%,1,1
+mdl230_allcap_sedol_numrevy2,"Weighted average within a month of the number of FY2 analyst earnings forecasts raised minus the number lowered, divided by the total number of analyst forecasts",MATRIX,74%,4,4
+mdl230_allcap_sedol_ocfast,Trailing 12-month net cash flow from operations divided by average total assets,MATRIX,82%,5,6
+mdl230_allcap_sedol_ocfmargin,TTM cash flow from operations divided by TTM sales (operating cash flow margin),MATRIX,79%,6,6
+mdl230_allcap_sedol_ocfratio,Most recent quarterly cash flow from operations divided by current liabilities,MATRIX,69%,6,6
+mdl230_allcap_sedol_ocfroi,TTM operating cash flow divided by average invested capital over the same period; invested capital = common equity + long-term debt + minority interest + preferred stock,MATRIX,81%,4,4
+mdl230_allcap_sedol_ohlsonscore,"Ohlson model score assessing a company's probability of bankruptcy based on size, capital structure, financial performance, and liquidity",MATRIX,69%,5,6
+mdl230_allcap_sedol_oilprice,"Beta coefficient to change in oil prices, estimated by a 60-month multiple regression of returns on several macroeconomic factors",MATRIX,78%,5,8
+mdl230_allcap_sedol_ollev,1 minus [(short‑term debt + long‑term debt + common equity + preferred equity − cash) ÷ (total assets − cash)] in the current quarter,MATRIX,82%,5,8
+mdl230_allcap_sedol_opincltd,It is defined as the difference between the yearly percent change in operating income and the yearly percent change in long-term debt,MATRIX,58%,0,0
+mdl230_allcap_sedol_oplev,Percent change in TTM operating income from the prior quarter divided by the percent change in TTM sales from the prior quarter (operating leverage),MATRIX,64%,3,4
+mdl230_allcap_sedol_otvni,It is defined as the trailing 12-month cost of goods sold divided by the average of inventory in the same period,MATRIX,47%,2,2
+mdl230_allcap_sedol_p50_200ratio,50-day moving average price divided by 200-day moving average price,MATRIX,78%,3,3
+mdl230_allcap_sedol_past,Month-end price divided by most recent quarterly total assets per share,MATRIX,82%,3,14
+mdl230_allcap_sedol_pau,"Unexpected accounts payable: current A/P minus expected A/P (prior-year closing A/P multiplied by TTM COGS growth), scaled by total assets",MATRIX,61%,5,9
+mdl230_allcap_sedol_pb,Most recent book value per share divided by month-end trading price (book-to-price),MATRIX,82%,10,10
+mdl230_allcap_sedol_pbdwf,Average quarterly forward-looking book value per share divided by close price,MATRIX,71%,7,8
+mdl230_allcap_sedol_pbroeresidual,"Residual from a price-to-book valuation model that incorporates firm growth and ROE (per Wilcox and Philips, 2005), capturing deviation from model-implied P/B",MATRIX,48%,2,2
+mdl230_allcap_sedol_pbwt,Time-weighted average of book value per share estimates for FY1 and FY2 divided by close price,MATRIX,70%,9,12
+mdl230_allcap_sedol_pca,Average of the trailing 12-month reported accounts receivable times 365 divided by the trailing 12-month sales,MATRIX,71%,2,2
+mdl230_allcap_sedol_pcdwf,Average quarterly forward-looking cash flows per share divided by close price,MATRIX,63%,4,4
+mdl230_allcap_sedol_pctabv260low,Current closing price divided by the lowest daily low over the last 260 trading days,MATRIX,83%,7,17
+mdl230_allcap_sedol_pctchg3ycf,Percent change in the most recent trailing 12-month cash flow per share compared to its level 12 quarters earlier (three years ago),MATRIX,70%,2,5
+mdl230_allcap_sedol_pctchg3yeps,Percent change in most recent TTM EPS versus TTM EPS 12 quarters ago,MATRIX,71%,5,10
+mdl230_allcap_sedol_pctchg3yfcf,Percent change in trailing 12-month free cash flow per share compared to 12 quarters ago,MATRIX,69%,4,4
+mdl230_allcap_sedol_pctchg3yocf,Percent change in trailing 12-month operating cash flow per share compared to 12 quarters ago,MATRIX,72%,8,12
+mdl230_allcap_sedol_pctchgastto,Percent change in the most recent asset turnover ratio compared to that of 4 quarters ago; asset turnover ratio is trailing 12-month sales divided by average total assets in the same period,MATRIX,79%,1,2
+mdl230_allcap_sedol_pctchgcf,Percent change in TTM cash flow per share versus four quarters ago,MATRIX,73%,1,1
+mdl230_allcap_sedol_pctchgeps,Percent change in the most recent trailing 12-month earnings per share before extra items compared to the EPS 4 quarters ago,MATRIX,72%,1,2
+mdl230_allcap_sedol_pctchgfcf,Percent change in the most recent trailing 12-month free cash flow per share compared to the free cash flow per share 4 quarters ago,MATRIX,71%,0,0
+mdl230_allcap_sedol_pctchgocf,Percent change in TTM operating cash flow per share versus 4 quarters ago,MATRIX,75%,8,9
+mdl230_allcap_sedol_pctchgqtrast,Growth in the most recently reported quarterly total assets per share compared with four quarters ago (percent change),MATRIX,82%,7,7
+mdl230_allcap_sedol_pctchgqtrsales,It is defined as the growth in most recent reported quarterly sales per share as compared to 4 quarters ago,MATRIX,79%,7,8
+mdl230_allcap_sedol_pcurlia,Most recently reported quarterly current liabilities per share divided by the month-end closing price,MATRIX,69%,6,6
+mdl230_allcap_sedol_pcwt,Time-weighted average of cash flows per share estimates for fiscal years 1 and 2 divided by the close price,MATRIX,63%,4,4
+mdl230_allcap_sedol_pd09erpvc,Standard deviation of the last 90 days’ closing prices divided by their mean (coefficient of variation),MATRIX,82%,8,8
+mdl230_allcap_sedol_pe_wt,Time-weighted forward earnings-to-price ratio using FY1 and FY2 earnings estimates to approximate a twelve-month forward earnings measure relative to price,MATRIX,81%,7,8
+mdl230_allcap_sedol_pedu,Difference between the trailing 12-month depreciation expenses and the expected level of depreciation expenses (multiplying the prior year's closing account balance by the growth in total fixed assets) scaled by total assets,MATRIX,80%,5,14
+mdl230_allcap_sedol_pedwf_cf,Next four quarters' mean consensus EPS estimate divided by price (forward earnings to price),MATRIX,81%,6,14
+mdl230_allcap_sedol_pelh_cf,"Sum of the 3-month change in the highest FY1 EPS estimate and the 3-month change in the lowest FY1 EPS estimate, scaled by month-end price",MATRIX,78%,3,3
+mdl230_allcap_sedol_perg,PEG ratio (price/earnings divided by earnings growth),MATRIX,55%,1,1
+mdl230_allcap_sedol_pfcf_cf,"Next 4-quarter mean earnings estimates plus trailing 12-month depreciation expense per share minus corresponding capital expenditures, divided by the month-end trading price",MATRIX,80%,1,1
+mdl230_allcap_sedol_pfcfghc,(TTM free cash flow per share − TTM free cash flow per share 4 quarters ago) divided by month-end trading price,MATRIX,82%,1,1
+mdl230_allcap_sedol_pfcfmtt,Trailing 12-month free cash flow per share divided by the month-end trading price; free cash flow equals operating cash flow minus capital expenditures and cash dividends,MATRIX,82%,8,10
+mdl230_allcap_sedol_pfcfy3ghc,It is defined as the difference between the most recently reported trailing 12-month free cash flow per share and that of 12-quarters ago for a stock divided by its month-end trading price,MATRIX,77%,3,3
+mdl230_allcap_sedol_pfcghc,Difference between TTM cash flow per share and that of 12 quarters ago divided by month-end price,MATRIX,81%,5,6
+mdl230_allcap_sedol_pfcmtt,Trailing 12-month cash flow per share scaled by the month-end trading price; cash flow = net income + depreciation,MATRIX,81%,4,5
+mdl230_allcap_sedol_pfcoghc,"Difference between the most recent trailing 12-month operating cash flow per share and that of 4 quarters ago, divided by the month-end trading price",MATRIX,82%,3,6
+mdl230_allcap_sedol_pfcomtt,TTM operating cash flow per share divided by month-end trading price (operating cash flow to price),MATRIX,82%,4,4
+mdl230_allcap_sedol_pfcoy3ghc,"Difference between current TTM operating cash flow per share and that from 12 quarters ago, divided by month-end trading price",MATRIX,78%,3,3
+mdl230_allcap_sedol_pfcy3ghc,Change in trailing 12-month cash flow per share over 3 years divided by month-end price,MATRIX,76%,4,4
+mdl230_allcap_sedol_pfgmtt,It is defined as the sum of trailing 12-month growth flow value per share for a stock divided by its month-end trading price. Growth flow is the sum of Research & Development expenses and reported net income,MATRIX,82%,3,8
+mdl230_allcap_sedol_pge_cf,"First Call next four quarters mean earnings estimate times I B E S long-term mean growth forecast, divided by month-end price",MATRIX,56%,1,1
+mdl230_allcap_sedol_pi,"Beta coefficient to changes in Industrial Production, estimated via a 60‑month multi-factor regression of stock returns on macro factors",MATRIX,78%,5,6
+mdl230_allcap_sedol_pinoa,Trailing 12-month operating income after depreciation divided by the average net operating assets,MATRIX,68%,4,5
+mdl230_allcap_sedol_ppa,Average trailing 12-month accounts payable times 365 divided by TTM cost of goods sold days payable outstanding,MATRIX,62%,3,6
+mdl230_allcap_sedol_pqipmtt,Trailing 12‑month income (operating and non‑operating) before taxes and minority interest per share divided by month‑end price,MATRIX,82%,4,7
+mdl230_allcap_sedol_prc,"Beta coefficient to change in the credit risk premium, estimated by a 60-month multiple regression of returns on several macroeconomic factors",MATRIX,78%,3,3
+mdl230_allcap_sedol_ps_wt,Time-weighted sales per share for FY1 and FY2 divided by price,MATRIX,80%,9,14
+mdl230_allcap_sedol_psdwf,FY1 forecast sales per share divided by current trading price (forward Sales-to-Price),MATRIX,79%,3,3
+mdl230_allcap_sedol_psmtt,Most recently reported trailing 12-month sales per share divided by month-end trading price,MATRIX,79%,14,28
+mdl230_allcap_sedol_pspeghc,"Change in TTM EPS versus 4 quarters ago, divided by the stock’s month-end price",MATRIX,82%,1,1
+mdl230_allcap_sedol_pu,Difference between realized profitability and the expected profitability estimated from a regression model,MATRIX,71%,6,6
+mdl230_allcap_sedol_pvan,Net asset value per share,MATRIX,82%,10,12
+mdl230_allcap_sedol_rationalalpha,Market-adjusted excess return measure using a proprietary rational decay model based on the intercept from a 12-month OLS regression,MATRIX,78%,2,4
+mdl230_allcap_sedol_ratrev6m,Six-month average of the change in the average analyst recommendation tracked by I/B/E/S,MATRIX,63%,3,3
+mdl230_allcap_sedol_rau,"Abnormal accounts receivable equal to current A R minus expected A R based on prior year-end A R times TTM sales growth, scaled by total assets",MATRIX,71%,9,9
+mdl230_allcap_sedol_rdsale,Average TTM research and development expenses divided by TTM total sales,MATRIX,40%,2,4
+mdl230_allcap_sedol_reinrate,"Trailing 12-month earnings per share before extra items minus trailing 12-month dividends per share by ex-date, divided by the average book equity per share in the same period",MATRIX,77%,6,7
+mdl230_allcap_sedol_rel5ybp,"Current book-to-price ratio minus the 60-month average BP, scaled by the 60-month standard deviation of BP (5-year relative BP z-score)",MATRIX,74%,8,10
+mdl230_allcap_sedol_rel5ycfp,"Current TTM cash flow-to-price minus its 60-month average, scaled by the 60-month standard deviation",MATRIX,72%,0,0
+mdl230_allcap_sedol_rel5ydivp,Z-score of current dividend yield relative to its own last 60 months: (current DivYield − 60‑month average DivYield) divided by the 60‑month standard deviation of DivYield,MATRIX,42%,2,2
+mdl230_allcap_sedol_rel5yebitdap,Z‑score of current TTM EBITDA per share to price ratio relative to its own last 60 months: (current − 60‑month average) ÷ 60‑month standard deviation,MATRIX,72%,3,3
+mdl230_allcap_sedol_rel5yep,It is defined as a stock's current trailing 12-month earnings per share before extra items-to-price ratio (EP) minus the average of the EPs in the last 60-month scaled by the standard deviation of the EPs over the same period,MATRIX,74%,1,1
+mdl230_allcap_sedol_rel5yfcfp,"Current trailing 12-month free cash flow-to-price ratio minus the 60-month average of that ratio, scaled by its standard deviation over the same period",MATRIX,73%,4,4
+mdl230_allcap_sedol_rel5yocfp,"Current TTM operating cash flow-to-price minus its 60-month average, scaled by the 60-month standard deviation",MATRIX,74%,3,3
+mdl230_allcap_sedol_rel5ysp,Standardized deviation of current TTM sales-to-price from its own 60-month history: (current TTM SP − 60-month average SP) divided by the 60-month SP standard deviation,MATRIX,73%,7,8
+mdl230_allcap_sedol_relpricestrength_,"Industry-normalized 12-month relative price strength, defined as a stock’s PS minus industry peers’ PS, scaled by the cross-sectional standard deviation",MATRIX,78%,3,3
+mdl230_allcap_sedol_rerror60m,Standard error of the slope from a regression of the last 60 months of a stock's monthly returns on S&P 500 Index returns,MATRIX,65%,4,5
+mdl230_allcap_sedol_rev3my1std,"Change in current mean FY1 EPS estimate versus three months ago, scaled by the standard deviation of analyst forecasts as of three months ago",MATRIX,77%,4,4
+mdl230_allcap_sedol_rev3my2std,"Change in the current analysts mean earnings estimate for fiscal year 2 versus three months ago, scaled by the standard deviation of analyst forecasts as of three months ago",MATRIX,77%,7,13
+mdl230_allcap_sedol_rev6fy2,"Average of the prior six monthly changes in FY2 consensus EPS, scaled by previous month-end price",MATRIX,78%,6,8
+mdl230_allcap_sedol_revper,Revenue per employee: TTM total sales divided by the number of employees at the end of the last fiscal year,MATRIX,78%,9,9
+mdl230_allcap_sedol_roe,"Return on Equity, net income divided by shareholders' equity",MATRIX,78%,0,0
+mdl230_allcap_sedol_roic,Trailing 12-month net income plus interest expenses divided by the average reported invested capital (common equity + long-term debt + minority interest + preferred stock),MATRIX,80%,1,1
+mdl230_allcap_sedol_rp,It is defined as the latest reported quarterly operating income divided by 12-Month lagged total assets,MATRIX,82%,1,1
+mdl230_allcap_sedol_rq,Quick ratio: current assets less inventories from the most recent quarter divided by total current liabilities from the most recent quarter,MATRIX,69%,2,2
+mdl230_allcap_sedol_rqi_rd,Interquartile range of daily total returns over the trailing one month,MATRIX,83%,9,19
+mdl230_allcap_sedol_saleeps,It is defined as the absolute value of the difference between the yearly percent change in trailing 12-month sales per share and the yearly percent change in trailing 12-month diluted earnings per share before extraordinary items,MATRIX,54%,5,8
+mdl230_allcap_sedol_saleg5y,"Difference between the trailing 12-month sales per share (SALE) and the SALE 20 quarters ago, then deflated by the average of the SALEs in the prior 20 quarters",MATRIX,72%,3,4
+mdl230_allcap_sedol_salegpm,Gross profit margin on sales (gross profit divided by sales),MATRIX,70%,2,16
+mdl230_allcap_sedol_salerec,Yearly percent change in TTM sales minus the yearly percent change in accounts receivable,MATRIX,71%,7,15
+mdl230_allcap_sedol_sh,Beta coefficient to changes in Housing Starts estimated from a 60-month multi-factor regression of returns,MATRIX,78%,2,2
+mdl230_allcap_sedol_sighc,Most recently reported inventory as a percentage of trailing 12-month sales minus the same percentage 4 quarters ago,MATRIX,47%,3,10
+mdl230_allcap_sedol_sigma,Standard deviation of monthly returns over the prior 60 months,MATRIX,65%,4,7
+mdl230_allcap_sedol_skew90cortn,Skewness of the distribution of a stock’s daily excess returns relative to the S&P 500 over the last 90 days,MATRIX,82%,7,18
+mdl230_allcap_sedol_skew90drtn,Skewness of the distribution of a stock’s daily price returns over the last 90 days,MATRIX,82%,0,0
+mdl230_allcap_sedol_slope4qeps5y,Slope of the time trend in TTM EPS before extraordinary items over the prior 20 quarters (approximately 5 years),MATRIX,79%,6,6
+mdl230_allcap_sedol_slope52wp,Four-week lagged slope coefficient from a least squares regression of the past 52 weeks’ weekly closing prices against time (weekly dates),MATRIX,78%,6,17
+mdl230_allcap_sedol_slope66wp,Four-week lagged slope coefficient of the least squares regression line of the last 66 weeks’ weekly closing prices against weekly dates,MATRIX,77%,3,4
+mdl230_allcap_sedol_spe1yfvc_cf,Coefficient of variation of FY1 EPS estimates: standard deviation of First Call analysts’ FY1 EPS forecasts divided by their mean,MATRIX,78%,5,7
+mdl230_allcap_sedol_spe2yfvc_cf,"Coefficient of variation of FY2 EPS estimates, defined as the standard deviation of individual First Call estimates divided by their mean",MATRIX,78%,4,4
+mdl230_allcap_sedol_spefcn,Absolute value of the difference between the yearly percent change in trailing 12-month operating cash flow per share and the yearly percent change in trailing 12-month diluted EPS before extraordinary items,MATRIX,58%,1,1
+mdl230_allcap_sedol_speghc,"TTM EPS before extraordinary items minus EPS from 4 quarters ago, scaled by average total assets per share",MATRIX,82%,2,2
+mdl230_allcap_sedol_stockrating,Average analyst recommendation per the I B E S standardized rating system,MATRIX,82%,6,6
+mdl230_allcap_sedol_surp,"Difference between actual earnings per share and consensus forecasts prior to the announcement date, scaled by the stock's price at the beginning of the quarter",MATRIX,79%,2,2
+mdl230_allcap_sedol_susgrowth,"Sustainable growth rate, defined as ROE times one minus the dividend payout ratio using TTM ROE",MATRIX,71%,3,4
+mdl230_allcap_sedol_tobinq,"Market value of equity plus debt divided by assets, with debt measured using book values",MATRIX,82%,1,1
+mdl230_allcap_sedol_totalcov,It equals (Cash Flow from Operations + Interest Paid + Tax Paid) / (Interest + Principal Paid),MATRIX,74%,7,7
+mdl230_allcap_sedol_totalsaleg,Year-over-year percent change in TTM total sales,MATRIX,79%,7,10
+mdl230_allcap_sedol_tstalp,"t‑statistic of the linear time trend in log daily closing price over the past 260 trading days, computed as (CORREL*sqrt(260−2))/sqrt(1−CORREL^2)",MATRIX,78%,3,5
+mdl230_allcap_sedol_ttmaccu,It is defined as the difference between the trailing 12-month net income and the trailing 12-month operating cash flow scaled by the beginning total assets,MATRIX,82%,3,3
+mdl230_allcap_sedol_ttmcapexp,It is defined as the trailing 12-month capital expenditures per share for a stock divided by its trading price,MATRIX,79%,8,8
+mdl230_allcap_sedol_ttmopincev,Trailing 12-month operating income before depreciation and amortization divided by enterprise value,MATRIX,81%,2,2
+mdl230_allcap_sedol_ttmsaleev,Trailing 12-month sales divided by the most recent month-end enterprise value (EV = equity market value + long-term debt + short-term debt + preferred stock + minority interest − cash and cash equivalents),MATRIX,79%,17,22
+mdl230_allcap_sedol_tw_ebitdaev,Time-weighted EBITDA to Enterprise Value measure using FY1 and FY2,MATRIX,73%,5,6
+mdl230_allcap_sedol_twepsrev,6-month average of the time-weighted sum of FY1 and FY2 earnings estimate revisions,MATRIX,66%,5,5
+mdl230_allcap_sedol_twepsstdrev,It is defined as the 6-month average of the time weighted sum of the FY1 and FY2 earnings estimate revisions adjusted by the standard deviations of earnings estimates,MATRIX,66%,10,11
+mdl230_allcap_sedol_varresirtn,"Variance of monthly residual returns over the last 24 months, where residual = stock monthly return minus 60-month Beta times S&P 500 monthly return",MATRIX,69%,5,5
+mdl230_allcap_sedol_vefcfmtt,It is defined as the trailing 12-month free cash flow (FCF) for a stock scaled by its month-end enterprise value (EV). EV = Equity Market Value + Long-term Debt + Short-term Debt + Preferred Stock + Minority Interest - Cash,MATRIX,82%,4,4
+mdl230_allcap_sedol_vefcomtt,Trailing 12‑month operating cash flow per share divided by enterprise value per share,MATRIX,82%,2,2
+mdl230_allcap_sedol_vesspem21f_cf,Consensus forward 12‑month EPS divided by the sum of market value of common equity per share and book value of long‑term debt per share,MATRIX,81%,7,8
+mdl230_allcap_sedol_visiratio,Most recent daily trading volume divided by the average daily trading volume over the previous 50 trading days,MATRIX,82%,9,12
+mdl230_allcap_sedol_vnicw,Most recent quarterly working capital divided by inventory; working capital = current assets − current liabilities,MATRIX,46%,0,0
+mdl230_allcap_sedol_vniu,"Abnormal inventory, defined as current inventory minus expected inventory based on prior year balance grown by TTM COGS growth, scaled by total assets",MATRIX,47%,1,2
+mdl230_allcap_sedol_voctni,Interest coverage ratio; typically EBIT (or similar earnings measure) divided by interest expense,MATRIX,73%,5,9
+mdl230_allcap_sedol_volpre6m,"Six-month moving average of the average monthly turnover ratio, where turnover equals shares traded each day divided by total shares outstanding",MATRIX,82%,7,8
+mdl230_allcap_sedol_volto,Monthly total trading volume divided by most recent total shares outstanding,MATRIX,83%,16,20
+mdl230_allcap_sedol_w57w03_rp,30-week moving average price divided by 75-week moving average price,MATRIX,77%,4,6
+mdl230_allcap_sedol_w62isr,Most recent weekly closing price divided by the weekly closing price 26 weeks earlier,MATRIX,81%,3,4
+mdl230_allcap_sedol_w93ntr,Price change from week t-43 to week t-4,MATRIX,78%,1,1
+mdl230_allcap_sedol_wcast,Average working capital in the trailing 12 months divided by the average total assets in the same period,MATRIX,69%,5,6
+mdl230_allcap_sedol_xiv,CBOE Volatility Index,MATRIX,78%,3,3
+mdl230_allcap_sedol_y5speq4rqsr,It is defined as the conditional square of the correlation between monthly dates and the corresponding trailing 12-month earnings per share before extra items in the prior 20 quarters,MATRIX,79%,6,11
+mdl230_allcap_sedol_y5speq4vc,Coefficient of variation of TTM EPS over the last 20 months: standard deviation divided by mean,MATRIX,79%,4,4
+mdl230_allcap_sedol_ydp_cf,"Assumed payout ratio multiplied by the next 4-quarter earnings estimates, divided by the month-end trading price; assumed payout = 10% + 84% × last year payout ratio − 38% × long-term earnings growth rate",MATRIX,54%,3,3
+mdl230_allcap_sedol_yen,"Average of three normalized earnings measures based on ROE, NPM, and EPS FY2, scaled by price",MATRIX,63%,5,5
+mdl230_allcap_sedol_yieldsprd,"Beta to the change in the slope of the yield curve (term structure), estimated from a 60-month multifactor regression of returns",MATRIX,78%,3,6
+mdl230_allcap_sedol_yoychgaa,It is defined as the difference between the trailing 12-month operating cash flow and the trailing 12-month income before extra items scaled by the average total assets then minus the scaled difference for the same quarter one year ago,MATRIX,82%,3,3
+mdl230_allcap_sedol_yoychgcr,"Year-over-year change in current ratio (current assets/current liabilities), comparing the most recent quarter to the same quarter one year ago",MATRIX,69%,5,5
+mdl230_allcap_sedol_yoychgda,Year-over-year change in total liabilities as a percentage of total assets (based on quarterly reports),MATRIX,82%,10,12
+mdl230_allcap_sedol_yoychggpm,Year-over-year change in gross profit margin; GPM = (Sales − COGS)/Sales comparing current quarter to the same quarter one year ago,MATRIX,67%,3,4
+mdl230_allcap_sedol_yoychgroa,It is defined as the most recent trailing 12-month income before extra items as a percentage of total assets minus the percentage for the same quarter one year ago,MATRIX,82%,6,6
+mdl230_allcap_sedol_yoychgroeart,Year-over-year arithmetic change in TTM earnings before extraordinary items divided by current total book equity,MATRIX,74%,5,7
+mdl230_allcap_sedol_yoychgroepct,"Yearly percentage change in ROE, where ROE is defined as TTM earnings before extraordinary items (from quarterly data) divided by current total book equity",MATRIX,66%,3,3
+mdl230_totalcap_cusip_25_4op,One minus the ratio of the last 52-week price exponential moving average to the last 4-week price exponential moving average,MATRIX,86%,6,7
+mdl230_totalcap_cusip_60dsigma,Standard deviation of monthly price returns,MATRIX,89%,2,2
+mdl230_totalcap_cusip_6351_rp,15-week moving average of price divided by 36-week moving average of price,MATRIX,87%,0,0
+mdl230_totalcap_cusip_actrtn12m,Percent change in price from month t-13 to month t-1,MATRIX,86%,0,0
+mdl230_totalcap_cusip_actrtn18m,Percent change in stock price from month t-19 to month t-1,MATRIX,84%,0,0
+mdl230_totalcap_cusip_actrtn1m,Percent change in price from month t-1 to month t,MATRIX,89%,2,3
+mdl230_totalcap_cusip_actrtn24m,Percent change in stock price from month t−25 to month t−1,MATRIX,82%,0,0
+mdl230_totalcap_cusip_actrtn2m,Percent change in price from month t−2 to month t,MATRIX,89%,0,0
+mdl230_totalcap_cusip_actrtn36m,Percent change in price from month t-37 to month t-1,MATRIX,79%,0,0
+mdl230_totalcap_cusip_actrtn3m,Percent change in price from month t-3 to month t,MATRIX,89%,2,2
+mdl230_totalcap_cusip_actrtn60m,Percent change in price from month t-61 to month t-1,MATRIX,72%,0,0
+mdl230_totalcap_cusip_actrtn60m12lag,Percent change in price from month t-72 to month t-12,MATRIX,69%,0,0
+mdl230_totalcap_cusip_actrtn6m,Percent price change from month t−7 to month t−1,MATRIX,87%,1,3
+mdl230_totalcap_cusip_actrtn9m,Stock’s price percent change from month t-10 to month t-1,MATRIX,88%,0,0
+mdl230_totalcap_cusip_ad,Most recently reported total debt divided by total assets,MATRIX,77%,1,3
+mdl230_totalcap_cusip_adpmoc,"The sum of long‑term debt, short‑term debt, underfunded pension liabilities, operating lease expense, and preferred stock divided by total assets (most recent)",MATRIX,87%,0,0
+mdl230_totalcap_cusip_adverint,Last fiscal year’s advertising expense divided by last fiscal year’s sales,MATRIX,71%,2,2
+mdl230_totalcap_cusip_ags,"TTM selling, general and administrative expenses divided by TTM sales",MATRIX,79%,0,0
+mdl230_totalcap_cusip_alpha60m,Intercept of the regression of the stock’s monthly returns on the S&P 500 monthly returns over the past 60 months,MATRIX,73%,0,0
+mdl230_totalcap_cusip_altmanz,Altman Z-score computed as 1.2*(Current Assets - Current Liabilities)/Total Assets + 1.4*Retained Earnings/Total Assets + 3.3*EBIT/Total Assets + 0.6*Market Value of Equity/Book Value of Total Liabilities + 1.0*Sales/Total Assets,MATRIX,69%,4,6
+mdl230_totalcap_cusip_aoer,Most recent quarter’s cumulative retained earnings divided by most recent quarter’s total assets,MATRIX,88%,3,3
+mdl230_totalcap_cusip_aor,Trailing 12-month income before extraordinary items divided by the average of total assets over the same period,MATRIX,88%,1,1
+mdl230_totalcap_cusip_apemtt,Trailing 12-month earnings per share after extraordinary items divided by the month-end trading price,MATRIX,89%,1,1
+mdl230_totalcap_cusip_apg,Trailing 12-month (Sales − COGS) divided by total assets,MATRIX,76%,2,2
+mdl230_totalcap_cusip_apgghcm3_,Difference between the most recent quarterly gross profit to assets and the same quarter three months ago; GPA = TTM (Sales − COGS) / Total Assets,MATRIX,73%,1,1
+mdl230_totalcap_cusip_apgghcy1_,"Change in gross profit to assets from the same quarter one year ago to the most recent quarter, where GPA = TTM (Sales − COGS) / Total Assets",MATRIX,75%,4,4
+mdl230_totalcap_cusip_apgghcy3_,Difference between the most recent quarterly gross profit to assets and the same quarter three years ago; gross profit to assets = TTM (Sales − COGS) divided by total assets,MATRIX,72%,0,0
+mdl230_totalcap_cusip_aspanratio,"Quarterly operating assets minus operating liabilities, divided by lagged total assets",MATRIX,79%,0,0
+mdl230_totalcap_cusip_aspemtty3gc,Three-year geometric growth rate of the most recently reported trailing 12-month EPS after extraordinary items,MATRIX,83%,0,0
+mdl230_totalcap_cusip_astcomp,Total current assets from the most recent quarter divided by total assets from the most recent quarter,MATRIX,72%,5,7
+mdl230_totalcap_cusip_astto,Trailing 12-month sales divided by the most recently reported quarterly assets,MATRIX,88%,10,29
+mdl230_totalcap_cusip_atmcallvol,Time-weighted average implied volatility of the nearest and next-nearest expiration at-the-money call options,MATRIX,80%,3,3
+mdl230_totalcap_cusip_atmputvol,Time-weighted average implied volatility of the nearest and next-nearest expiration at-the-money put options,MATRIX,80%,2,2
+mdl230_totalcap_cusip_avg10yep,Average earnings over the past 10 years divided by current price,MATRIX,77%,0,0
+mdl230_totalcap_cusip_avg10yepinf,Average inflation-adjusted earnings over the past 10 years divided by current price,MATRIX,77%,0,0
+mdl230_totalcap_cusip_bap20d,20-day moving average of the daily composite bid-ask spread deflated by the daily closing price,MATRIX,89%,1,1
+mdl230_totalcap_cusip_beta,0.67 times the 60-month beta plus 0.33; beta is the covariance of the stock’s monthly return with the S&P 500 monthly return over the prior 60 months divided by the variance of the S&P 500 monthly return,MATRIX,83%,0,0
+mdl230_totalcap_cusip_betasigma,Product of the adjusted 60-month Beta and the 60-month Sigma (standard deviation of monthly price returns),MATRIX,73%,0,0
+mdl230_totalcap_cusip_bmpo,Most recently reported quarterly operating income divided by the corresponding quarterly sales (operating margin),MATRIX,87%,1,1
+mdl230_totalcap_cusip_booklev,Most recent quarterly total assets divided by book equity,MATRIX,89%,4,5
+mdl230_totalcap_cusip_bpemtt,Most recently reported trailing 12-month earnings per share before extraordinary items divided by the stock’s month-end trading price,MATRIX,88%,1,1
+mdl230_totalcap_cusip_capacq,It is defined as the trailing 12-month operating cash flow less than the trailing 12-month cash dividends and then divided by the total expenditures in the same period.,MATRIX,86%,0,0
+mdl230_totalcap_cusip_capdistp,"Sum of trailing 12-month dividends per share and estimated trailing 12-month net stock repurchases (issued), scaled by price",MATRIX,84%,2,2
+mdl230_totalcap_cusip_capexast,Trailing 12-month capital expenditures divided by total assets from the most recent quarter,MATRIX,86%,1,1
+mdl230_totalcap_cusip_capexdeplink,Absolute value of the difference between the ranks (1–1000) of quarterly capital expenditures to assets and quarterly depreciation to assets,MATRIX,85%,0,0
+mdl230_totalcap_cusip_capexsale,Trailing 12-month capital expenditures divided by trailing 12-month sales,MATRIX,85%,1,1
+mdl230_totalcap_cusip_cashburnrate,"Negative of cash from operations plus cash from investing, divided by cash plus short-term investments",MATRIX,79%,0,0
+mdl230_totalcap_cusip_cashc,Average inventory days plus average collection days minus average payable days (cash conversion cycle),MATRIX,66%,1,1
+mdl230_totalcap_cusip_cashp,Most recently reported cash and equivalents per share divided by month-end trading price,MATRIX,80%,1,1
+mdl230_totalcap_cusip_cashratio,Most recent quarterly cash and equivalents divided by current liabilities,MATRIX,71%,1,1
+mdl230_totalcap_cusip_cashsale,Average cash and equivalents over the trailing 12 months divided by trailing 12-month sales,MATRIX,78%,4,4
+mdl230_totalcap_cusip_cashsev,Total cash and equivalents divided by the sum of market value of common equity and book value of long‑term debt,MATRIX,80%,3,3
+mdl230_totalcap_cusip_ccacw,It equals to: Increase in Accounts Receivables + Increase in Inventory + Decrease in Accounts Payable and Accrued Liabilities + Decrease in Accrued Income Taxes + Increase (Decrease) in Asssets (Liabilities).,MATRIX,76%,2,5
+mdl230_totalcap_cusip_ceroe,Trailing 12-month funds from operations divided by the average of current and previous year equity value,MATRIX,84%,1,4
+mdl230_totalcap_cusip_cfita,Trailing 12-month cash flow from investing activities divided by the average total assets over the last four quarters,MATRIX,88%,0,0
+mdl230_totalcap_cusip_cfleverage,Total liabilities divided by the trailing 12‑month operating cash flow,MATRIX,81%,0,0
+mdl230_totalcap_cusip_cfroi,Trailing 12‑month cash flow divided by average invested capital; invested capital = common equity + long‑term debt + minority interest + preferred stock,MATRIX,87%,1,1
+mdl230_totalcap_cusip_cg3yroic,"3‑year geometric growth rate of ROIC, where ROIC = (TTM net income + interest expense) divided by average invested capital; invested capital = common equity + long‑term debt + minority interest + preferred stock",MATRIX,80%,1,1
+mdl230_totalcap_cusip_cg3ysales,Geometric growth rate of trailing 12-month sales per share over the last 12 quarters,MATRIX,83%,1,1
+mdl230_totalcap_cusip_chg12msip,"12-month relative change in short interest position, defined as shares sold short relative to total shares outstanding",MATRIX,86%,3,3
+mdl230_totalcap_cusip_chg12mtotdebt,12-month relative change in total debt (long-term plus short-term),MATRIX,75%,0,0
+mdl230_totalcap_cusip_chg3ycfast,"Most recent trailing 12-month operating cash flow minus the comparable figure 12 quarters ago, scaled by average total assets over the same period",MATRIX,83%,0,0
+mdl230_totalcap_cusip_chg3yepsast,"Trailing 12-month EPS before extraordinary items minus EPS from 12 quarters ago, scaled by average total assets per share",MATRIX,85%,0,0
+mdl230_totalcap_cusip_chg3yepsp,(TTM earnings per share minus TTM EPS from 12 quarters ago) divided by the month-end trading price,MATRIX,87%,0,0
+mdl230_totalcap_cusip_chg3yfcfast,(TTM free cash flow minus TTM free cash flow from 12 quarters ago) divided by average total assets,MATRIX,86%,1,1
+mdl230_totalcap_cusip_chg3yocfast,(TTM operating cash flow minus TTM operating cash flow from 12 quarters ago) divided by average total assets,MATRIX,84%,0,0
+mdl230_totalcap_cusip_chg6malpha18m,"Six-month change in 18-month alpha, where alpha is the intercept from regressing monthly stock returns on S&P 500 monthly returns over the past 18 months",MATRIX,82%,1,1
+mdl230_totalcap_cusip_chgalpha12m,"Six-month change in 12-month alpha, where alpha is the intercept from regressing monthly stock returns on S&P 500 monthly returns over the past 12 months",MATRIX,84%,1,1
+mdl230_totalcap_cusip_chgalpha36m,"6‑month change in a stock’s 36‑month alpha, where alpha is the intercept from regressing monthly stock returns on S&P 500 monthly returns over the last 36 months",MATRIX,77%,0,0
+mdl230_totalcap_cusip_chgars,Change in accounts receivable as a percentage of trailing 12-month sales from four quarters ago to the most recent value,MATRIX,76%,7,15
+mdl230_totalcap_cusip_chginvavgast,"12-month change in quarterly total inventories, scaled by the average of total assets at the most recent quarter-end and four quarters prior",MATRIX,52%,2,2
+mdl230_totalcap_cusip_chgnoa,"Year‑over‑year change in net operating assets to total assets, where NOA = short‑term debt + long‑term debt + preferred equity + common equity − cash (most recent quarter)",MATRIX,79%,5,5
+mdl230_totalcap_cusip_chgollev,"Change in operating liability leverage from current quarter to four quarters ago, where operating liability leverage = 1 − (short-term debt + long-term debt + common equity + preferred equity − cash) / (total assets − cash)",MATRIX,88%,2,2
+mdl230_totalcap_cusip_chgqtrepssurp,"Change in quarterly earnings surprise (Actual EPS minus Consensus EPS), scaled by the most recent closing price",MATRIX,85%,1,1
+mdl230_totalcap_cusip_chgreccast,Percent change in the most recent quarterly accounts receivable to current assets ratio from the ratio in the same quarter one year ago,MATRIX,69%,1,1
+mdl230_totalcap_cusip_chgroeart,Quarterly arithmetic change in the ratio of trailing-twelve-month earnings before extraordinary items to current total book equity,MATRIX,85%,0,0
+mdl230_totalcap_cusip_chgroepct,"Quarterly percentage change in ROE, where ROE is trailing-12-month earnings before extraordinary items divided by current total book equity",MATRIX,85%,2,3
+mdl230_totalcap_cusip_chgsgasale,Difference between the yearly change in quarterly SG&A expenses and the yearly change in quarterly sales,MATRIX,79%,1,2
+mdl230_totalcap_cusip_chgshare,Percent change in the number of shares outstanding versus one year ago,MATRIX,87%,1,1
+mdl230_totalcap_cusip_chgvolpre4y,Change in the most recent 6-month moving average of monthly turnover ratio versus the 12-month moving average of monthly turnover ratio four years ago,MATRIX,71%,4,4
+mdl230_totalcap_cusip_cogsinvt,Absolute difference between the yearly percent change in TTM cost of goods sold and the yearly percent change in inventory level,MATRIX,53%,3,3
+mdl230_totalcap_cusip_coreepsp,"TTM earnings per share from operations (excluding special items, extraordinary items, discontinued operations, and cumulative accounting changes) divided by month-end price",MATRIX,89%,4,4
+mdl230_totalcap_cusip_covol,Slope of the least squares regression line of the last 60 months of monthly trading volume against time,MATRIX,74%,2,2
+mdl230_totalcap_cusip_cpgspea2y,"Most recent consensus EPS forecast for fiscal year 2 minus the consensus for year 1, divided by the consensus for year 1 (FY2 vs FY1 EPS growth percent)",MATRIX,89%,0,0
+mdl230_totalcap_cusip_cre_cf,Slope coefficient between market-adjusted returns around earnings announcements and the yearly change in quarterly actual EPS as tracked by First Call (earnings response coefficient),MATRIX,77%,1,1
+mdl230_totalcap_cusip_ctpmto,Exponentially weighted put-to-call ratio for out-of-the-money options,MATRIX,78%,3,3
+mdl230_totalcap_cusip_curindbp_,"Stock’s current book-to-price ratio minus the industry average book-to-price, divided by the standard deviation of book-to-price across the same relative universe",MATRIX,86%,1,1
+mdl230_totalcap_cusip_curindcfp_,"Stock’s trailing 12-month cash flow-to-price ratio minus the industry average, divided by the standard deviation of industry CFPs within the relative universe (industry-normalized)",MATRIX,85%,1,1
+mdl230_totalcap_cusip_curindcoreepsp_,"Stock’s trailing 12-month core earnings-to-price ratio minus the industry mean, standardized by the cross-sectional standard deviation within the relative universe",MATRIX,86%,0,0
+mdl230_totalcap_cusip_curinddivp_,"TTM dividend yield minus the industry average, divided by the industry standard deviation (industry-relative z-score)",MATRIX,87%,0,0
+mdl230_totalcap_cusip_curindebitdaev_,"Stock’s TTM EBITDA-to-enterprise value ratio minus its industry average, scaled by the industry standard deviation of EBITDA/EV",MATRIX,86%,1,1
+mdl230_totalcap_cusip_curindebitdap_,"TTM EBITDA-to-price ratio minus the industry average, divided by the industry standard deviation (industry-relative z-score)",MATRIX,85%,0,0
+mdl230_totalcap_cusip_curindep_,"Stock’s TTM earnings-to-price ratio before extraordinary items minus its industry average, scaled by the industry standard deviation of EP",MATRIX,86%,0,0
+mdl230_totalcap_cusip_curindfcfp_,"Industry-normalized z-score of free cash flow to price: a stock’s TTM FCF/P minus the industry average, divided by the industry standard deviation within the relative universe",MATRIX,86%,1,1
+mdl230_totalcap_cusip_curindocfp_,"Industry-standardized deviation of the stock’s trailing 12-month operating cash flow-to-price ratio from its industry average, divided by the cross-sectional standard deviation of OCFP in the relative universe",MATRIX,86%,3,4
+mdl230_totalcap_cusip_curindocfta_,"Industry-normalized z-score of operating cash flow to total assets: a stock’s TTM OCFTA minus the industry average, divided by the industry standard deviation within the relative universe",MATRIX,86%,6,7
+mdl230_totalcap_cusip_curindsp_,"Stock’s trailing 12-month sales-to-price ratio minus the industry average, scaled by the standard deviation of SPs within the relative universe (industry-standardized SP)",MATRIX,86%,7,9
+mdl230_totalcap_cusip_curratio,Most recent quarter current assets divided by most recent quarter current liabilities,MATRIX,72%,1,1
+mdl230_totalcap_cusip_cv4qsales3y,Standard deviation of the prior 12 quarters’ trailing 12-month sales per share divided by the mean over the same period (coefficient of variation),MATRIX,81%,3,3
+mdl230_totalcap_cusip_cvopinc,Standard deviation of TTM operating income per share over the prior 12 quarters divided by its mean,MATRIX,79%,0,0
+mdl230_totalcap_cusip_cvvolp20d,Coefficient of variation of the last 20 days’ closing prices divided by the coefficient of variation of daily trading volume over the same period,MATRIX,89%,1,1
+mdl230_totalcap_cusip_cws,Average working capital over the trailing 12 months divided by total sales over the same period; working capital equals inventory plus accounts receivable minus accounts payable,MATRIX,70%,2,2
+mdl230_totalcap_cusip_d41isr,Relative Strength Index over the prior 14 days based on average up and down price moves (overbought/oversold indicator),MATRIX,90%,4,4
+mdl230_totalcap_cusip_dcc,"Most recent quarterly cash flow from operations minus cash dividends, divided by current interest-bearing debt",MATRIX,68%,2,2
+mdl230_totalcap_cusip_debtcf,Trailing 12-month cash flow divided by the sum of most recently reported long-term debt and short-term interest-bearing debt,MATRIX,71%,1,1
+mdl230_totalcap_cusip_debtmktcap,(Long‑term debt + short‑term debt) divided by market capitalization,MATRIX,76%,0,0
+mdl230_totalcap_cusip_div5yg,Five-year dividend growth,MATRIX,39%,0,0
+mdl230_totalcap_cusip_divcf,Trailing 12‑month cash dividends (common and preferred) divided by trailing 12‑month cash flow,MATRIX,47%,1,1
+mdl230_totalcap_cusip_divcov,TTM earnings from operations divided by indicated annual dividends,MATRIX,46%,2,2
+mdl230_totalcap_cusip_divgp,Total dividends paid divided by (revenue minus cost of goods sold),MATRIX,36%,0,0
+mdl230_totalcap_cusip_divyield,Trailing 12-month dividends per share divided by the month-end trading price,MATRIX,47%,2,4
+mdl230_totalcap_cusip_dpcapex,Absolute difference between the yearly percent change in TTM depreciation expense and the yearly percent change in TTM capital expenditure,MATRIX,83%,2,2
+mdl230_totalcap_cusip_dsu,"The beta coefficient to changes in US Dollar value, estimated via a 60‑month multiple regression of returns on macroeconomic factors",MATRIX,87%,0,0
+mdl230_totalcap_cusip_dtsm1_rd,Standard deviation of the stock’s daily total return over the trailing one month,MATRIX,89%,3,5
+mdl230_totalcap_cusip_earningstorpedo,"(Next 4-quarter EPS estimate + TTM real earnings surprise) divided by TTM EPS, where TTM real earnings surprise is the sum over the last 4 quarters of actual EPS minus estimated EPS",MATRIX,82%,0,0
+mdl230_totalcap_cusip_earnshortfall,"Reported accounting earnings minus free cash flow, scaled by average assets",MATRIX,88%,2,2
+mdl230_totalcap_cusip_ebitdadebt,Trailing 12-month EBITDA divided by current total debt,MATRIX,75%,0,0
+mdl230_totalcap_cusip_ebitdadebtchg,Annual change in the ratio of trailing 12-month EBITDA to current total debt,MATRIX,71%,0,0
+mdl230_totalcap_cusip_ebitdaev,Trailing 12-month EBITDA divided by enterprise value (EV = Equity MV + LT Debt + ST Debt + Preferred + Minority Interest − Cash),MATRIX,87%,3,7
+mdl230_totalcap_cusip_ebitdap,"Trailing 12-month earnings before interest, taxes, depreciation and amortization divided by the stock’s month-end trading price (EBITDA-to-price)",MATRIX,88%,2,2
+mdl230_totalcap_cusip_ed,Most recently reported total long-term debt divided by total book equity,MATRIX,75%,1,1
+mdl230_totalcap_cusip_emeasales,Company’s annual sales attributed to EMEA divided by total annual sales,MATRIX,26%,2,2
+mdl230_totalcap_cusip_epschgetr,"Trailing 12-month pre-tax income per share multiplied by the change in effective tax rate from four quarters ago to the most recent TTM period, where effective tax rate = total tax expense divided by pre-tax income",MATRIX,76%,0,0
+mdl230_totalcap_cusip_equityto,Trailing 12-month sales divided by the average of trailing 12-month reported book equity (equity turnover),MATRIX,88%,5,6
+mdl230_totalcap_cusip_exdisspi,"Sum of the absolute values of extraordinary items, discontinued operations, and special items over the prior eight quarters, scaled by the average trailing 12-month sales over the same period",MATRIX,34%,1,1
+mdl230_totalcap_cusip_fc_curep,"Sum of the most recent three reported EPS plus the current-quarter consensus EPS estimate, divided by the month-end price",MATRIX,86%,0,0
+mdl230_totalcap_cusip_fc_curindfwdep_,"Next 4-quarter consensus earnings-to-price ratio minus the industry average, scaled by the standard deviation of industry FwdEPs (industry-standardized forward E/P)",MATRIX,87%,0,0
+mdl230_totalcap_cusip_fc_dypeg,"Forward earnings yield (reciprocal of forward 12-month P/E) divided by the total growth rate, where total growth equals I/B/E/S long-term growth plus indicated dividend yield",MATRIX,74%,2,2
+mdl230_totalcap_cusip_fc_ebop,Valuation from the Edwards-Bell-Ohlson model deflated by the stock’s month-end price (an intrinsic value measure comparing earnings to cost of capital),MATRIX,82%,5,5
+mdl230_totalcap_cusip_fc_estep,The most recent First Call next 4‑quarter median earnings estimate divided by the month‑end trading price,MATRIX,88%,0,0
+mdl230_totalcap_cusip_fc_fcfroey1p,"Trailing 12-month free cash flow per share multiplied by the consensus next four-quarter earnings forecast, divided by most recent book value per share and scaled by month-end price",MATRIX,86%,1,1
+mdl230_totalcap_cusip_fc_fqsurstd,The most recent quarterly earnings surprise (actual EPS minus First Call consensus) standardized by the standard deviation of First Call analysts’ individual forecasts,MATRIX,83%,3,4
+mdl230_totalcap_cusip_fc_fwdroe,First Call analysts’ earnings estimates for the next four quarters divided by the most recent common equity per share,MATRIX,84%,2,2
+mdl230_totalcap_cusip_fc_numest,Number of First Call analysts’ FY1 earnings estimates,MATRIX,88%,4,6
+mdl230_totalcap_cusip_fc_numrevq1,"Within a month, number of FYQ1 analyst EPS forecasts raised minus lowered, divided by the total number of forecasts",MATRIX,85%,1,3
+mdl230_totalcap_cusip_fc_numrevy1,"Within a month, the weighted average of FY1 analyst earnings forecast upgrades minus downgrades divided by total FY1 forecasts",MATRIX,86%,0,0
+mdl230_totalcap_cusip_fc_proformaep,"Trailing 12-month reported actual earnings for a stock recorded by First Call, scaled by the stock’s month-end trading price",MATRIX,85%,0,0
+mdl230_totalcap_cusip_fc_qepsferr,"Actual EPS minus consensus forecast, scaled by the stock price at the beginning of the quarter",MATRIX,82%,0,0
+mdl230_totalcap_cusip_fc_rel5yfwdep,"Five-year standardized relative forward earnings-to-price: current next 4-quarter consensus earnings forecast-to-price ratio minus its 60-month average, scaled by its 60-month standard deviation",MATRIX,74%,7,7
+mdl230_totalcap_cusip_fc_rev1q1,"Change in the current First Call consensus earnings forecast for fiscal quarter 1 versus one month ago, scaled by the month-end trading price",MATRIX,85%,1,1
+mdl230_totalcap_cusip_fc_rev3y1,"Change in the current First Call analysts’ mean earnings estimate for fiscal year 1 minus that of three months ago, scaled by month-end trading price",MATRIX,87%,2,2
+mdl230_totalcap_cusip_fc_rev3y2,"It is defined as the change in the current mean consensus earnings estimate for fiscal year 2 minus that of three months ago, deflated by its trading price.",MATRIX,85%,2,5
+mdl230_totalcap_cusip_fc_rev6,"Average of the prior 6 months’ monthly changes in First Call consensus EPS forecasts for fiscal year 1, scaled by the previous month-end trading price",MATRIX,84%,0,0
+mdl230_totalcap_cusip_fc_stdevfy1epsp,"Standard deviation of analysts’ individual FY1 earnings forecasts (First Call), scaled by month‑end closing price",MATRIX,83%,2,2
+mdl230_totalcap_cusip_fc_stdevfy2epsp,"Standard deviation of analysts’ individual FY2 earnings forecasts (First Call), scaled by month‑end closing price",MATRIX,84%,3,7
+mdl230_totalcap_cusip_fc_y2repsg,"Most recent First Call consensus FY2 earnings forecast minus the most recent reported fiscal year actual earnings (First Call), deflated by month‑end trading price",MATRIX,86%,0,0
+mdl230_totalcap_cusip_fc_y3sur,"Current-quarter mean analyst EPS forecast minus actual EPS from 12 quarters ago, scaled by the standard deviation of those historical actual EPS",MATRIX,75%,0,0
+mdl230_totalcap_cusip_fcfequity,Trailing 12-month free cash flow divided by average book equity over the same period,MATRIX,88%,0,0
+mdl230_totalcap_cusip_fcfghc,"Trailing 12-month free cash flow minus the trailing 12-month figure from 4 quarters ago, divided by average total assets",MATRIX,89%,0,0
+mdl230_totalcap_cusip_fcfroi,Trailing 12-month free cash flow divided by average invested capital (common equity + long-term debt + minority interest + preferred stock) over the same period,MATRIX,88%,3,3
+mdl230_totalcap_cusip_fcfsale,Trailing 12‑month free cash flow divided by trailing 12‑month sales,MATRIX,87%,0,0
+mdl230_totalcap_cusip_fcfy3gc,3-year geometric growth rate of free cash flow,MATRIX,74%,1,1
+mdl230_totalcap_cusip_fcghc,"The trailing 12‑month cash flow minus the comparable trailing 12‑month cash flow from 4 quarters ago, scaled by average total assets",MATRIX,87%,1,1
+mdl230_totalcap_cusip_fcoghc,"The most recent trailing 12‑month operating cash flow minus the trailing 12‑month operating cash flow from 4 quarters ago, divided by average total assets",MATRIX,89%,0,0
+mdl230_totalcap_cusip_fcus,"Most recent quarterly operating cash flow minus that of four quarters ago, divided by the standard deviation of this difference over the preceding eight quarters (standardized unexpected cash flow)",MATRIX,80%,0,0
+mdl230_totalcap_cusip_fixastto,Trailing 12-month sales divided by the average total fixed assets over the same period (fixed asset turnover),MATRIX,84%,1,1
+mdl230_totalcap_cusip_flowratio,"(Current assets − cash and equivalents) divided by (current liabilities − short‑term debt), using the most recent quarter",MATRIX,72%,0,0
+mdl230_totalcap_cusip_fqsurstd60dlag,"Most recent actual quarterly EPS minus the consensus EPS estimate from 60 days earlier, standardized by the dispersion (standard deviation) of analyst forecasts from 60 days earlier",MATRIX,75%,0,0
+mdl230_totalcap_cusip_fwdebitdaev,FY1 estimate of EBITDA divided by enterprise value,MATRIX,79%,3,3
+mdl230_totalcap_cusip_fy1epsskew,Skewness of the distribution of the leading 12-month (FY1) earnings per share estimates tracked by First Call,MATRIX,79%,0,0
+mdl230_totalcap_cusip_ga,Open‑interest‑weighted sum of the gamma for all options associated with the stock,MATRIX,81%,0,0
+mdl230_totalcap_cusip_gear,Long-term debt divided by (total assets minus current liabilities),MATRIX,74%,4,6
+mdl230_totalcap_cusip_grahamnum,Graham Number divided by price; Graham Number equals the square root of (22.5 × Earnings Per Share × Book Value Per Share),MATRIX,71%,0,0
+mdl230_totalcap_cusip_growdura,Natural log of the ratio of the stock’s leading 12-month PE to the S&P 500’s leading 12-month PE divided by the natural log of the ratio of 1 plus the stock’s total growth rate (IBES long-term growth plus indicated dividend yield) to the S&P 500’s total growth rate,MATRIX,73%,0,0
+mdl230_totalcap_cusip_gspea1q_cf,"Most recent First Call fiscal-quarter consensus earnings forecast minus actual earnings from four quarters ago, divided by month-end price",MATRIX,84%,3,6
+mdl230_totalcap_cusip_gspea1y_cf,"Most recent consensus forecast for next 4 quarters’ earnings minus last 4 quarters’ reported earnings (both per First Call), divided by the month-end stock price",MATRIX,83%,3,3
+mdl230_totalcap_cusip_gspea2y_cf,"Consensus earnings forecast for fiscal year 2 minus the consensus for year 1, divided by the month-end price",MATRIX,88%,0,0
+mdl230_totalcap_cusip_gtl,I/B/E/S mean long-term growth forecast; expected annual increase in operating earnings over the company’s next full business cycle,MATRIX,81%,1,1
+mdl230_totalcap_cusip_gtlm6ghc,Percent change in the most recent I/B/E/S mean long-term growth forecast versus 6 months ago,MATRIX,51%,0,0
+mdl230_totalcap_cusip_high52w,Month-end price divided by the highest monthly closing price over the past 12 months,MATRIX,87%,2,2
+mdl230_totalcap_cusip_ica,Change in the most recent TTM capital investment intensity relative to the average of the prior 3 years’ investment intensity,MATRIX,81%,0,0
+mdl230_totalcap_cusip_idb,Number of days the company can cover daily operating expenses (COGS and SG&A) using only cash and receivables on the balance sheet,MATRIX,76%,2,2
+mdl230_totalcap_cusip_impduration,"Equity risk metric analogous to Macaulay duration, combining book value, expected growth, expected profitability, and current stock price",MATRIX,83%,1,1
+mdl230_totalcap_cusip_impvol,Average implied volatility of the nearest-to-expiration at-the-money option contracts,MATRIX,81%,0,0
+mdl230_totalcap_cusip_inddistryid,"Quarterly distributions per share (based on ex-dividend date, excluding extra/special year-end dividends) multiplied by 4 and divided by trading price (indicated distribution yield)",MATRIX,45%,1,1
+mdl230_totalcap_cusip_indidivy,"Quarterly dividend per share (per ex-dividend date, excluding specials) multiplied by 4, divided by the stock’s month-end trading price (annualized dividend yield)",MATRIX,45%,3,3
+mdl230_totalcap_cusip_indrelcroe_,"Stock’s lagged quarterly ROE minus the industry average ROE, scaled by the standard deviation of industry ROEs (industry-normalized ROE)",MATRIX,84%,0,0
+mdl230_totalcap_cusip_indrelrecd_,"A stock’s asset‑adjusted annual doubtful receivables minus the industry average, scaled by the industry standard deviation",MATRIX,54%,1,1
+mdl230_totalcap_cusip_indrelrtn4w_,"Four-week stock return minus the industry average of comparable returns, divided by the standard deviation of those returns",MATRIX,88%,7,17
+mdl230_totalcap_cusip_indrelrtn5d_,"Last 5-day stock return minus the industry peer average of comparable returns, scaled by the standard deviation of those returns",MATRIX,89%,5,9
+mdl230_totalcap_cusip_inflation,"The beta coefficient to changes in inflation, estimated via a 60‑month multiple regression of returns on macroeconomic factors",MATRIX,87%,0,0
+mdl230_totalcap_cusip_invast,Current inventory level divided by total assets from the most recent quarter,MATRIX,53%,2,2
+mdl230_totalcap_cusip_iqa,Year-over-year change of 1 minus (current assets plus PP&E) divided by total assets,MATRIX,70%,0,0
+mdl230_totalcap_cusip_irttmsalesev,"Industry-normalized z-score of TTM sales-to-enterprise value: a stock’s TTM sales/EV minus the industry average, divided by the industry standard deviation within the relative universe",MATRIX,86%,3,3
+mdl230_totalcap_cusip_lagegp,"Trailing 12-month EPS before extraordinary items multiplied by the change in the yearly TTM sales-per-share growth rate, divided by the stock’s month-end trading price",MATRIX,75%,0,0
+mdl230_totalcap_cusip_lccau,"Most recent fiscal year accrued liabilities minus expected accrued liabilities (prior year closing balance multiplied by TTM sales growth), scaled by total assets",MATRIX,54%,0,0
+mdl230_totalcap_cusip_lfd,(Trailing 12-month pretax income + trailing 12-month interest expense) divided by trailing 12-month pretax income (degree of financial leverage),MATRIX,88%,1,7
+mdl230_totalcap_cusip_liqcoeff,Slope from regressing monthly stock turnover ratio (independent variable) on contemporaneous monthly stock returns (dependent variable),MATRIX,84%,1,1
+mdl230_totalcap_cusip_lumqca,Most recent quarterly invested capital divided by trailing 12-month EBITDA (acquisition multiple),MATRIX,78%,0,0
+mdl230_totalcap_cusip_m42rav,It is defined as the minimum of a stock monthly price return in last 24-month period.,MATRIX,83%,0,0
+mdl230_totalcap_cusip_m6dn2ntr,Percent change in the stock’s price from month t−12 to month t−7,MATRIX,86%,1,1
+mdl230_totalcap_cusip_mad3yttmni,"Mean absolute deviation of the last 12 quarters’ TTM net income, deflated by the average of total assets",MATRIX,81%,1,1
+mdl230_totalcap_cusip_mad3yttmsale,"Mean absolute deviation of 12-quarter trailing 12-month sales, scaled by average total assets",MATRIX,83%,1,1
+mdl230_totalcap_cusip_md,"Financial distress measure following Campbell, Hilscher and Szilagyi (2008) and Chen and Zhang (2009)",MATRIX,74%,3,3
+mdl230_totalcap_cusip_milliq,Monthly average of the ratio of daily absolute return to daily dollar trading volume,MATRIX,89%,0,0
+mdl230_totalcap_cusip_min1ygrossmargin,The one-year minimum value of a stock's quarterly gross profit margin,MATRIX,72%,0,0
+mdl230_totalcap_cusip_min1yopmargin,The one‑year minimum value of a stock’s quarterly operating profit margin,MATRIX,86%,0,0
+mdl230_totalcap_cusip_min2ygrossmargin,Two-year minimum of the stock’s quarterly gross profit margin,MATRIX,70%,0,0
+mdl230_totalcap_cusip_min2yopmargin,Two-year minimum of the quarterly operating profit margin,MATRIX,84%,1,1
+mdl230_totalcap_cusip_min3ygrossmargin,3‑year minimum of quarterly gross profit margin,MATRIX,70%,1,1
+mdl230_totalcap_cusip_min3yopmargin,The three‑year minimum value of a stock’s quarterly operating profit margin,MATRIX,83%,1,1
+mdl230_totalcap_cusip_mktcappera,Current month-end market capitalization divided by the number of analysts providing FY1 earnings estimates to I/B/E/S,MATRIX,88%,3,9
+mdl230_totalcap_cusip_mktlev,"Month-end total market value plus most recent quarterly book debt, divided by market value",MATRIX,89%,2,2
+mdl230_totalcap_cusip_monchgsip,Month-to-month change in the ratio of shares sold short to common shares outstanding,MATRIX,89%,0,0
+mdl230_totalcap_cusip_mpg,"Trailing twelve‑month gross profit margin, calculated as (Sales − COGS) / Sales",MATRIX,76%,0,0
+mdl230_totalcap_cusip_mpgghcm3_,Most recent quarterly gross profit margin minus the margin for the same quarter three months earlier; GPM = TTM (Sales − COGS) / Sales,MATRIX,71%,1,1
+mdl230_totalcap_cusip_mpgghcy3_,Most recent quarterly gross profit margin minus the margin for the same quarter three years earlier; GPM = TTM (Sales − COGS) / Sales,MATRIX,69%,1,1
+mdl230_totalcap_cusip_mpgy3gc,Three-year geometric growth rate of gross margins,MATRIX,70%,1,1
+mdl230_totalcap_cusip_mpn,Most recent quarterly net income after tax divided by the corresponding quarterly sales,MATRIX,86%,0,0
+mdl230_totalcap_cusip_mpnghc,Most recent quarterly net profit margin minus the net profit margin from 4 quarters ago,MATRIX,87%,1,1
+mdl230_totalcap_cusip_mpoghc,Most recent quarterly operating profit margin minus the operating profit margin from 4 quarters ago,MATRIX,85%,1,1
+mdl230_totalcap_cusip_mpoy3gc,"The 3‑year geometric growth rate of operating profit margins, where operating margin = quarterly operating income / quarterly sales",MATRIX,81%,0,0
+mdl230_totalcap_cusip_mrspe_cf,"3‑month change in First Call analysts’ median FY1 earnings forecast, scaled by the current mean estimate",MATRIX,73%,0,0
+mdl230_totalcap_cusip_nasales,Annual aggregate sales for North America divided by total annual sales,MATRIX,85%,2,2
+mdl230_totalcap_cusip_nef,"Sum of net cash from changes in common equity, preferred equity, convertible debt, other long-term debt, and short-term borrowings, scaled by total assets",MATRIX,82%,3,3
+mdl230_totalcap_cusip_netcashp,"Most recent quarterly cash and equivalents minus long-term and current debt, divided by the stock’s month-end market value",MATRIX,80%,1,1
+mdl230_totalcap_cusip_netdebt,"Net debt divided by the sum of net debt, preferred stock, and common stock; net debt = long‑term debt + short‑term debt − cash and equivalents (most recent quarter)",MATRIX,89%,2,3
+mdl230_totalcap_cusip_netdebtebitda,"Net debt divided by EBITDA, where net debt = long-term debt + short-term debt − cash and equivalents",MATRIX,78%,3,3
+mdl230_totalcap_cusip_nfaldebt,Most recent quarterly net fixed assets divided by total long-term debt,MATRIX,74%,0,0
+mdl230_totalcap_cusip_niper,Trailing 12-month income after taxes divided by the number of employees at the end of the last fiscal year,MATRIX,86%,1,1
+mdl230_totalcap_cusip_nla_u,Natural logarithm of the most recent quarterly reported total assets in USD,MATRIX,88%,1,1
+mdl230_totalcap_cusip_nlassets,Natural logarithm of the most recently reported quarterly total assets,MATRIX,89%,1,1
+mdl230_totalcap_cusip_nlmc,Natural logarithm of the cube of the stock’s month-end total market value,MATRIX,89%,0,0
+mdl230_totalcap_cusip_nlmc_u,Natural logarithm of the cube of the stock’s total market value in USD,MATRIX,89%,1,1
+mdl230_totalcap_cusip_nlprice,Natural logarithm of the cube of the stock’s month-end unadjusted closing price (ln(price^3)),MATRIX,89%,1,1
+mdl230_totalcap_cusip_nlprice_usd,Natural logarithm of the cube of the stock’s unadjusted USD closing price,MATRIX,89%,1,1
+mdl230_totalcap_cusip_nlsales,Natural logarithm of the cube of the company’s trailing 12-month sales,MATRIX,88%,2,2
+mdl230_totalcap_cusip_nlsales_usd,Natural logarithm of the cubic of the company’s trailing 12-month sales in USD,MATRIX,87%,0,0
+mdl230_totalcap_cusip_nlvolcap,Natural logarithm of the ratio of the trailing 12-month average monthly trading volume to the trailing 12-month average monthly market capitalization,MATRIX,86%,1,1
+mdl230_totalcap_cusip_nnastp,"Current assets per share minus total liabilities per share, divided by the month-end price",MATRIX,72%,1,1
+mdl230_totalcap_cusip_noato,Trailing 12‑month sales divided by the average net operating assets over the last 4 quarters; NOA = short‑term debt + long‑term debt + preferred equity + common equity − cash,MATRIX,83%,28,47
+mdl230_totalcap_cusip_nopatmargin,"(Net Income + Interest Expense*(1 − Effective Tax Rate)) divided by Net Sales, all on a trailing 12-month basis; effective tax rate = TTM income taxes / TTM income before taxes",MATRIX,81%,0,0
+mdl230_totalcap_cusip_normalmf60d,60‑day average of daily money flow divided by daily total dollar volume (VWAP × trading volume),MATRIX,87%,2,2
+mdl230_totalcap_cusip_ntrm01ff,Percent change in the stock’s price from month t-12 to month t-2,MATRIX,86%,1,9
+mdl230_totalcap_cusip_numrevy2,"Weighted average within a month of the number of FY2 analyst EPS forecasts raised minus those lowered, divided by the total number of forecasts",MATRIX,83%,0,0
+mdl230_totalcap_cusip_ocfast,Trailing 12-month net cash flow from operations divided by average total assets,MATRIX,88%,2,2
+mdl230_totalcap_cusip_ocfmargin,TTM cash flow from operations divided by TTM sales,MATRIX,87%,0,0
+mdl230_totalcap_cusip_ocfratio,Most recently reported quarterly cash flow from operations divided by current liabilities (operating cash flow ratio),MATRIX,72%,2,3
+mdl230_totalcap_cusip_ocfroi,TTM operating cash flow divided by average invested capital (common equity + long-term debt + minority interest + preferred stock),MATRIX,88%,1,2
+mdl230_totalcap_cusip_ohlsonscore,"Bankruptcy probability score from the Ohlson (1980) model based on size, capital structure, performance, and liquidity",MATRIX,71%,1,1
+mdl230_totalcap_cusip_oilprice,Beta to changes in oil prices estimated from a 60-month multiple regression of returns on macroeconomic factors,MATRIX,87%,1,1
+mdl230_totalcap_cusip_ollev,1 minus [(short-term debt + long-term debt + common equity + preferred equity − cash) divided by (total assets − cash)] in the current quarter,MATRIX,88%,4,8
+mdl230_totalcap_cusip_opincltd,Yearly percent change in operating income minus the yearly percent change in long-term debt,MATRIX,70%,1,1
+mdl230_totalcap_cusip_oplev,Percent change in trailing 12-month operating income from the previous quarter divided by the percent change in trailing 12-month sales from the previous quarter,MATRIX,79%,0,0
+mdl230_totalcap_cusip_otvni,Trailing 12-month cost of goods sold divided by average inventory over the same period,MATRIX,53%,0,0
+mdl230_totalcap_cusip_over,It is defined as the trailing 12-month operating income less depreciation minus income before extraordinary items scaled by trailing 12-month sales,MATRIX,87%,2,3
+mdl230_totalcap_cusip_p50_200ratio,50-day moving average of the stock’s price divided by its 200-day moving average,MATRIX,87%,4,9
+mdl230_totalcap_cusip_past,Month-end trading price divided by the most recent quarterly total assets per share,MATRIX,89%,2,2
+mdl230_totalcap_cusip_pau,"Current accounts payable minus the expected level (prior year’s closing A/P multiplied by TTM COGS growth), scaled by total assets",MATRIX,66%,2,6
+mdl230_totalcap_cusip_pb,Most recently reported book value per share divided by month-end trading price (book-to-price),MATRIX,88%,5,6
+mdl230_totalcap_cusip_pbdwf,Average quarterly forward-looking book value per share divided by close price,MATRIX,66%,1,1
+mdl230_totalcap_cusip_pbroeresidual,"Residual from a price-to-book model adjusted for firm growth, based on the Wilcox and Philips (2005) framework",MATRIX,68%,2,2
+mdl230_totalcap_cusip_pbwt,Time-weighted average of book value per share estimates in fiscal year 1 and fiscal year 2 divided by close price,MATRIX,80%,2,2
+mdl230_totalcap_cusip_pc_ratio,"Open interest in seven near-the-money, nearest-to-expiration put option contracts divided by open interest in seven near-the-money, nearest-to-expiration call option contracts",MATRIX,79%,0,0
+mdl230_totalcap_cusip_pca,"Average trailing 12-month accounts receivable multiplied by 365, divided by trailing 12-month sales (approximate days sales outstanding)",MATRIX,77%,1,1
+mdl230_totalcap_cusip_pcdwf,Average quarterly forward‑looking cash flows per share divided by the close price,MATRIX,57%,0,0
+mdl230_totalcap_cusip_pctabv260low,Current closing price divided by the lowest daily low price in the last 260 trading days,MATRIX,89%,2,2
+mdl230_totalcap_cusip_pctchg3ycf,Percent change in trailing 12-month cash flow per share relative to its level 12 quarters earlier,MATRIX,81%,2,3
+mdl230_totalcap_cusip_pctchg3yeps,Percent change in trailing 12-month EPS relative to EPS 12 quarters ago,MATRIX,81%,0,0
+mdl230_totalcap_cusip_pctchg3yfcf,Percent change in the most recent trailing 12-month free cash flow per share versus 12 quarters ago,MATRIX,82%,0,0
+mdl230_totalcap_cusip_pctchg3yocf,Percent change in the most recent trailing 12-month operating cash flow per share compared to operating cash flow per share 12 quarters ago,MATRIX,82%,0,0
+mdl230_totalcap_cusip_pctchgastto,"Percent change in asset turnover ratio versus 4 quarters ago, where asset turnover is TTM sales divided by average total assets",MATRIX,87%,0,0
+mdl230_totalcap_cusip_pctchgcf,Percent change in the most recent trailing 12-month cash flow per share compared to the value 4 quarters ago,MATRIX,85%,4,4
+mdl230_totalcap_cusip_pctchgeps,Percent change in the most recent TTM EPS before extraordinary items versus the EPS four quarters ago,MATRIX,87%,1,1
+mdl230_totalcap_cusip_pctchgfcf,Percent change in the most recent trailing 12‑month free cash flow per share versus the value 4 quarters ago,MATRIX,86%,0,0
+mdl230_totalcap_cusip_pctchgocf,Percent change in trailing 12-month operating cash flow per share compared to four quarters ago,MATRIX,87%,0,0
+mdl230_totalcap_cusip_pctchgqtrast,Growth in the most recently reported quarterly total assets per share versus four quarters ago,MATRIX,88%,0,0
+mdl230_totalcap_cusip_pctchgqtrsales,Percent growth in the most recent reported quarterly sales per share compared to 4 quarters ago,MATRIX,86%,0,0
+mdl230_totalcap_cusip_pctchgttmdistr,Percent change in the most recent trailing 12-month distributions per share versus the trailing 12-month distributions per share four quarters earlier,MATRIX,39%,1,3
+mdl230_totalcap_cusip_pcurlia,Most recently reported quarterly current liabilities per share divided by month-end closing price,MATRIX,71%,5,5
+mdl230_totalcap_cusip_pcwt,Time-weighted average of cash flows per share estimates in fiscal year 1 and fiscal year 2 divided by close price,MATRIX,71%,4,4
+mdl230_totalcap_cusip_pd09erpvc,Standard deviation of the last 90 days’ closing prices divided by their mean,MATRIX,88%,0,0
+mdl230_totalcap_cusip_pe_wt,Time-weighted combination of FY1 and FY2 earnings estimates to form a 12-month forward earnings factor,MATRIX,89%,2,3
+mdl230_totalcap_cusip_pedu,It is defined as the difference between the trailing 12-month depreciation expenses and the expected level of depreciation expenses (multiplying the prior year's closing account balance by the growth in total fixed assets) scaled by the total assets.,MATRIX,86%,1,1
+mdl230_totalcap_cusip_pedwf_cf,Next 4-quarter mean consensus earnings estimate divided by the stock price,MATRIX,88%,0,0
+mdl230_totalcap_cusip_pelh_cf,"Sum of the 3‑month change in highest and lowest FY1 earnings estimates (First Call), divided by month‑end trading price",MATRIX,86%,1,1
+mdl230_totalcap_cusip_perg,"Month-end stock price divided by leading 12-month earnings forecasts, scaled by average long-term growth rate estimate, then multiplied by the stock’s 36-month beta",MATRIX,73%,0,0
+mdl230_totalcap_cusip_pfcf_cf,"Next 4-quarter mean earnings estimates (First Call) plus TTM depreciation per share minus corresponding capital expenditures, divided by the stock’s month-end trading price (forward FCF to price proxy)",MATRIX,87%,1,1
+mdl230_totalcap_cusip_pfcfghc,"Difference between TTM free cash flow per share and that of four quarters ago, divided by month-end trading price",MATRIX,87%,0,0
+mdl230_totalcap_cusip_pfcfmtt,TTM free cash flow per share divided by month-end price; free cash flow = operating cash flow − capital expenditures − cash dividends,MATRIX,90%,1,1
+mdl230_totalcap_cusip_pfcfy3ghc,"Difference between the most recent trailing 12-month free cash flow per share and that from 12 quarters ago, divided by the month-end stock price",MATRIX,84%,0,0
+mdl230_totalcap_cusip_pfcghc,"Change in trailing 12-month cash flow per share versus 12 quarters ago, scaled by the stock’s month-end trading price",MATRIX,87%,3,5
+mdl230_totalcap_cusip_pfcmtt,Trailing 12-month cash flow per share (net income plus depreciation) divided by the stock’s month-end trading price,MATRIX,88%,0,0
+mdl230_totalcap_cusip_pfcoghc,"Difference between the most recent trailing 12-month operating cash flow per share and that of four quarters ago, divided by the stock’s month-end trading price",MATRIX,89%,5,7
+mdl230_totalcap_cusip_pfcomtt,Trailing 12‑month operating cash flow per share divided by month‑end trading price,MATRIX,90%,3,3
+mdl230_totalcap_cusip_pfcoy3ghc,"TTM operating cash flow per share minus that of 12 quarters ago, divided by month-end price",MATRIX,82%,0,0
+mdl230_totalcap_cusip_pfcy3ghc,"Difference between the trailing 12-month cash flow per share and the comparable trailing 12-month cash flow 12 quarters ago, divided by the stock’s month-end trading price",MATRIX,82%,0,0
+mdl230_totalcap_cusip_pfgmtt,Trailing 12-month “growth flow” per share (R&D expenses + reported net income) divided by month-end trading price,MATRIX,89%,3,3
+mdl230_totalcap_cusip_pge_cf,"First Call next 4‑quarter mean EPS estimate multiplied by I/B/E/S long‑term mean growth forecast, divided by month‑end trading price",MATRIX,74%,1,1
+mdl230_totalcap_cusip_pi,"Beta to changes in Industrial Production, estimated from a 60-month multi-factor regression of returns on macroeconomic factors",MATRIX,87%,2,2
+mdl230_totalcap_cusip_pinoa,Trailing 12-month operating income after depreciation divided by average net operating assets,MATRIX,70%,0,0
+mdl230_totalcap_cusip_ppa,Average trailing 12-month accounts payable times 365 divided by trailing 12-month cost of goods sold,MATRIX,67%,4,4
+mdl230_totalcap_cusip_pqipmtt,TTM operating and nonoperating income per share before income taxes and minority interest divided by the month-end price,MATRIX,90%,3,3
+mdl230_totalcap_cusip_prc,Beta to changes in the Credit Risk Premium from a 60-month multi-factor regression on macro variables,MATRIX,87%,0,0
+mdl230_totalcap_cusip_ps_wt,Time-weighted sales per share for FY1 and FY2 divided by price,MATRIX,86%,3,3
+mdl230_totalcap_cusip_psdwf,FY1 sales per share estimate divided by the stock’s trading price,MATRIX,82%,3,3
+mdl230_totalcap_cusip_psmtt,Trailing 12-month sales per share divided by the month-end trading price,MATRIX,88%,5,9
+mdl230_totalcap_cusip_pspeghc,"Difference between the most recent trailing 12-month EPS and that of 4 quarters ago, scaled by month-end trading price",MATRIX,89%,2,2
+mdl230_totalcap_cusip_pu,Unexpected profitability: realized profitability minus the expected value from a regression model,MATRIX,80%,0,0
+mdl230_totalcap_cusip_pvan,The most recent book value of net assets per share divided by the month‑end closing price (NAV = total assets − intangibles − liabilities),MATRIX,89%,6,7
+mdl230_totalcap_cusip_rationalalpha,"Intercept (alpha) from an OLS regression of the stock’s historical 12-month returns versus the S&P 500, using a proprietary rational decay weighting of observations",MATRIX,86%,0,0
+mdl230_totalcap_cusip_ratrev6m,Six-month average of the change in the average analyst recommendation tracked by I/B/E/S,MATRIX,79%,1,1
+mdl230_totalcap_cusip_rau,"Current accounts receivable minus expected accounts receivable (prior year’s closing AR multiplied by growth in trailing 12-month sales), scaled by total assets",MATRIX,77%,6,9
+mdl230_totalcap_cusip_rba,"Sum of daily market-adjusted returns from two days before to one day after the quarterly earnings announcement, using the S&P 500 as market proxy",MATRIX,90%,3,3
+mdl230_totalcap_cusip_rdsale,Trailing 12-month research and development expense divided by trailing 12-month total sales,MATRIX,34%,1,1
+mdl230_totalcap_cusip_reinrate,"Reinvestment rate: trailing 12-month EPS before extraordinary items minus trailing 12-month dividends per share, divided by average book equity per share over the same period",MATRIX,85%,2,2
+mdl230_totalcap_cusip_rel5ybp,"Current book-to-market ratio minus the 60-month average BP, scaled by the 60-month standard deviation of BP",MATRIX,72%,11,18
+mdl230_totalcap_cusip_rel5ycfp,"Current trailing 12‑month cash flow‑to‑price ratio minus the 60‑month average of that ratio, scaled by its 60‑month standard deviation",MATRIX,71%,2,2
+mdl230_totalcap_cusip_rel5ycoreepsp,"Current trailing 12-month core earnings-to-price ratio minus its 60-month average, scaled by its 60-month standard deviation",MATRIX,68%,1,1
+mdl230_totalcap_cusip_rel5ydivp,"Current dividend yield minus the 60-month average dividend yield, scaled by the 60-month standard deviation of dividend yields",MATRIX,46%,5,6
+mdl230_totalcap_cusip_rel5yebitdap,"Current trailing 12-month EBITDA per share-to-price ratio minus its 60-month average, scaled by its 60-month standard deviation",MATRIX,63%,6,94
+mdl230_totalcap_cusip_rel5yep,"Current trailing 12-month earnings-to-price ratio minus the 60-month average EP, scaled by the 60-month standard deviation of EP",MATRIX,67%,3,3
+mdl230_totalcap_cusip_rel5yfcfp,"Current TTM free cash flow‑to‑price ratio minus the 60‑month average, scaled by the standard deviation over the same period",MATRIX,68%,0,0
+mdl230_totalcap_cusip_rel5yocfp,Z-score of the stock’s current trailing 12-month operating cash flow-to-price ratio relative to its own last 60 months: (current OCFP − 60-month average OCFP) / 60-month standard deviation of OCFP,MATRIX,68%,2,2
+mdl230_totalcap_cusip_rel5ysp,"Current TTM sales-to-price ratio minus the 60‑month average SP, scaled by the SP standard deviation over the same period",MATRIX,68%,4,4
+mdl230_totalcap_cusip_relpricestrength_,"Stock’s 12‑month relative price strength minus the industry peer values, scaled by the industry standard deviation of those values",MATRIX,85%,0,0
+mdl230_totalcap_cusip_rerror60m,Standard error of the slope from regressing the stock’s last 60 months of returns on S&P 500 Index returns,MATRIX,73%,0,0
+mdl230_totalcap_cusip_rev3my1std,"Change in the current mean analyst EPS estimate for fiscal year 1 versus three months ago, scaled by the standard deviation of analyst forecasts as of three months ago",MATRIX,84%,2,2
+mdl230_totalcap_cusip_rev3my2std,"Change in the current mean earnings estimate for fiscal year 2 versus three months ago, scaled by the standard deviation of analyst forecasts as of three months ago",MATRIX,84%,1,1
+mdl230_totalcap_cusip_rev6fy2,"Average of the prior six months’ monthly changes in the consensus earnings forecast for fiscal year 2, scaled by the previous month-end price",MATRIX,83%,0,0
+mdl230_totalcap_cusip_revper,Trailing 12-month total sales divided by the number of employees at the end of the last reported fiscal year,MATRIX,84%,2,2
+mdl230_totalcap_cusip_rmi,Average implied volatility of the nearest-to-expiration at-the-money options minus the stock’s annualized volatility from the previous 21 trading days’ log returns,MATRIX,81%,1,1
+mdl230_totalcap_cusip_roe,Trailing 12-month income before extraordinary items divided by average common equity,MATRIX,85%,0,0
+mdl230_totalcap_cusip_roic,"Trailing 12-month net income and interest expenses divided by average invested capital (sum of common equity, long-term debt, minority interest, and preferred stock)",MATRIX,87%,1,1
+mdl230_totalcap_cusip_rp,Latest reported quarterly operating income divided by 12-month lagged total assets,MATRIX,88%,0,0
+mdl230_totalcap_cusip_rq,Quick ratio: most recent quarter current assets minus inventories divided by most recent quarter total current liabilities,MATRIX,72%,0,0
+mdl230_totalcap_cusip_rqi_rd,Interquartile range of the stock’s daily total return over the trailing one month,MATRIX,90%,3,3
+mdl230_totalcap_cusip_rsqr4qsales3y,Conditional square of the correlation between monthly time (date) and the trailing 12-month sales per share over the prior 12 quarters,MATRIX,81%,2,2
+mdl230_totalcap_cusip_saleeps,Absolute difference between the yearly percent change in TTM sales per share and the yearly percent change in TTM diluted EPS before extraordinary items,MATRIX,73%,0,0
+mdl230_totalcap_cusip_saleg5y,"Difference between trailing 12-month sales per share and that 20 quarters ago, deflated by the average of sales per share in the prior 20 quarters",MATRIX,80%,1,1
+mdl230_totalcap_cusip_salegpm,Difference between the yearly change in the most recent quarterly sales and the yearly change in the quarterly gross profit margin,MATRIX,76%,2,2
+mdl230_totalcap_cusip_salegstdev,Standard deviation of the year-over-year quarterly sales per share growth rate over the last 12 quarters,MATRIX,77%,0,0
+mdl230_totalcap_cusip_saleicap,Trailing 12-month total revenues divided by the average invested capital over the same period,MATRIX,86%,12,14
+mdl230_totalcap_cusip_salerec,Yearly percent change in trailing 12-month sales minus the yearly percent change in accounts receivable,MATRIX,77%,2,2
+mdl230_totalcap_cusip_salesaccel4q,Regression slope of year-over-year sales growth over the last four quarters,MATRIX,84%,2,2
+mdl230_totalcap_cusip_salesurp,"Most recent quarterly sales minus mean analyst forecast (I/B/E/S), divided by the standard deviation of analysts’ sales forecasts",MATRIX,80%,0,0
+mdl230_totalcap_cusip_se5yepsg,"Stock’s mean I/B/E/S long-term growth rate minus its 5-year historical EPS growth, divided by the stability of 5-year historical EPS growth per I/B/E/S",MATRIX,70%,1,1
+mdl230_totalcap_cusip_sh,"Beta coefficient to changes in Housing Starts, estimated via a 60-month multiple regression on macroeconomic factors",MATRIX,87%,2,2
+mdl230_totalcap_cusip_sharpe36m,"Annualized average monthly total return over the last 36 months minus the annualized average 90-day T-bill rate, divided by the standard deviation of monthly returns",MATRIX,81%,0,0
+mdl230_totalcap_cusip_si_ratio,Shares sold short divided by average daily trading volume over the last 30 trading days,MATRIX,90%,0,0
+mdl230_totalcap_cusip_sighc,Most recently reported inventory as a percentage of trailing 12-month sales minus that percentage four quarters earlier,MATRIX,53%,5,5
+mdl230_totalcap_cusip_sigma,The standard deviation of a stock’s monthly returns over the prior 60 months,MATRIX,73%,0,0
+mdl230_totalcap_cusip_sip,Number of shares sold short divided by common shares outstanding,MATRIX,88%,2,5
+mdl230_totalcap_cusip_skew90cortn,"Skewness of the distribution of daily excess returns vs the S&P 500 over the last 90 days, computed as 3*(Mean−Median)/Standard Deviation",MATRIX,88%,0,0
+mdl230_totalcap_cusip_skew90drtn,Skewness of the distribution of a stock’s daily price returns over the last 90 days (3*(mean−median)/standard deviation),MATRIX,88%,10,10
+mdl230_totalcap_cusip_slope4qcf3y,Slope coefficient from regressing monthly time (date) on trailing 12-month cash flow per share over the prior 12 quarters,MATRIX,79%,0,0
+mdl230_totalcap_cusip_slope4qeps3y,Slope coefficient from regressing monthly dates on trailing 12-month EPS before extraordinary items over the prior 12 quarters,MATRIX,83%,0,0
+mdl230_totalcap_cusip_slope4qeps5y,Slope coefficient between monthly dates and the corresponding trailing 12-month EPS before extraordinary items over the prior 20 quarters,MATRIX,84%,0,0
+mdl230_totalcap_cusip_slope4qfcf3y,Slope coefficient from regressing monthly dates on trailing 12-month free cash flow per share over the prior 12 quarters,MATRIX,77%,1,1
+mdl230_totalcap_cusip_slope4qocf3y,Slope coefficient from regressing monthly dates on trailing 12-month operating cash flow per share over the prior 12 quarters,MATRIX,81%,1,1
+mdl230_totalcap_cusip_slope4qsales3y,Slope coefficient between monthly dates and the corresponding trailing 12-month sales per share over the prior 12 quarters,MATRIX,81%,0,0
+mdl230_totalcap_cusip_slope52wp,4-week lagged slope coefficient from an OLS regression of the last 52 weeks of weekly closing prices on time (weekly dates),MATRIX,86%,0,0
+mdl230_totalcap_cusip_slope66wp,4-week lagged slope coefficient from an OLS regression of the last 66 weeks of weekly closing prices on time (weekly dates),MATRIX,85%,0,0
+mdl230_totalcap_cusip_sortinoratio,"Annualized average monthly total return over the last 36 months minus the annualized 90-Day T-Bill rate over the same period, divided by the standard deviation of monthly returns in months with negative total return",MATRIX,81%,0,0
+mdl230_totalcap_cusip_spe1yfvc_cf,Coefficient of variation of FY1 EPS forecasts: standard deviation of individual analyst estimates divided by their mean,MATRIX,83%,1,1
+mdl230_totalcap_cusip_spe2yfvc_cf,Standard deviation of individual FY2 EPS estimates (First Call) divided by their mean (coefficient of variation),MATRIX,83%,0,0
+mdl230_totalcap_cusip_spefcn,Absolute difference between the YoY percent change in TTM operating cash flow per share and the YoY percent change in TTM diluted EPS before extraordinary items,MATRIX,75%,0,0
+mdl230_totalcap_cusip_speghc,"TTM EPS before extraordinary items minus EPS from four quarters ago, scaled by average total assets per share",MATRIX,88%,1,1
+mdl230_totalcap_cusip_stockrating,Average analyst recommendation as tracked by the I/B/E/S standardized rating system,MATRIX,88%,3,5
+mdl230_totalcap_cusip_sue,"Most recent reported quarterly EPS minus EPS from 4 quarters ago, divided by the standard deviation of this difference over the preceding 8 quarters (standardized unexpected earnings)",MATRIX,83%,0,0
+mdl230_totalcap_cusip_surp,"Difference between actual EPS and the pre-announcement consensus forecast, scaled by the stock price at the beginning of the quarter (earnings surprise)",MATRIX,85%,2,2
+mdl230_totalcap_cusip_susgrowth,"Sustainable growth rate defined as ROE × (1 − dividend payout ratio), with ROE based on trailing 12 months",MATRIX,80%,0,0
+mdl230_totalcap_cusip_tobinq,"Market value of equity plus debt divided by total assets, (E + D) / A, with debt measured at book value",MATRIX,87%,8,10
+mdl230_totalcap_cusip_totalcov,(Cash Flow from Operations + Interest Paid + Tax Paid) divided by (Interest + Principal Paid),MATRIX,80%,3,3
+mdl230_totalcap_cusip_totalsaleg,Percent change in trailing 12-month total sales versus one year earlier,MATRIX,87%,2,2
+mdl230_totalcap_cusip_tstalp,Test statistic based on the correlation between ln(daily closing price) and daily dates over the last 260 days: (CORREL*(260−2)^0.5)/(1−CORREL^2)^0.5,MATRIX,86%,2,3
+mdl230_totalcap_cusip_ttmaccu,(TTM net income minus TTM operating cash flow) scaled by beginning total assets,MATRIX,89%,2,2
+mdl230_totalcap_cusip_ttmcapexp,Trailing 12-month capital expenditures per share divided by stock price,MATRIX,86%,4,4
+mdl230_totalcap_cusip_ttmopincev,Trailing 12-month operating income (before depreciation and amortization) divided by enterprise value; EV = Equity Market Value + Long-term Debt + Short-term Debt + Preferred Stock + Minority Interest − Cash,MATRIX,79%,1,1
+mdl230_totalcap_cusip_ttmsaleev,"Trailing 12-month sales divided by the most recent month-end enterprise value, where EV = market value of equity + long-term debt + short-term debt + preferred stock + minority interest − cash and cash equivalents",MATRIX,88%,8,24
+mdl230_totalcap_cusip_tw_ebitdaev,Time-weighted EBITDA to Enterprise Value ratio using FY1 and FY2,MATRIX,80%,2,2
+mdl230_totalcap_cusip_twepsrev,Six-month average of the time-weighted sum of FY1 and FY2 earnings estimate revisions,MATRIX,72%,0,0
+mdl230_totalcap_cusip_twepsstdrev,6-month average of the time-weighted sum of FY1 and FY2 earnings estimate revisions adjusted by the standard deviations of estimates,MATRIX,68%,2,2
+mdl230_totalcap_cusip_varresirtn,"Variance of monthly residual returns over the last 24 months, where residual return = stock’s monthly return minus 60-month beta times the S&P 500 monthly return",MATRIX,81%,0,0
+mdl230_totalcap_cusip_vefcfmtt,Trailing 12-month free cash flow divided by enterprise value (equity market value + long-term debt + short-term debt + preferred stock + minority interest − cash),MATRIX,88%,0,0
+mdl230_totalcap_cusip_vefcomtt,Trailing 12-month operating cash flow per share divided by per-share enterprise value,MATRIX,88%,1,1
+mdl230_totalcap_cusip_vesspem21f_cf,Consensus forward 12-month EPS forecast divided by the sum of market value of common equity per share and book value of long-term debt per share,MATRIX,87%,2,2
+mdl230_totalcap_cusip_visiratio,Most recent daily trading volume divided by the average daily trading volume over the previous 50 trading days,MATRIX,90%,3,3
+mdl230_totalcap_cusip_vnicw,Most recent quarterly working capital divided by inventory (working capital = current assets minus current liabilities),MATRIX,52%,0,0
+mdl230_totalcap_cusip_vniu,"Current inventory minus expected inventory (prior year-end balance multiplied by TTM COGS growth), scaled by total assets",MATRIX,53%,1,1
+mdl230_totalcap_cusip_voctni,Most recently reported quarterly operating income before depreciation divided by quarterly long-term debt interest expense,MATRIX,80%,1,1
+mdl230_totalcap_cusip_voldiff_pc,The difference between the time‑weighted average implied volatility of the two nearest‑to‑expiration at‑the‑money puts and the two nearest‑to‑expiration at‑the‑money calls,MATRIX,80%,2,3
+mdl230_totalcap_cusip_volpre6m,"6‑month moving average of average monthly turnover ratio, where turnover = daily shares traded divided by total shares outstanding",MATRIX,89%,8,13
+mdl230_totalcap_cusip_volto,Monthly total trading volume divided by the most recently reported total outstanding shares,MATRIX,90%,4,7
+mdl230_totalcap_cusip_w15tvp,4-week lagged 51-week average cumulative price and volume trend used to gauge trend strength and potential reversals,MATRIX,87%,2,3
+mdl230_totalcap_cusip_w57w03_rp,30-week moving average price divided by 75-week moving average price,MATRIX,85%,0,0
+mdl230_totalcap_cusip_w62isr,A stock’s most recent weekly closing price divided by its weekly closing price 26 weeks earlier,MATRIX,88%,2,2
+mdl230_totalcap_cusip_w93ntr,Price change from week t−43 to week t−4,MATRIX,87%,0,0
+mdl230_totalcap_cusip_wcast,Average working capital over the trailing 12 months divided by the average total assets over the same period,MATRIX,72%,1,1
+mdl230_totalcap_cusip_xiv,"Beta coefficient to changes in market volatility, estimated via a 60-month multiple regression of returns on macroeconomic factors",MATRIX,87%,0,0
+mdl230_totalcap_cusip_y3fcfq4rqsr,Conditional R-squared from regressing time (monthly dates) on trailing 12-month free cash flow per share over the prior 12 quarters (square of the correlation),MATRIX,82%,0,0
+mdl230_totalcap_cusip_y3fcfq4vc,Standard deviation of the last 12 quarters’ trailing 12-month free cash flow per share divided by the mean free cash flow (coefficient of variation),MATRIX,82%,0,0
+mdl230_totalcap_cusip_y3fcoq4rqsr,Conditional square of the correlation between monthly dates and the corresponding trailing 12-month operating cash flow per share over the prior 12 quarters,MATRIX,81%,0,0
+mdl230_totalcap_cusip_y3fcoq4vc,Standard deviation of the last 12 quarters’ trailing 12-month operating cash flow per share divided by the mean over the same period (coefficient of variation),MATRIX,81%,1,1
+mdl230_totalcap_cusip_y3fcq4rqsr,Conditional square of the correlation between monthly dates and the corresponding trailing 12-month cash flow per share over the prior 12 quarters,MATRIX,79%,0,0
+mdl230_totalcap_cusip_y3fcq4vc,Standard deviation of the prior 12 quarters’ TTM cash flow per share divided by their mean,MATRIX,79%,2,2
+mdl230_totalcap_cusip_y3speq4rqsr,Conditional square of the correlation between monthly dates and the corresponding trailing 12-month EPS before extra items over the prior 12 quarters (R-squared of EPS trend),MATRIX,83%,1,1
+mdl230_totalcap_cusip_y3speq4vc,Standard deviation of the last 12 quarters’ TTM EPS divided by the mean of those TTM EPS values,MATRIX,84%,1,1
+mdl230_totalcap_cusip_y5speq4rqsr,Conditional square of the correlation between monthly dates and corresponding trailing 12-month EPS before extraordinary items over the prior 20 quarters (an R-squared measure of EPS trend),MATRIX,84%,0,0
+mdl230_totalcap_cusip_y5speq4vc,The standard deviation of the last 20 months of trailing 12‑month EPS divided by their mean (coefficient of variation),MATRIX,72%,0,0
+mdl230_totalcap_cusip_ydp_cf,"Assumed payout ratio multiplied by First Call next 4-quarter earnings estimates, divided by month-end trading price; assumed payout = 10% + 84% × last year’s payout ratio − 38% × long-term earnings growth rate",MATRIX,69%,6,9
+mdl230_totalcap_cusip_yen,"Average of normalized earnings based on ROE, net profit margin, and FY2 EPS, scaled by price",MATRIX,84%,15,21
+mdl230_totalcap_cusip_yieldsprd,"Beta to the change in slope of the term structure, estimated from a 60-month multi-factor regression of returns on macro factors",MATRIX,87%,0,0
+mdl230_totalcap_cusip_yoychgaa,"Year-over-year change in the difference between trailing 12-month operating cash flow and trailing 12-month income before extraordinary items, each scaled by average total assets",MATRIX,88%,0,0
+mdl230_totalcap_cusip_yoychgcr,Most recent quarterly current ratio minus the current ratio for the same quarter one year ago (current ratio = current assets/current liabilities),MATRIX,72%,1,1
+mdl230_totalcap_cusip_yoychgda,"Year-over-year change in the ratio of total liabilities to total assets, measured as the difference between the most recent quarter and the same quarter one year ago",MATRIX,90%,7,9
+mdl230_totalcap_cusip_yoychgdistr,Growth in the most recent reported distribution per share versus the same period one year ago,MATRIX,35%,2,2
+mdl230_totalcap_cusip_yoychgdivq,It is defined as the growth rate of the latest quarterly regular dividends compare with historical trailing 12-month quarterly dividend.,MATRIX,32%,1,1
+mdl230_totalcap_cusip_yoychggpm,"Most recent quarterly gross profit margin minus the margin for the same quarter one year ago, where gross margin = (Sales − COGS)/Sales",MATRIX,72%,1,1
+mdl230_totalcap_cusip_yoychgroa,Change in return on assets: most recent trailing 12-month income before extraordinary items as a percent of total assets minus the same measure one year ago,MATRIX,90%,3,4
+mdl230_totalcap_cusip_yoychgroeart,"The yearly arithmetic change in ROE, where ROE = trailing 12‑month earnings before extraordinary items (quarterly data) divided by current total book equity",MATRIX,82%,0,0
+mdl230_totalcap_cusip_yoychgroepct,Yearly percentage change in TTM earnings before extraordinary items (from quarterly data) divided by current total book equity,MATRIX,77%,1,1
+mdl230_us5000_cusip_25_4op,One minus the ratio of the last 52-week price exponential moving average to the last 4-week price exponential moving average,MATRIX,95%,1,1
+mdl230_us5000_cusip_52whigh,Month-end price divided by the highest monthly closing price over the past 12 months,MATRIX,98%,4,5
+mdl230_us5000_cusip_60dsigma,Standard deviation of monthly price returns,MATRIX,99%,13,13
+mdl230_us5000_cusip_6351_rp,Ratio of the 15-week moving average of the stock’s price to the 36-week moving average of its price,MATRIX,97%,3,4
+mdl230_us5000_cusip_actrtn12m,Percent change in a stock’s price from month t-13 to month t-1,MATRIX,95%,1,1
+mdl230_us5000_cusip_actrtn18m,Percent change in price from month t-19 to month t-1,MATRIX,93%,2,2
+mdl230_us5000_cusip_actrtn1m,Percent change in a stock’s price from month t-1 to month t,MATRIX,100%,9,10
+mdl230_us5000_cusip_actrtn24m,Percent change in price from month t-25 to month t-1,MATRIX,91%,1,1
+mdl230_us5000_cusip_actrtn2m,Percent change in the stock’s price from month t−2 to month t,MATRIX,99%,11,18
+mdl230_us5000_cusip_actrtn36m,"Percent price change from month t−37 to month t−1 (cumulative 36‑month return, excluding the current month)",MATRIX,87%,2,4
+mdl230_us5000_cusip_actrtn3m,Percent change in a stock’s price from month t-3 to month t,MATRIX,99%,10,11
+mdl230_us5000_cusip_actrtn60m,Percent change in price from month t-61 to month t-1,MATRIX,80%,1,1
+mdl230_us5000_cusip_actrtn60m12lag,Percent change in price from month t-72 to month t-12,MATRIX,76%,1,1
+mdl230_us5000_cusip_actrtn6m,Percent change in price from month t−7 to month t−1,MATRIX,97%,0,0
+mdl230_us5000_cusip_actrtn9m,Price percent change from month t-10 to month t-1,MATRIX,97%,1,1
+mdl230_us5000_cusip_ad,Most recently reported total debt divided by total assets,MATRIX,86%,0,0
+mdl230_us5000_cusip_adpmoc,"Sum of long‑term debt, short‑term debt, underfunded pension liabilities, operating lease expense, and preferred stock divided by total assets",MATRIX,97%,1,1
+mdl230_us5000_cusip_adverint,Last fiscal year’s advertising expense divided by last fiscal year’s sales,MATRIX,78%,1,1
+mdl230_us5000_cusip_ags,"TTM selling, general, and administrative expenses divided by TTM sales",MATRIX,87%,1,1
+mdl230_us5000_cusip_alpha60m,Intercept from regressing the stock’s monthly returns on S&P 500 monthly returns over the past 60 months,MATRIX,80%,0,0
+mdl230_us5000_cusip_altmanz,Altman Z-score = 1.2*(Current Assets − Current Liabilities)/Total Assets + 1.4*Retained Earnings/Total Assets + 3.3*EBIT/Total Assets + 0.6*(Market Value of Equity)/Book Value of Total Liabilities + 1.0*Sales/Total Assets,MATRIX,76%,5,6
+mdl230_us5000_cusip_aoer,Reported cumulative retained earnings from the most recent quarter divided by reported total assets from the same quarter,MATRIX,98%,0,0
+mdl230_us5000_cusip_aor,Trailing 12-month income before extraordinary items divided by the average total assets over the same period,MATRIX,99%,1,1
+mdl230_us5000_cusip_apemtt,Most recently reported trailing 12-month EPS after extraordinary items divided by month-end trading price,MATRIX,99%,4,5
+mdl230_us5000_cusip_apg,Trailing 12-month (Sales minus COGS) divided by total assets (gross profit to assets),MATRIX,84%,0,0
+mdl230_us5000_cusip_apgghcm3_,Change in gross profit to assets versus the same quarter three months ago; GPA = TTM (Sales − COGS) / Total Assets,MATRIX,80%,0,0
+mdl230_us5000_cusip_apgghcy1_,Change in gross profit to assets versus the same quarter one year ago; GPA = TTM (Sales − COGS) / Total Assets,MATRIX,83%,0,0
+mdl230_us5000_cusip_apgghcy3_,Difference between the most recent quarterly gross profit to assets and the same quarter three years ago; gross profit to assets = TTM (Sales − COGS) divided by total assets,MATRIX,79%,0,0
+mdl230_us5000_cusip_apsales,Annual Asia-Pacific sales divided by total annual sales,MATRIX,25%,2,2
+mdl230_us5000_cusip_aspanratio,Quarterly operating assets minus operating liabilities scaled by lagged total assets,MATRIX,89%,1,1
+mdl230_us5000_cusip_aspemtty3gc,Three-year geometric growth rate (CAGR) of the most recently reported trailing 12-month EPS after extraordinary items,MATRIX,92%,0,0
+mdl230_us5000_cusip_astcomp,Most recent quarter total current assets divided by most recent quarter total assets,MATRIX,81%,7,7
+mdl230_us5000_cusip_astto,Trailing 12-month sales divided by the most recently reported quarterly assets,MATRIX,97%,4,4
+mdl230_us5000_cusip_atmcallvol,Time-weighted average implied volatility of the nearest and next-nearest expiration at-the-money call options,MATRIX,88%,1,2
+mdl230_us5000_cusip_atmputvol,Time‑weighted average implied volatility of the nearest‑to‑expiration and next‑nearest‑to‑expiration at‑the‑money put option contracts,MATRIX,88%,0,0
+mdl230_us5000_cusip_avg10yep,Average earnings over the past 10 years divided by current price,MATRIX,84%,1,1
+mdl230_us5000_cusip_avg10yepinf,Average inflation-adjusted earnings over the past 10 years divided by the current stock price (10-year real earnings yield),MATRIX,84%,0,0
+mdl230_us5000_cusip_bap20d,20-day moving average of the stock’s daily composite bid-ask spread divided by its daily closing price,MATRIX,100%,0,0
+mdl230_us5000_cusip_beta,"0.67 times the 60-month beta plus 0.33, where beta is the covariance of the stock’s monthly return with the S&P 500’s monthly return over the prior 60 months divided by the S&P 500’s return variance over the same period",MATRIX,92%,0,0
+mdl230_us5000_cusip_betasigma,Product of adjusted 60-month beta and 60-month standard deviation of monthly returns,MATRIX,80%,0,0
+mdl230_us5000_cusip_bmpo,Most recently reported quarterly operating income divided by the corresponding quarterly sales (operating margin),MATRIX,96%,1,1
+mdl230_us5000_cusip_booklev,Most recent quarterly total assets divided by book equity,MATRIX,100%,2,2
+mdl230_us5000_cusip_bpemtt,Most recent trailing 12 month EPS before extraordinary items divided by month end trading price,MATRIX,98%,1,1
+mdl230_us5000_cusip_capacq,(Trailing 12-month operating cash flow minus trailing 12-month cash dividends) divided by total expenditures in the same period,MATRIX,96%,1,1
+mdl230_us5000_cusip_capdistp,Sum of trailing 12 month dividends per share and estimated trailing 12 month net share repurchases issued per share scaled by price,MATRIX,91%,3,6
+mdl230_us5000_cusip_capexast,Trailing 12-month capital expenditures divided by total assets from the most recent quarter,MATRIX,95%,2,4
+mdl230_us5000_cusip_capexdeplink,Absolute difference between the ranks (1–1000) of quarterly capex-to-assets and quarterly depreciation-to-assets,MATRIX,94%,0,0
+mdl230_us5000_cusip_capexsale,Trailing 12‑month capital expenditures divided by trailing 12‑month sales,MATRIX,95%,1,1
+mdl230_us5000_cusip_cashburnrate,"Negative of cash from operations plus cash from investing, divided by cash plus short-term investments",MATRIX,88%,0,0
+mdl230_us5000_cusip_cashc,Cash conversion cycle measured as average inventory days plus average collection days minus average payable days,MATRIX,74%,2,3
+mdl230_us5000_cusip_cashp,Most recently reported cash and equivalents per share divided by the month-end trading price,MATRIX,89%,1,1
+mdl230_us5000_cusip_cashratio,Most recent quarterly cash and equivalents divided by current liabilities,MATRIX,80%,1,1
+mdl230_us5000_cusip_cashsale,Average cash and equivalents in the trailing 12 months divided by trailing 12-month sales,MATRIX,86%,0,0
+mdl230_us5000_cusip_cashsev,Total cash and equivalents divided by the sum of market value of common equity and book value of long term debt,MATRIX,89%,3,3
+mdl230_us5000_cusip_ccacw,Working capital accruals: increase in accounts receivable + increase in inventory + decrease in accounts payable and accrued liabilities + decrease in accrued income taxes + net change in other assets and liabilities,MATRIX,79%,2,2
+mdl230_us5000_cusip_ceroe,Trailing 12-month funds from operations divided by the average of current and previous year equity value,MATRIX,93%,0,0
+mdl230_us5000_cusip_cfita,Trailing 12-month cash flow from investing activities divided by the average total assets over the last 4 quarters,MATRIX,98%,0,0
+mdl230_us5000_cusip_cfleverage,Total liabilities divided by the trailing 12-month operating cash flow,MATRIX,89%,0,0
+mdl230_us5000_cusip_cfroi,Trailing 12‑month cash flow divided by average invested capital over the same period; invested capital = common equity + long‑term debt + minority interest + preferred stock,MATRIX,96%,2,9
+mdl230_us5000_cusip_cg3yroic,"3-year geometric growth rate of return on invested capital (ROIC), where ROIC = (TTM net income + interest expense) divided by average invested capital; invested capital = common equity + long-term debt + minority interest + preferred stock",MATRIX,88%,1,1
+mdl230_us5000_cusip_cg3ysales,Geometric growth rate of trailing 12-month sales per share over the last 12 quarters,MATRIX,92%,1,2
+mdl230_us5000_cusip_chg12msip,"12‑month relative change in short interest position, where SIP is shares sold short relative to shares outstanding",MATRIX,95%,0,0
+mdl230_us5000_cusip_chg12mtotdebt,12‑month relative change in total debt (short‑term plus long‑term debt),MATRIX,83%,1,1
+mdl230_us5000_cusip_chg3ycfast,"Most recent TTM operating cash flow minus comparable TTM operating cash flow from 12 quarters ago, scaled by average total assets",MATRIX,91%,0,0
+mdl230_us5000_cusip_chg3yepsast,"Trailing 12-month EPS before extraordinary items minus EPS 12 quarters ago, scaled by average total assets per share",MATRIX,94%,0,0
+mdl230_us5000_cusip_chg3yepsp,(TTM earnings per share − TTM earnings per share from 12 quarters ago) divided by month-end trading price,MATRIX,95%,1,2
+mdl230_us5000_cusip_chg3yfcfast,(TTM free cash flow − TTM free cash flow from 12 quarters ago) divided by average total assets,MATRIX,94%,0,0
+mdl230_us5000_cusip_chg3yocfast,"Most recent TTM operating cash flow minus that of 12 quarters ago, scaled by average total assets",MATRIX,92%,0,0
+mdl230_us5000_cusip_chg6malpha18m,"Six-month change in the stock’s 18-month alpha, where alpha is the intercept from regressing monthly stock returns on S&P 500 monthly returns over the past 18 months",MATRIX,91%,1,1
+mdl230_us5000_cusip_chgalpha12m,"Six-month change in a stock’s 12-month alpha, where alpha is the intercept from regressing the stock’s monthly returns on the S&P 500’s monthly returns over the last 12 months",MATRIX,93%,1,1
+mdl230_us5000_cusip_chgalpha36m,"Six‑month change in a stock’s 36‑month alpha, where alpha is the intercept from regressing monthly returns on the S&P 500 over the last 36 months",MATRIX,85%,0,0
+mdl230_us5000_cusip_chgars,Change in accounts receivable as a percentage of TTM sales compared with four quarters ago,MATRIX,84%,5,5
+mdl230_us5000_cusip_chginvavgast,12-month change in quarterly total inventories scaled by the average of total assets at the most recent quarter end and four quarters prior,MATRIX,59%,1,1
+mdl230_us5000_cusip_chgnoa,"Year‑over‑year change in net operating assets to total assets, where net operating assets = short‑term debt + long‑term debt + preferred equity + common equity − cash (most recent quarter)",MATRIX,88%,6,7
+mdl230_us5000_cusip_chgollev,"Change in operating liability leverage from the current quarter to four quarters ago, where operating liability leverage = 1 − (short‑term debt + long‑term debt + common equity + preferred equity − cash) / (total assets − cash)",MATRIX,98%,2,2
+mdl230_us5000_cusip_chgqtrepssurp,Change in quarterly earnings surprise actual EPS minus consensus estimate EPS scaled by the most recent closing price,MATRIX,92%,2,2
+mdl230_us5000_cusip_chgreccast,Percent change in the accounts receivable to current assets ratio versus the same quarter one year ago,MATRIX,77%,0,0
+mdl230_us5000_cusip_chgroeart,Quarterly arithmetic change in trailing-12-month earnings before extraordinary items divided by current total book equity,MATRIX,93%,1,1
+mdl230_us5000_cusip_chgroepct,"Quarterly percentage change in ROE, where ROE is defined as trailing-twelve-month earnings before extraordinary items divided by current total book equity",MATRIX,93%,2,3
+mdl230_us5000_cusip_chgsgasale,Yearly change in quarterly SG&A expenses minus the yearly change in quarterly sales,MATRIX,87%,0,0
+mdl230_us5000_cusip_chgvolpre4y,Change in the most recent 6-month moving average of the monthly turnover ratio (avg monthly volume/shares outstanding) compared to the 12-month moving average of the monthly turnover ratio four years ago,MATRIX,77%,2,2
+mdl230_us5000_cusip_cogsinvt,Absolute value of the difference between the yearly percent change in TTM cost of goods sold and the yearly percent change in inventory level,MATRIX,59%,0,0
+mdl230_us5000_cusip_coreepsp,"Trailing 12-month earnings per share from operations, excluding special items, divided by the month-end trading price",MATRIX,99%,3,7
+mdl230_us5000_cusip_covol,Slope of the least squares regression line of the last 60 months of monthly trading volume against time,MATRIX,81%,1,1
+mdl230_us5000_cusip_cpgspea2y,"Consensus FY2 EPS forecast minus consensus FY1 EPS forecast, divided by the FY1 consensus forecast",MATRIX,99%,0,0
+mdl230_us5000_cusip_cre_cf,Slope between market-adjusted returns around earnings announcements and the yearly change in quarterly actual EPS tracked by First Call,MATRIX,82%,0,0
+mdl230_us5000_cusip_ctpmto,Exponentially weighted put‑to‑call ratio for out‑of‑the‑money options,MATRIX,86%,0,0
+mdl230_us5000_cusip_curindbp_,"Stock’s current book-to-price ratio minus the industry average BP, scaled by the cross-sectional standard deviation of BPs in the relative universe",MATRIX,96%,4,4
+mdl230_us5000_cusip_curindcfp_,"Stock’s trailing 12-month cash flow-to-price ratio minus the industry average, scaled by the standard deviation of CFPs in the relative universe",MATRIX,94%,1,1
+mdl230_us5000_cusip_curindcoreepsp_,"TTM core earnings-to-price ratio minus the industry average, standardized by the industry standard deviation within the relative universe",MATRIX,96%,0,0
+mdl230_us5000_cusip_curinddivp_,"Stock’s trailing 12‑month dividend yield minus the industry average dividend yield, scaled by the cross‑sectional standard deviation of dividend yields in the relative universe",MATRIX,97%,0,0
+mdl230_us5000_cusip_curindebitdaev_,Industry normalized z score of TTM EBITDA to enterprise value the stock’s ratio minus the industry average divided by the industry standard deviation within the relative universe,MATRIX,95%,1,1
+mdl230_us5000_cusip_curindebitdap_,"Trailing 12-month EBITDA-to-price ratio minus the industry average, standardized by the industry standard deviation within the relative universe",MATRIX,94%,0,0
+mdl230_us5000_cusip_curindep_,"Industry‑standardized EP measure: the stock’s TTM earnings‑to‑price ratio less the industry average, divided by the industry standard deviation",MATRIX,96%,1,1
+mdl230_us5000_cusip_curindfcfp_,Industry normalized z score of TTM free cash flow to price the stock’s ratio minus the industry average divided by the industry standard deviation within the relative universe,MATRIX,96%,3,3
+mdl230_us5000_cusip_curindocfp_,"Industry-normalized z-score of the stock’s trailing 12-month operating cash flow-to-price ratio, computed as OCFP minus the industry average and divided by the cross-sectional standard deviation within the relative universe",MATRIX,96%,5,5
+mdl230_us5000_cusip_curindocfta_,"Stock’s TTM operating cash flow-to-total assets ratio minus the industry average, deflated by the standard deviation of OCFTAs in the same relative universe",MATRIX,96%,10,13
+mdl230_us5000_cusip_curindsp_,"Industry-normalized z-score of the stock’s trailing 12-month sales-to-price ratio, computed as SP minus the industry average and divided by the cross-sectional standard deviation within the relative universe",MATRIX,95%,7,8
+mdl230_us5000_cusip_curratio,Most recent quarter’s current assets divided by most recent quarter’s current liabilities,MATRIX,81%,1,1
+mdl230_us5000_cusip_cv4qsales3y,Standard deviation of prior 12 quarters’ trailing 12-month sales per share divided by the mean over the same period,MATRIX,88%,0,0
+mdl230_us5000_cusip_cvopinc,Standard deviation of trailing 12-month operating income per share over the prior 12 quarters divided by the mean over the same period (coefficient of variation of OPINC TTM over 12 quarters),MATRIX,85%,0,0
+mdl230_us5000_cusip_cvvolp20d,Coefficient of variation of the last 20 days of closing prices divided by the coefficient of variation of daily trading volume over the same period,MATRIX,100%,2,2
+mdl230_us5000_cusip_cws,"Average working capital over the trailing 12 months divided by total sales over the same period, where working capital equals inventory plus accounts receivable minus accounts payable",MATRIX,78%,0,0
+mdl230_us5000_cusip_d41isr,14‑day Relative Strength Index measuring average up and down price moves to indicate overbought or oversold conditions,MATRIX,100%,7,7
+mdl230_us5000_cusip_dcc,"Most recent quarterly cash flow from operations minus cash dividends, divided by current interest-bearing debt",MATRIX,76%,1,1
+mdl230_us5000_cusip_debtcf,Trailing 12-month cash flow divided by the sum of the most recent long-term debt and short-term interest-bearing debt,MATRIX,78%,0,0
+mdl230_us5000_cusip_debtmktcap,Long-term debt plus short-term debt divided by market capitalization,MATRIX,85%,0,0
+mdl230_us5000_cusip_div5yg,Five-year growth in dividends,MATRIX,44%,0,0
+mdl230_us5000_cusip_divcf,Trailing 12-month cash dividends (common and preferred) divided by trailing 12-month cash flow,MATRIX,53%,1,1
+mdl230_us5000_cusip_divcov,Trailing 12-month earnings from operations divided by indicated annual dividends (dividend coverage),MATRIX,51%,0,0
+mdl230_us5000_cusip_divgp,Total dividends paid divided by revenue minus cost of goods sold (share of gross profit paid as dividends),MATRIX,40%,1,1
+mdl230_us5000_cusip_divyield,Trailing 12-month dividends per share divided by month-end trading price,MATRIX,52%,10,10
+mdl230_us5000_cusip_dpcapex,Absolute difference between the yearly percent change in TTM depreciation expense and the yearly percent change in TTM capital expenditure,MATRIX,93%,0,0
+mdl230_us5000_cusip_dsu,Beta to changes in US dollar value estimated via a 60‑month multiple regression of returns on macroeconomic factors,MATRIX,97%,1,1
+mdl230_us5000_cusip_dtsm1_rd,Standard deviation of the stock’s daily total returns over the trailing one month,MATRIX,100%,0,0
+mdl230_us5000_cusip_earningstorpedo,"(Next 4 quarters EPS estimate + trailing 12-month real earnings surprise) divided by trailing 12-month EPS, where real surprise is actual minus estimated EPS summed over the last 4 quarters",MATRIX,88%,0,0
+mdl230_us5000_cusip_earnshortfall,"Reported accounting earnings minus free cash flow, scaled by average assets",MATRIX,98%,0,0
+mdl230_us5000_cusip_ebitdadebt,Trailing 12-month EBITDA divided by current total debt,MATRIX,84%,1,1
+mdl230_us5000_cusip_ebitdadebtchg,Annual change in the ratio of trailing-12-month EBITDA to current total debt,MATRIX,79%,1,1
+mdl230_us5000_cusip_ebitdaev,Trailing 12-month EBITDA divided by enterprise value (EV = Equity Market Value + Long-term Debt + Short-term Debt + Preferred Stock + Minority Interest − Cash),MATRIX,96%,12,17
+mdl230_us5000_cusip_ebitdap,Trailing 12-month EBITDA divided by the month-end trading price,MATRIX,98%,1,1
+mdl230_us5000_cusip_ed,Most recently reported total long-term debt divided by total book equity,MATRIX,83%,0,0
+mdl230_us5000_cusip_emeasales,Company’s annual aggregate EMEA sales divided by total annual sales,MATRIX,30%,1,1
+mdl230_us5000_cusip_epschgetr,TTM pre‑tax income per share multiplied by the change in effective tax rate versus 4 quarters ago,MATRIX,84%,1,1
+mdl230_us5000_cusip_equityto,Trailing 12-month sales divided by the average reported book equity over the trailing 12 months,MATRIX,97%,0,0
+mdl230_us5000_cusip_exdisspi,"Sum of the absolute values of extraordinary items, discontinued operations, and special items in the prior 8 quarters scaled by the average TTM sales over the same period",MATRIX,36%,1,1
+mdl230_us5000_cusip_fc_curep,"Sum of the most recently reported three quarters of EPS (per First Call) plus the consensus estimate for the current quarter, divided by the month-end price (current 4-quarter EPS-to-price)",MATRIX,94%,5,6
+mdl230_us5000_cusip_fc_curindfwdep_,"Industry-normalized z-score of the forward earnings-to-price ratio based on next four quarters’ consensus estimates, computed as FwdEP minus the industry average and divided by the cross-sectional standard deviation",MATRIX,95%,3,3
+mdl230_us5000_cusip_fc_dypeg,"Reciprocal of forward 12-month P/E (E/P) divided by the total growth rate, where total growth equals the I/B/E/S long-term growth forecast plus indicated dividend yield",MATRIX,80%,1,1
+mdl230_us5000_cusip_fc_ebop,Valuation from the Edwards‑Bell‑Ohlson model scaled by month‑end price,MATRIX,90%,3,3
+mdl230_us5000_cusip_fc_estep,Most recent First Call median estimate for the next four quarters’ earnings divided by the month-end stock price (forward EPS-to-price),MATRIX,96%,4,8
+mdl230_us5000_cusip_fc_fcfroey1p,"(TTM free cash flow per share × First Call consensus next 4-quarter earnings forecast) divided by most recently reported book value per share, then scaled by month-end trading price",MATRIX,96%,7,10
+mdl230_us5000_cusip_fc_fqsurstd,Most recent quarterly earnings surprise (actual EPS minus First Call consensus) standardized by the standard deviation of First Call analysts’ individual forecasts,MATRIX,88%,0,0
+mdl230_us5000_cusip_fc_fwdroe,Analysts’ earnings estimates for the next four quarters divided by the most recent common equity per share,MATRIX,92%,0,0
+mdl230_us5000_cusip_fc_numest,Number of analysts’ earnings estimates for fiscal year 1,MATRIX,98%,6,8
+mdl230_us5000_cusip_fc_numrevq1,"Within a month, the number of FYQ1 analyst EPS forecast increases minus decreases, divided by the total number of forecasts",MATRIX,91%,3,3
+mdl230_us5000_cusip_fc_numrevy1,Weighted average of net FY1 analyst earnings forecast revisions (upward minus downward within a month) divided by the total number of forecasts,MATRIX,94%,0,0
+mdl230_us5000_cusip_fc_proformaep,Trailing 12-month reported actual earnings recorded by First Call divided by the stock’s month-end trading price,MATRIX,93%,1,1
+mdl230_us5000_cusip_fc_qepsferr,"Quarterly EPS forecast error: actual EPS minus consensus forecast, scaled by the stock’s price at the beginning of the quarter",MATRIX,88%,4,4
+mdl230_us5000_cusip_fc_rel5yfwdep,"Current next 4-quarters consensus earnings-to-price ratio minus the 60-month average, scaled by the 60-month standard deviation",MATRIX,79%,11,36
+mdl230_us5000_cusip_fc_rev1q1,"Revision in consensus earnings forecast for fiscal quarter 1: current forecast minus that of one month ago, deflated by month‑end trading price",MATRIX,91%,1,1
+mdl230_us5000_cusip_fc_rev3y1,"Change in the current mean FY1 EPS estimate (First Call) versus three months ago, scaled by month-end price",MATRIX,95%,1,1
+mdl230_us5000_cusip_fc_rev3y2,"Revision in mean earnings estimate for fiscal year 2: current estimate minus that of three months ago, deflated by month‑end trading price",MATRIX,94%,0,0
+mdl230_us5000_cusip_fc_rev6,Average of the prior 6 months’ monthly changes in FY1 consensus earnings forecasts (First Call) scaled by the previous month-end trading price,MATRIX,93%,3,3
+mdl230_us5000_cusip_fc_stdevfy1epsp,Standard deviation of analysts’ individual FY1 EPS forecasts (First Call) scaled by month-end closing price,MATRIX,92%,0,0
+mdl230_us5000_cusip_fc_stdevfy2epsp,"Standard deviation of individual analysts’ FY2 EPS forecasts (First Call), scaled by month-end closing price",MATRIX,92%,1,1
+mdl230_us5000_cusip_fc_y2repsg,"Consensus FY2 EPS forecast (First Call) minus the most recently reported fiscal year actual EPS (First Call), divided by the month-end stock price",MATRIX,95%,1,1
+mdl230_us5000_cusip_fc_y3sur,"Current-quarter mean earnings forecast minus the actual earnings from 12 quarters ago, standardized by the standard deviation of those actual quarterly earnings",MATRIX,80%,1,1
+mdl230_us5000_cusip_fcfequity,Trailing 12-month free cash flow divided by average book equity over the same period,MATRIX,98%,1,1
+mdl230_us5000_cusip_fcfghc,"TTM free cash flow minus TTM free cash flow from four quarters ago, divided by average total assets",MATRIX,99%,0,0
+mdl230_us5000_cusip_fcfroi,Trailing 12-month free cash flow divided by average invested capital in the same period; invested capital = common equity + long-term debt + minority interest + preferred stock,MATRIX,98%,2,2
+mdl230_us5000_cusip_fcfsale,Trailing 12-month free cash flow divided by trailing 12-month sales,MATRIX,97%,0,0
+mdl230_us5000_cusip_fcfy3gc,Three‑year geometric growth rate of free cash flow,MATRIX,82%,1,1
+mdl230_us5000_cusip_fcghc,"TTM cash flow minus TTM cash flow from four quarters ago, scaled by average total assets",MATRIX,95%,0,0
+mdl230_us5000_cusip_fcoghc,"Change in operating cash flow: most recent TTM OCF minus TTM OCF from four quarters ago, divided by average total assets",MATRIX,99%,0,0
+mdl230_us5000_cusip_fcus,"Most recent quarterly operating cash flow minus that of 4 quarters ago, divided by the standard deviation of this difference over the preceding 8 quarters",MATRIX,85%,1,1
+mdl230_us5000_cusip_fixastto,Trailing 12 month sales divided by the average total fixed assets over the same period,MATRIX,94%,1,1
+mdl230_us5000_cusip_flowratio,Most recent quarter current assets minus cash and equivalents divided by current liabilities minus short term debt,MATRIX,81%,0,0
+mdl230_us5000_cusip_fqsurstd60dlag,"Most recent actual fiscal quarter EPS minus the consensus estimate from 60 days earlier, standardized by the dispersion of analyst forecasts 60 days earlier",MATRIX,78%,0,0
+mdl230_us5000_cusip_fwdebitdaev,FY1 estimate of EBITDA divided by enterprise value,MATRIX,86%,9,15
+mdl230_us5000_cusip_fy1epsskew,Skewness of the distribution of leading 12-month (FY1) earnings estimates tracked by First Call,MATRIX,85%,2,2
+mdl230_us5000_cusip_ga,Open interest–weighted sum of the gamma across all options on the stock,MATRIX,89%,0,0
+mdl230_us5000_cusip_gear,Long-term debt divided by the difference between total assets and current liabilities,MATRIX,83%,1,1
+mdl230_us5000_cusip_grahamnum,"Graham Number divided by price, where Graham Number = sqrt(22.5 × EPS × book value per share)",MATRIX,79%,4,5
+mdl230_us5000_cusip_growdura,"Natural log of the ratio of the stock’s leading 12-month P/E to the S&P 500’s leading 12-month P/E divided by the natural log of the ratio of 1 plus the stock’s total growth rate to the S&P 500 total growth rate, where total growth = I/B/E/S long-term growth rate plus dividend yield",MATRIX,79%,1,1
+mdl230_us5000_cusip_gspea1q_cf,"Most recent First Call fiscal quarter consensus EPS forecast minus actual quarterly EPS from four quarters ago, divided by the month-end stock price",MATRIX,90%,4,4
+mdl230_us5000_cusip_gspea1y_cf,"Next 4‑quarter consensus EPS forecast minus last 4‑quarter reported EPS, deflated by the stock’s month‑end trading price",MATRIX,88%,0,0
+mdl230_us5000_cusip_gspea2y_cf,"Most recent consensus FY2 earnings forecast minus the consensus FY1 forecast, divided by month-end trading price",MATRIX,98%,0,0
+mdl230_us5000_cusip_gtl,"I/B/E/S mean long-term growth forecast, representing expected annual operating earnings growth over the next business cycle",MATRIX,90%,4,5
+mdl230_us5000_cusip_gtlm6ghc,Percent change in the I/B/E/S mean long‑term growth forecast versus 6 months earlier,MATRIX,57%,0,0
+mdl230_us5000_cusip_ica,Change in the most recent TTM capital investment intensity relative to the average of the prior 3 years’ investment intensity,MATRIX,90%,0,0
+mdl230_us5000_cusip_idb,Number of days the company can cover daily operating expenses (COGS and SG&A) using only cash and receivables on its balance sheet,MATRIX,84%,3,4
+mdl230_us5000_cusip_idy,"Quarterly distributions per share (excluding specials), annualized by multiplying by 4, divided by current price",MATRIX,48%,4,7
+mdl230_us5000_cusip_impduration,"Equity risk measure analogous to Macaulay duration, combining book value, expected growth, expected profitability, and current stock price",MATRIX,91%,3,3
+mdl230_us5000_cusip_indidivy,"Applicable quarterly dividend per share (based on ex-dividend date, excluding specials) annualized by multiplying by 4, then divided by month-end price",MATRIX,51%,0,0
+mdl230_us5000_cusip_indrelcroe_,"Industry‑standardized ROE: lagged quarterly ROE minus industry average, divided by the industry standard deviation",MATRIX,94%,0,0
+mdl230_us5000_cusip_indrelrecd_,"Asset-adjusted annual doubtful receivables minus the industry average, standardized by the industry standard deviation of doubtful receivables",MATRIX,56%,0,0
+mdl230_us5000_cusip_indrelrtn4w_,"Stock’s 4-week return minus the industry average 4-week return, scaled by the industry standard deviation of those returns",MATRIX,98%,4,4
+mdl230_us5000_cusip_indrelrtn5d_,"Stock’s 5-day return minus the industry average 5-day return, scaled by the industry standard deviation of those returns",MATRIX,100%,8,10
+mdl230_us5000_cusip_inflation,Beta to the change in inflation estimated from a 60-month multiple regression of returns on macroeconomic factors,MATRIX,97%,4,4
+mdl230_us5000_cusip_invast,Current inventory level divided by total assets from the most recent quarter,MATRIX,60%,1,2
+mdl230_us5000_cusip_iqa,Year-over-year change of 1 minus the ratio of current assets plus PP&E to total assets,MATRIX,78%,1,6
+mdl230_us5000_cusip_irttmsalesev,"Industry-standardized TTM Sales-to-Enterprise Value ratio: the stock’s TTM sales-to-EV minus the industry average, divided by the cross-sectional standard deviation within the universe",MATRIX,96%,1,1
+mdl230_us5000_cusip_iv,Average implied volatility of the nearest-to-expiration at-the-money option contracts,MATRIX,89%,0,0
+mdl230_us5000_cusip_lagegp,"TTM EPS before extraordinary items times the change in yearly TTM sales per share growth rate, divided by month-end price",MATRIX,83%,0,0
+mdl230_us5000_cusip_lccau,"Most recent fiscal year’s accrued liabilities minus expected accrued liabilities (prior year closing balance times TTM sales growth), scaled by total assets",MATRIX,59%,2,2
+mdl230_us5000_cusip_lfd,(TTM pretax income + TTM interest expense) divided by TTM pretax income,MATRIX,98%,1,1
+mdl230_us5000_cusip_liqcoeff,Slope of the regression of monthly turnover ratio (X) on contemporary monthly stock returns (Y),MATRIX,92%,0,0
+mdl230_us5000_cusip_lumqca,Most recent quarterly invested capital divided by trailing 12-month EBITDA (acquisition multiple),MATRIX,86%,0,0
+mdl230_us5000_cusip_m42rav,It is defined as the minimum of a stock monthly price return in last 24-month period.,MATRIX,91%,1,1
+mdl230_us5000_cusip_m6dn2ntr,Percent change in the stock’s price from month t-12 to month t-7 (return in the second six months of the past year),MATRIX,96%,1,1
+mdl230_us5000_cusip_mad3yttmni,"Mean absolute deviation of the last 12 quarters’ trailing 12-month net income, scaled by the average of total assets",MATRIX,89%,0,0
+mdl230_us5000_cusip_mad3yttmsale,"Mean absolute deviation over the prior 12 quarters of trailing 12‑month sales, scaled by average total assets",MATRIX,91%,1,1
+mdl230_us5000_cusip_md,"Financial distress risk measure as defined by Campbell, Hilscher, and Szilagyi (2008) and Chen and Zhang (2009)",MATRIX,81%,0,0
+mdl230_us5000_cusip_milliq,Monthly average of the daily absolute return to daily dollar trading volume ratio,MATRIX,100%,3,4
+mdl230_us5000_cusip_min1ygrossmargin,Minimum quarterly gross profit margin over the past year,MATRIX,80%,0,0
+mdl230_us5000_cusip_min1yopmargin,Minimum quarterly operating profit margin over the last year,MATRIX,95%,0,0
+mdl230_us5000_cusip_min2ygrossmargin,Two-year minimum of quarterly gross profit margin,MATRIX,78%,0,0
+mdl230_us5000_cusip_min2yopmargin,Minimum value of the quarterly operating profit margin over the past two years,MATRIX,93%,1,1
+mdl230_us5000_cusip_min3ygrossmargin,Minimum quarterly gross profit margin over the past 3 years,MATRIX,77%,0,0
+mdl230_us5000_cusip_min3yopmargin,Minimum quarterly operating profit margin observed over the past 3 years,MATRIX,91%,0,0
+mdl230_us5000_cusip_mktcappera,Current month-end market capitalization divided by the number of analysts providing FY1 earnings estimates to I/B/E/S,MATRIX,98%,2,2
+mdl230_us5000_cusip_mktlev,"Market leverage defined as a stock’s month‑end total market value plus the most recent reported quarterly book debt, divided by the market value",MATRIX,99%,0,0
+mdl230_us5000_cusip_monchgsip,Month-to-month change in the ratio of shares sold short to common shares outstanding,MATRIX,99%,0,0
+mdl230_us5000_cusip_mpg,Trailing 12-month (Sales − COGS) divided by Sales,MATRIX,84%,0,0
+mdl230_us5000_cusip_mpgghcm3_,Most recent quarterly gross profit margin minus the margin for the same quarter three months earlier; gross margin = TTM (Sales − COGS)/Sales,MATRIX,78%,2,2
+mdl230_us5000_cusip_mpgghcy3_,Most recent quarterly gross profit margin minus that of the same quarter three years ago; GPM = TTM (Sales − COGS) / Sales,MATRIX,77%,0,0
+mdl230_us5000_cusip_mpgy3gc,Three‑year geometric growth rate of gross margins,MATRIX,77%,0,0
+mdl230_us5000_cusip_mpn,Most recent quarterly net income after tax divided by corresponding quarterly sales,MATRIX,95%,0,0
+mdl230_us5000_cusip_mpnghc,Most recent quarterly net profit margin minus the net profit margin four quarters ago (NPM = net income/total sales),MATRIX,96%,2,2
+mdl230_us5000_cusip_mpoghc,"Change in operating profit margin: most recent quarterly operating margin minus that of four quarters ago, where operating margin = income from operations / total sales",MATRIX,95%,3,3
+mdl230_us5000_cusip_mpoy3gc,"Three‑year geometric growth rate of operating profit margin, where margin equals quarterly operating income divided by quarterly sales",MATRIX,90%,0,0
+mdl230_us5000_cusip_mrspe_cf,Three-month change in First Call analysts’ median FY1 earnings forecast scaled by the current mean estimate,MATRIX,80%,1,1
+mdl230_us5000_cusip_nasales,Annual North America sales divided by total annual sales,MATRIX,90%,2,2
+mdl230_us5000_cusip_nef,"Sum of net cash from changes in common equity, preferred equity, convertible debt, other long-term debt, and short-term borrowings, scaled by total assets",MATRIX,89%,4,5
+mdl230_us5000_cusip_netcashp,"Net cash position scaled by market value: most recent cash and equivalents minus long‑term and current debt, divided by month‑end market value",MATRIX,89%,0,0
+mdl230_us5000_cusip_netdebt,"Net debt as a capital structure share: net debt divided by (net debt + preferred stock + common stock), where net debt = long‑term debt + short‑term debt − cash & equivalents; all from the most recent quarter",MATRIX,99%,0,0
+mdl230_us5000_cusip_netdebtebitda,Net debt long term debt plus short term debt minus cash and equivalents divided by EBITDA,MATRIX,87%,0,0
+mdl230_us5000_cusip_nfaldebt,Most recent quarterly net fixed assets divided by total long-term debt,MATRIX,82%,0,0
+mdl230_us5000_cusip_niper,Trailing 12-month income after taxes divided by the number of employees at the end of the last reported fiscal year,MATRIX,95%,1,1
+mdl230_us5000_cusip_nla_u,Natural logarithm of the most recent quarterly total assets in USD,MATRIX,99%,1,1
+mdl230_us5000_cusip_nlassets,Natural logarithm of the most recent quarterly total assets,MATRIX,100%,0,0
+mdl230_us5000_cusip_nlmc,Natural logarithm of the cube of the stock’s month-end total market value,MATRIX,99%,4,13
+mdl230_us5000_cusip_nlmc_u,Natural logarithm of the cube of the stock’s total market value in USD,MATRIX,100%,2,2
+mdl230_us5000_cusip_nlprice,Natural logarithm of the cube of the stock’s month-end unadjusted closing price,MATRIX,100%,1,1
+mdl230_us5000_cusip_nlprice_usd,Natural logarithm of the cube of the stock’s unadjusted closing price in USD,MATRIX,100%,1,1
+mdl230_us5000_cusip_nlsales,Natural logarithm of the cube of a company’s trailing 12-month sales,MATRIX,97%,0,0
+mdl230_us5000_cusip_nlsales_usd,Natural logarithm of the cube of trailing 12-month sales in USD,MATRIX,97%,1,1
+mdl230_us5000_cusip_nlvolcap,Natural logarithm of the ratio of the trailing 12-month average monthly trading volume to the trailing 12-month average monthly market capitalization,MATRIX,96%,7,9
+mdl230_us5000_cusip_nnastp,"Current assets per share minus total liabilities per share, divided by the month-end price",MATRIX,81%,2,2
+mdl230_us5000_cusip_noato,"Trailing 12-month sales divided by the last four quarters’ average net operating assets, where net operating assets = short-term debt + long-term debt + preferred equity + common equity - cash",MATRIX,92%,24,38
+mdl230_us5000_cusip_nopatmargin,"Net operating profit after tax margin defined as (Net Income + Interest Expense*(1−Effective Tax Rate)) divided by Net Sales, all on a trailing twelve‑month basis; Effective Tax Rate = TTM income taxes / TTM income before taxes",MATRIX,90%,0,0
+mdl230_us5000_cusip_normalmf60d,60-day average of daily money flow divided by daily total dollar volume (VWAP times trading volume),MATRIX,97%,1,1
+mdl230_us5000_cusip_ntrm01ff,Percent change in price from month t−12 to month t−2 (10-month momentum excluding the most recent month),MATRIX,96%,0,0
+mdl230_us5000_cusip_numrevy2,"Weighted average of the number of FY2 analyst earnings forecasts raised minus lowered within a month, divided by the total number of analyst forecasts",MATRIX,91%,1,1
+mdl230_us5000_cusip_ocfast,Trailing 12‑month net cash flow from operations divided by average total assets,MATRIX,99%,2,2
+mdl230_us5000_cusip_ocfmargin,Trailing 12-month cash flow from operations divided by trailing 12-month sales,MATRIX,97%,1,1
+mdl230_us5000_cusip_ocfratio,Most recently reported quarterly cash flow from operations divided by current liabilities,MATRIX,81%,2,2
+mdl230_us5000_cusip_ocfroi,Trailing 12-month operating cash flow divided by average invested capital (common equity + long-term debt + minority interest + preferred stock) over the same period,MATRIX,98%,1,2
+mdl230_us5000_cusip_ohlsonscore,Bankruptcy probability score from Ohlson 1980 based on firm size capital structure financial performance and liquidity,MATRIX,79%,0,0
+mdl230_us5000_cusip_oilprice,Beta to changes in oil prices estimated from a 60-month multi-factor regression of returns,MATRIX,97%,0,0
+mdl230_us5000_cusip_ollev,1 minus the ratio of short‑term debt plus long‑term debt plus common equity plus preferred equity minus cash to total assets minus cash in the current quarter,MATRIX,99%,9,22
+mdl230_us5000_cusip_opincltd,Yearly percent change in operating income minus the yearly percent change in long-term debt,MATRIX,77%,0,0
+mdl230_us5000_cusip_oplev,Percent change in TTM operating income from the previous quarter divided by the percent change in TTM sales from the previous quarter,MATRIX,87%,0,0
+mdl230_us5000_cusip_otvni,Trailing 12-month cost of goods sold divided by average inventory over the same period,MATRIX,60%,1,1
+mdl230_us5000_cusip_over,"Trailing 12-month operating income less depreciation minus income before extraordinary items, scaled by trailing 12-month sales",MATRIX,96%,0,0
+mdl230_us5000_cusip_p50_200ratio,Moving average of last 50 days’ prices divided by moving average of last 200 days’ prices,MATRIX,96%,0,0
+mdl230_us5000_cusip_past,Month-end stock price divided by the most recent quarterly total assets per share (price-to-assets per share),MATRIX,100%,8,17
+mdl230_us5000_cusip_pau,"Current accounts payable minus expected payables (prior year-end AP times TTM COGS growth), scaled by total assets",MATRIX,74%,2,2
+mdl230_us5000_cusip_pb,Book to price ratio most recent book value per share divided by month end trading price,MATRIX,99%,3,4
+mdl230_us5000_cusip_pbdwf,Average quarterly forward-looking book value per share divided by close price,MATRIX,69%,4,4
+mdl230_us5000_cusip_pbroeresidual,"Residual from a price‑to‑book model that incorporates firm growth, based on a variation of the Wilcox and Philips (2005) PB‑ROE framework",MATRIX,76%,2,2
+mdl230_us5000_cusip_pbwt,Time-weighted average of book value per share estimates for fiscal years 1 and 2 divided by the close price,MATRIX,87%,6,6
+mdl230_us5000_cusip_pc_ratio,Open interest in seven near‑the‑money nearest‑expiration put options divided by the open interest in seven near‑the‑money nearest‑expiration call options,MATRIX,87%,0,0
+mdl230_us5000_cusip_pca,Average trailing 12‑month accounts receivable times 365 divided by trailing 12‑month sales (days sales outstanding measure),MATRIX,86%,0,0
+mdl230_us5000_cusip_pcdwf,Average quarterly forward-looking cash flows per share divided by the closing price,MATRIX,60%,2,2
+mdl230_us5000_cusip_pctabv260low,Current closing price divided by the lowest daily low price over the past 260 trading days,MATRIX,99%,2,2
+mdl230_us5000_cusip_pctchg3ycf,Percent change in the most recent trailing 12-month cash flow per share versus its level 12 quarters ago,MATRIX,89%,1,1
+mdl230_us5000_cusip_pctchg3yeps,Percent change in the most recent trailing 12-month EPS compared to EPS 12 quarters ago,MATRIX,89%,0,0
+mdl230_us5000_cusip_pctchg3yfcf,Percent change in the most recent trailing 12-month free cash flow per share versus that of 12 quarters (3 years) ago,MATRIX,91%,0,0
+mdl230_us5000_cusip_pctchg3yocf,Percent change in the most recent TTM operating cash flow per share versus the value 12 quarters ago (3 years),MATRIX,91%,0,0
+mdl230_us5000_cusip_pctchgastto,"Percent change in the most recent asset turnover ratio versus four quarters ago, where asset turnover is TTM sales divided by average total assets",MATRIX,97%,1,3
+mdl230_us5000_cusip_pctchgcf,Percent change in the most recent TTM cash flow per share compared to four quarters ago,MATRIX,94%,0,0
+mdl230_us5000_cusip_pctchgeps,Percent change in the most recent trailing 12-month EPS before extraordinary items versus the EPS 4 quarters ago,MATRIX,97%,0,0
+mdl230_us5000_cusip_pctchgfcf,Percent change in the most recent TTM free cash flow per share compared to 4 quarters ago,MATRIX,96%,1,1
+mdl230_us5000_cusip_pctchgocf,Percent change in the most recent TTM operating cash flow per share versus four quarters ago,MATRIX,97%,2,2
+mdl230_us5000_cusip_pctchgqtrast,Growth in the most recently reported quarterly total assets per share compared to four quarters ago,MATRIX,98%,1,1
+mdl230_us5000_cusip_pctchgqtrsales,Growth in the most recently reported quarterly sales per share compared to the same quarter four quarters ago,MATRIX,96%,0,0
+mdl230_us5000_cusip_pctchgttmdistr,Percent change in recent TTM distributions per share versus TTM distributions per share 4 quarters earlier,MATRIX,43%,0,0
+mdl230_us5000_cusip_pcurlia,Most recent quarterly current liabilities per share divided by month-end closing price,MATRIX,81%,3,6
+mdl230_us5000_cusip_pcwt,Time-weighted average of cash flow per share estimates for FY1 and FY2 divided by the closing price,MATRIX,78%,1,1
+mdl230_us5000_cusip_pd09erpvc,Standard deviation of the last 90 days’ closing prices divided by the mean of those prices,MATRIX,98%,1,1
+mdl230_us5000_cusip_pe_wt,Time‑weighted blend of FY1 and FY2 earnings estimates to create a 12‑month forward EPS forecast used as an earnings factor,MATRIX,99%,1,1
+mdl230_us5000_cusip_pedu,"Unexpected depreciation: TTM depreciation expense minus expected depreciation (prior year closing balance times growth in total fixed assets), scaled by total assets",MATRIX,95%,3,4
+mdl230_us5000_cusip_pedwf_cf,Next 4‑quarters mean consensus earnings estimate divided by price (forward earnings‑to‑price),MATRIX,96%,3,3
+mdl230_us5000_cusip_pelh_cf,"Sum of the 3-month change in the highest FY1 EPS forecast and the change in the lowest FY1 EPS forecast (First Call), scaled by month-end price",MATRIX,95%,0,0
+mdl230_us5000_cusip_perg,"Month-end price divided by leading 12-month EPS forecast, scaled by the average long-term growth estimate, then multiplied by the stock’s 36-month beta",MATRIX,79%,2,2
+mdl230_us5000_cusip_pfcf_cf,"Next four quarters’ mean earnings estimates plus trailing 12-month depreciation per share minus corresponding capital expenditures, divided by the month-end trading price",MATRIX,96%,3,3
+mdl230_us5000_cusip_pfcfghc,"Change in trailing 12-month free cash flow per share versus four quarters ago, divided by the month-end trading price",MATRIX,97%,0,0
+mdl230_us5000_cusip_pfcfmtt,Trailing 12 month free cash flow per share divided by month end price where free cash flow equals operating cash flow minus capital expenditures and cash dividends,MATRIX,100%,0,0
+mdl230_us5000_cusip_pfcfy3ghc,"Difference between the most recent TTM free cash flow per share and that from 12 quarters ago, divided by month-end price",MATRIX,92%,0,0
+mdl230_us5000_cusip_pfcghc,"Difference between the TTM cash flow per share and that of 12 quarters ago, divided by the month-end stock price",MATRIX,96%,0,0
+mdl230_us5000_cusip_pfcmtt,Trailing 12-month cash flows per share (net income plus depreciation) scaled by month-end trading price,MATRIX,98%,1,1
+mdl230_us5000_cusip_pfcoghc,"Difference between most recent trailing 12-month operating cash flow per share and that of 4 quarters ago, divided by month-end price",MATRIX,99%,0,0
+mdl230_us5000_cusip_pfcomtt,Trailing 12-month operating cash flow per share divided by the month-end stock price (OCF yield),MATRIX,100%,3,3
+mdl230_us5000_cusip_pfcoy3ghc,"Difference between the most recent TTM operating cash flow per share and that from 12 quarters ago, divided by month-end price",MATRIX,88%,0,0
+mdl230_us5000_cusip_pfcy3ghc,Change in trailing 12‑month cash flow per share versus 12 quarters ago divided by month‑end price,MATRIX,89%,0,0
+mdl230_us5000_cusip_pfgmtt,"Trailing 12-month growth flow per share divided by month-end price, where growth flow equals R&D expenses plus reported net income",MATRIX,99%,3,5
+mdl230_us5000_cusip_pge_cf,"Product of next 4-quarter mean earnings estimate and long-term growth forecast (I/B/E/S), divided by month-end price",MATRIX,80%,2,2
+mdl230_us5000_cusip_pi,"Beta to changes in Industrial Production, estimated from a 60-month multiple regression of returns on macroeconomic factors",MATRIX,97%,1,1
+mdl230_us5000_cusip_pinoa,Trailing 12-month operating income after depreciation divided by average net operating assets,MATRIX,79%,1,1
+mdl230_us5000_cusip_ppa,Average trailing 12-month accounts payable times 365 divided by trailing 12-month cost of goods sold (a days payable outstanding measure),MATRIX,75%,2,2
+mdl230_us5000_cusip_pqipmtt,"Trailing 12-month operating and nonoperating income per share before taxes and minority interest, divided by the month-end trading price",MATRIX,100%,1,1
+mdl230_us5000_cusip_prc,Beta to changes in the Credit Risk Premium estimated from a 60‑month multi‑factor regression,MATRIX,97%,1,1
+mdl230_us5000_cusip_ps_wt,Time‑weighted sales per share for FY1 and FY2 divided by price,MATRIX,95%,2,2
+mdl230_us5000_cusip_psdwf,FY1 estimated sales per share divided by the stock’s trading price (forward sales-to-price),MATRIX,89%,2,4
+mdl230_us5000_cusip_psmtt,Most recent trailing 12-month sales per share divided by the month-end trading price,MATRIX,97%,1,1
+mdl230_us5000_cusip_pspeghc,Change in TTM earnings per share from four quarters ago scaled by month end trading price,MATRIX,99%,0,0
+mdl230_us5000_cusip_pu,Difference between realized profitability and the expected profitability from a regression model,MATRIX,88%,0,0
+mdl230_us5000_cusip_pvan,Most recent net asset value per share divided by the month-end closing price; NAV equals total assets minus intangible assets minus current and long-term liabilities,MATRIX,100%,9,10
+mdl230_us5000_cusip_rationalalpha,Stock’s market‑adjusted excess return measured as the Y‑intercept (alpha) from an OLS regression of returns on the S&P 500 over the past 12 months using a proprietary rational decay weighting,MATRIX,96%,0,0
+mdl230_us5000_cusip_ratrev6m,Six-month average of the change in the average analyst recommendation tracked by I/B/E/S,MATRIX,87%,0,0
+mdl230_us5000_cusip_rau,"Current accounts receivable minus expected receivables (prior year-end AR times TTM sales growth), scaled by total assets",MATRIX,85%,4,5
+mdl230_us5000_cusip_rba,Sum of market adjusted daily returns from two days before to one day after the quarterly earnings announcement using the S and P 500 as the market proxy,MATRIX,99%,2,5
+mdl230_us5000_cusip_rdsale,Trailing 12‑month research and development expense divided by trailing 12‑month total sales,MATRIX,40%,2,2
+mdl230_us5000_cusip_reinrate,"TTM EPS before extra items minus TTM dividends per share (by ex-date), divided by average book equity per share over the same period",MATRIX,94%,1,1
+mdl230_us5000_cusip_rel5ybp,"Current book-to-market (book/price) minus the average over the last 60 months, scaled by the standard deviation over the same 60-month period",MATRIX,79%,7,8
+mdl230_us5000_cusip_rel5ycfp,"Current TTM cash flow‑to‑price ratio minus the 60‑month average of that ratio, scaled by its 60‑month standard deviation",MATRIX,78%,1,1
+mdl230_us5000_cusip_rel5ycoreepsp,"Current TTM core earnings-to-price ratio minus the 60-month average of that ratio, scaled by its 60-month standard deviation (5-year z-score of CoreEP)",MATRIX,73%,2,2
+mdl230_us5000_cusip_rel5ydivp,"Current dividend yield minus the 60‑month average dividend yield, scaled by the 60‑month standard deviation",MATRIX,51%,1,1
+mdl230_us5000_cusip_rel5yebitdap,"Current TTM EBITDA per share-to-price ratio minus the 60-month average of that ratio, scaled by its 60-month standard deviation (a 5-year z-score)",MATRIX,69%,1,1
+mdl230_us5000_cusip_rel5yep,"Current TTM EPS‑to‑price ratio minus the 60‑month average of that ratio, scaled by its 60‑month standard deviation",MATRIX,72%,3,3
+mdl230_us5000_cusip_rel5yfcfp,"Current TTM free cash flow-to-price ratio minus the 60-month average FCFP, scaled by the 60-month standard deviation of FCFP",MATRIX,73%,1,1
+mdl230_us5000_cusip_rel5yocfp,Current TTM operating cash flow to price minus the 60 month average of that ratio scaled by its 60 month standard deviation,MATRIX,73%,0,0
+mdl230_us5000_cusip_rel5ysp,"Current trailing 12-month sales-to-price ratio minus the 60-month average, scaled by the standard deviation over the same 60-month period",MATRIX,73%,0,0
+mdl230_us5000_cusip_relpricestrength_,"A stock’s 12-month relative price strength minus the industry peers’ average, standardized by the industry standard deviation of price strength",MATRIX,95%,0,0
+mdl230_us5000_cusip_rerror60m,Standard error of the slope from regressing the last 60 months of the stock’s monthly returns on S&P 500 Index returns,MATRIX,80%,1,1
+mdl230_us5000_cusip_rev3my1std,"Change in the current mean FY1 earnings estimate versus three months ago, scaled by the standard deviation of analyst forecasts as of three months ago",MATRIX,91%,0,0
+mdl230_us5000_cusip_rev3my2std,"Change in the mean earnings estimate for fiscal year 2 over the past three months, scaled by the standard deviation of analyst forecasts as of three months ago",MATRIX,92%,1,1
+mdl230_us5000_cusip_rev6fy2,"Average of the prior six monthly changes in the consensus FY2 EPS forecast, scaled by the previous month-end price",MATRIX,91%,4,5
+mdl230_us5000_cusip_revper,Trailing 12-month total sales divided by the number of employees at the end of the last reported fiscal year (revenue per employee),MATRIX,93%,5,6
+mdl230_us5000_cusip_rmi,Average implied volatility of the nearest-to-expiration at-the-money options minus the stock’s annualized volatility of the previous 21-day log returns,MATRIX,89%,0,0
+mdl230_us5000_cusip_roe,Trailing 12 month income before extraordinary items divided by average common equity over the same period,MATRIX,95%,0,0
+mdl230_us5000_cusip_roic,TTM net income plus interest expense divided by average invested capital (common equity + long-term debt + minority interest + preferred stock),MATRIX,97%,0,0
+mdl230_us5000_cusip_rp,Latest reported quarterly operating income divided by total assets lagged by 12 months,MATRIX,98%,4,10
+mdl230_us5000_cusip_rq,Quick ratio: (current assets − inventories) from the most recent quarter divided by total current liabilities from the same quarter,MATRIX,81%,0,0
+mdl230_us5000_cusip_rqi_rd,Interquartile range of the stock’s daily total returns over the trailing one month,MATRIX,100%,3,6
+mdl230_us5000_cusip_rsqr4qsales3y,Conditional square of the correlation between monthly dates and the corresponding trailing 12-month sales per share over the prior 12 quarters,MATRIX,88%,0,0
+mdl230_us5000_cusip_saleeps,Absolute difference between the yearly percent change in TTM sales per share and the yearly percent change in TTM diluted EPS before extraordinary items,MATRIX,81%,0,0
+mdl230_us5000_cusip_saleg5y,Difference between current TTM sales per share and the value 20 quarters ago scaled by the average of sales per share over the prior 20 quarters,MATRIX,88%,0,0
+mdl230_us5000_cusip_salegpm,Yearly change in most recent reported quarterly sales minus the yearly change in quarterly gross profit margin,MATRIX,84%,0,0
+mdl230_us5000_cusip_salegstdev,Standard deviation of year-over-year quarterly sales per share growth over the last 12 quarters,MATRIX,84%,2,3
+mdl230_us5000_cusip_saleicap,Trailing 12-month total revenues divided by the average invested capital over the same period,MATRIX,95%,24,36
+mdl230_us5000_cusip_salerec,Yearly percent change in trailing 12-month sales minus the yearly percent change in accounts receivable,MATRIX,85%,0,0
+mdl230_us5000_cusip_salesaccel4q,Slope of the regression line of year-over-year sales growth against time (sales growth acceleration),MATRIX,92%,3,3
+mdl230_us5000_cusip_salesurp,"Most recent quarterly sales minus the mean I/B/E/S forecast, divided by the standard deviation of analysts’ sales forecasts",MATRIX,85%,2,2
+mdl230_us5000_cusip_se5yepsg,"IBES mean long-term growth rate minus 5-year historical EPS growth, divided by the stability of 5-year historical EPS growth (IBES)",MATRIX,77%,2,2
+mdl230_us5000_cusip_sh,Beta to changes in Housing Starts estimated from a 60‑month multi‑factor regression,MATRIX,97%,0,0
+mdl230_us5000_cusip_sharechg,Percent change in the current number of shares outstanding compared to one year ago,MATRIX,94%,1,1
+mdl230_us5000_cusip_sharpe36m,Annualized average monthly total return over the last 36 months minus the annualized 90 day T bill rate over the same period divided by the standard deviation of monthly returns,MATRIX,90%,0,0
+mdl230_us5000_cusip_si_ratio,Short interest divided by the stock’s average daily trading volume over the last 30 trading days,MATRIX,100%,5,7
+mdl230_us5000_cusip_sighc,Most recently reported inventory as a percentage of trailing 12-month sales minus that percentage four quarters ago,MATRIX,61%,1,1
+mdl230_us5000_cusip_sigma,Standard deviation of the stock’s monthly returns over the prior 60 months,MATRIX,80%,0,0
+mdl230_us5000_cusip_sip,Shares sold short divided by common shares outstanding,MATRIX,97%,1,1
+mdl230_us5000_cusip_skew90cortn,Skewness of the distribution of the stock’s daily excess returns versus the S&P 500 over the last 90 days,MATRIX,98%,1,1
+mdl230_us5000_cusip_skew90drtn,"Skewness of a stock’s daily return distribution over the last 90 days, computed as 3*(mean − median)/standard deviation",MATRIX,98%,0,0
+mdl230_us5000_cusip_slope4qcf3y,Slope coefficient between monthly dates and trailing 12-month cash flow per share over the prior 12 quarters,MATRIX,85%,0,0
+mdl230_us5000_cusip_slope4qeps3y,Slope coefficient from regressing monthly dates on trailing 12-month EPS before extraordinary items over the prior 12 quarters (trend in TTM EPS),MATRIX,90%,1,1
+mdl230_us5000_cusip_slope4qeps5y,Slope from regressing monthly dates against trailing 12-month EPS before extraordinary items over the prior 20 quarters,MATRIX,92%,1,1
+mdl230_us5000_cusip_slope4qfcf3y,Slope of a regression of monthly dates on trailing 12‑month free cash flow per share over the prior 12 quarters,MATRIX,83%,0,0
+mdl230_us5000_cusip_slope4qocf3y,Slope coefficient from regressing monthly time on trailing 12-month operating cash flow per share over the prior 12 quarters,MATRIX,87%,1,1
+mdl230_us5000_cusip_slope4qsales3y,Regression slope of monthly time against TTM sales per share over the prior 12 quarters,MATRIX,88%,0,0
+mdl230_us5000_cusip_slope52wp,4-week lagged slope coefficient from a least squares regression of the last 52 weeks of weekly closing prices on weekly dates,MATRIX,95%,1,1
+mdl230_us5000_cusip_slope66wp,Four‑week lagged slope of the least squares line of the last 66 weeks of weekly closing prices against weekly dates,MATRIX,94%,0,0
+mdl230_us5000_cusip_sortinoratio,"Annualized average monthly total return over the last 36 months minus the average annualized 90-day T-Bill rate over the same period, divided by the standard deviation of monthly returns in months when total return was negative",MATRIX,89%,0,0
+mdl230_us5000_cusip_spe1yfvc_cf,Standard deviation of individual analyst EPS estimates for fiscal year 1 divided by the mean of these forecasts,MATRIX,91%,1,1
+mdl230_us5000_cusip_spe2yfvc_cf,Coefficient of variation of FY2 EPS estimates: standard deviation of First Call analysts’ FY2 EPS estimates divided by their mean,MATRIX,91%,3,3
+mdl230_us5000_cusip_spefcn,Absolute difference between the yearly percent change in TTM operating cash flow per share and the yearly percent change in TTM diluted EPS before extraordinary items,MATRIX,82%,2,2
+mdl230_us5000_cusip_speghc,"TTM EPS before extra items minus EPS from four quarters ago, scaled by average total assets per share",MATRIX,98%,0,0
+mdl230_us5000_cusip_stockrating,Average analyst recommendation based on the I/B/E/S standardized rating system,MATRIX,98%,1,1
+mdl230_us5000_cusip_sue,"Most recent reported quarterly EPS minus EPS from four quarters ago, divided by the standard deviation of this difference over the preceding eight quarters",MATRIX,90%,1,1
+mdl230_us5000_cusip_surp,"Earnings surprise: actual EPS minus the prior consensus forecast, scaled by the stock price at the beginning of the quarter",MATRIX,92%,3,3
+mdl230_us5000_cusip_susgrowth,"Maximum sustainable growth rate defined as ROE times one minus the dividend payout ratio, with ROE measured on a trailing 12-month basis",MATRIX,89%,2,2
+mdl230_us5000_cusip_tobinq,"Market value of equity plus debt divided by assets, with debt measured at book value",MATRIX,98%,0,0
+mdl230_us5000_cusip_totalcov,(Cash flow from operations + interest paid + tax paid) divided by (interest + principal paid),MATRIX,88%,1,1
+mdl230_us5000_cusip_totalsaleg,Percent change in trailing 12-month total sales versus the trailing 12-month total sales one year ago,MATRIX,96%,4,5
+mdl230_us5000_cusip_tstalp,T statistic of the 260 day log price trend computed as CORREL times square root of 260 minus 2 divided by square root of 1 minus CORREL squared where CORREL is the correlation between log daily closing price and daily dates over the last 260 days,MATRIX,95%,0,0
+mdl230_us5000_cusip_ttmaccu,"Accruals measured as trailing 12‑month net income minus trailing 12‑month operating cash flow, scaled by beginning total assets",MATRIX,99%,0,0
+mdl230_us5000_cusip_ttmcapexp,Trailing 12-month capital expenditures per share divided by the stock’s trading price,MATRIX,95%,1,1
+mdl230_us5000_cusip_ttmopincev,Trailing 12 month operating income before depreciation and amortization divided by enterprise value where EV equals equity market value plus long term debt plus short term debt plus preferred stock plus minority interest minus cash,MATRIX,88%,2,2
+mdl230_us5000_cusip_ttmsaleev,"Trailing 12-month sales divided by the most recent month-end enterprise value (EV), where EV = Equity Market Value + Long-term Debt + Short-term Debt + Preferred Stock + Minority Interest − Cash and Cash Equivalents",MATRIX,97%,2,3
+mdl230_us5000_cusip_tw_ebitdaev,Time-weighted EBITDA-to-Enterprise Value using FY1 and FY2 figures,MATRIX,88%,3,3
+mdl230_us5000_cusip_twepsrev,Six-month average of the time-weighted sum of FY1 and FY2 earnings estimate revisions,MATRIX,76%,1,1
+mdl230_us5000_cusip_twepsstdrev,"Six-month average of the time-weighted sum of FY1 and FY2 earnings estimate revisions, adjusted by the standard deviation of earnings estimates",MATRIX,72%,0,0
+mdl230_us5000_cusip_varresirtn,"Variance of the stock’s monthly residual return over the last 24 months, where residual return = stock monthly return minus 60-month beta times the S&P 500 monthly return",MATRIX,88%,0,0
+mdl230_us5000_cusip_vefcfmtt,Trailing 12-month free cash flow scaled by enterprise value (EV = Equity Market Value + Long-term Debt + Short-term Debt + Preferred Stock + Minority Interest − Cash),MATRIX,98%,2,3
+mdl230_us5000_cusip_vefcomtt,Trailing 12-month operating cash flow per share divided by enterprise value per share,MATRIX,98%,1,7
+mdl230_us5000_cusip_vesspem21f_cf,Consensus forward 12‑month EPS forecast divided by the sum of market value of common equity per share and book value of long‑term debt per share,MATRIX,95%,5,11
+mdl230_us5000_cusip_visiratio,Most recent daily trading volume divided by the average daily trading volume over the previous 50 trading days,MATRIX,100%,7,19
+mdl230_us5000_cusip_vnicw,Most recent quarterly working capital (current assets minus current liabilities) divided by inventory,MATRIX,58%,0,0
+mdl230_us5000_cusip_vniu,"Unexpected inventory: current inventory minus expected inventory (prior year closing balance multiplied by TTM growth in cost of goods sold), scaled by total assets",MATRIX,59%,0,0
+mdl230_us5000_cusip_voctni,Most recent quarterly operating income before depreciation divided by quarterly long‑term debt interest expenses,MATRIX,89%,1,1
+mdl230_us5000_cusip_voldiff_pc,Difference between time-weighted average implied volatility of the two nearest-to-expiration at-the-money puts and that of the two nearest-to-expiration at-the-money calls,MATRIX,88%,3,3
+mdl230_us5000_cusip_volpre6m,"Six-month moving average of the average monthly turnover ratio, where turnover equals daily shares traded divided by total shares outstanding",MATRIX,99%,5,5
+mdl230_us5000_cusip_volto,Monthly total trading volume divided by the most recently reported total shares outstanding,MATRIX,100%,3,3
+mdl230_us5000_cusip_w15tvp,Four‑week lagged 51‑week average cumulative price‑volume trend indicator used to gauge trend strength and potential reversals,MATRIX,95%,1,2
+mdl230_us5000_cusip_w57w03_rp,30-week moving average price divided by 75-week moving average price,MATRIX,94%,0,0
+mdl230_us5000_cusip_w62isr,Most recent weekly closing price divided by the weekly closing price 26 weeks ago,MATRIX,98%,0,0
+mdl230_us5000_cusip_w93ntr,Price change from week t−43 to week t−4 (cumulative 39‑week return excluding the most recent 3 weeks),MATRIX,96%,1,1
+mdl230_us5000_cusip_wcast,Average working capital over the trailing 12 months divided by average total assets over the same period,MATRIX,81%,0,0
+mdl230_us5000_cusip_xiv,Beta to change in market volatility from a 60-month multiple regression of returns on macro factors,MATRIX,97%,1,1
+mdl230_us5000_cusip_y3fcfq4rqsr,Conditional square of the correlation between monthly dates and the corresponding trailing 12-month free cash flow per share in the prior 12 quarters,MATRIX,89%,1,1
+mdl230_us5000_cusip_y3fcfq4vc,Standard deviation of the last 12 quarters’ trailing 12-month free cash flow per share divided by the mean free cash flow,MATRIX,89%,0,0
+mdl230_us5000_cusip_y3fcoq4rqsr,Conditional square of the correlation between monthly dates and trailing 12-month operating cash flow per share over the prior 12 quarters,MATRIX,87%,0,0
+mdl230_us5000_cusip_y3fcoq4vc,Standard deviation of the last 12 quarters’ TTM operating cash flow per share divided by the mean of those OCF values,MATRIX,87%,1,1
+mdl230_us5000_cusip_y3fcq4rqsr,Conditional square of the correlation between monthly dates and trailing 12-month cash flow per share over the prior 12 quarters,MATRIX,85%,0,0
+mdl230_us5000_cusip_y3fcq4vc,Standard deviation of the prior 12 quarters’ trailing 12-month cash flow per share divided by the mean of those values,MATRIX,85%,0,0
+mdl230_us5000_cusip_y3speq4rqsr,Squared correlation between monthly dates and trailing 12‑month EPS before extraordinary items over the prior 12 quarters,MATRIX,90%,1,3
+mdl230_us5000_cusip_y3speq4vc,Standard deviation of the last 12 quarters’ TTM EPS divided by the mean of those EPS values,MATRIX,91%,2,4
+mdl230_us5000_cusip_y5speq4rqsr,Squared correlation between monthly dates and the corresponding TTM EPS before extraordinary items over the prior 20 quarters,MATRIX,92%,1,1
+mdl230_us5000_cusip_y5speq4vc,Coefficient of variation of the last 20 monthly TTM EPS values standard deviation divided by mean,MATRIX,80%,0,0
+mdl230_us5000_cusip_ydp_cf,"Assumed payout ratio multiplied by the First Call next 4-quarter earnings estimates, divided by month-end trading price; assumed payout ratio = 10% + 84% × last year’s payout ratio − 38% × long-term earnings growth rate",MATRIX,75%,21,33
+mdl230_us5000_cusip_yen,"Average of three normalized earnings measures (based on ROE, net profit margin, and EPS FY2), scaled by price",MATRIX,92%,8,10
+mdl230_us5000_cusip_yieldsprd,Beta to change in the slope of the term structure from a 60-month multiple regression of returns on macro factors,MATRIX,97%,0,0
+mdl230_us5000_cusip_yoychgaa,"Year-over-year change in the difference between TTM operating cash flow and TTM income before extraordinary items, scaled by average total assets",MATRIX,98%,4,4
+mdl230_us5000_cusip_yoychgcr,"Year-over-year change in the current ratio, defined as the most recent quarterly current ratio minus that of the same quarter one year ago",MATRIX,81%,0,0
+mdl230_us5000_cusip_yoychgda,"Year-over-year change in total liabilities as a percentage of total assets, comparing the most recent reported quarter to the same quarter a year ago",MATRIX,100%,11,23
+mdl230_us5000_cusip_yoychgdistr,Growth in the most recent reported distribution per share compared to the same period one year ago,MATRIX,38%,1,1
+mdl230_us5000_cusip_yoychgdivq,Growth rate of the latest quarterly regular dividend compared with the historical trailing 12-month quarterly dividend level,MATRIX,37%,0,0
+mdl230_us5000_cusip_yoychggpm,Most recent quarterly gross profit margin minus the gross profit margin of the same quarter one year ago; gross profit margin = (sales − cost of goods sold)/sales,MATRIX,80%,2,3
+mdl230_us5000_cusip_yoychgroa,Year over year change in return on assets measured as most recent TTM income before extraordinary items as a percent of total assets minus the same quarter a year ago,MATRIX,100%,32,38
+mdl230_us5000_cusip_yoychgroeart,Yearly arithmetic change in TTM earnings before extraordinary items divided by current total book equity (ROE),MATRIX,91%,1,1
+mdl230_us5000_cusip_yoychgroepct,"Year-over-year percentage change in ROE, where ROE is TTM earnings before extraordinary items (from quarterly data) divided by current total book equity",MATRIX,86%,0,0

@@ -1,0 +1,4 @@
+Field,Description,Type,Coverage,Users,Alphas
+dividend_growth_factor_score,"GRID signal: predicted likelihood or strength of imminent dividend increase (range [0,1]), based on Wolfe's ML model",MATRIX,45%,24,35
+oth424_divyld,Dividend yield of the company (method of calculation unspecified),MATRIX,42%,50,88
+oth424_mktcap,Market capitalization of the company (currency/unit unspecified; treat as relative size),MATRIX,45%,23,34

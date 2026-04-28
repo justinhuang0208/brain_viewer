@@ -1,0 +1,7 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth623_comp_textblob_polarity,"Company-slice TextBlob sentiment polarity score in the range [-1, 1]",VECTOR,89%,4,5
+oth623_comp_textblob_subjectivity,"Company-slice TextBlob subjectivity score in the range [0, 1]",VECTOR,91%,4,4
+oth623_created,Timestamp when the article was first published/created,VECTOR,100%,3,4
+oth623_doc_textblob_polarity,"Document-level TextBlob sentiment polarity score in the range [-1, 1]",VECTOR,96%,0,0
+oth623_doc_textblob_subjectivity,"Document-level TextBlob subjectivity score in the range [0, 1]",VECTOR,97%,2,2
+oth623_relevance_score,"Relevance/salience score of the mapped company within the article, typically in [0, 1], provided for NER-mapped entities",VECTOR,99%,5,9

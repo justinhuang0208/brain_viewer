@@ -1,0 +1,21 @@
+Field,Description,Type,Coverage,Users,Alphas
+opt3_openintecallatm,Daily aggregated open interest for at-the-money call options for the stock,MATRIX,85%,12,12
+opt3_openintecallitm,Daily aggregated open interest for in-the-money call options for the stock,MATRIX,84%,8,8
+opt3_openintecallotm,Daily aggregated open interest for out-of-the-money call options for the stock,MATRIX,85%,8,8
+opt3_openinteputatm,Daily aggregated open interest for at-the-money put options for the stock,MATRIX,83%,7,8
+opt3_openinteputitm,Daily aggregated open interest for in-the-money put options for the stock,MATRIX,83%,7,7
+opt3_openinteputotm,Daily aggregated open interest for out-of-the-money put options for the stock,MATRIX,84%,4,4
+opt3_volcallatm,Implied volatility of at-the-money call options,MATRIX,86%,60,71
+opt3_volcallitm,Implied volatility of in-the-money call options,MATRIX,86%,22,23
+opt3_volcallotma,Implied volatility of out-of-the-money call options (ask),MATRIX,86%,32,40
+opt3_volcallotmb,Implied volatility of out-of-the-money call options (bid),MATRIX,86%,26,34
+opt3_volputatm,Implied volatility of at-the-money put options,MATRIX,86%,23,27
+opt3_volputitm,Implied volatility of in-the-money put options,MATRIX,86%,16,18
+opt3_volputotma,Implied volatility of out-of-the-money put options (ask),MATRIX,86%,30,38
+opt3_volputotmb,Implied volatility of out-of-the-money put options (bid),MATRIX,86%,15,16
+opt3_volumecallatm,Daily aggregated traded volume for at-the-money call options for the stock,MATRIX,83%,19,21
+opt3_volumecallitm,Daily aggregated traded volume for in-the-money call options for the stock,MATRIX,82%,13,13
+opt3_volumecallotm,Daily aggregated traded volume for out-of-the-money call options for the stock,MATRIX,84%,6,6
+opt3_volumeputatm,Daily aggregated traded volume for at-the-money put options for the stock,MATRIX,81%,5,5
+opt3_volumeputitm,Daily aggregated traded volume for in-the-money put options for the stock,MATRIX,77%,14,16
+opt3_volumeputotm,Daily aggregated traded volume for out-of-the-money put options for the stock,MATRIX,81%,7,7

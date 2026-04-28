@@ -1,0 +1,13 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl68_1_mktcap,Market Cap,VECTOR,89%,3,3
+mdl68_1_ram,Risk-Adjusted Momentum Score,VECTOR,84%,6,6
+mdl68_1_raw,Raw Score,VECTOR,86%,0,0
+mdl68_1_score,Final Score,VECTOR,86%,1,1
+mdl68_mktcap,"Market capitalization of the company, measured in millions of USD",VECTOR,86%,4,4
+mdl68_ram,"Risk-adjusted momentum score for a China-listed equity, representing momentum alpha after adjusting for key risk factors such as beta, size, value, and rates",VECTOR,86%,8,9
+mdl68_raw,"Raw, unadjusted momentum score from the DREAM model, not risk-adjusted or standardized",VECTOR,86%,0,0
+mdl68_ream_us_mktcap,Market capitalization of the security in millions of USD as of the score date,VECTOR,82%,8,10
+mdl68_ream_us_ram,"Momentum score that has been risk-adjusted by removing exposures to common risk factors such as beta, size, value, and interest rates, representing a cleaner momentum alpha signal for a US equity on a given day (D1 = one-day lag version)",VECTOR,82%,2,2
+mdl68_ream_us_raw,"Raw, unadjusted momentum score (pre-risk adjustment) produced by the DREAM model",VECTOR,82%,4,4
+mdl68_ream_us_score,"Final DREAM momentum score: risk-adjusted, standardized, recommended for use as the main alpha signal",VECTOR,82%,7,8
+mdl68_score,"Final, risk-adjusted, and standardized DREAM momentum score: the main recommended alpha signal",VECTOR,86%,2,2

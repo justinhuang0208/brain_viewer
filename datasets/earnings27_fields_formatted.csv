@@ -1,0 +1,15 @@
+Field,Description,Type,Coverage,Users,Alphas
+ern27_atlas_unit_name,Atlas unit name,VECTOR,30%,79,105
+ern27_clean_content,Cleaned email body content with stop words removed and normalized,VECTOR,30%,60,82
+ern27_clean_subject,cleaned subject of the email with removing the stop words,VECTOR,30%,71,105
+ern27_earnings,"Count of words related to earnings themes, e.g., earning, earnings, profit, income",VECTOR,30%,91,124
+ern27_email_content,"Raw email body content as captured, unprocessed",VECTOR,30%,53,77
+ern27_email_from,raw encoded text for the sender of the email,VECTOR,30%,78,106
+ern27_email_received,UTC timestamp when the system or vendor received the email,VECTOR,30%,60,80
+ern27_expectations,"Count of words related to expectations, e.g., expectations, expected, consensus, expectation",VECTOR,30%,92,135
+ern27_is_multiple_ticker,is there different ticker for the company,VECTOR,30%,56,77
+ern27_negative,"Count of negative sentiment words in the email subject/body, e.g., sell, miss, lower, weak, weaker",VECTOR,30%,66,94
+ern27_neutral,"Count of neutral or mixed sentiment words, e.g., inline, neutral, mixed",VECTOR,30%,100,153
+ern27_positive,"Count of positive sentiment words in the email subject/body, e.g., buy, beat, strong, solid, better, ahead, high, higher, positive, raise, good, beats",VECTOR,30%,88,121
+ern27_revenue,"Count of words related to revenue themes, e.g., sales, revenue, revenues, topline",VECTOR,30%,52,64
+ern27_vendor_bank,the sender entity of the email,VECTOR,30%,67,88

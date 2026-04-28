@@ -1,0 +1,11 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd86_average_score,"Overall composite score aggregating all pillars, scaled as deciles 1–10 with higher being better",MATRIX,98%,5,11
+fnd86_companyname,Company name index,MATRIX,85%,2,2
+fnd86_country,Country,MATRIX,85%,1,1
+fnd86_earnings_score,"Earnings pillar score (1–10 decile, higher is better), reflecting earnings quality, revisions, and growth",MATRIX,90%,8,27
+fnd86_exchange,Stock exchange,MATRIX,85%,4,24
+fnd86_fundamental_score,"Fundamental score on a 1–10 decile scale, higher indicates stronger fundamental quality",MATRIX,100%,7,25
+fnd86_insider_trading_score,"Insider trading pillar score (decile 1–10), based on recent insider activity",MATRIX,82%,3,4
+fnd86_price_momentum_score,"Price momentum score on a 1–10 decile scale, higher indicates stronger recent price trend",MATRIX,99%,1,1
+fnd86_relative_valuation_score,"Relative valuation score on a 1–10 decile scale, higher indicates more attractive valuation versus peers in the region",MATRIX,87%,2,2
+fnd86_risk_score,"Risk pillar score, integer decile 1–10 where higher indicates a more favorable risk profile",MATRIX,100%,2,2

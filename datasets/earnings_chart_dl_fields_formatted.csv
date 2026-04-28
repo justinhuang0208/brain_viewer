@@ -1,0 +1,101 @@
+Field,Description,Type,Coverage,Users,Alphas
+close_return_quantile_1_1day,Continuous predicted 1-day forward close-to-close return from the earnings calendar CNN prediction model,MATRIX,100%,48,64
+high_return_quantile_1_1day,Assignment of the stock to quantile 1 based on predicted high-to-high 1-day return.,MATRIX,100%,12,14
+likelihood_quantile_5_group_0_50day_return,Log-probability confidence (log-softmax) of the stock-date belonging to quantile 0 (0-based) out of 5 quantile buckets for 50-day forward earnings calendar prediction,MATRIX,99%,0,0
+likelihood_quantile_5_group_2_50day_return,Log-probability confidence (log-softmax) of the stock-date belonging to quantile 2 (0-based) out of 5 quantile buckets for 50-day forward earnings calendar prediction,MATRIX,99%,0,0
+low_return_quantile_1_1day,Assignment of the stock to quantile 1 based on predicted low-to-low 1-day return.,MATRIX,100%,9,11
+open_return_quantile_1_1day,Assignment of the stock to quantile 1 based on predicted open-to-open 1-day return.,MATRIX,100%,9,11
+prob_quantile_2_bucket_0_10day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the bottom half quantile (index 0) in a 2-way return quantile split at 10-day forward horizon,MATRIX,99%,0,0
+prob_quantile_2_bucket_0_20day_return,Log-probability that the stock-date belongs to the lower half (quantile 0) in a 2-quantile forward return prediction at 20-day horizon,MATRIX,99%,1,1
+prob_quantile_2_bucket_0_50day_return,Log-probability confidence (log-softmax) of the stock-date belonging to quantile 0 (0-based) out of 2 quantile buckets for 50-day forward earnings calendar prediction,MATRIX,99%,1,1
+prob_quantile_2_bucket_0_5day_return,Log-probability (log-softmax) confidence that the stock is in the 0th quantile bucket (lowest half) for 2-way quantile split of 5-day forward return prediction,MATRIX,99%,1,1
+prob_quantile_2_bucket_0_5day_volatility,Log-probability of belonging to the bottom half quantile (quantile 0 of 2) for 5-day forward return prediction,MATRIX,99%,0,0
+prob_quantile_2_bucket_1_10day_return,Log-probability confidence for being in the top half quantile (quantile 1 out of 2) for 10-day forward return prediction in earnings calendar image prediction module,MATRIX,99%,1,1
+prob_quantile_2_bucket_1_20day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the upper half (quantile 1) in a 2-quantile forward return prediction at 20-day horizon,MATRIX,99%,2,2
+prob_quantile_2_bucket_1_50day_return,Log-probability confidence (log-softmax) of the stock-date belonging to quantile 1 (0-based) out of 2 quantile buckets for 50-day forward earnings calendar prediction,MATRIX,99%,1,1
+prob_quantile_2_bucket_1_5day_return,Log-probability confidence that the stock is in the 1st quantile bucket (top half) for 2-way quantile split of 5-day forward return prediction,MATRIX,100%,5,6
+prob_quantile_2_bucket_1_5day_volatility,Log-probability of belonging to the top half quantile (quantile 1 of 2) for 5-day forward return prediction,MATRIX,99%,1,1
+prob_quantile_3_bucket_0_10day_return,Log-probability confidence for being in the bottom quantile (quantile 0 out of 3) for 10-day forward return prediction in earnings calendar image prediction module,MATRIX,99%,1,2
+prob_quantile_3_bucket_0_20day_return,Log-probability (log-softmax confidence) that the stock's 20-day forward return is in the lowest quantile (index 0) when split into 3 quantiles,MATRIX,99%,3,3
+prob_quantile_3_bucket_0_50day_return,Probability that the stock falls into bucket 0 of quantile 3 for predicted 50-day return.,MATRIX,99%,1,1
+prob_quantile_3_bucket_0_5day_return,Log-probability confidence for the stock belonging to the 0th quantile (bottom bucket in 3-way split) of 5-day forward return prediction,MATRIX,99%,1,1
+prob_quantile_3_bucket_0_5day_volatility,Log-probability of belonging to the bottom third quantile (quantile 0 of 3) for 5-day forward return prediction,MATRIX,99%,0,0
+prob_quantile_3_bucket_1_10day_return,Log-probability confidence for being in the middle quantile (quantile 1 out of 3) for 10-day forward return prediction in earnings calendar image prediction module,MATRIX,99%,0,0
+prob_quantile_3_bucket_1_20day_return,Log-probability (log-softmax confidence) that the stock's 20-day forward return is in the second quantile (index 1) when split into 3 quantiles,MATRIX,100%,1,1
+prob_quantile_3_bucket_1_50day_return,Probability that the stock falls into bucket 1 of quantile 3 for predicted 50-day return.,MATRIX,99%,2,2
+prob_quantile_3_bucket_1_5day_return,Log-probability confidence for the stock belonging to the 1st quantile (middle bucket in 3-way split) of 5-day forward return prediction,MATRIX,100%,0,0
+prob_quantile_3_bucket_1_5day_volatility,Log-softmax confidence score that the stock belongs to the 1st quantile bucket out of 3 (0-based) for the 5-day forward return prediction in the earnings calendar prediction module,MATRIX,99%,1,1
+prob_quantile_3_bucket_2_10day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the top quantile (index 2) in a 3-way return quantile split at 10-day forward horizon,MATRIX,99%,3,4
+prob_quantile_3_bucket_2_20day_return,Log-probability that the stock-date belongs to the top third quantile (quantile 2) out of 3 for 20-day forward return prediction,MATRIX,99%,1,1
+prob_quantile_3_bucket_2_50day_return,Probability that the stock falls into bucket 2 of quantile 3 for predicted 50-day return.,MATRIX,99%,0,0
+prob_quantile_3_bucket_2_5day_return,Probability that the stock falls into bucket 2 of quantile 3 for predicted 5-day return.,MATRIX,99%,1,1
+prob_quantile_3_bucket_2_5day_volatility,Log-softmax confidence score that the stock belongs to the 2nd quantile bucket out of 3 (0-based) for the 5-day forward return prediction in the earnings calendar prediction module,MATRIX,100%,0,0
+prob_quantile_4_bucket_0_10day_return,Log-probability confidence for being in the bottom quantile (quantile 0 out of 4) for 10-day forward return prediction in earnings calendar image prediction module,MATRIX,99%,4,4
+prob_quantile_4_bucket_0_20day_return,Log-probability (log-softmax confidence) that the stock's 20-day forward return is in the lowest quantile (index 0) when split into 4 quantiles,MATRIX,99%,0,0
+prob_quantile_4_bucket_0_50day_return,Log-probability confidence (log-softmax) of the stock-date belonging to quantile 0 (0-based) out of 4 quantile buckets for 50-day forward earnings calendar prediction,MATRIX,99%,0,0
+prob_quantile_4_bucket_0_5day_return,Probability that the stock falls into bucket 0 of quantile 4 for predicted 5-day return.,MATRIX,99%,0,0
+prob_quantile_4_bucket_0_5day_volatility,Log-probability of belonging to the lowest quartile (quantile 0 of 4) for 5-day forward return prediction,MATRIX,99%,1,1
+prob_quantile_4_bucket_1_10day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the 2nd quantile (index 1) in a 4-way return quantile split at 10-day forward horizon,MATRIX,99%,1,1
+prob_quantile_4_bucket_1_20day_return,Log-probability that the stock-date belongs to the 2nd quartile (quantile 1) out of 4 quantiles for 20-day forward return prediction,MATRIX,99%,0,0
+prob_quantile_4_bucket_1_50day_return,Log-probability confidence (log-softmax) of the stock-date belonging to quantile 1 (0-based) out of 4 quantile buckets for 50-day forward earnings calendar prediction,MATRIX,99%,0,0
+prob_quantile_4_bucket_1_5day_return,Log-probability confidence for the stock belonging to the 1st quantile (second bucket in 4-way split) of 5-day forward return prediction,MATRIX,99%,1,1
+prob_quantile_4_bucket_1_5day_volatility,Log-probability of belonging to the second lowest quartile (quantile 1 of 4) for 5-day forward return prediction,MATRIX,99%,1,1
+prob_quantile_4_bucket_2_10day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the 3rd quantile (index 2) in a 4-way return quantile split at 10-day forward horizon,MATRIX,99%,0,0
+prob_quantile_4_bucket_2_20day_return,Log-probability (log-softmax confidence) that the stock's 20-day forward return is in the third quantile (index 2) when split into 4 quantiles,MATRIX,99%,1,2
+prob_quantile_4_bucket_2_50day_return,Log-probability confidence (log-softmax) of the stock-date belonging to quantile 2 (0-based) out of 4 quantile buckets for 50-day forward earnings calendar prediction,MATRIX,99%,1,1
+prob_quantile_4_bucket_2_5day_return,Probability that the stock falls into bucket 2 of quantile 4 for predicted 5-day return.,MATRIX,100%,0,0
+prob_quantile_4_bucket_2_5day_volatility,Log-softmax confidence score that the stock belongs to the 2nd quantile bucket out of 4 (0-based) for the 5-day forward return prediction in the earnings calendar prediction module,MATRIX,99%,0,0
+prob_quantile_4_bucket_3_10day_return,Log-probability confidence for being in the top quantile (quantile 3 out of 4) for 10-day forward return prediction in earnings calendar image prediction module,MATRIX,99%,6,6
+prob_quantile_4_bucket_3_20day_return,Log-probability that the stock-date belongs to the top quartile (quantile 3) out of 4 for 20-day forward return prediction,MATRIX,99%,2,2
+prob_quantile_4_bucket_3_50day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the 3rd quantile (top quartile) in a 4-quantile split for the 50-day forward return prediction,MATRIX,99%,2,2
+prob_quantile_4_bucket_3_5day_return,Probability that the stock falls into bucket 3 of quantile 4 for predicted 5-day return.,MATRIX,99%,3,4
+prob_quantile_4_bucket_3_5day_volatility,Log-softmax confidence score that the stock belongs to the 4th quantile bucket out of 4 (0-based) for the 5-day forward return prediction in the earnings calendar prediction module,MATRIX,99%,0,0
+prob_quantile_5_bucket_0_10day_return,Log-probability confidence for being in the bottom quantile (quantile 0 out of 5) for 10-day forward return prediction in earnings calendar image prediction module,MATRIX,99%,2,2
+prob_quantile_5_bucket_0_20day_return,Log-probability (log-softmax confidence) that the stock's 20-day forward return is in the lowest quantile (index 0) when split into 5 quantiles,MATRIX,100%,0,0
+prob_quantile_5_bucket_0_5day_return,Probability that the stock falls into bucket 0 of quantile 5 for predicted 5-day return.,MATRIX,99%,2,2
+prob_quantile_5_bucket_0_5day_volatility,Log-softmax confidence score that the stock belongs to the 0th (lowest) quantile bucket out of 5 (0-based) for the 5-day forward return prediction in the earnings calendar prediction module,MATRIX,99%,1,1
+prob_quantile_5_bucket_1_10day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the 2nd quantile (index 1) in a 5-way return quantile split at 10-day forward horizon,MATRIX,99%,0,0
+prob_quantile_5_bucket_1_20day_return,Log-probability (log-softmax confidence) that the stock's 20-day forward return is in the second quantile (index 1) when split into 5 quantiles,MATRIX,99%,0,0
+prob_quantile_5_bucket_1_50day_return,Log-probability confidence (log-softmax) of the stock-date belonging to quantile 1 (0-based) out of 5 quantile buckets for 50-day forward earnings calendar prediction,MATRIX,99%,1,3
+prob_quantile_5_bucket_1_5day_return,Log-probability confidence for the stock belonging to the 1st quantile (second bucket in 5-way split) of 5-day forward return prediction,MATRIX,99%,0,0
+prob_quantile_5_bucket_1_5day_volatility,Log-probability of belonging to the second quantile (quantile 1 of 5) for 5-day forward return prediction,MATRIX,99%,0,0
+prob_quantile_5_bucket_2_10day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the 3rd quantile (index 2) in a 5-way return quantile split at 10-day forward horizon,MATRIX,99%,3,4
+prob_quantile_5_bucket_2_20day_return,Log-probability (log-softmax confidence) that the stock's 20-day forward return is in the third quantile (index 2) when split into 5 quantiles,MATRIX,100%,1,1
+prob_quantile_5_bucket_2_5day_return,Log-probability confidence for the stock belonging to the 2nd quantile (third bucket in 5-way split) of 5-day forward return prediction,MATRIX,100%,1,1
+prob_quantile_5_bucket_2_5day_volatility,Log-softmax confidence score that the stock belongs to the 2nd quantile bucket out of 5 (0-based) for the 5-day forward return prediction in the earnings calendar prediction module,MATRIX,99%,0,0
+prob_quantile_5_bucket_3_10day_return,Log-probability confidence for being in the 4th quantile (quantile 3 out of 5) for 10-day forward return prediction in earnings calendar image prediction module,MATRIX,99%,2,2
+prob_quantile_5_bucket_3_20day_return,Log-probability that the stock-date belongs to the 4th quantile (index 3) out of 5 quantiles for 20-day forward return prediction,MATRIX,99%,0,0
+prob_quantile_5_bucket_3_50day_return,Log-probability confidence (log-softmax) of the stock-date belonging to quantile 3 (0-based) out of 5 quantile buckets for 50-day forward earnings calendar prediction,MATRIX,99%,1,2
+prob_quantile_5_bucket_3_5day_return,Probability that the stock falls into bucket 3 of quantile 5 for predicted 5-day return.,MATRIX,99%,2,2
+prob_quantile_5_bucket_3_5day_volatility,Log-softmax confidence score that the stock belongs to the 3rd quantile bucket out of 5 (0-based) for the 5-day forward return prediction in the earnings calendar prediction module,MATRIX,99%,0,0
+prob_quantile_5_bucket_4_10day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the top quantile (index 4) in a 5-way return quantile split at 10-day forward horizon,MATRIX,99%,4,5
+prob_quantile_5_bucket_4_20day_return,Log-probability that the stock-date belongs to the highest quintile (quantile 4) out of 5 for 20-day forward return prediction,MATRIX,99%,2,5
+prob_quantile_5_bucket_4_50day_return,Log-probability (log-softmax confidence) that the stock-date belongs to the 4th quantile (top fifth) in a 5-quantile split for the 50-day forward return prediction,MATRIX,99%,0,0
+prob_quantile_5_bucket_4_5day_return,Log-probability confidence for the stock belonging to the 4th quantile (top bucket in 5-way split) of 5-day forward return prediction,MATRIX,99%,1,1
+prob_quantile_5_bucket_4_5day_volatility,Log-probability (log-softmax confidence) of the stock-date belonging to the top (4th) quantile bucket out of 5 at 5-day forward return prediction horizon,MATRIX,99%,0,0
+quantile_1_assignment_10day_return,"Continuous, unconstrained predicted 10-day forward return regression output from earnings calendar image prediction module (requires winsorization before use)",MATRIX,99%,2,2
+quantile_1_assignment_20day_return,"Continuous predicted 20-day forward return (regression output) for the stock, unbounded and requiring winsorization before use",MATRIX,99%,0,0
+quantile_1_assignment_50day_return,Assignment of the stock to quantile 1 for predicted 50-day return.,MATRIX,99%,1,1
+quantile_1_assignment_5day_return,Continuous unconstrained regression prediction of 5-day forward return,MATRIX,99%,2,2
+quantile_1_assignment_5day_volatility,Continuous regression prediction of unconstrained 5-day forward return,MATRIX,99%,3,4
+quantile_2_assignment_10day_return,Integer quantile assignment (0-based) to one of two cross-sectional buckets for 10-day forward return,MATRIX,100%,1,1
+quantile_2_assignment_20day_return,Quantile assignment index (0-based) for 2 quantiles (halves) of forward return prediction at 20-day horizon,MATRIX,100%,3,3
+quantile_2_assignment_50day_return,"Integer quantile assignment (0-based) of the stock-date to one of 2 quantile buckets for 50-day forward return prediction; values 0 (bottom half), 1 (top half)",MATRIX,100%,1,1
+quantile_2_assignment_5day_return,0-based assignment to one of 2 quantile buckets for predicted 5-day forward return using the earnings calendar image model,MATRIX,100%,0,0
+quantile_2_assignment_5day_volatility,Quantile assignment indicating whether the stock's predicted 5-day forward return is in the lower half (0) or upper half (1) of the cross-sectional universe in the earnings calendar prediction module,MATRIX,100%,1,1
+quantile_3_assignment_10day_return,0-based assignment to one of three quantile buckets for 10-day forward return prediction in earnings calendar image prediction module,MATRIX,100%,0,0
+quantile_3_assignment_20day_return,Quantile assignment index (0-based) for 3 quantiles of forward return prediction at 20-day horizon,MATRIX,100%,1,1
+quantile_3_assignment_50day_return,"Integer quantile assignment (0-based) of the stock-date to one of 3 quantile buckets for 50-day forward return prediction; values 0 (bottom), 1 (middle), 2 (top)",MATRIX,100%,0,0
+quantile_3_assignment_5day_return,0-based assignment to one of 3 quantile buckets for predicted 5-day forward return based on earnings calendar image model,MATRIX,100%,2,2
+quantile_3_assignment_5day_volatility,"Quantile assignment indicating which third (0=bottom,1=middle,2=top) the stock's predicted 5-day forward return belongs to in the earnings calendar prediction module",MATRIX,100%,2,2
+quantile_4_assignment_10day_return,0-based assignment to one of four quantile buckets for 10-day forward return prediction in earnings calendar image prediction module,MATRIX,100%,2,2
+quantile_4_assignment_20day_return,Integer assignment (0-based) of the stock to one of 4 quantiles based on predicted 20-day forward return,MATRIX,100%,1,1
+quantile_4_assignment_50day_return,Integer quantile assignment (0-based) of the stock-date to one of 4 quantile buckets for 50-day forward return prediction; values from 0 (bottom quartile) to 3 (top quartile),MATRIX,100%,1,1
+quantile_4_assignment_5day_return,Integer quantile assignment (0-based) to one of 4 buckets for 5-day forward return prediction,MATRIX,100%,2,2
+quantile_4_assignment_5day_volatility,"Quantile assignment (0-based) to one of four forward return buckets at 5-day horizon, with 3 indicating the highest quartile",MATRIX,100%,0,0
+quantile_5_assignment_10day_return,Integer quantile assignment (0-based) to one of five cross-sectional buckets for 10-day forward return,MATRIX,100%,6,13
+quantile_5_assignment_20day_return,Quantile assignment index (0-based) for 5 quantiles of forward return prediction at 20-day horizon,MATRIX,100%,1,2
+quantile_5_assignment_50day_return,Integer quantile assignment (0-based) of the stock-date to one of 5 quantile buckets for 50-day forward return prediction; values 0 (bottom fifth) to 4 (top fifth),MATRIX,100%,1,1
+quantile_5_assignment_5day_return,0-based assignment to one of 5 quantile buckets for predicted 5-day forward return based on earnings calendar image model,MATRIX,100%,1,1
+quantile_5_assignment_5day_volatility,"Quantile assignment (0-based) to one of five forward return buckets at 5-day horizon, with 4 indicating the highest quantile",MATRIX,100%,1,1
+rolling_250day_return,Return calculated over the previous 250 trading days.,MATRIX,100%,6,6

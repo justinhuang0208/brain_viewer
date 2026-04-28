@@ -1,0 +1,33 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl263_convention_cng_longdebt_equity,"Year-over-year change in the ratio of long-term debt to equity, reflecting trends in long-term leverage",MATRIX,80%,6,8
+mdl263_convention_current_ratio,"Current assets divided by current liabilities, measuring short-term liquidity",MATRIX,69%,3,3
+mdl263_convention_debt_capital,"Ratio of total debt to total capital (total capital = total debt + equity), representing how much of the company’s capital comes from debt",MATRIX,80%,1,1
+mdl263_convention_debt_equity,"Ratio of total debt to total equity, a standard leverage metric gauging company indebtedness relative to its equity base",MATRIX,81%,2,2
+mdl263_convention_debt_mktcapital,"Total debt divided by the sum of market capitalization plus total debt, measuring debt as a proportion of total firm capitalization",MATRIX,81%,4,4
+mdl263_convention_longdebt_capital,"Ratio of long-term debt to total capital (total capital = long-term debt + equity), indicating the proportion of the company's capital structure comprised of long-term debt",MATRIX,81%,3,4
+mdl263_convention_longdebt_equity,"Ratio of long-term debt to common equity, measuring leverage through long-duration borrowings relative to shareholders’ equity",MATRIX,81%,0,0
+mdl263_convention_ocf_currliab,"Operating cash flow divided by current liabilities, indicating the company’s ability to cover short-term obligations with operating cash flow",MATRIX,69%,0,0
+mdl263_convention_quick_ratio,"(Current assets minus inventories) divided by current liabilities, indicating the company’s ability to meet short-term obligations without selling inventory",MATRIX,69%,0,0
+mdl263_mktcap,"Market capitalization, the total equity market value of a company’s outstanding shares (in USD)",MATRIX,81%,2,2
+mdl263_model_altman_zscore,"Altman’s Z-score, an academic formula for predicting company insolvency risk or likelihood of bankruptcy",MATRIX,69%,7,17
+mdl263_model_chs_default,"Probability of default according to the Campbell-Hilscher-Szilagyi (CHS) academic model, a statistical model for forecasting bankruptcy",MATRIX,73%,0,0
+mdl263_model_merton,"Distance to default derived from the Merton structural credit risk model, estimating how far the firm is from default based on its asset value, volatility, and liabilities",MATRIX,71%,0,0
+mdl263_model_ohlson_oscore,"Ohlson O-score, a statistical model-based indicator estimating probability of bankruptcy",MATRIX,68%,1,1
+mdl263_qes_alter_debt_weighted_duration,"Weighted average time to maturity of all debt instruments outstanding, measuring overall debt duration in years",MATRIX,77%,3,7
+mdl263_qes_alter_debt_weighted_interest_rate,"Weighted average interest rate across all outstanding debt, representing aggregate cost of debt financing",MATRIX,72%,2,2
+mdl263_qes_alter_distance_insolvency_1y,Proprietary measure of the firm’s “distance” or cushion from the insolvency boundary over a 1-year horizon; higher values indicate greater safety from default,MATRIX,67%,1,1
+mdl263_qes_alter_extreme_insolvency_stress_1y,"Model-estimated probability or risk score of a firm becoming insolvent in the next 1 year under extreme stress scenario, based on capital structure signals",MATRIX,72%,6,11
+mdl263_qes_alter_extreme_insolvency_stress_9m,"Model-estimated probability or risk score of a firm becoming insolvent in the next 9 months under an extreme stress scenario, based on capital structure characteristics",MATRIX,72%,1,1
+mdl263_qes_alter_growth_shortterm_debt,"Year-over-year growth rate in short-term debt maturing within 5 years, indicating changes in near-term debt exposure",MATRIX,70%,0,0
+mdl263_qes_alter_insolvency_stress_1y,Model-measured projection of insolvency risk (probability or risk score) over the next 1 year based on a firm’s capital structure,MATRIX,72%,0,0
+mdl263_qes_alter_insolvency_stress_2y,Model-measured projection of insolvency risk (probability or risk score) over the next 2 years based on a firm’s capital structure,MATRIX,72%,4,5
+mdl263_qes_alter_insolvency_stress_9m,Model-measured projection of insolvency risk (probability or risk score) over the next 9 months based on a firm’s capital structure,MATRIX,72%,1,1
+mdl263_qes_alter_moderate_insolvency_stress_1y,"Model-estimated probability or risk score of a firm becoming insolvent in the next 1 year under moderate stress scenario, based on capital structure",MATRIX,72%,0,0
+mdl263_qes_alter_moderate_insolvency_stress_2y,"Model-estimated probability or risk score of a firm becoming insolvent in the next 2 years under a moderate stress scenario, using proprietary capital structure analytics",MATRIX,72%,2,3
+mdl263_qes_alter_moderate_insolvency_stress_9m,"Model-projected moderate scenario insolvency risk over the next 9 months, factoring in a moderately stressed capital structure scenario",MATRIX,72%,0,0
+mdl263_qes_alter_revolver_debt,"Ratio of cash or available borrowing capacity on revolving credit facilities to total debt, representing additional liquidity buffer",MATRIX,71%,0,0
+mdl263_qes_alter_short_longterm_debt_ratio,Short Term Debt to Debt Due Within 5 years,MATRIX,72%,1,2
+mdl263_qes_alter_shortterm_debt_ratio,"Ratio of short-term debt (debt maturing within 1 year) to total debt, indicating the proportion of debt coming due soon",MATRIX,67%,0,0
+mdl263_qes_model_impliedalpha,"Expected return “alpha” forecast generated by the Cassie composite credit risk model, representing proprietary signal of future stock outperformance or underperformance",MATRIX,81%,1,1
+mdl263_qes_model_prelimcomposite,"Preliminary or early-stage version of the Cassie composite risk score, integrating standard and proprietary credit risk metrics",MATRIX,81%,0,0
+mdl263_qes_model_score,"Composite credit risk or solvency risk score produced by the Cassie model, integrating traditional and alternative risk signals to reflect overall credit quality; higher scores indicate lower insolvency risk",MATRIX,81%,1,1

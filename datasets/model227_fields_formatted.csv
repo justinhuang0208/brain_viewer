@@ -1,0 +1,21 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl227_fact_predict_1,Prediction variable 1 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,34,55
+mdl227_fact_predict_10,Prediction variable 10 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,16,18
+mdl227_fact_predict_11,Prediction variable 11 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,2,2
+mdl227_fact_predict_12,Prediction variable 12 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,8,8
+mdl227_fact_predict_13,Prediction variable 13 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,7,8
+mdl227_fact_predict_14,Prediction variable 14 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,2,2
+mdl227_fact_predict_15,Prediction variable 15 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,5,5
+mdl227_fact_predict_16,Prediction variable 16 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,5,5
+mdl227_fact_predict_2,Prediction variable 2 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,34,40
+mdl227_fact_predict_3,Prediction variable 3 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,20,23
+mdl227_fact_predict_4,Prediction variable 4 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,9,13
+mdl227_fact_predict_5,Prediction variable 5 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,7,13
+mdl227_fact_predict_6,Prediction variable 6 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,8,10
+mdl227_fact_predict_7,Prediction variable 7 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,4,6
+mdl227_fact_predict_8,Prediction variable 8 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,42,53
+mdl227_fact_predict_9,Prediction variable 9 of the EMI model in USA_GOAT_EMI_compustat,MATRIX,100%,9,9
+mdl227_predefined_c5,Predefined constant parameter (C5) used in the Option Volume Imbalance (OVI) idea blueprint,MATRIX,100%,5,5
+mdl227_predefined_c6,"A predefined feature from the USA_idea_ovi module, labeled as C6",MATRIX,100%,3,4
+mdl227_predefined_c7,"A predefined feature from the USA_idea_ovi module, labeled as C7",MATRIX,100%,3,3
+mdl227_predefined_c8,"A predefined feature from the USA_idea_ovi module, labeled as C8",MATRIX,100%,2,2

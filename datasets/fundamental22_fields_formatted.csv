@@ -1,0 +1,15 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd22_a0_value,Value of the field,VECTOR,72%,3,5
+fnd22_a1_value,"Numerical value(s) of one or more ESG KPIs, index mapped by position to codebook item for the given module and vintage",VECTOR,72%,3,4
+fnd22_a2_value,"Numerical value representing the ESG feature or metric relevant to this module, semantics depend on mapping",VECTOR,72%,2,4
+fnd22_a3_value,Numerical value of the ESG KPI or metric represented by the record; actual metric depends on mapping for the module,VECTOR,72%,6,6
+fnd22_a4_value,Numerical value or score for the given ESG KPI in the Social (A4) theme for a specific company and date,VECTOR,72%,3,4
+fnd22_a5_value,Value of the field,VECTOR,72%,4,5
+fnd22_a6_value,Value of the field,VECTOR,72%,9,12
+fnd22_a7_value,Value of the field,VECTOR,72%,8,11
+fnd22_a8_value,Value of the field,VECTOR,72%,2,2
+fnd22_a9_value,Value of the field,VECTOR,72%,3,3
+fnd22_as_value,Value of the field,VECTOR,72%,5,5
+fnd22_s1_value,Numerical value for the ESG metric/KPI represented in this record,VECTOR,72%,6,10
+fnd22_s2_value,Value of the field,VECTOR,72%,2,4
+fnd22_value,Numerical value of the specific ESG KPI for the given entity and date,VECTOR,72%,2,4

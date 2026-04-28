@@ -1,0 +1,3 @@
+Field,Description,Type,Coverage,Users,Alphas
+shrt3_bar,"Borrow demand rating on a 1–10 scale for a stock (1 = relatively low demand, 10 = relatively high)",VECTOR,100%,500,1761
+shrt3_utilizationpercent_units,"Ratio of shares on loan to shares available for lending, i.e., the utilization rate of lendable units (expressed as a percentage or fraction)",VECTOR,100%,322,791

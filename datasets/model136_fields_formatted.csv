@@ -1,0 +1,91 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl136_qes_etf_us_flow_gross,"Daily total dollar value (notional amount) of all ETF-driven stock flows, summing the absolute values of both inflows (ETF creations) and outflows (ETF redemptions)",MATRIX,86%,24,61
+mdl136_qes_etf_us_flow_gross_1m,"The total dollar amount of cumulative ETF creation and redemption flows (in both directions, summed absolutely) for the stock over the past month",MATRIX,86%,13,30
+mdl136_qes_etf_us_flow_gross_1m_fast_d1,"The total dollar amount of cumulative ETF creation and redemption flows (in both directions, summed absolutely) for the stock over the past month",MATRIX,83%,1,2
+mdl136_qes_etf_us_flow_gross_1w,Total notional dollar amount of gross ETF-driven stock flows (sum of inflow and outflow absolute values) over the trailing week (7 calendar days),MATRIX,86%,10,21
+mdl136_qes_etf_us_flow_gross_1w_fast_d1,Total notional dollar amount of gross ETF-driven stock flows (sum of inflow and outflow absolute values) over the trailing week (7 calendar days),MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_gross_fast_d1,"Daily total dollar value (notional amount) of all ETF-driven stock flows, summing the absolute values of both inflows (ETF creations) and outflows (ETF redemptions)",MATRIX,83%,1,1
+mdl136_qes_etf_us_flow_gross_pctvol,Total dollar value of ETF-driven stock flows (inflows plus outflows) as a percent of the stock's daily volume,MATRIX,86%,27,43
+mdl136_qes_etf_us_flow_gross_pctvol_1m,"Total dollar value of ETF-related gross stock flows (sum of inflows and outflows) over the past month, as a percentage of total stock trading volume in that month",MATRIX,86%,27,56
+mdl136_qes_etf_us_flow_gross_pctvol_1m_fast_d1,"Total dollar value of ETF-related gross stock flows (sum of inflows and outflows) over the past month, as a percentage of total stock trading volume in that month",MATRIX,83%,2,2
+mdl136_qes_etf_us_flow_gross_pctvol_1w,"Total dollar value of ETF-related gross stock flows (sum of inflows and outflows) over the past week, as a percentage of total stock trading volume in that week",MATRIX,86%,26,63
+mdl136_qes_etf_us_flow_gross_pctvol_1w_fast_d1,"Total dollar value of ETF-related gross stock flows (sum of inflows and outflows) over the past week, as a percentage of total stock trading volume in that week",MATRIX,83%,5,5
+mdl136_qes_etf_us_flow_gross_pctvol_fast_d1,Total dollar value of ETF-driven stock flows (inflows plus outflows) as a percent of the stock's daily volume,MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_in,Dollar value of daily stock inflows from ETF creations (ETF buy activity),MATRIX,86%,26,61
+mdl136_qes_etf_us_flow_in_1m,Aggregate dollar value of stock inflows from ETF creations over the past month,MATRIX,86%,8,16
+mdl136_qes_etf_us_flow_in_1m_fast_d1,Aggregate dollar value of stock inflows from ETF creations over the past month,MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_in_1w,Total dollar amount of ETF-driven inflows from creation baskets over the past week (trailing 7 days),MATRIX,86%,10,24
+mdl136_qes_etf_us_flow_in_1w_fast_d1,Total dollar amount of ETF-driven inflows from creation baskets over the past week (trailing 7 days),MATRIX,83%,2,2
+mdl136_qes_etf_us_flow_in_fast_d1,Dollar value of daily stock inflows from ETF creations (ETF buy activity),MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_in_pctvol,"Daily total notional value of ETF-driven stock inflows (via ETF creations) divided by the daily trading volume of the stock, expressed as a percentage",MATRIX,86%,25,97
+mdl136_qes_etf_us_flow_in_pctvol_1m,"Monthly total notional value of ETF-driven stock inflows (via ETF creations) divided by the total stock trading volume over the same month, expressed as a percentage",MATRIX,86%,25,83
+mdl136_qes_etf_us_flow_in_pctvol_1m_fast_d1,"Monthly total notional value of ETF-driven stock inflows (via ETF creations) divided by the total stock trading volume over the same month, expressed as a percentage",MATRIX,83%,1,1
+mdl136_qes_etf_us_flow_in_pctvol_1w,weekly total notional of stock inflows from ETF creation relative to stock volume,MATRIX,86%,23,44
+mdl136_qes_etf_us_flow_in_pctvol_1w_fast_d1,weekly total notional of stock inflows from ETF creation relative to stock volume,MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_in_pctvol_fast_d1,"Daily total notional value of ETF-driven stock inflows (via ETF creations) divided by the daily trading volume of the stock, expressed as a percentage",MATRIX,83%,1,1
+mdl136_qes_etf_us_flow_net,"Daily total net notional value of ETF-driven stock flows, calculated as inflows minus outflows",MATRIX,86%,13,19
+mdl136_qes_etf_us_flow_net_1m,Aggregate net ETF stock flows (inflows minus outflows) over the past month,MATRIX,86%,6,19
+mdl136_qes_etf_us_flow_net_1m_fast_d1,Aggregate net ETF stock flows (inflows minus outflows) over the past month,MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_net_1w,Aggregate net ETF stock flows (inflows minus outflows) over the past week,MATRIX,86%,10,19
+mdl136_qes_etf_us_flow_net_1w_fast_d1,Aggregate net ETF stock flows (inflows minus outflows) over the past week,MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_net_fast_d1,"Daily total net notional value of ETF-driven stock flows, calculated as inflows minus outflows",MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_net_pctvol,Daily net ETF stock flows (inflows minus outflows) as a percentage of daily stock trading volume,MATRIX,86%,14,27
+mdl136_qes_etf_us_flow_net_pctvol_1m,"Monthly total net notional value of ETF-driven stock flows (inflows minus outflows), divided by the total stock trading volume over that month, expressed as a percentage",MATRIX,86%,25,117
+mdl136_qes_etf_us_flow_net_pctvol_1m_fast_d1,"Monthly total net notional value of ETF-driven stock flows (inflows minus outflows), divided by the total stock trading volume over that month, expressed as a percentage",MATRIX,83%,2,2
+mdl136_qes_etf_us_flow_net_pctvol_1w,"Net dollar value of ETF-related stock flows (inflows minus outflows) over the past week, as a percentage of total stock trading volume in that week",MATRIX,86%,11,16
+mdl136_qes_etf_us_flow_net_pctvol_1w_fast_d1,"Net dollar value of ETF-related stock flows (inflows minus outflows) over the past week, as a percentage of total stock trading volume in that week",MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_net_pctvol_fast_d1,Daily net ETF stock flows (inflows minus outflows) as a percentage of daily stock trading volume,MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_out,"Daily total dollar amount of ETF-driven stock outflows, representing stocks released to the market by ETF redemptions",MATRIX,86%,10,16
+mdl136_qes_etf_us_flow_out_1m,Aggregate dollar value of stock outflows from ETF redemptions over the past month,MATRIX,86%,9,11
+mdl136_qes_etf_us_flow_out_1m_fast_d1,Aggregate dollar value of stock outflows from ETF redemptions over the past month,MATRIX,83%,1,1
+mdl136_qes_etf_us_flow_out_1w,Total notional dollar amount of ETF-driven stock outflows over the trailing week,MATRIX,86%,8,12
+mdl136_qes_etf_us_flow_out_1w_fast_d1,Total notional dollar amount of ETF-driven stock outflows over the trailing week,MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_out_fast_d1,"Daily total dollar amount of ETF-driven stock outflows, representing stocks released to the market by ETF redemptions",MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_out_pctvol,"Daily total dollar value of stock outflows from ETF redemptions, divided by that day's stock trading volume (percentage of volume)",MATRIX,86%,14,26
+mdl136_qes_etf_us_flow_out_pctvol_1m,"Total dollar value of stock outflows from ETF redemptions during the past month, divided by total trading volume in that month (percentage of volume)",MATRIX,86%,21,29
+mdl136_qes_etf_us_flow_out_pctvol_1m_fast_d1,"Total dollar value of stock outflows from ETF redemptions during the past month, divided by total trading volume in that month (percentage of volume)",MATRIX,83%,7,7
+mdl136_qes_etf_us_flow_out_pctvol_1w,"Weekly total notional value of ETF-driven stock outflows divided by the total stock trading volume over the same week, giving a percentage",MATRIX,86%,18,32
+mdl136_qes_etf_us_flow_out_pctvol_1w_fast_d1,"Weekly total notional value of ETF-driven stock outflows divided by the total stock trading volume over the same week, giving a percentage",MATRIX,83%,2,2
+mdl136_qes_etf_us_flow_out_pctvol_fast_d1,"Daily total dollar value of stock outflows from ETF redemptions, divided by that day's stock trading volume (percentage of volume)",MATRIX,83%,0,0
+mdl136_qes_etf_us_flow_skew,"Ratio of daily net ETF-driven stock flow (inflows minus outflows) to daily gross ETF-driven stock flow (sum of inflows and outflows), indicating flow directionality",MATRIX,86%,12,24
+mdl136_qes_etf_us_flow_skew_fast_d1,"Ratio of daily net ETF-driven stock flow (inflows minus outflows) to daily gross ETF-driven stock flow (sum of inflows and outflows), indicating flow directionality",MATRIX,83%,0,0
+mdl136_qes_etf_us_intensity,Current percent of float-adjusted shares outstanding held by ETFs (ETF ownership as percent of float),MATRIX,86%,23,88
+mdl136_qes_etf_us_intensity_delta_12m,Absolute change over the past 12 months in the percentage of float-adjusted shares outstanding held by ETFs,MATRIX,82%,12,25
+mdl136_qes_etf_us_intensity_delta_12m_fast_d1,Absolute change over the past 12 months in the percentage of float-adjusted shares outstanding held by ETFs,MATRIX,80%,1,1
+mdl136_qes_etf_us_intensity_delta_1m,Absolute change in percent of float-adjusted shares outstanding held by ETFs over the past 1 month,MATRIX,85%,32,87
+mdl136_qes_etf_us_intensity_delta_1m_fast_d1,Absolute change in percent of float-adjusted shares outstanding held by ETFs over the past 1 month,MATRIX,83%,1,1
+mdl136_qes_etf_us_intensity_delta_3m,Absolute change in percent of float-adjusted shares outstanding held by ETFs over the past 3 months,MATRIX,85%,22,177
+mdl136_qes_etf_us_intensity_delta_3m_fast_d1,Absolute change in percent of float-adjusted shares outstanding held by ETFs over the past 3 months,MATRIX,83%,1,2
+mdl136_qes_etf_us_intensity_delta_6m,Absolute change over 6 months in the percentage of float-adjusted shares outstanding held by ETFs,MATRIX,84%,22,42
+mdl136_qes_etf_us_intensity_delta_6m_fast_d1,Absolute change over 6 months in the percentage of float-adjusted shares outstanding held by ETFs,MATRIX,82%,1,1
+mdl136_qes_etf_us_intensity_fast_d1,Current percent of float-adjusted shares outstanding held by ETFs (ETF ownership as percent of float),MATRIX,83%,0,0
+mdl136_qes_etf_us_intensity_pctchg_12m,Percentage growth over 12 months in the percent of float-adjusted shares outstanding held by ETFs,MATRIX,82%,8,21
+mdl136_qes_etf_us_intensity_pctchg_12m_fast_d1,Percentage growth over 12 months in the percent of float-adjusted shares outstanding held by ETFs,MATRIX,80%,2,2
+mdl136_qes_etf_us_intensity_pctchg_1m,Percentage growth over 1 month in the percent of float-adjusted shares outstanding held by ETFs,MATRIX,86%,29,83
+mdl136_qes_etf_us_intensity_pctchg_1m_fast_d1,Percentage growth over 1 month in the percent of float-adjusted shares outstanding held by ETFs,MATRIX,83%,0,0
+mdl136_qes_etf_us_intensity_pctchg_3m,Percent change over the last 3 months in the percentage of the company’s float-adjusted shares outstanding held by ETFs,MATRIX,85%,27,206
+mdl136_qes_etf_us_intensity_pctchg_3m_fast_d1,Percent change over the last 3 months in the percentage of the company’s float-adjusted shares outstanding held by ETFs,MATRIX,83%,7,8
+mdl136_qes_etf_us_intensity_pctchg_6m,Percent growth over 6 months in the percentage of float-adjusted shares outstanding held by ETFs,MATRIX,84%,12,30
+mdl136_qes_etf_us_intensity_pctchg_6m_fast_d1,Percent growth over 6 months in the percentage of float-adjusted shares outstanding held by ETFs,MATRIX,82%,2,2
+mdl136_qes_etf_us_level,Total market value in USD of the company’s shares held by all ETFs in aggregate,MATRIX,86%,24,57
+mdl136_qes_etf_us_level_delta_12m,Absolute change in the aggregate market value of shares held by ETFs over the past 12 months,MATRIX,84%,16,34
+mdl136_qes_etf_us_level_delta_12m_fast_d1,Absolute change in the aggregate market value of shares held by ETFs over the past 12 months,MATRIX,81%,2,2
+mdl136_qes_etf_us_level_delta_1m,Absolute change in the aggregate market value of shares held by ETFs over the past 1 month,MATRIX,85%,9,11
+mdl136_qes_etf_us_level_delta_1m_fast_d1,Absolute change in the aggregate market value of shares held by ETFs over the past 1 month,MATRIX,83%,0,0
+mdl136_qes_etf_us_level_delta_3m,Absolute change in the total dollar market value of a stock held by all ETFs over the past 3 months,MATRIX,85%,16,30
+mdl136_qes_etf_us_level_delta_3m_fast_d1,Absolute change in the total dollar market value of a stock held by all ETFs over the past 3 months,MATRIX,83%,0,0
+mdl136_qes_etf_us_level_delta_6m,Absolute change over 6 months in aggregate market value of the stock held by ETFs,MATRIX,85%,10,16
+mdl136_qes_etf_us_level_delta_6m_fast_d1,Absolute change over 6 months in aggregate market value of the stock held by ETFs,MATRIX,82%,0,0
+mdl136_qes_etf_us_level_fast_d1,Total market value in USD of the company’s shares held by all ETFs in aggregate,MATRIX,83%,0,0
+mdl136_qes_etf_us_level_pctchg_12m,12-month percent change (growth rate) in the total dollar market value of a stock held by all ETFs,MATRIX,84%,17,43
+mdl136_qes_etf_us_level_pctchg_12m_fast_d1,12-month percent change (growth rate) in the total dollar market value of a stock held by all ETFs,MATRIX,81%,1,1
+mdl136_qes_etf_us_level_pctchg_3m,Percent growth over 3 months in aggregate market value of the stock held by ETFs,MATRIX,85%,16,24
+mdl136_qes_etf_us_level_pctchg_3m_fast_d1,Percent growth over 3 months in aggregate market value of the stock held by ETFs,MATRIX,83%,0,0
+mdl136_qes_etf_us_level_pctchg_6m,Percent growth over 6 months in aggregate market value of the stock held by ETFs,MATRIX,85%,16,32
+mdl136_qes_etf_us_level_pctchg_6m_fast_d1,Percent growth over 6 months in aggregate market value of the stock held by ETFs,MATRIX,82%,0,0
+mdl136_qes_etf_us_popularity,Number of ETFs holding the stock on the given date,MATRIX,86%,19,29
+mdl136_qes_etf_us_popularity_delta_1m,Change over 1 month in the number of ETFs that hold the stock,MATRIX,86%,10,25
+mdl136_qes_etf_us_popularity_delta_1m_fast_d1,Change over 1 month in the number of ETFs that hold the stock,MATRIX,83%,0,0
+mdl136_qes_etf_us_popularity_delta_3m,Change over 3 months in the number of ETFs that hold the stock,MATRIX,85%,19,33
+mdl136_qes_etf_us_popularity_delta_3m_fast_d1,Change over 3 months in the number of ETFs that hold the stock,MATRIX,83%,0,0
+mdl136_qes_etf_us_popularity_fast_d1,Number of ETFs holding the stock on the given date,MATRIX,83%,2,2

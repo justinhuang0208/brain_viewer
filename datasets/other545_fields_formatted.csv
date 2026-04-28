@@ -1,0 +1,5 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth545_mktcap,Market capitalization of the company in US dollars,VECTOR,81%,7,7
+oth545_mpd,"Score based on dynamic price momentum, capturing advanced or machine-learned price momentum of the stock",VECTOR,81%,3,3
+oth545_pln_omen,Score based on NLP-derived network momentum using text-mined linkages,VECTOR,81%,3,8
+oth545_score,Final composite NEMO 2.0 model score aggregated from seven network momentum signals,VECTOR,81%,4,5

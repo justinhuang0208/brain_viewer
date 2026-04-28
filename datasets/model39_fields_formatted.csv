@@ -1,0 +1,41 @@
+Field,Description,Type,Coverage,Users,Alphas
+global_price_momentum_percentile,"Floating-point global percentile rank (1–100) based on the Price Momentum model, where higher values indicate more attractive momentum",MATRIX,95%,1,1
+global_price_momentum_percentile_2,The current global 1-100 percentile rank of the security based on the Price Momentum Model,MATRIX,95%,0,0
+global_price_momentum_percentile_3,Global percentile rank (1–100) of the security based on the Price Momentum model; higher values indicate stronger momentum relative to the global universe,MATRIX,95%,1,1
+global_value_momentum_rank,The current global 1-100 percentile rank of the security based on the Value-Momentum Model,MATRIX,97%,7,7
+global_value_momentum_rank_float,Float (non-integer) value of the global 1-100 percentile rank for the Value-Momentum Model,MATRIX,97%,5,5
+global_value_momentum_rank_float_2,Float 0–100 percentile rank of the Value-Momentum composite within the global universe,MATRIX,97%,0,0
+industry_price_momentum_score,A percentile rank that reflects only the industry aspect of the Price Momentum Model. Scores of 100 indicate the highest rated stocks; scores of 1 indicate the lowest rated stocks.,MATRIX,97%,8,9
+industry_price_momentum_score_2,A percentile rank reflecting only the industry aspect of the Price Momentum Model; scores of 100 indicate the highest rated stocks and 1 the lowest,MATRIX,97%,2,2
+industry_price_momentum_score_3,Percentile rank (1–100) reflecting only the industry-relative component of the Price Momentum model; 100 indicates strongest momentum and 1 the weakest within the industry,MATRIX,97%,4,4
+industry_value_momentum_rank,The current industry 1-100 percentile rank of the security based on the Value-Momentum Model,MATRIX,96%,4,4
+industry_value_momentum_rank_float,Float (non-integer) value of the industry 1-100 percentile rank for the Value-Momentum Model,MATRIX,96%,2,3
+industry_value_momentum_rank_float_2,Float 0–100 percentile rank of the Value-Momentum composite within the industry group,MATRIX,96%,0,0
+long_term_price_momentum_score,A percentile rank that reflects only the long term aspect of the Price Momentum Model. Scores of 100 indicate the highest rated stocks; scores of 1 indicate the lowest rated stocks.,MATRIX,95%,2,2
+long_term_price_momentum_score_2,A percentile rank reflecting only the long term aspect of the Price Momentum Model; scores of 100 indicate the highest rated stocks and 1 the lowest,MATRIX,95%,1,1
+long_term_price_momentum_score_3,Percentile rank (1–100) capturing only the long-term (~12 months) component of the Price Momentum model; 100 indicates strongest and 1 weakest,MATRIX,95%,0,0
+mdl39_1_price_mo_global_rank,Global-relative 1–100 percentile rank of the Price Momentum model,MATRIX,95%,30,101
+mdl39_1_price_mo_industry_component,Global 1–100 percentile rank of the industry price momentum component of the Price Momentum model,MATRIX,97%,44,141
+mdl39_1_price_mo_long_term_component,Global 1–100 percentile rank of the long-term price momentum component of the Price Momentum model,MATRIX,95%,17,46
+mdl39_1_price_mo_mid_term_component,Global 1–100 percentile rank of the mid-term price momentum component of the Price Momentum model,MATRIX,97%,37,131
+mdl39_1_price_mo_region_rank,Region-relative 1–100 percentile rank of the Price Momentum model,MATRIX,95%,17,43
+mdl39_1_price_mo_short_term_component,Global 1–100 percentile rank of the short-term price momentum component of the Price Momentum model,MATRIX,97%,64,224
+mdl39_1_val_mo_global_rank,Global-relative 1–100 percentile rank of the Val-Mo model,MATRIX,97%,43,162
+mdl39_1_val_mo_industry_rank,Industry-relative 1–100 percentile rank of the Val-Mo model,MATRIX,96%,39,103
+mdl39_1_val_mo_region_rank,Region-relative 1–100 percentile rank of the Val-Mo model,MATRIX,97%,42,176
+mdl39_1_val_mo_sector_rank,Sector-relative 1–100 percentile rank of the Val-Mo model,MATRIX,97%,42,128
+mid_term_price_momentum_score,A percentile rank that reflects only the mid term aspect of the Price Momentum Model. Scores of 100 indicate the highest rated stocks; scores of 1 indicate the lowest rated stocks.,MATRIX,97%,1,2
+mid_term_price_momentum_score_2,A percentile rank reflecting only the mid term aspect of the Price Momentum Model; scores of 100 indicate the highest rated stocks and 1 the lowest,MATRIX,97%,1,2
+mid_term_price_momentum_score_3,Percentile rank (1–100) capturing only the mid-term (~3–6 months) component of the Price Momentum model; 100 indicates strongest and 1 weakest,MATRIX,97%,1,1
+region_value_momentum_rank,The current regional 1-100 percentile rank of the security based on the Value-Momentum Model,MATRIX,97%,3,6
+region_value_momentum_rank_float,Float (non-integer) value of the regional 1-100 percentile rank for the Value-Momentum Model,MATRIX,97%,2,2
+region_value_momentum_rank_float_2,Float 0–100 percentile rank of the Value-Momentum composite within the regional universe,MATRIX,97%,2,3
+regional_price_momentum_percentile,"Floating-point regional percentile rank (1–100) within the US region based on the Price Momentum model, where higher values indicate more attractive momentum",MATRIX,95%,0,0
+regional_price_momentum_percentile_2,The current regional 1-100 percentile rank of the security based on the Price Momentum Model,MATRIX,95%,0,0
+regional_price_momentum_percentile_3,Regional percentile rank (1–100) of the security based on the Price Momentum model; higher values indicate stronger momentum relative to its region,MATRIX,95%,1,1
+sector_value_momentum_rank,The current sector 1-100 percentile rank of the security based on the Value-Momentum Model,MATRIX,97%,7,7
+sector_value_momentum_rank_float,Float (non-integer) value of the sector 1-100 percentile rank for the Value-Momentum Model,MATRIX,97%,6,6
+sector_value_momentum_rank_float_2,Float 0–100 percentile rank of the Value-Momentum composite within the sector group,MATRIX,97%,2,2
+short_term_price_momentum_score,A percentile rank that reflects only the short term aspect of the Price Momentum Model. Scores of 100 indicate the highest rated stocks; scores of 1 indicate the lowest rated stocks.,MATRIX,97%,7,10
+short_term_price_momentum_score_2,A percentile rank reflecting only the short term aspect of the Price Momentum Model; scores of 100 indicate the highest rated stocks and 1 the lowest,MATRIX,97%,5,6
+short_term_price_momentum_score_3,Percentile rank (1–100) capturing only the short-term (~1 week) component of the Price Momentum model; 100 indicates strongest and 1 weakest,MATRIX,97%,7,10

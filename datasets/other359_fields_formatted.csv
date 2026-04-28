@@ -1,0 +1,11 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth359_all_conversations_comment_abusevote,Count of abuse reports or flags on the comment,VECTOR,25%,3,8
+oth359_all_conversations_comment_downvote,Count of downvotes the comment received,VECTOR,46%,2,2
+oth359_all_conversations_comment_replies,Number of replies to the comment,VECTOR,47%,5,14
+oth359_all_conversations_comment_upvote,Count of upvotes the comment received,VECTOR,54%,6,6
+oth359_all_conversations_visit_time,Timestamp when the comment was visited or captured by the crawler,VECTOR,70%,8,16
+oth359_top_reactions_comment_abusevote,Number of abuse or flag reports the comment received,VECTOR,89%,2,3
+oth359_top_reactions_comment_downvote,Number of downvotes the comment received,VECTOR,97%,2,2
+oth359_top_reactions_comment_replies,Number of replies the comment has received,VECTOR,97%,5,6
+oth359_top_reactions_comment_upvote,Number of upvotes the comment received,VECTOR,98%,2,2
+oth359_top_reactions_visit_time,Visit time to the site,VECTOR,99%,8,10

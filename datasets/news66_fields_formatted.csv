@@ -1,0 +1,4 @@
+Field,Description,Type,Coverage,Users,Alphas
+mws66_crawl_time,Data crawl time,VECTOR,50%,14,15
+mws66_timestamp_time,The timestamp for the time of record for the corresponding data.,VECTOR,50%,11,12
+mws66_views,The views of the page for the mentioned date,VECTOR,50%,9,11

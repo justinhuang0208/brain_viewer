@@ -1,0 +1,1197 @@
+Field,Description,Type,Coverage,Users,Alphas
+opt4_122_call_dis_delta20,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.20; higher values indicate lower reliability,MATRIX,84%,168,473
+opt4_122_call_dis_delta25,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.25; higher values indicate lower reliability,MATRIX,84%,102,214
+opt4_122_call_dis_delta30,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.30; higher values indicate lower reliability,MATRIX,84%,79,163
+opt4_122_call_dis_delta35,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.35; higher values indicate lower reliability,MATRIX,84%,75,199
+opt4_122_call_dis_delta40,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.40; higher values indicate lower reliability,MATRIX,84%,125,332
+opt4_122_call_dis_delta45,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.45; higher values indicate lower reliability,MATRIX,84%,33,54
+opt4_122_call_dis_delta50,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.50; higher values indicate lower reliability,MATRIX,84%,49,106
+opt4_122_call_dis_delta55,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.55; higher values indicate lower reliability,MATRIX,84%,36,58
+opt4_122_call_dis_delta60,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.60; higher values indicate lower reliability,MATRIX,84%,48,84
+opt4_122_call_dis_delta65,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.65; higher values indicate lower reliability,MATRIX,84%,24,37
+opt4_122_call_dis_delta70,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.70; higher values indicate lower reliability,MATRIX,84%,28,68
+opt4_122_call_dis_delta75,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.75; higher values indicate lower reliability,MATRIX,84%,22,41
+opt4_122_call_dis_delta80,Fit dispersion metric for the smoothed implied volatility of a theoretical call option expiring in 122 days at delta 0.80; higher values indicate lower reliability,MATRIX,84%,31,59
+opt4_122_call_pre_delta20,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.20,MATRIX,84%,50,175
+opt4_122_call_pre_delta25,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.25,MATRIX,84%,24,59
+opt4_122_call_pre_delta30,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.30,MATRIX,84%,30,62
+opt4_122_call_pre_delta35,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.35,MATRIX,84%,21,33
+opt4_122_call_pre_delta40,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.40,MATRIX,84%,74,222
+opt4_122_call_pre_delta45,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.45,MATRIX,84%,28,87
+opt4_122_call_pre_delta50,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.50,MATRIX,84%,28,58
+opt4_122_call_pre_delta55,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.55,MATRIX,84%,38,60
+opt4_122_call_pre_delta60,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.60,MATRIX,84%,25,58
+opt4_122_call_pre_delta65,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.65,MATRIX,84%,43,87
+opt4_122_call_pre_delta70,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.70,MATRIX,84%,26,61
+opt4_122_call_pre_delta75,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.75,MATRIX,84%,23,55
+opt4_122_call_pre_delta80,Theoretical premium (model-implied price) of a call option expiring in 122 days at delta 0.80,MATRIX,84%,17,29
+opt4_122_call_strike_delta20,Strike price corresponding to a theoretical call option expiring in 122 days at delta 0.20,MATRIX,84%,21,45
+opt4_122_call_strike_delta25,Strike price corresponding to a theoretical call option expiring in 122 days at delta 0.25,MATRIX,84%,43,80
+opt4_122_call_strike_delta30,Strike price corresponding to a theoretical call option expiring in 122 days at delta 0.30,MATRIX,84%,22,30
+opt4_122_call_strike_delta35,Strike price corresponding to a theoretical call option expiring in 122 days at delta 0.35,MATRIX,84%,81,194
+opt4_122_call_strike_delta40,The strike price of a theoretical call option with 122 days to expiration at a delta of 0.40,MATRIX,84%,43,91
+opt4_122_call_strike_delta45,The strike price of a theoretical call option with 122 days to expiration at a delta of 0.45,MATRIX,84%,22,27
+opt4_122_call_strike_delta50,The strike price of a theoretical call option with 122 days to expiration at a delta of 0.50,MATRIX,84%,36,59
+opt4_122_call_strike_delta55,The strike price of a theoretical call option with 122 days to expiration at a delta of 0.55,MATRIX,84%,37,58
+opt4_122_call_strike_delta60,The strike price of a theoretical call option with 122 days to expiration at a delta of 0.60,MATRIX,84%,72,186
+opt4_122_call_strike_delta65,The strike price of a theoretical call option with 122 days to expiration at a delta of 0.65,MATRIX,84%,41,67
+opt4_122_call_strike_delta70,The strike price of a theoretical call option with 122 days to expiration at a delta of 0.70,MATRIX,84%,46,61
+opt4_122_call_strike_delta75,The strike price of a theoretical call option with 122 days to expiration at a delta of 0.75,MATRIX,84%,42,64
+opt4_122_call_strike_delta80,The strike price of a theoretical call option with 122 days to expiration at a delta of 0.80,MATRIX,84%,26,98
+opt4_122_call_vola_delta20,The implied volatility of a theoretical call option with 122 days to expiration at a delta of 0.20,MATRIX,84%,72,133
+opt4_122_call_vola_delta25,"The implied volatility of a theoretical call option with expiration of 122 days, at delta of 0.25",MATRIX,84%,122,257
+opt4_122_call_vola_delta30,"The implied volatility of a theoretical call option with expiration of 122 days, at delta of 0.3",MATRIX,84%,51,101
+opt4_122_call_vola_delta35,The implied volatility of a theoretical call option with 122 days to expiration at a delta of 0.35,MATRIX,84%,86,223
+opt4_122_call_vola_delta40,"The implied volatility of a theoretical call option with expiration of 122 days, at delta of 0.4",MATRIX,84%,84,182
+opt4_122_call_vola_delta45,"The implied volatility of a theoretical call option with expiration of 122 days, at delta of 0.45",MATRIX,84%,85,184
+opt4_122_call_vola_delta50,"The implied volatility of a theoretical call option with expiration of 122 days, at delta of 0.5",MATRIX,84%,80,201
+opt4_122_call_vola_delta55,"The implied volatility of a theoretical call option with expiration of 122 days, at delta of 0.55",MATRIX,84%,50,97
+opt4_122_call_vola_delta60,"The implied volatility of a theoretical call option with expiration of 122 days, at delta of 0.6",MATRIX,84%,75,191
+opt4_122_call_vola_delta65,"The implied volatility of a theoretical call option with expiration of 122 days, at delta of 0.65",MATRIX,84%,46,90
+opt4_122_call_vola_delta70,"The implied volatility of a theoretical call option with expiration of 122 days, at delta of 0.7",MATRIX,84%,62,201
+opt4_122_call_vola_delta75,The implied volatility of a theoretical call option with 122 days to expiration at a delta of 0.75,MATRIX,84%,56,106
+opt4_122_call_vola_delta80,The implied volatility of a theoretical call option with 122 days to expiration at a delta of 0.80,MATRIX,84%,92,225
+opt4_122_put_dis_delta20,"The dispersion of a theoretical put option with 122 days to expiration at a delta of -0.20; dispersion measures the accuracy of the implied volatility calculation, where larger dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,18,72
+opt4_122_put_dis_delta25,"The dispersion of a theoretical put option with 122 days to expiration at a delta of -0.25; dispersion measures the accuracy of the implied volatility calculation, where larger dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,30,48
+opt4_122_put_dis_delta30,"The dispersion of a theoretical put option with 122 days to expiration at a delta of -0.30; dispersion measures the accuracy of the implied volatility calculation, where larger dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,12,16
+opt4_122_put_dis_delta35,"The dispersion of a theoretical put option with 122 days to expiration at a delta of -0.35; dispersion measures the accuracy of the implied volatility calculation, where larger dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,12,22
+opt4_122_put_dis_delta40,"The dispersion of a theoretical put option with 122 days to expiration at a delta of -0.40; dispersion measures the accuracy of the implied volatility calculation, where larger dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,55,307
+opt4_122_put_dis_delta45,"The dispersion of a theoretical put option with 122 days to expiration at a delta of -0.45; dispersion measures the accuracy of the implied volatility calculation, where larger dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,19,26
+opt4_122_put_dis_delta50,"The dispersion of a theoretical put option with 122 days to expiration at a delta of -0.50; dispersion measures the accuracy of the implied volatility calculation, where larger dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,41,91
+opt4_122_put_dis_delta55,"The dispersion of a theoretical put option with 122 days to expiration at a delta of -0.55; dispersion measures the accuracy of the implied volatility calculation, where larger dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,40,82
+opt4_122_put_dis_delta60,Dispersion (fit-quality) metric indicating the reliability of the put implied volatility estimate for the 122-days-to-expiry surface node at put delta -0.60,MATRIX,84%,17,32
+opt4_122_put_dis_delta65,Dispersion (fit-quality) metric indicating the reliability of the put implied volatility estimate for the 122-days-to-expiry surface node at put delta -0.65,MATRIX,84%,12,20
+opt4_122_put_dis_delta70,Dispersion (fit-quality) metric indicating the reliability of the put implied volatility estimate for the 122-days-to-expiry surface node at put delta -0.70,MATRIX,84%,22,56
+opt4_122_put_dis_delta75,Dispersion (fit-quality) metric indicating the reliability of the put implied volatility estimate for the 122-days-to-expiry surface node at put delta -0.75,MATRIX,84%,15,31
+opt4_122_put_dis_delta80,Dispersion (fit-quality) metric indicating the reliability of the put implied volatility estimate for the 122-days-to-expiry surface node at put delta -0.80,MATRIX,84%,27,40
+opt4_122_put_pre_delta20,Theoretical premium (model price) of a put option for the 122-days-to-expiry surface node at put delta -0.20,MATRIX,84%,15,44
+opt4_122_put_pre_delta25,Theoretical premium (model price) of a put option for the 122-days-to-expiry surface node at put delta -0.25,MATRIX,84%,10,42
+opt4_122_put_pre_delta30,Theoretical premium (model price) of a put option for the 122-days-to-expiry surface node at put delta -0.30,MATRIX,84%,32,59
+opt4_122_put_pre_delta35,Theoretical premium (model price) of a put option for the 122-days-to-expiry surface node at put delta -0.35,MATRIX,84%,32,65
+opt4_122_put_pre_delta40,Theoretical premium (model price) of a put option for the 122-days-to-expiry surface node at put delta -0.40,MATRIX,84%,22,23
+opt4_122_put_pre_delta45,"The premium of a theoretical put option with expiration of 122 days, at delta of -0.45",MATRIX,84%,32,84
+opt4_122_put_pre_delta50,"The premium of a theoretical put option with expiration of 122 days, at delta of -0.5",MATRIX,84%,14,24
+opt4_122_put_pre_delta55,"The premium of a theoretical put option with expiration of 122 days, at delta of -0.55",MATRIX,84%,20,33
+opt4_122_put_pre_delta60,"The premium of a theoretical put option with expiration of 122 days, at delta of -0.6",MATRIX,84%,46,124
+opt4_122_put_pre_delta65,"The premium of a theoretical put option with expiration of 122 days, at delta of -0.65",MATRIX,84%,23,40
+opt4_122_put_pre_delta70,"The premium of a theoretical put option with expiration of 122 days, at delta of -0.7",MATRIX,84%,33,80
+opt4_122_put_pre_delta75,"The premium of a theoretical put option with expiration of 122 days, at delta of -0.75",MATRIX,84%,24,51
+opt4_122_put_pre_delta80,"The premium of a theoretical put option with expiration of 122 days, at delta of -0.8",MATRIX,84%,34,94
+opt4_122_put_strike_delta20,"The strike price of a theoretical put option with expiration of 122 days, at delta of -0.2",MATRIX,84%,24,44
+opt4_122_put_strike_delta25,"The strike price of a theoretical put option with expiration of 122 days, at delta of -0.25",MATRIX,84%,35,58
+opt4_122_put_strike_delta30,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.30,MATRIX,84%,36,58
+opt4_122_put_strike_delta35,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.35,MATRIX,84%,59,105
+opt4_122_put_strike_delta40,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.40,MATRIX,84%,77,157
+opt4_122_put_strike_delta45,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.45,MATRIX,84%,38,52
+opt4_122_put_strike_delta50,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.50,MATRIX,84%,57,125
+opt4_122_put_strike_delta55,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.55,MATRIX,84%,60,126
+opt4_122_put_strike_delta60,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.60,MATRIX,84%,35,50
+opt4_122_put_strike_delta65,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.65,MATRIX,84%,27,35
+opt4_122_put_strike_delta70,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.70,MATRIX,84%,35,69
+opt4_122_put_strike_delta75,Strike price corresponding to the 122-days-to-expiry put surface node at put delta -0.75,MATRIX,84%,30,95
+opt4_122_put_strike_delta80,"The strike price of a theoretical put option with expiration of 122 days, at delta of -0.8",MATRIX,84%,28,48
+opt4_122_put_vola_delta20,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.2",MATRIX,84%,24,40
+opt4_122_put_vola_delta25,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.25",MATRIX,84%,87,182
+opt4_122_put_vola_delta30,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.3",MATRIX,84%,43,77
+opt4_122_put_vola_delta35,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.35",MATRIX,84%,51,103
+opt4_122_put_vola_delta40,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.4",MATRIX,84%,30,67
+opt4_122_put_vola_delta45,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.45",MATRIX,84%,46,115
+opt4_122_put_vola_delta50,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.5",MATRIX,84%,33,126
+opt4_122_put_vola_delta55,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.55",MATRIX,84%,36,109
+opt4_122_put_vola_delta60,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.6",MATRIX,84%,33,60
+opt4_122_put_vola_delta65,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.65",MATRIX,84%,35,47
+opt4_122_put_vola_delta70,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.7",MATRIX,84%,41,77
+opt4_122_put_vola_delta75,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.75",MATRIX,84%,24,41
+opt4_122_put_vola_delta80,"The implied volatility of a theoretical put option with expiration of 122 days, at delta of -0.8",MATRIX,84%,41,70
+opt4_152_call_dis_delta20,"The dispersion of a theoretical call option with expiration of 152 days, at delta of 0.2, measuring accuracy of the implied volatility calculation",MATRIX,84%,21,36
+opt4_152_call_dis_delta25,"The dispersion of a theoretical call option with expiration of 152 days, at delta of 0.25. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,15,22
+opt4_152_call_dis_delta30,"The dispersion of a theoretical call option with expiration of 152 days, at delta of 0.3. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,7,20
+opt4_152_call_dis_delta35,"The dispersion of a theoretical call option with expiration of 152 days, at delta of 0.35. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,25,51
+opt4_152_call_dis_delta40,Dispersion (fit error) of the smoothed implied volatility for a call option with 152 days to expiration at delta 0.4; higher values indicate less accurate implied volatility,MATRIX,84%,11,39
+opt4_152_call_dis_delta45,Dispersion (fit error) of the smoothed implied volatility for a call option with 152 days to expiration at delta 0.45; higher values indicate less accurate implied volatility,MATRIX,84%,44,114
+opt4_152_call_dis_delta50,Dispersion (fit error) of the smoothed implied volatility for a call option with 152 days to expiration at delta 0.5; higher values indicate less accurate implied volatility,MATRIX,84%,16,30
+opt4_152_call_dis_delta55,Dispersion (fit error) of the smoothed implied volatility for a call option with 152 days to expiration at delta 0.55; higher values indicate less accurate implied volatility,MATRIX,84%,14,25
+opt4_152_call_dis_delta60,"The dispersion of a theoretical call option with expiration of 152 days, at delta of 0.6. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,22,46
+opt4_152_call_dis_delta65,"The dispersion of a theoretical call option with 152 days to expiration at a delta of 0.65, measuring the accuracy of the implied volatility estimate; higher values indicate less reliable volatility",MATRIX,84%,27,40
+opt4_152_call_dis_delta70,"The dispersion of a theoretical call option with expiration of 152 days, at delta of 0.7, representing the accuracy of the implied volatility fit where a larger dispersion indicates less accuracy",MATRIX,84%,26,41
+opt4_152_call_dis_delta75,"The dispersion of a theoretical call option with 152 days to expiration at a delta of 0.75, representing the weighted standard deviation reflecting volatility estimate accuracy; higher values mean lower reliability",MATRIX,84%,26,82
+opt4_152_call_dis_delta80,"The dispersion of a theoretical call option with expiration of 152 days, at delta of 0.8. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,11,18
+opt4_152_call_pre_delta20,"The premium (option price) of a theoretical call option with 152 days to expiration, at delta of 0.2",MATRIX,84%,11,26
+opt4_152_call_pre_delta25,"The premium (option price) of a theoretical call option with 152 days to expiration, at delta of 0.25",MATRIX,84%,23,46
+opt4_152_call_pre_delta30,Premium (price) of a theoretical call option with 152 days to expiration at delta 0.3,MATRIX,84%,14,24
+opt4_152_call_pre_delta35,"The premium of a theoretical call option with expiration of 152 days, at delta of 0.35",MATRIX,84%,14,17
+opt4_152_call_pre_delta40,"The premium (option price) of a theoretical call option with expiration of 152 days, at delta of 0.4",MATRIX,84%,10,13
+opt4_152_call_pre_delta45,"The premium of a theoretical call option with expiration of 152 days, at delta of 0.45",MATRIX,84%,18,39
+opt4_152_call_pre_delta50,The premium of a theoretical call option with expiration of 152 days at delta 0.5,MATRIX,84%,11,41
+opt4_152_call_pre_delta55,"The premium of a theoretical call option with expiration of 152 days, at delta of 0.55",MATRIX,84%,19,27
+opt4_152_call_pre_delta60,Premium (price) of a theoretical call option with 152 days to expiration at delta 0.6,MATRIX,84%,20,72
+opt4_152_call_pre_delta65,Premium (price) of a theoretical call option with 152 days to expiration at delta 0.65,MATRIX,84%,18,32
+opt4_152_call_pre_delta70,"The premium (option price) of a theoretical call option with expiration of 152 days, at delta of 0.7",MATRIX,84%,39,83
+opt4_152_call_pre_delta75,The premium of a theoretical call option with expiration of 152 days at delta 0.75,MATRIX,84%,11,90
+opt4_152_call_pre_delta80,"The premium of a theoretical call option with expiration of 152 days, at delta of 0.8",MATRIX,84%,8,25
+opt4_152_call_strike_delta20,"The strike price of a theoretical call option with expiration of 152 days, at delta of 0.2",MATRIX,84%,18,20
+opt4_152_call_strike_delta25,"The strike price of a theoretical call option with expiration of 152 days, at delta of 0.25",MATRIX,84%,25,37
+opt4_152_call_strike_delta30,"The strike price of a theoretical call option with expiration of 152 days, at delta of 0.3",MATRIX,84%,27,51
+opt4_152_call_strike_delta35,"The strike price of a theoretical call option with expiration of 152 days, at delta of 0.35",MATRIX,84%,47,70
+opt4_152_call_strike_delta40,"The strike price of a theoretical call option with 152 days to expiration, at delta of 0.4",MATRIX,84%,38,58
+opt4_152_call_strike_delta45,Strike price of a theoretical call option with 152 days to expiration at delta 0.45,MATRIX,84%,14,21
+opt4_152_call_strike_delta50,Strike price of a theoretical call option with 152 days to expiration at delta 0.5,MATRIX,84%,41,64
+opt4_152_call_strike_delta55,Strike price of a theoretical call option with 152 days to expiration at delta 0.55,MATRIX,84%,32,49
+opt4_152_call_strike_delta60,Strike price of a theoretical call option with 152 days to expiration at delta 0.6,MATRIX,84%,57,91
+opt4_152_call_strike_delta65,"The strike price of a theoretical call option with expiration of 152 days, at delta of 0.65",MATRIX,84%,35,52
+opt4_152_call_strike_delta70,The strike price of a theoretical call option with 152 days to expiration at a delta of 0.7,MATRIX,84%,63,142
+opt4_152_call_strike_delta75,The strike price of a theoretical call option with expiration of 152 days at delta 0.75,MATRIX,84%,16,24
+opt4_152_call_strike_delta80,"The strike price of a theoretical call option with expiration of 152 days, at delta of 0.8",MATRIX,84%,51,103
+opt4_152_call_vola_delta20,The implied volatility of a theoretical call option with 152 days to expiration at a delta of 0.2,MATRIX,84%,44,90
+opt4_152_call_vola_delta25,"The implied volatility of a theoretical call option with expiration of 152 days, at delta of 0.25",MATRIX,84%,75,150
+opt4_152_call_vola_delta30,"The implied volatility of a theoretical call option with expiration of 152 days, at delta of 0.3",MATRIX,84%,44,96
+opt4_152_call_vola_delta35,The implied volatility of a theoretical call option with 152 days to expiration at a delta of 0.35,MATRIX,84%,50,86
+opt4_152_call_vola_delta40,The implied volatility of a theoretical call option with expiration of 152 days at delta 0.4,MATRIX,84%,62,119
+opt4_152_call_vola_delta45,"The implied volatility of a theoretical call option with expiration of 152 days, at delta of 0.45",MATRIX,84%,38,89
+opt4_152_call_vola_delta50,The implied volatility of a theoretical call option with 152 days to expiration at a delta of 0.5,MATRIX,84%,76,204
+opt4_152_call_vola_delta55,The implied volatility of a theoretical call option with expiration of 152 days at delta 0.55,MATRIX,84%,43,58
+opt4_152_call_vola_delta60,The implied volatility of a theoretical call option with expiration of 152 days at delta 0.6,MATRIX,84%,28,67
+opt4_152_call_vola_delta65,The implied volatility of a theoretical call option with 152 days to expiration at a delta of 0.65,MATRIX,84%,55,147
+opt4_152_call_vola_delta70,Implied volatility of a theoretical call option with 152 days to expiration at delta 0.7,MATRIX,84%,70,153
+opt4_152_call_vola_delta75,Implied volatility of a theoretical call option with 152 days to expiration at delta 0.75,MATRIX,84%,41,97
+opt4_152_call_vola_delta80,The implied volatility of a theoretical call option with expiration of 152 days at delta 0.8,MATRIX,84%,41,82
+opt4_152_put_dis_delta20,"The dispersion of a theoretical put option with 152 days to expiration at a delta of -0.2, indicating the accuracy of the implied volatility model; higher values imply less reliable implied volatility",MATRIX,84%,17,36
+opt4_152_put_dis_delta25,"The dispersion of a theoretical put option with 152 days to expiration at a delta of -0.25, measuring the uncertainty of implied volatility calculation; higher dispersion means lower confidence",MATRIX,84%,7,29
+opt4_152_put_dis_delta30,"The dispersion of a theoretical put option with 152 days to expiration, at delta of -0.3, measuring the accuracy of the implied volatility calculation; higher values indicate less accurate volatility",MATRIX,84%,8,15
+opt4_152_put_dis_delta35,"The dispersion of a theoretical put option with expiration of 152 days, at delta of -0.35. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,31,49
+opt4_152_put_dis_delta40,"The dispersion of a theoretical put option with expiration of 152 days, at delta of -0.4. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,12,24
+opt4_152_put_dis_delta45,"The dispersion of a theoretical put option with expiration of 152 days, at delta of -0.45. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,13,36
+opt4_152_put_dis_delta50,Dispersion (fit error) of the smoothed implied volatility for a put option with 152 days to expiration at delta -0.5; higher values indicate less accurate implied volatility,MATRIX,84%,35,74
+opt4_152_put_dis_delta55,"The dispersion of a theoretical put option with expiration of 152 days, at delta of -0.55. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,23,42
+opt4_152_put_dis_delta60,"The dispersion of a theoretical put option with expiration of 152 days, at delta of -0.6, representing the reliability of the implied volatility estimate",MATRIX,84%,16,28
+opt4_152_put_dis_delta65,"The dispersion of a theoretical put option with 152 days to expiration, at delta of -0.65, indicating accuracy of implied volatility calculation; larger values mean less accurate volatility",MATRIX,84%,54,153
+opt4_152_put_dis_delta70,Dispersion (fit error) of the smoothed implied volatility for a put option with 152 days to expiration at delta -0.7; higher values indicate less accurate implied volatility,MATRIX,84%,36,66
+opt4_152_put_dis_delta75,"The dispersion of a theoretical put option with expiration of 152 days, at delta of -0.75, indicating the accuracy of the implied volatility calculation where higher values mean less accuracy",MATRIX,84%,9,22
+opt4_152_put_dis_delta80,Dispersion (fit error) of the smoothed implied volatility for a put option with 152 days to expiration at delta -0.8; higher values indicate less accurate implied volatility,MATRIX,84%,17,33
+opt4_152_put_pre_delta20,"The premium (option price) of a theoretical put option with 152 days to expiration, at delta of -0.2",MATRIX,84%,23,42
+opt4_152_put_pre_delta25,Premium (price) of a theoretical put option with 152 days to expiration at delta -0.25,MATRIX,84%,10,13
+opt4_152_put_pre_delta30,Premium (price) of a theoretical put option with 152 days to expiration at delta -0.3,MATRIX,84%,16,38
+opt4_152_put_pre_delta35,"The premium of a theoretical put option with expiration of 152 days, at delta of -0.35",MATRIX,84%,11,17
+opt4_152_put_pre_delta40,"The premium (option price) of a theoretical put option with 152 days to expiration, at delta of -0.4",MATRIX,84%,29,72
+opt4_152_put_pre_delta45,"The premium (price) of a theoretical put option with expiration of 152 days, at delta of -0.45",MATRIX,84%,19,30
+opt4_152_put_pre_delta50,The premium (price) of a theoretical put option with 152 days to expiration at a delta of -0.5,MATRIX,84%,12,39
+opt4_152_put_pre_delta55,"The premium (option price) of a theoretical put option with expiration of 152 days, at delta of -0.55",MATRIX,84%,9,17
+opt4_152_put_pre_delta60,"The premium of a theoretical put option with expiration of 152 days, at delta of -0.6",MATRIX,84%,7,10
+opt4_152_put_pre_delta65,"The premium (price) of a theoretical put option with expiration of 152 days, at delta of -0.65",MATRIX,84%,47,257
+opt4_152_put_pre_delta70,Premium (price) of a theoretical put option with 152 days to expiration at delta -0.7,MATRIX,84%,27,48
+opt4_152_put_pre_delta75,"The premium (option price) of a theoretical put option with expiration of 152 days, at delta of -0.75",MATRIX,84%,17,27
+opt4_152_put_pre_delta80,Premium (price) of a theoretical put option with 152 days to expiration at delta -0.8,MATRIX,84%,26,50
+opt4_152_put_strike_delta20,"The strike price of a theoretical put option with expiration of 152 days, at delta of -0.2",MATRIX,84%,24,64
+opt4_152_put_strike_delta25,Strike price of a theoretical put option with 152 days to expiration at delta -0.25,MATRIX,84%,31,45
+opt4_152_put_strike_delta30,"The strike price of a theoretical put option with 152 days to expiration, at delta of -0.3",MATRIX,84%,31,57
+opt4_152_put_strike_delta35,Strike price of a theoretical put option with 152 days to expiration at delta -0.35,MATRIX,84%,47,98
+opt4_152_put_strike_delta40,"The strike price of a theoretical put option with expiration of 152 days, at delta of -0.4",MATRIX,84%,29,46
+opt4_152_put_strike_delta45,"The strike price of a theoretical put option with expiration of 152 days, at delta of -0.45",MATRIX,84%,43,75
+opt4_152_put_strike_delta50,"The strike price of a theoretical put option with expiration of 152 days, at delta of -0.5",MATRIX,84%,46,82
+opt4_152_put_strike_delta55,Strike price of a theoretical put option with 152 days to expiration at delta -0.55,MATRIX,84%,28,43
+opt4_152_put_strike_delta60,Strike price of a theoretical put option with 152 days to expiration at delta -0.6,MATRIX,84%,27,51
+opt4_152_put_strike_delta65,"The strike price of a theoretical put option with 152 days to expiration, at delta of -0.65",MATRIX,84%,62,181
+opt4_152_put_strike_delta70,"The strike price of a theoretical put option with expiration of 152 days, at delta of -0.7",MATRIX,84%,33,74
+opt4_152_put_strike_delta75,"The strike price of a theoretical put option with expiration of 152 days, at delta of -0.75",MATRIX,84%,45,97
+opt4_152_put_strike_delta80,"The strike price of a theoretical put option with expiration of 152 days, at delta of -0.8",MATRIX,84%,17,22
+opt4_152_put_vola_delta20,Implied volatility of a theoretical put option with 152 days to expiration at delta -0.2,MATRIX,84%,23,45
+opt4_152_put_vola_delta25,Implied volatility of a theoretical put option with 152 days to expiration at delta -0.25,MATRIX,84%,21,37
+opt4_152_put_vola_delta30,"The implied volatility of a theoretical put option with expiration of 152 days, at delta of -0.3",MATRIX,84%,52,117
+opt4_152_put_vola_delta35,Implied volatility of a theoretical put option with 152 days to expiration at delta -0.35,MATRIX,84%,37,70
+opt4_152_put_vola_delta40,Implied volatility of a theoretical put option with 152 days to expiration at delta -0.4,MATRIX,84%,25,48
+opt4_152_put_vola_delta45,"The implied volatility of a theoretical put option with 152 days to expiration, at delta of -0.45",MATRIX,84%,33,57
+opt4_152_put_vola_delta50,The implied volatility of a theoretical put option with expiration of 152 days at delta -0.5,MATRIX,84%,36,53
+opt4_152_put_vola_delta55,The implied volatility of a theoretical put option with expiration of 152 days at delta -0.55,MATRIX,84%,18,36
+opt4_152_put_vola_delta60,The implied volatility of a theoretical put option with 152 days to expiration at a delta of -0.6,MATRIX,84%,17,37
+opt4_152_put_vola_delta65,"The implied volatility of a theoretical put option with expiration of 152 days, at delta of -0.65",MATRIX,84%,33,49
+opt4_152_put_vola_delta70,Implied volatility of a theoretical put option with 152 days to expiration at delta -0.7,MATRIX,84%,23,57
+opt4_152_put_vola_delta75,The implied volatility of a theoretical put option with 152 days to expiration at a delta of -0.75,MATRIX,84%,46,78
+opt4_152_put_vola_delta80,Implied volatility of a theoretical put option with 152 days to expiration at delta -0.8,MATRIX,84%,31,68
+opt4_182_call_dis_delta20,"The dispersion of a theoretical call option with expiration of 182 days, at delta of 0.2. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,6,42
+opt4_182_call_dis_delta25,"The dispersion of a theoretical call option with 182 days to expiration at delta 0.25, indicating accuracy of implied volatility calculation",MATRIX,84%,14,28
+opt4_182_call_dis_delta30,"The dispersion of a theoretical call option with 182 days to expiration at delta 0.30, representing the accuracy of the implied volatility calculation; larger dispersion means less accuracy",MATRIX,84%,11,40
+opt4_182_call_dis_delta35,"The dispersion of a theoretical call option with 182 days to expiration at delta 0.35, measuring the accuracy of the implied volatility calculation; higher values indicate less accurate smoothed implied volatility",MATRIX,84%,6,23
+opt4_182_call_dis_delta40,The dispersion value indicating the accuracy of the implied volatility calculation for a theoretical call option expiring in 182 days with delta 0.4. Higher dispersion implies less reliable IV,MATRIX,84%,6,7
+opt4_182_call_dis_delta45,"The dispersion of a theoretical call option with 182 days to expiration at delta 0.45, indicating the reliability of the implied volatility calculation; higher values show less accuracy",MATRIX,84%,8,20
+opt4_182_call_dis_delta50,"The dispersion of a theoretical call option with 182 days to expiration at delta 0.50, measuring the accuracy of the implied volatility calculation; higher values indicate less accurate smoothed implied volatility",MATRIX,84%,35,63
+opt4_182_call_dis_delta55,The dispersion value indicating the accuracy of the implied volatility calculation for a theoretical call option expiring in 182 days with delta 0.55. Higher dispersion implies less reliable IV,MATRIX,84%,18,78
+opt4_182_call_dis_delta60,"The dispersion of a theoretical call option with expiration of 182 days, at delta of 0.6. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,20,37
+opt4_182_call_dis_delta65,"The dispersion of a theoretical call option with expiration of 182 days, at delta of 0.65. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,8,17
+opt4_182_call_dis_delta70,"The dispersion of a theoretical call option with expiration of 182 days, at delta of 0.7. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,11,30
+opt4_182_call_dis_delta75,"The dispersion of a theoretical call option with expiration of 182 days, at delta of 0.75, which is a measure of the accuracy of the implied volatility calculation; higher dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,7,33
+opt4_182_call_dis_delta80,"The dispersion of a theoretical call option with expiration of 182 days, at delta of 0.8, measuring the accuracy of the implied volatility calculation",MATRIX,84%,18,54
+opt4_182_call_pre_delta20,The premium of a theoretical call option expiring in 182 days with a delta of 0.2,MATRIX,84%,16,39
+opt4_182_call_pre_delta25,The premium (theoretical value) of a call option expiring in 182 days with delta 0.25,MATRIX,84%,13,23
+opt4_182_call_pre_delta30,"The premium of a theoretical call option with expiration of 182 days, at delta of 0.3",MATRIX,84%,9,27
+opt4_182_call_pre_delta35,"The premium of a theoretical call option with expiration of 182 days, at delta of 0.35",MATRIX,84%,20,38
+opt4_182_call_pre_delta40,The premium of a theoretical call option with 182 days to expiration at delta 0.4,MATRIX,84%,14,17
+opt4_182_call_pre_delta45,"The premium of a theoretical call option with expiration of 182 days, at delta of 0.45",MATRIX,84%,11,14
+opt4_182_call_pre_delta50,The premium (theoretical value) of a call option expiring in 182 days with delta 0.5,MATRIX,84%,9,20
+opt4_182_call_pre_delta55,"The premium of a theoretical call option with expiration of 182 days, at delta of 0.55",MATRIX,84%,26,43
+opt4_182_call_pre_delta60,"The premium of a theoretical call option with expiration of 182 days, at delta of 0.6",MATRIX,84%,9,16
+opt4_182_call_pre_delta65,The premium of a theoretical call option expiring in 182 days with a delta of 0.65,MATRIX,84%,11,19
+opt4_182_call_pre_delta70,"The premium of a theoretical call option with expiration of 182 days, at delta of 0.7",MATRIX,84%,10,19
+opt4_182_call_pre_delta75,The premium of a theoretical call option with 182 days to expiration at delta 0.75,MATRIX,84%,7,11
+opt4_182_call_pre_delta80,The premium (price) of a theoretical call option with 182 days to expiration at delta 0.80,MATRIX,84%,10,17
+opt4_182_call_strike_delta20,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.2",MATRIX,84%,25,44
+opt4_182_call_strike_delta25,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.25",MATRIX,84%,16,21
+opt4_182_call_strike_delta30,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.3",MATRIX,84%,23,34
+opt4_182_call_strike_delta35,The strike price of a theoretical call option with 182 days to expiration at delta 0.35,MATRIX,84%,16,39
+opt4_182_call_strike_delta40,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.4",MATRIX,84%,38,63
+opt4_182_call_strike_delta45,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.45",MATRIX,84%,54,85
+opt4_182_call_strike_delta50,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.5",MATRIX,84%,43,91
+opt4_182_call_strike_delta55,The strike price of a theoretical call option with 182 days to expiration at delta 0.55,MATRIX,84%,29,56
+opt4_182_call_strike_delta60,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.6",MATRIX,84%,25,41
+opt4_182_call_strike_delta65,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.65",MATRIX,84%,32,48
+opt4_182_call_strike_delta70,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.7",MATRIX,84%,54,144
+opt4_182_call_strike_delta75,The strike price of a theoretical call option with 182 days to expiration at delta 0.75,MATRIX,84%,45,70
+opt4_182_call_strike_delta80,"The strike price of a theoretical call option with expiration of 182 days, at delta of 0.8",MATRIX,84%,18,31
+opt4_182_call_vola_delta20,"The implied volatility of a theoretical call option with expiration of 182 days, at delta of 0.2",MATRIX,84%,54,83
+opt4_182_call_vola_delta25,"The implied volatility of a theoretical call option with expiration of 182 days, at delta of 0.25",MATRIX,84%,53,140
+opt4_182_call_vola_delta30,"The implied volatility of a theoretical call option with expiration of 182 days, at delta of 0.3",MATRIX,84%,56,131
+opt4_182_call_vola_delta35,"The implied volatility of a theoretical call option with expiration of 182 days, at delta of 0.35",MATRIX,84%,42,89
+opt4_182_call_vola_delta40,The implied volatility of a theoretical call option with 182 days to expiration at delta 0.4,MATRIX,84%,51,80
+opt4_182_call_vola_delta45,"The implied volatility of a theoretical call option with expiration of 182 days, at delta of 0.45",MATRIX,84%,49,101
+opt4_182_call_vola_delta50,"The implied volatility of a theoretical call option with expiration of 182 days, at delta of 0.5",MATRIX,84%,55,92
+opt4_182_call_vola_delta55,The implied volatility of a theoretical call option with 182 days to expiration at delta 0.55,MATRIX,84%,99,181
+opt4_182_call_vola_delta60,The implied volatility of a theoretical call option with 182 days to expiration at delta 0.6,MATRIX,84%,41,109
+opt4_182_call_vola_delta65,The implied volatility of a theoretical call option with 182 days to expiration at delta 0.65,MATRIX,84%,31,45
+opt4_182_call_vola_delta70,The implied volatility of a theoretical call option expiring in 182 days with a delta of 0.7,MATRIX,84%,44,70
+opt4_182_call_vola_delta75,The implied volatility of a theoretical call option with 182 days to expiration at delta 0.75,MATRIX,84%,23,77
+opt4_182_call_vola_delta80,The implied volatility of a theoretical call option with 182 days to expiration at delta 0.80,MATRIX,84%,47,153
+opt4_182_put_dis_delta20,"The dispersion of a theoretical put option with expiration of 182 days, at delta of -0.2. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,16,28
+opt4_182_put_dis_delta25,"The dispersion of a theoretical put option with 182 days to expiration at delta -0.25, indicating accuracy of implied volatility calculation",MATRIX,84%,3,7
+opt4_182_put_dis_delta30,"The dispersion of a theoretical put option with 182 days to expiration at delta -0.30, measuring the accuracy of the implied volatility calculation; higher values indicate less accurate smoothed implied volatility",MATRIX,84%,6,14
+opt4_182_put_dis_delta35,The dispersion value indicating the accuracy of the implied volatility calculation for a theoretical put option expiring in 182 days with delta -0.35. Higher dispersion implies less reliable IV,MATRIX,84%,10,24
+opt4_182_put_dis_delta40,"The dispersion of a theoretical put option with expiration of 182 days, at delta of -0.4. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,13,18
+opt4_182_put_dis_delta45,"The dispersion of a theoretical put option with expiration of 182 days, at delta of -0.45. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,42,99
+opt4_182_put_dis_delta50,"The dispersion of a theoretical put option with expiration of 182 days, at delta of -0.5, which is a measure of the accuracy of the implied volatility calculation; higher dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,18,39
+opt4_182_put_dis_delta55,The dispersion value indicating the accuracy of the implied volatility calculation for a theoretical put option expiring in 182 days with delta -0.55. Higher dispersion implies less reliable IV,MATRIX,84%,22,56
+opt4_182_put_dis_delta60,"The dispersion of a theoretical put option with 182 days to expiration at delta -0.60, measuring the accuracy of the implied volatility calculation; higher values indicate less accurate smoothed implied volatility",MATRIX,84%,27,61
+opt4_182_put_dis_delta65,The dispersion value indicating the accuracy of the implied volatility calculation for a theoretical put option expiring in 182 days with delta -0.65. Higher dispersion implies less reliable IV,MATRIX,84%,27,35
+opt4_182_put_dis_delta70,"The dispersion of a theoretical put option with expiration of 182 days, at delta of -0.7. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,14,27
+opt4_182_put_dis_delta75,"The dispersion of a theoretical put option with 182 days to expiration at delta -0.75, measuring the accuracy of the implied volatility calculation; higher values indicate less accuracy",MATRIX,84%,20,51
+opt4_182_put_dis_delta80,"The dispersion of a theoretical put option with expiration of 182 days, at delta of -0.8, which is a measure of the accuracy of the implied volatility calculation; higher dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,22,46
+opt4_182_put_pre_delta20,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.2",MATRIX,84%,19,50
+opt4_182_put_pre_delta25,The premium of a theoretical put option expiring in 182 days with a delta of -0.25,MATRIX,84%,25,63
+opt4_182_put_pre_delta30,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.3",MATRIX,84%,19,37
+opt4_182_put_pre_delta35,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.35",MATRIX,84%,22,41
+opt4_182_put_pre_delta40,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.4",MATRIX,84%,15,32
+opt4_182_put_pre_delta45,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.45",MATRIX,84%,27,39
+opt4_182_put_pre_delta50,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.5",MATRIX,84%,40,74
+opt4_182_put_pre_delta55,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.55",MATRIX,84%,15,25
+opt4_182_put_pre_delta60,The premium (price) of a theoretical put option with 182 days to expiration at delta -0.60,MATRIX,84%,13,34
+opt4_182_put_pre_delta65,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.65",MATRIX,84%,22,34
+opt4_182_put_pre_delta70,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.7",MATRIX,84%,26,53
+opt4_182_put_pre_delta75,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.75",MATRIX,84%,17,32
+opt4_182_put_pre_delta80,"The premium of a theoretical put option with expiration of 182 days, at delta of -0.8",MATRIX,84%,12,29
+opt4_182_put_strike_delta20,The strike price of a theoretical put option with 182 days to expiration at delta -0.20,MATRIX,84%,42,68
+opt4_182_put_strike_delta25,"The strike price of a theoretical put option with expiration of 182 days, at delta of -0.25",MATRIX,84%,64,137
+opt4_182_put_strike_delta30,"The strike price of a theoretical put option with expiration of 182 days, at delta of -0.3",MATRIX,84%,17,21
+opt4_182_put_strike_delta35,"The strike price of a theoretical put option with expiration of 182 days, at delta of -0.35",MATRIX,84%,27,58
+opt4_182_put_strike_delta40,"The strike price of a theoretical put option with expiration of 182 days, at delta of -0.4",MATRIX,84%,34,50
+opt4_182_put_strike_delta45,"The strike price of a theoretical put option with expiration of 182 days, at delta of -0.45",MATRIX,84%,23,36
+opt4_182_put_strike_delta50,The strike price of a theoretical put option with 182 days to expiration at delta -0.50,MATRIX,84%,50,78
+opt4_182_put_strike_delta55,The strike price of a theoretical put option with 182 days to expiration at delta -0.55,MATRIX,84%,38,77
+opt4_182_put_strike_delta60,The strike price of a theoretical put option expiring in 182 days with a delta of -0.6,MATRIX,84%,25,51
+opt4_182_put_strike_delta65,The strike price of a theoretical put option with 182 days to expiration at delta -0.65,MATRIX,84%,32,68
+opt4_182_put_strike_delta70,"The strike price of a theoretical put option with expiration of 182 days, at delta of -0.7",MATRIX,84%,32,46
+opt4_182_put_strike_delta75,"The strike price of a theoretical put option with expiration of 182 days, at delta of -0.75",MATRIX,84%,32,70
+opt4_182_put_strike_delta80,"The strike price of a theoretical put option with expiration of 182 days, at delta of -0.8",MATRIX,84%,25,42
+opt4_182_put_vola_delta20,The implied volatility of a theoretical put option expiring in 182 days with a delta of -0.2,MATRIX,84%,42,96
+opt4_182_put_vola_delta25,"The implied volatility of a theoretical put option with expiration of 182 days, at delta of -0.25",MATRIX,84%,26,47
+opt4_182_put_vola_delta30,"The implied volatility of a theoretical put option with expiration of 182 days, at delta of -0.3",MATRIX,84%,16,24
+opt4_182_put_vola_delta35,The implied volatility of a theoretical put option with 182 days to expiration at delta -0.35,MATRIX,84%,26,46
+opt4_182_put_vola_delta40,The implied volatility of a theoretical put option with 182 days to expiration at delta -0.40,MATRIX,84%,25,39
+opt4_182_put_vola_delta45,The implied volatility of a theoretical put option expiring in 182 days with a delta of -0.45,MATRIX,84%,41,88
+opt4_182_put_vola_delta50,"The implied volatility of a theoretical put option with expiration of 182 days, at delta of -0.5",MATRIX,84%,20,27
+opt4_182_put_vola_delta55,"The implied volatility of a theoretical put option with expiration of 182 days, at delta of -0.55",MATRIX,84%,40,65
+opt4_182_put_vola_delta60,The implied volatility of a theoretical put option with 182 days to expiration at delta -0.6,MATRIX,84%,21,45
+opt4_182_put_vola_delta65,The implied volatility of a theoretical put option with 182 days to expiration at delta -0.65,MATRIX,84%,53,166
+opt4_182_put_vola_delta70,The implied volatility of a theoretical put option with 182 days to expiration at delta -0.7,MATRIX,84%,58,202
+opt4_182_put_vola_delta75,"The implied volatility of a theoretical put option with expiration of 182 days, at delta of -0.75",MATRIX,84%,16,32
+opt4_182_put_vola_delta80,"The implied volatility of a theoretical put option with expiration of 182 days, at delta of -0.8",MATRIX,84%,64,276
+opt4_273_call_dis_delta20,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.2. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,12,36
+opt4_273_call_dis_delta25,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.25; a measure of the accuracy of implied volatility calculation where a larger dispersion indicates less accuracy",MATRIX,84%,8,10
+opt4_273_call_dis_delta30,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.3, measuring the accuracy of the implied volatility calculation; higher dispersion indicates less accurate smoothed IV",MATRIX,84%,12,21
+opt4_273_call_dis_delta35,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.35. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,12,15
+opt4_273_call_dis_delta40,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.4. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,9,22
+opt4_273_call_dis_delta45,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.45. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,6,19
+opt4_273_call_dis_delta50,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.5. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,12,16
+opt4_273_call_dis_delta55,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.55. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,13,29
+opt4_273_call_dis_delta60,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.6, measuring the accuracy of the implied volatility calculation; higher dispersion indicates less accurate smoothed IV",MATRIX,84%,10,28
+opt4_273_call_dis_delta65,The dispersion value indicating the accuracy of the implied volatility estimate for a theoretical call option expiring in 273 days at delta 0.65; higher values indicate less accuracy,MATRIX,84%,8,34
+opt4_273_call_dis_delta70,The dispersion value measuring the accuracy of the implied volatility smoothing for a theoretical call option expiring in 273 days at delta 0.7,MATRIX,84%,11,24
+opt4_273_call_dis_delta75,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.75; a measure of the accuracy of implied volatility calculation where a larger dispersion indicates less accuracy",MATRIX,84%,9,18
+opt4_273_call_dis_delta80,"The dispersion of a theoretical call option with expiration of 273 days, at delta of 0.8, measuring the accuracy of the implied volatility calculation; higher dispersion indicates less accurate smoothed IV",MATRIX,84%,8,30
+opt4_273_call_pre_delta20,The premium (price) of a theoretical call option expiring in 273 days at delta 0.2,MATRIX,84%,7,13
+opt4_273_call_pre_delta25,The premium (price) of a theoretical call option expiring in 273 days at delta 0.25,MATRIX,84%,16,39
+opt4_273_call_pre_delta30,"The premium of a theoretical call option with expiration of 273 days, at delta of 0.3",MATRIX,84%,15,20
+opt4_273_call_pre_delta35,"The premium of a theoretical call option with expiration of 273 days, at delta of 0.35",MATRIX,84%,24,45
+opt4_273_call_pre_delta40,"The premium of a theoretical call option with expiration of 273 days, at delta of 0.4",MATRIX,84%,7,7
+opt4_273_call_pre_delta45,The premium of a theoretical call option with 273 days to expiration at a delta of 0.45,MATRIX,84%,41,147
+opt4_273_call_pre_delta50,"The premium of a theoretical call option with expiration of 273 days, at delta of 0.5",MATRIX,84%,40,81
+opt4_273_call_pre_delta55,"The premium of a theoretical call option with expiration of 273 days, at delta of 0.55",MATRIX,84%,16,26
+opt4_273_call_pre_delta60,"The premium (price) of a theoretical call option with expiration of 273 days, at delta of 0.6",MATRIX,84%,21,60
+opt4_273_call_pre_delta65,"The premium of a theoretical call option with expiration of 273 days, at delta of 0.65",MATRIX,84%,10,17
+opt4_273_call_pre_delta70,The premium (price) of a theoretical call option expiring in 273 days at delta 0.7,MATRIX,84%,13,36
+opt4_273_call_pre_delta75,"The premium (price) of a theoretical call option with expiration of 273 days, at delta of 0.75",MATRIX,84%,15,29
+opt4_273_call_pre_delta80,"The premium of a theoretical call option with expiration of 273 days, at delta of 0.8",MATRIX,84%,11,21
+opt4_273_call_strike_delta20,"The strike price of a theoretical call option with expiration of 273 days, at delta of 0.2",MATRIX,84%,20,40
+opt4_273_call_strike_delta25,The strike price of a theoretical call option with expiration of 273 days and delta 0.25,MATRIX,84%,36,75
+opt4_273_call_strike_delta30,"The strike price of a theoretical call option with expiration of 273 days, at delta of 0.3",MATRIX,84%,27,40
+opt4_273_call_strike_delta35,"The strike price of a theoretical call option with expiration of 273 days, at delta of 0.35",MATRIX,84%,14,29
+opt4_273_call_strike_delta40,"The strike price of a theoretical call option with expiration of 273 days, at delta of 0.4",MATRIX,84%,21,70
+opt4_273_call_strike_delta45,The strike price of a theoretical call option with 273 days to expiration at a delta of 0.45,MATRIX,84%,24,63
+opt4_273_call_strike_delta50,"The strike price of a theoretical call option with expiration of 273 days, at delta of 0.5",MATRIX,84%,44,86
+opt4_273_call_strike_delta55,The strike price of a theoretical call option expiring in 273 days at delta 0.55,MATRIX,84%,51,106
+opt4_273_call_strike_delta60,"The strike price of a theoretical call option with expiration of 273 days, at delta of 0.6",MATRIX,84%,29,33
+opt4_273_call_strike_delta65,"The strike price of a theoretical call option with expiration of 273 days, at delta of 0.65",MATRIX,84%,39,74
+opt4_273_call_strike_delta70,"The strike price of a theoretical call option with expiration of 273 days, at delta of 0.7",MATRIX,84%,64,123
+opt4_273_call_strike_delta75,The strike price of a theoretical call option with 273 days to expiration at a delta of 0.75,MATRIX,84%,23,63
+opt4_273_call_strike_delta80,The strike price of a theoretical call option expiring in 273 days at delta 0.8,MATRIX,84%,28,92
+opt4_273_call_vola_delta20,The implied volatility of a theoretical call option with 273 days to expiration at a delta of 0.2,MATRIX,84%,28,66
+opt4_273_call_vola_delta25,The implied volatility of a theoretical call option expiring in 273 days at delta 0.25,MATRIX,84%,73,212
+opt4_273_call_vola_delta30,"The implied volatility of a theoretical call option with expiration of 273 days, at delta of 0.3",MATRIX,84%,52,83
+opt4_273_call_vola_delta35,The implied volatility of a theoretical call option expiring in 273 days at delta 0.35,MATRIX,84%,43,69
+opt4_273_call_vola_delta40,The implied volatility of a theoretical call option with expiration of 273 days and delta 0.4,MATRIX,84%,53,84
+opt4_273_call_vola_delta45,The implied volatility of a theoretical call option expiring in 273 days at delta 0.45,MATRIX,84%,31,54
+opt4_273_call_vola_delta50,The implied volatility of a theoretical call option expiring in 273 days at delta 0.5,MATRIX,84%,42,61
+opt4_273_call_vola_delta55,The implied volatility of a theoretical call option expiring in 273 days at delta 0.55,MATRIX,84%,57,110
+opt4_273_call_vola_delta60,"The implied volatility of a theoretical call option with expiration of 273 days, at delta of 0.6",MATRIX,84%,36,58
+opt4_273_call_vola_delta65,The implied volatility of a theoretical call option expiring in 273 days at delta 0.65,MATRIX,84%,31,52
+opt4_273_call_vola_delta70,The implied volatility of a theoretical call option expiring in 273 days at delta 0.7,MATRIX,84%,36,74
+opt4_273_call_vola_delta75,"The implied volatility of a theoretical call option with expiration of 273 days, at delta of 0.75",MATRIX,84%,35,62
+opt4_273_call_vola_delta80,"The implied volatility of a theoretical call option with expiration of 273 days, at delta of 0.8",MATRIX,84%,80,313
+opt4_273_put_dis_delta20,"The dispersion of a theoretical put option with expiration of 273 days, at delta of -0.2; a measure of the accuracy of implied volatility calculation where a larger dispersion indicates less accuracy",MATRIX,84%,21,62
+opt4_273_put_dis_delta25,"The dispersion of a theoretical put option with expiration of 273 days, at delta of -0.25. Dispersion measures the accuracy of the implied volatility calculation; higher values indicate less accuracy",MATRIX,84%,5,9
+opt4_273_put_dis_delta30,"The dispersion of a theoretical put option with expiration of 273 days, at delta of -0.3, measuring the accuracy of the implied volatility calculation; higher dispersion indicates less accurate smoothed IV",MATRIX,84%,11,24
+opt4_273_put_dis_delta35,"The dispersion of a theoretical put option with expiration of 273 days, at delta of -0.35; a measure of the accuracy of implied volatility calculation where a larger dispersion indicates less accuracy",MATRIX,84%,9,11
+opt4_273_put_dis_delta40,"The dispersion of a theoretical put option with expiration of 273 days, at delta of -0.4. Dispersion measures the accuracy of the implied volatility calculation; higher values indicate less accuracy",MATRIX,84%,20,45
+opt4_273_put_dis_delta45,The measure of accuracy (dispersion) of the implied volatility calculation for a theoretical put option with 273 days to expiration at a delta of -0.45; higher values indicate less accurate volatility,MATRIX,84%,15,40
+opt4_273_put_dis_delta50,"The dispersion of a theoretical put option with expiration of 273 days, at delta of -0.5. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,10,23
+opt4_273_put_dis_delta55,"The dispersion of a theoretical put option with expiration of 273 days, at delta of -0.55. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,48,317
+opt4_273_put_dis_delta60,"The dispersion of a theoretical put option with expiration of 273 days, at delta of -0.6; a measure of the accuracy of implied volatility calculation where a larger dispersion indicates less accuracy",MATRIX,84%,33,76
+opt4_273_put_dis_delta65,"The dispersion of a theoretical put option with expiration of 273 days, at delta of -0.65. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,14,33
+opt4_273_put_dis_delta70,The dispersion value reflecting the confidence level in the implied volatility estimate for a theoretical put option expiring in 273 days at delta -0.7,MATRIX,84%,10,17
+opt4_273_put_dis_delta75,The measure of accuracy (dispersion) of the implied volatility calculation for a theoretical put option with 273 days to expiration at a delta of -0.75; higher values indicate less accurate volatility,MATRIX,84%,19,44
+opt4_273_put_dis_delta80,"The measure of accuracy (dispersion) of the implied volatility calculation for a theoretical put option expiring in 273 days at delta -0.8, with higher values indicating less accuracy",MATRIX,84%,13,36
+opt4_273_put_pre_delta20,The premium price of a theoretical put option with expiration of 273 days and delta -0.2,MATRIX,84%,14,20
+opt4_273_put_pre_delta25,"The premium of a theoretical put option with expiration of 273 days, at delta of -0.25",MATRIX,84%,26,49
+opt4_273_put_pre_delta30,"The premium of a theoretical put option with expiration of 273 days, at delta of -0.3",MATRIX,84%,42,90
+opt4_273_put_pre_delta35,"The premium of a theoretical put option with expiration of 273 days, at delta of -0.35",MATRIX,84%,35,94
+opt4_273_put_pre_delta40,The premium (price) of a theoretical put option expiring in 273 days at delta -0.4,MATRIX,84%,18,27
+opt4_273_put_pre_delta45,The premium (price) of a theoretical put option expiring in 273 days at delta -0.45,MATRIX,84%,50,183
+opt4_273_put_pre_delta50,The premium of a theoretical put option with 273 days to expiration at a delta of -0.5,MATRIX,84%,7,18
+opt4_273_put_pre_delta55,The premium price of a theoretical put option with expiration of 273 days and delta -0.55,MATRIX,84%,17,31
+opt4_273_put_pre_delta60,"The premium (price) of a theoretical put option with expiration of 273 days, at delta of -0.6",MATRIX,84%,57,273
+opt4_273_put_pre_delta65,"The premium of a theoretical put option with expiration of 273 days, at delta of -0.65",MATRIX,84%,14,42
+opt4_273_put_pre_delta70,"The premium of a theoretical put option with expiration of 273 days, at delta of -0.7",MATRIX,84%,12,55
+opt4_273_put_pre_delta75,The premium price of a theoretical put option with expiration of 273 days and delta -0.75,MATRIX,84%,19,50
+opt4_273_put_pre_delta80,"The premium of a theoretical put option with expiration of 273 days, at delta of -0.8",MATRIX,84%,37,110
+opt4_273_put_strike_delta20,The strike price of a theoretical put option expiring in 273 days at delta -0.2,MATRIX,84%,26,51
+opt4_273_put_strike_delta25,"The strike price of a theoretical put option with expiration of 273 days, at delta of -0.25",MATRIX,84%,13,30
+opt4_273_put_strike_delta30,"The strike price of a theoretical put option with expiration of 273 days, at delta of -0.3",MATRIX,84%,53,139
+opt4_273_put_strike_delta35,"The strike price of a theoretical put option with expiration of 273 days, at delta of -0.35",MATRIX,84%,32,80
+opt4_273_put_strike_delta40,The strike price of a theoretical put option expiring in 273 days at delta -0.4,MATRIX,84%,28,58
+opt4_273_put_strike_delta45,"The strike price of a theoretical put option with expiration of 273 days, at delta of -0.45",MATRIX,84%,39,93
+opt4_273_put_strike_delta50,"The strike price of a theoretical put option with expiration of 273 days, at delta of -0.5",MATRIX,84%,51,131
+opt4_273_put_strike_delta55,The strike price of a theoretical put option with 273 days to expiration at a delta of -0.55,MATRIX,84%,29,94
+opt4_273_put_strike_delta60,"The strike price of a theoretical put option with expiration of 273 days, at delta of -0.6",MATRIX,84%,41,81
+opt4_273_put_strike_delta65,"The strike price of a theoretical put option with expiration of 273 days, at delta of -0.65",MATRIX,84%,35,61
+opt4_273_put_strike_delta70,The strike price of a theoretical put option with 273 days to expiration at a delta of -0.7,MATRIX,84%,20,38
+opt4_273_put_strike_delta75,The strike price of a theoretical put option expiring in 273 days at delta -0.75,MATRIX,84%,29,65
+opt4_273_put_strike_delta80,"The strike price of a theoretical put option with expiration of 273 days, at delta of -0.8",MATRIX,84%,11,17
+opt4_273_put_vola_delta20,"The implied volatility of a theoretical put option with expiration of 273 days, at delta of -0.2",MATRIX,84%,31,70
+opt4_273_put_vola_delta25,The implied volatility of a theoretical put option expiring in 273 days at delta -0.25,MATRIX,84%,24,44
+opt4_273_put_vola_delta30,The implied volatility of a theoretical put option expiring in 273 days at delta -0.3,MATRIX,84%,32,60
+opt4_273_put_vola_delta35,The implied volatility of a theoretical put option with expiration of 273 days and delta -0.35,MATRIX,84%,23,54
+opt4_273_put_vola_delta40,"The implied volatility of a theoretical put option with expiration of 273 days, at delta of -0.4",MATRIX,84%,69,156
+opt4_273_put_vola_delta45,The implied volatility of a theoretical put option expiring in 273 days at delta -0.45,MATRIX,84%,49,109
+opt4_273_put_vola_delta50,"The implied volatility of a theoretical put option with expiration of 273 days, at delta of -0.5",MATRIX,84%,49,155
+opt4_273_put_vola_delta55,The implied volatility of a theoretical put option expiring in 273 days at delta -0.55,MATRIX,84%,29,48
+opt4_273_put_vola_delta60,"The implied volatility of a theoretical put option with expiration of 273 days, at delta of -0.6",MATRIX,84%,42,112
+opt4_273_put_vola_delta65,"The implied volatility of a theoretical put option with expiration of 273 days, at delta of -0.65",MATRIX,84%,19,45
+opt4_273_put_vola_delta70,The implied volatility of a theoretical put option with 273 days to expiration at a delta of -0.7,MATRIX,84%,32,76
+opt4_273_put_vola_delta75,"The implied volatility of a theoretical put option with expiration of 273 days, at delta of -0.75",MATRIX,84%,23,46
+opt4_273_put_vola_delta80,The implied volatility of a theoretical put option expiring in 273 days at delta -0.8,MATRIX,84%,66,314
+opt4_30_call_dis_delta20,"The dispersion of a theoretical call option with expiration of 30 days, at delta of 0.2. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,82%,12,18
+opt4_30_call_dis_delta25,"The dispersion of a theoretical call option with expiration of 30 days, at delta of 0.25. Dispersion measures the accuracy of the implied volatility calculation; higher values indicate less reliable smoothed implied volatility",MATRIX,82%,6,9
+opt4_30_call_dis_delta30,"The dispersion of a theoretical call option with expiration of 30 days, at delta of 0.3, measuring the accuracy of implied volatility smoothing",MATRIX,82%,10,18
+opt4_30_call_dis_delta35,"The dispersion of a theoretical call option with expiration of 30 days, at delta of 0.35, measuring accuracy of the implied volatility calculation; higher values indicate less accuracy",MATRIX,82%,13,19
+opt4_30_call_dis_delta40,"The dispersion of a theoretical call option with expiration of 30 days, at delta of 0.4. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,82%,23,45
+opt4_30_call_dis_delta45,The dispersion of a theoretical call option with 30 days to expiration at delta of 0.45; higher dispersion indicates less accurate smoothed implied volatility,MATRIX,82%,22,28
+opt4_30_call_dis_delta50,Measure of the accuracy of the implied volatility calculation for a theoretical call option with 30 days to expiration at delta 0.5; higher values indicate less accurate smoothed implied volatility,MATRIX,82%,49,130
+opt4_30_call_dis_delta55,Dispersion of the theoretical call option fit with 30 days to expiration at delta 0.55; higher values indicate less accurate smoothed implied volatility,MATRIX,82%,7,9
+opt4_30_call_dis_delta60,Measure of the accuracy of the implied volatility calculation for a theoretical call option with 30 days to expiration at delta 0.6; higher values indicate less accurate smoothed implied volatility,MATRIX,82%,8,41
+opt4_30_call_dis_delta65,"The dispersion of a theoretical call option with expiration of 30 days, at delta of 0.65, indicating the reliability of the implied volatility",MATRIX,82%,7,14
+opt4_30_call_dis_delta70,"The dispersion of a theoretical call option with expiration of 30 days, at delta of 0.7, measuring accuracy of the implied volatility calculation; higher values indicate less accuracy",MATRIX,82%,5,17
+opt4_30_call_dis_delta75,The dispersion of a theoretical call option with 30 days to expiration at delta of 0.75; higher dispersion indicates less accurate smoothed implied volatility,MATRIX,82%,9,21
+opt4_30_call_dis_delta80,Dispersion of the theoretical call option fit with 30 days to expiration at delta 0.80; higher values indicate less accurate smoothed implied volatility,MATRIX,82%,14,32
+opt4_30_call_pre_delta20,"The premium of a theoretical call option with expiration of 30 days, at delta of 0.2",MATRIX,82%,26,45
+opt4_30_call_pre_delta25,"The premium of a theoretical call option with expiration of 30 days, at delta of 0.25",MATRIX,82%,7,22
+opt4_30_call_pre_delta30,The premium (price) of a theoretical call option with 30 days to expiration at delta of 0.3,MATRIX,82%,7,17
+opt4_30_call_pre_delta35,Premium (price) of a theoretical call option with 30 days to expiration at delta 0.35,MATRIX,82%,15,23
+opt4_30_call_pre_delta40,"The premium of a theoretical call option with expiration of 30 days, at delta of 0.4",MATRIX,82%,38,73
+opt4_30_call_pre_delta45,"The premium of a theoretical call option with expiration of 30 days, at delta of 0.45",MATRIX,82%,6,14
+opt4_30_call_pre_delta50,"The premium of a theoretical call option with expiration of 30 days, at delta of 0.5",MATRIX,82%,24,30
+opt4_30_call_pre_delta55,The premium (price) of a theoretical call option with 30 days to expiration at delta of 0.55,MATRIX,82%,6,8
+opt4_30_call_pre_delta60,The premium (price) of a theoretical call option with 30 days to expiration at delta of 0.6,MATRIX,82%,13,26
+opt4_30_call_pre_delta65,The premium (price) of a theoretical call option with 30 days to expiration at delta of 0.65,MATRIX,82%,17,23
+opt4_30_call_pre_delta70,Premium (price) of a theoretical call option with 30 days to expiration at delta 0.70,MATRIX,82%,7,11
+opt4_30_call_pre_delta75,"The premium of a theoretical call option with expiration of 30 days, at delta of 0.75",MATRIX,82%,11,26
+opt4_30_call_pre_delta80,The premium (price) of a theoretical call option with 30 days to expiration at delta of 0.8,MATRIX,82%,5,12
+opt4_30_call_strike_delta20,"The strike price of a theoretical call option with expiration of 30 days, at delta of 0.2",MATRIX,82%,6,8
+opt4_30_call_strike_delta25,Strike price of a theoretical call option with 30 days to expiration at delta 0.25,MATRIX,82%,15,29
+opt4_30_call_strike_delta30,Strike price of a theoretical call option with 30 days to expiration at delta 0.30,MATRIX,82%,10,11
+opt4_30_call_strike_delta35,Strike price of a theoretical call option with 30 days to expiration at delta 0.35,MATRIX,82%,23,31
+opt4_30_call_strike_delta40,"The strike price of a theoretical call option with expiration of 30 days, at delta of 0.4",MATRIX,82%,59,119
+opt4_30_call_strike_delta45,"The strike price of a theoretical call option with expiration of 30 days, at delta of 0.45",MATRIX,82%,6,6
+opt4_30_call_strike_delta50,"The strike price of a theoretical call option with expiration of 30 days, at delta of 0.5",MATRIX,82%,40,59
+opt4_30_call_strike_delta55,"The strike price of a theoretical call option with expiration of 30 days, at delta of 0.55",MATRIX,82%,37,71
+opt4_30_call_strike_delta60,The strike price of a theoretical call option with 30 days to expiration at delta of 0.6,MATRIX,82%,28,33
+opt4_30_call_strike_delta65,The strike price of a theoretical call option with 30 days to expiration at delta of 0.65,MATRIX,82%,41,57
+opt4_30_call_strike_delta70,"The strike price of a theoretical call option with expiration of 30 days, at delta of 0.7",MATRIX,82%,26,39
+opt4_30_call_strike_delta75,"The strike price of a theoretical call option with expiration of 30 days, at delta of 0.75",MATRIX,82%,25,117
+opt4_30_call_strike_delta80,The strike price of a theoretical call option with 30 days to expiration at delta of 0.8,MATRIX,82%,16,40
+opt4_30_call_vola_delta20,The implied volatility of a theoretical call option with 30 days to expiration at delta of 0.2,MATRIX,82%,64,130
+opt4_30_call_vola_delta25,The implied volatility of a theoretical call option with 30 days to expiration at delta of 0.25,MATRIX,82%,60,154
+opt4_30_call_vola_delta30,The implied volatility of a theoretical call option with 30 days to expiration at delta of 0.3,MATRIX,82%,88,216
+opt4_30_call_vola_delta35,"The implied volatility of a theoretical call option with expiration of 30 days, at delta of 0.35",MATRIX,82%,42,85
+opt4_30_call_vola_delta40,"The implied volatility of a theoretical call option with expiration of 30 days, at delta of 0.4",MATRIX,82%,67,138
+opt4_30_call_vola_delta45,Implied volatility of a theoretical call option with 30 days to expiration at delta 0.45,MATRIX,82%,91,183
+opt4_30_call_vola_delta50,The implied volatility of a theoretical call option with 30 days to expiration at delta of 0.5,MATRIX,82%,147,332
+opt4_30_call_vola_delta55,"The implied volatility of a theoretical call option with expiration of 30 days, at delta of 0.55",MATRIX,82%,44,66
+opt4_30_call_vola_delta60,The implied volatility of a theoretical call option with 30 days to expiration at delta of 0.6,MATRIX,82%,47,82
+opt4_30_call_vola_delta65,The implied volatility of a theoretical call option with 30 days to expiration at delta of 0.65,MATRIX,82%,42,65
+opt4_30_call_vola_delta70,The implied volatility of a theoretical call option with 30 days to expiration at delta of 0.7,MATRIX,82%,19,26
+opt4_30_call_vola_delta75,Implied volatility of a theoretical call option with 30 days to expiration at delta 0.75,MATRIX,82%,40,83
+opt4_30_call_vola_delta80,"The implied volatility of a theoretical call option with expiration of 30 days, at delta of 0.8",MATRIX,82%,12,22
+opt4_30_put_dis_delta20,"The dispersion of a theoretical put option with expiration of 30 days, at delta of -0.2. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,82%,14,30
+opt4_30_put_dis_delta25,"The dispersion of a theoretical put option with expiration of 30 days, at delta of -0.25, measuring accuracy of the implied volatility calculation; higher values indicate less accuracy",MATRIX,82%,10,30
+opt4_30_put_dis_delta30,"The dispersion of a theoretical put option with expiration of 30 days, at delta of -0.3. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,82%,9,15
+opt4_30_put_dis_delta35,"The dispersion of a theoretical put option with expiration of 30 days, at delta of -0.35, representing the accuracy of the implied volatility calculation; higher values indicate less reliable smoothing",MATRIX,82%,9,22
+opt4_30_put_dis_delta40,The dispersion of a theoretical put option with 30 days to expiration at delta of -0.4; higher dispersion indicates less accurate smoothed implied volatility,MATRIX,82%,8,17
+opt4_30_put_dis_delta45,"The dispersion of a theoretical put option with expiration of 30 days, at delta of -0.45. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,82%,8,12
+opt4_30_put_dis_delta50,The dispersion measure of accuracy for the implied volatility of a theoretical put option with 30 days to expiration at delta of -0.5; higher dispersion means less accurate smoothed implied volatility,MATRIX,82%,7,14
+opt4_30_put_dis_delta55,"The dispersion of a theoretical put option with expiration of 30 days, at delta of -0.55. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,82%,10,17
+opt4_30_put_dis_delta60,"The dispersion of a theoretical put option with expiration of 30 days, at delta of -0.6. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,82%,17,60
+opt4_30_put_dis_delta65,Dispersion of the theoretical put option fit with 30 days to expiration at delta -0.65; higher values indicate less accurate smoothed implied volatility,MATRIX,82%,6,15
+opt4_30_put_dis_delta70,Measure of the accuracy of the implied volatility calculation for a theoretical put option with 30 days to expiration at delta -0.7; higher values indicate less accurate smoothed implied volatility,MATRIX,82%,6,9
+opt4_30_put_dis_delta75,Measure of the accuracy of the implied volatility calculation for a theoretical put option with 30 days to expiration at delta -0.75; higher values indicate less accurate smoothed implied volatility,MATRIX,82%,12,19
+opt4_30_put_dis_delta80,"The dispersion of a theoretical put option with expiration of 30 days, at delta of -0.8. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,82%,13,17
+opt4_30_put_pre_delta20,"The premium of a theoretical put option with expiration of 30 days, at delta of -0.2",MATRIX,82%,11,20
+opt4_30_put_pre_delta25,"The premium of a theoretical put option with expiration of 30 days, at delta of -0.25",MATRIX,82%,12,23
+opt4_30_put_pre_delta30,Premium (price) of a theoretical put option with 30 days to expiration at delta -0.30,MATRIX,82%,7,76
+opt4_30_put_pre_delta35,The premium (price) of a theoretical put option with 30 days to expiration at delta of -0.35,MATRIX,82%,12,20
+opt4_30_put_pre_delta40,Premium (price) of a theoretical put option with 30 days to expiration at delta -0.40,MATRIX,82%,19,54
+opt4_30_put_pre_delta45,The premium (price) of a theoretical put option with 30 days to expiration at delta of -0.45,MATRIX,82%,40,87
+opt4_30_put_pre_delta50,Premium (price) of a theoretical put option with 30 days to expiration at delta -0.50,MATRIX,82%,8,28
+opt4_30_put_pre_delta55,Premium (price) of a theoretical put option with 30 days to expiration at delta -0.55,MATRIX,82%,12,16
+opt4_30_put_pre_delta60,The premium (price) of a theoretical put option with 30 days to expiration at delta of -0.6,MATRIX,82%,12,47
+opt4_30_put_pre_delta65,"The premium of a theoretical put option with expiration of 30 days, at delta of -0.65",MATRIX,82%,8,14
+opt4_30_put_pre_delta70,"The premium of a theoretical put option with expiration of 30 days, at delta of -0.7",MATRIX,82%,14,41
+opt4_30_put_pre_delta75,Premium (price) of a theoretical put option with 30 days to expiration at delta -0.75,MATRIX,82%,11,18
+opt4_30_put_pre_delta80,Premium (price) of a theoretical put option with 30 days to expiration at delta -0.80,MATRIX,82%,13,28
+opt4_30_put_strike_delta20,"The strike price of a theoretical put option with expiration of 30 days, at delta of -0.2",MATRIX,82%,13,18
+opt4_30_put_strike_delta25,Strike price of a theoretical put option with 30 days to expiration at delta -0.25,MATRIX,82%,32,48
+opt4_30_put_strike_delta30,The strike price of a theoretical put option with 30 days to expiration at delta of -0.3,MATRIX,82%,26,32
+opt4_30_put_strike_delta35,"The strike price of a theoretical put option with expiration of 30 days, at delta of -0.35",MATRIX,82%,35,55
+opt4_30_put_strike_delta40,"The strike price of a theoretical put option with expiration of 30 days, at delta of -0.4",MATRIX,82%,41,72
+opt4_30_put_strike_delta45,The strike price of a theoretical put option with 30 days to expiration at delta of -0.45,MATRIX,82%,49,80
+opt4_30_put_strike_delta50,Strike price of a theoretical put option with 30 days to expiration at delta -0.50,MATRIX,82%,58,101
+opt4_30_put_strike_delta55,"The strike price of a theoretical put option with expiration of 30 days, at delta of -0.55",MATRIX,82%,34,50
+opt4_30_put_strike_delta60,"The strike price of a theoretical put option with expiration of 30 days, at delta of -0.6",MATRIX,82%,43,88
+opt4_30_put_strike_delta65,The strike price of a theoretical put option with 30 days to expiration at delta of -0.65,MATRIX,82%,18,32
+opt4_30_put_strike_delta70,Strike price of a theoretical put option with 30 days to expiration at delta -0.70,MATRIX,82%,36,72
+opt4_30_put_strike_delta75,"The strike price of a theoretical put option with expiration of 30 days, at delta of -0.75",MATRIX,82%,15,22
+opt4_30_put_strike_delta80,Strike price of a theoretical put option with 30 days to expiration at delta -0.80,MATRIX,82%,16,20
+opt4_30_put_vola_delta20,"The implied volatility of a theoretical put option with expiration of 30 days, at delta of -0.2",MATRIX,82%,23,46
+opt4_30_put_vola_delta25,Implied volatility of a theoretical put option with 30 days to expiration at delta -0.25,MATRIX,82%,37,62
+opt4_30_put_vola_delta30,The implied volatility of a theoretical put option with 30 days to expiration at delta of -0.3,MATRIX,82%,34,62
+opt4_30_put_vola_delta35,The implied volatility of a theoretical put option with 30 days to expiration at delta of -0.35,MATRIX,82%,31,59
+opt4_30_put_vola_delta40,"The implied volatility of a theoretical put option with expiration of 30 days, at delta of -0.4",MATRIX,82%,59,155
+opt4_30_put_vola_delta45,Implied volatility of a theoretical put option with 30 days to expiration at delta -0.45,MATRIX,82%,99,2226
+opt4_30_put_vola_delta50,"The implied volatility of a theoretical put option with expiration of 30 days, at delta of -0.5",MATRIX,82%,120,375
+opt4_30_put_vola_delta55,"The implied volatility of a theoretical put option with expiration of 30 days, at delta of -0.55",MATRIX,82%,34,121
+opt4_30_put_vola_delta60,The implied volatility of a theoretical put option with 30 days to expiration at delta of -0.6,MATRIX,82%,62,163
+opt4_30_put_vola_delta65,Implied volatility of a theoretical put option with 30 days to expiration at delta -0.65,MATRIX,82%,35,101
+opt4_30_put_vola_delta70,The implied volatility of a theoretical put option with 30 days to expiration at delta of -0.7,MATRIX,82%,57,174
+opt4_30_put_vola_delta75,"The implied volatility of a theoretical put option with expiration of 30 days, at delta of -0.75",MATRIX,82%,18,42
+opt4_30_put_vola_delta80,"The implied volatility of a theoretical put option with expiration of 30 days, at delta of -0.8",MATRIX,82%,22,59
+opt4_365_call_dis_delta20,"The dispersion of a theoretical call option with expiration of 365 days, at delta of 0.2. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,10,26
+opt4_365_call_dis_delta25,"The dispersion, a measure of accuracy or uncertainty, of the theoretical call option implied volatility for a 365-day expiration at delta 0.25",MATRIX,84%,12,17
+opt4_365_call_dis_delta30,"The dispersion, a measure of accuracy or uncertainty, of the theoretical call option implied volatility for a 365-day expiration at delta 0.3",MATRIX,84%,12,27
+opt4_365_call_dis_delta35,The dispersion (model fit reliability measure) for a theoretical call option with 365 days to expiration at delta 0.35; higher values indicate less accurate implied volatility,MATRIX,84%,14,24
+opt4_365_call_dis_delta40,"The dispersion of a theoretical call option with expiration of 365 days, at delta of 0.4. A higher dispersion indicates less accurate smoothed implied volatility",MATRIX,84%,14,26
+opt4_365_call_dis_delta45,"The dispersion of a theoretical call option with expiration of 365 days, at delta of 0.45. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,22,33
+opt4_365_call_dis_delta50,"The dispersion of a theoretical call option with expiration of 365 days, at delta of 0.5. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,11,19
+opt4_365_call_dis_delta55,The dispersion measure indicating the accuracy of the implied volatility calculation for a theoretical call option with expiration of 365 days at delta 0.55; larger values indicate less accurate smoothed implied volatility,MATRIX,84%,5,23
+opt4_365_call_dis_delta60,"The dispersion of a theoretical call option with expiration of 365 days, at delta of 0.6. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,46,187
+opt4_365_call_dis_delta65,The dispersion (model fit reliability measure) for a theoretical call option with 365 days to expiration at delta 0.65; higher values indicate less accurate implied volatility,MATRIX,84%,16,41
+opt4_365_call_dis_delta70,"The dispersion of a theoretical call option with expiration of 365 days, at delta of 0.7. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,9,18
+opt4_365_call_dis_delta75,"The dispersion of a theoretical call option with expiration of 365 days, at delta of 0.75. Dispersion measures the accuracy of the implied volatility calculation, with larger values indicating less accurate smoothed implied volatility",MATRIX,84%,18,45
+opt4_365_call_dis_delta80,"The dispersion of a theoretical call option with expiration of 365 days, at delta of 0.8. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,12,23
+opt4_365_call_pre_delta20,The premium (price) of a theoretical call option with 365 days to expiration at delta 0.20,MATRIX,84%,31,47
+opt4_365_call_pre_delta25,The premium (price) of a theoretical call option with 365 days to expiration at delta 0.25,MATRIX,84%,32,65
+opt4_365_call_pre_delta30,"The premium of a theoretical call option with expiration of 365 days, at delta of 0.3",MATRIX,84%,16,31
+opt4_365_call_pre_delta35,The premium of a theoretical call option with expiration of 365 days at delta 0.35,MATRIX,84%,31,54
+opt4_365_call_pre_delta40,The premium of a theoretical call option with expiration of 365 days at delta 0.4,MATRIX,84%,30,52
+opt4_365_call_pre_delta45,The premium (price) of a theoretical call option with 365 days to expiration at delta 0.45,MATRIX,84%,12,23
+opt4_365_call_pre_delta50,"The premium of a theoretical call option with expiration of 365 days, at delta of 0.5",MATRIX,84%,11,33
+opt4_365_call_pre_delta55,The premium (price) of a theoretical call option with 365 days to expiration at delta 0.55,MATRIX,84%,14,28
+opt4_365_call_pre_delta60,"The premium of a theoretical call option with expiration of 365 days, at delta of 0.6",MATRIX,84%,16,19
+opt4_365_call_pre_delta65,"The premium of a theoretical call option with expiration of 365 days, at delta of 0.65",MATRIX,84%,7,8
+opt4_365_call_pre_delta70,The premium of a theoretical call option with expiration of 365 days at delta 0.7,MATRIX,84%,8,12
+opt4_365_call_pre_delta75,The premium (price) of a theoretical call option with 365 days to expiration at delta 0.75,MATRIX,84%,10,14
+opt4_365_call_pre_delta80,"The premium of a theoretical call option with expiration of 365 days, at delta of 0.8",MATRIX,84%,11,23
+opt4_365_call_strike_delta20,The strike price of a theoretical call option with 365 days to expiration at delta 0.20,MATRIX,84%,32,46
+opt4_365_call_strike_delta25,"The strike price of a theoretical call option with expiration of 365 days, at delta of 0.25",MATRIX,84%,44,126
+opt4_365_call_strike_delta30,"The strike price of a theoretical call option with expiration of 365 days, at delta of 0.3",MATRIX,84%,7,9
+opt4_365_call_strike_delta35,"The strike price of a theoretical call option with expiration of 365 days, at delta of 0.35",MATRIX,84%,21,28
+opt4_365_call_strike_delta40,"The strike price of a theoretical call option with expiration of 365 days, at delta of 0.4",MATRIX,84%,25,39
+opt4_365_call_strike_delta45,"The strike price of a theoretical call option with expiration of 365 days, at delta of 0.45",MATRIX,84%,13,14
+opt4_365_call_strike_delta50,"The strike price of a theoretical call option with expiration of 365 days, at delta of 0.5",MATRIX,84%,29,56
+opt4_365_call_strike_delta55,"The strike price of a theoretical call option with expiration of 365 days, at delta of 0.55",MATRIX,84%,49,134
+opt4_365_call_strike_delta60,The strike price of a theoretical call option with 365 days to expiration at delta 0.60,MATRIX,84%,18,36
+opt4_365_call_strike_delta65,The strike price of a theoretical call option expiring in 365 days at a delta of 0.65,MATRIX,84%,62,164
+opt4_365_call_strike_delta70,"The strike price of a theoretical call option with expiration of 365 days, at delta of 0.7",MATRIX,84%,67,148
+opt4_365_call_strike_delta75,"The strike price of a theoretical call option with expiration of 365 days, at delta of 0.75",MATRIX,84%,28,57
+opt4_365_call_strike_delta80,The strike price of a theoretical call option with 365 days to expiration at delta 0.80,MATRIX,84%,24,39
+opt4_365_call_vola_delta20,The implied volatility of a theoretical call option with 365 days to expiration at delta 0.20,MATRIX,84%,49,90
+opt4_365_call_vola_delta25,"The implied volatility of a theoretical call option with expiration of 365 days, at delta of 0.25",MATRIX,84%,42,74
+opt4_365_call_vola_delta30,"The implied volatility of a theoretical call option with expiration of 365 days, at delta of 0.3",MATRIX,84%,51,129
+opt4_365_call_vola_delta35,"The implied volatility of a theoretical call option with expiration of 365 days, at delta of 0.35",MATRIX,84%,37,61
+opt4_365_call_vola_delta40,The implied volatility of a theoretical call option with 365 days to expiration at delta 0.40,MATRIX,84%,27,44
+opt4_365_call_vola_delta45,"The implied volatility of a theoretical call option with expiration of 365 days, at delta of 0.45",MATRIX,84%,31,51
+opt4_365_call_vola_delta50,"The implied volatility of a theoretical call option with expiration of 365 days, at delta of 0.5",MATRIX,84%,28,51
+opt4_365_call_vola_delta55,The implied volatility of a theoretical call option with 365 days to expiration at delta 0.55,MATRIX,84%,55,95
+opt4_365_call_vola_delta60,"The implied volatility of a theoretical call option with expiration of 365 days, at delta of 0.6",MATRIX,84%,42,67
+opt4_365_call_vola_delta65,"The implied volatility of a theoretical call option with expiration of 365 days, at delta of 0.65",MATRIX,84%,47,80
+opt4_365_call_vola_delta70,The implied volatility of a theoretical call option with expiration of 365 days at delta 0.7,MATRIX,84%,57,140
+opt4_365_call_vola_delta75,The implied volatility of a theoretical call option with 365 days to expiration at delta 0.75,MATRIX,84%,38,61
+opt4_365_call_vola_delta80,The implied volatility of a theoretical call option with 365 days to expiration at delta 0.80,MATRIX,84%,50,105
+opt4_365_put_dis_delta20,"The dispersion of a theoretical put option with expiration of 365 days, at delta of -0.2. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,13,56
+opt4_365_put_dis_delta25,The dispersion (model fit reliability measure) for a theoretical put option with 365 days to expiration at delta -0.25; higher values indicate less accurate implied volatility,MATRIX,84%,8,46
+opt4_365_put_dis_delta30,"The dispersion of a theoretical put option with expiration of 365 days, at delta of -0.3. Indicates the accuracy of the implied volatility calculation; larger dispersion means less accuracy",MATRIX,84%,4,6
+opt4_365_put_dis_delta35,"The dispersion of a theoretical put option with expiration of 365 days, at delta of -0.35. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,13,33
+opt4_365_put_dis_delta40,"The dispersion of a theoretical put option with expiration of 365 days, at delta of -0.4, measuring the accuracy of the implied volatility calculation; larger values indicate less accuracy",MATRIX,84%,16,35
+opt4_365_put_dis_delta45,The dispersion (model fit reliability measure) for a theoretical put option with 365 days to expiration at delta -0.45; higher values indicate less accurate implied volatility,MATRIX,84%,28,62
+opt4_365_put_dis_delta50,"The dispersion of a theoretical put option with expiration of 365 days, at delta of -0.5, measuring the accuracy of the implied volatility calculation; larger values indicate less accuracy",MATRIX,84%,16,29
+opt4_365_put_dis_delta55,The dispersion measure indicating the accuracy of the implied volatility calculation for a theoretical put option with expiration of 365 days at delta -0.55; larger values indicate less accurate smoothed implied volatility,MATRIX,84%,12,28
+opt4_365_put_dis_delta60,"The dispersion of a theoretical put option with expiration of 365 days, at delta of -0.6. Dispersion measures the accuracy of the implied volatility calculation, with larger values indicating less accurate smoothed implied volatility",MATRIX,84%,23,47
+opt4_365_put_dis_delta65,The dispersion measure indicating the accuracy of the implied volatility calculation for a theoretical put option with expiration of 365 days at delta -0.65; larger values indicate less accurate smoothed implied volatility,MATRIX,84%,12,15
+opt4_365_put_dis_delta70,"The dispersion of a theoretical put option with expiration of 365 days, at delta of -0.7. Dispersion measures the accuracy of the implied volatility calculation; larger values mean less accurate smoothed implied volatility",MATRIX,84%,12,24
+opt4_365_put_dis_delta75,The dispersion measure indicating the accuracy of the implied volatility calculation for a theoretical put option with expiration of 365 days at delta -0.75; larger values indicate less accurate smoothed implied volatility,MATRIX,84%,11,73
+opt4_365_put_dis_delta80,"The dispersion of a theoretical put option with expiration of 365 days, at delta of -0.8. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,18,25
+opt4_365_put_pre_delta20,"The premium of a theoretical put option with expiration of 365 days, at delta of -0.2",MATRIX,84%,10,14
+opt4_365_put_pre_delta25,"The premium of a theoretical put option with expiration of 365 days, at delta of -0.25",MATRIX,84%,7,15
+opt4_365_put_pre_delta30,"The premium of a theoretical put option with expiration of 365 days, at delta of -0.3",MATRIX,84%,16,39
+opt4_365_put_pre_delta35,"The premium of a theoretical put option with expiration of 365 days, at delta of -0.35",MATRIX,84%,7,15
+opt4_365_put_pre_delta40,"The premium of a theoretical put option with expiration of 365 days, at delta of -0.4",MATRIX,84%,46,324
+opt4_365_put_pre_delta45,The premium (price) of a theoretical put option with 365 days to expiration at delta -0.45,MATRIX,84%,10,28
+opt4_365_put_pre_delta50,"The premium of a theoretical put option with expiration of 365 days, at delta of -0.5",MATRIX,84%,38,118
+opt4_365_put_pre_delta55,"The premium (price) of a theoretical put option with expiration of 365 days, at delta of -0.55",MATRIX,84%,41,167
+opt4_365_put_pre_delta60,The premium (price) of a theoretical put option with 365 days to expiration at delta -0.60,MATRIX,84%,25,53
+opt4_365_put_pre_delta65,"The premium of a theoretical put option with expiration of 365 days, at delta of -0.65",MATRIX,84%,44,143
+opt4_365_put_pre_delta70,The premium of a theoretical put option with expiration of 365 days at delta -0.7,MATRIX,84%,27,70
+opt4_365_put_pre_delta75,"The premium (price) of a theoretical put option with expiration of 365 days, at delta of -0.75",MATRIX,84%,32,56
+opt4_365_put_pre_delta80,"The premium of a theoretical put option with expiration of 365 days, at delta of -0.8",MATRIX,84%,19,49
+opt4_365_put_strike_delta20,The strike price of a theoretical put option with 365 days to expiration at delta -0.20,MATRIX,84%,50,99
+opt4_365_put_strike_delta25,The strike price of a theoretical put option with 365 days to expiration at delta -0.25,MATRIX,84%,24,49
+opt4_365_put_strike_delta30,"The strike price of a theoretical put option with expiration of 365 days, at delta of -0.3",MATRIX,84%,32,54
+opt4_365_put_strike_delta35,"The strike price of a theoretical put option with expiration of 365 days, at delta of -0.35",MATRIX,84%,54,111
+opt4_365_put_strike_delta40,The strike price of a theoretical put option with 365 days to expiration at delta -0.40,MATRIX,84%,20,33
+opt4_365_put_strike_delta45,The strike price of a theoretical put option with 365 days to expiration at delta -0.45,MATRIX,84%,32,54
+opt4_365_put_strike_delta50,"The strike price of a theoretical put option with expiration of 365 days, at delta of -0.5",MATRIX,84%,29,35
+opt4_365_put_strike_delta55,"The strike price of a theoretical put option with expiration of 365 days, at delta of -0.55",MATRIX,84%,35,56
+opt4_365_put_strike_delta60,The strike price of a theoretical put option with expiration of 365 days at delta -0.6,MATRIX,84%,44,101
+opt4_365_put_strike_delta65,The strike price of a theoretical put option with 365 days to expiration at delta -0.65,MATRIX,84%,22,27
+opt4_365_put_strike_delta70,"The strike price of a theoretical put option with expiration of 365 days, at delta of -0.7",MATRIX,84%,35,71
+opt4_365_put_strike_delta75,"The strike price of a theoretical put option with expiration of 365 days, at delta of -0.75",MATRIX,84%,21,50
+opt4_365_put_strike_delta80,"The strike price of a theoretical put option with expiration of 365 days, at delta of -0.8",MATRIX,84%,41,110
+opt4_365_put_vola_delta20,The implied volatility of a theoretical put option with 365 days to expiration at delta -0.20,MATRIX,84%,25,46
+opt4_365_put_vola_delta25,The implied volatility of a theoretical put option with 365 days to expiration at delta -0.25,MATRIX,84%,33,66
+opt4_365_put_vola_delta30,The implied volatility of a theoretical put option with 365 days to expiration at delta -0.30,MATRIX,84%,29,34
+opt4_365_put_vola_delta35,"The implied volatility of a theoretical put option with expiration of 365 days, at delta of -0.35",MATRIX,84%,31,51
+opt4_365_put_vola_delta40,"The implied volatility of a theoretical put option with expiration of 365 days, at delta of -0.4",MATRIX,84%,16,44
+opt4_365_put_vola_delta45,"The implied volatility of a theoretical put option with expiration of 365 days, at delta of -0.45",MATRIX,84%,70,206
+opt4_365_put_vola_delta50,"The implied volatility of a theoretical put option with expiration of 365 days, at delta of -0.5",MATRIX,84%,34,50
+opt4_365_put_vola_delta55,"The implied volatility of a theoretical put option with expiration of 365 days, at delta of -0.55",MATRIX,84%,42,122
+opt4_365_put_vola_delta60,"The implied volatility of a theoretical put option with expiration of 365 days, at delta of -0.6",MATRIX,84%,18,30
+opt4_365_put_vola_delta65,The implied volatility of a theoretical put option with 365 days to expiration at delta -0.65,MATRIX,84%,36,69
+opt4_365_put_vola_delta70,"The implied volatility of a theoretical put option with expiration of 365 days, at delta of -0.7",MATRIX,84%,10,26
+opt4_365_put_vola_delta75,The implied volatility of a theoretical put option with 365 days to expiration at delta -0.75,MATRIX,84%,14,20
+opt4_365_put_vola_delta80,The implied volatility of a theoretical put option expiring in 365 days at a delta of -0.8,MATRIX,84%,59,221
+opt4_547_call_dis_delta20,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.20; higher values indicate less accurate implied volatility,MATRIX,84%,9,20
+opt4_547_call_dis_delta25,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.25; higher values indicate less accurate implied volatility,MATRIX,84%,3,9
+opt4_547_call_dis_delta30,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.30; higher values indicate less accurate implied volatility,MATRIX,84%,5,16
+opt4_547_call_dis_delta35,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.35; higher values indicate less accurate implied volatility,MATRIX,84%,8,35
+opt4_547_call_dis_delta40,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.40; higher values indicate less accurate implied volatility,MATRIX,84%,7,8
+opt4_547_call_dis_delta45,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.45; higher values indicate less accurate implied volatility,MATRIX,84%,9,25
+opt4_547_call_dis_delta50,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.50; higher values indicate less accurate implied volatility,MATRIX,84%,14,38
+opt4_547_call_dis_delta55,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.55; higher values indicate less accurate implied volatility,MATRIX,84%,17,26
+opt4_547_call_dis_delta60,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.60; higher values indicate less accurate implied volatility,MATRIX,84%,9,11
+opt4_547_call_dis_delta65,Dispersion of the smoothed implied volatility estimate for a theoretical call option with 547 days to expiration at delta 0.65; higher values indicate less accurate implied volatility,MATRIX,84%,40,79
+opt4_547_call_dis_delta70,Measure of accuracy/uncertainty (dispersion) of smoothed implied volatility for a theoretical call option with 547 days to expiration at delta 0.70; higher values mean less accurate volatility,MATRIX,84%,7,10
+opt4_547_call_dis_delta75,Measure of accuracy/uncertainty (dispersion) of smoothed implied volatility for a theoretical call option with 547 days to expiration at delta 0.75; higher values mean less accurate volatility,MATRIX,84%,9,40
+opt4_547_call_dis_delta80,Measure of accuracy/uncertainty (dispersion) of smoothed implied volatility for a theoretical call option with 547 days to expiration at delta 0.80; higher values mean less accurate volatility,MATRIX,84%,9,62
+opt4_547_call_pre_delta20,Theoretical premium price of a call option with 547 days to expiration at delta 0.20,MATRIX,84%,34,52
+opt4_547_call_pre_delta25,Theoretical premium price of a call option with 547 days to expiration at delta 0.25,MATRIX,84%,12,30
+opt4_547_call_pre_delta30,Theoretical premium price of a call option with 547 days to expiration at delta 0.30,MATRIX,84%,7,24
+opt4_547_call_pre_delta35,Theoretical premium price of a call option with 547 days to expiration at delta 0.35,MATRIX,84%,30,57
+opt4_547_call_pre_delta40,Theoretical premium price of a call option with 547 days to expiration at delta 0.40,MATRIX,84%,11,33
+opt4_547_call_pre_delta45,Theoretical premium price of a call option with 547 days to expiration at delta 0.45,MATRIX,84%,18,26
+opt4_547_call_pre_delta50,Theoretical premium price of a call option with 547 days to expiration at delta 0.50,MATRIX,84%,11,18
+opt4_547_call_pre_delta55,Theoretical premium price of a call option with 547 days to expiration at delta 0.55,MATRIX,84%,33,72
+opt4_547_call_pre_delta60,Theoretical premium price of a call option with 547 days to expiration at delta 0.60,MATRIX,84%,11,22
+opt4_547_call_pre_delta65,Theoretical premium price of a call option with 547 days to expiration at delta 0.65,MATRIX,84%,15,44
+opt4_547_call_pre_delta70,Theoretical premium price of a call option with 547 days to expiration at delta 0.70,MATRIX,84%,24,72
+opt4_547_call_pre_delta75,Theoretical premium price of a call option with 547 days to expiration at delta 0.75,MATRIX,84%,19,35
+opt4_547_call_pre_delta80,Theoretical premium price of a call option with 547 days to expiration at delta 0.80,MATRIX,84%,16,38
+opt4_547_call_strike_delta20,Strike price of a theoretical call option with 547 days to expiration at delta 0.20,MATRIX,84%,11,17
+opt4_547_call_strike_delta25,Strike price of a theoretical call option with 547 days to expiration at delta 0.25,MATRIX,84%,21,25
+opt4_547_call_strike_delta30,Strike price of a theoretical call option with 547 days to expiration at delta 0.30,MATRIX,84%,18,32
+opt4_547_call_strike_delta35,Strike price of a theoretical call option with 547 days to expiration at delta 0.35,MATRIX,84%,27,82
+opt4_547_call_strike_delta40,The strike price of a theoretical call option with expiration of 547 days at a delta of 0.4,MATRIX,84%,12,36
+opt4_547_call_strike_delta45,The strike price of a theoretical call option with expiration of 547 days at a delta of 0.45,MATRIX,84%,17,35
+opt4_547_call_strike_delta50,The strike price of a theoretical call option with expiration of 547 days at a delta of 0.5,MATRIX,84%,35,61
+opt4_547_call_strike_delta55,The strike price of a theoretical call option with expiration of 547 days at a delta of 0.55,MATRIX,84%,29,36
+opt4_547_call_strike_delta60,The strike price of a theoretical call option with expiration of 547 days at a delta of 0.6,MATRIX,84%,40,97
+opt4_547_call_strike_delta65,The strike price of a theoretical call option with expiration of 547 days at a delta of 0.65,MATRIX,84%,15,55
+opt4_547_call_strike_delta70,The strike price of a theoretical call option with expiration of 547 days at a delta of 0.7,MATRIX,84%,17,22
+opt4_547_call_strike_delta75,The strike price of a theoretical call option with expiration of 547 days at a delta of 0.75,MATRIX,84%,24,256
+opt4_547_call_strike_delta80,The strike price of a theoretical call option with expiration of 547 days at a delta of 0.8,MATRIX,84%,17,36
+opt4_547_call_vola_delta20,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.2,MATRIX,84%,68,154
+opt4_547_call_vola_delta25,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.25,MATRIX,84%,60,130
+opt4_547_call_vola_delta30,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.3,MATRIX,84%,59,166
+opt4_547_call_vola_delta35,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.35,MATRIX,84%,81,226
+opt4_547_call_vola_delta40,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.4,MATRIX,84%,75,142
+opt4_547_call_vola_delta45,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.45,MATRIX,84%,40,73
+opt4_547_call_vola_delta50,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.5,MATRIX,84%,69,126
+opt4_547_call_vola_delta55,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.55,MATRIX,84%,68,150
+opt4_547_call_vola_delta60,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.6,MATRIX,84%,65,143
+opt4_547_call_vola_delta65,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.65,MATRIX,84%,79,209
+opt4_547_call_vola_delta70,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.7,MATRIX,84%,45,77
+opt4_547_call_vola_delta75,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.75,MATRIX,84%,56,110
+opt4_547_call_vola_delta80,The implied volatility of a theoretical call option with expiration of 547 days at a delta of 0.8,MATRIX,84%,45,108
+opt4_547_put_dis_delta20,The dispersion of a theoretical put option with expiration of 547 days at a delta of -0.2; higher values indicate less accurate implied volatility estimates,MATRIX,84%,22,42
+opt4_547_put_dis_delta25,The dispersion of a theoretical put option with expiration of 547 days at a delta of -0.25; higher values indicate less accurate implied volatility estimates,MATRIX,84%,5,12
+opt4_547_put_dis_delta30,The dispersion of a theoretical put option with expiration of 547 days at a delta of -0.3; higher values indicate less accurate implied volatility estimates,MATRIX,84%,6,21
+opt4_547_put_dis_delta35,The dispersion of a theoretical put option with expiration of 547 days at a delta of -0.35; higher values indicate less accurate implied volatility estimates,MATRIX,84%,39,94
+opt4_547_put_dis_delta40,The dispersion of a theoretical put option with expiration of 547 days at a delta of -0.4; higher values indicate less accurate implied volatility estimates,MATRIX,84%,16,49
+opt4_547_put_dis_delta45,The dispersion of a theoretical put option with expiration of 547 days at a delta of -0.45; higher values indicate less accurate implied volatility estimates,MATRIX,84%,50,376
+opt4_547_put_dis_delta50,The dispersion of a theoretical put option with expiration of 547 days at a delta of -0.5; higher values indicate less accurate implied volatility estimates,MATRIX,84%,11,87
+opt4_547_put_dis_delta55,The dispersion of a theoretical put option with expiration of 547 days at a delta of -0.55; higher values indicate less accurate implied volatility estimates,MATRIX,84%,7,12
+opt4_547_put_dis_delta60,Dispersion metric indicating the accuracy of the implied volatility fit for a theoretical put option with 547 days to expiration at delta -0.6; higher values mean less reliable implied volatility,MATRIX,84%,14,26
+opt4_547_put_dis_delta65,Dispersion metric indicating the accuracy of the implied volatility fit for a theoretical put option with 547 days to expiration at delta -0.65; higher values mean less reliable implied volatility,MATRIX,84%,13,29
+opt4_547_put_dis_delta70,Dispersion metric indicating the accuracy of the implied volatility fit for a theoretical put option with 547 days to expiration at delta -0.7; higher values mean less reliable implied volatility,MATRIX,84%,7,7
+opt4_547_put_dis_delta75,Dispersion metric indicating the accuracy of the implied volatility fit for a theoretical put option with 547 days to expiration at delta -0.75; higher values mean less reliable implied volatility,MATRIX,84%,6,11
+opt4_547_put_dis_delta80,Dispersion metric indicating the accuracy of the implied volatility fit for a theoretical put option with 547 days to expiration at delta -0.8; higher values mean less reliable implied volatility,MATRIX,84%,6,12
+opt4_547_put_pre_delta20,The theoretical premium of a put option with 547 days to expiration at delta -0.2,MATRIX,84%,10,12
+opt4_547_put_pre_delta25,The theoretical premium of a put option with 547 days to expiration at delta -0.25,MATRIX,84%,11,27
+opt4_547_put_pre_delta30,The theoretical premium of a put option with 547 days to expiration at delta -0.3,MATRIX,84%,38,168
+opt4_547_put_pre_delta35,The theoretical premium of a put option with 547 days to expiration at delta -0.35,MATRIX,84%,12,20
+opt4_547_put_pre_delta40,The theoretical premium of a put option with 547 days to expiration at delta -0.4,MATRIX,84%,20,47
+opt4_547_put_pre_delta45,The theoretical premium of a put option with 547 days to expiration at delta -0.45,MATRIX,84%,49,166
+opt4_547_put_pre_delta50,The theoretical premium of a put option with 547 days to expiration at delta -0.5,MATRIX,84%,31,55
+opt4_547_put_pre_delta55,The theoretical premium of a put option with 547 days to expiration at delta -0.55,MATRIX,84%,10,31
+opt4_547_put_pre_delta60,The theoretical premium of a put option with 547 days to expiration at delta -0.6,MATRIX,84%,14,55
+opt4_547_put_pre_delta65,The theoretical premium of a put option with 547 days to expiration at delta -0.65,MATRIX,84%,19,101
+opt4_547_put_pre_delta70,The theoretical premium of a put option with 547 days to expiration at delta -0.7,MATRIX,84%,11,19
+opt4_547_put_pre_delta75,The theoretical premium of a put option with 547 days to expiration at delta -0.75,MATRIX,84%,22,45
+opt4_547_put_pre_delta80,The theoretical premium of a put option with 547 days to expiration at delta -0.8,MATRIX,84%,9,14
+opt4_547_put_strike_delta20,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.2,MATRIX,84%,45,75
+opt4_547_put_strike_delta25,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.25,MATRIX,84%,25,31
+opt4_547_put_strike_delta30,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.3,MATRIX,84%,21,43
+opt4_547_put_strike_delta35,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.35,MATRIX,84%,33,96
+opt4_547_put_strike_delta40,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.4,MATRIX,84%,31,45
+opt4_547_put_strike_delta45,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.45,MATRIX,84%,39,90
+opt4_547_put_strike_delta50,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.5,MATRIX,84%,23,26
+opt4_547_put_strike_delta55,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.55,MATRIX,84%,27,36
+opt4_547_put_strike_delta60,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.6,MATRIX,84%,47,127
+opt4_547_put_strike_delta65,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.65,MATRIX,84%,39,94
+opt4_547_put_strike_delta70,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.7,MATRIX,84%,17,26
+opt4_547_put_strike_delta75,Strike price corresponding to a theoretical put option with 547 days to expiration at delta -0.75,MATRIX,84%,22,36
+opt4_547_put_strike_delta80,The strike price of a theoretical put option with expiration of 547 days and delta of -0.8,MATRIX,84%,21,35
+opt4_547_put_vola_delta20,The implied volatility of a theoretical put option with expiration of 547 days and delta of -0.2,MATRIX,84%,30,65
+opt4_547_put_vola_delta25,The implied volatility of a theoretical put option with expiration of 547 days and delta of -0.25,MATRIX,84%,42,73
+opt4_547_put_vola_delta30,The implied volatility of a theoretical put option with expiration of 547 days and delta of -0.3,MATRIX,84%,65,224
+opt4_547_put_vola_delta35,The implied volatility of a theoretical put option with expiration of 547 days and delta of -0.35,MATRIX,84%,46,105
+opt4_547_put_vola_delta40,The implied volatility of a theoretical put option with expiration of 547 days and delta of -0.4,MATRIX,84%,43,104
+opt4_547_put_vola_delta45,The implied volatility of a theoretical put option with expiration of 547 days and delta of -0.45,MATRIX,84%,21,65
+opt4_547_put_vola_delta50,The implied volatility of a theoretical put option with expiration of 547 days and delta of -0.5,MATRIX,84%,77,129
+opt4_547_put_vola_delta55,The implied volatility of a theoretical put option with expiration of 547 days and delta of -0.55,MATRIX,84%,16,21
+opt4_547_put_vola_delta60,The implied volatility of a theoretical put option with expiration of 547 days and delta of -0.6,MATRIX,84%,60,161
+opt4_547_put_vola_delta65,The implied volatility of a theoretical put option expiring in 547 days at a delta of -0.65,MATRIX,84%,25,55
+opt4_547_put_vola_delta70,The implied volatility of a theoretical put option expiring in 547 days at a delta of -0.7,MATRIX,84%,31,52
+opt4_547_put_vola_delta75,The implied volatility of a theoretical put option expiring in 547 days at a delta of -0.75,MATRIX,84%,16,29
+opt4_547_put_vola_delta80,The implied volatility of a theoretical put option expiring in 547 days at a delta of -0.8,MATRIX,84%,18,32
+opt4_60_call_dis_delta20,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.20; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,9,98
+opt4_60_call_dis_delta25,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.25; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,5,14
+opt4_60_call_dis_delta30,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.30; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,6,8
+opt4_60_call_dis_delta35,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.35; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,8,13
+opt4_60_call_dis_delta40,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.40; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,45,312
+opt4_60_call_dis_delta45,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.45; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,12,16
+opt4_60_call_dis_delta50,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.50; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,8,18
+opt4_60_call_dis_delta55,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.55; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,13,22
+opt4_60_call_dis_delta60,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.60; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,11,20
+opt4_60_call_dis_delta65,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 60 days to expiration at a delta of 0.65; higher values indicate less reliable/imprecise implied volatility,MATRIX,84%,15,20
+opt4_60_call_dis_delta70,"Measure of the accuracy of the implied volatility calculation for a call option expiring in 60 days at delta 0.7, with higher values indicating less accuracy",MATRIX,84%,22,36
+opt4_60_call_dis_delta75,"Measure of the accuracy of the implied volatility calculation for a call option expiring in 60 days at delta 0.75, with higher values indicating less accuracy",MATRIX,84%,4,11
+opt4_60_call_dis_delta80,"Measure of the accuracy of the implied volatility calculation for a call option expiring in 60 days at delta 0.8, with higher values indicating less accuracy",MATRIX,84%,13,42
+opt4_60_call_pre_delta20,Theoretical premium of a call option expiring in 60 days at delta 0.2,MATRIX,84%,42,123
+opt4_60_call_pre_delta25,Theoretical premium of a call option expiring in 60 days at delta 0.25,MATRIX,84%,13,16
+opt4_60_call_pre_delta30,Theoretical premium of a call option expiring in 60 days at delta 0.3,MATRIX,84%,5,6
+opt4_60_call_pre_delta35,Theoretical premium of a call option expiring in 60 days at delta 0.35,MATRIX,84%,14,25
+opt4_60_call_pre_delta40,Theoretical premium of a call option expiring in 60 days at delta 0.4,MATRIX,84%,10,14
+opt4_60_call_pre_delta45,Theoretical premium of a call option expiring in 60 days at delta 0.45,MATRIX,84%,14,24
+opt4_60_call_pre_delta50,Theoretical premium of a call option expiring in 60 days at delta 0.5,MATRIX,84%,29,49
+opt4_60_call_pre_delta55,"The premium of a theoretical call option with expiration of 60 days, at delta of 0.55",MATRIX,84%,15,23
+opt4_60_call_pre_delta60,"The premium of a theoretical call option with expiration of 60 days, at delta of 0.6",MATRIX,84%,11,15
+opt4_60_call_pre_delta65,"The premium of a theoretical call option with expiration of 60 days, at delta of 0.65",MATRIX,84%,35,82
+opt4_60_call_pre_delta70,"The premium of a theoretical call option with expiration of 60 days, at delta of 0.7",MATRIX,84%,23,31
+opt4_60_call_pre_delta75,"The premium of a theoretical call option with expiration of 60 days, at delta of 0.75",MATRIX,84%,12,17
+opt4_60_call_pre_delta80,"The premium of a theoretical call option with expiration of 60 days, at delta of 0.8",MATRIX,84%,7,10
+opt4_60_call_strike_delta20,"The strike price of a theoretical call option with expiration of 60 days, at delta of 0.2",MATRIX,84%,37,55
+opt4_60_call_strike_delta25,"The strike price of a theoretical call option with expiration of 60 days, at delta of 0.25",MATRIX,84%,29,51
+opt4_60_call_strike_delta30,"The strike price of a theoretical call option with expiration of 60 days, at delta of 0.3",MATRIX,84%,28,40
+opt4_60_call_strike_delta35,"The strike price of a theoretical call option with expiration of 60 days, at delta of 0.35",MATRIX,84%,7,11
+opt4_60_call_strike_delta40,The strike price of a theoretical call option with 60 days to expiration and delta of 0.40,MATRIX,84%,25,74
+opt4_60_call_strike_delta45,The strike price of a theoretical call option with 60 days to expiration and delta of 0.45,MATRIX,84%,26,44
+opt4_60_call_strike_delta50,The strike price of a theoretical call option with 60 days to expiration and delta of 0.50,MATRIX,84%,22,40
+opt4_60_call_strike_delta55,The strike price of a theoretical call option with 60 days to expiration and delta of 0.55,MATRIX,84%,36,45
+opt4_60_call_strike_delta60,The strike price of a theoretical call option with 60 days to expiration and delta of 0.60,MATRIX,84%,56,161
+opt4_60_call_strike_delta65,The strike price of a theoretical call option with 60 days to expiration and delta of 0.65,MATRIX,84%,50,99
+opt4_60_call_strike_delta70,The strike price of a theoretical call option with 60 days to expiration and delta of 0.70,MATRIX,84%,30,51
+opt4_60_call_strike_delta75,The strike price of a theoretical call option with 60 days to expiration and delta of 0.75,MATRIX,84%,30,82
+opt4_60_call_strike_delta80,The strike price of a theoretical call option with 60 days to expiration and delta of 0.80,MATRIX,84%,20,32
+opt4_60_call_vola_delta20,"The implied volatility of a theoretical call option with expiration of 60 days, at delta of 0.2",MATRIX,84%,22,59
+opt4_60_call_vola_delta25,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.25,MATRIX,84%,33,46
+opt4_60_call_vola_delta30,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.30,MATRIX,84%,60,1312
+opt4_60_call_vola_delta35,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.35,MATRIX,84%,47,99
+opt4_60_call_vola_delta40,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.40,MATRIX,84%,40,65
+opt4_60_call_vola_delta45,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.45,MATRIX,84%,167,2709
+opt4_60_call_vola_delta50,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.50,MATRIX,84%,41,74
+opt4_60_call_vola_delta55,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.55,MATRIX,84%,29,55
+opt4_60_call_vola_delta60,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.60,MATRIX,84%,37,73
+opt4_60_call_vola_delta65,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.65,MATRIX,84%,40,67
+opt4_60_call_vola_delta70,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.70,MATRIX,84%,27,73
+opt4_60_call_vola_delta75,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.75,MATRIX,84%,38,63
+opt4_60_call_vola_delta80,The implied volatility of a theoretical call option with 60 days to expiration and delta of 0.80,MATRIX,84%,21,39
+opt4_60_put_dis_delta20,The dispersion (fit quality) of a theoretical put option with 60 days to expiration and delta of -0.20; higher values indicate less reliable smoothed implied volatility,MATRIX,84%,14,70
+opt4_60_put_dis_delta25,The dispersion (fit quality) of a theoretical put option with 60 days to expiration and delta of -0.25; higher values indicate less reliable smoothed implied volatility,MATRIX,84%,9,20
+opt4_60_put_dis_delta30,The dispersion (fit quality) of a theoretical put option with 60 days to expiration and delta of -0.30; higher values indicate less reliable smoothed implied volatility,MATRIX,84%,10,30
+opt4_60_put_dis_delta35,The dispersion (fit quality) of a theoretical put option with 60 days to expiration and delta of -0.35; higher values indicate less reliable smoothed implied volatility,MATRIX,84%,9,14
+opt4_60_put_dis_delta40,The dispersion (fit quality) of a theoretical put option with 60 days to expiration and delta of -0.40; higher values indicate less reliable smoothed implied volatility,MATRIX,84%,10,18
+opt4_60_put_dis_delta45,The dispersion (fit quality) of a theoretical put option with 60 days to expiration and delta of -0.45; higher values indicate less reliable smoothed implied volatility,MATRIX,84%,20,44
+opt4_60_put_dis_delta50,The dispersion (fit quality) of a theoretical put option with 60 days to expiration and delta of -0.50; higher values indicate less reliable smoothed implied volatility,MATRIX,84%,32,56
+opt4_60_put_dis_delta55,The dispersion (fit quality) of a theoretical put option with 60 days to expiration and delta of -0.55; higher values indicate less reliable smoothed implied volatility,MATRIX,84%,16,26
+opt4_60_put_dis_delta60,"The dispersion of a theoretical put option at 60 days expiration and delta -0.6, measuring the accuracy of the implied volatility calculation with larger values indicating less accuracy",MATRIX,84%,18,48
+opt4_60_put_dis_delta65,"The dispersion of a theoretical put option at 60 days expiration and delta -0.65, measuring the accuracy of the implied volatility calculation with larger values indicating less accuracy",MATRIX,84%,25,40
+opt4_60_put_dis_delta70,"The dispersion of a theoretical put option at 60 days expiration and delta -0.7, measuring the accuracy of the implied volatility calculation with larger values indicating less accuracy",MATRIX,84%,23,32
+opt4_60_put_dis_delta75,"The dispersion of a theoretical put option at 60 days expiration and delta -0.75, measuring the accuracy of the implied volatility calculation with larger values indicating less accuracy",MATRIX,84%,12,22
+opt4_60_put_dis_delta80,"The dispersion of a theoretical put option at 60 days expiration and delta -0.8, measuring the accuracy of the implied volatility calculation with larger values indicating less accuracy",MATRIX,84%,41,124
+opt4_60_put_pre_delta20,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.2",MATRIX,84%,33,90
+opt4_60_put_pre_delta25,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.25",MATRIX,84%,5,5
+opt4_60_put_pre_delta30,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.3",MATRIX,84%,9,23
+opt4_60_put_pre_delta35,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.35",MATRIX,84%,28,54
+opt4_60_put_pre_delta40,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.4",MATRIX,84%,11,47
+opt4_60_put_pre_delta45,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.45",MATRIX,84%,37,151
+opt4_60_put_pre_delta50,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.5",MATRIX,84%,36,70
+opt4_60_put_pre_delta55,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.55",MATRIX,84%,40,85
+opt4_60_put_pre_delta60,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.6",MATRIX,84%,8,26
+opt4_60_put_pre_delta65,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.65",MATRIX,84%,31,51
+opt4_60_put_pre_delta70,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.7",MATRIX,84%,27,48
+opt4_60_put_pre_delta75,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.75",MATRIX,84%,43,115
+opt4_60_put_pre_delta80,"The premium of a theoretical put option with expiration of 60 days, at delta of -0.8",MATRIX,84%,41,94
+opt4_60_put_strike_delta20,"The strike price of a theoretical put option with expiration of 60 days, at delta of -0.2",MATRIX,84%,23,47
+opt4_60_put_strike_delta25,"The strike price of a theoretical put option with expiration of 60 days, at delta of -0.25",MATRIX,84%,22,28
+opt4_60_put_strike_delta30,The strike price of a theoretical put option expiring in 60 days with a delta of -0.3,MATRIX,84%,33,65
+opt4_60_put_strike_delta35,The strike price of a theoretical put option expiring in 60 days with a delta of -0.35,MATRIX,84%,44,70
+opt4_60_put_strike_delta40,The strike price of a theoretical put option expiring in 60 days with a delta of -0.4,MATRIX,84%,28,72
+opt4_60_put_strike_delta45,The strike price of a theoretical put option expiring in 60 days with a delta of -0.45,MATRIX,84%,47,87
+opt4_60_put_strike_delta50,The strike price of a theoretical put option expiring in 60 days with a delta of -0.5,MATRIX,84%,32,47
+opt4_60_put_strike_delta55,The strike price of a theoretical put option expiring in 60 days with a delta of -0.55,MATRIX,84%,35,50
+opt4_60_put_strike_delta60,The strike price of a theoretical put option expiring in 60 days with a delta of -0.6,MATRIX,84%,40,57
+opt4_60_put_strike_delta65,The strike price of a theoretical put option expiring in 60 days with a delta of -0.65,MATRIX,84%,51,78
+opt4_60_put_strike_delta70,The strike price of a theoretical put option expiring in 60 days with a delta of -0.7,MATRIX,84%,19,33
+opt4_60_put_strike_delta75,The strike price of a theoretical put option expiring in 60 days with a delta of -0.75,MATRIX,84%,32,206
+opt4_60_put_strike_delta80,The strike price of a theoretical put option with expiration of 60 days and delta of -0.8,MATRIX,84%,28,64
+opt4_60_put_vola_delta20,The implied volatility of a theoretical put option with expiration of 60 days and delta of -0.2,MATRIX,84%,24,60
+opt4_60_put_vola_delta25,The implied volatility of a theoretical put option with expiration of 60 days and delta of -0.25,MATRIX,84%,25,44
+opt4_60_put_vola_delta30,The implied volatility of a theoretical put option with expiration of 60 days and delta of -0.3,MATRIX,84%,41,85
+opt4_60_put_vola_delta35,The implied volatility of a theoretical put option with expiration of 60 days and delta of -0.35,MATRIX,84%,29,50
+opt4_60_put_vola_delta40,The implied volatility of a theoretical put option with expiration of 60 days and delta of -0.4,MATRIX,84%,34,65
+opt4_60_put_vola_delta45,The implied volatility of a theoretical put option with expiration of 60 days and delta of -0.45,MATRIX,84%,65,114
+opt4_60_put_vola_delta50,The implied volatility of a theoretical put option with expiration of 60 days and delta of -0.5,MATRIX,84%,31,61
+opt4_60_put_vola_delta55,The implied volatility of a theoretical put option with expiration of 60 days and delta of -0.55,MATRIX,84%,19,31
+opt4_60_put_vola_delta60,The implied volatility of a theoretical put option with expiration of 60 days and delta of -0.6,MATRIX,84%,23,48
+opt4_60_put_vola_delta65,The implied volatility of a put option expiring in 60 days at a delta of -0.65,MATRIX,84%,19,28
+opt4_60_put_vola_delta70,The implied volatility of a put option expiring in 60 days at a delta of -0.7,MATRIX,84%,35,83
+opt4_60_put_vola_delta75,The implied volatility of a put option expiring in 60 days at a delta of -0.75,MATRIX,84%,16,22
+opt4_60_put_vola_delta80,The implied volatility of a put option expiring in 60 days at a delta of -0.8,MATRIX,84%,38,76
+opt4_730_call_dis_delta20,Dispersion indicating the accuracy of the theoretical call option implied volatility calculation with 730 days to expiration at delta 0.2; higher values mean less accurate volatility,MATRIX,84%,12,32
+opt4_730_call_dis_delta25,"The dispersion of a theoretical call option with expiration of 730 days, at delta of 0.25. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,5,8
+opt4_730_call_dis_delta30,Dispersion indicating the accuracy of the theoretical call option implied volatility calculation with 730 days to expiration at delta 0.3; higher values mean less accurate volatility,MATRIX,84%,13,30
+opt4_730_call_dis_delta35,"The dispersion of a theoretical call option with expiration of 730 days, at delta of 0.35, indicating the accuracy of implied volatility calculation",MATRIX,84%,7,16
+opt4_730_call_dis_delta40,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 730 days to expiration at delta 0.4; higher values indicate less reliable implied volatility estimates,MATRIX,84%,24,47
+opt4_730_call_dis_delta45,Dispersion indicating the accuracy of the theoretical call option implied volatility calculation with 730 days to expiration at delta 0.45; higher values mean less accurate volatility,MATRIX,84%,25,47
+opt4_730_call_dis_delta50,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical call option with 730 days to expiration at delta 0.5; higher values indicate less reliable implied volatility estimates,MATRIX,84%,17,54
+opt4_730_call_dis_delta55,"The dispersion of a theoretical call option with 730 days to expiration at delta 0.55, measuring the accuracy of implied volatility; larger values imply less accuracy",MATRIX,84%,9,14
+opt4_730_call_dis_delta60,"The dispersion of a theoretical call option with 730 days to expiration at delta 0.6, indicating the accuracy of the implied volatility calculation; higher values mean less accuracy",MATRIX,84%,23,52
+opt4_730_call_dis_delta65,"The dispersion of a theoretical call option with expiration of 730 days, at delta of 0.65. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,23,48
+opt4_730_call_dis_delta70,"The dispersion of a theoretical call option with expiration of 730 days, at delta of 0.7, representing the accuracy of the implied volatility calculation, with larger values indicating less accuracy",MATRIX,84%,17,40
+opt4_730_call_dis_delta75,The dispersion indicating accuracy of implied volatility calculation for a call option expiring in 730 days at delta 0.75; higher values mean less reliable volatility,MATRIX,84%,16,48
+opt4_730_call_dis_delta80,The dispersion indicating accuracy of implied volatility calculation for a call option expiring in 730 days at delta 0.8; higher values mean less reliable volatility,MATRIX,84%,24,33
+opt4_730_call_pre_delta20,The premium (option price) of a theoretical call option with 730 days to expiration at delta 0.2,MATRIX,84%,20,59
+opt4_730_call_pre_delta25,The premium (price) of a theoretical call option with 730 days to expiration at a delta of 0.25,MATRIX,84%,18,31
+opt4_730_call_pre_delta30,"The premium of a theoretical call option with expiration of 730 days, at delta of 0.3",MATRIX,84%,16,25
+opt4_730_call_pre_delta35,The premium of a theoretical call option with 730 days to expiration at delta 0.35,MATRIX,84%,28,42
+opt4_730_call_pre_delta40,The premium of a theoretical call option with 730 days to expiration at delta 0.4,MATRIX,84%,19,56
+opt4_730_call_pre_delta45,The premium of a theoretical call option with 730 days to expiration at delta 0.45,MATRIX,84%,10,10
+opt4_730_call_pre_delta50,"The premium of a theoretical call option with expiration of 730 days, at delta of 0.5",MATRIX,84%,51,175
+opt4_730_call_pre_delta55,The premium (price) of a theoretical call option with 730 days to expiration at a delta of 0.55,MATRIX,84%,15,21
+opt4_730_call_pre_delta60,The premium of a theoretical call option with 730 days to expiration at delta 0.6,MATRIX,84%,10,14
+opt4_730_call_pre_delta65,"The premium of a theoretical call option with expiration of 730 days, at delta of 0.65",MATRIX,84%,17,36
+opt4_730_call_pre_delta70,"The premium of a theoretical call option with expiration of 730 days, at delta of 0.7",MATRIX,84%,9,16
+opt4_730_call_pre_delta75,The premium of a theoretical call option with 730 days to expiration at delta 0.75,MATRIX,84%,20,64
+opt4_730_call_pre_delta80,The premium (option price) of a theoretical call option with 730 days to expiration at delta 0.8,MATRIX,84%,13,24
+opt4_730_call_strike_delta20,The strike price of a theoretical call option with 730 days to expiration at delta 0.2,MATRIX,84%,23,49
+opt4_730_call_strike_delta25,"The strike price of a theoretical call option with 730 days to expiration, at delta of 0.25",MATRIX,84%,23,45
+opt4_730_call_strike_delta30,"The strike price of a theoretical call option with expiration of 730 days, at delta of 0.3",MATRIX,84%,10,31
+opt4_730_call_strike_delta35,The strike price of a theoretical call option with 730 days to expiration at delta 0.35,MATRIX,84%,47,131
+opt4_730_call_strike_delta40,"The strike price of a theoretical call option with expiration of 730 days, at delta of 0.4",MATRIX,84%,34,52
+opt4_730_call_strike_delta45,The strike price of a theoretical call option expiring in 730 days at delta 0.45,MATRIX,84%,25,38
+opt4_730_call_strike_delta50,"The strike price of a theoretical call option with 730 days to expiration, at delta of 0.5",MATRIX,84%,26,43
+opt4_730_call_strike_delta55,"The strike price of a theoretical call option with expiration of 730 days, at delta of 0.55",MATRIX,84%,47,105
+opt4_730_call_strike_delta60,The strike price of a theoretical call option expiring in 730 days at delta 0.6,MATRIX,84%,15,60
+opt4_730_call_strike_delta65,The strike price of a theoretical call option with 730 days to expiration at delta 0.65,MATRIX,84%,12,19
+opt4_730_call_strike_delta70,"The strike price of a theoretical call option with expiration of 730 days, at delta of 0.7",MATRIX,84%,39,50
+opt4_730_call_strike_delta75,"The strike price of a theoretical call option with 730 days to expiration, at delta of 0.75",MATRIX,84%,23,38
+opt4_730_call_strike_delta80,The strike price of a theoretical call option with 730 days to expiration at delta 0.8,MATRIX,84%,7,12
+opt4_730_call_vola_delta20,The implied volatility for a theoretical call option with 730 days to expiration at delta 0.2,MATRIX,84%,80,137
+opt4_730_call_vola_delta25,The implied volatility of a theoretical call option with 730 days to expiration at a delta of 0.25,MATRIX,84%,61,120
+opt4_730_call_vola_delta30,"The implied volatility of a theoretical call option with expiration of 730 days, at delta of 0.3",MATRIX,84%,88,182
+opt4_730_call_vola_delta35,The implied volatility of a theoretical call option expiring in 730 days at delta 0.35,MATRIX,84%,70,131
+opt4_730_call_vola_delta40,The implied volatility of a theoretical call option with 730 days to expiration at delta 0.4,MATRIX,84%,96,186
+opt4_730_call_vola_delta45,The implied volatility of a theoretical call option with 730 days to expiration at a delta of 0.45,MATRIX,84%,171,356
+opt4_730_call_vola_delta50,The implied volatility of a theoretical call option with 730 days to expiration at delta 0.5,MATRIX,84%,91,203
+opt4_730_call_vola_delta55,"The implied volatility of a theoretical call option with expiration of 730 days, at delta of 0.55",MATRIX,84%,66,134
+opt4_730_call_vola_delta60,The implied volatility of a theoretical call option expiring in 730 days at delta 0.6,MATRIX,84%,81,206
+opt4_730_call_vola_delta65,"The implied volatility of a theoretical call option with expiration of 730 days, at delta of 0.65",MATRIX,84%,76,197
+opt4_730_call_vola_delta70,"The implied volatility of a theoretical call option with expiration of 730 days, at delta of 0.7",MATRIX,84%,84,181
+opt4_730_call_vola_delta75,"The implied volatility of a theoretical call option with expiration of 730 days, at delta of 0.75",MATRIX,84%,85,259
+opt4_730_call_vola_delta80,The implied volatility of a theoretical call option with 730 days to expiration at delta 0.8,MATRIX,84%,80,323
+opt4_730_put_dis_delta20,"The dispersion of a theoretical put option with expiration of 730 days, at delta of -0.2. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,37,75
+opt4_730_put_dis_delta25,"The dispersion of a theoretical put option with expiration of 730 days, at delta of -0.25. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,11,16
+opt4_730_put_dis_delta30,"The dispersion of a theoretical put option with expiration of 730 days, at delta of -0.3, representing the accuracy of the implied volatility calculation, with larger values indicating less accuracy",MATRIX,84%,8,58
+opt4_730_put_dis_delta35,The dispersion (model fit error or uncertainty) of the implied volatility for a theoretical put option with 730 days to expiration at a delta of -0.35; higher values indicate less reliable implied volatility estimates,MATRIX,84%,12,50
+opt4_730_put_dis_delta40,"The dispersion of a theoretical put option with expiration of 730 days, at delta of -0.4, indicating the accuracy of implied volatility calculation",MATRIX,84%,14,26
+opt4_730_put_dis_delta45,"The dispersion of a theoretical put option with expiration of 730 days, at delta of -0.45. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,29,50
+opt4_730_put_dis_delta50,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical put option with 730 days to expiration at delta -0.5; higher values indicate less reliable implied volatility estimates,MATRIX,84%,18,31
+opt4_730_put_dis_delta55,The dispersion value measuring the accuracy of the implied volatility calculation for a theoretical put option with 730 days to expiration at delta -0.55; higher values indicate less reliable implied volatility estimates,MATRIX,84%,26,46
+opt4_730_put_dis_delta60,"The dispersion of a theoretical put option with expiration of 730 days, at delta of -0.6. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,22,48
+opt4_730_put_dis_delta65,"The dispersion of a theoretical put option with expiration of 730 days, at delta of -0.65, indicating the accuracy of implied volatility calculation",MATRIX,84%,11,51
+opt4_730_put_dis_delta70,"The dispersion value for a theoretical put option with 730 days to expiration at delta -0.7; a measure of the accuracy of the implied volatility calculation (roughly a weighted standard deviation), where larger values indicate less accurate smoothed implied volatility",MATRIX,84%,8,20
+opt4_730_put_dis_delta75,"The dispersion of a theoretical put option with expiration of 730 days, at delta of -0.75, representing the accuracy of the implied volatility calculation, with larger values indicating less accuracy",MATRIX,84%,10,15
+opt4_730_put_dis_delta80,"The dispersion of a theoretical put option with expiration of 730 days, at delta of -0.8. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,9,10
+opt4_730_put_pre_delta20,The premium (price) of a theoretical put option with 730 days to expiration at a delta of -0.2,MATRIX,84%,16,56
+opt4_730_put_pre_delta25,The premium of a theoretical put option with 730 days to expiration at delta -0.25,MATRIX,84%,19,63
+opt4_730_put_pre_delta30,The premium of a theoretical put option with 730 days to expiration at delta -0.3,MATRIX,84%,18,61
+opt4_730_put_pre_delta35,The premium (option price) of a theoretical put option with 730 days to expiration at delta -0.35,MATRIX,84%,8,17
+opt4_730_put_pre_delta40,The premium of a theoretical put option with 730 days to expiration at delta -0.4,MATRIX,84%,9,11
+opt4_730_put_pre_delta45,"The premium of a theoretical put option with expiration of 730 days, at delta of -0.45",MATRIX,84%,34,50
+opt4_730_put_pre_delta50,"The premium of a theoretical put option with expiration of 730 days, at delta of -0.5",MATRIX,84%,11,14
+opt4_730_put_pre_delta55,The premium (price) of a theoretical put option with 730 days to expiration at a delta of -0.55,MATRIX,84%,43,103
+opt4_730_put_pre_delta60,"The premium of a theoretical put option with expiration of 730 days, at delta of -0.6",MATRIX,84%,8,14
+opt4_730_put_pre_delta65,Premium (price) of the theoretical put option with 730 days to expiration at delta -0.65,MATRIX,84%,32,63
+opt4_730_put_pre_delta70,The premium of a theoretical put option with 730 days to expiration at delta -0.7,MATRIX,84%,8,12
+opt4_730_put_pre_delta75,The premium of a theoretical put option with 730 days to expiration at delta -0.75,MATRIX,84%,7,29
+opt4_730_put_pre_delta80,The premium (price) of a theoretical put option with 730 days to expiration at a delta of -0.8,MATRIX,84%,15,32
+opt4_730_put_strike_delta20,"The strike price of a theoretical put option with 730 days to expiration, at delta of -0.2",MATRIX,84%,29,76
+opt4_730_put_strike_delta25,"The strike price of a theoretical put option with 730 days to expiration, at delta of -0.25",MATRIX,84%,27,33
+opt4_730_put_strike_delta30,The strike price of a theoretical put option with 730 days to expiration at delta -0.3,MATRIX,84%,39,82
+opt4_730_put_strike_delta35,The strike price of a theoretical put option with 730 days to expiration at delta -0.35,MATRIX,84%,38,60
+opt4_730_put_strike_delta40,The strike price of a theoretical put option with 730 days to expiration at delta -0.4,MATRIX,84%,31,48
+opt4_730_put_strike_delta45,"The strike price of a theoretical put option with expiration of 730 days, at delta of -0.45",MATRIX,84%,44,105
+opt4_730_put_strike_delta50,The strike price of a theoretical put option with 730 days to expiration at delta -0.5,MATRIX,84%,59,243
+opt4_730_put_strike_delta55,"The strike price of a theoretical put option with expiration of 730 days, at delta of -0.55",MATRIX,84%,30,50
+opt4_730_put_strike_delta60,The strike price of a theoretical put option with 730 days to expiration at delta -0.6,MATRIX,84%,35,64
+opt4_730_put_strike_delta65,The strike price of a theoretical put option with 730 days to expiration at a delta of -0.65,MATRIX,84%,22,55
+opt4_730_put_strike_delta70,The strike price of a theoretical put option expiring in 730 days at delta -0.7,MATRIX,84%,26,44
+opt4_730_put_strike_delta75,The strike price of a theoretical put option expiring in 730 days at delta -0.75,MATRIX,84%,20,58
+opt4_730_put_strike_delta80,The strike price of a theoretical put option expiring in 730 days at delta -0.8,MATRIX,84%,33,62
+opt4_730_put_vola_delta20,The implied volatility of a theoretical put option with 730 days to expiration at delta -0.2,MATRIX,84%,53,103
+opt4_730_put_vola_delta25,"The implied volatility of a theoretical put option with 730 days to expiration, at delta of -0.25",MATRIX,84%,52,89
+opt4_730_put_vola_delta30,The implied volatility of a theoretical put option with 730 days to expiration at delta -0.3,MATRIX,84%,32,50
+opt4_730_put_vola_delta35,The implied volatility of a theoretical put option with 730 days to expiration at delta -0.35,MATRIX,84%,30,75
+opt4_730_put_vola_delta40,The implied volatility of a theoretical put option expiring in 730 days at delta -0.4,MATRIX,84%,73,181
+opt4_730_put_vola_delta45,"The implied volatility of a theoretical put option with expiration of 730 days, at delta of -0.45",MATRIX,84%,157,386
+opt4_730_put_vola_delta50,The implied volatility of a theoretical put option with 730 days to expiration at delta -0.5,MATRIX,84%,57,121
+opt4_730_put_vola_delta55,The implied volatility of a theoretical put option with 730 days to expiration at a delta of -0.55,MATRIX,84%,45,75
+opt4_730_put_vola_delta60,"The implied volatility of a theoretical put option with expiration of 730 days, at delta of -0.6",MATRIX,84%,57,167
+opt4_730_put_vola_delta65,The implied volatility of a theoretical put option with 730 days to expiration at delta -0.65,MATRIX,84%,47,68
+opt4_730_put_vola_delta70,"The implied volatility of a theoretical put option with expiration of 730 days, at delta of -0.7",MATRIX,84%,20,31
+opt4_730_put_vola_delta75,"The implied volatility of a theoretical put option with expiration of 730 days, at delta of -0.75",MATRIX,84%,39,66
+opt4_730_put_vola_delta80,The implied volatility of a theoretical put option with 730 days to expiration at delta -0.8,MATRIX,84%,36,101
+opt4_91_call_dis_delta20,"The dispersion of a theoretical call option with expiration of 91 days, at delta of 0.2, measuring the accuracy of the implied volatility estimate where higher values indicate less accuracy",MATRIX,84%,9,20
+opt4_91_call_dis_delta25,The dispersion measure of the implied volatility calculation accuracy for a theoretical call option expiring in 91 days with delta 0.25; higher values indicate less reliable implied volatility,MATRIX,84%,10,11
+opt4_91_call_dis_delta30,Dispersion value indicating the accuracy of the implied volatility estimation for a call option at 91 days to expiration with delta 0.3. Higher values signal less accurate volatility smoothing,MATRIX,84%,5,9
+opt4_91_call_dis_delta35,"The dispersion indicating the accuracy of the implied volatility calculation for a theoretical call option with expiration of 91 days, at delta of 0.35; higher values mean less accurate",MATRIX,84%,7,10
+opt4_91_call_dis_delta40,Dispersion value indicating the accuracy of the implied volatility estimation for a call option at 91 days to expiration with delta 0.4. Higher values signal less accurate volatility smoothing,MATRIX,84%,15,26
+opt4_91_call_dis_delta45,The dispersion measure indicating the accuracy of the implied volatility calculation for a theoretical call option with 91 days to expiration at a delta of 0.45; higher values mean less accurate smoothed implied volatility,MATRIX,84%,13,20
+opt4_91_call_dis_delta50,"The dispersion of a theoretical call option with expiration of 91 days, at delta of 0.5, measuring the accuracy of the implied volatility estimate where higher values indicate less accuracy",MATRIX,84%,18,45
+opt4_91_call_dis_delta55,"The dispersion measuring the accuracy of the implied volatility calculation for a theoretical call option with expiration of 91 days, at delta of 0.55; higher values indicate less accurate smoothed implied volatility",MATRIX,84%,6,29
+opt4_91_call_dis_delta60,"The dispersion of a theoretical call option with expiration of 91 days, at delta of 0.6. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,11,32
+opt4_91_call_dis_delta65,"The dispersion of a theoretical call option with expiration of 91 days, at delta of 0.65. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,5,14
+opt4_91_call_dis_delta70,"The dispersion of a theoretical call option with expiration of 91 days, at delta of 0.7. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,12,70
+opt4_91_call_dis_delta75,"The measure of accuracy of the implied volatility calculation for a theoretical call option with 91 days to expiration and delta of 0.75, indicating reliability of the smoothed implied volatility",MATRIX,84%,11,36
+opt4_91_call_dis_delta80,"The dispersion of a theoretical call option with expiration of 91 days at delta 0.8, measuring the accuracy of implied volatility calculation with higher values indicating less accuracy",MATRIX,84%,12,87
+opt4_91_call_pre_delta20,"The premium of a theoretical call option with expiration of 91 days, at delta of 0.2",MATRIX,84%,31,64
+opt4_91_call_pre_delta25,"The premium of a theoretical call option with expiration of 91 days, at delta of 0.25",MATRIX,84%,9,44
+opt4_91_call_pre_delta30,The premium of a theoretical call option with expiration of 91 days at delta 0.3,MATRIX,84%,15,38
+opt4_91_call_pre_delta35,"The premium of a theoretical call option with expiration of 91 days, at delta of 0.35",MATRIX,84%,10,20
+opt4_91_call_pre_delta40,"The premium of a theoretical call option with expiration of 91 days, at delta of 0.4",MATRIX,84%,26,59
+opt4_91_call_pre_delta45,The premium of a theoretical call option with expiration of 91 days at delta 0.45,MATRIX,84%,7,11
+opt4_91_call_pre_delta50,"The premium of a theoretical call option with expiration of 91 days, at delta of 0.5",MATRIX,84%,4,7
+opt4_91_call_pre_delta55,"The premium of a theoretical call option with expiration of 91 days, at delta of 0.55",MATRIX,84%,11,23
+opt4_91_call_pre_delta60,"The premium of a theoretical call option with expiration of 91 days, at delta of 0.6",MATRIX,84%,17,51
+opt4_91_call_pre_delta65,The premium of a theoretical call option with 91 days to expiration at a delta of 0.65,MATRIX,84%,44,154
+opt4_91_call_pre_delta70,Theoretical premium (price) of a call option with expiration in 91 days at delta 0.7,MATRIX,84%,23,62
+opt4_91_call_pre_delta75,The premium of a theoretical call option with expiration of 91 days and delta of 0.75,MATRIX,84%,14,48
+opt4_91_call_pre_delta80,The premium of a theoretical call option with expiration of 91 days and delta of 0.8,MATRIX,84%,46,224
+opt4_91_call_strike_delta20,The strike price of a theoretical call option with expiration of 91 days and delta of 0.2,MATRIX,84%,18,24
+opt4_91_call_strike_delta25,"The strike price of a theoretical call option with expiration of 91 days, at delta of 0.25",MATRIX,84%,21,53
+opt4_91_call_strike_delta30,Strike price corresponding to a theoretical call option expiring in 91 days with delta 0.3,MATRIX,84%,29,47
+opt4_91_call_strike_delta35,"The strike price of a theoretical call option with expiration of 91 days, at delta of 0.35",MATRIX,84%,50,73
+opt4_91_call_strike_delta40,The strike price of a theoretical call option with 91 days to expiration and delta of 0.4,MATRIX,84%,36,55
+opt4_91_call_strike_delta45,The strike price of a theoretical call option with 91 days to expiration at a delta of 0.45,MATRIX,84%,30,54
+opt4_91_call_strike_delta50,The strike price of a theoretical call option with 91 days to expiration and delta of 0.5,MATRIX,84%,59,118
+opt4_91_call_strike_delta55,"The strike price of a theoretical call option with expiration of 91 days, at delta of 0.55",MATRIX,84%,28,41
+opt4_91_call_strike_delta60,The strike price of a theoretical call option with 91 days to expiration at a delta of 0.6,MATRIX,84%,18,37
+opt4_91_call_strike_delta65,"The strike price of a theoretical call option with expiration of 91 days, at delta of 0.65",MATRIX,84%,41,108
+opt4_91_call_strike_delta70,The strike price of a theoretical call option with 91 days to expiration at a delta of 0.7,MATRIX,84%,25,43
+opt4_91_call_strike_delta75,The strike price of a theoretical call option with 91 days to expiration at a delta of 0.75,MATRIX,84%,39,70
+opt4_91_call_strike_delta80,"The strike price of a theoretical call option with expiration of 91 days, at delta of 0.8",MATRIX,84%,31,56
+opt4_91_call_vola_delta20,The implied volatility of a theoretical call option with expiration of 91 days at delta 0.2,MATRIX,84%,30,53
+opt4_91_call_vola_delta25,"The implied volatility of a theoretical call option with expiration of 91 days, at delta of 0.25",MATRIX,84%,52,77
+opt4_91_call_vola_delta30,Implied volatility of a theoretical call option expiring in 91 days with delta 0.3,MATRIX,84%,26,69
+opt4_91_call_vola_delta35,The implied volatility of a theoretical call option with 91 days to expiration and delta of 0.35,MATRIX,84%,89,195
+opt4_91_call_vola_delta40,"The implied volatility of a theoretical call option with expiration of 91 days, at delta of 0.4",MATRIX,84%,20,36
+opt4_91_call_vola_delta45,"The implied volatility of a theoretical call option with expiration of 91 days, at delta of 0.45",MATRIX,84%,68,159
+opt4_91_call_vola_delta50,Implied volatility of a theoretical call option expiring in 91 days with delta 0.5,MATRIX,84%,45,78
+opt4_91_call_vola_delta55,The implied volatility of a theoretical call option expiring in 91 days at delta 0.55,MATRIX,84%,49,104
+opt4_91_call_vola_delta60,The implied volatility of a theoretical call option with 91 days to expiration at a delta of 0.6,MATRIX,84%,32,60
+opt4_91_call_vola_delta65,Implied volatility of a theoretical call option expiring in 91 days with delta 0.65,MATRIX,84%,38,73
+opt4_91_call_vola_delta70,The implied volatility of a theoretical call option with 91 days to expiration and delta of 0.7,MATRIX,84%,17,26
+opt4_91_call_vola_delta75,The implied volatility of a theoretical call option expiring in 91 days at delta 0.75,MATRIX,84%,31,47
+opt4_91_call_vola_delta80,"The implied volatility of a theoretical call option with expiration of 91 days, at delta of 0.8",MATRIX,84%,53,81
+opt4_91_put_dis_delta20,"The dispersion indicating the accuracy of the implied volatility calculation for a theoretical put option with expiration of 91 days, at delta of -0.2; higher values mean less accurate",MATRIX,84%,6,7
+opt4_91_put_dis_delta25,"The measure of accuracy of the implied volatility calculation for a theoretical put option with 91 days to expiration and delta of -0.25, indicating reliability of the smoothed implied volatility",MATRIX,84%,23,32
+opt4_91_put_dis_delta30,Dispersion value indicating the accuracy of the implied volatility estimation for a put option at 91 days to expiration with delta -0.3. Higher values signal less accurate volatility smoothing,MATRIX,84%,14,36
+opt4_91_put_dis_delta35,The dispersion measure of the implied volatility calculation accuracy for a theoretical put option expiring in 91 days with delta -0.35; higher values indicate less reliable implied volatility,MATRIX,84%,14,60
+opt4_91_put_dis_delta40,"The dispersion of a theoretical put option with expiration of 91 days, at delta of -0.4, measuring the accuracy of the implied volatility estimate where higher values indicate less accuracy",MATRIX,84%,15,34
+opt4_91_put_dis_delta45,"The measure of accuracy of the implied volatility calculation for a theoretical put option with 91 days to expiration and delta of -0.45, indicating reliability of the smoothed implied volatility",MATRIX,84%,35,72
+opt4_91_put_dis_delta50,"The dispersion of a theoretical put option with expiration of 91 days, at delta of -0.5. Dispersion is a measure of the accuracy of the implied volatility calculation, roughly corresponding to a weighted standard deviation. A larger dispersion indicates a less accurate smoothed implied volatility",MATRIX,84%,8,18
+opt4_91_put_dis_delta55,"The measure of accuracy of the implied volatility calculation for a theoretical put option with 91 days to expiration and delta of -0.55, indicating reliability of the smoothed implied volatility",MATRIX,84%,18,30
+opt4_91_put_dis_delta60,"The measure of accuracy of the implied volatility calculation for a theoretical put option with 91 days to expiration and delta of -0.6, indicating reliability of the smoothed implied volatility",MATRIX,84%,45,131
+opt4_91_put_dis_delta65,The dispersion measure of the implied volatility calculation accuracy for a theoretical put option expiring in 91 days with delta -0.65; higher values indicate less reliable implied volatility,MATRIX,84%,14,18
+opt4_91_put_dis_delta70,"The dispersion measuring the accuracy of the implied volatility calculation for a theoretical put option with expiration of 91 days, at delta of -0.7; higher values indicate less accurate smoothed implied volatility",MATRIX,84%,18,45
+opt4_91_put_dis_delta75,"The dispersion of a theoretical put option with expiration of 91 days, at delta of -0.75; larger values indicate a less accurate smoothed implied volatility",MATRIX,84%,16,24
+opt4_91_put_dis_delta80,"The dispersion of a theoretical put option with expiration of 91 days at delta -0.8, measuring the accuracy of implied volatility calculation with higher values indicating less accuracy",MATRIX,84%,24,93
+opt4_91_put_pre_delta20,The premium (theoretical price) of a put option with 91 days to expiration and delta -0.2,MATRIX,84%,26,39
+opt4_91_put_pre_delta25,The premium (theoretical price) of a put option with 91 days to expiration and delta -0.25,MATRIX,84%,8,31
+opt4_91_put_pre_delta30,The premium of a theoretical put option with expiration of 91 days at delta -0.3,MATRIX,84%,14,68
+opt4_91_put_pre_delta35,"The premium of a theoretical put option with expiration of 91 days, at delta of -0.35",MATRIX,84%,32,70
+opt4_91_put_pre_delta40,"The premium of a theoretical put option with expiration of 91 days, at delta of -0.4",MATRIX,84%,36,58
+opt4_91_put_pre_delta45,The premium of a theoretical put option with 91 days to expiration at a delta of -0.45,MATRIX,84%,30,67
+opt4_91_put_pre_delta50,"The premium of a theoretical put option with expiration of 91 days, at delta of -0.5",MATRIX,84%,8,12
+opt4_91_put_pre_delta55,"The premium of a theoretical put option with expiration of 91 days, at delta of -0.55",MATRIX,84%,25,50
+opt4_91_put_pre_delta60,The premium (theoretical price) of a put option with 91 days to expiration and delta -0.6,MATRIX,84%,36,69
+opt4_91_put_pre_delta65,The premium of a theoretical put option with expiration of 91 days at delta -0.65,MATRIX,84%,25,47
+opt4_91_put_pre_delta70,The premium of a theoretical put option with expiration of 91 days and delta of -0.7,MATRIX,84%,25,70
+opt4_91_put_pre_delta75,"The premium of a theoretical put option with expiration of 91 days, at delta of -0.75",MATRIX,84%,28,64
+opt4_91_put_pre_delta80,The premium (theoretical price) of a put option with 91 days to expiration and delta -0.8,MATRIX,84%,13,108
+opt4_91_put_strike_delta20,"The strike price of a theoretical put option with expiration of 91 days, at delta of -0.2",MATRIX,84%,34,61
+opt4_91_put_strike_delta25,"The strike price of a theoretical put option with expiration of 91 days, at delta of -0.25",MATRIX,84%,35,78
+opt4_91_put_strike_delta30,"The strike price of a theoretical put option with expiration of 91 days, at delta of -0.3",MATRIX,84%,34,45
+opt4_91_put_strike_delta35,"The strike price of a theoretical put option with expiration of 91 days, at delta of -0.35",MATRIX,84%,31,41
+opt4_91_put_strike_delta40,The strike price of a theoretical put option with 91 days to expiration at a delta of -0.4,MATRIX,84%,53,140
+opt4_91_put_strike_delta45,The strike price of a theoretical put option with expiration of 91 days and delta of -0.45,MATRIX,84%,22,43
+opt4_91_put_strike_delta50,"The strike price of a theoretical put option with expiration of 91 days, at delta of -0.5",MATRIX,84%,53,125
+opt4_91_put_strike_delta55,"The strike price of a theoretical put option with expiration of 91 days, at delta of -0.55",MATRIX,84%,26,192
+opt4_91_put_strike_delta60,The strike price of a theoretical put option with expiration of 91 days at delta -0.6,MATRIX,84%,28,47
+opt4_91_put_strike_delta65,The strike price of a theoretical put option with expiration of 91 days at delta -0.65,MATRIX,84%,22,52
+opt4_91_put_strike_delta70,The strike price of a theoretical put option with expiration of 91 days and delta of -0.7,MATRIX,84%,29,52
+opt4_91_put_strike_delta75,"The strike price of a theoretical put option with expiration of 91 days, at delta of -0.75",MATRIX,84%,38,72
+opt4_91_put_strike_delta80,The strike price of a theoretical put option with expiration of 91 days and delta of -0.8,MATRIX,84%,18,49
+opt4_91_put_vola_delta20,The implied volatility of a theoretical put option with 91 days to expiration and delta of -0.2,MATRIX,84%,18,36
+opt4_91_put_vola_delta25,The implied volatility of a theoretical put option with 91 days to expiration at a delta of -0.25,MATRIX,84%,13,16
+opt4_91_put_vola_delta30,"The implied volatility of a theoretical put option with expiration of 91 days, at delta of -0.3",MATRIX,84%,20,67
+opt4_91_put_vola_delta35,The implied volatility of a theoretical put option expiring in 91 days at delta -0.35,MATRIX,84%,19,29
+opt4_91_put_vola_delta40,The implied volatility of a theoretical put option with expiration of 91 days at delta -0.4,MATRIX,84%,46,120
+opt4_91_put_vola_delta45,"The implied volatility of a theoretical put option with expiration of 91 days, at delta of -0.45",MATRIX,84%,38,83
+opt4_91_put_vola_delta50,"The implied volatility of a theoretical put option with expiration of 91 days, at delta of -0.5",MATRIX,84%,22,61
+opt4_91_put_vola_delta55,"The implied volatility of a theoretical put option with expiration of 91 days, at delta of -0.55",MATRIX,84%,28,50
+opt4_91_put_vola_delta60,"The implied volatility of a theoretical put option with expiration of 91 days, at delta of -0.6",MATRIX,84%,9,16
+opt4_91_put_vola_delta65,"The implied volatility of a theoretical put option with expiration of 91 days, at delta of -0.65",MATRIX,84%,64,150
+opt4_91_put_vola_delta70,Implied volatility of a theoretical put option expiring in 91 days with delta -0.7,MATRIX,84%,17,44
+opt4_91_put_vola_delta75,Implied volatility of a theoretical put option expiring in 91 days with delta -0.75,MATRIX,84%,53,157
+opt4_91_put_vola_delta80,"The implied volatility of a theoretical put option with expiration of 91 days, at delta of -0.8",MATRIX,84%,32,71
+opt4_adjfactor,"Cumulative product of all adjustment factors (e.g., splits, dividends) for the security up to this date",MATRIX,100%,94,224
+opt4_ask,"If positive, the daily high trade price for the security; if negative, indicates no trade occurred and the value represents the closing ask quote",MATRIX,100%,61,230
+opt4_bid,"If positive, the daily low trade price for the security; if negative, indicates no trade occurred and the value represents the closing bid quote",MATRIX,100%,107,650
+opt4_call_delta_122d,Delta of at-the-money-forward call options with expiration of 122 days,MATRIX,83%,97,275
+opt4_call_delta_152d,Delta of at-the-money-forward call options with expiration of 152 days,MATRIX,83%,38,108
+opt4_call_delta_182d,Delta of at-the-money-forward call options with expiration of 182 days,MATRIX,83%,52,144
+opt4_call_delta_273d,The delta (sensitivity of option price to underlying price) of call options with approximately 273 days to expiry from a standardized options surface snapshot,MATRIX,27%,20,41
+opt4_call_delta_30d,Call option delta for options with 30 days to expiration in the ATM/forward volatility surface snapshot module,MATRIX,84%,77,178
+opt4_call_delta_365d,Call option delta for options with 365 days to expiration in the ATM/forward volatility surface snapshot module,MATRIX,26%,44,77
+opt4_call_delta_60d,Delta of at-the-money-forward call options with expiration of 60 days,MATRIX,84%,50,115
+opt4_call_delta_91d,Delta of call options with 91 days to expiration in the standardized option snapshot matrix,MATRIX,83%,93,191
+opt4_call_forwardprice_122d,The calculated forward price for the underlying security of at-the-money-forward call options with expiration of 122 days,MATRIX,84%,53,183
+opt4_call_forwardprice_152d,The calculated forward price for the underlying security of at-the-money-forward call options with expiration of 152 days,MATRIX,83%,40,56
+opt4_call_forwardprice_182d,The calculated forward price for the underlying security of at-the-money-forward call options with expiration of 182 days,MATRIX,83%,53,211
+opt4_call_forwardprice_273d,The calculated forward price for the underlying security of at-the-money-forward call options with expiration of 273 days,MATRIX,27%,29,66
+opt4_call_forwardprice_30d,The calculated forward price for the underlying security of at-the-money-forward call options with expiration of 30 days,MATRIX,84%,35,49
+opt4_call_forwardprice_365d,The calculated forward price for the underlying security of at-the-money-forward call options with expiration of 365 days,MATRIX,26%,36,98
+opt4_call_forwardprice_60d,The calculated forward price for the underlying security of at-the-money-forward call options with expiration of 60 days,MATRIX,84%,33,56
+opt4_call_forwardprice_91d,The calculated forward price for the underlying security of at-the-money-forward call options with expiration of 91 days,MATRIX,84%,41,67
+opt4_call_gamma_122d,Gamma of at-the-money-forward call options with expiration of 122 days,MATRIX,83%,51,141
+opt4_call_gamma_152d,Gamma of at-the-money-forward call options with expiration of 152 days,MATRIX,83%,28,79
+opt4_call_gamma_182d,Gamma of at-the-money-forward call options with expiration of 182 days,MATRIX,83%,29,48
+opt4_call_gamma_273d,Gamma of at-the-money-forward call options with expiration of 273 days,MATRIX,27%,12,15
+opt4_call_gamma_30d,The gamma Greek (rate of change of delta with respect to underlying price) for call options with approximately 30 days until expiration,MATRIX,84%,25,53
+opt4_call_gamma_365d,Gamma of at-the-money-forward call options with expiration of 365 days,MATRIX,26%,25,41
+opt4_call_gamma_60d,Gamma of at-the-money-forward call options with expiration of 60 days,MATRIX,84%,25,96
+opt4_call_gamma_91d,Gamma of at-the-money-forward call options with expiration of 91 days,MATRIX,83%,30,54
+opt4_call_openinterest,Total number of outstanding call option contracts (open interest) for the underlying security on the specified date,MATRIX,84%,71,299
+opt4_call_pre_122d,Premium of at-the-money-forward call options with expiration of 122 days,MATRIX,83%,17,31
+opt4_call_pre_152d,Premium of at-the-money-forward call options with expiration of 152 days,MATRIX,83%,11,16
+opt4_call_pre_182d,Premium of at-the-money-forward call options with expiration of 182 days,MATRIX,83%,21,38
+opt4_call_pre_273d,Premium (price) of call options with approximately 273 days to expiration in the standard option matrix,MATRIX,27%,7,28
+opt4_call_pre_30d,Premium of at-the-money-forward call options with expiration of 30 days,MATRIX,84%,29,38
+opt4_call_pre_365d,Premium of at-the-money-forward call options with expiration of 365 days,MATRIX,26%,33,63
+opt4_call_pre_60d,Premium of at-the-money-forward call options with expiration of 60 days,MATRIX,84%,22,57
+opt4_call_pre_91d,The premium (price) of call options with approximately 91 days to expiry from a standardized options surface snapshot,MATRIX,83%,27,33
+opt4_call_strikeprice_122d,Strike price of at-the-money-forward call options with expiration of 122 days,MATRIX,83%,28,45
+opt4_call_strikeprice_152d,Strike price of at-the-money-forward call options with expiration of 152 days,MATRIX,83%,31,47
+opt4_call_strikeprice_182d,Strike price of at-the-money-forward call options with expiration of 182 days,MATRIX,83%,25,37
+opt4_call_strikeprice_273d,Strike price of at-the-money-forward call options with expiration of 273 days,MATRIX,27%,5,11
+opt4_call_strikeprice_30d,Strike price of at-the-money-forward call options with expiration of 30 days,MATRIX,84%,57,239
+opt4_call_strikeprice_365d,Strike price of at-the-money-forward call options with expiration of 365 days,MATRIX,26%,8,17
+opt4_call_strikeprice_60d,Call option strike prices corresponding to 60 days to expiry,MATRIX,84%,63,141
+opt4_call_strikeprice_91d,Strike price of call options with 91 days to expiration in the standardized option snapshot matrix,MATRIX,83%,28,60
+opt4_call_theta_122d,Theta of at-the-money-forward call options with expiration of 122 days,MATRIX,83%,32,47
+opt4_call_theta_152d,Theta (time decay) of call options with approximately 152 days to expiration in the standard option matrix,MATRIX,83%,46,72
+opt4_call_theta_182d,Theta of at-the-money-forward call options with expiration of 182 days,MATRIX,83%,9,31
+opt4_call_theta_273d,Theta of at-the-money-forward call options with expiration of 273 days,MATRIX,27%,23,40
+opt4_call_theta_30d,Theta of at-the-money-forward call options with expiration of 30 days,MATRIX,84%,45,86
+opt4_call_theta_365d,Theta of at-the-money-forward call options with expiration of 365 days,MATRIX,26%,10,25
+opt4_call_theta_60d,Theta of at-the-money-forward call options with expiration of 60 days,MATRIX,84%,48,89
+opt4_call_theta_91d,Theta of at-the-money-forward call options with expiration of 91 days,MATRIX,83%,52,84
+opt4_call_vega_122d,Vega of at-the-money-forward call options with expiration of 122 days,MATRIX,83%,33,84
+opt4_call_vega_152d,Vega of at-the-money-forward call options with expiration of 152 days,MATRIX,83%,18,32
+opt4_call_vega_182d,Vega of at-the-money-forward call options with expiration of 182 days,MATRIX,83%,18,26
+opt4_call_vega_273d,Vega of at-the-money-forward call options with expiration of 273 days,MATRIX,27%,7,14
+opt4_call_vega_30d,Call option vega (sensitivity to volatility changes) measured at 30 days to expiration,MATRIX,84%,20,49
+opt4_call_vega_365d,Vega of at-the-money-forward call options with expiration of 365 days,MATRIX,26%,7,8
+opt4_call_vega_60d,Vega (sensitivity to volatility) of call options with approximately 60 days to expiration in the standard option matrix,MATRIX,84%,52,131
+opt4_call_vega_91d,Vega of at-the-money-forward call options with expiration of 91 days,MATRIX,83%,29,68
+opt4_call_vola_122d,Implied volatility of at-the-money-forward call options with expiration of 122 days,MATRIX,83%,107,389
+opt4_call_vola_152d,Call option implied volatility for options with 152 days to expiration in the ATM/forward volatility surface snapshot module,MATRIX,83%,116,263
+opt4_call_vola_182d,Implied volatility of call options with approximately 182 days to expiration in the standard option matrix,MATRIX,83%,95,193
+opt4_call_vola_273d,Implied volatility for call options at 273 days to expiration in a matrix/grid format,MATRIX,27%,77,131
+opt4_call_vola_30d,Implied volatility of call options with approximately 30 days to expiration in the standard option matrix,MATRIX,84%,187,473
+opt4_call_vola_365d,Implied volatility of at-the-money-forward call options with expiration of 365 days,MATRIX,26%,113,504
+opt4_call_vola_60d,Call option implied volatility at 60 days to expiry,MATRIX,84%,121,284
+opt4_call_vola_91d,Implied volatility for call options at 91 days to expiration in a matrix/grid format,MATRIX,83%,116,354
+opt4_call_volume,Daily total number of call option contracts traded for the underlying security across all exchanges on the specified date,MATRIX,84%,41,112
+opt4_close,"If positive, the closing trade price for the security; if negative, indicates no trade occurred and the value represents the average of the closing bid and ask (closing mid-quote)",MATRIX,100%,186,1643
+opt4_open,Opening price for the security on this date; zero if unavailable,MATRIX,100%,89,329
+opt4_put_delta_122d,Delta of at-the-money-forward put options with expiration of 122 days,MATRIX,83%,55,122
+opt4_put_delta_152d,Delta of at-the-money-forward put options with expiration of 152 days,MATRIX,83%,13,49
+opt4_put_delta_182d,Delta of at-the-money-forward put options with expiration of 182 days,MATRIX,83%,33,67
+opt4_put_delta_273d,Delta of at-the-money-forward put options with expiration of 273 days,MATRIX,27%,30,52
+opt4_put_delta_30d,Delta of at-the-money-forward put options with expiration of 30 days,MATRIX,84%,71,295
+opt4_put_delta_365d,Delta of at-the-money-forward put options with expiration of 365 days,MATRIX,26%,24,60
+opt4_put_delta_60d,Delta (option price sensitivity to underlying price changes) of put options with 60 days to expiration in the standardized option snapshot matrix,MATRIX,84%,79,364
+opt4_put_delta_91d,Delta of at-the-money-forward put options with expiration of 91 days,MATRIX,83%,67,270
+opt4_put_forwardprice_122d,The calculated forward price for the underlying security of at-the-money-forward put options with expiration of 122 days,MATRIX,84%,32,56
+opt4_put_forwardprice_152d,The calculated forward price for the underlying security of at-the-money-forward put options with expiration of 152 days,MATRIX,83%,56,103
+opt4_put_forwardprice_182d,The calculated forward price for the underlying security of at-the-money-forward put options with expiration of 182 days,MATRIX,83%,22,50
+opt4_put_forwardprice_273d,The calculated forward price for the underlying security of at-the-money-forward put options with expiration of 273 days,MATRIX,27%,6,17
+opt4_put_forwardprice_30d,The calculated forward price for the underlying security of at-the-money-forward put options with expiration of 30 days,MATRIX,84%,52,106
+opt4_put_forwardprice_365d,The calculated forward price for the underlying security of at-the-money-forward put options with expiration of 365 days,MATRIX,26%,18,39
+opt4_put_forwardprice_60d,The calculated forward price for the underlying security of at-the-money-forward put options with expiration of 60 days,MATRIX,84%,35,86
+opt4_put_forwardprice_91d,The calculated forward price for the underlying security of at-the-money-forward put options with expiration of 91 days,MATRIX,84%,38,66
+opt4_put_gamma_122d,Gamma (rate of change of delta) of put options with approximately 122 days to expiration in the standard option matrix,MATRIX,83%,20,63
+opt4_put_gamma_152d,Gamma of at-the-money-forward put options with expiration of 152 days,MATRIX,83%,50,125
+opt4_put_gamma_182d,Gamma of at-the-money-forward put options with expiration of 182 days,MATRIX,83%,36,59
+opt4_put_gamma_273d,Gamma of at-the-money-forward put options with expiration of 273 days,MATRIX,27%,38,121
+opt4_put_gamma_30d,Gamma of at-the-money-forward put options with expiration of 30 days,MATRIX,84%,49,115
+opt4_put_gamma_365d,Gamma of at-the-money-forward put options with expiration of 365 days,MATRIX,26%,17,35
+opt4_put_gamma_60d,Gamma of at-the-money-forward put options with expiration of 60 days,MATRIX,84%,30,86
+opt4_put_gamma_91d,Gamma of at-the-money-forward put options with expiration of 91 days,MATRIX,83%,38,76
+opt4_put_openinterest,Total number of outstanding put option contracts (open interest) for the underlying security on the specified date,MATRIX,84%,130,456
+opt4_put_pre_122d,Premium of at-the-money-forward put options with expiration of 122 days,MATRIX,83%,19,52
+opt4_put_pre_152d,Premium of at-the-money-forward put options with expiration of 152 days,MATRIX,83%,41,87
+opt4_put_pre_182d,The premium (price) of put options with approximately 182 days to expiry from a standardized options surface snapshot,MATRIX,83%,12,33
+opt4_put_pre_273d,Premium of at-the-money-forward put options with expiration of 273 days,MATRIX,27%,47,162
+opt4_put_pre_30d,Put option premium (price) measured at 30 days to expiration,MATRIX,84%,30,64
+opt4_put_pre_365d,Premium (price) of put options with approximately 365 days to expiration in the standard option matrix,MATRIX,26%,13,20
+opt4_put_pre_60d,Premium (price) of put options with 60 days to expiration in the standardized option snapshot matrix,MATRIX,84%,48,119
+opt4_put_pre_91d,Premium of at-the-money-forward put options with expiration of 91 days,MATRIX,83%,27,53
+opt4_put_strikeprice_122d,Strike price of at-the-money-forward put options with expiration of 122 days,MATRIX,83%,41,112
+opt4_put_strikeprice_152d,Strike price of at-the-money-forward put options with expiration of 152 days,MATRIX,83%,32,62
+opt4_put_strikeprice_182d,Strike price of at-the-money-forward put options with expiration of 182 days,MATRIX,83%,18,49
+opt4_put_strikeprice_273d,Strike price of at-the-money-forward put options with expiration of 273 days,MATRIX,27%,6,12
+opt4_put_strikeprice_30d,Strike price of at-the-money-forward put options with expiration of 30 days,MATRIX,84%,35,59
+opt4_put_strikeprice_365d,Put option strike price for options expiring in 365 days,MATRIX,26%,22,35
+opt4_put_strikeprice_60d,Put option strike price for options expiring in 60 days,MATRIX,84%,34,68
+opt4_put_strikeprice_91d,Strike price of at-the-money-forward put options with expiration of 91 days,MATRIX,83%,33,130
+opt4_put_theta_122d,Theta of at-the-money-forward put options with expiration of 122 days,MATRIX,83%,55,102
+opt4_put_theta_152d,Theta of at-the-money-forward put options with expiration of 152 days,MATRIX,83%,35,58
+opt4_put_theta_182d,Theta of at-the-money-forward put options with expiration of 182 days,MATRIX,83%,21,42
+opt4_put_theta_273d,Theta of at-the-money-forward put options with expiration of 273 days,MATRIX,27%,7,50
+opt4_put_theta_30d,Theta of at-the-money-forward put options with expiration of 30 days,MATRIX,84%,31,49
+opt4_put_theta_365d,Theta of at-the-money-forward put options with expiration of 365 days,MATRIX,26%,8,16
+opt4_put_theta_60d,Theta of at-the-money-forward put options with expiration of 60 days,MATRIX,84%,29,76
+opt4_put_theta_91d,Theta of at-the-money-forward put options with expiration of 91 days,MATRIX,83%,37,64
+opt4_put_vega_122d,Vega of at-the-money-forward put options with expiration of 122 days,MATRIX,83%,17,52
+opt4_put_vega_152d,Vega of at-the-money-forward put options with expiration of 152 days,MATRIX,83%,21,50
+opt4_put_vega_182d,Vega of at-the-money-forward put options with expiration of 182 days,MATRIX,83%,19,53
+opt4_put_vega_273d,Vega of at-the-money-forward put options with expiration of 273 days,MATRIX,27%,45,350
+opt4_put_vega_30d,Vega of at-the-money-forward put options with expiration of 30 days,MATRIX,84%,32,61
+opt4_put_vega_365d,Vega of at-the-money-forward put options with expiration of 365 days,MATRIX,26%,25,54
+opt4_put_vega_60d,Vega for put options with 60 days to expiration in the standardized option snapshot matrix,MATRIX,84%,34,108
+opt4_put_vega_91d,Vega for put options with 91 days to expiration in the standardized option snapshot matrix,MATRIX,83%,39,89
+opt4_put_vola_122d,Put option implied volatility for options with 122 days to expiration from the ATM/forward surface snapshot module,MATRIX,83%,51,110
+opt4_put_vola_152d,Implied volatility of put options with approximately 152 days to expiration in the standard option matrix,MATRIX,83%,55,94
+opt4_put_vola_182d,Implied volatility of put options with approximately 182 days to expiration in the standard option matrix,MATRIX,83%,99,283
+opt4_put_vola_273d,Implied volatility of put options with approximately 273 days to expiration in the standard option matrix,MATRIX,27%,40,67
+opt4_put_vola_30d,Put option implied volatility measured at 30 days to expiration,MATRIX,84%,66,138
+opt4_put_vola_365d,Implied volatility of at-the-money-forward put options with expiration of 365 days,MATRIX,26%,16,26
+opt4_put_vola_60d,The implied volatility of put options with approximately 60 days to expiry from a standardized options surface snapshot,MATRIX,84%,106,197
+opt4_put_vola_91d,Put option implied volatility for options with 91 days to expiration in the ATM/forward volatility surface snapshot module,MATRIX,83%,59,131
+opt4_put_volume,Daily total number of put option contracts traded for the underlying security across all exchanges on the specified date,MATRIX,84%,29,112
+opt4_retfactor,Cumulative product of adjustment factors including dividends as of this date,MATRIX,100%,46,120
+opt4_return,"Holding period return from the last good pricing date to this date, including price appreciation and cash distributions adjusted for splits",MATRIX,100%,178,1212
+opt4_secpr_volume,Total traded volume for the security on this date,MATRIX,100%,121,523
+opt4_shareoutstanding,Total number of publicly traded shares of the company,MATRIX,100%,114,615
+opt4_total_openinterest,Total number of outstanding option contracts (calls and puts combined) for the underlying security on the specified date,MATRIX,84%,101,240
+opt4_total_volume,Daily total number of option contracts traded (calls and puts combined) for the underlying security across all exchanges on the specified date,MATRIX,84%,44,126
+opt4_vola_10d,"Realized volatility, calculated over date ranges of 10 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,54,175
+opt4_vola_122d,"Realized volatility, calculated over date ranges of 122 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,39,106
+opt4_vola_14d,"Realized volatility, calculated over date ranges of 14 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,46,124
+opt4_vola_152d,"Realized volatility, calculated over date ranges of 152 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,63,136
+opt4_vola_1825d,"Realized volatility, calculated over date ranges of 1825 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,87,285
+opt4_vola_182d,"Realized volatility, calculated over date ranges of 182 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,35,94
+opt4_vola_273d,"Realized volatility, calculated over date ranges of 273 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,57,151
+opt4_vola_30d,"Realized volatility, calculated over date ranges of 30 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,39,98
+opt4_vola_365d,"Realized volatility, calculated over date ranges of 365 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,85,271
+opt4_vola_547d,"Realized volatility, calculated over date ranges of 547 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,77,237
+opt4_vola_60d,"Realized volatility, calculated over date ranges of 60 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,39,147
+opt4_vola_730d,"Realized volatility, calculated over date ranges of 730 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,54,195
+opt4_vola_91d,"Realized volatility, calculated over date ranges of 91 calendar days, using a simple standard deviation calculation on the logarithm of the close-to-close daily total return",MATRIX,84%,83,430

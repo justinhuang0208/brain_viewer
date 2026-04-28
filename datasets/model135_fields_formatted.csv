@@ -1,0 +1,274 @@
+Field,Description,Type,Coverage,Users,Alphas
+accumulation_distribution_line_10d,"10-day Accumulation/Distribution Line; measures cumulative flow of volume into or out of a security based on price and volume over the past 10 trading days, z-score normalized",VECTOR,83%,7,7
+accumulation_distribution_line_3d,"Accumulation/Distribution Line over a 3-day lookback, normalized",VECTOR,83%,3,3
+accumulation_distribution_line_5d,"Accumulation/Distribution Line over a 5-day lookback, normalized",VECTOR,83%,2,2
+aroon_oscillator_20d,"20-day Awesome Oscillator value, measuring the difference between 20-period and longer-period simple moving averages of the midpoint price to identify momentum shifts, normalized and clipped",VECTOR,83%,1,1
+aroon_oscillator_3d,"Awesome Oscillator computed over a 3-day parameter; compares short-term and long-term SMAs of price midpoints to reflect momentum, z-score normalized",VECTOR,83%,2,2
+aroon_oscillator_40d,"40-day Awesome Oscillator value, measuring the difference between 40-period and longer-period simple moving averages of the midpoint price to identify momentum shifts, normalized and clipped",VECTOR,83%,1,1
+aroon_oscillator_5d,"Awesome Oscillator computed over a 5-day parameter; compares short-term and long-term SMAs of price midpoints to reflect momentum, z-score normalized",VECTOR,83%,0,0
+average_directional_index_10d,"Z-score normalized Average Directional Movement Index (ADX) over a 10-day period, measuring trend strength",VECTOR,83%,0,0
+average_directional_index_20d,"Z-score normalized Average Directional Movement Index (ADX) over a 20-day period, measuring trend strength",VECTOR,83%,1,1
+average_directional_index_3d,"Average Directional Index (a technical indicator measuring trend strength), calculated over a 3-day window, z-score normalized",VECTOR,83%,2,2
+average_true_range_3d,"Z-score normalized Average True Range (ATR) over a 3-day window, indicating short-term price volatility",VECTOR,83%,2,2
+bollinger_band_value_20d,"Bollinger Bands metric (e.g., %B or bandwidth) over a 20-day window, normalized",VECTOR,83%,0,0
+bollinger_band_value_3d,"Bollinger Bands metric (e.g., %B or bandwidth) over a 3-day window, normalized",VECTOR,83%,0,0
+bollinger_band_value_5d,"Bollinger Bands metric (e.g., %B or bandwidth) over a 5-day window, normalized",VECTOR,83%,2,2
+chaikin_money_flow_10d,"10-day Chaikin Money Flow; measures buying and selling pressure over the past 10 trading days using price and volume, z-score normalized",VECTOR,83%,1,1
+chaikin_money_flow_20d,"20-day Chaikin Money Flow; measures buying and selling pressure over the past 20 trading days using price and volume, z-score normalized",VECTOR,83%,0,0
+chaikin_money_flow_3d,"3-day Chaikin Money Flow; measures buying and selling pressure over the past 3 trading days using price and volume, z-score normalized",VECTOR,83%,2,2
+chaikin_money_flow_40d,"40-day Chaikin Money Flow; measures buying and selling pressure over the past 40 trading days using price and volume, z-score normalized",VECTOR,83%,2,2
+chaikin_oscillator_1d,Coincident indicators for 1 day,VECTOR,83%,0,0
+chaikin_oscillator_2d,Coincident indicators for 2 days,VECTOR,83%,1,1
+chaikin_oscillator_3d,Coincident indicators for 3 day,VECTOR,83%,0,0
+chaikin_oscillator_6d,Coincident indicators for 6 day,VECTOR,83%,1,1
+chaikin_oscillator_7d,Coincident indicators for 7 day,VECTOR,83%,1,1
+chaikin_oscillator_8d,Coincident indicators for 8 day,VECTOR,83%,0,0
+close_location_value_0d,"Close Location Value, relative position of close within the day’s high-low range, zero-day lag, normalized",VECTOR,83%,3,3
+commodity_channel_index_10d,"10-day Commodity Channel Index, quantifying price deviation from its moving average over 10 days to identify cyclical price patterns, normalized and clipped",VECTOR,83%,0,0
+commodity_channel_index_3d,"3-day Commodity Channel Index, quantifying price deviation from its moving average over 3 days to identify cyclical price patterns, normalized and clipped",VECTOR,83%,1,1
+commodity_channel_index_40d,"40-day Commodity Channel Index, quantifying price deviation from its moving average over 40 days to identify cyclical price patterns, normalized and clipped",VECTOR,83%,2,2
+detrended_price_oscillator_26d,"Detrended Price Oscillator calculated over a 26-day window, highlighting detrended price movements over roughly a one-month period; normalized",VECTOR,83%,0,0
+detrended_price_oscillator_36d,"Detrended Price Oscillator calculated over a 36-day window, focusing on multi-week price fluctuations independent of longer-term trends; normalized",VECTOR,83%,0,0
+detrended_price_oscillator_8d,"Detrended Price Oscillator calculated over an 8-day window, removing longer-term trends to highlight short-term cycles; normalized for comparability",VECTOR,83%,0,0
+ease_of_movement_20d,"Ease of Movement (EMV) over a 20-day window, measuring the medium-term relationship between price change and trading volume; normalized",VECTOR,83%,0,0
+ease_of_movement_3d,"Ease of Movement (EMV) over a 3-day lookback, measuring price change relative to volume in the very short term; normalized",VECTOR,83%,0,0
+eighteen_day_detrended_price_oscillator,"Detrended Price Oscillator calculated over an 18-day window, highlighting intermediate short-term cycles by removing prevailing trends; normalized",VECTOR,83%,0,0
+five_day_average_directional_index,"Z-score normalized Average Directional Movement Index (ADX) over a 5-day period, measuring trend strength",VECTOR,83%,0,0
+five_day_average_true_range,"Z-score normalized Average True Range (ATR) over a 5-day window, indicating short-term price volatility",VECTOR,83%,0,0
+five_day_chaikin_money_flow,"5-day Chaikin Money Flow; measures buying and selling pressure over the past 5 trading days using price and volume, z-score normalized",VECTOR,83%,0,0
+five_day_chaikin_oscillator,Coincident indicators for 5 day,VECTOR,83%,0,0
+five_day_commodity_channel_index,"5-day Commodity Channel Index, quantifying price deviation from its moving average over 5 days to identify cyclical price patterns, normalized and clipped",VECTOR,83%,0,0
+five_day_ease_of_movement,"Ease of Movement (EMV) over a 5-day lookback, measuring efficiency of price movement relative to trading volume; normalized",VECTOR,83%,0,0
+five_day_mass_index,"5-day Mass Index, same as above but computed over a 5-day period and z-score normalized",VECTOR,83%,0,0
+five_day_money_flow_index,Money Flow Index calculated over a 5-day window and z-score normalized; short-term volume-weighted momentum or pressure indicator,VECTOR,83%,0,0
+five_day_relative_strength_index,"Relative Strength Index over a 5-day window, z-score normalized",VECTOR,83%,0,0
+five_day_stochastic_oscillator,"Stochastic Oscillator computed over a 5-day lookback, indicating the normalized momentum of closing price relative to its recent range",VECTOR,83%,0,0
+five_day_stochastic_rsi,"Stochastic RSI, calculated over a 5-day window, z-score normalized",VECTOR,83%,0,0
+five_day_volume_price_trend,Volume Price Trend indicator calculated over a 5-day window and z-score normalized; similar to the 3-day version for short-term trend detection,VECTOR,83%,0,0
+force_index_20d,"20-day Force Index, a volume-weighted momentum indicator calculated over 20 days and z-score normalized",VECTOR,83%,1,1
+force_index_3d,"Force Index (FI) over 3 days, measuring buying and selling pressure based on price and volume over a very short window; normalized",VECTOR,83%,2,2
+force_index_40d,"40-day Force Index, a volume-weighted momentum indicator calculated over 40 days and z-score normalized",VECTOR,83%,0,0
+force_index_5d,"Force Index (FI) over a 5-day window, indicating the magnitude of price movements as influenced by volume in the short term; normalized",VECTOR,83%,1,1
+forty_day_accumulation_distribution_line,"40-day Accumulation/Distribution Line; measures cumulative flow of volume into or out of a security based on price and volume over the past 40 trading days, z-score normalized",VECTOR,83%,1,1
+forty_day_average_directional_index,"Z-score normalized Average Directional Movement Index (ADX) over a 40-day period, measuring trend strength",VECTOR,83%,0,0
+forty_day_average_true_range,"Z-score normalized Average True Range (ATR) over a 40-day window, indicating medium-term price volatility",VECTOR,83%,0,0
+forty_day_bollinger_band,"Bollinger Bands metric (e.g., %B or bandwidth) over a 40-day window, normalized",VECTOR,83%,0,0
+forty_day_ease_of_movement,"Ease of Movement (EMV) over a 40-day lookback, measuring longer-term trends in price efficiency relative to volume; normalized",VECTOR,83%,1,1
+forty_day_money_flow_index,Money Flow Index calculated over a 40-day window and z-score normalized; signals longer-term accumulation or distribution dynamics based on price and volume,VECTOR,83%,2,2
+forty_day_relative_strength_index,"Relative Strength Index over a 40-day window, z-score normalized",VECTOR,83%,0,0
+forty_day_stochastic_oscillator,"Stochastic Oscillator computed over a 40-day lookback, indicating the normalized momentum of closing price relative to its recent range",VECTOR,83%,1,1
+forty_day_stochastic_rsi,"Stochastic RSI, calculated over a 40-day window, z-score normalized",VECTOR,83%,0,0
+four_day_chaikin_oscillator,Coincident indicators for 4 day,VECTOR,83%,1,1
+four_day_mass_index,"4-day Mass Index, same as above but computed over a 4-day period and z-score normalized",VECTOR,83%,0,0
+macd_indicator_2d,"MACD (Moving Average Convergence Divergence) calculated with fast and slow EMAs using a 2-day sensitivity/setting, indicating very short-term momentum, z-score normalized",VECTOR,83%,1,1
+macd_indicator_3d,"MACD (Moving Average Convergence Divergence) calculated with fast and slow EMAs using a 3-day sensitivity/setting, indicating short-term momentum, z-score normalized",VECTOR,83%,2,2
+macd_indicator_4d,"MACD (Moving Average Convergence Divergence) calculated with fast and slow EMAs using a 4-day sensitivity/setting, indicating short-term momentum, z-score normalized",VECTOR,83%,1,1
+market_capitalization_value_4,"Market capitalization of the company, typically in USD, raw (unnormalized) value",VECTOR,83%,0,0
+mass_index_1d,"1-day Mass Index, a volatility indicator measuring price reversals based on high-low range expansion, computed with a 1-day lookback and z-score normalized",VECTOR,83%,0,0
+mass_index_2d,"2-day Mass Index, same as above but computed over a 2-day period and z-score normalized",VECTOR,83%,0,0
+mdl135_d01_bb,"Bollinger Bands indicator calculated with a 10-day lookback; likely refers to the band width, z-score, or similar normalized measure derived from 10-day moving average and standard deviation",VECTOR,88%,25,31
+mdl135_d01_fmc,Chaikin Money Flow over 10 days; assesses buying/selling pressure by combining price and volume (typically between -1 and +1),VECTOR,88%,32,73
+mdl135_d01_icc,"Commodity Channel Index over 10 days; oscillator of price deviation from its mean to identify cyclical trends, normalized",VECTOR,88%,18,31
+mdl135_d01_if,Force Index over 10 days; volume-weighted price movement indicator reflecting the strength of moves,VECTOR,88%,22,32
+mdl135_d01_ifm,Money Flow Index calculated over a 10-day window; a volume-weighted oscillator that measures buying and selling pressure,VECTOR,88%,17,34
+mdl135_d01_isr,"Relative Strength Index computed over a 10-day period, a momentum indicator measuring speed and change of price movements (normalized)",VECTOR,88%,15,37
+mdl135_d01_isrs,"Stochastic Relative Strength Index calculated over a 10-day window; a momentum oscillator applying stochastic calculations to RSI values, used for overbought/oversold signals (original “Sell RSI” naming likely a typo)",VECTOR,88%,28,53
+mdl135_d01_iv,Vortex Indicator over 10 days; trend and reversal strength indicator (typically includes +VI and -VI components),VECTOR,88%,5,6
+mdl135_d01_ivn,"Negative Volume Index computed over a 10-day period, measuring price trends associated with declining trading volumes",VECTOR,88%,5,8
+mdl135_d01_lda,"Accumulation/Distribution Line over 10 trading days, integrating price and volume to track money flow",VECTOR,88%,22,29
+mdl135_d01_oa,"Awesome Oscillator over 10 days; momentum indicator based on the difference between two moving averages of the midpoint price, normalized",VECTOR,88%,7,9
+mdl135_d01_os,"Stochastic Oscillator over 10 days; compares close to the 10-day high–low range, typically normalized 0–100",VECTOR,88%,5,7
+mdl135_d01_rta,"10-day Average True Range, a normalized measure of volatility based on recent high, low, and closing prices over the past 10 days",VECTOR,88%,7,17
+mdl135_d01_tpv,Volume Price Trend indicator computed over a 10-day window; measures cumulative volume adjusted by the direction and magnitude of price change,VECTOR,88%,4,4
+mdl135_d01_vbo,On-Balance Volume over 10 trading days; cumulative volume flow to gauge accumulation or distribution,VECTOR,88%,3,4
+mdl135_d01_vme,Ease of Movement over 10 days; relates price change to volume to gauge price-volume efficiency,VECTOR,88%,1,1
+mdl135_d01_xda,"10-day Average Directional Movement Index, a normalized technical indicator that measures trend strength over a 10-day period",VECTOR,88%,6,9
+mdl135_d01ntr,"Trailing 10-day return for the security, as defined by the provider (simple or log), aligned to PIT discipline",VECTOR,88%,6,10
+mdl135_d02_bb,"Bollinger Bands statistics over 20 days, such as band width or relative position within the bands",VECTOR,88%,13,22
+mdl135_d02_fmc,Chaikin Money Flow over 20 days; price-volume measure of buying/selling pressure,VECTOR,88%,29,42
+mdl135_d02_icc,"Commodity Channel Index over 20 days; oscillator of price deviation from its mean to identify cyclical trends, normalized",VECTOR,88%,8,11
+mdl135_d02_if,"Force Index technical indicator calculated over a 20-day period, reflecting price and volume-based momentum",VECTOR,88%,8,41
+mdl135_d02_ifm,Money Flow Index calculated over a 20-day window; a volume-weighted oscillator that measures buying and selling pressure,VECTOR,88%,9,14
+mdl135_d02_isr,"20-day Relative Strength Index, a normalized momentum indicator measuring the speed of price changes",VECTOR,88%,8,12
+mdl135_d02_isrs,"Stochastic RSI (Stochastic Relative Strength Index) calculated over 20 days, measuring momentum by applying the stochastic formula to RSI values",VECTOR,88%,4,5
+mdl135_d02_iv,Vortex Indicator over 20 days; trend-following measure based on upward and downward price movement,VECTOR,88%,4,4
+mdl135_d02_ivn,"Negative Volume Index computed over a 20-day period, emphasizing price trends on days of decreasing volume",VECTOR,88%,2,2
+mdl135_d02_lda,"Accumulation/Distribution Line over 20 trading days, measuring cumulative money flow volume based on price and volume",VECTOR,88%,11,17
+mdl135_d02_oa,"Awesome Oscillator over 20 days; momentum indicator based on the difference between two moving averages of the midpoint price, normalized",VECTOR,88%,11,19
+mdl135_d02_os,"Stochastic Oscillator over 20 days; compares close to the 20-day high–low range, typically normalized 0–100",VECTOR,88%,4,6
+mdl135_d02_rta,"20-day Average True Range, a normalized measure of volatility based on recent high, low, and closing prices over the past 20 days",VECTOR,88%,6,18
+mdl135_d02_tpv,Volume Price Trend indicator computed over a 20-day window; measures cumulative volume adjusted by the direction and magnitude of price change,VECTOR,88%,6,13
+mdl135_d02_vbo,"20-day On-Balance Volume, a cumulative indicator that adds or subtracts volume based on price moves to measure buying and selling pressure over 20 days",VECTOR,88%,9,13
+mdl135_d02_vme,"Ease of Movement technical indicator calculated over a 20-day period, measuring the relationship between price change and volume",VECTOR,88%,4,4
+mdl135_d02_xda,"20-day Average Directional Movement Index, a normalized technical indicator that measures trend strength over a 20-day period",VECTOR,88%,8,15
+mdl135_d02ntr,"Trailing 20-trading-day return of the security (provider convention typically simple return), computed point-in-time with D1 delay",VECTOR,88%,7,11
+mdl135_d04_bb,"Bollinger Bands-derived measure over a 40-day lookback (e.g., %B or band width/position), z-score normalized",VECTOR,88%,4,8
+mdl135_d04_fmc,"Chaikin Money Flow over 40 days, a volume-weighted measure of buying and selling pressure, z-score normalized",VECTOR,88%,23,41
+mdl135_d04_icc,"Commodity Channel Index over 40 days; oscillator of price deviation from its mean to identify cyclical trends, normalized",VECTOR,88%,8,48
+mdl135_d04_if,"Force Index technical indicator calculated over a 40-day period, gauging buying and selling pressure using price and volume",VECTOR,88%,6,8
+mdl135_d04_ifm,Money Flow Index calculated over a 40-day window; a volume-weighted oscillator that measures buying and selling pressure,VECTOR,88%,6,14
+mdl135_d04_isr,"Relative Strength Index over a 40-day lookback, z-score normalized",VECTOR,88%,10,15
+mdl135_d04_isrs,"Stochastic RSI over 40 days, fast momentum oscillator scaled 0–100 indicating overbought or oversold",VECTOR,88%,5,6
+mdl135_d04_iv,Vortex Indicator over 40 days; trend-following measure based on upward and downward price movement,VECTOR,88%,2,3
+mdl135_d04_ivn,"Negative Volume Index over 40 trading days, emphasizing periods with declining volume",VECTOR,88%,4,10
+mdl135_d04_lda,Accumulation/Distribution Line over a 40-day window; cumulative money flow based on price and volume indicating buying/selling pressure over the past 40 trading days,VECTOR,88%,17,37
+mdl135_d04_oa,"Awesome Oscillator over 40 days; momentum indicator based on the difference between two moving averages of the midpoint price, normalized",VECTOR,88%,5,11
+mdl135_d04_os,"Stochastic Oscillator over 40 days; compares close to the 40-day high–low range, typically normalized 0–100",VECTOR,88%,6,10
+mdl135_d04_rta,"Average True Range over 40 days, volatility measure in price units",VECTOR,88%,7,9
+mdl135_d04_tpv,Volume Price Trend indicator computed over a 40-day window; measures cumulative volume adjusted by the direction and magnitude of price change,VECTOR,88%,9,19
+mdl135_d04_vbo,On-Balance Volume over 40 days; cumulative indicator reflecting volume flow,VECTOR,88%,8,14
+mdl135_d04_vme,"Ease of Movement value for a 40-day window, measuring the ease with which price moves are made (combining volume and price change); larger values indicate price moves with less volume resistance",VECTOR,88%,5,9
+mdl135_d04_xda,"40-day Average Directional Movement Index, a normalized technical indicator that measures trend strength over a 40-day period",VECTOR,88%,5,35
+mdl135_d04ntr,"40-day return, trailing price return aligned to point-in-time discipline",VECTOR,88%,6,10
+mdl135_d21_opd,Detrended Price Oscillator over 12 days; filters long-term trend to isolate medium-term cycles,VECTOR,88%,7,34
+mdl135_d2_im,Mass Index over 2 days; uses the high–low range to identify potential trend reversals,VECTOR,88%,3,3
+mdl135_d2_ist,True Strength Index over 2 days; momentum measure using double-smoothed price changes,VECTOR,88%,12,21
+mdl135_d2_oc,"Composite coincident technical indicator representing aggregated signals over a 2-day recent window, proprietary calculation",VECTOR,88%,11,15
+mdl135_d2_ou,"Ultimate Oscillator over 2 days, multi-timeframe momentum of buying pressure scaled 0–100",VECTOR,88%,13,22
+mdl135_d2_ovp,Percentage Volume Oscillator with 2-day parameters; percent difference between short- and long-term volume EMAs indicating short-term volume momentum,VECTOR,88%,3,5
+mdl135_d3_bb,"Bollinger Bands value calculated over the past 3 trading days, reflecting price volatility and relative position within a 3-day moving average channel",VECTOR,88%,5,7
+mdl135_d3_fmc,"Chaikin Money Flow over 3 days, short-horizon money flow volume",VECTOR,88%,44,78
+mdl135_d3_icc,"Commodity Channel Index over 3 days; oscillator of price deviation from its mean to identify cyclical trends, normalized",VECTOR,88%,11,21
+mdl135_d3_if,"Force Index computed over a 3-day period, combining price change and volume to gauge short-term buying/selling pressure",VECTOR,88%,13,29
+mdl135_d3_ifm,"Money Flow Index over a 3-day lookback, blending price and volume to indicate buying and selling pressure",VECTOR,88%,7,7
+mdl135_d3_im,Mass Index over 3 days; range-expansion volatility indicator for potential trend reversals,VECTOR,88%,3,8
+mdl135_d3_isr,"Relative Strength Index over a 3-day lookback, z-score normalized",VECTOR,88%,7,12
+mdl135_d3_isrs,"3-day Stochastic RSI, a normalized oscillator applying a stochastic transform to RSI values",VECTOR,88%,6,15
+mdl135_d3_ist,True Strength Index over 3 days; momentum measure using double-smoothed price changes,VECTOR,88%,5,5
+mdl135_d3_iv,Vortex Indicator over 3 days; trend-following measure based on upward and downward price movement,VECTOR,88%,8,11
+mdl135_d3_ivn,"Z-score normalized Negative Volume Index calculated over a 3-day period, measuring price movement on lower-volume days",VECTOR,88%,12,22
+mdl135_d3_lda,"3-day Accumulation Distribution Line, measuring the cumulative flow of money into and out of a security using both price and volume over a 3-day window",VECTOR,88%,20,33
+mdl135_d3_oa,Awesome Oscillator over 3 days; momentum via the difference between short- and long-period moving averages of price,VECTOR,88%,8,12
+mdl135_d3_oc,"Composite coincident technical indicator representing aggregated signals over a 3-day recent window, proprietary calculation",VECTOR,88%,15,32
+mdl135_d3_os,"Stochastic Oscillator over 3 days; compares close to the 3-day high–low range, typically normalized 0–100",VECTOR,88%,11,16
+mdl135_d3_ou,Ultimate Oscillator over 3 days; weighted blend of multiple timeframes’ buying pressure and volatility indicating short-term momentum,VECTOR,88%,12,27
+mdl135_d3_ovp,Percentage Volume Oscillator with 3-day parameters; percent difference between short- and long-term volume EMAs indicating short-term volume momentum,VECTOR,88%,10,42
+mdl135_d3_rta,Average True Range over 3 days; short-term volatility measure based on true range,VECTOR,88%,4,4
+mdl135_d3_tpv,"Volume Price Trend indicator calculated over 3 days, a cumulative price-volume trend measure",VECTOR,88%,7,10
+mdl135_d3_vbo,"On-Balance Volume calculated using a 3-day lookback, measuring cumulative volume flow based on pricing direction to detect volume trends supporting price moves",VECTOR,88%,6,11
+mdl135_d3_vme,"Ease of Movement over 3 days, relating price change to volume",VECTOR,88%,6,9
+mdl135_d3_xda,"3-day Average Directional Movement Index (trend strength indicator, calculated with 3-day lookback, z-score normalized)",VECTOR,88%,3,4
+mdl135_d3ntr,"3-day trailing return for the security, typically a simple return aligned with point-in-time discipline",VECTOR,88%,9,32
+mdl135_d4_im,Mass Index over 4 days; high–low range-based indicator to detect potential trend reversals,VECTOR,88%,5,17
+mdl135_d4_oc,"Composite coincident technical indicator representing aggregated signals over a 4-day recent window, proprietary calculation",VECTOR,88%,25,40
+mdl135_d4_ovp,"Percentage Volume Oscillator with 4-day parameters; percent difference between short- and long-term volume EMAs, expressed as a percentage",VECTOR,88%,3,8
+mdl135_d5_bb,"Bollinger Bands-derived measure over a 5-day lookback (e.g., %B or band width/position), z-score normalized",VECTOR,88%,10,19
+mdl135_d5_fmc,"Chaikin Money Flow over 5 days, assesses buying and selling pressure from price and volume",VECTOR,88%,13,21
+mdl135_d5_icc,"Commodity Channel Index over 5 days; oscillator of price deviation from its mean to identify cyclical trends, normalized",VECTOR,88%,14,18
+mdl135_d5_if,"Force Index calculated over 5 days, combining price and volume to measure buying and selling pressure",VECTOR,88%,23,31
+mdl135_d5_ifm,"Money Flow Index over 5 days, volume-weighted momentum oscillator indicating overbought or oversold conditions",VECTOR,88%,7,8
+mdl135_d5_im,"Mass Index over 5 days, range-expansion indicator used to flag potential trend reversals",VECTOR,88%,4,7
+mdl135_d5_isr,"Relative Strength Index over a 5-day lookback, z-score normalized",VECTOR,88%,10,15
+mdl135_d5_isrs,"Stochastic RSI over 5 days, momentum oscillator indicating overbought or oversold states",VECTOR,88%,5,10
+mdl135_d5_iv,Vortex Indicator over 5 days; trend-following measure based on upward and downward price movement,VECTOR,88%,5,7
+mdl135_d5_ivn,"Negative Volume Index over 5 trading days, emphasizing price moves on lower-volume days",VECTOR,88%,4,10
+mdl135_d5_lda,Accumulation/Distribution Line over 5 days; cumulative money flow measure of buying/selling pressure,VECTOR,88%,8,10
+mdl135_d5_oa,"Awesome Oscillator over 5 days, measuring market momentum via SMA differences",VECTOR,88%,3,4
+mdl135_d5_oc,"Composite coincident technical indicator representing aggregated signals over a 5-day recent window, proprietary calculation",VECTOR,88%,15,32
+mdl135_d5_os,"Stochastic Oscillator over 5 days; compares close to the 5-day high–low range, typically normalized 0–100",VECTOR,88%,3,4
+mdl135_d5_ovp,"Percentage Volume Oscillator with 5-day parameters; percent difference between short- and long-term volume EMAs, expressed as a percentage",VECTOR,88%,14,15
+mdl135_d5_rta,"5-day Average True Range, a normalized measure of volatility based on recent high, low, and closing prices over the past 5 days",VECTOR,88%,3,6
+mdl135_d5_tpv,"Volume Price Trend over 5 days, combining price trend and volume to indicate direction and strength of moves",VECTOR,88%,6,11
+mdl135_d5_vbo,On-Balance Volume over 5 days; cumulative volume-based indicator,VECTOR,88%,13,49
+mdl135_d5_vme,"Ease of Movement over 5 days, relating price change to volume to gauge price-volume ease",VECTOR,88%,11,42
+mdl135_d5_xda,"5-day Average Directional Movement Index, a normalized technical indicator that measures trend strength over a 5-day period",VECTOR,88%,3,3
+mdl135_d5ntr,"5-day return, trailing price return aligned to point-in-time discipline",VECTOR,88%,6,7
+mdl135_d62_opd,"Detrended Price Oscillator over a 26-day period, identifying cycles by removing longer-term price trends",VECTOR,88%,6,12
+mdl135_d63_opd,Detrended Price Oscillator over 36 days; removes long-term trend to highlight cyclical deviations,VECTOR,88%,7,16
+mdl135_d6_oc,"Composite coincident technical indicator representing aggregated signals over a 6-day recent window, proprietary calculation",VECTOR,88%,18,29
+mdl135_d6_ovp,"Percentage Volume Oscillator with 6-day parameters; percent difference between short- and long-term volume EMAs, expressed as a percentage",VECTOR,88%,42,66
+mdl135_d7_oc,Coincident indicators for 7 day,VECTOR,88%,11,21
+mdl135_d81_opd,"Detrended Price Oscillator value computed using an 18-day lookback period, measuring short-term price cycles with the long-term trend removed",VECTOR,88%,5,10
+mdl135_d8_oc,Coincident indicators for 8 day,VECTOR,88%,15,24
+mdl135_d8_opd,"Detrended Price Oscillator calculated over an 8-day window, an oscillator removing long-term trends to identify short-term price cycles and turning points",VECTOR,88%,7,12
+mdl135_gsubind,Numeric subindustry identifier (float) from vendor taxonomy without a codebook,VECTOR,88%,6,11
+mdl135_im,"Z-score normalized Mass Index calculated over a 1-day period, identifying potential trend reversals by analyzing range expansion",VECTOR,88%,4,6
+mdl135_ist,True Strength Index over 1 day; momentum measure using double-smoothed price changes,VECTOR,88%,9,12
+mdl135_macd_1d,"1-day Moving Average Convergence Divergence (MACD calculated with 1-day moving averages or shortest parameters, measures rapid price momentum shifts, z-score normalized)",VECTOR,88%,16,23
+mdl135_macd_2d,"Moving Average Convergence Divergence computed with very short-term 2-day parameterization, indicating momentum and trend",VECTOR,88%,5,6
+mdl135_macd_3d,"Moving Average Convergence Divergence indicator calculated with a 3-day window, representing short-term price momentum shifts",VECTOR,88%,12,45
+mdl135_macd_4d,"4-day Moving Average Convergence Divergence (difference between short- and long-term moving averages for price, calculated with 4-day parameters, z-score normalized)",VECTOR,88%,3,8
+mdl135_mktcap,"Market capitalization of the company, likely in millions of USD, not normalized",VECTOR,88%,4,9
+mdl135_oc,"Composite coincident technical indicator representing aggregated signals for the most recent day, proprietary calculation",VECTOR,88%,17,31
+mdl135_ou,"Ultimate Oscillator value calculated for a 1-day period, integrating multi-timeframe momentum",VECTOR,88%,21,39
+mdl135_ovp,Percentage Volume Oscillator with 1-day parameters; percent difference between short- and long-term volume EMAs indicating short-term volume momentum,VECTOR,88%,8,19
+mdl135_vlc,"Close Location Value: a normalized measure indicating the position of the closing price within the day’s price range (e.g., between low and high), with 0-day lag (same-day value, minimal lag indicator)",VECTOR,88%,25,44
+mdl135_willimsr_10d,"Williams %R (Percent Range) technical indicator, using a 10-day lookback window, normalized",VECTOR,88%,29,49
+mdl135_willimsr_20d,"Williams Percent Range over a 20-day lookback, z-score normalized",VECTOR,88%,11,14
+mdl135_willimsr_3d,"Williams %R (Percent Range) technical indicator calculated using a 3-day lookback window, normalized",VECTOR,88%,40,70
+mdl135_willimsr_40d,"Williams Percent Range over a 40-day lookback, z-score normalized",VECTOR,88%,13,22
+mdl135_willimsr_5d,"Williams %R (Percent Range) technical indicator, using a 5-day lookback window, normalized",VECTOR,88%,29,45
+money_flow_index_10d,Money Flow Index calculated over a 10-day window and z-score normalized; medium-term volume-weighted momentum or pressure indicator,VECTOR,83%,0,0
+money_flow_index_20d,Money Flow Index calculated over a 20-day window and z-score normalized; captures volume-driven overbought or oversold conditions for a roughly 1-month horizon,VECTOR,83%,3,3
+money_flow_index_3d,"Money Flow Index calculated over a 3-day period and z-score normalized, indicating recent buying or selling pressure",VECTOR,83%,0,0
+negative_volume_index_20d,"Negative Volume Index calculated over a 20-day window and z-score normalized; measures cumulative trend using volume on days when volume declines, used to detect smart money accumulation or distribution",VECTOR,83%,0,0
+negative_volume_index_3d,"3-day Negative Volume Index, tracks price changes on days with decreasing trading volume over a 3-day window and z-score normalized",VECTOR,83%,0,0
+negative_volume_index_40d,Negative Volume Index calculated over a 40-day window and z-score normalized; same as above but with a longer lookback period for smoothing and trend capture,VECTOR,83%,0,0
+negative_volume_index_5d,"5-day Negative Volume Index, price movement on days with lower volume over a 5-day window and z-score normalized",VECTOR,83%,0,0
+on_balance_volume_10d,"10-day On-Balance Volume, cumulative volume flow calculated over 10 days and z-score normalized",VECTOR,83%,0,0
+on_balance_volume_20d,"20-day On-Balance Volume, cumulative volume flow calculated over 20 days and z-score normalized",VECTOR,83%,0,0
+on_balance_volume_40d,"40-day On-Balance Volume, cumulative volume flow calculated over 40 days and z-score normalized",VECTOR,83%,1,1
+on_balance_volume_5d,"5-day On-Balance Volume, cumulative volume flow calculated over 5 days and z-score normalized",VECTOR,83%,0,0
+one_day_macd_indicator,"MACD (Moving Average Convergence Divergence) calculated with fast and slow EMAs using a 1-day sensitivity/setting, indicating short-term momentum, z-score normalized",VECTOR,83%,0,0
+one_day_percentage_volume_oscillator,"Percentage Volume Oscillator; percentage difference between short-term and long-term volume EMAs calculated with 1-day smoothing, z-score normalized",VECTOR,83%,0,0
+percentage_volume_oscillator_2d,"Percentage Volume Oscillator; percentage difference between short-term and long-term volume EMAs calculated with 2-day smoothing, z-score normalized",VECTOR,83%,0,0
+percentage_volume_oscillator_3d,"Percentage Volume Oscillator; percentage difference between short-term and long-term volume EMAs calculated with 3-day smoothing, z-score normalized",VECTOR,83%,1,2
+percentage_volume_oscillator_4d,"Percentage Volume Oscillator; percentage difference between two volume EMAs with a 4-day parameter, z-score normalized",VECTOR,83%,0,0
+percentage_volume_oscillator_5d,"Percentage Volume Oscillator; percentage difference between two volume EMAs with a 5-day parameter, z-score normalized",VECTOR,83%,0,0
+percentage_volume_oscillator_6d,"Percentage Volume Oscillator; percentage difference between two volume EMAs with a 6-day parameter, z-score normalized",VECTOR,83%,4,4
+relative_strength_index_10d,"Relative Strength Index over a 10-day window, z-score normalized",VECTOR,83%,1,1
+relative_strength_index_20d,"Relative Strength Index over a 20-day window, z-score normalized",VECTOR,83%,1,1
+relative_strength_index_3d,"Relative Strength Index over a 3-day window, z-score normalized",VECTOR,83%,1,1
+stochastic_oscillator_3d,"Stochastic Oscillator computed over a 3-day lookback, indicating the normalized momentum of closing price relative to its recent range",VECTOR,83%,1,1
+stochastic_rsi_10d,"Stochastic RSI, calculated over a 10-day window, z-score normalized",VECTOR,83%,0,0
+ten_day_aroon_oscillator,"10-day Awesome Oscillator value, measuring the difference between 10-period and longer-period simple moving averages of the midpoint price to identify momentum shifts, normalized and clipped",VECTOR,83%,0,0
+ten_day_average_true_range,"Z-score normalized Average True Range (ATR) over a 10-day window, indicating price volatility",VECTOR,83%,0,0
+ten_day_bollinger_band,"Bollinger Bands metric (e.g., %B or bandwidth) over a 10-day window, normalized",VECTOR,83%,0,0
+ten_day_ease_of_movement,"Ease of Movement (EMV) over a 10-day window, capturing price sensitivity to volume trends in the short term; normalized",VECTOR,83%,0,0
+ten_day_force_index,"Force Index (FI) over a 10-day window, representing medium-short-term buying/selling strength via price and volume interaction; normalized",VECTOR,83%,1,1
+ten_day_negative_volume_index,"10-day Negative Volume Index, price movement on days with lower volume over a 10-day window and z-score normalized",VECTOR,83%,0,0
+ten_day_stochastic_oscillator,"Stochastic Oscillator computed over a 10-day lookback, indicating the normalized momentum of closing price relative to its recent range",VECTOR,83%,1,1
+ten_day_vortex_indicator,Vortex indicator for 10 days,VECTOR,83%,1,1
+three_day_mass_index,"3-day Mass Index, same as above but computed over a 3-day period and z-score normalized",VECTOR,83%,0,0
+three_day_on_balance_volume,"3-day On-Balance Volume, cumulative volume flow calculated over 3 days and z-score normalized",VECTOR,83%,1,2
+three_day_stochastic_rsi,"Stochastic RSI (a momentum oscillator applying the stochastic formula to the RSI), calculated over a 3-day window, z-score normalized",VECTOR,83%,1,1
+three_day_total_return,3-day trailing return; provider-defined (typically simple return) measured over the past 3 trading days,VECTOR,83%,0,0
+three_day_true_strength_indicator,"True Strength Index (a momentum oscillator measuring trend strength), calculated over a 3-day period, z-score normalized",VECTOR,83%,1,1
+total_return_10d,"10-day trailing return; provider-defined (simple or logarithmic, typically simple) measured over the past 10 trading days",VECTOR,83%,0,0
+total_return_40d,40-day trailing return; provider-defined (typically simple return) measured over the past 40 trading days,VECTOR,83%,1,1
+total_return_5d,5-day trailing return; provider-defined (typically simple return) measured over the past 5 trading days,VECTOR,83%,0,0
+triple_ema_rate_change_10d,"TRIX (Triple Exponential Average) oscillator computed with a 10-day window, a momentum indicator based on triple-smoothed EMA to reduce noise and identify trend direction",VECTOR,88%,0,0
+triple_ema_rate_change_10d_us,"TRIX (Triple Exponential Average Oscillator), calculated over a 10-day window, z-score normalized",VECTOR,83%,0,0
+triple_ema_rate_change_20d,TRIX (Triple Exponential Average Oscillator) over a 20-day period; momentum indicator highlighting turning points,VECTOR,88%,0,0
+triple_ema_rate_change_20d_us,"TRIX (Triple Exponential Average Oscillator), calculated over a 20-day window, z-score normalized",VECTOR,83%,0,0
+triple_ema_rate_change_3d,TRIX over 3 days; triple exponentially smoothed price oscillator capturing short-term momentum and filtering noise,VECTOR,88%,1,1
+triple_ema_rate_change_3d_us,"TRIX (Triple Exponential Average Oscillator, a smoothed momentum indicator), calculated over a 3-day window, z-score normalized",VECTOR,83%,0,0
+triple_ema_rate_change_40d,TRIX over 40 days; triple-smoothed momentum oscillator based on the rate of change of a triple EMA,VECTOR,88%,0,0
+triple_ema_rate_change_40d_us,"TRIX (Triple Exponential Average Oscillator), calculated over a 40-day window, z-score normalized",VECTOR,83%,0,0
+triple_ema_rate_change_5d,"TRIX momentum oscillator over 5 days, rate of change of a triple-smoothed EMA",VECTOR,88%,0,0
+triple_ema_rate_change_5d_us,"TRIX (Triple Exponential Average Oscillator), calculated over a 5-day window, z-score normalized",VECTOR,83%,1,3
+true_strength_indicator_1d,"True Strength Index (a momentum oscillator measuring trend strength), calculated over a 1-day period, z-score normalized",VECTOR,83%,1,1
+true_strength_indicator_2d,"True Strength Index (a momentum oscillator measuring trend strength), calculated over a 2-day period, z-score normalized",VECTOR,83%,1,1
+twelve_day_detrended_price_oscillator,"Detrended Price Oscillator calculated over a 12-day window, removing longer-term trends to highlight cycles of that length; normalized",VECTOR,83%,0,0
+twenty_day_accumulation_distribution_line,"20-day Accumulation/Distribution Line; measures cumulative flow of volume into or out of a security based on price and volume over the past 20 trading days, z-score normalized",VECTOR,83%,0,0
+twenty_day_average_true_range,"Z-score normalized Average True Range (ATR) over a 20-day window, indicating price volatility",VECTOR,83%,0,0
+twenty_day_commodity_channel_index,"20-day Commodity Channel Index, quantifying price deviation from its moving average over 20 days to identify cyclical price patterns, normalized and clipped",VECTOR,83%,0,0
+twenty_day_stochastic_oscillator,"Stochastic Oscillator computed over a 20-day lookback, indicating the normalized momentum of closing price relative to its recent range",VECTOR,83%,0,0
+twenty_day_stochastic_rsi,"Stochastic RSI, calculated over a 20-day window, z-score normalized",VECTOR,83%,0,0
+twenty_day_total_return,20-day trailing return; provider-defined (typically simple return) measured over the past 20 trading days,VECTOR,83%,0,0
+twenty_day_volume_price_trend,Volume Price Trend indicator calculated over a 20-day window and z-score normalized; focuses on intermediate-term volume-driven trend movements,VECTOR,83%,0,0
+twenty_day_vortex_indicator,Vortex indicator for 20 days,VECTOR,83%,0,0
+ultimate_oscillator_1d,Ultimate Oscillator for 1 day,VECTOR,83%,0,0
+ultimate_oscillator_2d,Ultimate Oscillator for 2 days,VECTOR,83%,0,0
+ultimate_oscillator_3d,"Ultimate Oscillator (a technical momentum oscillator that combines multiple timeframes, here using a 3-day lookback window), z-score normalized",VECTOR,83%,1,1
+volume_price_trend_10d,Volume Price Trend indicator calculated over a 10-day window and z-score normalized; captures medium-term cumulative volume-price relationship,VECTOR,83%,0,0
+volume_price_trend_3d,Volume Price Trend indicator calculated over a 3-day window and z-score normalized; measures trend strength using cumulative volume adjusted by price change,VECTOR,83%,1,1
+volume_price_trend_40d,Volume Price Trend indicator calculated over a 40-day window and z-score normalized; tracks longer-term volume-weighted price trends,VECTOR,83%,0,0
+vortex_trend_indicator_3d,Vortex indicator for 3 days,VECTOR,83%,0,0
+vortex_trend_indicator_40d,Vortex indicator for 40 days,VECTOR,83%,0,0
+vortex_trend_indicator_5d,Vortex indicator for 5 days,VECTOR,83%,0,0
+williams_percent_r_10d,"Williams Percent Range indicator over a 10-day lookback, z-score normalized",VECTOR,83%,0,0
+williams_percent_r_20d,"Williams Percent Range indicator over a 20-day lookback, z-score normalized",VECTOR,83%,1,2
+williams_percent_r_3d,"Williams Percent Range indicator over a 3-day lookback, z-score normalized",VECTOR,83%,2,2
+williams_percent_r_40d,"Williams Percent Range indicator over a 40-day lookback, z-score normalized",VECTOR,83%,0,0
+williams_percent_r_5d,"Williams Percent Range indicator over a 5-day lookback, z-score normalized",VECTOR,83%,1,1

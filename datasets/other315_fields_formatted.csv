@@ -1,0 +1,33 @@
+Field,Description,Type,Coverage,Users,Alphas
+active_notional_value_leg1,Monetary notional amount effective for leg 1 on a specific date.,VECTOR,0%,0,0
+contract_notional_value_leg1,"Notional amount for leg 1 (initial or current outstanding); rules for schedules, amendments, FX options, and CDS gross notional apply",VECTOR,66%,5,6
+contract_notional_value_leg2,"For Leg 2, the contractual notional amount; initial notional at inception, updated for lifecycle events to the outstanding amount; report full terminated value if fully terminated; FX options also report Call and Put amounts; CDS notional reflects gross",VECTOR,43%,1,1
+contract_trade_price,"Price specified in the OTC derivative transaction (excluding fees, taxes, commissions); initial or forward price depending on product; updated when available",VECTOR,38%,0,0
+leg1_aggregate_notional_quantity,"Aggregate notional quantity of the underlying asset for Leg 1 over the term of the transaction, updated when available",VECTOR,65%,3,3
+leg1_call_option_value,Monetary amount the option gives the right to buy for the first leg.,VECTOR,0%,0,0
+leg1_fixed_payment_period_count,"Number of time units determining payment frequency for the fixed rate on leg 1 (paired with payment period; special cases for ADHO, EXPI, DAIL)",VECTOR,43%,6,12
+leg1_floating_payment_period_count,"Number of time units (per the payment frequency period) determining how often floating-leg payments occur for leg 1; special cases: ADHO not applicable, EXPI=1, intraday uses DAIL with multiplier 0",VECTOR,43%,1,1
+leg1_floating_reset_period_count,Number of time units for the reset frequency of the floating leg for the first leg.,VECTOR,0%,0,0
+leg1_notional_quantity_value,Non-monetary quantity specified for the first leg of the contract.,VECTOR,12%,1,1
+leg1_put_option_value,Monetary amount the option gives the right to sell for the first leg.,VECTOR,0%,0,0
+leg1_quantity_frequency_count,Number of time units for the quantity frequency for the first leg.,VECTOR,0%,0,0
+leg1_spread_expression_format,Manner in which the spread for the first leg is expressed.,VECTOR,0%,0,0
+leg1_spread_value,Spread on the floating leg index reference price for the first leg.,VECTOR,0%,0,0
+leg2_aggregate_notional_quantity,Aggregate notional quantity of the underlying for leg 2 over the transaction’s term; updated when available,VECTOR,43%,0,0
+leg2_call_option_value,Monetary amount the option gives the right to buy for the second leg.,VECTOR,0%,0,0
+leg2_fixed_payment_period_count,Number of time units for the fixed rate payment frequency for the second leg.,VECTOR,8%,4,4
+leg2_floating_payment_period_count,"Number of time units (as defined by the payment frequency period) that determines how often payments occur for the floating-rate leg on Leg 2; not applicable if ADHO, equals 1 if EXPI, and equals 0 if intraday (DAIL)",VECTOR,34%,2,2
+leg2_floating_reset_period_count,"Number of time units (as defined by the floating rate reset frequency period) that determines how often resets occur on Leg 2; not applicable if ADHO, equals 1 if EXPI, and equals 0 if intraday (DAIL)",VECTOR,43%,0,0
+leg2_notional_quantity_value,Non-monetary quantity specified for the second leg of the contract.,VECTOR,12%,0,0
+leg2_notional_value_on_effective_date,Notional amount effective on a specific date for the second leg.,VECTOR,0%,0,0
+leg2_put_option_value,Monetary amount the option gives the right to sell for the second leg.,VECTOR,0%,0,0
+leg2_quantity_frequency_count,Number of time units for the quantity frequency for the second leg.,VECTOR,0%,0,0
+leg2_spread_expression_format,Manner in which the spread for the second leg is expressed.,VECTOR,15%,0,0
+leg2_spread_value,Spread on the floating leg index reference price for the second leg.,VECTOR,15%,0,0
+option_premium_value,Amount paid for the option premium.,VECTOR,1%,0,0
+option_strike_expression_format,Manner in which the strike price is expressed for the option.,VECTOR,0%,0,0
+option_strike_value,Price at which the owner of an option can buy or sell the underlying asset.,VECTOR,0%,0,0
+oth315_execution_timestamp,"Date and time the transaction was originally executed, creating the UTI; remains unchanged for the life of the UTI. For cleared swaps, it is when the DCO accepts the original swap",VECTOR,66%,4,4
+package_trade_price_format,Specifies the manner in which the price of a package transaction is expressed.,VECTOR,1%,0,0
+price_expression_format,Manner in which the price is expressed.,VECTOR,48%,0,0
+transaction_currency_exchange_rate,Rate at which two currencies are exchanged in the transaction.,VECTOR,0%,0,0

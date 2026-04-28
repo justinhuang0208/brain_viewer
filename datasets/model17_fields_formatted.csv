@@ -1,0 +1,31 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl17_dynamicfocusrank,"Rank measure based on fundamental and technical metrics, focused on the very short-term (1-2 week) trading horizon, reflecting buy/sell signal strength",MATRIX,46%,30,95
+mdl17_est_z_buyrec_pct,% of analysts giving a buy recommendation,MATRIX,44%,9,23
+mdl17_est_z_coverage,No. of analysts covering the stock,MATRIX,45%,14,34
+mdl17_est_z_downtarget_pct,% of analysts revising their price target downwards,MATRIX,44%,13,21
+mdl17_est_z_dtstsespe,Standard deviation of FY1 earnings estimate,MATRIX,45%,9,17
+mdl17_est_z_earningsrevision,Change in mean earnings estimate divided by weekend price,MATRIX,45%,10,14
+mdl17_est_z_earningssurprise,Current quarter earnings surprise,MATRIX,45%,16,27
+mdl17_est_z_earningstorpedo,Difference between FY1 earnings estimate and last 4 quarters' earnings.,MATRIX,45%,15,26
+mdl17_est_z_epsgrowthest,Median analyst expected growth in operating earnings over next full business cycle,MATRIX,42%,11,17
+mdl17_est_z_netearningsrevision,The difference between the number of analysts raising and lowering FY1 earnings estimates as a percentage of analyst coverage,MATRIX,45%,14,57
+mdl17_est_z_netrec_pct,Buy - Sell recommendations as % of total recommendations,MATRIX,44%,14,33
+mdl17_est_z_nettarget_pct,Analyst price target increases minus decreases over the past 4 weeks as a percentage of the total number of price targets,MATRIX,44%,10,18
+mdl17_est_z_sellrec_pct,Sell recommendations as a % of total recommendations,MATRIX,44%,16,26
+mdl17_est_z_uptarget_pct,% of analysts revising their price target upwards,MATRIX,44%,7,24
+mdl17_fnd_focusrank,"Rank measure based on fundamental and technical metrics, emphasizing longer-term (1-2 year) value/fundamental investing prospects",MATRIX,46%,18,26
+mdl17_score,"A composite sentiment score summarizing analyst estimates, revisions, recommendations, and dispersion, used as a buy/sell/neutral indicator",MATRIX,55%,21,28
+mdl17_score_buyrec_pct,"Percentage of analyst recommendations that are ""buy,"" divided by the total number of recommendations for the stock",MATRIX,44%,8,13
+mdl17_score_coverage,Total number of analysts currently covering the stock with either recommendations or earnings estimates,MATRIX,45%,13,29
+mdl17_score_downtarget_pct,Percentage of analysts who have revised their price target downwards out of the total covering analysts during the recent period,MATRIX,44%,9,11
+mdl17_score_dtstsespe,"Standard deviation of analyst estimates of next fiscal year earnings, measuring dispersion or disagreement among analysts",MATRIX,45%,12,44
+mdl17_score_earningsrevision,"Change in the average earnings estimate (usually for next year) over the past month, scaled by the stock's week-end price",MATRIX,45%,10,17
+mdl17_score_earningssurprise,"The difference between the most recent actual reported earnings and the consensus analyst estimate for the quarter, possibly expressed relative to price",MATRIX,45%,10,19
+mdl17_score_earningstorpedo,Difference between the current mean estimate of next fiscal year earnings and the sum of actual earnings over the last four quarters,MATRIX,45%,11,27
+mdl17_score_epsgrowthest,Median of analysts’ estimates for the company's operating earnings growth over the next full business cycle (typically 3-5 years),MATRIX,42%,10,29
+mdl17_score_equityfocusrank,"Rank measure based on a blend of fundamental and technical metrics, focused on a medium-term (2-3 month) investment horizon for equity style factors",MATRIX,46%,15,52
+mdl17_score_netearningsrevision,"Difference between the number of analysts raising and lowering next fiscal year earnings estimates, expressed as a percentage of total analyst coverage",MATRIX,45%,7,13
+mdl17_score_netrec_pct,"Percentage difference between analysts giving ""buy"" recommendations and those giving ""sell"" recommendations, as a proportion of all recommendations",MATRIX,44%,11,20
+mdl17_score_nettarget_pct,"Difference between number of analysts raising and lowering price targets over last four weeks, divided by the total number of price targets, giving a net percentage",MATRIX,44%,8,18
+mdl17_score_sellrec_pct,"Percentage of analyst recommendations that are ""sell,"" divided by the total number of recommendations for the stock",MATRIX,44%,6,10
+mdl17_score_uptarget_pct,Percentage of analysts who have revised their price target upwards out of the total number of analysts covering the stock during the recent period,MATRIX,44%,12,19

@@ -1,0 +1,60 @@
+Field,Description,Type,Coverage,Users,Alphas
+insd3_10k_freq_flag,10-K Frequency Flag,MATRIX,100%,143,1941
+insd3_10k_freq_latest_filed,10-K Frequency Latest Filed,MATRIX,85%,46,77
+insd3_10k_freq_latest_release,10-K Frequency Latest Release,MATRIX,85%,20,23
+insd3_10q_freq_flag,10-Q Frequency Flag,MATRIX,100%,87,315
+insd3_10q_freq_latest_filed,10-Q Frequency Latest Filed,MATRIX,87%,95,437
+insd3_10q_freq_latest_release,10-Q Frequency Latest Release,MATRIX,87%,151,3540
+insd3_10q_info_negative_freq,10-Q Info Negative Frequency,VECTOR,62%,19,25
+insd3_10q_info_negative_score,A numeric score quantifying the negativity of sentiment detected in the 10-Q filing text using sentiment analysis,VECTOR,62%,18,20
+insd3_10q_info_positive_freq,10-Q Info Positive Frequency,VECTOR,62%,23,104
+insd3_10q_info_positive_score,A numeric score quantifying the positivity of sentiment detected in the 10-Q filing text using sentiment analysis,VECTOR,62%,17,73
+insd3_10q_info_text,Raw or main extracted text content from 10-Q filings for the relevant reporting period,VECTOR,37%,69,145
+insd3_10q_negative_freq,10-Q Negative Frequency,VECTOR,63%,87,2285
+insd3_10q_negative_score,"A score quantifying negative sentiment found in the 10-Q filing, based on sentiment analysis of language in the text",VECTOR,62%,18,21
+insd3_10q_positive_freq,10-Q Positive Frequency,VECTOR,62%,13,16
+insd3_10q_positive_score,"A score quantifying positive sentiment found in the 10-Q filing, based on sentiment analysis of language in the text",VECTOR,62%,88,219
+insd3_10q_text,"Raw text content of the 10-Q filing, used for NLP and other textual analyses",VECTOR,37%,99,2448
+insd3_10q_tone_score,Overall sentiment score representing the tone (positive or negative) of the 10-Q filing derived from text analysis,VECTOR,62%,32,160
+insd3_8k_freq_flag,8-K Frequency Flag,MATRIX,100%,63,207
+insd3_8k_freq_latest_filed,8-K Frequency Latest Filed,MATRIX,87%,66,362
+insd3_8k_freq_latest_release,8-K Frequency Latest Release,MATRIX,87%,68,360
+insd3_8k_negative_freq,8-K Negative Frequency,VECTOR,84%,175,3378
+insd3_8k_negative_score,8-K Negative Score,VECTOR,84%,203,3214
+insd3_8k_positive_freq,8-K Positive Frequency,VECTOR,84%,238,2819
+insd3_8k_positive_score,8-K Positive Score,VECTOR,84%,180,2617
+insd3_8k_tone_score,8-K Tone Score,VECTOR,84%,238,3035
+insd3_cikmap,Cik Map,MATRIX,49%,0,0
+insd3_corresp_file_count,Corresponding File Count,MATRIX,100%,43,88
+insd3_dlh_qca,Acquisition Holdings,MATRIX,65%,69,226
+insd3_dlh_spd,Definitive Proxy Statement Holdings,MATRIX,62%,19,36
+insd3_edgar_insider_shares,"The number of shares involved in the insider transaction (either bought, sold, or otherwise transacted)",VECTOR,80%,11,12
+insd3_exerciseprice,The price at which an option or derivative security can be exercised in an insider transaction,VECTOR,80%,10,12
+insd3_form4_bnum,Form 4 Buy Number,MATRIX,41%,125,3785
+insd3_form4_bvol,Form 4 Buy Volume,MATRIX,41%,64,214
+insd3_form4_snum,Form 4 Sell Number,MATRIX,55%,12,14
+insd3_form4_svol,Form 4 Sell Volume,MATRIX,55%,22,24
+insd3_form4_trans_shares,Form 4 Transact Shares,MATRIX,71%,102,238
+insd3_holding_holding_share,The number of shares held in a particular security as disclosed in the 13F filing,VECTOR,100%,25,29
+insd3_holding_holding_value,The market value (USD) of the position held in a particular security as disclosed in the 13F filing,VECTOR,100%,22,35
+insd3_holding_issuer_cik,"Central Index Key (CIK) for the issuing company, as registered with the SEC",VECTOR,100%,35,41
+insd3_holdingaftertrade,The number of shares or units held by the insider after the reported transaction,VECTOR,80%,23,67
+insd3_issuer_ii,"Integer identifier or index for the issuer (company) corresponding to the filing, likely for efficient mapping or cross-referencing",VECTOR,99%,21,24
+insd3_issuercik,SEC Central Index Key (CIK) assigned to the issuer (company) of the securities,VECTOR,80%,7,8
+insd3_issuerii,Issuer Ii,VECTOR,72%,14,18
+insd3_market_value,Market Value,VECTOR,45%,29,38
+insd3_mun_qca,Acquisition Number,MATRIX,65%,20,22
+insd3_mun_spd,Definitive Proxy Statement Number,MATRIX,62%,9,10
+insd3_ownercik,SEC Central Index Key (CIK) assigned to the insider/owner involved in the transaction,VECTOR,80%,15,50
+insd3_period_of_report,Period Of Report,VECTOR,45%,23,25
+insd3_price,The price per share at which the insider transaction occurred,VECTOR,80%,17,41
+insd3_qca,Acquisition,MATRIX,65%,32,34
+insd3_securitytype,"The type of security transacted (e.g., common stock, option, derivative)",VECTOR,80%,15,17
+insd3_sic,Standard Industrial Classification (SIC) code identifying the primary industry sector of the company or filing entity,MATRIX,100%,44,111
+insd3_spd,Depreciation and Amortization expense for the period,MATRIX,62%,9,9
+insd3_underlyingamount,The quantity of underlying shares or units involved in a derivative or option transaction,VECTOR,80%,11,24
+insd3_upload_file_count,"The total number of files associated with the specific SEC EDGAR upload event or batch, indicating how many individual filings or documents were included in that upload",MATRIX,100%,109,3060
+insd3_whalewisdom_shares,Whale Wisdom Shares,VECTOR,45%,16,23
+insd3_xzhou_insider_acquire_raw,Insider Acquire Raw,MATRIX,74%,33,35
+insd3_xzhou_insider_disposal_raw,Insider Disposal Raw,MATRIX,74%,25,28
+insd3_xzhou_insider_holding_raw,Insider Holding Raw,MATRIX,74%,17,20

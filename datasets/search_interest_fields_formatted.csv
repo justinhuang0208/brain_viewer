@@ -1,0 +1,11 @@
+Field,Description,Type,Coverage,Users,Alphas
+relative_interest_score,The Google Trends popularity score for the search term on the given date,VECTOR,93%,31,59
+relative_interest_score_2,Standardized unbounded search interest score indicating the popularity of the search term,VECTOR,66%,10,11
+relative_interest_score_3_fast_d1,Unbounded standardized search interest score normalized for comparability,VECTOR,95%,2,2
+relative_interest_score_4,"Standardized, unbounded search interest score for the term on that date, comparable across time and terms",VECTOR,95%,27,49
+relative_interest_score_5,"Standardized, unbounded search interest score for the term on the given date",VECTOR,64%,15,19
+trend_confidence_overlap_months,Confidence score of the guess computed over a multi-month overlap window,VECTOR,93%,1,1
+trend_confidence_overlap_months_3,the confident of our guessing over months,VECTOR,64%,1,3
+trend_estimation_confidence_score,Confidence score of the automated guess linking the search term to the target company/topic,VECTOR,93%,4,4
+trend_estimation_confidence_score_2_fast_d1,Confidence estimate for the nowcast value (higher means more reliable),VECTOR,95%,2,2
+trend_estimation_confidence_score_3,Confidence score indicating reliability of the nowcasted search interest value; higher means more reliable,VECTOR,64%,9,24

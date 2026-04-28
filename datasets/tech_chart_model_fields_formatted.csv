@@ -1,0 +1,193 @@
+Field,Description,Type,Coverage,Users,Alphas
+absolute_price_oscillator_10d,Absolute Price Oscillator value for a 10-day window.,MATRIX,100%,1,1
+absolute_price_oscillator_50d,Absolute Price Oscillator value calculated over a 50-day window.,MATRIX,100%,1,1
+accumulation_distribution_10d,Accumulation/Distribution indicator over a 10-day period.,MATRIX,100%,0,0
+accumulation_distribution_50d,Accumulation/Distribution indicator value over a 50-day window.,MATRIX,100%,1,1
+accumulation_distribution_oscillator_10d,Accumulation/Distribution Oscillator for a 10-day window.,MATRIX,100%,1,1
+accumulation_distribution_oscillator_50d,Accumulation/Distribution Oscillator value calculated over a 50-day window.,MATRIX,100%,0,0
+aroon_oscillator_10d,Aroon Oscillator value for a 10-day period.,MATRIX,100%,0,0
+aroon_oscillator_50d,Aroon Oscillator value calculated over a 50-day window.,MATRIX,100%,0,0
+average_directional_index_10d_3,Average Directional Index value for a 10-day period.,MATRIX,100%,0,0
+average_directional_index_50d,Average Directional Index value calculated over a 50-day window.,MATRIX,100%,0,0
+average_directional_movement_rating_50d,Average Directional Movement Rating value calculated over a 50-day window.,MATRIX,100%,0,0
+average_price_10d,Average price over a 10-day window.,MATRIX,100%,0,0
+average_price_50d,Average price value calculated over a 50-day window.,MATRIX,100%,0,0
+average_true_range_10d,Average True Range value for a 10-day window.,MATRIX,100%,0,0
+average_true_range_50d,Average true range indicator value over a 50-day window.,MATRIX,100%,0,0
+balance_of_power_10d,Balance of Power indicator for a 10-day window.,MATRIX,100%,1,3
+balance_of_power_50d,Balance of Power indicator value calculated over a 50-day window.,MATRIX,100%,0,0
+bollinger_bands_50d,Bollinger Bands values calculated over a 50-day window.,MATRIX,100%,0,0
+bollinger_bands_lower_10d,Lower band value of Bollinger Bands over a 10-day window.,MATRIX,100%,0,0
+bollinger_bands_lower_50d,Lower Bollinger Band value calculated over a 50-day window.,MATRIX,100%,0,0
+bollinger_bands_middle_10d,Middle band value of Bollinger Bands over a 10-day window.,MATRIX,100%,0,0
+bollinger_bands_upper_10d,Upper band value of Bollinger Bands over a 10-day window.,MATRIX,100%,0,0
+bollinger_bands_upper_50d,Upper Bollinger Band value calculated over a 50-day window.,MATRIX,100%,0,0
+ceiling_price_10d,Ceiling value of price for the 10-day period.,MATRIX,100%,0,0
+ceiling_price_50d,Ceiling price value calculated over a 50-day window.,MATRIX,100%,0,0
+chande_momentum_oscillator_10d,Chande Momentum Oscillator value for a 10-day period.,MATRIX,100%,0,0
+chande_momentum_oscillator_50d,Chande Momentum Oscillator value calculated over a 50-day window.,MATRIX,100%,0,0
+commodity_channel_index_10d_2,Commodity Channel Index calculated over a 10-day window.,MATRIX,100%,0,0
+commodity_channel_index_50d,Commodity Channel Index value calculated over a 50-day window.,MATRIX,100%,0,0
+directional_movement_index_10d,Directional Movement Index for a 10-day window.,MATRIX,100%,0,0
+directional_movement_index_50d,Directional Movement Index value calculated over a 50-day window.,MATRIX,100%,0,0
+double_exponential_moving_average_10d,Double Exponential Moving Average value for a 10-day period.,MATRIX,100%,0,0
+double_exponential_moving_average_50d,Double Exponential Moving Average value calculated over a 50-day window.,MATRIX,100%,0,0
+exponential_moving_average_10d,Exponential Moving Average value for a 10-day period.,MATRIX,100%,0,0
+exponential_moving_average_50d,Exponential Moving Average value calculated over a 50-day window.,MATRIX,100%,0,0
+fifty_day_mean_price_trend,"The 50-day average of closing prices, used to identify price trends over a medium-term period.",MATRIX,100%,0,0
+floor_price_10d,Floor value of price for the 10-day period.,MATRIX,100%,0,0
+floor_price_50d,Floor price value calculated over a 50-day window.,MATRIX,100%,0,0
+hilbert_transform_dcperiod_50d,Hilbert Transform Dominant Cycle Period value over a 50-day window.,MATRIX,100%,1,1
+hilbert_transform_dcphase_50d,Hilbert Transform Dominant Cycle Phase value over a 50-day window.,MATRIX,100%,0,0
+hilbert_transform_trend_mode_10d,Hilbert Transform Trend Mode for a 10-day window.,MATRIX,100%,0,0
+hilbert_transform_trendline_50d,Hilbert Transform Trendline value calculated over a 50-day window.,MATRIX,100%,0,0
+hilbert_transform_trendmode_50d,Hilbert Transform Trendmode value calculated over a 50-day window.,MATRIX,100%,0,0
+kaufman_adaptive_moving_average_10d,Kaufman Adaptive Moving Average value for a 10-day period.,MATRIX,100%,1,1
+kaufman_adaptive_moving_average_50d,Kaufman Adaptive Moving Average value calculated over a 50-day window.,MATRIX,100%,0,0
+linear_regression_50d,Linear regression value calculated over a 50-day window.,MATRIX,100%,0,0
+linear_regression_angle_10d,Angle of linear regression calculated over a 10-day window.,MATRIX,100%,0,0
+linear_regression_angle_50d,Angle of the linear regression line calculated over a 50-day window.,MATRIX,100%,0,0
+linear_regression_intercept_10d,Intercept of linear regression calculated over a 10-day window.,MATRIX,100%,0,0
+linear_regression_intercept_50d,Intercept of the linear regression line calculated over a 50-day window.,MATRIX,100%,0,0
+linear_regression_slope_10d,Slope of linear regression calculated over a 10-day window.,MATRIX,100%,0,0
+linear_regression_slope_50d,Slope of the linear regression line calculated over a 50-day window.,MATRIX,100%,0,0
+linear_regression_value_10d,Linear regression value calculated over a 10-day window.,MATRIX,100%,0,0
+macd_indicator_50d,MACD indicator value calculated over a 50-day window.,MATRIX,100%,0,0
+macd_value_10d,MACD (Moving Average Convergence Divergence) value for a 10-day window.,MATRIX,100%,0,0
+maximum_price_10d,Maximum price observed over a 10-day window.,MATRIX,100%,0,0
+maximum_price_50d,Maximum price value observed over a 50-day window.,MATRIX,100%,0,0
+maximum_price_index_50d,Index of the maximum price observed over a 50-day window.,MATRIX,100%,0,0
+median_price_10d,Median price value over a 10-day window.,MATRIX,100%,0,0
+median_price_50d,Median price value calculated over a 50-day window.,MATRIX,100%,0,0
+median_price_value_50d,Median price value calculated over a 50-day window.,MATRIX,100%,0,0
+mid_price_10d,Mid price value over a 10-day window.,MATRIX,100%,0,0
+midpoint_price_10d,Midpoint price over a 10-day window.,MATRIX,100%,0,0
+midpoint_price_50d,Midpoint price value calculated over a 50-day window.,MATRIX,100%,0,0
+minimum_price_10d,Minimum price observed over a 10-day window.,MATRIX,100%,0,0
+minimum_price_50d,Minimum price value observed over a 50-day window.,MATRIX,100%,0,0
+minimum_price_index_50d,Index of the minimum price observed over a 50-day window.,MATRIX,100%,0,0
+minus_directional_indicator_10d,Minus Directional Indicator value for a 10-day period.,MATRIX,100%,0,0
+minus_directional_movement_10d,Minus Directional Movement value for a 10-day period.,MATRIX,100%,0,0
+model_confidence_score_5cat,"Confidence score for the predicted 10-day return quantile, log-transformed.",MATRIX,100%,0,0
+momentum_10d,Momentum indicator value for a 10-day window.,MATRIX,100%,0,0
+momentum_indicator_50d,Momentum indicator value calculated over a 50-day window.,MATRIX,100%,0,0
+money_flow_index_10d_2,Money Flow Index calculated over a 10-day window.,MATRIX,100%,0,0
+money_flow_index_50d,Money Flow Index value calculated over a 50-day window.,MATRIX,100%,0,0
+moving_average_10d,Moving average value for a 10-day period.,MATRIX,100%,0,0
+moving_average_50d,Moving average value calculated over a 50-day window.,MATRIX,100%,0,0
+negative_directional_indicator_50d,Negative Directional Indicator value calculated over a 50-day window.,MATRIX,100%,0,0
+negative_directional_movement_50d,Negative Directional Movement value calculated over a 50-day window.,MATRIX,100%,0,0
+normalized_average_true_range_10d,Normalized Average True Range for a 10-day period.,MATRIX,100%,0,0
+normalized_average_true_range_50d,Normalized Average True Range value calculated over a 50-day window.,MATRIX,100%,0,0
+on_balance_volume_10d_2,On-Balance Volume calculated over a 10-day window.,MATRIX,100%,0,0
+on_balance_volume_50d,On-Balance Volume value calculated over a 50-day window.,MATRIX,100%,0,0
+percentage_price_oscillator_10d,Percentage Price Oscillator value for a 10-day window.,MATRIX,100%,0,0
+percentage_price_oscillator_50d,Percentage Price Oscillator value calculated over a 50-day window.,MATRIX,100%,0,0
+plus_directional_indicator_10d,Plus Directional Indicator value for a 10-day period.,MATRIX,100%,0,0
+plus_directional_movement_10d,Plus Directional Movement value for a 10-day period.,MATRIX,100%,0,0
+positive_directional_indicator_50d,Positive Directional Indicator value calculated over a 50-day window.,MATRIX,100%,0,0
+positive_directional_movement_50d,Positive Directional Movement value calculated over a 50-day window.,MATRIX,100%,1,1
+predicted_return_quantile_1,Predicted category for 10-day future return using technical indicators set 1.,MATRIX,100%,3,4
+predicted_return_quantile_14,Predicted category for 10-day future return using technical indicators set 14.,MATRIX,100%,0,0
+predicted_return_quantile_19,Predicted category for 10-day future return using technical indicators set 19.,MATRIX,100%,2,4
+predicted_return_quantile_2,Predicted category for 10-day future return using technical indicators set 2.,MATRIX,100%,1,1
+predicted_return_quantile_20,Predicted category for 10-day future return using technical indicators set 20.,MATRIX,100%,2,2
+predicted_return_quantile_23,Predicted category for 10-day future return using technical indicators set 23.,MATRIX,100%,4,4
+predicted_return_quantile_25,Predicted category for 10-day future return using technical indicators set 25.,MATRIX,100%,2,2
+predicted_return_quantile_28,Predicted category for 10-day future return using technical indicators set 28.,MATRIX,100%,0,0
+predicted_return_quantile_29,Predicted category for 10-day future return using technical indicators set 29.,MATRIX,100%,0,0
+predicted_return_quantile_3,Predicted category for 10-day future return using technical indicators set 3.,MATRIX,100%,0,0
+predicted_return_quantile_30,Predicted category for 10-day future return using technical indicators set 30.,MATRIX,100%,0,0
+predicted_return_quantile_31,Predicted category for 10-day future return using technical indicators set 31.,MATRIX,100%,0,0
+predicted_return_quantile_32,Predicted category for 10-day future return using technical indicators set 32.,MATRIX,100%,0,0
+predicted_return_quantile_33,Predicted category for 10-day future return using technical indicators set 33.,MATRIX,100%,0,0
+predicted_return_quantile_35,Predicted category for 10-day future return using technical indicators set 35.,MATRIX,100%,0,0
+predicted_return_quantile_36,Predicted category for 10-day future return using technical indicators set 36.,MATRIX,100%,1,1
+predicted_return_quantile_37,Predicted category for 10-day future return using technical indicators set 37.,MATRIX,100%,3,3
+predicted_return_quantile_5cat,"Predicted category for 10-day future return, ranked into five quantiles.",MATRIX,100%,1,2
+predicted_return_quantile_7,Predicted category for 10-day future return using technical indicators set 7.,MATRIX,100%,0,0
+predicted_return_quantile_8,Predicted category for 10-day future return using technical indicators set 8.,MATRIX,100%,0,0
+prediction_confidence_score_1,Model confidence score for the predicted 10-day return quantile using technical indicators set 1.,MATRIX,100%,0,0
+prediction_confidence_score_14,Model confidence score for the predicted 10-day return quantile using technical indicators set 14.,MATRIX,100%,0,0
+prediction_confidence_score_19,Model confidence score for the predicted 10-day return quantile using technical indicators set 19.,MATRIX,100%,0,0
+prediction_confidence_score_2,Model confidence score for the predicted 10-day return quantile using technical indicators set 2.,MATRIX,100%,0,0
+prediction_confidence_score_20,Model confidence score for the predicted 10-day return quantile using technical indicators set 20.,MATRIX,100%,0,0
+prediction_confidence_score_23,Model confidence score for the predicted 10-day return quantile using technical indicators set 23.,MATRIX,100%,0,0
+prediction_confidence_score_25,Model confidence score for the predicted 10-day return quantile using technical indicators set 25.,MATRIX,100%,0,0
+prediction_confidence_score_29,Model confidence score for the predicted 10-day return quantile using technical indicators set 29.,MATRIX,100%,0,0
+prediction_confidence_score_3,Model confidence score for the predicted 10-day return quantile using technical indicators set 3.,MATRIX,100%,0,0
+prediction_confidence_score_30,Model confidence score for the predicted 10-day return quantile using technical indicators set 30.,MATRIX,100%,0,0
+prediction_confidence_score_31,Model confidence score for the predicted 10-day return quantile using technical indicators set 31.,MATRIX,100%,0,0
+prediction_confidence_score_32,Model confidence score for the predicted 10-day return quantile using technical indicators set 32.,MATRIX,100%,0,0
+prediction_confidence_score_33,Model confidence score for the predicted 10-day return quantile using technical indicators set 33.,MATRIX,100%,0,0
+prediction_confidence_score_35,Model confidence score for the predicted 10-day return quantile using technical indicators set 35.,MATRIX,100%,0,0
+prediction_confidence_score_36,Model confidence score for the predicted 10-day return quantile using technical indicators set 36.,MATRIX,100%,0,0
+prediction_confidence_score_37,Model confidence score for the predicted 10-day return quantile using technical indicators set 37.,MATRIX,100%,0,0
+prediction_confidence_score_7,Model confidence score for the predicted 10-day return quantile using technical indicators set 7.,MATRIX,100%,0,0
+prediction_confidence_score_8,Model confidence score for the predicted 10-day return quantile using technical indicators set 8.,MATRIX,100%,0,0
+rate_of_change_10d,Rate of change value over a 10-day window.,MATRIX,100%,1,1
+rate_of_change_50d,Rate of change indicator value calculated over a 50-day window.,MATRIX,100%,0,0
+rate_of_change_percent_10d,Rate of change percentage over a 10-day window.,MATRIX,100%,0,0
+rate_of_change_percentage_50d,Rate of change percentage value calculated over a 50-day window.,MATRIX,100%,0,0
+rate_of_change_ratio_100_10d,Rate of change ratio (scaled by 100) over a 10-day window.,MATRIX,100%,0,0
+rate_of_change_ratio_100_50d,Rate of change ratio (base 100) value calculated over a 50-day window.,MATRIX,100%,0,0
+rate_of_change_ratio_10d,Rate of change ratio over a 10-day window.,MATRIX,100%,0,0
+rate_of_change_ratio_50d,Rate of change ratio value calculated over a 50-day window.,MATRIX,100%,0,0
+relative_strength_index_10d_2,Relative Strength Index value for a 10-day period.,MATRIX,100%,0,0
+relative_strength_index_50d,Relative Strength Index value calculated over a 50-day window.,MATRIX,100%,0,0
+t3_moving_average_50d,T3 moving average value calculated over a 50-day window.,MATRIX,100%,0,0
+ten_day_mean_price_trend,The average closing price of a security over the past 10 trading days.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_10,Model confidence score for predicted 10-day return quantile using indicator set 10.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_11,Model confidence score for predicted 10-day return quantile using indicator set 11.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_12,Model confidence score for predicted 10-day return quantile using indicator set 12.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_13,Model confidence score for predicted 10-day return quantile using indicator set 13.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_15,Model confidence score for predicted 10-day return quantile using indicator set 15.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_16,Model confidence score for predicted 10-day return quantile using indicator set 16.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_17,Model confidence score for predicted 10-day return quantile using indicator set 17.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_18,Model confidence score for predicted 10-day return quantile using indicator set 18.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_21,Model confidence score for predicted 10-day return quantile using indicator set 21.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_22,Model confidence score for predicted 10-day return quantile using indicator set 22.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_24,Model confidence score for predicted 10-day return quantile using indicator set 24.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_26,Model confidence score for predicted 10-day return quantile using indicator set 26.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_27,Model confidence score for predicted 10-day return quantile using indicator set 27.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_28,Model confidence score for predicted 10-day return quantile using indicator set 28.,MATRIX,100%,1,1
+ten_day_return_quantile_confidence_34,Model confidence score for predicted 10-day return quantile using indicator set 34.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_38,Model confidence score for predicted 10-day return quantile using indicator set 38.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_4,Model confidence score for predicted 10-day return quantile using indicator set 4.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_6,Model confidence score for predicted 10-day return quantile using indicator set 6.,MATRIX,100%,0,0
+ten_day_return_quantile_confidence_9,Model confidence score for predicted 10-day return quantile using indicator set 9.,MATRIX,100%,0,0
+ten_day_return_quantile_label_10,Predicted quantile label for 10-day future return using indicator set 10.,MATRIX,100%,0,0
+ten_day_return_quantile_label_11,Predicted quantile label for 10-day future return using indicator set 11.,MATRIX,100%,6,6
+ten_day_return_quantile_label_12,Predicted quantile label for 10-day future return using indicator set 12.,MATRIX,100%,0,0
+ten_day_return_quantile_label_13,Predicted quantile label for 10-day future return using indicator set 13.,MATRIX,100%,0,0
+ten_day_return_quantile_label_15,Predicted quantile label for 10-day future return using indicator set 15.,MATRIX,100%,0,0
+ten_day_return_quantile_label_16,Predicted quantile label for 10-day future return using indicator set 16.,MATRIX,100%,0,0
+ten_day_return_quantile_label_17,Predicted quantile label for 10-day future return using indicator set 17.,MATRIX,100%,1,1
+ten_day_return_quantile_label_18,Predicted quantile label for 10-day future return using indicator set 18.,MATRIX,100%,0,0
+ten_day_return_quantile_label_21,Predicted quantile label for 10-day future return using indicator set 21.,MATRIX,100%,2,2
+ten_day_return_quantile_label_22,Predicted quantile label for 10-day future return using indicator set 22.,MATRIX,100%,0,0
+ten_day_return_quantile_label_24,Predicted quantile label for 10-day future return using indicator set 24.,MATRIX,100%,1,1
+ten_day_return_quantile_label_26,Predicted quantile label for 10-day future return using indicator set 26.,MATRIX,100%,1,1
+ten_day_return_quantile_label_27,Predicted quantile label for 10-day future return using indicator set 27.,MATRIX,100%,1,1
+ten_day_return_quantile_label_34,Predicted quantile label for 10-day future return using indicator set 34.,MATRIX,100%,1,1
+ten_day_return_quantile_label_38,Predicted quantile label for 10-day future return using indicator set 38.,MATRIX,100%,3,6
+ten_day_return_quantile_label_4,Predicted quantile label for 10-day future return using indicator set 4.,MATRIX,100%,0,0
+ten_day_return_quantile_label_6,Predicted quantile label for 10-day future return using indicator set 6.,MATRIX,100%,0,0
+ten_day_return_quantile_label_9,Predicted quantile label for 10-day future return using indicator set 9.,MATRIX,100%,1,1
+time_series_forecast_10d,Time Series Forecast value for a 10-day period.,MATRIX,100%,0,0
+time_series_forecast_50d,Time Series Forecast value calculated over a 50-day window.,MATRIX,100%,0,0
+triangular_moving_average_10d,Triangular moving average value for a 10-day period.,MATRIX,100%,0,0
+triangular_moving_average_50d,Triangular moving average value calculated over a 50-day window.,MATRIX,100%,0,0
+triple_ema_50d,Triple Exponential Moving Average value over a 50-day window.,MATRIX,100%,0,0
+triple_exponential_average_10d,Triple Exponential Average indicator for a 10-day period.,MATRIX,100%,0,0
+triple_exponential_average_50d,Triple exponential average indicator value over a 50-day window.,MATRIX,100%,0,0
+true_range_10d,True Range value calculated over a 10-day window.,MATRIX,100%,0,0
+true_range_50d,True range value calculated over a 50-day window.,MATRIX,100%,0,0
+typical_price_10d,Typical price calculated over a 10-day window.,MATRIX,100%,0,0
+typical_price_50d,Typical price value calculated over a 50-day window.,MATRIX,100%,0,0
+weighted_close_price_10d,Weighted close price calculated over a 10-day window.,MATRIX,100%,1,1
+weighted_close_price_50d,Weighted close price value calculated over a 50-day window.,MATRIX,100%,0,0
+weighted_moving_average_10d,Weighted Moving Average value for a 10-day period.,MATRIX,100%,0,0
+weighted_moving_average_50d,Weighted moving average value calculated over a 50-day window.,MATRIX,100%,0,0
+williams_percent_r_50d,Williams %R indicator value calculated over a 50-day window.,MATRIX,100%,1,1
+williams_percent_range_10d,Williams %R technical indicator calculated over a 10-day window.,MATRIX,100%,0,0

@@ -1,0 +1,103 @@
+Field,Description,Type,Coverage,Users,Alphas
+aggregate_large_target_long_horizon_return,Aggregate portfolio return using large price targets and extended timeframes.,VECTOR,77%,6,6
+aggregate_large_target_long_horizon_return_2,Aggregate portfolio return using large price targets and extended timeframes.,VECTOR,65%,2,2
+aggregate_medium_target_mid_horizon_return,Aggregate portfolio return using medium price targets and mid-range timeframes.,VECTOR,65%,0,0
+aggregate_medium_target_mid_horizon_return_2,Aggregate portfolio return using medium price targets and mid-range timeframes.,VECTOR,65%,0,0
+aggregate_prediction_accuracy_score,Weighted score reflecting overall prediction accuracy and volume.,VECTOR,65%,0,0
+aggregate_prediction_accuracy_score_2,Weighted score reflecting overall prediction accuracy and volume.,VECTOR,65%,0,0
+aggregate_small_target_quick_horizon_gain,Portfolio return using small price targets and short time horizons across all assets.,VECTOR,65%,0,0
+aggregate_small_target_quick_horizon_return,Aggregate portfolio return using small price targets and short timeframes.,VECTOR,65%,0,0
+asset_aggregate_portfolio_return,Total percentage return for an asset using all price and time targets.,VECTOR,60%,1,1
+asset_aggregate_portfolio_return_2,Total percentage return for an asset using all price and time targets.,VECTOR,65%,1,1
+asset_correct_long_predictions_count,Number of correct long-biased predictions for a specific asset.,VECTOR,65%,1,1
+asset_correct_long_predictions_count_2,Number of correct long-biased predictions for a specific asset.,VECTOR,65%,1,1
+asset_correct_short_predictions_count,Number of correct short-biased predictions for a specific asset.,VECTOR,60%,0,0
+asset_correct_short_predictions_count_2,Number of correct short-biased predictions for a specific asset.,VECTOR,65%,0,0
+asset_current_market_price,Current market price of the asset at the time of prediction.,VECTOR,65%,2,2
+asset_current_market_price_2,Current market price of the asset at the time of prediction.,VECTOR,65%,0,0
+asset_large_target_long_horizon_return,Percentage return for an asset using large price targets and extended timeframes.,VECTOR,65%,0,0
+asset_large_target_long_horizon_return_2,Percentage return for an asset using large price targets and extended timeframes.,VECTOR,65%,0,0
+asset_long_prediction_ratio,Proportion of long-biased predictions out of total predictions for an asset.,VECTOR,60%,0,0
+asset_long_prediction_ratio_2,Proportion of long-biased predictions out of total predictions for an asset.,VECTOR,65%,0,0
+asset_long_prediction_success_rate,Ratio of correct long-biased predictions to total long predictions for an asset.,VECTOR,65%,1,1
+asset_long_prediction_success_rate_2,Ratio of correct long-biased predictions to total long predictions for an asset.,VECTOR,65%,1,1
+asset_long_predictions_count,Total number of long-biased predictions made for a specific asset.,VECTOR,60%,0,0
+asset_long_predictions_count_2,Total number of long-biased predictions made for a specific asset.,VECTOR,65%,0,0
+asset_medium_target_mid_horizon_return,Percentage return for an asset using medium price targets and mid-range timeframes.,VECTOR,60%,1,1
+asset_medium_target_mid_horizon_return_2,Percentage return for an asset using medium price targets and mid-range timeframes.,VECTOR,65%,0,0
+asset_prediction_accuracy_score,Weighted score reflecting prediction accuracy and volume for an asset.,VECTOR,60%,0,0
+asset_prediction_accuracy_score_2,Weighted score reflecting prediction accuracy and volume for an asset.,VECTOR,65%,0,0
+asset_prediction_confidence_ratio,Ratio of current confidence score to the maximum confidence score for an asset.,VECTOR,65%,0,0
+asset_prediction_confidence_ratio_2,Ratio of current confidence score to the maximum confidence score for an asset.,VECTOR,65%,0,0
+asset_prediction_success_rate,Ratio of correct predictions to total predictions for an asset.,VECTOR,65%,0,0
+asset_prediction_success_rate_2,Ratio of correct predictions to total predictions for an asset.,VECTOR,65%,0,0
+asset_recent_prediction_success_trend,Recent success rate of predictions for a specific asset.,VECTOR,60%,1,1
+asset_short_prediction_ratio,Proportion of short-biased predictions out of total predictions for an asset.,VECTOR,65%,0,0
+asset_short_prediction_ratio_2,Proportion of short-biased predictions out of total predictions for an asset.,VECTOR,81%,1,1
+asset_short_prediction_success_rate,Ratio of correct short-biased predictions to total short predictions for an asset.,VECTOR,60%,0,0
+asset_short_predictions_count,Total number of short-biased predictions made for a specific asset.,VECTOR,60%,3,3
+asset_short_predictions_count_2,Total number of short-biased predictions made for a specific asset.,VECTOR,65%,0,0
+asset_short_signals_success_ratio,Ratio of correct short position predictions to total short predictions for a specific asset.,VECTOR,65%,0,0
+asset_small_target_quick_horizon_return,Percentage return for an asset using small price targets and short timeframes.,VECTOR,60%,0,0
+asset_small_target_quick_horizon_return_2,Percentage return for an asset using small price targets and short timeframes.,VECTOR,65%,0,0
+asset_total_predictions_count,Total number of predictions made for a specific asset.,VECTOR,65%,0,0
+asset_total_predictions_count_2,Total number of predictions made for a specific asset.,VECTOR,65%,0,0
+bear_market_aggregate_portfolio_gain,Aggregate percentage return for all positions during bear market periods.,VECTOR,65%,0,0
+bear_market_aggregate_portfolio_return,Total portfolio return during periods of declining asset prices.,VECTOR,60%,0,0
+bear_market_large_target_long_horizon_return,Portfolio return during bear markets using large price targets and extended timeframes.,VECTOR,60%,0,0
+bear_market_large_target_long_horizon_return_2,Portfolio return during bear markets using large price targets and extended timeframes.,VECTOR,65%,1,1
+bear_market_medium_target_mid_horizon_return,Portfolio return during bear markets using medium price targets and mid-range timeframes.,VECTOR,60%,0,0
+bear_market_medium_target_mid_horizon_return_2,Portfolio return during bear markets using medium price targets and mid-range timeframes.,VECTOR,65%,0,0
+bear_market_small_target_quick_horizon_gain,Portfolio return for small price targets and quick timeframes during bear market periods.,VECTOR,65%,0,0
+bear_market_small_target_quick_horizon_return,Portfolio return during bear markets using small price targets and short timeframes.,VECTOR,60%,0,0
+bull_market_aggregate_portfolio_return,Total portfolio return during periods of rising asset prices.,VECTOR,65%,1,1
+bull_market_aggregate_portfolio_return_2,Total portfolio return during periods of rising asset prices.,VECTOR,81%,0,0
+bull_market_large_target_long_horizon_return,Portfolio return during bull markets using large price targets and extended timeframes.,VECTOR,60%,0,0
+bull_market_large_target_long_horizon_return_2,Portfolio return during bull markets using large price targets and extended timeframes.,VECTOR,65%,0,0
+bull_market_medium_target_mid_horizon_return,Portfolio return during bull markets using medium price targets and mid-range timeframes.,VECTOR,77%,0,0
+bull_market_medium_target_mid_horizon_return_2,Portfolio return during bull markets using medium price targets and mid-range timeframes.,VECTOR,65%,0,0
+bull_market_small_target_quick_horizon_return,Portfolio return during bull markets using small price targets and short timeframes.,VECTOR,60%,0,0
+bull_market_small_target_quick_horizon_return_2,Portfolio return during bull markets using small price targets and short timeframes.,VECTOR,81%,0,0
+long_bias_prediction_ratio_overall,Proportion of long-biased predictions out of all predictions for an account.,VECTOR,65%,0,0
+long_prediction_success_rate_overall,Ratio of correct long-biased predictions to total long predictions across all assets.,VECTOR,65%,0,0
+long_prediction_success_rate_overall_2,Ratio of correct long-biased predictions to total long predictions across all assets.,VECTOR,65%,0,0
+long_signals_aggregate_portfolio_return,Total portfolio return using only long-biased signals.,VECTOR,60%,1,1
+long_signals_aggregate_portfolio_return_2,Total portfolio return using only long-biased signals.,VECTOR,65%,0,0
+long_signals_large_target_extended_horizon_return,Total return from long-biased signals with large price targets and long time horizons.,VECTOR,60%,0,0
+long_signals_large_target_extended_horizon_return_2,Total return from long-biased signals with large price targets and long time horizons.,VECTOR,65%,1,1
+long_signals_medium_target_mid_horizon_return,Portfolio return from long-biased signals with medium price targets and mid-range timeframes.,VECTOR,65%,0,0
+long_signals_medium_target_mid_horizon_return_2,Portfolio return from long-biased signals with medium price targets and mid-range timeframes.,VECTOR,81%,1,1
+long_signals_small_target_quick_horizon_return,Portfolio return from long-biased signals with small price targets and short timeframes.,VECTOR,60%,0,0
+long_signals_small_target_quick_horizon_return_2,Portfolio return from long-biased signals with small price targets and short timeframes.,VECTOR,65%,1,1
+overall_aggregate_portfolio_return,Aggregate percentage return using all price and time targets across all assets.,VECTOR,60%,0,0
+overall_aggregate_portfolio_return_2,Aggregate percentage return using all price and time targets across all assets.,VECTOR,65%,0,0
+overall_correct_long_predictions_count,Number of correct long-biased predictions across all assets.,VECTOR,60%,1,1
+overall_correct_long_predictions_count_2,Number of correct long-biased predictions across all assets.,VECTOR,65%,0,0
+overall_correct_short_predictions_count,Number of correct short-biased predictions across all assets.,VECTOR,77%,1,1
+overall_correct_short_predictions_count_2,Number of correct short-biased predictions across all assets.,VECTOR,65%,0,0
+overall_long_predictions_count,Total number of long-biased predictions made by an account across all assets.,VECTOR,65%,0,0
+overall_long_predictions_count_2,Total number of long-biased predictions made by an account across all assets.,VECTOR,65%,0,0
+overall_long_signals_ratio,Ratio of long position predictions to total predictions made across all assets.,VECTOR,65%,0,0
+overall_prediction_confidence_ratio,Ratio of current overall confidence score to the maximum possible score.,VECTOR,77%,0,0
+overall_prediction_confidence_ratio_2,Ratio of current overall confidence score to the maximum possible score.,VECTOR,65%,1,1
+overall_prediction_success_rate,Ratio of correct predictions to total predictions across all assets.,VECTOR,77%,1,1
+overall_prediction_success_rate_2,Ratio of correct predictions to total predictions across all assets.,VECTOR,65%,0,0
+overall_short_predictions_count,Total number of short-biased predictions made by an account across all assets.,VECTOR,65%,0,0
+overall_short_signals_count,Total number of short position predictions made across all assets by an account.,VECTOR,65%,0,0
+overall_signals_count,Total number of predictions made by an account across all assets.,VECTOR,65%,0,0
+overall_total_predictions_count,Total number of predictions made by an account across all assets.,VECTOR,60%,1,1
+recent_prediction_success_trend_asset,"Recent trend of successful predictions for a specific asset, based on the last nine signals.",VECTOR,65%,1,1
+recent_prediction_success_trend_overall,Measure of recent prediction success across all assets for an account.,VECTOR,60%,0,0
+recent_prediction_success_trend_overall_2,"Recent trend of successful predictions across all assets, based on the last nine signals.",VECTOR,65%,0,0
+short_bias_prediction_ratio_overall,Proportion of short-biased predictions out of all predictions for an account.,VECTOR,65%,0,0
+short_bias_prediction_ratio_overall_2,Proportion of short-biased predictions out of all predictions for an account.,VECTOR,81%,1,1
+short_prediction_success_rate_overall,Ratio of correct short-biased predictions to total short predictions across all assets.,VECTOR,60%,0,0
+short_prediction_success_rate_overall_2,Ratio of correct short-biased predictions to total short predictions across all assets.,VECTOR,65%,0,0
+short_signals_aggregate_portfolio_return,Total portfolio return using only short-biased signals.,VECTOR,77%,0,0
+short_signals_aggregate_portfolio_return_2,Total portfolio return using only short-biased signals.,VECTOR,81%,0,0
+short_signals_large_target_long_horizon_return,Portfolio return from short-biased signals with large price targets and extended timeframes.,VECTOR,65%,1,1
+short_signals_large_target_long_horizon_return_2,Portfolio return from short-biased signals with large price targets and extended timeframes.,VECTOR,65%,1,2
+short_signals_medium_target_mid_horizon_return,Portfolio return from short-biased signals with medium price targets and mid-range timeframes.,VECTOR,60%,1,1
+short_signals_medium_target_mid_horizon_return_2,Portfolio return from short-biased signals with medium price targets and mid-range timeframes.,VECTOR,65%,2,3
+short_signals_small_target_quick_horizon_return,Portfolio return from short-biased signals with small price targets and short timeframes.,VECTOR,77%,0,0
+short_signals_small_target_quick_horizon_return_2,Portfolio return from short-biased signals with small price targets and short timeframes.,VECTOR,65%,0,0

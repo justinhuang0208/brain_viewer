@@ -1,0 +1,44 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl23_analyst_revisn,Analyst forecast revision score (unitless; more negative values indicate more negative revisions),MATRIX,56%,76,192
+mdl23_bk_13w_mdl_score_chg,Change in model score over 13 weeks,MATRIX,71%,67,522
+mdl23_bk_1w_mdl_score_chg,Change in model score over 1 week,MATRIX,72%,76,340
+mdl23_bk_5_year_beta,Stock beta over 5 years,MATRIX,72%,67,490
+mdl23_bk_5year_eps_growth,5 year EPS growth forecast,MATRIX,53%,50,164
+mdl23_bk_6mon_price_change,6 month stock price change,MATRIX,72%,61,506
+mdl23_bk_analyst_revisn,Analyst Forecast Revisions. Stocks with recent negative forecast revisions tend to underperform,MATRIX,62%,47,156
+mdl23_bk_analyst_valu_sent,Analyst valuation sentiment; higher score indicates cheaper stocks according to analysts,MATRIX,64%,35,93
+mdl23_bk_asset_effcncy,Higher score indicates better asset utilization efficiency,MATRIX,66%,38,151
+mdl23_bk_asset_valu,High score indicates high book values compared to market cap,MATRIX,66%,58,190
+mdl23_bk_average_daily_vol,Average daily trading volume in shares,MATRIX,72%,86,426
+mdl23_bk_company_name,Company name,MATRIX,66%,42,146
+mdl23_bk_debt_to_equity,Debt-to-equity ratio,MATRIX,70%,78,558
+mdl23_bk_dra,DRA Decile : DRA scores are deciled across the entire universe,MATRIX,66%,50,221
+mdl23_bk_earn_gth_valu,Higher score indicates better earnings growth prospects,MATRIX,65%,51,145
+mdl23_bk_entrpris_valu,Higher score indicates higher operating income relative to enterprise value,MATRIX,65%,54,260
+mdl23_bk_eps_surprise,Most Recently Reported Quarterly EPS Surprise (%) : Vendor:This data is for filtering or screening on your end if you choose,MATRIX,70%,53,248
+mdl23_bk_fcf_valu,Higher score indicates higher free cash flows relative to market cap,MATRIX,65%,41,134
+mdl23_bk_fund_gth,Score capturing fundamental growth such as free cash flow or revenue growth; higher values indicate stronger growth,MATRIX,65%,60,315
+mdl23_bk_leverage,Financial leverage ratio (total assets to equity),MATRIX,66%,35,136
+mdl23_bk_market_cap,"Market capitalization, calculated as share price times shares outstanding",MATRIX,72%,50,279
+mdl23_bk_mdl_score,DRA Score : The sum of all the DRA sub-components. A high value is good.,MATRIX,66%,39,134
+mdl23_bk_mdl_sector_neutral,DRA Decile (Sector Neutral) : DRA scores are deciled within each sector,MATRIX,64%,41,130
+mdl23_bk_net_equity_financ,Higher score indicates higher levels of equity issuance,MATRIX,66%,41,163
+mdl23_bk_no_ana_fy1s,Number of Analysts Providing FY1 Forecasts : Vendor:This data is for filtering or screening on your end if you choose,MATRIX,72%,53,163
+mdl23_bk_pric_volatil_ann,Price volatility annualized in percentage,MATRIX,72%,73,359
+mdl23_bk_prob_1yret_less,Probability of underperforming market over a one year horizon,MATRIX,72%,74,555
+mdl23_bk_profitabil_chg,Higher score indicates higher icnrease in profitability,MATRIX,66%,42,134
+mdl23_bk_profitabil_trend,Score measuring consistency of profitability; higher score means more consistent profitability,MATRIX,64%,36,119
+mdl23_bk_return_on_equity,Return on equity percentage,MATRIX,69%,61,331
+mdl23_bk_rev_stabil,Higher score indicates more consistency in Revenue,MATRIX,65%,44,187
+mdl23_bk_trailing_price,Trailing price-to-earnings (P/E) ratio,MATRIX,56%,38,203
+mdl23_cash_src_use,Cash Sources & Uses Stocks with recent external financing and high recent capital expenditures relative to net operating assets (new) tend to underperform,MATRIX,59%,58,241
+mdl23_company_name,Company name,MATRIX,60%,28,67
+mdl23_dra,"Overall DRA risk decile ranking (1=lowest downside risk, 10=highest)",MATRIX,60%,41,107
+mdl23_fund_growth,Fundamental growth score (unitless; higher indicates stronger growth),MATRIX,60%,37,111
+mdl23_fund_stabil,Fundamental stability indicator (unitless; higher indicates more stability),MATRIX,59%,39,106
+mdl23_lev_effcncy,Leverage & Efficiency. Stocks with high LT debt and low revenues relative to assets and COGS (new) tend to underperform,MATRIX,60%,68,201
+mdl23_mdl_score,Composite Downside Risk Alert score; higher values indicate lower expected downside risk,MATRIX,60%,41,137
+mdl23_mdl_sector_neutral,Sector-neutral DRA risk decile (1–10; lower is better),MATRIX,60%,46,114
+mdl23_tail_risk,Tail risk indicator (unitless; higher values indicate greater extreme-risk exposure),MATRIX,60%,39,165
+mdl23_technical_actn,Technical Action Stocks with low recent price correlation to market movements,MATRIX,60%,81,244
+mdl23_valuation,Stocks with low adjusted free cash flows relative to their enterprise values,MATRIX,59%,40,167

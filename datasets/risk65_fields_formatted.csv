@@ -1,0 +1,7 @@
+Field,Description,Type,Coverage,Users,Alphas
+rsk65_mfm_etfm3_dsrt_intermediate,Instrument Specific Returns,MATRIX,100%,97,120
+rsk65_mfm_etfm3_srisk,Instrument idiosyncratic/specific risk estimate for the ETF in the ETFM3 model,MATRIX,95%,35,38
+rsk65_mfm_etfm4_dsrt_intermediate,Instrument Specific Returns,MATRIX,100%,61,64
+rsk65_mfm_etfm4_srisk,Instrument-specific idiosyncratic risk estimates for ETFM4,MATRIX,95%,28,30
+rsk65_trsd_3mfte_mfm,Instrument-specific residual returns unexplained by the model factors,MATRIX,95%,46,61
+rsk65_trsd_4mfte_mfm,Instrument-specific residual returns (specific returns) for each ETF in the ETFM4 model,MATRIX,100%,47,57

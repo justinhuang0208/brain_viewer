@@ -1,0 +1,13 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd69_capxy2q,Capital Expenditures (Quarterly),MATRIX,42%,23,24
+fnd69_dltry2q,Long-Term Debt - Reduction (Quarterly),MATRIX,39%,7,7
+fnd69_fiscalquarter,Fiscal quarter,MATRIX,100%,13,14
+fnd69_fiscalyear,Fiscal year,MATRIX,100%,21,26
+fnd69_q2ycktsrp,Purchase of Common and Preferred Stock (Quarterly),MATRIX,39%,5,5
+fnd69_q2yfcnao,Operating Activities - Net Cash Flow (Quarterly),MATRIX,43%,15,18
+fnd69_q2yktss,Sale of Common and Preferred Stock (Quarterly),MATRIX,39%,15,19
+fnd69_q2ysitld,Long-Term Debt - Issuance (Quarterly),MATRIX,39%,8,9
+fnd69_q2yvd,Cash Dividends (Cash Flow) (Quarterly),MATRIX,40%,1,1
+fnd69_qta,Assets - Total (Quarterly),MATRIX,100%,7,7
+fnd69_rtqf,Fiscal quarter,MATRIX,100%,26,35
+fnd69_ta,Assets - Total (Quarterly),MATRIX,51%,3,3

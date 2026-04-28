@@ -1,0 +1,215 @@
+Field,Description,Type,Coverage,Users,Alphas
+mws87_actinvoratioceopres,Number of words of CEO/number of words of executives in presentation,VECTOR,63%,14,17
+mws87_actinvoratioceoqa,Number of words spoken by CEO divided by number of words spoken by executives in Q&A.,VECTOR,63%,7,7
+mws87_actinvoratiocfopres,Number of words of CFO/number of words of executives in presentation,VECTOR,60%,4,8
+mws87_actinvoratiocfoqa,Number of words of CFO/number of words of executives in Q&A,VECTOR,59%,2,2
+mws87_analyst_ari_qa,The ARI score of Sell Side Analysts in Q_A,VECTOR,71%,5,8
+mws87_analyst_cli_qa,The CLI score of Sell Side Analysts in Q_A,VECTOR,71%,14,18
+mws87_analyst_dcs_qa,The DCS score of Sell Side Analysts in Q_A,VECTOR,71%,14,20
+mws87_analyst_fkgl_qa,The FKGL score of sell side analysts in Q&A.,VECTOR,71%,6,6
+mws87_analyst_forw_sent_qa,The Forward Sentiment Score of Sell Side Analysts in Q_A,VECTOR,57%,62,114
+mws87_analyst_fre_qa,The Flesch Reading Ease score of the sell-side analysts in Q&A,VECTOR,71%,8,13
+mws87_analyst_gfi_qa,The GFI score of sell side analysts in Q&A,VECTOR,71%,5,12
+mws87_analyst_neg_logit_qa,The Negative Logit of Sell Side Analysts in Q_A,VECTOR,71%,59,110
+mws87_analyst_neu_logit_qa,The Neutral Logit of Sell Side Analysts in Q&A,VECTOR,71%,32,74
+mws87_analyst_pos_logit_qa,The Positive Logit of sell side analysts in Q&A.,VECTOR,71%,96,184
+mws87_analyst_sent_score_qa,The sentiment score of sell side analysts in Q&A.,VECTOR,71%,39,61
+mws87_analyst_smog_qa,The SMOG score of sell side analysts in Q&A,VECTOR,71%,8,12
+mws87_analystattendence,number of Sell Side Analysts that attend the conference,VECTOR,70%,2,2
+mws87_aq_erf,The FRE score in Q&A,VECTOR,72%,8,10
+mws87_aq_erf_oec,The FRE score of CEO in Q_A,VECTOR,67%,11,11
+mws87_aq_erf_ofc,The FRE score of CFO in Q&A.,VECTOR,63%,1,1
+mws87_aq_ifg,The GFI score in Q_A,VECTOR,72%,2,2
+mws87_aq_ifg_oec,The GFI score of CEO in Q&A.,VECTOR,67%,2,3
+mws87_aq_ifg_ofc,The GFI score of CFO in Q&A.,VECTOR,63%,5,5
+mws87_aq_ilc,The CLI score in Q&A.,VECTOR,72%,7,10
+mws87_aq_ilc_oec,The CLI score of CEO in Q&A,VECTOR,67%,5,5
+mws87_aq_ilc_ofc,The Coleman-Liau Index score of the CFO in Q&A,VECTOR,63%,3,5
+mws87_aq_ira,The ARI score in Q&A,VECTOR,72%,3,3
+mws87_aq_ira_oec,The ARI score of CEO in Q&A,VECTOR,67%,1,1
+mws87_aq_ira_ofc,The ARI score of CFO in Q&A,VECTOR,63%,3,3
+mws87_aq_lgkf,The FKGL score in Q&A,VECTOR,72%,2,2
+mws87_aq_lgkf_oec,The FKGL score of CEO in Q_A.,VECTOR,67%,2,2
+mws87_aq_lgkf_ofc,The FKGL score of CFO in Q_A.,VECTOR,63%,4,6
+mws87_aq_scd,The DCS score in Q&A,VECTOR,72%,4,6
+mws87_aq_scd_oec,The DCS score of CEO in Q&A.,VECTOR,67%,3,3
+mws87_aq_scd_ofc,The DCS score of CFO in Q&A.,VECTOR,63%,2,2
+mws87_ari_all,The ARI score in the whole conference call,VECTOR,73%,7,12
+mws87_ceo_forw_sent_pres,The Forward Sentiment Score of CEO in Presentation,VECTOR,61%,5,5
+mws87_ceo_forw_sent_qa,The forward sentiment score of CEO in Q_A.,VECTOR,53%,9,13
+mws87_ceo_neg_logit_pres,The negative logit of CEO in presentation.,VECTOR,68%,9,18
+mws87_ceo_neg_logit_qa,The Negative Logit of CEO in Q&A,VECTOR,67%,11,14
+mws87_ceo_neu_logit_pres,The neutral logit of CEO in presentation.,VECTOR,68%,4,4
+mws87_ceo_neu_logit_qa,The Neutral Logit of CEO in Q&A.,VECTOR,67%,13,25
+mws87_ceo_pos_logit_pres,The positive logit of CEO in presentation.,VECTOR,68%,28,39
+mws87_ceo_pos_logit_qa,The Positive Logit of CEO in Q_A,VECTOR,67%,30,48
+mws87_ceo_sent_score_pres,The Sentiment Score of CEO in Presentation,VECTOR,68%,10,16
+mws87_ceo_sent_score_qa,The sentiment score of CEO in Q&A.,VECTOR,67%,21,31
+mws87_ceo_smog_pres,The SMOG score of the CEO in the presentation,VECTOR,68%,1,6
+mws87_ceo_smog_qa,The SMOG score of CEO in Q&A.,VECTOR,67%,2,3
+mws87_ceoattendence,"If the company's CEO attends the conference, it equals 1; otherwise, it equals 0.",VECTOR,64%,4,11
+mws87_cfo_forw_sent_pres,The forward sentiment score of CFO in presentation.,VECTOR,56%,6,9
+mws87_cfo_forw_sent_qa,The Forward Sentiment Score of CFO in Q_A,VECTOR,43%,2,2
+mws87_cfo_neg_logit_pres,The negative logit of CFO in presentation.,VECTOR,64%,11,15
+mws87_cfo_neg_logit_qa,The negative logit of CFO in Q&A.,VECTOR,63%,10,12
+mws87_cfo_neu_logit_pres,The Neutral Logit of CFO in Presentation,VECTOR,64%,5,7
+mws87_cfo_neu_logit_qa,The Neutral Logit of CFO in Q_A,VECTOR,63%,10,16
+mws87_cfo_pos_logit_pres,The Positive Logit of CFO in Presentation,VECTOR,64%,8,10
+mws87_cfo_pos_logit_qa,The Positive Logit of CFO in Q&A,VECTOR,63%,11,17
+mws87_cfo_sent_score_pres,The Sentiment Score of CFO in Presentation,VECTOR,64%,11,12
+mws87_cfo_sent_score_qa,The Sentiment Score of CFO in Q_A,VECTOR,63%,12,41
+mws87_cfo_smog_pres,The SMOG score of CFO in presentation.,VECTOR,64%,3,3
+mws87_cfo_smog_qa,The SMOG score of CFO in Q&A,VECTOR,63%,2,2
+mws87_cfoattendence,"if the company's CFO attends the conference, it equals 1; otherwise 0.",VECTOR,63%,3,6
+mws87_cli_all,The CLI score in the whole conference call,VECTOR,73%,4,8
+mws87_confcallpart_ari_pres,The ARI score of conference call participants in presentation.,VECTOR,26%,1,1
+mws87_confcallpart_ari_qa,The ARI score of conference call participants in Q&A.,VECTOR,72%,4,8
+mws87_confcallpart_cli_pres,The CLI score of conference call participants in presentation.,VECTOR,26%,2,2
+mws87_confcallpart_cli_qa,The CLI score of conference call participants in Q_A.,VECTOR,72%,4,7
+mws87_confcallpart_dcs_pres,The DCS score of Conference call Participants in Presentation,VECTOR,26%,2,2
+mws87_confcallpart_dcs_qa,The DCS score of conference call participants in Q&A.,VECTOR,72%,12,20
+mws87_confcallpart_fkgl_pres,The FKGL score of Conference call Participants in Presentation,VECTOR,26%,1,1
+mws87_confcallpart_fkgl_qa,The FKGL score of Conference call Participants in Q_A,VECTOR,72%,7,8
+mws87_confcallpart_forw_sent_qa,The forward sentiment score of conference call participants in Q&A.,VECTOR,59%,11,18
+mws87_confcallpart_fre_pres,The FRE score of Conference call Participants in Presentation,VECTOR,26%,3,3
+mws87_confcallpart_fre_qa,The FRE score of Conference call Participants in Q_A,VECTOR,72%,11,20
+mws87_confcallpart_gfi_pres,The GFI score of conference call participants in presentation.,VECTOR,26%,2,7
+mws87_confcallpart_gfi_qa,The GFI score of conference call participants in Q&A.,VECTOR,72%,5,9
+mws87_confcallpart_neg_logit_pres,The negative logit of conference call participants in presentation.,VECTOR,26%,2,5
+mws87_confcallpart_neg_logit_qa,The Negative Logit of Conference call Participants in Q_A,VECTOR,72%,8,15
+mws87_confcallpart_neu_logit_pres,The neutral logit of conference call participants in presentation.,VECTOR,26%,2,2
+mws87_confcallpart_neu_logit_qa,The neutral logit of conference call participants in Q&A.,VECTOR,72%,11,20
+mws87_confcallpart_pos_logit_pres,The positive logit of conference call participants in the presentation.,VECTOR,26%,2,4
+mws87_confcallpart_pos_logit_qa,The Positive Logit of Conference call Participants in Q_A,VECTOR,72%,57,85
+mws87_confcallpart_sent_score_pres,The Sentiment Score of Conference call Participants in Presentation,VECTOR,26%,3,6
+mws87_confcallpart_sent_score_qa,The sentiment score of conference call participants in Q&A,VECTOR,72%,20,30
+mws87_confcallpart_smog_pres,The SMOG score of Conference call Participants in Presentation,VECTOR,26%,2,2
+mws87_confcallpart_smog_qa,The SMOG score of conference call participants in Q&A,VECTOR,72%,8,9
+mws87_corppart_ari_pres,The ARI score of Corporate Participants in Presentation,VECTOR,73%,1,1
+mws87_corppart_ari_qa,The ARI score of corporate participants in Q&A.,VECTOR,72%,7,9
+mws87_corppart_cli_pres,The CLI score of corporate participants in presentation.,VECTOR,73%,11,21
+mws87_corppart_cli_qa,The CLI score of Corporate Participants in Q_A,VECTOR,72%,5,7
+mws87_corppart_dcs_pres,The DCS score of corporate participants in presentation.,VECTOR,73%,5,7
+mws87_corppart_dcs_qa,The DCS score of corporate participants in Q&A.,VECTOR,72%,2,2
+mws87_corppart_fkgl_pres,The FKGL score of Corporate Participants in Presentation,VECTOR,73%,7,15
+mws87_corppart_fkgl_qa,The FKGL score of corporate participants in Q&A,VECTOR,72%,7,10
+mws87_corppart_forw_sent_pres,The forward sentiment score of corporate participants in presentation.,VECTOR,71%,15,19
+mws87_corppart_forw_sent_qa,The Forward Sentiment Score of Corporate Participants in Q&A,VECTOR,66%,6,14
+mws87_corppart_fre_pres,The FRE score of corporate participants in presentation.,VECTOR,73%,5,12
+mws87_corppart_fre_qa,The FRE score of corporate participants in Q&A.,VECTOR,72%,11,14
+mws87_corppart_gfi_pres,The GFI score of corporate participants in presentation.,VECTOR,73%,10,27
+mws87_corppart_gfi_qa,The GFI score of Corporate Participants in Q&A,VECTOR,72%,2,2
+mws87_corppart_neg_logit_pres,The negative logit of corporate participants in presentation.,VECTOR,73%,26,50
+mws87_corppart_neg_logit_qa,The Negative Logit of Corporate Participants in Q_A,VECTOR,72%,15,27
+mws87_corppart_neu_logit_pres,The neutral logit of corporate participants in presentation.,VECTOR,73%,3,4
+mws87_corppart_neu_logit_qa,The Neutral Logit of Corporate Participants in Q&A,VECTOR,72%,7,8
+mws87_corppart_pos_logit_pres,The Positive Logit of Corporate Participants in Presentation,VECTOR,73%,6,30
+mws87_corppart_pos_logit_qa,The positive logit of corporate participants in Q&A,VECTOR,72%,12,16
+mws87_corppart_sent_score_pres,The Sentiment Score of Corporate Participants in Presentation,VECTOR,73%,28,84
+mws87_corppart_sent_score_qa,The sentiment score of corporate participants in Q&A,VECTOR,72%,16,31
+mws87_corppart_smog_pres,The SMOG score of corporate participants in presentation.,VECTOR,73%,9,31
+mws87_corppart_smog_qa,The SMOG score of corporate participants in Q&A.,VECTOR,72%,4,4
+mws87_corppartattendence,Number of corporate participants that attend the conference,VECTOR,69%,1,2
+mws87_dcs_all,The DCS score in the whole conference call,VECTOR,73%,2,2
+mws87_fkgl_all,The FKGL score in the whole conference call.,VECTOR,73%,8,9
+mws87_fre_all,The FRE score in the whole conference call,VECTOR,73%,2,4
+mws87_gfi_all,The GFI score in the whole conference call,VECTOR,73%,4,7
+mws87_neg_logit_all,The Negative Logit of ALL,VECTOR,73%,22,32
+mws87_neg_logit_pres,The negative logit of presentation.,VECTOR,73%,31,152
+mws87_neg_logit_qa,The Negative Logit of Q_A,VECTOR,72%,14,22
+mws87_neu_logit_all,The neutral logit of all.,VECTOR,73%,6,15
+mws87_neu_logit_pres,The neutral logit score of the presentation,VECTOR,73%,5,7
+mws87_neu_logit_qa,The neutral logit of Q&A.,VECTOR,72%,6,6
+mws87_numnongaappres,Number of occurrences of non-GAAP in presentation.,VECTOR,39%,6,7
+mws87_numqapair,Number of QA pairs (one question followed by two answers counted as 2 QA pairs) (NA if no Q&A),VECTOR,70%,6,6
+mws87_numqueanalyst,Number of questions from sell-side analysts in Q&A (NA if no questions).,VECTOR,69%,3,7
+mws87_numsentanalystqa,number of sentences of Sell Side Analysts in Q_A,VECTOR,69%,4,6
+mws87_numsentans,Number of sentences of all answers (NA if no Q&A).,VECTOR,70%,6,11
+mws87_numsentceopres,number of sentences of CEO in Presentation,VECTOR,63%,3,3
+mws87_numsentceoqa,Number of sentences of CEO in Q&A.,VECTOR,63%,5,15
+mws87_numsentcfopres,number of sentences of CFO in Presentation,VECTOR,60%,1,3
+mws87_numsentcfoqa,number of sentences of CFO in Q&A,VECTOR,59%,2,4
+mws87_numsentconfcallpartqa,number of sentences of conference call participants in Q_A,VECTOR,70%,4,4
+mws87_numsentexepres,number of executives in Presentation,VECTOR,68%,1,1
+mws87_numsentexeqa,number of sentences of executives in Q&A,VECTOR,67%,3,4
+mws87_numsentoperpres,Number of sentences of the operator in the presentation,VECTOR,67%,3,10
+mws87_numsentoperqa,number of sentences of operator in Q&A (NA if no Q&A),VECTOR,67%,1,1
+mws87_numsentque,Number of sentences in all questions (NA if no Q&A),VECTOR,70%,4,7
+mws87_numsentqueanalyst,number of sentences of questions of Sell Side Analysts in Q_A (NA if no questions),VECTOR,69%,7,10
+mws87_numsuppans,Number of supplement answers (one question followed by two answers counted as 1 supplement answer) (NA if no Q&A),VECTOR,65%,2,2
+mws87_numvswordsratioceopres,Number of numerical/number of all words of CEO in presentation (NA if CEO not attended or no speech in presentation).,VECTOR,63%,77,172
+mws87_numvswordsratioceoqa,Number of numerical words divided by number of all words spoken by CEO in Q&A (NA if CEO not attended or no speech in Q&A).,VECTOR,60%,1,1
+mws87_numvswordsratiocfopres,number of numerical/number of all words of CFO in Presentation (NA if CFO not attended or no speech in Presentation),VECTOR,59%,5,5
+mws87_numvswordsratiocfoqa,Number of numerical/number of all words of CFO in Q&A (NA if CFO not attended or no speech in Q&A).,VECTOR,56%,5,7
+mws87_numvswordsratioexepres,Number of numerical/number of all words of executives in presentation.,VECTOR,68%,5,5
+mws87_numvswordsratioexeqa,number of numerical/number of all words of executives in Q&A (NA if no Q&A),VECTOR,67%,4,4
+mws87_numwordanalystqa,Number of words of sell side analysts in Q&A.,VECTOR,69%,2,4
+mws87_numwordans,number of words of all answers (NA if no Q&A),VECTOR,70%,5,7
+mws87_numwordceopres,Number of words of CEO in the presentation.,VECTOR,63%,4,9
+mws87_numwordceoqa,Number of words of CEO in Q&A.,VECTOR,63%,5,6
+mws87_numwordcfopres,number of words of CFO in Presentation,VECTOR,60%,3,7
+mws87_numwordcfoqa,number of words of CFO in Q&A,VECTOR,59%,6,11
+mws87_numwordconfcallpartqa,Number of words of conference call participants in Q&A,VECTOR,70%,9,12
+mws87_numwordexepres,number of executives in Presentation,VECTOR,68%,5,6
+mws87_numwordexeqa,Number of words of executives in Q&A.,VECTOR,67%,4,7
+mws87_numwordoperpres,Number of words of operator in presentation.,VECTOR,67%,7,19
+mws87_numwordoperqa,Number of words spoken by operator in Q&A (NA if no Q&A).,VECTOR,67%,3,10
+mws87_numwordque,Number of words of all questions (NA if no Q&A).,VECTOR,70%,3,3
+mws87_oper_ari_pres,The ARI score of operator in presentation.,VECTOR,69%,5,9
+mws87_oper_ari_qa,The ARI score of operator in Q&A.,VECTOR,69%,9,21
+mws87_oper_cli_pres,The CLI score of operator in presentation.,VECTOR,69%,6,10
+mws87_oper_cli_qa,The CLI score of Operator in Q_A,VECTOR,69%,2,2
+mws87_oper_dcs_pres,The DCS score of Operator in Presentation,VECTOR,69%,6,6
+mws87_oper_dcs_qa,The DCS score of Operator in Q_A,VECTOR,69%,6,7
+mws87_oper_fkgl_pres,The FKGL score of Operator in Presentation,VECTOR,69%,3,6
+mws87_oper_fkgl_qa,The FKGL score of operator in Q&A.,VECTOR,69%,3,7
+mws87_oper_fre_pres,The FRE score of Operator in Presentation,VECTOR,69%,5,7
+mws87_oper_fre_qa,The Flesch Reading Ease score of the operator in Q&A,VECTOR,69%,4,4
+mws87_oper_gfi_pres,The Gunning Fog Index score of the operator in the presentation,VECTOR,69%,3,4
+mws87_oper_gfi_qa,The GFI score of Operator in Q&A,VECTOR,69%,4,6
+mws87_oper_neg_logit_pres,The Negative Logit of operator in presentation.,VECTOR,69%,3,12
+mws87_oper_neg_logit_qa,The Negative Logit of Operator in Q&A,VECTOR,69%,15,33
+mws87_oper_neu_logit_pres,The Neutral Logit of Operator in Presentation,VECTOR,69%,3,4
+mws87_oper_neu_logit_qa,The neutral logit of operator in Q&A.,VECTOR,69%,5,12
+mws87_oper_pos_logit_pres,The positive logit score of the operator in the presentation,VECTOR,69%,2,2
+mws87_oper_pos_logit_qa,The positive logit of operator in Q&A,VECTOR,69%,3,5
+mws87_oper_sent_score_pres,The Sentiment Score of Operator in Presentation,VECTOR,69%,4,4
+mws87_oper_sent_score_qa,The Sentiment Score of operator in Q&A.,VECTOR,69%,5,5
+mws87_oper_smog_pres,The SMOG score of Operator in Presentation,VECTOR,69%,2,2
+mws87_oper_smog_qa,The SMOG score of operator in Q&A.,VECTOR,69%,3,23
+mws87_pos_logit_all,The Positive Logit of ALL,VECTOR,73%,13,18
+mws87_pos_logit_pres,The positive logit of presentation.,VECTOR,73%,19,72
+mws87_pos_logit_qa,The Positive Logit of Q_A,VECTOR,72%,26,42
+mws87_qasentratio,Number of sentences of questions/number of sentences of answers (NA if no Q&A).,VECTOR,70%,8,14
+mws87_qawordratio,Number of words in questions divided by number of words in answers (NA if no Q&A),VECTOR,70%,5,13
+mws87_sent_score_all,The sentiment score of all.,VECTOR,73%,17,29
+mws87_sent_score_pres,The sentiment score of the presentation.,VECTOR,73%,14,25
+mws87_sent_score_qa,The sentiment score of Q&A.,VECTOR,72%,36,152
+mws87_serp_erf,The FRE score in Presentation,VECTOR,73%,5,7
+mws87_serp_erf_oec,The FRE score of CEO in Presentation,VECTOR,68%,4,4
+mws87_serp_erf_ofc,The FRE score of CFO in Presentation,VECTOR,64%,11,16
+mws87_serp_ifg,The GFI score in Presentation,VECTOR,73%,6,22
+mws87_serp_ifg_oec,The GFI score of CEO in presentation.,VECTOR,68%,2,5
+mws87_serp_ifg_ofc,The GFI score of CFO in the presentation.,VECTOR,64%,5,8
+mws87_serp_ilc,The CLI score in Presentation,VECTOR,73%,16,23
+mws87_serp_ilc_oec,The CLI score of CEO in presentation.,VECTOR,68%,10,17
+mws87_serp_ilc_ofc,The CLI score of CFO in Presentation,VECTOR,64%,5,11
+mws87_serp_ira,The ARI score in Presentation,VECTOR,73%,8,14
+mws87_serp_ira_oec,The ARI score of CEO in the presentation.,VECTOR,68%,5,8
+mws87_serp_ira_ofc,The ARI score of CFO in Presentation,VECTOR,64%,3,3
+mws87_serp_lgkf,The FKGL score in Presentation,VECTOR,73%,19,43
+mws87_serp_lgkf_oec,The FKGL score of CEO in presentation.,VECTOR,68%,3,7
+mws87_serp_lgkf_ofc,The FKGL score of CFO in the presentation.,VECTOR,64%,4,8
+mws87_serp_scd,The DCS score in Presentation,VECTOR,73%,6,8
+mws87_serp_scd_oec,The DCS score of CEO in Presentation,VECTOR,68%,2,2
+mws87_serp_scd_ofc,The DCS score of CFO in Presentation,VECTOR,64%,1,2
+mws87_serppaagmun,Number of occurrences of GAAP in presentation.,VECTOR,38%,4,6
+mws87_sinvsplurratioceopres,"(number of (I,my,me,mine) - number of (We, our, us, ours))/(number of (I,my,me,mine) + number of (We, our, us, ours)) of CEO in Presentation (NA if CEO not attended or no speech in Presentation)",VECTOR,63%,6,10
+mws87_sinvsplurratioceoqa,"(Number of (I, my, me, mine) - number of (We, our, us, ours)) divided by (Number of (I, my, me, mine) + number of (We, our, us, ours)) of CEO in Q&A (NA if CEO not attended or no speech in Q&A).",VECTOR,63%,9,19
+mws87_sinvsplurratiocfopres,"(number of (I,my,me,mine) - number of (We, our, us, ours))/(number of (I,my,me,mine) + number of (We, our, us, ours)) of CFO in Presentation (NA if CFO not attended or no speech in Presentation)",VECTOR,59%,5,7
+mws87_sinvsplurratiocfoqa,"(number of (I,my,me,mine) - number of (We, our, us, ours))/(number of (I,my,me,mine) + number of (We, our, us, ours)) of CFO in Q&A (NA if CFO not attended or no speech in Q&A)",VECTOR,58%,2,3
+mws87_sinvsplurratioexepres,"(Number of (I, my, me, mine) - number of (We, our, us, ours))/(Number of (I, my, me, mine) + number of (We, our, us, ours)) of executives in Presentation",VECTOR,68%,3,3
+mws87_sinvsplurratioexeqa,"(Number of (I, my, me, mine) - number of (We, our, us, ours))/(Number of (I, my, me, mine) + number of (We, our, us, ours)) of executives in Q&A (NA if no Q&A)",VECTOR,67%,4,8
+mws87_smog_all,The SMOG score in the whole conference call.,VECTOR,73%,16,38
+mws87_smog_pres,The SMOG score in presentation.,VECTOR,73%,13,29
+mws87_smog_qa,The SMOG score in Q_A,VECTOR,72%,6,7

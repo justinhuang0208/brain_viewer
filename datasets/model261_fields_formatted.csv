@@ -1,0 +1,9 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl261_composite,Composite risk score that aggregates multiple crisis exposure factors into a single broad indicator of overall daily risk for the stock,MATRIX,86%,7,20
+mdl261_hf_crowding,A score representing the degree of hedge fund ownership crowding in the stock; higher crowding suggests increased risk of volatility from potential forced selling or deleveraging,MATRIX,85%,12,28
+mdl261_hy_spreads,"A measure of the stock’s sensitivity (beta) to changes in high-yield credit spreads, indicating potential outperformance during credit spread spikes",MATRIX,86%,3,5
+mdl261_interest_lev,"Sensitivity (beta) of the stock’s returns to changes in long-term interest rates, measuring potential performance as interest rates move",MATRIX,78%,0,0
+mdl261_leverage,"A ratio (commonly long-term debt to equity) that reflects the financial leverage of the company, with higher values indicating greater risk in deteriorating credit environments",MATRIX,86%,4,6
+mdl261_merton_default,"Probability of default for the company as implied by a Merton credit risk model, which uses equity and market data to estimate risk of default",MATRIX,76%,3,5
+mdl261_sales_expose_euro,"Percentage of company sales generated in European markets, indicating sensitivity to European economic or crisis conditions",MATRIX,26%,5,6
+mdl261_short_cash,"Proportion of cash and short-term investments relative to total assets, indicating the firm’s liquidity and providing a buffer against funding stress",MATRIX,86%,5,11

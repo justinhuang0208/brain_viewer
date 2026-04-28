@@ -1,0 +1,10 @@
+Field,Description,Type,Coverage,Users,Alphas
+headline_character_count,"Number of characters in the news headline, excluding spaces.",VECTOR,100%,6,7
+headline_character_count_benzinga,"Number of Unicode characters in decode_title, including whitespace; counts code points, not bytes",VECTOR,98%,0,0
+headline_sentiment_score,"Numerical sentiment score for the news headline, typically ranging from negative to positive.",VECTOR,100%,0,0
+headline_sentiment_score_benzinga,"Numerical sentiment score for the event in range [-1, 1], where negative is negative tone, positive is positive tone, and 0 is neutral; produced by the dataset’s GRU-based model with D1 delay",VECTOR,98%,0,0
+headline_word_count,Number of words in the news headline or title.,VECTOR,100%,1,4
+headline_word_count_benzinga,Token count of purify_title; number of whitespace-delimited words after normalization,VECTOR,98%,0,0
+oth635_char_count,"Count of Unicode characters in decode_title, including whitespace",VECTOR,100%,1,1
+oth635_sentiment,"Neural-derived sentiment score for the event/title in [-1, 1] (negative to positive, 0 neutral)",VECTOR,100%,1,1
+oth635_words_count,"Number of tokens/words in the normalized title (purify_title), whitespace-separated",VECTOR,100%,0,0

@@ -1,0 +1,14 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth546_analystnet_common,Number of analysts that cover both the primary and peer company (shared analyst coverage),VECTOR,71%,5,7
+oth546_busnet_common,Count of business or geographic segments that are shared between the two companies,VECTOR,71%,4,9
+oth546_busnet_strength,Correlation metric quantifying similarity in business segment reporting between the two companies in the pair,VECTOR,71%,1,1
+oth546_executivenet_common,Number of executives and board members (current or former) shared between the primary and peer companies,VECTOR,68%,0,0
+oth546_from_analyst,Number of analysts covering the primary company,VECTOR,71%,3,3
+oth546_from_freq,Number of executives and board members associated with the primary company,VECTOR,68%,1,1
+oth546_geonet_common,Number of shared geographic segments between primary and peer companies,VECTOR,39%,0,0
+oth546_geonet_strength,Correlation measure between geographic segment presence vectors of the two companies; reflects geographic similarity,VECTOR,39%,1,1
+oth546_mdanet_strength,"Similarity score based on Management Discussion & Analysis (MD&A) filing text, indicating business operation similarity between the two companies",VECTOR,68%,0,0
+oth546_nlpbusnet_strength,"Textual similarity score between the business section filings of the two companies, reflecting how closely related they are based on NLP analysis",VECTOR,69%,0,0
+oth546_qerf_ot,Number of executives and board members associated with the peer company,VECTOR,68%,1,1
+oth546_risknet_strength,"Similarity score or correlation of Risk Factor section text between the primary and peer companies, indicating how similar their disclosed risk language/themes are",VECTOR,52%,1,1
+oth546_to_analyst,Number of analysts covering the peer (secondary) company,VECTOR,71%,1,1

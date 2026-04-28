@@ -1,0 +1,77 @@
+Field,Description,Type,Coverage,Users,Alphas
+nws5_01l,Number of minutes that elapsed before price went up 10 percentage points,VECTOR,93%,15,32
+nws5_01p,The minimum of L10 or S10,VECTOR,93%,25,33
+nws5_01s,Number of minutes that elapsed before price went down 10 percentage points,VECTOR,93%,64,91
+nws5_02l,Number of minutes that elapsed before price went up 20 percentage points,VECTOR,93%,6,10
+nws5_02p,The minimum of L20 or S20,VECTOR,93%,14,24
+nws5_02s,Number of minutes that elapsed before price went down 20 percentage points,VECTOR,93%,21,23
+nws5_10_minutes,The percent change in price in the first 10 minutes following the news release,VECTOR,88%,22,36
+nws5_120_minutes,The percent change in price in the first 120 minutes following the news release,VECTOR,91%,46,82
+nws5_1l,Number of minutes that elapsed before price went up 1 percentage point,VECTOR,93%,11,15
+nws5_1p,The minimum of L1 or S1,VECTOR,93%,9,32
+nws5_1s,Number of minutes that elapsed before price went down 1 percentage point,VECTOR,93%,19,57
+nws5_2l,Number of minutes that elapsed before price went up 2 percentage points,VECTOR,93%,16,27
+nws5_2p,The minimum of L2 or S2,VECTOR,93%,26,34
+nws5_2s,Number of minutes that elapsed before price went down 2 percentage points,VECTOR,93%,20,29
+nws5_30_minutes,The percent change in price in the first 30 minutes following the news release,VECTOR,90%,37,63
+nws5_30_seconds,The percent change in price in the 30 seconds following the news release,VECTOR,80%,20,32
+nws5_3l,Number of minutes that elapsed before price went up 3 percentage points,VECTOR,93%,12,24
+nws5_3p,The minimum of L3 or S3,VECTOR,93%,16,30
+nws5_3s,Number of minutes that elapsed before price went down 3 percentage points,VECTOR,93%,20,41
+nws5_41rta,Fourteen-day Average True Range,VECTOR,93%,21,40
+nws5_4l,Number of minutes that elapsed before price went up 4 percentage points,VECTOR,93%,16,32
+nws5_4p,The minimum of L4 or S4,VECTOR,93%,21,32
+nws5_4s,Number of minutes that elapsed before price went down 4 percentage points,VECTOR,93%,31,53
+nws5_57l,Number of minutes that elapsed before price went up 7.5 percentage points,VECTOR,93%,11,54
+nws5_57p,The minimum of L75 or S75,VECTOR,93%,26,46
+nws5_57s,Number of minutes that elapsed before price went down 7.5 percentage points,VECTOR,93%,46,72
+nws5_5_minutes,The percent change in price in the first 5 minutes following the news release,VECTOR,87%,11,17
+nws5_5l,Number of minutes that elapsed before price went up 5 percentage points,VECTOR,93%,16,20
+nws5_5p,The minimum of L5 or S5,VECTOR,93%,39,50
+nws5_5s,Number of minutes that elapsed before price went down 5 percentage points,VECTOR,93%,47,96
+nws5_60_minutes,The percent change in price in the first 60 minutes following the news release,VECTOR,90%,19,32
+nws5_90_minutes,The percent change in price in the first 90 minutes following the news release,VECTOR,90%,25,66
+nws5_active,Kept for compatibility only,VECTOR,93%,7,8
+nws5_allticks,Total number of ticks for the trading day,VECTOR,93%,74,269
+nws5_allvwap,Volume-weighted average price of all sessions,VECTOR,92%,14,19
+nws5_atr_ratio,Today's Range/ATR20,VECTOR,90%,22,43
+nws5_close_vol,Main close volume,VECTOR,90%,15,43
+nws5_curr_vol,Current day's session volume,VECTOR,93%,22,67
+nws5_dayopen,Price at the session open,VECTOR,92%,10,17
+nws5_dividendyield,Annual yield,VECTOR,46%,5,7
+nws5_eodclose,Close price of the session,VECTOR,92%,8,14
+nws5_eodhigh,Highest price reached between the time of news and the end of the session,VECTOR,91%,10,23
+nws5_eodlow,Lowest price reached between the time of news and the end of the session,VECTOR,91%,7,15
+nws5_eodvwap,Volume-weighted average price of the session from the time of news until the end of the session,VECTOR,90%,15,37
+nws5_highexcstddev,"(EODHigh - TONLast)/StdDev, where StdDev is one standard deviation for the close price for 30 calendar days",VECTOR,90%,19,32
+nws5_lowexcstddev,"(TONLast - EODLow)/StdDev, where StdDev is one standard deviation for the close price for 30 calendar days",VECTOR,88%,75,206
+nws5_mainvwap,Main session volume weighted average price,VECTOR,90%,10,18
+nws5_maxdnamt,The price at the time of the news minus the after-the-news low,VECTOR,89%,17,32
+nws5_maxdown,Percent change from the price at the time of the news to the after-the-news low,VECTOR,89%,25,45
+nws5_maxup,Percent change from the price at the time of the news to the after-the-news high,VECTOR,90%,19,45
+nws5_maxupamt,The after-the-news high minus the price at the time of the news,VECTOR,90%,9,25
+nws5_minute,The percent change in price in the first minute following the news release,VECTOR,84%,17,51
+nws5_mktcap_1000,Reported market capitalization for the calendar day of the session,VECTOR,93%,4,4
+nws5_mov_vol,30-day moving average session volume,VECTOR,93%,29,72
+nws5_open_vol,Main open volume,VECTOR,90%,26,66
+nws5_opengap,(DayOpen - PrevClose) / PrevClose,VECTOR,88%,15,35
+nws5_peratio,Reported price-to-earnings ratio for the calendar day of the session,VECTOR,72%,15,30
+nws5_postvwap,Post-session volume weighted average price,VECTOR,86%,10,22
+nws5_prev_vol,Previous day's session volume,VECTOR,93%,20,43
+nws5_prevclose,Previous trading day's close price,VECTOR,93%,18,58
+nws5_prevday,Percent change between the previous day's open and close,VECTOR,93%,18,44
+nws5_prevwap,Pre-session volume weighted average price,VECTOR,74%,10,19
+nws5_range,(Session High Price - Session Low Price) / Session Low Price,VECTOR,90%,10,19
+nws5_rangeamt,Session High Price - Session Low Price,VECTOR,90%,19,31
+nws5_rangestddev,"(RangeAmt-AvgRange)/RangeStdDev, where AvgRange is the average of the daily range, and RangeStdDev is one standard deviation for the daily range, both for 30 calendar days",VECTOR,90%,24,59
+nws5_result,Percent change between the price at the time of the news release to the price at the close of the session,VECTOR,90%,43,175
+nws5_result_vs_index,((EODClose - TONLast) / TONLast) - ((SPYClose - SPYLast) / SPYLast),VECTOR,91%,37,80
+nws5_shortinterest,Total number of shares sold short divided by total number of shares outstanding,VECTOR,79%,5,9
+nws5_sl,Whether a long or short position would have been more advantageous: If (EODHigh - Last) > (Last - EODLow) Then LS = 1; If (EODHigh - Last) = (Last - EODLow) Then LS= 0; If (EODHigh - Last) < (Last - EODLow) Then LS = -1.,VECTOR,93%,29,44
+nws5_spyclose,Price of SPY at close of session,VECTOR,93%,18,38
+nws5_spylast,Last Price of the SPY at the time of the news,VECTOR,93%,23,74
+nws5_tonhigh,Highest price reached during the session before the time of news,VECTOR,92%,17,23
+nws5_tonlast,Price at the time of news,VECTOR,93%,14,36
+nws5_tonlow,Lowest price reached during the session before the time of the news,VECTOR,92%,11,21
+nws5_vol_ratio,Curr_Vol / Mov_Vol,VECTOR,93%,35,64
+nws5_volumestddev,"(CurrentVolume - AvgVol) / VolStDev, where AvgVol is the average of the daily volume, and VolStDev is one standard deviation for the daily volume, both for 30 calendar days",VECTOR,92%,29,81

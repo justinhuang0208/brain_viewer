@@ -1,0 +1,15 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl127_mktcap,"Market capitalization of the company at the snapshot date, denominated in USD",VECTOR,43%,18,18
+mdl127_pia2,Patent-based innovation composite score derived from firm-level patent analytics; delivered as a raw cross-sectional z-score for use prior to any custom neutralization,VECTOR,31%,10,10
+mdl127_relevance_hist_1_recent_1,Innovation relevance comparing the most recent 1 year of patenting with the company’s 1-year historical patent technology footprint,VECTOR,32%,1,1
+mdl127_relevance_hist_1_recent_1_neut,"Neutralized innovation relevance between recent 1 year and prior 1-year footprint; cross-sectional z-score neutralized for sector, market cap, volatility, and momentum",VECTOR,31%,5,5
+mdl127_relevance_hist_3_recent_1,Similarity between the recent 1 year of patent output and the technological footprint established over the preceding 3 years,VECTOR,38%,5,5
+mdl127_relevance_hist_3_recent_1_neut,"Neutralized innovation relevance comparing recent 1-year output to a 3-year historical base; cross-sectional z-score neutralized for sector, market cap, volatility, and momentum",VECTOR,37%,2,2
+mdl127_relevance_hist_3_recent_3,Alignment between a company’s recent 3-year innovation output and its patent technology footprint from the prior 3-year period,VECTOR,33%,3,3
+mdl127_relevance_hist_3_recent_3_neut,"Neutralized innovation relevance across matching recent 3-year and past 3-year periods; cross-sectional z-score neutralized for sector, market cap, volatility, and momentum",VECTOR,34%,8,9
+mdl127_relevance_hist_5_recent_1,Alignment between the most recent 1 year’s innovation output and the company’s prior 5-year historical patent footprint,VECTOR,40%,4,5
+mdl127_relevance_hist_5_recent_1_neut,"Neutralized innovation relevance comparing recent 1-year output to a 5-year historical base; cross-sectional z-score neutralized for sector, market cap, volatility, and momentum",VECTOR,39%,2,2
+mdl127_relevance_hist_5_recent_3,Alignment between the recent 3 years’ innovation output and the company’s prior 5-year historical patent footprint,VECTOR,35%,4,4
+mdl127_relevance_hist_5_recent_3_neut,"Neutralized innovation relevance comparing recent 3-year output to a 5-year historical base; cross-sectional z-score neutralized for sector, market cap, volatility, and momentum",VECTOR,36%,0,0
+mdl127_relevance_hist_5_recent_5,Alignment between the recent 5 years’ innovation output and the company’s prior 5-year historical patent footprint,VECTOR,33%,5,5
+mdl127_relevance_hist_5_recent_5_neut,"Neutralized innovation relevance comparing recent 5-year output to a 5-year historical base; cross-sectional z-score neutralized for sector, market cap, volatility, and momentum",VECTOR,34%,9,10

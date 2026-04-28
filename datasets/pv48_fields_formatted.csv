@@ -1,0 +1,100 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv48_2000_constituent_totalcap,Total market capitalization for the 2000 constituent.,MATRIX,57%,0,0
+pv48_2000_constituent_totalsharesout,Total shares outstanding for the 2000 constituent.,MATRIX,57%,1,1
+pv48_3000_constituent_totalcap,Total market capitalization for the 3000 constituent.,MATRIX,90%,0,0
+pv48_3000_constituent_totalsharesout,Total shares outstanding before free-float adjustment,MATRIX,90%,0,0
+pv48_constituent_cap,Float-adjusted market capitalization of the security used for index weighting,MATRIX,86%,1,1
+pv48_constituent_growthshares,Shares allocated to the Growth sleeve of the Russell style indices (portion of sharesout),MATRIX,86%,0,0
+pv48_constituent_ind,"A code representing the industry classification of a security, used for grouping by business activity.",MATRIX,79%,1,1
+pv48_constituent_mtd_return,The cumulative return for the security from the beginning of the current month up to the present date.,MATRIX,86%,1,1
+pv48_constituent_return,"The total return for the security over a given period, reflecting both price appreciation and dividends.",MATRIX,86%,0,0
+pv48_constituent_se,"A code representing the broad economic sector to which a security belongs, used in historical data.",MATRIX,86%,0,0
+pv48_constituent_sharesout,Float-adjusted shares outstanding for the security used in Russell index calculations,MATRIX,86%,0,0
+pv48_constituent_subs,A code representing the sub-sector classification of a security for industry grouping purposes.,MATRIX,85%,0,0
+pv48_constituent_v1_2_0_cap,No field description,MATRIX,89%,1,1
+pv48_constituent_v1_2_0_growthshares,No field description,MATRIX,89%,0,0
+pv48_constituent_v1_2_0_ind,No field description,MATRIX,82%,0,0
+pv48_constituent_v1_2_0_mtd_return,No field description,MATRIX,89%,3,3
+pv48_constituent_v1_2_0_return,No field description,MATRIX,89%,0,0
+pv48_constituent_v1_2_0_se,No field description,MATRIX,89%,0,0
+pv48_constituent_v1_2_0_sharesout,No field description,MATRIX,89%,0,0
+pv48_constituent_v1_2_0_subs,No field description,MATRIX,89%,0,0
+pv48_constituent_v1_2_0_valueshares,No field description,MATRIX,89%,0,0
+pv48_constituent_valueshares,Shares allocated to the Value sleeve of the Russell style indices (portion of sharesout),MATRIX,86%,0,0
+pv48_dynamic_amount_change,Change in shares outstanding (SHARES_NEW minus SHARES_CUR),VECTOR,33%,1,1
+pv48_dynamic_es_cur,Pre-change economic sector classification code,VECTOR,34%,1,1
+pv48_dynamic_ind_cur,Pre-change industry classification code,VECTOR,33%,2,3
+pv48_dynamic_shares_cur,Float-adjusted shares outstanding before the action/change,VECTOR,34%,3,3
+pv48_dynamic_shares_cur_growth,Growth sleeve shares before the action/change,VECTOR,34%,0,0
+pv48_dynamic_shares_cur_value,Value sleeve shares before the action/change,VECTOR,34%,1,1
+pv48_dynamic_shares_new,Float-adjusted shares outstanding after the action/change,VECTOR,33%,0,0
+pv48_dynamic_subs_cur,Pre-change subsector classification code,VECTOR,34%,0,0
+pv48_r3000_amount_change,Change in shares outstanding (SHARES_NEW minus SHARES_CUR),VECTOR,35%,0,0
+pv48_r3000_amount_change_value,Change in Value sleeve shares (after minus before),VECTOR,26%,0,0
+pv48_r3000_es_cur,Pre-action economic sector classification code,VECTOR,36%,0,0
+pv48_r3000_ind_cur,Current/previous Russell industry classification code before the change,VECTOR,36%,0,0
+pv48_r3000_shares_cur,Float-adjusted shares outstanding before the action,VECTOR,36%,0,0
+pv48_r3000_shares_cur_growth,Growth sleeve shares allocation before the action,VECTOR,36%,0,0
+pv48_r3000_shares_cur_value,Value sleeve shares allocation before the action,VECTOR,36%,0,0
+pv48_r3000_shares_new,Float-adjusted shares outstanding after the action,VECTOR,35%,0,0
+pv48_r3000_shares_new_value,Value sleeve shares allocation after the action,VECTOR,26%,0,0
+pv48_r3000_subs_cur,Current sub-sector code for the US 3000 index.,VECTOR,36%,1,1
+pv48_r3000e_amount_change,Change in total shares (SHARES_NEW minus SHARES_CUR),VECTOR,40%,1,1
+pv48_r3000e_amount_change_growth,Change in growth shares for the US 3000E index.,VECTOR,27%,0,0
+pv48_r3000e_amount_change_value,Change in value shares for the US 3000E index.,VECTOR,30%,0,0
+pv48_r3000e_es_cur,Economic sector classification code before the change,VECTOR,35%,0,0
+pv48_r3000e_shares_cur,Float-adjusted shares outstanding before the action/change,VECTOR,42%,2,2
+pv48_r3000e_shares_cur_growth,Growth sleeve shares before the action/change,VECTOR,42%,0,0
+pv48_r3000e_shares_cur_value,Value sleeve shares before the action/change,VECTOR,42%,0,0
+pv48_r3000e_shares_new,Float-adjusted shares outstanding after the action/change,VECTOR,40%,1,1
+pv48_r3000e_shares_new_growth,Growth sleeve shares after the action/change,VECTOR,27%,0,0
+pv48_r3000e_shares_new_value,Value sleeve shares after the action/change,VECTOR,30%,1,1
+pv48_r3000e_subs_cur,Subsector classification code before the change,VECTOR,35%,0,0
+pv48_ru2000_constituent_cap,Float‑adjusted market capitalization of the constituent,MATRIX,57%,0,0
+pv48_ru2000_constituent_growthshares,Shares allocated to the Growth style sleeve for the constituent,MATRIX,57%,3,3
+pv48_ru2000_constituent_ind,ru2000 constituent ind related to the US 2000 constituent index.,MATRIX,49%,0,0
+pv48_ru2000_constituent_mtd_return,ru2000 constituent mtd return related to the US 2000 constituent index.,MATRIX,57%,0,0
+pv48_ru2000_constituent_return,Daily total return of the constituent,MATRIX,57%,0,0
+pv48_ru2000_constituent_se,ru2000 constituent se related to the US 2000 constituent index.,MATRIX,56%,0,0
+pv48_ru2000_constituent_sharesout,Float‑adjusted shares outstanding used by Russell indices,MATRIX,57%,1,1
+pv48_ru2000_constituent_subs,ru2000 constituent subs related to the US 2000 constituent index.,MATRIX,56%,0,0
+pv48_ru2000_constituent_valueshares,Shares allocated to the Value style sleeve for the constituent,MATRIX,57%,8,18
+pv48_ru3000_constituent_cap,Float-adjusted market capitalization used by the index,MATRIX,89%,0,0
+pv48_ru3000_constituent_growthshares,Shares allocated to the Growth sleeve in the Russell Value/Growth split,MATRIX,89%,3,3
+pv48_ru3000_constituent_ind,ru3000 constituent ind related to the US 3000 constituent index.,MATRIX,77%,0,0
+pv48_ru3000_constituent_mtd_return,Month-to-date total return,MATRIX,89%,0,0
+pv48_ru3000_constituent_return,Daily total return of the security,MATRIX,89%,1,1
+pv48_ru3000_constituent_se,ru3000 constituent se related to the US 3000 constituent index.,MATRIX,89%,0,0
+pv48_ru3000_constituent_sharesout,Float-adjusted shares outstanding used in Russell indices,MATRIX,89%,0,0
+pv48_ru3000_constituent_subs,ru3000 constituent subs related to the US 3000 constituent index.,MATRIX,89%,0,0
+pv48_ru3000_constituent_valueshares,Shares allocated to the Value sleeve in the Russell Value/Growth split,MATRIX,89%,5,6
+pv48_russellindex_groshares,Number of shares allocated to the Growth sleeve (in thousands),MATRIX,90%,0,0
+pv48_russellindex_index1000,russellindex index1000 related to the US market index.,MATRIX,90%,0,0
+pv48_russellindex_index2000,russellindex index2000 related to the US market index.,MATRIX,90%,1,1
+pv48_russellindex_index2500,russellindex index2500 related to the US market index.,MATRIX,90%,0,0
+pv48_russellindex_midcap,russellindex midcap related to the US market index.,MATRIX,90%,1,1
+pv48_russellindex_mtd_return,Month-to-date total return,MATRIX,90%,1,1
+pv48_russellindex_return,Daily total return of the constituent,MATRIX,90%,4,4
+pv48_russellindex_sharechg,russellindex sharechg related to the US market index.,MATRIX,90%,0,0
+pv48_russellindex_shares,Float-adjusted shares outstanding used by Russell index methodology,MATRIX,90%,0,0
+pv48_russellindex_smallcap,russellindex smallcap related to the US market index.,MATRIX,90%,0,0
+pv48_russellindex_top200,russellindex top200 related to the US market index.,MATRIX,90%,0,0
+pv48_russellindex_valshares,"Value shares allocated to the Value sleeve, in thousands",MATRIX,90%,0,0
+pv48_usa_russell_rgs_groshares,Shares allocated to the Growth style sleeve (in thousands),MATRIX,85%,0,0
+pv48_usa_russell_rgs_mtd_return,Month‑to‑date total return of the security,MATRIX,85%,2,2
+pv48_usa_russell_rgs_return,Daily total return of the security,MATRIX,85%,0,0
+pv48_usa_russell_rgs_sharechg,The daily change in the number of shares for a security compared to the previous day.,MATRIX,85%,1,1
+pv48_usa_russell_rgs_shares,Float‑adjusted shares outstanding used by Russell methodology,MATRIX,85%,0,0
+pv48_usa_russell_rgs_v3_1_0_groshares,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_v3_1_0_index1000,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_v3_1_0_index2000,No field description,MATRIX,90%,1,1
+pv48_usa_russell_rgs_v3_1_0_index2500,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_v3_1_0_midcap,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_v3_1_0_mtd_return,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_v3_1_0_return,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_v3_1_0_sharechg,No field description,MATRIX,90%,1,1
+pv48_usa_russell_rgs_v3_1_0_shares,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_v3_1_0_smallcap,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_v3_1_0_top200,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_v3_1_0_valshares,No field description,MATRIX,90%,0,0
+pv48_usa_russell_rgs_valshares,Shares allocated to the Value style sleeve (in thousands),MATRIX,85%,0,0

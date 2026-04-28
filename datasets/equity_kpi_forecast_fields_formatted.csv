@@ -1,0 +1,23 @@
+Field,Description,Type,Coverage,Users,Alphas
+analyst_consensus_value,Street/aggregated analyst consensus estimate for the metric (same units as the metric),VECTOR,38%,1,1
+analyst_yoy_change_percent,"Year-over-year change in the consensus estimate for the metric (percent, 0–100)",VECTOR,37%,0,0
+beat_precision_rate,"Precision of past “beat” predictions over the evaluation window (percent, 0–100)",VECTOR,37%,0,0
+composite_confidence_flag,Combined confidence score derived from multiple model components (0–100),VECTOR,37%,0,0
+consensus_mape_percent,"Historical average error of consensus versus actuals (percent, 0–100)",VECTOR,38%,7,7
+data_backfill_flag,Boolean flag indicating the row was produced by historical backfill rather than live on Action_Date,VECTOR,38%,0,0
+days_until_earnings_release,Integer days from Action_Date to Earnings_Date (negative if after),VECTOR,38%,3,3
+directional_accuracy_rate,"Historical accuracy of the model’s direction (beat/miss) predictions (percent, 0–100)",VECTOR,37%,0,0
+directional_confidence_flag,Confidence that the beat/miss direction relative to consensus is correct (0–100),VECTOR,37%,0,0
+forecast_accuracy_advantage_percent,"Difference between OdinUltra’s historical error and consensus error (negative means the model is more accurate), percent 0–100",VECTOR,37%,1,1
+forecast_beat_indicator,Indicates whether OdinUltra's forecast beat consensus estimates,VECTOR,38%,0,0
+forecast_consensus_surprise_percent,"Model forecast minus consensus, as a percent of consensus (0–100)",VECTOR,38%,0,0
+forecast_mape_percent,"Average absolute forecast error of the OdinUltra model versus actuals over recent quarters (MAPE), expressed as a percent on a 0–100 scale",VECTOR,37%,2,2
+forecast_miss_indicator,Indicates whether OdinUltra's forecast misses consensus estimates,VECTOR,38%,0,0
+forecasted_yoy_change_percent,Year-over-year percent change in the model’s forecast for the metric (0–100),VECTOR,37%,2,2
+miss_precision_rate,"Precision of past “miss” predictions over the evaluation window (percent, 0–100)",VECTOR,36%,0,0
+model_confidence_flag,Indicates that the OdinUltra Difference with Consensus is larger than OdinUltra's model historical error,VECTOR,37%,1,1
+numerical_confidence_flag,Confidence that the forecast magnitude is accurate (0–100),VECTOR,37%,0,0
+predicted_metric_value,Model’s point forecast for the specified metric (units depend on the metric),VECTOR,38%,3,3
+prior_beat_count,Count of the last 12 quarters where the company beat consensus,VECTOR,37%,1,1
+prior_miss_count,Count of the last 12 quarters where the company missed consensus,VECTOR,37%,1,1
+quarter_duration_days,Total number of calendar days in the fiscal quarter (integer),VECTOR,38%,0,0

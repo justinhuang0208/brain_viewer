@@ -1,0 +1,9 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl232_countrycode,Vendor-assigned country code for the issuer; join to a country mapping to obtain labels,MATRIX,93%,5,16
+mdl232_in_country_rank,"Composite 1–100 percentile insider activity rank within the country peer group, combining NetBuyerRatioRank, PurchaseDepthRank, and SellingDepthRank; higher is more bullish",MATRIX,88%,15,40
+mdl232_in_industry_rank,Composite 1–100 percentile insider activity rank within the TRBC industry peer group; higher is more bullish,MATRIX,87%,12,29
+mdl232_in_netbuyer_ratio_rank,1–100 percentile rank of the net buyer ratio among insiders (breadth of buyers vs. sellers); higher values indicate more net buying and a more bullish signal,MATRIX,88%,22,52
+mdl232_in_purchase_depth_rank,"1–100 percentile rank of the recency and magnitude of insider purchases; higher values indicate stronger, more recent buying and a more bullish signal",MATRIX,88%,24,41
+mdl232_in_sector_rank,Composite 1–100 percentile insider activity rank within the TRBC sector peer group; higher is more bullish,MATRIX,88%,14,38
+mdl232_in_selling_depth_rank,"1–100 percentile rank of insider selling depth for the company, oriented so higher values indicate less concerning selling and a more bullish signal",MATRIX,88%,6,6
+mdl232_regioncode,Region code,MATRIX,100%,14,22

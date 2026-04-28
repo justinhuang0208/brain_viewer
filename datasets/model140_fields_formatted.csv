@@ -1,0 +1,4 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl140_qes_sinc_comp,Composite factor combining both pure inflation sensitivity and interest rate sensitivity into a holistic metric of a stock's macro inflation exposure; preferred for portfolio risk modeling and thematic tilts,MATRIX,76%,14,71
+mdl140_qes_sinc_neut,"Stock-level sensitivity to expected inflation changes, ""neutralized"" or adjusted to remove the contemporaneous effect of benchmark interest rate changes; captures pure inflation beta orthogonal to interest rates",MATRIX,74%,13,31
+mdl140_qes_sinc_sensitivity,"Stock-level estimated “beta” sensitivity to expected inflation, specifically to changes in the 10-year breakeven inflation rate, derived from elastic net regression",MATRIX,74%,9,37

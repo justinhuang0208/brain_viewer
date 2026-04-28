@@ -1,0 +1,35 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv109_announce_dt,Announce Date,VECTOR,31%,1,2
+pv109_bg_corpbond_amt_issued,Amount Issued,VECTOR,31%,4,9
+pv109_bg_corpbond_amt_outstanding,Amount Outstanding,VECTOR,31%,2,2
+pv109_bg_corpbond_day_cnt,Day Count,VECTOR,31%,0,0
+pv109_bg_corpbond_issue_dt,Issue Date,VECTOR,31%,2,2
+pv109_bg_corpbond_issue_px,Issue Price,VECTOR,28%,0,0
+pv109_bg_corpbond_maturity,Maturity,VECTOR,31%,2,2
+pv109_bg_corpbond_npc,Coupon,VECTOR,31%,2,3
+pv109_bg_corpbond_par_amt,Par Amount,VECTOR,31%,0,0
+pv109_bg_corpbond_px_ask,Ask Price,VECTOR,28%,2,2
+pv109_bg_corpbond_px_last,Last Price,VECTOR,28%,2,2
+pv109_bg_corpbond_px_volume,Volume,VECTOR,31%,0,0
+pv109_bg_corpbond_qerf_npc,Coupon Frequency,VECTOR,31%,2,2
+pv109_bg_corpbond_yld_ytm_ask,Ask Yield To Maturity,VECTOR,28%,0,0
+pv109_bo_corp_yld_ytm_ask,Ask Yield To Maturity,VECTOR,28%,1,1
+pv109_ergdata_corp_amt_issued,Amount Issued,VECTOR,31%,0,0
+pv109_ergdata_corp_amt_outstanding,Amount Outstanding,VECTOR,31%,0,0
+pv109_ergdata_corp_day_cnt,Day Count,VECTOR,31%,0,0
+pv109_ergdata_corp_issue_dt,Issue Date,VECTOR,31%,1,1
+pv109_ergdata_corp_issue_px,Issue Price,VECTOR,28%,3,3
+pv109_ergdata_corp_maturity,Maturity,VECTOR,31%,1,2
+pv109_ergdata_corp_npc,Coupon,VECTOR,31%,2,2
+pv109_ergdata_corp_par_amt,Par Amount,VECTOR,31%,0,0
+pv109_ergdata_corp_px_ask,Ask Price,VECTOR,28%,0,0
+pv109_ergdata_corp_px_last,Last Price,VECTOR,28%,2,2
+pv109_ergdata_corp_px_volume,Volume,VECTOR,31%,0,0
+pv109_ergdata_corp_qerf_npc,Coupon Frequency,VECTOR,31%,1,1
+pv109_ergdata_corp_yld_ytm_ask,Ask Yield To Maturity,VECTOR,28%,0,0
+pv109_min_increment,Minimum Increment,VECTOR,31%,0,0
+pv109_min_piece,Minimum Piece,VECTOR,31%,1,1
+pv109_pyt_ytm,Maturity / Refund Type,VECTOR,27%,3,4
+pv109_redemp_val,Redemption Value,VECTOR,31%,6,6
+pv109_td_npc_txn,Next Coupon Settle Date,VECTOR,31%,1,1
+pv109_yld_cnv_ask,Ask Yield To Convention,VECTOR,28%,1,2

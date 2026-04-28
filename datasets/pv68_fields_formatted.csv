@@ -1,0 +1,10 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv68_0_relation,"Variable-length vector of neighbor stock IDs; each ID is a stock that has a directed, event-driven social media relationship originating from the primary stock on that date",VECTOR,62%,6,11
+pv68_0_score,score,VECTOR,62%,5,7
+pv68_0_score_float,score_float,VECTOR,62%,1,1
+pv68_1_relation,relation,VECTOR,36%,0,0
+pv68_1_score,score,VECTOR,36%,1,1
+pv68_1_score_float,score float,VECTOR,36%,1,3
+pv68_2_relation,relation,VECTOR,61%,3,5
+pv68_2_score,score,VECTOR,61%,1,1
+pv68_2_score_float,score float,VECTOR,61%,3,7

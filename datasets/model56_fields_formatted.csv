@@ -1,0 +1,11 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl56_companyname,Company name index,MATRIX,85%,28,50
+mdl56_country,Country,MATRIX,85%,18,21
+mdl56_exchange,Stock exchange,MATRIX,85%,19,77
+srp_average_score,average score,MATRIX,76%,34,74
+srp_earnings_score,earnings score,MATRIX,71%,54,118
+srp_fundamental_score,fundamental score,MATRIX,79%,52,133
+srp_insider_trading_score,Insider trading score,MATRIX,62%,27,76
+srp_price_momentum_score,price momentum score,MATRIX,82%,26,51
+srp_relative_valuation_score,relative valuation score,MATRIX,68%,26,57
+srp_risk_score,risk score,MATRIX,82%,29,56

@@ -1,0 +1,211 @@
+Field,Description,Type,Coverage,Users,Alphas
+snt23_2dts_gen_212,General sentiment score.,MATRIX,100%,4,9
+snt23_2dts_sop_219,Sentiment daily time series value.,MATRIX,100%,2,2
+snt23_2dts_tuen_214,Sentiment daily time series value.,MATRIX,100%,3,3
+snt23_2neg_conf_low,Lower bound of the 95% confidence interval for the mean negative sentiment score for the stock on that date; may fall outside 0–1,MATRIX,100%,15,19
+snt23_2neg_conf_low_223,Confidence level of sentiment.,MATRIX,100%,4,9
+snt23_2neg_conf_up,Upper bound of the 95% confidence interval for the mean negative sentiment score for the stock on that date; may fall outside 0–1,MATRIX,100%,5,5
+snt23_2neg_conf_up_231,Confidence level of sentiment.,MATRIX,100%,3,3
+snt23_2neg_max,Maximum negative sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,9,9
+snt23_2neg_max_227,Maximum negative sentiment value.,MATRIX,100%,4,4
+snt23_2neg_mean,Average negative sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,9,10
+snt23_2neg_mean_218,Average negative sentiment value.,MATRIX,100%,4,4
+snt23_2neg_median,Median negative sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,9,11
+snt23_2neg_median_220,Median negative sentiment value.,MATRIX,100%,2,3
+snt23_2neg_min,Minimum negative sentiment score across all Inferess-linked news stories for the stock on that date (same-day aggregation); unit: proportion 0–1,MATRIX,100%,16,19
+snt23_2neg_min_229,Minimum negative sentiment value.,MATRIX,100%,1,2
+snt23_2neg_std,Standard deviation of negative sentiment scores across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,16,19
+snt23_2neut_conf_low,Lower bound of the 95% confidence interval for the mean neutral sentiment score for the stock on that date; may fall outside 0–1,MATRIX,100%,6,8
+snt23_2neut_conf_low_217,Confidence level of sentiment.,MATRIX,100%,3,3
+snt23_2neut_conf_up,Upper bound of the 95% confidence interval for the mean neutral sentiment score for the stock on that date; may fall outside 0–1,MATRIX,100%,10,12
+snt23_2neut_conf_up_224,Confidence level of sentiment.,MATRIX,100%,4,14
+snt23_2neut_max,Maximum neutral sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,10,11
+snt23_2neut_max_226,Maximum neutral sentiment value.,MATRIX,100%,1,5
+snt23_2neut_mean,Average neutral sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,2,2
+snt23_2neut_mean_230,Average neutral sentiment value.,MATRIX,100%,2,2
+snt23_2neut_median,Median neutral sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,1,1
+snt23_2neut_median_213,Median neutral sentiment value.,MATRIX,100%,1,1
+snt23_2neut_min,Minimum neutral sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,10,13
+snt23_2neut_min_221,Minimum neutral sentiment value.,MATRIX,100%,2,5
+snt23_2neut_std,Standard deviation of neutral sentiment scores across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,5,5
+snt23_2pos_conf_low,Lower bound of the 95% confidence interval for the mean positive sentiment score for the stock on that date; may fall outside 0–1,MATRIX,100%,9,12
+snt23_2pos_conf_low_228,Confidence level of sentiment.,MATRIX,100%,3,7
+snt23_2pos_conf_up,Upper bound of the 95% confidence interval for the mean positive sentiment score for the stock on that date; may fall outside 0–1,MATRIX,100%,3,4
+snt23_2pos_conf_up_211,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23_2pos_max,Maximum positive sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,3,3
+snt23_2pos_max_222,Maximum positive sentiment value.,MATRIX,100%,2,2
+snt23_2pos_mean,Average positive sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,13,18
+snt23_2pos_mean_225,Average positive sentiment value.,MATRIX,100%,3,6
+snt23_2pos_median,Median positive sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,8,12
+snt23_2pos_median_215,Median positive sentiment value.,MATRIX,100%,1,5
+snt23_2pos_min,Minimum positive sentiment score across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,4,4
+snt23_2pos_min_216,Minimum positive sentiment value.,MATRIX,100%,2,2
+snt23_2pos_std,Standard deviation of positive sentiment scores across all stories for the stock on that date; unit: proportion 0–1,MATRIX,100%,4,6
+snt23_3dts_gen_283,General sentiment score.,MATRIX,100%,0,0
+snt23_3dts_sop_287,Sentiment daily time series value.,MATRIX,100%,2,2
+snt23_3dts_tuen_285,Sentiment daily time series value.,MATRIX,100%,1,1
+snt23_3neg_conf_low,"Lower bound of the 95% confidence interval for the mean negative sentiment score across stories for the stock-day (USA, variant 3, next-day aggregation); may slightly be below 0",MATRIX,100%,4,5
+snt23_3neg_conf_low_291,Confidence level of sentiment.,MATRIX,100%,2,3
+snt23_3neg_conf_up,"Upper bound of the 95% confidence interval for the mean negative sentiment score across stories for the stock-day (USA, variant 3, next-day aggregation); may slightly exceed 0–1",MATRIX,100%,0,0
+snt23_3neg_conf_up_274,Confidence level of sentiment.,MATRIX,100%,0,0
+snt23_3neg_max,"Maximum negative sentiment score among all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,6,8
+snt23_3neg_max_284,Maximum negative sentiment value.,MATRIX,100%,1,3
+snt23_3neg_mean,"Average negative sentiment score across all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,2,4
+snt23_3neg_mean_292,Average negative sentiment value.,MATRIX,100%,2,2
+snt23_3neg_median,"Median negative sentiment score across all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_3neg_median_277,Median negative sentiment value.,MATRIX,100%,1,1
+snt23_3neg_min,"Minimum negative sentiment score among all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,5,5
+snt23_3neg_min_280,Minimum negative sentiment value.,MATRIX,100%,1,1
+snt23_3neg_std,"Standard deviation of negative sentiment scores across all stories for the stock on the day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,0,0
+snt23_3neut_conf_low,"Lower bound of the 95% confidence interval for the mean neutral sentiment score across stories for the stock-day (USA, variant 3, next-day aggregation); may slightly be below 0",MATRIX,100%,0,0
+snt23_3neut_conf_low_275,Confidence level of sentiment.,MATRIX,100%,0,0
+snt23_3neut_conf_up,"Upper bound of the 95% confidence interval for the mean neutral sentiment score across stories for the stock-day (USA, variant 3, next-day aggregation); may slightly exceed 0–1",MATRIX,100%,0,0
+snt23_3neut_conf_up_282,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23_3neut_max,"Maximum neutral sentiment score among all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,1,2
+snt23_3neut_max_281,Maximum neutral sentiment value.,MATRIX,100%,0,0
+snt23_3neut_mean,"Average neutral sentiment score across all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,1,1
+snt23_3neut_mean_276,Average neutral sentiment value.,MATRIX,100%,0,0
+snt23_3neut_median,"Median neutral sentiment score across all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,1,2
+snt23_3neut_median_278,Median neutral sentiment value.,MATRIX,100%,1,1
+snt23_3neut_min,"Minimum neutral sentiment score among all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_3neut_min_286,Minimum neutral sentiment value.,MATRIX,100%,1,1
+snt23_3neut_std,"Standard deviation of neutral sentiment scores across all stories for the stock on the day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,1,1
+snt23_3pos_conf_low,"Lower bound of the 95% confidence interval for the mean positive sentiment score across stories for the stock-day (USA, variant 3, next-day aggregation); may slightly be below 0",MATRIX,100%,0,0
+snt23_3pos_conf_low_293,Confidence level of sentiment.,MATRIX,100%,0,0
+snt23_3pos_conf_up,"Upper bound of the 95% confidence interval for the mean positive sentiment score across stories for the stock-day (USA, variant 3, next-day aggregation); may slightly exceed 0–1",MATRIX,100%,0,0
+snt23_3pos_conf_up_288,Confidence level of sentiment.,MATRIX,100%,0,0
+snt23_3pos_max,"Maximum positive sentiment score among all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,1,1
+snt23_3pos_max_294,Maximum positive sentiment value.,MATRIX,100%,0,0
+snt23_3pos_mean,"Average positive sentiment score across all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_3pos_mean_279,Average positive sentiment value.,MATRIX,100%,2,2
+snt23_3pos_median,"Median positive sentiment score across all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,2,2
+snt23_3pos_median_290,Median positive sentiment value.,MATRIX,100%,2,2
+snt23_3pos_min,"Minimum positive sentiment score among all Inferess news stories linked to the stock on the given trading day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,2,2
+snt23_3pos_min_289,Minimum positive sentiment value.,MATRIX,100%,1,1
+snt23_3pos_std,"Standard deviation of positive sentiment scores across all stories for the stock on the day (USA, variant 3, next-day aggregation); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_4dts_gen_114,General sentiment score.,MATRIX,100%,1,3
+snt23_4dts_sop_126,Sentiment daily time series value.,MATRIX,100%,0,0
+snt23_4dts_tuen_110,Sentiment daily time series value.,MATRIX,100%,2,2
+snt23_4neg_conf_low,"Lower bound of the 95% confidence interval for the mean negative sentiment score for the stock-date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,2,2
+snt23_4neg_conf_low_115,Confidence level of sentiment.,MATRIX,100%,0,0
+snt23_4neg_conf_up,"Upper bound of the 95% confidence interval for the mean negative sentiment score for the stock-date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,0,0
+snt23_4neg_conf_up_120,Confidence level of sentiment.,MATRIX,100%,0,0
+snt23_4neg_max,"Maximum negative sentiment score among stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,2,2
+snt23_4neg_max_112,Maximum negative sentiment value.,MATRIX,100%,1,1
+snt23_4neg_mean,"Average negative sentiment score across all stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,1,1
+snt23_4neg_mean_111,Average negative sentiment value.,MATRIX,100%,0,0
+snt23_4neg_median,"Median negative sentiment score across stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,4,4
+snt23_4neg_median_108,Median negative sentiment value.,MATRIX,100%,3,3
+snt23_4neg_min,"Minimum negative sentiment score among stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,5,6
+snt23_4neg_min_124,Minimum negative sentiment value.,MATRIX,100%,2,9
+snt23_4neg_std,"Standard deviation of negative sentiment scores across stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,3,4
+snt23_4neut_conf_low,"Lower bound of the 95% confidence interval for the mean neutral sentiment score for the stock-date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,1,1
+snt23_4neut_conf_low_122,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23_4neut_conf_up,"Upper bound of the 95% confidence interval for the mean neutral sentiment score for the stock-date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,1,1
+snt23_4neut_conf_up_117,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23_4neut_max,"Maximum neutral sentiment score among stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,1,8
+snt23_4neut_max_107,Maximum neutral sentiment value.,MATRIX,100%,2,2
+snt23_4neut_mean,Average neutral sentiment score across stories for the stock on the date; unit: proportion 0–1,MATRIX,100%,3,3
+snt23_4neut_mean_109,Average neutral sentiment value.,MATRIX,100%,1,1
+snt23_4neut_median,"Median neutral sentiment score across stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_4neut_median_106,Median neutral sentiment value.,MATRIX,100%,1,1
+snt23_4neut_min,"Minimum neutral sentiment score among stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,2,2
+snt23_4neut_min_125,Minimum neutral sentiment value.,MATRIX,100%,2,2
+snt23_4neut_std,"Standard deviation of neutral sentiment scores across stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_4pos_conf_low,"Lower bound of the 95% confidence interval for the mean positive sentiment score for the stock-date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,1,1
+snt23_4pos_conf_low_118,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23_4pos_conf_up,"Upper bound of the 95% confidence interval for the mean positive sentiment score for the stock-date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,4,6
+snt23_4pos_conf_up_123,Confidence level of sentiment.,MATRIX,100%,1,6
+snt23_4pos_max,"Maximum positive sentiment score among stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,1,1
+snt23_4pos_max_119,Maximum positive sentiment value.,MATRIX,100%,1,1
+snt23_4pos_mean,"Average positive sentiment score across all stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,0,0
+snt23_4pos_mean_113,Average positive sentiment value.,MATRIX,100%,1,1
+snt23_4pos_median,"Median positive sentiment score across stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,4,4
+snt23_4pos_median_116,Median positive sentiment value.,MATRIX,100%,3,3
+snt23_4pos_min,"Minimum positive sentiment score among stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,2,2
+snt23_4pos_min_121,Minimum positive sentiment value.,MATRIX,100%,1,1
+snt23_4pos_std,"Standard deviation of positive sentiment scores across stories for the stock on the date (AMR, variant 4, D0); unit: proportion 0–1",MATRIX,100%,0,0
+snt23_5dts_gen_176,General sentiment score.,MATRIX,100%,0,0
+snt23_5dts_sop_183,Sentiment daily time series value.,MATRIX,100%,0,0
+snt23_5dts_tuen_177,Sentiment daily time series value.,MATRIX,100%,0,0
+snt23_5neg_conf_low,"Lower bound of the 95% confidence interval for the mean negative sentiment score for the stock on that trading day (AMR, variant 5, D0; may slightly fall outside [0,1])",MATRIX,100%,4,5
+snt23_5neg_conf_low_179,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23_5neg_conf_up,"Upper bound of the 95% confidence interval for the mean negative sentiment score for the stock on that trading day (AMR, variant 5, D0; may slightly fall outside [0,1])",MATRIX,100%,1,1
+snt23_5neg_conf_up_170,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23_5neg_max,"Maximum negative sentiment score among stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,11,13
+snt23_5neg_max_180,Maximum negative sentiment value.,MATRIX,100%,2,4
+snt23_5neg_mean,"Average negative sentiment score across all stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,2,2
+snt23_5neg_mean_175,Average negative sentiment value.,MATRIX,100%,1,1
+snt23_5neg_median,"Median negative sentiment score across stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,7,9
+snt23_5neg_median_189,Median negative sentiment value.,MATRIX,100%,2,2
+snt23_5neg_min,"Minimum negative sentiment score among stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,3,3
+snt23_5neg_min_187,Minimum negative sentiment value.,MATRIX,100%,1,1
+snt23_5neg_std,"Standard deviation of negative sentiment scores across stories for the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,0,0
+snt23_5neut_conf_low,"Lower bound of the 95% confidence interval for the mean neutral sentiment score for the stock on that trading day (AMR, variant 5, D0; may slightly fall outside [0,1])",MATRIX,100%,1,1
+snt23_5neut_conf_low_178,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23_5neut_conf_up,"Upper bound of the 95% confidence interval for the mean neutral sentiment score for the stock on that trading day (AMR, variant 5, D0; may slightly fall outside [0,1])",MATRIX,100%,3,3
+snt23_5neut_conf_up_181,Confidence level of sentiment.,MATRIX,100%,2,2
+snt23_5neut_max,"Maximum neutral sentiment score among stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,1,1
+snt23_5neut_max_186,Maximum neutral sentiment value.,MATRIX,100%,0,0
+snt23_5neut_mean,"Average neutral sentiment score across all stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,0,0
+snt23_5neut_mean_172,Average neutral sentiment value.,MATRIX,100%,0,0
+snt23_5neut_median,"Median neutral sentiment score across stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,2,2
+snt23_5neut_median_185,Median neutral sentiment value.,MATRIX,100%,2,2
+snt23_5neut_min,"Minimum neutral sentiment score among stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,5,6
+snt23_5neut_min_173,Minimum neutral sentiment value.,MATRIX,100%,1,8
+snt23_5neut_std,"Standard deviation of neutral sentiment scores across stories for the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,0,0
+snt23_5pos_conf_low,"Lower bound of the 95% confidence interval for the mean positive sentiment score for the stock on that trading day (AMR, variant 5, D0; may slightly fall outside [0,1])",MATRIX,100%,3,8
+snt23_5pos_conf_low_174,Confidence level of sentiment.,MATRIX,100%,2,7
+snt23_5pos_conf_up,"Upper bound of the 95% confidence interval for the mean positive sentiment score for the stock on that trading day (AMR, variant 5, D0; may slightly fall outside [0,1])",MATRIX,100%,2,2
+snt23_5pos_conf_up_171,Confidence level of sentiment.,MATRIX,100%,2,2
+snt23_5pos_max,"Maximum positive sentiment score among stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,2,2
+snt23_5pos_max_188,Maximum positive sentiment value.,MATRIX,100%,1,1
+snt23_5pos_mean,"Average positive sentiment score across news stories linked to the stock on the day (USA, D0, variant 5); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_5pos_mean_184,Average positive sentiment value.,MATRIX,100%,3,3
+snt23_5pos_median,"Median positive sentiment score across stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,3,3
+snt23_5pos_median_182,Median positive sentiment value.,MATRIX,100%,1,1
+snt23_5pos_min,"Minimum positive sentiment score among stories linked to the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,2,2
+snt23_5pos_min_169,Minimum positive sentiment value.,MATRIX,100%,2,2
+snt23_5pos_std,"Standard deviation of positive sentiment scores across stories for the stock on that trading day (AMR, variant 5, D0; unit: proportion 0–1)",MATRIX,100%,0,0
+snt23_neg_conf_low,"Lower bound of the 95% confidence interval for the negative sentiment mean for the stock-day (USA, D1); may extend beyond [0,1]",MATRIX,100%,1,1
+snt23_neg_conf_up,"Upper bound of the 95% confidence interval for the negative sentiment mean for the stock-day (USA, D1); may extend beyond [0,1]",MATRIX,100%,10,12
+snt23_neg_max,"Maximum negative sentiment score across all news stories for the stock on the day (USA, D1); unit: proportion 0–1",MATRIX,100%,26,33
+snt23_neg_mean,"Average negative sentiment score across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,6,7
+snt23_neg_median,"Median negative sentiment score across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,0,0
+snt23_neg_min,"Minimum negative sentiment score across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,13,20
+snt23_neg_std,"Standard deviation of negative sentiment scores across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,0,0
+snt23_neut_conf_low,"Lower bound of the 95% confidence interval for the neutral sentiment mean for the stock-day (USA, D1); may extend beyond [0,1]",MATRIX,100%,0,0
+snt23_neut_conf_up,"Upper bound of the 95% confidence interval for the neutral sentiment mean for the stock-day (USA, D1); may extend beyond [0,1]",MATRIX,100%,1,1
+snt23_neut_max,"Maximum neutral sentiment score across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,4,4
+snt23_neut_mean,"Average neutral sentiment score across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,2,2
+snt23_neut_median,"Median neutral sentiment score across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,2,2
+snt23_neut_min,"Minimum neutral sentiment score across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_neut_std,"Standard deviation of neutral sentiment scores across all stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,2,2
+snt23_pos_conf_low,"Lower bound of the 95% confidence interval for the positive sentiment mean for the stock-day (USA, D1); may extend beyond [0,1]",MATRIX,100%,2,2
+snt23_pos_conf_up,"Upper bound of the 95% confidence interval for the positive sentiment mean for the stock-day (USA, D1); may extend beyond [0,1]",MATRIX,100%,1,1
+snt23_pos_max,"Maximum positive sentiment score across all stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_pos_mean,"Average positive sentiment score across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_pos_median,"Median positive sentiment score across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,3,3
+snt23_pos_min,"Minimum positive sentiment score across all stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,1,1
+snt23_pos_std,"Standard deviation of positive sentiment scores across stories for the stock-day (USA, D1); unit: proportion 0–1",MATRIX,100%,1,1
+snt23dts_gen_147,General sentiment score.,MATRIX,100%,1,1
+snt23dts_sop_136,Sentiment daily time series value.,MATRIX,100%,0,0
+snt23dts_tuen_145,Sentiment daily time series value.,MATRIX,100%,1,1
+snt23neg_conf_low_135,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23neg_conf_up_129,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23neg_max_137,Maximum negative sentiment value.,MATRIX,100%,7,15
+snt23neg_mean_146,Average negative sentiment value.,MATRIX,100%,5,6
+snt23neg_median_128,Median negative sentiment value.,MATRIX,100%,1,1
+snt23neg_min_133,Minimum negative sentiment value.,MATRIX,100%,2,10
+snt23neut_conf_low_127,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23neut_conf_up_141,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23neut_max_130,Maximum neutral sentiment value.,MATRIX,100%,3,3
+snt23neut_mean_144,Average neutral sentiment value.,MATRIX,100%,1,1
+snt23neut_median_138,Median neutral sentiment value.,MATRIX,100%,1,1
+snt23neut_min_134,Minimum neutral sentiment value.,MATRIX,100%,1,1
+snt23pos_conf_low_139,Confidence level of sentiment.,MATRIX,100%,2,2
+snt23pos_conf_up_140,Confidence level of sentiment.,MATRIX,100%,1,1
+snt23pos_max_142,Maximum positive sentiment value.,MATRIX,100%,1,1
+snt23pos_mean_132,Average positive sentiment value.,MATRIX,100%,3,3
+snt23pos_median_131,Median positive sentiment value.,MATRIX,100%,1,1
+snt23pos_min_143,Minimum positive sentiment value.,MATRIX,100%,0,0

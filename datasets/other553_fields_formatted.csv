@@ -1,0 +1,75 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth553_a_avgnumericpos,Average numerical position in financial text.,MATRIX,81%,32,40
+oth553_a_avgsentlen,Average sentence length in financial text.,MATRIX,82%,15,15
+oth553_a_blamecnt,Count of blame-related terms in financial text.,MATRIX,76%,8,8
+oth553_a_invblamecnt,Count of blame-related terms in financial text.,MATRIX,70%,6,7
+oth553_a_numericcnt,Count of numerical values in financial text.,MATRIX,81%,13,16
+oth553_a_passiveratio,Ratio of passive voice in financial text.,MATRIX,81%,6,6
+oth553_a_polycnt,Count of polysyllabic words in financial text.,MATRIX,82%,4,8
+oth553_a_poscnt,Count of positive terms in financial text.,MATRIX,82%,20,26
+oth553_a_wordcnt,Total word count in financial text.,MATRIX,82%,12,14
+oth553_eps_analyst,Number of analysts providing earnings per share estimates.,VECTOR,94%,6,6
+oth553_eps_answer_ratio,Ratio of answers in earnings call transcripts related to earnings per share.,VECTOR,74%,6,6
+oth553_eps_estvalue,Value of current earnings per share estimates.,VECTOR,94%,4,4
+oth553_eps_isprevspeak,Indicator if there was previous speech related to earnings per share.,VECTOR,74%,7,7
+oth553_eps_poscnt,Positive sentiment count related to earnings per share.,VECTOR,73%,6,9
+oth553_eps_preestvalue,Value of current earnings per share estimates.,VECTOR,93%,4,4
+oth553_eps_question_ratio,Ratio of questions in earnings call transcripts related to earnings per share.,VECTOR,74%,9,10
+oth553_eps_tncgen,Negative sentiment count related to earnings per share.,VECTOR,74%,3,3
+oth553_eps_wordcnt,Word count in earnings call transcripts related to earnings per share.,VECTOR,74%,5,6
+oth553_eps_yearspeakcnt,Count of speeches related to earnings per share within the year.,VECTOR,79%,5,6
+oth553_horizon,Time horizon for the data point.,VECTOR,88%,7,7
+oth553_p_avgnumericpos,Average numerical position in financial text.,MATRIX,83%,5,6
+oth553_p_avgsentlen,Average sentence length in financial text.,MATRIX,83%,5,23
+oth553_p_blamecnt,Count of blame-related terms in financial text.,MATRIX,80%,28,34
+oth553_p_invblamecnt,Count of blame-related terms in financial text.,MATRIX,77%,4,4
+oth553_p_numericcnt,Count of numerical values in financial text.,MATRIX,83%,3,3
+oth553_p_passiveratio,Ratio of passive voice in financial text.,MATRIX,83%,5,6
+oth553_p_polycnt,Count of polysyllabic words in financial text.,MATRIX,83%,7,8
+oth553_p_poscnt,Count of positive terms in financial text.,MATRIX,83%,3,3
+oth553_p_wordcnt,Total word count in financial text.,MATRIX,83%,2,2
+oth553_preptgvalue,Value of the previous price target.,VECTOR,85%,4,4
+oth553_prerecvalue,Value of the previous recommendation.,VECTOR,50%,2,2
+oth553_ptg_analyst,Number of analysts providing price target estimates.,VECTOR,88%,5,5
+oth553_ptg_answer_ratio,Ratio of answers in earnings call transcripts related to price targets.,VECTOR,66%,1,1
+oth553_ptg_isprevspeak,Indicator if there was previous speech related to price targets.,VECTOR,67%,5,5
+oth553_ptg_poscnt,Positive sentiment count related to price targets.,VECTOR,64%,3,3
+oth553_ptg_question_ratio,Ratio of questions in earnings call transcripts related to price targets.,VECTOR,66%,1,1
+oth553_ptg_tncgen,Negative sentiment count related to price targets.,VECTOR,66%,2,2
+oth553_ptg_wordcnt,Word count in earnings call transcripts related to price targets.,VECTOR,66%,5,6
+oth553_ptg_yearspeakcnt,Count of speeches related to price targets within the year.,VECTOR,73%,4,4
+oth553_ptgvalue,Value of the current price target.,VECTOR,88%,12,12
+oth553_q_avgnumericpos,Average numerical position in financial text.,MATRIX,80%,4,4
+oth553_q_avgsentlen,Average sentence length in financial text.,MATRIX,81%,3,3
+oth553_q_blamecnt,Count of blame-related terms in financial text.,MATRIX,61%,1,1
+oth553_q_invblamecnt,Count of blame-related terms in financial text.,MATRIX,44%,8,8
+oth553_q_numericcnt,Count of numerical values in financial text.,MATRIX,80%,4,4
+oth553_q_passiveratio,Ratio of passive voice in financial text.,MATRIX,80%,5,6
+oth553_q_polycnt,Count of polysyllabic words in financial text.,MATRIX,81%,3,3
+oth553_q_poscnt,Count of positive terms in financial text.,MATRIX,81%,20,24
+oth553_q_wordcnt,Total word count in financial text.,MATRIX,81%,2,2
+oth553_rec_analyst,Number of analysts providing recommendation estimates.,VECTOR,68%,1,1
+oth553_rec_answer_ratio,Ratio of answers in earnings call transcripts related to recommendations.,VECTOR,34%,2,2
+oth553_rec_isprevspeak,Indicator if there was previous speech related to recommendations.,VECTOR,34%,1,1
+oth553_rec_poscnt,Positive sentiment count related to recommendations.,VECTOR,30%,2,2
+oth553_rec_question_ratio,Ratio of questions in earnings call transcripts related to recommendations.,VECTOR,34%,1,1
+oth553_rec_tncgen,Negative sentiment count related to recommendations.,VECTOR,34%,1,1
+oth553_rec_wordcnt,Word count in earnings call transcripts related to recommendations.,VECTOR,34%,3,3
+oth553_rec_yearspeakcnt,Count of speeches related to recommendations within the year.,VECTOR,44%,0,0
+oth553_recvalue,Value of the current recommendation.,VECTOR,69%,5,5
+oth553_sal_analyst,Number of analysts providing sales estimates.,VECTOR,93%,4,4
+oth553_sal_answer_ratio,Ratio of answers in earnings call transcripts related to sales.,VECTOR,74%,2,2
+oth553_sal_estvalue,Value of current sales estimates.,VECTOR,93%,3,3
+oth553_sal_isprevspeak,Indicator if there was previous speech related to sales.,VECTOR,74%,7,7
+oth553_sal_poscnt,Positive sentiment count related to sales.,VECTOR,73%,13,15
+oth553_sal_preestvalue,Value of current sales estimates.,VECTOR,92%,4,5
+oth553_sal_question_ratio,Ratio of questions in earnings call transcripts related to sales.,VECTOR,74%,1,1
+oth553_sal_tncgen,Negative sentiment count related to sales.,VECTOR,74%,4,5
+oth553_sal_wordcnt,Word count in earnings call transcripts related to sales.,VECTOR,74%,3,3
+oth553_sal_yearspeakcnt,Count of speeches related to sales within the year.,VECTOR,79%,9,10
+oth553_tncgen_a,General negative sentiment count.,MATRIX,82%,1,1
+oth553_tncgen_p,General negative sentiment count.,MATRIX,83%,5,5
+oth553_tncgen_q,General negative sentiment count.,MATRIX,81%,2,2
+oth553_tncrecnu_a,Data field for financial opinion mining.,MATRIX,81%,1,1
+oth553_tncrecnu_p,Data field for financial opinion mining.,MATRIX,83%,6,7
+oth553_tncrecnu_q,Data field for financial opinion mining.,MATRIX,81%,4,4

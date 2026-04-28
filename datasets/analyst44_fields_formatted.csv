@@ -1,0 +1,798 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl44_2_bps_coveredby,bps coveredby,VECTOR,79%,36,52
+anl44_2_bps_lastactccy,Currency code (ISO 4217) for the last known estimate value,VECTOR,76%,9,11
+anl44_2_bps_lastactvalue,"Last known estimate value before this event, often the prior published value",VECTOR,72%,9,13
+anl44_2_bps_prevalue,Previous estimate value before the current revision/change,VECTOR,76%,10,13
+anl44_2_bps_value,Current estimate value for Book Value Per Share from this event,VECTOR,79%,22,31
+anl44_2_capex_coveredby,Identifier for the regime or coverage for the CAPEX estimate event,VECTOR,79%,10,12
+anl44_2_capex_lastactccy,Currency code of the last CAPEX estimate value (ISO 4217),VECTOR,76%,7,10
+anl44_2_capex_lastactvalue,Most recent prior CAPEX estimate value before the current event,VECTOR,73%,6,6
+anl44_2_capex_prevalue,Previous CAPEX estimate value before the current revision,VECTOR,76%,10,13
+anl44_2_capex_value,Current CAPEX estimate value for the event,VECTOR,79%,7,9
+anl44_2_cfps_coveredby,cfps coveredby,VECTOR,68%,13,44
+anl44_2_cfps_lastactccy,Currency code for the last known CFPS estimate,VECTOR,65%,2,2
+anl44_2_cfps_lastactvalue,Last known CFPS estimate value before the current event,VECTOR,60%,3,3
+anl44_2_cfps_prevalue,Previous estimate value immediately before the current revision event,VECTOR,65%,5,6
+anl44_2_cfps_value,Current analyst estimate value for Cash Flow Per Share,VECTOR,68%,2,2
+anl44_2_dps_coveredby,Identifier indicating which regime or policy covers the DPS estimate event,VECTOR,78%,2,2
+anl44_2_dps_lastactccy,"Currency code of the last reported DPS value, in ISO 4217 format",VECTOR,76%,3,3
+anl44_2_dps_lastactvalue,Previous or last reported value for DPS before the current event,VECTOR,70%,1,1
+anl44_2_dps_prevalue,Previous DPS estimate value before the current revision/event,VECTOR,61%,1,1
+anl44_2_dps_value,Current estimate value reported for Dividends Per Share (DPS),VECTOR,78%,8,10
+anl44_2_ebit_coveredby,String indicating regime or coverage regime; helps track which regime the event/estimate belongs to,VECTOR,94%,1,1
+anl44_2_ebit_lastactccy,Currency code for the last known EBIT estimate (ISO 4217 format),VECTOR,91%,0,0
+anl44_2_ebit_lastactvalue,"Most recent EBIT estimate before the current event, often prior published or final value",VECTOR,89%,0,0
+anl44_2_ebit_prevalue,"Previous EBIT estimate value directly before the current event, useful for measuring revision size",VECTOR,93%,0,0
+anl44_2_ebit_value,Current estimated value of EBIT,VECTOR,94%,2,2
+anl44_2_ebitda_coveredby,String identifier indicating the coverage regime or regime status for the estimate event,VECTOR,85%,0,0
+anl44_2_ebitda_lastactccy,Currency code (ISO 4217) in which the last known estimate value was reported,VECTOR,82%,0,0
+anl44_2_ebitda_lastactvalue,The most recent known value for the estimate prior to the current or latest event/revision,VECTOR,77%,1,1
+anl44_2_ebitda_prevalue,"Previous value of the EBITDA estimate before the current event, enables tracking of revisions",VECTOR,83%,0,0
+anl44_2_ebitda_source,ebitda source,VECTOR,81%,12,21
+anl44_2_ebitda_value,Current value of the EBITDA estimate,VECTOR,85%,0,0
+anl44_2_ebitdaps_coveredby,Identifier of the coverage regime or regime under which this event is reported,VECTOR,42%,0,0
+anl44_2_ebitdaps_lastactccy,Currency code corresponding to the last known estimate value,VECTOR,42%,1,4
+anl44_2_ebitdaps_lastactvalue,Value of the last known EBITDA per share estimate before the current event,VECTOR,36%,0,0
+anl44_2_ebitdaps_prevalue,Previous EBITDA per share estimate value before this event (shows revision magnitude),VECTOR,40%,3,4
+anl44_2_ebitdaps_value,Current analyst estimate value for EBITDAPS,VECTOR,42%,2,3
+anl44_2_eps_coveredby,"Regime or coverage identifier for the EPS event, helps regime linkage",VECTOR,96%,2,3
+anl44_2_eps_lastactccy,Currency code of the last published EPS estimate,VECTOR,93%,1,1
+anl44_2_eps_lastactvalue,Value of the most recent EPS estimate before the current event,VECTOR,92%,0,0
+anl44_2_eps_prevalue,Previous EPS estimate value before the current event,VECTOR,95%,3,4
+anl44_2_eps_value,Current EPS estimate value,VECTOR,96%,1,1
+anl44_2_epsr_coveredby,epsr coveredby,VECTOR,93%,11,12
+anl44_2_epsr_lastactccy,"Currency code for the last known/published estimate value, follows ISO 4217",VECTOR,91%,5,8
+anl44_2_epsr_lastactvalue,Most recent EPSR estimate value before the current event,VECTOR,90%,6,6
+anl44_2_epsr_prevalue,Previous EPSR estimate value immediately before the current event,VECTOR,93%,8,38
+anl44_2_epsr_value,"Current estimate value for EPS (or relevant indicator), numeric",VECTOR,93%,12,35
+anl44_2_fcfps_coveredby,fcfps coveredby,VECTOR,53%,3,4
+anl44_2_fcfps_lastactccy,Currency code (ISO 4217) for the last reported FCFPS estimate before the current event,VECTOR,49%,3,4
+anl44_2_fcfps_lastactvalue,Last recorded Free Cash Flow Per Share value before the current event,VECTOR,43%,1,1
+anl44_2_fcfps_prevalue,Previous value of the FCFPS estimate before revision,VECTOR,50%,1,1
+anl44_2_fcfps_value,Current value of the FCFPS estimate,VECTOR,53%,1,1
+anl44_2_grossmargin_coveredby,Coverage or regime linkage indicator specifying the coverage regime for the gross margin event,VECTOR,77%,3,7
+anl44_2_grossmargin_lastactccy,Currency code (ISO 4217) in which the last gross margin estimate value was denominated,VECTOR,69%,6,10
+anl44_2_grossmargin_lastactvalue,Last known gross margin estimate value prior to the current event,VECTOR,61%,5,9
+anl44_2_grossmargin_prevalue,Previous gross margin estimate value prior to the current revision,VECTOR,61%,5,5
+anl44_2_grossmargin_value,Current gross margin estimate value for the event,VECTOR,77%,5,5
+anl44_2_nav_coveredby,nav coveredby,VECTOR,80%,1,1
+anl44_2_nav_lastactccy,Currency code (ISO) used for reporting the last NAV value,VECTOR,80%,2,2
+anl44_2_nav_lastactvalue,Value of NAV at the time of the most recent prior update before this event,VECTOR,77%,8,9
+anl44_2_nav_prevalue,Previous NAV estimate value before the current event (shows revision),VECTOR,75%,4,4
+anl44_2_nav_value,The current NAV estimate value,VECTOR,80%,0,0
+anl44_2_netdebt_coveredby,Regime or coverage regime identifier for linkage and validation,VECTOR,73%,1,1
+anl44_2_netdebt_lastactccy,Currency code for the most recent prior estimate value,VECTOR,69%,1,1
+anl44_2_netdebt_lastactvalue,Most recent NETDEBT estimate value prior to the current event,VECTOR,64%,3,4
+anl44_2_netdebt_prevalue,"Previous estimate value before this event, used to indicate revision",VECTOR,67%,3,3
+anl44_2_netdebt_value,Current estimate value for Net Debt,VECTOR,73%,4,4
+anl44_2_netprofit_broker,netprofit broker,VECTOR,93%,8,8
+anl44_2_netprofit_coveredby,Regime or coverage indicator identifying the regime under which the estimate is covered,VECTOR,95%,0,0
+anl44_2_netprofit_lastactccy,Currency code (ISO 4217) of the last known net profit estimate value,VECTOR,93%,0,0
+anl44_2_netprofit_lastactvalue,Value of the last known net profit estimate prior to the current event,VECTOR,92%,1,1
+anl44_2_netprofit_prevalue,Previous value of the net profit estimate prior to the current event,VECTOR,95%,1,1
+anl44_2_netprofit_rep_coveredby,Regime or coverage identifier linking the event to a coverage regime or delay regime,VECTOR,93%,7,9
+anl44_2_netprofit_rep_lastactccy,"Currency code for the last net profit value, according to ISO 4217",VECTOR,90%,8,9
+anl44_2_netprofit_rep_lastactvalue,"The last known net profit estimate before the current event, often the previously published value",VECTOR,89%,5,7
+anl44_2_netprofit_rep_prevalue,Previous net profit estimate value before the current revision,VECTOR,92%,5,5
+anl44_2_netprofit_rep_value,Current value of the net profit estimate or report,VECTOR,93%,12,18
+anl44_2_netprofit_source,netprofit source,VECTOR,91%,8,14
+anl44_2_netprofit_value,Current value of the net profit estimate for the event,VECTOR,95%,0,0
+anl44_2_operatingprofit_coveredby,operatingprofit coveredby,VECTOR,31%,1,1
+anl44_2_operatingprofit_lastactccy,Currency code used for the last known operating profit estimate value,VECTOR,31%,3,3
+anl44_2_operatingprofit_lastactvalue,operatingprofit lastactvalue,VECTOR,6%,1,2
+anl44_2_operatingprofit_prevalue,operatingprofit prevalue,VECTOR,21%,0,0
+anl44_2_operatingprofit_value,Current estimate value for operating profit,VECTOR,31%,1,1
+anl44_2_pretaxprofit_coveredby,pretaxprofit coveredby,VECTOR,94%,1,1
+anl44_2_pretaxprofit_lastactccy,Currency code of the last known estimate value (ISO 4217 format),VECTOR,91%,1,1
+anl44_2_pretaxprofit_lastactvalue,Last recorded value of pre-tax profit estimate before current event or revision,VECTOR,88%,0,0
+anl44_2_pretaxprofit_prevalue,Previous estimate value before the current event—quantifies revision magnitude,VECTOR,94%,0,0
+anl44_2_pretaxprofit_rep_coveredby,Regime or coverage identifier indicating the regime under which the pretax profit estimate is submitted,VECTOR,88%,5,7
+anl44_2_pretaxprofit_rep_lastactccy,ISO currency code for the last acted (prior) pretax profit estimate,VECTOR,86%,8,11
+anl44_2_pretaxprofit_rep_lastactvalue,Last known pretax profit estimate value prior to this event,VECTOR,84%,6,10
+anl44_2_pretaxprofit_rep_prevalue,Previous pretax profit estimate value directly before the current event,VECTOR,86%,6,8
+anl44_2_pretaxprofit_rep_value,Current pretax profit estimate value provided in this event,VECTOR,88%,1,1
+anl44_2_pretaxprofit_value,"Current estimate value for pre-tax profit (numeric, float)",VECTOR,94%,14,15
+anl44_2_roa_coveredby,Regime or coverage regime identifier linked to this ROA event,VECTOR,70%,1,1
+anl44_2_roa_lastactccy,"Currency code for the last reported ROA estimate prior to the current event, ISO 4217",VECTOR,68%,1,1
+anl44_2_roa_lastactvalue,Most recent ROA estimate value before this event,VECTOR,62%,5,5
+anl44_2_roa_prevalue,Previous ROA estimate value before the current event,VECTOR,64%,0,0
+anl44_2_roa_value,Current ROA estimate value (numeric),VECTOR,70%,2,2
+anl44_2_roe_coveredby,"Code or regime identifier marking coverage logic for this ROE event, useful for regime analysis",VECTOR,81%,3,6
+anl44_2_roe_lastactccy,Currency code (ISO 4217) for last known ROE estimate value before the current event,VECTOR,79%,2,2
+anl44_2_roe_lastactvalue,Last known ROE estimate value prior to the current event; the previously published or revised ROE,VECTOR,72%,2,3
+anl44_2_roe_prevalue,"Previous analyst estimate value for ROE, prior to the current event or revision",VECTOR,75%,3,4
+anl44_2_roe_value,"Current analyst estimate for Return on Equity (ROE), as of this event",VECTOR,81%,2,2
+anl44_2_sales_coveredby,Coverage regime or identifier indicating which regulatory/data regime governs this sales event,VECTOR,96%,0,0
+anl44_2_sales_lastactccy,Currency code for the last known prior estimate for sales,VECTOR,93%,1,1
+anl44_2_sales_lastactvalue,The most recent prior sales estimate value (before the current event),VECTOR,92%,1,3
+anl44_2_sales_prevalue,Previous value of the sales estimate prior to this event (enables tracking of revisions),VECTOR,95%,3,4
+anl44_2_sales_value,Current value of the analyst sales estimate,VECTOR,96%,1,1
+anl44_2_tbvps_coveredby,tbvps coveredby,VECTOR,39%,4,4
+anl44_2_tbvps_lastactccy,Currency code (ISO 4217) of the last TBVPS estimate prior to the current event,VECTOR,38%,1,1
+anl44_2_tbvps_lastactvalue,Value of the last TBVPS estimate prior to the current event,VECTOR,31%,5,5
+anl44_2_tbvps_prevalue,Previous TBVPS estimate value before this event (shows revision amount),VECTOR,37%,3,6
+anl44_2_tbvps_value,Current TBVPS estimate value submitted in this event,VECTOR,39%,1,1
+anl44_analyst,analyst,VECTOR,93%,11,32
+anl44_best_bps,best bps,VECTOR,80%,10,11
+anl44_best_bps_4wk_chg,best bps 4wk chg,VECTOR,74%,9,10
+anl44_best_bps_4wk_dn,best bps 4wk dn,VECTOR,69%,1,1
+anl44_best_bps_4wk_up,best bps 4wk up,VECTOR,68%,4,9
+anl44_best_bps_chg_pct,best bps chg pct,VECTOR,71%,3,6
+anl44_best_bps_hi,best bps hi,VECTOR,80%,4,4
+anl44_best_bps_lo,best bps lo,VECTOR,80%,4,6
+anl44_best_bps_median,best bps median,VECTOR,80%,2,2
+anl44_best_bps_numest,best bps numest,VECTOR,80%,8,11
+anl44_best_bps_stddev,best bps stddev,VECTOR,67%,4,4
+anl44_best_cps,BEst consensus Cash Flow Per Share estimate for the period,VECTOR,63%,1,2
+anl44_best_cps_4wk_chg,Change in Cash Per Share (CPS) estimate over the last 4 weeks (not a percent change),VECTOR,62%,5,5
+anl44_best_cps_4wk_dn,Number of analysts who decreased their Cash Per Share (CPS) estimate in the last 4 weeks,VECTOR,71%,3,3
+anl44_best_cps_4wk_up,Number of analysts who increased their Cash Per Share (CPS) estimate in the last 4 weeks,VECTOR,63%,9,10
+anl44_best_cps_chg_pct,Percentage change in the specified period Cash Per Share (CPS) estimate versus the prior CPS estimate,VECTOR,63%,2,2
+anl44_best_cps_hi,Highest analyst estimate for Cash Per Share (CPS) for the period,VECTOR,71%,1,1
+anl44_best_cps_lo,Lowest analyst estimate for Cash Per Share (CPS) for the period,VECTOR,71%,2,2
+anl44_best_cps_median,Median estimated Cash Per Share (CPS) for the specified period from consensus estimates,VECTOR,71%,3,3
+anl44_best_cps_numest,Number of analyst Cash Per Share (CPS) estimates contributing to the consensus,VECTOR,71%,4,10
+anl44_best_cps_stddev,"Standard deviation of contributed Cash Per Share (CPS) estimates for the specified period, measuring consensus dispersion",VECTOR,54%,3,3
+anl44_best_cur_ev_to_ebitda,best cur ev to ebitda,VECTOR,83%,13,23
+anl44_best_dps,Bloomberg BEst consensus Dividend Per Share estimate on an annualized basis (net or gross per country convention),VECTOR,74%,4,4
+anl44_best_dps_4wk_chg,Change in the consensus Dividend Per Share estimate over the last 4 weeks for the specified period (not a percent),VECTOR,83%,6,6
+anl44_best_dps_4wk_dn,Number of analysts who decreased their Dividend Per Share estimates over the last 4 weeks for the specified period,VECTOR,84%,2,2
+anl44_best_dps_4wk_up,Number of analysts who increased their Dividend Per Share estimates over the last 4 weeks for the specified period,VECTOR,84%,2,2
+anl44_best_dps_chg_pct,The percent change in the consensus Dividend Per Share estimate for the specified fiscal period over the last four weeks,VECTOR,74%,0,0
+anl44_best_dps_hi,The highest analyst estimate for Dividend Per Share (DPS) for the specified period,VECTOR,74%,2,2
+anl44_best_dps_lo,The lowest analyst estimate for Dividend Per Share (DPS) for the specified period,VECTOR,74%,2,2
+anl44_best_dps_median,"The median estimated Dividend Per Share (DPS) for the specified estimate period, representing the middle value among all analyst estimates",VECTOR,74%,0,0
+anl44_best_dps_numest,Number of analyst Dividend Per Share estimates contributing to the consensus for the specified period,VECTOR,74%,0,0
+anl44_best_dps_stddev,"Standard deviation of analyst Dividend Per Share (DPS) estimates, measuring the dispersion or consensus among estimates",VECTOR,71%,1,1
+anl44_best_ebit,best ebit,VECTOR,88%,5,7
+anl44_best_ebit_4wk_chg,best ebit 4wk chg,VECTOR,86%,10,10
+anl44_best_ebit_4wk_dn,best ebit 4wk dn,VECTOR,85%,8,12
+anl44_best_ebit_4wk_up,best ebit 4wk up,VECTOR,84%,4,5
+anl44_best_ebit_chg_pct,best ebit chg pct,VECTOR,83%,7,7
+anl44_best_ebit_hi,best ebit hi,VECTOR,88%,7,13
+anl44_best_ebit_lo,best ebit lo,VECTOR,88%,8,9
+anl44_best_ebit_median,best ebit median,VECTOR,88%,3,3
+anl44_best_ebit_numest,best ebit numest,VECTOR,88%,12,16
+anl44_best_ebit_stddev,best ebit stddev,VECTOR,84%,8,14
+anl44_best_ebit_to_sales,best ebit to sales,VECTOR,88%,17,53
+anl44_best_ebitda,best ebitda,VECTOR,83%,8,12
+anl44_best_ebitda_4wk_chg,best ebitda 4wk chg,VECTOR,80%,8,11
+anl44_best_ebitda_4wk_dn,best ebitda 4wk dn,VECTOR,80%,7,8
+anl44_best_ebitda_4wk_up,best ebitda 4wk up,VECTOR,79%,9,12
+anl44_best_ebitda_chg_pct,best ebitda chg pct,VECTOR,78%,6,9
+anl44_best_ebitda_hi,best ebitda hi,VECTOR,83%,6,8
+anl44_best_ebitda_lo,best ebitda lo,VECTOR,83%,6,9
+anl44_best_ebitda_median,best ebitda median,VECTOR,83%,3,10
+anl44_best_ebitda_numest,best ebitda numest,VECTOR,83%,5,6
+anl44_best_ebitda_stddev,best ebitda stddev,VECTOR,76%,5,6
+anl44_best_eps,BEst EPS consensus estimate for the specified period (defaults to adjusted EPS definition),VECTOR,88%,25,35
+anl44_best_eps_4wk_chg,Absolute change in the specified period Bloomberg consensus EPS estimate over the last four weeks (not a percent change),VECTOR,87%,9,12
+anl44_best_eps_4wk_dn,Number of analysts who lowered their EPS estimates in the last 4 weeks for the specified period,VECTOR,88%,8,18
+anl44_best_eps_4wk_up,Number of analysts who have increased their EPS estimates over the last 4 weeks (consensus-based),VECTOR,88%,16,20
+anl44_best_eps_chg_pct,Percent change in the specified-period EPS estimate versus the prior estimate,VECTOR,88%,2,3
+anl44_best_eps_gaap_chg_pct,best eps gaap chg pct,VECTOR,87%,4,10
+anl44_best_eps_hi,Highest analyst EPS estimate for the specified period within the consensus,VECTOR,88%,9,15
+anl44_best_eps_lo,Lowest analyst EPS estimate for the specified period within the consensus,VECTOR,88%,22,49
+anl44_best_eps_median,Median EPS estimate for the specified period across contributing analysts,VECTOR,88%,6,16
+anl44_best_eps_numest,Number of contributing analyst EPS estimates in the consensus for the specified period,VECTOR,99%,7,18
+anl44_best_eps_stddev,"Standard deviation of contributed EPS estimates, measuring dispersion of the consensus for the specified period",VECTOR,86%,20,33
+anl44_best_ev_to_best_ebit,best ev to best ebit,VECTOR,86%,10,18
+anl44_best_nav,best nav,VECTOR,74%,6,7
+anl44_best_nav_4wk_chg,best nav 4wk chg,VECTOR,69%,2,2
+anl44_best_nav_4wk_dn,best nav 4wk dn,VECTOR,64%,7,11
+anl44_best_nav_4wk_up,best nav 4wk up,VECTOR,63%,7,8
+anl44_best_nav_chg_pct,best nav chg pct,VECTOR,65%,0,0
+anl44_best_nav_hi,best nav hi,VECTOR,74%,8,12
+anl44_best_nav_lo,best nav lo,VECTOR,74%,5,7
+anl44_best_nav_median,best nav median,VECTOR,74%,3,4
+anl44_best_nav_numest,best nav numest,VECTOR,74%,12,16
+anl44_best_nav_stddev,best nav stddev,VECTOR,60%,7,9
+anl44_best_ndebt,best ndebt,VECTOR,67%,3,6
+anl44_best_ndebt_4wk_chg,best ndebt 4wk chg,VECTOR,62%,5,5
+anl44_best_ndebt_4wk_dn,best ndebt 4wk dn,VECTOR,58%,6,11
+anl44_best_ndebt_4wk_up,best ndebt 4wk up,VECTOR,59%,4,10
+anl44_best_ndebt_chg_pct,best ndebt chg pct,VECTOR,60%,3,6
+anl44_best_ndebt_hi,best ndebt hi,VECTOR,67%,4,7
+anl44_best_ndebt_lo,best ndebt lo,VECTOR,67%,5,7
+anl44_best_ndebt_median,best ndebt median,VECTOR,67%,6,15
+anl44_best_ndebt_numest,best ndebt numest,VECTOR,67%,2,2
+anl44_best_ndebt_stddev,best ndebt stddev,VECTOR,55%,3,4
+anl44_best_net,best net,VECTOR,92%,2,4
+anl44_best_net_4wk_chg,best net 4wk chg,VECTOR,91%,4,4
+anl44_best_net_4wk_dn,best net 4wk dn,VECTOR,91%,6,9
+anl44_best_net_4wk_up,best net 4wk up,VECTOR,90%,5,6
+anl44_best_net_chg_pct,best net chg pct,VECTOR,88%,3,7
+anl44_best_net_gaap_chg_pct,best net gaap chg pct,VECTOR,85%,7,7
+anl44_best_net_hi,best net hi,VECTOR,92%,8,9
+anl44_best_net_lo,best net lo,VECTOR,92%,6,6
+anl44_best_net_median,best net median,VECTOR,92%,6,11
+anl44_best_net_numest,best net numest,VECTOR,92%,7,8
+anl44_best_net_stddev,best net stddev,VECTOR,90%,4,4
+anl44_best_ni_adj_to_sales,best ni adj to sales,VECTOR,92%,10,15
+anl44_best_opp,best opp,VECTOR,61%,4,4
+anl44_best_opp_4wk_chg,best opp 4wk chg,VECTOR,51%,4,4
+anl44_best_opp_4wk_dn,best opp 4wk dn,VECTOR,48%,0,0
+anl44_best_opp_4wk_up,best opp 4wk up,VECTOR,46%,2,2
+anl44_best_opp_chg_pct,best opp chg pct,VECTOR,46%,0,0
+anl44_best_opp_hi,best opp hi,VECTOR,61%,3,6
+anl44_best_opp_lo,best opp lo,VECTOR,61%,2,3
+anl44_best_opp_median,best opp median,VECTOR,61%,2,2
+anl44_best_opp_numest,best opp numest,VECTOR,61%,2,2
+anl44_best_opp_stddev,best opp stddev,VECTOR,40%,0,0
+anl44_best_opp_to_sales,best opp to sales,VECTOR,61%,2,6
+anl44_best_pe_ratio,best pe ratio,VECTOR,93%,129,378
+anl44_best_ptp,best ptp,VECTOR,91%,6,8
+anl44_best_ptp_4wk_chg,best ptp 4wk chg,VECTOR,89%,6,16
+anl44_best_ptp_4wk_dn,best ptp 4wk dn,VECTOR,89%,12,17
+anl44_best_ptp_4wk_up,best ptp 4wk up,VECTOR,88%,10,19
+anl44_best_ptp_chg_pct,best ptp chg pct,VECTOR,86%,9,9
+anl44_best_ptp_hi,best ptp hi,VECTOR,91%,5,5
+anl44_best_ptp_lo,best ptp lo,VECTOR,91%,7,8
+anl44_best_ptp_median,best ptp median,VECTOR,91%,4,4
+anl44_best_ptp_numest,best ptp numest,VECTOR,91%,5,17
+anl44_best_ptp_stddev,best ptp stddev,VECTOR,87%,5,6
+anl44_best_ptp_to_sales,best ptp to sales,VECTOR,91%,14,31
+anl44_best_px_bps_ratio,best px bps ratio,VECTOR,86%,30,67
+anl44_best_px_cps_ratio,best px cps ratio,VECTOR,75%,34,57
+anl44_best_roa,best roa,VECTOR,66%,7,8
+anl44_best_roa_4wk_chg,best roa 4wk chg,VECTOR,60%,5,6
+anl44_best_roa_4wk_dn,best roa 4wk dn,VECTOR,58%,3,4
+anl44_best_roa_4wk_up,best roa 4wk up,VECTOR,56%,2,2
+anl44_best_roa_chg_pct,best roa chg pct,VECTOR,57%,3,4
+anl44_best_roa_hi,best roa hi,VECTOR,66%,3,3
+anl44_best_roa_lo,best roa lo,VECTOR,66%,6,10
+anl44_best_roa_median,best roa median,VECTOR,66%,6,6
+anl44_best_roa_numest,best roa numest,VECTOR,66%,2,2
+anl44_best_roa_stddev,best roa stddev,VECTOR,45%,2,2
+anl44_best_roe,best roe,VECTOR,79%,11,41
+anl44_best_roe_4wk_chg,best roe 4wk chg,VECTOR,73%,7,10
+anl44_best_roe_4wk_dn,best roe 4wk dn,VECTOR,71%,14,22
+anl44_best_roe_4wk_up,best roe 4wk up,VECTOR,70%,15,18
+anl44_best_roe_chg_pct,best roe chg pct,VECTOR,70%,6,10
+anl44_best_roe_hi,best roe hi,VECTOR,79%,9,21
+anl44_best_roe_lo,best roe lo,VECTOR,79%,9,13
+anl44_best_roe_median,best roe median,VECTOR,79%,13,18
+anl44_best_roe_numest,best roe numest,VECTOR,79%,8,12
+anl44_best_roe_stddev,best roe stddev,VECTOR,64%,1,1
+anl44_best_sales,best sales,VECTOR,93%,7,10
+anl44_best_sales_4wk_chg,best sales 4wk chg,VECTOR,91%,4,6
+anl44_best_sales_4wk_dn,best sales 4wk dn,VECTOR,90%,16,32
+anl44_best_sales_4wk_up,best sales 4wk up,VECTOR,90%,38,70
+anl44_best_sales_chg_pct,best sales chg pct,VECTOR,88%,3,3
+anl44_best_sales_hi,best sales hi,VECTOR,93%,7,9
+anl44_best_sales_lo,best sales lo,VECTOR,92%,6,17
+anl44_best_sales_median,best sales median,VECTOR,93%,3,9
+anl44_best_sales_numest,best sales numest,VECTOR,93%,6,8
+anl44_best_sales_stddev,best sales stddev,VECTOR,90%,5,7
+anl44_bps_best_crncy_iso,bps best crncy iso,MATRIX,100%,27,202
+anl44_bps_best_cur_fiscal_qtr_period,bps best cur fiscal qtr period,MATRIX,99%,13,14
+anl44_bps_best_cur_fiscal_semi_year_period,bps best cur fiscal semi year period,MATRIX,99%,20,72
+anl44_bps_best_cur_fiscal_year_period,bps best cur fiscal year period,MATRIX,99%,19,39
+anl44_bps_best_eeps_cur_yr,bps best eeps cur yr,MATRIX,93%,24,347
+anl44_bps_best_eeps_nxt_yr,bps best eeps nxt yr,MATRIX,93%,23,56
+anl44_bps_best_fiscal_period_dt,bps best fiscal period dt,VECTOR,80%,11,22
+anl44_bps_best_fperiod_override,bps best fperiod override,VECTOR,80%,5,9
+anl44_bps_coveredby,BPS D0 coveredby,VECTOR,79%,3,3
+anl44_bps_latest_ann_dt_qtrly,bps latest ann dt qtrly,VECTOR,52%,3,6
+anl44_bps_most_recent_period_end_dt,bps most recent period end dt,VECTOR,56%,2,2
+anl44_bps_prevalue,Bps D0 prevalue,VECTOR,75%,3,3
+anl44_bps_value,BPS D0 value,VECTOR,79%,2,2
+anl44_capex_coveredby,Capex D0 coveredby,VECTOR,73%,4,7
+anl44_capex_prevalue,Capex D0 prevalue,VECTOR,69%,2,2
+anl44_capex_value,Capex d0 value,VECTOR,73%,3,3
+anl44_cfps_best_crncy_iso,Currency code (ISO standard) in which the BEst CPS estimate is reported,MATRIX,95%,14,22
+anl44_cfps_best_cur_fiscal_qtr_period,Current fiscal quarter end date for which Bloomberg Estimates content is provided,MATRIX,91%,17,43
+anl44_cfps_best_cur_fiscal_semi_year_period,Current fiscal semi-annual period end date for which Bloomberg Estimate content is provided,MATRIX,95%,16,19
+anl44_cfps_best_cur_fiscal_year_period,Current fiscal year end date for which Bloomberg Estimates content is provided,MATRIX,100%,16,36
+anl44_cfps_best_eeps_cur_yr,BEst earnings per share estimate for the current fiscal year,MATRIX,87%,15,30
+anl44_cfps_best_eeps_nxt_yr,BEst earnings per share estimate for the next fiscal year,MATRIX,87%,17,62
+anl44_cfps_best_fiscal_period_dt,Fiscal period date (year and month) for which Bloomberg Estimate data is reported,VECTOR,63%,5,5
+anl44_cfps_best_fperiod_override,"BEst Fiscal Period Override code specifying which estimate period to retrieve (e.g., 1FY, 2FQ, -1FS)",VECTOR,70%,1,1
+anl44_cfps_coveredby,CFPS D0 covered by,VECTOR,63%,7,8
+anl44_cfps_latest_ann_dt_qtrly,Date of the latest quarterly earnings or sales announcement,VECTOR,52%,4,4
+anl44_cfps_most_recent_period_end_dt,"End date of the most recently available financial period (annual, quarterly, or semi-annual)",VECTOR,55%,2,3
+anl44_cfps_prevalue,CFPS D0 prevalue,VECTOR,60%,3,3
+anl44_cfps_value,CFPS d0 value,VECTOR,63%,1,1
+anl44_dps_best_crncy_iso,"ISO currency code in which the DPS consensus value is calculated (e.g., USD, JPY)",MATRIX,95%,15,21
+anl44_dps_best_cur_fiscal_qtr_period,Current fiscal quarter end date for which Bloomberg Earnings Estimates content is provided,MATRIX,91%,16,36
+anl44_dps_best_cur_fiscal_semi_year_period,The end date of the current fiscal semi-annual period for which Bloomberg Earnings Estimates are provided (for semi-annual reporters),MATRIX,100%,15,38
+anl44_dps_best_cur_fiscal_year_period,Current fiscal year end date for which Bloomberg Estimates content is provided,MATRIX,100%,9,20
+anl44_dps_best_eeps_cur_yr,Estimated Earnings Per Share (EPS) for the current fiscal year as provided by Bloomberg estimates,MATRIX,87%,15,24
+anl44_dps_best_eeps_nxt_yr,Estimated Earnings Per Share (EPS) for the next fiscal year as provided by Bloomberg estimates,MATRIX,98%,21,293
+anl44_dps_best_fiscal_period_dt,Date corresponding to the fiscal period for which the Bloomberg estimate data applies (year and month of period end),VECTOR,74%,4,4
+anl44_dps_best_fperiod_override,User or system-specified fiscal period override indicating which fiscal period BEst should reference,VECTOR,73%,4,4
+anl44_dps_coveredby,Dps d0 coveredby,VECTOR,72%,2,2
+anl44_dps_latest_ann_dt_qtrly,The most recent date on which quarterly earnings or sales results were announced,VECTOR,47%,0,0
+anl44_dps_most_recent_period_end_dt,"The end date for the most recently completed fiscal period (annual, quarterly, or semi-annual)",VECTOR,51%,3,3
+anl44_dps_prevalue,DPS D0 prevalue,VECTOR,46%,0,0
+anl44_dps_value,Dps d0 value,VECTOR,49%,1,1
+anl44_ebit_best_crncy_iso,ebit best crncy iso,MATRIX,100%,12,15
+anl44_ebit_best_cur_fiscal_qtr_period,ebit best cur fiscal qtr period,MATRIX,99%,11,26
+anl44_ebit_best_cur_fiscal_semi_year_period,ebit best cur fiscal semi year period,MATRIX,99%,12,34
+anl44_ebit_best_cur_fiscal_year_period,ebit best cur fiscal year period,MATRIX,99%,19,49
+anl44_ebit_best_eeps_cur_yr,ebit best eeps cur yr,MATRIX,93%,18,47
+anl44_ebit_best_eeps_nxt_yr,ebit best eeps nxt yr,MATRIX,93%,12,25
+anl44_ebit_best_fiscal_period_dt,ebit best fiscal period dt,VECTOR,88%,9,13
+anl44_ebit_best_fperiod_override,ebit best fperiod override,VECTOR,88%,7,10
+anl44_ebit_coveredby,EBIT D0 coveredby,VECTOR,90%,5,11
+anl44_ebit_latest_ann_dt_qtrly,ebit latest ann dt qtrly,VECTOR,79%,19,23
+anl44_ebit_most_recent_period_end_dt,ebit most recent period end dt,VECTOR,82%,16,20
+anl44_ebit_prevalue,Ebit d0 prevalue,VECTOR,89%,1,1
+anl44_ebit_value,EBIT D0 value,VECTOR,90%,3,4
+anl44_ebitda_best_crncy_iso,ebitda best crncy iso,MATRIX,100%,7,14
+anl44_ebitda_best_cur_fiscal_qtr_period,ebitda best cur fiscal qtr period,MATRIX,99%,12,18
+anl44_ebitda_best_cur_fiscal_semi_year_period,ebitda best cur fiscal semi year period,MATRIX,99%,21,199
+anl44_ebitda_best_cur_fiscal_year_period,ebitda best cur fiscal year period,MATRIX,99%,8,9
+anl44_ebitda_best_eeps_cur_yr,ebitda best eeps cur yr,MATRIX,93%,14,25
+anl44_ebitda_best_eeps_nxt_yr,ebitda best eeps nxt yr,MATRIX,93%,13,33
+anl44_ebitda_best_fiscal_period_dt,ebitda best fiscal period dt,VECTOR,83%,6,6
+anl44_ebitda_best_fperiod_override,ebitda best fperiod override,VECTOR,83%,2,5
+anl44_ebitda_coveredby,Ebitda d0 coveredby,VECTOR,84%,5,8
+anl44_ebitda_latest_ann_dt_qtrly,ebitda latest ann dt qtrly,VECTOR,72%,8,14
+anl44_ebitda_most_recent_period_end_dt,ebitda most recent period end dt,VECTOR,75%,3,4
+anl44_ebitda_prevalue,Ebitda d0 prevalue,VECTOR,82%,9,10
+anl44_ebitda_value,Ebitda d0 value,VECTOR,84%,2,2
+anl44_ebitdaps_coveredby,Ebitdaps d0 coveredby,VECTOR,37%,1,1
+anl44_ebitdaps_prevalue,EBITDAPS d0 prevalue,VECTOR,35%,0,0
+anl44_ebitdaps_value,EBITDAPS D0 value,VECTOR,37%,1,1
+anl44_eps_best_crncy_iso,ISO currency code for the currency in which the Bloomberg consensus EPS value is stated for the current annual period; may include sub-currencies like GBp,MATRIX,95%,10,26
+anl44_eps_best_cur_fiscal_qtr_period,Current fiscal quarter end date for which Bloomberg Earnings Estimates content is provided,MATRIX,100%,17,67
+anl44_eps_best_cur_fiscal_semi_year_period,Current fiscal semi-annual end date or period for which Bloomberg Estimates content is provided,MATRIX,100%,15,38
+anl44_eps_best_cur_fiscal_year_period,Current fiscal year end date for which Bloomberg Earnings Estimates content is provided,MATRIX,91%,12,61
+anl44_eps_best_eeps_cur_yr,Estimated earnings per share for the current fiscal year from Bloomberg Estimates (BEst),MATRIX,98%,31,67
+anl44_eps_best_eeps_nxt_yr,Consensus estimated EPS for the next fiscal year,MATRIX,98%,26,63
+anl44_eps_best_fiscal_period_dt,Calendar year and month of the fiscal period associated with the Bloomberg Estimate data,VECTOR,88%,5,6
+anl44_eps_best_fperiod_override,"Fiscal period override string for Bloomberg Estimates (e.g., 1FY, 2FQ, 05Q1, 06Y, 07S2) specifying which period the EPS estimate refers to",VECTOR,97%,5,6
+anl44_eps_coveredby,EPS d0 coveredby,VECTOR,95%,4,8
+anl44_eps_gaap_best_crncy_iso,eps gaap best crncy iso,MATRIX,100%,11,25
+anl44_eps_gaap_best_cur_fiscal_qtr_period,eps gaap best cur fiscal qtr period,MATRIX,99%,5,7
+anl44_eps_gaap_best_cur_fiscal_semi_year_period,eps gaap best cur fiscal semi year period,MATRIX,99%,9,49
+anl44_eps_gaap_best_cur_fiscal_year_period,eps gaap best cur fiscal year period,MATRIX,99%,12,17
+anl44_eps_gaap_best_eeps_cur_yr,eps gaap best eeps cur yr,MATRIX,93%,19,55
+anl44_eps_gaap_best_eeps_nxt_yr,eps gaap best eeps nxt yr,MATRIX,93%,18,32
+anl44_eps_gaap_best_fiscal_period_dt,eps gaap best fiscal period dt,VECTOR,93%,3,3
+anl44_eps_gaap_best_fperiod_override,eps gaap best fperiod override,VECTOR,93%,12,18
+anl44_eps_gaap_latest_ann_dt_qtrly,eps gaap latest ann dt qtrly,VECTOR,89%,12,25
+anl44_eps_gaap_most_recent_period_end_dt,eps gaap most recent period end dt,VECTOR,90%,12,19
+anl44_eps_latest_ann_dt_qtrly,Latest quarterly earnings or sales announcement date,VECTOR,84%,10,15
+anl44_eps_most_recent_period_end_dt,"Most recent available period end date from annual, quarterly, or semi-annual reporting, possibly from partial updates",VECTOR,84%,14,19
+anl44_eps_prevalue,EPS D0 prevalue,VECTOR,95%,4,7
+anl44_eps_ratio_best_crncy_iso,eps ratio best crncy iso,MATRIX,100%,9,14
+anl44_eps_ratio_best_cur_fiscal_qtr_period,eps ratio best cur fiscal qtr period,MATRIX,99%,14,28
+anl44_eps_ratio_best_cur_fiscal_semi_year_period,eps ratio best cur fiscal semi year period,MATRIX,99%,13,14
+anl44_eps_ratio_best_cur_fiscal_year_period,eps ratio best cur fiscal year period,MATRIX,99%,11,26
+anl44_eps_ratio_best_eeps_cur_yr,eps ratio best eeps cur yr,MATRIX,93%,27,73
+anl44_eps_ratio_best_eeps_nxt_yr,eps ratio best eeps nxt yr,MATRIX,93%,26,42
+anl44_eps_ratio_best_fperiod_override,eps ratio best fperiod override,VECTOR,93%,6,7
+anl44_eps_value,Eps d0 value,VECTOR,95%,7,21
+anl44_epsr_best_crncy_iso,epsr best crncy iso,MATRIX,100%,7,15
+anl44_epsr_best_cur_fiscal_qtr_period,epsr best cur fiscal qtr period,MATRIX,99%,9,20
+anl44_epsr_best_cur_fiscal_semi_year_period,epsr best cur fiscal semi year period,MATRIX,99%,18,45
+anl44_epsr_best_cur_fiscal_year_period,epsr best cur fiscal year period,MATRIX,99%,25,149
+anl44_epsr_best_eeps_cur_yr,epsr best eeps cur yr,MATRIX,93%,23,45
+anl44_epsr_best_eeps_nxt_yr,epsr best eeps nxt yr,MATRIX,93%,9,12
+anl44_epsr_best_fiscal_period_dt,epsr best fiscal period dt,VECTOR,91%,10,15
+anl44_epsr_best_fperiod_override,epsr best fperiod override,VECTOR,91%,6,7
+anl44_epsr_coveredby,Epsr d0 coveredby,VECTOR,84%,2,5
+anl44_epsr_latest_ann_dt_qtrly,epsr latest ann dt qtrly,VECTOR,87%,12,14
+anl44_epsr_most_recent_period_end_dt,epsr most recent period end dt,VECTOR,88%,4,12
+anl44_epsr_prevalue,Epsr D0 prevalue,VECTOR,83%,3,3
+anl44_epsr_value,EPSR D0 value,VECTOR,84%,6,9
+anl44_fcfps_coveredby,Fcfps D0 coveredby,VECTOR,48%,3,3
+anl44_fcfps_prevalue,FCFPS D0 prevalue,VECTOR,45%,1,1
+anl44_fcfps_value,Fcfps d0 value,VECTOR,48%,1,1
+anl44_ffops_best_crncy_iso,ffops best crncy iso,MATRIX,100%,14,20
+anl44_ffops_best_cur_fiscal_qtr_period,ffops best cur fiscal qtr period,MATRIX,99%,9,24
+anl44_ffops_best_cur_fiscal_semi_year_period,FFOPS best cur fiscal semi-year period,MATRIX,99%,14,48
+anl44_ffops_best_cur_fiscal_year_period,ffops best cur fiscal year period,MATRIX,99%,10,15
+anl44_ffops_best_eeps_cur_yr,ffops best eeps cur yr,MATRIX,93%,15,23
+anl44_ffops_best_eeps_nxt_yr,ffops best eeps nxt yr,MATRIX,93%,22,46
+anl44_gaap_best_eps,gaap best eps,VECTOR,93%,13,40
+anl44_gaap_best_eps_4wk_chg,gaap best eps 4wk chg,VECTOR,92%,4,6
+anl44_gaap_best_eps_4wk_dn,gaap best eps 4wk dn,VECTOR,92%,9,24
+anl44_gaap_best_eps_4wk_up,gaap best eps 4wk up,VECTOR,91%,12,17
+anl44_gaap_best_eps_chg_pct,gaap best eps chg pct,VECTOR,89%,5,6
+anl44_gaap_best_eps_gaap,gaap best eps gaap,VECTOR,92%,11,20
+anl44_gaap_best_eps_gaap_4wk_chg,gaap best eps gaap 4wk chg,VECTOR,90%,10,13
+anl44_gaap_best_eps_gaap_4wk_dn,gaap best eps gaap 4wk dn,VECTOR,90%,2,2
+anl44_gaap_best_eps_gaap_4wk_up,gaap best eps gaap 4wk up,VECTOR,90%,29,47
+anl44_gaap_best_eps_gaap_hi,gaap best eps gaap hi,VECTOR,92%,10,15
+anl44_gaap_best_eps_gaap_lo,gaap best eps gaap lo,VECTOR,92%,6,13
+anl44_gaap_best_eps_gaap_median,gaap best eps gaap median,VECTOR,92%,9,12
+anl44_gaap_best_eps_gaap_numest,gaap best eps gaap numest,VECTOR,92%,13,24
+anl44_gaap_best_eps_gaap_stddev,gaap best eps gaap stddev,VECTOR,88%,14,21
+anl44_gaap_best_eps_hi,gaap best eps hi,VECTOR,93%,11,11
+anl44_gaap_best_eps_lo,gaap best eps lo,VECTOR,93%,13,17
+anl44_gaap_best_eps_median,gaap best eps median,VECTOR,93%,4,4
+anl44_gaap_best_eps_numest,gaap best eps numest,VECTOR,93%,4,5
+anl44_gaap_best_eps_stddev,gaap best eps stddev,VECTOR,91%,20,23
+anl44_gaap_best_net_gaap,gaap best net gaap,VECTOR,91%,10,14
+anl44_gaap_best_net_gaap_4wk_chg,gaap best net gaap 4wk chg,VECTOR,88%,8,11
+anl44_gaap_best_net_gaap_4wk_dn,gaap best net gaap 4wk dn,VECTOR,89%,11,39
+anl44_gaap_best_net_gaap_4wk_up,gaap best net gaap 4wk up,VECTOR,88%,18,24
+anl44_gaap_best_net_gaap_hi,gaap best net gaap hi,VECTOR,91%,1,2
+anl44_gaap_best_net_gaap_lo,gaap best net gaap lo,VECTOR,91%,4,6
+anl44_gaap_best_net_gaap_median,gaap best net gaap median,VECTOR,91%,5,8
+anl44_gaap_best_net_gaap_numest,gaap best net gaap numest,VECTOR,91%,6,7
+anl44_gaap_best_net_gaap_stddev,gaap best net gaap stddev,VECTOR,86%,6,6
+anl44_grossmargin_coveredby,Grossmargin D0 coveredby,VECTOR,70%,4,4
+anl44_grossmargin_prevalue,Grossmargin d0 prevalue,VECTOR,58%,4,5
+anl44_grossmargin_value,Grossmargin d0 value,VECTOR,70%,6,6
+anl44_nav_best_crncy_iso,nav best crncy iso,MATRIX,100%,10,14
+anl44_nav_best_cur_fiscal_qtr_period,nav best cur fiscal qtr period,MATRIX,99%,7,22
+anl44_nav_best_cur_fiscal_semi_year_period,nav best cur fiscal semi year period,MATRIX,99%,10,26
+anl44_nav_best_cur_fiscal_year_period,nav best cur fiscal year period,MATRIX,99%,8,15
+anl44_nav_best_eeps_cur_yr,nav best eeps cur yr,MATRIX,93%,28,94
+anl44_nav_best_eeps_nxt_yr,nav best eeps nxt yr,MATRIX,93%,19,37
+anl44_nav_best_fiscal_period_dt,nav best fiscal period dt,VECTOR,74%,10,13
+anl44_nav_best_fperiod_override,nav best fperiod override,VECTOR,74%,4,6
+anl44_nav_coveredby,Nav d0 coveredby,VECTOR,68%,3,4
+anl44_nav_latest_ann_dt_qtrly,nav latest ann dt qtrly,VECTOR,57%,1,1
+anl44_nav_most_recent_period_end_dt,nav most recent period end dt,VECTOR,59%,3,4
+anl44_nav_prevalue,NAV d0 prevalue,VECTOR,63%,4,5
+anl44_nav_value,NAV D0 value,VECTOR,68%,0,0
+anl44_netdebt_best_crncy_iso,netdebt best crncy iso,MATRIX,100%,7,17
+anl44_netdebt_best_cur_fiscal_qtr_period,netdebt best cur fiscal qtr period,MATRIX,99%,7,12
+anl44_netdebt_best_cur_fiscal_semi_year_period,netdebt best cur fiscal semi year period,MATRIX,99%,19,37
+anl44_netdebt_best_cur_fiscal_year_period,netdebt best cur fiscal year period,MATRIX,99%,13,24
+anl44_netdebt_best_eeps_cur_yr,netdebt best eeps cur yr,MATRIX,93%,20,40
+anl44_netdebt_best_eeps_nxt_yr,netdebt best eeps nxt yr,MATRIX,93%,27,39
+anl44_netdebt_best_fiscal_period_dt,netdebt best fiscal period dt,VECTOR,67%,2,2
+anl44_netdebt_best_fperiod_override,netdebt best fperiod override,VECTOR,67%,1,1
+anl44_netdebt_coveredby,Netdebt d0 coveredby,VECTOR,66%,6,6
+anl44_netdebt_latest_ann_dt_qtrly,netdebt latest ann dt qtrly,VECTOR,41%,1,1
+anl44_netdebt_most_recent_period_end_dt,netdebt most recent period end dt,VECTOR,45%,0,0
+anl44_netdebt_prevalue,Netdebt d0 prevalue,VECTOR,60%,3,4
+anl44_netdebt_value,Netdebt D0 value,VECTOR,66%,1,1
+anl44_netprofit_coveredby,Netprofit d0 coveredby,VECTOR,94%,6,9
+anl44_netprofit_gaap_best_crncy_iso,netprofit gaap best crncy iso,MATRIX,100%,9,17
+anl44_netprofit_gaap_best_cur_fiscal_qtr_period,netprofit gaap best cur fiscal qtr period,MATRIX,99%,10,15
+anl44_netprofit_gaap_best_cur_fiscal_semi_year_period,netprofit gaap best cur fiscal semi year period,MATRIX,99%,16,28
+anl44_netprofit_gaap_best_cur_fiscal_year_period,netprofit gaap best cur fiscal year period,MATRIX,99%,14,21
+anl44_netprofit_gaap_best_eeps_cur_yr,netprofit gaap best eeps cur yr,MATRIX,93%,13,21
+anl44_netprofit_gaap_best_eeps_nxt_yr,netprofit gaap best eeps nxt yr,MATRIX,93%,16,31
+anl44_netprofit_gaap_best_fiscal_period_dt,netprofit gaap best fiscal period dt,VECTOR,92%,7,9
+anl44_netprofit_gaap_best_fperiod_override,netprofit gaap best fperiod override,VECTOR,92%,4,17
+anl44_netprofit_gaap_latest_ann_dt_qtrly,netprofit gaap latest ann dt qtrly,VECTOR,87%,16,33
+anl44_netprofit_gaap_most_recent_period_end_dt,netprofit gaap most recent period end dt,VECTOR,89%,14,22
+anl44_netprofit_prevalue,Netprofit d0 prevalue,VECTOR,93%,3,4
+anl44_netprofit_rep_best_crncy_iso,netprofit rep best crncy iso,MATRIX,100%,9,18
+anl44_netprofit_rep_best_cur_fiscal_qtr_period,netprofit rep best cur fiscal qtr period,MATRIX,99%,6,16
+anl44_netprofit_rep_best_cur_fiscal_semi_year_period,netprofit rep best cur fiscal semi year period,MATRIX,99%,12,96
+anl44_netprofit_rep_best_cur_fiscal_year_period,netprofit rep best cur fiscal year period,MATRIX,99%,12,23
+anl44_netprofit_rep_best_eeps_cur_yr,netprofit rep best eeps cur yr,MATRIX,93%,17,57
+anl44_netprofit_rep_best_eeps_nxt_yr,netprofit rep best eeps nxt yr,MATRIX,93%,18,39
+anl44_netprofit_rep_best_fiscal_period_dt,netprofit rep best fiscal period dt,VECTOR,90%,8,8
+anl44_netprofit_rep_best_fperiod_override,netprofit rep best fperiod override,VECTOR,90%,4,4
+anl44_netprofit_rep_coveredby,Netprofit rep d0 coveredby,VECTOR,89%,8,11
+anl44_netprofit_rep_latest_ann_dt_qtrly,netprofit rep latest ann dt qtrly,VECTOR,85%,8,9
+anl44_netprofit_rep_most_recent_period_end_dt,netprofit rep most recent period end dt,VECTOR,86%,13,14
+anl44_netprofit_rep_prevalue,Netprofit rep D0 prevalue,VECTOR,87%,2,2
+anl44_netprofit_rep_value,Netprofit rep D0 value,VECTOR,89%,7,11
+anl44_netprofit_value,Netprofit d0 value,VECTOR,94%,5,7
+anl44_operatingprofit_best_crncy_iso,operatingprofit best crncy iso,MATRIX,100%,17,87
+anl44_operatingprofit_best_cur_fiscal_qtr_period,operatingprofit best cur fiscal qtr period,MATRIX,99%,16,68
+anl44_operatingprofit_best_cur_fiscal_semi_year_period,Operating profit best cur fiscal semi-year period,MATRIX,99%,14,40
+anl44_operatingprofit_best_cur_fiscal_year_period,operatingprofit best cur fiscal year period,MATRIX,99%,10,16
+anl44_operatingprofit_best_eeps_cur_yr,operatingprofit best eeps cur yr,MATRIX,93%,12,19
+anl44_operatingprofit_best_eeps_nxt_yr,operatingprofit best eeps nxt yr,MATRIX,93%,21,34
+anl44_operatingprofit_best_fiscal_period_dt,operatingprofit best fiscal period dt,VECTOR,61%,5,6
+anl44_operatingprofit_best_fperiod_override,operatingprofit best fperiod override,VECTOR,61%,3,3
+anl44_operatingprofit_coveredby,Operatingprofit d0 coveredby,VECTOR,50%,0,0
+anl44_operatingprofit_latest_ann_dt_qtrly,operatingprofit latest ann dt qtrly,VECTOR,31%,0,0
+anl44_operatingprofit_most_recent_period_end_dt,operatingprofit most recent period end dt,VECTOR,47%,0,0
+anl44_operatingprofit_prevalue,Operatingprofit D0 prevalue,VECTOR,42%,0,0
+anl44_operatingprofit_value,Operating profit D0 value,VECTOR,50%,1,1
+anl44_orig_en_bps_coveredby,orig en bps coveredby,VECTOR,68%,7,10
+anl44_orig_en_bps_prevalue,orig en bps prevalue,VECTOR,60%,2,2
+anl44_orig_en_bps_value,orig en bps value,VECTOR,68%,4,4
+anl44_orig_en_capex_coveredby,orig en capex coveredby,VECTOR,61%,12,25
+anl44_orig_en_capex_prevalue,orig en capex prevalue,VECTOR,63%,1,1
+anl44_orig_en_capex_value,orig en capex value,VECTOR,61%,4,7
+anl44_orig_en_ebit_coveredby,orig en ebit coveredby,VECTOR,74%,4,4
+anl44_orig_en_ebit_prevalue,orig en ebit prevalue,VECTOR,69%,1,1
+anl44_orig_en_ebit_value,orig en ebit value,VECTOR,74%,6,11
+anl44_orig_en_ebitda_coveredby,orig en ebitda coveredby,VECTOR,68%,8,14
+anl44_orig_en_ebitda_prevalue,orig en ebitda prevalue,VECTOR,63%,0,0
+anl44_orig_en_ebitda_value,orig en ebitda value,VECTOR,68%,1,2
+anl44_orig_en_ebitdaps_coveredby,orig en ebitdaps coveredby,VECTOR,37%,1,1
+anl44_orig_en_ebitdaps_prevalue,orig en ebitdaps prevalue,VECTOR,35%,0,0
+anl44_orig_en_ebitdaps_value,orig en ebitdaps value,VECTOR,37%,0,0
+anl44_orig_en_eps_coveredby,orig en eps v1 0 0 coveredby,VECTOR,84%,4,6
+anl44_orig_en_eps_prevalue,orig en eps v1 0 0 prevalue,VECTOR,79%,5,9
+anl44_orig_en_eps_value,orig en eps v1 0 0 value,VECTOR,84%,12,15
+anl44_orig_en_epsr_coveredby,orig en epsr coveredby,VECTOR,58%,0,0
+anl44_orig_en_epsr_prevalue,orig en epsr prevalue,VECTOR,57%,1,1
+anl44_orig_en_epsr_value,orig en epsr value,VECTOR,58%,1,1
+anl44_orig_en_fcfps_coveredby,orig en fcfps coveredby,VECTOR,41%,0,0
+anl44_orig_en_fcfps_prevalue,orig en fcfps prevalue,VECTOR,38%,2,2
+anl44_orig_en_fcfps_value,orig en fcfps value,VECTOR,41%,1,1
+anl44_orig_en_grossmargin_coveredby,orig en grossmargin coveredby,VECTOR,71%,7,9
+anl44_orig_en_grossmargin_prevalue,orig en grossmargin prevalue,VECTOR,58%,0,0
+anl44_orig_en_grossmargin_value,orig en grossmargin value,VECTOR,71%,3,3
+anl44_orig_en_nav_coveredby,Orig EN NAV covered by,VECTOR,69%,2,2
+anl44_orig_en_nav_prevalue,orig en nav prevalue,VECTOR,63%,2,3
+anl44_orig_en_nav_value,orig en nav value,VECTOR,69%,5,6
+anl44_orig_en_netdebt_coveredby,orig en netdebt coveredby,VECTOR,49%,0,0
+anl44_orig_en_netdebt_prevalue,orig en netdebt prevalue,VECTOR,41%,1,1
+anl44_orig_en_netdebt_value,orig en netdebt value,VECTOR,49%,2,2
+anl44_orig_en_netprofit_coveredby,orig en netprofit coveredby,VECTOR,78%,16,27
+anl44_orig_en_netprofit_prevalue,orig en netprofit prevalue,VECTOR,74%,5,6
+anl44_orig_en_netprofit_rep_coveredby,orig en netprofit rep coveredby,VECTOR,88%,5,5
+anl44_orig_en_netprofit_rep_prevalue,orig en netprofit rep prevalue,VECTOR,89%,1,1
+anl44_orig_en_netprofit_rep_value,Orig EN net profit rep value,VECTOR,88%,4,5
+anl44_orig_en_netprofit_value,orig en netprofit value,VECTOR,78%,2,2
+anl44_orig_en_operatingprofit_coveredby,orig en operatingprofit coveredby,VECTOR,48%,0,0
+anl44_orig_en_operatingprofit_prevalue,orig en operatingprofit prevalue,VECTOR,39%,0,0
+anl44_orig_en_operatingprofit_value,orig en operatingprofit value,VECTOR,48%,1,1
+anl44_orig_en_pretaxprofit_coveredby,orig en pretaxprofit coveredby,VECTOR,74%,6,13
+anl44_orig_en_pretaxprofit_prevalue,orig en pretaxprofit prevalue,VECTOR,72%,1,2
+anl44_orig_en_pretaxprofit_rep_coveredby,orig en pretaxprofit rep coveredby,VECTOR,57%,4,8
+anl44_orig_en_pretaxprofit_rep_prevalue,orig en pretaxprofit rep prevalue,VECTOR,55%,4,4
+anl44_orig_en_pretaxprofit_rep_value,orig en pretaxprofit rep value,VECTOR,57%,0,0
+anl44_orig_en_pretaxprofit_value,orig en pretaxprofit value,VECTOR,74%,3,5
+anl44_orig_en_roa_coveredby,orig en roa coveredby,VECTOR,55%,5,7
+anl44_orig_en_roa_prevalue,orig en roa prevalue,VECTOR,56%,10,14
+anl44_orig_en_roa_value,orig en roa value,VECTOR,55%,0,0
+anl44_orig_en_roe_coveredby,orig en roe coveredby,VECTOR,67%,3,3
+anl44_orig_en_roe_prevalue,orig en roe prevalue,VECTOR,70%,1,1
+anl44_orig_en_roe_value,orig en roe value,VECTOR,67%,1,1
+anl44_orig_en_sales_coveredby,Orig EN sales V1 0 0 covered by,VECTOR,79%,3,3
+anl44_orig_en_sales_prevalue,orig en sales v1 0 0 prevalue,VECTOR,76%,4,4
+anl44_orig_en_sales_value,orig en sales v1 0 0 value,VECTOR,79%,4,6
+anl44_orig_en_tbvps_coveredby,orig en tbvps coveredby,VECTOR,34%,1,1
+anl44_orig_en_tbvps_prevalue,orig en tbvps prevalue,VECTOR,31%,0,0
+anl44_orig_en_tbvps_value,orig en tbvps value,VECTOR,34%,0,0
+anl44_pretaxprofit_best_crncy_iso,pretaxprofit best crncy iso,MATRIX,100%,6,30
+anl44_pretaxprofit_best_cur_fiscal_qtr_period,pretaxprofit best cur fiscal qtr period,MATRIX,99%,4,329
+anl44_pretaxprofit_best_cur_fiscal_semi_year_period,pretaxprofit best cur fiscal semi year period,MATRIX,99%,23,32
+anl44_pretaxprofit_best_cur_fiscal_year_period,pretaxprofit best cur fiscal year period,MATRIX,99%,10,16
+anl44_pretaxprofit_best_eeps_cur_yr,pretaxprofit best eeps cur yr,MATRIX,93%,15,41
+anl44_pretaxprofit_best_eeps_nxt_yr,pretaxprofit best eeps nxt yr,MATRIX,93%,19,49
+anl44_pretaxprofit_best_fiscal_period_dt,pretaxprofit best fiscal period dt,VECTOR,91%,7,11
+anl44_pretaxprofit_best_fperiod_override,pretaxprofit best fperiod override,VECTOR,91%,11,16
+anl44_pretaxprofit_coveredby,Pretaxprofit d0 coveredby,VECTOR,92%,4,6
+anl44_pretaxprofit_latest_ann_dt_qtrly,pretaxprofit latest ann dt qtrly,VECTOR,82%,6,10
+anl44_pretaxprofit_most_recent_period_end_dt,pretaxprofit most recent period end dt,VECTOR,86%,22,39
+anl44_pretaxprofit_prevalue,Pretaxprofit d0 prevalue,VECTOR,91%,4,5
+anl44_pretaxprofit_rep_coveredby,Pretaxprofit rep D0 coveredby,VECTOR,70%,4,5
+anl44_pretaxprofit_rep_prevalue,Pretaxprofit rep D0 prevalue,VECTOR,68%,1,2
+anl44_pretaxprofit_rep_value,Pretaxprofit rep d0 value,VECTOR,70%,3,3
+anl44_pretaxprofit_value,Pretaxprofit d0 value,VECTOR,92%,8,17
+anl44_r_best_eps_gaap,r best eps gaap,VECTOR,91%,13,20
+anl44_r_best_eps_gaap_4wk_chg,r best eps gaap 4wk chg,VECTOR,89%,10,22
+anl44_r_best_eps_gaap_4wk_dn,r best eps gaap 4wk dn,VECTOR,89%,18,35
+anl44_r_best_eps_gaap_4wk_up,r best eps gaap 4wk up,VECTOR,89%,18,25
+anl44_r_best_eps_gaap_hi,r best eps gaap hi,VECTOR,91%,11,13
+anl44_r_best_eps_gaap_lo,r best eps gaap lo,VECTOR,91%,16,22
+anl44_r_best_eps_gaap_median,r best eps gaap median,VECTOR,91%,8,15
+anl44_r_best_eps_gaap_numest,r best eps gaap numest,VECTOR,91%,4,9
+anl44_r_best_eps_gaap_stddev,r best eps gaap stddev,VECTOR,88%,12,19
+anl44_rep_best_net_gaap,rep best net gaap,VECTOR,90%,5,8
+anl44_rep_best_net_gaap_4wk_chg,rep best net gaap 4wk chg,VECTOR,88%,6,13
+anl44_rep_best_net_gaap_4wk_dn,rep best net gaap 4wk dn,VECTOR,88%,10,19
+anl44_rep_best_net_gaap_4wk_up,rep best net gaap 4wk up,VECTOR,87%,14,17
+anl44_rep_best_net_gaap_hi,rep best net gaap hi,VECTOR,90%,8,19
+anl44_rep_best_net_gaap_lo,rep best net gaap lo,VECTOR,90%,9,39
+anl44_rep_best_net_gaap_median,rep best net gaap median,VECTOR,90%,10,14
+anl44_rep_best_net_gaap_numest,rep best net gaap numest,VECTOR,90%,11,18
+anl44_rep_best_net_gaap_stddev,rep best net gaap stddev,VECTOR,85%,5,5
+anl44_roa_best_crncy_iso,roa best crncy iso,MATRIX,100%,12,49
+anl44_roa_best_cur_fiscal_qtr_period,roa best cur fiscal qtr period,MATRIX,99%,18,44
+anl44_roa_best_cur_fiscal_semi_year_period,roa best cur fiscal semi year period,MATRIX,99%,16,33
+anl44_roa_best_cur_fiscal_year_period,roa best cur fiscal year period,MATRIX,99%,13,20
+anl44_roa_best_eeps_cur_yr,roa best eeps cur yr,MATRIX,93%,34,96
+anl44_roa_best_eeps_nxt_yr,roa best eeps nxt yr,MATRIX,93%,23,48
+anl44_roa_best_fiscal_period_dt,roa best fiscal period dt,VECTOR,66%,14,39
+anl44_roa_best_fperiod_override,roa best fperiod override,VECTOR,66%,4,5
+anl44_roa_coveredby,Roa d0 coveredby,VECTOR,63%,1,1
+anl44_roa_latest_ann_dt_qtrly,roa latest ann dt qtrly,VECTOR,28%,4,4
+anl44_roa_most_recent_period_end_dt,roa most recent period end dt,VECTOR,37%,5,6
+anl44_roa_prevalue,ROA D0 prevalue,VECTOR,58%,7,8
+anl44_roa_value,Roa d0 value,VECTOR,63%,2,2
+anl44_roe_best_crncy_iso,roe best crncy iso,MATRIX,100%,10,23
+anl44_roe_best_cur_fiscal_qtr_period,roe best cur fiscal qtr period,MATRIX,99%,12,23
+anl44_roe_best_cur_fiscal_semi_year_period,roe best cur fiscal semi year period,MATRIX,99%,22,89
+anl44_roe_best_cur_fiscal_year_period,roe best cur fiscal year period,MATRIX,99%,12,28
+anl44_roe_best_eeps_cur_yr,roe best eeps cur yr,MATRIX,93%,21,136
+anl44_roe_best_eeps_nxt_yr,roe best eeps nxt yr,MATRIX,93%,21,44
+anl44_roe_best_fiscal_period_dt,roe best fiscal period dt,VECTOR,79%,6,7
+anl44_roe_best_fperiod_override,roe best fperiod override,VECTOR,79%,9,9
+anl44_roe_coveredby,ROE d0 coveredby,VECTOR,77%,7,9
+anl44_roe_latest_ann_dt_qtrly,roe latest ann dt qtrly,VECTOR,42%,3,3
+anl44_roe_most_recent_period_end_dt,roe most recent period end dt,VECTOR,50%,5,8
+anl44_roe_prevalue,Roe d0 prevalue,VECTOR,72%,3,17
+anl44_roe_value,Roe d0 value,VECTOR,77%,9,20
+anl44_sales_best_crncy_iso,sales best crncy iso,MATRIX,100%,11,28
+anl44_sales_best_cur_fiscal_qtr_period,sales best cur fiscal qtr period,MATRIX,99%,7,23
+anl44_sales_best_cur_fiscal_semi_year_period,sales best cur fiscal semi year period,MATRIX,99%,15,19
+anl44_sales_best_cur_fiscal_year_period,sales best cur fiscal year period,MATRIX,99%,15,138
+anl44_sales_best_eeps_cur_yr,sales best eeps cur yr,MATRIX,93%,19,32
+anl44_sales_best_eeps_nxt_yr,sales best eeps nxt yr,MATRIX,93%,21,44
+anl44_sales_best_fiscal_period_dt,sales best fiscal period dt,VECTOR,93%,7,13
+anl44_sales_best_fperiod_override,sales best fperiod override,VECTOR,93%,6,6
+anl44_sales_coveredby,Sales d0 coveredby,VECTOR,95%,3,4
+anl44_sales_latest_ann_dt_qtrly,sales latest ann dt qtrly,VECTOR,88%,15,24
+anl44_sales_most_recent_period_end_dt,sales most recent period end dt,VECTOR,90%,5,6
+anl44_sales_prevalue,Sales d0 prevalue,VECTOR,94%,4,13
+anl44_sales_value,Sales D0 value,VECTOR,95%,3,3
+anl44_second_en_bps_coveredby,bps coveredby,VECTOR,72%,2,3
+anl44_second_en_bps_lastactccy,bps lastactccy,VECTOR,72%,1,1
+anl44_second_en_bps_lastactvalue,bps lastactvalue,VECTOR,50%,2,2
+anl44_second_en_bps_prevalue,bps prevalue,VECTOR,68%,3,3
+anl44_second_en_bps_value,bps value,VECTOR,72%,3,3
+anl44_second_en_capex_lastactvalue,capex lastactvalue,VECTOR,31%,2,2
+anl44_second_en_capex_value,capex value,VECTOR,65%,0,0
+anl44_second_en_cfps_coveredby,"Identifier of the regime or coverage state for this estimate event, used for regime linkage and validation",VECTOR,72%,0,0
+anl44_second_en_cfps_lastactccy,ISO 4217 currency code for the last recorded CFPS estimate value prior to the current event,VECTOR,66%,1,1
+anl44_second_en_cfps_lastactvalue,Last known CFPS estimate value prior to the current event,VECTOR,63%,1,1
+anl44_second_en_cfps_prevalue,Previous CFPS estimate value prior to current event,VECTOR,68%,0,0
+anl44_second_en_cfps_value,"Current CFPS estimate value (e.g., cash flow per share), numeric",VECTOR,72%,2,2
+anl44_second_en_dps_coveredby,Regime or coverage regime identifier associated with the DPS event,VECTOR,84%,3,3
+anl44_second_en_dps_lastactccy,Currency code of the last reported DPS estimate,VECTOR,77%,0,0
+anl44_second_en_dps_prevalue,Previous DPS estimate value prior to the current event,VECTOR,63%,1,1
+anl44_second_en_dps_value,Current value of the DPS estimate (Dividends Per Share),VECTOR,84%,2,2
+anl44_second_en_ebitda_lastactvalue,ebitda lastactvalue,VECTOR,28%,3,3
+anl44_second_en_ebitda_source,ebitda source,VECTOR,62%,15,20
+anl44_second_en_ebitdaps_coveredby,ebitdaps coveredby,VECTOR,41%,1,1
+anl44_second_en_ebitdaps_lastactccy,ebitdaps lastactccy,VECTOR,41%,2,3
+anl44_second_en_ebitdaps_prevalue,ebitdaps prevalue,VECTOR,38%,1,1
+anl44_second_en_ebitdaps_value,ebitdaps value,VECTOR,41%,0,0
+anl44_second_en_eps_coveredby,eps coveredby,VECTOR,100%,1,1
+anl44_second_en_eps_lastactccy,"Currency code of last published/prior EPS estimate, ISO 4217",VECTOR,97%,0,0
+anl44_second_en_eps_lastactvalue,"Last known EPS estimate value prior to the current event, i.e., the most recent previous EPS figure in the event chain",VECTOR,97%,1,1
+anl44_second_en_eps_prevalue,Previous EPS estimate value before current event (for revision tracking),VECTOR,100%,1,1
+anl44_second_en_eps_value,"Current EPS estimate value (numeric, float)",VECTOR,100%,2,2
+anl44_second_en_epsr_coveredby,epsr coveredby,VECTOR,60%,6,6
+anl44_second_en_epsr_lastactccy,epsr lastactccy,VECTOR,60%,4,4
+anl44_second_en_epsr_prevalue,epsr prevalue,VECTOR,59%,1,1
+anl44_second_en_epsr_source,epsr source,VECTOR,90%,13,15
+anl44_second_en_epsr_value,epsr value,VECTOR,60%,5,9
+anl44_second_en_fcfps_coveredby,fcfps coveredby,VECTOR,45%,3,3
+anl44_second_en_fcfps_lastactccy,fcfps lastactccy,VECTOR,45%,1,1
+anl44_second_en_fcfps_lastactvalue,fcfps lastactvalue,VECTOR,28%,1,1
+anl44_second_en_fcfps_prevalue,fcfps prevalue,VECTOR,43%,3,3
+anl44_second_en_fcfps_value,fcfps value,VECTOR,45%,2,2
+anl44_second_en_grossmargin_coveredby,grossmargin coveredby,VECTOR,75%,6,7
+anl44_second_en_grossmargin_lastactccy,grossmargin lastactccy,VECTOR,75%,6,6
+anl44_second_en_grossmargin_lastactvalue,grossmargin lastactvalue,VECTOR,40%,4,4
+anl44_second_en_grossmargin_prevalue,grossmargin prevalue,VECTOR,61%,6,6
+anl44_second_en_grossmargin_value,grossmargin value,VECTOR,75%,5,8
+anl44_second_en_nav_coveredby,nav coveredby,VECTOR,72%,5,6
+anl44_second_en_nav_lastactccy,nav lastactccy,VECTOR,72%,5,5
+anl44_second_en_nav_lastactvalue,nav lastactvalue,VECTOR,27%,1,1
+anl44_second_en_nav_prevalue,nav prevalue,VECTOR,66%,6,7
+anl44_second_en_nav_value,nav value,VECTOR,72%,6,6
+anl44_second_en_netdebt_coveredby,netdebt coveredby,VECTOR,52%,2,3
+anl44_second_en_netdebt_lastactccy,netdebt lastactccy,VECTOR,52%,3,6
+anl44_second_en_netdebt_prevalue,netdebt prevalue,VECTOR,46%,1,1
+anl44_second_en_netdebt_value,netdebt value,VECTOR,52%,9,15
+anl44_second_en_netprofit_broker,netprofit broker,VECTOR,82%,9,12
+anl44_second_en_netprofit_rep_coveredby,netprofit rep coveredby,VECTOR,90%,4,5
+anl44_second_en_netprofit_rep_lastactccy,netprofit rep lastactccy,VECTOR,90%,4,11
+anl44_second_en_netprofit_rep_prevalue,netprofit rep prevalue,VECTOR,88%,8,10
+anl44_second_en_netprofit_rep_value,netprofit rep value,VECTOR,90%,8,14
+anl44_second_en_netprofit_source,netprofit source,VECTOR,68%,6,13
+anl44_second_en_operatingprofit_coveredby,operatingprofit coveredby,VECTOR,53%,0,0
+anl44_second_en_operatingprofit_lastactccy,operatingprofit lastactccy,VECTOR,53%,0,0
+anl44_second_en_operatingprofit_prevalue,operatingprofit prevalue,VECTOR,42%,1,1
+anl44_second_en_operatingprofit_value,Operating profit value,VECTOR,53%,1,1
+anl44_second_en_pretaxprofit_coveredby,pretaxprofit coveredby,VECTOR,77%,6,8
+anl44_second_en_pretaxprofit_lastactccy,pretaxprofit lastactccy,VECTOR,77%,2,2
+anl44_second_en_pretaxprofit_lastactvalue,pretaxprofit lastactvalue,VECTOR,53%,4,4
+anl44_second_en_pretaxprofit_prevalue,pretaxprofit prevalue,VECTOR,77%,6,7
+anl44_second_en_pretaxprofit_rep_coveredby,pretaxprofit rep coveredby,VECTOR,59%,9,11
+anl44_second_en_pretaxprofit_rep_lastactccy,pretaxprofit rep lastactccy,VECTOR,59%,5,5
+anl44_second_en_pretaxprofit_rep_prevalue,pretaxprofit rep prevalue,VECTOR,57%,7,7
+anl44_second_en_pretaxprofit_rep_value,pretaxprofit rep value,VECTOR,59%,6,7
+anl44_second_en_pretaxprofit_value,pretaxprofit value,VECTOR,77%,8,14
+anl44_second_en_roa_coveredby,roa coveredby,VECTOR,59%,4,4
+anl44_second_en_roa_lastactccy,roa lastactccy,VECTOR,59%,3,3
+anl44_second_en_roa_lastactvalue,roa lastactvalue,VECTOR,27%,1,1
+anl44_second_en_roa_prevalue,roa prevalue,VECTOR,58%,4,5
+anl44_second_en_roa_value,roa value,VECTOR,59%,9,10
+anl44_second_en_roe_coveredby,roe coveredby,VECTOR,70%,1,2
+anl44_second_en_roe_lastactccy,roe lastactccy,VECTOR,70%,2,2
+anl44_second_en_roe_lastactvalue,roe lastactvalue,VECTOR,37%,1,1
+anl44_second_en_roe_prevalue,roe prevalue,VECTOR,72%,6,14
+anl44_second_en_roe_value,roe value,VECTOR,70%,3,3
+anl44_second_en_sales_broker,sales broker,VECTOR,85%,5,7
+anl44_second_en_sales_coveredby,sales coveredby,VECTOR,100%,0,0
+anl44_second_en_sales_lastactccy,The currency code (ISO 4217) associated with the last known sales estimate value before the current event,VECTOR,97%,1,1
+anl44_second_en_sales_lastactvalue,"Most recent known sales estimate value prior to the current event; typically, the previously published or finalized value",VECTOR,97%,1,1
+anl44_second_en_sales_prevalue,"Previous value for the sales estimate, before current event",VECTOR,100%,1,1
+anl44_second_en_sales_source,sales source,VECTOR,71%,7,11
+anl44_second_en_sales_value,Current sales estimate value,VECTOR,100%,12,18
+anl44_second_en_tbvps_coveredby,tbvps coveredby,VECTOR,38%,2,3
+anl44_second_en_tbvps_lastactccy,tbvps lastactccy,VECTOR,38%,3,3
+anl44_second_en_tbvps_prevalue,tbvps prevalue,VECTOR,35%,0,0
+anl44_second_en_tbvps_value,tbvps value,VECTOR,37%,1,1
+anl44_tbvps_coveredby,tbvps coveredby,VECTOR,34%,2,2
+anl44_tbvps_prevalue,tbvps prevalue,VECTOR,31%,1,1
+anl44_tbvps_value,tbvps value,VECTOR,34%,1,1
+capex_currency_code,Currency code of the current CAPEX estimate (ISO 4217),VECTOR,79%,1,1
+cfps_currency_code,ISO 4217 currency code for the current estimate,VECTOR,68%,0,0
+coverage_sources_cash_flow_per_share,List or indicator of which data sources have covered the cash flow per share forecast.,VECTOR,70%,0,0
+coverage_sources_dividend_per_share,List or indicator of which data sources have covered the dividend per share forecast.,VECTOR,73%,0,0
+coverage_sources_sales_orig,List or indicator of which data sources have covered the sales forecast in the original version module.,VECTOR,100%,0,0
+dps_expected_report_date,Expected date of the next earnings report (may be adjusted for time zone details),MATRIX,95%,1,1
+dps_expected_report_period_label,"The reporting period (e.g., Q1, Q2, S1, Y) for which the next earnings report is expected",VECTOR,74%,0,0
+dps_expected_report_time,"The expected earnings announcement time, shown as a specific time when available or labels such as before market open (Bef-mkt) or after market close (Aft-mkt)",MATRIX,100%,1,1
+dps_last_forecast_update,The most recent date that any update was made to Bloomberg Estimates data for this security or period,VECTOR,84%,0,0
+dps_market_session_status,"Market status code indicating whether the security is actively traded, suspended, or otherwise impacted on its exchange",VECTOR,74%,0,0
+ebit_currency_code,ISO 4217 currency code for the current EBIT estimate,VECTOR,94%,0,0
+ebitda_currency_code,ISO 4217 currency code for the current EBITDA estimate value,VECTOR,85%,0,0
+ebitdaps_currency_code,Currency code for the current EBITDA per share estimate value,VECTOR,42%,1,1
+eps_currency_code_2,Currency code (ISO 4217) for the current EPS estimate,VECTOR,96%,0,0
+epsr_currency_code,"Currency code for the current estimate, usually ISO 4217",VECTOR,93%,1,1
+expected_earnings_report_date,Expected date for the next earnings or financial report,MATRIX,95%,0,0
+expected_earnings_report_time,Expected time of day for the future earnings report release,MATRIX,100%,1,1
+expected_report_period_label,"Expected earnings reporting period, coded as Q1-Q4, C1-C4, S1-S2, or Y (annual)",VECTOR,63%,0,0
+forecast_coverage_sources,Indicator showing which data providers have covered the forecast after the event.,VECTOR,100%,1,1
+forecast_currency_book_value_per_share,Currency code (ISO 4217) for the current estimate value,VECTOR,79%,0,0
+forecast_currency_cash_flow_per_share,"ISO 4217 currency code for this estimate (e.g., USD, EUR), indicating the units of Value",VECTOR,70%,0,0
+forecast_currency_cash_flow_per_share_second,ISO 4217 currency code for the current CFPS estimate,VECTOR,72%,0,0
+forecast_currency_code,Currency code of the current DPS estimate,VECTOR,84%,0,0
+forecast_currency_code_2,ISO currency code indicating the currency in which the net profit estimate/report is denominated,VECTOR,93%,0,0
+forecast_currency_code_3,ISO 3-letter currency code used for the EPS estimate value,VECTOR,100%,0,0
+forecast_currency_dividend_per_share,Currency code (ISO 4217 standard) for the DPS estimate,VECTOR,73%,0,0
+forecast_currency_dps,"Currency code for current DPS estimate, usually ISO 4217 format",VECTOR,78%,0,0
+forecast_currency_eps,ISO 4217 3-letter currency code for the estimate value,VECTOR,100%,0,0
+forecast_currency_fcfps,Currency code (ISO 4217) for the current FCFPS estimate,VECTOR,53%,0,0
+forecast_currency_netprofit,Currency code (ISO 4217) for the net profit estimate value,VECTOR,95%,0,0
+forecast_currency_roa,Currency code applying to the current ROA estimate (ISO 4217 three-letter code),VECTOR,66%,0,0
+forecast_currency_roe,Currency code (ISO 4217) in which the current ROE estimate is stated,VECTOR,77%,0,0
+forecast_currency_sales,ISO currency code of the sales estimate,VECTOR,96%,0,0
+forecast_currency_sales_orig,ISO 4217 currency code for the sales estimate value,VECTOR,100%,0,0
+forecast_currency_tangible_book_value_per_share,Currency code (ISO 4217) for the TBVPS estimate in this event,VECTOR,39%,0,0
+forecast_period_end_date_3,End date of Bloomberg's fundamental period for the data point,VECTOR,61%,0,0
+forecasted_eps_value,Current EPS estimate value (numeric),VECTOR,100%,0,0
+forecasted_value_cash_flow_per_share,Current estimate value for Cash Flow Per Share as stated in this event,VECTOR,70%,0,0
+forecasted_value_dividend_per_share,Current Dividend Per Share estimate value,VECTOR,73%,0,0
+forecasted_value_sales_orig,Current sales estimate value,VECTOR,100%,0,0
+grossmargin_currency_code,Currency code (ISO 4217) for the current gross margin estimate value,VECTOR,65%,0,0
+last_annual_currency_update,Currency code for the latest updated annual DPS estimate,MATRIX,87%,1,1
+last_annual_value_update,dps lastupdatedannval,MATRIX,78%,0,0
+last_forecast_update_timestamp,Last update date of BEst estimates content (reflects any period/data source/consolidation overrides),VECTOR,63%,1,1
+last_quarterly_currency_update,Currency code for the latest updated quarterly DPS estimate,MATRIX,75%,0,0
+last_quarterly_value_update,dps lastupdatedqtrval,MATRIX,69%,0,0
+latest_actual_value,Last published value of the DPS estimate before the current event,VECTOR,74%,1,1
+latest_annual_currency_code,Currency code of the EPS value at the last updated annual period,MATRIX,97%,3,5
+latest_annual_currency_update_cash_flow_per_share_second,cfps lastupdatedannccy,MATRIX,82%,0,0
+latest_annual_currency_update_sales,sales lastupdatedannccy,MATRIX,97%,0,0
+latest_annual_period_end_update_cash_flow_per_share,Date or timestamp when the annual period end for cash flow per share was last updated.,MATRIX,84%,3,3
+latest_annual_period_end_update_cash_flow_per_share_second,cfps lastupdatedannann,MATRIX,82%,2,2
+latest_annual_period_end_update_cash_flow_per_share_second_2,Date when annual CFPS data was last updated for its period end,MATRIX,82%,2,2
+latest_annual_period_end_update_dividend_per_share,Date or timestamp when the annual period end for dividend per share was last updated.,MATRIX,92%,0,0
+latest_annual_period_end_update_sales,sales lastupdatedannann,MATRIX,97%,0,0
+latest_annual_period_end_update_sales_2,sales lastupdatedannend,MATRIX,97%,1,1
+latest_annual_period_end_update_sales_orig,Date or timestamp when the annual period end for sales was last updated in the original version module.,MATRIX,100%,0,0
+latest_annual_value,EPS value at the time of the last updated annual end period,MATRIX,95%,1,1
+latest_annual_value_update_cash_flow_per_share_second,cfps lastupdatedannval,MATRIX,75%,0,0
+latest_annual_value_update_sales,Sales value for the last updated annual period,MATRIX,96%,0,0
+latest_best_estimate_update_time,"Last update date/time of the BEst estimates content (reflects any fiscal period, data source, or consolidation overrides)",VECTOR,88%,0,0
+latest_quarter_currency_code,"Currency code for the most recent quarterly EPS estimate, likely ISO 4217 format",MATRIX,98%,1,2
+latest_quarter_eps_value,Numeric value of the most recent quarterly EPS estimate,MATRIX,97%,5,6
+latest_quarterly_annual_update_cash_flow_per_share,cfps lastupdatedqtrann,MATRIX,81%,0,0
+latest_quarterly_annual_update_sales,sales lastupdatedqtrann,MATRIX,98%,0,0
+latest_quarterly_currency_update_cash_flow_per_share_second,cfps lastupdatedqtrccy,MATRIX,81%,0,0
+latest_quarterly_currency_update_sales,Currency code for the last updated quarterly sales value,MATRIX,98%,0,0
+latest_quarterly_period_end_update_cash_flow_per_share,Date or timestamp when the period end for the quarterly cash flow per share value was last updated.,MATRIX,72%,1,1
+latest_quarterly_period_end_update_cash_flow_per_share_second,End date of the quarterly reporting period tied to the last CFPS update,MATRIX,81%,0,0
+latest_quarterly_period_end_update_dividend_per_share,Date or timestamp when the period end for the quarterly dividend per share value was last updated.,MATRIX,75%,0,0
+latest_quarterly_period_end_update_sales,sales lastupdatedqtrend,MATRIX,98%,0,0
+latest_quarterly_period_end_update_sales_orig,Date or timestamp when the period end for the quarterly sales value was last updated in the original version module.,MATRIX,98%,2,2
+latest_quarterly_value_update_cash_flow_per_share_second,cfps lastupdatedqtrval,MATRIX,73%,0,0
+latest_quarterly_value_update_sales,Sales value for the last updated quarterly period,MATRIX,97%,0,0
+market_session_status,"Trading status of the instrument, indicating active, inactive, suspended, halted, or paused per exchange reporting",VECTOR,63%,0,0
+market_trading_status_3,"Trading status of the security (e.g., active, inactive, suspended)",VECTOR,88%,1,1
+nav_currency_code_3,Currency code for the current NAV estimate (ISO 4217),VECTOR,80%,3,3
+netdebt_currency_code,Currency code of the estimate (ISO 4217 standard),VECTOR,73%,1,1
+operatingprofit_currency_code,ISO 4217 currency code of the operating profit estimate,VECTOR,31%,0,0
+pretaxprofit_currency_code,Currency code for the current estimate value (ISO 4217 standard),VECTOR,94%,3,3
+pretaxprofitrep_currency_code,ISO 4217 currency code for the current pretax profit estimate value,VECTOR,87%,0,0
+previous_forecast_value,Previous EPS estimate value before the current revision/event,VECTOR,98%,0,0
+previous_forecast_value_cash_flow_per_share,"Previous estimate value preceding this event (numeric), useful for measuring revision size",VECTOR,66%,0,0
+previous_forecast_value_dividend_per_share,Previous Dividend Per Share estimate value before the latest revision,VECTOR,59%,0,0
+previous_forecast_value_sales_orig,Previous sales estimate value prior to the latest revision,VECTOR,98%,0,0
+sales_forecast_currency_code,Currency code of the current sales estimate,VECTOR,100%,1,1

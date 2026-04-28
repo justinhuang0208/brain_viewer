@@ -1,0 +1,147 @@
+Field,Description,Type,Coverage,Users,Alphas
+earnings_news_mention_count,"Number of news items per security and date that mention ""earnings,"" ""earning,"" or ""EPS"" in the text, representing earnings-related news frequency",MATRIX,90%,81,167
+earnings_news_mention_count_fast_d1,"Number of news items per security and date that mention ""earnings,"" ""earning,"" or ""EPS"" in the text, representing earnings-related news frequency",MATRIX,90%,15,15
+headline_negative_score_value,Score representing the negative sentiment in the news headline.,MATRIX,92%,7,7
+headline_negative_score_value_v2,The average proportion of negative words to total words found in the headlines of all news articles for a given security and date,MATRIX,100%,22,90
+headline_negative_sentiment_score,Ratio of negative words to total words in the story headline,VECTOR,3%,0,0
+headline_negative_sentiment_score_story,Ratio of negative words to total words in the headline,VECTOR,35%,18,25
+headline_negative_term_count,"Number of news headlines with negative sentiment for each security and date, reflecting frequency of negative news",MATRIX,92%,5,5
+headline_negative_term_count_v2,total count of negative words in the headlines of all news stories,MATRIX,100%,56,157
+headline_negative_word_count,Number of negative words in the story headline,VECTOR,92%,2,6
+headline_negative_word_count_story,Number of negative words in the headline across all news articles,VECTOR,92%,21,37
+headline_news_mention_count,"Total count of news headlines for each security and date, aggregating all news events regardless of sentiment",MATRIX,92%,70,236
+headline_news_mention_count_v2,The total number of news articles considered for a given security and date,MATRIX,100%,152,576
+headline_positive_score_value,Score representing the positive sentiment in the news headline.,MATRIX,92%,5,8
+headline_positive_score_value_v2,The average proportion of positive words to total words found in the headlines of all news articles for a given security and date,MATRIX,100%,3,3
+headline_positive_sentiment_score,Ratio of positive words to total words in the story headline,VECTOR,6%,2,2
+headline_positive_sentiment_score_story,Ratio of positive words to total words in the headline,VECTOR,22%,3,5
+headline_positive_term_count,"Number of news headlines with positive sentiment for each security and date, reflecting frequency of positive news",MATRIX,92%,3,5
+headline_positive_term_count_v2,total count of positive words in the headlines of all news stories,MATRIX,100%,4,4
+headline_positive_word_count,Number of positive words in the story headline,VECTOR,92%,0,0
+headline_positive_word_count_story,Number of positive words in the headline across all news articles,VECTOR,92%,2,2
+headline_sentiment_score_2,"Sentiment score for the headline, calculated as (positive words minus negative words) divided by (positive plus negative words)",VECTOR,8%,1,1
+headline_sentiment_score_story,"Net sentiment score for the headline, calculated as (positive words - negative words) divided by (positive words + negative words)",VECTOR,43%,10,15
+headline_sentiment_value,"Sentiment or tone score of news headlines for each security and date, scaled from negative to positive values, indicating overall news sentiment",MATRIX,92%,3,3
+headline_sentiment_value_v2,average headline tone score computed as (number of positive words - number of negative words) divided by (number of positive words + number of negative words) for all news stories,MATRIX,100%,54,130
+industry_weight_alt_dmgrhchendtnret,"Primary industry classification code/category for the entity at point-in-time (e.g., NAICS-like primary industry)",MATRIX,100%,8,9
+industry_weight_stddev_alt_dmgrhchendtnret,The standard deviation of industry weights in the alternative module.,MATRIX,100%,5,5
+insider_news_item_count,Number of news articles mentioning insider-related keywords for US securities on a given date,MATRIX,48%,35,67
+insider_news_mention_count,"Number of news articles for the security on the given date that contain the keyword ""insider"" (insider-related news frequency)",MATRIX,100%,86,331
+insider_news_mention_count_fast_d1,"Number of news articles for the security on the given date that contain the keyword ""insider"" (insider-related news frequency)",MATRIX,100%,0,0
+live_news_area_identifier,Identifier for the geographic area or data center associated with the live news item.,VECTOR,100%,19,32
+live_news_area_identifier_fast_d1,Identifier for the geographic area or data center associated with the live news item.,VECTOR,100%,0,0
+live_news_display_label,Display label or name for the live news item or source.,VECTOR,100%,31,176
+live_news_display_label_fast_d1,Display label or name for the live news item or source.,VECTOR,100%,1,1
+live_news_headline_tag,Tag indicating the type or status of the live news headline.,VECTOR,100%,19,42
+live_news_headline_tag_fast_d1,Tag indicating the type or status of the live news headline.,VECTOR,100%,2,2
+livenews_item_count_fast_d1,"Daily count of live news articles per US security and date that mention sales, earnings, analysts, EPS, or insider-related keywords",MATRIX,94%,2,2
+livenews_story_company_count_sl,Number of companies or entities mentioned or involved in the story,VECTOR,100%,29,91
+livenews_story_full_text_sl,Full text content of the news story,VECTOR,100%,1,2
+news_category_tag_d0_160000,headline tag or categorical classification tag for the news story,VECTOR,100%,1,1
+news_headline_tag,Headline tag or fine-grained classification label for the news story,VECTOR,100%,17,51
+news_headline_tag_800,news headline tag,VECTOR,100%,2,2
+news_headline_tag_d1,Headline tag or categorical classification of the news,VECTOR,100%,0,0
+news_headline_tag_fast_d1,Headline tag or fine-grained classification label for the news story,VECTOR,100%,0,0
+news_item_count_300,"Next-day (D1) count of news stories per security and date for USA, excluding stories containing the keywords ""insider"" or ""imbalance""",MATRIX,100%,77,339
+news_item_count_300_fast_d1,"Next-day (D1) count of news stories per security and date for USA, excluding stories containing the keywords ""insider"" or ""imbalance""",MATRIX,100%,1,1
+news_item_count_lcadata,"Number of news articles associated with each security and date that do not contain the keyword ""insider""",MATRIX,33%,138,1888
+news_item_value_d0_160000,news type value,VECTOR,100%,0,0
+news_item_value_score,news type value,VECTOR,100%,19,41
+news_item_value_score_800,news type value,VECTOR,100%,1,1
+news_item_value_score_d1,Quantitative value or score assigned to a news item in the d1 module.,VECTOR,100%,1,1
+news_item_value_score_fast_d1,news type value,VECTOR,100%,2,2
+news_mention_frequency_2,"Count of news articles per US security and date, excluding stories containing insider-related keywords (real-time D0 delay)",MATRIX,92%,52,142
+news_mention_frequency_2_fast_d1,"Count of news articles per US security and date, excluding stories containing insider-related keywords (real-time D0 delay)",MATRIX,92%,8,11
+news_related_entity_count,"Number of affected instruments, entities, or companies mentioned in the news event",VECTOR,100%,28,130
+news_related_entity_count_800,Number of affected instruments/entities mentioned in the news story,VECTOR,100%,0,0
+news_related_entity_count_d0_160000,number of affected instruments or entities mentioned in the news,VECTOR,100%,0,0
+news_related_entity_count_d1,Number of affected or mentioned instruments/entities in the news,VECTOR,100%,1,1
+news_related_entity_count_fast_d1,"Number of affected instruments, entities, or companies mentioned in the news event",VECTOR,100%,6,6
+news_signal_dmgrhchendtn,A computed signal or indicator derived from news data in the DmgrHchenDtn module.,VECTOR,100%,0,0
+news_story_company_count,Number of distinct companies or entities mentioned in the story,VECTOR,100%,22,82
+news_story_full_text,Full text content of the news story/article,VECTOR,100%,0,0
+news_topic_name,index to type name,VECTOR,100%,20,64
+news_topic_name_800,"Index or pointer to the type name of the news event, typically used to map code to description",VECTOR,100%,1,1
+news_topic_name_d0_160000,index or reference to the type name of the news event,VECTOR,100%,2,3
+news_topic_name_d1,Descriptive name of the main topic for the news item in the d1 module.,VECTOR,100%,0,0
+news_topic_name_fast_d1,index to type name,VECTOR,100%,2,2
+nws7_area,"Returns News Service Data Centre where the news was first broadcast (0 - NY, 1 - LD, 2 - LO, 3 - HA)",VECTOR,100%,18,31
+nws7_d1_comp_count,the number of different companies in the story,VECTOR,97%,1,4
+nws7_d1_timestamp,timestamp of the story,VECTOR,97%,18,63
+nws7_display_name,"Message subtype (0: alert, 1: first_take, 2: subsequent_take, 3: correction, 4: corrected, 5: delete)",VECTOR,100%,2,4
+nws7_headline_negative_freq,How many negative words in the headline of all news,VECTOR,31%,2,3
+nws7_headline_negative_score,negative words divided by all words,VECTOR,31%,1,2
+nws7_headline_tone_score,((pos - neg) / (pos + neg)) in headline,VECTOR,40%,1,1
+nws7_headlinetone_2_news_freq,number of news,MATRIX,100%,3,20
+nws7_headlinetone_news_freq,number of news,MATRIX,86%,2,4
+nws7_headlinetones_take_seqno,Number of alerts/takes in the story. Set to 1 for the first and incremented by 1 for each subsequent alert/take in that story,VECTOR,86%,14,51
+nws7_headlinetones_time,time,VECTOR,86%,12,38
+nws7_livenews_tag,news headline tag,VECTOR,100%,1,2
+nws7_news_earning_qerf,"Number of news with earning|earnings|EPS"" key words""",MATRIX,85%,1,8
+nws7_news_freq_2_qerf,"Number of news without sale|sales|earning|earnings|EPS|analyst"" keywords""",MATRIX,89%,1,11
+nws7_news_freq_ins_qerf,"Number of news with insider"" keywords""",MATRIX,30%,1,6
+nws7_news_freq_insider_qerf,"Number of news without insider"" key words""",MATRIX,100%,2,20
+nws7_news_freq_lcadata_qerf,number of news,MATRIX,29%,9,60
+nws7_news_tag,news headline tag,VECTOR,100%,2,5
+nws7_news_topic_tag,news headline tag,VECTOR,100%,17,48
+nws7_newsfreq_d1_qerf,"Number of news without insider|imbalance"" keywords""",MATRIX,100%,3,19
+nws7_related_num,news affected instruments number,VECTOR,100%,1,10
+nws7_sl_d1_comp_count,the number of different companies in the story,VECTOR,96%,1,2
+nws7_sl_d1_timestamp,timestamp of the story,VECTOR,96%,32,125
+nws7_story_negative_freq,How many negative words in the story,VECTOR,75%,11,16
+nws7_story_negative_score,negative words divided by all words,VECTOR,75%,6,6
+nws7_story_positive_freq,how many positive words in story,VECTOR,73%,1,5
+nws7_story_positive_score,positive words divided by all words,VECTOR,73%,1,1
+nws7_story_time,"Time (in GMT, to the second) the first alert/take for this story was issued",VECTOR,100%,26,101
+nws7_story_tone_score,Number of alerts/takes in the story. Set to 1 for the first and incremented by 1 for each subsequent alert/take in that story,VECTOR,76%,10,15
+nws7_storyheadlinetones_take_seqno,time,VECTOR,86%,16,34
+nws7_storyheadlinetones_time,( (pos - neg) / (pos + neg) ),VECTOR,86%,12,36
+nws7_storytone_news_freq,Negative words divided by all words,MATRIX,87%,1,6
+nws7_tname,index to type name,VECTOR,100%,1,2
+nws7_topic_related_num,news affected instruments number,VECTOR,100%,24,68
+nws7_topic_tname,index to type name,VECTOR,100%,16,44
+nws7_topic_tvalue,news type value,VECTOR,100%,26,56
+nws7_tvalue,news type value,VECTOR,100%,1,1
+nws7_usa_livenews_take_seqno,Number of alerts/takes in the story. Set to 1 for the first and incremented by 1 for each subsequent alert/take in that story,VECTOR,100%,24,64
+nws7_usa_livenews_time,"Time (in GMT, to the second) this alert/take was issued",VECTOR,100%,20,59
+nws7_usa_news_headlinetone_2_negative_freq,How many negative words in the headline of all news,MATRIX,28%,4,12
+nws7_usa_news_headlinetone_2_negative_score,average negative score (negative words by all words) of all news,MATRIX,28%,1,1
+nws7_usa_news_headlinetone_2_tone_score,average tone_score ( (pos - neg) / (pos + neg) ),MATRIX,39%,1,3
+nws7_usa_news_revisions_d1_time,when the event was published,VECTOR,37%,16,16
+nws7_usa_news_storytone_negative_freq,how many negative words in headline of all news,MATRIX,49%,1,2
+nws7_usa_news_storytone_negative_score,average negative score (negative words by all words) of all news,MATRIX,49%,1,1
+nws7_usa_news_storytone_positive_freq,How many positive words in the headline of all news,MATRIX,41%,1,1
+nws7_usa_news_storytone_positive_score,average positive score (negative words by all words) of all news,MATRIX,41%,1,6
+nws7_usa_news_storytone_tone_score,Average tone_score ((pos - neg) / (pos + neg)),MATRIX,53%,2,8
+nws7_usa_news_storytones_pzengxth_date,date,VECTOR,92%,13,28
+nws7_usa_news_storytones_pzengxth_negative_freq,how many negative words in story,VECTOR,89%,21,54
+nws7_usa_news_storytones_pzengxth_negative_score,negative words divided by all words,VECTOR,89%,15,25
+nws7_usa_news_storytones_pzengxth_positive_freq,how many positive words in story,VECTOR,76%,18,44
+nws7_usa_news_storytones_pzengxth_positive_score,positive words divided by all words,VECTOR,75%,16,28
+nws7_usa_news_storytones_pzengxth_take_seqno,Number of alerts/takes in the story. Set to 1 for the first and incremented by 1 for each subsequent alert/take in that story,VECTOR,92%,19,45
+nws7_usa_news_storytones_pzengxth_time,time,VECTOR,92%,30,131
+nws7_usa_news_storytones_pzengxth_tone_score,((pos - neg) / (pos + neg)),VECTOR,89%,29,56
+nws7_usa_news_time,news time,VECTOR,100%,22,73
+nws7_usa_news_topic_time,news time,VECTOR,100%,19,48
+nws7_usa_xtangnewsfreqrawnf_daily_raw,raw news number by interval,MATRIX,100%,1,27
+sales_news_mention_count_fast_d1,"Count of sales-related news stories for US securities, available with next-day (D1) research delay",MATRIX,90%,5,6
+sector_name_alt_dmgrhchendtnret,"Broadest sector classification for the entity at point-in-time, mapped to major economic sectors (e.g., Energy, Utilities, Financials)",MATRIX,100%,8,8
+sector_stddev_alt_dmgrhchendtnret,The standard deviation of sector values in the alternative module.,MATRIX,100%,5,5
+story_body_negative_sentiment_score,Ratio of negative words to total words in the story text,VECTOR,82%,7,7
+story_body_negative_word_count,Number of negative words in the story text,VECTOR,92%,11,16
+story_body_positive_sentiment_score,Ratio of positive words to total words in the story,VECTOR,81%,14,21
+story_body_positive_word_count,Number of positive words in the story text,VECTOR,92%,20,41
+story_body_sentiment_score,Number of alerts/takes in the story. Starts at 1 for first alert/take and increases by 1 for each additional alert/take in that story,VECTOR,83%,10,15
+story_negative_sentiment_score_pzengxth,Proportion of negative words in the story (negative words / all words),VECTOR,94%,1,1
+story_negative_word_count_pzengxth,Count of negative words in the story,VECTOR,95%,0,0
+story_positive_sentiment_score_pzengxth,Proportion of positive words in the story (positive words / all words),VECTOR,84%,1,1
+story_positive_word_count_pzengxth,Count of positive words in the story,VECTOR,95%,0,0
+story_sentiment_score_pzengxth,"Sentiment score of the story, calculated as (positive words minus negative words) divided by (positive words plus negative words)",VECTOR,94%,1,1
+storytone_negative_score_value_v2_1_0,"Average percentage of negative words out of all words, across all news stories",MATRIX,92%,24,40
+storytone_negative_term_count_v2_1_0,Total count of negative words found in the headlines of all news stories,MATRIX,92%,36,76
+storytone_news_mention_count_v2_1_0,Number of news articles or stories for the security/date,MATRIX,92%,62,136
+storytone_positive_score_value_v2_1_0,"Average percentage of positive words out of all words, across all news stories",MATRIX,92%,28,51
+storytone_positive_term_count_v2_1_0,Total count of positive words found in the headlines of all news stories,MATRIX,92%,35,144
+storytone_sentiment_value_v2_1_0,"Average sentiment tone of news stories, calculated as (positive count - negative count) divided by (positive count + negative count)",MATRIX,92%,56,117
+xtang_news_daily_raw_count,Raw daily count of news items as processed by the Xtang module.,MATRIX,100%,93,349
+xtang_news_item_count,Count of news events or stories per security and date in the USA_XtangNfgData module; represents the frequency of reported news items,MATRIX,100%,4,46

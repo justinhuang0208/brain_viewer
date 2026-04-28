@@ -1,0 +1,227 @@
+Field,Description,Type,Coverage,Users,Alphas
+earning_broker_count,Number of brokers contributing to the earnings consensus for the event.,VECTOR,47%,0,0
+earning_broker_count_fast_d1,Number of brokers contributing to the earnings consensus for the event.,VECTOR,47%,4,4
+earning_calendar_quarter_end,The end date of the calendar quarter associated with the earnings event.,VECTOR,47%,2,2
+earning_calendar_quarter_end_fast_d1,The end date of the calendar quarter associated with the earnings event.,VECTOR,47%,2,2
+earning_event_type_label,"Descriptive label for the type of earnings event (e.g., actual, estimate).",VECTOR,47%,0,0
+earning_event_type_label_fast_d1,"Descriptive label for the type of earnings event (e.g., actual, estimate).",VECTOR,47%,0,0
+earning_fiscal_quarter_number,Fiscal quarter number that the earnings relate to (1–4),VECTOR,47%,0,0
+earning_fiscal_quarter_number_fast_d1,Fiscal quarter number that the earnings relate to (1–4),VECTOR,47%,0,0
+earning_fiscal_year,Fiscal year number that the earnings relate to,VECTOR,47%,0,0
+earning_fiscal_year_end,The company’s fiscal year end date (month/day for fiscal year closing),VECTOR,47%,0,0
+earning_fiscal_year_end_fast_d1,The company’s fiscal year end date (month/day for fiscal year closing),VECTOR,47%,0,0
+earning_fiscal_year_fast_d1,Fiscal year number that the earnings relate to,VECTOR,47%,0,0
+earning_number_value,"The reported or estimated earnings number (e.g., EPS) for the event.",VECTOR,47%,0,0
+earning_number_value_fast_d1,"The reported or estimated earnings number (e.g., EPS) for the event.",VECTOR,47%,1,1
+earning_time_type,"Classification of the time associated with the earnings event (e.g., before open, after close).",VECTOR,47%,0,0
+earning_time_type_fast_d1,"Classification of the time associated with the earnings event (e.g., before open, after close).",VECTOR,47%,1,1
+estimated_next_shareholder_meeting_date,"Tentative or estimated date (as an integer date, e.g., YYYYMMDD) for the next shareholder annual meeting, provided with next-trading-day (D1) availability for the USA region",MATRIX,79%,3,3
+event_end_date_is_estimated,Flag indicating whether the event end date is estimated rather than confirmed,VECTOR,87%,0,0
+event_end_date_is_estimated_fast_d1,Flag indicating whether the event end date is estimated rather than confirmed,VECTOR,87%,1,1
+event_end_date_type,"Type or classification of the event's end date (e.g., actual, estimated).",VECTOR,87%,2,2
+event_end_date_type_fast_d1,"Type or classification of the event's end date (e.g., actual, estimated).",VECTOR,87%,0,0
+event_end_time,Local time at which the event ends,VECTOR,87%,0,0
+event_end_time_fast_d1,Local time at which the event ends,VECTOR,87%,3,3
+event_fiscal_year,The fiscal year associated with the earnings event.,VECTOR,87%,0,0
+event_fiscal_year_fast_d1,The fiscal year associated with the earnings event.,VECTOR,87%,0,0
+event_frequency_count,Count of StreetEvents events (hits) for the security on the given period/date,MATRIX,63%,1,1
+event_occurrence_count,The number of times the event or sentiment is detected in the transcript.,MATRIX,82%,1,2
+event_occurrence_count_fast_d1,The number of times the event or sentiment is detected in the transcript.,MATRIX,82%,7,7
+event_quarter_label,"Label or code indicating the quarter associated with the event (e.g., Q1, Q2).",VECTOR,87%,0,0
+event_quarter_label_fast_d1,"Label or code indicating the quarter associated with the event (e.g., Q1, Q2).",VECTOR,87%,1,1
+event_start_date_is_estimated,Flag indicating whether the event start date is estimated rather than confirmed,VECTOR,87%,0,0
+event_start_date_is_estimated_fast_d1,Flag indicating whether the event start date is estimated rather than confirmed,VECTOR,87%,0,0
+event_start_date_type,"Type or classification of the event's start date (e.g., actual, estimated).",VECTOR,87%,0,0
+event_start_date_type_fast_d1,"Type or classification of the event's start date (e.g., actual, estimated).",VECTOR,87%,3,4
+event_start_time_2,Local time at which the event starts,VECTOR,87%,0,0
+event_start_time_2_fast_d1,Local time at which the event starts,VECTOR,87%,0,0
+event_type_code_info10,"Numeric code identifying the type of event (e.g., earnings call, release, IPO, etc.)",VECTOR,58%,2,2
+event_type_code_info1d0,"Numeric code identifying the event type (e.g., 1=earnings call/presentation, 2=earnings release, 4=IPO, etc.)",VECTOR,62%,2,2
+info10_event_type_code_simple,Numeric code indicating the type/category of the event,VECTOR,76%,1,1
+info10_event_type_code_simple_fast_d1,Numeric code indicating the type/category of the event,VECTOR,63%,1,1
+info10_expiration_date,The date when the info10 data record is set to expire or become inactive.,VECTOR,58%,0,0
+info10_expiration_date_simple,The date when the info10 data record (simple version) is set to expire.,VECTOR,76%,3,3
+info10_expiration_date_simple_fast_d1,The date when the info10 data record (simple version) is set to expire.,VECTOR,63%,0,0
+info10_expiration_time,The time of day when the info10 data record is set to expire.,VECTOR,63%,1,1
+info10_expiration_time_simple,The time of day when the info10 data record (simple version) is set to expire.,VECTOR,76%,1,1
+info10_expiration_time_simple_fast_d1,The time of day when the info10 data record (simple version) is set to expire.,VECTOR,63%,1,1
+info10_last_update_date,Date when the event information was last updated,VECTOR,58%,0,0
+info10_last_update_date_simple,Date when this record was last updated,VECTOR,76%,1,1
+info10_last_update_date_simple_fast_d1,Date when this record was last updated,VECTOR,63%,1,1
+info10_last_update_time,Time when the event information was last updated (HHMMSS),VECTOR,58%,0,0
+info10_last_update_time_simple,Time when this record was last updated,VECTOR,76%,1,1
+info10_last_update_time_simple_fast_d1,Time when this record was last updated,VECTOR,63%,1,1
+info10_negative_sentiment_score,Negative words divided by total words in the transcript,VECTOR,63%,0,0
+info10_negative_sentiment_score_simple,Negative sentiment score (negative words divided by total words),VECTOR,76%,2,2
+info10_negative_sentiment_score_simple_fast_d1,Negative sentiment score (negative words divided by total words),VECTOR,63%,0,0
+info10_negative_word_count,Count of negative words in the transcript,VECTOR,58%,1,1
+info10_negative_word_count_simple,Number of negative words detected in the event transcript,VECTOR,76%,0,0
+info10_negative_word_count_simple_fast_d1,Number of negative words detected in the event transcript,VECTOR,63%,0,0
+info10_positive_sentiment_score,Positive words divided by total words in the transcript,VECTOR,63%,1,1
+info10_positive_sentiment_score_simple,Positive sentiment score (positive words divided by total words),VECTOR,84%,1,1
+info10_positive_sentiment_score_simple_fast_d1,Positive sentiment score (positive words divided by total words),VECTOR,63%,1,1
+info10_positive_word_count,Count of positive words in the transcript,VECTOR,63%,0,0
+info10_positive_word_count_simple,Number of positive words detected in the event transcript,VECTOR,76%,0,0
+info10_positive_word_count_simple_fast_d1,Number of positive words detected in the event transcript,VECTOR,63%,0,0
+info10_start_date,Event start date (when the event is scheduled to take place),VECTOR,58%,1,1
+info10_start_date_simple,Date and time when the event is scheduled to take place,VECTOR,76%,3,3
+info10_start_date_simple_fast_d1,Date and time when the event is scheduled to take place,VECTOR,63%,0,0
+info10_start_time,Scheduled start time of the event (HHMMSS),VECTOR,58%,1,2
+info10_start_time_simple,Scheduled start time of the event (HHMMSS),VECTOR,76%,2,2
+info10_start_time_simple_fast_d1,Scheduled start time of the event (HHMMSS),VECTOR,63%,0,0
+info10_tone_score,(Positive word count − negative word count) divided by (positive + negative word counts),VECTOR,63%,0,0
+info10_tone_score_simple,Overall sentiment/tone score computed by the vendor for the event/transcript,VECTOR,76%,1,1
+info10_tone_score_simple_fast_d1,Overall sentiment/tone score computed by the vendor for the event/transcript,VECTOR,63%,0,0
+info10_version_label,"Version of the story/transcript (0=preliminary, 1=final)",VECTOR,58%,1,1
+info10_version_label_simple,"Version of the transcript/brief (e.g., preliminary, edited, audited)",VECTOR,84%,1,1
+info10_version_label_simple_fast_d1,"Version of the transcript/brief (e.g., preliminary, edited, audited)",VECTOR,63%,2,2
+info1d0_expiration_date,The date when the info_1_D0 data record is set to expire.,VECTOR,62%,1,1
+info1d0_expiration_time,The time of day when the info_1_D0 data record is set to expire.,VECTOR,62%,2,2
+info1d0_last_update_date,Last update date for the event information (YYYYMMDD),VECTOR,62%,1,1
+info1d0_last_update_time,Last update time for the event information (HHMMSS),VECTOR,62%,1,1
+info1d0_negative_sentiment_score,Number of negative words divided by total words,VECTOR,62%,1,1
+info1d0_negative_word_count,Count of negative words in the transcript,VECTOR,62%,0,0
+info1d0_positive_sentiment_score,Number of positive words divided by total words,VECTOR,62%,6,7
+info1d0_positive_word_count,Count of positive words in the transcript,VECTOR,62%,1,1
+info1d0_start_date,Date when the event is scheduled to take place,VECTOR,62%,0,0
+info1d0_start_time,Scheduled start time of the event (HHMMSS),VECTOR,62%,5,6
+info1d0_tone_score,(positive_words − negative_words) / (positive_words + negative_words),VECTOR,62%,2,2
+info1d0_version_label,"Version of the story/transcript (0=preliminary, 1=final)",VECTOR,62%,0,0
+last_event_timestamp_info10_simple_fast_d1,Timestamp of the most recent event in the info10 module (simple version).,VECTOR,9%,0,0
+last_event_timestamp_info1d0,Timestamp marking the time of the last event (typically a UNIX epoch),VECTOR,62%,0,0
+last_event_timestamp_streetevents2_fast_d1,Timestamp of the most recent event in the StreetEvents2 module.,VECTOR,9%,2,2
+negative_sentiment_score_2,A numerical score representing the negative sentiment in the transcript.,MATRIX,82%,3,3
+negative_sentiment_score_2_fast_d1,A numerical score representing the negative sentiment in the transcript.,MATRIX,82%,9,10
+negative_word_frequency,The frequency of negative words or phrases in the transcript.,MATRIX,82%,3,4
+negative_word_frequency_fast_d1,The frequency of negative words or phrases in the transcript.,MATRIX,82%,8,11
+next_corporate_presentation_date,"Next scheduled or confirmed corporate presentation date (for a China-listed company) as of today, available on a next-trading-day delay, stored as an integer date (e.g., YYYYMMDD)",MATRIX,53%,1,1
+next_earnings_call_date,"Next scheduled or confirmed earnings conference call date for the US region module, encoded as an integer date (typically YYYYMMDD); data available with D1 (next trading day) delay",MATRIX,85%,8,9
+next_earnings_estimate_date,"Estimated next earnings release date when the actual date is not yet confirmed (D1 module; next-day availability), stored as an integer date (e.g., YYYYMMDD)",MATRIX,85%,2,2
+next_ex_dividend_event_date,"The next confirmed ex-dividend date for the company in the USA module, delivered with next-day (D1) timeliness and encoded as an integer date",MATRIX,47%,1,1
+next_shareholder_meeting_date,"Confirmed next scheduled date (as an integer date, e.g., YYYYMMDD) for the upcoming shareholder annual meeting as of today, provided with next-trading-day (D1) availability for the USA region",MATRIX,33%,1,1
+nws21_abz1neg_eventid,Vendor-generated unique identifier for the event,VECTOR,62%,16,37
+nws21_abz1neg_eventtype,"Integer code identifying the event category (e.g., earnings call, release, IPO, etc.) per vendor list",VECTOR,63%,23,39
+nws21_abz1neg_storyid,Vendor-generated unique identifier for the story/transcript,VECTOR,63%,14,27
+nws21_abz1neg_version,"Story/transcript version flag (0=preliminary, 1=final)",VECTOR,63%,32,99
+nws21_abz1negv_exptime,Scheduled expiration time of the event record,VECTOR,62%,20,31
+nws21_abz1negv_lastuptime,Time of the last update to this record,VECTOR,62%,21,94
+nws21_abz1negv_starttime,Scheduled start time of the event (local region time),VECTOR,62%,19,27
+nws21_abz1pos_eventid,Vendor-assigned unique identifier for the event,VECTOR,62%,19,37
+nws21_abz1pos_eventtype,"Numeric code indicating the event type per StreetEvents taxonomy (e.g., earnings call, earnings release, IPO, conference, etc.)",VECTOR,62%,17,26
+nws21_abz1pos_storyid,Vendor-assigned unique identifier for the story or transcript,VECTOR,62%,27,67
+nws21_abz1pos_version,"Story version flag (0 = preliminary, 1 = final)",VECTOR,62%,22,41
+nws21_abz1posaz_exptime,Scheduled expiration time of the event record,VECTOR,63%,25,68
+nws21_abz1posaz_lastuptime,Time of the most recent update to this record,VECTOR,62%,23,38
+nws21_abz1posaz_starttime,Scheduled start time of the event,VECTOR,62%,10,21
+nws21_abz2_eventtype,"Numeric code identifying the event type per StreetEvents codebook (e.g., earnings call, earnings release, IPO, etc.)",VECTOR,58%,19,61
+nws21_abz2_neg_freq,Count of negative words in the transcript/segment,VECTOR,58%,22,43
+nws21_abz2_neg_sc,Negative words divided by total words in the transcript/segment,VECTOR,58%,32,48
+nws21_abz2_pos_freq,Count of positive words in the transcript/segment,VECTOR,58%,16,37
+nws21_abz2_pos_sc,Positive words divided by total words in the transcript/segment,VECTOR,58%,30,61
+nws21_abz2_tone_sc,(pos - neg) / (pos + neg) sentiment score for the transcript/segment,VECTOR,63%,41,64
+nws21_abz2_version,"Story version flag (0 = preliminary, 1 = final)",VECTOR,58%,18,31
+nws21_abz31a1_eventtype,"Identifies the type of event. 1 - earnings conference call/presentation, 2 - earnings release, 4 - IPO, 5 - corporate conference call/presentation, 7 - conference presentation, 8 - other corporate, 10 - conference, 11 - shareholder/annual meeting, 12 - market holiday, 21 - analyst conference call, 22 - institutional analyst meeting, 23 - company visit, 24 - roadshow, 25 - general/political event, 29 - other institutional, 30 - guidance call/presentation, 31 - corporate analyst meeting, 32 - sales/trading statement release, 33 - sales/trading statement call/presentation, 34 - merger and acquisition announcement, 41 - ex-dividend, 42 - stock split, 43 - IPO withdrawal, 44 - secondary withdrawal, 45 - IPO filing, 47 - IPO lockup, 48 - secondary public offering pricing, 49 - secondary public offering filing, 50 - economic event.",VECTOR,69%,12,18
+nws21_abz31a1_neg_freq,number of negative words in the transcript.,VECTOR,69%,12,32
+nws21_abz31a1_neg_sc,number of negative words/number of all words.,VECTOR,69%,17,27
+nws21_abz31a1_pos_freq,number of positive words in the transcript.,VECTOR,69%,8,13
+nws21_abz31a1_pos_sc,number of positive words/number of all words.,VECTOR,69%,8,29
+nws21_abz31a1_tone_sc,(number of positive words - number of negative words)/(number of positive words + number of negative words),VECTOR,69%,12,26
+nws21_abz31a1_version,version of story. 0 for preliminary and 1 for final.,VECTOR,69%,14,22
+nws21_abz3_g09_eventtype,"Identifies the type of event. 1 - earnings conference call/presentation, 2 - earnings release, 4 - IPO, 5 - corporate conference call/presentation, 7 - conference presentation, 8 - other corporate, 10 - conference, 11 - shareholder/annual meeting, 12 - market holiday, 21 - analyst conference call, 22 - institutional analyst meeting, 23 - company visit, 24 - roadshow, 25 - general/political event, 29 - other institutional, 30 - guidance call/presentation, 31 - corporate analyst meeting, 32 - sales/trading statement release, 33 - sales/trading statement call/presentation, 34 - merger and acquisition announcement, 41-exdividend, 42-stock split, 43-IPO withdrawal, 44-secondary withdrawal, 45- IPO filing, 47 - IPO lockup, 48 - secondary public offering pricing, 49-secondary public offering filing, 50 - economic event.",VECTOR,68%,10,17
+nws21_abz3_g09_neg_freq,number of negative words in the transcript.,VECTOR,68%,15,96
+nws21_abz3_g09_neg_sc,number of negative words/number of all words.,VECTOR,68%,11,16
+nws21_abz3_g09_pos_freq,number of positive words in the transcript.,VECTOR,68%,18,58
+nws21_abz3_g09_pos_sc,number of positive words/number of all words.,VECTOR,68%,23,50
+nws21_abz3_g09_tone_sc,(number of positive words - number of negative words)/(number of positive words + number of negative words),VECTOR,67%,20,38
+nws21_abz3_g09_version,version of story. 0 for preliminary and 1 for final.,VECTOR,68%,51,183
+nws21_abz3_g09_vinlastevent,marks time of last event.,VECTOR,68%,26,39
+nws21_abz3a2_eventtype,"Integer code identifying the event type (e.g., earnings call, earnings release, IPO, conference, etc.)",VECTOR,62%,22,26
+nws21_abz3a2_neg_freq,Count of negative words in the transcript,VECTOR,62%,10,15
+nws21_abz3a2_neg_sc,Negative words divided by total words in the transcript,VECTOR,62%,24,65
+nws21_abz3a2_pos_freq,Count of positive words in the transcript,VECTOR,62%,29,49
+nws21_abz3a2_pos_sc,Positive words divided by total words in the transcript,VECTOR,62%,25,34
+nws21_abz3a2_tone_sc,Sentiment tone = (positive word count − negative word count) / (positive + negative word count),VECTOR,62%,64,131
+nws21_abz3a2_version,"Story/transcript version indicator (0=preliminary, 1=final)",VECTOR,62%,21,37
+nws21_abz3a2_vinlastevent,Timestamp of the most recent related event,VECTOR,62%,13,25
+nws21_abz3az_eventtype,"Identifies the type of event. 1 - earnings conference call/presentation, 2 - earnings release, 4 - IPO, 5 - corporate conference call/presentation, 7 - conference presentation, 8 - other corporate, 10 - conference, 11 - shareholder/annual meeting, 12 - market holiday, 21 - analyst conference call, 22 - institutional analyst meeting, 23 - company visit, 24 - roadshow, 25 - general/political event, 29 - other institutional, 30 - guidance call/presentation, 31 - corporate analyst meeting, 32 - sales/trading statement release, 33 - sales/trading statement call/presentation, 34 - merger and acquisition announcement, 41 - ex-dividend, 42 - stock split, 43 - IPO withdrawal, 44 - secondary withdrawal, 45 - IPO filing, 47 - IPO lockup, 48 - secondary public offering pricing, 49 - secondary public offering filing, 50 - economic event.",VECTOR,69%,11,18
+nws21_abz3az_neg_freq,number of negative words in the transcript.,VECTOR,69%,22,31
+nws21_abz3az_neg_sc,number of negative words/number of all words.,VECTOR,69%,2,2
+nws21_abz3az_pos_freq,number of positive words in the transcript.,VECTOR,69%,15,36
+nws21_abz3az_pos_sc,number of positive words/number of all words.,VECTOR,69%,2,3
+nws21_abz3az_tone_sc,(number of positive words - number of negative words)/(number of positive words + number of negative words),VECTOR,69%,12,18
+nws21_abz3az_version,version of story. 0 for preliminary and 1 for final.,VECTOR,69%,1,2
+nws21_abz4s2_eventtype,"Identifies the type of event. 1 - earnings conference call/presentation, 2 - earnings release, 4 - IPO, 5 - corporate conference call/presentation, 7 - conference presentation, 8 - other corporate, 10 - conference, 11 - shareholder/annual meeting, 12 - market holiday, 21 - analyst conference call, 22 - institutional analyst meeting, 23 - company visit, 24 - roadshow, 25 - general/political event, 29 - other institutional, 30 - guidance call/presentation, 31 - corporate analyst meeting, 32 - sales/trading statement release, 33 - sales/trading statement call/presentation, 34 - merger and acquisition announcement, 41 - ex-dividend, 42 - stock split, 43 - IPO withdrawal, 44 - secondary withdrawal, 45 - IPO filing, 47 - IPO lockup, 48 - secondary public offering pricing, 49 - secondary public offering filing, 50 - economic event.",VECTOR,75%,14,46
+nws21_abz4s2_eventtype_fast_d1,"Identifies the type of event. 1 - earnings conference call/presentation, 2 - earnings release, 4 - IPO, 5 - corporate conference call/presentation, 7 - conference presentation, 8 - other corporate, 10 - conference, 11 - shareholder/annual meeting, 12 - market holiday, 21 - analyst conference call, 22 - institutional analyst meeting, 23 - company visit, 24 - roadshow, 25 - general/political event, 29 - other institutional, 30 - guidance call/presentation, 31 - corporate analyst meeting, 32 - sales/trading statement release, 33 - sales/trading statement call/presentation, 34 - merger and acquisition announcement, 41 - ex-dividend, 42 - stock split, 43 - IPO withdrawal, 44 - secondary withdrawal, 45 - IPO filing, 47 - IPO lockup, 48 - secondary public offering pricing, 49 - secondary public offering filing, 50 - economic event.",VECTOR,79%,3,3
+nws21_abz4s2_neg_freq,number of negative words.,VECTOR,75%,15,24
+nws21_abz4s2_neg_freq_fast_d1,number of negative words.,VECTOR,84%,2,2
+nws21_abz4s2_neg_sc,number of negative words/number of all words.,VECTOR,75%,18,31
+nws21_abz4s2_neg_sc_fast_d1,number of negative words/number of all words.,VECTOR,84%,1,1
+nws21_abz4s2_pos_freq,number of positive words.,VECTOR,75%,20,43
+nws21_abz4s2_pos_freq_fast_d1,number of positive words.,VECTOR,79%,3,3
+nws21_abz4s2_pos_sc,number of positive words/number of all words.,VECTOR,84%,16,30
+nws21_abz4s2_pos_sc_fast_d1,number of positive words/number of all words.,VECTOR,84%,2,2
+nws21_abz4s2_tone_sc,(number of positive words - number of negative words)/(number of positive words + number of negative words),VECTOR,75%,19,35
+nws21_abz4s2_tone_sc_fast_d1,(number of positive words - number of negative words)/(number of positive words + number of negative words),VECTOR,79%,1,1
+nws21_abz4s2_version,version of story. 0 for preliminary and 1 for final.,VECTOR,75%,32,53
+nws21_abz4s2_version_fast_d1,version of story. 0 for preliminary and 1 for final.,VECTOR,84%,4,4
+nws21_ac2_eventtype,"Numeric code identifying the event type (e.g., earnings call, release, IPO, conference), per vendor taxonomy",VECTOR,58%,11,18
+nws21_ac2_neg_freq,Count of negative words in the transcript,VECTOR,63%,22,31
+nws21_ac2_neg_sc,Share of negative words in the transcript (negative words divided by total words),VECTOR,58%,23,43
+nws21_ac2_pos_freq,Count of positive words in the transcript,VECTOR,58%,16,37
+nws21_ac2_pos_sc,Share of positive words in the transcript (positive words divided by total words),VECTOR,58%,23,34
+nws21_ac2_version,"Story version indicator (0 = preliminary, 1 = final)",VECTOR,63%,13,25
+nws21_event_freq,Count of events,MATRIX,82%,1,1
+nws21_event_freq_fast_d1,Count of events,MATRIX,82%,3,3
+nws21_infoaz_tone_sc,Net sentiment: (positive words − negative words) divided by (positive words + negative words),VECTOR,63%,108,155
+nws21_neg_firstpartoffset,position of the first part of the same file.,VECTOR,62%,21,61
+nws21_neg_parttype,"Segment type within the transcript (0=unknown, 1=CEO presentation, 2=CFO presentation, 3=analyst, 4=CEO answer, 5=CFO answer)",VECTOR,62%,7,15
+nws21_neg_sc,Negative word count divided by total word count,MATRIX,82%,2,2
+nws21_neg_sc_fast_d1,Negative word count divided by total word count,MATRIX,82%,5,7
+nws21_neg_totalwords,Total number of words in the segment or story part,VECTOR,62%,15,27
+nws21_participants,"0 for no CEO, 1 for CFO, 10 for CEO and 11 for both CEO & CFO being present.",VECTOR,75%,14,16
+nws21_participants_fast_d1,"0 for no CEO, 1 for CFO, 10 for CEO and 11 for both CEO & CFO being present.",VECTOR,79%,5,6
+nws21_pos_firstpartoffset,position of the first part of the same file.,VECTOR,63%,11,17
+nws21_pos_parttype,"Code for the segment type or speaker role (0 unknown, 1 CEO presentation, 2 CFO presentation, 3 analyst, 4 CEO answer, 5 CFO answer)",VECTOR,62%,14,34
+nws21_pos_sc,Positive word count divided by total word count,MATRIX,82%,10,10
+nws21_pos_sc_fast_d1,Positive word count divided by total word count,MATRIX,82%,11,13
+nws21_pos_totalwords,Total number of words in the segment or part,VECTOR,62%,15,31
+nws21_qa_count,number of question & answers.,VECTOR,75%,21,29
+nws21_qa_count_fast_d1,number of question & answers.,VECTOR,79%,3,3
+nws21_qerf,Count of StreetEvents occurrences (events/mentions) in the measurement period for the given entity/date,MATRIX,63%,78,332
+nws21_qerf_gen,Count of negative words,MATRIX,82%,1,1
+nws21_qerf_gen_fast_d1,Count of negative words,MATRIX,82%,3,3
+nws21_qerf_sop,Count of positive words,MATRIX,82%,4,4
+nws21_qerf_sop_fast_d1,Count of positive words,MATRIX,82%,12,13
+nws21_tone_tone_sc,Normalized tone: (positive word count minus negative word count) divided by (positive word count plus negative word count),MATRIX,82%,9,9
+nws21_tone_tone_sc_fast_d1,Normalized tone: (positive word count minus negative word count) divided by (positive word count plus negative word count),MATRIX,82%,18,20
+overall_tone_score,Overall composite sentiment tone score for the company on the given date derived from StreetEvents transcripts,MATRIX,82%,24,28
+overall_tone_score_fast_d1,Overall composite sentiment tone score for the company on the given date derived from StreetEvents transcripts,MATRIX,82%,41,46
+positive_sentiment_score_3,A numerical score representing the positive sentiment in the transcript.,MATRIX,82%,5,5
+positive_sentiment_score_3_fast_d1,A numerical score representing the positive sentiment in the transcript.,MATRIX,82%,17,25
+positive_word_frequency,The frequency of positive words or phrases in the transcript.,MATRIX,82%,2,2
+positive_word_frequency_fast_d1,The frequency of positive words or phrases in the transcript.,MATRIX,82%,8,11
+previous_corporate_presentation_date,"Most recent past corporate presentation date before today (for a China-listed company), available on a next-trading-day delay, stored as an integer date (e.g., YYYYMMDD)",MATRIX,71%,2,2
+previous_earnings_call_date,"Most recent past earnings conference call date prior to today for the US region module, encoded as an integer date (typically YYYYMMDD); data available with D1 delay",MATRIX,90%,3,3
+previous_ex_dividend_event_date,"The most recent past ex-dividend date before today for the company in the USA module, encoded as an integer date",MATRIX,49%,1,1
+previous_shareholder_meeting_date,"Most recent past date (as an integer date, e.g., YYYYMMDD) when the shareholder annual meeting last occurred before today, provided with next-trading-day (D1) availability for the USA region",MATRIX,50%,1,1
+se_event_count,number of events.,MATRIX,69%,208,979
+se_neg_score,number of negative words/number of all words.,MATRIX,69%,154,606
+se_neg_words,Number of negative words.,MATRIX,69%,115,400
+se_pos_score,number of positive words/number of all words.,MATRIX,69%,156,526
+se_pos_words,number of positive words.,MATRIX,69%,120,368
+se_score,(number of positive words - number of negative words)/(number of positive words + number of negative words),MATRIX,69%,440,2359
+story_neg_expiration_date,Scheduled expiration date of the event record,VECTOR,62%,0,0
+story_neg_last_update_date,Date of the last update to this record,VECTOR,62%,1,1
+story_neg_start_date,Event start date (local region time),VECTOR,63%,0,0
+streetevents2_expiration_date,The date when the event or record in StreetEvents2 expires or becomes inactive.,VECTOR,75%,2,2
+streetevents2_expiration_date_fast_d1,The date when the event or record in StreetEvents2 expires or becomes inactive.,VECTOR,84%,1,1
+streetevents2_expiration_time,The time of day when the event or record in StreetEvents2 expires.,VECTOR,75%,1,1
+streetevents2_expiration_time_fast_d1,The time of day when the event or record in StreetEvents2 expires.,VECTOR,79%,1,1
+streetevents2_last_update_date,The date when the StreetEvents2 record was last updated.,VECTOR,75%,1,1
+streetevents2_last_update_date_fast_d1,The date when the StreetEvents2 record was last updated.,VECTOR,84%,3,3
+streetevents2_last_update_time,The time of day when the StreetEvents2 record was last updated.,VECTOR,75%,0,0
+streetevents2_last_update_time_fast_d1,The time of day when the StreetEvents2 record was last updated.,VECTOR,84%,1,1
+streetevents2_start_date,The date when the event or record in StreetEvents2 becomes effective.,VECTOR,75%,0,0
+streetevents2_start_date_fast_d1,The date when the event or record in StreetEvents2 becomes effective.,VECTOR,79%,1,1
+streetevents2_start_time,The time of day when the event or record in StreetEvents2 becomes effective.,VECTOR,75%,1,1
+streetevents2_start_time_fast_d1,The time of day when the event or record in StreetEvents2 becomes effective.,VECTOR,84%,1,1

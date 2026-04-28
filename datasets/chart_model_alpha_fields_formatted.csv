@@ -1,0 +1,282 @@
+Field,Description,Type,Coverage,Users,Alphas
+atm_call_option_delta_value,"The option Delta (rate of change of option price with respect to underlying) for at-the-money call options, D1 lagged, feature for Std2 index2",MATRIX,96%,0,0
+atm_call_option_delta_value_1,Delta sensitivity for at-the-money call option.,MATRIX,96%,0,0
+atm_call_option_delta_value_2,"Delta Greek for at-the-money call options as-of T–1, showing sensitivity of option price to small changes in underlying stock price",MATRIX,96%,2,3
+atm_call_option_estimated_forward,Projected price of underlying at call option expiration.,MATRIX,96%,1,1
+atm_call_option_estimated_forward_2,Projected price of underlying at call option expiration (alternate index).,MATRIX,96%,0,0
+atm_call_option_exercise_price,Exercise price for at-the-money call options.,MATRIX,96%,0,0
+atm_call_option_forward_value,Projected price of the underlying asset at the call option's expiration.,MATRIX,96%,1,1
+atm_call_option_forward_value_2,Projected price of the underlying asset at the call option's expiration.,MATRIX,96%,0,0
+atm_call_option_gamma_factor,"As-of D1, Gamma (rate of change of Delta with respect to underlying price) of ATM call options for the stock, Std2 variant, model index0",MATRIX,96%,0,0
+atm_call_option_gamma_factor_2,"As-of D1, engineered feature for the option-implied Gamma Greek of at-the-money call options within the ATM standard variant and model index2",MATRIX,96%,1,1
+atm_call_option_gamma_rate,"The option Gamma (rate of change of Delta with respect to underlying price) for at-the-money call options, D1 lagged, used as a feature for Std2 index2",MATRIX,96%,0,0
+atm_call_option_gamma_value,Gamma sensitivity for at-the-money call option.,MATRIX,96%,1,1
+atm_call_option_gamma_value_2,"Gamma Greek for at-the-money call options as-of T–1, indicating the rate of change of delta relative to the stock price",MATRIX,96%,0,0
+atm_call_option_premium_amount,Premium paid for at-the-money call option contract.,MATRIX,96%,0,0
+atm_call_option_premium_amount_2,Option premium (price) of at-the-money call options as-of T–1 used in feature engineering for predictive modeling,MATRIX,96%,0,0
+atm_call_option_premium_value,"As-of D1, option-implied premium value for at-the-money call options, within the OptionStd2 overlay variant and model index2",MATRIX,96%,0,0
+atm_call_option_price_premium_3,Monetary value paid to acquire an at-the-money call option contract.,MATRIX,96%,0,0
+atm_call_option_price_premium_4,"As-of D1, engineered feature representing the premium (option price) of at-the-money call options under the ATM standard overlay and model index2",MATRIX,96%,0,0
+atm_call_option_price_sensitivity_2,"As-of D1, Delta (sensitivity of option price to underlying asset price) of ATM call options for the stock, variant Std2, model index0",MATRIX,96%,0,0
+atm_call_option_price_sensitivity_3,"As-of D1, engineered feature representing the option-implied Delta Greek for at-the-money call options within the ATM standard variant and model index2",MATRIX,96%,1,1
+atm_call_option_projected_expiry_price,Expected price of the underlying at expiry for at-the-money call options.,MATRIX,96%,0,0
+atm_call_option_strike_level,Strike price for the at-the-money call option contract.,MATRIX,96%,0,0
+atm_call_option_strike_level_2,Strike price for the at-the-money call option contract.,MATRIX,96%,0,0
+atm_call_option_strike_value,"As-of D1, at-the-money call option strike price feature, representing the exercise price of the call option",MATRIX,96%,1,2
+atm_call_option_strike_value_2,"Strike price of at-the-money call options as-of T–1, used as engineered feature for option-implied data analysis",MATRIX,96%,1,1
+atm_call_option_theta_decay,"As-of D1, Theta (time decay) of ATM call options for the stock, Std2 variant, model index0",MATRIX,96%,1,1
+atm_call_option_time_decay,"As-of D1, time decay Greek (Theta) for at-the-money call options, calculated in OptionStd2 overlay variant and model index2",MATRIX,96%,0,0
+atm_call_option_vega_response,"As-of D1, Vega (sensitivity of option price to volatility) of ATM call options for the stock, Std2 variant, model index0",MATRIX,96%,0,0
+atm_call_option_volatility_estimate,"As-of D1, implied volatility feature for at-the-money call options in the OptionStd2 overlay variant and model index2",MATRIX,96%,2,2
+atm_call_option_volatility_level,"As-of D1, implied volatility of ATM call options for the stock, Std2 variant, model index0",MATRIX,96%,0,0
+atm_call_option_volatility_level_1,Implied volatility for at-the-money call option.,MATRIX,96%,0,0
+atm_call_option_volatility_level_2,"As-of D1, engineered feature representing the implied volatility of at-the-money call options from the ATM standard variant and model index2",MATRIX,96%,0,0
+atm_call_option_volatility_level_2_0,"Implied volatility of at-the-money call options as-of T–1, reflecting market expectations of future stock price fluctuations",MATRIX,96%,0,0
+atm_call_option_volatility_sensitivity,"The option Vega (sensitivity of option price to volatility) for at-the-money call options, D1 lagged, used as a feature in the Std2 index2 variant",MATRIX,96%,0,0
+atm_delta_first_quartile,First quartile (25th percentile) of delta values for at-the-money call options.,MATRIX,96%,0,0
+atm_delta_maximum_value,Maximum delta value among at-the-money call options.,MATRIX,96%,1,1
+atm_delta_median_value,"Median Delta (first derivative of option price with respect to underlying price) for at-the-money call options, based on the standardized boxplot statistics, as-of (T-1) date",MATRIX,96%,1,1
+atm_delta_minimum_value,Minimum delta value among at-the-money call options.,MATRIX,96%,0,0
+atm_delta_third_quartile,"Third quartile (75th percentile) of Delta values for at-the-money call options derived from standardized boxplot features, as-of (T-1) date",MATRIX,96%,1,1
+atm_forward_price_first_quartile,First quartile (25th percentile) of projected underlying asset prices for at-the-money call options.,MATRIX,96%,0,0
+atm_forward_price_maximum_value,Maximum projected underlying asset price for at-the-money call options.,MATRIX,96%,0,0
+atm_forward_price_median_value,Median of projected underlying asset prices for at-the-money call options.,MATRIX,96%,0,0
+atm_forward_price_minimum_value,Minimum projected underlying asset price for at-the-money call options.,MATRIX,96%,0,0
+atm_forward_price_third_quartile,Third quartile (75th percentile) of projected underlying asset prices for at-the-money call options.,MATRIX,96%,0,0
+atm_gamma_first_quartile,First quartile (25th percentile) of gamma sensitivity for at-the-money call options.,MATRIX,96%,0,0
+atm_gamma_maximum_value,Maximum gamma sensitivity among at-the-money call options.,MATRIX,96%,0,0
+atm_gamma_median_value,"Median value of the Gamma (second derivative of option price with respect to underlying price) for at-the-money call options, based on standardized boxplot overlay features, as-of (T-1) date",MATRIX,96%,1,1
+atm_gamma_minimum_value,Minimum gamma sensitivity among at-the-money call options.,MATRIX,96%,0,0
+atm_gamma_third_quartile,Third quartile (75th percentile) of gamma sensitivity for at-the-money call options.,MATRIX,96%,0,0
+atm_option_feature_difference_addition,Sum of differences between selected at-the-money option features at close.,MATRIX,96%,6,7
+atm_premium_first_quartile,"First quartile (25th percentile) of option premiums (prices) for at-the-money call options using standardized boxplot statistics, as-of (T-1) date",MATRIX,96%,1,1
+atm_premium_maximum_value,Maximum premium value among at-the-money call options.,MATRIX,96%,0,0
+atm_premium_median_value,Median premium value for at-the-money call options.,MATRIX,96%,0,0
+atm_premium_minimum_value,Minimum premium value among at-the-money call options.,MATRIX,96%,0,0
+atm_premium_third_quartile,Third quartile (75th percentile) of premium values for at-the-money call options.,MATRIX,96%,0,0
+atm_put_option_delta_value,"As-of D1, sensitivity Greek (Delta) for at-the-money put options, within OptionStd2 overlay and model index2",MATRIX,96%,1,1
+atm_put_option_delta_value_1,Delta sensitivity for at-the-money put option.,MATRIX,96%,0,0
+atm_put_option_delta_value_2,"Delta Greek value for at-the-money put options as-of T–1, representing sensitivity of option price to underlying stock price changes",MATRIX,96%,0,0
+atm_put_option_estimated_forward,Projected price of underlying at put option expiration.,MATRIX,96%,0,0
+atm_put_option_estimated_forward_2,Projected price of underlying at put option expiration (alternate index).,MATRIX,96%,0,0
+atm_put_option_exercise_price,"As-of D1, strike price of the at-the-money put option, included as feature in OptionStd2 overlay variant and model index2",MATRIX,96%,0,0
+atm_put_option_forward_value,Projected price of the underlying asset at the put option's expiration.,MATRIX,96%,0,0
+atm_put_option_forward_value_2,Projected price of the underlying asset at the put option's expiration.,MATRIX,96%,0,0
+atm_put_option_gamma_factor_2,"As-of D1, Gamma of ATM put options for the stock, Std2 variant, model index0",MATRIX,96%,1,1
+atm_put_option_gamma_factor_3,"As-of D1, engineered feature representing the option-implied Gamma Greek of at-the-money put options, calculated within the ATM standard variant and model seed index2",MATRIX,96%,0,0
+atm_put_option_gamma_rate,"As-of D1, curvature Greek (Gamma) for at-the-money put options, within the OptionStd2 overlay variant and model index2",MATRIX,96%,0,0
+atm_put_option_gamma_value,Gamma sensitivity for at-the-money put option.,MATRIX,96%,1,1
+atm_put_option_gamma_value_2,"Gamma Greek of at-the-money put options as-of T–1, measuring the convexity of the option’s delta with respect to the stock price",MATRIX,96%,0,0
+atm_put_option_premium_amount,Premium paid for at-the-money put option contract.,MATRIX,96%,0,0
+atm_put_option_premium_amount_2,Premium paid for at-the-money put option contract (alternate index).,MATRIX,96%,0,0
+atm_put_option_premium_value,Monetary value paid to acquire an at-the-money put option.,MATRIX,96%,0,0
+atm_put_option_price_premium_3,"As-of D1, premium value of at-the-money (ATM) put options for the stock, variant Std2 and model index0",MATRIX,96%,0,0
+atm_put_option_price_premium_4,"As-of D1, engineered feature representing the premium (option price) of at-the-money put options under the ATM standard variant and model index2",MATRIX,96%,0,0
+atm_put_option_price_sensitivity_3,Market-neutral option-implied Delta (sensitivity of option price to underlying asset price) for ATM put options as of D1 in OptionStd2 variant,MATRIX,96%,0,0
+atm_put_option_price_sensitivity_4,"As-of D1, engineered rolling-window feature representing the Delta Greek calculated from At-The-Money put options, based on the OptionStd2 overlay variant with model seed index2",MATRIX,96%,0,0
+atm_put_option_projected_expiry_price,Expected price of the underlying at expiry for at-the-money put options.,MATRIX,96%,0,0
+atm_put_option_strike_level,Strike price for the at-the-money put option contract.,MATRIX,96%,0,0
+atm_put_option_strike_level_2,Strike price for the at-the-money put option contract.,MATRIX,96%,0,0
+atm_put_option_strike_value,"As-of D1, at-the-money put option strike price feature, representing the exercise price of the put option",MATRIX,96%,0,0
+atm_put_option_strike_value_2,"Strike price of at-the-money put options as-of T–1, included as an engineered option feature",MATRIX,96%,0,0
+atm_put_option_theta_decay,Rate at which the at-the-money put option loses value as time passes.,MATRIX,96%,2,2
+atm_put_option_time_decay,"As-of D1, time decay Greek (Theta) for at-the-money put options, calculated in OptionStd2 overlay variant and model index2",MATRIX,96%,0,0
+atm_put_option_vega_response_2,"As-of D1, Vega of ATM put options for the stock, Std2 variant, model index0",MATRIX,96%,0,0
+atm_put_option_volatility_estimate,"As-of D1, implied volatility feature for at-the-money put options in OptionStd2 overlay variant and model index2",MATRIX,96%,0,0
+atm_put_option_volatility_level,ATM put option implied volatility feature (rolling-window or snapshot) at D1 in OptionStd2 overlay,MATRIX,96%,0,0
+atm_put_option_volatility_level_1,Implied volatility for at-the-money put option.,MATRIX,96%,0,0
+atm_put_option_volatility_level_2,"As-of D1, engineered rolling-window feature representing the implied volatility calculated from At-The-Money put options, based on the OptionStd2 overlay variant with model seed index2",MATRIX,96%,0,0
+atm_put_option_volatility_level_2_0,"Implied volatility of at-the-money put options as-of T–1, reflecting expected stock price variability",MATRIX,96%,0,0
+atm_put_option_volatility_sensitivity,"The option Vega for at-the-money put options, D1 lagged feature, variant Std2 index2",MATRIX,96%,0,0
+atm_strike_first_quartile,First quartile (25th percentile) of strike prices for at-the-money call options.,MATRIX,96%,0,0
+atm_strike_maximum_value,Maximum strike price among at-the-money call options.,MATRIX,96%,0,0
+atm_strike_median_value,Median strike price for ATM call options in the D1-lagged standardized boxplot overlay,MATRIX,96%,0,0
+atm_strike_minimum_value,Minimum strike price for ATM call options in the D1-lagged standardized boxplot overlay,MATRIX,96%,0,0
+atm_strike_third_quartile,Third quartile (75th percentile) of strike prices for at-the-money call options.,MATRIX,96%,0,0
+atm_theta_first_quartile,First quartile (25th percentile) of theta values for at-the-money call options.,MATRIX,96%,0,0
+atm_theta_maximum_value,Maximum theta value among at-the-money call options.,MATRIX,96%,0,0
+atm_theta_median_value,Median theta value for at-the-money call options.,MATRIX,96%,0,0
+atm_theta_minimum_value,Minimum theta value among at-the-money call options.,MATRIX,96%,1,2
+atm_theta_third_quartile,Third quartile (75th percentile) of theta values for at-the-money call options.,MATRIX,96%,0,0
+atm_vega_first_quartile,First quartile (25th percentile) of vega sensitivity for at-the-money call options.,MATRIX,96%,0,0
+atm_vega_maximum_value,Maximum vega sensitivity among at-the-money call options.,MATRIX,96%,0,0
+atm_vega_median_value,Median vega sensitivity for at-the-money call options.,MATRIX,96%,0,0
+atm_vega_minimum_value,Minimum vega sensitivity among at-the-money call options.,MATRIX,96%,0,0
+atm_vega_third_quartile,"Third quartile (75th percentile) of the Vega (sensitivity of option price to volatility) for at-the-money call options, derived from standardized boxplot features, as-of (T-1) date",MATRIX,96%,0,0
+atm_volatility_first_quartile,First quartile (Q1) of implied volatility for ATM call options in the D1-lagged standardized boxplot overlay,MATRIX,96%,0,0
+atm_volatility_maximum_value,Maximum implied volatility among at-the-money call options.,MATRIX,96%,0,0
+atm_volatility_median_value,"Median implied volatility from at-the-money call options using standardized boxplot statistics, as-of (T-1) date",MATRIX,96%,1,1
+atm_volatility_minimum_value,Minimum implied volatility for ATM call options in the D1-lagged standardized boxplot overlay,MATRIX,96%,3,3
+atm_volatility_third_quartile,Third quartile (Q3) of implied volatility for ATM call options in the D1-lagged standardized boxplot overlay,MATRIX,96%,0,0
+close_feature_direction_flip,Indicator showing if the close feature direction is reversed compared to the prior period.,MATRIX,100%,1,1
+option_return_bucket1_label,"Trivial quantile assignment always equal to 0 for 1-quantile bucket, thus provides no predictive value",MATRIX,95%,0,0
+option_return_bucket1_label_2,Trivial 1-quantile assignment for market-neutral forward return; always 0 and not useful for research or trading,MATRIX,89%,0,0
+option_return_bucket1_label_3,Predicted quantile label for 1-bucket return classification (version 3).,MATRIX,95%,0,0
+option_return_bucket2_label,Predicted quantile label for 2-bucket return classification.,MATRIX,93%,0,0
+option_return_bucket2_label_2,Predicted quantile label for 2-bucket return classification (version 2).,MATRIX,93%,1,1
+option_return_bucket2_label_3,Quantile assignment (integer 0 or 1) of stock-date into one of 2 cross-sectional market-neutral quantile buckets for 10-day forward return predicted by the Option standard deviation overlay retrain variant at D1 lag,MATRIX,93%,0,0
+option_return_bucket2_prob0,Probability assigned to label 0 in 2-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket2_prob0_2,Probability assigned to label 0 in 2-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket2_prob0_3,Probability assigned to label 0 in 2-bucket return prediction (version 3).,MATRIX,89%,0,0
+option_return_bucket2_prob1,Probability assigned to label 1 in 2-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket2_prob1_2,Probability assigned to label 1 in 2-bucket return prediction (version 2).,MATRIX,89%,1,1
+option_return_bucket2_prob1_3,"Log-probability (log-softmax output) of the stock-date's forward return being in the 1st quantile out of 2 quantiles, from market-neutral 10-day forward return prediction model after Std10 retrain batch as-of T-1 (D1)",MATRIX,89%,0,0
+option_return_bucket3_label,Predicted quantile label for 3-bucket return classification.,MATRIX,93%,0,0
+option_return_bucket3_label_2,Predicted quantile label for 3-bucket return classification (version 2).,MATRIX,93%,0,0
+option_return_bucket3_label_3,"Quantile assignment bucket out of 3 quantiles for market-neutral 10-day forward return prediction, as-of T-1 (D1), integer in [0,2]",MATRIX,93%,0,0
+option_return_bucket3_prob0,Probability assigned to label 0 in 3-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket3_prob0_2,Probability assigned to label 0 in 3-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket3_prob0_3,"Log-probability (log-softmax output) of the stock-date's forward return being in the 0th quantile out of 3 quantiles, from a market-neutral 10-day forward return prediction model after Std10 retrain batch and as-of T-1 (D1) discipline",MATRIX,89%,0,0
+option_return_bucket3_prob1,Probability assigned to label 1 in 3-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket3_prob1_2,Probability assigned to label 1 in 3-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket3_prob1_3,"Log-probability (log-softmax output) of the stock-date's forward return being in the 1st quantile out of 3 quantiles, from market-neutral 10-day forward return prediction model after Std10 retrain batch as-of T-1 (D1)",MATRIX,89%,0,0
+option_return_bucket3_prob2,Probability assigned to label 2 in 3-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket3_prob2_2,Probability assigned to label 2 in 3-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket3_prob2_3,"Log-probability (log-softmax output) of the stock-date's forward return being in the 2nd quantile out of 3 quantiles, from market-neutral 10-day forward return prediction model after Std10 retrain batch as-of T-1 (D1)",MATRIX,89%,0,0
+option_return_bucket4_label,Integer quantile assignment (0-based) of the stock-date to one of 4 cross-sectional quantile buckets for the market-neutral forward return predicted by the given module,MATRIX,93%,0,0
+option_return_bucket4_label_2,Predicted quantile label for 4-bucket return classification (version 2).,MATRIX,93%,0,0
+option_return_bucket4_label_3,Quantile assignment (integer 0 to 3) of stock-date into one of 4 cross-sectional market-neutral quantile buckets for 10-day forward return predicted by the Option standard deviation overlay retrain variant at D1 lag,MATRIX,93%,0,0
+option_return_bucket4_prob0,Probability assigned to label 0 in 4-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket4_prob0_2,Probability assigned to label 0 in 4-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket4_prob0_3,Probability assigned to label 0 in 4-bucket return prediction (version 3).,MATRIX,89%,0,0
+option_return_bucket4_prob1,Probability assigned to label 1 in 4-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket4_prob1_2,Probability assigned to label 1 in 4-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket4_prob1_3,Probability assigned to label 1 in 4-bucket return prediction (version 3).,MATRIX,89%,0,0
+option_return_bucket4_prob2,Probability assigned to label 2 in 4-bucket return prediction.,MATRIX,89%,0,0
+option_return_bucket4_prob2_2,Probability assigned to label 2 in 4-bucket return prediction (version 2).,MATRIX,89%,1,1
+option_return_bucket4_prob2_3,Probability assigned to label 2 in 4-bucket return prediction (version 3).,MATRIX,95%,0,0
+option_return_bucket4_prob3,Probability assigned to label 3 in 4-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket4_prob3_2,Probability assigned to label 3 in 4-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket4_prob3_3,Probability assigned to label 3 in 4-bucket return prediction (version 3).,MATRIX,95%,0,0
+option_return_bucket5_label,Predicted quantile label for 5-bucket return classification.,MATRIX,93%,0,0
+option_return_bucket5_label_2,Predicted quantile label for 5-bucket return classification (version 2).,MATRIX,93%,1,1
+option_return_bucket5_label_3,"Quantile assignment bucket out of 5 quantiles for market-neutral 10-day forward return prediction, as-of T-1 (D1), integer in [0,4]",MATRIX,93%,0,0
+option_return_bucket5_prob0,Probability assigned to label 0 in 5-bucket return prediction.,MATRIX,95%,1,1
+option_return_bucket5_prob0_2,Probability assigned to label 0 in 5-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket5_prob0_3,"Log-probability (log-softmax output) of the stock-date's forward return being in the 0th quantile out of 5 quantiles, from a market-neutral 10-day forward return prediction model after Std10 retrain batch and as-of T-1 (D1) discipline",MATRIX,89%,0,0
+option_return_bucket5_prob1,Probability assigned to label 1 in 5-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket5_prob1_2,Probability assigned to label 1 in 5-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket5_prob1_3,"Log-probability (log-softmax output) of the stock-date's forward return being in the 1st quantile out of 5 quantiles, from market-neutral 10-day forward return prediction model after Std10 retrain batch as-of T-1 (D1)",MATRIX,89%,0,0
+option_return_bucket5_prob2,Probability assigned to label 2 in 5-bucket return prediction.,MATRIX,95%,0,0
+option_return_bucket5_prob2_2,Probability assigned to label 2 in 5-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket5_prob2_3,Probability assigned to label 2 in 5-bucket return prediction (version 3).,MATRIX,89%,0,0
+option_return_bucket5_prob3,Probability assigned to label 3 in 5-bucket return prediction.,MATRIX,89%,0,0
+option_return_bucket5_prob3_2,Probability assigned to label 3 in 5-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket5_prob3_3,"Log-probability (log-softmax output) of the stock-date's forward return being in the 3rd quantile out of 5 quantiles, from market-neutral 10-day forward return prediction model after Std10 retrain batch as-of T-1 (D1)",MATRIX,89%,0,0
+option_return_bucket5_prob4,Probability assigned to label 4 in 5-bucket return prediction.,MATRIX,95%,2,2
+option_return_bucket5_prob4_2,Probability assigned to label 4 in 5-bucket return prediction (version 2).,MATRIX,89%,0,0
+option_return_bucket5_prob4_3,Probability assigned to label 4 in 5-bucket return prediction (version 3).,MATRIX,95%,0,0
+option_return_rank_1_label,"Trivial quantile assignment always zero for 1 quantile, not useful for research or trading",MATRIX,88%,0,0
+option_return_rank_1_label_2,"Trivial quantile assignment always 0 (1-quantile, no variation), market-neutral forward return bucket",MATRIX,88%,0,0
+option_return_rank_1_label_3,Predicted label for 1-quantile ranking of option return (Std2 version).,MATRIX,88%,0,0
+option_return_rank_2_label,Predicted label for 2-quantile ranking of option return.,MATRIX,93%,0,0
+option_return_rank_2_label_2,"Quantile assignment label for 2-way cross-sectional market-neutral forward return buckets (integer 0 or 1), as-of T-1",MATRIX,93%,0,0
+option_return_rank_2_prob_0,"Log-probability (log_softmax output) of the stock-date's strictly market-neutral forward return falling into quantile 0 out of 2 quantile buckets, for a specified forward horizon within the Option Std8 Retrain RH D1 prediction model",MATRIX,88%,0,0
+option_return_rank_2_prob_0_2,Probability assigned to label 0 for 2-quantile ranking of option return (Std7 version).,MATRIX,95%,0,0
+option_return_rank_2_prob_1,"Log-probability (log-softmax output) of belonging to quantile 1 out of 2 for market-neutral forward return, requires exponentiation for probability",MATRIX,88%,0,0
+option_return_rank_2_prob_1_2,Log(softmax) confidence score for quantile bucket 1 of 2 in market-neutral forward return prediction; exp() needed for probability,MATRIX,88%,0,0
+option_return_rank_3_label,"Quantile assignment integer-valued field indicating the bucket (0 to 2) the stock-date belongs to, for the market-neutral forward return distribution split into 3 quantiles, within the Option Std8 Retrain RH D1 prediction module",MATRIX,93%,0,0
+option_return_rank_3_label_2,"Quantile assignment label for 3-way cross-sectional market-neutral forward return buckets (integer in 0 to 2), as-of T-1",MATRIX,93%,0,0
+option_return_rank_3_label_3,"Integer 0-based quantile assignment among 3 quantiles for market-neutral forward return at module horizon, Std2 variant retrain, as-of T-1",MATRIX,93%,0,0
+option_return_rank_3_prob_0,"Log-probability (log_softmax output) of the stock-date's strictly market-neutral forward return falling into quantile 0 out of 3 quantile buckets, for a specified forward horizon within the Option Std8 Retrain RH D1 prediction model",MATRIX,88%,0,0
+option_return_rank_3_prob_0_2,Probability assigned to label 0 for 3-quantile ranking of option return (Std7 version).,MATRIX,95%,0,0
+option_return_rank_3_prob_0_3,"Log-probability (log-softmax) output of CNN for confidence stock-date falls into quantile bucket 0 out of 3 cross-sectional quantiles for market-neutral forward return, Std2 retrain variant, as-of T-1",MATRIX,88%,0,0
+option_return_rank_3_prob_1,"Log-probability (log_softmax output) of the stock-date's strictly market-neutral forward return falling into quantile 1 out of 3 quantile buckets, for a specified forward horizon within the Option Std8 Retrain RH D1 prediction model",MATRIX,95%,0,0
+option_return_rank_3_prob_1_2,Log(softmax) confidence score for quantile bucket 1 of 3 in market-neutral forward return prediction; must exponentiate to get probability,MATRIX,88%,0,0
+option_return_rank_3_prob_2,"Log-probability (log-softmax output) of belonging to quantile 2 out of 3 for market-neutral forward return, requires exponentiation for probability",MATRIX,95%,0,0
+option_return_rank_3_prob_2_2,Probability assigned to label 2 for 3-quantile ranking of option return (Std7 version).,MATRIX,88%,0,0
+option_return_rank_4_label,Predicted label for 4-quantile ranking of option return.,MATRIX,93%,0,0
+option_return_rank_4_label_2,"Quantile assignment label for 4-way cross-sectional market-neutral forward return buckets (integer in 0 to 3), as-of T-1",MATRIX,93%,0,0
+option_return_rank_4_prob_0,"Log-probability (log_softmax output) of the stock-date's strictly market-neutral forward return falling into quantile 0 out of 4 quantile buckets, for a specified forward horizon within the Option Std8 Retrain RH D1 prediction model",MATRIX,95%,0,0
+option_return_rank_4_prob_0_2,Log(softmax) confidence score for quantile bucket 0 of 4 for market-neutral forward return prediction; use exp() to get actual probability,MATRIX,95%,0,0
+option_return_rank_4_prob_1,"Log-probability (log_softmax output) of the stock-date's strictly market-neutral forward return falling into quantile 1 out of 4 quantile buckets, for a specified forward horizon within the Option Std8 Retrain RH D1 prediction model",MATRIX,88%,0,0
+option_return_rank_4_prob_1_2,Probability assigned to label 1 for 4-quantile ranking of option return (Std7 version).,MATRIX,95%,0,0
+option_return_rank_4_prob_2,"Log-probability (log_softmax output) of the stock-date's strictly market-neutral forward return falling into quantile 2 out of 4 quantile buckets, for a specified forward horizon within the Option Std8 Retrain RH D1 prediction model",MATRIX,88%,0,0
+option_return_rank_4_prob_2_2,Log(softmax) confidence score for quantile bucket 2 of 4 in market-neutral forward return prediction; exp() required to obtain probability,MATRIX,95%,0,0
+option_return_rank_4_prob_3,"Log-probability (log_softmax output) of the stock-date's strictly market-neutral forward return falling into quantile 3 out of 4 quantile buckets, for a specified forward horizon within the Option Std8 Retrain RH D1 prediction model",MATRIX,95%,0,0
+option_return_rank_4_prob_3_2,Log(softmax) confidence score for quantile bucket 3 of 5 in market-neutral forward return prediction; apply exp() for usable probability,MATRIX,88%,1,1
+option_return_rank_5_label,Predicted label for 5-quantile ranking of option return.,MATRIX,93%,0,0
+option_return_rank_5_label_2,"5-way cross-sectional quantile assignment (0-based) for strictly market-neutral forward returns at a defined horizon (set by module context), with variant Std7 retrain batch",MATRIX,93%,1,1
+option_return_rank_5_label_3,"Integer 0-based cross-sectional quantile assignment into one of 5 buckets for the market-neutral forward return at horizon defined by the module, Std2 retrain variant, strictly as-of T-1",MATRIX,93%,0,0
+option_return_rank_5_prob_0,"Log-probability (log-softmax output) of belonging to quantile 0 out of 5 for market-neutral forward return, requires exponentiation for probability",MATRIX,95%,0,0
+option_return_rank_5_prob_0_2,"Log(softmax) model confidence score (log-probability) for quantile bucket 0 of 5 for market-neutral forward return prediction, requiring exp() for probability interpretation",MATRIX,88%,0,0
+option_return_rank_5_prob_1,"Log-probability (log_softmax output) of the stock-date's strictly market-neutral forward return falling into quantile 1 out of 5 quantile buckets, for a specified forward horizon within the Option Std8 Retrain RH D1 prediction model",MATRIX,88%,0,0
+option_return_rank_5_prob_1_2,Probability assigned to label 1 for 5-quantile ranking of option return (Std7 version).,MATRIX,88%,0,0
+option_return_rank_5_prob_2,"Log-probability (log_softmax output) of the stock-date's strictly market-neutral forward return falling into quantile 2 out of 5 quantile buckets, for a specified forward horizon within the Option Std8 Retrain RH D1 prediction model",MATRIX,88%,0,0
+option_return_rank_5_prob_2_2,Log(softmax) confidence score for quantile bucket 2 of 5 in market-neutral forward return prediction; exponentiate to get actionable probability,MATRIX,95%,0,0
+option_return_rank_5_prob_3,"Log-probability (log-softmax output) of belonging to quantile 3 out of 5 for market-neutral forward return, requires exponentiation for probability",MATRIX,88%,0,0
+option_return_rank_5_prob_3_2,Log(softmax) confidence score for quantile bucket 3 of 5 in market-neutral forward return prediction; apply exp() for usable probability,MATRIX,88%,0,0
+option_return_rank_5_prob_3_3,"Log-probability (log-softmax) output of CNN model predicting the confidence that the 5-way cross-sectional market-neutral forward return quantile is bucket 3 for the stock-date, with Std2 retrain variant and as-of T-1 data",MATRIX,95%,0,0
+option_return_rank_5_prob_4,"Log-probability (log-softmax output) of belonging to quantile 4 out of 5 for market-neutral forward return, requires exponentiation for probability",MATRIX,88%,0,0
+option_return_rank_5_prob_4_2,Probability assigned to label 4 for 5-quantile ranking of option return (Std7 version).,MATRIX,88%,0,0
+option_return_rank_5_prob_4_3,"Log-probability (log-softmax) output of CNN model predicting the confidence that the 5-way cross-sectional market-neutral forward return quantile is bucket 4 for the stock-date, Std2 variant, as-of T-1",MATRIX,88%,0,0
+predicted_return_five_quantile_12,"Quantile assignment integer (0 to 4) allocating stock-date to one of 5 cross-sectional quantile buckets for the forward market-neutral return, as-of T-1",MATRIX,93%,0,0
+predicted_return_five_quantile_4,Quantile assignment integer field assigning stock-date to one of 5 cross-sectional quantile buckets (0-based) for market-neutral N-day forward return prediction,MATRIX,93%,1,1
+predicted_return_five_quantile_5,Integer 0-based assignment of the stock-date to one of 5 cross-sectional quantile buckets for strictly market-neutral 5-quantile forward return at D1 lag from Option Std5 Retrain model horizon RH,MATRIX,93%,0,0
+predicted_return_four_quantile_12,"Quantile assignment integer (0 to 3) allocating stock-date to one of 4 cross-sectional quantile buckets for the forward market-neutral return, as-of T-1",MATRIX,93%,0,0
+predicted_return_four_quantile_2,"Integer 0-based cross-sectional quantile assignment into one of 4 buckets for market-neutral forward return at module horizon, Std2 retrain variant, as-of T-1",MATRIX,93%,0,0
+predicted_return_four_quantile_4,Quantile assignment integer field for 4-way split assigning the stock-date to one of 4 cross-sectional buckets based on market-neutral forward return as predicted by CNN with Standard overlay variant 4 retrain,MATRIX,93%,0,0
+predicted_return_four_quantile_5,"Integer 0-based assignment of the stock-date to one of 4 cross-sectional quantile buckets for strictly market-neutral 4-quantile forward return at D1 lag, from Option Std5 Retrain model horizon RH",MATRIX,93%,0,0
+predicted_return_one_quantile_12,Predicted quantile label for future return using a single bucket (all grouped together).,MATRIX,89%,0,0
+predicted_return_one_quantile_4,Trivial quantile assignment field (always 0) indicating stock-date belongs to the only quantile bucket for market-neutral forward return prediction,MATRIX,89%,0,0
+predicted_return_one_quantile_5,Quantile assignment field always trivial (always 0) for a single quantile (1-way) cross-sectional bucket; not useful for research or trading in the strictly D1-lagged option stddev retrain model 5,MATRIX,89%,0,0
+predicted_return_three_quantile_12,"Quantile assignment integer (0 to 2) allocating stock-date to one of 3 cross-sectional quantile buckets for the forward market-neutral return, as-of T-1",MATRIX,93%,0,0
+predicted_return_three_quantile_4,"Quantile assignment integer (0-2) that assigns the stock-date to one of 3 cross-sectional quantile buckets for market-neutral forward return, based on as-of T–1 option-implied features processed by CNN variant Std4 retrain",MATRIX,93%,0,0
+predicted_return_three_quantile_5,"Quantile assignment (integer in 0 to 2) of the stock-date into one of 3 cross-sectional buckets for market-neutral forward return prediction with option stddev overlay and retrain batch 5, as of D1",MATRIX,93%,0,0
+predicted_return_two_quantile_12,Predicted quantile label for future return using a two-way split.,MATRIX,93%,0,0
+predicted_return_two_quantile_2,"Quantile assignment integer (0 or 1) assigning stock-date to one of 2 cross-sectional quantile buckets for market-neutral forward return, produced by Option Std2 retrain model at D1 lag",MATRIX,93%,0,0
+predicted_return_two_quantile_4,Quantile assignment integer field assigning stock-date to one of 2 cross-sectional quantile buckets (0-based) for market-neutral N-day forward return prediction,MATRIX,93%,0,0
+predicted_return_two_quantile_5,"Quantile assignment (integer in 0 to 1) of the stock-date into one of 2 cross-sectional buckets for market-neutral forward return prediction with option stddev overlay retrain 5, as of D1",MATRIX,93%,0,0
+probability_bucket0_five_quantile_12,Log-probability output of the ML model for the lowest quantile (0) in a 5-quantile market-neutral forward return prediction using standardized option-implied overlays with retrain variant Std12 at D1 lag,MATRIX,89%,0,0
+probability_bucket0_five_quantile_2,"Log-probability output of CNN model for confidence stock-date falls into quantile bucket 0 out of 5 buckets for market-neutral forward return, Std2 variant retrain, as-of T-1",MATRIX,88%,0,0
+probability_bucket0_five_quantile_4,Log-probability CNN output (log-softmax) for the lowest quantile (index 0) in a 5-quantile market-neutral forward return prediction; requires exponentiation for probability,MATRIX,96%,0,0
+probability_bucket0_five_quantile_5,Model-assigned probability that the future return falls in the lowest bucket of a five-way quantile split.,MATRIX,96%,0,0
+probability_bucket0_four_quantile_12,Log-probability output of the ML model for the lowest quantile (0) in a 4-quantile market-neutral forward return prediction using standardized option-implied overlays with retrain variant Std12 at D1 lag,MATRIX,89%,0,0
+probability_bucket0_four_quantile_2,"Log-probability output of CNN for confidence stock-date falls into quantile bucket 0 out of 4 buckets for market-neutral forward return, Std2 retrain variant, as-of T-1",MATRIX,88%,0,0
+probability_bucket0_four_quantile_4,Log-probability output of model confidence that forward return falls in lowest quantile index 0 out of 4 buckets; exponentiate this field to get actual probability,MATRIX,96%,0,0
+probability_bucket0_four_quantile_5,Model-assigned probability that the future return falls in the lowest bucket of a four-way quantile split.,MATRIX,89%,0,0
+probability_bucket0_three_quantile_12,Log-probability output of the ML model for the lowest quantile (0) in a 3-quantile market-neutral forward return prediction using standardized option-implied overlays with retrain variant Std12 at D1 lag,MATRIX,89%,0,0
+probability_bucket0_three_quantile_4,Model-assigned probability that the future return falls in the lowest bucket of a three-way quantile split.,MATRIX,96%,0,0
+probability_bucket0_three_quantile_5,Model-assigned probability that the future return falls in the lowest bucket of a three-way quantile split.,MATRIX,89%,1,1
+probability_bucket0_two_quantile_12,Model-assigned probability that the future return falls in the lowest bucket of a two-way quantile split.,MATRIX,89%,0,0
+probability_bucket0_two_quantile_2,"Log-probability output (log-softmax) that stock-date belongs to quantile 0 out of 2 buckets for market-neutral forward return, Std2 retrain variant, as-of T-1",MATRIX,88%,0,0
+probability_bucket0_two_quantile_4,Log-probability CNN output indicating confidence that forward return is in quantile 0 of 2 quantiles; exponentiate to get actionable probability,MATRIX,96%,0,0
+probability_bucket0_two_quantile_5,Model-assigned probability that the future return falls in the lowest bucket of a two-way quantile split.,MATRIX,89%,0,0
+probability_bucket1_five_quantile_12,Log-probability output of the ML model for the second quantile (1) in a 5-quantile market-neutral forward return prediction using standardized option-implied overlays with retrain variant Std12 at D1 lag,MATRIX,95%,0,0
+probability_bucket1_five_quantile_2,Model-assigned probability that the future return falls in the second bucket of a five-way quantile split.,MATRIX,88%,0,0
+probability_bucket1_five_quantile_4,Model-assigned probability that the future return falls in the second bucket of a five-way quantile split.,MATRIX,96%,0,0
+probability_bucket1_five_quantile_5,Model-assigned probability that the future return falls in the second bucket of a five-way quantile split.,MATRIX,89%,0,0
+probability_bucket1_four_quantile_12,Log-probability output of the ML model for the second quantile (1) in a 4-quantile market-neutral forward return prediction using standardized option-implied overlays with retrain variant Std12 at D1 lag,MATRIX,89%,0,0
+probability_bucket1_four_quantile_2,Model-assigned probability that the future return falls in the second bucket of a four-way quantile split.,MATRIX,88%,0,0
+probability_bucket1_four_quantile_4,Log-probability output of model confidence that stock-date’s forward return is in quantile 1 of 4 quantiles; exponentiate for actionable probability,MATRIX,89%,0,0
+probability_bucket1_four_quantile_5,Model-assigned probability that the future return falls in the second bucket of a four-way quantile split.,MATRIX,96%,0,0
+probability_bucket1_three_quantile_12,Model-assigned probability that the future return falls in the second bucket of a three-way quantile split.,MATRIX,95%,0,0
+probability_bucket1_three_quantile_2,Model-assigned probability that the future return falls in the second bucket of a three-way quantile split.,MATRIX,88%,0,0
+probability_bucket1_three_quantile_4,Log-probability (log-softmax) output indicating model confidence that the forward return is in the 2nd quantile (index 1) of 3 quantiles; exponentiate to get probability,MATRIX,89%,0,0
+probability_bucket1_three_quantile_5,Model-assigned probability that the future return falls in the second bucket of a three-way quantile split.,MATRIX,89%,0,0
+probability_bucket1_two_quantile_12,Model-assigned probability that the future return falls in the second bucket of a two-way quantile split.,MATRIX,89%,0,0
+probability_bucket1_two_quantile_2,Model-assigned probability that the future return falls in the second bucket of a two-way quantile split.,MATRIX,88%,0,0
+probability_bucket1_two_quantile_4,Model-assigned probability that the future return falls in the second bucket of a two-way quantile split.,MATRIX,96%,0,0
+probability_bucket1_two_quantile_5,Model-assigned probability that the future return falls in the second bucket of a two-way quantile split.,MATRIX,96%,0,0
+probability_bucket2_five_quantile_12,Log-probability output of the ML model for the third quantile (2) in a 5-quantile market-neutral forward return prediction using standardized option-implied overlays with retrain variant Std12 at D1 lag,MATRIX,89%,0,0
+probability_bucket2_five_quantile_2,Model-assigned probability that the future return falls in the third bucket of a five-way quantile split.,MATRIX,88%,0,0
+probability_bucket2_five_quantile_4,Model-assigned probability that the future return falls in the third bucket of a five-way quantile split.,MATRIX,96%,0,0
+probability_bucket2_five_quantile_5,Model-assigned probability that the future return falls in the third bucket of a five-way quantile split.,MATRIX,89%,0,0
+probability_bucket2_four_quantile_12,Model-assigned probability that the future return falls in the third bucket of a four-way quantile split.,MATRIX,89%,0,0
+probability_bucket2_four_quantile_2,Model-assigned probability that the future return falls in the third bucket of a four-way quantile split.,MATRIX,88%,0,0
+probability_bucket2_four_quantile_4,Log-probability (log-softmax output) from model confidence that forward return falls into 3rd quantile (index 2) out of 4 quantile buckets; must be exponentiated to obtain actionable probability,MATRIX,96%,0,0
+probability_bucket2_four_quantile_5,Model-assigned probability that the future return falls in the third bucket of a four-way quantile split.,MATRIX,89%,0,0
+probability_bucket2_three_quantile_12,Log-probability output of the ML model for the highest quantile (2) in a 3-quantile market-neutral forward return prediction using standardized option-implied overlays with retrain variant Std12 at D1 lag,MATRIX,89%,0,0
+probability_bucket2_three_quantile_2,Model-assigned probability that the future return falls in the third bucket of a three-way quantile split.,MATRIX,88%,0,0
+probability_bucket2_three_quantile_4,Model-assigned probability that the future return falls in the third bucket of a three-way quantile split.,MATRIX,96%,0,0
+probability_bucket2_three_quantile_5,Model-assigned probability that the future return falls in the third bucket of a three-way quantile split.,MATRIX,89%,0,0
+probability_bucket3_five_quantile_12,Log-probability output of the ML model for the fourth quantile (3) in a 5-quantile market-neutral forward return prediction using standardized option-implied overlays with retrain variant Std12 at D1 lag,MATRIX,89%,1,1
+probability_bucket3_five_quantile_4,Model-assigned probability that the future return falls in the fourth bucket of a five-way quantile split.,MATRIX,96%,0,0
+probability_bucket3_five_quantile_5,Model-assigned probability that the future return falls in the fourth bucket of a five-way quantile split.,MATRIX,89%,0,0
+probability_bucket3_four_quantile_12,Model-assigned probability that the future return falls in the fourth bucket of a four-way quantile split.,MATRIX,89%,0,0
+probability_bucket3_four_quantile_2,Model-assigned probability that the future return falls in the fourth bucket of a four-way quantile split.,MATRIX,88%,0,0
+probability_bucket3_four_quantile_4,Model-assigned probability that the future return falls in the fourth bucket of a four-way quantile split.,MATRIX,96%,0,0
+probability_bucket3_four_quantile_5,Model-assigned probability that the future return falls in the fourth bucket of a four-way quantile split.,MATRIX,96%,0,0
+probability_bucket4_five_quantile_12,Model-assigned probability that the future return falls in the highest bucket of a five-way quantile split.,MATRIX,89%,1,1
+probability_bucket4_five_quantile_4,Model-assigned probability that the future return falls in the highest bucket of a five-way quantile split.,MATRIX,96%,0,0
+probability_bucket4_five_quantile_5,Model-assigned probability that the future return falls in the highest bucket of a five-way quantile split.,MATRIX,89%,0,0

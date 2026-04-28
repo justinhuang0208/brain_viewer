@@ -1,0 +1,3 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv149_dld_3a,Number of downgrades.,MATRIX,98%,5,5
+pv149_status_5,"Status code representing current state of data/record, e.g., valid, missing, suspended",MATRIX,0%,1,1

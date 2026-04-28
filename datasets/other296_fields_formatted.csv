@@ -1,0 +1,48 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth296_call_time,UTC date and time of the earnings call,VECTOR,88%,4,4
+oth296_call_time_fast_d1,UTC date and time of the earnings call,VECTOR,88%,0,0
+oth296_confidence,Normalized confidence of the sentiment classification derived from the Prob_ fields; ranges from 0 to 1,VECTOR,88%,2,2
+oth296_confidence_fast_d1,Normalized confidence of the sentiment classification derived from the Prob_ fields; ranges from 0 to 1,VECTOR,88%,2,2
+oth296_daily_call_time,The date and time of the earnings call in UTC,VECTOR,88%,18,19
+oth296_daily_call_time_fast_d1,The date and time of the earnings call in UTC,VECTOR,88%,6,6
+oth296_daily_confidence,"Confidence score derived from Prob_ fields, scaled between 0 and 1 (approx. (max Prob − 0.333)/0.666)",VECTOR,88%,4,4
+oth296_daily_confidence_fast_d1,"Confidence score derived from Prob_ fields, scaled between 0 and 1 (approx. (max Prob − 0.333)/0.666)",VECTOR,88%,0,0
+oth296_daily_prob_neg,Probability that sentiment is negative; part of a three-class distribution summing to 1,VECTOR,88%,7,8
+oth296_daily_prob_neg_fast_d1,Probability that sentiment is negative; part of a three-class distribution summing to 1,VECTOR,88%,4,4
+oth296_daily_prob_ntr,Probability that sentiment is neutral; part of a three-class distribution summing to 1,VECTOR,88%,3,3
+oth296_daily_prob_ntr_fast_d1,Probability that sentiment is neutral; part of a three-class distribution summing to 1,VECTOR,88%,2,2
+oth296_daily_prob_pos,Probability that sentiment is positive; part of a three-class distribution summing to 1,VECTOR,88%,38,47
+oth296_daily_prob_pos_fast_d1,Probability that sentiment is positive; part of a three-class distribution summing to 1,VECTOR,88%,27,41
+oth296_daily_received_time,UTC timestamp when Alexandria received the transcript text,VECTOR,88%,3,3
+oth296_daily_received_time_fast_d1,UTC timestamp when Alexandria received the transcript text,VECTOR,88%,2,6
+oth296_daily_sentiment,"Trinary sentiment label for the section/topic: 1 positive, 0 neutral, -1 negative, based on highest probability",VECTOR,88%,20,21
+oth296_daily_sentiment_fast_d1,"Trinary sentiment label for the section/topic: 1 positive, 0 neutral, -1 negative, based on highest probability",VECTOR,88%,8,10
+oth296_daily_topic_count,Count of times the identified topic is discussed in the section,VECTOR,88%,3,3
+oth296_daily_topic_count_fast_d1,Count of times the identified topic is discussed in the section,VECTOR,88%,2,3
+oth296_daily_word_count,Number of words in the transcript section,VECTOR,88%,2,2
+oth296_daily_word_count_fast_d1,Number of words in the transcript section,VECTOR,88%,0,0
+oth296_intraday_call_time,The intraday time when the earnings call took place.,VECTOR,78%,1,1
+oth296_intraday_confidence,The intraday confidence score associated with the sentiment analysis or data extraction.,VECTOR,78%,2,2
+oth296_intraday_prob_neg,The intraday probability of negative sentiment.,VECTOR,78%,2,2
+oth296_intraday_prob_ntr,The intraday probability of neutral sentiment.,VECTOR,78%,3,4
+oth296_intraday_prob_pos,The intraday probability of positive sentiment.,VECTOR,78%,9,9
+oth296_intraday_received_time,The intraday time when the earnings call transcript data was received.,VECTOR,78%,1,1
+oth296_intraday_sentiment,The intraday sentiment score from earnings call transcripts.,VECTOR,78%,1,1
+oth296_intraday_topic_count,The intraday count of distinct topics identified.,VECTOR,78%,0,0
+oth296_intraday_word_count,The intraday count of words in earnings call transcripts.,VECTOR,78%,3,6
+oth296_prob_neg,Raw probability that the topic sentiment is negative; POS/NTR/NEG probabilities sum to 1,VECTOR,88%,17,20
+oth296_prob_neg_fast_d1,Raw probability that the topic sentiment is negative; POS/NTR/NEG probabilities sum to 1,VECTOR,88%,9,9
+oth296_prob_ntr,Raw probability that the topic sentiment is neutral; POS/NTR/NEG probabilities sum to 1,VECTOR,88%,3,4
+oth296_prob_ntr_fast_d1,Raw probability that the topic sentiment is neutral; POS/NTR/NEG probabilities sum to 1,VECTOR,88%,3,5
+oth296_prob_pos,Raw probability that the topic sentiment is positive; POS/NTR/NEG probabilities sum to 1,VECTOR,88%,34,45
+oth296_prob_pos_fast_d1,Raw probability that the topic sentiment is positive; POS/NTR/NEG probabilities sum to 1,VECTOR,88%,12,23
+oth296_received_time,UTC timestamp when Alexandria received the transcript text,VECTOR,88%,3,3
+oth296_received_time_fast_d1,UTC timestamp when Alexandria received the transcript text,VECTOR,88%,3,3
+oth296_sentiment,"Trinary sentiment label for the section/topic based on highest probability: 1=positive, 0=neutral, -1=negative",VECTOR,88%,28,43
+oth296_sentiment_fast_d1,"Trinary sentiment label for the section/topic based on highest probability: 1=positive, 0=neutral, -1=negative",VECTOR,88%,13,21
+oth296_topic_count,Number of times the identified topic is discussed within the section,VECTOR,88%,0,0
+oth296_topic_count_fast_d1,Number of times the identified topic is discussed within the section,VECTOR,88%,0,0
+oth296_word_count,Number of words in the transcript section,VECTOR,88%,3,6
+oth296_word_count_fast_d1,Number of words in the transcript section,VECTOR,88%,0,0
+oth296_wqreceivetime,Epoch time added by WQ.,VECTOR,86%,0,0
+oth296_wqreceivetime_fast_d1,Epoch time added by WQ.,VECTOR,86%,2,2

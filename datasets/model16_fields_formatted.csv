@@ -1,9 +1,25 @@
 Field,Description,Type,Coverage,Users,Alphas
-fscore_growth,The purpose of this metric is to qualify the expected MT growth potential of the stock.,Matrix,30%,63,138
-fscore_momentum,The purpose of this metric is to identify stocks which are currently undergoing either upward or downward analyst revisions.,Matrix,30%,79,177
-fscore_profitability,The purpose of this metric is to rank stocks based on their ability to generate cash flows.,Matrix,30%,50,120
-fscore_quality,The purpose of this metric is to measure both the sustainability and certainty of earnings.,Matrix,31%,95,229
-fscore_surface,"The static score. An index between 0 & 100 is applied for each stock and each composite factor. The first ranking is a pentagon surface-based score. The larger the surface, the higher the rank.",Matrix,30%,66,280
-fscore_surface_accel,"The derivative score. In a second step, we calculate the derivative of this score (i.e., is the surface of the pentagon increasing or decreasing from the previous month?)",Matrix,30%,35,139
-fscore_total,"The final score, M-Score, is a weighted average of both the Pentagon surface score and the Pentagon acceleration score.",Matrix,30%,47,177
-fscore_value,The purpose of this metric is to see if the stock is under or overpriced given several well-known valuation standards.,Matrix,30%,85,166
+analyst_revision_rank_derivative,Daily-indicator variant of momentum capturing recent price moves and analyst estimate revisions,MATRIX,100%,210,328
+cashflow_efficiency_rank_derivative,Ranks stocks by their ability to generate cash flows and operational profitability,MATRIX,100%,141,182
+composite_factor_score_derivative,Momentum score based on analyst revisions; intraday variant,MATRIX,100%,93,139
+earnings_certainty_rank_derivative,Measures the sustainability and certainty of earnings quality,MATRIX,100%,120,152
+fscore_bfl_growth,"Growth composite estimating expected medium-term growth potential (e.g., revenues, earnings); higher is better (0–100)",MATRIX,38%,17,21
+fscore_bfl_momentum,Composite momentum measure reflecting recent price dynamics and analyst estimate revisions to identify improving or deteriorating names,MATRIX,38%,20,29
+fscore_bfl_profitability,Profitability composite ranking firms by ability to generate cash flows and operational efficiency; higher is better (0–100),MATRIX,38%,7,18
+fscore_bfl_quality,"Composite measuring earnings quality, stability, and balance-sheet resilience",MATRIX,38%,23,25
+fscore_bfl_surface,Static composite “style surface” score aggregating the five primary style scores; larger surface implies higher rank,MATRIX,37%,20,20
+fscore_bfl_surface_accel,Acceleration (derivative) of the pentagon surface score relative to the previous month,MATRIX,37%,45,70
+fscore_bfl_total,Blended composite M-Score combining the static pentagon surface score and its acceleration into an overarching rating,MATRIX,37%,9,10
+fscore_bfl_value,Valuation composite indicating how under- or overpriced a stock is versus common valuation measures; higher is better (cheaper) (0–100),MATRIX,38%,34,38
+fscore_growth,Composite measuring the stock’s expected medium-term growth potential,MATRIX,30%,136,270
+fscore_momentum,Composite momentum metric focused on recent analyst estimate revisions to identify stocks experiencing upward or downward revisions,MATRIX,30%,264,456
+fscore_profitability,Composite ranking stocks by their ability to generate cash flows and operational profitability,MATRIX,30%,198,331
+fscore_quality,Composite measuring the sustainability and certainty of earnings,MATRIX,30%,755,1494
+fscore_surface,"Static overall “style surface” score combining Value, Growth, Profitability, Momentum, and Quality; larger surface implies higher rank",MATRIX,30%,164,432
+fscore_surface_accel,"Acceleration (derivative) of the pentagon surface score, indicating whether the overall style surface is rising or falling versus the previous month",MATRIX,29%,94,214
+fscore_total,Final blended score that combines the static pentagon surface score with its acceleration,MATRIX,29%,144,328
+fscore_value,"Composite assessing whether the stock is under- or overpriced using standard valuation measures (e.g., multiples)",MATRIX,30%,237,402
+growth_potential_rank_derivative,Composite growth score qualifying the stock’s expected medium‑term growth potential,MATRIX,100%,118,136
+multi_factor_acceleration_score_derivative,Change in the acceleration of multi-factor score compared to previous period.,MATRIX,100%,115,132
+multi_factor_static_score_derivative,Change in static multi-factor score compared to previous period.,MATRIX,100%,74,87
+relative_valuation_rank_derivative,Assesses whether the stock is under or overpriced based on standard valuation multiples indicator variant,MATRIX,100%,62,79

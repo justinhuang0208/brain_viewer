@@ -1,0 +1,133 @@
+Field,Description,Type,Coverage,Users,Alphas
+opt6_1000dorhv,1000-day realized historical intraday volatility based on open-high-low-close prices,MATRIX,98%,142,591
+opt6_10dorhv,10-day realized historical intraday volatility based on open-high-low-close prices,MATRIX,98%,78,303
+opt6_120dorhv,120-day open-high-low-close realized historical volatility,MATRIX,98%,92,221
+opt6_1dorhv,The 1-day historical intraday volatility,MATRIX,98%,60,257
+opt6_20div,20-day interpolated implied at-the-money volatility (calendar day),MATRIX,98%,54,234
+opt6_20dorhv,20-day historical intraday volatility based on open-high-low-close prices,MATRIX,98%,60,272
+opt6_252dorhv,The 252-day historical intraday volatility,MATRIX,98%,60,179
+opt6_2rtscf,Goodness of fit metric for the 20-day volatility forecast compared to the actual future 20-day realized volatility,MATRIX,98%,82,364
+opt6_30div,The 20-day interpolated implied volatility.,MATRIX,98%,61,300
+opt6_500dorhv,The 500-day historical intraday volatility,MATRIX,98%,57,223
+opt6_5dorhv,5-day historical realized volatility using open-high-low-close prices,MATRIX,98%,48,274
+opt6_60div,Interpolated implied volatility for a 60-day expiry,MATRIX,98%,47,152
+opt6_60dorhv,The 60-day historical intraday volatility,MATRIX,98%,71,388
+opt6_90div,90-day interpolated implied volatility,MATRIX,98%,47,118
+opt6_90dorhv,The 90-day historical intraday volatility.,MATRIX,98%,51,98
+opt6_absavgernmv,Average percentage absolute stock price move associated with the next earnings announcement,MATRIX,98%,101,618
+opt6_am002vi,The 200-day moving average of the vendor 20-day ex-earn implied volatility.,MATRIX,98%,58,195
+opt6_asset_type,"Classification of stock type indicating easy-to-borrow, hard-to-borrow, dividend paying status, or security type such as ETF or index using predefined codes",MATRIX,98%,43,139
+opt6_bestetf,The closest SPDR Sector ETF (default to SPY or RUT if none).,MATRIX,83%,60,205
+opt6_beta1m,Short term price beta with SPY for 30 calendar days,MATRIX,98%,67,333
+opt6_beta1y,One-year price beta measuring sensitivity to market movements over 365 calendar days,MATRIX,98%,77,209
+opt6_correletf1m,Vendor 30-day implied volatility ex-earnings correlation with the best ETF 30-day IV over the last month.,MATRIX,98%,58,164
+opt6_correletf1y,One-year rolling correlation between vendor 30-day implied volatility excluding earnings of the asset and the SPDR sector ETF 30-day implied volatility,MATRIX,98%,105,308
+opt6_correlspy1m,Vendor 30-day implied volatility ex-earnings correlation with SPY one month.,MATRIX,98%,56,260
+opt6_correlspy1y,One-year correlation of 30-day ex-earnings implied volatility of the asset with that of SPY,MATRIX,98%,82,242
+opt6_cvolu,Today’s call option volume for all strikes for the current trading day,MATRIX,98%,49,139
+opt6_derivinf,Derivative infinite implied.,MATRIX,98%,60,476
+opt6_derivinffcst,Forecast infinite derivative.,MATRIX,98%,57,348
+opt6_divamt,Dividend amount,MATRIX,98%,44,339
+opt6_divfreq,Number of dividends paid per year,MATRIX,98%,91,360
+opt6_divyield,Annualized dividend yield calculated as dividends divided by current stock price,MATRIX,98%,114,388
+opt6_etfincl,The ETFs where the symbol is a component pipe delimited if multiple.,MATRIX,26%,5,5
+opt6_etfivhvxernratio,"Ratio of 30-day implied volatility excluding earnings divided by 20-day ex-earnings historical volatility, normalized by ETF equivalent ratio",MATRIX,98%,42,213
+opt6_etfivhvxernratio1m,"Ratio of 30-day implied volatility excluding earnings divided by 20-day ex-earnings historical volatility, normalized by ETF equivalent ratio, averaged over one month",MATRIX,98%,58,287
+opt6_etfivhvxernratio1y,30-day implied volatility ex-earnings / HV20xErn Ratio divided by ETF 30-day implied / HV20d ratio year average.,MATRIX,98%,64,230
+opt6_etfivhvxernratiostd1y,30-day implied volatility ex-earnings / HV20xErn Ratio divided by ETF 30-day implied / HV20d ratio year standard deviation.,MATRIX,98%,84,275
+opt6_etfsloperatio,Slope divided by ETF slope current,MATRIX,98%,47,153
+opt6_etfsloperatioavg1m,Slope divided by ETF slope month average,MATRIX,98%,52,136
+opt6_etfsloperatioavg1y,Slope divided by ETF slope year average.,MATRIX,98%,62,218
+opt6_etfsloperatioavgstd1y,Slope divided by ETF slope year standard deviation.,MATRIX,98%,57,218
+opt6_fcstr2imp,The goodness of fit of the implied forecast vs actual implied in 20 days.,MATRIX,98%,60,324
+opt6_impliediee,Market implied earnings effect is found by solving for a term structure equation where the earnings effects adjust the months affected by earnings.,MATRIX,98%,48,279
+opt6_ioc,Total call option open interest,MATRIX,98%,82,418
+opt6_irate5wk,Short-term risk-free interest rate based on 5-week treasury yields,MATRIX,98%,61,278
+opt6_iratelt,Long-term risk-free interest rate from treasuries.,MATRIX,98%,49,177
+opt6_ivetfratio,Ratio of 30-day implied volatility excluding earnings to the 30-day implied volatility of a matched ETF,MATRIX,98%,68,255
+opt6_ivetfratioavg1m,30-day implied volatility ex-earnings divided by ETF 30-day vendor implied volatility 30-day average.,MATRIX,98%,77,331
+opt6_ivetfratioavg1y,30-day implied volatility ex-earnings divided by ETF 30-day vendor implied volatility 1-year average.,MATRIX,98%,63,183
+opt6_ivetfratiostd1y,One-year standard deviation of the ratio of 30-day implied volatility excluding earnings over the ETF's 30-day vendor implied volatility,MATRIX,98%,95,248
+opt6_ivhvxernratio,30-day implied volatility ex-earnings / HV20xErn Ratio.,MATRIX,98%,61,205
+opt6_ivhvxernratio1m,30-day implied volatility ex-earnings / HV20xErn Ratio vs month average.,MATRIX,98%,61,133
+opt6_ivhvxernratio1y,30-day implied volatility ex-earnings/HV20xErn Ratio vs yearly average.,MATRIX,98%,54,189
+opt6_ivhvxernratiostd1y,30-day implied volatility ex-earnings/HV20xErn Ratio vs yearly range standard deviation.,MATRIX,98%,93,306
+opt6_ivpctile1m,Percentile of the current 30-day implied volatility ex-earnings vs. month range.,MATRIX,98%,119,867
+opt6_ivpctile1y,Percentile ranking of the current 30-day ex-earnings implied volatility within the past one-year range,MATRIX,98%,55,126
+opt6_ivpctileetf,Percentile ranking of the current ETF 30-day implied volatility ex-earnings against its 1-year historical range,MATRIX,98%,49,106
+opt6_ivpctilespy,Percentile of the current 30-day implied volatility ex-earnings / SPY vs. year range.,MATRIX,98%,47,151
+opt6_ivspyratio,Ratio of 30-day implied volatility excluding earnings for the asset to the 30-day vendor implied volatility of SPY,MATRIX,98%,61,419
+opt6_ivspyratioavg1m,30-day implied volatility ex-earning divided by SPY 30-day vendor implied volatility 30-day average.,MATRIX,98%,82,246
+opt6_ivspyratioavg1y,One-year rolling average of the ratio of the asset's 30-day ex-earnings implied volatility to SPY's 30-day implied volatility,MATRIX,98%,69,257
+opt6_ivspyratiostd1y,One-year rolling standard deviation of the ratio between asset 30-day ex-earnings implied volatility and SPY 30-day implied volatility,MATRIX,98%,85,216
+opt6_ivstdev1y,The standard deviation of the 30-day implied volatility ex-earnings for the year.,MATRIX,98%,77,253
+opt6_ivstdevsmean,Number of standard deviations the 30-day implied volatility ex-earnings is away from the mean for the year,MATRIX,98%,58,174
+opt6_kw1gnhcxpkts,Stock price change over 1 week.,MATRIX,98%,60,167
+opt6_lastern,Last earnings date,MATRIX,97%,69,326
+opt6_lasterntod,"Deprecated field, no active use",MATRIX,98%,115,637
+opt6_m1atmfitiv,"Forecasted at-the-money volatility for month 1, based on ex-earnings forecast plus earnings effect for the current days to expiration",MATRIX,98%,42,189
+opt6_m1gnhcxpkts,Stock price change over 1 month,MATRIX,98%,63,245
+opt6_m2atmfitiv,At-the-money implied volatility for month 2 calculated from a volatility surface or curve fit,MATRIX,98%,46,160
+opt6_m3atmfitiv,The at-the-money monthly fit volatility for month 3.,MATRIX,98%,45,178
+opt6_m4atmfitiv,The at-the-money monthly fit volatility for month 4,MATRIX,98%,50,170
+opt6_m6gnhcxpkts,Stock price change over 6 months,MATRIX,98%,51,197
+opt6_mktcap,Market capitalization of the underlying security,MATRIX,97%,60,220
+opt6_mktwidthvol,Market width in implied vol points at the interpolated 30 days to expiration.,MATRIX,98%,35,151
+opt6_mktwidthvolinf,Market width in implied volatility points at the interpolated 2 years to expiration.,MATRIX,98%,41,187
+opt6_nexterntod,Deprecated item.,MATRIX,98%,104,299
+opt6_nrexvifniro,Infinite implied option volatility.,MATRIX,98%,45,189
+opt6_optvolu20davg,The 20-day moving average of total options trading volume for the symbol,MATRIX,98%,74,296
+opt6_or20divfcst,The forecast of implied volatility in 20 days with earnings taken out.,MATRIX,98%,44,187
+opt6_or20divxern,The 20-day interpolated implied option volatility with earnings effect taken out.,MATRIX,98%,44,131
+opt6_poi,"Total put open interest, representing the number of outstanding put option contracts",MATRIX,98%,52,260
+opt6_pvolu,Today's total put option volume across all strikes,MATRIX,98%,34,112
+opt6_px1kgam,Estimated daily cost of hedging 1000 units of gamma for 30-day options,MATRIX,98%,52,346
+opt6_rip,The dollar amount of options to start ignoring in delta calculation.,MATRIX,98%,58,359
+opt6_sector_des,Sector Description,MATRIX,90%,62,292
+opt6_sector_num,The sector as derived by cusip number,MATRIX,88%,27,117
+opt6_sectorname,SPDR short name of the sector.,MATRIX,70%,21,35
+opt6_slcxp,Closing price of the security on the prior trading day,MATRIX,98%,49,259
+opt6_slope,The put-call slope at the interpolated 30 calendar days of the tangent at 50 delta.,MATRIX,98%,34,132
+opt6_slopeavg1m,Slope average for trailing month,MATRIX,98%,66,336
+opt6_slopeavg1y,Slope average for trailing year,MATRIX,98%,135,1316
+opt6_slopefcst,"Forecasted slope of the implied volatility skew, useful to compare against the actual slope",MATRIX,98%,49,240
+opt6_slopeinf,Implied infinite slope.,MATRIX,98%,55,369
+opt6_slopeinffcst,Slope forecast infinite.,MATRIX,98%,37,216
+opt6_slopepctile,One-year percentile rank of the volatility surface slope,MATRIX,98%,59,351
+opt6_slopestd1y,Standard deviation of the Slope.,MATRIX,98%,99,484
+opt6_stkvolu,"Total stock trading volume for the underlying asset, measured in shares",MATRIX,98%,109,736
+opt6_tkover,0 - Not a takeover. 1 - A takeover or rumored takeover stock.,MATRIX,6%,17,60
+opt6_tscfd02ro,Forecasted volatility for the next 20 days accounting for removal of earnings effects,MATRIX,98%,47,211
+opt6_tscffniro,"Forecast of the infinite implied volatility. Could be compared to actual implied volatility or actual infinite. The forecasts of the 2-year implied volatility are developed using long-term ex-earnings historical volatility, ex-earnings implied volatility, and the IV HV relationships, related ETF HV IV relationships.",MATRIX,98%,38,167
+opt6_tscfvired,Forecast derivative at 30-day interpolated.,MATRIX,98%,48,192
+opt6_vhslcd0001,1000-day historical close-to-close realized volatility,MATRIX,98%,51,219
+opt6_vhslcd005,The 500-day historical close to close volatility,MATRIX,98%,49,155
+opt6_vhslcd01,10-day close-to-close historical realized volatility,MATRIX,98%,32,128
+opt6_vhslcd02,"20-day historical close-to-close realized volatility, annualized",MATRIX,98%,39,138
+opt6_vhslcd021,120-day historical realized volatility calculated using close-to-close prices,MATRIX,98%,46,157
+opt6_vhslcd06,60-day historical realized volatility calculated using close-to-close prices,MATRIX,98%,34,120
+opt6_vhslcd09,90-day historical close-to-close realized volatility,MATRIX,98%,33,107
+opt6_vhslcd252,The 252-day historical close to close volatility,MATRIX,98%,30,87
+opt6_vhslcd5,The 5-day historical close to close volatility,MATRIX,98%,29,70
+opt6_vim6,The 6 month interpolated implied volatility,MATRIX,89%,20,47
+opt6_vimta1m,At-the-money implied volatility for the first standard expiration (month 1),MATRIX,98%,46,209
+opt6_vimta2m,At-the-money implied volatility for the options expiring in month 2,MATRIX,98%,42,113
+opt6_vimta3m,At-the-money implied volatility for the options expiring in month 3,MATRIX,98%,68,1234
+opt6_vimta4m,At-the-money implied volatility for the 4th standard expiration month,MATRIX,98%,29,122
+opt6_vimtaxp,Stock price taken at the time of implied volatility calculation,MATRIX,98%,41,120
+opt6_vired,Derivative or curvature of the monthly strikes at 30-day interpolated. The derivative is the change in the slope for every 10 delta increase in the call delta.,MATRIX,98%,33,294
+opt6_vitscfmta1m,Forecast of volatility for month 1.,MATRIX,98%,41,109
+opt6_vitscfmta2m,Forecast of volatility for month 2.,MATRIX,98%,41,201
+opt6_vitscfmta3m,Forecast of volatility for month 3.,MATRIX,98%,31,199
+opt6_vitscfmta4m,Forecast of volatility for month 4.,MATRIX,98%,35,143
+opt6_volofivol,Annualized standard deviation of ex-earnings 30-day implied.,MATRIX,98%,72,249
+opt6_volofvol,Annualized standard deviation of daily (1-day) statistical volatility for one year,MATRIX,98%,52,324
+opt6_xetd1m,Days to expiration in standard first options month,MATRIX,98%,50,217
+opt6_xetd2m,Number of days to expiration for the second options month,MATRIX,98%,46,165
+opt6_xetd3m,Number of days to expiration for the options in month 3,MATRIX,98%,44,229
+opt6_xetd4m,Days to expiration for month 4 options,MATRIX,98%,41,118
+opt6_xpslcm1,Stock price at the prior month (21 trading days ago),MATRIX,98%,76,347
+opt6_xpslcm6,Stock closing price from approximately 6 months (126 trading days) ago,MATRIX,98%,65,186
+opt6_xpslcy1,Stock price at the prior year (252 trading days ago).,MATRIX,98%,44,160
+opt6_xxpslckw1,Stock price at the prior week (5 trading days ago),MATRIX,98%,57,388
+opt6_y1gnhcxpkts,Stock price change over 1 year.,MATRIX,98%,78,273

@@ -1,0 +1,12 @@
+Field,Description,Type,Coverage,Users,Alphas
+snt18_classification_official,The users classification,VECTOR,97%,16,17
+snt18_followers,Number of followers the user has at capture time,VECTOR,97%,28,47
+snt18_following,Number of accounts the user follows at capture time,VECTOR,97%,27,40
+snt18_following_stocks,The number of stocks the user is following,VECTOR,93%,54,160
+snt18_ideas,Investing ideas,VECTOR,97%,29,39
+snt18_identity,The users classification,VECTOR,97%,23,37
+snt18_reply_count,Number of replies to this message,VECTOR,97%,33,65
+snt18_sentiment_indicator,Sentiment indicator,VECTOR,97%,31,40
+snt18_trending,Trending flag,VECTOR,59%,26,36
+snt18_vls_body,Full-length or pipeline-processed variant of the message body,VECTOR,97%,43,62
+snt18_wqrcvtime,Received time,VECTOR,97%,39,79

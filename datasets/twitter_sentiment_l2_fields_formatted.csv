@@ -1,0 +1,96 @@
+Field,Description,Type,Coverage,Users,Alphas
+aggregated_sentiment_value_1,"Aggregated sentiment value derived from social media sources, method 1.",MATRIX,94%,4,6
+aggregated_sentiment_value_10,"Aggregated sentiment value derived from social media sources, method 10.",MATRIX,91%,1,1
+aggregated_sentiment_value_11,"Aggregated sentiment value derived from social media sources, method 11.",MATRIX,91%,1,1
+aggregated_sentiment_value_12,"Aggregated sentiment value derived from social media sources, method 12.",MATRIX,91%,1,2
+aggregated_sentiment_value_13,"Aggregated sentiment value derived from social media sources, method 13.",MATRIX,82%,0,0
+aggregated_sentiment_value_14,"Aggregated sentiment value derived from social media sources, method 14.",MATRIX,82%,0,0
+aggregated_sentiment_value_15,"Aggregated sentiment value derived from social media sources, method 15.",MATRIX,82%,1,1
+aggregated_sentiment_value_16,"Aggregated sentiment value derived from social media sources, method 16.",MATRIX,82%,0,0
+aggregated_sentiment_value_17,"Aggregated sentiment value derived from social media sources, method 17.",MATRIX,82%,0,0
+aggregated_sentiment_value_18,"Aggregated sentiment value derived from social media sources, method 18.",MATRIX,82%,0,0
+aggregated_sentiment_value_2,"Aggregated sentiment value derived from social media sources, method 2.",MATRIX,94%,1,1
+aggregated_sentiment_value_3,"Aggregated sentiment value derived from social media sources, method 3.",MATRIX,94%,0,0
+aggregated_sentiment_value_4,"Aggregated sentiment value derived from social media sources, method 4.",MATRIX,94%,1,2
+aggregated_sentiment_value_5,"Aggregated sentiment value derived from social media sources, method 5.",MATRIX,94%,1,1
+aggregated_sentiment_value_6,"Aggregated sentiment value derived from social media sources, method 6.",MATRIX,94%,0,0
+aggregated_sentiment_value_7,"Aggregated sentiment value derived from social media sources, method 7.",MATRIX,91%,0,0
+aggregated_sentiment_value_8,"Aggregated sentiment value derived from social media sources, method 8.",MATRIX,91%,0,0
+aggregated_sentiment_value_9,"Aggregated sentiment value derived from social media sources, method 9.",MATRIX,91%,1,1
+market_relevance_score_1,"Score indicating the relevance of social media activity to market impact, filter 1.",MATRIX,100%,1,1
+market_relevance_score_10,"Score indicating the relevance of social media activity to market impact, filter 10.",MATRIX,100%,0,0
+market_relevance_score_11,"Score indicating the relevance of social media activity to market impact, filter 11.",MATRIX,100%,1,1
+market_relevance_score_12,"Score indicating the relevance of social media activity to market impact, filter 12.",MATRIX,100%,13,13
+market_relevance_score_13,"Score indicating the relevance of social media activity to market impact, filter 13.",MATRIX,100%,0,0
+market_relevance_score_14,"Score indicating the relevance of social media activity to market impact, filter 14.",MATRIX,100%,0,0
+market_relevance_score_15,"Score indicating the relevance of social media activity to market impact, filter 15.",MATRIX,100%,1,1
+market_relevance_score_16,"Score indicating the relevance of social media activity to market impact, filter 16.",MATRIX,100%,0,0
+market_relevance_score_17,"Score indicating the relevance of social media activity to market impact, filter 17.",MATRIX,100%,1,1
+market_relevance_score_18,"Score indicating the relevance of social media activity to market impact, filter 18.",MATRIX,100%,0,0
+market_relevance_score_19,"Score indicating the relevance of social media activity to market impact, filter 19.",MATRIX,100%,0,0
+market_relevance_score_2,"Score indicating the relevance of social media activity to market impact, filter 2.",MATRIX,100%,0,0
+market_relevance_score_20,"Score indicating the relevance of social media activity to market impact, filter 20.",MATRIX,100%,0,0
+market_relevance_score_21,"Score indicating the relevance of social media activity to market impact, filter 21.",MATRIX,100%,0,0
+market_relevance_score_22,"Score indicating the relevance of social media activity to market impact, filter 22.",MATRIX,100%,0,0
+market_relevance_score_23,"Score indicating the relevance of social media activity to market impact, filter 23.",MATRIX,100%,0,0
+market_relevance_score_24,"Score indicating the relevance of social media activity to market impact, filter 24.",MATRIX,100%,0,0
+market_relevance_score_25,"Score indicating the relevance of social media activity to market impact, filter 25.",MATRIX,100%,0,0
+market_relevance_score_26,"Score indicating the relevance of social media activity to market impact, filter 26.",MATRIX,100%,0,0
+market_relevance_score_27,"Score indicating the relevance of social media activity to market impact, filter 27.",MATRIX,100%,0,0
+market_relevance_score_28,"Score indicating the relevance of social media activity to market impact, filter 28.",MATRIX,100%,0,0
+market_relevance_score_29,"Score indicating the relevance of social media activity to market impact, filter 29.",MATRIX,100%,0,0
+market_relevance_score_3,"Score indicating the relevance of social media activity to market impact, filter 3.",MATRIX,100%,0,0
+market_relevance_score_30,"Score indicating the relevance of social media activity to market impact, filter 30.",MATRIX,100%,1,1
+market_relevance_score_31,"Score indicating the relevance of social media activity to market impact, filter 31.",MATRIX,100%,0,0
+market_relevance_score_32,"Score indicating the relevance of social media activity to market impact, filter 32.",MATRIX,100%,1,1
+market_relevance_score_33,"Score indicating the relevance of social media activity to market impact, filter 33.",MATRIX,100%,1,1
+market_relevance_score_34,"Score indicating the relevance of social media activity to market impact, filter 34.",MATRIX,100%,0,0
+market_relevance_score_35,"Score indicating the relevance of social media activity to market impact, filter 35.",MATRIX,100%,0,0
+market_relevance_score_36,"Score indicating the relevance of social media activity to market impact, filter 36.",MATRIX,100%,1,1
+market_relevance_score_37,"Score indicating the relevance of social media activity to market impact, filter 37.",MATRIX,100%,0,0
+market_relevance_score_38,"Score indicating the relevance of social media activity to market impact, filter 38.",MATRIX,100%,0,0
+market_relevance_score_39,"Score indicating the relevance of social media activity to market impact, filter 39.",MATRIX,100%,0,0
+market_relevance_score_4,"Score indicating the relevance of social media activity to market impact, filter 4.",MATRIX,100%,0,0
+market_relevance_score_40,"Score indicating the relevance of social media activity to market impact, filter 40.",MATRIX,100%,0,0
+market_relevance_score_41,"Score indicating the relevance of social media activity to market impact, filter 41.",MATRIX,100%,0,0
+market_relevance_score_42,"Score indicating the relevance of social media activity to market impact, filter 42.",MATRIX,100%,0,0
+market_relevance_score_43,"Score indicating the relevance of social media activity to market impact, filter 43.",MATRIX,100%,1,1
+market_relevance_score_44,"Score indicating the relevance of social media activity to market impact, filter 44.",MATRIX,100%,0,0
+market_relevance_score_45,"Score indicating the relevance of social media activity to market impact, filter 45.",MATRIX,100%,0,0
+market_relevance_score_46,"Score indicating the relevance of social media activity to market impact, filter 46.",MATRIX,100%,0,0
+market_relevance_score_47,"Score indicating the relevance of social media activity to market impact, filter 47.",MATRIX,100%,1,2
+market_relevance_score_48,"Score indicating the relevance of social media activity to market impact, filter 48.",MATRIX,100%,0,0
+market_relevance_score_49,"Score indicating the relevance of social media activity to market impact, filter 49.",MATRIX,100%,0,0
+market_relevance_score_5,"Score indicating the relevance of social media activity to market impact, filter 5.",MATRIX,100%,1,1
+market_relevance_score_50,"Score indicating the relevance of social media activity to market impact, filter 50.",MATRIX,100%,0,0
+market_relevance_score_51,"Score indicating the relevance of social media activity to market impact, filter 51.",MATRIX,100%,0,0
+market_relevance_score_52,"Score indicating the relevance of social media activity to market impact, filter 52.",MATRIX,100%,0,0
+market_relevance_score_53,"Score indicating the relevance of social media activity to market impact, filter 53.",MATRIX,100%,0,0
+market_relevance_score_54,"Score indicating the relevance of social media activity to market impact, filter 54.",MATRIX,100%,1,1
+market_relevance_score_55,"Score indicating the relevance of social media activity to market impact, filter 55.",MATRIX,100%,1,1
+market_relevance_score_56,"Score indicating the relevance of social media activity to market impact, filter 56.",MATRIX,100%,0,0
+market_relevance_score_57,"Score indicating the relevance of social media activity to market impact, filter 57.",MATRIX,100%,0,0
+market_relevance_score_58,"Score indicating the relevance of social media activity to market impact, filter 58.",MATRIX,100%,0,0
+market_relevance_score_59,"Score indicating the relevance of social media activity to market impact, filter 59.",MATRIX,100%,0,0
+market_relevance_score_6,"Score indicating the relevance of social media activity to market impact, filter 6.",MATRIX,100%,0,0
+market_relevance_score_60,"Score indicating the relevance of social media activity to market impact, filter 60.",MATRIX,100%,0,0
+market_relevance_score_61,"Score indicating the relevance of social media activity to market impact, filter 61.",MATRIX,100%,1,1
+market_relevance_score_62,"Score indicating the relevance of social media activity to market impact, filter 62.",MATRIX,100%,1,1
+market_relevance_score_63,"Score indicating the relevance of social media activity to market impact, filter 63.",MATRIX,100%,0,0
+market_relevance_score_64,"Score indicating the relevance of social media activity to market impact, filter 64.",MATRIX,100%,0,0
+market_relevance_score_65,"Score indicating the relevance of social media activity to market impact, filter 65.",MATRIX,100%,0,0
+market_relevance_score_66,"Score indicating the relevance of social media activity to market impact, filter 66.",MATRIX,100%,1,1
+market_relevance_score_67,"Score indicating the relevance of social media activity to market impact, filter 67.",MATRIX,100%,0,0
+market_relevance_score_68,"Score indicating the relevance of social media activity to market impact, filter 68.",MATRIX,100%,0,0
+market_relevance_score_69,"Score indicating the relevance of social media activity to market impact, filter 69.",MATRIX,100%,0,0
+market_relevance_score_7,"Score indicating the relevance of social media activity to market impact, filter 7.",MATRIX,100%,0,0
+market_relevance_score_70,"Score indicating the relevance of social media activity to market impact, filter 70.",MATRIX,100%,0,0
+market_relevance_score_71,"Score indicating the relevance of social media activity to market impact, filter 71.",MATRIX,100%,0,0
+market_relevance_score_72,"Score indicating the relevance of social media activity to market impact, filter 72.",MATRIX,100%,1,1
+market_relevance_score_73,"Score indicating the relevance of social media activity to market impact, filter 73.",MATRIX,100%,0,0
+market_relevance_score_74,"Score indicating the relevance of social media activity to market impact, filter 74.",MATRIX,100%,0,0
+market_relevance_score_75,"Score indicating the relevance of social media activity to market impact, filter 75.",MATRIX,100%,0,0
+market_relevance_score_76,"Score indicating the relevance of social media activity to market impact, filter 76.",MATRIX,100%,0,0
+market_relevance_score_77,"Score indicating the relevance of social media activity to market impact, filter 77.",MATRIX,100%,0,0
+market_relevance_score_8,"Score indicating the relevance of social media activity to market impact, filter 8.",MATRIX,100%,0,0
+market_relevance_score_9,"Score indicating the relevance of social media activity to market impact, filter 9.",MATRIX,100%,1,1

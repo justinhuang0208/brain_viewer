@@ -1,0 +1,121 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl163_curep_deltapredict_model_mada,"Rolling mean absolute deviation of the original Current Earnings Yield data, measuring instability of the underlying panel",MATRIX,90%,16,72
+mdl163_curep_deltapredict_model_madp,"Rolling mean absolute deviation of the model prediction output, measuring instability or crowding of the predictions",MATRIX,100%,23,56
+mdl163_curep_deltapredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for this module; average absolute prediction error,MATRIX,91%,17,66
+mdl163_curep_deltapredict_model_predict,first model of predicted value Current Earnings Yield. Defined as the sum of most recently reported 3 quarters EPS and analysts' consensus earnings estimate for current quarter divided by its price,MATRIX,100%,156,702
+mdl163_ebitdaev_deltapredict_model_mada,mean absolute deviaiton of original data,MATRIX,92%,16,38
+mdl163_ebitdaev_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,11,20
+mdl163_ebitdaev_deltapredict_model_mae,Out-of-sample mean absolute error of model_predict for this module (units of the target),MATRIX,93%,8,9
+mdl163_ebitdaev_deltapredict_model_predict,"first model of predicted value of TTM EBITDA-to-Enterprise Value. Defined as the trailing 12-month earnings before interest,taxes,depreciation and amortization for a stock deflated by its enterprise value (EV). EV= Equity Market Value + Long-term Debt + Short-term Debt + Preferred Stock + Minority Interest -Cash.",MATRIX,100%,40,147
+mdl163_ebitdaev_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,90%,8,11
+mdl163_ebitdaev_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,12,15
+mdl163_ebitdaev_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for the EBITDA/EV overlay; units match EBITDA/EV,MATRIX,91%,7,10
+mdl163_ebitdaev_trendpredict_model_predict,"D1-lagged point-in-time ML nowcast of the stock’s TTM EBITDA-to-Enterprise Value ratio (predicted EBITDA/EV as of the as-of date), embargoed",MATRIX,100%,19,55
+mdl163_ebop_deltapredict_model_mada,mean absolute deviaiton of original data,MATRIX,88%,11,18
+mdl163_ebop_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,8,13
+mdl163_ebop_deltapredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for the EBOP deltapredict overlay,MATRIX,89%,6,8
+mdl163_ebop_deltapredict_model_predict,first model of predicted value of Edwards-Bell-Ohlson Value-to-Price. Defined as a stock's valuation based on Edwards-Bell-Ohlson(EBO) model deflated its trading price. EBO is a modified dividend discount model that measures a firm's intrinsic value by comparing generated earnings to the cost of capital.,MATRIX,100%,19,27
+mdl163_ebop_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,86%,7,42
+mdl163_ebop_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,5,9
+mdl163_ebop_trendpredict_model_mae,Out-of-sample mean absolute error of model_predict for this module; average absolute prediction error magnitude,MATRIX,87%,8,8
+mdl163_ebop_trendpredict_model_predict,Embargoed D1 trendpredict ML prediction of Edwards-Bell-Ohlson Value-to-Price (intrinsic value-to-price ratio) for the stock as of the as-of date,MATRIX,100%,18,26
+mdl163_fc_egp_deltapredict_model_mada,mean absolute deviaiton of original data,MATRIX,96%,10,14
+mdl163_fc_egp_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,6,20
+mdl163_fc_egp_deltapredict_model_mae,Out-of-sample mean absolute error of model_predict for the inverse PEG delta; units same as the target,MATRIX,96%,7,9
+mdl163_fc_egp_deltapredict_model_predict,"first model of predicted value of Inverse of PEG Ratio. Defined as a company's next 4-quarter mean earnings estimate multiplied by the mean long-term growth rate forecast, scaled by its trading price.",MATRIX,100%,17,122
+mdl163_fc_egp_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,93%,4,4
+mdl163_fc_egp_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,10,14
+mdl163_fc_egp_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for the inverse PEG nowcast; units match the target and used as a risk or crowding meta-feature,MATRIX,94%,6,10
+mdl163_fc_egp_trendpredict_model_predict,"D1-lagged, point-in-time model nowcast of the inverse PEG ratio for the as-of date, defined as (next 4-quarter mean EPS estimate × long-term growth forecast) divided by price",MATRIX,100%,8,26
+mdl163_fc_fcfp_deltapredict_model_mada,"Rolling mean absolute deviation of the realized Forward Free Cash Flow-to-Price series, indicating instability of the underlying panel",MATRIX,91%,12,80
+mdl163_fc_fcfp_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,7,11
+mdl163_fc_fcfp_deltapredict_model_mae,Embargoed out-of-sample mean absolute error of the model’s prediction for the Forward Free Cash Flow-to-Price change,MATRIX,93%,5,10
+mdl163_fc_fcfp_deltapredict_model_predict,"first model of predicted value of Forward Free Cash Flow-to-Price. Defined as the next 4-quarter's mean consensus earnings estimate plus trailing 12-month depreciation expense per share minus corresponding capital expenditures, divided by trading price.",MATRIX,100%,88,304
+mdl163_fc_fcfp_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,89%,6,13
+mdl163_fc_fcfp_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,3,5
+mdl163_fc_fcfp_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for this module,MATRIX,90%,7,11
+mdl163_fc_fcfp_trendpredict_model_predict,D1-lagged nowcast of Forward Free Cash Flow-to-Price: (next 4-quarter mean consensus earnings estimate per share + trailing 12-month depreciation per share − corresponding capital expenditures per share) divided by price,MATRIX,100%,66,720
+mdl163_fc_fqsurstd_deltapredict_model_mada,mean absolute deviaiton of original data,MATRIX,96%,5,23
+mdl163_fc_fqsurstd_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,13,17
+mdl163_fc_fqsurstd_deltapredict_model_mae,Out-of-sample mean absolute error of model_predict for the standardized earnings surprise change overlay,MATRIX,96%,2,3
+mdl163_fc_fqsurstd_deltapredict_model_predict,first model of predicted value of Most Recent Earnings Surprise. Defined as the most recent quarterly earnings surprise (actual fiscal quarter EPS less the consensus earnings estimate) adjusted by the standard deviation of analyst forecasts.,MATRIX,100%,8,25
+mdl163_fc_fqsurstd_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,94%,7,12
+mdl163_fc_fqsurstd_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,4,4
+mdl163_fc_fqsurstd_trendpredict_model_mae,mean absolute error of the predction,MATRIX,94%,5,80
+mdl163_fc_fqsurstd_trendpredict_model_predict,"D1-lagged point-in-time ML nowcast of the standardized most recent quarterly earnings surprise (actual EPS minus consensus, adjusted by the std dev of analyst forecasts)",MATRIX,100%,11,16
+mdl163_fc_fwdep_deltapredict_model_mada,mean absolute deviaiton of original data,MATRIX,93%,4,4
+mdl163_fc_fwdep_deltapredict_model_madp,Rolling mean absolute deviation of the model’s prediction series,MATRIX,100%,5,5
+mdl163_fc_fwdep_deltapredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for this module; units match the target 12-month forward mean earnings yield,MATRIX,93%,4,8
+mdl163_fc_fwdep_deltapredict_model_predict,first model of predicted value of Leading 12-Month Mean Earnings Yield. Defined as the next 4-quarter's mean consensus earnings estimate divided by the price.,MATRIX,100%,95,222
+mdl163_fc_fwdep_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,91%,4,4
+mdl163_fc_fwdep_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,9,15
+mdl163_fc_fwdep_trendpredict_model_mae,mean absolute error of the predction,MATRIX,91%,5,7
+mdl163_fc_fwdep_trendpredict_model_predict,"Embargoed D1 nowcast of the Leading 12-Month Mean Earnings Yield, defined as the next 4 quarters’ mean consensus earnings estimate divided by price",MATRIX,100%,17,25
+mdl163_gpm_composite_deltapredict_model_mada,"Rolling mean absolute deviation of the realized underlying GPM composite analytic, indicating volatility of the original data",MATRIX,95%,10,11
+mdl163_gpm_composite_deltapredict_model_madp,"Rolling mean absolute deviation of the overlay predictions, measuring instability or crowding of the model output",MATRIX,100%,3,4
+mdl163_gpm_composite_deltapredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for the GPM composite delta overlay; units match the target,MATRIX,96%,4,5
+mdl163_gpm_composite_deltapredict_model_predict,first model of predicted value of Gross Profit Margin,MATRIX,100%,11,18
+mdl163_gpm_composite_trendpredict_model_mada,"Rolling mean absolute deviation of the underlying Gross Profit Margin (original data), embargoed/PIT",MATRIX,93%,5,5
+mdl163_gpm_composite_trendpredict_model_madp,"Rolling mean absolute deviation of the model prediction series (overlay output), indicating prediction instability/crowding",MATRIX,100%,5,10
+mdl163_gpm_composite_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for the GPM overlay; risk/crowding meta-feature,MATRIX,94%,12,21
+mdl163_gpm_composite_trendpredict_model_predict,Embargoed D1 trendpredict nowcast of Gross Profit Margin (GPM) for this module; primary model prediction,MATRIX,100%,10,13
+mdl163_indidivy_deltapredict_model_mada,"Rolling mean absolute deviation of the realized underlying analytic (indicated dividend yield), indicating volatility of the original data",MATRIX,49%,4,4
+mdl163_indidivy_deltapredict_model_madp,"Rolling mean absolute deviation of the overlay’s predictions for the indicated dividend yield deltapredict module, measuring instability/crowding of the model output",MATRIX,100%,7,7
+mdl163_indidivy_deltapredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for the indicated dividend yield deltapredict module,MATRIX,50%,2,4
+mdl163_indidivy_deltapredict_model_predict,"first model of predicted value of Indicated Dividend Yield. Defined as the last quarterly dividend declared multiplied by 4, scaled by month-end trading price. The dividend includes extras declared within the last 12 months.",MATRIX,100%,29,99
+mdl163_indidivy_trendpredict_model_mada,"Rolling mean absolute deviation of the realized Indicated Dividend Yield (underlying original data), measuring panel instability",MATRIX,49%,1,1
+mdl163_indidivy_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,4,12
+mdl163_indidivy_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for this module,MATRIX,49%,2,4
+mdl163_indidivy_trendpredict_model_predict,"Embargoed D1 trendpredict nowcast of Indicated Dividend Yield, defined as 4 times the last quarterly dividend declared divided by the month-end price, including extras declared in the past 12 months",MATRIX,100%,14,30
+mdl163_proformaep_deltapredict_model_mada,mean absolute error of the predction,MATRIX,89%,1,1
+mdl163_proformaep_deltapredict_model_madp,mean absolute error of the predction,MATRIX,100%,7,11
+mdl163_proformaep_deltapredict_model_mae,mean absolute error of the predction,MATRIX,90%,4,5
+mdl163_proformaep_deltapredict_model_predict,first model of predicted value of TTM Pro Forma Earnings-to-Price. Defined as the trailing 12-month earnings scaled by the trading price.,MATRIX,100%,20,45
+mdl163_proformaep_trendpredict_model_mada,mean absolute error of the predction,MATRIX,87%,3,3
+mdl163_proformaep_trendpredict_model_madp,mean absolute error of the predction,MATRIX,100%,5,6
+mdl163_proformaep_trendpredict_model_mae,"Out-of-sample mean absolute error of model_predict for the Pro Forma Earnings-to-Price overlay (embargoed, PIT)",MATRIX,88%,2,2
+mdl163_proformaep_trendpredict_model_predict,Embargoed nowcast of TTM Pro Forma Earnings-to-Price (trailing 12‑month earnings divided by price) for this module,MATRIX,100%,13,32
+mdl163_qgp_capeff_deltapredict_model_mada,mean absolute deviaiton of original data,MATRIX,89%,4,6
+mdl163_qgp_capeff_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,6,7
+mdl163_qgp_capeff_deltapredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for the Capital Effectiveness delta target; same units as the target,MATRIX,91%,3,3
+mdl163_qgp_capeff_deltapredict_model_predict,Embargoed D1-lagged ML prediction of the forward change (revision/delta) in the Capital Effectiveness analytic; primary overlay output,MATRIX,100%,64,188
+mdl163_qgp_capeff_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,88%,6,7
+mdl163_qgp_capeff_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,8,15
+mdl163_qgp_capeff_trendpredict_model_mae,"Embargoed out-of-sample mean absolute error of model_predict for Capital Effectiveness, used as a risk or reliability indicator",MATRIX,90%,1,2
+mdl163_qgp_capeff_trendpredict_model_predict,Embargoed nowcast of the Capital Effectiveness analytic as of the current date (D1-lagged); primary overlay output,MATRIX,100%,15,23
+mdl163_qgp_valuation_deltapredict_model_mada,mean absolute deviaiton of original data,MATRIX,90%,3,11
+mdl163_qgp_valuation_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,7,12
+mdl163_qgp_valuation_deltapredict_model_mae,mean absolute error of the predction,MATRIX,92%,3,3
+mdl163_qgp_valuation_deltapredict_model_predict,Embargoed D1-lagged ML overlay predicting the forward change/revision in the QSG Valuation Rank (deltapredict regime),MATRIX,100%,26,54
+mdl163_qgp_valuation_trendpredict_model_mada,"Rolling mean absolute deviation of the realized valuation analytic (original data), indicating underlying instability",MATRIX,88%,6,7
+mdl163_qgp_valuation_trendpredict_model_madp,"Rolling mean absolute deviation of the model’s prediction, indicating instability or crowding of the output",MATRIX,100%,6,8
+mdl163_qgp_valuation_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of the model’s valuation prediction,MATRIX,90%,11,15
+mdl163_qgp_valuation_trendpredict_model_predict,Embargoed nowcast of the Valuation Rank analytic as of the date (primary model prediction),MATRIX,100%,12,38
+mdl163_qgp_vfpriceratio_deltapredict_model_mada,mean absolute deviaiton of original data,MATRIX,88%,6,10
+mdl163_qgp_vfpriceratio_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,12,25
+mdl163_qgp_vfpriceratio_deltapredict_model_mae,mean absolute error of the predction,MATRIX,90%,4,4
+mdl163_qgp_vfpriceratio_deltapredict_model_predict,first model of predicted value of Value to Price Rank,MATRIX,100%,58,148
+mdl163_qgp_vfpriceratio_trendpredict_model_mada,"Rolling mean absolute deviation of the realized underlying Value-to-Price Rank analytic (original data), indicating panel volatility",MATRIX,86%,3,8
+mdl163_qgp_vfpriceratio_trendpredict_model_madp,"Rolling mean absolute deviation of the overlay prediction for the Value-to-Price Rank, measuring output instability",MATRIX,100%,5,7
+mdl163_qgp_vfpriceratio_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for the Value-to-Price Rank overlay,MATRIX,89%,1,1
+mdl163_qgp_vfpriceratio_trendpredict_model_predict,Embargoed trendpredict model output (nowcast) of the Value-to-Price Rank for the stock at D1,MATRIX,100%,10,21
+mdl163_ttmpiqp_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,92%,7,10
+mdl163_ttmpiqp_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,7,10
+mdl163_ttmpiqp_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for the TTM Pretax Income-to-Price overlay,MATRIX,93%,5,5
+mdl163_ttmpiqp_trendpredict_model_predict,Embargoed as-of-date prediction of TTM Pretax Income-to-Price (trailing 12‑month pretax income per share divided by stock price),MATRIX,100%,5,41
+mdl163_vma2_ma_em_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,94%,5,9
+mdl163_vma2_ma_em_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,5,9
+mdl163_vma2_ma_em_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for this module,MATRIX,94%,5,6
+mdl163_vma2_ma_em_trendpredict_model_predict,"Embargoed D1 nowcast second-model overlay of Reported Earnings Momentum defined as 50% Standardized Unexpected Cash Flow, 25% Real Earnings Surprise, and 25% Change in Real Earnings Surprise",MATRIX,100%,13,74
+mdl163_vma2_va_deltapredict_model_mada,mean absolute deviaiton of original data,MATRIX,97%,7,8
+mdl163_vma2_va_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,6,8
+mdl163_vma2_va_deltapredict_model_mae,mean absolute error of the predction,MATRIX,97%,11,16
+mdl163_vma2_va_deltapredict_model_predict,first model of predicted value of Value Analyst II. Defined as the equal-weighted average of the Momentum Analyst II and Value Analyst II ranks.,MATRIX,100%,43,79
+mdl163_vma2_va_ev_deltapredict_model_mada,"Rolling mean absolute deviation of the realized Earnings Valuation metric (underlying data), indicating panel instability",MATRIX,96%,6,11
+mdl163_vma2_va_ev_deltapredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,10,12
+mdl163_vma2_va_ev_deltapredict_model_mae,Out-of-sample mean absolute error of model_predict for the predicted D1 change in the Earnings Valuation metric,MATRIX,97%,9,19
+mdl163_vma2_va_ev_deltapredict_model_predict,first model of predicted value of Earnings Valuation. Defined as the equal-weighted average of Time-weighted Earnings Yield and Industry Relative TTM Core Earnings to Price.,MATRIX,100%,34,55
+mdl163_vma2_va_ev_trendpredict_model_mada,mean absolute deviaiton of original data,MATRIX,94%,7,7
+mdl163_vma2_va_ev_trendpredict_model_madp,mean absolute deviaiton of the prediction,MATRIX,100%,7,19
+mdl163_vma2_va_ev_trendpredict_model_mae,Embargoed out-of-sample mean absolute error of model_predict for this module,MATRIX,94%,6,9
+mdl163_vma2_va_ev_trendpredict_model_predict,"Trendpredict D1 embargoed ML nowcast of Earnings Valuation (VA_EV), the second-model output; defined as the equal-weighted average of Time-weighted Earnings Yield and Industry-Relative TTM Core Earnings-to-Price",MATRIX,100%,17,37

@@ -1,0 +1,5 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl243_country_rank,"Combined Alpha Model percentile rank 1–100 relative to peers in the same country, higher is more bullish",VECTOR,89%,22,26
+mdl243_industry_rank,"Combined Alpha Model percentile rank 1–100 relative to peers in the same TRBC industry group within the region, higher is more bullish",VECTOR,89%,22,28
+mdl243_region_rank,"Combined Alpha Model percentile rank 1–100 relative to peers in the same region, higher is more bullish",VECTOR,89%,14,15
+mdl243_sector_rank,"Combined Alpha Model percentile rank 1–100 relative to peers in the same TRBC economic sector within the region, higher is more bullish",VECTOR,89%,30,47

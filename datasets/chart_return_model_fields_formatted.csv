@@ -1,0 +1,249 @@
+Field,Description,Type,Coverage,Users,Alphas
+fifth_ask_price_int60,Ask price at the fifth position in the 60-minute interval.,MATRIX,100%,0,0
+fifth_bid_price_int60,Bid price at the fifth position in the 60-minute interval.,MATRIX,100%,0,0
+fifth_high_price_int60,"The high price observed at interval 5 within a 60-interval day, strictly as-of the close of that interval",MATRIX,100%,0,0
+fifth_high_price_int60_2,Highest price reached at interval 4 (5th 60-bar interval) as-of close,MATRIX,100%,0,0
+fifth_trade_price_int60,Trade price at the fifth position in the 60-minute interval.,MATRIX,100%,0,0
+fifth_trade_volume_int60,Trade volume at the fifth position in the 60-minute interval.,MATRIX,100%,0,0
+first_ask_price_agg,Best ask price at interval 0 from aggregated order book aggregation,MATRIX,100%,0,0
+first_ask_price_int120,Ask price at the close of the 1st interval (0-based) in the Int120 module,MATRIX,100%,0,0
+first_ask_price_int60,Ask price at the first position in the 60-minute interval.,MATRIX,100%,0,0
+first_ask_price_top_book,Best ask price at interval 0 in top-of-book data,MATRIX,100%,0,0
+first_ask_size_agg,Size available at best ask price at interval 0 from aggregated order book,MATRIX,100%,0,0
+first_ask_size_top_book,Ask size at the first position in the top of book.,MATRIX,100%,1,1
+first_bid_ask_spread_top_book,Bid-ask spread at interval 0 in the top-of-book dataset,MATRIX,100%,0,0
+first_bid_price_agg,Best bid price at interval 0 from aggregated order book aggregation,MATRIX,100%,0,0
+first_bid_price_int120,Bid price at the first position in the 120-minute interval.,MATRIX,100%,0,0
+first_bid_price_int60,Bid price at the first position in the 60-minute interval.,MATRIX,100%,1,2
+first_bid_price_tob,Bid price for the first time segment in top of book data.,MATRIX,100%,0,0
+first_bid_size_agg,Bid size at the first position in the aggregated data.,MATRIX,100%,0,0
+first_bid_size_tob,Size (quantity) available at best bid price at interval 0,MATRIX,100%,0,0
+first_high_price_agg,Highest price at the first position in the aggregated data.,MATRIX,100%,0,0
+first_high_price_int120,High price at the close of the 1st interval (0-based) in the Int120 module,MATRIX,100%,0,0
+first_high_price_int60,"The high price observed at interval 0 (start of the day) within a 60-interval day, strictly as-of the close of that interval",MATRIX,100%,0,0
+first_high_price_top_book,High price during interval 0 (highest trade price recorded as of the close of first interval),MATRIX,100%,0,0
+first_low_price_agg,Lowest price reached during interval 0,MATRIX,100%,0,0
+first_low_price_int120,Lowest price at the first position in the 120-minute interval.,MATRIX,100%,0,0
+first_low_price_int60,"The low price observed at interval 0 (start of the day) within a 60-interval day, strictly as-of the close of that interval",MATRIX,100%,0,0
+first_low_price_top_book,Lowest price at the first position in the top of book.,MATRIX,100%,0,0
+first_trade_price_agg,Trade price at the first position in the aggregated data.,MATRIX,100%,0,0
+first_trade_price_int120,Trade price at the first position in the 120-minute interval.,MATRIX,100%,0,0
+first_trade_price_int60,Trade price at the first position in the 60-minute interval.,MATRIX,100%,0,0
+first_trade_price_tob,Trade price for the first time segment in top of book data.,MATRIX,100%,0,0
+first_trade_volume_agg,Total traded volume recorded at the close of interval 0,MATRIX,100%,0,0
+first_trade_volume_int120,Trade volume at the first position in the 120-minute interval.,MATRIX,100%,0,0
+first_trade_volume_int60,"Volume traded during the 1st interval of the trading session (0-based), as-of the close of that interval",MATRIX,100%,0,0
+first_volume_tob,Trade volume during interval 0 (total traded shares as of the close of first interval),MATRIX,100%,1,1
+first_vwap_agg,Volume-weighted average price at interval 0 based on aggregated trades,MATRIX,100%,0,0
+first_vwap_top_book,Volume-weighted average price at interval 0 from top-of-book data,MATRIX,100%,0,0
+fourth_ask_price_int60,Ask price at the fourth position in the 60-minute interval.,MATRIX,100%,0,0
+fourth_bid_price_int60,Bid price at the fourth position in the 60-minute interval.,MATRIX,100%,0,0
+fourth_high_price_int60,"As-of the close of interval 3, the highest traded price during interval 3 within the 60-interval intraday period",MATRIX,100%,0,0
+fourth_low_price_int60,"As-of the close of interval 4, the lowest traded price during interval 4 within the 60-interval intraday period",MATRIX,100%,0,0
+fourth_low_price_int60_2,"Lowest price during the 4th interval of the trading session (0-based index), as-of the close of that interval",MATRIX,100%,0,0
+fourth_trade_price_int60,Trade price at the fourth position in the 60-minute interval.,MATRIX,100%,0,0
+fourth_trade_volume_int60,"The traded volume at interval 4 within a 60-interval day, strictly as-of the close of that interval",MATRIX,100%,0,0
+fourth_trade_volume_int60_2,Trade volume at the fourth position in the 60-minute interval (alternate).,MATRIX,100%,0,0
+interval_ask_first,Ask price at the close of interval 0 within the trading day in the IntG2 module,MATRIX,100%,0,0
+interval_ask_first_fl,"The ask price at the end of the interval with index 0, representing the top-of-book/level-1 orderbook ask price",MATRIX,100%,0,0
+interval_ask_second,Ask price at the close of interval 1 within the trading day in the IntG2 module,MATRIX,100%,0,0
+interval_ask_second_fl,"The ask price at the end of the interval with index 1, representing the top-of-book/level-1 orderbook ask price",MATRIX,100%,0,0
+interval_bid_first,Bid price at the close of interval 0 within the trading day in the IntG2 module,MATRIX,100%,0,0
+interval_bid_first_fl,"The bid price at the end of the interval with index 0, representing the top-of-book/level-1 orderbook bid price",MATRIX,100%,0,0
+interval_bid_second,Bid price at the close of interval 1 within the trading day in the IntG2 module,MATRIX,100%,1,1
+interval_bid_second_fl,"Bid price at interval 1 within the trading day, representing the best bid price as-of the close of the 2nd interval",MATRIX,100%,0,0
+interval_high_first,Highest price of the security during interval 0 within the trading day in the IntG2 module,MATRIX,100%,0,0
+interval_high_first_fl,"Highest price recorded during the first interval of the trading day, as-of the close of interval 0",MATRIX,100%,0,0
+interval_high_second,Highest price of the security during interval 1 within the trading day in the IntG2 module,MATRIX,100%,0,0
+interval_high_second_fl,"The high price at the end of the interval with index 1, strictly as-of-close of that interval",MATRIX,100%,0,0
+interval_low_first,Lowest price of the security during interval 0 within the trading day in the IntG2 module,MATRIX,100%,0,0
+interval_low_first_fl,"The low price at the end of the interval with index 0, strictly as-of-close of that interval",MATRIX,100%,0,0
+interval_low_second,Lowest price of the security during interval 1 within the trading day in the IntG2 module,MATRIX,100%,0,0
+interval_low_second_fl,"The low price at the end of the interval with index 1, strictly as-of-close of that interval",MATRIX,100%,0,0
+interval_price_first,Price value for the first interval segment.,MATRIX,100%,0,0
+interval_price_first_fl,Price value for the first interval segment in FL configuration.,MATRIX,100%,0,0
+interval_price_second,Price value for the second interval segment.,MATRIX,100%,0,0
+interval_price_second_fl,Price value for the second interval segment in FL configuration.,MATRIX,100%,0,0
+interval_volume_first,Volume value for the first interval segment.,MATRIX,100%,0,0
+interval_volume_first_fl,The traded volume at the end of the interval with index 0,MATRIX,100%,0,0
+interval_volume_second,Volume traded during interval 1 within the trading day in the IntG2 module,MATRIX,100%,0,0
+interval_volume_second_fl,The traded volume at the end of the interval with index 1,MATRIX,100%,0,0
+likelihood_fifth_return_bucket_bidaskr10,Log(softmax) probability assigned to the 6th quantile bucket (0-based index 5) for the 10-interval forward return in the BidAsk image prediction module; exponentiate to get probability,MATRIX,100%,0,0
+likelihood_fifth_return_bucket_bidaskr5im,Log(softmax) model-assigned probability (log probability) for the 6th quantile bucket (index 5) in the 5-interval forward return prediction,MATRIX,100%,0,0
+likelihood_fifth_return_bucket_g2,Model-assigned probability for the fifth predicted return group in G2 configuration.,MATRIX,100%,0,0
+likelihood_fifth_return_bucket_g2r5,Model-assigned probability for the fifth predicted return group in G2R5 configuration.,MATRIX,100%,0,0
+likelihood_fifth_return_bucket_r10_2,Log softmax probability for quantile bucket index 5; exponentiate to obtain the actual probability for the 10-interval forward return horizon,MATRIX,100%,0,0
+likelihood_fifth_return_bucket_r5,Model-assigned probability for the fifth predicted return group in R5 configuration.,MATRIX,100%,0,0
+likelihood_fourth_return_bucket_bidaskr10,Log(softmax) probability assigned to the 5th quantile bucket (0-based index 4) for the 10-interval forward return in the BidAsk image prediction module; exponentiate to get probability,MATRIX,100%,0,0
+likelihood_fourth_return_bucket_bidaskr5im,Log(softmax) model-assigned probability (log probability) for the 5th quantile bucket (index 4) in the 5-interval forward return prediction,MATRIX,100%,0,0
+likelihood_fourth_return_bucket_g2,Model-assigned probability for the fourth predicted return group in G2 configuration.,MATRIX,100%,0,0
+likelihood_fourth_return_bucket_g2r5,Model-assigned probability for the fourth predicted return group in G2R5 configuration.,MATRIX,100%,0,0
+likelihood_fourth_return_bucket_r10_2,Log softmax probability for quantile bucket index 4; exponentiate to obtain the actual probability for the 10-interval forward return horizon,MATRIX,100%,0,0
+likelihood_fourth_return_bucket_r5,Model-assigned probability for the fourth predicted return group in R5 configuration.,MATRIX,100%,0,0
+likelihood_second_return_bucket_bidaskr10,Log(softmax) probability assigned to the 3rd quantile bucket (0-based index 2) for the 10-interval forward return in the BidAsk image prediction module; exponentiate to get probability,MATRIX,100%,0,0
+likelihood_second_return_bucket_bidaskr5im,Log(softmax) model-assigned probability (log probability) for the 3rd quantile bucket (index 2) in the 5-interval forward return prediction,MATRIX,100%,0,0
+likelihood_second_return_bucket_flr1,Log(softmax) of model-assigned probability for the 3rd quantile bucket (index 2) for 1-interval ahead return prediction from the core CNN image-based interval feature layer model; exponentiate to obtain actual probability,MATRIX,100%,0,0
+likelihood_second_return_bucket_g2,Model-assigned probability for the second predicted return group in G2 configuration.,MATRIX,100%,0,0
+likelihood_second_return_bucket_g2r5,Model-assigned probability for the second predicted return group in G2R5 configuration.,MATRIX,100%,0,0
+likelihood_second_return_bucket_r10_2,Log softmax probability for quantile bucket index 2; exponentiate to obtain the actual probability for the 10-interval forward return horizon,MATRIX,100%,0,0
+likelihood_second_return_bucket_r5,Model-assigned probability for the second predicted return group in R5 configuration.,MATRIX,100%,0,0
+likelihood_third_return_bucket_bidaskr10,Log(softmax) probability assigned to the 4th quantile bucket (0-based index 3) for the 10-interval forward return in the BidAsk image prediction module; exponentiate to get probability,MATRIX,100%,0,0
+likelihood_third_return_bucket_bidaskr5im,Log(softmax) model-assigned probability (log probability) for the 4th quantile bucket (index 3) in the 5-interval forward return prediction,MATRIX,100%,0,0
+likelihood_third_return_bucket_flr1,Log(softmax) of model-assigned probability for the 4th quantile bucket (index 3) for 1-interval ahead return prediction from the core CNN image-based interval feature layer model; exponentiate to obtain actual probability,MATRIX,100%,0,0
+likelihood_third_return_bucket_g2,Model-assigned probability for the third predicted return group in G2 configuration.,MATRIX,100%,0,0
+likelihood_third_return_bucket_g2r5,Model-assigned probability for the third predicted return group in G2R5 configuration.,MATRIX,100%,0,0
+likelihood_third_return_bucket_r10_2,Log softmax probability for quantile bucket index 3; exponentiate to obtain the actual probability for the 10-interval forward return horizon,MATRIX,100%,0,0
+likelihood_third_return_bucket_r5,Model-assigned probability for the third predicted return group in R5 configuration.,MATRIX,100%,0,0
+predicted_fifth_quantile_group,Zero-based quantile assignment to the 6th bucket for next 1-interval forward return prediction from the CNN image model,MATRIX,100%,0,0
+predicted_fifth_quantile_group_g6r1,Predicted label for the fifth quantile group in G6R1 configuration.,MATRIX,100%,0,0
+predicted_fifth_quantile_group_r10,Predicted label for the fifth quantile group in R10 configuration.,MATRIX,100%,0,0
+predicted_fifth_quantile_group_r20,Predicted label for the fifth quantile group in R20 configuration.,MATRIX,100%,0,0
+predicted_fifth_quantile_group_w2r1,Predicted label for the fifth quantile group in W2R1 configuration.,MATRIX,100%,0,0
+predicted_fifth_return_bucket_bidaskr10,"Binary assignment indicator (1 if assigned, else 0) for the 6th quantile bucket (0-based index 5) of the predicted 10-interval forward return from the BidAsk image/CNN model",MATRIX,100%,0,0
+predicted_fifth_return_bucket_bidaskr5im,0-based assignment indicating if the stock is in the 6th quantile bucket (index 5) for the 5-interval forward return prediction,MATRIX,100%,0,0
+predicted_fifth_return_bucket_g2,Predicted label for the fifth return group in G2 configuration.,MATRIX,100%,0,0
+predicted_fifth_return_bucket_g2r5,One-hot label indicating assignment to the 6th quantile bucket for the 5-interval ahead return in the interval group 2 CNN prediction image module,MATRIX,100%,0,0
+predicted_fifth_return_bucket_r10_2,Predicted label for the fifth return group in R10 configuration.,MATRIX,100%,0,0
+predicted_fifth_return_bucket_r5,Predicted label for the fifth return group in R5 configuration.,MATRIX,100%,0,0
+predicted_fifth_return_quantile,Predicted label for the fifth return quantile group.,MATRIX,100%,0,0
+predicted_fifth_return_quantile_2,0-based quantile assignment indicator (1 if assigned) for the 6th quantile bucket in 5-interval forward return predictions from Tob (top-of-book) CNN image model,MATRIX,100%,2,2
+predicted_five_day_forward_return,Predicted return for the next five trading days.,MATRIX,100%,1,1
+predicted_forward_return,Unbounded continuous regression prediction for the next interval (1-bar ahead) return using top-of-book data in the Pred_Image module; winsorization recommended before use,MATRIX,100%,0,0
+predicted_forward_return_2,"Continuous regression-style prediction of next 1-interval return from the CNN image model; raw and unbounded, must be winsorized before use",MATRIX,100%,0,0
+predicted_forward_return_3,Predicted future return value for the security (alternate model 2).,MATRIX,100%,0,0
+predicted_forward_return_bidaskr10,Predicted forward return value for the asset in BidAskR10 configuration.,MATRIX,100%,0,0
+predicted_forward_return_bidaskr5im,Predicted forward return value for the asset in BidAskR5IM configuration.,MATRIX,100%,0,0
+predicted_forward_return_flr1,Continuous regression-style predicted return for 1-interval ahead from the core CNN image-based interval feature layer model; raw output requiring winsorization before use,MATRIX,100%,0,0
+predicted_forward_return_g2,"Continuous regression-style prediction of the next interval return forecasted by the Pred_Image_IntG2 model; raw and unbounded, requires winsorization before use",MATRIX,100%,0,0
+predicted_forward_return_g2r5,Raw continuous regression prediction of the next 5 intervals’ return from the interval group 2 CNN prediction image module; winsorize before use,MATRIX,100%,0,0
+predicted_forward_return_g6r1,Raw regression-style continuous prediction of the 1-interval ahead return from the interval image model; requires winsorization before use,MATRIX,100%,0,0
+predicted_forward_return_r10,continuous regression-style prediction of forward return over the next 10 intervals from the CNN image model in the IntG2 group; raw output requiring winsorization before use,MATRIX,100%,0,0
+predicted_forward_return_r10_2,Continuous raw regression prediction of the 10-interval forward return from the Pred_Image interval prediction model,MATRIX,100%,0,0
+predicted_forward_return_r20,"Raw continuous regression prediction of the 20-interval ahead forward return from the CNN model, requires winsorization before use",MATRIX,100%,0,0
+predicted_forward_return_r5,Continuous regression-style raw prediction of the 5-interval forward return from the CNN image model; winsorize at the 1st/99th percentile before use,MATRIX,100%,0,0
+predicted_forward_return_t100,Continuous regression prediction of the raw return over the next 1 interval; recommended to winsorize before use,MATRIX,100%,0,0
+predicted_forward_return_w2r1,Raw regression-style predicted return for the next 1 interval; should be winsorized before use,MATRIX,100%,0,0
+predicted_fourth_quantile_group,Zero-based quantile assignment to the 5th bucket for next 1-interval forward return prediction from the CNN image model,MATRIX,100%,0,0
+predicted_fourth_quantile_group_g6r1,Predicted label for the fourth quantile group in G6R1 configuration.,MATRIX,100%,0,0
+predicted_fourth_quantile_group_r10,Predicted label for the fourth quantile group in R10 configuration.,MATRIX,100%,0,0
+predicted_fourth_quantile_group_r20,Predicted label for the fourth quantile group in R20 configuration.,MATRIX,100%,0,0
+predicted_fourth_quantile_group_w2r1,Predicted label for the fourth quantile group in W2R1 configuration.,MATRIX,100%,0,0
+predicted_fourth_return_bucket_bidaskr10,Binary assignment indicator for the 5th quantile bucket (0-based index 4) of the predicted 10-interval forward return from the BidAsk CNN model,MATRIX,100%,0,0
+predicted_fourth_return_bucket_bidaskr5im,0-based assignment indicating if the stock is in the 5th quantile bucket (index 4) for the 5-interval forward return prediction,MATRIX,100%,0,0
+predicted_fourth_return_bucket_g2,Predicted label for the fourth return group in G2 configuration.,MATRIX,100%,0,0
+predicted_fourth_return_bucket_g2r5,One-hot label indicating assignment to the 5th quantile bucket for the 5-interval ahead return in the interval group 2 CNN prediction image module,MATRIX,100%,0,0
+predicted_fourth_return_bucket_r10_2,Predicted label for the fourth return group in R10 configuration.,MATRIX,100%,0,0
+predicted_fourth_return_bucket_r5,Predicted label for the fourth return group in R5 configuration.,MATRIX,100%,0,0
+predicted_fourth_return_quantile,Predicted label for the fourth return quantile group.,MATRIX,100%,0,0
+predicted_fourth_return_quantile_2,0-based quantile assignment indicator (1 if assigned) for the 5th quantile bucket in 5-interval forward return predictions from Tob (top-of-book) CNN image model,MATRIX,100%,0,0
+predicted_one_day_forward_return,Continuous regression-style prediction of the forward return over the next 1 interval; raw model output that must be winsorized before use,MATRIX,100%,0,0
+predicted_second_quantile_group,Zero-based quantile assignment to the 3rd bucket for next 1-interval forward return prediction from the CNN image model,MATRIX,100%,0,0
+predicted_second_quantile_group_g6r1,Predicted label for the second quantile group in G6R1 configuration.,MATRIX,100%,0,0
+predicted_second_quantile_group_r10,Predicted label for the second quantile group in R10 configuration.,MATRIX,100%,0,0
+predicted_second_quantile_group_r20,Predicted label for the second quantile group in R20 configuration.,MATRIX,100%,0,0
+predicted_second_quantile_group_w2r1,Predicted label for the second quantile group in W2R1 configuration.,MATRIX,100%,0,0
+predicted_second_return_bucket_bidaskr10,Binary assignment indicator for the 3rd quantile bucket (0-based index 2) of the predicted 10-interval forward return from the BidAsk CNN model,MATRIX,100%,0,0
+predicted_second_return_bucket_bidaskr5im,0-based assignment indicating if the stock is in the 3rd quantile bucket (index 2) for the 5-interval forward return prediction,MATRIX,100%,0,0
+predicted_second_return_bucket_g2,Predicted label for the second return group in G2 configuration.,MATRIX,100%,0,0
+predicted_second_return_bucket_g2r5,One-hot label indicating assignment to the 3rd quantile bucket for the 5-interval ahead return in the interval group 2 CNN prediction image module,MATRIX,100%,0,0
+predicted_second_return_bucket_r10_2,Predicted label for the second return group in R10 configuration.,MATRIX,100%,0,0
+predicted_second_return_bucket_r5,Predicted label for the second return group in R5 configuration.,MATRIX,100%,1,2
+predicted_second_return_quantile,Predicted label for the second return quantile group.,MATRIX,100%,1,1
+predicted_second_return_quantile_2,0-based quantile assignment indicator (1 if assigned) for the 3rd quantile bucket in 5-interval forward return predictions from Tob (top-of-book) CNN image model,MATRIX,100%,0,0
+predicted_ten_day_forward_return,Predicted return for the next ten trading days.,MATRIX,100%,1,2
+predicted_third_quantile_group,Zero-based quantile assignment to the 4th bucket for next 1-interval forward return prediction from the CNN image model,MATRIX,100%,0,0
+predicted_third_quantile_group_g6r1,Predicted label for the third quantile group in G6R1 configuration.,MATRIX,100%,0,0
+predicted_third_quantile_group_r10,Predicted label for the third quantile group in R10 configuration.,MATRIX,100%,0,0
+predicted_third_quantile_group_r20,Predicted label for the third quantile group in R20 configuration.,MATRIX,100%,0,0
+predicted_third_quantile_group_w2r1,Predicted label for the third quantile group in W2R1 configuration.,MATRIX,100%,0,0
+predicted_third_return_bucket_bidaskr10,Binary assignment indicator for the 4th quantile bucket (0-based index 3) of the predicted 10-interval forward return from the BidAsk CNN model,MATRIX,100%,0,0
+predicted_third_return_bucket_bidaskr5im,0-based assignment indicating if the stock is in the 4th quantile bucket (index 3) for the 5-interval forward return prediction,MATRIX,100%,0,0
+predicted_third_return_bucket_g2,Predicted label for the third return group in G2 configuration.,MATRIX,100%,1,1
+predicted_third_return_bucket_g2r5,One-hot label indicating assignment to the 4th quantile bucket for the 5-interval ahead return in the interval group 2 CNN prediction image module,MATRIX,100%,0,0
+predicted_third_return_bucket_r10_2,Predicted label for the third return group in R10 configuration.,MATRIX,100%,0,0
+predicted_third_return_bucket_r5,Predicted label for the third return group in R5 configuration.,MATRIX,100%,0,0
+predicted_third_return_quantile,Predicted label for the third return quantile group.,MATRIX,100%,0,0
+predicted_third_return_quantile_2,0-based quantile assignment indicator (1 if assigned) for the 4th quantile bucket in 5-interval forward return predictions from Tob (top-of-book) CNN image model,MATRIX,100%,0,0
+predicted_three_day_forward_return,Predicted return for the next three trading days.,MATRIX,100%,0,0
+predicted_twenty_day_forward_return,Predicted return for the next twenty trading days.,MATRIX,100%,1,1
+probability_fifth_quantile_group,Log(softmax) model probability of assignment to the 6th quantile bucket for next 1-interval forward return in CNN image prediction; exponentiate to get probability,MATRIX,100%,0,0
+probability_fifth_quantile_group_g6r1,Model-assigned probability for the fifth quantile group in G6R1 configuration.,MATRIX,100%,0,0
+probability_fifth_quantile_group_r10,Model-assigned probability for the fifth quantile group in R10 configuration.,MATRIX,100%,0,0
+probability_fifth_quantile_group_r20,Logarithm of the predicted probability (log-softmax) that the 20-interval ahead return falls into the 6th quantile bucket (0-based index 5) from a CNN model output,MATRIX,100%,0,0
+probability_fifth_quantile_group_w2r1,Model-assigned probability for the fifth quantile group in W2R1 configuration.,MATRIX,100%,0,0
+probability_fifth_return_bucket,Model-assigned probability for the fifth return quantile label.,MATRIX,100%,0,0
+probability_fifth_return_bucket_2,Log(softmax) of model-assigned probability for the 6th quantile bucket (0-based) for 5-interval forward return predictions from Tob (top-of-book) CNN image model,MATRIX,100%,0,0
+probability_fifth_return_bucket_flr1,Log(softmax) of model-assigned probability for the 6th quantile bucket (index 5) for 1-interval ahead return prediction from the core CNN image-based interval feature layer model; exponentiate to obtain actual probability,MATRIX,100%,0,0
+probability_fifth_return_bucket_t100,Model probability for the fifth return bucket in the T100 configuration.,MATRIX,100%,0,0
+probability_fourth_quantile_group,Log(softmax) model probability of assignment to the 5th quantile bucket for next 1-interval forward return in CNN image prediction; exponentiate to get probability,MATRIX,100%,0,0
+probability_fourth_quantile_group_g6r1,Model-assigned probability for the fourth quantile group in G6R1 configuration.,MATRIX,100%,0,0
+probability_fourth_quantile_group_r10,Model-assigned probability for the fourth quantile group in R10 configuration.,MATRIX,100%,0,0
+probability_fourth_quantile_group_r20,Logarithm of the predicted probability (log-softmax) that the 20-interval ahead return falls into the 5th quantile bucket (0-based index 4) from a CNN model output,MATRIX,100%,0,0
+probability_fourth_quantile_group_w2r1,Model-assigned probability for the fourth quantile group in W2R1 configuration.,MATRIX,100%,0,0
+probability_fourth_return_bucket,Model-assigned probability for the fourth return quantile label.,MATRIX,100%,0,0
+probability_fourth_return_bucket_2,Log(softmax) of model-assigned probability for the 5th quantile bucket (0-based) for 5-interval forward return predictions from Tob (top-of-book) CNN image model,MATRIX,100%,0,0
+probability_fourth_return_bucket_flr1,Log(softmax) of model-assigned probability for the 5th quantile bucket (index 4) for 1-interval ahead return prediction from the core CNN image-based interval feature layer model; exponentiate to obtain actual probability,MATRIX,100%,0,0
+probability_fourth_return_bucket_t100,Model probability for the fourth return bucket in the T100 configuration.,MATRIX,100%,0,0
+probability_second_quantile_group,Log(softmax) model probability (log-probability) of assignment to the 3rd quantile bucket for next 1-interval forward return in CNN image prediction; exponentiate to get probability,MATRIX,100%,0,0
+probability_second_quantile_group_g6r1,Model-assigned probability for the second quantile group in G6R1 configuration.,MATRIX,100%,0,0
+probability_second_quantile_group_r10,Model-assigned probability for the second quantile group in R10 configuration.,MATRIX,100%,0,0
+probability_second_quantile_group_r20,Logarithm of the predicted probability (log-softmax) that the 20-interval ahead return falls into the 3rd quantile bucket (0-based index 2) from a CNN model output,MATRIX,100%,0,0
+probability_second_quantile_group_w2r1,Model-assigned probability for the second quantile group in W2R1 configuration.,MATRIX,100%,0,0
+probability_second_return_bucket,Model-assigned probability for the second return quantile label.,MATRIX,100%,0,0
+probability_second_return_bucket_2,Log(softmax) of model-assigned probability for the 3rd quantile bucket (0-based) for 5-interval forward return predictions from Tob (top-of-book) CNN image model,MATRIX,100%,0,0
+probability_second_return_bucket_t100,Model probability for the second return bucket in the T100 configuration.,MATRIX,100%,0,0
+probability_third_quantile_group,Log(softmax) model probability of assignment to the 4th quantile bucket for next 1-interval forward return in CNN image prediction; exponentiate to get probability,MATRIX,100%,0,0
+probability_third_quantile_group_g6r1,Model-assigned probability for the third quantile group in G6R1 configuration.,MATRIX,100%,0,0
+probability_third_quantile_group_r10,Model-assigned probability for the third quantile group in R10 configuration.,MATRIX,100%,0,0
+probability_third_quantile_group_r20,Logarithm of the predicted probability (log-softmax) that the 20-interval ahead return falls into the 4th quantile bucket (0-based index 3) from a CNN model output,MATRIX,100%,0,0
+probability_third_quantile_group_w2r1,Model-assigned probability for the third quantile group in W2R1 configuration.,MATRIX,100%,0,0
+probability_third_return_bucket,Model-assigned probability for the third return quantile label.,MATRIX,100%,0,0
+probability_third_return_bucket_2,Log(softmax) of model-assigned probability for the 4th quantile bucket (0-based) for 5-interval forward return predictions from Tob (top-of-book) CNN image model,MATRIX,100%,0,0
+probability_third_return_bucket_t100,Model probability for the third return bucket in the T100 configuration.,MATRIX,100%,0,0
+second_ask_price_agg,Ask price at the second position in the aggregated data.,MATRIX,100%,0,0
+second_ask_price_int120,Ask price at the close of the 2nd interval (0-based) in the Int120 module,MATRIX,100%,0,0
+second_ask_price_int60,"The ask price at interval 1 within a 60-interval day, representing top-of-book ask prices as-of the close of that interval",MATRIX,100%,0,0
+second_ask_price_tob,Ask price for the second time segment in top of book data.,MATRIX,100%,0,0
+second_ask_size_agg,Ask size at the second position in the aggregated data.,MATRIX,100%,0,0
+second_ask_size_tob,Ask size for the second time segment in top of book data.,MATRIX,100%,0,0
+second_bid_ask_spread_tob,Bid-ask spread at interval 1 (difference between best ask and bid prices as of the close of second interval),MATRIX,100%,0,0
+second_bid_price_agg,Bid price at the second position in the aggregated data.,MATRIX,100%,0,0
+second_bid_price_int120,Bid price at the close of the 2nd interval (0-based) in the Int120 module,MATRIX,100%,0,0
+second_bid_price_int60,"The bid price at interval 1 within a 60-interval day, representing top-of-book bid prices as-of the close of that interval",MATRIX,100%,0,0
+second_bid_price_top_book,Best bid price at interval 1 in top-of-book data,MATRIX,100%,0,0
+second_bid_size_agg,Bid size at the second position in the aggregated data.,MATRIX,100%,0,0
+second_bid_size_top_book,Bid size at the second position in the top of book.,MATRIX,100%,0,0
+second_high_price_agg,Highest price reached during interval 1,MATRIX,100%,0,0
+second_high_price_int120,High price at the close of the 2nd interval (0-based) in the Int120 module,MATRIX,100%,0,0
+second_high_price_int60,Highest price reached at interval 1 (2nd 60-bar interval) as-of close,MATRIX,100%,0,0
+second_high_price_top_book,High price during interval 1 (highest trade price recorded as of the close of second interval),MATRIX,100%,1,2
+second_low_price_agg,Lowest price reached during interval 1,MATRIX,100%,0,0
+second_low_price_int120,Low price at the close of the 2nd interval (0-based) in the Int120 module,MATRIX,100%,0,0
+second_low_price_int60,"Lowest price reached during the 2nd interval of the trading session (0-based index), as-of the close of that interval",MATRIX,100%,0,0
+second_low_price_top_book,Second lowest price recorded in the top of book.,MATRIX,100%,0,0
+second_trade_price_agg,Trade price at the second position in the aggregated data.,MATRIX,100%,0,0
+second_trade_price_int120,Trade price at the second position in the 120-minute interval.,MATRIX,100%,0,0
+second_trade_price_int60,Trade price at the second position in the 60-minute interval.,MATRIX,100%,0,0
+second_trade_price_top_book,Trade price at the second position in the top of book.,MATRIX,100%,0,0
+second_trade_volume_agg,Traded volume at interval 1 from aggregated trades,MATRIX,100%,0,0
+second_trade_volume_int120,Trading volume at the close of the 2nd interval (0-based) in the Int120 module,MATRIX,100%,0,0
+second_trade_volume_int60,Trade volume at the second position in the 60-minute interval.,MATRIX,100%,0,0
+second_trade_volume_top_book,Trade volume at the second position in the top of book.,MATRIX,100%,1,2
+second_vwap_agg,Volume-weighted average price at interval 1 based on aggregated trades,MATRIX,100%,0,0
+second_vwap_tob,Volume-weighted average price at interval 1 from top-of-book data,MATRIX,100%,0,0
+sixth_bid_price_int60,Bid price at the sixth position in the 60-minute interval.,MATRIX,100%,0,0
+sixth_low_price_int60,Lowest price reached at interval 5 (6th 60-bar interval) as-of close,MATRIX,100%,0,0
+sixth_trade_price_int60,Trade price at the sixth position in the 60-minute interval.,MATRIX,100%,0,0
+third_ask_price_int120,Ask price at the third position in the 120-minute interval.,MATRIX,100%,0,0
+third_ask_price_int60,"The ask price at interval 3 within a 60-interval day, representing top-of-book ask prices as-of the close of that interval",MATRIX,100%,0,0
+third_ask_price_int60_2,"The ask price at interval 2 within a 60-interval day, representing top-of-book ask prices as-of the close of that interval",MATRIX,100%,0,0
+third_bid_price_int120,Bid price at the close of the 3rd interval (0-based) in the Int120 module,MATRIX,100%,0,0
+third_bid_price_int60,Bid price at the third position in the 60-minute interval.,MATRIX,100%,1,2
+third_high_price_int120,Highest price at the third position in the 120-minute interval.,MATRIX,100%,0,0
+third_high_price_int60,"As-of the close of interval 2, the highest traded price during interval 2 within the 60-interval intraday period",MATRIX,100%,0,0
+third_low_price_int120,Lowest price at the third position in the 120-minute interval.,MATRIX,100%,0,0
+third_low_price_int60,"As-of the close of interval 2, the lowest traded price during interval 2 within the 60-interval intraday period",MATRIX,100%,0,0
+third_trade_price_int120,Trade price at the third position in the 120-minute interval.,MATRIX,100%,0,0
+third_trade_price_int60,Trade price at the third position in the 60-minute interval.,MATRIX,100%,0,0
+third_trade_volume_int120,Trade volume at the third position in the 120-minute interval.,MATRIX,100%,0,0
+third_trade_volume_int60,"The traded volume at interval 2 within a 60-interval day, strictly as-of the close of that interval",MATRIX,100%,0,0

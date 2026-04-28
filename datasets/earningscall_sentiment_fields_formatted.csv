@@ -1,0 +1,227 @@
+Field,Description,Type,Coverage,Users,Alphas
+answer_chunk_count,Total number of semantic chunks in the Answers section of the conference call (per stock-date event),MATRIX,85%,6,7
+assetutilization_negative_score,Negative probability score for asset utilization statements in the chunk,VECTOR,86%,18,18
+assetutilization_negative_score_fast_d1,Negative probability score for asset utilization statements in the chunk,VECTOR,85%,37,45
+assetutilization_neutral_score,Neutral probability score for asset utilization statements in the chunk,VECTOR,86%,3,4
+assetutilization_neutral_score_fast_d1,Neutral probability score for asset utilization statements in the chunk,VECTOR,85%,5,5
+assetutilization_positive_score,Positive probability score for asset utilization statements in the chunk,VECTOR,86%,16,25
+assetutilization_positive_score_fast_d1,Positive probability score for asset utilization statements in the chunk,VECTOR,85%,36,46
+assetutilization_sentiment_polarity,Signed net sentiment polarity for asset utilization in the chunk (approximately −1 to +1),VECTOR,86%,29,50
+assetutilization_sentiment_polarity_fast_d1,Signed net sentiment polarity for asset utilization in the chunk (approximately −1 to +1),VECTOR,85%,49,68
+cashflow_negative_score,Negative probability score for cash flow statements in the chunk,VECTOR,86%,5,11
+cashflow_negative_score_fast_d1,Negative probability score for cash flow statements in the chunk,VECTOR,85%,5,5
+cashflow_neutral_score,Neutral probability score for cash flow statements in the chunk,VECTOR,86%,1,1
+cashflow_neutral_score_fast_d1,Neutral probability score for cash flow statements in the chunk,VECTOR,85%,4,4
+cashflow_positive_score,Positive probability score for cash flow statements in the chunk,VECTOR,86%,4,5
+cashflow_positive_score_fast_d1,Positive probability score for cash flow statements in the chunk,VECTOR,85%,16,19
+cashflow_sentiment_polarity,Signed net sentiment polarity for cash flow in the chunk (approximately −1 to +1),VECTOR,86%,8,9
+cashflow_sentiment_polarity_fast_d1,Signed net sentiment polarity for cash flow in the chunk (approximately −1 to +1),VECTOR,85%,17,21
+chunk_relevance_z0_flag,"Indicator if the chunk relevance z-score is above 0 (1 if above, 0 otherwise)",VECTOR,86%,0,0
+chunk_relevance_z0_flag_fast_d1,"Indicator if the chunk relevance z-score is above 0 (1 if above, 0 otherwise)",VECTOR,85%,1,1
+chunk_relevance_z1_flag,"Indicator if the chunk relevance z-score is above 1 (1 if above, 0 otherwise)",VECTOR,86%,1,1
+chunk_relevance_z1_flag_fast_d1,"Indicator if the chunk relevance z-score is above 1 (1 if above, 0 otherwise)",VECTOR,85%,0,0
+chunk_relevance_z2_flag,"Indicator if the chunk relevance z-score is above 2 (1 if above, 0 otherwise)",VECTOR,86%,1,2
+chunk_relevance_z2_flag_fast_d1,"Indicator if the chunk relevance z-score is above 2 (1 if above, 0 otherwise)",VECTOR,85%,0,0
+count_negative_assetutilization_answer,Number of semantic chunks in the Answers section classified as negative for asset utilization,MATRIX,85%,0,0
+count_negative_assetutilization_presentation,"Number of negative sentiment chunks about asset utilization in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,3,3
+count_negative_assetutilization_question,Count of chunks in the Q&A section classified as negative for asset utilization-related content,MATRIX,85%,1,1
+count_negative_assetutilization_summary,Number of chunks classified as negative for asset utilization across the entire conference call (ALL sections),MATRIX,85%,5,6
+count_negative_assetutilization_summary_fast_d1,Number of chunks classified as negative for asset utilization across the entire conference call (ALL sections),MATRIX,85%,9,9
+count_negative_cashflow_answer,Number of semantic chunks in the Answers section classified as negative for cash flow,MATRIX,85%,0,0
+count_negative_cashflow_presentation,"Number of negative sentiment chunks about cash flow in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,1,2
+count_negative_cashflow_question,Count of chunks in the Q&A section classified as negative for cash flow-related content,MATRIX,85%,0,0
+count_negative_cashflow_summary,Number of chunks classified as negative for cash flow across the entire conference call (ALL sections),MATRIX,85%,1,1
+count_negative_cashflow_summary_fast_d1,Number of chunks classified as negative for cash flow across the entire conference call (ALL sections),MATRIX,85%,4,5
+count_negative_leverage_answer,Count of chunks in the Answers section with negative sentiment regarding leverage (per stock-date event),MATRIX,85%,1,1
+count_negative_leverage_presentation,Count of semantic chunks in the Presentation (P) section of the conference call that exhibit negative leverage sentiment for the given stock-date (D1-lag),MATRIX,85%,0,0
+count_negative_leverage_question,"Count of chunks labeled negative on the leverage axis in the Q&A section of the conference call (USA, D1 lag)",MATRIX,85%,0,0
+count_negative_leverage_summary,Number of chunks classified as negative for leverage across the entire conference call (ALL sections),MATRIX,85%,2,2
+count_negative_leverage_summary_fast_d1,Number of chunks classified as negative for leverage across the entire conference call (ALL sections),MATRIX,85%,4,4
+count_negative_profitability_answer,Count of chunks in the Answers section with negative sentiment regarding profitability (per stock-date event),MATRIX,85%,0,0
+count_negative_profitability_presentation,"Number of negative sentiment chunks about profitability in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,1,1
+count_negative_profitability_question,"Count of chunks labeled negative on the profitability axis in the Q&A section of the conference call (USA, D1 lag)",MATRIX,85%,0,0
+count_negative_profitability_summary,Number of chunks classified as negative for profitability across the entire conference call (ALL sections),MATRIX,85%,0,0
+count_negative_profitability_summary_fast_d1,Number of chunks classified as negative for profitability across the entire conference call (ALL sections),MATRIX,85%,5,5
+count_negative_valuation_answer,Number of semantic chunks in the Answers section classified as negative for valuation,MATRIX,85%,0,0
+count_negative_valuation_presentation,"Number of negative sentiment chunks about valuation in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,0,0
+count_negative_valuation_question,Count of chunks in the Q&A section classified as negative for valuation-related content,MATRIX,85%,1,1
+count_negative_valuation_summary,Number of chunks classified as negative for valuation across the entire conference call (ALL sections),MATRIX,85%,0,0
+count_negative_valuation_summary_fast_d1,Number of chunks classified as negative for valuation across the entire conference call (ALL sections),MATRIX,85%,1,1
+count_neutral_assetutilization_answer,Number of semantic chunks in the Answers section classified as neutral for asset utilization,MATRIX,85%,0,0
+count_neutral_assetutilization_presentation,"Number of neutral sentiment chunks about asset utilization in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,1,1
+count_neutral_assetutilization_question,Count of chunks in the Q&A section classified as neutral for asset utilization-related content,MATRIX,85%,0,0
+count_neutral_assetutilization_summary,Number of chunks with neutral sentiment related to asset utilization across the entire call (all sections),MATRIX,85%,3,4
+count_neutral_assetutilization_summary_fast_d1,Number of chunks with neutral sentiment related to asset utilization across the entire call (all sections),MATRIX,85%,1,1
+count_neutral_cashflow_answer,Number of semantic chunks in the Answers section classified as neutral for cash flow,MATRIX,85%,0,0
+count_neutral_cashflow_presentation,"Number of neutral sentiment chunks about cash flow in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,0,0
+count_neutral_cashflow_question,Count of chunks in the Q&A section classified as neutral for cash flow-related content,MATRIX,85%,0,0
+count_neutral_cashflow_summary,Number of chunks classified as neutral for cash flow across the entire conference call (ALL sections),MATRIX,85%,2,2
+count_neutral_cashflow_summary_fast_d1,Number of chunks classified as neutral for cash flow across the entire conference call (ALL sections),MATRIX,85%,1,1
+count_neutral_leverage_answer,Count of chunks in the Answers section with neutral sentiment regarding leverage (per stock-date event),MATRIX,85%,0,0
+count_neutral_leverage_presentation,"Number of neutral sentiment chunks about leverage in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,0,0
+count_neutral_leverage_question,Count of chunks in the Q&A section classified as neutral for leverage-related content,MATRIX,85%,2,2
+count_neutral_leverage_summary,Number of chunks classified as neutral for leverage across the entire conference call (ALL sections),MATRIX,85%,0,0
+count_neutral_leverage_summary_fast_d1,Number of chunks classified as neutral for leverage across the entire conference call (ALL sections),MATRIX,85%,0,0
+count_neutral_profitability_answer,Number of semantic chunks in the Answers section classified as neutral for profitability,MATRIX,85%,0,0
+count_neutral_profitability_presentation,"Number of neutral sentiment chunks about profitability in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,0,0
+count_neutral_profitability_question,"Count of chunks labeled neutral on the profitability axis in the Q&A section of the conference call (USA, D1 lag)",MATRIX,85%,0,0
+count_neutral_profitability_summary,Number of chunks classified as neutral for profitability across the entire conference call (ALL sections),MATRIX,85%,0,0
+count_neutral_profitability_summary_fast_d1,Number of chunks classified as neutral for profitability across the entire conference call (ALL sections),MATRIX,85%,0,0
+count_neutral_valuation_answer,Number of semantic chunks in the Answers section classified as neutral for valuation,MATRIX,85%,0,0
+count_neutral_valuation_presentation,"Number of neutral sentiment chunks about valuation in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,0,0
+count_neutral_valuation_question,Number of chunks in the Q&A section classified as neutral regarding valuation for the conference call,MATRIX,85%,1,1
+count_neutral_valuation_summary,Number of chunks classified as neutral for valuation across the entire conference call (ALL sections),MATRIX,85%,0,0
+count_neutral_valuation_summary_fast_d1,Number of chunks classified as neutral for valuation across the entire conference call (ALL sections),MATRIX,85%,2,2
+count_positive_assetutilization_answer,Number of semantic chunks in the Answers section classified as positive for asset utilization,MATRIX,85%,1,1
+count_positive_assetutilization_presentation,"Number of positive sentiment chunks about asset utilization in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,0,0
+count_positive_assetutilization_question,"Count of chunks labeled positive on the asset utilization axis in the Q&A section of the conference call (USA, D1 lag)",MATRIX,85%,2,2
+count_positive_assetutilization_summary,Number of chunks classified as positive for asset utilization across the entire conference call (ALL sections),MATRIX,85%,5,7
+count_positive_assetutilization_summary_fast_d1,Number of chunks classified as positive for asset utilization across the entire conference call (ALL sections),MATRIX,85%,6,8
+count_positive_cashflow_answer,Number of semantic chunks in the Answers section classified as positive for cash flow,MATRIX,85%,1,1
+count_positive_cashflow_presentation,Count of semantic chunks in the Presentation (P) section of the conference call that exhibit positive cash flow sentiment for the given stock-date (D1-lag),MATRIX,85%,1,1
+count_positive_cashflow_question,Count of chunks in the Q&A section classified as positive for cash flow-related content,MATRIX,85%,0,0
+count_positive_cashflow_summary,Number of chunks classified as positive for cash flow across the entire conference call (ALL sections),MATRIX,85%,3,3
+count_positive_cashflow_summary_fast_d1,Number of chunks classified as positive for cash flow across the entire conference call (ALL sections),MATRIX,85%,2,2
+count_positive_leverage_answer,Number of semantic chunks in the Answers section classified as positive for leverage,MATRIX,85%,1,1
+count_positive_leverage_presentation,"Number of positive sentiment chunks about leverage in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,2,2
+count_positive_leverage_question,"Count of chunks labeled positive on the leverage axis in the Q&A section of the conference call (USA, D1 lag)",MATRIX,85%,0,0
+count_positive_leverage_summary,Number of chunks classified as positive for leverage across the entire conference call (ALL sections),MATRIX,85%,0,0
+count_positive_leverage_summary_fast_d1,Number of chunks classified as positive for leverage across the entire conference call (ALL sections),MATRIX,85%,1,1
+count_positive_profitability_answer,Number of semantic chunks in the Answers section classified as positive for profitability,MATRIX,85%,0,0
+count_positive_profitability_presentation,"Number of positive sentiment chunks about profitability in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,0,0
+count_positive_profitability_question,Number of chunks in the Q&A section classified as positive regarding profitability for the conference call,MATRIX,85%,0,0
+count_positive_profitability_summary,Number of chunks classified as positive for profitability across the entire conference call (ALL sections),MATRIX,85%,1,1
+count_positive_profitability_summary_fast_d1,Number of chunks classified as positive for profitability across the entire conference call (ALL sections),MATRIX,85%,2,3
+count_positive_valuation_answer,Number of semantic chunks in the Answers section classified as positive for valuation,MATRIX,85%,1,1
+count_positive_valuation_presentation,"Number of positive sentiment chunks about valuation in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,3,3
+count_positive_valuation_question,Number of chunks in the Q&A section classified as positive regarding valuation for the conference call,MATRIX,85%,1,1
+count_positive_valuation_summary,Number of chunks with positive sentiment related to valuation across the entire call (all sections),MATRIX,85%,4,4
+count_positive_valuation_summary_fast_d1,Number of chunks with positive sentiment related to valuation across the entire call (all sections),MATRIX,85%,2,2
+leverage_negative_score,Negative probability score for leverage statements in the chunk,VECTOR,86%,5,5
+leverage_negative_score_fast_d1,Negative probability score for leverage statements in the chunk,VECTOR,85%,4,6
+leverage_neutral_score,Neutral probability score for leverage statements in the chunk,VECTOR,86%,0,0
+leverage_neutral_score_fast_d1,Neutral probability score for leverage statements in the chunk,VECTOR,85%,2,2
+leverage_positive_score,Positive probability score for leverage statements in the chunk,VECTOR,86%,2,2
+leverage_positive_score_fast_d1,Positive probability score for leverage statements in the chunk,VECTOR,85%,2,2
+leverage_sentiment_polarity,Signed net sentiment polarity for leverage in the chunk (approximately −1 to +1),VECTOR,86%,4,4
+leverage_sentiment_polarity_fast_d1,Signed net sentiment polarity for leverage in the chunk (approximately −1 to +1),VECTOR,85%,6,6
+mean_negative_assetutilization_answer,Average of the negative sentiment probability scores for asset utilization-related statements in the Answers section,MATRIX,84%,1,1
+mean_negative_assetutilization_presentation,"Mean of negative probability scores for asset utilization statements in the presentation section (USA, D1 delay)",MATRIX,84%,3,3
+mean_negative_assetutilization_question,Average of chunk-level negative sentiment probability scores for asset utilization-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_negative_assetutilization_summary,Average negative probability score for asset utilization across the entire conference call (ALL sections),MATRIX,85%,6,8
+mean_negative_assetutilization_summary_fast_d1,Average negative probability score for asset utilization across the entire conference call (ALL sections),MATRIX,85%,20,44
+mean_negative_cashflow_answer,Average of the negative sentiment probability scores for cash flow-related statements in the Answers section,MATRIX,84%,2,2
+mean_negative_cashflow_presentation,"Mean of negative probability scores for cash flow statements in the presentation section (USA, D1 delay)",MATRIX,84%,11,23
+mean_negative_cashflow_question,"Average negative sentiment score for cash flow-related content in the Q&A section of the conference call (USA, D1 lag)",MATRIX,85%,0,0
+mean_negative_cashflow_summary,Average negative probability score for cash flow across the entire conference call (ALL sections),MATRIX,85%,2,2
+mean_negative_cashflow_summary_fast_d1,Average negative probability score for cash flow across the entire conference call (ALL sections),MATRIX,85%,9,16
+mean_negative_leverage_answer,Average of the negative sentiment probability scores for leverage-related statements in the Answers section,MATRIX,84%,0,0
+mean_negative_leverage_presentation,"Mean of negative probability scores for leverage statements in the presentation section (USA, D1 delay)",MATRIX,84%,2,2
+mean_negative_leverage_question,Average of chunk-level negative sentiment probability scores for leverage-related content in the Q&A section of the conference call,MATRIX,85%,1,1
+mean_negative_leverage_summary,Average negative probability score for leverage across the entire conference call (ALL sections),MATRIX,85%,2,2
+mean_negative_leverage_summary_fast_d1,Average negative probability score for leverage across the entire conference call (ALL sections),MATRIX,85%,3,3
+mean_negative_profitability_answer,Average of the negative sentiment probability scores for profitability-related statements in the Answers section,MATRIX,84%,1,1
+mean_negative_profitability_presentation,"Mean of negative probability scores for profitability statements in the presentation section (USA, D1 delay)",MATRIX,84%,2,2
+mean_negative_profitability_question,Average of chunk-level negative sentiment probability scores for profitability-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_negative_profitability_summary,Average negative probability score for profitability across the entire conference call (ALL sections),MATRIX,85%,1,4
+mean_negative_profitability_summary_fast_d1,Average negative probability score for profitability across the entire conference call (ALL sections),MATRIX,85%,5,7
+mean_negative_valuation_answer,Average of the negative sentiment probability scores for valuation-related statements in the Answers section,MATRIX,84%,1,1
+mean_negative_valuation_presentation,"Mean of negative probability scores for valuation statements in the presentation section (USA, D1 delay)",MATRIX,84%,1,1
+mean_negative_valuation_question,Average of chunk-level negative sentiment probability scores for valuation-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_negative_valuation_summary,Average negative sentiment score for valuation-related chunks across the entire call (all sections),MATRIX,85%,1,1
+mean_negative_valuation_summary_fast_d1,Average negative sentiment score for valuation-related chunks across the entire call (all sections),MATRIX,85%,7,9
+mean_neutral_assetutilization_answer,Average of the neutral sentiment probability scores for asset utilization-related statements in the Answers section,MATRIX,84%,1,1
+mean_neutral_assetutilization_presentation,"Mean of neutral probability scores for asset utilization statements in the presentation section (USA, D1 delay)",MATRIX,84%,0,0
+mean_neutral_assetutilization_question,Average of chunk-level neutral sentiment probability scores for asset utilization-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_neutral_assetutilization_summary,Average neutral probability score for asset utilization across the entire conference call (ALL sections),MATRIX,85%,0,0
+mean_neutral_assetutilization_summary_fast_d1,Average neutral probability score for asset utilization across the entire conference call (ALL sections),MATRIX,85%,1,1
+mean_neutral_cashflow_answer,Average of the neutral sentiment probability scores for cash flow-related statements in the Answers section,MATRIX,84%,0,0
+mean_neutral_cashflow_presentation,"Mean of neutral probability scores for cash flow statements in the presentation section (USA, D1 delay)",MATRIX,84%,0,0
+mean_neutral_cashflow_question,Mean neutral probability score for cash flow-related chunks in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_neutral_cashflow_summary,Average neutral probability score for cash flow across the entire conference call (ALL sections),MATRIX,85%,0,0
+mean_neutral_cashflow_summary_fast_d1,Average neutral probability score for cash flow across the entire conference call (ALL sections),MATRIX,85%,0,0
+mean_neutral_leverage_answer,"Average neutral sentiment magnitude for leverage-related content in the Answers section of the conference call (per stock-date event, D1 delay)",MATRIX,84%,0,0
+mean_neutral_leverage_presentation,"Mean of neutral probability scores for leverage statements in the presentation section (USA, D1 delay)",MATRIX,84%,1,1
+mean_neutral_leverage_question,Average of chunk-level neutral sentiment probability scores for leverage-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_neutral_leverage_summary,Average neutral sentiment score for leverage-related chunks across the entire call (all sections),MATRIX,85%,0,0
+mean_neutral_leverage_summary_fast_d1,Average neutral sentiment score for leverage-related chunks across the entire call (all sections),MATRIX,85%,0,0
+mean_neutral_profitability_answer,Average of the neutral sentiment probability scores for profitability-related statements in the Answers section,MATRIX,84%,0,0
+mean_neutral_profitability_presentation,Mean neutral sentiment intensity score for profitability across all chunks in the Presentation (P) section for the given stock-date (D1-lag),MATRIX,84%,0,0
+mean_neutral_profitability_question,Mean neutral probability score for profitability-related chunks in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_neutral_profitability_summary,Average neutral probability score for profitability across the entire conference call (ALL sections),MATRIX,85%,0,0
+mean_neutral_profitability_summary_fast_d1,Average neutral probability score for profitability across the entire conference call (ALL sections),MATRIX,85%,0,0
+mean_neutral_valuation_answer,Average of the neutral sentiment probability scores for valuation-related statements in the Answers section,MATRIX,84%,1,1
+mean_neutral_valuation_presentation,"Mean of neutral probability scores for valuation statements in the presentation section (USA, D1 delay)",MATRIX,84%,0,0
+mean_neutral_valuation_question,Mean neutral probability score for valuation-related chunks in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_neutral_valuation_summary,Average neutral probability score for valuation across the entire conference call (ALL sections),MATRIX,85%,1,1
+mean_neutral_valuation_summary_fast_d1,Average neutral probability score for valuation across the entire conference call (ALL sections),MATRIX,85%,1,1
+mean_polarity_assetutilization_answer,Average signed polarity score for asset utilization–related statements in the Answers section of the conference call,MATRIX,84%,2,2
+mean_polarity_assetutilization_presentation,"Average signed polarity score for asset utilization statements in the presentation section (USA, D1 delay)",MATRIX,84%,6,6
+mean_polarity_assetutilization_question,Average of chunk-level signed polarity scores (negative to positive) for asset utilization-related content in the Q&A section of the conference call,MATRIX,85%,2,2
+mean_polarity_assetutilization_summary,"Average signed polarity score for asset utilization across the entire conference call (ALL sections), D1-lag summary",MATRIX,85%,36,80
+mean_polarity_assetutilization_summary_fast_d1,"Average signed polarity score for asset utilization across the entire conference call (ALL sections), D1-lag summary",MATRIX,85%,51,95
+mean_polarity_cashflow_answer,Average signed polarity score for cash flow–related statements in the Answers section of the conference call,MATRIX,84%,3,3
+mean_polarity_cashflow_presentation,"Average signed polarity score for cash flow statements in the presentation section (USA, D1 delay)",MATRIX,84%,12,15
+mean_polarity_cashflow_question,Average of chunk-level signed polarity scores (negative to positive) for cash flow-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_polarity_cashflow_summary,"Average signed polarity score for cash flow across the entire conference call (ALL sections), D1-lag summary",MATRIX,85%,2,2
+mean_polarity_cashflow_summary_fast_d1,"Average signed polarity score for cash flow across the entire conference call (ALL sections), D1-lag summary",MATRIX,85%,7,8
+mean_polarity_leverage_answer,Average signed polarity score for leverage-related statements in the Answers section of the conference call,MATRIX,84%,4,4
+mean_polarity_leverage_presentation,Average signed polarity score (negative to positive) for leverage across all chunks in the Presentation (P) section for the given stock-date (D1-lag),MATRIX,84%,2,2
+mean_polarity_leverage_question,Average of chunk-level signed polarity scores (negative to positive) for leverage-related content in the Q&A section of the conference call,MATRIX,85%,3,3
+mean_polarity_leverage_summary,"Average signed polarity score for leverage-related chunks across the entire conference call (ALL sections), D1-lag summary",MATRIX,85%,6,8
+mean_polarity_leverage_summary_fast_d1,"Average signed polarity score for leverage-related chunks across the entire conference call (ALL sections), D1-lag summary",MATRIX,85%,8,10
+mean_polarity_profitability_answer,Average signed polarity score for profitability-related statements in the Answers section of the conference call,MATRIX,84%,4,5
+mean_polarity_profitability_presentation,Average signed polarity score (negative to positive) for profitability across all chunks in the Presentation (P) section for the given stock-date (D1-lag),MATRIX,84%,3,3
+mean_polarity_profitability_question,Average of chunk-level signed polarity scores (negative to positive) for profitability-related content in the Q&A section of the conference call,MATRIX,85%,1,1
+mean_polarity_profitability_summary,Average signed polarity score for profitability across chunks in the entire call (all sections),MATRIX,85%,10,11
+mean_polarity_profitability_summary_fast_d1,Average signed polarity score for profitability across chunks in the entire call (all sections),MATRIX,85%,17,19
+mean_polarity_valuation_answer,Average signed polarity score for valuation-related content in the Answers section,MATRIX,84%,1,1
+mean_polarity_valuation_presentation,Average signed polarity score (negative to positive) for valuation across all chunks in the Presentation (P) section for the given stock-date (D1-lag),MATRIX,84%,3,3
+mean_polarity_valuation_question,Average of chunk-level signed polarity scores (negative to positive) for valuation-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_polarity_valuation_summary,"Average signed polarity score for valuation across the entire conference call (ALL sections), D1-lag summary",MATRIX,85%,0,0
+mean_polarity_valuation_summary_fast_d1,"Average signed polarity score for valuation across the entire conference call (ALL sections), D1-lag summary",MATRIX,85%,2,2
+mean_positive_assetutilization_answer,Average of the positive sentiment probability scores for asset utilization-related statements in the Answers section,MATRIX,84%,2,2
+mean_positive_assetutilization_presentation,"Mean of positive probability scores for asset utilization statements in the presentation section (USA, D1 delay)",MATRIX,84%,7,8
+mean_positive_assetutilization_question,Average of chunk-level positive sentiment probability scores for asset utilization-related content in the Q&A section of the conference call,MATRIX,85%,13,25
+mean_positive_assetutilization_summary,Average positive probability score for asset utilization across the entire conference call (ALL sections),MATRIX,85%,9,12
+mean_positive_assetutilization_summary_fast_d1,Average positive probability score for asset utilization across the entire conference call (ALL sections),MATRIX,85%,13,14
+mean_positive_cashflow_answer,Average of the positive sentiment probability scores for cash flow-related statements in the Answers section,MATRIX,84%,2,2
+mean_positive_cashflow_presentation,"Mean of positive probability scores for cash flow statements in the presentation section (USA, D1 delay)",MATRIX,84%,8,12
+mean_positive_cashflow_question,Average of chunk-level positive sentiment probability scores for cash flow-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_positive_cashflow_summary,Average positive probability score for cash flow across the entire conference call (ALL sections),MATRIX,85%,5,5
+mean_positive_cashflow_summary_fast_d1,Average positive probability score for cash flow across the entire conference call (ALL sections),MATRIX,85%,7,7
+mean_positive_leverage_answer,Average of the positive sentiment probability scores for leverage-related statements in the Answers section,MATRIX,84%,0,0
+mean_positive_leverage_presentation,"Mean of positive probability scores for leverage statements in the presentation section (USA, D1 delay)",MATRIX,84%,0,0
+mean_positive_leverage_question,Average of chunk-level positive sentiment probability scores for leverage-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_positive_leverage_summary,Average positive sentiment score for leverage-related chunks across the entire call (all sections),MATRIX,85%,1,1
+mean_positive_leverage_summary_fast_d1,Average positive sentiment score for leverage-related chunks across the entire call (all sections),MATRIX,85%,1,2
+mean_positive_profitability_answer,Average of the positive sentiment probability scores for profitability-related statements in the Answers section,MATRIX,84%,1,1
+mean_positive_profitability_presentation,"Mean of positive probability scores for profitability statements in the presentation section (USA, D1 delay)",MATRIX,84%,0,0
+mean_positive_profitability_question,Average of chunk-level positive sentiment probability scores for profitability-related content in the Q&A section of the conference call,MATRIX,85%,1,1
+mean_positive_profitability_summary,Average positive probability score for profitability across the entire conference call (ALL sections),MATRIX,85%,12,17
+mean_positive_profitability_summary_fast_d1,Average positive probability score for profitability across the entire conference call (ALL sections),MATRIX,85%,18,22
+mean_positive_valuation_answer,"Average positive sentiment magnitude for valuation-related content in the Answers section of the conference call (per stock-date event, D1 delay)",MATRIX,84%,1,1
+mean_positive_valuation_presentation,"Mean of positive probability scores for valuation statements in the presentation section (USA, D1 delay)",MATRIX,84%,14,21
+mean_positive_valuation_question,Average of chunk-level positive sentiment probability scores for valuation-related content in the Q&A section of the conference call,MATRIX,85%,0,0
+mean_positive_valuation_summary,Average positive probability score for valuation across the entire conference call (ALL sections),MATRIX,85%,9,10
+mean_positive_valuation_summary_fast_d1,Average positive probability score for valuation across the entire conference call (ALL sections),MATRIX,85%,10,12
+presentation_chunk_count,"Total number of chunks in the presentation section of the conference call (USA, D1 delay)",MATRIX,85%,2,3
+profitability_negative_score,Negative probability score for profitability statements in the chunk,VECTOR,86%,4,11
+profitability_negative_score_fast_d1,Negative probability score for profitability statements in the chunk,VECTOR,85%,3,3
+profitability_neutral_score,Neutral probability score for profitability statements in the chunk,VECTOR,86%,1,1
+profitability_neutral_score_fast_d1,Neutral probability score for profitability statements in the chunk,VECTOR,85%,2,2
+profitability_positive_score,Positive probability score for profitability statements in the chunk,VECTOR,86%,14,19
+profitability_positive_score_fast_d1,Positive probability score for profitability statements in the chunk,VECTOR,85%,13,16
+profitability_sentiment_polarity,Signed net sentiment polarity for profitability in the chunk (approximately −1 to +1),VECTOR,86%,5,6
+profitability_sentiment_polarity_fast_d1,Signed net sentiment polarity for profitability in the chunk (approximately −1 to +1),VECTOR,85%,9,14
+question_chunk_count,Total number of chunks in the Q&A section of the conference call,MATRIX,85%,0,0
+summary_chunk_count,Total number of semantic chunks in the conference call (ALL sections) for the event,MATRIX,85%,1,1
+summary_chunk_count_fast_d1,Total number of semantic chunks in the conference call (ALL sections) for the event,MATRIX,85%,0,0
+valuation_negative_score,Negative probability score for valuation statements in the chunk,VECTOR,86%,5,6
+valuation_negative_score_fast_d1,Negative probability score for valuation statements in the chunk,VECTOR,85%,3,3
+valuation_neutral_score,Neutral probability score for valuation statements in the chunk,VECTOR,86%,2,2
+valuation_neutral_score_fast_d1,Neutral probability score for valuation statements in the chunk,VECTOR,85%,2,2
+valuation_positive_score,Positive probability score for valuation statements in the chunk,VECTOR,86%,7,7
+valuation_positive_score_fast_d1,Positive probability score for valuation statements in the chunk,VECTOR,85%,8,12
+valuation_sentiment_polarity,Signed net sentiment polarity for valuation in the chunk (approximately −1 to +1),VECTOR,86%,1,1
+valuation_sentiment_polarity_fast_d1,Signed net sentiment polarity for valuation in the chunk (approximately −1 to +1),VECTOR,85%,1,1

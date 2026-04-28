@@ -1,0 +1,6 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv53_beta_vix_normalized,Beta VIX normalized,MATRIX,50%,102,663
+pv53_logreturns5_normalized,Normalized log returns for 5 days,MATRIX,50%,69,579
+pv53_usa_uber_beta_ung_125_normalized,Beta information,MATRIX,50%,42,393
+pv53_usa_uber_beta_uso_125_normalized,Beta information,MATRIX,50%,52,404
+pv53_weights,Weight information,MATRIX,50%,57,440

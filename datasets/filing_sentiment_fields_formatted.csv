@@ -1,0 +1,23 @@
+Field,Description,Type,Coverage,Users,Alphas
+aggregate_sentiment_score_2,Sum of sentiment scores of all tagged words and phrases in the section,VECTOR,73%,0,0
+aggregate_sentiment_score_3,Sum of sentiment scores of all tagged words/phrases in the section,VECTOR,54%,0,0
+financial_note_quantity,"The number of individual notes in the Notes to Consolidated
+Financial Statements section",VECTOR,54%,0,0
+financial_note_quantity_2,Number of individual notes in the Notes to Consolidated Financial Statements section,VECTOR,73%,0,0
+major_section_quantity,The number of parts in the filing,VECTOR,54%,0,0
+major_section_quantity_2,Count of major parts in the parsed 8-K filing,VECTOR,3%,2,2
+mean_sentiment_score,The average of all words and phrases tagged in the section with sentiment,VECTOR,54%,0,0
+mean_sentiment_score_2,Average sentiment score of all tagged words and phrases in the section,VECTOR,3%,0,0
+negative_sentiment_term_count,The number of words and phrases tagged in the section with a sentiment score less than 0,VECTOR,54%,0,0
+negative_sentiment_term_count_2,Count of words and phrases in the section tagged with negative sentiment (score less than 0),VECTOR,73%,1,1
+positive_sentiment_term_count,The number of words and phrases tagged in the section with a sentiment score greater than 0,VECTOR,54%,0,0
+positive_sentiment_term_count_2,Count of words and phrases in the section tagged with positive sentiment (score greater than 0),VECTOR,73%,0,0
+regulatory_item_quantity,The number of items within all parts of the filing,VECTOR,54%,0,0
+regulatory_item_quantity_2,Number of items across all parts of the filing,VECTOR,73%,4,4
+sentiment_analysis_granularity_2,Level of SENTIMENT,VECTOR,73%,3,3
+sentiment_term_quantity,The number of positive_hits plus negative_hits in a section,VECTOR,54%,0,0
+sentiment_term_quantity_2,Total count of sentiment hits in the section (positive_hits plus negative_hits),VECTOR,3%,0,0
+subsection_quantity,The number of sub-sections in the section,VECTOR,54%,0,0
+subsection_quantity_2,Number of sub-sections in the section,VECTOR,73%,3,3
+total_word_quantity,The number of words in the section,VECTOR,54%,0,0
+total_word_quantity_2,Number of words in the section,VECTOR,73%,0,0

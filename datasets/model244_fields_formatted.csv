@@ -1,0 +1,7 @@
+Field,Description,Type,Coverage,Users,Alphas
+highest_trade_unit_price,Maximum price paid per unit in transactions executed by tranches (multiple executions),VECTOR,77%,0,0
+mdl244_company_sentiment,"Average event sentiment score over the prior 91 days for the company, scaled between -1 and 1",VECTOR,77%,6,6
+mdl244_insider_level,Ranking of the insider within the company,VECTOR,77%,4,6
+mdl244_transaction_significance,"The importance ranking of a deal, where 3 is highest and 1 is lowest significance",VECTOR,77%,1,1
+mdl244_transaction_unit_price,"The price at which the transaction was executed, per unit of measurement",VECTOR,77%,4,9
+mdl244_transaction_value,Total value of the transaction in the respective/local currency,VECTOR,77%,1,2

@@ -1,0 +1,14 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl313_atlas_unit_name,Atlas unit name,MATRIX,72%,1,1
+mdl313_companyname,Company Name,MATRIX,72%,1,1
+mdl313_iai,Intangible Asset Intensity Score,MATRIX,72%,1,1
+mdl313_ick,Knowledge Capital Intensity Score(R&D),MATRIX,43%,3,3
+mdl313_ico,Organizational Capital Intensity Score,MATRIX,71%,1,1
+mdl313_mktcap_usd,Market Cap in USD,MATRIX,72%,3,3
+mdl313_sector,Sector,MATRIX,72%,1,1
+mdl313_sedol,Point in Time SEDOL of the Security,MATRIX,72%,3,3
+mdl313_sub_industry,Sub Industry,MATRIX,72%,1,1
+mdl313_us_iai,"Intangible Asset Intensity score, normalized [0,1], summarizing a company's intangible capital relative to adjusted assets",MATRIX,67%,1,1
+mdl313_us_ick,"Knowledge Capital Intensity score (from capitalized/depreciated R&D divided by adjusted assets), scaled [0,1]",MATRIX,38%,3,3
+mdl313_us_ico,"Organizational Capital Intensity score (from capitalized/depreciated org. capital/SG&A divided by adjusted assets), scaled [0,1]",MATRIX,66%,2,2
+mdl313_us_mktcap_usd,Market capitalization of the company in US dollars as of the score date,MATRIX,67%,3,3

@@ -1,0 +1,18 @@
+Field,Description,Type,Coverage,Users,Alphas
+snt27_avgranking_19,Average of rankings,VECTOR,91%,299,796
+snt27_dltcc_3,Country code TLD,VECTOR,94%,169,449
+snt27_kurtosis_16,Kurtosis of ranking,VECTOR,67%,319,657
+snt27_new_atlas_domain_1,Cleaned domain name,VECTOR,94%,241,737
+snt27_rank_2,rank of the domain,VECTOR,94%,157,451
+snt27_relpopularity08_11,Relative popularity calculated with alpha=0.8,VECTOR,91%,286,599
+snt27_relpopularity1_14,Relative popularity calculated with alpha=1,VECTOR,91%,234,519
+snt27_skewness_21,Skewness of ranking,VECTOR,67%,355,990
+snt27_top50pctranking_15,The top 50% percentile ranking,VECTOR,91%,147,404
+snt27_top50pctrankingavg_13,The average ranking of the top 50% percentile,VECTOR,91%,119,288
+snt27_top75pctranking_8,The top 75% percentile ranking,VECTOR,91%,145,304
+snt27_top75pctrankingavg_9,The average ranking of the top 75% percentile,VECTOR,91%,103,318
+snt27_topranking_7,The top ranking,VECTOR,91%,154,423
+snt27_totalcountrydomains_10,Total number of country-code TLDs,VECTOR,91%,128,275
+snt27_totaldomains_17,Total number of sub-domains,VECTOR,91%,153,403
+snt27_website_4,name of the website,VECTOR,94%,177,555
+snt27_wq_pit_12,"For ongoing data it is wq_append_time, for history data it simulated from PIT simulation field in the MCD input settings. MCD builder can disable auto-filled value of wq_pit for ongoing, by checking the flag Always simulate PIT"" in MCD Output Config""",VECTOR,91%,213,412

@@ -1,0 +1,4 @@
+Field,Description,Type,Coverage,Users,Alphas
+opinion_score_delta,Change in the opinion score compared to the previous period.,VECTOR,64%,1,2
+opinion_score_numeric,Numerical score representing the overall user opinion for the asset.,VECTOR,64%,1,1
+standardized_opinion_score,Opinion score adjusted to a common scale for comparison.,VECTOR,64%,3,6

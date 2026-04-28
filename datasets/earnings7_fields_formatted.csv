@@ -1,0 +1,41 @@
+Field,Description,Type,Coverage,Users,Alphas
+confcall_financial_year,Fiscal year for which the conference call is relevant or reported,VECTOR,84%,10,11
+confcall_financial_year_fast_d1,Fiscal year for which the conference call is relevant or reported,VECTOR,84%,10,14
+confcall_fiscal_quarter,Fiscal quarter (1-4) for which the conference call pertains,VECTOR,91%,10,17
+confcall_fiscal_quarter_fast_d1,Fiscal quarter (1-4) for which the conference call pertains,VECTOR,91%,27,29
+dividend_amount_original_currency,The currency code (integer) representing the original currency in which the dividend amount is declared,VECTOR,50%,6,6
+dividend_amount_original_currency_fast_d1,The currency code (integer) representing the original currency in which the dividend amount is declared,VECTOR,50%,5,5
+dividend_payment_frequency_2,"How often the dividend is paid (e.g., annual, quarterly) as an integer frequency code",VECTOR,50%,3,5
+dividend_payment_frequency_2_fast_d1,"How often the dividend is paid (e.g., annual, quarterly) as an integer frequency code",VECTOR,50%,4,6
+earnings_announcement_time_of_day,"Numeric code indicating the expected time of day when the earnings announcement is scheduled (e.g., before market, after market, during market hours, or unspecified)",VECTOR,100%,12,12
+earnings_announcement_time_of_day_fast_d1,"Numeric code indicating the expected time of day when the earnings announcement is scheduled (e.g., before market, after market, during market hours, or unspecified)",VECTOR,43%,15,16
+earnings_date_fiscal_quarter,Numeric value (1-4) indicating which fiscal quarter the earnings date pertains to,VECTOR,100%,14,15
+earnings_date_fiscal_quarter_fast_d1,Numeric value (1-4) indicating which fiscal quarter the earnings date pertains to,VECTOR,43%,11,11
+earnings_date_fiscal_year,Numeric value representing the fiscal year associated with the scheduled or reported earnings event,VECTOR,100%,17,18
+earnings_date_fiscal_year_fast_d1,Numeric value representing the fiscal year associated with the scheduled or reported earnings event,VECTOR,43%,11,15
+eps_fiscal_quarter,Fiscal quarter to which the reported EPS relates (1-4),VECTOR,95%,21,24
+eps_fiscal_quarter_fast_d1,Fiscal quarter to which the reported EPS relates (1-4),VECTOR,95%,30,34
+eps_fiscal_year,Fiscal year to which the reported EPS relates,VECTOR,95%,10,15
+eps_fiscal_year_fast_d1,Fiscal year to which the reported EPS relates,VECTOR,95%,7,9
+eps_original_currency,Currency code for the original currency in which EPS was reported,VECTOR,93%,6,6
+eps_original_currency_fast_d1,Currency code for the original currency in which EPS was reported,VECTOR,93%,12,12
+ern7_co_spe,Reported earnings per share in original currency,VECTOR,90%,31,49
+ern7_co_spe_fast_d1,Reported earnings per share in original currency,VECTOR,90%,12,15
+ern7_div_amount,Dividend amount paid per share in the issuer's local currency,VECTOR,50%,19,24
+ern7_div_amount_fast_d1,Dividend amount paid per share in the issuer's local currency,VECTOR,50%,12,12
+ern7_div_amount_oc,dividend amount,VECTOR,50%,21,26
+ern7_div_amount_oc_fast_d1,dividend amount,VECTOR,50%,21,25
+ern7_div_amount_usd,"Dividend amount paid per share, converted into US dollars",VECTOR,50%,24,35
+ern7_div_amount_usd_fast_d1,"Dividend amount paid per share, converted into US dollars",VECTOR,50%,12,12
+ern7_dsu_spe,Reported earnings per share in US Dollars,VECTOR,91%,58,137
+ern7_dsu_spe_fast_d1,Reported earnings per share in US Dollars,VECTOR,91%,13,18
+ern7_spe,Reported earnings per share amount in local currency,VECTOR,30%,16,20
+ern7_spe_fast_d1,Reported earnings per share amount in local currency,VECTOR,30%,4,6
+estimated_earnings_fiscal_year,Estimated fiscal year for which the EPS is provided,VECTOR,87%,39,51
+estimated_earnings_fiscal_year_fast_d1,Estimated fiscal year for which the EPS is provided,VECTOR,87%,68,116
+next_earnings_quarter,Numeric value specifying the fiscal quarter (1-4) for which the next earnings date (next_ed) is scheduled,VECTOR,100%,19,27
+next_earnings_quarter_fast_d1,Numeric value specifying the fiscal quarter (1-4) for which the next earnings date (next_ed) is scheduled,VECTOR,43%,18,23
+prelim_eps_lower_bound,Lower bound of preliminary earnings per share (EPS) estimate range,VECTOR,1%,13,19
+prelim_eps_lower_bound_fast_d1,Lower bound of preliminary earnings per share (EPS) estimate range,VECTOR,1%,20,39
+prelim_eps_upper_bound,Upper bound of preliminary earnings per share (EPS) estimate range,VECTOR,1%,23,29
+prelim_eps_upper_bound_fast_d1,Upper bound of preliminary earnings per share (EPS) estimate range,VECTOR,1%,33,45

@@ -1,0 +1,9 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd25_fiscalyear,Fiscal year identifier (numeric),VECTOR,42%,3,3
+fnd25_interimnumber,"Sequence number within the fiscal year/period (e.g., 1 for Q1)",VECTOR,39%,3,7
+fnd25_metriccode,Metric code as an integer,VECTOR,36%,9,12
+fnd25_metricvalue,Numeric value of the operating metric,VECTOR,42%,12,16
+fnd25_periodlength,"Number of months or weeks covered by the reporting period, depending on reporting practices",VECTOR,29%,5,6
+fnd25_periodtypecode,"Numeric code for reporting frequency; 1=annual, 2=quarterly, 3=semi-annual, 4=trimester",VECTOR,42%,11,12
+fnd25_statementtypecode,"Code for statement context: 1=Profit & Loss, 3=Balance Sheet",VECTOR,42%,4,5
+fnd25_updatetype,"Update type provides information on how statements were formulated. Options include: UPD - Update Normal, UCA - Update Calculated, USP - Update Special, RES - Restated Normal, RCA - Restated Calculated, RSP - Restated Special, CLA - Reclassified Normal, CCA - Reclassified Calculated, CSP - Reclassified Special",VECTOR,36%,7,9

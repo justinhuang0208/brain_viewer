@@ -1,0 +1,3 @@
+Field,Description,Type,Coverage,Users,Alphas
+imb5_mktcap,Market capitalization of security in regional currency units,MATRIX,87%,456,831
+imb5_score,SHIELD-OIL composite score (0-1) indicating resilience/advantage in oil shock regimes,MATRIX,87%,1228,2888

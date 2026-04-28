@@ -1,0 +1,316 @@
+Field,Description,Type,Coverage,Users,Alphas
+negative_sentiment_average_10,"Average negative sentiment score across all applicable news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,9,9
+negative_sentiment_average_11,Mean negative sentiment score across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,6,7
+negative_sentiment_average_12,Average negative sentiment score across all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,8,8
+negative_sentiment_average_2,Mean value of negative sentiment scores in main session.,MATRIX,76%,3,3
+negative_sentiment_average_7,"Average negative sentiment score for the stock during the pre-market session on the day (variant 4), aggregated over Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,88%,2,2
+negative_sentiment_average_8,Average negative sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,2,2
+negative_sentiment_average_9,"Average negative sentiment score for the stock during the post-market session on that day, aggregated across relevant news items; scores normalized to [0,1]; NA if no items",MATRIX,69%,2,2
+negative_sentiment_average_post,"Average (mean) negative sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,1,1
+negative_sentiment_average_pre5,Average negative sentiment score across the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,3,3
+negative_sentiment_confidence_base,Lower bound of the approximately 95% confidence interval for the negative sentiment mean during the main session (mean minus 1.96 times std divided by sqrt of item count); may fall outside 0–1; NA if no items,MATRIX,76%,2,3
+negative_sentiment_confidence_base_2,Lower bound of confidence interval for negative sentiment in post-market.,MATRIX,69%,1,2
+negative_sentiment_confidence_base_3,Lower bound of the approximate 95% confidence interval for the mean negative sentiment across pre-market news items for the stock on the day; normal approximation,MATRIX,88%,1,2
+negative_sentiment_confidence_base_4,Lower endpoint of the approximate 95% confidence interval for the mean negative sentiment score for the stock’s post-market session items (mean − 1.96*std/sqrt(N); may be below 0),MATRIX,69%,1,1
+negative_sentiment_confidence_base_5,"Approximate 95% confidence interval lower bound for the mean negative sentiment score for the stock during the pre-market session on the day (variant 4), using normal approximation (mean ± 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,88%,2,2
+negative_sentiment_confidence_ceiling,Upper endpoint of the approx. 95% confidence interval for the mean negative sentiment in the pre-market session (normal approximation; may exceed 1),MATRIX,88%,1,1
+negative_sentiment_confidence_ceiling_2,Upper bound of the approximately 95% confidence interval for the negative sentiment mean during the main session (mean plus 1.96 times std divided by sqrt of item count); may fall outside 0–1; NA if no items,MATRIX,76%,1,1
+negative_sentiment_confidence_ceiling_3,Upper bound of confidence interval for negative sentiment in post-market.,MATRIX,69%,1,1
+negative_sentiment_confidence_ceiling_4,Upper bound of the approximate 95% confidence interval for the mean negative sentiment across pre-market news items for the stock on the day; normal approximation,MATRIX,88%,2,2
+negative_sentiment_confidence_ceiling_5,"Upper endpoint of the approximate 95% confidence interval for the mean negative sentiment score for the stock’s post-market session items (mean + 1.96*std/sqrt(N); may exceed [0,1])",MATRIX,69%,1,1
+negative_sentiment_confidence_floor,"Lower bound of the approximate 95% confidence interval for the mean negative sentiment score for the stock in the pre-market session on that day, based on Benzinga NewsQuantified items scored by WorldQuant’s model (scores normalized to [0,1])",MATRIX,88%,1,1
+negative_sentiment_confidence_floor_10,Lower bound of the approximate 95% confidence interval for the mean negative sentiment score across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,1,1
+negative_sentiment_confidence_floor_11,Lower endpoint of the approximate 95 percent confidence interval for the mean negative sentiment across pre-market news items for the stock that day (normal approximation; may fall outside 0 to 1),MATRIX,88%,2,2
+negative_sentiment_confidence_floor_2,Lower endpoint of the approximate 95% confidence interval for the mean negative sentiment score during the main session on that day (normal approximation over item scores),MATRIX,76%,1,1
+negative_sentiment_confidence_floor_7,Lower endpoint of the approximate 95% confidence interval for the mean of negative sentiment scores across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,1,1
+negative_sentiment_confidence_floor_8,"Lower endpoint of the approximate 95% confidence interval for the mean negative sentiment score for the stock-day in the post-market session (mean ± 1.96×std/√N); may fall outside [0,1]",MATRIX,69%,0,0
+negative_sentiment_confidence_floor_9,"Lower endpoint of the approximate 95% confidence interval for the mean negative sentiment during the main (regular-hours) session that day, using a normal approximation; may fall outside [0,1]",MATRIX,76%,0,0
+negative_sentiment_confidence_lower_2,Lower bound of confidence interval for negative sentiment in main session.,MATRIX,76%,0,0
+negative_sentiment_confidence_lower_post,"Lower endpoint of the approximate 95% confidence interval for the mean negative sentiment score for the stock during the post-market session on the given day (variant 3), using normal approximation (mean − 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,69%,0,0
+negative_sentiment_confidence_lower_pre5,Lower endpoint of the approx. 95% confidence interval for the mean negative sentiment in the pre-market session (normal approximation; may be below 0),MATRIX,88%,0,0
+negative_sentiment_confidence_top,"Upper bound of the approximate 95% confidence interval for the mean negative sentiment score for the stock in the pre-market session on that day, based on Benzinga NewsQuantified items scored by WorldQuant’s model (scores normalized to [0,1])",MATRIX,88%,0,0
+negative_sentiment_confidence_top_2,Upper endpoint of the approximate 95% confidence interval for the mean negative sentiment score during the main session on that day (normal approximation over item scores),MATRIX,76%,1,1
+negative_sentiment_confidence_upper_10,"Upper endpoint of the approximate 95% confidence interval for the mean negative sentiment during the main (regular-hours) session that day, using a normal approximation; may fall outside [0,1]",MATRIX,76%,1,1
+negative_sentiment_confidence_upper_11,Upper bound of the approximate 95% confidence interval for the mean negative sentiment score across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+negative_sentiment_confidence_upper_12,Upper endpoint of the approximate 95 percent confidence interval for the mean negative sentiment across pre-market news items for the stock that day (normal approximation; may fall outside 0 to 1),MATRIX,88%,0,0
+negative_sentiment_confidence_upper_2,Upper bound of confidence interval for negative sentiment in main session.,MATRIX,76%,0,0
+negative_sentiment_confidence_upper_7,"Approximate 95% confidence interval upper bound for the mean negative sentiment score for the stock during the pre-market session on the day (variant 4), using normal approximation (mean ± 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,88%,0,0
+negative_sentiment_confidence_upper_8,Upper endpoint of the approximate 95% confidence interval for the mean of negative sentiment scores across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+negative_sentiment_confidence_upper_9,"Upper endpoint of the approximate 95% confidence interval for the mean negative sentiment score for the stock-day in the post-market session; may fall outside [0,1]",MATRIX,69%,0,0
+negative_sentiment_confidence_upper_post,"Upper endpoint of the approximate 95% confidence interval for the mean negative sentiment score for the stock during the post-market session on the given day (variant 3), using normal approximation (mean + 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,69%,0,0
+negative_sentiment_dispersion_10,Standard deviation of negative sentiment scores across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+negative_sentiment_dispersion_12,Standard deviation of negative sentiment scores across all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+negative_sentiment_dispersion_7,Standard deviation of negative sentiment scores across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+negative_sentiment_dispersion_8,Standard deviation of negative sentiment scores across post-market session news items for the stock-day,MATRIX,69%,0,0
+negative_sentiment_dispersion_9,"Standard deviation of negative sentiment scores across news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+negative_sentiment_least_score,Minimum negative sentiment score observed across news items for the stock during the main session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,0,0
+negative_sentiment_least_score_12,Minimum negative sentiment score among all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+negative_sentiment_least_score_2,"Minimum of negative sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_least_score_3,"Minimum negative sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+negative_sentiment_least_score_4,Minimum negative sentiment score across the stock’s Benzinga NewsQuantified items in the post-market session for that day,MATRIX,69%,0,0
+negative_sentiment_least_score_5,"Minimum negative sentiment score observed for the stock during the pre-market session on the day (variant 4); scores normalized to [0,1]",MATRIX,88%,0,0
+negative_sentiment_least_value,Minimum negative sentiment score observed for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+negative_sentiment_least_value_10,Minimum negative sentiment score observed across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+negative_sentiment_least_value_2,Minimum negative sentiment score across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+negative_sentiment_least_value_7,Minimum negative sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+negative_sentiment_least_value_8,"Minimum negative sentiment score observed across post-market session news items for the stock-day; scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_least_value_9,"Minimum negative sentiment score across all applicable news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+negative_sentiment_maximum_2,"Maximum negative sentiment score across Benzinga NewsQuantified items for the stock during the main session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+negative_sentiment_maximum_post,"Maximum negative sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_maximum_pre5,Maximum negative sentiment score among that stock’s pre-market news items for the day (scores normalized 0–1),MATRIX,88%,0,0
+negative_sentiment_mean_value_2,Average negative sentiment score across news items for the stock during the main trading session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,0,0
+negative_sentiment_mean_value_3,"Average (mean) of negative sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_mean_value_4,"Average negative sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+negative_sentiment_mean_value_5,"Average negative sentiment score across the stock’s Benzinga NewsQuantified items in the post-market session for that day (scores normalized to [0,1])",MATRIX,69%,0,0
+negative_sentiment_median_2,Median value of negative sentiment scores in main session.,MATRIX,76%,0,0
+negative_sentiment_median_post,"Median negative sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,1,1
+negative_sentiment_median_pre5,Median negative sentiment score across the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+negative_sentiment_middle_score,Median of negative sentiment scores across news items for the stock during the main trading session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,1,1
+negative_sentiment_middle_score_12,Median negative sentiment score across all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+negative_sentiment_middle_score_2,"Median of negative sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_middle_score_3,"Median negative sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,1,1
+negative_sentiment_middle_score_4,Median negative sentiment score across the stock’s Benzinga NewsQuantified items in the post-market session for that day,MATRIX,69%,0,0
+negative_sentiment_middle_score_5,"Median of negative sentiment scores for the stock during the pre-market session on the day (variant 4), aggregated over Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,88%,0,0
+negative_sentiment_middle_value,Median negative sentiment score for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+negative_sentiment_middle_value_10,Median of negative sentiment scores across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+negative_sentiment_middle_value_2,Median of negative sentiment scores across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+negative_sentiment_middle_value_7,Median negative sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+negative_sentiment_middle_value_8,"Median negative sentiment score across post-market session news items for the stock-day; scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_middle_value_9,"Median of negative sentiment scores across all Benzinga NewsQuantified items for the stock during the main (regular-hours) session on that day, as scored by WorldQuant’s model; scores normalized to [0,1]",MATRIX,76%,0,0
+negative_sentiment_minimum_2,"Minimum negative sentiment score across Benzinga NewsQuantified items for the stock during the main session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+negative_sentiment_minimum_post,"Minimum negative sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_minimum_pre5,Minimum negative sentiment score among the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+negative_sentiment_peak_score,Maximum negative sentiment score observed across news items for the stock during the main session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,1,1
+negative_sentiment_peak_score_12,Maximum negative sentiment score among all pre-market news items for the stock on that day (WorldQuant model on Benzinga NewsQuantified; score scale 0 to 1),MATRIX,88%,1,1
+negative_sentiment_peak_score_2,"Maximum of negative sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_peak_score_3,"Maximum negative sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+negative_sentiment_peak_score_4,"Maximum negative sentiment score among the stock’s Benzinga NewsQuantified items during the post-market session for that day (scores normalized to [0,1])",MATRIX,69%,0,0
+negative_sentiment_peak_score_5,"Maximum negative sentiment score observed for the stock during the pre-market session on the day (variant 4); scores normalized to [0,1]",MATRIX,88%,0,0
+negative_sentiment_peak_value,Maximum negative sentiment score observed for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+negative_sentiment_peak_value_11,Maximum negative sentiment score observed across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+negative_sentiment_peak_value_2,Maximum negative sentiment score across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+negative_sentiment_peak_value_7,Maximum negative sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+negative_sentiment_peak_value_8,"Maximum negative sentiment score observed across post-market session news items for the stock-day; scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_peak_value_9,"Maximum negative sentiment score across all applicable news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+negative_sentiment_standard_deviation,Standard deviation of negative sentiment scores for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+negative_sentiment_standard_deviation_2,Standard deviation of negative sentiment scores across news items for the stock during the main session on that day; NA if no items,MATRIX,76%,0,0
+negative_sentiment_standard_deviation_25,Standard deviation of negative sentiment scores in main session.,MATRIX,76%,0,0
+negative_sentiment_standard_deviation_3,"Standard deviation of negative sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_standard_deviation_33,Standard deviation of negative sentiment scores across all Benzinga NewsQuantified items for the stock during the main session on that day,MATRIX,76%,0,0
+negative_sentiment_standard_deviation_4,Standard deviation of negative sentiment scores across pre-market news items for the stock on the day,MATRIX,88%,0,0
+negative_sentiment_standard_deviation_5,Standard deviation of negative sentiment scores across the stock’s Benzinga NewsQuantified items in the post-market session for that day,MATRIX,69%,0,0
+negative_sentiment_standard_deviation_6,"Standard deviation of negative sentiment scores for the stock during the pre-market session on the day (variant 4); scores normalized to [0,1]",MATRIX,88%,0,0
+negative_sentiment_standard_deviation_post,"Standard deviation of negative sentiment scores across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+negative_sentiment_standard_deviation_pre5,Standard deviation of negative sentiment scores across the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+negative_sentiment_typical_value,Mean negative sentiment score for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+negative_sentiment_typical_value_2,Average negative sentiment score across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+neutral_sentiment_average_10,"Average neutral sentiment score across all applicable news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,1,1
+neutral_sentiment_average_11,Mean neutral sentiment score across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+neutral_sentiment_average_2,Mean value of neutral sentiment scores in main session.,MATRIX,76%,0,0
+neutral_sentiment_average_7,"Average neutral sentiment score for the stock during the pre-market session on the day (variant 4), aggregated over Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,88%,0,0
+neutral_sentiment_average_8,Average neutral sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+neutral_sentiment_average_9,"Average neutral sentiment score for the stock during the post-market session on that day, aggregated across Benzinga NewsQuantified items scored by the model; scores normalized to [0,1]; NA if no items",MATRIX,69%,0,0
+neutral_sentiment_average_post,"Average (mean) neutral sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_confidence_base,Lower endpoint of the approx. 95% confidence interval for the mean neutral sentiment in the pre-market session (normal approximation; may be below 0),MATRIX,88%,0,0
+neutral_sentiment_confidence_base_2,Lower bound of the approximately 95% confidence interval for the neutral sentiment mean during the main session (mean minus 1.96 times std divided by sqrt of item count); may fall outside 0–1; NA if no items,MATRIX,76%,0,0
+neutral_sentiment_confidence_base_3,Lower bound of confidence interval for neutral sentiment in post-market.,MATRIX,69%,0,0
+neutral_sentiment_confidence_base_4,Lower bound of the approximate 95% confidence interval for the mean neutral sentiment across pre-market news items for the stock on the day; normal approximation,MATRIX,88%,0,0
+neutral_sentiment_confidence_base_5,Lower endpoint of the approximate 95% confidence interval for the mean neutral sentiment score for the stock’s post-market session items (mean − 1.96*std/sqrt(N); may be below 0),MATRIX,69%,0,0
+neutral_sentiment_confidence_base_6,"Approximate 95% confidence interval lower bound for the mean neutral sentiment score for the stock during the pre-market session on the day (variant 4), using normal approximation (mean ± 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,88%,0,0
+neutral_sentiment_confidence_ceiling,Upper bound of the approximately 95% confidence interval for the neutral sentiment mean during the main session (mean plus 1.96 times std divided by sqrt of item count); may fall outside 0–1; NA if no items,MATRIX,76%,0,0
+neutral_sentiment_confidence_ceiling_2,Upper bound of confidence interval for neutral sentiment in post-market.,MATRIX,69%,0,0
+neutral_sentiment_confidence_ceiling_3,Upper bound of the approximate 95% confidence interval for the mean neutral sentiment across pre-market news items for the stock on the day; normal approximation,MATRIX,88%,0,0
+neutral_sentiment_confidence_ceiling_4,"Upper endpoint of the approximate 95% confidence interval for the mean neutral sentiment score for the stock’s post-market session items (mean + 1.96*std/sqrt(N); may exceed [0,1])",MATRIX,69%,0,0
+neutral_sentiment_confidence_floor,"Lower bound of the approximate 95% confidence interval for the mean neutral sentiment score for the stock in the pre-market session on that day, based on Benzinga NewsQuantified items scored by WorldQuant’s model (scores normalized to [0,1])",MATRIX,88%,0,0
+neutral_sentiment_confidence_floor_10,Lower bound of the approximate 95% confidence interval for the mean neutral sentiment score across Benzinga NewsQuantified items for the stock during the post-market session that day (scores normalized 0-1),MATRIX,69%,0,0
+neutral_sentiment_confidence_floor_11,Lower endpoint of the approximate 95 percent confidence interval for the mean neutral sentiment across pre-market news items for the stock that day (normal approximation; may fall outside 0 to 1),MATRIX,88%,0,0
+neutral_sentiment_confidence_floor_2,Lower endpoint of the approximate 95% confidence interval for the mean neutral sentiment score during the main session on that day (normal approximation over item scores),MATRIX,76%,0,0
+neutral_sentiment_confidence_floor_7,Lower endpoint of the approximate 95% confidence interval for the mean of neutral sentiment scores across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+neutral_sentiment_confidence_floor_8,"Lower endpoint of the approximate 95% confidence interval for the mean neutral sentiment score for the stock-day in the post-market session (normal approximation: mean ± 1.96×std/√N); may fall outside [0,1]",MATRIX,69%,0,0
+neutral_sentiment_confidence_floor_9,"Lower endpoint of the approximate 95% confidence interval for the mean neutral sentiment during the main (regular-hours) session that day, using a normal approximation; may fall outside [0,1]",MATRIX,76%,0,0
+neutral_sentiment_confidence_lower_2,Lower bound of confidence interval for neutral sentiment in main session.,MATRIX,76%,0,0
+neutral_sentiment_confidence_lower_post,"Lower endpoint of the approximate 95% confidence interval for the mean neutral sentiment score for the stock during the post-market session on the given day (variant 3), using normal approximation (mean − 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,69%,0,0
+neutral_sentiment_confidence_top,"Upper bound of the approximate 95% confidence interval for the mean neutral sentiment score for the stock in the pre-market session on that day, based on Benzinga NewsQuantified items scored by WorldQuant’s model (scores normalized to [0,1])",MATRIX,88%,0,0
+neutral_sentiment_confidence_top_2,Upper endpoint of the approximate 95% confidence interval for the mean neutral sentiment score during the main session on that day (normal approximation over item scores),MATRIX,76%,0,0
+neutral_sentiment_confidence_upper_10,"Upper endpoint of the approximate 95% confidence interval for the mean neutral sentiment during the main (regular-hours) session that day, using a normal approximation; may fall outside [0,1]",MATRIX,76%,0,0
+neutral_sentiment_confidence_upper_11,Upper bound of the approximate 95% confidence interval for the mean neutral sentiment score across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+neutral_sentiment_confidence_upper_12,Upper endpoint of the approximate 95 percent confidence interval for the mean neutral sentiment across pre-market news items for the stock that day (normal approximation; may fall outside 0 to 1),MATRIX,88%,0,0
+neutral_sentiment_confidence_upper_2,Upper bound of confidence interval for neutral sentiment in main session.,MATRIX,76%,1,1
+neutral_sentiment_confidence_upper_7,"Approximate 95% confidence interval upper bound for the mean neutral sentiment score for the stock during the pre-market session on the day (variant 4), using normal approximation (mean ± 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,88%,0,0
+neutral_sentiment_confidence_upper_8,Upper endpoint of the approximate 95% confidence interval for the mean of neutral sentiment scores across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+neutral_sentiment_confidence_upper_9,"Upper endpoint of the approximate 95% confidence interval for the mean neutral sentiment score for the stock-day in the post-market session; may fall outside [0,1]",MATRIX,69%,0,0
+neutral_sentiment_confidence_upper_post,"Upper endpoint of the approximate 95% confidence interval for the mean neutral sentiment score for the stock during the post-market session on the given day (variant 3), using normal approximation (mean + 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,69%,0,0
+neutral_sentiment_confidence_upper_pre5,Upper endpoint of the approx. 95% confidence interval for the mean neutral sentiment in the pre-market session (normal approximation; may exceed 0–1),MATRIX,88%,0,0
+neutral_sentiment_dispersion_10,"Standard deviation of neutral sentiment scores across news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+neutral_sentiment_dispersion_11,Standard deviation of neutral sentiment scores across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+neutral_sentiment_dispersion_12,Standard deviation of neutral sentiment scores across all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+neutral_sentiment_dispersion_7,"Standard deviation of neutral sentiment scores for the stock during the pre-market session on the day (variant 4); scores normalized to [0,1]",MATRIX,88%,0,0
+neutral_sentiment_dispersion_8,Standard deviation of neutral sentiment scores across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+neutral_sentiment_dispersion_9,Standard deviation of neutral sentiment scores across post-market session news items for the stock-day,MATRIX,69%,0,0
+neutral_sentiment_least_score,Minimum neutral sentiment score observed across news items for the stock during the main session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,0,0
+neutral_sentiment_least_score_12,Minimum neutral sentiment score among all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+neutral_sentiment_least_score_2,"Minimum of neutral sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_least_score_3,"Minimum neutral sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+neutral_sentiment_least_score_4,Minimum neutral sentiment score across the stock’s Benzinga NewsQuantified items in the post-market session for that day,MATRIX,69%,0,0
+neutral_sentiment_least_value,Minimum neutral sentiment score observed for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+neutral_sentiment_least_value_10,"Minimum neutral sentiment score across all applicable news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+neutral_sentiment_least_value_11,Minimum neutral sentiment score observed across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+neutral_sentiment_least_value_2,Minimum neutral sentiment score across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+neutral_sentiment_least_value_7,"Minimum neutral sentiment score observed for the stock during the pre-market session on the day (variant 4); scores normalized to [0,1]",MATRIX,88%,0,0
+neutral_sentiment_least_value_8,Minimum neutral sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+neutral_sentiment_least_value_9,"Minimum neutral sentiment score observed across post-market session news items for the stock-day; scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_maximum_2,"Maximum neutral sentiment score across Benzinga NewsQuantified items for the stock during the main session that day; scores normalized to [0,1]",MATRIX,76%,1,1
+neutral_sentiment_maximum_post,"Maximum neutral sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_maximum_pre5,Maximum neutral sentiment score among the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+neutral_sentiment_mean_score_12,Average neutral sentiment score across all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+neutral_sentiment_mean_value_2,Average neutral sentiment score across the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+neutral_sentiment_mean_value_4,Average neutral sentiment score across news items for the stock during the main trading session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,0,0
+neutral_sentiment_mean_value_5,"Average (mean) of neutral sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,1,1
+neutral_sentiment_mean_value_6,"Average neutral sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+neutral_sentiment_mean_value_7,"Average neutral sentiment score across the stock’s Benzinga NewsQuantified items in the post-market session for that day (scores normalized to [0,1])",MATRIX,69%,0,0
+neutral_sentiment_median_2,Median value of neutral sentiment scores in main session.,MATRIX,76%,0,0
+neutral_sentiment_median_post,"Median neutral sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_median_pre5,Median neutral sentiment score across the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+neutral_sentiment_middle_score,Median of neutral sentiment scores across news items for the stock during the main trading session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,0,0
+neutral_sentiment_middle_score_12,Median neutral sentiment score across all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,1,1
+neutral_sentiment_middle_score_2,"Median of neutral sentiment scores for the stock on the post-market session day (variant 4), aggregated across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_middle_score_3,"Median neutral sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+neutral_sentiment_middle_score_4,Median neutral sentiment score across the stock’s Benzinga NewsQuantified items in the post-market session for that day,MATRIX,69%,0,0
+neutral_sentiment_middle_score_5,"Median of neutral sentiment scores for the stock during the pre-market session on the day (variant 4), aggregated over Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,88%,0,0
+neutral_sentiment_middle_value,Median neutral sentiment score for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+neutral_sentiment_middle_value_10,Median of neutral sentiment scores across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+neutral_sentiment_middle_value_2,Median of neutral sentiment scores across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+neutral_sentiment_middle_value_7,Median neutral sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+neutral_sentiment_middle_value_8,"Median neutral sentiment score across post-market session news items for the stock-day; scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_middle_value_9,"Median of neutral sentiment scores across all Benzinga NewsQuantified items for the stock during the main (regular-hours) session on that day, as scored by WorldQuant’s model; scores normalized to [0,1]",MATRIX,76%,0,0
+neutral_sentiment_minimum_2,"Minimum neutral sentiment score across Benzinga NewsQuantified items for the stock during the main session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+neutral_sentiment_minimum_post,"Minimum neutral sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_minimum_pre5,Minimum neutral sentiment score among the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+neutral_sentiment_peak_score,Maximum neutral sentiment score observed across news items for the stock during the main session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,0,0
+neutral_sentiment_peak_score_2,"Maximum of neutral sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_peak_score_3,"Maximum neutral sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+neutral_sentiment_peak_score_4,"Maximum neutral sentiment score among the stock’s Benzinga NewsQuantified items during the post-market session for that day (scores normalized to [0,1])",MATRIX,69%,0,0
+neutral_sentiment_peak_score_5,"Maximum neutral sentiment score observed for the stock during the pre-market session on the day (variant 4); scores normalized to [0,1]",MATRIX,88%,0,0
+neutral_sentiment_peak_value,Maximum neutral sentiment score observed for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+neutral_sentiment_peak_value_10,"Maximum neutral sentiment score across all applicable news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+neutral_sentiment_peak_value_11,Maximum neutral sentiment score observed across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+neutral_sentiment_peak_value_12,Maximum neutral sentiment score among all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+neutral_sentiment_peak_value_2,Maximum neutral sentiment score across all Benzinga NewsQuantified items for the stock during the main (regular) session on that day; scores are model outputs normalized to the 0–1 range,MATRIX,76%,0,0
+neutral_sentiment_peak_value_7,Maximum neutral sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+neutral_sentiment_peak_value_8,"Maximum neutral sentiment score observed across post-market session news items for the stock-day; scores normalized to [0,1]",MATRIX,69%,0,0
+neutral_sentiment_standard_deviation,Standard deviation of neutral sentiment scores for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,1,1
+neutral_sentiment_standard_deviation_2,Standard deviation of neutral sentiment scores across news items for the stock during the main session on that day; NA if no items,MATRIX,76%,1,1
+neutral_sentiment_standard_deviation_25,Standard deviation of neutral sentiment scores in main session.,MATRIX,76%,0,0
+neutral_sentiment_standard_deviation_3,"Standard deviation of neutral sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,1,1
+neutral_sentiment_standard_deviation_33,Standard deviation of neutral sentiment scores across all Benzinga NewsQuantified items for the stock during the main session on that day,MATRIX,76%,0,0
+neutral_sentiment_standard_deviation_4,Standard deviation of neutral sentiment scores across pre-market news items for the stock on the day,MATRIX,88%,0,0
+neutral_sentiment_standard_deviation_5,Standard deviation of neutral sentiment scores across the stock’s Benzinga NewsQuantified items in the post-market session for that day,MATRIX,69%,0,0
+neutral_sentiment_standard_deviation_post,"Standard deviation of neutral sentiment scores across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,1,1
+neutral_sentiment_standard_deviation_pre5,Standard deviation of neutral sentiment scores across the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+neutral_sentiment_typical_value,Mean neutral sentiment score for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+neutral_sentiment_typical_value_2,Average neutral sentiment score across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+positive_sentiment_average_10,Mean positive sentiment score across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+positive_sentiment_average_2,Mean value of positive sentiment scores in main session.,MATRIX,76%,0,0
+positive_sentiment_average_7,Average positive sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+positive_sentiment_average_8,"Average positive sentiment score for the stock during the post-market session on that day, aggregated across relevant news items; scores normalized to [0,1]; NA if no items",MATRIX,69%,0,0
+positive_sentiment_average_9,"Average positive sentiment score across all applicable news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+positive_sentiment_average_post,"Average (mean) positive sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+positive_sentiment_average_pre5,Average positive sentiment score across the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+positive_sentiment_confidence_base,Lower bound of the approximately 95% confidence interval for the positive sentiment mean during the main session (mean minus 1.96 times std divided by sqrt of item count); may fall outside 0–1; NA if no items,MATRIX,76%,0,0
+positive_sentiment_confidence_base_2,Lower bound of confidence interval for positive sentiment in post-market.,MATRIX,69%,1,1
+positive_sentiment_confidence_base_3,Lower bound of the approximate 95% confidence interval for the mean positive sentiment across pre-market news items for the stock on the day; normal approximation,MATRIX,88%,0,0
+positive_sentiment_confidence_base_4,Lower endpoint of the approximate 95% confidence interval for the mean positive sentiment score for the stock’s post-market session items (mean − 1.96*std/sqrt(N); may be below 0),MATRIX,69%,0,0
+positive_sentiment_confidence_base_5,"Approximate 95% confidence interval lower bound for the mean positive sentiment score for the stock during the pre-market session on the day (variant 4), using normal approximation (mean ± 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,88%,0,0
+positive_sentiment_confidence_ceiling_12,Upper endpoint of the approximate 95 percent confidence interval for the mean positive sentiment across pre-market news items for the stock that day (normal approximation; may fall outside 0 to 1),MATRIX,88%,1,2
+positive_sentiment_confidence_ceiling_2,Upper endpoint of the approx. 95% confidence interval for the mean positive sentiment in the pre-market session (normal approximation; may exceed 1),MATRIX,88%,1,1
+positive_sentiment_confidence_ceiling_3,Upper bound of the approximately 95% confidence interval for the positive sentiment mean during the main session (computed as mean plus 1.96 times std divided by sqrt of item count); may fall outside 0–1; NA if no items,MATRIX,76%,0,0
+positive_sentiment_confidence_ceiling_4,Upper bound of confidence interval for positive sentiment in post-market.,MATRIX,69%,0,0
+positive_sentiment_confidence_ceiling_5,Upper bound of the approximate 95% confidence interval for the mean positive sentiment across pre-market news items for the stock on the day; normal approximation,MATRIX,88%,0,0
+positive_sentiment_confidence_ceiling_6,"Upper endpoint of the approximate 95% confidence interval for the mean positive sentiment score for the stock’s post-market session items (mean + 1.96*std/sqrt(N); may exceed [0,1])",MATRIX,69%,0,0
+positive_sentiment_confidence_floor,"Lower bound of the approximate 95% confidence interval for the mean positive sentiment score for the stock in the pre-market session on that day, based on Benzinga NewsQuantified items scored by WorldQuant’s model (scores normalized to [0,1])",MATRIX,88%,0,0
+positive_sentiment_confidence_floor_10,"Lower endpoint of the approximate 95% confidence interval for the mean positive sentiment during the main (regular-hours) session that day, using a normal approximation; may fall outside [0,1]",MATRIX,76%,0,0
+positive_sentiment_confidence_floor_11,Lower bound of the approximate 95% confidence interval for the mean positive sentiment score across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+positive_sentiment_confidence_floor_12,Lower endpoint of the approximate 95 percent confidence interval for the mean positive sentiment across pre-market news items for the stock that day (normal approximation; may fall outside 0 to 1),MATRIX,88%,0,0
+positive_sentiment_confidence_floor_2,Lower endpoint of the approximate 95% confidence interval for the mean positive sentiment score during the main session on that day (normal approximation over item scores),MATRIX,76%,0,0
+positive_sentiment_confidence_floor_7,Lower endpoint of the approximate 95% confidence interval for the mean of positive sentiment scores across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,1,1
+positive_sentiment_confidence_floor_8,"Lower endpoint of the approximate 95% confidence interval for the mean positive sentiment score for the stock-day in the post-market session (mean ± 1.96×std/√N); may fall outside [0,1]",MATRIX,69%,1,1
+positive_sentiment_confidence_lower_2,Lower bound of confidence interval for positive sentiment in main session.,MATRIX,76%,0,0
+positive_sentiment_confidence_lower_post,"Lower endpoint of the approximate 95% confidence interval for the mean positive sentiment score for the stock during the post-market session on the given day (variant 3), using normal approximation (mean − 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,69%,0,0
+positive_sentiment_confidence_lower_pre5,Lower endpoint of the approx. 95% confidence interval for the mean positive sentiment in the pre-market session (normal approximation; may be below 0),MATRIX,88%,0,0
+positive_sentiment_confidence_top,"Upper bound of the approximate 95% confidence interval for the mean positive sentiment score for the stock in the pre-market session on that day, based on Benzinga NewsQuantified items scored by WorldQuant’s model (scores normalized to [0,1])",MATRIX,88%,0,0
+positive_sentiment_confidence_top_2,Upper endpoint of the approximate 95% confidence interval for the mean positive sentiment score during the main session on that day (normal approximation over item scores),MATRIX,76%,0,0
+positive_sentiment_confidence_upper_10,"Upper endpoint of the approximate 95% confidence interval for the mean positive sentiment during the main (regular-hours) session that day, using a normal approximation; may fall outside [0,1]",MATRIX,76%,1,1
+positive_sentiment_confidence_upper_11,Upper bound of the approximate 95% confidence interval for the mean positive sentiment score across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+positive_sentiment_confidence_upper_2,Upper bound of confidence interval for positive sentiment in main session.,MATRIX,76%,0,0
+positive_sentiment_confidence_upper_7,"Approximate 95% confidence interval upper bound for the mean positive sentiment score for the stock during the pre-market session on the day (variant 4), using normal approximation (mean ± 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,88%,0,0
+positive_sentiment_confidence_upper_8,Upper endpoint of the approximate 95% confidence interval for the mean of positive sentiment scores across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+positive_sentiment_confidence_upper_9,"Upper endpoint of the approximate 95% confidence interval for the mean positive sentiment score for the stock-day in the post-market session; may fall outside [0,1]",MATRIX,69%,1,1
+positive_sentiment_confidence_upper_post,"Upper endpoint of the approximate 95% confidence interval for the mean positive sentiment score for the stock during the post-market session on the given day (variant 3), using normal approximation (mean + 1.96×std/√N); bounds may fall outside [0,1]",MATRIX,69%,0,0
+positive_sentiment_dispersion_10,Standard deviation of positive sentiment scores across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+positive_sentiment_dispersion_12,Standard deviation of positive sentiment scores across all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,1,1
+positive_sentiment_dispersion_6,"Standard deviation of positive sentiment scores for the stock during the pre-market session on the day (variant 4); scores normalized to [0,1]",MATRIX,88%,0,0
+positive_sentiment_dispersion_7,Standard deviation of positive sentiment scores across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+positive_sentiment_dispersion_8,Standard deviation of positive sentiment scores across post-market session news items for the stock-day,MATRIX,69%,1,1
+positive_sentiment_dispersion_9,"Standard deviation of positive sentiment scores across news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,1,1
+positive_sentiment_least_score,Minimum positive sentiment score among the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,2,2
+positive_sentiment_least_score_12,Minimum positive sentiment score among all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,1,2
+positive_sentiment_least_score_2,Minimum positive sentiment score observed across news items for the stock during the main session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,1,1
+positive_sentiment_least_score_3,"Minimum of positive sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+positive_sentiment_least_score_4,"Minimum positive sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+positive_sentiment_least_score_5,Minimum positive sentiment score across the stock’s Benzinga NewsQuantified items in the post-market session for that day,MATRIX,69%,0,0
+positive_sentiment_least_value,Minimum positive sentiment score observed for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+positive_sentiment_least_value_10,"Minimum positive sentiment score across all applicable news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+positive_sentiment_least_value_11,Minimum positive sentiment score observed across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+positive_sentiment_least_value_2,Minimum positive sentiment score across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+positive_sentiment_least_value_7,"Minimum positive sentiment score observed for the stock during the pre-market session on the day (variant 4); scores normalized to [0,1]",MATRIX,88%,0,0
+positive_sentiment_least_value_8,Minimum positive sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+positive_sentiment_least_value_9,"Minimum positive sentiment score observed across post-market session news items for the stock-day; scores normalized to [0,1]",MATRIX,69%,0,0
+positive_sentiment_maximum_2,"Maximum positive sentiment score across Benzinga NewsQuantified items linked to the stock during the main (regular-hours) session on that day; item-level scores are model-normalized to [0,1]",MATRIX,76%,0,0
+positive_sentiment_maximum_post,"Maximum positive sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+positive_sentiment_maximum_pre5,Maximum positive sentiment score among the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,1,1
+positive_sentiment_mean_score_12,Average positive sentiment score across all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+positive_sentiment_mean_value_2,Average positive sentiment score across Benzinga NewsQuantified news items for the stock during the main (regular) trading session on that day; scores are model outputs normalized to 0–1; NA if no items,MATRIX,76%,0,0
+positive_sentiment_mean_value_3,"Average (mean) of positive sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+positive_sentiment_mean_value_4,"Average positive sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+positive_sentiment_mean_value_5,"Average positive sentiment score across the stock’s Benzinga NewsQuantified items in the post-market session for that day (scores normalized to [0,1])",MATRIX,69%,0,0
+positive_sentiment_mean_value_6,"Average positive sentiment score for the stock during the pre-market session on the day (variant 4), aggregated over Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,88%,0,0
+positive_sentiment_median_2,Median value of positive sentiment scores in main session.,MATRIX,76%,0,0
+positive_sentiment_median_post,"Median positive sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,0,0
+positive_sentiment_median_pre5,Median positive sentiment score across the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+positive_sentiment_middle_score,Median of positive sentiment scores across news items for the stock during the main trading session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,0,0
+positive_sentiment_middle_score_12,Median positive sentiment score across all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+positive_sentiment_middle_score_2,"Median of positive sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,0,0
+positive_sentiment_middle_score_3,"Median positive sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,0,0
+positive_sentiment_middle_score_4,Median positive sentiment score across the stock’s Benzinga NewsQuantified items in the post-market session for that day,MATRIX,69%,0,0
+positive_sentiment_middle_score_5,"Median of positive sentiment scores for the stock during the pre-market session on the day (variant 4), aggregated over Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,88%,0,0
+positive_sentiment_middle_value,Median positive sentiment score for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+positive_sentiment_middle_value_10,Median of positive sentiment scores across Benzinga NewsQuantified items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+positive_sentiment_middle_value_2,Median of positive sentiment scores across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+positive_sentiment_middle_value_7,Median positive sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,1,1
+positive_sentiment_middle_value_8,"Median positive sentiment score across post-market session news items for the stock-day; scores normalized to [0,1]",MATRIX,69%,0,0
+positive_sentiment_middle_value_9,"Median of positive sentiment scores across all Benzinga NewsQuantified items for the stock during the main (regular-hours) session on that day, as scored by WorldQuant’s model; scores normalized to [0,1]",MATRIX,76%,0,0
+positive_sentiment_minimum_2,"Minimum positive sentiment score across Benzinga NewsQuantified items for the stock during the main session that day; scores normalized to [0,1]",MATRIX,76%,1,2
+positive_sentiment_minimum_post,"Minimum positive sentiment score across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3), using WorldQuant’s model; scores normalized to [0,1]",MATRIX,69%,0,0
+positive_sentiment_peak_score,Maximum positive sentiment score observed across news items for the stock during the main session on that day; scores normalized to 0–1; NA if no items,MATRIX,76%,0,0
+positive_sentiment_peak_score_12,Maximum positive sentiment score among all pre-market news items for the stock on that day (0 to 1 scale),MATRIX,88%,0,0
+positive_sentiment_peak_score_2,"Maximum of positive sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,1,1
+positive_sentiment_peak_score_3,"Maximum positive sentiment score across pre-market news items for the stock on the day; scores normalized to [0,1]",MATRIX,88%,1,1
+positive_sentiment_peak_score_4,"Maximum positive sentiment score among the stock’s Benzinga NewsQuantified items during the post-market session for that day (scores normalized to [0,1])",MATRIX,69%,0,0
+positive_sentiment_peak_value_10,"Maximum positive sentiment score across all applicable news items for the stock during the main (regular-hours) session that day; scores normalized to [0,1]",MATRIX,76%,0,0
+positive_sentiment_peak_value_11,Maximum positive sentiment score observed across items for the stock during the post-market session that day (scores 0-1),MATRIX,69%,0,0
+positive_sentiment_peak_value_2,Maximum positive sentiment score observed for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+positive_sentiment_peak_value_3,Maximum positive sentiment score across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,0,0
+positive_sentiment_peak_value_7,"Maximum positive sentiment score observed for the stock during the pre-market session on the day (variant 4); scores normalized to [0,1]",MATRIX,88%,0,0
+positive_sentiment_peak_value_8,Maximum positive sentiment score across Benzinga NewsQuantified items for the stock during the main trading session on that day (variant 2),MATRIX,76%,0,0
+positive_sentiment_peak_value_9,"Maximum positive sentiment score observed across post-market session news items for the stock-day; scores normalized to [0,1]",MATRIX,69%,1,1
+positive_sentiment_standard_deviation,Standard deviation of positive sentiment scores for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,0,0
+positive_sentiment_standard_deviation_2,Standard deviation of positive sentiment scores across news items for the stock during the main session on that day; NA if no items,MATRIX,76%,0,0
+positive_sentiment_standard_deviation_25,Standard deviation of positive sentiment scores in main session.,MATRIX,76%,0,0
+positive_sentiment_standard_deviation_3,"Standard deviation of positive sentiment scores for the stock on the post-market session day (variant 4), across Benzinga NewsQuantified items; scores normalized to [0,1]",MATRIX,69%,1,1
+positive_sentiment_standard_deviation_33,Standard deviation of positive sentiment scores across all Benzinga NewsQuantified items for the stock during the main session on that day,MATRIX,76%,0,0
+positive_sentiment_standard_deviation_4,Standard deviation of positive sentiment scores across pre-market news items for the stock on the day,MATRIX,88%,0,0
+positive_sentiment_standard_deviation_5,Standard deviation of positive sentiment scores across the stock’s Benzinga NewsQuantified items in the post-market session for that day,MATRIX,69%,4,4
+positive_sentiment_standard_deviation_post,"Standard deviation of positive sentiment scores across Benzinga NewsQuantified items for the stock during the post-market session on the given day (variant 3); scores normalized to [0,1]",MATRIX,69%,3,3
+positive_sentiment_standard_deviation_pre5,Standard deviation of positive sentiment scores across the stock’s pre-market news items for the day (0–1 scale),MATRIX,88%,0,0
+positive_sentiment_typical_value,Mean positive sentiment score for the stock in the pre-market session on that day across Benzinga NewsQuantified items,MATRIX,88%,1,1
+positive_sentiment_typical_value_2,Average positive sentiment score across all Benzinga NewsQuantified items for the stock during the main session on that day; scores normalized to 0–1,MATRIX,76%,1,3

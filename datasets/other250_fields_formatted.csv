@@ -1,0 +1,5 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth250_item_display_price,"Displayed list price of the item at the parse date, in the local currency of the site",VECTOR,38%,5,5
+oth250_item_rating,"Average customer star rating at parse time, typically on a 0 to 5 scale",VECTOR,36%,2,2
+oth250_item_review_count,Total number of customer reviews at parse time,VECTOR,36%,6,6
+oth250_rank,"Bestseller rank of the item within its category on that date, where 1 is best",VECTOR,39%,2,2

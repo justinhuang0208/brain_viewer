@@ -1,0 +1,88 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd13_acoa,Other Current Assets,MATRIX,45%,232,583
+fnd13_adbs,Normalized EBITDA,MATRIX,86%,233,968
+fnd13_adep,"Accumulated Depreciation, Total",MATRIX,47%,105,296
+fnd13_agse,Selling/General/Administrative Expense,MATRIX,83%,182,582
+fnd13_aing,Intangibles - Gross,MATRIX,32%,97,305
+fnd13_aptc,"Property/Plant/Equipment, Total - Gross",MATRIX,48%,113,293
+fnd13_asti,Short-Term Investments,MATRIX,36%,99,216
+fnd13_caic,Income Available to Common Excluding Extraordinary Items,MATRIX,97%,162,600
+fnd13_cinx,Income Available to Common Excluding Extraordinary Items,MATRIX,97%,188,764
+fnd13_cmin,Minority Interest,MATRIX,31%,83,541
+fnd13_cstq,Treasury Stock - Common,MATRIX,45%,62,290
+fnd13_dlcl,Current Portion of Long-Term Debt/Capital Leases,MATRIX,52%,83,158
+fnd13_dlts,Total Debt,MATRIX,84%,147,430
+fnd13_dtll,Long-Term Debt,MATRIX,79%,160,964
+fnd13_dtns,Net Debt,MATRIX,87%,156,595
+fnd13_dtsl,Notes Payable/Short-Term Debt,MATRIX,84%,91,288
+fnd13_eaca,Cash & Equivalents,MATRIX,85%,173,743
+fnd13_ecor,Cost of Revenue,MATRIX,80%,149,608
+fnd13_erad,Research & Development,MATRIX,34%,117,487
+fnd13_fbbs,Basic EPS Excluding Extraordinary Items,MATRIX,97%,154,520
+fnd13_graa,"Accounts Receivable - Trade, Gross",MATRIX,42%,63,141
+fnd13_iabs,Basic EPS Including Extraordinary Items,MATRIX,97%,122,432
+fnd13_ifpv,Net Income after Stock Based Compensation Expense,MATRIX,27%,10,18
+fnd13_ists,Total Special Items,MATRIX,62%,62,485
+fnd13_itpv,Normalized Income Before Taxes,MATRIX,97%,113,542
+fnd13_ixts,Total Extraordinary Items,MATRIX,29%,27,40
+fnd13_lcol,Other Current Liabilities,MATRIX,43%,51,116
+fnd13_letq,Total Liabilities & Shareholders' Equity,MATRIX,97%,149,724
+fnd13_lmin,Minority Interest,MATRIX,34%,31,62
+fnd13_ltll,Other Long-Term Liabilities,MATRIX,71%,101,347
+fnd13_ltls,"Other Liabilities, Total",MATRIX,88%,68,229
+fnd13_mpns,Net Profit Margin,MATRIX,96%,153,1064
+fnd13_mtps,Pretax Margin,MATRIX,96%,113,541
+fnd13_nins,"Interest Income (Expense), Net-Non-Operating, Total",MATRIX,82%,103,437
+fnd13_ntiv,Inc Tax Ex Impact of Sp Items,MATRIX,89%,96,418
+fnd13_octq,Total Common Shares Outstanding,MATRIX,97%,145,781
+fnd13_pxtl,Income Taxes Payable,MATRIX,40%,64,285
+fnd13_qred,Retained Earnings (Accumulated Deficit),MATRIX,94%,115,638
+fnd13_rkdbal_orianno,Original Announcement,MATRIX,98%,112,485
+fnd13_rkdbalancesheetq_acta,Total Current Assets,MATRIX,78%,153,418
+fnd13_rkdbalancesheetq_aint,"Intangibles, Net",MATRIX,65%,102,324
+fnd13_rkdbalancesheetq_aitl,Total Inventory,MATRIX,61%,84,308
+fnd13_rkdbalancesheetq_atot,Total Assets,MATRIX,97%,139,582
+fnd13_rkdbalancesheetq_crta,"Total Receivables, Net",MATRIX,85%,97,263
+fnd13_rkdbalancesheetq_dttl,Total Long-Term Debt,MATRIX,79%,87,382
+fnd13_rkdbalancesheetq_eltq,Total Equity,MATRIX,97%,125,596
+fnd13_rkdbalancesheetq_iscs,Cash and Short-Term Investments,MATRIX,87%,168,533
+fnd13_rkdbalancesheetq_iwga,"Goodwill, Net",MATRIX,67%,120,438
+fnd13_rkdbalancesheetq_lapb,Accounts Payable,MATRIX,76%,116,450
+fnd13_rkdbalancesheetq_lctl,Total Current Liabilities,MATRIX,78%,67,218
+fnd13_rkdbalancesheetq_lltl,Total Liabilities,MATRIX,97%,110,520
+fnd13_rkdbalancesheetq_nppa,"Property/Plant/Equipment, Total - Net",MATRIX,93%,94,349
+fnd13_rkdbalancesheetq_rcaa,"Accounts Receivable - Trade, Net",MATRIX,81%,90,276
+fnd13_rkdbalancesheetq_xeal,Accrued Expenses,MATRIX,75%,99,411
+fnd13_rkdbalancesheetq_yppa,Prepaid Expenses,MATRIX,59%,91,204
+fnd13_rkdic_ori_anno,Original Announcement,MATRIX,98%,135,519
+fnd13_rkdincomestatementq_agss,"Selling/General/Admin. Expenses, Total",MATRIX,84%,108,365
+fnd13_rkdincomestatementq_cnin,Net Income,MATRIX,97%,89,415
+fnd13_rkdincomestatementq_dgcd,Gross Dividends - Common Stock,MATRIX,81%,53,296
+fnd13_rkdincomestatementq_etoe,Total Operating Expense,MATRIX,90%,140,429
+fnd13_rkdincomestatementq_nibx,Net Income Before Extra Items,MATRIX,97%,107,459
+fnd13_rkdincomestatementq_pede,Depreciation,MATRIX,34%,39,59
+fnd13_rkdincomestatementq_prgs,Gross Profit,MATRIX,81%,169,488
+fnd13_rkdincomestatementq_rltr,Total Revenue,MATRIX,89%,112,442
+fnd13_rkdincomestatementq_rpds,Depreciation/Amortization,MATRIX,47%,43,96
+fnd13_rkdincomestatementq_sopi,Operating Income,MATRIX,90%,134,550
+fnd13_rkdincomestatementq_srev,Revenue,MATRIX,87%,106,449
+fnd13_rkdincomestatementq_stnr,Net Sales,MATRIX,83%,94,305
+fnd13_rkdincomestatementq_tait,Net Income After Taxes,MATRIX,97%,79,294
+fnd13_rkdincomestatementq_tbie,Net Income Before Taxes,MATRIX,97%,115,386
+fnd13_rkdincomestatementq_vbes,Basic Normalized EPS,MATRIX,97%,93,501
+fnd13_rkm_or_anno,Original Announcement,MATRIX,98%,133,569
+fnd13_saoa,Other Long-Term Assets,MATRIX,72%,92,320
+fnd13_sbit,Normalized EBIT,MATRIX,87%,129,553
+fnd13_scor,"Cost of Revenue, Total",MATRIX,81%,94,460
+fnd13_sinv,Long-Term Investments,MATRIX,44%,57,160
+fnd13_smcq,Common Stock,MATRIX,93%,101,486
+fnd13_smcs,"Common Stock, Total",MATRIX,93%,99,336
+fnd13_soca,"Other Current Assets, Total",MATRIX,65%,77,304
+fnd13_socl,"Other Current liabilities, Total",MATRIX,78%,329,1132
+fnd13_sola,"Other Long-Term Assets, Total",MATRIX,87%,124,585
+fnd13_sopp,Operating Margin,MATRIX,86%,107,450
+fnd13_tdbs,Deferred Income Tax,MATRIX,53%,68,165
+fnd13_ttax,Provision for Income Taxes,MATRIX,89%,116,530
+fnd13_vaia,Accumulated Amortization Against Intangible Fixed Assets,MATRIX,32%,83,326
+fnd13_viac,Normalized Income Available to Common Shareholders,MATRIX,97%,103,427
+fnd13_viat,Normalized Income After Taxes,MATRIX,97%,128,754

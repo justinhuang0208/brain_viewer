@@ -1,0 +1,31 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth571_views14d,Total Wikipedia company page views in the USA module over the trailing 14-day window ending 14 days ago (inclusive; module timezone),MATRIX,60%,11,12
+oth571_views1y,Total Wikipedia company page views in the USA module over the trailing 365-day window (366 in leap years) ending 364 days ago (inclusive; module timezone),MATRIX,54%,3,3
+oth571_views1yafternoon,Wikipedia company page views in the USA module from 12:00 to 17:59 on the day 364 days ago (module timezone),MATRIX,54%,3,3
+oth571_views1ydesktop,Total Wikipedia company page views in the USA module via desktop devices on the day 364 days ago (desktop web; module timezone),MATRIX,54%,2,2
+oth571_views1yevening,Wikipedia company page views in the USA module from 18:00 to 23:59 on the day 364 days ago (module timezone),MATRIX,54%,3,3
+oth571_views1ymobile,Total Wikipedia company page views in the USA module via mobile devices on the day 364 days ago (mobile web and apps; module timezone),MATRIX,54%,6,6
+oth571_views1ymorning,Wikipedia company page views in the USA module from 06:00 to 11:59 on the day 364 days ago (module timezone),MATRIX,54%,4,4
+oth571_views1ynight,Wikipedia company page views in the USA module from 00:00 to 05:59 on the day 364 days ago (module timezone),MATRIX,54%,2,2
+oth571_views28d,Total Wikipedia company page views in the USA module over the trailing 28-day window ending 28 days ago (inclusive; module timezone),MATRIX,59%,7,7
+oth571_views28dafternoon,Wikipedia company page views in the USA module from 12:00 to 17:59 on the day 28 days ago (module timezone),MATRIX,59%,5,5
+oth571_views28ddesktop,Total Wikipedia company page views in the USA module via desktop devices on the day 28 days ago (desktop web; module timezone),MATRIX,59%,2,3
+oth571_views28devening,Wikipedia company page views in the USA module from 18:00 to 23:59 on the day 28 days ago (module timezone),MATRIX,59%,3,3
+oth571_views28dmobile,Total Wikipedia company page views in the USA module via mobile devices on the day 28 days ago (mobile web and apps; module timezone),MATRIX,59%,9,10
+oth571_views28dmorning,Wikipedia company page views in the USA module from 06:00 to 11:59 on the day 28 days ago (module timezone),MATRIX,59%,4,4
+oth571_views28dnight,Wikipedia company page views in the USA module from 00:00 to 05:59 on the day 28 days ago (module timezone),MATRIX,59%,2,2
+oth571_views7d,Total Wikipedia page views over the past 7 natural days.,MATRIX,60%,10,10
+oth571_views7dafternoon,Wikipedia company page views in the USA module from 12:00 to 17:59 on the day 7 days ago (module timezone),MATRIX,60%,4,4
+oth571_views7ddesktop,Wikipedia page views from desktop devices over the past 7 natural days.,MATRIX,60%,3,3
+oth571_views7devening,Wikipedia company page views in the USA module from 18:00 to 23:59 on the day 7 days ago (module timezone),MATRIX,60%,5,7
+oth571_views7dmobile,Wikipedia page views from mobile devices over the past 7 natural days.,MATRIX,60%,14,15
+oth571_views7dmorning,Wikipedia company page views in the USA module from 06:00 to 11:59 on the day 7 days ago (module timezone),MATRIX,60%,6,6
+oth571_views7dnight,Wikipedia company page views in the USA module from 00:00 to 05:59 on the day 7 days ago (module timezone),MATRIX,60%,3,3
+oth571_views84d,Total Wikipedia company page views in the USA module over the trailing 84-day window ending 84 days ago (inclusive; module timezone),MATRIX,58%,4,4
+oth571_viewstoday,Total Wikipedia company page views in the USA module today (calendar day; module timezone),MATRIX,59%,29,36
+oth571_viewstodayafternoon,Wikipedia company page views in the USA module from 12:00 to 17:59 today (module timezone),MATRIX,59%,8,8
+oth571_viewstodaydesktop,Total Wikipedia company page views in the USA module via desktop devices today (desktop web; module timezone),MATRIX,59%,5,5
+oth571_viewstodayevening,Wikipedia company page views in the USA module from 18:00 to 23:59 today (module timezone),MATRIX,59%,13,21
+oth571_viewstodaymobile,Total Wikipedia company page views in the USA module via mobile devices today (mobile web and apps; module timezone),MATRIX,59%,35,54
+oth571_viewstodaymorning,Wikipedia company page views in the USA module from 06:00 to 11:59 today (module timezone),MATRIX,59%,10,10
+oth571_viewstodaynight,Wikipedia company page views in the USA module from 00:00 to 05:59 today (module timezone),MATRIX,59%,5,5

@@ -1,0 +1,295 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl165_dl8ibesnuggetschiwumodel1_01v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,194,519
+mdl165_dl8ibesnuggetschiwumodel1_02v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,87,256
+mdl165_dl8ibesnuggetschiwumodel1_03v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,102,278
+mdl165_dl8ibesnuggetschiwumodel1_04v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,88,279
+mdl165_dl8ibesnuggetschiwumodel1_11v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,80,258
+mdl165_dl8ibesnuggetschiwumodel1_12v,layer 1 feature derived from analyst data,MATRIX,100%,75,304
+mdl165_dl8ibesnuggetschiwumodel1_13v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,116,526
+mdl165_dl8ibesnuggetschiwumodel1_14v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,157,676
+mdl165_dl8ibesnuggetschiwumodel1_1v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,62,161
+mdl165_dl8ibesnuggetschiwumodel1_21v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,287,850
+mdl165_dl8ibesnuggetschiwumodel1_22v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,58,278
+mdl165_dl8ibesnuggetschiwumodel1_23v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,55,164
+mdl165_dl8ibesnuggetschiwumodel1_24v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,47,92
+mdl165_dl8ibesnuggetschiwumodel1_2v,"Nonlinear latent embedding feature (layer 1) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,43,171
+mdl165_dl8ibesnuggetschiwumodel1_31v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,43,83
+mdl165_dl8ibesnuggetschiwumodel1_32v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,36,81
+mdl165_dl8ibesnuggetschiwumodel1_33v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,55,137
+mdl165_dl8ibesnuggetschiwumodel1_34v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,95,406
+mdl165_dl8ibesnuggetschiwumodel1_3v,"Nonlinear latent embedding feature (layer 1) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,53,102
+mdl165_dl8ibesnuggetschiwumodel1_41v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,34,117
+mdl165_dl8ibesnuggetschiwumodel1_42v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,107,477
+mdl165_dl8ibesnuggetschiwumodel1_43v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,43,135
+mdl165_dl8ibesnuggetschiwumodel1_44v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,45,67
+mdl165_dl8ibesnuggetschiwumodel1_4v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,47,79
+mdl165_dl8ibesnuggetschiwumodel1_51v,"Nonlinear latent embedding feature (layer 1) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,54,356
+mdl165_dl8ibesnuggetschiwumodel1_52v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,128,445
+mdl165_dl8ibesnuggetschiwumodel1_53v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,53,165
+mdl165_dl8ibesnuggetschiwumodel1_54v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,43,114
+mdl165_dl8ibesnuggetschiwumodel1_5v,"Nonlinear latent embedding feature (layer 1) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,34,53
+mdl165_dl8ibesnuggetschiwumodel1_61v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,70,172
+mdl165_dl8ibesnuggetschiwumodel1_62v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,38,80
+mdl165_dl8ibesnuggetschiwumodel1_63v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,57,138
+mdl165_dl8ibesnuggetschiwumodel1_64v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,35,95
+mdl165_dl8ibesnuggetschiwumodel1_6v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,33,65
+mdl165_dl8ibesnuggetschiwumodel1_71v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,35,131
+mdl165_dl8ibesnuggetschiwumodel1_72v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,55,169
+mdl165_dl8ibesnuggetschiwumodel1_73v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,137,348
+mdl165_dl8ibesnuggetschiwumodel1_74v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,60,162
+mdl165_dl8ibesnuggetschiwumodel1_7v,"Nonlinear latent embedding feature (layer 1) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,48,207
+mdl165_dl8ibesnuggetschiwumodel1_81v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,30,84
+mdl165_dl8ibesnuggetschiwumodel1_82v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,31,75
+mdl165_dl8ibesnuggetschiwumodel1_83v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,63,210
+mdl165_dl8ibesnuggetschiwumodel1_84v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,68,308
+mdl165_dl8ibesnuggetschiwumodel1_8v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,30,36
+mdl165_dl8ibesnuggetschiwumodel1_91v,"Layer-1 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,51,147
+mdl165_dl8ibesnuggetschiwumodel1_92v,"Layer-2 deep-learning latent feature derived from embargoed IBES sell-side analyst data (D1-lagged, point-in-time)",MATRIX,100%,92,465
+mdl165_dl8ibesnuggetschiwumodel1_93v,"Nonlinear latent embedding feature (layer 2) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,49,123
+mdl165_dl8ibesnuggetschiwumodel1_9v,"Nonlinear latent embedding feature (layer 1) from D1-lagged, point-in-time IBES analyst data; non-interpretable scalar meta-feature",MATRIX,100%,35,131
+mdl165_dl8ibesnuggetschiwumodel1_sop,"Top-level nonlinear score from the deep-learning IBES nuggets embedding (rankable regime/importance measure; not a probability; D1-lagged, point-in-time)",MATRIX,100%,392,988
+mdl165_dl8ibesnuggetschiwumodel2_01v,layer 1 feature derived from analyst data,MATRIX,100%,49,89
+mdl165_dl8ibesnuggetschiwumodel2_02v,layer 1 feature derived from analyst data,MATRIX,100%,49,228
+mdl165_dl8ibesnuggetschiwumodel2_03v,"Intermediate nonlinear latent feature (layer 2 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,43,171
+mdl165_dl8ibesnuggetschiwumodel2_04v,layer 2 feature derived from analyst data,MATRIX,100%,31,80
+mdl165_dl8ibesnuggetschiwumodel2_11v,layer 1 feature derived from analyst data,MATRIX,100%,29,50
+mdl165_dl8ibesnuggetschiwumodel2_12v,layer 1 feature derived from analyst data,MATRIX,100%,27,90
+mdl165_dl8ibesnuggetschiwumodel2_13v,layer 2 feature derived from analyst data,MATRIX,100%,28,69
+mdl165_dl8ibesnuggetschiwumodel2_14v,layer 2 feature derived from analyst data,MATRIX,100%,30,78
+mdl165_dl8ibesnuggetschiwumodel2_1v,"Early-stage nonlinear latent feature (layer 1 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,32,66
+mdl165_dl8ibesnuggetschiwumodel2_21v,layer 1 feature derived from analyst data,MATRIX,100%,32,92
+mdl165_dl8ibesnuggetschiwumodel2_22v,layer 1 feature derived from analyst data,MATRIX,100%,44,106
+mdl165_dl8ibesnuggetschiwumodel2_23v,layer 2 feature derived from analyst data,MATRIX,100%,23,63
+mdl165_dl8ibesnuggetschiwumodel2_24v,layer 2 feature derived from analyst data,MATRIX,100%,33,87
+mdl165_dl8ibesnuggetschiwumodel2_2v,layer 1 feature derived from analyst data,MATRIX,100%,20,57
+mdl165_dl8ibesnuggetschiwumodel2_31v,"Early-stage nonlinear latent feature (layer 1 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,36,123
+mdl165_dl8ibesnuggetschiwumodel2_32v,layer 1 feature derived from analyst data,MATRIX,100%,22,58
+mdl165_dl8ibesnuggetschiwumodel2_33v,layer 2 feature derived from analyst data,MATRIX,100%,31,88
+mdl165_dl8ibesnuggetschiwumodel2_34v,layer 2 feature derived from analyst data,MATRIX,100%,21,60
+mdl165_dl8ibesnuggetschiwumodel2_3v,layer 1 feature derived from analyst data,MATRIX,100%,23,52
+mdl165_dl8ibesnuggetschiwumodel2_41v,layer 1 feature derived from analyst data,MATRIX,100%,18,26
+mdl165_dl8ibesnuggetschiwumodel2_42v,layer 1 feature derived from analyst data,MATRIX,100%,35,111
+mdl165_dl8ibesnuggetschiwumodel2_43v,layer 2 feature derived from analyst data,MATRIX,100%,40,172
+mdl165_dl8ibesnuggetschiwumodel2_44v,layer 2 feature derived from analyst data,MATRIX,100%,34,108
+mdl165_dl8ibesnuggetschiwumodel2_4v,"Early-stage nonlinear latent feature (layer 1 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,28,38
+mdl165_dl8ibesnuggetschiwumodel2_51v,layer 1 feature derived from analyst data,MATRIX,100%,24,67
+mdl165_dl8ibesnuggetschiwumodel2_52v,"Intermediate nonlinear latent feature (layer 2 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,39,113
+mdl165_dl8ibesnuggetschiwumodel2_53v,layer 2 feature derived from analyst data,MATRIX,100%,25,46
+mdl165_dl8ibesnuggetschiwumodel2_54v,layer 2 feature derived from analyst data,MATRIX,100%,31,103
+mdl165_dl8ibesnuggetschiwumodel2_5v,layer 1 feature derived from analyst data,MATRIX,100%,16,46
+mdl165_dl8ibesnuggetschiwumodel2_61v,layer 1 feature derived from analyst data,MATRIX,100%,17,56
+mdl165_dl8ibesnuggetschiwumodel2_62v,"Intermediate nonlinear latent feature (layer 2 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,14,31
+mdl165_dl8ibesnuggetschiwumodel2_63v,layer 2 feature derived from analyst data,MATRIX,100%,38,85
+mdl165_dl8ibesnuggetschiwumodel2_64v,layer 2 feature derived from analyst data,MATRIX,100%,37,232
+mdl165_dl8ibesnuggetschiwumodel2_6v,layer 1 feature derived from analyst data,MATRIX,100%,26,123
+mdl165_dl8ibesnuggetschiwumodel2_71v,layer 1 feature derived from analyst data,MATRIX,100%,25,76
+mdl165_dl8ibesnuggetschiwumodel2_72v,"Intermediate nonlinear latent feature (layer 2 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,17,60
+mdl165_dl8ibesnuggetschiwumodel2_73v,layer 2 feature derived from analyst data,MATRIX,100%,46,72
+mdl165_dl8ibesnuggetschiwumodel2_74v,layer 2 feature derived from analyst data,MATRIX,100%,40,137
+mdl165_dl8ibesnuggetschiwumodel2_7v,"Early-stage nonlinear latent feature (layer 1 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,20,53
+mdl165_dl8ibesnuggetschiwumodel2_81v,layer 1 feature derived from analyst data,MATRIX,100%,25,109
+mdl165_dl8ibesnuggetschiwumodel2_82v,layer 2 feature derived from analyst data,MATRIX,100%,28,164
+mdl165_dl8ibesnuggetschiwumodel2_83v,layer 2 feature derived from analyst data,MATRIX,100%,17,52
+mdl165_dl8ibesnuggetschiwumodel2_84v,layer 2 feature derived from analyst data,MATRIX,100%,47,138
+mdl165_dl8ibesnuggetschiwumodel2_8v,"Early-stage nonlinear latent feature (layer 1 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,36,275
+mdl165_dl8ibesnuggetschiwumodel2_91v,layer 1 feature derived from analyst data,MATRIX,100%,25,48
+mdl165_dl8ibesnuggetschiwumodel2_92v,layer 2 feature derived from analyst data,MATRIX,100%,30,65
+mdl165_dl8ibesnuggetschiwumodel2_93v,layer 2 feature derived from analyst data,MATRIX,100%,17,66
+mdl165_dl8ibesnuggetschiwumodel2_9v,"Early-stage nonlinear latent feature (layer 1 embedding) from the DL8 IBES Nuggets model, derived from D1-lagged point-in-time IBES analyst data; scalar meta-feature not directly interpretable",MATRIX,100%,17,43
+mdl165_dl8ibesnuggetschiwumodel2_sop,"Top-level nonlinear meta-feature score (pos) from a deep-learning embedding of D1-lagged, point-in-time IBES analyst data; normalized and rankable, not a probability",MATRIX,100%,255,989
+mdl165_dl8ibesnuggetskachengmodel1_01v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,22,60
+mdl165_dl8ibesnuggetskachengmodel1_02v,layer 1 feature derived from analyst data,MATRIX,100%,41,165
+mdl165_dl8ibesnuggetskachengmodel1_03v,layer 2 feature derived from analyst data,MATRIX,100%,88,177
+mdl165_dl8ibesnuggetskachengmodel1_04v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,24,64
+mdl165_dl8ibesnuggetskachengmodel1_11v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,52,114
+mdl165_dl8ibesnuggetskachengmodel1_12v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,41,103
+mdl165_dl8ibesnuggetskachengmodel1_13v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,22,82
+mdl165_dl8ibesnuggetskachengmodel1_14v,layer 2 feature derived from analyst data,MATRIX,100%,22,50
+mdl165_dl8ibesnuggetskachengmodel1_1v,layer 1 feature derived from analyst data,MATRIX,100%,86,147
+mdl165_dl8ibesnuggetskachengmodel1_21v,layer 1 feature derived from analyst data,MATRIX,100%,25,49
+mdl165_dl8ibesnuggetskachengmodel1_22v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,20,47
+mdl165_dl8ibesnuggetskachengmodel1_23v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,40,106
+mdl165_dl8ibesnuggetskachengmodel1_24v,layer 2 feature derived from analyst data,MATRIX,100%,88,264
+mdl165_dl8ibesnuggetskachengmodel1_2v,layer 1 feature derived from analyst data,MATRIX,100%,42,65
+mdl165_dl8ibesnuggetskachengmodel1_31v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,100,147
+mdl165_dl8ibesnuggetskachengmodel1_32v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,36,83
+mdl165_dl8ibesnuggetskachengmodel1_33v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,39,83
+mdl165_dl8ibesnuggetskachengmodel1_34v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,17,36
+mdl165_dl8ibesnuggetskachengmodel1_3v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,21,62
+mdl165_dl8ibesnuggetskachengmodel1_41v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,38,147
+mdl165_dl8ibesnuggetskachengmodel1_42v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,15,89
+mdl165_dl8ibesnuggetskachengmodel1_43v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,35,80
+mdl165_dl8ibesnuggetskachengmodel1_44v,layer 2 feature derived from analyst data,MATRIX,100%,37,115
+mdl165_dl8ibesnuggetskachengmodel1_4v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,16,80
+mdl165_dl8ibesnuggetskachengmodel1_51v,layer 1 feature derived from analyst data,MATRIX,100%,21,64
+mdl165_dl8ibesnuggetskachengmodel1_52v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,35,97
+mdl165_dl8ibesnuggetskachengmodel1_53v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,27,42
+mdl165_dl8ibesnuggetskachengmodel1_54v,layer 2 feature derived from analyst data,MATRIX,100%,40,123
+mdl165_dl8ibesnuggetskachengmodel1_5v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,21,74
+mdl165_dl8ibesnuggetskachengmodel1_61v,layer 1 feature derived from analyst data,MATRIX,100%,16,25
+mdl165_dl8ibesnuggetskachengmodel1_62v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,19,54
+mdl165_dl8ibesnuggetskachengmodel1_63v,layer 2 feature derived from analyst data,MATRIX,100%,41,99
+mdl165_dl8ibesnuggetskachengmodel1_64v,layer 2 feature derived from analyst data,MATRIX,100%,30,104
+mdl165_dl8ibesnuggetskachengmodel1_6v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,31,96
+mdl165_dl8ibesnuggetskachengmodel1_71v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,20,45
+mdl165_dl8ibesnuggetskachengmodel1_72v,layer 2 feature derived from analyst data,MATRIX,100%,22,82
+mdl165_dl8ibesnuggetskachengmodel1_73v,layer 2 feature derived from analyst data,MATRIX,100%,25,61
+mdl165_dl8ibesnuggetskachengmodel1_74v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,24,55
+mdl165_dl8ibesnuggetskachengmodel1_7v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,30,176
+mdl165_dl8ibesnuggetskachengmodel1_81v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,37,137
+mdl165_dl8ibesnuggetskachengmodel1_82v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,31,81
+mdl165_dl8ibesnuggetskachengmodel1_83v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,24,41
+mdl165_dl8ibesnuggetskachengmodel1_84v,layer 2 feature derived from analyst data,MATRIX,100%,44,120
+mdl165_dl8ibesnuggetskachengmodel1_8v,"Early-stage nonlinear latent embedding (layer 1) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,43,134
+mdl165_dl8ibesnuggetskachengmodel1_91v,layer 1 feature derived from analyst data,MATRIX,100%,25,54
+mdl165_dl8ibesnuggetskachengmodel1_92v,"Intermediate-stage nonlinear latent embedding (layer 2) derived from embargoed IBES analyst data (D1-lagged, PIT)",MATRIX,100%,25,99
+mdl165_dl8ibesnuggetskachengmodel1_93v,layer 2 feature derived from analyst data,MATRIX,100%,25,82
+mdl165_dl8ibesnuggetskachengmodel1_9v,layer 1 feature derived from analyst data,MATRIX,100%,35,170
+mdl165_dl8ibesnuggetskachengmodel1_sop,"Top-level nonlinear meta-feature score (pos) from deep-learning embedding of embargoed IBES analyst data (D1-lagged, PIT); normalized, rankable, not a probability",MATRIX,100%,138,377
+mdl165_dl8qsgnuggetskachengmodel1_01v,layer 1 feature derived from quant model data,MATRIX,100%,15,54
+mdl165_dl8qsgnuggetskachengmodel1_02v,layer 1 feature derived from quant model data,MATRIX,100%,37,107
+mdl165_dl8qsgnuggetskachengmodel1_03v,layer 2 feature derived from quant model data,MATRIX,100%,30,59
+mdl165_dl8qsgnuggetskachengmodel1_04v,layer 2 feature derived from quant model data,MATRIX,100%,32,113
+mdl165_dl8qsgnuggetskachengmodel1_11v,layer 1 feature derived from quant model data,MATRIX,100%,17,64
+mdl165_dl8qsgnuggetskachengmodel1_12v,layer 1 feature derived from quant model data,MATRIX,100%,41,141
+mdl165_dl8qsgnuggetskachengmodel1_13v,layer 2 feature derived from quant model data,MATRIX,100%,23,68
+mdl165_dl8qsgnuggetskachengmodel1_14v,layer 2 feature derived from quant model data,MATRIX,100%,19,68
+mdl165_dl8qsgnuggetskachengmodel1_1v,layer 1 feature derived from quant model data,MATRIX,100%,16,42
+mdl165_dl8qsgnuggetskachengmodel1_21v,layer 1 feature derived from quant model data,MATRIX,100%,19,41
+mdl165_dl8qsgnuggetskachengmodel1_22v,layer 1 feature derived from quant model data,MATRIX,100%,13,37
+mdl165_dl8qsgnuggetskachengmodel1_23v,layer 2 feature derived from quant model data,MATRIX,100%,23,59
+mdl165_dl8qsgnuggetskachengmodel1_24v,layer 2 feature derived from quant model data,MATRIX,100%,32,51
+mdl165_dl8qsgnuggetskachengmodel1_2v,layer 1 feature derived from quant model data,MATRIX,100%,18,36
+mdl165_dl8qsgnuggetskachengmodel1_31v,layer 1 feature derived from quant model data,MATRIX,100%,14,31
+mdl165_dl8qsgnuggetskachengmodel1_32v,layer 1 feature derived from quant model data,MATRIX,100%,18,61
+mdl165_dl8qsgnuggetskachengmodel1_33v,layer 2 feature derived from quant model data,MATRIX,100%,18,37
+mdl165_dl8qsgnuggetskachengmodel1_34v,layer 2 feature derived from quant model data,MATRIX,100%,20,63
+mdl165_dl8qsgnuggetskachengmodel1_3v,layer 1 feature derived from quant model data,MATRIX,100%,13,35
+mdl165_dl8qsgnuggetskachengmodel1_41v,layer 1 feature derived from quant model data,MATRIX,100%,15,96
+mdl165_dl8qsgnuggetskachengmodel1_42v,layer 1 feature derived from quant model data,MATRIX,100%,16,44
+mdl165_dl8qsgnuggetskachengmodel1_43v,layer 2 feature derived from quant model data,MATRIX,100%,16,46
+mdl165_dl8qsgnuggetskachengmodel1_44v,layer 2 feature derived from quant model data,MATRIX,100%,20,85
+mdl165_dl8qsgnuggetskachengmodel1_4v,layer 1 feature derived from quant model data,MATRIX,100%,19,43
+mdl165_dl8qsgnuggetskachengmodel1_51v,layer 1 feature derived from quant model data,MATRIX,100%,17,71
+mdl165_dl8qsgnuggetskachengmodel1_52v,layer 2 feature derived from quant model data,MATRIX,100%,77,195
+mdl165_dl8qsgnuggetskachengmodel1_53v,layer 2 feature derived from quant model data,MATRIX,100%,20,83
+mdl165_dl8qsgnuggetskachengmodel1_54v,layer 2 feature derived from quant model data,MATRIX,100%,27,108
+mdl165_dl8qsgnuggetskachengmodel1_5v,layer 1 feature derived from quant model data,MATRIX,100%,20,65
+mdl165_dl8qsgnuggetskachengmodel1_61v,layer 1 feature derived from quant model data,MATRIX,100%,22,60
+mdl165_dl8qsgnuggetskachengmodel1_62v,layer 2 feature derived from quant model data,MATRIX,100%,27,72
+mdl165_dl8qsgnuggetskachengmodel1_63v,layer 2 feature derived from quant model data,MATRIX,100%,222,725
+mdl165_dl8qsgnuggetskachengmodel1_64v,layer 2 feature derived from quant model data,MATRIX,100%,30,51
+mdl165_dl8qsgnuggetskachengmodel1_6v,layer 1 feature derived from quant model data,MATRIX,100%,34,78
+mdl165_dl8qsgnuggetskachengmodel1_71v,layer 1 feature derived from quant model data,MATRIX,100%,24,70
+mdl165_dl8qsgnuggetskachengmodel1_72v,layer 2 feature derived from quant model data,MATRIX,100%,31,96
+mdl165_dl8qsgnuggetskachengmodel1_73v,layer 2 feature derived from quant model data,MATRIX,100%,60,166
+mdl165_dl8qsgnuggetskachengmodel1_74v,layer 2 feature derived from quant model data,MATRIX,100%,18,53
+mdl165_dl8qsgnuggetskachengmodel1_7v,layer 1 feature derived from quant model data,MATRIX,100%,14,36
+mdl165_dl8qsgnuggetskachengmodel1_81v,layer 1 feature derived from quant model data,MATRIX,100%,23,108
+mdl165_dl8qsgnuggetskachengmodel1_82v,layer 2 feature derived from quant model data,MATRIX,100%,21,75
+mdl165_dl8qsgnuggetskachengmodel1_83v,layer 2 feature derived from quant model data,MATRIX,100%,26,92
+mdl165_dl8qsgnuggetskachengmodel1_84v,layer 2 feature derived from quant model data,MATRIX,100%,195,750
+mdl165_dl8qsgnuggetskachengmodel1_8v,layer 1 feature derived from quant model data,MATRIX,100%,26,144
+mdl165_dl8qsgnuggetskachengmodel1_91v,layer 1 feature derived from quant model data,MATRIX,100%,23,46
+mdl165_dl8qsgnuggetskachengmodel1_92v,layer 2 feature derived from quant model data,MATRIX,100%,16,25
+mdl165_dl8qsgnuggetskachengmodel1_93v,layer 2 feature derived from quant model data,MATRIX,100%,26,92
+mdl165_dl8qsgnuggetskachengmodel1_9v,layer 1 feature derived from quant model data,MATRIX,100%,35,123
+mdl165_dl8qsgnuggetskachengmodel1_sop,"Top-level nonlinear meta-feature score (scalar embedding) from a deep-learning model using embargoed QSG parent analytics (D1-lag, point-in-time); normalized, rankable, not a probability and not directly interpretable",MATRIX,100%,398,1013
+mdl165_dl8qsgnuggetskachengmodel2_01v,layer 1 feature derived from quant model data,MATRIX,100%,23,41
+mdl165_dl8qsgnuggetskachengmodel2_02v,layer 1 feature derived from quant model data,MATRIX,100%,17,60
+mdl165_dl8qsgnuggetskachengmodel2_03v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,35,105
+mdl165_dl8qsgnuggetskachengmodel2_04v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,15,63
+mdl165_dl8qsgnuggetskachengmodel2_11v,layer 1 feature derived from quant model data,MATRIX,100%,10,25
+mdl165_dl8qsgnuggetskachengmodel2_12v,layer 1 feature derived from quant model data,MATRIX,100%,13,31
+mdl165_dl8qsgnuggetskachengmodel2_13v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,21,45
+mdl165_dl8qsgnuggetskachengmodel2_14v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,19,69
+mdl165_dl8qsgnuggetskachengmodel2_1v,layer 1 feature derived from quant model data,MATRIX,100%,13,42
+mdl165_dl8qsgnuggetskachengmodel2_21v,layer 1 feature derived from quant model data,MATRIX,100%,20,43
+mdl165_dl8qsgnuggetskachengmodel2_22v,layer 1 feature derived from quant model data,MATRIX,100%,11,16
+mdl165_dl8qsgnuggetskachengmodel2_23v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,12,41
+mdl165_dl8qsgnuggetskachengmodel2_24v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,32,64
+mdl165_dl8qsgnuggetskachengmodel2_2v,layer 1 feature derived from quant model data,MATRIX,100%,9,11
+mdl165_dl8qsgnuggetskachengmodel2_31v,layer 1 feature derived from quant model data,MATRIX,100%,16,21
+mdl165_dl8qsgnuggetskachengmodel2_32v,layer 1 feature derived from quant model data,MATRIX,100%,14,25
+mdl165_dl8qsgnuggetskachengmodel2_33v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,17,67
+mdl165_dl8qsgnuggetskachengmodel2_34v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,32,107
+mdl165_dl8qsgnuggetskachengmodel2_3v,layer 1 feature derived from quant model data,MATRIX,100%,17,63
+mdl165_dl8qsgnuggetskachengmodel2_41v,layer 1 feature derived from quant model data,MATRIX,100%,17,31
+mdl165_dl8qsgnuggetskachengmodel2_42v,layer 1 feature derived from quant model data,MATRIX,100%,9,21
+mdl165_dl8qsgnuggetskachengmodel2_43v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,42,100
+mdl165_dl8qsgnuggetskachengmodel2_44v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,13,21
+mdl165_dl8qsgnuggetskachengmodel2_4v,layer 1 feature derived from quant model data,MATRIX,100%,20,62
+mdl165_dl8qsgnuggetskachengmodel2_51v,layer 1 feature derived from quant model data,MATRIX,100%,17,43
+mdl165_dl8qsgnuggetskachengmodel2_52v,layer 2 feature derived from quant model data,MATRIX,100%,24,117
+mdl165_dl8qsgnuggetskachengmodel2_53v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,12,38
+mdl165_dl8qsgnuggetskachengmodel2_54v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,17,41
+mdl165_dl8qsgnuggetskachengmodel2_5v,layer 1 feature derived from quant model data,MATRIX,100%,10,67
+mdl165_dl8qsgnuggetskachengmodel2_61v,layer 1 feature derived from quant model data,MATRIX,100%,17,27
+mdl165_dl8qsgnuggetskachengmodel2_62v,layer 2 feature derived from quant model data,MATRIX,100%,15,27
+mdl165_dl8qsgnuggetskachengmodel2_63v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,8,30
+mdl165_dl8qsgnuggetskachengmodel2_64v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,30,179
+mdl165_dl8qsgnuggetskachengmodel2_6v,layer 1 feature derived from quant model data,MATRIX,100%,10,14
+mdl165_dl8qsgnuggetskachengmodel2_71v,layer 1 feature derived from quant model data,MATRIX,100%,9,25
+mdl165_dl8qsgnuggetskachengmodel2_72v,layer 2 feature derived from quant model data,MATRIX,100%,24,64
+mdl165_dl8qsgnuggetskachengmodel2_73v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,21,41
+mdl165_dl8qsgnuggetskachengmodel2_74v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,16,92
+mdl165_dl8qsgnuggetskachengmodel2_7v,layer 1 feature derived from quant model data,MATRIX,100%,23,81
+mdl165_dl8qsgnuggetskachengmodel2_81v,layer 1 feature derived from quant model data,MATRIX,100%,9,22
+mdl165_dl8qsgnuggetskachengmodel2_82v,layer 2 feature derived from quant model data,MATRIX,100%,17,40
+mdl165_dl8qsgnuggetskachengmodel2_83v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,13,42
+mdl165_dl8qsgnuggetskachengmodel2_84v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,10,16
+mdl165_dl8qsgnuggetskachengmodel2_8v,layer 1 feature derived from quant model data,MATRIX,100%,16,48
+mdl165_dl8qsgnuggetskachengmodel2_91v,layer 1 feature derived from quant model data,MATRIX,100%,20,107
+mdl165_dl8qsgnuggetskachengmodel2_92v,layer 2 feature derived from quant model data,MATRIX,100%,19,23
+mdl165_dl8qsgnuggetskachengmodel2_93v,"Layer-2 latent embedding feature derived from QSG quant model data (D1-lagged, point-in-time; non-interpretable scalar)",MATRIX,100%,23,30
+mdl165_dl8qsgnuggetskachengmodel2_9v,layer 1 feature derived from quant model data,MATRIX,100%,13,33
+mdl165_dl8qsgnuggetskachengmodel2_sop,"Top-level nonlinear meta-feature score (embedding) from the deep-learning nuggets model using embargoed, D1-lagged QSG inputs; normalized regime-sensitive signal for ranking, not a probability",MATRIX,100%,93,285
+mdl165_dl8starminenuggetschiehuangmodel1_01v,layer 1 feature derived from fundamental data,MATRIX,100%,77,206
+mdl165_dl8starminenuggetschiehuangmodel1_02v,layer 1 feature derived from fundamental data,MATRIX,100%,32,106
+mdl165_dl8starminenuggetschiehuangmodel1_03v,layer 2 feature derived from fundamental data,MATRIX,100%,180,542
+mdl165_dl8starminenuggetschiehuangmodel1_04v,layer 2 feature derived from fundamental data,MATRIX,100%,21,63
+mdl165_dl8starminenuggetschiehuangmodel1_11v,layer 1 feature derived from fundamental data,MATRIX,100%,38,82
+mdl165_dl8starminenuggetschiehuangmodel1_12v,layer 1 feature derived from fundamental data,MATRIX,100%,90,290
+mdl165_dl8starminenuggetschiehuangmodel1_13v,layer 2 feature derived from fundamental data,MATRIX,100%,47,144
+mdl165_dl8starminenuggetschiehuangmodel1_14v,layer 2 feature derived from fundamental data,MATRIX,100%,44,107
+mdl165_dl8starminenuggetschiehuangmodel1_1v,layer 1 feature derived from fundamental data,MATRIX,100%,12,79
+mdl165_dl8starminenuggetschiehuangmodel1_21v,layer 1 feature derived from fundamental data,MATRIX,100%,49,241
+mdl165_dl8starminenuggetschiehuangmodel1_22v,layer 1 feature derived from fundamental data,MATRIX,100%,71,189
+mdl165_dl8starminenuggetschiehuangmodel1_23v,layer 2 feature derived from fundamental data,MATRIX,100%,12,39
+mdl165_dl8starminenuggetschiehuangmodel1_24v,layer 2 feature derived from fundamental data,MATRIX,100%,145,518
+mdl165_dl8starminenuggetschiehuangmodel1_2v,layer 1 feature derived from fundamental data,MATRIX,100%,85,217
+mdl165_dl8starminenuggetschiehuangmodel1_31v,layer 1 feature derived from fundamental data,MATRIX,100%,19,59
+mdl165_dl8starminenuggetschiehuangmodel1_32v,layer 1 feature derived from fundamental data,MATRIX,100%,37,119
+mdl165_dl8starminenuggetschiehuangmodel1_33v,layer 2 feature derived from fundamental data,MATRIX,100%,100,259
+mdl165_dl8starminenuggetschiehuangmodel1_34v,layer 2 feature derived from fundamental data,MATRIX,100%,41,93
+mdl165_dl8starminenuggetschiehuangmodel1_3v,layer 1 feature derived from fundamental data,MATRIX,100%,65,274
+mdl165_dl8starminenuggetschiehuangmodel1_41v,layer 1 feature derived from fundamental data,MATRIX,100%,66,157
+mdl165_dl8starminenuggetschiehuangmodel1_42v,layer 1 feature derived from fundamental data,MATRIX,100%,44,139
+mdl165_dl8starminenuggetschiehuangmodel1_43v,layer 2 feature derived from fundamental data,MATRIX,100%,41,132
+mdl165_dl8starminenuggetschiehuangmodel1_44v,layer 2 feature derived from fundamental data,MATRIX,100%,14,32
+mdl165_dl8starminenuggetschiehuangmodel1_4v,layer 1 feature derived from fundamental data,MATRIX,100%,30,66
+mdl165_dl8starminenuggetschiehuangmodel1_51v,layer 1 feature derived from fundamental data,MATRIX,100%,81,309
+mdl165_dl8starminenuggetschiehuangmodel1_52v,layer 2 feature derived from fundamental data,MATRIX,100%,87,327
+mdl165_dl8starminenuggetschiehuangmodel1_53v,layer 2 feature derived from fundamental data,MATRIX,100%,41,121
+mdl165_dl8starminenuggetschiehuangmodel1_54v,layer 2 feature derived from fundamental data,MATRIX,100%,123,533
+mdl165_dl8starminenuggetschiehuangmodel1_5v,layer 1 feature derived from fundamental data,MATRIX,100%,52,171
+mdl165_dl8starminenuggetschiehuangmodel1_61v,layer 1 feature derived from fundamental data,MATRIX,100%,34,131
+mdl165_dl8starminenuggetschiehuangmodel1_62v,layer 2 feature derived from fundamental data,MATRIX,100%,51,144
+mdl165_dl8starminenuggetschiehuangmodel1_63v,layer 2 feature derived from fundamental data,MATRIX,100%,20,99
+mdl165_dl8starminenuggetschiehuangmodel1_64v,layer 2 feature derived from fundamental data,MATRIX,100%,26,126
+mdl165_dl8starminenuggetschiehuangmodel1_6v,layer 1 feature derived from fundamental data,MATRIX,100%,28,136
+mdl165_dl8starminenuggetschiehuangmodel1_71v,layer 1 feature derived from fundamental data,MATRIX,100%,63,168
+mdl165_dl8starminenuggetschiehuangmodel1_72v,layer 2 feature derived from fundamental data,MATRIX,100%,29,71
+mdl165_dl8starminenuggetschiehuangmodel1_73v,layer 2 feature derived from fundamental data,MATRIX,100%,81,239
+mdl165_dl8starminenuggetschiehuangmodel1_74v,layer 2 feature derived from fundamental data,MATRIX,100%,51,158
+mdl165_dl8starminenuggetschiehuangmodel1_7v,layer 1 feature derived from fundamental data,MATRIX,100%,58,199
+mdl165_dl8starminenuggetschiehuangmodel1_81v,layer 1 feature derived from fundamental data,MATRIX,100%,31,84
+mdl165_dl8starminenuggetschiehuangmodel1_82v,layer 2 feature derived from fundamental data,MATRIX,100%,10,54
+mdl165_dl8starminenuggetschiehuangmodel1_83v,layer 2 feature derived from fundamental data,MATRIX,100%,83,429
+mdl165_dl8starminenuggetschiehuangmodel1_84v,layer 2 feature derived from fundamental data,MATRIX,100%,19,64
+mdl165_dl8starminenuggetschiehuangmodel1_8v,layer 1 feature derived from fundamental data,MATRIX,100%,17,51
+mdl165_dl8starminenuggetschiehuangmodel1_91v,layer 1 feature derived from fundamental data,MATRIX,100%,63,123
+mdl165_dl8starminenuggetschiehuangmodel1_92v,layer 2 feature derived from fundamental data,MATRIX,100%,39,103
+mdl165_dl8starminenuggetschiehuangmodel1_93v,layer 2 feature derived from fundamental data,MATRIX,100%,27,93
+mdl165_dl8starminenuggetschiehuangmodel1_9v,layer 1 feature derived from fundamental data,MATRIX,100%,62,204
+mdl165_dl8starminenuggetschiehuangmodel1_sop,"Top-level nonlinear meta-feature score from the DL8 Starmine Nuggets (ChiehuangModel1) embedding, derived from embargoed D1-lagged Starmine fundamentals; a normalized scalar for ranking/stacking, not a probability",MATRIX,100%,618,1995

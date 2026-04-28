@@ -1,0 +1,306 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl49_1stfiscalquarterearningspershare,Earnings per share in the first fiscal quarter,MATRIX,52%,13,17
+anl49_1stfiscalquarterearningspershareindicator,First fiscal quarter earnings per share indicator,MATRIX,52%,7,8
+anl49_1stfiscalquartersalesorrevenues,Sales or revenues in the first fiscal quarter,MATRIX,50%,4,6
+anl49_1stfiscalquartersalesorrevenuesindicator,First fiscal quarter sales or revenues indicator,MATRIX,52%,1,2
+anl49_2ndfiscalquarterearningspershare,Earnings per share in the second fiscal quarter,MATRIX,52%,2,4
+anl49_2ndfiscalquarterearningspershareindicator,Second fiscal quarter earnings on a per share indicator,MATRIX,52%,0,0
+anl49_2ndfiscalquartersalesorrevenues,Sales or revenues in the second fiscal quarter,MATRIX,50%,3,3
+anl49_2ndfiscalquartersalesorrevenuesindicator,Second fiscal quarter sales or revenues indicator,MATRIX,52%,1,1
+anl49_35estd35yrgrowthratebookvaluepershare,Estimated 3–5 year growth rate of book value per share; units: percentage,MATRIX,49%,1,1
+anl49_35estd35yrgrowthratecashflowpershare,Estimated 3–5 year growth rate of cash flow per share; units: percentage,MATRIX,44%,1,1
+anl49_35estd35yrgrowthratedividendspershare,Estimated 3–5 year growth rate of dividends per share; units: percentage,MATRIX,48%,0,0
+anl49_35estd35yrgrowthrateearningspershare,Estimated 3–5 year growth rate of earnings per share; units: percentage,MATRIX,45%,3,3
+anl49_35estd35yrgrowthratesalespershare,Estimated 3–5 year growth rate of sales per share; units: percentage,MATRIX,46%,0,0
+anl49_35estd35yrhighappreciationtarget,Estimated 3–5 year high appreciation target (scenario-based),MATRIX,52%,2,3
+anl49_35estd35yrhighavgannualtotalreturn,Estimated 3–5 year high average annual total return; units: percentage,MATRIX,52%,6,9
+anl49_35estd35yrlowappreciationtarget,Estimated 3–5 year low appreciation target (scenario-based),MATRIX,52%,1,1
+anl49_35estd35yrlowavgannualtotalreturn,Estimated 3–5 year low average annual total return; units: percentage,MATRIX,52%,4,4
+anl49_35projected35yearhighpricetarget,3–5 year high price target estimate (scenario-based),MATRIX,52%,1,1
+anl49_35projected35yearlowpricetarget,3–5 year low price target estimate (scenario-based),MATRIX,52%,1,1
+anl49_3rdfiscalquarterearningspershare,Earnings per share in the third fiscal quarter,MATRIX,52%,2,3
+anl49_3rdfiscalquarterearningspershareindicator,Third fiscal quarter earnings on a per share indicator,MATRIX,52%,0,0
+anl49_3rdfiscalquartersalesorrevenues,Sales or revenues in the third fiscal quarter,MATRIX,50%,1,2
+anl49_3rdfiscalquartersalesorrevenuesindicator,Third fiscal quarter sales or revenues indicator,MATRIX,52%,2,2
+anl49_4thfiscalquarterearningspershare,Earnings per share in the fourth fiscal quarter,MATRIX,52%,1,1
+anl49_4thfiscalquarterearningspershareindicator,Fourth fiscal quarter earnings per share indicator,MATRIX,52%,0,0
+anl49_4thfiscalquartersalesorrevenues,Sales or revenues in the fourth fiscal quarter,MATRIX,50%,1,1
+anl49_4thfiscalquartersalesorrevenuesindicator,Fourth fiscal quarter sales or revenues indicator,MATRIX,52%,0,0
+anl49_alldividendstonetprofit,Total dividends paid as a percentage of net profit,MATRIX,30%,2,4
+anl49_alldividendstonetprofitindicator,All dividends to net profit indicator,MATRIX,52%,0,0
+anl49_annual_backfill_datayear,Year of the annual backfill data record (fiscal year covered),MATRIX,53%,7,7
+anl49_annual_datayear,Fiscal year associated with the data record for the company,MATRIX,52%,4,5
+anl49_annual_vector_datayear,"Fiscal year associated with the record (e.g., 2001)",VECTOR,52%,2,2
+anl49_annualfiscalearningspershare,"Annual fiscal year EPS, calculated as net income before extraordinary items divided by weighted average shares",MATRIX,52%,0,0
+anl49_annualfiscalearningspershareindicator,Annual fiscal earnings per share indicator,MATRIX,52%,0,0
+anl49_annualfiscalsalesorrevenues,Total sales or revenues for the fiscal year,MATRIX,50%,0,0
+anl49_annualfiscalsalesorrevenuesindicator,Annual fiscal sales or revenues indicator,MATRIX,52%,0,0
+anl49_averageannualdividendyield,Average annual dividend yield; units: percentage,MATRIX,50%,6,8
+anl49_averageannualdividendyieldindicator,Average annual dividend yield indicator,MATRIX,96%,3,4
+anl49_averageannualperatio,Average annual price-to-earnings ratio; units: ratio,MATRIX,50%,2,2
+anl49_averageannualperatioindicator,Average annual PE ratio indicator,MATRIX,96%,2,2
+anl49_averageannualrelativepe,Average annual relative P/E ratio (company P/E relative to a benchmark); units: ratio,MATRIX,50%,4,4
+anl49_averageannualrelativepeindicator,Average annual relative PE indicator,MATRIX,96%,0,0
+anl49_backfill_1stfiscalquarterearningspershare,"Earnings per share (EPS) for the 1st fiscal quarter, in currency per share",MATRIX,53%,0,0
+anl49_backfill_1stfiscalquarterearningspershareindicator,First fiscal quarter earnings per share indicator,MATRIX,53%,0,0
+anl49_backfill_1stfiscalquartersalesorrevenues,"Sales or revenues in the 1st fiscal quarter, in currency",MATRIX,51%,0,0
+anl49_backfill_1stfiscalquartersalesorrevenuesindicator,First fiscal quarter sales or revenues indicator,MATRIX,53%,2,2
+anl49_backfill_2ndfiscalquarterearningspershare,"Earnings per share (EPS) for the 2nd fiscal quarter, in currency per share",MATRIX,53%,0,0
+anl49_backfill_2ndfiscalquarterearningspershareindicator,Second fiscal quarter earnings on a per share indicator,MATRIX,53%,0,0
+anl49_backfill_2ndfiscalquartersalesorrevenues,"Sales or revenues in the 2nd fiscal quarter, in currency",MATRIX,51%,0,0
+anl49_backfill_2ndfiscalquartersalesorrevenuesindicator,Second fiscal quarter sales or revenues indicator,MATRIX,53%,0,0
+anl49_backfill_35estd35yrgrowthratebookvaluepershare,"Estimated 3–5 year growth rate of book value per share, percentage",MATRIX,49%,0,0
+anl49_backfill_35estd35yrgrowthratecashflowpershare,"Estimated 3–5 year growth rate of cash flow per share, percentage",MATRIX,44%,0,0
+anl49_backfill_35estd35yrgrowthratedividendspershare,"Estimated 3–5 year growth rate of dividends per share, percentage",MATRIX,49%,0,0
+anl49_backfill_35estd35yrgrowthrateearningspershare,"Estimated 3–5 year growth rate of earnings per share, percentage",MATRIX,46%,0,0
+anl49_backfill_35estd35yrgrowthratesalespershare,"Estimated 3–5 year growth rate of sales per share, percentage",MATRIX,47%,0,0
+anl49_backfill_35estd35yrhighappreciationtarget,"Estimated high appreciation target over the next 3–5 years, scenario-based",MATRIX,52%,3,3
+anl49_backfill_35estd35yrhighavgannualtotalreturn,"Estimated high average annual total return over the next 3–5 years, percentage",MATRIX,52%,6,6
+anl49_backfill_35estd35yrlowappreciationtarget,"Estimated low appreciation target over the next 3–5 years, scenario-based",MATRIX,52%,1,1
+anl49_backfill_35estd35yrlowavgannualtotalreturn,"Estimated low average annual total return over the next 3–5 years, percentage",MATRIX,52%,3,7
+anl49_backfill_35projected35yearhighpricetarget,"Projected high price target for the next 3–5 years, scenario-based",MATRIX,52%,0,0
+anl49_backfill_35projected35yearlowpricetarget,"Projected low price target for the next 3–5 years, scenario-based",MATRIX,52%,0,0
+anl49_backfill_3rdfiscalquarterearningspershare,"Earnings per share (EPS) for the 3rd fiscal quarter, in currency per share",MATRIX,53%,0,0
+anl49_backfill_3rdfiscalquarterearningspershareindicator,Third fiscal quarter earnings on a per share indicator,MATRIX,53%,0,0
+anl49_backfill_3rdfiscalquartersalesorrevenues,"Sales or revenues in the 3rd fiscal quarter, in currency",MATRIX,51%,4,4
+anl49_backfill_3rdfiscalquartersalesorrevenuesindicator,Third fiscal quarter sales or revenues indicator,MATRIX,53%,0,0
+anl49_backfill_4thfiscalquarterearningspershare,"Earnings per share (EPS) for the 4th fiscal quarter, in currency per share",MATRIX,53%,0,0
+anl49_backfill_4thfiscalquarterearningspershareindicator,Fourth fiscal quarter earnings per share indicator,MATRIX,53%,0,0
+anl49_backfill_4thfiscalquartersalesorrevenues,"Sales or revenues in the 4th fiscal quarter, in currency",MATRIX,51%,1,1
+anl49_backfill_4thfiscalquartersalesorrevenuesindicator,Fourth fiscal quarter sales or revenues indicator,MATRIX,53%,1,1
+anl49_backfill_alldividendstonetprofit,Ratio of total dividends paid to net profit (percent/ratio),MATRIX,30%,1,1
+anl49_backfill_alldividendstonetprofitindicator,All dividends to net profit indicator,MATRIX,53%,1,1
+anl49_backfill_annualfiscalearningspershare,"Earnings per share (EPS) for the fiscal year, in currency per share",MATRIX,53%,0,0
+anl49_backfill_annualfiscalearningspershareindicator,Annual fiscal earnings per share indicator,MATRIX,53%,0,0
+anl49_backfill_annualfiscalsalesorrevenues,"Total sales or revenues for the fiscal year, in currency",MATRIX,51%,0,0
+anl49_backfill_annualfiscalsalesorrevenuesindicator,Annual fiscal sales or revenues indicator,MATRIX,53%,1,1
+anl49_backfill_averageannualdividendyield,"Average annual dividend yield, percentage",MATRIX,51%,18,21
+anl49_backfill_averageannualdividendyieldindicator,Average annual dividend yield indicator,MATRIX,98%,3,4
+anl49_backfill_averageannualperatio,Average annual price-to-earnings ratio,MATRIX,50%,0,0
+anl49_backfill_averageannualperatioindicator,Average annual PE ratio indicator,MATRIX,98%,3,4
+anl49_backfill_averageannualrelativepe,The stock's current P/E divided by the median P/E for all stocks under review.,MATRIX,50%,2,2
+anl49_backfill_averageannualrelativepeindicator,Average annual relative PE indicator,MATRIX,98%,3,3
+anl49_backfill_beta,Backfill: Beta—measure of stock return sensitivity to the market; Value Line uses NYSE Composite,MATRIX,89%,5,5
+anl49_backfill_betasrfactor,The coefficient of the correlation of the BETA. It describes the percentage of a stocks systematic (market) risk. The average R is about .50,MATRIX,89%,4,6
+anl49_backfill_bookvaluepershare,Book value per share at fiscal year end (assets minus liabilities and prior claims divided by common shares),MATRIX,53%,1,1
+anl49_backfill_bookvaluepershareindicator,Book value per share indicator,MATRIX,53%,0,0
+anl49_backfill_capitalspendingpershare,Annual capital expenditures (capex) expressed per share,MATRIX,45%,2,2
+anl49_backfill_capitalspendingpershareindicator,Capital spendings per share indicator,MATRIX,53%,1,1
+anl49_backfill_cashflowpershare,"Annual cash flow per share, typically cash flow less preferred dividends if any",MATRIX,48%,0,0
+anl49_backfill_cashflowpershareindicator,Cash flow per share indicator,MATRIX,53%,0,0
+anl49_backfill_commonequityratioindicator,Common equity ratio indicator,MATRIX,53%,1,2
+anl49_backfill_commonsharesoutstanding,Total number of common shares outstanding at fiscal year end,MATRIX,53%,0,0
+anl49_backfill_commonsharesoutstandingindicator,Common share outstanding indicator,MATRIX,53%,0,0
+anl49_backfill_depreciationdepletionamortization,"Total annual depreciation, depletion, and amortization expense",MATRIX,42%,1,1
+anl49_backfill_depreciationdepletionamortizationindicator,"Depreciation, depletion & Amortization indicator",MATRIX,53%,0,0
+anl49_backfill_dividendsdeclaredpershare,Total dividends declared per common share during the fiscal year,MATRIX,53%,0,0
+anl49_backfill_dividendsdeclaredpershareindicator,Dividends declared per share indicator,MATRIX,53%,0,0
+anl49_backfill_earnedcommonequityindicator,Earned common equity indicator,MATRIX,53%,1,1
+anl49_backfill_earnednetworth,Net income expressed as a percentage of net worth. (Net Worth = Common and preferred equity),MATRIX,48%,5,5
+anl49_backfill_earnednetworthindicator,Earned networth indicator,MATRIX,53%,0,0
+anl49_backfill_earnedtotalassetsindicator,Earned total assets indicator,MATRIX,53%,0,0
+anl49_backfill_earnedtotalcapital,Net income plus half of the long-term debt interest expense expressed as a percentage of total capital. (Total Capital = Stockholders' equity + Long-term debt),MATRIX,47%,0,0
+anl49_backfill_earnedtotalcapitalindicator,Earned total capital indicator,MATRIX,53%,0,0
+anl49_backfill_earningspershare,Annual earnings per share (EPS) for the fiscal year,MATRIX,53%,0,0
+anl49_backfill_earningspershareindicator,Earnings per share indicator,MATRIX,53%,0,0
+anl49_backfill_earningspredictabilityindex,Backfill: earnings predictability index (approx. 5 to 100); higher values indicate more predictable earnings,MATRIX,71%,1,1
+anl49_backfill_estdcurrentperatio,Backfill: estimated current price‑to‑earnings ratio (PE),MATRIX,48%,8,9
+anl49_backfill_estddividendspersharenext12months,Backfill: estimated dividends per share for the next 12 months (currency/share),MATRIX,53%,0,0
+anl49_backfill_estddividendyield,Backfill: estimated dividend yield (percentage),MATRIX,53%,16,21
+anl49_backfill_estdepsforcurrent12monthperiod,Backfill: estimated earnings per share for the current 12‑month period (currency/share),MATRIX,52%,1,1
+anl49_backfill_estdrelativeperatio,Estimated Current P/E Ratio divided by the comparable figure for the Composite Index.,MATRIX,48%,0,0
+anl49_backfill_formattype,Most companies are carried in the standard industrial data format. Special formats are available for specialized industries.,MATRIX,98%,7,7
+anl49_backfill_grossequipmentpershareindicator,Gross equiipment per share indicator,MATRIX,53%,0,0
+anl49_backfill_grossmarginindicator,Gross margin indicator,MATRIX,53%,0,0
+anl49_backfill_incometaxrate,"Effective income tax rate for the year, expressed as a percentage",MATRIX,49%,1,1
+anl49_backfill_incometaxrateindicator,Income tax rate indicator,MATRIX,53%,0,0
+anl49_backfill_industrytimelinessrank,A ranking of the Value Line industry groups based on the average rank of the stocks composing the respective industries.,MATRIX,98%,28,45
+anl49_backfill_insuranceinforceindicator,Insurance inforce indicator,MATRIX,53%,1,1
+anl49_backfill_inventoryindicator,Inventory indicator,MATRIX,53%,0,0
+anl49_backfill_inventoryturnoverindicator,inventory turnover indicator,MATRIX,53%,0,0
+anl49_backfill_loadfactorindicator,Load factor indicator,MATRIX,53%,0,0
+anl49_backfill_loanlossprovisionindicator,Loadn loss provision indicator,MATRIX,53%,0,0
+anl49_backfill_loansindicator,Loans indicator,MATRIX,53%,0,0
+anl49_backfill_loanstototalassetsindicator,Loans to total assets indicator,MATRIX,53%,0,0
+anl49_backfill_longtermdebt,"Total long-term debt outstanding (liabilities due beyond one year), in reported currency",MATRIX,41%,1,1
+anl49_backfill_longtermdebtindicator,Longterm debt indicator,MATRIX,53%,0,0
+anl49_backfill_longtermdebtratioindicator,Long-term debt ratio indicator,MATRIX,53%,0,0
+anl49_backfill_netinterestincomeindicator,Net interest income indicator,MATRIX,53%,1,1
+anl49_backfill_netplantindicator,Net plant indicator,MATRIX,53%,1,1
+anl49_backfill_netprofit,Total annual net profit (net income) for the fiscal year,MATRIX,53%,0,0
+anl49_backfill_netprofitindicator,Net profit indicator,MATRIX,53%,0,0
+anl49_backfill_netprofitmargin,"Net profit margin for the year, net income as a percentage of sales/revenues",MATRIX,45%,0,0
+anl49_backfill_netprofitmarginindicator,Net profit margin indicator,MATRIX,53%,1,1
+anl49_backfill_networth,"Shareholders’ equity (assets minus liabilities), total in currency",MATRIX,50%,2,2
+anl49_backfill_networthindicator,Networth indicator,MATRIX,53%,0,0
+anl49_backfill_networthtototalassetsindicator,Networth to total assets indicator,MATRIX,53%,0,0
+anl49_backfill_numberofstoresindicator,Number of stores indicator,MATRIX,53%,0,0
+anl49_backfill_operatingexpenseratioindicator,Operating expense ratio indicator,MATRIX,53%,0,0
+anl49_backfill_operatingmargin,"Operating margin for the year, expressed as a percentage of sales/revenues",MATRIX,46%,0,0
+anl49_backfill_operatingmarginindicator,Operating margin indicator,MATRIX,53%,1,1
+anl49_backfill_performancerank,A measure of a company's relative price performance over the next 12 months. It is a purely quantitative measure that is based on past earnings and price performance data. Companies are ranked relative to one another using a scale from 1 (Highest) to 5 (Lowest).,MATRIX,98%,3,3
+anl49_backfill_pricegrowthpersistence,"It is the measurement of the consistency of relative price growth. Using each year of the past 10 (or fewer) as a base, a count is made of the number of subsequent years in which relative price of the stock was higher than the base period. The sum of these counts is the basis for the Index. Growth Persistence Indexes range from 100 (highest) to 5 (lowest).",MATRIX,77%,2,2
+anl49_backfill_pricestabilityindex,Backfill: price stability index (approx. 5 to 100); higher = more stable prices,MATRIX,89%,2,2
+anl49_backfill_pricetobookvalueindicator,Price to book value indicator,MATRIX,53%,1,3
+anl49_backfill_quarterfiscalyearends,The calendar quarter corresponding to the company's fiscal year end date.,MATRIX,98%,1,1
+anl49_backfill_recentprice,Backfill: most recent stock price as of the latest review date (currency),MATRIX,98%,4,5
+anl49_backfill_retainedtocommonequity,Ratio of retained earnings to common equity (percent/ratio),MATRIX,47%,4,5
+anl49_backfill_retainedtocommonequityindicator,Retained Earnings to common equity indicator,MATRIX,53%,0,0
+anl49_backfill_safetyrank,"Backfill: Safety Rank measuring investment risk; 1 = safest, 5 = riskiest",MATRIX,98%,9,12
+anl49_backfill_salesorrevenues,Total annual sales or revenues reported for the fiscal year,MATRIX,50%,1,1
+anl49_backfill_salesorrevenuesindicator,Sales or revenues indicator,MATRIX,53%,0,0
+anl49_backfill_salesorrevenuespershare,Annual sales or revenues expressed on a per-share basis,MATRIX,49%,8,9
+anl49_backfill_salesorrevenuespershareindicator,Sales or revenues per share indicator,MATRIX,53%,1,1
+anl49_backfill_serviceflag,"Backfill: service coverage flag (1=Investment Survey, 2=Expanded Edition, 3=Value Line Database)",MATRIX,98%,1,1
+anl49_backfill_sicclassification,Backfill: Standard Industrial Classification (SIC) code(s) for the company’s industry,MATRIX,98%,3,6
+anl49_backfill_standarddeviationofpricechange,Measure of total volatility or risk in a stock.,MATRIX,89%,3,3
+anl49_backfill_technicalrank,"Ranking of estimated stock price performance relative to the overall market in the next three to six months, based on a complex analysis of the stock's relative price performance during the prior 52 weeks. Stocks ranked 1 (Highest) and 2 (Above Average) are likely to outpace the market during the next quarter or two. Those ranked 4 (Below Average) and 5 (Lowest) are not expected to outperform most stocks. Stocks ranked 3 (Average) will probably advance or decline with the market. The Technical Rank is purely a function of relative price action and is primarily a predictor of relative short-term price movements.",MATRIX,98%,3,5
+anl49_backfill_timelinessrank,"Backfill: Timeliness Rank forecasting next‑year market performance; 1 = best, 5 = worst",MATRIX,98%,3,11
+anl49_backfill_totalassetsindicator,Total assets indicator,MATRIX,53%,0,0
+anl49_backfill_totalcapitalindicator,Total capital indicator,MATRIX,53%,0,0
+anl49_backfill_typeofearningspershare,"The codes used for the type of quarterly earnings per share as reported in Primary=P, Diluted=D",MATRIX,98%,2,4
+anl49_backfill_valuelineindustry,"Sort each of these firms into one of industry groups taking care to reflect a company's current business operation, not just its historical role.",MATRIX,98%,3,3
+anl49_backfill_valugaugeestimatingdifficultyrank,Companies whose earnings are easy to forecast are rated 1; Companies whose earnings are difficult to forecast are rated 5. A rank of 3 rates average. A rank of 2 is above average and a rank of 4 is below average.,MATRIX,48%,0,0
+anl49_backfill_valugaugerelativeposition,"Each company is rated from 1 to about 1600. Low numbers represent easy companies to forecast, while the higher numbers represent difficult companies to forecast.",MATRIX,48%,1,1
+anl49_backfill_valugaugerelativepositionchange,Backfill: change in ValuGauge relative position versus the prior quarter (percentage),MATRIX,48%,1,1
+anl49_backfill_valugaugevarianceofearningschange,"This is the statistical factor explained for field number 30, which is rank ordered in the determination of the Difficulty Ranks and Relative Positions.",MATRIX,48%,0,0
+anl49_backfill_workingcapital,"Working capital, calculated as current assets minus current liabilities",MATRIX,45%,1,1
+anl49_backfill_workingcapitalindicator,Working capital indicator,MATRIX,53%,0,0
+anl49_beta,"Beta coefficient measuring the stock’s sensitivity to market movements, based on the NYSE Composite",MATRIX,87%,3,3
+anl49_betasrfactor,"Correlation or R-factor associated with the stock’s Beta, indicating the proportion of movement explained by the market",MATRIX,87%,2,2
+anl49_bookvaluepershare,"Book value per share at fiscal year end (assets minus liabilities and prior claims, divided by common shares)",MATRIX,52%,0,0
+anl49_bookvaluepershareindicator,Book value per share indicator,MATRIX,52%,0,0
+anl49_capitalspendingpershare,Annual capital expenditures (capex) expressed on a per-share basis,MATRIX,44%,2,2
+anl49_capitalspendingpershareindicator,Capital spendings per share indicator,MATRIX,52%,1,1
+anl49_cashflowpershare,"Annual cash flow per share, typically cash flow less preferred dividends, on a per-share basis",MATRIX,47%,1,1
+anl49_cashflowpershareindicator,Cash flow per share indicator,MATRIX,52%,0,0
+anl49_commonequityratioindicator,Common equity ratio indicator,MATRIX,52%,0,0
+anl49_commonsharesoutstanding,Number of common shares outstanding at fiscal year end,MATRIX,52%,1,1
+anl49_commonsharesoutstandingindicator,Common share outstanding indicator,MATRIX,52%,0,0
+anl49_depreciationdepletionamortization,"Total depreciation, depletion, and amortization expense for the fiscal year",MATRIX,41%,0,0
+anl49_depreciationdepletionamortizationindicator,"Depreciation, depletion & Amortization indicator",MATRIX,52%,2,2
+anl49_dividendsdeclaredpershare,Total dividends declared during the fiscal year on a per-share basis,MATRIX,52%,1,1
+anl49_dividendsdeclaredpershareindicator,Dividends declared per share indicator,MATRIX,52%,0,0
+anl49_earnedcommonequityindicator,Earned common equity indicator,MATRIX,52%,3,3
+anl49_earnednetworth,Net income expressed as a percentage of net worth. (Net Worth = Common and preferred equity),MATRIX,48%,7,9
+anl49_earnednetworthindicator,Earned networth indicator,MATRIX,52%,0,0
+anl49_earnedtotalassetsindicator,Earned total assets indicator,MATRIX,52%,1,1
+anl49_earnedtotalcapital,Net income plus half of the long-term debt interest expense expressed as a percentage of total capital. (Total Capital = Stockholders' equity + Long-term debt),MATRIX,46%,6,7
+anl49_earnedtotalcapitalindicator,Earned total capital indicator,MATRIX,52%,0,0
+anl49_earningspershare,Annual earnings per share (net income divided by weighted average shares outstanding),MATRIX,52%,2,4
+anl49_earningspershareindicator,Earnings per share indicator,MATRIX,52%,2,2
+anl49_earningspredictabilityindex,"Index from roughly 5 to 100 indicating the reliability and predictability of earnings, with higher values more predictable",MATRIX,71%,1,2
+anl49_estdcurrentperatio,Estimated current price-to-earnings ratio,MATRIX,47%,2,2
+anl49_estddividendspersharenext12months,Estimated dividends per share expected to be paid over the next 12 months,MATRIX,52%,2,9
+anl49_estddividendyield,Estimated dividend yield as a percentage of price,MATRIX,52%,2,2
+anl49_estdepsforcurrent12monthperiod,Estimated earnings per share for the current 12-month period,MATRIX,52%,0,0
+anl49_estdrelativeperatio,Estimated PE ratio relative to a benchmark such as the market or industry average,MATRIX,47%,2,3
+anl49_formattype,Most companies are carried in the standard industrial data format. Special formats are available for specialized industries.,MATRIX,96%,3,4
+anl49_grossequipmentpershareindicator,Gross equiipment per share indicator,MATRIX,52%,0,0
+anl49_grossmarginindicator,Gross margin indicator,MATRIX,52%,0,0
+anl49_incometaxrate,"Effective income tax rate for the fiscal year, as a percentage",MATRIX,48%,0,0
+anl49_incometaxrateindicator,Income tax rate indicator,MATRIX,52%,0,0
+anl49_industrytimelinessrank,"Industry-level timeliness ranking indicating expected relative market performance, with 1 most timely and higher numbers less timely",MATRIX,96%,4,4
+anl49_insuranceinforceindicator,Insurance inforce indicator,MATRIX,52%,0,0
+anl49_inventoryindicator,Inventory indicator,MATRIX,52%,1,1
+anl49_inventoryturnoverindicator,inventory turnover indicator,MATRIX,52%,0,0
+anl49_loadfactorindicator,Load factor indicator,MATRIX,52%,0,0
+anl49_loanlossprovisionindicator,Loadn loss provision indicator,MATRIX,52%,0,0
+anl49_loansindicator,Loans indicator,MATRIX,52%,0,0
+anl49_loanstototalassetsindicator,Loans to total assets indicator,MATRIX,52%,1,1
+anl49_longtermdebt,"Total long-term debt outstanding at fiscal year end, in reported currency",MATRIX,40%,2,4
+anl49_longtermdebtindicator,Longterm debt indicator,MATRIX,52%,0,0
+anl49_longtermdebtratioindicator,Long-term debt ratio indicator,MATRIX,52%,0,0
+anl49_netinterestincomeindicator,Net interest income indicator,MATRIX,52%,0,0
+anl49_netplantindicator,Net plant indicator,MATRIX,52%,0,0
+anl49_netprofit,Company’s net income (profit) for the fiscal year,MATRIX,52%,1,3
+anl49_netprofitindicator,Net profit indicator,MATRIX,52%,0,0
+anl49_netprofitmargin,Net profit margin for the fiscal year (net income as a percentage of sales),MATRIX,44%,0,0
+anl49_netprofitmarginindicator,Net profit margin indicator,MATRIX,52%,0,0
+anl49_networth,"Shareholders’ equity (net worth) at fiscal year end, in reported currency",MATRIX,49%,2,3
+anl49_networthindicator,Networth indicator,MATRIX,52%,0,0
+anl49_networthtototalassetsindicator,Networth to total assets indicator,MATRIX,52%,1,1
+anl49_numberofstoresindicator,Number of stores indicator,MATRIX,52%,0,0
+anl49_operatingexpenseratioindicator,Operating expense ratio indicator,MATRIX,52%,0,0
+anl49_operatingmargin,"Operating margin for the fiscal year, expressed as a percentage of sales",MATRIX,45%,1,1
+anl49_operatingmarginindicator,Operating margin indicator,MATRIX,52%,0,0
+anl49_performancerank,A measure of a company's relative price performance over the next 12 months. It is a purely quantitative measure that is based on past earnings and price performance data. Companies are ranked relative to one another using a scale from 1 (Highest) to 5 (Lowest).,MATRIX,96%,1,8
+anl49_pricegrowthpersistence,"It is the measurement of the consistency of relative price growth. Using each year of the past 10 (or fewer) as a base, a count is made of the number of subsequent years in which relative price of the stock was higher than the base period. The sum of these counts is the basis for the Index. Growth Persistence Indexes range from 100 (highest) to 5 (lowest).",MATRIX,76%,2,2
+anl49_pricestabilityindex,"Index from roughly 5 to 100 measuring the stability of the stock’s price over time, higher means more stable",MATRIX,87%,0,0
+anl49_pricetobookvalueindicator,Price to book value indicator,MATRIX,52%,0,0
+anl49_quarterfiscalyearends,Quarter number (1–4) in which the company’s fiscal year ends,MATRIX,96%,0,0
+anl49_quarterly_backfill_datayear,Year associated with the quarterly data record,MATRIX,53%,0,0
+anl49_quarterly_datayear,Year of the quarterly data record,MATRIX,52%,1,1
+anl49_quarterly_vector_datayear,"The financial data year associated with the record (e.g., 2000, 2001)",VECTOR,52%,0,0
+anl49_recentprice,"Most recent market price used by the dataset, typically as of the latest weekly update",MATRIX,96%,0,0
+anl49_retainedtocommonequity,Retained earnings as a percentage of common equity,MATRIX,46%,2,2
+anl49_retainedtocommonequityindicator,Retained Earnings to common equity indicator,MATRIX,52%,3,3
+anl49_safetyrank,Risk rating of the stock from 1 (safest) to 5 (riskiest),MATRIX,96%,5,5
+anl49_salesorrevenues,Total annual sales or revenues reported by the company,MATRIX,49%,2,2
+anl49_salesorrevenuesindicator,Sales or revenues indicator,MATRIX,52%,0,0
+anl49_salesorrevenuespershare,Annual sales or revenues expressed on a per-share basis,MATRIX,48%,1,1
+anl49_salesorrevenuespershareindicator,Sales or revenues per share indicator,MATRIX,52%,0,0
+anl49_serviceflag,"Coverage channel flag indicating which Value Line service the stock is in (1 Investment Survey, 2 Expanded Edition, 3 Value Line Database)",MATRIX,96%,3,3
+anl49_sicclassification,Standard Industrial Classification code(s) assigned to the company,MATRIX,96%,5,7
+anl49_standarddeviationofpricechange,"Statistical standard deviation of the stock’s price changes over a defined period, measuring volatility",MATRIX,87%,2,2
+anl49_technicalrank,"Ranking of estimated stock price performance relative to the overall market in the next three to six months, based on a complex analysis of the stock's relative price performance during the prior 52 weeks. Stocks ranked 1 (Highest) and 2 (Above Average) are likely to outpace the market during the next quarter or two. Those ranked 4 (Below Average) and 5 (Lowest) are not expected to outperform most stocks. Stocks ranked 3 (Average) will probably advance or decline with the market. The Technical Rank is purely a function of relative price action and is primarily a predictor of relative short-term price movements.",MATRIX,96%,1,1
+anl49_timelinessrank,"Proprietary rank of expected relative market performance over the next year, with 1 best and 5 worst",MATRIX,96%,0,0
+anl49_totalassetsindicator,Total assets indicator,MATRIX,52%,2,2
+anl49_totalcapitalindicator,Total capital indicator,MATRIX,52%,0,0
+anl49_typeofearningspershare,"The codes used for the type of quarterly earnings per share as reported in Primary=P, Diluted=D",MATRIX,96%,1,1
+anl49_valuelineindustry,Value Line industry group classification for the company,MATRIX,96%,1,2
+anl49_valugaugeestimatingdifficultyrank,Companies whose earnings are easy to forecast are rated 1; Companies whose earnings are difficult to forecast are rated 5. A rank of 3 rates average. A rank of 2 is above average and a rank of 4 is below average.,MATRIX,48%,0,0
+anl49_valugaugerelativeposition,"Each company is rated from 1 to about 1600. Low numbers represent easy companies to forecast, while the higher numbers represent difficult companies to forecast.",MATRIX,48%,1,1
+anl49_valugaugerelativepositionchange,"Change from the prior period in the stock’s ValuGauge relative position, often expressed as a percentage",MATRIX,48%,1,1
+anl49_valugaugevarianceofearningschange,"This is the statistical factor explained for field number 30, which is rank ordered in the determination of the Difficulty Ranks and Relative Positions.",MATRIX,48%,0,0
+anl49_vector_1stcalendarqtrdividendspaidpershare,Dividends paid per share in the 1st calendar quarter,VECTOR,51%,3,3
+anl49_vector_1stfiscalquarterearningspershare,Earnings per share for the 1st fiscal quarter,VECTOR,52%,1,1
+anl49_vector_1stfiscalquartersalesorrevenues,"Sales or revenues amount for the 1st fiscal quarter, in reported currency",VECTOR,50%,0,0
+anl49_vector_2ndcalendarqtrdividendspaidpershare,Dividends paid per share in the 2nd calendar quarter,VECTOR,50%,0,0
+anl49_vector_2ndfiscalquarterearningspershare,Earnings per share for the 2nd fiscal quarter,VECTOR,52%,0,0
+anl49_vector_2ndfiscalquartersalesorrevenues,"Sales or revenues amount for the 2nd fiscal quarter, typically an estimate in vector records",VECTOR,50%,1,1
+anl49_vector_35estd35yrgrowthratebookvaluepershare,"Estimated 3–5 year growth rate of book value per share, percent",VECTOR,49%,2,2
+anl49_vector_35estd35yrgrowthratecashflowpershare,"Estimated 3–5 year growth rate of cash flow per share, percent",VECTOR,44%,0,0
+anl49_vector_35estd35yrgrowthratedividendspershare,"Estimated 3–5 year growth rate of dividends per share, percent",VECTOR,48%,0,0
+anl49_vector_35estd35yrgrowthrateearningspershare,"Estimated 3–5 year growth rate of earnings per share, percent",VECTOR,45%,2,2
+anl49_vector_35estd35yrgrowthratesalespershare,"Estimated 3–5 year growth rate of sales per share, percent",VECTOR,46%,1,1
+anl49_vector_35estd35yrhighappreciationtarget,The percentage appreciation potential computed from the stock's recent price to the projected high price 3 to 5 years hence.,VECTOR,52%,0,0
+anl49_vector_35estd35yrhighavgannualtotalreturn,"Estimated high-case average annual total return over 3–5 years, percent",VECTOR,52%,3,4
+anl49_vector_35estd35yrlowappreciationtarget,The percentage appreciation potential computed from the stock's recent price to the projected low price 3 to 5 years hence.,VECTOR,52%,0,0
+anl49_vector_35estd35yrlowavgannualtotalreturn,"Estimated low-case average annual total return over 3–5 years, percent",VECTOR,52%,2,2
+anl49_vector_35projected35yearhighpricetarget,Estimated 3–5 year high price target for the stock (vector-style timestamped record),VECTOR,52%,2,2
+anl49_vector_35projected35yearlowpricetarget,Estimated 3–5 year low price target for the stock (vector-style timestamped record),VECTOR,52%,1,1
+anl49_vector_3rdcalendarqtrdividendspaidpershare,Dividends paid per share in the 3rd calendar quarter,VECTOR,45%,0,0
+anl49_vector_3rdfiscalquarterearningspershare,Earnings per share for the 3rd fiscal quarter,VECTOR,52%,0,0
+anl49_vector_3rdfiscalquartersalesorrevenues,"Sales or revenues amount for the 3rd fiscal quarter, typically an estimate in vector records",VECTOR,50%,2,2
+anl49_vector_4thcalendarqtrdividendspaidpershare,Dividends paid per share in the 4th calendar quarter,VECTOR,35%,0,0
+anl49_vector_4thfiscalquarterearningspershare,Earnings per share for the 4th fiscal quarter,VECTOR,52%,0,0
+anl49_vector_4thfiscalquartersalesorrevenues,"Sales or revenues amount for the 4th fiscal quarter, typically an estimate in vector records",VECTOR,50%,0,0
+anl49_vector_alldividendstonetprofit,Ratio of all dividends paid to net profit (percent/ratio),VECTOR,30%,0,0
+anl49_vector_annualfiscalearningspershare,"Earnings per share for the fiscal year (annual), typically an estimate in vector records",VECTOR,52%,0,0
+anl49_vector_annualfiscalsalesorrevenues,"Total sales or revenues for the fiscal year (annual), typically an estimate in vector records",VECTOR,50%,0,0
+anl49_vector_averageannualdividendyield,"Average annual dividend yield over recent years, percent",VECTOR,50%,7,10
+anl49_vector_averageannualperatio,Average of annual P/E ratios over recent years (vector-style record),VECTOR,50%,0,0
+anl49_vector_averageannualrelativepe,Average of annual relative P/E ratios (vs market) over recent years,VECTOR,50%,0,0
+anl49_vector_bookvaluepershare,"Book value per common share at fiscal year-end (assets minus liabilities and prior claims, divided by shares)",VECTOR,52%,2,2
+anl49_vector_calendaryeardividendspaidpershare,Total dividends paid per share over the entire calendar year,VECTOR,35%,0,0
+anl49_vector_capitalspendingpershare,"Capital expenditures per common share for the fiscal year, in currency per share",VECTOR,44%,0,0
+anl49_vector_cashflowpershare,"Cash flow per share (annual), typically cash flow available to common shareholders; defined by Value Line as cash flow less preferred dividends",VECTOR,47%,0,0
+anl49_vector_commonsharesoutstanding,Total number of common shares outstanding,VECTOR,52%,0,0
+anl49_vector_depreciationdepletionamortization,"Total depreciation, depletion, and amortization expense for the fiscal year (reported currency)",VECTOR,41%,0,0
+anl49_vector_dividendsdeclaredpershare,Dividends declared per share for the fiscal year (currency per share),VECTOR,52%,0,0
+anl49_vector_earnednetworth,"Amount of net worth earned during the year, total in reported currency",VECTOR,48%,8,10
+anl49_vector_earnedtotalcapital,Total earned capital of the company (reported currency),VECTOR,46%,2,8
+anl49_vector_earningspershare,"Earnings per share (EPS) for the fiscal year, in currency per share",VECTOR,52%,0,0
+anl49_vector_incometaxrate,Effective income tax rate for the year (percentage of earnings),VECTOR,48%,0,0
+anl49_vector_longtermdebt,"Total long-term debt at fiscal year-end, in reported currency",VECTOR,40%,2,2
+anl49_vector_netprofit,"Company’s net income for the fiscal year (total, reported currency)",VECTOR,52%,0,0
+anl49_vector_netprofitmargin,Net profit as a percentage of sales/revenues for the fiscal year (net profit margin),VECTOR,44%,1,1
+anl49_vector_networth,"Shareholders’ equity (net worth) at year-end, in reported currency",VECTOR,49%,3,3
+anl49_vector_operatingmargin,Operating margin for the year (percentage of revenues),VECTOR,45%,0,0
+anl49_vector_retainedtocommonequity,Ratio of retained earnings to common equity (retained to common equity),VECTOR,46%,0,0
+anl49_vector_salesorrevenues,Total annual sales or revenues reported for the fiscal year (company currency),VECTOR,49%,0,0
+anl49_vector_salesorrevenuespershare,"Sales or revenues per share (annual), in currency per share",VECTOR,48%,3,3
+anl49_vector_workingcapital,"Working capital (current assets minus current liabilities), in reported currency",VECTOR,44%,0,0
+anl49_workingcapital,Working capital at fiscal year end (current assets minus current liabilities),MATRIX,44%,1,1
+anl49_workingcapitalindicator,Working capital indicator,MATRIX,52%,0,0

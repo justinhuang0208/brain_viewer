@@ -1,0 +1,1045 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv20_02_5_fma_rd,Chaikin oscillator value over a 5-20 day period.,MATRIX,100%,32,58
+pv20_02_5_rvp_rd,Price-volume ratio over a 5-20 day period.,MATRIX,100%,9,24
+pv20_02_cdts_rd,Standard deviation of returns over a 20-day period.,MATRIX,100%,5,5
+pv20_02_cmlh_rd,High-low midpoint change over a 20-day period.,MATRIX,100%,11,17
+pv20_02_lmh_rd,High minus low price range over a 20-day period.,MATRIX,100%,8,16
+pv20_02_spcd_rd,Daily closing price spread over a 20-day period.,MATRIX,100%,8,21
+pv20_02_spcda_rd,Adjusted daily closing price spread over a 20-day period.,MATRIX,100%,9,18
+pv20_03_cmlh_rd,High-low midpoint change over a 30-day period.,MATRIX,100%,7,11
+pv20_04_5_rvp_rd,Price-volume ratio over a 5-40 day period.,MATRIX,100%,4,4
+pv20_04_cdts_rd,Standard deviation of returns over a 40-day period.,MATRIX,100%,8,22
+pv20_04_qil_rd,Liquidity measure over a 40-day period.,MATRIX,100%,5,6
+pv20_052_52_rvp_rd,Price-volume ratio over a 25-250 day period.,MATRIX,100%,4,4
+pv20_052_5_rvp_rd,Price-volume ratio over a 5-250 day period.,MATRIX,100%,4,4
+pv20_052_cdts_rd,Standard deviation of returns over a 250-day period.,MATRIX,100%,7,11
+pv20_052_cmlh_rd,High-low midpoint change over a 250-day period.,MATRIX,100%,12,18
+pv20_052_lmh_rd,High minus low price range over a 250-day period.,MATRIX,100%,5,5
+pv20_052_qil_rd,Liquidity measure over a 250-day period.,MATRIX,100%,4,4
+pv20_052_spcd_rd,Daily closing price spread over a 250-day period.,MATRIX,100%,8,8
+pv20_052_spcda_rd,Adjusted daily closing price spread over a 250-day period.,MATRIX,100%,4,4
+pv20_052vi,Implied volatility over a 250-day period.,MATRIX,100%,13,19
+pv20_052vigen,Negative implied volatility over a 250-day period.,MATRIX,100%,8,12
+pv20_1_1_rta_rd,Average true range over a 1-day period.,MATRIX,100%,5,18
+pv20_1_ard_accounts_payable_trade,ARD Accounts Payable - Trade,MATRIX,74%,3,3
+pv20_1_cmlh_rd,High-low midpoint change over a 1-day period.,MATRIX,100%,23,40
+pv20_1_lmh_rd,High minus low price range over a 1-day period.,MATRIX,100%,7,13
+pv20_1_omlh_rd,High-low midpoint change (open prices) over a 1-day period.,MATRIX,100%,7,8
+pv20_1_pvt_rd,Total volume price over a 1-day period.,MATRIX,100%,5,5
+pv20_1_qil_rd,Liquidity measure over a 1-day period.,MATRIX,100%,5,7
+pv20_1_spcd_rd,Daily closing price spread over a 1-day period.,MATRIX,100%,7,12
+pv20_1_spcda_rd,Adjusted daily closing price spread over a 1-day period.,MATRIX,100%,3,3
+pv20_1_vmlh_rd,High-low midpoint volatility over a 1-day period.,MATRIX,100%,10,12
+pv20_1_vmt_rd,Total market volatility over a 1-day period.,MATRIX,100%,7,17
+pv20_21_03ftni_rd,Interval factor for a 30-12 day period.,MATRIX,100%,5,5
+pv20_21_13ftni_rd,Interval factor for a 31-12 day period.,MATRIX,100%,5,5
+pv20_21_23ftni_rd,Interval factor for a 32-12 day period.,MATRIX,100%,4,4
+pv20_21_33ftni_rd,Interval factor for a 33-12 day period.,MATRIX,100%,8,10
+pv20_21_43ftni_rd,Interval factor for a 34-12 day period.,MATRIX,100%,6,18
+pv20_21_53ftni_rd,Interval factor for a 35-12 day period.,MATRIX,100%,6,16
+pv20_21_63ftni_rd,Interval factor for a 36-12 day period.,MATRIX,100%,15,24
+pv20_21_73ftni_rd,Interval factor for a 37-12 day period.,MATRIX,100%,6,13
+pv20_21_83ftni_rd,Interval factor for a 38-12 day period.,MATRIX,100%,4,5
+pv20_252_mom,Momentum factor over a 252-day period.,MATRIX,100%,3,3
+pv20_3_lmh_rd,High minus low price range over a 3-day period.,MATRIX,100%,3,3
+pv20_52_5_rta_rd,Average true range over a 5-25 day period.,MATRIX,100%,4,4
+pv20_5_1_fma_rd,Chaikin oscillator value over a 1-5 day period.,MATRIX,100%,9,18
+pv20_5_cdts_rd,Standard deviation of returns over a 5-day period.,MATRIX,100%,3,3
+pv20_5_cmlh_rd,High-low midpoint change over a 5-day period.,MATRIX,100%,17,27
+pv20_5_lmh_rd,High minus low price range over a 5-day period.,MATRIX,100%,3,3
+pv20_5_qil_rd,Liquidity measure over a 5-day period.,MATRIX,100%,4,4
+pv20_5_spcd_rd,Daily closing price spread over a 5-day period.,MATRIX,100%,7,16
+pv20_5_spcda_rd,Adjusted daily closing price spread over a 5-day period.,MATRIX,100%,4,4
+pv20_a2_announcement_dt,Latest Full Earnings Report Date,MATRIX,100%,4,4
+pv20_a2_ard_share_out_from_front_cover,ARD Shares Outstanding From The Front Cover,MATRIX,87%,2,2
+pv20_a2_ardr_additional_paid_in_capital,ARD Ref Additional Paid In Capital,MATRIX,90%,2,2
+pv20_a2_ardr_common_stock,ARD Ref Common Stock,MATRIX,91%,3,3
+pv20_a2_ardr_deferred_inc_tax_asset_lt,ARD Ref Deferred Income Tax Asset (LT),MATRIX,59%,2,2
+pv20_a2_ardr_furniture_machinery_equip,ARD Ref Furniture/Machinery/Equipment,MATRIX,72%,2,2
+pv20_a2_ardr_inventory,ARD Ref Inventories,MATRIX,37%,3,3
+pv20_a2_ardr_par_value,ARD Ref Par Value,MATRIX,71%,2,2
+pv20_a2_ardr_raw_material,ARD Ref Raw Materials,MATRIX,31%,2,2
+pv20_a2_ardr_shares_outstanding,ARD Ref Shares Outstanding,MATRIX,75%,3,3
+pv20_a2_ardr_total_shareholders_equity,ARD Ref Total Shareholders Equity,MATRIX,98%,3,3
+pv20_a2_latest_period_end_dt_full_record,Latest Period End Date from Full Records,MATRIX,100%,3,3
+pv20_a_announcement_dt,Latest Full Earnings Report Date,MATRIX,100%,2,2
+pv20_a_ard_accrued_expenses,ARD Accrued Expenses,MATRIX,41%,1,1
+pv20_a_ard_accts_receivable_trade,ARD Accounts Receivable - Trade,MATRIX,74%,1,1
+pv20_a_ard_allow_for_doubtful_accts,ARD Allowance For Doubtful Accounts,MATRIX,28%,1,1
+pv20_a_ard_common_stock,ARD Common Stock,MATRIX,94%,1,1
+pv20_a_ard_current_portion_of_lt_debt,ARD Current Portion of Long-Term Debt,MATRIX,31%,1,1
+pv20_a_ard_deferred_inc_tax_asset_lt,ARD Deferred Income Tax Asset (Long-Term),MATRIX,36%,2,2
+pv20_a_ard_goodwll,ARD Goodwill,MATRIX,67%,2,2
+pv20_a_ard_oth_noncurrent_liabilities,ARD Other Noncurrent Liabilities,MATRIX,84%,2,2
+pv20_a_ard_other_current_liabilities,ARD Other Current Liabilities,MATRIX,44%,7,7
+pv20_a_ard_other_intangible_asset,ARD Other Intangible Assets,MATRIX,61%,1,1
+pv20_a_ard_other_noncurrent_asset,ARD Other Noncurrent Assets,MATRIX,79%,3,3
+pv20_a_ard_prepaid_exp_and_other,ARD Prepaid Expenses and Other,MATRIX,50%,1,1
+pv20_a_ard_property_plant_equip_net,ARD Property Plant & Equipment - Net,MATRIX,89%,2,2
+pv20_a_ard_tot_liab_and_shareholder_eqy,ARD Total Liabilities and Shareholders Equity,MATRIX,99%,1,1
+pv20_a_ard_tot_liabilities,ARD Total Liabilities,MATRIX,94%,1,1
+pv20_a_ard_total_current_liabilities,ARD Total Current Liabilities,MATRIX,84%,2,2
+pv20_a_ard_total_shareholders_equity,ARD Total Shareholders Equity,MATRIX,100%,3,3
+pv20_a_ard_treasury_shares_num,ARD Treasury Shares (Number),MATRIX,36%,1,1
+pv20_a_ardr_property_plant_equip_net,ARD Ref Property Plant & Equipment - Net,MATRIX,75%,2,2
+pv20_a_fundamental_entry_dt,Fundamental Data Entry Date,MATRIX,100%,2,2
+pv20_a_latest_period_end_dt_full_record,Latest Period End Date from Full Records,MATRIX,100%,2,2
+pv20_aftercons_difference_86,Difference in consensus estimates after an event.,VECTOR,100%,0,0
+pv20_aftercons_high_87,Highest consensus estimate after an event.,VECTOR,100%,1,1
+pv20_aftercons_low_88,Lowest consensus estimate after an event.,VECTOR,100%,2,2
+pv20_aftercons_mean_89,Mean consensus estimate after an event.,VECTOR,100%,0,0
+pv20_aftercons_median_90,Median consensus estimate after an event.,VECTOR,100%,1,1
+pv20_aftercons_numitems_91,Number of items in the consensus after an event.,VECTOR,100%,0,0
+pv20_aftercons_percentage_92,Percentage change in consensus estimates after an event.,VECTOR,100%,0,0
+pv20_aftercons_stddev_93,Standard deviation of consensus estimates after an event.,VECTOR,100%,0,0
+pv20_afterest_difference_96,Difference in estimates after an event.,VECTOR,100%,2,2
+pv20_afterest_percentage_97,Percentage change in estimates after an event.,VECTOR,100%,1,1
+pv20_afterest_value_99,Value of estimates after an event.,VECTOR,100%,0,0
+pv20_ard_acc_oth_comprehensive_inc,ARD Accumulated Other Comprehensive Income,MATRIX,83%,3,3
+pv20_ard_accounts_payable_trade,ARD Accounts Payable - Trade,MATRIX,74%,1,1
+pv20_ard_accrued_exp_and_other,ARD Accrued Expenses and Other,MATRIX,27%,2,2
+pv20_ard_additional_paid_in_capital,ARD Additional Paid In Capital,MATRIX,92%,1,1
+pv20_ard_cash_and_equivalents,ARD Cash and Equivalents,MATRIX,96%,5,13
+pv20_ard_deferred_income_taxes_liab,ARD Deferred Income Taxes (Liabilities),MATRIX,48%,2,2
+pv20_ard_inventory,ARD Inventories,MATRIX,51%,2,2
+pv20_ard_lt_debt,ARD Long Term Debt,MATRIX,63%,1,1
+pv20_ard_other_current_assets,ARD Other Current Assets,MATRIX,40%,3,3
+pv20_ard_shares_authorized,ARD Shares Authorized,MATRIX,91%,2,2
+pv20_ard_shares_outstanding,ARD Shares Outstanding,MATRIX,84%,1,1
+pv20_ard_tot_noncurrent_liabilities,ARD Total Noncurrent Liabilities,MATRIX,62%,1,1
+pv20_ard_total_cur_assets,ARD Total Current Assets,MATRIX,83%,2,2
+pv20_ard_total_noncurrent_assets,ARD Total Non-Current Assets,MATRIX,63%,1,1
+pv20_ardr_current_portion_of_lt_debt,ARD Ref Current Portion of Long-Term Debt,MATRIX,28%,1,1
+pv20_ardr_deferred_income_taxes_liab,ARD Ref Deferred Income Taxes (Liabilities),MATRIX,61%,2,2
+pv20_ardr_finished_good,ARD Ref Finished Goods,MATRIX,32%,1,1
+pv20_ardr_goodwll,ARD Ref Goodwill,MATRIX,58%,1,1
+pv20_ardr_other_gross_fixed_assets,ARD Ref Other Gross Fixed Assets,MATRIX,27%,1,1
+pv20_ardr_other_intangible_asset,ARD Ref Other Intangible Assets,MATRIX,46%,2,2
+pv20_ardr_property_plant_equip_gross,ARD Ref Property Plant & Equipment - Gross,MATRIX,48%,1,1
+pv20_ardr_retained_earn_acc_deficit,ARD Ref Retained Earnings (Accumulated Deficit),MATRIX,97%,1,1
+pv20_beforecons_high_100,Highest consensus estimate before an event.,VECTOR,100%,0,0
+pv20_beforecons_low_101,Lowest consensus estimate before an event.,VECTOR,100%,0,0
+pv20_beforecons_mean_102,Mean consensus estimate before an event.,VECTOR,100%,0,0
+pv20_beforecons_median_103,Median consensus estimate before an event.,VECTOR,100%,1,1
+pv20_beforecons_numitems_104,Number of items in the consensus before an event.,VECTOR,100%,0,0
+pv20_beforecons_numitems_orig_105,Original number of items in the consensus before an event.,VECTOR,100%,0,0
+pv20_beforecons_stddev_106,Standard deviation of consensus estimates before an event.,VECTOR,100%,0,0
+pv20_beforeest_value_110,Value of estimates before an event.,VECTOR,100%,1,1
+pv20_beta125,Beta coefficient calculated over a 125-day period.,MATRIX,100%,4,4
+pv20_beta250,Beta coefficient calculated over a 250-day period.,MATRIX,100%,3,3
+pv20_beta60,Beta coefficient calculated over a 60-day period.,MATRIX,100%,5,5
+pv20_bottom,Bottom score for the USA Universe Score dataset.,MATRIX,100%,3,3
+pv20_category_111,Category classification,VECTOR,100%,0,0
+pv20_cneutret_1d_neutrets,Neutralized returns for a 1-day period.,MATRIX,100%,2,2
+pv20_cneutret_group1davgret,Group average neutralized returns for a 1-day period.,MATRIX,100%,2,2
+pv20_cneutret_groupndavgret,Group average neutralized returns for an N-day period.,MATRIX,100%,3,3
+pv20_cneutret_nd_rets,Neutralized returns for an N-day period.,MATRIX,100%,3,3
+pv20_companyname,Company Name,MATRIX,89%,1,1
+pv20_country_code,ISO country code for the data.,MATRIX,89%,1,1
+pv20_cusip,"9-digit CUSIP Code for US and Canadian securities. For other securities, this value be replaced with NA",MATRIX,89%,5,5
+pv20_dmgrhchenrpret_sector,Sector classification for the data.,GROUP,100%,3,12
+pv20_dr_aret_1,Absolute return over a 1-day period.,MATRIX,100%,4,4
+pv20_dr_aret_20,Absolute return over a 20-day period.,MATRIX,100%,2,2
+pv20_dr_aret_250,Absolute return over a 250-day period.,MATRIX,100%,6,11
+pv20_dr_aret_5,Absolute return over a 5-day period.,MATRIX,100%,2,2
+pv20_dr_aret_50,Absolute return over a 50-day period.,MATRIX,100%,5,19
+pv20_dr_chaikin_1_5,Chaikin oscillator value over a 1-5 day period.,MATRIX,100%,3,3
+pv20_dr_chaikin_5_20,Chaikin oscillator value over a 5-20 day period.,MATRIX,100%,3,3
+pv20_dr_codhml_1,Coefficient of dispersion for high minus low prices over a 1-day period.,MATRIX,100%,7,15
+pv20_dr_skewret_15,Skewness of returns over a 15-day period.,MATRIX,100%,5,6
+pv20_dr_skewret_6,Skewness of returns over a 6-day period.,MATRIX,100%,3,3
+pv20_dr_vola_120,Volatility of returns over a 120-day period.,MATRIX,100%,10,19
+pv20_dr_vola_20,Volatility of returns over a 20-day period.,MATRIX,100%,3,3
+pv20_dr_vola_250,Volatility of returns over a 250-day period.,MATRIX,100%,2,2
+pv20_dr_vola_30,Volatility of returns over a 30-day period.,MATRIX,100%,3,4
+pv20_dr_vola_40,Volatility of returns over a 40-day period.,MATRIX,100%,4,5
+pv20_dr_vola_5,Volatility of returns over a 5-day period.,MATRIX,100%,2,2
+pv20_dr_vola_60,Volatility of returns over a 60-day period.,MATRIX,100%,2,2
+pv20_dr_volret_1,Volatility of returns for a 1-day period.,MATRIX,100%,3,3
+pv20_dr_volsignret_1,Signed volatility of returns for a 1-day period.,MATRIX,100%,7,7
+pv20_dr_volvola_20,Volatility of volatility over a 20-day period.,MATRIX,100%,8,14
+pv20_ebitda_expected_report_period,ebitda expected report period,VECTOR,94%,1,1
+pv20_ebitda_market_status,Market Status,VECTOR,94%,0,0
+pv20_ebt_indicator_1_feature10,"Indicator 1, Feature 10 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,99%,2,2
+pv20_ebt_indicator_1_feature11,"Indicator 1, Feature 11 from IBES Pre-tax Profit heuristics",MATRIX,99%,1,1
+pv20_ebt_indicator_1_feature12,Feature 12 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,100%,1,1
+pv20_ebt_indicator_1_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,90%,1,1
+pv20_ebt_indicator_1_feature4,Feature 4 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,90%,2,2
+pv20_ebt_indicator_1_feature7,Feature 7 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,99%,2,2
+pv20_ebt_indicator_1_feature8,"Indicator 1, Feature 8 from IBES Pre-tax Profit heuristics",MATRIX,100%,2,2
+pv20_ebt_indicator_1_feature9,Feature 9 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,100%,1,1
+pv20_ebt_indicator_2_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [median 3 months ago],MATRIX,98%,1,1
+pv20_ebt_indicator_2_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,1,1
+pv20_ebt_indicator_2_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,89%,1,1
+pv20_ebt_indicator_2_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,89%,3,3
+pv20_ebt_indicator_2_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,89%,1,1
+pv20_ebt_indicator_2_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,98%,1,1
+pv20_ebt_indicator_2_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,3,6
+pv20_ebt_indicator_2_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,4,15
+pv20_ebt_indicator_3_feature0,"Heuristically extracted IBES Pre-tax Profit (EBT) feature: Indicator 3, feature 0; Fiscal Year 3; mean of flash estimates",MATRIX,99%,2,2
+pv20_ebt_indicator_3_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,96%,1,1
+pv20_ebt_indicator_3_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,96%,2,2
+pv20_ebt_indicator_3_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,99%,1,1
+pv20_ebt_indicator_3_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,82%,1,1
+pv20_ebt_indicator_3_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,82%,1,1
+pv20_ebt_indicator_3_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,99%,1,1
+pv20_ebt_indicator_4_feature11,"Indicator 4, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,74%,1,1
+pv20_ebt_indicator_4_feature3,Feature 3 from Indicator 4 in IBES Pre-tax Profit module,MATRIX,44%,1,1
+pv20_ebt_indicator_4_feature4,"Indicator 4, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,44%,1,1
+pv20_ebt_indicator_4_feature6,Feature 6 from Indicator 4 in IBES Pre-tax Profit module,MATRIX,44%,1,1
+pv20_ebt_indicator_4_feature7,"Indicator 4, Feature 7 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,71%,1,1
+pv20_ebt_indicator_4_feature9,Feature 9 from Indicator 4 in IBES Pre-tax Profit module,MATRIX,84%,1,1
+pv20_ebt_indicator_6_feature0,Mean of the latest flash IBES EBT estimates across analysts for Quarter 1 horizon (next fiscal quarter),MATRIX,95%,1,1
+pv20_ebt_indicator_6_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [median 3 months ago],MATRIX,94%,11,27
+pv20_ebt_indicator_6_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,95%,1,1
+pv20_ebt_indicator_6_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,95%,1,1
+pv20_ebt_indicator_6_feature2,Median across analysts of IBES EBT estimates as of four weeks ago for Quarter 1 horizon,MATRIX,95%,5,5
+pv20_ebt_indicator_6_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,81%,1,1
+pv20_ebt_indicator_6_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,81%,1,1
+pv20_ebt_indicator_6_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,81%,4,4
+pv20_ebt_indicator_6_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,94%,1,1
+pv20_ebt_indicator_6_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,6,13
+pv20_ebt_indicator_6_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,95%,2,2
+pv20_ebt_indicator_7_feature0,"Heuristically extracted IBES Pre-tax Profit (EBT) feature: Indicator 7, feature 0; Quarter 2; mean of flash estimates",MATRIX,95%,3,3
+pv20_ebt_indicator_7_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,94%,1,1
+pv20_ebt_indicator_7_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,94%,1,1
+pv20_ebt_indicator_7_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,95%,4,4
+pv20_ebt_indicator_7_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [median 4 weeks ago],MATRIX,94%,1,1
+pv20_ebt_indicator_7_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,80%,1,1
+pv20_ebt_indicator_7_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,80%,1,1
+pv20_ebt_indicator_7_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,80%,1,1
+pv20_ebt_indicator_7_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,80%,1,1
+pv20_ebt_indicator_7_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,93%,1,1
+pv20_ebt_indicator_7_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,2,2
+pv20_ebt_indicator_7_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,95%,1,1
+pv20_ebt_indicator_8_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,94%,4,4
+pv20_ebt_indicator_8_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,94%,1,1
+pv20_ebt_indicator_8_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,94%,1,1
+pv20_ebt_indicator_8_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [median 4 weeks ago],MATRIX,94%,1,1
+pv20_ebt_indicator_8_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,78%,1,1
+pv20_ebt_indicator_8_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,94%,2,2
+pv20_ebt_indicator_9_feature0,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [mean_flash],MATRIX,94%,1,1
+pv20_ebt_indicator_9_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [median 3 months ago],MATRIX,88%,2,2
+pv20_ebt_indicator_9_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,92%,1,1
+pv20_ebt_indicator_9_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,92%,2,2
+pv20_ebt_indicator_9_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,94%,0,0
+pv20_ebt_indicator_9_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,74%,0,0
+pv20_ebt_indicator_9_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,74%,0,0
+pv20_ebt_indicator_9_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,88%,1,1
+pv20_ebt_indicator_9_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,1,1
+pv20_ebt_indicator_n_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,88%,1,1
+pv20_ebt_indicator_n_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,69%,0,0
+pv20_ebt_indicator_n_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,69%,0,0
+pv20_ebt_indicator_n_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,69%,0,0
+pv20_ebt_indicator_n_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,86%,1,1
+pv20_ebt_indicator_n_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,100%,4,4
+pv20_ebt_indicator_n_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,91%,0,0
+pv20_ebt_indicator_o_feature0,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [mean_flash],MATRIX,89%,0,0
+pv20_ebt_indicator_o_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [median 3 months ago],MATRIX,85%,0,0
+pv20_ebt_indicator_o_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,87%,2,2
+pv20_ebt_indicator_o_feature2,"Heuristically extracted IBES Pre-tax Profit (EBT) feature: Indicator O, feature 2; Quarter 6; median as of 4 weeks ago",MATRIX,87%,0,0
+pv20_ebt_indicator_o_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,65%,6,7
+pv20_ebt_indicator_o_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,66%,1,1
+pv20_ebt_indicator_p_feature0,"Heuristically extracted IBES Pre-tax Profit (EBT) feature: Indicator P, feature 0; Quarter 7; mean of flash estimates",MATRIX,87%,0,0
+pv20_ebt_indicator_p_feature1,"Heuristically extracted IBES Pre-tax Profit (EBT) feature: Indicator P, feature 1; Quarter 7; median as of 3 months ago",MATRIX,81%,2,2
+pv20_ebt_indicator_p_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,85%,0,0
+pv20_ebt_indicator_p_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,85%,0,0
+pv20_ebt_indicator_p_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,87%,2,2
+pv20_ebt_indicator_p_feature2,Median across analysts of IBES EBT estimates as of four weeks ago for Quarter 7 horizon,MATRIX,85%,0,0
+pv20_ebt_indicator_p_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,60%,0,0
+pv20_ebt_indicator_p_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,60%,0,0
+pv20_ebt_indicator_p_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,60%,0,0
+pv20_ebt_indicator_p_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,81%,0,0
+pv20_ebt_indicator_q_feature0,"Heuristically extracted IBES Pre-tax Profit (EBT) feature: Indicator Q, feature 0; Quarter 8; mean of flash estimates",MATRIX,86%,0,0
+pv20_ebt_indicator_q_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,80%,0,0
+pv20_ebt_indicator_q_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,80%,1,1
+pv20_ebt_indicator_q_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,85%,1,1
+pv20_ebt_indicator_q_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [median 4 weeks ago],MATRIX,80%,4,4
+pv20_ebt_indicator_q_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,50%,0,0
+pv20_ebt_indicator_q_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,50%,0,0
+pv20_ebt_indicator_q_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,50%,0,0
+pv20_ebt_indicator_q_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,76%,0,0
+pv20_ebt_indicator_q_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,86%,1,1
+pv20_eps_indicator_1_feature11,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,3,3
+pv20_eps_indicator_1_feature2,Heuristically extracted predictive feature from IBES EPS modules for Fiscal Year 1; median EPS estimate as of 4 weeks ago,MATRIX,100%,1,1
+pv20_eps_indicator_1_feature3,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_1_feature4,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_1_feature7,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_1_feature8,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_2_feature0,"Flash mean of IBES analyst EPS estimates for Fiscal Year 2, heuristically extracted for US equities",MATRIX,100%,1,1
+pv20_eps_indicator_2_feature1,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 2] [median 3 months ago],MATRIX,100%,2,2
+pv20_eps_indicator_2_feature11,Heuristically extracted feature 11 from indicator 2 in the IBES Earnings per Share module for Fiscal Year 2 (non-trivial feature),MATRIX,100%,1,1
+pv20_eps_indicator_2_feature12,Heuristically extracted feature 12 from indicator 2 in the IBES Earnings per Share module for Fiscal Year 2 (non-trivial feature),MATRIX,100%,2,2
+pv20_eps_indicator_2_feature2,Heuristically extracted predictive feature from IBES EPS modules for Fiscal Year 2; median EPS estimate as of 4 weeks ago,MATRIX,100%,0,0
+pv20_eps_indicator_2_feature4,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,4,4
+pv20_eps_indicator_2_feature5,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,2,2
+pv20_eps_indicator_2_feature8,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_eps_indicator_3_feature11,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 3] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_3_feature12,Heuristically extracted feature 12 from indicator 3 in the IBES Earnings per Share module for Fiscal Year 3 (non-trivial feature),MATRIX,100%,0,0
+pv20_eps_indicator_3_feature5,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 3] [Non-trivial feature],MATRIX,95%,0,0
+pv20_eps_indicator_3_feature6,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 3] [Non-trivial feature],MATRIX,95%,0,0
+pv20_eps_indicator_4_feature0,IBES EPS predictive feature (Indicator 4) for Fiscal Year 4; mean_flash (mean of flash estimates),MATRIX,96%,0,0
+pv20_eps_indicator_4_feature1,IBES EPS predictive feature (Indicator 4) for Fiscal Year 4; median 3 months ago (median consensus from 3 months prior),MATRIX,82%,3,3
+pv20_eps_indicator_4_feature10,Feature number 10 for indicator 4 extracted heuristically from IBES modules of Pre-tax Profit for Fiscal Year 3,MATRIX,86%,2,2
+pv20_eps_indicator_4_feature11,"Indicator 4, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,86%,1,1
+pv20_eps_indicator_4_feature2,IBES EPS predictive feature (Indicator 4) for Fiscal Year 4; median 4 weeks ago (median consensus from four weeks prior),MATRIX,86%,0,0
+pv20_eps_indicator_4_feature3,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 4] [Non-trivial feature],MATRIX,55%,1,1
+pv20_eps_indicator_4_feature4,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 4] [Non-trivial feature],MATRIX,55%,0,0
+pv20_eps_indicator_4_feature5,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 4] [Non-trivial feature],MATRIX,55%,0,0
+pv20_eps_indicator_4_feature6,[Features heuristically extracted from ibes modules of Earnings per Share] [Fiscal Year 4] [Non-trivial feature],MATRIX,56%,0,0
+pv20_eps_indicator_4_feature7,"Indicator 4, Feature 7 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,82%,1,1
+pv20_eps_indicator_4_feature9,Feature 9 from Indicator 4 in IBES Pre-tax Profit module,MATRIX,96%,0,0
+pv20_eps_indicator_6_feature0,Heuristically extracted predictive feature from IBES EPS modules for Quarter 1; statistic: mean of flash estimates (mean_flash),MATRIX,100%,0,0
+pv20_eps_indicator_6_feature1,Heuristically derived predictive feature from IBES Earnings per Share estimates for Quarter 1; median value as of 3 months ago,MATRIX,100%,7,7
+pv20_eps_indicator_6_feature10,Feature 10 for Indicator 6 extracted heuristically from IBES Pre-tax Profit modules for Fiscal Year 4,MATRIX,100%,1,1
+pv20_eps_indicator_6_feature12,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 1] [Non-trivial feature],MATRIX,100%,3,3
+pv20_eps_indicator_6_feature2,Heuristically derived predictive feature from IBES Earnings per Share estimates for Quarter 1; median value as of 4 weeks ago,MATRIX,100%,2,3
+pv20_eps_indicator_6_feature7,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 1] [Non-trivial feature],MATRIX,100%,2,2
+pv20_eps_indicator_6_feature8,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 1] [Non-trivial feature],MATRIX,100%,12,27
+pv20_eps_indicator_7_feature0,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 2] [mean_flash],MATRIX,100%,0,0
+pv20_eps_indicator_7_feature1,Heuristically extracted predictive feature from IBES EPS modules for Quarter 2; statistic: median as of 3 months ago,MATRIX,100%,0,0
+pv20_eps_indicator_7_feature11,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 2] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_7_feature12,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 2] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_7_feature2,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 2] [median 4 weeks ago],MATRIX,100%,0,0
+pv20_eps_indicator_7_feature6,Heuristically extracted feature 6 from indicator 7 in the IBES Earnings per Share module for Quarter 2 (non-trivial feature),MATRIX,100%,0,0
+pv20_eps_indicator_8_feature1,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 3] [median 3 months ago],MATRIX,100%,1,1
+pv20_eps_indicator_8_feature10,Heuristically extracted feature 10 from indicator 8 in the IBES Earnings per Share module for Quarter 3 (non-trivial feature),MATRIX,100%,0,0
+pv20_eps_indicator_8_feature11,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_eps_indicator_8_feature12,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_eps_indicator_8_feature2,"Heuristically extracted feature 2 from indicator 8 in the IBES Earnings per Share module for Quarter 3, computed as the median 4 weeks ago",MATRIX,100%,0,0
+pv20_eps_indicator_8_feature3,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 3] [Non-trivial feature],MATRIX,98%,0,0
+pv20_eps_indicator_8_feature4,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 3] [Non-trivial feature],MATRIX,98%,0,0
+pv20_eps_indicator_8_feature6,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 3] [Non-trivial feature],MATRIX,98%,0,0
+pv20_eps_indicator_8_feature7,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_eps_indicator_9_feature1,Heuristically derived predictive feature from IBES Earnings per Share estimates for Quarter 4; median value as of 3 months ago,MATRIX,100%,0,0
+pv20_eps_indicator_9_feature11,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_eps_indicator_9_feature12,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 4] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_9_feature2,Heuristically extracted predictive feature from IBES EPS modules for Quarter 4; statistic: median as of 4 weeks ago,MATRIX,100%,0,0
+pv20_eps_indicator_9_feature3,Heuristically extracted feature 3 from indicator 9 in the IBES Earnings per Share module for Quarter 4 (non-trivial feature),MATRIX,96%,3,3
+pv20_eps_indicator_9_feature5,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 4] [Non-trivial feature],MATRIX,96%,0,0
+pv20_eps_indicator_9_feature6,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 4] [Non-trivial feature],MATRIX,96%,1,1
+pv20_eps_indicator_9_feature7,Heuristically extracted feature 7 from indicator 9 in the IBES Earnings per Share module for Quarter 4 (non-trivial feature),MATRIX,100%,1,1
+pv20_eps_indicator_9_feature8,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_eps_indicator_9_feature9,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 4] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_n_feature1,Median IBES EPS estimate for Quarter 5 as of 3 months ago,MATRIX,100%,0,0
+pv20_eps_indicator_n_feature2,Median IBES EPS estimate for Quarter 5 as of 4 weeks ago,MATRIX,100%,0,0
+pv20_eps_indicator_n_feature3,Heuristically extracted feature 3 from indicator N in the IBES Earnings per Share module for Quarter 5 (non-trivial feature),MATRIX,93%,1,1
+pv20_eps_indicator_n_feature5,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 5] [Non-trivial feature],MATRIX,93%,0,0
+pv20_eps_indicator_n_feature6,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 5] [Non-trivial feature],MATRIX,94%,1,2
+pv20_eps_indicator_n_feature7,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 5] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_n_feature8,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 5] [Non-trivial feature],MATRIX,100%,2,6
+pv20_eps_indicator_o_feature10,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 6] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_o_feature12,Heuristically extracted feature 12 from indicator O in the IBES Earnings per Share module for Quarter 6 (non-trivial feature),MATRIX,100%,0,0
+pv20_eps_indicator_o_feature3,Heuristically extracted feature 3 from indicator O in the IBES Earnings per Share module for Quarter 6 (non-trivial feature),MATRIX,90%,0,0
+pv20_eps_indicator_o_feature5,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 6] [Non-trivial feature],MATRIX,90%,0,0
+pv20_eps_indicator_o_feature8,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 6] [Non-trivial feature],MATRIX,100%,2,2
+pv20_eps_indicator_p_feature0,Heuristically derived predictive feature 0 from IBES EPS for Quarter 7; mean_flash aggregation,MATRIX,100%,0,0
+pv20_eps_indicator_p_feature1,"Heuristically extracted feature 1 from indicator P in the IBES Earnings per Share module for Quarter 7, computed as the median 3 months ago",MATRIX,96%,2,2
+pv20_eps_indicator_p_feature10,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 7] [Non-trivial feature],MATRIX,100%,0,0
+pv20_eps_indicator_p_feature12,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 7] [Non-trivial feature],MATRIX,100%,2,2
+pv20_eps_indicator_p_feature2,Heuristically derived predictive feature 2 from IBES EPS for Quarter 7; median measured 4 weeks ago,MATRIX,100%,0,0
+pv20_eps_indicator_p_feature4,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 7] [Non-trivial feature],MATRIX,83%,0,0
+pv20_eps_indicator_p_feature6,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 7] [Non-trivial feature],MATRIX,84%,1,1
+pv20_eps_indicator_p_feature8,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 7] [Non-trivial feature],MATRIX,100%,0,0
+pv20_eps_indicator_q_feature0,Heuristically extracted predictive feature from IBES EPS modules for Quarter 8; statistic: mean of flash estimates (mean_flash),MATRIX,100%,1,1
+pv20_eps_indicator_q_feature10,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 8] [Non-trivial feature],MATRIX,96%,0,0
+pv20_eps_indicator_q_feature11,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 8] [Non-trivial feature],MATRIX,96%,1,1
+pv20_eps_indicator_q_feature12,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 8] [Non-trivial feature],MATRIX,100%,1,1
+pv20_eps_indicator_q_feature3,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 8] [Non-trivial feature],MATRIX,72%,0,0
+pv20_eps_indicator_q_feature4,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 8] [Non-trivial feature],MATRIX,72%,0,0
+pv20_eps_indicator_q_feature5,Heuristically extracted feature 5 from indicator Q in the IBES Earnings per Share module for Quarter 8 (non-trivial feature),MATRIX,72%,1,1
+pv20_eps_indicator_q_feature6,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 8] [Non-trivial feature],MATRIX,73%,1,1
+pv20_eps_indicator_q_feature7,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 8] [Non-trivial feature],MATRIX,92%,0,0
+pv20_eps_indicator_q_feature8,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 8] [Non-trivial feature],MATRIX,100%,1,2
+pv20_eps_indicator_q_feature9,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 8] [Non-trivial feature],MATRIX,100%,1,1
+pv20_fincharts_fundaimage4image,Image data for USA Fincharts.,VECTOR,89%,0,0
+pv20_fiscalend_112,Fiscal year-end date for the forecast.,VECTOR,100%,1,2
+pv20_fiscalyear_113,Fiscal year associated with the forecast.,VECTOR,100%,0,0
+pv20_forecasttype_115,"Type of forecast (e.g., earnings, revenue).",VECTOR,100%,1,2
+pv20_fx_conversion,FX conversion rate for the specified currency.,MATRIX,100%,0,0
+pv20_gp_bet_industry_cap_top3000_1_20,Beta of industry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,100%,2,2
+pv20_gp_bet_industry_cap_top3000_1_5,Beta of industry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,0,0
+pv20_gp_bet_subindustry_cap_top2000_1_20,Beta of subindustry capitalization for top 2000 securities over a 1-20 day period.,MATRIX,74%,1,1
+pv20_gp_bet_subindustry_cap_top2000_1_5,Beta of subindustry capitalization for top 2000 securities over a 1-5 day period.,MATRIX,72%,0,0
+pv20_gp_bet_subindustry_cap_top3000_1_20,Beta of subindustry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,99%,0,0
+pv20_gp_bet_subindustry_cap_top3000_1_5,Beta of subindustry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,0,0
+pv20_gp_bet_subindustry_cap_top3000_1_60,Beta of subindustry capitalization for top 3000 securities over a 1-60 day period.,MATRIX,100%,0,0
+pv20_gp_cor_industry_cap_top3000_1_20,Correlation of industry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,100%,0,0
+pv20_gp_cor_industry_cap_top3000_1_5,Correlation of industry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,1,1
+pv20_gp_cor_subindustry_cap_top2000_1_20,Correlation of subindustry capitalization for top 2000 securities over a 1-20 day period.,MATRIX,74%,0,0
+pv20_gp_cor_subindustry_cap_top2000_1_5,Correlation of subindustry capitalization for top 2000 securities over a 1-5 day period.,MATRIX,72%,0,0
+pv20_gp_cor_subindustry_cap_top3000_1_20,Correlation of subindustry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,99%,0,0
+pv20_gp_cor_subindustry_cap_top3000_1_5,Correlation of subindustry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,0,0
+pv20_gp_cor_subindustry_cap_top3000_1_60,Correlation of subindustry capitalization for top 3000 securities over a 1-60 day period.,MATRIX,100%,1,1
+pv20_gp_rbet_industry_cap_top3000_1_20,Relative beta of industry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,100%,0,0
+pv20_gp_rbet_industry_cap_top3000_1_5,Relative beta of industry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,2,11
+pv20_gp_rbet_subindustry_cap_top2000_1_20,Relative beta of subindustry capitalization for top 2000 securities over a 1-20 day period.,MATRIX,76%,0,0
+pv20_gp_rbet_subindustry_cap_top2000_1_5,Relative beta of subindustry capitalization for top 2000 securities over a 1-5 day period.,MATRIX,76%,0,0
+pv20_gp_rbet_subindustry_cap_top3000_1_20,Relative beta of subindustry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,100%,0,0
+pv20_gp_rbet_subindustry_cap_top3000_1_5,Relative beta of subindustry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,0,0
+pv20_gp_rbet_subindustry_cap_top3000_1_60,Relative beta of subindustry capitalization for top 3000 securities over a 1-60 day period.,MATRIX,100%,0,0
+pv20_gp_ret_industry_cap_top3000_1_20,Returns of industry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,100%,0,0
+pv20_gp_ret_industry_cap_top3000_1_5,Returns of industry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,1,1
+pv20_gp_ret_subindustry_cap_top2000_1_20,Returns of subindustry capitalization for top 2000 securities over a 1-20 day period.,MATRIX,76%,0,0
+pv20_gp_ret_subindustry_cap_top2000_1_5,Returns of subindustry capitalization for top 2000 securities over a 1-5 day period.,MATRIX,76%,1,1
+pv20_gp_ret_subindustry_cap_top3000_1_20,Returns of subindustry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,100%,1,1
+pv20_gp_ret_subindustry_cap_top3000_1_5,Returns of subindustry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,0,0
+pv20_gp_ret_subindustry_cap_top3000_1_60,Returns of subindustry capitalization for top 3000 securities over a 1-60 day period.,MATRIX,100%,0,0
+pv20_gp_tvr_industry_cap_top3000_1_20,Turnover ratio of industry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,100%,3,9
+pv20_gp_tvr_industry_cap_top3000_1_5,Turnover ratio of industry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,0,0
+pv20_gp_tvr_subindustry_cap_top2000_1_20,Turnover ratio of subindustry capitalization for top 2000 securities over a 1-20 day period.,MATRIX,76%,0,0
+pv20_gp_tvr_subindustry_cap_top2000_1_5,Turnover ratio of subindustry capitalization for top 2000 securities over a 1-5 day period.,MATRIX,76%,0,0
+pv20_gp_tvr_subindustry_cap_top3000_1_20,Turnover ratio of subindustry capitalization for top 3000 securities over a 1-20 day period.,MATRIX,100%,0,0
+pv20_gp_tvr_subindustry_cap_top3000_1_5,Turnover ratio of subindustry capitalization for top 3000 securities over a 1-5 day period.,MATRIX,100%,0,0
+pv20_gp_tvr_subindustry_cap_top3000_1_60,Turnover ratio of subindustry capitalization for top 3000 securities over a 1-60 day period.,MATRIX,100%,0,0
+pv20_gps_indicator_1_feature1,"Indicator 1, Feature 1 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_gps_indicator_1_feature11,"Indicator 1, Feature 11 from IBES Pre-tax Profit heuristics",MATRIX,100%,0,0
+pv20_gps_indicator_1_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_1_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_1_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,1,1
+pv20_gps_indicator_1_feature6,"Indicator 1, Feature 6 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_gps_indicator_1_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,2,2
+pv20_gps_indicator_1_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,2,3
+pv20_gps_indicator_1_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_2_feature0,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [mean_flash],MATRIX,100%,0,0
+pv20_gps_indicator_2_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [median 3 months ago],MATRIX,100%,4,4
+pv20_gps_indicator_2_feature10,Feature 10 from Indicator 2 in IBES Pre-tax Profit heuristics,MATRIX,100%,1,1
+pv20_gps_indicator_2_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_2_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_2_feature3,"Indicator 2, Feature 3 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_gps_indicator_2_feature4,"Indicator 2, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_gps_indicator_2_feature6,Feature 6 from Indicator 2 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_gps_indicator_2_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_2_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,5,5
+pv20_gps_indicator_2_feature9,"Indicator 2, Feature 9 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,1,1
+pv20_gps_indicator_3_feature1,"Indicator 3, Feature 1 from IBES Pre-tax Profit heuristics",MATRIX,99%,0,0
+pv20_gps_indicator_3_feature12,"Indicator 3, Feature 12 from IBES Pre-tax Profit heuristics",MATRIX,100%,2,2
+pv20_gps_indicator_3_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,88%,0,0
+pv20_gps_indicator_3_feature4,Feature 4 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,88%,0,0
+pv20_gps_indicator_3_feature5,"Indicator 3, Feature 5 from IBES Pre-tax Profit heuristics",MATRIX,88%,0,0
+pv20_gps_indicator_3_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,89%,1,1
+pv20_gps_indicator_3_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,99%,2,2
+pv20_gps_indicator_3_feature8,"Indicator 3, Feature 8 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_gps_indicator_4_feature10,Feature number 10 for indicator 4 extracted heuristically from IBES modules of Pre-tax Profit for Fiscal Year 3,MATRIX,77%,0,0
+pv20_gps_indicator_4_feature2,Median IBES Pre-tax Profit estimate for Fiscal Year 4 as of 4 weeks ago,MATRIX,77%,0,0
+pv20_gps_indicator_4_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,44%,0,0
+pv20_gps_indicator_4_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,44%,0,0
+pv20_gps_indicator_4_feature5,Feature 5 from Indicator 4 in IBES Pre-tax Profit module,MATRIX,44%,0,0
+pv20_gps_indicator_4_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,45%,1,2
+pv20_gps_indicator_6_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [median 3 months ago],MATRIX,100%,1,1
+pv20_gps_indicator_6_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,1,1
+pv20_gps_indicator_6_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [median 4 weeks ago],MATRIX,100%,1,1
+pv20_gps_indicator_6_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,96%,0,0
+pv20_gps_indicator_6_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,97%,1,2
+pv20_gps_indicator_6_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_6_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,4,4
+pv20_gps_indicator_6_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_7_feature0,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [mean_flash],MATRIX,100%,3,3
+pv20_gps_indicator_7_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_7_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,1,1
+pv20_gps_indicator_7_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,1,1
+pv20_gps_indicator_7_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [median 4 weeks ago],MATRIX,100%,1,5
+pv20_gps_indicator_7_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,95%,0,0
+pv20_gps_indicator_7_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,95%,0,0
+pv20_gps_indicator_7_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,95%,0,0
+pv20_gps_indicator_7_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_7_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_8_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [median 3 months ago],MATRIX,100%,1,1
+pv20_gps_indicator_8_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_8_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_8_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,94%,0,0
+pv20_gps_indicator_8_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_8_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,1,1
+pv20_gps_indicator_8_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_9_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [median 3 months ago],MATRIX,100%,0,0
+pv20_gps_indicator_9_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_9_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_9_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_9_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,91%,1,1
+pv20_gps_indicator_9_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_9_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_n_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_n_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_n_feature2,Heuristically extracted predictive feature 2 from the IBES Pre-tax Profit module (Indicator N) for Quarter 5; median estimate as of 4 weeks ago,MATRIX,100%,1,1
+pv20_gps_indicator_n_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,87%,0,0
+pv20_gps_indicator_n_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,87%,0,0
+pv20_gps_indicator_n_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,87%,0,0
+pv20_gps_indicator_n_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,87%,2,3
+pv20_gps_indicator_n_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,98%,1,1
+pv20_gps_indicator_n_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,100%,1,1
+pv20_gps_indicator_n_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_o_feature0,Heuristically extracted predictive feature 0 from the IBES Pre-tax Profit module (Indicator O) for Quarter 6; mean of flash estimates,MATRIX,100%,1,1
+pv20_gps_indicator_o_feature1,Heuristically extracted predictive feature 1 from the IBES Pre-tax Profit module (Indicator O) for Quarter 6; median estimate as of 3 months ago,MATRIX,96%,0,0
+pv20_gps_indicator_o_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,98%,0,0
+pv20_gps_indicator_o_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,98%,0,0
+pv20_gps_indicator_o_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,100%,1,1
+pv20_gps_indicator_o_feature2,Heuristically extracted predictive feature 2 from the IBES Pre-tax Profit module (Indicator O) for Quarter 6; median estimate as of 4 weeks ago,MATRIX,98%,0,0
+pv20_gps_indicator_o_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,81%,0,0
+pv20_gps_indicator_o_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,81%,0,0
+pv20_gps_indicator_o_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,82%,0,0
+pv20_gps_indicator_o_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,96%,1,2
+pv20_gps_indicator_o_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_p_feature0,Heuristically extracted predictive feature 0 from the IBES Pre-tax Profit module (Indicator P) for Quarter 7; mean of flash estimates,MATRIX,99%,1,1
+pv20_gps_indicator_p_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,96%,0,0
+pv20_gps_indicator_p_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [median 4 weeks ago],MATRIX,96%,0,0
+pv20_gps_indicator_p_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,71%,0,0
+pv20_gps_indicator_p_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,71%,0,0
+pv20_gps_indicator_p_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,72%,0,0
+pv20_gps_indicator_p_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_q_feature0,"IBES predictive indicator for Pre-tax Profit, Quarter 8; mean of flash estimates",MATRIX,97%,1,1
+pv20_gps_indicator_q_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,90%,1,1
+pv20_gps_indicator_q_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [median 4 weeks ago],MATRIX,90%,2,2
+pv20_gps_indicator_q_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,83%,1,1
+pv20_gps_indicator_q_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,100%,0,0
+pv20_gps_indicator_q_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,97%,0,0
+pv20_group_all,Aggregated group factor for all securities.,MATRIX,100%,0,0
+pv20_image_iv2image,Image associated,VECTOR,100%,2,2
+pv20_indicator_0_feature0_121,[Features heuristically extracted from ibes modules of Earnings per Share] [Long Term Growth] [mean_flash],MATRIX,83%,0,0
+pv20_indicator_0_feature10,[Features heuristically extracted from ibes modules of Earnings per Share] [Long Term Growth] [Non-trivial feature],MATRIX,81%,0,0
+pv20_indicator_0_feature11_124,[Features heuristically extracted from ibes modules of Earnings per Share] [Long Term Growth] [Non-trivial feature],MATRIX,81%,0,0
+pv20_indicator_0_feature1_123,[Features heuristically extracted from ibes modules of Earnings per Share] [Long Term Growth] [median 3 months ago],MATRIX,79%,0,0
+pv20_indicator_0_feature3,[Features heuristically extracted from ibes modules of Earnings per Share] [Long Term Growth] [Non-trivial feature],MATRIX,53%,0,0
+pv20_indicator_0_feature6_122,[Features heuristically extracted from ibes modules of Earnings per Share] [Long Term Growth] [Non-trivial feature],MATRIX,55%,0,0
+pv20_indicator_0_feature7_120,[Features heuristically extracted from ibes modules of Earnings per Share] [Long Term Growth] [Non-trivial feature],MATRIX,79%,1,1
+pv20_indicator_4_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_indicator_8_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,90%,0,0
+pv20_indicator_n_feature12,[Features heuristically extracted from ibes modules of Earnings per Share] [Quarter 5] [Non-trivial feature],MATRIX,100%,1,1
+pv20_industry,Industry classification for USA data.,GROUP,100%,2,5
+pv20_industrysd,Standard deviation of industry returns for USA data.,MATRIX,100%,1,1
+pv20_industrysdw,Weighted standard deviation of industry returns for USA data.,MATRIX,100%,4,12
+pv20_industryw,Weighted industry returns for USA data.,MATRIX,100%,2,17
+pv20_interimperiodend_116,End date of the interim period,VECTOR,100%,1,1
+pv20_interimperiodnum_117,Number of the interim period,VECTOR,100%,0,0
+pv20_label,Label associated with USA Finchcharts Funda data.,MATRIX,89%,1,1
+pv20_label2,Secondary label for USA Finchcharts SFunda data.,MATRIX,98%,38,58
+pv20_label3,Tertiary label for USA Finchcharts SFunda data.,MATRIX,98%,62,91
+pv20_label5,Fifth label for USA Finchcharts SFunda data.,MATRIX,98%,46,73
+pv20_market,Market classification for USA data.,GROUP,100%,3,3
+pv20_marketsd,Standard deviation of market returns for USA data.,MATRIX,100%,1,1
+pv20_marketsdw,Weighted standard deviation of market returns for USA data.,MATRIX,100%,2,2
+pv20_marketw,Weighted market returns for USA data.,MATRIX,100%,3,3
+pv20_mktcap,Market Cap,MATRIX,89%,1,1
+pv20_negvol250,Negative volatility over a 250-day period.,MATRIX,100%,0,0
+pv20_net_indicator_1_feature0,"Indicator 1, Feature 0 from IBES Pre-tax Profit heuristics",MATRIX,100%,1,1
+pv20_net_indicator_1_feature10,"Indicator 1, Feature 10 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_net_indicator_1_feature11,"Indicator 1, Feature 11 from IBES Pre-tax Profit heuristics",MATRIX,100%,1,1
+pv20_net_indicator_1_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,2,2
+pv20_net_indicator_1_feature3,Feature 3 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_net_indicator_1_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_1_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,2,2
+pv20_net_indicator_1_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,1,1
+pv20_net_indicator_1_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_1_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,1,1
+pv20_net_indicator_2_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [median 3 months ago],MATRIX,100%,2,2
+pv20_net_indicator_2_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_2_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_2_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,2,4
+pv20_net_indicator_2_feature3,"Indicator 2, Feature 3 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,1,1
+pv20_net_indicator_2_feature4,"Indicator 2, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_net_indicator_2_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,1,1
+pv20_net_indicator_2_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_2_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_2_feature9,"Indicator 2, Feature 9 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,2,2
+pv20_net_indicator_3_feature1,"Indicator 3, Feature 1 from IBES Pre-tax Profit heuristics",MATRIX,100%,0,0
+pv20_net_indicator_3_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_3_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,100%,7,7
+pv20_net_indicator_3_feature2,Median across analysts of IBES Pre-tax Profit estimates for forecast fiscal year 3 (FY3) as of 4 weeks ago,MATRIX,100%,2,2
+pv20_net_indicator_3_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,94%,0,0
+pv20_net_indicator_3_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,94%,0,0
+pv20_net_indicator_3_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_3_feature8,"Indicator 3, Feature 8 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_net_indicator_3_feature9,Feature 9 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_net_indicator_4_feature10,Feature number 10 for indicator 4 extracted heuristically from IBES modules of Pre-tax Profit for Fiscal Year 3,MATRIX,84%,1,1
+pv20_net_indicator_4_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,84%,0,0
+pv20_net_indicator_4_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,53%,0,0
+pv20_net_indicator_4_feature4,"Indicator 4, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,53%,0,0
+pv20_net_indicator_4_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,53%,0,0
+pv20_net_indicator_4_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,53%,0,0
+pv20_net_indicator_4_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,94%,1,1
+pv20_net_indicator_6_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [median 3 months ago],MATRIX,100%,6,6
+pv20_net_indicator_6_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,1,2
+pv20_net_indicator_6_feature2,Median across analysts of IBES Pre-tax Profit estimates for forecast quarter 1 (Q1) as of 4 weeks ago,MATRIX,100%,0,0
+pv20_net_indicator_6_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,97%,1,1
+pv20_net_indicator_6_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,97%,0,0
+pv20_net_indicator_6_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,97%,0,0
+pv20_net_indicator_6_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_6_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_7_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [median 3 months ago],MATRIX,100%,1,1
+pv20_net_indicator_7_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_7_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_7_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [median 4 weeks ago],MATRIX,100%,0,0
+pv20_net_indicator_7_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,96%,0,0
+pv20_net_indicator_7_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,96%,0,0
+pv20_net_indicator_7_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,96%,0,0
+pv20_net_indicator_7_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,96%,0,0
+pv20_net_indicator_7_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,1,1
+pv20_net_indicator_7_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_7_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_8_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_8_feature2,Median IBES pre-tax profit (EBT) estimate for Quarter 3 as of 4 weeks ago,MATRIX,100%,1,1
+pv20_net_indicator_8_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,95%,0,0
+pv20_net_indicator_8_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,1,1
+pv20_net_indicator_9_feature0,Mean of flash IBES pre-tax profit estimates for Quarter 4,MATRIX,100%,0,0
+pv20_net_indicator_9_feature1,Median across analysts of IBES Pre-tax Profit estimates for forecast quarter 4 (Q4) as of 3 months ago,MATRIX,100%,0,0
+pv20_net_indicator_9_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_9_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_9_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,91%,0,0
+pv20_net_indicator_9_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,92%,0,0
+pv20_net_indicator_9_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,1,1
+pv20_net_indicator_9_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_n_feature0,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [mean_flash],MATRIX,100%,0,0
+pv20_net_indicator_n_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [median 3 months ago],MATRIX,98%,0,0
+pv20_net_indicator_n_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_n_feature2,Median IBES pre-tax profit estimate for Quarter 5 as of 4 weeks ago,MATRIX,100%,0,0
+pv20_net_indicator_n_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,87%,0,0
+pv20_net_indicator_n_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,87%,0,0
+pv20_net_indicator_n_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,87%,0,0
+pv20_net_indicator_n_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,87%,0,0
+pv20_net_indicator_n_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,98%,0,0
+pv20_net_indicator_n_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_n_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_o_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_o_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [median 4 weeks ago],MATRIX,98%,0,0
+pv20_net_indicator_o_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,81%,1,1
+pv20_net_indicator_o_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,81%,1,1
+pv20_net_indicator_o_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,81%,0,0
+pv20_net_indicator_o_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,96%,0,0
+pv20_net_indicator_o_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_p_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,99%,0,0
+pv20_net_indicator_p_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [median 4 weeks ago],MATRIX,96%,0,0
+pv20_net_indicator_p_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,72%,1,1
+pv20_net_indicator_p_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,72%,0,0
+pv20_net_indicator_p_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_p_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,100%,0,0
+pv20_net_indicator_q_feature0,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [mean_flash],MATRIX,98%,0,0
+pv20_net_indicator_q_feature1,Median IBES pre-tax profit estimate for Quarter 8 as of 3 months ago,MATRIX,84%,0,0
+pv20_net_indicator_q_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,89%,0,0
+pv20_net_indicator_q_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,89%,1,1
+pv20_net_indicator_q_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [median 4 weeks ago],MATRIX,89%,0,0
+pv20_net_indicator_q_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,57%,0,0
+pv20_net_indicator_q_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,57%,0,0
+pv20_net_indicator_q_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,58%,0,0
+pv20_net_indicator_q_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,84%,1,1
+pv20_opr_indicator_1_feature0,"Indicator 1, Feature 0 from IBES Pre-tax Profit heuristics",MATRIX,77%,0,0
+pv20_opr_indicator_1_feature1,"Indicator 1, Feature 1 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,70%,0,0
+pv20_opr_indicator_1_feature10,"Indicator 1, Feature 10 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,71%,0,0
+pv20_opr_indicator_1_feature11,"Indicator 1, Feature 11 from IBES Pre-tax Profit heuristics",MATRIX,71%,0,0
+pv20_opr_indicator_1_feature12,Feature 12 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,77%,1,1
+pv20_opr_indicator_1_feature3,Feature 3 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,46%,0,0
+pv20_opr_indicator_1_feature5,Feature 5 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,46%,0,0
+pv20_opr_indicator_1_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,70%,0,0
+pv20_opr_indicator_1_feature8,"Indicator 1, Feature 8 from IBES Pre-tax Profit heuristics",MATRIX,100%,0,0
+pv20_opr_indicator_2_feature0,"Indicator 2, Feature 0 from IBES Pre-tax Profit heuristics",MATRIX,76%,1,3
+pv20_opr_indicator_2_feature11,"Indicator 2, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,69%,0,0
+pv20_opr_indicator_2_feature12,Feature 12 from Indicator 2 in IBES Pre-tax Profit module,MATRIX,76%,0,0
+pv20_opr_indicator_2_feature2,Feature 2 from Indicator 2 in IBES Pre-tax Profit module,MATRIX,69%,1,1
+pv20_opr_indicator_2_feature4,"Indicator 2, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,45%,0,0
+pv20_opr_indicator_2_feature5,"Indicator 2, Feature 5 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,45%,0,0
+pv20_opr_indicator_2_feature9,"Indicator 2, Feature 9 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,76%,0,0
+pv20_opr_indicator_3_feature10,"Indicator 3, Feature 10 from IBES Pre-tax Profit heuristics",MATRIX,57%,1,1
+pv20_opr_indicator_3_feature12,"Indicator 3, Feature 12 from IBES Pre-tax Profit heuristics",MATRIX,69%,2,2
+pv20_opr_indicator_3_feature2,"Indicator 3, Feature 2 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,57%,0,0
+pv20_opr_indicator_3_feature4,Feature 4 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,34%,0,0
+pv20_opr_indicator_3_feature5,"Indicator 3, Feature 5 from IBES Pre-tax Profit heuristics",MATRIX,34%,0,0
+pv20_opr_indicator_3_feature7,Feature 7 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,54%,0,0
+pv20_opr_indicator_3_feature8,"Indicator 3, Feature 8 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,1,3
+pv20_opr_indicator_3_feature9,Feature 9 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,69%,0,0
+pv20_opr_indicator_4_feature0,"Indicator 4, Feature 0 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,44%,0,0
+pv20_opr_indicator_4_feature1,Feature 1 from Indicator 4 module,MATRIX,29%,0,0
+pv20_opr_indicator_4_feature10,Feature number 10 for indicator 4 extracted heuristically from IBES modules of Pre-tax Profit for Fiscal Year 3,MATRIX,32%,0,0
+pv20_opr_indicator_4_feature2,"Indicator 4, Feature 2 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,32%,6,10
+pv20_opr_indicator_4_feature7,"Indicator 4, Feature 7 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,29%,0,0
+pv20_opr_indicator_6_feature0,"Indicator 6, Feature 0 (specific heuristic or metric from IBES module)",MATRIX,65%,0,0
+pv20_opr_indicator_6_feature1,"Indicator 6, Feature 1 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,61%,0,0
+pv20_opr_indicator_6_feature2,Feature 2 from Indicator 6 in IBES Pre-tax Profit module,MATRIX,63%,0,0
+pv20_opr_indicator_6_feature3,Feature 3 from Indicator 6 in IBES Pre-tax Profit module,MATRIX,38%,0,0
+pv20_opr_indicator_6_feature5,"Indicator 6, Feature 5 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,38%,0,0
+pv20_opr_indicator_6_feature7,Feature 7 from Indicator 6 in IBES Pre-tax Profit module,MATRIX,61%,0,0
+pv20_opr_indicator_6_feature8,"Indicator 6, Feature 8 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_opr_indicator_6_feature9,Feature 9 from Indicator 6 in IBES Pre-tax Profit module,MATRIX,65%,0,0
+pv20_opr_indicator_7_feature0,"Indicator 7, Feature 0 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,63%,0,0
+pv20_opr_indicator_7_feature10,"Indicator 7, Feature 10 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,62%,0,0
+pv20_opr_indicator_7_feature11,Feature 11 from Indicator 7 in IBES Pre-tax Profit module,MATRIX,62%,0,0
+pv20_opr_indicator_7_feature2,"Indicator 7, Feature 2 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,62%,0,0
+pv20_opr_indicator_7_feature3,Feature number 3 for Indicator 7 extracted heuristically from IBES modules of Pre-tax Profit for Quarter 3 (median 4 weeks ago),MATRIX,37%,0,0
+pv20_opr_indicator_7_feature4,Feature 4 from Indicator 7 in IBES Pre-tax Profit module,MATRIX,37%,0,0
+pv20_opr_indicator_7_feature5,"Indicator 7, Feature 5 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,37%,0,0
+pv20_opr_indicator_7_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_opr_indicator_7_feature9,Feature 9 of Indicator 7 extracted from IBES modules of Pre-tax Profit,MATRIX,63%,0,0
+pv20_opr_indicator_8_feature0,Feature 0 from Indicator 8 in IBES Pre-tax Profit module,MATRIX,62%,1,1
+pv20_opr_indicator_8_feature1,Feature 1 from Indicator 8 in IBES Pre-tax Profit module,MATRIX,56%,0,0
+pv20_opr_indicator_8_feature10,"Indicator 8, Feature 10 from IBES Pre-tax Profit heuristics",MATRIX,60%,0,0
+pv20_opr_indicator_8_feature12,Feature 12 from Indicator 8 in IBES Pre-tax Profit module,MATRIX,62%,0,0
+pv20_opr_indicator_8_feature3,"Heuristically extracted IBES Pre-tax Profit predictive feature: Indicator 8, Feature 3, targeting Quarter 3 (non-trivial feature)",MATRIX,36%,0,0
+pv20_opr_indicator_8_feature8,Feature 8 from Indicator 8 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_opr_indicator_9_feature0,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [mean_flash],MATRIX,61%,0,0
+pv20_opr_indicator_9_feature1,Feature 1 from Indicator 9 module,MATRIX,53%,0,0
+pv20_opr_indicator_9_feature10,"Indicator 9, Feature 10 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,56%,0,0
+pv20_opr_indicator_9_feature11,"Indicator 9, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,56%,0,0
+pv20_opr_indicator_9_feature12,Feature 12 from Indicator 9 in IBES Pre-tax Profit module,MATRIX,61%,0,0
+pv20_opr_indicator_9_feature2,Feature 2 from Indicator 9 in IBES module of Pre-tax Profit,MATRIX,56%,0,0
+pv20_opr_indicator_9_feature4,"Indicator 9, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,34%,0,0
+pv20_opr_indicator_9_feature7,"Indicator 9, Feature 7 from IBES Pre-tax Profit heuristics",MATRIX,53%,0,0
+pv20_opr_indicator_n_feature0,Mean of flash (preliminary) IBES pre-tax profit estimates for Quarter 5,MATRIX,58%,0,0
+pv20_opr_indicator_n_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,52%,0,0
+pv20_opr_indicator_n_feature2,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [median 4 weeks ago],MATRIX,52%,0,0
+pv20_opr_indicator_n_feature3,"Heuristically extracted IBES Pre-tax Profit predictive feature: Indicator N, Feature 3, targeting Quarter 5 (non-trivial feature)",MATRIX,30%,0,0
+pv20_opr_indicator_n_feature4,"Heuristically extracted IBES Pre-tax Profit predictive feature: Indicator N, Feature 4, targeting Quarter 5 (non-trivial feature)",MATRIX,30%,0,0
+pv20_opr_indicator_n_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,58%,0,0
+pv20_opr_indicator_o_feature0,"IBES Pre-tax Profit predictive feature: Indicator O, Feature 0, targeting Quarter 6, computed as the mean of flash estimates",MATRIX,53%,0,0
+pv20_opr_indicator_o_feature1,"Median IBES pre-tax profit estimate for Quarter 6, snapshot 3 months ago",MATRIX,46%,0,0
+pv20_opr_indicator_o_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,49%,0,0
+pv20_opr_indicator_o_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,49%,0,0
+pv20_opr_indicator_o_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,53%,0,0
+pv20_opr_indicator_o_feature2,"IBES Pre-tax Profit predictive feature: Indicator O, Feature 2, targeting Quarter 6, computed as the median of estimates 4 weeks ago",MATRIX,49%,0,0
+pv20_opr_indicator_o_feature7,"Heuristically extracted IBES Pre-tax Profit predictive feature: Indicator O, Feature 7, targeting Quarter 6 (non-trivial feature)",MATRIX,46%,0,0
+pv20_opr_indicator_o_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,100%,1,2
+pv20_opr_indicator_o_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,53%,0,0
+pv20_opr_indicator_p_feature0,Mean of flash (preliminary) IBES pre-tax profit estimates for Quarter 7,MATRIX,51%,0,0
+pv20_opr_indicator_p_feature1,"IBES Pre-tax Profit predictive feature: Indicator P, Feature 1, targeting Quarter 7, computed as the median of estimates 3 months ago",MATRIX,40%,0,0
+pv20_opr_indicator_p_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,45%,0,0
+pv20_opr_indicator_p_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,51%,0,0
+pv20_opr_indicator_p_feature2,"IBES Pre-tax Profit predictive feature: Indicator P, Feature 2, targeting Quarter 7, computed as the median of estimates 4 weeks ago",MATRIX,45%,0,0
+pv20_opr_indicator_p_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,40%,0,0
+pv20_opr_indicator_p_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,100%,0,0
+pv20_opr_indicator_p_feature9,"Heuristically extracted IBES Pre-tax Profit predictive feature: Indicator P, Feature 9, targeting Quarter 7 (non-trivial feature)",MATRIX,51%,0,0
+pv20_opr_indicator_q_feature0,Mean of flash (preliminary) IBES pre-tax profit estimates for Quarter 8,MATRIX,47%,0,0
+pv20_opr_indicator_q_feature1,"IBES Pre-tax Profit predictive feature: Indicator Q, Feature 1, targeting Quarter 8, computed as the median of estimates 3 months ago",MATRIX,28%,0,0
+pv20_opr_indicator_q_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,36%,0,0
+pv20_opr_indicator_q_feature2,"IBES Pre-tax Profit predictive feature: Indicator Q, Feature 2, targeting Quarter 8, computed as the median of estimates 4 weeks ago",MATRIX,36%,0,0
+pv20_opr_indicator_q_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,28%,0,0
+pv20_opr_indicator_q_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,100%,0,0
+pv20_opr_indicator_q_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,47%,0,0
+pv20_pre_indicator_1_feature0,"Indicator 1, Feature 0 from IBES Pre-tax Profit heuristics",MATRIX,100%,3,13
+pv20_pre_indicator_1_feature1,"Indicator 1, Feature 1 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,1,1
+pv20_pre_indicator_1_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_pre_indicator_1_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_pre_indicator_1_feature12,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 1, Feature 12 – Fiscal Year 1; non-trivial",MATRIX,100%,0,0
+pv20_pre_indicator_1_feature3,Feature 3 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_pre_indicator_1_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_pre_indicator_1_feature5,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 1, Feature 5 – Fiscal Year 1; non-trivial",MATRIX,100%,0,0
+pv20_pre_indicator_1_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_pre_indicator_1_feature8,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 1, Feature 8 – Fiscal Year 1; non-trivial",MATRIX,100%,0,0
+pv20_pre_indicator_2_feature0,"Indicator 2, Feature 0 from IBES Pre-tax Profit heuristics",MATRIX,100%,1,1
+pv20_pre_indicator_2_feature10,"Indicator 2, Feature 10 from IBES Pre-tax Profit heuristics",MATRIX,100%,0,0
+pv20_pre_indicator_2_feature11,"Indicator 2, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_pre_indicator_2_feature2,Feature 2 from Indicator 2 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_pre_indicator_2_feature3,"Indicator 2, Feature 3 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,99%,0,0
+pv20_pre_indicator_2_feature4,"Indicator 2, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,99%,0,0
+pv20_pre_indicator_2_feature5,"Indicator 2, Feature 5 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,99%,3,3
+pv20_pre_indicator_2_feature8,"Indicator 2, Feature 8 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_pre_indicator_2_feature9,"Indicator 2, Feature 9 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,1,1
+pv20_pre_indicator_3_feature0,"Indicator 3, Feature 0 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_pre_indicator_3_feature10,"Indicator 3, Feature 10 from IBES Pre-tax Profit heuristics",MATRIX,100%,1,1
+pv20_pre_indicator_3_feature3,Feature 3 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,90%,1,1
+pv20_pre_indicator_3_feature4,Feature 4 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,90%,0,0
+pv20_pre_indicator_3_feature5,"Indicator 3, Feature 5 from IBES Pre-tax Profit heuristics",MATRIX,90%,0,0
+pv20_pre_indicator_3_feature7,Feature 7 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,100%,1,1
+pv20_pre_indicator_3_feature9,Feature 9 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_pre_indicator_4_feature0,US predictive IBES Pre-tax Profit: heuristically extracted Indicator 4 Feature 0 for Fiscal Year 4 (mean of flash estimates),MATRIX,90%,0,0
+pv20_pre_indicator_4_feature1,US predictive IBES Pre-tax Profit: heuristically extracted Indicator 4 Feature 1 for Fiscal Year 4 (median consensus from 3 months ago),MATRIX,73%,0,0
+pv20_pre_indicator_4_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,77%,0,0
+pv20_pre_indicator_4_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,77%,0,0
+pv20_pre_indicator_4_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,90%,0,0
+pv20_pre_indicator_4_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,45%,0,0
+pv20_pre_indicator_4_feature5,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 4, Feature 5 – Fiscal Year 4; non-trivial",MATRIX,45%,0,0
+pv20_pre_indicator_4_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,73%,0,0
+pv20_pre_indicator_4_feature9,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 4, Feature 9 – Fiscal Year 4; non-trivial",MATRIX,90%,0,0
+pv20_pre_indicator_6_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_pre_indicator_6_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,2,2
+pv20_pre_indicator_6_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_pre_indicator_6_feature2,Heuristic feature from IBES Pre-tax Profit for Quarter 1 horizon; median estimate as of 4 weeks ago,MATRIX,100%,0,0
+pv20_pre_indicator_6_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,93%,0,0
+pv20_pre_indicator_6_feature5,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 6, Feature 5 – Quarter 1; non-trivial",MATRIX,93%,0,0
+pv20_pre_indicator_6_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,93%,1,1
+pv20_pre_indicator_6_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,7,20
+pv20_pre_indicator_6_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,1,1
+pv20_pre_indicator_6_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 1] [Non-trivial feature],MATRIX,100%,0,0
+pv20_pre_indicator_7_feature0,US predictive IBES Pre-tax Profit: heuristically extracted Indicator 7 Feature 0 for Quarter 2 (mean of flash estimates),MATRIX,100%,1,1
+pv20_pre_indicator_7_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [median 3 months ago],MATRIX,100%,0,0
+pv20_pre_indicator_7_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,1,1
+pv20_pre_indicator_7_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,92%,0,0
+pv20_pre_indicator_7_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,92%,0,0
+pv20_pre_indicator_8_feature0,US predictive IBES Pre-tax Profit: heuristically extracted Indicator 8 Feature 0 for Quarter 3 (mean of flash estimates),MATRIX,100%,0,0
+pv20_pre_indicator_8_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_pre_indicator_8_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,0,0
+pv20_pre_indicator_8_feature12,Feature 12 from Indicator 8 in the IBES Pre-tax Profit module,MATRIX,100%,1,1
+pv20_pre_indicator_8_feature2,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 8, Feature 2 – Quarter 3; median 4 weeks ago",MATRIX,100%,1,1
+pv20_pre_indicator_8_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,90%,0,0
+pv20_pre_indicator_8_feature6,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 8, Feature 6 – Quarter 3; non-trivial",MATRIX,91%,2,2
+pv20_pre_indicator_8_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,1,1
+pv20_pre_indicator_9_feature0,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 9, Feature 0 – Quarter 4; mean_flash",MATRIX,100%,0,0
+pv20_pre_indicator_9_feature1,"IBES Pre-tax Profit predictive feature (heuristic): Indicator 9, Feature 1 – Quarter 4; median 3 months ago",MATRIX,98%,0,0
+pv20_pre_indicator_9_feature10,"Indicator 9, Feature 10 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,1,1
+pv20_pre_indicator_9_feature11,"Indicator 9, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_pre_indicator_9_feature2,Feature 2 from Indicator 9 in the IBES module of Pre-tax Profit,MATRIX,100%,0,0
+pv20_pre_indicator_9_feature3,Feature 3 from Indicator 9 in the IBES Pre-tax Profit module,MATRIX,87%,0,0
+pv20_pre_indicator_9_feature6,"Indicator 9, Feature 6 from IBES Pre-tax Profit heuristics",MATRIX,87%,1,1
+pv20_pre_indicator_9_feature7,"Indicator 9, Feature 7 from IBES Pre-tax Profit heuristics",MATRIX,98%,0,0
+pv20_pre_indicator_9_feature8,"Indicator 9, Feature 8 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_pre_indicator_9_feature9,Feature 9 from Indicator 9 in the IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_pre_indicator_n_feature1,Feature 1 from Indicator N in the IBES module of Pre-tax Profit,MATRIX,96%,0,0
+pv20_pre_indicator_n_feature10,"Heuristically extracted Feature 10 from Indicator N in the IBES Pre-tax Profit SAL module, Fiscal Year 2, non-trivial feature",MATRIX,98%,0,0
+pv20_pre_indicator_n_feature2,"IBES Pre-tax Profit predictive feature (heuristic): Indicator N, Feature 2 – Quarter 5; median 4 weeks ago",MATRIX,98%,1,1
+pv20_pre_indicator_n_feature5,"Heuristically extracted Feature 5 from Indicator N in the IBES Pre-tax Profit SAL module, Quarter 1, non-trivial feature",MATRIX,82%,0,0
+pv20_pre_indicator_n_feature7,Feature 7 of Indicator N in the IBES Pre-tax Profit module,MATRIX,96%,2,9
+pv20_pre_indicator_n_feature8,Feature 8 from Indicator N in the IBES module of Pre-tax Profit,MATRIX,100%,0,0
+pv20_pre_indicator_o_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,96%,0,0
+pv20_pre_indicator_o_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,96%,0,0
+pv20_pre_indicator_o_feature12,"IBES Pre-tax Profit predictive feature (heuristic): Indicator O, Feature 12 – Quarter 6; non-trivial",MATRIX,98%,0,0
+pv20_pre_indicator_o_feature2,US predictive IBES Pre-tax Profit: heuristically extracted Indicator O Feature 2 for Quarter 6 (median consensus from 4 weeks ago),MATRIX,96%,0,0
+pv20_pre_indicator_o_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,75%,1,1
+pv20_pre_indicator_o_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,75%,0,0
+pv20_pre_indicator_o_feature5,"IBES Pre-tax Profit predictive feature (heuristic): Indicator O, Feature 5 – Quarter 6; non-trivial",MATRIX,75%,1,1
+pv20_pre_indicator_o_feature6,"IBES Pre-tax Profit predictive feature (heuristic): Indicator O, Feature 6 – Quarter 6; non-trivial",MATRIX,76%,0,0
+pv20_pre_indicator_o_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,94%,0,0
+pv20_pre_indicator_o_feature8,"IBES Pre-tax Profit predictive feature (heuristic): Indicator O, Feature 8 – Quarter 6; non-trivial",MATRIX,100%,0,0
+pv20_pre_indicator_p_feature0,US predictive IBES Pre-tax Profit: heuristically extracted Indicator P Feature 0 for Quarter 7 (mean of flash estimates),MATRIX,97%,0,0
+pv20_pre_indicator_p_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [median 3 months ago],MATRIX,89%,0,0
+pv20_pre_indicator_p_feature11,"IBES Pre-tax Profit predictive feature (heuristic): Indicator P, Feature 11 – Quarter 7; non-trivial",MATRIX,94%,0,0
+pv20_pre_indicator_p_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,97%,0,0
+pv20_pre_indicator_p_feature2,Median of IBES pre-tax profit estimates as of 4 weeks ago for Quarter 7,MATRIX,94%,0,0
+pv20_pre_indicator_p_feature4,"IBES Pre-tax Profit predictive feature (heuristic): Indicator P, Feature 4 – Quarter 7; non-trivial",MATRIX,67%,1,1
+pv20_pre_indicator_p_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,67%,0,0
+pv20_pre_indicator_p_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,68%,0,0
+pv20_pre_indicator_p_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,89%,0,0
+pv20_pre_indicator_p_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,97%,1,1
+pv20_pre_indicator_q_feature10,"IBES Pre-tax Profit predictive feature (heuristic): Indicator Q, Feature 10 – Quarter 8; non-trivial",MATRIX,88%,1,1
+pv20_pre_indicator_q_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,95%,0,0
+pv20_pre_indicator_q_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,52%,0,0
+pv20_pre_indicator_q_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,81%,2,2
+pv20_pre_indicator_q_feature8,"Predictive indicator from the IBES Quarter module (Indicator Q, feature 8): flash mean consensus (mean_flash) for Quarter 1 pre-tax profit",MATRIX,100%,0,0
+pv20_prob,Probability score associated with USA Finchcharts Funda data.,MATRIX,89%,0,0
+pv20_prob2,Secondary probability score for USA Finchcharts SFunda data.,MATRIX,98%,0,0
+pv20_prob3,Tertiary probability score for USA Finchcharts SFunda data.,MATRIX,98%,0,0
+pv20_prob5,Fifth probability score for USA Finchcharts SFunda data.,MATRIX,98%,0,0
+pv20_q_1_announcement_dt,Latest Full Earnings Report Date,MATRIX,100%,0,0
+pv20_q_1_ard_accrued_expenses,ARD Accrued Expenses,MATRIX,41%,4,6
+pv20_q_1_ard_accts_receivable_trade,ARD Accounts Receivable - Trade,MATRIX,74%,0,0
+pv20_q_1_ard_allow_for_doubtful_accts,ARD Allowance For Doubtful Accounts,MATRIX,30%,0,0
+pv20_q_1_ard_common_stock,ARD Common Stock,MATRIX,94%,0,0
+pv20_q_1_ard_current_portion_of_lt_debt,ARD Current Portion of Long-Term Debt,MATRIX,32%,0,0
+pv20_q_1_ard_deferred_inc_tax_asset_lt,ARD Deferred Income Tax Asset (Long-Term),MATRIX,36%,0,0
+pv20_q_1_ard_income_tax_accrued_payable,ARD Income Taxes Accrued/Payable,MATRIX,25%,0,0
+pv20_q_1_ard_oth_noncurrent_liabilities,ARD Other Noncurrent Liabilities,MATRIX,84%,0,0
+pv20_q_1_ard_other_current_liabilities,ARD Other Current Liabilities,MATRIX,45%,2,2
+pv20_q_1_ard_other_intangible_asset,ARD Other Intangible Assets,MATRIX,61%,0,0
+pv20_q_1_ard_other_noncurrent_asset,ARD Other Noncurrent Assets,MATRIX,79%,1,1
+pv20_q_1_ard_property_plant_equip_net,ARD Property Plant & Equipment - Net,MATRIX,89%,0,0
+pv20_q_1_ard_tot_liab_and_shareholder_eqy,ARD Total Liabilities and Shareholders Equity,MATRIX,99%,0,0
+pv20_q_1_ard_tot_liabilities,ARD Total Liabilities,MATRIX,95%,0,0
+pv20_q_1_ard_total_current_liabilities,ARD Total Current Liabilities,MATRIX,84%,0,0
+pv20_q_1_ard_total_shareholders_equity,ARD Total Shareholders Equity,MATRIX,100%,1,1
+pv20_q_1_ard_treasury_shares_num,ARD Treasury Shares (Number),MATRIX,36%,1,1
+pv20_q_1_fundamental_entry_dt,Fundamental Data Entry Date,MATRIX,100%,1,1
+pv20_q_1_latest_period_end_dt_full_record,Latest Period End Date from Full Records,MATRIX,100%,0,0
+pv20_q_2_ard_share_out_from_front_cover,ARD Shares Outstanding From The Front Cover,MATRIX,91%,0,0
+pv20_q_2_ardr_additional_paid_in_capital,ARD Ref Additional Paid In Capital,MATRIX,89%,0,0
+pv20_q_2_ardr_common_stock,ARD Ref Common Stock,MATRIX,91%,1,1
+pv20_q_2_ardr_deferred_inc_tax_asset_lt,ARD Ref Deferred Income Tax Asset (LT),MATRIX,26%,0,0
+pv20_q_2_ardr_furniture_machinery_equip,ARD Ref Furniture/Machinery/Equipment,MATRIX,47%,0,0
+pv20_q_2_ardr_inventory,ARD Ref Inventories,MATRIX,36%,0,0
+pv20_q_2_ardr_par_value,ARD Ref Par Value,MATRIX,80%,1,1
+pv20_q_2_ardr_property_plant_equip_net,ARD Ref Property Plant & Equipment - Net,MATRIX,54%,0,0
+pv20_q_2_ardr_raw_material,ARD Ref Raw Materials,MATRIX,30%,0,0
+pv20_q_2_ardr_shares_outstanding,ARD Ref Shares Outstanding,MATRIX,78%,1,1
+pv20_q_2_ardr_total_shareholders_equity,ARD Ref Total Shareholders Equity,MATRIX,97%,0,0
+pv20_q_2_fundamental_entry_dt,Fundamental Data Entry Date,MATRIX,100%,1,1
+pv20_q_2_latest_period_end_dt_full_record,Latest Period End Date from Full Records,MATRIX,100%,0,0
+pv20_q_ard_allow_for_doubtful_accts,ARD Allowance For Doubtful Accounts,MATRIX,30%,0,0
+pv20_q_ard_goodwll,ARD Goodwill,MATRIX,67%,0,0
+pv20_q_ard_other_current_liabilities,ARD Other Current Liabilities,MATRIX,45%,0,0
+pv20_q_ard_other_intangible_asset,ARD Other Intangible Assets,MATRIX,61%,1,2
+pv20_q_ard_other_noncurrent_asset,ARD Other Noncurrent Assets,MATRIX,79%,0,0
+pv20_q_ard_prepaid_exp_and_other,ARD Prepaid Expenses and Other,MATRIX,51%,0,0
+pv20_q_ardr_common_stock,ARD Ref Common Stock,MATRIX,91%,0,0
+pv20_q_ardr_inventory,ARD Ref Inventories,MATRIX,36%,0,0
+pv20_q_ardr_par_value,ARD Ref Par Value,MATRIX,80%,0,0
+pv20_q_ardr_total_shareholders_equity,ARD Ref Total Shareholders Equity,MATRIX,97%,0,0
+pv20_receivetime_119,Time when the forecast data was received.,VECTOR,100%,0,0
+pv20_relation,Relationship link between entities in the USA dataset.,VECTOR,84%,0,0
+pv20_relinv_top1000_0_inverted,Indicates whether the relationship is inverted for the top 1000 securities (set 0).,VECTOR,37%,0,0
+pv20_relinv_top1000_0_related,Indicates related entities for the top 1000 securities (set 0).,VECTOR,37%,0,0
+pv20_relinv_top1000_1_inverted,Indicates whether the relationship is inverted for the top 1000 securities (set 1).,VECTOR,37%,1,1
+pv20_relinv_top1000_1_related,Indicates related entities for the top 1000 securities (set 1).,VECTOR,37%,0,0
+pv20_relinv_top2000_0_inverted,Indicates whether the relationship is inverted for the top 2000 securities (set 0).,VECTOR,72%,1,2
+pv20_relinv_top2000_0_related,Indicates related entities for the top 2000 securities (set 0).,VECTOR,72%,0,0
+pv20_relinv_top2000_1_inverted,Indicates whether the relationship is inverted for the top 2000 securities (set 1).,VECTOR,72%,0,0
+pv20_relinv_top2000_1_related,Indicates related entities for the top 2000 securities (set 1).,VECTOR,72%,1,1
+pv20_ret,Returns for USA Finchcharts SFunda data.,MATRIX,98%,86,150
+pv20_returns1,Returns over a 1-day period.,MATRIX,100%,9,12
+pv20_returns10,"Embargoed rolling 10-day FX return, vendor-provided and compliant with regime, masking, and embargo rules; represents the FX rate change over the last 10 days; use as-is",MATRIX,100%,2,2
+pv20_returns100,100-day returns value for the asset,MATRIX,100%,1,1
+pv20_returns100_t,Timestamp for 100-day returns value,MATRIX,100%,0,0
+pv20_returns10_t,Timestamp for 10-day returns value,MATRIX,100%,0,0
+pv20_returns120,Embargoed rolling return over the past 120 calendar days for the relevant FX rate; vendor-calculated and not to be recalculated or interpolated,MATRIX,100%,0,0
+pv20_returns120_t,Timestamp for 120-day returns value,MATRIX,100%,0,0
+pv20_returns15,"Embargoed rolling return for the currency or currency pair over the past 15 days, calculated according to the research-safe regime and embargo discipline",MATRIX,100%,0,0
+pv20_returns150,150-day returns value for the asset,MATRIX,100%,1,1
+pv20_returns150_t,Timestamp for 150-day returns value,MATRIX,100%,0,0
+pv20_returns15_t,Timestamp for 15-day returns value,MATRIX,100%,0,0
+pv20_returns180,Embargoed rolling return over the past 180 days for the currency pair or FX instrument; cumulative or compounded return computed under delay embargo discipline,MATRIX,100%,1,1
+pv20_returns180_t,Timestamp for 180-day returns value,MATRIX,100%,0,0
+pv20_returns1_t,Total returns over a 1-day period.,MATRIX,100%,0,0
+pv20_returns2,2-day returns value for the asset,MATRIX,100%,6,12
+pv20_returns20,"Precomputed embargoed 20-day rolling return of the FX rate, incorporating regimes and masking; provided as-is and not to be recomputed by users",MATRIX,100%,1,1
+pv20_returns200,200-day returns value (variant 42),MATRIX,100%,0,0
+pv20_returns200_t,Timestamp for 200-day returns value,MATRIX,100%,0,0
+pv20_returns20_t,Timestamp for 20-day returns value,MATRIX,100%,0,0
+pv20_returns25,Embargoed rolling foreign exchange (FX) return over a 25-day period,MATRIX,100%,0,0
+pv20_returns250,250-day returns value for the asset,MATRIX,100%,1,1
+pv20_returns250_t,Timestamp for 250-day returns value,MATRIX,100%,0,0
+pv20_returns252,"Embargoed point-in-time rolling return over the prior 252 trading days (approximately one year), computed under bbo delay discipline to avoid lookahead bias",MATRIX,100%,1,1
+pv20_returns252_t,Timestamp for 252-day returns value,MATRIX,100%,0,0
+pv20_returns25_t,"Return value corresponding to a 25-day lookback or lag period, type T",MATRIX,100%,0,0
+pv20_returns2_t,Timestamp for 2-day returns value,MATRIX,100%,0,0
+pv20_returns3,3-day returns value for the asset,MATRIX,100%,0,0
+pv20_returns30,30-day total return; cumulative return over the past 30 trading days (typically computed as log or simple return),MATRIX,100%,0,0
+pv20_returns300,300-day returns value for the asset,MATRIX,100%,1,1
+pv20_returns300_t,Timestamp for 300-day returns value,MATRIX,100%,0,0
+pv20_returns30_t,Trailing 30-day return percentage,MATRIX,100%,0,0
+pv20_returns3_t,Timestamp for 3-day returns value,MATRIX,100%,0,0
+pv20_returns4,4-day returns value for the asset,MATRIX,100%,0,0
+pv20_returns40,"Embargoed vendor-calculated rolling FX return over 40 calendar days, aligned with current regime, masking, and embargo discipline",MATRIX,100%,0,0
+pv20_returns40_t,Timestamp for 40-day returns value,MATRIX,100%,0,0
+pv20_returns4_t,Timestamp for 4-day returns value,MATRIX,100%,0,0
+pv20_returns5,5-day returns value (variant 98),MATRIX,100%,0,0
+pv20_returns50,"Embargoed 50-period rolling return in FX rate, expressed as percent change, computed under bbo delay/embargo rules with regime alignment; vendor-provided point-in-time value",MATRIX,100%,0,0
+pv20_returns500,500-day returns value for the asset,MATRIX,99%,0,0
+pv20_returns500_t,Timestamp for 500-day returns value,MATRIX,99%,0,0
+pv20_returns50_t,Timestamp for 50-day returns value,MATRIX,100%,0,0
+pv20_returns5_t,Timestamp for 5-day returns value,MATRIX,100%,0,0
+pv20_returns60,"Embargoed rolling 60-day FX return provided by the vendor, incorporating embargo, regime, and masking rules; not to be recomputed",MATRIX,100%,1,1
+pv20_returns60_t,Timestamp for 60-day returns value,MATRIX,100%,0,0
+pv20_returns70,"Embargoed rolling return over the past 70 calendar days for the relevant currency or currency pair, calculated by the data vendor and not to be recalculated",MATRIX,100%,0,0
+pv20_returns70_t,Timestamp for 70-day returns value,MATRIX,100%,0,0
+pv20_returns75,75-day returns value (variant 100),MATRIX,100%,0,0
+pv20_returns750,"Embargoed rolling return over a 750-day period for the FX instrument, calculated by the vendor and aligned with regime and masking discipline",MATRIX,91%,2,3
+pv20_returns750_t,Timestamp for 750-day returns value,MATRIX,91%,0,0
+pv20_returns75_t,Timestamp for 75-day returns value,MATRIX,100%,0,0
+pv20_returns90,"Embargoed rolling foreign exchange (FX) return over the past 90 calendar days, computed in line with regime, masking, and embargo rules",MATRIX,100%,0,0
+pv20_returns90_t,Timestamp for 90-day returns value,MATRIX,100%,0,0
+pv20_returns_group,Group classification for USA Ad Astra returns.,MATRIX,100%,1,1
+pv20_returns_t,Timestamp for returns value,MATRIX,100%,0,0
+pv20_revere_group_5_3_sector,Sector classification for USA Revere group 5_3.,GROUP,100%,3,10
+pv20_revere_hierarchy_min100_corr21_513_v1_sector,No field description,GROUP,72%,4,5
+pv20_revere_hierarchy_min100_corr21_513_v2_sector,Sector classification for USA Revere hierarchy,GROUP,72%,1,9
+pv20_revere_hierarchy_min100_corr21_v1_sector,"Industry sector identifier/code for each company as-of-date in the USA Revere hierarchy overlay (min100, 21-day correlation, version v1), used to map company-to-sector membership; values are sector codes decoded via NIO_IX",GROUP,76%,2,18
+pv20_revere_hierarchy_min100_corr21_v2_sector,Sector classification for USA Revere hierarchy,GROUP,76%,2,4
+pv20_revere_hierarchy_min15_sector,"Industry sector identifier/classification for securities within the USA Revere hierarchy (min15 variant), where the “min15” tag denotes a minimum threshold criterion (e.g., coverage or constituent count) used for inclusion",GROUP,76%,2,8
+pv20_revere_hierarchy_min2_top2000_sector,"Industry sector identifier (Revere sector code) for U.S. equities in the USA_revere_hierarchy_min2_top2000 universe, which contains the top 2000 ranked securities and excludes the two lowest hierarchy levels",GROUP,76%,2,11
+pv20_revere_hierarchy_min4_sector,Point-in-time integer code for the Revere sector classification of each USA instrument in the revere_hierarchy_min4 module; decode via the module’s NIO_IX/sectorIx to obtain the sector name/path and use as the research-legal industry sector identifier,GROUP,76%,3,13
+pv20_revere_hierarchy_min50_sector,Point-in-time Revere industry sector code (integer) for each U.S. security in the USA_revere_hierarchy_min50 module; map the code via the module’s sectorIx to obtain the sector name/path and use it as the research-legal sector classification,GROUP,76%,1,5
+pv20_revere_hierarchy_min6_sector,Point-in-time Revere sector classification code (integer) for US securities; decode using the module’s sector index/codebook (NIO_IX),GROUP,76%,2,6
+pv20_revere_rha2_min30_sector,Sector classification for USA Revere hierarchy,GROUP,76%,4,10
+pv20_ro_rd,Operating return for the dataset.,MATRIX,100%,0,0
+pv20_sal_indicator_1_feature0,"Indicator 1, Feature 0 from IBES Pre-tax Profit heuristics",MATRIX,100%,1,1
+pv20_sal_indicator_1_feature12,Feature 12 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,100%,1,1
+pv20_sal_indicator_1_feature2,"Indicator 1, Feature 2 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_sal_indicator_1_feature3,Feature 3 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_sal_indicator_1_feature6,"Indicator 1, Feature 6 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_sal_indicator_1_feature7,Feature 7 from Indicator 1 module,MATRIX,100%,0,0
+pv20_sal_indicator_1_feature9,Feature 9 from Indicator 1 in IBES Pre-tax Profit module,MATRIX,100%,1,1
+pv20_sal_indicator_2_feature0,"Indicator 2, Feature 0 from IBES Pre-tax Profit heuristics",MATRIX,100%,0,0
+pv20_sal_indicator_2_feature1,Feature 1 from Indicator 2 in IBES Pre-tax Profit module,MATRIX,100%,1,1
+pv20_sal_indicator_2_feature10,"Indicator 2, Feature 10 from IBES Pre-tax Profit heuristics",MATRIX,100%,0,0
+pv20_sal_indicator_2_feature11,"Indicator 2, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_sal_indicator_2_feature12,Feature 12 from Indicator 2 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_sal_indicator_2_feature2,Feature 2 from Indicator 2 in IBES Pre-tax Profit module,MATRIX,100%,1,1
+pv20_sal_indicator_2_feature4,"Indicator 2, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,3,3
+pv20_sal_indicator_2_feature5,"Indicator 2, Feature 5 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,1,1
+pv20_sal_indicator_2_feature7,"Indicator 2, Feature 7 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,2,2
+pv20_sal_indicator_2_feature8,"Indicator 2, Feature 8 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,11,17
+pv20_sal_indicator_3_feature0,"Indicator 3, Feature 0 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,1,1
+pv20_sal_indicator_3_feature11,"Indicator 3, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_sal_indicator_3_feature4,Feature 4 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,94%,0,0
+pv20_sal_indicator_3_feature5,"Indicator 3, Feature 5 from IBES Pre-tax Profit heuristics",MATRIX,94%,0,0
+pv20_sal_indicator_3_feature6,"Indicator 3, Feature 6 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,94%,0,0
+pv20_sal_indicator_3_feature7,Feature 7 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_sal_indicator_3_feature9,Feature 9 from Indicator 3 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_sal_indicator_4_feature0,"Indicator 4, Feature 0 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,97%,0,0
+pv20_sal_indicator_4_feature10,Feature number 10 for indicator 4 extracted heuristically from IBES modules of Pre-tax Profit for Fiscal Year 3,MATRIX,88%,0,0
+pv20_sal_indicator_4_feature11,"Indicator 4, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,88%,0,0
+pv20_sal_indicator_4_feature12,"Indicator 4, Feature 12 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,97%,0,0
+pv20_sal_indicator_4_feature2,"Indicator 4, Feature 2 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,88%,0,0
+pv20_sal_indicator_4_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Fiscal Year 4] [Non-trivial feature],MATRIX,58%,0,0
+pv20_sal_indicator_4_feature5,Feature 5 from Indicator 4 in IBES Pre-tax Profit module,MATRIX,58%,0,0
+pv20_sal_indicator_6_feature10,Feature number 10 for indicator 6 extracted heuristically from IBES modules of Pre-tax Profit for Fiscal Year 4,MATRIX,100%,0,0
+pv20_sal_indicator_6_feature11,"Indicator 6, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_sal_indicator_6_feature2,Feature 2 from Indicator 6 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_sal_indicator_6_feature4,Feature 4 from Indicator 6 in IBES Pre-tax Profit module,MATRIX,97%,4,4
+pv20_sal_indicator_6_feature5,"Indicator 6, Feature 5 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,97%,0,0
+pv20_sal_indicator_6_feature6,Feature 6 from Indicator 6 in IBES Pre-tax Profit module,MATRIX,97%,2,2
+pv20_sal_indicator_6_feature8,"Indicator 6, Feature 8 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,39,76
+pv20_sal_indicator_7_feature0,"Indicator 7, Feature 0 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_sal_indicator_7_feature1,Feature 1 from Indicator 7 in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_sal_indicator_7_feature10,"Indicator 7, Feature 10 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,1,1
+pv20_sal_indicator_7_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_sal_indicator_7_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,1,1
+pv20_sal_indicator_7_feature2,"Indicator 7, Feature 2 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,2,2
+pv20_sal_indicator_7_feature3,Feature number 3 for indicator 7 extracted heuristically from IBES modules of Pre-tax Profit for Quarter 3 (median 4 weeks ago),MATRIX,96%,1,1
+pv20_sal_indicator_7_feature5,"Indicator 7, Feature 5 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,96%,0,0
+pv20_sal_indicator_7_feature6,Feature 6 from Indicator 7 in IBES Pre-tax Profit module,MATRIX,96%,0,0
+pv20_sal_indicator_7_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_sal_indicator_7_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 2] [Non-trivial feature],MATRIX,100%,0,0
+pv20_sal_indicator_8_feature1,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [median 3 months ago],MATRIX,100%,0,0
+pv20_sal_indicator_8_feature10,"Indicator 8, Feature 10 from IBES Pre-tax Profit heuristics",MATRIX,100%,0,0
+pv20_sal_indicator_8_feature11,"Indicator 8, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_sal_indicator_8_feature12,Feature 12 from Indicator 8 in IBES Pre-tax Profit module,MATRIX,100%,10,21
+pv20_sal_indicator_8_feature2,Feature number 2 for indicator 8 extracted heuristically from IBES modules of Pre-tax Profit for Quarter 1,MATRIX,100%,0,0
+pv20_sal_indicator_8_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,95%,1,1
+pv20_sal_indicator_8_feature4,"Indicator 8, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,95%,2,2
+pv20_sal_indicator_8_feature6,"Indicator 8, Feature 6 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,95%,0,0
+pv20_sal_indicator_8_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,1,1
+pv20_sal_indicator_8_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 3] [Non-trivial feature],MATRIX,100%,2,2
+pv20_sal_indicator_9_feature10,"Indicator 9, Feature 10 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_sal_indicator_9_feature11,"Indicator 9, Feature 11 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,100%,0,0
+pv20_sal_indicator_9_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,100%,0,0
+pv20_sal_indicator_9_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 4] [Non-trivial feature],MATRIX,93%,1,1
+pv20_sal_indicator_9_feature4,"Indicator 9, Feature 4 extracted heuristically from IBES Pre-tax Profit modules",MATRIX,93%,0,0
+pv20_sal_indicator_9_feature6,"Indicator 9, Feature 6 from IBES Pre-tax Profit heuristics",MATRIX,93%,0,0
+pv20_sal_indicator_9_feature7,"Indicator 9, Feature 7 from IBES Pre-tax Profit heuristics",MATRIX,100%,1,1
+pv20_sal_indicator_n_feature0,Mean of IBES flash (most recent) pre-tax profit estimates for forecast Quarter 5,MATRIX,100%,0,0
+pv20_sal_indicator_n_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,100%,0,0
+pv20_sal_indicator_n_feature3,Feature 3 of Indicator N in IBES Pre-tax Profit module,MATRIX,90%,0,0
+pv20_sal_indicator_n_feature4,Feature 4 of Indicator N extracted from IBES modules of Pre-tax Profit,MATRIX,90%,3,3
+pv20_sal_indicator_n_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,90%,1,1
+pv20_sal_indicator_n_feature6,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 5] [Non-trivial feature],MATRIX,90%,0,0
+pv20_sal_indicator_n_feature7,Feature 7 of Indicator N in IBES Pre-tax Profit module,MATRIX,100%,0,0
+pv20_sal_indicator_n_feature8,Feature 8 from Indicator N in IBES module of Pre-tax Profit,MATRIX,100%,3,12
+pv20_sal_indicator_o_feature0,"Indicator O, feature 0 extracted from IBES modules of Pre-tax Profit",MATRIX,100%,0,0
+pv20_sal_indicator_o_feature10,Feature 10 from Indicator O in IBES module of Pre-tax Profit,MATRIX,100%,0,0
+pv20_sal_indicator_o_feature11,"IBES predictive indicator from module O, feature 11 related to Pre-tax Profit for Fiscal Year 1",MATRIX,100%,0,0
+pv20_sal_indicator_o_feature12,Feature 12 from Indicator O in IBES module of Pre-tax Profit,MATRIX,100%,4,17
+pv20_sal_indicator_o_feature2,Median IBES Pre-tax Profit estimate as of 4 weeks ago for Quarter 6 (feature 2),MATRIX,100%,0,0
+pv20_sal_indicator_o_feature4,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 6] [Non-trivial feature],MATRIX,86%,1,1
+pv20_sal_indicator_o_feature5,Feature 5 of Indicator O in IBES Pre-tax Profit module,MATRIX,86%,0,0
+pv20_sal_indicator_o_feature6,Feature 6 of Indicator O in IBES Pre-tax Profit module,MATRIX,86%,0,0
+pv20_sal_indicator_o_feature9,Feature 9 from Indicator O in IBES module of Pre-tax Profit,MATRIX,100%,0,0
+pv20_sal_indicator_p_feature1,Feature 1 of Indicator P in IBES Pre-tax Profit module,MATRIX,95%,3,4
+pv20_sal_indicator_p_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,99%,0,0
+pv20_sal_indicator_p_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,99%,0,0
+pv20_sal_indicator_p_feature2,"IBES predictive indicator from module P, feature 2 related to Pre-tax Profit for Quarter 6",MATRIX,99%,1,1
+pv20_sal_indicator_p_feature3,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,79%,0,0
+pv20_sal_indicator_p_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,79%,0,0
+pv20_sal_indicator_p_feature7,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,95%,0,0
+pv20_sal_indicator_p_feature8,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,100%,0,0
+pv20_sal_indicator_p_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 7] [Non-trivial feature],MATRIX,100%,1,1
+pv20_sal_indicator_q_feature0,"IBES Pre-tax Profit Quarter 8 mean flash estimate (Indicator Q, feature 0)",MATRIX,100%,0,0
+pv20_sal_indicator_q_feature1,Median IBES Pre-tax Profit estimate as of 3 months ago for Quarter 8 (feature 1),MATRIX,90%,0,0
+pv20_sal_indicator_q_feature10,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,94%,0,0
+pv20_sal_indicator_q_feature11,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,94%,0,0
+pv20_sal_indicator_q_feature12,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,98%,0,0
+pv20_sal_indicator_q_feature5,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,67%,0,0
+pv20_sal_indicator_q_feature9,[Features heuristically extracted from ibes modules of Pre-tax Profit] [Quarter 8] [Non-trivial feature],MATRIX,100%,0,0
+pv20_score,Score for the dataset,MATRIX,89%,12,36
+pv20_sector,Sector Name,MATRIX,89%,0,0
+pv20_sectorsd,Standard deviation of sector returns for USA data.,MATRIX,100%,0,0
+pv20_sectorsdw,Weighted standard deviation of sector returns for USA data.,MATRIX,100%,1,1
+pv20_sectorw,Weighted sector returns for USA data.,MATRIX,100%,0,0
+pv20_tsvol,Time-series volatility for USA Universe Score data.,MATRIX,100%,0,0
+pv20_vol250,Volatility over a 250-day period for USA Universe Score data.,MATRIX,100%,2,2
+pv20_vol_252,Volatility over a 252-day period.,MATRIX,100%,2,2
+pv20_volume_group,Group classification for USA Ad Astra volume data.,MATRIX,100%,2,6
+pv20_vret,Volatility of returns for USA DmgrJyaoUtop1 data.,MATRIX,100%,5,12
+pv20_weight,Weight assigned to relationships in the USA Re_Llink dataset.,VECTOR,84%,2,2

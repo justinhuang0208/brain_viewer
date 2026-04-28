@@ -1,0 +1,13 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl133_mktcap,"Market capitalization of the company, measured in millions of US dollars",VECTOR,31%,1,1
+mdl133_qes_avid_bm_dynmval,"Book-to-market factor exposure, dynamically constructed using adaptive or regime-aware models to capture book-to-market value characteristics that change over time",VECTOR,26%,3,3
+mdl133_qes_avid_bm_hedge,"Book-to-market factor exposure after applying risk factor hedging, which neutralizes unwanted risk exposures from the book-to-market measure",VECTOR,31%,2,6
+mdl133_qes_avid_divyld_dynmval,"Stock’s exposure to the dividend yield value factor, dynamically constructed using regime-switching or market condition-adaptive models",VECTOR,27%,0,0
+mdl133_qes_avid_divyld_hedge,"Dividend yield factor exposure after explicit hedging against risk factors, indicating dividend yield sensitivity cleansed of unwanted risks",VECTOR,31%,1,4
+mdl133_qes_avid_fcf_dynmval,"Free cash flow yield factor exposure, dynamically constructed using regime-switching or adaptive models to better reflect value characteristics in different market contexts",VECTOR,27%,2,2
+mdl133_qes_avid_fcf_hedge,"Free cash flow yield factor exposure after applying risk factor hedging, which neutralizes unwanted risk exposures that could affect the free cash flow yield measure",VECTOR,31%,1,6
+mdl133_qes_avid_ocf_dynmval,Dynamically constructed operating cash flow yield factor exposure using regime-switching or adaptive methods,VECTOR,26%,1,1
+mdl133_qes_avid_ocf_hedge,"Operating cash flow yield factor exposure after explicit risk factor hedging, meaning sensitivity to OCF yield with macro/style risk effects removed",VECTOR,31%,0,0
+mdl133_qes_avid_pe_dynmval,"Price-to-earnings factor exposure, dynamically constructed using regime-switching models to reflect changing market regimes and improve the representation of the P/E value signal",VECTOR,29%,1,2
+mdl133_qes_avid_pe_hedge,"Price-to-earnings factor exposure after explicit hedging of risk factors, isolating PE-specific sensitivity",VECTOR,31%,0,0
+mdl133_qes_avid_score,"Composite score combining all refined AVID value factor exposures into a single, dynamically weighted value metric for the stock",VECTOR,31%,1,1

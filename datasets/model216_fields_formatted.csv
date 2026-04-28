@@ -1,0 +1,91 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl216_armcountry100score,"Percentile rank 1–100 within the country based on the Analyst Revisions Model; 100 best, 1 worst",VECTOR,94%,73,339
+mdl216_armcountry100score_fast_d1,"Percentile rank 1–100 within the country based on the Analyst Revisions Model; 100 best, 1 worst",VECTOR,89%,2,2
+mdl216_armcountry1rank,"0–1 scaled country-relative ARM rank, with higher values indicating stronger signals versus country peers",VECTOR,94%,41,124
+mdl216_armcountry1rank_fast_d1,"0–1 scaled country-relative ARM rank, with higher values indicating stronger signals versus country peers",VECTOR,89%,2,2
+mdl216_armcountry5score,"1–5 mapped score of the country ARM percentile (bell-shaped bins); 1 best, 5 worst",VECTOR,94%,26,113
+mdl216_armcountry5score_fast_d1,"1–5 mapped score of the country ARM percentile (bell-shaped bins); 1 best, 5 worst",VECTOR,89%,3,5
+mdl216_armestimaterevisioncombinationrank,"Combined estimate revisions rank that weights preferred, secondary, and revenue revisions, with weights varying by profitability",VECTOR,94%,33,79
+mdl216_armestimaterevisioncombinationrank_fast_d1,"Combined estimate revisions rank that weights preferred, secondary, and revenue revisions, with weights varying by profitability",VECTOR,89%,3,4
+mdl216_armglobal100score,"Global 1–100 percentile score from the ARM model, where 100 indicates highest rated globally",VECTOR,94%,39,97
+mdl216_armglobal100score_fast_d1,"Global 1–100 percentile score from the ARM model, where 100 indicates highest rated globally",VECTOR,89%,3,3
+mdl216_armglobal1rank,0–1 precision version of the global ARM percentile rank,VECTOR,94%,31,74
+mdl216_armglobal1rank_fast_d1,0–1 precision version of the global ARM percentile rank,VECTOR,89%,4,4
+mdl216_armglobal5score,"Global ARM score mapped from the 1–100 percentile to a 1–5 scale, where 1 indicates highest rated and 5 indicates lowest, using the specified percentile buckets",VECTOR,94%,34,88
+mdl216_armglobal5score_fast_d1,"Global ARM score mapped from the 1–100 percentile to a 1–5 scale, where 1 indicates highest rated and 5 indicates lowest, using the specified percentile buckets",VECTOR,89%,3,3
+mdl216_armglobalcombinationscore,"Combined global ARM score that blends the Estimates Revisions component with the Recommendations component; if recommendations are unavailable, it equals the Estimates Revisions component",VECTOR,94%,27,54
+mdl216_armglobalcombinationscore_fast_d1,"Combined global ARM score that blends the Estimates Revisions component with the Recommendations component; if recommendations are unavailable, it equals the Estimates Revisions component",VECTOR,89%,3,3
+mdl216_armindustry100score,Percentile rank (1–100) within the industry based on the ARM algorithm; 100 is highest and 1 is lowest,VECTOR,94%,34,116
+mdl216_armindustry100score_fast_d1,Percentile rank (1–100) within the industry based on the ARM algorithm; 100 is highest and 1 is lowest,VECTOR,89%,1,1
+mdl216_armindustry1rank,0–1 precision version of the industry ARM percentile rank,VECTOR,94%,40,132
+mdl216_armindustry1rank_fast_d1,0–1 precision version of the industry ARM percentile rank,VECTOR,89%,0,0
+mdl216_armindustry5score,"Industry score mapped from the 1–100 ARM percentile to a 1–5 scale (bell-shaped distribution), where 1 is highest and 5 is lowest",VECTOR,94%,17,65
+mdl216_armindustry5score_fast_d1,"Industry score mapped from the 1–100 ARM percentile to a 1–5 scale (bell-shaped distribution), where 1 is highest and 5 is lowest",VECTOR,89%,2,2
+mdl216_armpreferredrevision1rank,"0–1 scaled rank for the preferred revisions component, providing higher precision than 1–100; higher values indicate stronger signals",VECTOR,94%,45,101
+mdl216_armpreferredrevision1rank_fast_d1,"0–1 scaled rank for the preferred revisions component, providing higher precision than 1–100; higher values indicate stronger signals",VECTOR,89%,2,2
+mdl216_armpreferredrevisioncomponent100rank,"1–100 rank of the preferred (primary) revisions component based on the ARM algorithm, where 100 is strongest",VECTOR,94%,41,113
+mdl216_armpreferredrevisioncomponent100rank_fast_d1,"1–100 rank of the preferred (primary) revisions component based on the ARM algorithm, where 100 is strongest",VECTOR,89%,5,8
+mdl216_armpreferredrevisioncomponent5rank,"Analyst Revisions rank for the Preferred measure mapped from the 1–100 percentile to a 1–5 scale, where 1 is highest and 5 is lowest",VECTOR,94%,30,76
+mdl216_armpreferredrevisioncomponent5rank_fast_d1,"Analyst Revisions rank for the Preferred measure mapped from the 1–100 percentile to a 1–5 scale, where 1 is highest and 5 is lowest",VECTOR,89%,1,1
+mdl216_armpreferredrevisionscore,Component score of the ARM derived from revisions and predicted surprises in the preferred earnings measure,VECTOR,94%,19,42
+mdl216_armpreferredrevisionscore_fast_d1,Component score of the ARM derived from revisions and predicted surprises in the preferred earnings measure,VECTOR,89%,1,1
+mdl216_armrecommendation100rank,"1–100 percentile rank based solely on recommendations-based factors; 100 best, 1 worst",VECTOR,94%,53,198
+mdl216_armrecommendation100rank_fast_d1,"1–100 percentile rank based solely on recommendations-based factors; 100 best, 1 worst",VECTOR,88%,1,1
+mdl216_armrecommendation1rank,ARM recommendation rank expressed on a 0–1 scale providing greater precision than the 1–100 ranking,VECTOR,94%,47,106
+mdl216_armrecommendation1rank_fast_d1,ARM recommendation rank expressed on a 0–1 scale providing greater precision than the 1–100 ranking,VECTOR,88%,3,3
+mdl216_armrecommendation5rank,"1–5 mapped rank of the recommendations-based ARM percentile; 1 best, 5 worst (bell-shaped bins)",VECTOR,94%,33,93
+mdl216_armrecommendation5rank_fast_d1,"1–5 mapped rank of the recommendations-based ARM percentile; 1 best, 5 worst (bell-shaped bins)",VECTOR,88%,3,6
+mdl216_armrecommendationscore,ARM component score derived from analyst recommendations with coverage normalization and combined ranking approach,VECTOR,94%,23,53
+mdl216_armrecommendationscore_fast_d1,ARM component score derived from analyst recommendations with coverage normalization and combined ranking approach,VECTOR,88%,1,1
+mdl216_armregion100score,"Percentile rank 1–100 within the region based on the Analyst Revisions Model; 100 best, 1 worst",VECTOR,94%,28,58
+mdl216_armregion100score_fast_d1,"Percentile rank 1–100 within the region based on the Analyst Revisions Model; 100 best, 1 worst",VECTOR,89%,0,0
+mdl216_armregion1rank,"0–1 scaled regional rank for the ARM model, with higher values indicating stronger signals relative to regional peers",VECTOR,94%,27,49
+mdl216_armregion1rank_fast_d1,"0–1 scaled regional rank for the ARM model, with higher values indicating stronger signals relative to regional peers",VECTOR,89%,1,1
+mdl216_armregion5score,"Region score mapped from the 1–100 ARM percentile to a 1–5 scale (bell-shaped distribution), where 1 is highest and 5 is lowest",VECTOR,94%,16,33
+mdl216_armregion5score_fast_d1,"Region score mapped from the 1–100 ARM percentile to a 1–5 scale (bell-shaped distribution), where 1 is highest and 5 is lowest",VECTOR,89%,3,3
+mdl216_armrevenuerevision1rank,0–1 precision rank of the revenue-related component in the Analyst Revisions Model,VECTOR,94%,25,86
+mdl216_armrevenuerevision1rank_fast_d1,0–1 precision rank of the revenue-related component in the Analyst Revisions Model,VECTOR,88%,2,3
+mdl216_armrevenuerevisioncomponent100rank,"1–100 rank of the revenue revisions component based on the ARM algorithm, where 100 is strongest and 1 is weakest",VECTOR,94%,34,188
+mdl216_armrevenuerevisioncomponent100rank_fast_d1,"1–100 rank of the revenue revisions component based on the ARM algorithm, where 100 is strongest and 1 is weakest",VECTOR,88%,4,5
+mdl216_armrevenuerevisioncomponent5rank,"Rank of the revenue revisions component mapped to a 1–5 scale, where 1 is highest and 5 is lowest",VECTOR,94%,36,156
+mdl216_armrevenuerevisioncomponent5rank_fast_d1,"Rank of the revenue revisions component mapped to a 1–5 scale, where 1 is highest and 5 is lowest",VECTOR,88%,2,3
+mdl216_armrevenuerevisionscore,Component score of the ARM based on revenue revisions and predicted surprises,VECTOR,94%,21,54
+mdl216_armrevenuerevisionscore_fast_d1,Component score of the ARM based on revenue revisions and predicted surprises,VECTOR,88%,4,7
+mdl216_armsecondaryrevision1rank,"0–1 scaled rank for the secondary revisions component, with higher values indicating stronger signals",VECTOR,94%,23,60
+mdl216_armsecondaryrevision1rank_fast_d1,"0–1 scaled rank for the secondary revisions component, with higher values indicating stronger signals",VECTOR,77%,1,1
+mdl216_armsecondaryrevisioncomponent100rank,"Analyst Revisions 1–100 rank for the Secondary measure based on the ARM algorithm, where 100 is highest and 1 is lowest",VECTOR,94%,31,121
+mdl216_armsecondaryrevisioncomponent100rank_fast_d1,"Analyst Revisions 1–100 rank for the Secondary measure based on the ARM algorithm, where 100 is highest and 1 is lowest",VECTOR,77%,0,0
+mdl216_armsecondaryrevisioncomponent5rank,"Analyst Revisions rank for the Secondary measure mapped from the 1–100 percentile to a 1–5 scale, where 1 is highest and 5 is lowest",VECTOR,94%,21,88
+mdl216_armsecondaryrevisioncomponent5rank_fast_d1,"Analyst Revisions rank for the Secondary measure mapped from the 1–100 percentile to a 1–5 scale, where 1 is highest and 5 is lowest",VECTOR,77%,1,1
+mdl216_armsecondaryrevisionscore,Component score of the Analyst Revisions Model derived from secondary earnings revisions and predicted surprises,VECTOR,94%,19,43
+mdl216_armsecondaryrevisionscore_fast_d1,Component score of the Analyst Revisions Model derived from secondary earnings revisions and predicted surprises,VECTOR,77%,2,3
+mdl216_armsector100score,"Percentile rank 1–100 within the sector based on the Analyst Revisions Model; 100 best, 1 worst",VECTOR,94%,32,68
+mdl216_armsector100score_fast_d1,"Percentile rank 1–100 within the sector based on the Analyst Revisions Model; 100 best, 1 worst",VECTOR,89%,3,3
+mdl216_armsector1rank,0–1 precision version of the sector ARM percentile rank,VECTOR,94%,30,96
+mdl216_armsector1rank_fast_d1,0–1 precision version of the sector ARM percentile rank,VECTOR,89%,3,4
+mdl216_armsector5score,"1–5 mapped score of the sector ARM percentile (bell-shaped bins); 1 best, 5 worst",VECTOR,94%,44,118
+mdl216_armsector5score_fast_d1,"1–5 mapped score of the sector ARM percentile (bell-shaped bins); 1 best, 5 worst",VECTOR,89%,2,4
+mdl216_industryclassification,TRBC Industry Group code as of the as-of date (point-in-time),VECTOR,94%,24,39
+mdl216_industryclassification_fast_d1,TRBC Industry Group code as of the as-of date (point-in-time),VECTOR,89%,1,1
+mdl216_preferredblendedrevisionfq1percent,"Even-weighted blended revision percent for the Preferred measure in FQ1 across 7, 14, 30, 60, and 90-day lookbacks",VECTOR,94%,45,101
+mdl216_preferredblendedrevisionfq1percent_fast_d1,"Even-weighted blended revision percent for the Preferred measure in FQ1 across 7, 14, 30, 60, and 90-day lookbacks",VECTOR,86%,7,9
+mdl216_preferredblendedrevisionfy1percent,"Even-weighted blend of Preferred FY1 revision measures over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,94%,23,121
+mdl216_preferredblendedrevisionfy1percent_fast_d1,"Even-weighted blend of Preferred FY1 revision measures over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,89%,4,4
+mdl216_preferredblendedrevisionfy2percent,"Even-weighted blend of Preferred FY2 revision measures over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,94%,15,58
+mdl216_preferredblendedrevisionfy2percent_fast_d1,"Even-weighted blend of Preferred FY2 revision measures over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,88%,1,1
+mdl216_recommendationblendedrevisionpercent,"Even-weighted blend of recommendation revisions over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,94%,17,56
+mdl216_recommendationblendedrevisionpercent_fast_d1,"Even-weighted blend of recommendation revisions over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,88%,4,4
+mdl216_revenueblendedrevisionfq1percent,"Even-weighted blended percentage change in revenue estimate revisions for next fiscal quarter (FQ1) across 7, 14, 30, 60, and 90-day windows; positive indicates upward revisions",VECTOR,94%,33,88
+mdl216_revenueblendedrevisionfq1percent_fast_d1,"Even-weighted blended percentage change in revenue estimate revisions for next fiscal quarter (FQ1) across 7, 14, 30, 60, and 90-day windows; positive indicates upward revisions",VECTOR,85%,2,2
+mdl216_revenueblendedrevisionfy1percent,"Even-weighted blend of Revenue FY1 revision measures over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,94%,16,35
+mdl216_revenueblendedrevisionfy1percent_fast_d1,"Even-weighted blend of Revenue FY1 revision measures over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,88%,0,0
+mdl216_revenueblendedrevisionfy2percent,"Even-weighted blend of Revenue FY2 revision measures over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,94%,16,46
+mdl216_revenueblendedrevisionfy2percent_fast_d1,"Even-weighted blend of Revenue FY2 revision measures over 7, 14, 30, 60, and 90 days, expressed as a percent change",VECTOR,88%,2,3
+mdl216_secondaryblendedrevisionfq1percent,"Even-weighted blended revision percent for the Secondary measure in FQ1 across 7, 14, 30, 60, and 90-day lookbacks",VECTOR,94%,23,39
+mdl216_secondaryblendedrevisionfq1percent_fast_d1,"Even-weighted blended revision percent for the Secondary measure in FQ1 across 7, 14, 30, 60, and 90-day lookbacks",VECTOR,71%,2,2
+mdl216_secondaryblendedrevisionfy1percent,"Even-weighted blended revision percent for the Secondary measure in FY1 across 7, 14, 30, 60, and 90-day lookbacks",VECTOR,94%,15,57
+mdl216_secondaryblendedrevisionfy1percent_fast_d1,"Even-weighted blended revision percent for the Secondary measure in FY1 across 7, 14, 30, 60, and 90-day lookbacks",VECTOR,77%,1,1
+mdl216_secondaryblendedrevisionfy2percent,"Even-weighted blended revision percent for the Secondary measure in FY2 across 7, 14, 30, 60, and 90-day lookbacks",VECTOR,94%,17,48
+mdl216_secondaryblendedrevisionfy2percent_fast_d1,"Even-weighted blended revision percent for the Secondary measure in FY2 across 7, 14, 30, 60, and 90-day lookbacks",VECTOR,76%,4,4
+mdl216_sectorclassification,Refinitiv TRBC Economic Sector code as of the AsOfDate; earliest available TRBC used if missing on that date,VECTOR,94%,25,33
+mdl216_sectorclassification_fast_d1,Refinitiv TRBC Economic Sector code as of the AsOfDate; earliest available TRBC used if missing on that date,VECTOR,89%,1,2

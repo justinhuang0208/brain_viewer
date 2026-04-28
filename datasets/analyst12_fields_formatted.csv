@@ -1,0 +1,13 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl12_bbgnews_relation,Encoded integer representing the type or strength of the association between the keyword and the company,VECTOR,54%,19,20
+anl12_bbgnews_score,An integer score indicating the relevance or strength of the relationship between the keyword and the company,VECTOR,54%,18,25
+anl12_bbgnews_score_float,"A floating-point version of the relationship relevance score, enabling fine-grained quantification",VECTOR,54%,6,7
+anl12_benzinga_relation,relation,VECTOR,39%,5,5
+anl12_benzinga_score,score,VECTOR,39%,9,11
+anl12_benzinga_score_float,"Floating-point version of the score field, providing finer granularity for the relationship strength",VECTOR,39%,6,7
+anl12_djnews_relation,relation,VECTOR,65%,7,7
+anl12_djnews_score,Numeric score quantifying the relevance or significance of the relationship between the keyword and the stock; higher values indicate stronger relationship,VECTOR,65%,10,11
+anl12_djnews_score_float,"Floating-point version of the score, offering finer granularity of the relationship strength between the keyword and the stock",VECTOR,65%,4,5
+anl12_isname,"Indicator if the keyword is part of the company name or ticker symbol (1 means yes, 0 means no)",VECTOR,88%,18,27
+anl12_stockfrequency,Count of the keyword's appearances in news articles specifically related to a given company on a specific date,VECTOR,89%,15,31
+anl12_totalfrequency,Total count of this keyword's appearances across all news articles in the dataset's full period,VECTOR,89%,15,36

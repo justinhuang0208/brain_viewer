@@ -1,0 +1,24 @@
+Field,Description,Type,Coverage,Users,Alphas
+aggregate_sentiment_total,"Sum of the primary sentiment channel probabilities across all mapped headlines for the stock-day (D1), representing net positive sentiment flow",MATRIX,98%,5,5
+headline_item_count,Raw count of mapped RavenPack Web headlines per stock-day (D1),MATRIX,98%,6,10
+mws85_sentiment,"Per-headline TRNA-like positive sentiment probability (0–1) predicted for RavenPack Web events, base channel, D1 delay",VECTOR,100%,31,51
+normalized_headline_count,News headline count normalized by a reference or average value.,MATRIX,98%,3,3
+peak_sentiment_value,"For each stock-day, the maximum value of the primary sentiment channel (TRNA-like positive probability) among all mapped RavenPack Web headlines",MATRIX,98%,0,0
+sentiment1_aggregate_total,Daily sum of channel 1 positive sentiment probabilities across all mapped headlines for the stock-day (D1),MATRIX,98%,2,2
+sentiment1_average_value,"Daily mean of channel 1 predicted TRNA-like positive sentiment probabilities across all mapped headlines for the stock-day (D1); values in [0,1]",MATRIX,100%,5,7
+sentiment1_distribution_skewness,Fisher skewness of the distribution of event-level sentiment channel 1 values across the stock-day’s mapped headlines,MATRIX,98%,1,1
+sentiment1_highest_score,"For each stock-day, the maximum value of the sentiment1 channel (TRNA-like positive probability) among all mapped RavenPack Web headlines",MATRIX,98%,3,3
+sentiment1_lowest_score,"For each stock-day, the minimum value of the sentiment1 channel (TRNA-like positive probability) among all mapped RavenPack Web headlines",MATRIX,98%,2,2
+sentiment1_median_value,Median of event-level sentiment channel 1 (TRNA-like positive probability) across all mapped headlines for the stock-day (D1),MATRIX,100%,2,2
+sentiment1_raw_score,"Event-level vector of channel 1 predicted TRNA-like positive sentiment probabilities per mapped headline for the stock (D1), values in [0,1]",VECTOR,98%,0,0
+sentiment2_aggregate_total,Sum of event-level sentiment channel 2 values (TRNA-like positive probability) across all mapped headlines for the stock-day,MATRIX,98%,5,5
+sentiment2_average_value,Daily mean of channel 2 positive sentiment probabilities across the stock-day’s headlines (0–1),MATRIX,98%,0,0
+sentiment2_central_tendency,Daily median of channel 2 positive sentiment probabilities across the stock-day’s headlines (0–1),MATRIX,98%,0,0
+sentiment2_distribution_skewness,Daily Fisher skewness of channel 2 positive sentiment probabilities across all mapped headlines for the stock-day (D1),MATRIX,98%,1,1
+sentiment2_highest_score,Daily maximum of channel 2 positive sentiment probabilities across the stock-day’s headlines (0–1),MATRIX,98%,0,0
+sentiment2_lowest_score,Minimum value of event-level sentiment channel 2 probability across all mapped headlines for the stock-day (D1),MATRIX,98%,1,1
+sentiment2_raw_score,"Event-level vector of channel 2 predicted TRNA-like positive sentiment probabilities per mapped headline for the stock (D1), values in [0,1]",VECTOR,98%,0,0
+sentiment_distribution_skewness,Daily Fisher skewness of base-channel positive sentiment probabilities across the stock-day’s headlines,MATRIX,98%,2,3
+sentiment_overall_average,Daily mean of base-channel positive sentiment probabilities across the stock-day’s headlines (0–1),MATRIX,98%,2,2
+sentiment_overall_median,Daily median of base-channel positive sentiment probabilities across the stock-day’s headlines (0–1),MATRIX,98%,3,4
+sentiment_overall_minimum,Daily minimum of base-channel positive sentiment probabilities across the stock-day’s headlines (0–1),MATRIX,98%,0,0

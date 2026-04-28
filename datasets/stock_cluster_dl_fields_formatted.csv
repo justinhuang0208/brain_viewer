@@ -1,0 +1,5 @@
+Field,Description,Type,Coverage,Users,Alphas
+principal_component_features,Feature vector for each stock derived from principal component analysis.,MATRIX,70%,1,2
+principal_component_features_2,Feature vector for each stock derived from principal component analysis (TOP500 universe).,MATRIX,18%,0,0
+principal_component_features_3,Feature vector for each stock derived from principal component analysis (TOP1000 universe).,MATRIX,36%,0,0
+principal_component_features_4,Feature vector for each stock derived from principal component analysis (TOP3000 universe).,MATRIX,100%,0,0

@@ -1,0 +1,3 @@
+Field,Description,Type,Coverage,Users,Alphas
+mws19_newssource,Integer code referencing sourceIx to identify the news source for the article,VECTOR,54%,7,9
+mws19_newstime,The publication time of the news article in HHMMSS integer format; time zone unspecified,VECTOR,54%,15,20

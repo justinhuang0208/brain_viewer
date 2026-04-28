@@ -1,0 +1,446 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl11_1e,Aggregate score for Pollution Prevention & Environmental Remediation for the company,MATRIX,84%,98,178
+anl11_1g,"Aggregate key performance indicator for board independence, diversity, and effectiveness",MATRIX,84%,62,134
+anl11_1pme,Aggregate key performance indicator measuring company’s Compensation and Employee Satisfaction,MATRIX,84%,83,190
+anl11_1tic,Aggregate key performance indicator for Community Engagement and Charitable Activities,MATRIX,83%,56,301
+anl11_2_1e,Aggregate KPI for pollution prevention & environmental remediation,MATRIX,64%,1,6
+anl11_2_1g,"Aggregate KPI for Board Independence, Diversity, & Effectiveness",MATRIX,70%,1,5
+anl11_2_1pme,Aggregate KPI for Compensation & Employee Satisfaction,MATRIX,71%,3,10
+anl11_2_1tic,Aggregate KPI for Community Engagement & Charitable Activities,MATRIX,68%,1,2
+anl11_2_2e,Aggregate KPI for Anti-Pollution Policies & Environmental Transparency,MATRIX,62%,39,68
+anl11_2_2g,Aggregate KPI for Management Standards & Ethics,MATRIX,73%,1,2
+anl11_2_2pme,Aggregate KPI for employee diversity treatment & labor rights,MATRIX,73%,2,4
+anl11_2_2tic,"Aggregate KPI for Human Rights Activism, Supply Chain, Labor & Human Rights Policies",MATRIX,72%,2,6
+anl11_2_3e,Aggregate KPI for Energy & Resource Efficiency,MATRIX,69%,1,2
+anl11_2_3g,"Aggregate KPI for Disclosure, Transparency, & Stakeholder Accountability",MATRIX,70%,1,3
+anl11_2_3pme,"Aggregate KPI for Employee Continuing Education, Training, Work Conditions, Safety & Health",MATRIX,68%,1,1
+anl11_2_3tic,Aggregate KPI for Business Model & Products,MATRIX,63%,1,1
+anl11_2_e,"The E Score averages the E1, E2, and E3 scores.",MATRIX,70%,2,2
+anl11_2_g,"The G Score averages the G1, G2, and G3 scores.",MATRIX,73%,2,7
+anl11_2_gse,"The ESG Score averages the E, S, and G scores.",MATRIX,73%,2,2
+anl11_2_pme,The EMP score averages the three EMP scores.,MATRIX,73%,29,51
+anl11_2_region,Region of the world in which the company is headquartered,MATRIX,73%,47,143
+anl11_2_tic,"The CIT Score averages the CIT1, CIT2, and CIT3 scores.",MATRIX,73%,3,5
+anl11_2e,Aggregate score for Anti-Pollution Policies & Environmental Transparency for the company,MATRIX,83%,39,68
+anl11_2g,Aggregate key performance indicator for management standards and ethics,MATRIX,84%,61,107
+anl11_2pme,Aggregate key performance indicator for Employee Diversity Treatment and Labor Rights,MATRIX,84%,51,128
+anl11_2tic,"Aggregate KPI for Human Rights Activism, Supply Chain, Labor & Human Rights Policies",MATRIX,84%,68,138
+anl11_3e,Aggregate score for Energy & Resource Efficiency for the company,MATRIX,84%,34,78
+anl11_3g,"Aggregate key performance indicator for disclosure, transparency, and stakeholder accountability",MATRIX,84%,46,114
+anl11_3pme,"Aggregate key performance indicator for Employee Continuing Education, Training, Work Conditions, Safety & Health",MATRIX,83%,31,54
+anl11_3tic,Aggregate key performance indicator measuring Business Model & Products under the Citizenship pillar,MATRIX,83%,26,36
+anl11_cit1reg_industryperc,"Percentile within industry for CIT1 (Community Engagement & Charitable Activities), 100% as best",MATRIX,82%,51,74
+anl11_cit1reg_industryrnk,"Rank within industry for CIT1 (Community Engagement & Charitable Activities), 1 being highest",MATRIX,83%,47,97
+anl11_cit1regsubsecperc,"Percentile within subsector for CIT1 (Community Engagement & Charitable Activities), 100% as best",MATRIX,82%,34,66
+anl11_cit1regsubsecrnk,"Rank within subsector for CIT1 (Community Engagement & Charitable Activities), 1 being highest",MATRIX,83%,33,105
+anl11_cit2reg_industryperc,"Percentile position of a company within its industry peer group for the CIT2 KPI, with 100% being the best",MATRIX,82%,83,1275
+anl11_cit2reg_industryrnk,"Rank of a company within its industry peer group for the CIT2 KPI, with 1 being the highest rank",MATRIX,84%,43,124
+anl11_cit2regsubsecperc,"Percentile of CIT2 KPI within the region-subsector peer group, with 100% being the highest (best)",MATRIX,82%,59,83
+anl11_cit2regsubsecrnk,"Rank of CIT2 KPI within the region-subsector peer group, with 1 being the highest (best)",MATRIX,84%,54,164
+anl11_cit3reg_industryperc,"Percentile of a company's CIT3 score within its region-industry peer group, with 100% being the best",MATRIX,82%,28,61
+anl11_cit3reg_industryrnk,"Rank of a company's CIT3 score within its region-industry peer group, with 1 being the highest",MATRIX,83%,32,108
+anl11_cit3regsubsecperc,"Percentile of CIT3 KPI within the region-subsector peer group, with 100% being the highest (best)",MATRIX,82%,26,88
+anl11_cit3regsubsecrnk,"Rank of a company's CIT3 score within its region-subsector peer group, with 1 being the highest",MATRIX,83%,22,30
+anl11_cit_totalcor,"Hybrid score for Capital Investment pillar, weighting CIT1, CIT2, and CIT3 based on strong positive rank correlations to financial metrics related to total returns for the company’s peer group",MATRIX,76%,40,83
+anl11_cit_totalcorregsectperc,"The percentile of the company within its sector on the Citizenship (CIT) Hybrid Score, with 100% being best among sector peers",MATRIX,75%,31,61
+anl11_cit_totalcorregsectrnk,"The rank of the company within its sector based on the Citizenship (CIT) Hybrid Score, where 1 is the highest rank among sector peers",MATRIX,76%,49,105
+anl11_cit_totalcorregsubsecperc,"The percentile of the company within its subsector on the Citizenship (CIT) Hybrid Score, with 100% being best among subsector peers",MATRIX,75%,37,71
+anl11_cit_totalcorregsubsecrnk,"The rank of the company within its subsector based on the Citizenship (CIT) Hybrid Score, where 1 is the highest rank among subsector peers",MATRIX,76%,39,85
+anl11_cit_ttcrg_industryperc,"The percentile of the company within its industry on the Citizenship (CIT) Hybrid Score, with 100% indicating top performance among peers",MATRIX,75%,26,77
+anl11_cit_ttcrg_industryrnk,"The rank of the company within its industry on the Citizenship (CIT) Hybrid Score, where 1 is the highest rank among industry peers",MATRIX,76%,25,98
+anl11_citposcorreg_industryperc,"The percentile of the company within its industry on the Citizenship (CIT) Max Correlation Score, with 100% being best among peers",MATRIX,75%,25,45
+anl11_citposcorreg_industryrnk,"The rank of the company within its industry on the Citizenship (CIT) Max Correlation Score, where 1 is the highest score among peers",MATRIX,75%,31,58
+anl11_citposcorregsubsecrnk,"Subsector Rank of CIT Max Correlation Score, where 1 is the highest rank",MATRIX,75%,32,80
+anl11_citreg_industryperc,"Percentile of company's CIT Score within its industry peer group, with 100% being the best",MATRIX,83%,33,76
+anl11_citreg_industryrnk,"Rank of company's CIT Score within its industry peer group, where 1 means highest rank",MATRIX,84%,28,111
+anl11_citregsubsecperc,"Percentile of company's CIT Score within its subsector peer group, with 100% being the best",MATRIX,83%,30,71
+anl11_citregsubsecrnk,"Rank of company's CIT Score within its subsector peer group, where 1 means highest rank",MATRIX,84%,43,99
+anl11_company_name,Company name,MATRIX,73%,38,105
+anl11_creptcesger1e,Percentile ranking of the company on E1 KPI within its region-sector group (100% = best),MATRIX,82%,31,58
+anl11_creptcesger1g,"Percentile of a company's G1 score within its region-sector peer group, with 100% being the best",MATRIX,82%,29,59
+anl11_creptcesger1pme,"Percentile within sector for EMP1 (Compensation & Employee Satisfaction), with 100% as the best",MATRIX,82%,25,63
+anl11_creptcesger1tic,"Percentile within sector for CIT1 (Community Engagement & Charitable Activities), 100% as best",MATRIX,82%,20,40
+anl11_creptcesger2e,Percentile ranking of the company on E2 KPI within its region-sector group (100% = best),MATRIX,82%,24,40
+anl11_creptcesger2g,"Percentile of a company's G2 score within its region-sector peer group, with 100% being the best",MATRIX,83%,41,113
+anl11_creptcesger2pme,"Percentile within sector for EMP2 (Employee Diversity Treatment & Labor Rights), with 100% as the best",MATRIX,83%,24,59
+anl11_creptcesger2tic,"Percentile of CIT2 KPI within the region-sector peer group, with 100% being the highest (best)",MATRIX,82%,37,69
+anl11_creptcesger3e,Percentile ranking of the company on E3 KPI within its region-sector group (100% = best),MATRIX,82%,22,39
+anl11_creptcesger3g,"Percentile of company within its sector peer group based on the G3 governance KPI, with 100% being the best",MATRIX,82%,28,42
+anl11_creptcesger3pme,"Percentile within sector for EMP3 (Continuing Education, Training, Work Conditions, Safety & Health), 100% as best",MATRIX,82%,23,38
+anl11_creptcesger3tic,"Percentile of CIT3 KPI within the region-sector peer group, with 100% being the highest (best)",MATRIX,82%,27,47
+anl11_creptcesgere,"Percentile ranking of the Environmental (E) score for a company within its sector, with 100% being the best",MATRIX,82%,24,42
+anl11_creptcesgerg,"Percentile within the sector peer group for the Governance (G) score, with 100% being the best",MATRIX,83%,31,70
+anl11_creptcesgergse,"Percentile ranking of the company within its sector peer group based on ESG score, with 100% being the best",MATRIX,83%,23,62
+anl11_creptcesgerpme,"Percentile of a company's EMP Score within its sector group, where 100% is the best score",MATRIX,83%,28,48
+anl11_creptcesgerrocsope,Percentile of the company’s Environmental max correlation score within its sector peer group; 100% is best,MATRIX,72%,13,20
+anl11_creptcesgerrocsopg,"Percentile within the sector peer group for the governance max correlation score (both positive and negative), 100% being the best",MATRIX,75%,22,43
+anl11_creptcesgerrocsopgse,"Company's percentile in its sector on the ESG Max Correlation Score, with 100% being the best",MATRIX,76%,28,49
+anl11_creptcesgerrocsoppme,"Percentile of a company's EMP Max Correlation Score within its sector peer group, where 100% is the best value",MATRIX,75%,21,39
+anl11_creptcesgertic,"Percentile of company's CIT Score within its sector peer group, with 100% being the best",MATRIX,83%,30,52
+anl11_crptcsknrtcsgrscptc,"The rank and percentile of the company within its sector on the Citizenship (CIT) Max Correlation Score, with rank 1 being best and percentile reflecting standing among peers",MATRIX,75%,27,47
+anl11_ctpscrgsbscrnksbscprc,"The rank and percentile of the company within its subsector on the Citizenship (CIT) Max Correlation Score, with rank 1 being best and percentile reflecting standing among peers",MATRIX,75%,18,27
+anl11_e,"Overall environmental (E) score, calculated as the average of E1, E2, and E3 scores",MATRIX,84%,31,64
+anl11_e1reg_industryperc,Percentile ranking of the company on E1 KPI within its region-industry group (100% = best),MATRIX,82%,21,31
+anl11_e1reg_industryrnk,Rank of the company on E1 KPI within its region-industry group (1 = highest rank),MATRIX,84%,16,23
+anl11_e1regsubsecperc,Percentile ranking of the company on E1 KPI within its region-subsector group (100% = best),MATRIX,82%,21,47
+anl11_e1regsubsecrnk,Rank of the company on E1 KPI within its region-subsector group (1 = highest rank),MATRIX,84%,16,31
+anl11_e2reg_industryperc,Percentile ranking of the company on E2 KPI within its region-industry group (100% = best),MATRIX,82%,19,24
+anl11_e2reg_industryrnk,Rank of the company on E2 KPI within its region-industry group (1 = highest rank),MATRIX,83%,15,50
+anl11_e2regsubsecperc,Percentile ranking of the company on E2 KPI within its region-subsector group (100% = best),MATRIX,82%,15,23
+anl11_e2regsubsecrnk,Rank of the company on E2 KPI within its region-subsector group (1 = highest rank),MATRIX,83%,14,30
+anl11_e3reg_industryperc,"Percentile ranking (within industry) for the third Environmental KPI (E3), with higher percentiles indicating better performance in E3 compared to industry peers",MATRIX,82%,24,44
+anl11_e3reg_industryrnk,Rank of the company on E3 KPI within its region-industry group (1 = highest rank),MATRIX,84%,15,21
+anl11_e3regsubsecperc,Percentile ranking of the company on E3 KPI within its region-subsector group (100% = best),MATRIX,82%,23,34
+anl11_e3regsubsecrnk,Rank of the company on E3 KPI within its region-subsector group (1 = highest rank),MATRIX,84%,14,33
+anl11_e_totalcor,"Hybrid E score, with the three E KPIs weighted by their strength of positive correlation to financial metrics related to 1-year and 3-year total returns for the company's peers",MATRIX,75%,17,29
+anl11_e_totalcorregsectperc,Percentile of the company’s Environmental Hybrid score within its sector (100% is best),MATRIX,75%,25,85
+anl11_e_totalcorregsectrnk,"Rank position of the company’s E Hybrid Score (composite E metric weighted by correlation) within sector peer group, 1 is highest",MATRIX,75%,18,52
+anl11_e_totalcorregsubsecperc,Percentile of the company’s Environmental Hybrid score within its subsector (100% is best),MATRIX,75%,21,26
+anl11_e_totalcorregsubsecrnk,"Rank position of the company’s E Hybrid Score within subsector peer group, 1 is highest",MATRIX,75%,22,56
+anl11_e_ttcrg_industryperc,Percentile of the company’s Environmental Hybrid score within its industry (100% is best),MATRIX,75%,21,39
+anl11_e_ttcrg_industryrnk,"Rank position of the company’s E Hybrid Score within industry peer group, 1 is highest",MATRIX,75%,23,53
+anl11_emp1reg_industryperc,"Percentile within industry for EMP1 (Compensation & Employee Satisfaction), with 100% as the best",MATRIX,82%,23,40
+anl11_emp1reg_industryrnk,"Rank within the industry for EMP1 (Compensation & Employee Satisfaction), 1 being the highest in industry",MATRIX,84%,18,48
+anl11_emp1regsubsecperc,"Percentile within subsector for EMP1 (Compensation & Employee Satisfaction), with 100% as the best",MATRIX,82%,20,53
+anl11_emp1regsubsecrnk,"Rank within the subsector for EMP1 (Compensation & Employee Satisfaction), 1 being the best in subsector",MATRIX,84%,19,45
+anl11_emp2reg_industryperc,"Percentile within industry for EMP2 (Employee Diversity Treatment & Labor Rights), with 100% as the best",MATRIX,83%,28,49
+anl11_emp2reg_industryrnk,"Rank within the industry for EMP2 (Employee Diversity Treatment & Labor Rights), 1 being the highest in industry",MATRIX,84%,26,66
+anl11_emp2regsubsecperc,"Percentile within subsector for EMP2 (Employee Diversity Treatment & Labor Rights), with 100% as the best",MATRIX,83%,32,66
+anl11_emp2regsubsecrnk,"Rank within the subsector for EMP2 (Employee Diversity Treatment & Labor Rights), 1 being the best in subsector",MATRIX,84%,36,86
+anl11_emp3reg_industryperc,"Percentile within industry for EMP3 (Continuing Education, Training, Work Conditions, Safety & Health), 100% as best",MATRIX,82%,16,24
+anl11_emp3reg_industryrnk,"Rank within the industry for EMP3 (Continuing Education, Training, Work Conditions, Safety & Health), 1 as highest",MATRIX,83%,23,41
+anl11_emp3regsubsecperc,"Percentile within subsector for EMP3 (Continuing Education, Training, Work Conditions, Safety & Health), 100% as best",MATRIX,82%,21,38
+anl11_emp3regsubsecrnk,"Rank within the subsector for EMP3 (Continuing Education, Training, Work Conditions, Safety & Health), 1 as highest",MATRIX,83%,16,21
+anl11_emp_totalcor,"EMP Hybrid Score representing a weighted combination of three EMP scores, weighted based on their positive correlation to financial metrics related to 1-year and 3-year total returns, specific to the company's peer group",MATRIX,76%,32,68
+anl11_emp_totalcorregsectperc,"Percentile of a company's EMP Hybrid Score within its sector peer group, where 100% is the best value",MATRIX,76%,23,54
+anl11_emp_totalcorregsectrnk,"Rank of a company's EMP Hybrid Score within its sector peer group, where 1 is the highest rank",MATRIX,76%,19,39
+anl11_emp_totalcorregsubsecperc,"Percentile of a company's EMP Hybrid Score within its subsector peer group, where 100% is the best value",MATRIX,76%,15,20
+anl11_emp_totalcorregsubsecrnk,"Rank of a company's EMP Hybrid Score within its subsector peer group, where 1 is the highest rank",MATRIX,76%,20,71
+anl11_emp_ttcrg_industryperc,"Percentile of a company's EMP Hybrid Score within its industry peer group, where 100% is the best value",MATRIX,76%,19,27
+anl11_emp_ttcrg_industryrnk,"Rank of a company's EMP Hybrid Score within its industry peer group, where 1 is the highest rank",MATRIX,76%,22,52
+anl11_empposcorreg_industryperc,"Percentile of a company's EMP Max Correlation Score within its industry peer group, where 100% is the best value",MATRIX,75%,13,37
+anl11_empposcorreg_industryrnk,"Rank of a company's EMP Max Correlation Score within its industry peer group, where 1 is the highest rank",MATRIX,76%,15,32
+anl11_empposcorregsubsecperc,"Percentile of a company's EMP Max Correlation Score within its subsector peer group, where 100% is the best value",MATRIX,75%,14,30
+anl11_empposcorregsubsecrnk,"Rank of a company's EMP Max Correlation Score within its subsector peer group, where 1 is the highest rank",MATRIX,76%,14,29
+anl11_empreg_industryperc,"Percentile of a company's EMP Score within its industry group, where 100% is the best score",MATRIX,83%,15,44
+anl11_empreg_industryrnk,"Rank of a company's EMP Score within its industry group, where 1 is the best/highest score",MATRIX,84%,17,38
+anl11_empregsubsecperc,"Percentile of a company's EMP Score within its subsector group, where 100% is the best score",MATRIX,83%,23,42
+anl11_empregsubsecrnk,"Rank of a company's EMP Score within its subsector group, where 1 is the best/highest score",MATRIX,84%,33,334
+anl11_eposcorreg_industryperc,Percentile of the company’s Environmental max correlation score within its industry peer group; 100% is best,MATRIX,72%,17,20
+anl11_eposcorreg_industryrnk,Rank of the company’s Environmental max correlation score within its industry peer group; 1 is highest,MATRIX,73%,20,35
+anl11_eposcorregsubsecperc,Percentile of the company’s Environmental max correlation score within its subsector peer group; 100% is best,MATRIX,72%,14,46
+anl11_eposcorregsubsecrnk,Rank of the company’s Environmental max correlation score within its subsector peer group; 1 is highest,MATRIX,73%,14,40
+anl11_ereg_industryperc,Percentile of the company’s Environmental (E) score within its industry peer group (100% is best),MATRIX,82%,16,51
+anl11_ereg_industryrnk,"Rank of the Environmental (E) score for a company within its industry peer group, with 1 being the highest rank",MATRIX,84%,16,25
+anl11_eregsubsecperc,Percentile of the company’s Environmental (E) score within its subsector peer group; 100% is best,MATRIX,82%,18,27
+anl11_eregsubsecrnk,"Rank of the company within its subsector peer group based on Environmental Score, with 1 being the highest rank",MATRIX,84%,8,17
+anl11_esg_totalcor,"Hybrid ESG score, combining E, EMP, CIT, and G KPIs weighted by strongest positive rank correlation to 1-year/3-year total returns for the peer group",MATRIX,76%,32,43
+anl11_esg_totalcorregsectperc,"Company's percentile in its sector on the ESG Hybrid Score (weighted positive correlation), with 100% being the best",MATRIX,76%,21,46
+anl11_esg_totalcorregsectrnk,"Company's rank in its sector on the ESG Hybrid Score (weighted positive correlation), with 1 being the highest",MATRIX,76%,22,56
+anl11_esg_totalcorregsubsecperc,"Company's percentile in its subsector on the ESG Hybrid Score (weighted positive correlation), with 100% being the best",MATRIX,76%,17,34
+anl11_esg_totalcorregsubsecrnk,"Company's rank in its subsector on the ESG Hybrid Score (weighted positive correlation), with 1 being the highest",MATRIX,76%,17,44
+anl11_esg_ttcrg_industryperc,"Company's percentile in its industry on the ESG Hybrid Score (weighted positive correlation), with 100% being the best",MATRIX,76%,17,42
+anl11_esg_ttcrg_industryrnk,"Company's rank in its industry on the ESG Hybrid Score (weighted positive correlation), with 1 being the highest",MATRIX,76%,17,46
+anl11_esgposcorreg_industryperc,"Company's percentile in its industry on the ESG Max Correlation Score, with 100% being the best",MATRIX,76%,22,35
+anl11_esgposcorreg_industryrnk,"Company's rank in its industry on the ESG Max Correlation Score, with 1 being the highest",MATRIX,76%,18,56
+anl11_esgposcorregsubsecperc,"Company's percentile in its subsector on the ESG Max Correlation Score, with 100% being the best",MATRIX,76%,18,37
+anl11_esgposcorregsubsecrnk,"Company's rank in its subsector on the ESG Max Correlation Score, with 1 being the highest",MATRIX,76%,19,42
+anl11_esgreg_industryperc,"Percentile ranking of the company within its industry peer group based on ESG score, with 100% being the best",MATRIX,83%,21,42
+anl11_esgreg_industryrnk,"Rank of the company within its industry peer group based on ESG score, with 1 being the highest rank",MATRIX,84%,19,40
+anl11_esgregsubsecperc,"Percentile ranking of the company within its subsector peer group based on ESG score, with 100% being the best",MATRIX,83%,24,50
+anl11_esgregsubsecrnk,"Rank of the company within its subsector peer group based on ESG score, with 1 being the highest rank",MATRIX,84%,26,95
+anl11_g,"Overall Governance (G) Score, calculated as the average of G1, G2, and G3 governance metrics for the company",MATRIX,84%,37,103
+anl11_g1reg_industryperc,"Percentile of a company's G1 score within its region-industry peer group, with 100% being the best",MATRIX,82%,20,44
+anl11_g1reg_industryrnk,"Rank of a company's G1 score within its region-industry peer group, with 1 being the highest",MATRIX,84%,10,34
+anl11_g1regsubsecperc,"Percentile of a company's G1 score within its region-subsector peer group, with 100% being the best",MATRIX,82%,12,24
+anl11_g1regsubsecrnk,"Rank of a company's G1 score within its region-subsector peer group, with 1 being the highest",MATRIX,84%,12,43
+anl11_g2reg_industryperc,"Percentile of a company's G2 score within its region-industry peer group, with 100% being the best",MATRIX,83%,34,53
+anl11_g2reg_industryrnk,"Rank of a company's G2 score within its region-industry peer group, with 1 being the highest",MATRIX,84%,25,69
+anl11_g2regsubsecperc,"Percentile of a company's G2 score within its region-subsector peer group, with 100% being the best",MATRIX,83%,18,34
+anl11_g2regsubsecrnk,"Rank of a company's G2 score within its region-subsector peer group, with 1 being the highest",MATRIX,84%,23,63
+anl11_g3reg_industryperc,"Percentile of company within its industry peer group based on the G3 governance KPI, with 100% being the best",MATRIX,82%,13,28
+anl11_g3reg_industryrnk,"Rank of company within its industry peer group based on the G3 governance KPI, where 1 is the highest rank",MATRIX,84%,15,72
+anl11_g3regsubsecperc,"Percentile of company within its subsector peer group based on the G3 governance KPI, with 100% being the best",MATRIX,82%,17,29
+anl11_g3regsubsecrnk,"Rank of a company's G3 score within its region-subsector peer group, with 1 being the highest",MATRIX,84%,19,61
+anl11_g_totalcor,"Governance hybrid score, weighting G1, G2, G3 by their positive correlation to financial performance, particularly 1-year and 3-year total returns in the company’s peer group",MATRIX,76%,36,46
+anl11_g_totalcorregsectperc,"Percentile within the sector peer group for the governance hybrid score (positively correlated only), 100% being the best",MATRIX,76%,21,45
+anl11_g_totalcorregsectrnk,"Rank within the sector peer group for the governance hybrid score (positively correlated only), with 1 being the highest",MATRIX,76%,20,46
+anl11_g_totalcorregsubsecperc,"Percentile within the subsector peer group for the governance hybrid score (positively correlated only), 100% being the best",MATRIX,76%,22,49
+anl11_g_totalcorregsubsecrnk,"Rank within the subsector peer group for the governance hybrid score (positively correlated only), with 1 being the highest",MATRIX,76%,13,19
+anl11_g_ttcrg_industryperc,"Percentile within the industry peer group for the governance hybrid score (positively correlated only), 100% being the best",MATRIX,76%,18,46
+anl11_g_ttcrg_industryrnk,"Rank within the industry peer group for the governance hybrid score (positively correlated only), with 1 being the highest",MATRIX,76%,14,26
+anl11_global_industrycount,Total number of industries globally in the dataset,MATRIX,81%,38,94
+anl11_globalsectcount,Total number of sectors globally in the dataset,MATRIX,81%,13,26
+anl11_globalsubseccount,Total number of subsectors globally in the dataset,MATRIX,81%,18,25
+anl11_gposcorreg_industryperc,"Percentile within the industry peer group for the governance max correlation score (both positive and negative), 100% being the best",MATRIX,75%,17,29
+anl11_gposcorreg_industryrnk,Rank within the industry peer group for the governance max correlation score (both positive and negative) with 1 being the highest,MATRIX,76%,17,39
+anl11_gposcorregsubsecperc,"Percentile within the subsector peer group for the governance max correlation score (both positive and negative), 100% being the best",MATRIX,75%,30,61
+anl11_gposcorregsubsecrnk,Rank within the subsector peer group for the governance max correlation score (both positive and negative) with 1 being the highest,MATRIX,76%,17,36
+anl11_greg_industryperc,"Percentile within the industry peer group for the Governance (G) score, with 100% being the best",MATRIX,83%,23,50
+anl11_greg_industryrnk,"Rank within the industry peer group for the Governance (G) score, with 1 being the highest",MATRIX,84%,24,54
+anl11_gregsubsecperc,"Percentile within the subsector peer group for the Governance (G) score, with 100% being the best",MATRIX,83%,22,68
+anl11_gregsubsecrnk,"Rank within the subsector peer group for the Governance (G) score, with 1 being the highest",MATRIX,84%,19,67
+anl11_gse,"Overall ESG (Environmental, Social, Governance) score, calculated as the average of the E, S, and G scores",MATRIX,84%,42,118
+anl11_knrtcesger1e,Rank of the company on E1 KPI within its region-sector group (1 = highest rank),MATRIX,84%,30,99
+anl11_knrtcesger1g,"Rank of a company's G1 score within its region-sector peer group, with 1 being the highest",MATRIX,84%,22,51
+anl11_knrtcesger1pme,"Rank within the sector for EMP1 (Compensation & Employee Satisfaction), 1 being the highest among sector peers",MATRIX,84%,16,37
+anl11_knrtcesger1tic,"Rank within sector for CIT1 (Community Engagement & Charitable Activities), 1 being highest",MATRIX,83%,20,90
+anl11_knrtcesger2e,Rank of the company on E2 KPI within its region-sector group (1 = highest rank),MATRIX,83%,16,36
+anl11_knrtcesger2g,"Rank of a company's G2 score within its region-sector peer group, with 1 being the highest",MATRIX,84%,18,41
+anl11_knrtcesger2pme,"Rank within the sector for EMP2 (Employee Diversity Treatment & Labor Rights), 1 being the highest among sector peers",MATRIX,84%,26,63
+anl11_knrtcesger2tic,"Rank of CIT2 KPI within the region-sector peer group, with 1 being the highest (best)",MATRIX,84%,32,86
+anl11_knrtcesger3e,Rank of the company on E3 KPI within its region-sector group (1 = highest rank),MATRIX,84%,13,37
+anl11_knrtcesger3g,"Rank of a company's G3 score within its region-sector peer group, with 1 being the highest",MATRIX,84%,18,47
+anl11_knrtcesger3pme,"Rank within the sector for EMP3 (Continuing Education, Training, Work Conditions, Safety & Health), 1 as highest",MATRIX,83%,10,71
+anl11_knrtcesger3tic,"Rank of a company's CIT3 score within its region-sector peer group, with 1 being the highest",MATRIX,83%,19,53
+anl11_knrtcesgere,"Rank of the company within its sector peer group based on Environmental Score, with 1 being the highest rank",MATRIX,84%,18,28
+anl11_knrtcesgerg,"Rank within the sector peer group for the Governance (G) score, with 1 being the highest",MATRIX,84%,20,57
+anl11_knrtcesgergse,"Rank of the company within its sector peer group based on ESG score, with 1 being the highest rank",MATRIX,84%,24,53
+anl11_knrtcesgerpme,"Rank of a company's EMP Score within its sector group, where 1 is the best/highest score",MATRIX,84%,25,53
+anl11_knrtcesgerrocsope,Rank of the company’s Environmental max correlation score within its sector peer group; 1 is highest,MATRIX,73%,16,39
+anl11_knrtcesgerrocsopg,Rank within the sector peer group for the governance max correlation score (both positive and negative) with 1 being the highest,MATRIX,76%,21,42
+anl11_knrtcesgerrocsopgse,"Company's rank in its sector on the ESG Max Correlation Score, with 1 being the highest",MATRIX,76%,23,49
+anl11_knrtcesgerrocsoppme,"Rank of a company's EMP Max Correlation Score within its sector peer group, where 1 is the highest rank",MATRIX,76%,18,33
+anl11_knrtcesgerrocsoptic,"Sector Rank of CIT Max Correlation Score, where 1 is the highest rank",MATRIX,75%,30,45
+anl11_knrtcesgertic,"Rank of company's CIT Score within its sector peer group, where 1 means highest rank",MATRIX,84%,31,120
+anl11_pme,"Overall Employment (EMP) Score, calculated as the average of the three EMP KPIs for the company",MATRIX,84%,29,51
+anl11_region_industrycount,Total number of industries within the specified region,MATRIX,84%,48,156
+anl11_regionsectcount,Total number of sectors within the specified region,MATRIX,84%,59,216
+anl11_regionsubseccount,Total number of subsectors within the specified region,MATRIX,84%,52,195
+anl11_rocsope,"Environment Max Correlation Score, weighting E1, E2, and E3 metrics according to positive and negative correlations to financial metrics related to 1-year and 3-year total returns for the company’s peers",MATRIX,73%,26,51
+anl11_rocsopg,"Governance max correlation score, weighting G1, G2, G3 by their correlation (both positive and negative) to financial performance, particularly 1-year and 3-year total returns in the company’s peer group",MATRIX,76%,28,67
+anl11_rocsopgse,"Composite score for ESG that weights E, EMP, CIT, and G scores based on their positive and negative correlations to key financial metrics regarding 1-year and 3-year total returns for the company’s peer group",MATRIX,76%,23,28
+anl11_rocsoppme,"EMP Max Correlation Score, weighting the three EMP KPIs by their strong positive and negative correlations with financial metrics such as 1-year and 3-year total returns in the company’s peer group",MATRIX,76%,25,41
+anl11_rocsoptic,"Max Correlation score for Capital Investment pillar, weighting CIT1, CIT2, and CIT3 based on both positive and negative correlations to financial metrics related to total returns within the peer group",MATRIX,75%,41,90
+anl11_tic,"Average of the CIT1, CIT2, and CIT3 scores for the company",MATRIX,84%,45,105
+anti_pollution_policy_industry_percentile,"Percentile ranking of the company within its industry peer group on the OWL E2 KPI, with 100% being the best",MATRIX,80%,1,1
+anti_pollution_policy_industry_rank,"Rank of the company within its industry peer group based on the OWL E2 KPI, with 1 being the highest",MATRIX,81%,0,0
+anti_pollution_policy_score,"Aggregated environmental transparency KPI reflecting company policies, reporting, and dedication to environmental transparency",MATRIX,84%,0,0
+anti_pollution_policy_sector_percentile,"Percentile ranking of the company within its sector peer group on the OWL E2 KPI, with 100% being the best",MATRIX,80%,0,0
+anti_pollution_policy_sector_rank,"Rank of the company within its sector peer group based on the OWL E2 KPI, with 1 being the highest",MATRIX,81%,0,0
+anti_pollution_policy_subsector_percentile,"Percentile ranking of the company within its subsector peer group on the OWL E2 KPI, with 100% being the best",MATRIX,80%,0,0
+anti_pollution_policy_subsector_rank,"Rank of the company within its subsector peer group based on the OWL E2 KPI, with 1 being the highest",MATRIX,81%,0,0
+board_independence_diversity_score,"KPI for Board Effectiveness, aggregating data on Board independence, diversity, and effectiveness in meeting financial and sustainability goals",MATRIX,84%,0,0
+board_independence_industry_percentile,"Percentile ranking of a company's Board Effectiveness KPI (G1) within its industry peer group, where 100% is best",MATRIX,81%,0,0
+board_independence_industry_rank,"Rank of the company's Board Effectiveness KPI (G1) within its industry peer group, with 1 being best",MATRIX,81%,7,8
+board_independence_sector_percentile,"Percentile ranking of a company's Board Effectiveness KPI (G1) within its sector peer group, where 100% is best",MATRIX,81%,0,0
+board_independence_sector_rank,"Rank of the company's Board Effectiveness KPI (G1) within its sector peer group, with 1 being best",MATRIX,81%,0,0
+board_independence_subsector_percentile,"Percentile ranking of a company's Board Effectiveness KPI (G1) within its subsector peer group, where 100% is best",MATRIX,81%,0,0
+board_independence_subsector_rank,"Rank of the company's Board Effectiveness KPI (G1) within its subsector peer group, with 1 being best",MATRIX,81%,0,0
+community_corr_weighted_score,"Score for Capital Investment KPIs (CIT1, CIT2, CIT3) weighted by strongest (positive and negative) correlations with financial metrics linked to company returns; emphasizes materiality to financial outcomes",MATRIX,68%,0,0
+community_engagement_industry_percentile,"Percentile ranking of a company's performance on the OWL CIT1 KPI within its industry peer group, with 100% being the highest/best possible score",MATRIX,80%,0,0
+community_engagement_industry_rank,"Rank of company within its industry peer group on the CIT1 KPI (community & charity), with 1 being the highest rank",MATRIX,81%,0,0
+community_engagement_score,"KPI measuring company performance in community and charitable activities, public health, and local social/environmental impacts",MATRIX,83%,0,0
+community_engagement_sector_percentile,"Percentile ranking of a company's performance on the OWL CIT1 KPI within its sector peer group, with 100% being the highest/best possible score",MATRIX,80%,0,0
+community_engagement_sector_rank,"Rank of company within its sector peer group on the CIT1 KPI (community & charity), with 1 being the highest rank",MATRIX,81%,0,0
+community_engagement_subsector_percentile,"Percentile of a company within its industry subsector peer group for the CIT1 citizenship KPI, with 100% being the best",MATRIX,80%,0,0
+community_engagement_subsector_rank,"Rank of company within its subsector peer group on the CIT1 KPI (community & charity), with 1 being the highest rank",MATRIX,81%,0,0
+community_hybrid_industry_percentile,"Percentile ranking of a company's CIT Hybrid score within its industry peer group, with 100% being the best",MATRIX,68%,0,0
+community_hybrid_industry_position,"Rank of a company's CIT Hybrid score within its industry peer group, with 1 representing the highest rank",MATRIX,68%,0,0
+community_hybrid_sector_percentile,"Percentile ranking of the Citizenship hybrid score for the company within its sector peer group, with 100% being the best",MATRIX,68%,0,0
+community_hybrid_sector_position,"Rank of a company's CIT Hybrid score within its sector peer group, with 1 representing the highest rank",MATRIX,68%,0,0
+community_hybrid_subsector_percentile,"Percentile ranking of a company's CIT Hybrid score within its subsector peer group, with 100% being the best",MATRIX,68%,0,0
+community_hybrid_subsector_position,"Rank of a company's CIT Hybrid score within its subsector peer group, with 1 representing the highest rank",MATRIX,68%,0,0
+community_maxcorr_industry_percentile,"Percentile ranking of a company's CIT Max Correlation score within its industry peer group, with 100% being the best",MATRIX,68%,0,0
+community_maxcorr_industry_position,"Rank of a company's CIT Max Correlation score within its industry peer group, where 1 is the highest rank",MATRIX,68%,0,0
+community_maxcorr_sector_percentile,"Percentile ranking of a company's CIT Max Correlation score within its sector peer group, with 100% being the best",MATRIX,68%,0,0
+community_maxcorr_sector_position,"Rank of a company's CIT Max Correlation score within its sector peer group, where 1 is the highest rank",MATRIX,68%,0,0
+community_maxcorr_subsector_percentile,"Percentile ranking of a company's CIT Max Correlation score within its subsector peer group, with 100% being the best",MATRIX,68%,0,0
+community_maxcorr_subsector_position,"Rank of a company's CIT Max Correlation score within its subsector peer group, where 1 is the highest rank",MATRIX,68%,0,0
+community_pillar_composite_score,"Capital Investment Score; average of CIT1, CIT2, and CIT3, representing overall capital investment-related ESG performance for a company",MATRIX,84%,0,0
+community_positive_corr_score,"Score for Capital Investment KPIs (CIT1, CIT2, CIT3) weighted by positive correlations with financial metrics linked to company returns; emphasizes beneficial capital investment metrics for financial performance",MATRIX,68%,1,1
+community_score_industry_percentile,"Percentile ranking of the company within its industry peer group based on the Citizenship (CIT) score, where 100% represents the top performer",MATRIX,81%,0,0
+community_score_industry_position,"Rank of the company within its industry peer group based on the overall CIT Score, with 1 as the best performance",MATRIX,81%,0,0
+community_score_sector_percentile,Percentile ranking of a company's Capital Investment Score within its sector peer group (100% is best),MATRIX,81%,0,0
+community_score_subsector_percentile,"Percentile ranking of the company within its subsector peer group based on the Citizenship (CIT) score, where 100% represents the top performer",MATRIX,81%,0,0
+community_score_subsector_position,"Rank of the company within its subsector peer group based on the overall CIT Score, with 1 as the best performance",MATRIX,81%,1,1
+community_sector_position,"Rank of the company within its sector peer group based on the overall CIT Score, with 1 as the best performance",MATRIX,81%,2,2
+disclosure_transparency_accountability_score,"A composite KPI measuring Disclosure & Accountability: assesses the quality of financial and sustainability reporting, engagement in sustainability performance by employees and management, and overall transparency to stakeholders. Indicates how well a company has transitioned to high-quality reporting and transparency",MATRIX,84%,0,0
+disclosure_transparency_industry_percentile,"Percentile of company within its industry for the OWL G3 Disclosure & Accountability KPI, with 100% best",MATRIX,81%,0,0
+disclosure_transparency_industry_rank,"Rank of a company within its industry peer group on the G3 governance KPI, with 1 being the highest",MATRIX,81%,1,1
+disclosure_transparency_sector_percentile,"Percentile of company within its sector for the OWL G3 Disclosure & Accountability KPI, with 100% best",MATRIX,81%,0,0
+disclosure_transparency_sector_rank,"Rank of company within its sector based on the OWL G3 Disclosure & Accountability KPI, with 1 being the top rank",MATRIX,81%,0,0
+disclosure_transparency_subsector_percentile,"Percentile of company within its subsector for the OWL G3 Disclosure & Accountability KPI, with 100% best",MATRIX,81%,0,0
+disclosure_transparency_subsector_rank,"Rank of company within its subsector based on the OWL G3 Disclosure & Accountability KPI, with 1 being the top rank",MATRIX,81%,0,0
+employee_compensation_industry_percentile,"Percentile of a company within its industry peer group on the EMP1 KPI (Compensation & Satisfaction), with 100% as the best performance",MATRIX,80%,0,0
+employee_compensation_industry_rank,"Rank of Employment KPI 1 for the company within its industry peer group, with 1 being the highest",MATRIX,81%,0,0
+employee_compensation_satisfaction_score,"Employment KPI 1 measures how well the company fosters employee satisfaction through fair pay, benefits, and practices promoting productivity, indicating transition to a fair-compensation workplace",MATRIX,84%,0,0
+employee_compensation_sector_percentile,"Percentile of a company within its sector peer group on the EMP1 KPI (Compensation & Satisfaction), with 100% as the best performance",MATRIX,80%,0,0
+employee_compensation_sector_rank,"Rank of company within its sector peer group on the EMP1 KPI (compensation & satisfaction), with 1 being the highest rank",MATRIX,81%,0,0
+employee_compensation_subsector_percentile,"Percentile ranking of Employment KPI 1 for the company within its subsector peer group, with 100% being the best",MATRIX,80%,0,0
+employee_compensation_subsector_rank,"Rank of company within its subsector peer group on the EMP1 KPI (compensation & satisfaction), with 1 being the highest rank",MATRIX,81%,0,0
+employee_training_industry_percentile,"Percentile of a company within its industry peer group on the EMP3 KPI (Education & Work Conditions), with 100% as the best performance",MATRIX,80%,0,0
+employee_training_industry_rank,"Rank of company within its industry peer group on the EMP3 KPI (education & work conditions), with 1 being the highest rank",MATRIX,80%,0,0
+employee_training_safety_score,"KPI measuring company performance on education, work conditions, workplace safety, training, and health",MATRIX,83%,0,0
+employee_training_sector_percentile,"Percentile of a company within its sector peer group on the EMP3 KPI (Education & Work Conditions), with 100% as the best performance",MATRIX,80%,0,0
+employee_training_sector_rank,"Rank of company within its sector peer group on the EMP3 KPI (education & work conditions), with 1 being the highest rank",MATRIX,80%,0,0
+employee_training_subsector_percentile,"Percentile of a company within its subsector peer group on the EMP3 KPI (Education & Work Conditions), with 100% as the best performance",MATRIX,80%,0,0
+employee_training_subsector_rank,"Rank of company within its subsector peer group on the EMP3 KPI (education & work conditions), with 1 being the highest rank",MATRIX,80%,0,0
+environmental_corr_weighted_industry_percentile,Percentile of company’s E Max Correlation score within industry peer group (100% is best),MATRIX,66%,0,0
+environmental_corr_weighted_industry_position,"Rank of company’s E Max Correlation score within industry peer group, with 1 being highest",MATRIX,67%,0,0
+environmental_corr_weighted_score,"A composite Environmental (E) score built by weighting E1, E2, and E3 KPIs according to the strength of both positive and negative correlations with financial metrics (such as 1-year and 3-year total returns) observed in the most granular available peer group. Rewards companies for being strong or weak on metrics depending on whether those differences are linked to superior financial results",MATRIX,67%,0,0
+environmental_corr_weighted_sector_percentile,Percentile of company’s E Max Correlation score within sector peer group (100% is best),MATRIX,66%,0,0
+environmental_corr_weighted_sector_position,"Rank of company’s E Max Correlation score within sector peer group, with 1 being highest",MATRIX,67%,0,0
+environmental_corr_weighted_subsector_percentile,Percentile of company’s E Max Correlation score within subsector peer group (100% is best),MATRIX,66%,0,0
+environmental_corr_weighted_subsector_position,"Rank of company’s E Max Correlation score within subsector peer group, with 1 being highest",MATRIX,67%,0,0
+environmental_industry_percentile,Percentile of company’s E score within industry peer group (100% is best),MATRIX,80%,0,0
+environmental_industry_position,"Rank of company’s E score within its industry peer group, with 1 being highest",MATRIX,81%,0,0
+environmental_pillar_composite_score,"The average Environmental Score (E), calculated as the unweighted mean of E1, E2, and E3 KPIs; this field shows a company’s overall environmental performance relative to peers without prioritizing any sub-component",MATRIX,84%,0,0
+environmental_positive_corr_industry_percentile,Percentile of company’s E Hybrid score within industry peer group (100% is best),MATRIX,66%,0,0
+environmental_positive_corr_industry_position,"Rank of company’s E Hybrid score within industry peer group, 1 is highest",MATRIX,66%,0,0
+environmental_positive_corr_score,"A composite Environmental (E) score built by weighting E1, E2, and E3 KPIs according to their positive correlations with financially relevant metrics (such as total returns over 1 and 3 years), using the most granular available peer group. Rewards only strong performance on metrics positively linked to returns",MATRIX,66%,0,0
+environmental_positive_corr_sector_percentile,Percentile of company’s E Hybrid score within sector peer group (100% is best),MATRIX,66%,0,0
+environmental_positive_corr_sector_position,"Rank of company’s E Hybrid score within sector peer group, 1 is highest",MATRIX,66%,0,0
+environmental_positive_corr_subsector_percentile,Percentile of company’s E Hybrid score within subsector peer group (100% is best),MATRIX,66%,0,0
+environmental_positive_corr_subsector_position,"Rank of company’s E Hybrid score within subsector peer group, 1 is highest",MATRIX,66%,0,0
+environmental_sector_percentile,Percentile of company’s E score within sector peer group (100% is best),MATRIX,80%,0,0
+environmental_sector_position,"Rank of company’s E score within its sector peer group, with 1 being highest",MATRIX,81%,0,0
+environmental_subsector_percentile,Percentile of company’s E score within subsector peer group (100% is best),MATRIX,80%,0,0
+environmental_subsector_position,"Rank of company’s E score within its subsector peer group, with 1 being highest",MATRIX,81%,0,0
+governance_corr_weighted_industry_percentile,Percentile of a company within its industry peer group based on the Governance Max Correlation Score; 100% is best,MATRIX,68%,2,2
+governance_corr_weighted_industry_position,Rank of a company within its industry peer group based on the Governance Max Correlation Score; 1 is highest,MATRIX,68%,1,3
+governance_corr_weighted_score,"Governance Max Correlation Score, calculated by weighting G1, G2, and G3 based on their rank correlation (positive and negative) with financial metrics strongly correlated to 1 and 3 year returns in the company’s peer group",MATRIX,68%,0,0
+governance_corr_weighted_sector_percentile,Percentile of a company within its sector peer group based on the Governance Max Correlation Score; 100% is best,MATRIX,68%,0,0
+governance_corr_weighted_sector_position,Rank of a company within its sector peer group based on the Governance Max Correlation Score; 1 is highest,MATRIX,68%,0,0
+governance_corr_weighted_subsector_percentile,Percentile of a company within its subsector peer group based on the Governance Max Correlation Score; 100% is best,MATRIX,68%,0,0
+governance_corr_weighted_subsector_position,Rank of a company within its subsector peer group based on the Governance Max Correlation Score; 1 is highest,MATRIX,68%,0,0
+governance_industry_percentile,Percentile of a company within its industry peer group based on the Governance (G) Score; 100% is best,MATRIX,81%,2,2
+governance_industry_position,Rank of a company within its industry peer group based on the Governance (G) Score; 1 is highest,MATRIX,81%,0,0
+governance_pillar_composite_score,"Governance score, which is the average of the subcomponent scores G1, G2, and G3, representing broad governance performance with no subjective weighting",MATRIX,84%,0,0
+governance_positive_corr_industry_percentile,"Percentile ranking of the Governance (G) Hybrid Score within the company's industry peer group, with higher percentiles indicating better relative performance (100% is best)",MATRIX,67%,0,0
+governance_positive_corr_industry_position,Rank of a company within its industry peer group based on the Governance Hybrid Score; 1 is highest,MATRIX,68%,0,0
+governance_positive_corr_score,"Governance Hybrid Score, calculated by weighting G1, G2, and G3 based on positive rank correlation with financial metrics strongly correlated to 1 and 3 year returns in the peer group",MATRIX,68%,1,1
+governance_positive_corr_sector_percentile,Percentile of a company within its sector peer group based on the Governance Hybrid Score; 100% is best,MATRIX,67%,0,0
+governance_positive_corr_sector_position,Rank of a company within its sector peer group based on the Governance Hybrid Score; 1 is highest,MATRIX,68%,1,1
+governance_positive_corr_subsector_percentile,"Percentile ranking of the Governance (G) Hybrid Score within the company's subsector peer group, with higher percentiles indicating better relative performance (100% is best)",MATRIX,67%,0,0
+governance_positive_corr_subsector_position,Rank of a company within its subsector peer group based on the Governance Hybrid Score; 1 is highest,MATRIX,68%,0,0
+governance_sector_percentile,Percentile of a company within its sector peer group based on the Governance (G) Score; 100% is best,MATRIX,81%,0,0
+governance_sector_position,Rank of a company within its sector peer group based on the Governance (G) Score; 1 is highest,MATRIX,81%,0,0
+governance_subsector_percentile,Percentile of a company within its subsector peer group based on the Governance (G) Score; 100% is best,MATRIX,81%,0,0
+governance_subsector_position,Rank of a company within its subsector peer group based on the Governance (G) Score; 1 is highest,MATRIX,81%,0,0
+human_rights_industry_percentile,"Percentile ranking of a company's Human Rights KPI (CIT2) within its industry peer group, where 100% is best",MATRIX,81%,1,1
+human_rights_industry_rank,"Rank of the company's Human Rights KPI (CIT2) within its industry peer group, with 1 being best",MATRIX,81%,3,3
+human_rights_sector_percentile,"Percentile ranking of a company's Human Rights KPI (CIT2) within its sector peer group, where 100% is best",MATRIX,81%,0,0
+human_rights_sector_rank,"Rank of the company's Human Rights KPI (CIT2) within its sector peer group, with 1 being best",MATRIX,81%,2,2
+human_rights_subsector_percentile,"Percentile ranking of a company's Human Rights KPI (CIT2) within its subsector peer group, where 100% is best",MATRIX,81%,1,6
+human_rights_subsector_rank,"Rank of the company's Human Rights KPI (CIT2) within its subsector peer group, with 1 being best",MATRIX,81%,1,1
+human_rights_supply_chain_score,"KPI for Human Rights, aggregating data on a company's policies and performance regarding human rights issues such as child or compulsory labor and community treatment",MATRIX,84%,2,3
+management_ethics_industry_percentile,"Percentile score of a company's G2 KPI standing within its industry peer group, with 100% being the highest/best",MATRIX,81%,2,2
+management_ethics_industry_rank,"Rank of the company's Management Ethics KPI (G2) within its industry peer group, with 1 being best",MATRIX,81%,2,3
+management_ethics_sector_percentile,"Percentile ranking of a company's Management Ethics KPI (G2) within its sector peer group, where 100% is best",MATRIX,81%,0,0
+management_ethics_sector_rank,"Rank of the company's Management Ethics KPI (G2) within its sector peer group, with 1 being best",MATRIX,81%,0,0
+management_ethics_standards_score,"KPI for Management Ethics, measuring management's stakeholder relations, ethical decision-making, equitable shareholder treatment, and ESG integration",MATRIX,84%,1,1
+management_ethics_subsector_percentile,"Percentile ranking of a company's Management Ethics KPI (G2) within its subsector peer group, where 100% is best",MATRIX,81%,0,0
+management_ethics_subsector_rank,"Rank of the company's Management Ethics KPI (G2) within its subsector peer group, with 1 being best",MATRIX,81%,0,0
+overall_sustainability_score,"The ESG Score for a company, calculated as a simple average of its Environmental (E), Social (S), and Governance (G) scores with equal weighting, providing an overall, unweighted ESG assessment without subjective prioritization among E, S, and G components",MATRIX,84%,1,1
+pollution_prevention_industry_percentile,"Percentile ranking of the company within its industry peer group on the OWL E1 KPI, with 100% being the best",MATRIX,80%,1,1
+pollution_prevention_industry_rank,"Rank of the company within its industry peer group based on the OWL E1 KPI, with 1 being the highest",MATRIX,81%,0,0
+pollution_prevention_score,Aggregated pollution prevention KPI reflecting how well a company is reducing pollution and transitioning to less harmful technologies,MATRIX,84%,2,2
+pollution_prevention_sector_percentile,"Percentile ranking of the company within its sector peer group on the OWL E1 KPI, with 100% being the best",MATRIX,80%,0,0
+pollution_prevention_sector_rank,"Rank of the company within its sector peer group based on the OWL E1 KPI, with 1 being the highest",MATRIX,81%,1,1
+pollution_prevention_subsector_percentile,"Percentile ranking of the company within its subsector peer group on the OWL E1 KPI, with 100% being the best",MATRIX,80%,0,0
+pollution_prevention_subsector_rank,"Rank of the company within its subsector peer group based on the OWL E1 KPI, with 1 being the highest",MATRIX,81%,0,0
+resource_efficiency_industry_percentile,The percentile position of a company within its industry peer group based on the OWL E3 KPI; higher percentiles indicate better performance,MATRIX,80%,1,1
+resource_efficiency_industry_rank,"Rank of company within its industry peer group on the OWL E3 KPI, with 1 being the highest rank",MATRIX,81%,0,0
+resource_efficiency_score,Aggregated resource efficiency KPI reflecting how well a company reduces resource use and implements recycling,MATRIX,84%,0,0
+resource_efficiency_sector_percentile,The percentile position of a company within its sector peer group based on the OWL E3 KPI; higher percentiles indicate better performance,MATRIX,80%,0,0
+resource_efficiency_sector_rank,"Rank of the company within its sector peer group based on the OWL E3 KPI, with 1 being the highest",MATRIX,81%,0,0
+resource_efficiency_subsector_percentile,The percentile position of a company within its subsector peer group based on the OWL E3 KPI; higher percentiles indicate better performance,MATRIX,80%,0,0
+resource_efficiency_subsector_rank,"Rank of company within its subsector peer group on the OWL E3 KPI, with 1 being the highest rank",MATRIX,81%,1,1
+social_corr_weighted_industry_percentile,"Percentile within the Industry peer group based on the maximum correlation score for the Social (S) pillar, with 100% being the best",MATRIX,68%,0,0
+social_corr_weighted_industry_position,"Rank within the Industry peer group based on the maximum correlation score for the Social (S) pillar, with 1 being the highest",MATRIX,68%,1,1
+social_corr_weighted_score,"Composite score for social KPIs (EMP1, EMP2, EMP3, CIT1, CIT2, CIT3) weighted by their absolute correlation (positive and negative) to financial metrics related to returns; rewards both strong and weak metrics as causally relevant to performance, within the most granular peer group",MATRIX,68%,0,0
+social_corr_weighted_sector_percentile,"Percentile within the Sector peer group based on the maximum correlation score for the Social (S) pillar, with 100% being the best",MATRIX,68%,0,0
+social_corr_weighted_sector_position,"Rank of company’s S Max Correlation score within sector peer group, 1 is highest",MATRIX,68%,0,0
+social_corr_weighted_subsector_percentile,"Percentile within the SubSector peer group based on the maximum correlation score for the Social (S) pillar, with 100% being the best",MATRIX,68%,0,0
+social_corr_weighted_subsector_position,"Rank within the SubSector peer group based on the maximum correlation score for the Social (S) pillar, with 1 representing the top rank",MATRIX,68%,1,2
+social_industry_percentile,Percentile of company’s S score within industry peer group (100% is best),MATRIX,81%,0,0
+social_industry_position,"Rank of company’s S score within industry peer group, 1 is highest",MATRIX,82%,0,0
+social_pillar_composite_score,"Composite Social (S) Score calculated as the average of the CIT (Citizenship) and EMP (Employment) scores, with no subjective weighting between them",MATRIX,84%,0,0
+social_pillar_score,"Social (S) score for the company; calculated by simple average of CIT (Citizenship) and EMP (Employment) metrics, with no weighting",MATRIX,84%,1,1
+social_poscorr_industry_percentile,Region of the world in which company is headquartered,MATRIX,76%,2,2
+social_poscorr_industry_position,Rank of the company’s Social max correlation score within its industry peer group; 1 is highest,MATRIX,76%,0,0
+social_poscorr_sector_percentile,Percentile of the company’s Social max correlation score within its sector peer group; 100% is best,MATRIX,76%,1,1
+social_poscorr_sector_position,Rank of the company’s Social max correlation score within its sector peer group; 1 is highest,MATRIX,76%,0,0
+social_poscorr_subsector_percentile,Percentile of the company’s Social max correlation score within its subsector peer group; 100% is best,MATRIX,76%,0,0
+social_poscorr_subsector_position,Rank of the company’s Social max correlation score within its subsector peer group; 1 is highest,MATRIX,76%,0,0
+social_positive_corr_industry_percentile,Percentile of a company within its industry peer group based on the Social (S) Hybrid score; 100% is best,MATRIX,68%,1,1
+social_positive_corr_industry_position,Rank of a company within its industry peer group based on the Social (S) Hybrid score; 1 is the highest rank,MATRIX,68%,0,0
+social_positive_corr_score,"A composite Social (S) score created by weighting EMP1, EMP2, EMP3, CIT1, CIT2, and CIT3 according to their positive correlations with financial metrics highly correlated to 1- and 3-year total returns; rewards strong performance on metrics positively linked to returns, using the most granular peer group possible",MATRIX,68%,1,1
+social_positive_corr_sector_percentile,"Percentile ranking of the Social hybrid score for the company within its sector peer group, with 100% being the best",MATRIX,68%,0,0
+social_positive_corr_sector_position,Rank of a company within its sector peer group based on the Social (S) Hybrid score; 1 is the highest rank,MATRIX,68%,0,0
+social_positive_corr_subsector_percentile,Percentile of a company within its subsector peer group based on the Social (S) Hybrid score; 100% is best,MATRIX,68%,0,0
+social_positive_corr_subsector_position,"Rank of a company within its subsector peer group on the S Hybrid score, with 1 being the highest",MATRIX,68%,1,1
+social_score_industry_percentile,Percentile of the company’s Social (S) score within its industry peer group; 100% is best,MATRIX,83%,0,0
+social_score_industry_position,Rank of the company’s Social (S) score within its industry peer group; 1 is highest,MATRIX,84%,0,0
+social_score_positive_correlation,"Social (S) score for the company; calculated by simple average of CIT (Citizenship) and EMP (Employment) metrics, with no weighting",MATRIX,76%,0,0
+social_score_sector_percentile,Percentile of the company’s Social (S) score within its sector peer group; 100% is best,MATRIX,83%,0,0
+social_score_sector_position,Rank of the company’s Social (S) score within its sector peer group; 1 is highest,MATRIX,84%,0,0
+social_score_subsector_percentile,Percentile of the company’s Social (S) score within its subsector peer group; 100% is best,MATRIX,83%,0,0
+social_score_subsector_position,Rank of the company’s Social (S) score within its subsector peer group; 1 is highest,MATRIX,84%,0,0
+social_score_total_correlation,Total correlation value for the S (Social) score with financial metrics,MATRIX,76%,0,0
+social_sector_percentile,Percentile of company’s S score within sector peer group (100% is best),MATRIX,81%,0,0
+social_sector_position,"Rank of company’s S score within sector peer group, 1 is highest",MATRIX,82%,0,0
+social_subsector_percentile,Percentile of company’s S score within subsector peer group (100% is best),MATRIX,81%,0,0
+social_subsector_position,"Rank of company’s S score within subsector peer group, 1 is highest",MATRIX,82%,1,2
+social_totalcorr_industry_percentile,Region of the world in which company is headquartered,MATRIX,76%,1,1
+social_totalcorr_industry_position,Region of the world in which company is headquartered,MATRIX,76%,0,0
+social_totalcorr_sector_percentile,Percentile ranking within sector peer group for social score weighted by total correlation to financial returns.,MATRIX,76%,0,0
+social_totalcorr_sector_position,Company’s position within sector peer group for social score weighted by total correlation to financial returns.,MATRIX,76%,1,1
+social_totalcorr_subsector_percentile,Percentile ranking within subsector peer group for social score weighted by total correlation to financial returns.,MATRIX,76%,0,0
+social_totalcorr_subsector_position,Company’s position within subsector peer group for social score weighted by total correlation to financial returns.,MATRIX,76%,0,0
+sustainability_corr_weighted_industry_percentile,"Percentile score of a company's ESG Max Correlation score within its industry peer group, with 100% being the highest/best",MATRIX,68%,0,0
+sustainability_corr_weighted_industry_position,"Rank of a company's ESG Max Correlation score within its industry peer group, with 1 being the highest",MATRIX,69%,0,0
+sustainability_corr_weighted_sector_percentile,"Percentile score of a company's ESG Max Correlation score within its sector peer group, with 100% being the highest/best",MATRIX,68%,0,0
+sustainability_corr_weighted_sector_position,"Rank of company within its sector based on its ESG Max Correlation score, with 1 being highest",MATRIX,69%,0,0
+sustainability_corr_weighted_subsector_percentile,"Percentile score of a company's ESG Max Correlation score within its subsector peer group, with 100% being the highest/best",MATRIX,68%,0,0
+sustainability_corr_weighted_subsector_position,"Rank of a company's ESG Max Correlation score within its subsector peer group, with 1 being the highest",MATRIX,69%,0,0
+sustainability_hybrid_score,"A composite ESG score where underlying KPIs are weighted by positive correlations with financial metrics strongly tied to company performance within the relevant peer group, rewarding companies for strong performance on ESG elements most associated with good financial results; uses the most granular peer group available",MATRIX,69%,0,0
+sustainability_industry_percentile,"Percentile ranking of a company’s ESG score within its industry peer group, with 100% being the best",MATRIX,81%,0,0
+sustainability_industry_rank,"Rank of company within its industry based on its overall ESG score, with 1 being the highest",MATRIX,82%,0,0
+sustainability_max_correlation_score,"A composite ESG score where each underlying KPI is weighted according to its strongest (positive or negative) correlation with financially relevant metrics (such as returns or profitability), rewarding companies for performance on ESG elements most linked to financial outcomes relative to peers; always uses the most granular peer group available",MATRIX,69%,0,0
+sustainability_positive_corr_industry_percentile,"Percentile score of a company's ESG Hybrid score within its industry peer group, with 100% being the highest/best",MATRIX,68%,0,0
+sustainability_positive_corr_industry_position,"Rank of a company's ESG Hybrid score within its industry peer group, with 1 being the highest",MATRIX,69%,0,0
+sustainability_positive_corr_sector_percentile,"Percentile score of a company's ESG Hybrid score within its sector peer group, with 100% being the highest/best",MATRIX,68%,0,0
+sustainability_positive_corr_sector_position,"Rank of company within its sector for ESG Hybrid score, with 1 being the highest",MATRIX,69%,0,0
+sustainability_positive_corr_subsector_percentile,"Percentile score of a company's ESG Hybrid score within its subsector peer group, with 100% being the highest/best",MATRIX,68%,0,0
+sustainability_positive_corr_subsector_position,"Rank of a company's ESG Hybrid score within its subsector peer group, with 1 being the highest",MATRIX,69%,0,0
+sustainability_sector_percentile,"Percentile of company within its sector for its overall ESG score, with 100% being best",MATRIX,81%,0,0
+sustainability_sector_rank,"Rank of company within its sector based on its overall ESG score, with 1 being the highest",MATRIX,82%,0,0
+sustainability_subsector_percentile,"Percentile ranking of the company's ESG score within its subsector peer group, with 100% being the best",MATRIX,81%,0,0
+sustainability_subsector_rank,"Rank of company within its subsector based on its overall ESG score, with 1 being the highest",MATRIX,82%,1,1
+sustainable_product_business_model_score,"KPI for Sustainability Integration, measuring how well a company transitions its products and operations toward sustainable, low-impact offerings",MATRIX,83%,1,2
+sustainable_product_industry_percentile,"Percentile ranking of a company's Sustainability Integration KPI (CIT3) within its industry peer group, where 100% is best",MATRIX,80%,0,0
+sustainable_product_industry_rank,"Rank of the company's Sustainability Integration KPI (CIT3) within its industry peer group, with 1 being best",MATRIX,80%,0,0
+sustainable_product_sector_percentile,"Percentile ranking of a company's Sustainability Integration KPI (CIT3) within its sector peer group, where 100% is best",MATRIX,80%,0,0
+sustainable_product_sector_rank,"Rank of the company's Sustainability Integration KPI (CIT3) within its sector peer group, with 1 being best",MATRIX,80%,0,0
+sustainable_product_subsector_percentile,"Percentile ranking of a company's Sustainability Integration KPI (CIT3) within its subsector peer group, where 100% is best",MATRIX,80%,1,1
+sustainable_product_subsector_rank,"Rank of the company's Sustainability Integration KPI (CIT3) within its subsector peer group, with 1 being best",MATRIX,80%,0,0
+workforce_corr_weighted_industry_percentile,Percentile ranking of a company's Employment Max Correlation Score within its industry (100% is best/highest correlation to material financial performance),MATRIX,68%,0,0
+workforce_corr_weighted_industry_position,"Rank of the company within its industry peer group based on the EMP Max Correlation Score, with 1 as the top performer",MATRIX,68%,0,0
+workforce_corr_weighted_score,"Score for Employment KPIs (EMP1, EMP2, EMP3) weighted by their strongest correlations (positive and negative) with financial metrics linked to company returns; emphasizes materiality to financial outcomes",MATRIX,68%,0,0
+workforce_corr_weighted_sector_percentile,Percentile ranking of a company's Employment Max Correlation Score within its sector (100% is best/highest correlation to material financial performance),MATRIX,68%,1,1
+workforce_corr_weighted_sector_position,"Rank of the company within its sector peer group based on the EMP Max Correlation Score, with 1 as the top performer",MATRIX,68%,1,1
+workforce_corr_weighted_subsector_percentile,Percentile ranking of a company's Employment Max Correlation Score within its subsector (100% is best/highest correlation to material financial performance),MATRIX,68%,0,0
+workforce_corr_weighted_subsector_position,"Rank of the company within its subsector peer group based on the EMP Max Correlation Score, with 1 as the top performer",MATRIX,68%,0,0
+workforce_industry_percentile,Percentile ranking of a company's Employment Score within its industry peer group (100% is best),MATRIX,81%,0,0
+workforce_industry_position,"Rank position of the company within its Industry peer group for the EMP Score, with 1 being the highest",MATRIX,81%,0,0
+workforce_pillar_composite_score,"Average score of EMP1, EMP2, and EMP3, measuring employment-related performance without subjective weighting among these KPIs",MATRIX,84%,0,0
+workforce_positive_corr_industry_percentile,Percentile ranking of a company's Employment Hybrid Score within its industry peer group (100% is best),MATRIX,66%,0,0
+workforce_positive_corr_industry_position,"Rank of the company within industry peer group based on EMP Hybrid Score, with 1 as the best performance",MATRIX,66%,0,0
+workforce_positive_corr_score,"Score for Employment KPIs (EMP1, EMP2, EMP3) weighted by their positive correlations with financial metrics linked to company returns; emphasizes beneficial employment metrics for financial performance",MATRIX,66%,0,0
+workforce_positive_corr_sector_percentile,Percentile ranking of a company's Employment Hybrid Score within its sector peer group (100% is best),MATRIX,66%,0,0
+workforce_positive_corr_sector_position,"Rank of the company within sector peer group based on EMP Hybrid Score, with 1 as the best performance",MATRIX,66%,0,0
+workforce_positive_corr_subsector_percentile,Percentile ranking of a company's Employment Hybrid Score within its subsector peer group (100% is best),MATRIX,66%,0,0
+workforce_positive_corr_subsector_position,"Rank of the company within subsector peer group based on EMP Hybrid Score, with 1 as the best performance",MATRIX,66%,0,0
+workforce_sector_percentile,Percentile ranking of a company's Employment Score within its sector peer group (100% is best),MATRIX,81%,1,1
+workforce_sector_position,"Rank position of the company within its Sector peer group for the EMP Score, with 1 being the highest",MATRIX,82%,1,1
+workforce_subsector_percentile,Percentile ranking of a company's Employment Score within its subsector peer group (100% is best),MATRIX,81%,0,0
+workforce_subsector_position,"Rank position of the company within its SubSector peer group for the EMP Score, with 1 being the highest",MATRIX,81%,1,1
+workplace_diversity_industry_percentile,"Percentile of a company within its industry peer group on the EMP2 KPI (Diversity & Rights), with 100% as the best performance",MATRIX,81%,0,0
+workplace_diversity_industry_rank,"Rank of a company within its industry peer group on the EMP2 employment KPI, with 1 being the highest (best) rank",MATRIX,81%,0,0
+workplace_diversity_labor_rights_score,"KPI measuring company performance on workplace diversity, labor-management relations, and workforce rights",MATRIX,84%,2,2
+workplace_diversity_sector_percentile,"Percentile of a company within its sector peer group on the EMP2 KPI (Diversity & Rights), with 100% as the best performance",MATRIX,81%,0,0
+workplace_diversity_sector_rank,"Rank of company within its sector peer group on the EMP2 KPI (diversity & rights), with 1 being the highest rank",MATRIX,81%,0,0
+workplace_diversity_subsector_percentile,"Percentile of a company within its subsector peer group on the EMP2 KPI (Diversity & Rights), with 100% as the best performance",MATRIX,81%,0,0
+workplace_diversity_subsector_rank,"Rank of company within its subsector peer group on the EMP2 KPI (diversity & rights), with 1 being the highest rank",MATRIX,81%,0,0

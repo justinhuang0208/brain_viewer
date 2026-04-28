@@ -1,0 +1,23 @@
+Field,Description,Type,Coverage,Users,Alphas
+nws48_acb,Score representing news sentiment of a story focusing on corporate action announcements,VECTOR,100%,16,21
+nws48_aes,Aggregate score (0-100) of positive event ratio vs. all non-neutral events for an entity over a 91-day rolling window,VECTOR,100%,14,16
+nws48_bam,"Score representing news sentiment for stories about venture activity, company events, mergers, acquisitions, and takeovers",VECTOR,100%,11,15
+nws48_bee,Sentiment score for stories about earnings evaluations,VECTOR,100%,14,21
+nws48_ber,Score representing news sentiment specializing in earnings release announcements,VECTOR,100%,5,6
+nws48_ens,Event Novelty Score (0–100) representing how new or unique the news story is within a 24-hour window,VECTOR,93%,8,23
+nws48_ens_elapsed,Number of milliseconds between the first and current story in an event novelty chain,VECTOR,93%,6,12
+nws48_ens_similarity_gap,The number of days since a similar story was detected; measures time gap between current news and last similar event,VECTOR,93%,13,44
+nws48_ess,"Event Sentiment Score: score (0-100) measuring news sentiment for an entity in the story, higher is more positive",VECTOR,93%,8,18
+nws48_g_ens,"Global Event Novelty Score (0–100) across all providers, measuring how ""new"" a news story is within a 24-hour window",VECTOR,93%,15,22
+nws48_g_ens_elapsed,Number of milliseconds between the first and current story in a global event novelty chain,VECTOR,93%,6,15
+nws48_g_ens_similarity_gap,Number of days since the last similar globally-detected story; measures time gap between globally similar events,VECTOR,93%,6,6
+nws48_ghc_lna,Numerical score representing analyst recommendation changes,VECTOR,100%,12,20
+nws48_nip,Score (0–100) quantifying projected market impact of a news flash over the next two hours,VECTOR,100%,8,14
+nws48_qcm,"Multi-classifier sentiment score for equities, reflecting aggregate tone for the most relevant companies in the story",VECTOR,100%,12,24
+nws48_qep,"Score representing sentiment in global equities news, specializing in positive and negative identification",VECTOR,100%,6,12
+nws48_qmb,Score representing sentiment for editorials/commentaries specifically on equity markets,VECTOR,100%,9,22
+nws48_relevance,"Score (0-100) indicating how strongly related the entity is to the news story, with higher values showing greater relevance",VECTOR,100%,14,19
+nws48_rp_story_event_count,"Represents the total entity records published per news story; essentially, the number of distinct entities involved in the story",VECTOR,100%,11,20
+nws48_rp_story_event_index,"Order of the entity record within a news story, shows the position of the entity",VECTOR,100%,11,14
+nws48_ssc,Sentiment score between 0 and 100 representing the overall sentiment of the news story,VECTOR,100%,19,45
+nws48_vea,Count of non-neutral events for an entity over a 91-day rolling window,VECTOR,100%,7,11

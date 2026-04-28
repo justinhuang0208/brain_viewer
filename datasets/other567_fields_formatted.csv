@@ -1,0 +1,224 @@
+Field,Description,Type,Coverage,Users,Alphas
+avg_business_outlook_score,Company month average business outlook rating on a 1 to 5 scale higher is more positive,VECTOR,62%,2,3
+avg_career_growth_score,Company-month average employee rating of career opportunities on a 1–5 scale,VECTOR,62%,2,2
+avg_ceo_approval_score,"Average CEO approval rating from reviews (scale mapped, e.g., 1–5)",VECTOR,60%,3,3
+avg_culture_values_score,Company-level average review rating for culture and values (1–5),VECTOR,62%,2,2
+avg_diversity_inclusion_score,Company-month average rating of diversity and inclusion on a 1–5 scale,VECTOR,68%,3,3
+avg_overall_company_score,Rolling average overall company rating from employee reviews at the company-month level (scale roughly 1–5),VECTOR,62%,0,0
+avg_pay_and_benefits_score,Company-level average review rating of compensation and benefits (1–5),VECTOR,62%,2,2
+avg_recommend_to_peer_score,"Average score indicating whether reviewers would recommend the company to a friend for the period (typically 1–5, company-month level)",VECTOR,62%,2,2
+avg_senior_management_score,Company-level average review rating of senior leadership (1–5),VECTOR,62%,1,1
+avg_work_life_balance_score,Company-level average review rating of work-life balance (1–5),VECTOR,62%,0,0
+benefits_perks_sentiment,Text-derived score reflecting sentiment about company perks and benefits,VECTOR,62%,2,3
+career_advancement_sentiment_score,Text-derived score for career advancement opportunities,VECTOR,62%,3,5
+career_growth_rating,Reviewer’s rating of career opportunities (1 to 5),VECTOR,61%,0,0
+company_size_sentiment_score,Topic score related to company size or employee count derived from review text (scale varies),VECTOR,62%,0,0
+compensation_sentiment_score,Numeric score reflecting perceived compensation competitiveness,VECTOR,62%,0,0
+coworkers_sentiment_score,Text-derived sentiment score about coworkers/peer environment,VECTOR,62%,1,1
+culture_values_rating,Rating of company culture and values (typically 1–5 at review level),VECTOR,61%,0,0
+diversity_inclusion_rating,Reviewer’s rating of diversity and inclusion (1 to 5),VECTOR,67%,0,0
+diversity_inclusion_sentiment_score,Text-derived sentiment score on diversity and inclusion,VECTOR,62%,0,0
+employment_duration_years,Number of years the reviewer worked at the company,VECTOR,62%,0,0
+innovation_technology_sentiment_score,Model-derived sentiment score for innovation and technology discussed in the review text,VECTOR,62%,0,0
+leadership_sentiment_score,Model-derived sentiment score related to management,VECTOR,62%,3,4
+mentorship_sentiment_score,Text-derived mentorship sentiment score,VECTOR,62%,2,5
+negative_feedback_text,Cons/negative comments text provided by the reviewer,VECTOR,62%,0,0
+onboarding_sentiment_score,Model-derived sentiment score about onboarding experiences,VECTOR,62%,3,12
+oth567_deltaasm_391,MSA of position,VECTOR,31%,1,1
+oth567_deltaatlas_month,The month and year of the position (At MCD level we have converted to date so added {dd} to month field,VECTOR,51%,0,0
+oth567_deltaatlas_month_382,The month and year of the position (At MCD level we have converted to date so added {dd} to month field,VECTOR,58%,0,0
+oth567_deltacountry_436,The name of the country,VECTOR,31%,0,0
+oth567_deltajob_category_411,Aggregated new position role with 7 discrete levels,VECTOR,31%,4,4
+oth567_deltaprimary_city_360,City,VECTOR,58%,2,2
+oth567_deltaprimary_country_367,Country,VECTOR,58%,0,0
+oth567_deltaprimary_exchange_388,Exchange Name,VECTOR,58%,3,4
+oth567_deltaprimary_gvkey_369,gv_key,VECTOR,58%,2,3
+oth567_deltaprimary_isin_371,ISIN code,VECTOR,58%,1,2
+oth567_deltaprimary_naics_368,Naics Code,VECTOR,58%,2,2
+oth567_deltaprimary_sedol_389,sedol,VECTOR,58%,1,1
+oth567_deltaprimary_sic_377,sic,VECTOR,58%,4,11
+oth567_deltaprimary_state_385,State,VECTOR,58%,1,1
+oth567_deltaprimary_ticker_375,ticker,VECTOR,58%,2,2
+oth567_deltaregion_422,This refers to the region,VECTOR,31%,2,11
+oth567_deltareview_advice_420,reviewer?s advice to management,VECTOR,29%,1,2
+oth567_deltareview_cons_396,negative review of company,VECTOR,31%,2,2
+oth567_deltareview_count_helpful_421,number of users who found the review helpful,VECTOR,31%,1,1
+oth567_deltareview_featured_431,indicates whether review is featured on company page,VECTOR,31%,0,0
+oth567_deltareview_iscovid19_423,indicates whether review mentions the covid19 pandemic,VECTOR,31%,0,0
+oth567_deltareview_pros_406,positive review of company,VECTOR,31%,2,2
+oth567_deltareviewer_current_job_402,indicates whether the reviewer is a current or former employee,VECTOR,31%,2,3
+oth567_deltareviewer_employment_status_407,indicates employment type of reviewer (freelance,VECTOR,31%,5,5
+oth567_deltareviewer_length_of_employment_430,number of years the reviewer worked at the company,VECTOR,31%,1,1
+oth567_deltarole_k50_408,Aggregated previous position role with 50 discrete levels,VECTOR,31%,3,3
+oth567_deltascore_career_advancement_410,Score for career advancement,VECTOR,31%,1,1
+oth567_deltascore_company_size_432,Company size score,VECTOR,31%,2,2
+oth567_deltascore_compensation_425,Compensation score,VECTOR,31%,0,0
+oth567_deltascore_coworkers_416,Score of coworkers,VECTOR,31%,2,2
+oth567_deltascore_culture_433,Culture score,VECTOR,31%,0,0
+oth567_deltascore_diversity_and_inclusion_427,Score for diversity and inclusion,VECTOR,31%,0,0
+oth567_deltascore_innovation_technology_414,score_innovation_technology,VECTOR,31%,1,1
+oth567_deltascore_management_393,Management score,VECTOR,31%,1,1
+oth567_deltascore_mentorship_415,Mentorship score,VECTOR,31%,4,4
+oth567_deltascore_onboarding_400,Onboarding scores,VECTOR,31%,1,1
+oth567_deltascore_perks_397,Score for perks,VECTOR,31%,0,0
+oth567_deltascore_remote_work_434,Remote work scores,VECTOR,31%,0,0
+oth567_deltascore_work_life_balance_399,Score of work life balance,VECTOR,31%,2,2
+oth567_deltastate_417,state of position,VECTOR,31%,1,1
+oth567_individual_deltaatlas_unit_name_403,Atlas unit name,VECTOR,31%,2,2
+oth567_individual_deltarating_business_outlook_392,business outlook rating (positive,VECTOR,31%,3,3
+oth567_individual_deltarating_career_opportunities_426,rating of career opportunities (1 to 5,VECTOR,31%,1,1
+oth567_individual_deltarating_ceo_409,approval rating of the CEO (approve,VECTOR,31%,0,0
+oth567_individual_deltarating_compensation_and_benefits_419,rating of employee compensation and benefits (1 to 5,VECTOR,31%,1,1
+oth567_individual_deltarating_culture_and_values_405,rating of company culture and values (integer values 1 to 5,VECTOR,30%,6,7
+oth567_individual_deltarating_diversity_and_inclusion_412,rating of company diversity and inclusion (integer values 1 to 5,VECTOR,30%,6,6
+oth567_individual_deltarating_overall_435,overall rating of company (integer values 1 to 5,VECTOR,31%,2,2
+oth567_individual_deltarating_recommend_to_friend_418,indicates whether reviewer would recommend a friend to the company (positive,VECTOR,31%,1,1
+oth567_individual_deltarating_senior_leadership_428,rating of senior management (1 to 5,VECTOR,30%,0,0
+oth567_individual_deltarating_work_life_balance_413,rating of work-life balance (1 to 5,VECTOR,31%,0,0
+oth567_individualatlas_unit_name_321,Atlas unit name,VECTOR,55%,0,0
+oth567_individualcompany_342,Company name,VECTOR,55%,0,0
+oth567_individualrating_business_outlook_340,business outlook rating (positive,VECTOR,55%,3,3
+oth567_individualrating_career_opportunities,Rating of career opportunities on a 1–5 scale,VECTOR,44%,4,4
+oth567_individualrating_career_opportunities_331,rating of career opportunities (1 to 5,VECTOR,55%,3,3
+oth567_individualrating_ceo_338,approval rating of the CEO (approve,VECTOR,55%,2,2
+oth567_individualrating_compensation_and_benefits,Per-review rating of compensation and benefits on a 1–5 scale,VECTOR,44%,4,4
+oth567_individualrating_compensation_and_benefits_337,rating of employee compensation and benefits (1 to 5,VECTOR,55%,3,3
+oth567_individualrating_culture_and_values,Reviewer rating of company culture and values on a 1 to 5 scale,VECTOR,44%,0,0
+oth567_individualrating_culture_and_values_356,rating of company culture and values (integer values 1 to 5,VECTOR,55%,0,0
+oth567_individualrating_diversity_and_inclusion,Reviewer’s rating of company diversity and inclusion on a 1–5 scale,VECTOR,44%,1,1
+oth567_individualrating_diversity_and_inclusion_317,rating of company diversity and inclusion (integer values 1 to 5,VECTOR,54%,1,1
+oth567_individualrating_overall,Overall company rating given in the review on a 1–5 scale,VECTOR,44%,4,5
+oth567_individualrating_overall_312,overall rating of company (integer values 1 to 5,VECTOR,55%,3,4
+oth567_individualrating_recommend_to_friend_332,indicates whether reviewer would recommend a friend to the company (positive,VECTOR,55%,2,2
+oth567_individualrating_senior_leadership,Employee’s rating of senior leadership/senior management on a 1–5 scale,VECTOR,44%,3,3
+oth567_individualrating_senior_leadership_323,rating of senior management (1 to 5,VECTOR,55%,1,1
+oth567_individualrating_work_life_balance,"Reviewer’s rating of work-life balance, typically 1 to 5",VECTOR,44%,2,7
+oth567_individualrating_work_life_balance_353,rating of work-life balance (1 to 5,VECTOR,55%,2,7
+oth567_individualsedol_326,This refers to the SEDOL,VECTOR,55%,1,1
+oth567_individualticker_335,This refers to the ticker,VECTOR,55%,2,3
+oth567_kic_383,CIK number,VECTOR,58%,4,4
+oth567_primary_cusip_365,CUSIP number,VECTOR,58%,1,1
+oth567_primary_lei_378,LEI code,VECTOR,58%,3,5
+oth567_primary_linkedin_url_379,Company LinkedIn URL (parent company,VECTOR,58%,1,1
+oth567_review_summary,Title or headline of the review,VECTOR,44%,4,4
+oth567_review_summary_311,title of review,VECTOR,55%,2,2
+oth567_trend_deltaatlas_unit_name_359,Atlas unit name,VECTOR,58%,0,0
+oth567_trend_deltacompany_366,Company name,VECTOR,58%,0,0
+oth567_trend_deltarating_business_outlook,Rolling yearly average business outlook rating or approval,VECTOR,51%,3,10
+oth567_trend_deltarating_business_outlook_387,business outlook rating (positive,VECTOR,58%,1,1
+oth567_trend_deltarating_career_opportunities,Rating of career opportunities on a 1–5 scale,VECTOR,51%,5,5
+oth567_trend_deltarating_career_opportunities_370,rating of career opportunities (1 to 5,VECTOR,58%,2,2
+oth567_trend_deltarating_ceo,Rolling yearly average CEO approval rating (share approving or approval level),VECTOR,51%,3,3
+oth567_trend_deltarating_ceo_381,approval rating of the CEO (approve,VECTOR,57%,1,1
+oth567_trend_deltarating_compensation_and_benefits,Rating of employee compensation and benefits on a 1–5 scale,VECTOR,51%,1,3
+oth567_trend_deltarating_compensation_and_benefits_372,rating of employee compensation and benefits (1 to 5,VECTOR,58%,1,1
+oth567_trend_deltarating_culture_and_values,Average rating of culture and values (1–5 scale) in the trend period,VECTOR,51%,5,5
+oth567_trend_deltarating_culture_and_values_361,rating of company culture and values (integer values 1 to 5,VECTOR,58%,1,1
+oth567_trend_deltarating_diversity_and_inclusion,Rating of company diversity and inclusion on a 1–5 scale,VECTOR,51%,5,5
+oth567_trend_deltarating_diversity_and_inclusion_374,rating of company diversity and inclusion (integer values 1 to 5,VECTOR,58%,1,1
+oth567_trend_deltarating_overall,Rolling yearly average overall rating at the company-month level on a 1 to 5 scale,VECTOR,51%,2,2
+oth567_trend_deltarating_overall_390,overall rating of company (integer values 1 to 5,VECTOR,58%,1,1
+oth567_trend_deltarating_recommend_to_friend,"Average rating for likelihood to recommend the company to a friend (trend, 1–5 scale)",VECTOR,51%,2,4
+oth567_trend_deltarating_recommend_to_friend_363,indicates whether reviewer would recommend a friend to the company (positive,VECTOR,58%,1,1
+oth567_trend_deltarating_senior_leadership,Average rating of senior leadership (1–5 scale) in the trend period,VECTOR,51%,3,3
+oth567_trend_deltarating_senior_leadership_384,rating of senior management (1 to 5,VECTOR,58%,1,1
+oth567_trend_deltarating_work_life_balance,Average employee rating of work-life balance on a 1–5 scale at the company-month level,VECTOR,51%,4,4
+oth567_trend_deltarating_work_life_balance_380,rating of work-life balance (1 to 5,VECTOR,58%,4,4
+oth567_trend_deltasedol_364,This refers to the SEDOL,VECTOR,58%,0,0
+oth567_trend_deltaticker_376,This refers to the ticker,VECTOR,58%,1,1
+oth567_trendatlas_unit_name_454,Atlas unit name,VECTOR,58%,2,2
+oth567_trendcompany_450,Company name,VECTOR,58%,1,1
+oth567_trendrating_business_outlook,Average business outlook rating (typically 1–5 or normalized),VECTOR,48%,1,1
+oth567_trendrating_business_outlook_445,business outlook rating (positive,VECTOR,57%,0,0
+oth567_trendrating_career_opportunities,Average rating of career opportunities (1–5 scale) at the company-month level,VECTOR,48%,6,6
+oth567_trendrating_career_opportunities_453,rating of career opportunities (1 to 5,VECTOR,58%,1,1
+oth567_trendrating_ceo,Average CEO approval/effectiveness rating (typically on a 1–5 scale),VECTOR,48%,1,1
+oth567_trendrating_ceo_438,approval rating of the CEO (approve,VECTOR,56%,1,1
+oth567_trendrating_compensation_and_benefits,Average review rating of compensation and benefits on a 1–5 scale,VECTOR,48%,3,3
+oth567_trendrating_compensation_and_benefits_443,rating of employee compensation and benefits (1 to 5,VECTOR,58%,1,1
+oth567_trendrating_culture_and_values,Average rating of culture and values (1–5 scale) at the company-month level,VECTOR,48%,5,5
+oth567_trendrating_culture_and_values_451,rating of company culture and values (integer values 1 to 5,VECTOR,58%,5,5
+oth567_trendrating_diversity_and_inclusion,Average review rating of diversity and inclusion on a 1–5 scale,VECTOR,48%,2,2
+oth567_trendrating_diversity_and_inclusion_442,rating of company diversity and inclusion (integer values 1 to 5,VECTOR,57%,2,2
+oth567_trendrating_overall,Average overall company rating from reviews (1–5 scale) at the company-month level,VECTOR,48%,3,3
+oth567_trendrating_overall_462,overall rating of company (integer values 1 to 5,VECTOR,58%,3,3
+oth567_trendrating_recommend_to_friend,Average rating of likelihood to recommend the company to a friend (1–5 scale or normalized),VECTOR,48%,5,5
+oth567_trendrating_recommend_to_friend_446,indicates whether reviewer would recommend a friend to the company (positive,VECTOR,58%,4,4
+oth567_trendrating_senior_leadership,Average review rating of senior leadership on a 1–5 scale,VECTOR,48%,4,5
+oth567_trendrating_senior_leadership_456,rating of senior management (1 to 5,VECTOR,58%,2,2
+oth567_trendrating_work_life_balance,Average review rating of work-life balance on a 1–5 scale,VECTOR,48%,4,4
+oth567_trendrating_work_life_balance_448,rating of work-life balance (1 to 5,VECTOR,58%,1,1
+oth567_trendsedol_444,This refers to the SEDOL,VECTOR,58%,1,1
+oth567_trendticker_452,This refers to the ticker,VECTOR,58%,1,1
+oth567asm_329,MSA of position,VECTOR,55%,1,1
+oth567atlas_month,"Vendor atlas month key for the record’s period (month-year, used to align trends)",VECTOR,48%,3,3
+oth567atlas_month_460,The month and year of the position (At MCD level we have converted to date so added {dd} to month field,VECTOR,58%,2,2
+oth567country_310,The name of the country,VECTOR,55%,1,1
+oth567job_category_354,Aggregated new position role with 7 discrete levels,VECTOR,55%,1,2
+oth567primary_city_461,City,VECTOR,58%,1,1
+oth567primary_country_447,Country,VECTOR,58%,0,0
+oth567primary_exchange_457,Exchange Name,VECTOR,58%,1,3
+oth567primary_gvkey_437,gv_key,VECTOR,58%,3,3
+oth567primary_isin_441,ISIN code,VECTOR,58%,2,2
+oth567primary_naics_440,Naics Code,VECTOR,58%,6,9
+oth567primary_sedol_459,sedol,VECTOR,58%,1,1
+oth567primary_sic_455,sic,VECTOR,58%,1,1
+oth567primary_state_449,State,VECTOR,58%,0,0
+oth567primary_ticker_439,ticker,VECTOR,58%,3,9
+oth567region_320,This refers to the region,VECTOR,55%,2,2
+oth567review_advice,Reviewer’s advice to management in free text,VECTOR,44%,1,1
+oth567review_advice_324,reviewer's advice to management,VECTOR,53%,1,1
+oth567review_cons,Raw textual content of the cons or negatives highlighted by the reviewer,VECTOR,44%,2,2
+oth567review_cons_352,negative review of company,VECTOR,55%,1,1
+oth567review_count_helpful,Count of users who marked the review as helpful,VECTOR,44%,5,5
+oth567review_count_helpful_319,number of users who found the review helpful,VECTOR,55%,1,1
+oth567review_count_not_helpful,Count of users who marked the review as not helpful,VECTOR,44%,1,1
+oth567review_count_not_helpful_350,number of users who found the review unhelpful,VECTOR,48%,1,1
+oth567review_featured_349,indicates whether review is featured on company page,VECTOR,55%,0,0
+oth567review_iscovid19_345,indicates whether review mentions the covid19 pandemic,VECTOR,55%,7,9
+oth567review_pros,Free-text pros or positive aspects of the company noted by the reviewer,VECTOR,44%,5,5
+oth567review_pros_339,positive review of company,VECTOR,55%,2,2
+oth567reviewer_current_job_347,indicates whether the reviewer is a current or former employee,VECTOR,55%,2,2
+oth567reviewer_employment_status_344,indicates employment type of reviewer (freelance,VECTOR,55%,3,4
+oth567reviewer_length_of_employment,Number of years the reviewer worked at the company,VECTOR,44%,0,0
+oth567reviewer_length_of_employment_346,number of years the reviewer worked at the company,VECTOR,55%,1,1
+oth567role_k50_336,Aggregated previous position role with 50 discrete levels,VECTOR,55%,2,2
+oth567score_career_advancement,Score reflecting perceived career advancement and growth opportunities,VECTOR,44%,1,2
+oth567score_career_advancement_316,Score for career advancement,VECTOR,55%,0,0
+oth567score_company_size,Model-derived score related to company size or perceptions of company scale,VECTOR,44%,2,2
+oth567score_company_size_358,Company size score,VECTOR,55%,1,1
+oth567score_compensation,Model-derived sentiment score related to compensation from the review text,VECTOR,44%,2,2
+oth567score_compensation_355,Compensation score,VECTOR,55%,2,2
+oth567score_coworkers,Model-derived score reflecting sentiment about coworkers or peer environment in the review,VECTOR,44%,1,1
+oth567score_coworkers_315,Score of coworkers,VECTOR,55%,0,0
+oth567score_culture,Model-derived culture sentiment score from the review text,VECTOR,44%,1,1
+oth567score_culture_341,Culture score,VECTOR,55%,1,1
+oth567score_diversity_and_inclusion,Model-derived topic score for diversity and inclusion,VECTOR,44%,2,2
+oth567score_diversity_and_inclusion_325,Score for diversity and inclusion,VECTOR,55%,1,1
+oth567score_innovation_technology,"Model-derived sentiment score for innovation and technology topics in the review text (real-valued, can be negative or positive)",VECTOR,44%,9,9
+oth567score_innovation_technology_328,score_innovation_technology,VECTOR,55%,8,8
+oth567score_management,Model-derived management sentiment score from the review text,VECTOR,44%,1,1
+oth567score_management_351,Management score,VECTOR,55%,1,1
+oth567score_mentorship,Model-derived score reflecting mentorship quality or experience,VECTOR,44%,2,2
+oth567score_mentorship_330,Mentorship score,VECTOR,55%,0,0
+oth567score_onboarding,Model-derived onboarding sentiment score from the review text,VECTOR,44%,0,0
+oth567score_onboarding_318,Onboarding scores,VECTOR,55%,0,0
+oth567score_perks,Model-derived score representing company perks and benefits,VECTOR,44%,0,0
+oth567score_perks_309,Score for perks,VECTOR,55%,2,2
+oth567score_remote_work,Model-derived score indicating sentiment about remote work,VECTOR,44%,3,3
+oth567score_remote_work_322,Remote work scores,VECTOR,55%,1,1
+oth567score_work_life_balance,Model-derived score reflecting work-life balance sentiment,VECTOR,44%,2,2
+oth567score_work_life_balance_334,Score of work life balance,VECTOR,55%,1,1
+oth567state_343,state of position,VECTOR,55%,2,2
+overall_company_rating,Reviewer’s overall rating of the company on a 1–5 scale,VECTOR,62%,1,1
+remote_work_sentiment_score,Model-derived sentiment score indicating remote work friendliness or experience reflected in the review text,VECTOR,62%,0,0
+remuneration_benefits_score,Reviewer’s rating of compensation and benefits (1 to 5),VECTOR,61%,1,2
+review_helpful_count,Number of users who marked the review as helpful,VECTOR,62%,2,3
+review_positive_comments,Free-text section listing the pros or positive aspects of the company,VECTOR,62%,0,0
+review_title_summary,Title or short summary of the review,VECTOR,62%,0,0
+review_unhelpful_count,Number of users who marked the review as not helpful,VECTOR,62%,1,1
+senior_management_rating,Reviewer’s rating of senior leadership on a 1–5 scale,VECTOR,61%,0,0
+suggestion_to_management,Free-text advice or recommendations to management provided by the reviewer,VECTOR,56%,0,0
+work_life_balance_rating,Reviewer’s rating of work-life balance (1 to 5),VECTOR,61%,0,0
+work_life_balance_sentiment_score,Text-derived sentiment score regarding work-life balance,VECTOR,62%,2,2
+workplace_culture_sentiment,Model-derived sentiment score about company culture,VECTOR,62%,3,3

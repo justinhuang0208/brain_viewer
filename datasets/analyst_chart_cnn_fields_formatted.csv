@@ -1,0 +1,368 @@
+Field,Description,Type,Coverage,Users,Alphas
+img_avg_actual_ebit_us,Average EBIT actual value from analyst reports for USA stocks as of previous close D1,MATRIX,88%,2,2
+img_cnn_feature1_us_ibes_1_b2_d1,"First extracted CNN feature from US analyst chart image, IBES variant 1, batch 2, day 1.",MATRIX,100%,16,16
+img_cnn_feature1_us_ibes_1_b5_d1,"First extracted CNN feature from US analyst chart image, IBES variant 1, batch 5, day 1.",MATRIX,100%,7,8
+img_cnn_feature1_us_ibes_1_b6_d1,"First extracted CNN feature from US analyst chart image, IBES variant 1, batch 6, day 1.",MATRIX,100%,1,2
+img_cnn_feature1_us_ibes_1_d1,"First extracted CNN feature from US analyst chart image, IBES variant 1, day 1.",MATRIX,100%,28,36
+img_cnn_feature1_us_ibes_2_b2_d1,"First extracted CNN feature from US analyst chart image, IBES variant 2, batch 2, day 1.",MATRIX,100%,3,4
+img_cnn_feature1_us_ibes_3_b2_d1,"First extracted CNN feature from US analyst chart image, IBES variant 3, batch 2, day 1.",MATRIX,100%,1,1
+img_cnn_feature1_us_ibes_3_b4_d1,"First extracted CNN feature from US analyst chart image, IBES variant 3, batch 4, day 1.",MATRIX,92%,1,2
+img_cnn_feature1_us_ibes_4_d1,"First extracted CNN feature from US analyst chart image, IBES variant 4, day 1.",MATRIX,90%,1,1
+img_cnn_feature1_us_ibes_5_b6_d1,"First extracted CNN feature from US analyst chart image, IBES variant 5, batch 6, day 1.",MATRIX,100%,2,2
+img_cnn_feature1_us_ibes_6_b6_d1,"First extracted CNN feature from US analyst chart image, IBES variant 6, batch 6, day 1.",MATRIX,100%,1,1
+img_cnn_feature1_us_ibespred_1_b8_d1,"First convolutional neural network feature from US stocks, batch 8, data version 1, using analyst chart images (variant 1).",MATRIX,100%,5,8
+img_cnn_feature1_us_ibespred_3_b7_d1,"First convolutional neural network feature from US stocks, batch 7, data version 1, using analyst chart images (variant 3).",MATRIX,100%,2,2
+img_cnn_feature2_us_ibes_1_b2_d1,"Second extracted CNN feature from US analyst chart image, IBES variant 1, batch 2, day 1.",MATRIX,99%,16,18
+img_cnn_feature2_us_ibes_1_b5_d1,"Second extracted CNN feature from US analyst chart image, IBES variant 1, batch 5, day 1.",MATRIX,100%,3,3
+img_cnn_feature2_us_ibes_1_b6_d1,"Second extracted CNN feature from US analyst chart image, IBES variant 1, batch 6, day 1.",MATRIX,100%,3,7
+img_cnn_feature2_us_ibes_1_d1,"Second extracted CNN feature from US analyst chart image, IBES variant 1, day 1.",MATRIX,95%,4,7
+img_cnn_feature2_us_ibes_2_b2_d1,"Second extracted CNN feature from US analyst chart image, IBES variant 2, batch 2, day 1.",MATRIX,99%,1,1
+img_cnn_feature2_us_ibes_3_b2_d1,"Second extracted CNN feature from US analyst chart image, IBES variant 3, batch 2, day 1.",MATRIX,100%,5,6
+img_cnn_feature2_us_ibes_3_b4_d1,"Second extracted CNN feature from US analyst chart image, IBES variant 3, batch 4, day 1.",MATRIX,100%,0,0
+img_cnn_feature2_us_ibes_4_d1,"Second-level image feature from US analyst chart data, version 4.",MATRIX,100%,2,3
+img_cnn_feature2_us_ibes_5_b6_d1,"Second extracted CNN feature from US analyst chart image, IBES variant 5, batch 6, day 1.",MATRIX,100%,2,2
+img_cnn_feature2_us_ibes_6_b6_d1,"Second extracted CNN feature from US analyst chart image, IBES variant 6, batch 6, day 1.",MATRIX,100%,2,2
+img_cnn_feature2_us_ibespred_1_b8_d1,"Second convolutional neural network feature from US stocks, batch 8, data version 1, using analyst chart images (variant 1).",MATRIX,100%,3,4
+img_cnn_feature2_us_ibespred_2_b8_d1,"Second convolutional neural network feature from US stocks, batch 8, data version 1, using analyst chart images (variant 2).",MATRIX,100%,2,2
+img_cnn_feature2_us_ibespred_3_b7_d1,"Second convolutional neural network feature from US stocks, batch 7, data version 1, using analyst chart images (variant 3).",MATRIX,100%,2,2
+img_cnn_feature3_us_ibes_1_b2_d1,"Third extracted CNN feature from US analyst chart image, IBES variant 1, batch 2, day 1.",MATRIX,99%,2,2
+img_cnn_feature3_us_ibes_1_d1,"Third extracted CNN feature from US analyst chart image, IBES variant 1, day 1.",MATRIX,100%,3,3
+img_cnn_feature3_us_ibes_2_b2_d1,"Deep learning image feature extracted from US analyst data, batch 2, version 3.",MATRIX,99%,3,3
+img_cnn_feature3_us_ibes_3_b2_d1,"Third extracted CNN feature from US analyst chart image, IBES variant 3, batch 2, day 1.",MATRIX,99%,0,0
+img_cnn_feature3_us_ibes_4_d1,"Third extracted CNN feature from US analyst chart image, IBES variant 4, day 1.",MATRIX,100%,2,4
+img_cnn_feature3_us_ibes_6_b6_d1,"Third extracted CNN feature from US analyst chart image, IBES variant 6, batch 6, day 1.",MATRIX,100%,0,0
+img_cnn_feature3_us_ibespred_1_b8_d1,"Third convolutional neural network feature from US stocks, batch 8, data version 1, using analyst chart images (variant 1).",MATRIX,100%,4,4
+img_cnn_feature3_us_ibespred_2_b8_d1,"Third convolutional neural network feature from US stocks, batch 8, data version 1, using analyst chart images (variant 2).",MATRIX,100%,11,11
+img_cnn_feature3_us_ibespred_3_b7_d1,"Third convolutional neural network feature from US stocks, batch 7, data version 1, using analyst chart images (variant 3).",MATRIX,100%,5,6
+img_high_avg_sum_eps_us,Average of the highest consensus earnings per share estimates.,MATRIX,99%,0,0
+img_high_avg_sum_nav_us,Average of the highest NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_high_avg_sum_sal_us,Average of highest total sales consensus values for US stocks.,MATRIX,99%,0,0
+img_high_max_3mth_ago_sum_eps_us,Maximum of the highest consensus earnings per share estimates from three months ago.,MATRIX,79%,0,0
+img_high_max_3mth_ago_sum_nav_us,Maximum of the highest NAV-related estimates from 3 months ago for US companies.,MATRIX,43%,0,0
+img_high_max_4wks_ago_sum_eps_us,Maximum of the highest consensus earnings per share estimates from four weeks ago.,MATRIX,83%,0,0
+img_high_max_4wks_ago_sum_nav_us,Maximum of the highest NAV-related estimates from 4 weeks ago for US companies.,MATRIX,52%,0,0
+img_high_max_sum_eps_us,Maximum of the highest consensus earnings per share estimates.,MATRIX,99%,0,0
+img_high_max_sum_nav_us,Maximum value among the highest NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_high_median_3mth_ago_sum_eps_us,Median of the highest consensus earnings per share estimates from three months ago.,MATRIX,97%,0,0
+img_high_median_3mth_ago_sum_nav_us,Median of the highest NAV-related estimates from 3 months ago for US companies.,MATRIX,91%,0,0
+img_high_median_4wks_ago_sum_eps_us,Median of the highest consensus earnings per share estimates from four weeks ago.,MATRIX,98%,0,0
+img_high_median_4wks_ago_sum_nav_us,Median of the highest NAV-related estimates from 4 weeks ago for US companies.,MATRIX,93%,0,0
+img_high_median_sum_eps_us,Median of the highest consensus earnings per share estimates.,MATRIX,99%,0,0
+img_high_median_sum_nav_us,Median value among the highest NAV-related estimates for US companies.,MATRIX,94%,0,0
+img_high_min_3mth_ago_sum_eps_us,Minimum of the highest consensus earnings per share estimates from three months ago.,MATRIX,96%,0,0
+img_high_min_3mth_ago_sum_nav_us_2,Minimum of the highest consensus net asset value estimates from three months ago.,MATRIX,87%,0,0
+img_high_min_4wks_ago_sum_eps_us,Minimum of the highest consensus earnings per share estimates from four weeks ago.,MATRIX,97%,0,0
+img_high_min_4wks_ago_sum_nav_us,Minimum of the highest NAV-related estimates from 4 weeks ago for US companies.,MATRIX,90%,0,0
+img_high_min_sum_eps_us,Minimum of the highest consensus earnings per share estimates.,MATRIX,99%,0,0
+img_high_min_sum_nav_us,Minimum value among the highest NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_low_avg_sum_eps_us,Average of the lowest consensus earnings per share estimates.,MATRIX,99%,0,0
+img_low_avg_sum_nav_us,Average of the lowest NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_low_avg_sum_sal_us,Average of lowest total sales consensus values for US stocks.,MATRIX,99%,0,0
+img_low_max_3mth_ago_sum_eps_us,Maximum of the lowest consensus earnings per share estimates from three months ago.,MATRIX,78%,0,0
+img_low_max_3mth_ago_sum_nav_us,Maximum of the lowest NAV-related estimates from 3 months ago for US companies.,MATRIX,43%,1,1
+img_low_max_4wks_ago_sum_eps_us,Maximum of the lowest consensus earnings per share estimates from four weeks ago.,MATRIX,83%,0,0
+img_low_max_4wks_ago_sum_nav_us,Maximum of the lowest NAV-related estimates from 4 weeks ago for US companies.,MATRIX,51%,0,0
+img_low_max_sum_eps_us,Maximum of the lowest consensus earnings per share estimates.,MATRIX,99%,0,0
+img_low_max_sum_nav_us,Maximum value among the lowest NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_low_median_3mth_ago_sum_eps_us,Median of the lowest consensus earnings per share estimates from three months ago.,MATRIX,97%,0,0
+img_low_median_3mth_ago_sum_nav_us,Median of the lowest NAV-related estimates from 3 months ago for US companies.,MATRIX,91%,0,0
+img_low_median_4wks_ago_sum_eps_us,Median of the lowest consensus earnings per share estimates from four weeks ago.,MATRIX,98%,0,0
+img_low_median_4wks_ago_sum_nav_us,Median of the lowest NAV-related estimates from 4 weeks ago for US companies.,MATRIX,93%,0,0
+img_low_median_sum_eps_us,Median of the lowest consensus earnings per share estimates.,MATRIX,99%,0,0
+img_low_median_sum_nav_us,Median value among the lowest NAV-related estimates for US companies.,MATRIX,94%,0,0
+img_low_min_3mth_ago_sum_eps_us,Minimum of the lowest consensus earnings per share estimates from three months ago.,MATRIX,96%,0,0
+img_low_min_3mth_ago_sum_nav_us,Minimum of the lowest NAV-related estimates from 3 months ago for US companies.,MATRIX,87%,0,0
+img_low_min_4wks_ago_sum_eps_us,Minimum of the lowest consensus earnings per share estimates from four weeks ago.,MATRIX,97%,1,1
+img_low_min_4wks_ago_sum_nav_us,Minimum of the lowest NAV-related estimates from 4 weeks ago for US companies.,MATRIX,90%,0,0
+img_low_min_sum_eps_us,Minimum of the lowest consensus earnings per share estimates.,MATRIX,99%,0,0
+img_low_min_sum_nav_us,Minimum value among the lowest NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_max_actual_ebit_us,Maximum EBIT actual value reported by analysts for USA stocks as of previous close D1,MATRIX,88%,0,0
+img_mean_avg_ebitda_us_ibessum2rkdconspe,"Average of the IBES consensus mean EBITDA estimates for USA stocks over the recent rolling window, as of previous close (D1)",MATRIX,88%,0,0
+img_mean_avg_eps_us_ibessum2rkdconspe,Arithmetic mean of analyst EPS estimates for US companies.,MATRIX,97%,0,0
+img_mean_avg_sum_eps_us,Average of the average consensus earnings per share estimates.,MATRIX,99%,1,1
+img_mean_avg_sum_nav_us,Average mean of IBES SumNav estimates across all analysts for USA stocks as of D1,MATRIX,96%,0,0
+img_mean_avg_sum_sal_us,Mean average of analyst sales estimates for USA stocks as of T-1,MATRIX,99%,0,0
+img_mean_max_3mth_ago_sum_eps_us,Maximum of the average consensus earnings per share estimates from three months ago.,MATRIX,79%,0,0
+img_mean_max_3mth_ago_sum_nav_us,Maximum of the mean NAV-related estimates from 3 months ago for US companies.,MATRIX,44%,0,0
+img_mean_max_4wks_ago_sum_eps_us,Maximum of the consensus mean EPS (SumEps) estimate over the last 4 weeks as of previous close,MATRIX,83%,0,0
+img_mean_max_4wks_ago_sum_nav_us,Maximum of the mean NAV-related estimates from 4 weeks ago for US companies.,MATRIX,52%,0,0
+img_mean_max_ebitda_us_ibessum2rkdconspe,Maximum of mean EBITDA consensus values for US stocks.,MATRIX,88%,0,0
+img_mean_max_eps_us_ibessum2rkdconspe,Maximum value among the mean EPS estimates for US companies.,MATRIX,97%,0,0
+img_mean_max_flash_sum_eps_us,Maximum of the most recent (flash) average consensus earnings per share estimates.,MATRIX,85%,0,0
+img_mean_max_flash_sum_nav_us_2,Maximum of the most recent (flash) average consensus net asset value estimates.,MATRIX,63%,0,0
+img_mean_max_sum_eps_us,Maximum of the average consensus earnings per share estimates.,MATRIX,99%,0,0
+img_mean_max_sum_nav_us,Maximum value among the mean NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_mean_median_3mth_ago_sum_eps_us,Median of the average consensus earnings per share estimates from three months ago.,MATRIX,97%,0,0
+img_mean_median_3mth_ago_sum_nav_us,Median of the mean NAV-related estimates from 3 months ago for US companies.,MATRIX,91%,0,0
+img_mean_median_4wks_ago_sum_eps_us,Median of the average consensus earnings per share estimates from four weeks ago.,MATRIX,98%,0,0
+img_mean_median_4wks_ago_sum_nav_us,Median of the mean NAV-related estimates from 4 weeks ago for US companies.,MATRIX,93%,0,0
+img_mean_median_ebitda_us_ibessum2rkdconspe,Median of mean EBITDA consensus values for US stocks.,MATRIX,64%,1,1
+img_mean_median_eps_us_ibessum2rkdconspe,Median value of the mean EPS estimates for US companies.,MATRIX,84%,1,1
+img_mean_median_flash_sum_eps_us,Median of the most recent (flash) average consensus earnings per share estimates.,MATRIX,99%,0,0
+img_mean_median_flash_sum_nav_us_2,Median of the most recent (flash) average consensus net asset value estimates.,MATRIX,94%,0,0
+img_mean_median_sum_eps_us,Median of the average consensus earnings per share estimates.,MATRIX,99%,0,0
+img_mean_median_sum_nav_us_2,Median of the average consensus net asset value estimates.,MATRIX,94%,0,0
+img_mean_min_3mth_ago_sum_eps_us,Minimum of the average consensus earnings per share estimates from three months ago.,MATRIX,96%,0,0
+img_mean_min_3mth_ago_sum_nav_us,Minimum of the mean NAV-related estimates from 3 months ago for US companies.,MATRIX,87%,0,0
+img_mean_min_4wks_ago_sum_eps_us,Minimum of the average consensus earnings per share estimates from four weeks ago.,MATRIX,97%,1,1
+img_mean_min_4wks_ago_sum_nav_us,Minimum of the mean NAV-related estimates from 4 weeks ago for US companies.,MATRIX,90%,0,0
+img_mean_min_ebitda_us_ibessum2rkdconspe,Minimum of mean EBITDA consensus values for US stocks.,MATRIX,88%,1,1
+img_mean_min_eps_us_ibessum2rkdconspe,Minimum value among the mean EPS estimates for US companies.,MATRIX,97%,1,1
+img_mean_min_flash_sum_eps_us,Minimum of the most recent (flash) average consensus earnings per share estimates.,MATRIX,97%,0,0
+img_mean_min_flash_sum_nav_us,Minimum of the most recent mean NAV-related estimates for US companies.,MATRIX,85%,0,0
+img_mean_min_sum_eps_us,Minimum of the average consensus earnings per share estimates.,MATRIX,99%,0,0
+img_mean_min_sum_nav_us,Minimum value among the mean NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_mean_q1_ebitda_us_ibessum2rkdconspe,"Mean value of EBITDA consensus for US stocks, first quartile.",MATRIX,64%,0,0
+img_mean_q1_eps_us_ibessum2rkdconspe,First quartile (25th percentile) of the mean EPS estimates for US companies.,MATRIX,83%,1,1
+img_mean_q3_ebitda_us_ibessum2rkdconspe,"Mean value of EBITDA consensus for US stocks, third quartile.",MATRIX,64%,0,0
+img_mean_q3_eps_us_ibessum2rkdconspe,Third quartile (75th percentile) of the mean EPS estimates for US companies.,MATRIX,83%,0,0
+img_mean_sum_ebitda_us_ibessum2rkdconspe,Sum of mean EBITDA consensus values for US stocks.,MATRIX,88%,0,0
+img_mean_sum_eps_us_ibessum2rkdconspe,Sum of analyst EPS estimates divided by the number of estimates for US companies.,MATRIX,97%,0,0
+img_median_avg_ebitda_us_ibessum2rkdconspe,Average of median EBITDA consensus values for US stocks.,MATRIX,88%,1,1
+img_median_avg_eps_us_ibessum2rkdconspe,Median of the average EPS estimates for US companies.,MATRIX,97%,0,0
+img_median_avg_sum_eps_us,Average of the median consensus earnings per share estimates.,MATRIX,99%,0,0
+img_median_avg_sum_nav_us,Median of the average NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_median_avg_sum_sal_us,"Median analyst sales consensus estimate as of previous close (D1), averaged across all analysts, USA universe",MATRIX,99%,0,0
+img_median_max_3mth_ago_sum_eps_us,Maximum of the median consensus earnings per share estimates from three months ago.,MATRIX,79%,0,0
+img_median_max_3mth_ago_sum_nav_us,Maximum of the median NAV-related estimates from 3 months ago for US companies.,MATRIX,44%,0,0
+img_median_max_4wks_ago_sum_eps_us,Maximum of the median consensus earnings per share estimates from four weeks ago.,MATRIX,83%,0,0
+img_median_max_4wks_ago_sum_nav_us,Maximum of the median NAV-related estimates from 4 weeks ago for US companies.,MATRIX,52%,0,0
+img_median_max_ebitda_us_ibessum2rkdconspe,Maximum of median EBITDA consensus values for US stocks.,MATRIX,88%,1,1
+img_median_max_eps_us_ibessum2rkdconspe,Maximum value among the median EPS estimates for US companies.,MATRIX,97%,0,0
+img_median_max_sum_eps_us,Maximum of the median consensus earnings per share estimates.,MATRIX,99%,0,0
+img_median_max_sum_nav_us,Maximum value among the median NAV-related estimates for US companies.,MATRIX,96%,0,0
+img_median_median_3mth_ago_sum_eps_us,Median of the median consensus earnings per share estimates from three months ago.,MATRIX,97%,0,0
+img_median_median_3mth_ago_sum_nav_us,Median of the median NAV-related estimates from 3 months ago for US companies.,MATRIX,91%,0,0
+img_median_median_4wks_ago_sum_eps_us,Median of the median consensus earnings per share estimates from four weeks ago.,MATRIX,98%,0,0
+img_median_median_4wks_ago_sum_nav_us,Median of the median NAV-related estimates from 4 weeks ago for US companies.,MATRIX,93%,1,1
+img_median_median_ebitda_us_ibessum2rkdconspe,Median of median EBITDA consensus values for US stocks.,MATRIX,64%,0,0
+img_median_median_eps_us_ibessum2rkdconspe,Median of the median EPS estimates for US companies.,MATRIX,84%,0,0
+img_median_median_sum_eps_us,Median (over the lookback window) of the consensus median EPS (SumEps) estimate as of previous close,MATRIX,99%,0,0
+img_median_median_sum_nav_us_2,Median of the median consensus net asset value estimates.,MATRIX,94%,0,0
+img_median_min_3mth_ago_sum_eps_us,Minimum of the median consensus earnings per share estimates from three months ago.,MATRIX,96%,0,0
+img_median_min_3mth_ago_sum_nav_us,Minimum of the median NAV-related estimates from 3 months ago for US companies.,MATRIX,87%,0,0
+img_median_min_4wks_ago_sum_eps_us,Minimum of the median consensus earnings per share estimates from four weeks ago.,MATRIX,97%,0,0
+img_median_min_4wks_ago_sum_nav_us,Minimum of the median NAV-related estimates from 4 weeks ago for US companies.,MATRIX,90%,0,0
+img_median_min_ebitda_us_ibessum2rkdconspe,Minimum of median EBITDA consensus values for US stocks.,MATRIX,88%,0,0
+img_median_min_eps_us_ibessum2rkdconspe,Minimum value among the median EPS estimates for US companies.,MATRIX,97%,0,0
+img_median_min_sum_eps_us,Minimum of the consensus median EPS (SumEps) estimate over the lookback window as of previous close,MATRIX,99%,0,0
+img_median_min_sum_nav_us_2,Minimum of the median consensus net asset value estimates.,MATRIX,96%,0,0
+img_median_q1_ebitda_us_ibessum2rkdconspe,"Median value of EBITDA consensus for US stocks, first quartile.",MATRIX,63%,0,0
+img_median_q1_eps_us_ibessum2rkdconspe,First quartile (25th percentile) of analyst EPS estimates for US companies.,MATRIX,79%,0,0
+img_median_q3_ebitda_us_ibessum2rkdconspe,"Median value of EBITDA consensus for US stocks, third quartile.",MATRIX,63%,0,0
+img_median_q3_eps_us_ibessum2rkdconspe,Third quartile (75th percentile) of analyst EPS estimates for US companies.,MATRIX,80%,0,0
+img_median_sum_ebitda_us_ibessum2rkdconspe,Sum of median EBITDA consensus values for US stocks.,MATRIX,88%,0,0
+img_median_sum_eps_us_ibessum2rkdconspe,Sum of median EPS estimates for US companies.,MATRIX,97%,0,0
+img_min_actual_ebit_us,Minimum EBIT actual value reported by analysts for USA stocks as of previous close D1,MATRIX,88%,0,0
+img_pred_r100_q1,Regression-style continuous prediction of 100-day forward return,MATRIX,99%,1,3
+img_pred_r100_q1_2,"Continuous regression prediction estimate of 100-day forward return, CNN analyst model batch 2",MATRIX,99%,0,0
+img_pred_r100_q1_3,Continuous regression output predicting 100-day forward return for USA universe using Ibes_new_1 variant at day T-1,MATRIX,95%,1,1
+img_pred_r100_q2,Quantile assignment (0-based) for 2 quantiles of 100-day forward return prediction,MATRIX,99%,0,0
+img_pred_r100_q2_2,"Model prediction for 100% return threshold, quarter 2, aggregate prediction (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q2_3,"Model prediction for return scenario 100, quantile 2.",MATRIX,95%,0,0
+img_pred_r100_q2_p0,"Model prediction for 100% return threshold, quarter 2, prediction index 0.",MATRIX,99%,0,0
+img_pred_r100_q2_p0_2,"Model prediction for 100% return threshold, quarter 2, prediction index 0 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q2_p0_3,"Model prediction for return scenario 100, quantile 2, parameter 0.",MATRIX,95%,0,0
+img_pred_r100_q2_p1,"Model prediction for 100% return threshold, quarter 2, prediction index 1.",MATRIX,99%,0,0
+img_pred_r100_q2_p1_2,"Model prediction for 100% return threshold, quarter 2, prediction index 1 (second occurrence).",MATRIX,99%,1,1
+img_pred_r100_q2_p1_3,"Model prediction for return scenario 100, quantile 2, parameter 1.",MATRIX,95%,0,0
+img_pred_r100_q3,"Model prediction for 100% return threshold, quarter 3, aggregate prediction.",MATRIX,99%,2,3
+img_pred_r100_q3_2,"Model prediction for 100% return threshold, quarter 3, aggregate prediction (second occurrence).",MATRIX,99%,1,1
+img_pred_r100_q3_3,Quantile assignment (0-based) to one of 3 buckets for the 100-day forward return prediction,MATRIX,95%,0,0
+img_pred_r100_q3_p0,"Model prediction for 100% return threshold, quarter 3, prediction index 0.",MATRIX,99%,1,1
+img_pred_r100_q3_p0_2,"Model prediction for 100% return threshold, quarter 3, prediction index 0 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q3_p0_3,"Model prediction for return scenario 100, quantile 3, parameter 0.",MATRIX,95%,0,0
+img_pred_r100_q3_p1,"Model prediction for 100% return threshold, quarter 3, prediction index 1.",MATRIX,99%,0,0
+img_pred_r100_q3_p1_2,"Model prediction for 100% return threshold, quarter 3, prediction index 1 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q3_p1_3,"Model prediction for return scenario 100, quantile 3, parameter 1.",MATRIX,95%,0,0
+img_pred_r100_q3_p2,"Model prediction for 100% return threshold, quarter 3, prediction index 2.",MATRIX,99%,1,1
+img_pred_r100_q3_p2_2,"Model prediction for 100% return threshold, quarter 3, prediction index 2 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q3_p2_3,"Model prediction for return scenario 100, quantile 3, parameter 2.",MATRIX,95%,0,0
+img_pred_r100_q4,Quantile assignment (0-based) to one of 4 buckets for 100-day forward return prediction,MATRIX,99%,0,0
+img_pred_r100_q4_2,"Model prediction for 100% return threshold, quarter 4, aggregate prediction (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q4_3,"Model prediction for return scenario 100, quantile 4.",MATRIX,95%,1,1
+img_pred_r100_q4_p0,"Model prediction for 100% return threshold, quarter 4, prediction index 0.",MATRIX,99%,2,2
+img_pred_r100_q4_p0_2,"Model prediction for 100% return threshold, quarter 4, prediction index 0 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q4_p0_3,"Model prediction for return scenario 100, quantile 4, parameter 0.",MATRIX,95%,0,0
+img_pred_r100_q4_p1,"Model prediction for 100% return threshold, quarter 4, prediction index 1.",MATRIX,99%,1,1
+img_pred_r100_q4_p1_2,"Model prediction for 100% return threshold, quarter 4, prediction index 1 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q4_p1_3,"Model prediction for return scenario 100, quantile 4, parameter 1.",MATRIX,95%,0,0
+img_pred_r100_q4_p2,"Model prediction for 100% return threshold, quarter 4, prediction index 2.",MATRIX,99%,0,0
+img_pred_r100_q4_p2_2,"Model prediction for 100% return threshold, quarter 4, prediction index 2 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q4_p2_3,"Model prediction for return scenario 100, quantile 4, parameter 2.",MATRIX,95%,0,0
+img_pred_r100_q4_p3,"Model prediction for 100% return threshold, quarter 4, prediction index 3.",MATRIX,99%,0,0
+img_pred_r100_q4_p3_2,"Model prediction for 100% return threshold, quarter 4, prediction index 3 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q4_p3_4,"Model-predicted return for 100-day horizon, quantile 4, parameter set 3.",MATRIX,95%,0,0
+img_pred_r100_q5,"Quantile bucket assignment (0-based) among 5 quantiles for 100-day forward return prediction in USA universe using analyst data variant ""Ibes_new_1"" batch 2, day minus 1",MATRIX,99%,1,1
+img_pred_r100_q5_2,"Quantile assignment (0-based) to one of 5 buckets for 100-day forward return prediction, USA analyst prediction batch 2",MATRIX,99%,0,0
+img_pred_r100_q5_3,"Model prediction for return scenario 100, quantile 5.",MATRIX,95%,0,0
+img_pred_r100_q5_p0,"Model prediction for 100% return threshold, quarter 5, prediction index 0.",MATRIX,99%,0,0
+img_pred_r100_q5_p0_2,"Log(softmax) model confidence score (log probability) for 0th quintile in 100-day forward return prediction, CNN analyst model batch 2",MATRIX,99%,0,0
+img_pred_r100_q5_p0_3,Log-probability (log(softmax)) of this stock-date belonging to the 0th bucket (lowest) out of 5 quantiles for 100-day forward return based on the Ibes new analyst prediction model,MATRIX,95%,0,0
+img_pred_r100_q5_p1,"Model prediction for 100% return threshold, quarter 5, prediction index 1.",MATRIX,99%,0,0
+img_pred_r100_q5_p1_2,"Model prediction for 100% return threshold, quarter 5, prediction index 1 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q5_p1_3,"Model prediction for return scenario 100, quantile 5, parameter 1.",MATRIX,95%,0,0
+img_pred_r100_q5_p2,"Model prediction for 100% return threshold, quarter 5, prediction index 2.",MATRIX,99%,1,1
+img_pred_r100_q5_p2_2,"Log(softmax) model confidence score (log probability) for 2nd quintile in 100-day forward return prediction, CNN analyst model batch 2",MATRIX,99%,1,1
+img_pred_r100_q5_p2_3,"Model prediction for return scenario 100, quantile 5, parameter 2.",MATRIX,95%,0,0
+img_pred_r100_q5_p3,"Model prediction for 100% return threshold, quarter 5, prediction index 3.",MATRIX,99%,0,0
+img_pred_r100_q5_p3_2,"Model prediction for 100% return threshold, quarter 5, prediction index 3 (second occurrence).",MATRIX,99%,4,4
+img_pred_r100_q5_p3_3,"Model prediction for return scenario 100, quantile 5, parameter 3.",MATRIX,95%,0,0
+img_pred_r100_q5_p4,"Model prediction for 100% return threshold, quarter 5, prediction index 4.",MATRIX,99%,1,1
+img_pred_r100_q5_p4_2,"Model prediction for 100% return threshold, quarter 5, prediction index 4 (second occurrence).",MATRIX,99%,0,0
+img_pred_r100_q5_p4_3,"Model prediction for return scenario 100, quantile 5, parameter 4.",MATRIX,95%,0,0
+img_pred_r10_q1,Continuous regression prediction (float) for 10-day forward return based on the Ibes new analyst prediction model; needs winsorization,MATRIX,95%,0,0
+img_pred_r10_q1_2,Continuous regression prediction of 10-day forward return in the USA universe,MATRIX,100%,1,1
+img_pred_r10_q2,Assigned quantile bucket (0 or 1) for 10-day forward return prediction in USA universe,MATRIX,95%,1,1
+img_pred_r10_q2_2,"Assigned quantile bucket (0-based) for the 10-day forward return prediction, with 2 quantiles",MATRIX,100%,1,1
+img_pred_r10_q2_p0,"Model prediction for return scenario 10, quantile 2, parameter 0.",MATRIX,95%,0,0
+img_pred_r10_q2_p0_2,Log(softmax) probability of assignment to bucket 0 for 10-day forward return tercile prediction (3 buckets total),MATRIX,100%,0,0
+img_pred_r10_q2_p1,"Model prediction for return scenario 10, quantile 2, parameter 1.",MATRIX,95%,0,0
+img_pred_r10_q2_p1_2,"Model-predicted return for 10-day horizon, quantile 2, parameter set 1 (variant 2).",MATRIX,100%,1,1
+img_pred_r10_q3,Quantile assignment (0-based) for this stock-date belonging to one of 3 quantiles for 10-day forward return based on the Ibes new analyst prediction model,MATRIX,95%,0,0
+img_pred_r10_q3_2,"Assigned quantile bucket (0-based) for the 10-day forward return prediction, with 3 quantiles",MATRIX,100%,0,0
+img_pred_r10_q3_p0,"Model prediction for return scenario 10, quantile 3, parameter 0.",MATRIX,95%,0,0
+img_pred_r10_q3_p0_2,"Model-predicted return for 10-day horizon, quantile 3, parameter set 0 (variant 2).",MATRIX,100%,0,0
+img_pred_r10_q3_p1,"Model prediction for return scenario 10, quantile 3, parameter 1.",MATRIX,95%,0,0
+img_pred_r10_q3_p1_2,"Model-predicted return for 10-day horizon, quantile 3, parameter set 1 (variant 2).",MATRIX,100%,0,0
+img_pred_r10_q3_p2,Log(softmax) model probability of bucket 2 out of 3 for 10-day forward return prediction in USA universe,MATRIX,95%,0,0
+img_pred_r10_q3_p2_2,Log(softmax) probability of assignment to bucket 2 for 10-day forward return tercile prediction (3 buckets total),MATRIX,100%,0,0
+img_pred_r10_q4,Quantile assignment (0-based) to one of 4 buckets for the 10-day forward return prediction,MATRIX,95%,0,0
+img_pred_r10_q4_2,"Model-predicted return for 10-day horizon, quantile 4.",MATRIX,100%,0,0
+img_pred_r10_q4_p0,Log(softmax) model probability of bucket 0 out of 4 for 10-day forward return prediction in USA universe,MATRIX,95%,0,0
+img_pred_r10_q4_p0_2,"Model-predicted return for 10-day horizon, quantile 4, parameter set 0.",MATRIX,100%,1,1
+img_pred_r10_q4_p1,"Model prediction for return scenario 10, quantile 4, parameter 1.",MATRIX,95%,0,0
+img_pred_r10_q4_p1_2,"Model-predicted return for 10-day horizon, quantile 4, parameter set 1 (variant 2).",MATRIX,100%,0,0
+img_pred_r10_q4_p2,"Model prediction for return scenario 10, quantile 4, parameter 2.",MATRIX,95%,0,0
+img_pred_r10_q4_p2_2,"Model-predicted return for 10-day horizon, quantile 4, parameter set 2 (variant 2).",MATRIX,100%,0,0
+img_pred_r10_q4_p3,"Model prediction for return scenario 10, quantile 4, parameter 3.",MATRIX,95%,0,0
+img_pred_r10_q4_p3_2,"Model-predicted return for 10-day horizon, quantile 4, parameter set 3 (variant 2).",MATRIX,100%,2,2
+img_pred_r10_q5,Quantile assignment (0-based) to one of 5 buckets for the 10-day forward return prediction,MATRIX,95%,2,8
+img_pred_r10_q5_2,Quantile assignment (0-based) to one of 5 buckets for the 10-day forward return prediction in the USA universe,MATRIX,100%,2,2
+img_pred_r10_q5_p0,Log(softmax) model probability of bucket 0 out of 5 for 10-day forward return prediction in USA universe,MATRIX,95%,0,0
+img_pred_r10_q5_p0_2,"Model-predicted return for 10-day horizon, quantile 5, parameter set 0 (variant 2).",MATRIX,100%,0,0
+img_pred_r10_q5_p1_3,Log(softmax) model probability of bucket 1 out of 5 for 10-day forward return prediction in USA universe,MATRIX,95%,0,0
+img_pred_r10_q5_p1_4,"Model-predicted return for 10-day horizon, quantile 5, parameter set 1 (variant 4).",MATRIX,100%,1,1
+img_pred_r10_q5_p2,"Model prediction for return scenario 10, quantile 5, parameter 2.",MATRIX,95%,0,0
+img_pred_r10_q5_p2_2,Log(softmax) probability of assignment to bucket 2 for 10-day forward return quintile prediction (5 buckets total),MATRIX,100%,0,0
+img_pred_r10_q5_p3_2,"Model-predicted return for 10-day horizon, quantile 5, parameter set 3.",MATRIX,95%,1,1
+img_pred_r10_q5_p3_3,"Model-predicted return for 10-day horizon, quantile 5, parameter set 3 (variant 3).",MATRIX,100%,0,0
+img_pred_r10_q5_p4,Log(softmax) model probability of bucket 4 out of 5 for 10-day forward return prediction in USA universe,MATRIX,95%,0,0
+img_pred_r10_q5_p4_2,"Model-predicted return for 10-day horizon, quantile 5, parameter set 4 (variant 2).",MATRIX,100%,1,1
+img_pred_r120_q1,"Continuous regression prediction estimate of 120-day forward return, CNN analyst model batch 2",MATRIX,99%,0,0
+img_pred_r120_q1_2,"Continuous regression prediction of 120-day forward return (float) based on IBES analyst data, batch 2 variant, as-of previous day close",MATRIX,99%,1,1
+img_pred_r120_q2,"Model prediction for 120% return threshold, quarter 2, aggregate prediction.",MATRIX,99%,1,2
+img_pred_r120_q2_2,"Quantile assignment (0-based, 3 buckets) for 120-day forward return prediction in USA universe, batch 2 variant",MATRIX,99%,0,0
+img_pred_r120_q2_p0,"Model prediction for 120% return threshold, quarter 2, prediction index 0.",MATRIX,99%,0,0
+img_pred_r120_q2_p0_2,"Model-predicted return for 120-day horizon, quantile 2, parameter 0.",MATRIX,99%,0,0
+img_pred_r120_q2_p1,"Model prediction for 120% return threshold, quarter 2, prediction index 1.",MATRIX,99%,0,0
+img_pred_r120_q2_p1_2,"Model-predicted return for 120-day horizon, quantile 2, parameter 1.",MATRIX,99%,0,0
+img_pred_r120_q3,"Model prediction for 120% return threshold, quarter 3, aggregate prediction.",MATRIX,99%,0,0
+img_pred_r120_q3_2,"Quantile assignment (0-based) for 120-day forward return into one of 3 buckets (terciles) predicted by a CNN-based analyst model using IBES new_3 data, batch 2 variant, as of T-1",MATRIX,99%,0,0
+img_pred_r120_q3_p0,"Log(softmax) model confidence score (log probability) for 0th tercile in 120-day forward return prediction, CNN analyst model batch 2",MATRIX,99%,0,0
+img_pred_r120_q3_p0_2,"Model-predicted return for 120-day horizon, quantile 3, parameter 0 (alternate).",MATRIX,99%,1,1
+img_pred_r120_q3_p1,"Model prediction for 120% return threshold, quarter 3, prediction index 1.",MATRIX,99%,0,0
+img_pred_r120_q3_p1_2,"Model-predicted return for 120-day horizon, quantile 3, parameter 1.",MATRIX,99%,0,0
+img_pred_r120_q3_p2,"Model prediction for 120% return threshold, quarter 3, prediction index 2.",MATRIX,99%,0,0
+img_pred_r120_q3_p2_2,"Model-predicted return for 120-day horizon, quantile 3, parameter 2.",MATRIX,99%,0,0
+img_pred_r120_q4,"Model prediction for 120% return threshold, quarter 4, aggregate prediction.",MATRIX,99%,0,0
+img_pred_r120_q4_3,"Model-predicted return for 120-day horizon, quantile 4 (alternate).",MATRIX,99%,0,0
+img_pred_r120_q4_p0,"Model prediction for 120% return threshold, quarter 4, prediction index 0.",MATRIX,99%,1,1
+img_pred_r120_q4_p0_2,"Model-predicted return for 120-day horizon, quantile 4, parameter 0.",MATRIX,99%,0,0
+img_pred_r120_q4_p1,"Model prediction for 120% return threshold, quarter 4, prediction index 1.",MATRIX,99%,0,0
+img_pred_r120_q4_p1_2,"Model-predicted return for 120-day horizon, quantile 4, parameter 1.",MATRIX,99%,0,0
+img_pred_r120_q4_p2,"Model prediction for 120% return threshold, quarter 4, prediction index 2.",MATRIX,99%,0,0
+img_pred_r120_q4_p2_2,"Model-predicted return for 120-day horizon, quantile 4, parameter 2 (alternate).",MATRIX,99%,0,0
+img_pred_r120_q4_p3,"Model prediction for 120% return threshold, quarter 4, prediction index 3.",MATRIX,99%,0,0
+img_pred_r120_q4_p3_2,"Model-predicted return for 120-day horizon, quantile 4, parameter 3 (alternate).",MATRIX,99%,0,0
+img_pred_r120_q5,Assigned 0-based quintile (0 low to 4 high) for 120-day forward return prediction from CNN analyst model batch 2,MATRIX,99%,0,0
+img_pred_r120_q5_3,"Model-predicted return for 120-day horizon, quantile 5.",MATRIX,99%,0,0
+img_pred_r120_q5_p0,"Model prediction for 120% return threshold, quarter 5, prediction index 0.",MATRIX,99%,0,0
+img_pred_r120_q5_p0_2,"Model-predicted return for 120-day horizon, quantile 5, parameter 0.",MATRIX,99%,0,0
+img_pred_r120_q5_p1,"Model prediction for 120% return threshold, quarter 5, prediction index 1.",MATRIX,99%,0,0
+img_pred_r120_q5_p1_2,"Model-predicted return for 120-day horizon, quantile 5, parameter 1 (alternate).",MATRIX,99%,0,0
+img_pred_r120_q5_p2,"Model prediction for 120% return threshold, quarter 5, prediction index 2.",MATRIX,99%,1,1
+img_pred_r120_q5_p2_2,"Model-predicted return for 120-day horizon, quantile 5, parameter 2.",MATRIX,99%,0,0
+img_pred_r120_q5_p3,"Log(softmax) model confidence score (log probability) for 3rd quintile in 120-day forward return prediction, CNN analyst model batch 2",MATRIX,99%,0,0
+img_pred_r120_q5_p3_2,"Model-predicted return for 120-day horizon, quantile 5, parameter 3.",MATRIX,99%,0,0
+img_pred_r120_q5_p4,"Model prediction for 120% return threshold, quarter 5, prediction index 4.",MATRIX,99%,0,0
+img_pred_r120_q5_p4_2,"Model-predicted return for 120-day horizon, quantile 5, parameter 4.",MATRIX,99%,0,0
+img_pred_r60_q1,Regression-style continuous prediction of 60-day forward return in USA universe using new Ibes data variant 4 at D1,MATRIX,100%,0,0
+img_pred_r60_q2,"Model-predicted return for 60-day horizon, quantile 2.",MATRIX,100%,2,2
+img_pred_r60_q2_p0,"Model-predicted return for 60-day horizon, quantile 2, parameter set 0.",MATRIX,100%,0,0
+img_pred_r60_q2_p1,"Model-predicted return for 60-day horizon, quantile 2, parameter set 1.",MATRIX,100%,1,3
+img_pred_r60_q3,"Assigned quantile bucket (0-based) for the 60-day forward return prediction, with 3 quantiles",MATRIX,100%,1,1
+img_pred_r60_q3_p0,"Model-predicted return for 60-day horizon, quantile 3, parameter set 0.",MATRIX,100%,1,1
+img_pred_r60_q3_p1,"Model-predicted return for 60-day horizon, quantile 3, parameter set 1.",MATRIX,100%,0,0
+img_pred_r60_q3_p2,"Model-predicted return for 60-day horizon, quantile 3, parameter set 2.",MATRIX,100%,0,0
+img_pred_r60_q4,Quantile assignment (0-based) to the 4th bucket out of 5 quantiles for the 60-day forward return prediction in the USA universe,MATRIX,100%,0,0
+img_pred_r60_q4_p0,"Model-predicted return for 60-day horizon, quantile 4, parameter set 0.",MATRIX,100%,0,0
+img_pred_r60_q4_p1,"Model-predicted return for 60-day horizon, quantile 4, parameter set 1.",MATRIX,100%,0,0
+img_pred_r60_q4_p2,"Model-predicted return for 60-day horizon, quantile 4, parameter set 2.",MATRIX,100%,1,1
+img_pred_r60_q4_p3,"Model-predicted return for 60-day horizon, quantile 4, parameter set 3.",MATRIX,100%,0,0
+img_pred_r60_q5,"Model-predicted return for 60-day horizon, quantile 5.",MATRIX,100%,1,6
+img_pred_r60_q5_p0,"Model-predicted return for 60-day horizon, quantile 5, parameter set 0.",MATRIX,100%,0,0
+img_pred_r60_q5_p1,Log(softmax) probability of assignment to bucket 1 for 60-day forward return quintile prediction (5 buckets total),MATRIX,100%,0,0
+img_pred_r60_q5_p2,"Model-predicted return for 60-day horizon, quantile 5, parameter set 2.",MATRIX,100%,0,0
+img_pred_r60_q5_p3,Log(softmax) probability of assignment to bucket 3 for 60-day forward return quintile prediction (5 buckets total),MATRIX,100%,1,1
+img_pred_r60_q5_p4,"Model-predicted return for 60-day horizon, quantile 5, parameter set 4.",MATRIX,100%,0,0
+img_pred_r75_q1,Regression-style continuous prediction of 75-day forward return,MATRIX,99%,0,0
+img_pred_r75_q2,Quantile assignment (0-based) to one of 2 buckets for 75-day forward return prediction,MATRIX,99%,0,0
+img_pred_r75_q2_p0,"Model prediction for 75% return threshold, quarter 2, prediction index 0.",MATRIX,99%,0,0
+img_pred_r75_q2_p1,"Model prediction for 75% return threshold, quarter 2, prediction index 1.",MATRIX,99%,0,0
+img_pred_r75_q3,"Model prediction for 75% return threshold, quarter 3, aggregate prediction.",MATRIX,99%,0,0
+img_pred_r75_q3_p0,"Model prediction for 75% return threshold, quarter 3, prediction index 0.",MATRIX,99%,0,0
+img_pred_r75_q3_p1,"Model prediction for 75% return threshold, quarter 3, prediction index 1.",MATRIX,99%,0,0
+img_pred_r75_q3_p2,"Model prediction for 75% return threshold, quarter 3, prediction index 2.",MATRIX,99%,0,0
+img_pred_r75_q4,"Model prediction for 75% return threshold, quarter 4, aggregate prediction.",MATRIX,99%,0,0
+img_pred_r75_q4_p0,"Model prediction for 75% return threshold, quarter 4, prediction index 0.",MATRIX,99%,1,1
+img_pred_r75_q4_p1,"Model prediction for 75% return threshold, quarter 4, prediction index 1.",MATRIX,99%,0,0
+img_pred_r75_q4_p2,"Model prediction for 75% return threshold, quarter 4, prediction index 2.",MATRIX,99%,0,0
+img_pred_r75_q4_p3,"Model prediction for 75% return threshold, quarter 4, prediction index 3.",MATRIX,99%,0,0
+img_pred_r75_q5,"Model prediction for 75% return threshold, quarter 5, aggregate prediction.",MATRIX,99%,0,0
+img_pred_r75_q5_p0,"Model prediction for 75% return threshold, quarter 5, prediction index 0.",MATRIX,99%,0,0
+img_pred_r75_q5_p1,"Model prediction for 75% return threshold, quarter 5, prediction index 1.",MATRIX,99%,1,1
+img_pred_r75_q5_p2,"Model prediction for 75% return threshold, quarter 5, prediction index 2.",MATRIX,99%,0,0
+img_pred_r75_q5_p3,"Model prediction for 75% return threshold, quarter 5, prediction index 3.",MATRIX,99%,0,0
+img_pred_r75_q5_p4,"Model prediction for 75% return threshold, quarter 5, prediction index 4.",MATRIX,99%,0,0
+img_pred_r90_q1,"Continuous regression prediction of 90-day forward return predicted by a CNN-based analyst model using IBES new_3 data, batch 2 variant, as of T-1",MATRIX,99%,0,0
+img_pred_r90_q2_2,"Model-predicted return for 90-day horizon, quantile 2.",MATRIX,99%,0,0
+img_pred_r90_q2_p0,"Model-predicted return for 90-day horizon, quantile 2, parameter 0.",MATRIX,99%,0,0
+img_pred_r90_q2_p1_2,"Model-predicted return for 90-day horizon, quantile 2, parameter 1.",MATRIX,99%,0,0
+img_pred_r90_q3_2,"Quantile assignment (0-based, 3 buckets) for 90-day forward return prediction in USA universe, batch 2 variant",MATRIX,99%,0,0
+img_pred_r90_q3_p0_2,"Model-predicted return for 90-day horizon, quantile 3, parameter 0.",MATRIX,99%,0,0
+img_pred_r90_q3_p1,"Model-predicted return for 90-day horizon, quantile 3, parameter 1.",MATRIX,99%,0,0
+img_pred_r90_q3_p2_2,"Model-predicted return for 90-day horizon, quantile 3, parameter 2.",MATRIX,99%,0,0
+img_pred_r90_q4,"Model-predicted return for 90-day horizon, quantile 4.",MATRIX,99%,0,0
+img_pred_r90_q4_p0_2,"Model-predicted return for 90-day horizon, quantile 4, parameter 0.",MATRIX,99%,0,0
+img_pred_r90_q4_p1_2,"Model-predicted return for 90-day horizon, quantile 4, parameter 1.",MATRIX,99%,0,0
+img_pred_r90_q4_p2,"Model-predicted return for 90-day horizon, quantile 4, parameter 2.",MATRIX,99%,0,0
+img_pred_r90_q4_p3_2,"Model-predicted return for 90-day horizon, quantile 4, parameter 3.",MATRIX,99%,0,0
+img_pred_r90_q5_2,"Model-predicted return for 90-day horizon, quantile 5.",MATRIX,99%,0,0
+img_pred_r90_q5_p0_2,"Model-predicted return for 90-day horizon, quantile 5, parameter 0.",MATRIX,99%,1,1
+img_pred_r90_q5_p1_2,"Model-predicted return for 90-day horizon, quantile 5, parameter 1.",MATRIX,99%,0,0
+img_pred_r90_q5_p2_2,"Model-predicted return for 90-day horizon, quantile 5, parameter 2 (alternate).",MATRIX,99%,0,0
+img_pred_r90_q5_p3_2,"Model-predicted return for 90-day horizon, quantile 5, parameter 3.",MATRIX,99%,0,0
+img_pred_r90_q5_p4_2,"Model-predicted return for 90-day horizon, quantile 5, parameter 4.",MATRIX,99%,0,0
+img_std_max_3mth_ago_sum_eps_us,Maximum of the standard deviation of consensus earnings per share estimates from three months ago.,MATRIX,66%,0,0
+img_std_max_4wks_ago_sum_eps_us,Maximum of the standard deviation of consensus earnings per share estimates from four weeks ago.,MATRIX,69%,0,0
+img_std_max_flash_sum_eps_us,Maximum of the most recent (flash) standard deviation of consensus earnings per share estimates.,MATRIX,66%,0,0
+img_std_max_sum_eps_us,Maximum of the standard deviation of consensus earnings per share estimates.,MATRIX,73%,0,0
+img_std_max_sum_nav_us,Maximum value among the standard deviation of NAV-related estimates for US companies.,MATRIX,29%,0,0
+img_std_median_3mth_ago_sum_eps_us,Median of the standard deviation of consensus earnings per share estimates from three months ago.,MATRIX,93%,0,0
+img_std_median_3mth_ago_sum_nav_us,Median of the standard deviation of NAV-related estimates from 3 months ago for US companies.,MATRIX,71%,0,0
+img_std_median_4wks_ago_sum_eps_us,Median of the standard deviation of consensus earnings per share estimates from four weeks ago.,MATRIX,94%,0,0
+img_std_median_4wks_ago_sum_nav_us,Median of the standard deviation of NAV-related estimates from 4 weeks ago for US companies.,MATRIX,71%,0,0
+img_std_median_flash_sum_eps_us,Median of the most recent (flash) standard deviation of consensus earnings per share estimates.,MATRIX,92%,1,1
+img_std_median_flash_sum_nav_us,Median of the most recent standard deviation of NAV-related estimates for US companies.,MATRIX,64%,0,0
+img_std_median_sum_eps_us,Median of the standard deviation of consensus earnings per share estimates.,MATRIX,94%,0,0
+img_std_median_sum_nav_us,Median value of the standard deviation of NAV-related estimates for US companies.,MATRIX,72%,0,0
+img_std_min_3mth_ago_sum_eps_us,Minimum of the standard deviation of consensus earnings per share estimates from three months ago.,MATRIX,87%,0,0
+img_std_min_3mth_ago_sum_nav_us,Minimum standard deviation of NAV-related estimates from 3 months ago for US companies.,MATRIX,58%,0,0
+img_std_min_4wks_ago_sum_eps_us,Minimum of the standard deviation of consensus earnings per share estimates from four weeks ago.,MATRIX,89%,0,0
+img_std_min_4wks_ago_sum_nav_us,Minimum standard deviation of NAV-related estimates from 4 weeks ago for US companies.,MATRIX,58%,0,0
+img_std_min_flash_sum_eps_us,Minimum of the most recent (flash) standard deviation of consensus earnings per share estimates.,MATRIX,86%,0,0
+img_std_min_flash_sum_nav_us,Minimum of the most recent standard deviation of NAV-related estimates for US companies.,MATRIX,50%,0,0
+img_std_min_sum_eps_us,Minimum of the standard deviation of consensus earnings per share estimates.,MATRIX,90%,1,1
+img_std_min_sum_nav_us,Minimum value among the standard deviation of NAV-related estimates for US companies.,MATRIX,60%,0,0
+img_sum_actual_ebit_us,Sum of actual reported EBIT values for the selected group.,MATRIX,88%,0,0

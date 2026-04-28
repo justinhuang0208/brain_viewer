@@ -1,0 +1,161 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv52_asdaq_atquote_avg_time_sec,"Average time to execute for at-the-quote executions (at the NBBO), in seconds",VECTOR,84%,13,39
+pv52_asdaq_atquote_shares,Shares executed at the prevailing NBBO at execution,VECTOR,100%,8,36
+pv52_asdaq_avg_eff_spread,Average Effective Spread (in USD),VECTOR,100%,3,4
+pv52_asdaq_avg_rlzd_spread,Average Realized Spread (in USD),VECTOR,100%,5,6
+pv52_asdaq_away_exec_shares,Shares executed at venues away from the reporting market center,VECTOR,100%,5,6
+pv52_asdaq_bx_atquote_avg_time_sec,"Average time associated with at-the-quote executions, in seconds",VECTOR,32%,5,5
+pv52_asdaq_bx_atquote_shares,Shares executed at the prevailing NBBO (at the quote),VECTOR,100%,1,3
+pv52_asdaq_bx_avg_eff_spread,Average Effective Spread (in USD),VECTOR,100%,1,1
+pv52_asdaq_bx_avg_rlzd_spread,Average Realized Spread (in USD),VECTOR,100%,5,9
+pv52_asdaq_bx_away_exec_shares,Shares executed at a venue other than the reporting market center,VECTOR,100%,3,5
+pv52_asdaq_bx_cncld_shares,Number of shares canceled or rejected within the covered orders,VECTOR,100%,2,3
+pv52_asdaq_bx_mkt_cntr_exec_trades,Market Center Executed Shares,VECTOR,100%,4,4
+pv52_asdaq_bx_order_size_code,"Encoded order size bucket for the orders (e.g., 100–499, 500–1,999, 2,000–4,999, 5,000+ shares)",VECTOR,100%,0,0
+pv52_asdaq_bx_order_type_code,"Encoded order type bucket for the orders (e.g., market, marketable limit, inside/at/near-quote limit); decode via the file’s lookup",VECTOR,100%,7,8
+pv52_asdaq_bx_outquote_avg_amt,Outside-the-Quote Average Amount (in USD),VECTOR,82%,0,0
+pv52_asdaq_bx_outquote_shares,Shares executed outside the prevailing NBBO,VECTOR,100%,2,2
+pv52_asdaq_bx_price_imprvd_avg_amt,"Average per-share price improvement amount, in USD",VECTOR,100%,0,0
+pv52_asdaq_bx_price_imprvd_shares,Shares executed with price improvement,VECTOR,100%,4,4
+pv52_asdaq_bx_shares_0_9_sec,Shares executed 0 to 9 seconds after order receipt,VECTOR,100%,0,0
+pv52_asdaq_bx_shares_10_29_sec,Shares executed 10 to 29 seconds after order receipt,VECTOR,100%,3,3
+pv52_asdaq_bx_shares_30_59_sec,Shares executed 30 to 59 seconds after order receipt,VECTOR,100%,4,10
+pv52_asdaq_bx_shares_5_30_min,Shares executed 5 to 30 minutes after order receipt,VECTOR,100%,1,1
+pv52_asdaq_bx_shares_60_299_sec,Shares executed 60 to 299 seconds after order receipt,VECTOR,100%,0,0
+pv52_asdaq_bx_tot_cov_order,Total number of covered orders in the bucket,VECTOR,100%,2,2
+pv52_asdaq_bx_tot_cov_shares,Total covered shares in the bucket,VECTOR,100%,1,2
+pv52_asdaq_cncld_shares,Number of shares canceled or rejected (not executed),VECTOR,100%,5,11
+pv52_asdaq_mkt_cntr_exec_trades,Market Center Executed Shares,VECTOR,100%,3,5
+pv52_asdaq_order_size_code,"Code indicating the order size bucket (e.g., 21=100–499, 22=500–1,999, 23=2,000–4,999, 24=5,000+ shares)",VECTOR,100%,7,11
+pv52_asdaq_order_type_code,"Code indicating the order type per Rule 605 buckets (e.g., 11=Market, 12=Marketable limit, 13=Inside-the-quote limit, 14=At-the-quote limit, 15=Near-the-quote limit)",VECTOR,100%,1,1
+pv52_asdaq_outquote_avg_amt,"Average per-share amount by which execution price was outside the NBBO, in USD",VECTOR,100%,3,4
+pv52_asdaq_outquote_avg_time_sec,"Average time to execute for outside-the-quote executions, in seconds",VECTOR,69%,1,1
+pv52_asdaq_outquote_shares,Shares executed outside the prevailing NBBO,VECTOR,100%,1,1
+pv52_asdaq_price_imprvd_avg_amt,"Average per-share price improvement versus the NBBO at execution, in USD",VECTOR,100%,2,2
+pv52_asdaq_price_imprvd_shares,Shares executed with price improvement relative to the NBBO,VECTOR,100%,3,3
+pv52_asdaq_psx_atquote_avg_time_sec,"Average time to execution for at-the-quote shares, in seconds",VECTOR,30%,0,0
+pv52_asdaq_psx_atquote_shares,Number of shares executed at the prevailing NBBO at execution time,VECTOR,100%,1,1
+pv52_asdaq_psx_avg_eff_spread,Average Effective Spread (in USD),VECTOR,100%,0,0
+pv52_asdaq_psx_avg_rlzd_spread,Average Realized Spread (in USD),VECTOR,100%,2,2
+pv52_asdaq_psx_away_exec_shares,Number of shares executed at venues other than the reporting market center,VECTOR,100%,1,1
+pv52_asdaq_psx_cncld_shares,Number of shares canceled or rejected (not executed),VECTOR,100%,4,5
+pv52_asdaq_psx_mkt_cntr_exec_trades,Market Center Executed Shares,VECTOR,100%,3,3
+pv52_asdaq_psx_order_size_code,"Coded order size bucket (e.g., 21=100–499, 22=500–1,999, 23=2,000–4,999, 24=5,000+ shares)",VECTOR,100%,0,0
+pv52_asdaq_psx_order_type_code,"Coded order type bucket (e.g., 11=Market, 12=Marketable limit, 13=Inside-the-quote limit, 14=At-the-quote limit, 15=Near-the-quote limit)",VECTOR,100%,3,4
+pv52_asdaq_psx_outquote_avg_amt,"Average per-share price difference for out-of-quote executions relative to NBBO, in USD (vendor-defined sign convention)",VECTOR,70%,0,0
+pv52_asdaq_psx_outquote_shares,Number of shares executed outside the prevailing NBBO at the time of execution,VECTOR,100%,2,3
+pv52_asdaq_psx_price_imprvd_avg_amt,"Average per-share price improvement amount relative to NBBO, in USD",VECTOR,100%,1,1
+pv52_asdaq_psx_price_imprvd_shares,Number of shares executed with price improvement at the reporting venue,VECTOR,100%,3,3
+pv52_asdaq_psx_shares_0_9_sec,Number of shares executed within 0–9 seconds after order receipt,VECTOR,100%,0,0
+pv52_asdaq_psx_shares_10_29_sec,Number of shares executed 10–29 seconds after order receipt,VECTOR,100%,1,1
+pv52_asdaq_psx_shares_30_59_sec,Number of shares executed 30–59 seconds after order receipt,VECTOR,100%,4,5
+pv52_asdaq_psx_shares_5_30_min,Number of shares executed 5–30 minutes after order receipt,VECTOR,100%,0,0
+pv52_asdaq_psx_shares_60_299_sec,Number of shares executed 60–299 seconds (about 1–5 minutes) after order receipt,VECTOR,100%,1,1
+pv52_asdaq_psx_tot_cov_order,Total number of covered orders included in this venue/participant/order-type/size bucket,VECTOR,100%,3,3
+pv52_asdaq_psx_tot_cov_shares,Total number of shares covered by Rule 605 in this bucket,VECTOR,100%,1,1
+pv52_asdaq_shares_0_9_sec,Shares executed 0–9 seconds after order receipt,VECTOR,100%,2,2
+pv52_asdaq_shares_10_29_sec,Shares executed 10–29 seconds after order receipt,VECTOR,100%,1,2
+pv52_asdaq_shares_30_59_sec,Shares executed 30–59 seconds after order receipt,VECTOR,100%,1,1
+pv52_asdaq_shares_5_30_min,Shares executed 5–30 minutes after order receipt,VECTOR,100%,1,1
+pv52_asdaq_shares_60_299_sec,Shares executed 60–299 seconds after order receipt,VECTOR,100%,2,2
+pv52_asdaq_tot_cov_order,Total number of covered orders in the bucket,VECTOR,100%,1,1
+pv52_asdaq_tot_cov_shares,Total covered shares in the bucket,VECTOR,100%,0,0
+pv52_yse_american_atquote_shares,Shares executed at the prevailing NBBO at the time of execution,VECTOR,100%,2,3
+pv52_yse_american_avg_eff_spread,Average Effective Spread (in USD),VECTOR,100%,2,2
+pv52_yse_american_avg_rlzd_spread,Average Realized Spread (in USD),VECTOR,100%,0,0
+pv52_yse_american_away_exec_shares,Shares executed at a venue other than the reporting market center,VECTOR,70%,3,5
+pv52_yse_american_cncld_shares,Number of shares canceled or not executed (canceled/rejected shares),VECTOR,100%,4,6
+pv52_yse_american_mkt_cntr_exec_trades,Market Center Executed Shares,VECTOR,100%,4,4
+pv52_yse_american_order_size_code,"Code for order size bucket (21: 100–499, 22: 500–1,999, 23: 2,000–4,999, 24: 5,000+ shares)",VECTOR,100%,9,10
+pv52_yse_american_order_type_code,"Code indicating the order type bucket (e.g., 11 Market, 12 Marketable Limit, 13 Inside-quote, 14 At-quote, 15 Near-quote)",VECTOR,100%,9,13
+pv52_yse_american_outquote_avg_amt,Outside-the-Quote Average Amount (in USD),VECTOR,86%,13,18
+pv52_yse_american_outquote_shares,Shares executed outside the prevailing NBBO at the time of execution,VECTOR,100%,0,0
+pv52_yse_american_price_imprvd_avg_amt,Average dollar amount of price improvement per share,VECTOR,89%,6,6
+pv52_yse_american_price_imprvd_shares,Shares executed with price improvement relative to the NBBO,VECTOR,100%,7,9
+pv52_yse_american_shares_0_9_sec,Shares executed within 0 to 9 seconds after order receipt,VECTOR,100%,7,7
+pv52_yse_american_shares_10_29_sec,Shares executed within 10 to 29 seconds after order receipt,VECTOR,100%,3,3
+pv52_yse_american_shares_30_59_sec,Shares executed within 30 to 59 seconds after order receipt,VECTOR,100%,5,5
+pv52_yse_american_shares_5_30_min,Shares executed within 5 to 30 minutes after order receipt,VECTOR,94%,1,1
+pv52_yse_american_shares_60_299_sec,Shares executed within 60 to 299 seconds after order receipt,VECTOR,100%,4,5
+pv52_yse_american_tot_cov_order,Total number of covered orders in the bucket under SEC Rule 605,VECTOR,100%,2,4
+pv52_yse_american_tot_cov_shares,Total shares associated with the covered orders in the bucket,VECTOR,100%,9,16
+pv52_yse_arca_atquote_avg_time_sec,"Average time for at-the-quote executions, in seconds, for the bucket",VECTOR,78%,0,0
+pv52_yse_arca_atquote_shares,Number of shares executed at the prevailing NBBO,VECTOR,100%,0,0
+pv52_yse_arca_avg_eff_spread,Average Effective Spread (in USD),VECTOR,100%,0,0
+pv52_yse_arca_avg_rlzd_spread,Average Realized Spread (in USD),VECTOR,100%,1,1
+pv52_yse_arca_away_exec_shares,Number of shares executed at venues away from the reporting market center,VECTOR,100%,1,1
+pv52_yse_arca_cncld_shares,Number of shares canceled or rejected (not executed),VECTOR,100%,0,0
+pv52_yse_arca_mkt_cntr_exec_trades,Market Center Executed Shares,VECTOR,100%,0,0
+pv52_yse_arca_order_size_code,"Code indicating the order size bucket for this record (e.g., 21=100–499, 22=500–1,999, 23=2,000–4,999, 24=5,000+ shares)",VECTOR,100%,2,3
+pv52_yse_arca_order_type_code,"Code indicating the order type per Rule 605 categories (e.g., 11=Market, 12=Marketable limit, 13=Inside-quote limit, 14=At-quote limit, 15=Near-quote limit)",VECTOR,100%,2,2
+pv52_yse_arca_outquote_avg_amt,Outside-the-Quote Average Amount (in USD),VECTOR,100%,0,0
+pv52_yse_arca_outquote_avg_time_sec,"Average time for outside-the-quote executions, in seconds, for the bucket",VECTOR,59%,1,1
+pv52_yse_arca_outquote_shares,Number of shares executed outside the prevailing NBBO,VECTOR,100%,1,1
+pv52_yse_arca_price_imprvd_avg_amt,"Average per-share price improvement amount, in USD, for price-improved executions",VECTOR,100%,1,1
+pv52_yse_arca_price_imprvd_shares,Number of shares that received price improvement versus the NBBO,VECTOR,100%,3,3
+pv52_yse_arca_shares_0_9_sec,Number of shares executed within 0–9 seconds of order receipt,VECTOR,100%,1,1
+pv52_yse_arca_shares_10_29_sec,Number of shares executed within 10–29 seconds of order receipt,VECTOR,100%,0,0
+pv52_yse_arca_shares_30_59_sec,Number of shares executed within 30–59 seconds of order receipt,VECTOR,100%,1,1
+pv52_yse_arca_shares_5_30_min,Number of shares executed 5 to 30 minutes after order receipt,VECTOR,100%,4,10
+pv52_yse_arca_shares_60_299_sec,Number of shares executed 60–299 seconds after order receipt,VECTOR,100%,1,1
+pv52_yse_arca_tot_cov_order,Total number of covered orders in the bucket,VECTOR,100%,0,0
+pv52_yse_arca_tot_cov_shares,Total number of covered shares in the bucket,VECTOR,100%,1,1
+pv52_yse_atquote_avg_time_sec,"Average time to execution for at-the-quote shares, in seconds",VECTOR,71%,6,6
+pv52_yse_atquote_shares,Number of shares executed at the prevailing NBBO (at the quote),VECTOR,100%,6,6
+pv52_yse_avg_eff_spread,Average Effective Spread (in USD),VECTOR,100%,2,2
+pv52_yse_avg_rlzd_spread,Average Realized Spread (in USD),VECTOR,100%,2,2
+pv52_yse_away_exec_shares,Number of shares executed at venues other than the reporting market center,VECTOR,100%,8,8
+pv52_yse_chicago_atquote_shares,Number of shares executed at the prevailing NBBO,VECTOR,92%,4,4
+pv52_yse_chicago_avg_eff_spread,Average Effective Spread (in USD),VECTOR,88%,5,5
+pv52_yse_chicago_avg_rlzd_spread,Average Realized Spread (in USD),VECTOR,89%,1,2
+pv52_yse_chicago_away_exec_shares,Number of shares executed away from the reporting market center,VECTOR,56%,7,9
+pv52_yse_chicago_cncld_shares,Number of shares canceled or rejected (not executed),VECTOR,92%,4,4
+pv52_yse_chicago_mkt_cntr_exec_trades,Market Center Executed Shares,VECTOR,89%,7,8
+pv52_yse_chicago_order_size_code,"Code indicating the order size bucket in shares (e.g., 21=100–499, 22=500–1,999, 23=2,000–4,999, 24=5,000+)",VECTOR,92%,4,4
+pv52_yse_chicago_order_type_code,"Code indicating the order type per Rule 605 bucket (e.g., 11=Market, 12=Marketable limit, 13=Inside-quote, 14=At-quote, 15=Near-quote); decode per file if needed",VECTOR,92%,5,8
+pv52_yse_chicago_outquote_avg_amt,"Average price offset for outside-the-quote executions, in USD per share",VECTOR,58%,6,8
+pv52_yse_chicago_outquote_shares,Number of shares executed outside the prevailing NBBO,VECTOR,92%,1,2
+pv52_yse_chicago_price_imprvd_avg_amt,"Average amount of price improvement per share, in USD",VECTOR,40%,1,3
+pv52_yse_chicago_price_imprvd_shares,Number of shares executed with price improvement relative to the NBBO,VECTOR,92%,5,5
+pv52_yse_chicago_shares_0_9_sec,Number of shares executed within 0–9 seconds of order receipt,VECTOR,89%,1,1
+pv52_yse_chicago_shares_10_29_sec,Number of shares executed within 10–29 seconds of order receipt,VECTOR,80%,0,0
+pv52_yse_chicago_shares_30_59_sec,Number of shares executed within 30–59 seconds of order receipt,VECTOR,73%,2,3
+pv52_yse_chicago_shares_5_30_min,Number of shares executed within 5 to 30 minutes of order receipt,VECTOR,32%,3,5
+pv52_yse_chicago_shares_60_299_sec,Number of shares executed within 60–299 seconds of order receipt,VECTOR,70%,0,0
+pv52_yse_chicago_tot_cov_order,Total number of covered orders in this bucket under Rule 605,VECTOR,92%,3,3
+pv52_yse_chicago_tot_cov_shares,Total number of covered shares in this bucket,VECTOR,92%,4,4
+pv52_yse_cncld_shares,Number of shares canceled or rejected from covered orders,VECTOR,100%,3,3
+pv52_yse_mkt_cntr_exec_trades,Market Center Executed Shares,VECTOR,100%,8,10
+pv52_yse_national_atquote_shares,Number of shares executed at the prevailing NBBO at the time of execution,VECTOR,100%,5,5
+pv52_yse_national_avg_eff_spread,Average Effective Spread (in USD),VECTOR,100%,3,3
+pv52_yse_national_avg_rlzd_spread,Average Realized Spread (in USD),VECTOR,100%,8,13
+pv52_yse_national_away_exec_shares,Number of shares executed at venues away from the reporting market center,VECTOR,68%,12,12
+pv52_yse_national_cncld_shares,Number of shares canceled or rejected in the given bucket,VECTOR,100%,11,16
+pv52_yse_national_mkt_cntr_exec_trades,Market Center Executed Shares,VECTOR,100%,7,7
+pv52_yse_national_order_size_code,"Code indicating the order size bucket in shares (e.g., 21=100–499, 22=500–1,999, etc.)",VECTOR,100%,13,14
+pv52_yse_national_order_type_code,"Code indicating the order type bucket (e.g., market, marketable limit, inside/at/near quote)",VECTOR,100%,13,21
+pv52_yse_national_outquote_avg_amt,Average per-share amount executed outside the quote in USD (difference from NBBO),VECTOR,94%,7,7
+pv52_yse_national_outquote_shares,Number of shares executed outside the prevailing NBBO at the time of execution,VECTOR,100%,10,11
+pv52_yse_national_price_imprvd_avg_amt,Average price improvement amount per share in USD,VECTOR,100%,5,8
+pv52_yse_national_price_imprvd_shares,Number of shares that received price improvement relative to the NBBO,VECTOR,100%,11,15
+pv52_yse_national_shares_0_9_sec,Shares executed within 0 to 9 seconds after order receipt,VECTOR,100%,7,11
+pv52_yse_national_shares_10_29_sec,Shares executed within 10 to 29 seconds after order receipt,VECTOR,100%,10,13
+pv52_yse_national_shares_30_59_sec,Shares executed within 30 to 59 seconds after order receipt,VECTOR,100%,16,19
+pv52_yse_national_shares_5_30_min,Shares executed within 5 to 30 minutes after order receipt,VECTOR,96%,7,8
+pv52_yse_national_shares_60_299_sec,Shares executed within 60 to 299 seconds after order receipt,VECTOR,100%,17,19
+pv52_yse_national_tot_cov_order,Total number of covered orders in the given bucket,VECTOR,100%,12,15
+pv52_yse_national_tot_cov_shares,Total number of shares in covered orders in the given bucket,VECTOR,100%,8,12
+pv52_yse_order_size_code,"Code indicating the order size bucket (e.g., 100–499, 500–1,999, 2,000–4,999, 5,000+ shares)",VECTOR,100%,2,2
+pv52_yse_order_type_code,"Code indicating the order type bucket (e.g., 11=market, 12=marketable limit, 13=inside-quote limit, 14=at-quote limit, 15=near-quote limit)",VECTOR,100%,3,5
+pv52_yse_outquote_avg_amt,"Average price difference for executions outside the NBBO, in USD per share",VECTOR,100%,1,1
+pv52_yse_outquote_avg_time_sec,"Average time to execution for outside-the-quote shares, in seconds",VECTOR,41%,2,2
+pv52_yse_outquote_shares,Number of shares executed outside the NBBO at time of execution,VECTOR,100%,4,7
+pv52_yse_price_imprvd_avg_amt,"Average amount of price improvement achieved, in USD per share",VECTOR,100%,3,3
+pv52_yse_price_imprvd_shares,Number of shares executed with price improvement relative to the NBBO,VECTOR,100%,5,5
+pv52_yse_shares_0_9_sec,Number of shares executed within 0 to 9 seconds after order receipt,VECTOR,100%,5,5
+pv52_yse_shares_10_29_sec,Number of shares executed 10 to 29 seconds after order receipt,VECTOR,100%,16,26
+pv52_yse_shares_30_59_sec,Number of shares executed 30 to 59 seconds after order receipt,VECTOR,100%,9,11
+pv52_yse_shares_5_30_min,Number of shares executed 5 to 30 minutes after order receipt,VECTOR,100%,6,6
+pv52_yse_shares_60_299_sec,Number of shares executed 60 to 299 seconds after order receipt,VECTOR,100%,8,12
+pv52_yse_tot_cov_order,Total number of covered orders in the bucket,VECTOR,100%,7,8
+pv52_yse_tot_cov_shares,Total number of shares in covered orders for the bucket,VECTOR,100%,4,6

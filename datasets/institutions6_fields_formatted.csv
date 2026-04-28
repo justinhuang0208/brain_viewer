@@ -1,0 +1,23 @@
+Field,Description,Type,Coverage,Users,Alphas
+aggregate_equity_value_all_owners,"Aggregate dollar value of shares of the security held by all owners, with duplication between child and parent owners removed",MATRIX,100%,24,31
+aggregate_equity_value_institutions,Aggregate dollar value of shares of the security currently held by all institutional investors at the reporting date,MATRIX,100%,17,20
+aggregate_share_count_all_owners,"Aggregate number of shares of the security held by all owners, with duplication between child and parent owners removed",MATRIX,100%,25,33
+aggregate_share_count_institutions,Total number of shares of the security currently held by all institutional investors at the reporting date,MATRIX,100%,21,25
+count_institutional_buyers_security,Number of institutional investors who purchased shares of the security during the reporting period,MATRIX,100%,23,26
+count_institutional_holders_security,Number of institutional investors currently holding shares (with holdings greater than zero) for the security at the reporting date,MATRIX,100%,15,16
+count_institutional_sellers_security,Number of institutional investors who sold shares of the security during the reporting period,MATRIX,100%,31,38
+inst6_num_of_institutional_buyers,Number of institutional investors who purchased shares of the security during the reporting period,MATRIX,100%,235,653
+inst6_num_of_institutional_holders,Number of institutional investors holding shares greater than zero in the security at the given time,MATRIX,100%,119,291
+inst6_num_of_institutional_sellers,Number of institutional investors who sold shares of the security during the reporting period,MATRIX,100%,148,338
+inst6_num_of_institutional_shares_bought,Total number of shares of the security purchased by institutional investors during the reporting period,MATRIX,100%,143,352
+inst6_num_of_institutional_shares_sold,Total number of shares of the security sold by institutional investors during the reporting period,MATRIX,100%,109,308
+inst6_total_share_held_by_owners,Aggregate number of shares of the security held by all owners with duplicate holdings between parent and child owners eliminated,MATRIX,100%,113,389
+inst6_total_shares_held_by_institutions,Aggregate number of shares of the security currently held by institutional investors,MATRIX,100%,112,262
+inst6_value_held_by_institutions,Aggregate dollar value of shares of the security currently held by institutional investors,MATRIX,100%,89,211
+inst6_value_held_by_owners,Aggregate dollar value of shares of the security held by all owners with duplication between parent and child owners eliminated,MATRIX,100%,90,233
+inst6_value_of_institutional_shares_bought,Aggregate dollar value of shares of the security purchased by institutional investors during the reporting period,MATRIX,100%,107,313
+inst6_value_of_institutional_shares_sold,Aggregate dollar value of shares of the security sold by institutional investors during the reporting period,MATRIX,100%,97,332
+market_value_institutional_shares_acquired,Aggregate dollar value of shares of the security purchased by institutional investors during the reporting period,MATRIX,100%,15,15
+market_value_institutional_shares_disposed,Aggregate dollar value of shares of the security sold by institutional investors during the reporting period,MATRIX,100%,16,19
+quantity_institutional_shares_acquired,Total number of shares of the security purchased by institutional investors during the reporting period,MATRIX,100%,16,21
+quantity_institutional_shares_disposed,Total number of shares of the security sold by institutional investors during the reporting period,MATRIX,100%,19,24

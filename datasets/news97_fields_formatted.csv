@@ -1,0 +1,106 @@
+Field,Description,Type,Coverage,Users,Alphas
+nws97_2dts_gen,Standard deviation of negative sentiment scores across the day’s Seeking Alpha articles for the stock,MATRIX,100%,5,5
+nws97_2dts_sop,Standard deviation of positive sentiment scores across the day’s Seeking Alpha articles for the stock,MATRIX,100%,1,1
+nws97_2dts_tuen,Standard deviation of neutral sentiment scores across the day’s Seeking Alpha articles for the stock,MATRIX,100%,3,3
+nws97_2neg_conf_low,Lower bound of the 95% confidence interval for the daily mean negative sentiment score from Seeking Alpha articles for the stock,MATRIX,100%,3,3
+nws97_2neg_conf_up,Upper bound of the 95% confidence interval for the daily mean negative sentiment score from Seeking Alpha articles for the stock,MATRIX,100%,5,5
+nws97_2neg_max,Maximum negative sentiment score among the day’s Seeking Alpha articles for the stock,MATRIX,100%,2,2
+nws97_2neg_mean,Average negative sentiment score across the day’s Seeking Alpha articles for the stock,MATRIX,100%,2,2
+nws97_2neg_median,Median negative sentiment score across the day’s Seeking Alpha articles for the stock,MATRIX,100%,4,4
+nws97_2neg_min,Minimum negative sentiment score among the day’s Seeking Alpha articles for the stock,MATRIX,100%,2,2
+nws97_2neut_conf_low,Lower bound of the 95% confidence interval for the daily mean neutral sentiment score from Seeking Alpha articles for the stock,MATRIX,100%,3,3
+nws97_2neut_conf_up,Upper bound of the 95% confidence interval for the daily mean neutral sentiment score from Seeking Alpha articles for the stock,MATRIX,100%,4,4
+nws97_2neut_max,Maximum neutral sentiment score among the day’s Seeking Alpha articles for the stock,MATRIX,100%,3,3
+nws97_2neut_mean,Average neutral sentiment score across the day’s Seeking Alpha articles for the stock,MATRIX,100%,3,3
+nws97_2neut_median,Median neutral sentiment score across the day’s Seeking Alpha articles for the stock,MATRIX,100%,5,6
+nws97_2neut_min,Minimum neutral sentiment score among the day’s Seeking Alpha articles for the stock,MATRIX,100%,2,2
+nws97_2pos_conf_low,Lower bound of the 95% confidence interval for the daily mean positive sentiment score from Seeking Alpha articles for the stock,MATRIX,100%,1,1
+nws97_2pos_conf_up,Upper bound of the 95% confidence interval for the daily mean positive sentiment score from Seeking Alpha articles for the stock,MATRIX,100%,1,1
+nws97_2pos_max,Maximum positive sentiment score among the day’s Seeking Alpha articles for the stock,MATRIX,100%,1,1
+nws97_2pos_mean,Average positive sentiment score across the day’s Seeking Alpha articles for the stock,MATRIX,100%,1,1
+nws97_2pos_median,Median positive sentiment score across the day’s Seeking Alpha articles for the stock,MATRIX,100%,2,2
+nws97_2pos_min,Minimum positive sentiment score among the day’s Seeking Alpha articles for the stock,MATRIX,100%,2,2
+nws97_3dts_gen,Standard deviation of negative sentiment scores across Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,4,4
+nws97_3dts_sop,Standard deviation of positive sentiment scores across Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,3,3
+nws97_3dts_tuen,Standard deviation of neutral sentiment scores across Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,1,1
+nws97_3neg_conf_low,Lower bound of the 95% confidence interval for the stock’s daily mean negative sentiment score,MATRIX,100%,2,2
+nws97_3neg_conf_up,Upper bound of the 95% confidence interval for the stock’s daily mean negative sentiment score,MATRIX,100%,4,5
+nws97_3neg_max,Highest negative sentiment score among Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,2,2
+nws97_3neg_mean,Daily average negative sentiment score across Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,3,5
+nws97_3neg_median,Median negative sentiment score across Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,2,2
+nws97_3neg_min,Minimum negative sentiment score among Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,3,3
+nws97_3neut_conf_low,Lower bound of the 95% confidence interval for the stock’s daily mean neutral sentiment score,MATRIX,100%,6,6
+nws97_3neut_conf_up,Upper bound of the 95% confidence interval for the stock’s daily mean neutral sentiment score,MATRIX,100%,4,4
+nws97_3neut_max,Maximum neutral sentiment score among Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,4,4
+nws97_3neut_mean,Daily average neutral sentiment score across Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,3,3
+nws97_3neut_median,Median neutral sentiment score across Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,1,1
+nws97_3neut_min,Minimum neutral sentiment score among Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,3,3
+nws97_3pos_conf_low,Lower bound of the 95% confidence interval for the stock’s daily mean positive sentiment score,MATRIX,100%,1,1
+nws97_3pos_conf_up,Upper bound of the 95% confidence interval for the stock’s daily mean positive sentiment score,MATRIX,100%,4,7
+nws97_3pos_max,Maximum positive sentiment score among Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,2,2
+nws97_3pos_mean,Daily average positive sentiment score across Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,3,4
+nws97_3pos_median,Median positive sentiment score across Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,2,2
+nws97_3pos_min,Minimum positive sentiment score among Seeking Alpha articles mapped to the stock for that day,MATRIX,100%,2,2
+nws97_4dts_gen,Standard deviation of negative sentiment scores across Seeking Alpha articles for the stock on that day,MATRIX,100%,3,3
+nws97_4dts_sop,Standard deviation of positive sentiment scores across Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_4dts_tuen,Standard deviation of neutral sentiment scores across Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_4neg_conf_low,Lower bound of the 95% confidence interval for the daily mean negative sentiment score (from Seeking Alpha articles),MATRIX,100%,2,3
+nws97_4neg_conf_up,Upper bound of the 95% confidence interval for the daily mean negative sentiment score (from Seeking Alpha articles),MATRIX,100%,2,2
+nws97_4neg_max,Highest negative sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_4neg_mean,Average negative sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,1,1
+nws97_4neg_median,Median negative sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_4neg_min,Lowest negative sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,3,3
+nws97_4neut_conf_low,Lower bound of the 95% confidence interval for the daily mean neutral sentiment score (from Seeking Alpha articles),MATRIX,100%,2,2
+nws97_4neut_conf_up,Upper bound of the 95% confidence interval for the daily mean neutral sentiment score (from Seeking Alpha articles),MATRIX,100%,5,5
+nws97_4neut_max,Highest neutral sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,3,3
+nws97_4neut_mean,Average neutral sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,4,4
+nws97_4neut_median,Median neutral sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,1,1
+nws97_4neut_min,Lowest neutral sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,1,1
+nws97_4pos_conf_low,Lower bound of the 95% confidence interval for the daily mean positive sentiment score (from Seeking Alpha articles),MATRIX,100%,3,3
+nws97_4pos_conf_up,Upper bound of the 95% confidence interval for the daily mean positive sentiment score (from Seeking Alpha articles),MATRIX,100%,1,1
+nws97_4pos_max,Highest positive sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,3,3
+nws97_4pos_mean,Average positive sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_4pos_median,Median positive sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_4pos_min,Lowest positive sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,4,4
+nws97_5dts_gen,Standard deviation of negative sentiment scores across Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_5dts_sop,Standard deviation of positive sentiment scores across Seeking Alpha articles for the stock on that day,MATRIX,100%,4,4
+nws97_5dts_tuen,Standard deviation of neutral sentiment scores across Seeking Alpha articles for the stock on that day,MATRIX,100%,1,1
+nws97_5neg_conf_low,Lower bound of the 95% confidence interval for the daily mean negative sentiment score for the stock,MATRIX,100%,2,2
+nws97_5neg_conf_up,Upper bound of the 95% confidence interval for the daily mean negative sentiment score for the stock,MATRIX,100%,3,4
+nws97_5neg_max,Maximum negative sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,5,5
+nws97_5neg_mean,Average (mean) negative sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,6,13
+nws97_5neg_median,Median negative sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,4,4
+nws97_5neg_min,Minimum negative sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,5,6
+nws97_5neut_conf_low,Lower bound of the 95% confidence interval for the daily mean neutral sentiment score for the stock,MATRIX,100%,3,3
+nws97_5neut_conf_up,Upper bound of the 95% confidence interval for the daily mean neutral sentiment score for the stock,MATRIX,100%,4,4
+nws97_5neut_max,Maximum neutral sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_5neut_mean,Average (mean) neutral sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_5neut_median,Median neutral sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97_5neut_min,Minimum neutral sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,3,3
+nws97_5pos_conf_low,Lower bound of the 95% confidence interval for the daily mean positive sentiment score for the stock,MATRIX,100%,1,1
+nws97_5pos_conf_up,Upper bound of the 95% confidence interval for the daily mean positive sentiment score for the stock,MATRIX,100%,3,3
+nws97_5pos_max,Maximum positive sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,1,1
+nws97_5pos_mean,Average (mean) positive sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,5,6
+nws97_5pos_median,Median positive sentiment score across Seeking Alpha articles for the stock on that day,MATRIX,100%,3,3
+nws97_5pos_min,Minimum positive sentiment score among Seeking Alpha articles for the stock on that day,MATRIX,100%,2,2
+nws97dts_gen,Standard deviation of the model-assigned negative sentiment scores across Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,1,1
+nws97dts_sop,Standard deviation of the model-assigned positive sentiment scores across Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,2,3
+nws97dts_tuen,Standard deviation of the model-assigned neutral sentiment scores across Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,3,3
+nws97neg_conf_low,"Lower bound of the 95% confidence interval for the daily mean negative sentiment score for the stock, based on article-level scores that day",MATRIX,100%,1,1
+nws97neg_conf_up,"Upper bound of the 95% confidence interval for the daily mean negative sentiment score for the stock, based on article-level scores that day",MATRIX,100%,3,3
+nws97neg_max,Maximum model-assigned negative sentiment score among Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,2,2
+nws97neg_mean,Average (mean) of the model-assigned negative sentiment scores across Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,6,6
+nws97neg_median,Median of the model-assigned negative sentiment scores across Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,5,5
+nws97neg_min,Minimum model-assigned negative sentiment score among Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,2,2
+nws97neut_conf_low,"Lower bound of the 95% confidence interval for the daily mean neutral sentiment score for the stock, based on article-level scores that day",MATRIX,100%,4,5
+nws97neut_conf_up,"Upper bound of the 95% confidence interval for the daily mean neutral sentiment score for the stock, based on article-level scores that day",MATRIX,100%,4,5
+nws97neut_max,Maximum model-assigned neutral sentiment score among Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,5,6
+nws97neut_mean,Average (mean) of the model-assigned neutral sentiment scores across Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,2,2
+nws97neut_median,Median of the model-assigned neutral sentiment scores across Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,2,3
+nws97neut_min,Minimum model-assigned neutral sentiment score among Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,3,3
+nws97pos_conf_low,"Lower bound of the 95% confidence interval for the daily mean positive sentiment score for the stock, based on article-level scores that day",MATRIX,100%,4,4
+nws97pos_conf_up,"Upper bound of the 95% confidence interval for the daily mean positive sentiment score for the stock, based on article-level scores that day",MATRIX,100%,3,3
+nws97pos_max,Maximum model-assigned positive sentiment score among Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,2,3
+nws97pos_mean,Average (mean) of the model-assigned positive sentiment scores across Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,3,3
+nws97pos_median,Median of the model-assigned positive sentiment scores across Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,3,3
+nws97pos_min,Minimum model-assigned positive sentiment score among Seeking Alpha articles mapped to the stock on that day,MATRIX,100%,1,1

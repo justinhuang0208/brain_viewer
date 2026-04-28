@@ -1,0 +1,5 @@
+Field,Description,Type,Coverage,Users,Alphas
+rsk60_crowding,"Signed daily indicator of shorting activity (positive = increased shorting/crowding, negative = covering/decrowding)",VECTOR,95%,313,811
+rsk60_datatime,"Vendor timestamp in HHMMSS for the snapshot, used to order intraday prints",VECTOR,100%,204,609
+rsk60_last,Most recent borrow/lend rate observed at the snapshot time,VECTOR,100%,646,1598
+rsk60_offer,Composite borrow fee (annualized) paid by the short seller,VECTOR,100%,797,2016

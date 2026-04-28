@@ -1,0 +1,43 @@
+Field,Description,Type,Coverage,Users,Alphas
+mws52_chars_in_presentation,Number of characters in presentation,MATRIX,65%,3,11
+mws52_chars_in_qa,Number of characters in Q&A,MATRIX,64%,3,3
+mws52_conference_call_participants,Number of conference call participants,MATRIX,64%,3,10
+mws52_corporate_participants,Number of corporate participants,MATRIX,65%,2,7
+mws52_eventtype,Type of conference call event,MATRIX,70%,1,4
+mws52_expirationtime,Expiration time of the event,MATRIX,70%,1,6
+mws52_lastuptime,Last update time,MATRIX,70%,2,2
+mws52_occurence,Occurrence of keywords in presentation and Q&A,VECTOR,65%,11,18
+mws52_occurence_presentation,Occurrence of keywords in presentation,VECTOR,65%,15,95
+mws52_occurence_qa,Occurrence of keywords in Q&A,VECTOR,64%,15,23
+mws52_paragraphs_in_presentation,Number of paragraphs in presentation,MATRIX,65%,22,42
+mws52_position,Position of keywords in presentation and Q&A,VECTOR,65%,13,19
+mws52_position_presentation,Position of keywords in presentation,VECTOR,65%,19,34
+mws52_position_qa,Position of keywords in Q&A,VECTOR,65%,12,18
+mws52_pparagraphs_in_qa,Number of paragraphs in Q&A,MATRIX,64%,1,11
+mws52_questions_in_presentation,Number of questions in presentation,MATRIX,43%,2,2
+mws52_questions_in_qa,Number of questions in Q&A,MATRIX,64%,1,1
+mws52_sentences_in_presentation,Number of sentences in presentation,MATRIX,65%,1,4
+mws52_sentences_in_qa,Number of sentences in Q&A,MATRIX,64%,1,2
+mws52_starttime,Start time of the event,MATRIX,70%,42,78
+mws52_talks_in_presentation,Number of talks in presentation,MATRIX,65%,2,10
+mws52_talks_in_qa,Number of talks in Q&A,MATRIX,64%,2,2
+mws52_v2_chars_in_presentation,Number of characters spoken during the presentation section,MATRIX,80%,80,145
+mws52_v2_chars_in_qa,Number of characters spoken during the Q&A section,MATRIX,80%,60,91
+mws52_v2_conference_call_participants,Number of analyst or third-party participants in the call,MATRIX,80%,54,132
+mws52_v2_corporate_participants,Number of corporate (issuer) participants in the call,MATRIX,80%,45,93
+mws52_v2_eventtype,Type of conference call event,MATRIX,80%,45,80
+mws52_v2_expirationtime,Expiration time of the event,MATRIX,80%,42,145
+mws52_v2_lastuptime,Last update time of the event record,MATRIX,80%,45,194
+mws52_v2_paragraphs_in_presentation,Number of paragraphs spoken during the presentation section,MATRIX,80%,23,43
+mws52_v2_pparagraphs_in_qa,Number of paragraphs spoken during the Q&A section,MATRIX,80%,29,73
+mws52_v2_questions_in_presentation,Number of questions asked during the presentation section,MATRIX,80%,21,44
+mws52_v2_questions_in_qa,Number of questions asked during the Q&A section,MATRIX,80%,37,65
+mws52_v2_sentences_in_presentation,Number of sentences spoken during the presentation section,MATRIX,80%,34,56
+mws52_v2_sentences_in_qa,Number of sentences spoken during the Q&A section,MATRIX,80%,36,58
+mws52_v2_starttime,Start time of the conference call event,MATRIX,80%,42,78
+mws52_v2_talks_in_presentation,Number of individual talks or speeches during the presentation section,MATRIX,80%,34,93
+mws52_v2_talks_in_qa,Number of individual talks or speeches during the Q&A section,MATRIX,80%,34,48
+mws52_v2_words_in_presentation,Number of words spoken during the presentation section,MATRIX,80%,45,87
+mws52_v2_words_in_qa,Number of words spoken during the Q&A section,MATRIX,80%,45,141
+mws52_words_in_presentation,Number of words in presentation,MATRIX,65%,1,2
+mws52_words_in_qa,Number of words in Q&A,MATRIX,64%,1,3

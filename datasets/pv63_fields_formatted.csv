@@ -1,0 +1,17 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv63_d1_bain,Number of aggressive buy trades during the day,MATRIX,99%,7,8
+pv63_d1_iaba,Dollar amount (USD) of aggressive buy trades during the day,MATRIX,99%,9,10
+pv63_d1_iasa,Dollar amount (USD) of aggressive sell trades during the day,MATRIX,99%,2,2
+pv63_d1_nias,Number of aggressive sell trades during the day,MATRIX,99%,10,11
+pv63_d1_nibp,Number of bid-put (order additions at the best bid) events during the day,MATRIX,99%,8,17
+pv63_d1_nibw,Number of bid-withdraw (order removals at the best bid) events during the day,MATRIX,99%,1,1
+pv63_d1_pain,Number of ask-put (order additions at the best ask) events during the day,MATRIX,99%,7,8
+pv63_d1_ptsl,"Last traded price for the day (last 1-minute price), in USD",MATRIX,99%,7,9
+pv63_d1_vbai,Total shares executed by aggressive buyers (lifting the ask) during the day,MATRIX,99%,6,6
+pv63_d1_vpai,Total shares added to the best ask during the day,MATRIX,99%,1,1
+pv63_d1_vpbi,Total shares added to the best bid during the day,MATRIX,99%,2,2
+pv63_d1_vsai,Total shares executed by aggressive sellers (hitting the bid) during the day,MATRIX,99%,10,11
+pv63_d1_vtni,Total shares traded during the day,MATRIX,99%,7,7
+pv63_d1_vwai,Total shares withdrawn from the best ask during the day,MATRIX,99%,5,5
+pv63_d1_vwbi,Total shares withdrawn from the best bid during the day,MATRIX,99%,3,3
+pv63_d1_wain,Number of ask-withdraw (order removals at the best ask) events during the day,MATRIX,99%,4,5

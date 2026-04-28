@@ -1,0 +1,182 @@
+Field,Description,Type,Coverage,Users,Alphas
+absolute_price_change_today,Change in stock price since previous day close,VECTOR,20%,4,4
+adjusted_return_for_bias,The return on the idea adjusted for contributor or model bias.,VECTOR,25%,4,5
+aggregate_idea_return,The sum of realized and unrealized returns for the trade idea.,VECTOR,19%,1,2
+aggregate_return_ex_fx,The total return for the idea excluding foreign exchange effects.,VECTOR,19%,1,1
+aggregate_return_percent,The total return as a percentage of average investment.,VECTOR,20%,2,2
+aggregate_trade_return,Sum of realised and unrealised returns,VECTOR,20%,0,0
+allocated_funds_currency,The currency used for the investment in the trade idea.,VECTOR,25%,2,2
+anl45_ad_rel_ret_per,Average daily index relative return percentage,VECTOR,54%,4,4
+anl45_ad_ret_per,Average daily percent return over the idea’s lifetime,VECTOR,55%,1,1
+anl45_ang_inv,Time-weighted average investment,VECTOR,66%,2,2
+anl45_avg_dur,Average age of the idea limited to the selected period,VECTOR,66%,1,1
+anl45_avg_initial_prc,Average share price weighted by volume of each share purchase,VECTOR,54%,0,0
+anl45_avg_initial_prc_wfee,The avg initial price adjusted to include fee payment when fees are applied,VECTOR,54%,6,7
+anl45_beta,"A measure of the volatility or systematic risk of a security compared to the market, updated monthly based on last 20 months",VECTOR,61%,5,7
+anl45_bias_weighted_ret,Non-Functional,VECTOR,66%,2,5
+anl45_bm_exchange_rate,Exchange Rate by which the Benchmark will be measured,VECTOR,0%,0,0
+anl45_bm_fx_ret,FX return made by the benchmark due to currency movements,VECTOR,60%,0,0
+anl45_bm_ret,Return of the benchmark index,VECTOR,58%,1,1
+anl45_bm_ret_wo_fx,Benchmark’s return excluding foreign exchange effects (raw benchmark return),VECTOR,58%,3,8
+anl45_closed_prc,Price at which the idea was closed,VECTOR,51%,0,0
+anl45_current_inv,"Current investment amount, including increases and partial closures",VECTOR,66%,1,1
+anl45_days_since_inception,Number of trading days since the idea was submitted,VECTOR,66%,2,2
+anl45_idea_count,"Number of ideas in a group, useful when grouping ideas",VECTOR,66%,0,0
+anl45_index_period_end_prc,Benchmark or index end price for the selected performance period,VECTOR,59%,4,4
+anl45_index_period_start_prc,Benchmark or index start price for the selected performance period,VECTOR,59%,2,2
+anl45_index_ret_per,Return percentage had the investment been made in the selected index,VECTOR,59%,0,0
+anl45_initial_inv,Initial investment amount allocated to the idea,VECTOR,66%,2,2
+anl45_inv_exchange_rate,Exchange rate between stock and investment currencies / FX Rate on the period End date,VECTOR,0%,0,0
+anl45_jensensalpha,Risk-adjusted performance measure representing return over market,VECTOR,60%,3,8
+anl45_latest_prc,The current price of the stock in the idea,VECTOR,48%,3,8
+anl45_net_market_exposure,Difference in fractional total value between long and short ideas (net market exposure),VECTOR,66%,10,16
+anl45_new_value,"New value set for the stop-loss percent, target price, or capital allocation",VECTOR,67%,4,4
+anl45_old_value,"Previous value of the stop-loss percent, target price, or capital allocation before the latest change",VECTOR,67%,1,1
+anl45_period_end_prc,Close price on day at end of selected period,VECTOR,54%,2,2
+anl45_period_start_prc,Close price on day before start of selected period,VECTOR,54%,2,2
+anl45_prc,The price given to the investment change,VECTOR,67%,2,2
+anl45_prc_change_per_today,Percent change in stock price since previous close of day price,VECTOR,53%,1,1
+anl45_prc_change_today,Change in stock price since previous day close,VECTOR,54%,3,3
+anl45_prev_close_prc,Last available close price for the stock,VECTOR,52%,2,3
+anl45_probability,Tag giving a quantative measure of conviction,VECTOR,13%,0,0
+anl45_real_ret,Realized return from closed portions of the idea since inception,VECTOR,54%,3,3
+anl45_real_ret_today,Increase in realized return since the previous market close,VECTOR,52%,2,2
+anl45_real_value,Monetary value of the realized (closed) portion of the idea,VECTOR,54%,0,0
+anl45_rel_index_ret,Difference in return percentage between the idea and the comparative index,VECTOR,53%,0,0
+anl45_rel_index_ret_per,Difference in return percentage between the idea and the comparative index,VECTOR,54%,0,0
+anl45_rel_ret_per_today,Relative return percentage today,VECTOR,52%,1,2
+anl45_rel_ret_today,Increase in realised return since last market close,VECTOR,51%,1,1
+anl45_ret_per_today,Percentage return since last market close,VECTOR,53%,1,2
+anl45_ret_today,Increase in realised return since last market close,VECTOR,54%,1,1
+anl45_risk_free_rate,The unrealised return on an open idea,VECTOR,67%,1,1
+anl45_stock_ret_per,Net total return from all ideas since the previous market close,VECTOR,54%,2,3
+anl45_stock_ret_per_relative,Average daily return percentage had the investment been made in the relative benchmark index,VECTOR,53%,1,1
+anl45_target_prc,Author’s stated likely exit price for the idea,VECTOR,52%,5,7
+anl45_time,Approximate time horizon for the idea,VECTOR,67%,1,1
+anl45_tot_ret,Sum of realised and unrealised returns,VECTOR,54%,1,4
+anl45_tot_ret_per,Total return as a percentage of average investment,VECTOR,55%,0,0
+anl45_tot_ret_wo_fx,Total return excluding any foreign exchange effects,VECTOR,54%,1,1
+anl45_transaction_charge,Transaction fee charged for the idea (in calculation currency),VECTOR,67%,1,1
+anl45_treynor_ratio,A ratio that measures returns earned in excess of that which could have been earned on a riskless investment (such as the risk free rate).??,VECTOR,61%,3,3
+anl45_unreal_ret,Unrealized return on the open idea (mark-to-market),VECTOR,54%,4,7
+anl45_unreal_ret_today,Increase in unrealised return since the last market close,VECTOR,52%,2,3
+anl45_unreal_value,Unrealised value of an open idea,VECTOR,54%,4,10
+average_daily_relative_return_percent,Average daily index relative return percentage,VECTOR,19%,0,0
+average_daily_return_percent,Average daily percent return over the lifetime of the idea,VECTOR,20%,1,1
+average_idea_duration,Average age of the idea (limited to the period selected),VECTOR,25%,0,0
+average_initial_price_with_fee,The avg initial price adjusted to include fee payment when fees are applied,VECTOR,20%,0,0
+average_initial_trade_price,Average share price weighted by volume of each share purchase,VECTOR,20%,0,0
+average_investment_amount,Time-weighted average investment,VECTOR,25%,0,0
+benchmark_conversion_rate,Exchange rate used to measure/convert the benchmark,VECTOR,0%,0,0
+benchmark_currency_abbreviation,Currency of the benchmark,VECTOR,25%,0,0
+benchmark_currency_code,Currency of the benchmark,VECTOR,67%,1,1
+benchmark_fx_return_value,Foreign exchange return attributable to the benchmark (movement due to currency differences),VECTOR,22%,0,0
+benchmark_index_return_percent,The return percentage of the index over the selected period.,VECTOR,20%,0,0
+benchmark_period_closing_price,The index price at the end of the selected period.,VECTOR,21%,0,0
+benchmark_period_opening_price,The index price at the start of the selected period.,VECTOR,21%,2,2
+benchmark_return_ex_fx,Basically tracking the raw returns of the benchmark,VECTOR,21%,0,0
+benchmark_total_return,Return of the benchmark over the measurement period,VECTOR,21%,1,1
+bias_adjusted_return_value,Non functional field retained for compatibility not used in calculations,VECTOR,25%,0,0
+conversion_rate_summary,Exchange rate between investment and performance currencies.,VECTOR,0%,0,0
+currency_gain_percentage,The percentage return generated from currency movements.,VECTOR,0%,0,0
+currency_gain_value,The return generated from currency movements.,VECTOR,0%,0,0
+current_investment_amount,"Current investment amount of the idea, including all increases and partial closures",VECTOR,25%,0,0
+daily_price_change_percent,The percentage change in price since the previous day's close.,VECTOR,19%,1,1
+daily_price_delta,The change in the security's price since the previous market close.,VECTOR,20%,0,0
+daily_unrealized_gain,The increase in unrealized return since the last market close.,VECTOR,19%,0,0
+days_since_idea_start,Number of trading days since the idea was submitted,VECTOR,25%,0,0
+entry_price_inclusive_fees,The average initial price adjusted for transaction fees.,VECTOR,20%,0,0
+event_associated_price,The price associated with an investment change or event.,VECTOR,25%,1,1
+expected_exit_price_2,The projected price at which the contributor expects to close the position.,VECTOR,6%,1,1
+expected_exit_price_3,Author’s likely exit price for the idea,VECTOR,6%,0,0
+final_closing_price,The price at which the trade idea was closed or exited.,VECTOR,17%,1,1
+foreign_exchange_gain,The return generated from foreign exchange rate changes.,VECTOR,0%,0,0
+foreign_exchange_return_value,Return generated from variations in foreign exchange rates affecting the idea's PnL,VECTOR,55%,0,0
+fx_gain_percentage,The percentage return generated from foreign exchange rate movements.,VECTOR,0%,1,3
+fx_return_percentage,Return from FX movements expressed as a percentage of the investment,VECTOR,55%,0,0
+gain_percent_today,The percentage return for the idea since the last market close.,VECTOR,19%,0,0
+grouped_idea_total,The number of ideas in a group or view.,VECTOR,25%,0,0
+index_period_ending_price,Benchmark/Index end price based on the performance period you chose,VECTOR,21%,1,1
+index_period_starting_price,Benchmark/Index start price based on the performance period you chose,VECTOR,22%,1,1
+index_return_percentage,Return percentage had the investment been made in the comparative index,VECTOR,21%,0,0
+investment_conversion_rate,"Exchange rate between stock and investment currencies, i.e., FX rate on the period end date",VECTOR,0%,0,0
+investment_currency_abbreviation,Currency of the idea investment,VECTOR,25%,0,0
+investment_currency_code,Currency of the investment,VECTOR,67%,0,0
+investment_fx_conversion_rate,The exchange rate between stock and investment currencies.,VECTOR,0%,0,0
+investment_performance_fx_rate,The exchange rate between investment and performance currencies.,VECTOR,0%,0,0
+jensens_alpha_value,Risk-adjusted performance measure representing return above the market (Jensen’s Alpha),VECTOR,22%,1,1
+mean_daily_relative_return_percent,The average daily index-relative return percentage over the idea’s lifetime.,VECTOR,19%,0,0
+mean_daily_return_percent,The average daily percent return over the idea’s lifetime.,VECTOR,20%,0,0
+mean_idea_age_period,The average age of the idea within the selected period.,VECTOR,25%,1,1
+mean_invested_amount,The time-weighted average amount allocated to the trade idea.,VECTOR,25%,1,1
+most_recent_market_price,The most recent price of the security in the trade idea.,VECTOR,15%,1,2
+most_recent_security_price,The current price of the stock in the idea,VECTOR,16%,0,0
+net_exposure_to_market,"The net exposure to market movements, calculated as long minus short positions.",VECTOR,25%,0,0
+net_market_exposure_value,Difference in fractional total value between long and short ideas,VECTOR,25%,0,0
+net_stock_return_percent,The net total return from all ideas since the previous market close.,VECTOR,19%,0,0
+open_position_return,The return on open (unrealized) positions in the trade idea.,VECTOR,19%,0,0
+open_position_value,The value of unrealized (open) parts of the trade idea.,VECTOR,19%,3,6
+period_closing_price,The closing price at the end of the selected period.,VECTOR,19%,0,0
+period_ending_security_price,Close price on day at end of selected period,VECTOR,20%,0,0
+period_opening_price,The closing price before the start of the selected period.,VECTOR,20%,0,0
+period_starting_security_price,Close price on day before start of selected period,VECTOR,20%,1,1
+present_invested_amount,The current total amount allocated to the trade idea.,VECTOR,25%,0,0
+previous_closing_security_price,Last available closing price for the stock,VECTOR,19%,0,0
+previous_field_value,"The value before a change in stop loss, target price, or capital.",VECTOR,25%,0,0
+previous_field_value_2,"Previous value of a stop-loss percent, target price, or capital change",VECTOR,25%,0,0
+previous_market_close_price,The last available closing price for the security.,VECTOR,19%,0,0
+price_change_percent_today,Percentage change in stock price since previous day's close,VECTOR,20%,0,0
+realized_gain_today,The increase in realized return since the last market close.,VECTOR,19%,0,0
+realized_idea_gain,The realized return on the idea from closed positions.,VECTOR,20%,0,0
+realized_position_value,The value of closed (realized) parts of the trade idea.,VECTOR,20%,0,0
+realized_position_value_2,Value of the realised (closed) portions of the idea,VECTOR,20%,0,0
+realized_return_today_value,Increase in realized return since the last market close,VECTOR,19%,1,1
+realized_trade_return,Realised return on the idea since inception or closure,VECTOR,20%,1,3
+reference_fx_rate,The exchange rate used to convert benchmark returns to the reporting currency.,VECTOR,0%,1,1
+reference_index_currency,The currency in which the benchmark index is denominated.,VECTOR,25%,0,0
+reference_index_fx_gain,Return generated from foreign exchange movements in the benchmark.,VECTOR,22%,0,0
+reference_index_return,The return of the benchmark index over the selected period.,VECTOR,20%,0,0
+reference_index_return_ex_fx,Benchmark return excluding foreign exchange effects.,VECTOR,20%,1,1
+relative_gain_percent_today,The relative return percentage for the idea for today.,VECTOR,18%,0,0
+relative_gain_today,The change in relative return for the idea since the last market close.,VECTOR,17%,0,0
+relative_index_gain,The return if all investments had been made in the benchmark index.,VECTOR,18%,0,0
+relative_index_return_percent,The difference in return percentage between the idea and the benchmark index.,VECTOR,19%,1,1
+relative_index_return_percentage,Percentage difference in return between the idea and the comparative index,VECTOR,19%,0,0
+relative_index_return_value,Difference in return percentage between investing in the idea and the chosen benchmark index,VECTOR,19%,0,0
+relative_return_percent_today,Relative return percentage for today,VECTOR,19%,0,0
+relative_return_today_value,Increase in realised return since the last market close,VECTOR,19%,0,0
+relative_stock_return_percent,The average daily return percentage if all investments were in the index.,VECTOR,18%,0,0
+return_percentage_today,Percentage return since last market close,VECTOR,20%,0,0
+risk_adjusted_excess_return,"The performance of the idea above market return, adjusted for risk.",VECTOR,22%,0,0
+risk_adjusted_return_per_beta,A risk-adjusted return measure relative to the risk-free rate and beta.,VECTOR,23%,0,0
+riskless_investment_rate,The unrealised return on an open idea,VECTOR,25%,1,2
+security_currency_code_8,Currency in which the security is traded,VECTOR,25%,0,0
+security_relative_return_percent,Average daily return percentage had all investments been in the relative index,VECTOR,19%,0,0
+security_return_percent,Net total return from all ideas since the previous market close,VECTOR,20%,1,1
+security_trade_price,Price used for the investment change at the event time,VECTOR,25%,0,0
+security_trading_currency_2,The currency in which the security is traded.,VECTOR,25%,1,1
+security_trading_currency_3,Currency in which the security is traded,VECTOR,67%,0,0
+starting_invested_amount,The initial amount allocated to the trade idea.,VECTOR,25%,1,1
+starting_investment_amount,Initial investment amount for the idea,VECTOR,25%,0,0
+success_likelihood_score_2,A quantitative measure of the likelihood of the idea’s success.,VECTOR,13%,1,1
+summary_conversion_rate,Exchange rate between investment and performance currencies,VECTOR,55%,0,0
+systematic_risk_beta,"A measure of the security’s systematic risk versus the market, updated monthly based on the last ~20 months",VECTOR,23%,0,0
+systematic_risk_measure,A measure of the idea's volatility relative to the overall market.,VECTOR,23%,0,0
+theoretical_zero_risk_rate,The theoretical rate of return of a risk-free investment.,VECTOR,25%,1,1
+total_gain_today,The total increase in return for the idea since the last market close.,VECTOR,20%,0,0
+total_return_excluding_fx,Return excluding any foreign exchange effects,VECTOR,20%,0,0
+total_return_percentage,Total return as a percentage of average investment,VECTOR,20%,0,0
+total_return_today_value,Increase in realised return since last market close,VECTOR,20%,1,1
+trade_execution_fee,The transaction fee charged for executing the trade idea.,VECTOR,25%,4,4
+trade_idea_closed_price,The price at which the idea was closed,VECTOR,17%,3,3
+trade_idea_count,"Number of ideas in the group/context, useful for grouping",VECTOR,25%,0,0
+trade_idea_success_probability,Quantitative measure of conviction for the idea,VECTOR,13%,0,0
+trade_transaction_fee,Transaction fee charged for the idea in the calculation currency,VECTOR,25%,0,0
+trading_days_since_submission,The number of trading days since the idea was submitted.,VECTOR,25%,2,3
+treynor_performance_ratio,Risk-adjusted return ratio measuring excess return per unit of systematic risk relative to the risk-free rate,VECTOR,23%,0,0
+unrealized_position_value,Unrealised value of an open idea,VECTOR,20%,0,0
+unrealized_return_today_value,Increase in unrealised return since the last market close,VECTOR,19%,0,0
+unrealized_trade_return,The unrealised return on an open idea,VECTOR,20%,0,0
+updated_field_value,"The new value after a change in stop loss, target price, or capital.",VECTOR,25%,2,2
+updated_field_value_2,"New value of a stop-loss percent, target price, or capital change",VECTOR,25%,0,0
+volume_weighted_entry_price,The average share price weighted by purchase volume at entry.,VECTOR,20%,0,0

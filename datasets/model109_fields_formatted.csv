@@ -1,0 +1,299 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl109_1yf_dlyspe,"Earnings yield (inverse of P/E) based on analyst consensus forecast EPS for the next fiscal year (FY1), using the median estimate",VECTOR,85%,279,1359
+mdl109_1yf_ep,"Price-to-Earnings ratio calculated as current stock price divided by analyst consensus forecast EPS for the next fiscal year (FY1), using the median estimate",VECTOR,78%,191,978
+mdl109_2yf_dlyspe,"Earnings yield (inverse of P/E) based on analyst consensus forecast EPS for the second next fiscal year (FY2), using the median estimate",VECTOR,83%,255,1220
+mdl109_2yf_ep,"Price-to-Earnings ratio calculated as current stock price divided by analyst consensus forecast EPS for the second next fiscal year (FY2), using the median estimate",VECTOR,78%,229,1099
+mdl109_57_03_am,Signal for moving average crossover: difference or indicator of when 30-week moving average crosses 75-week moving average of price; identifies longer-term trend shifts,VECTOR,84%,18,57
+mdl109_63_51_am,Signal for moving average crossover: difference between 15-week and 36-week moving averages of price; often used to detect medium-term trend reversals,VECTOR,86%,16,25
+mdl109_abn_volm,"Abnormal trading volume indicator, most likely measuring how the most recent trading volume deviates from typical levels (such as relative to a moving average), highlighting spikes in activity",VECTOR,87%,52,136
+mdl109_ac_5y_sale,"Acceleration in revenue (sales) growth rate measured over the previous five years, quantifying the change in the growth trajectory of company revenues",VECTOR,84%,28,135
+mdl109_accruals,"Sloan (1996) accruals metric: measures the portion of earnings due to accrual accounting versus cash flow, often used as a quality or earnings manipulation risk indicator",VECTOR,86%,32,90
+mdl109_altman1968,Altman's z-score for bankruptcy prediction as defined in the original 1968 model (composite score using several financial ratios),VECTOR,69%,34,71
+mdl109_altman1983,"Altman's Z-score using the 1983 revised formula, an updated bankruptcy risk and financial distress indicator",VECTOR,69%,13,38
+mdl109_amihud,"Amihud illiquidity ratio, measuring price impact per unit of trading volume",VECTOR,87%,21,40
+mdl109_aor,Return on assets based on trailing twelve months,VECTOR,86%,15,43
+mdl109_asset_gr,"Asset growth anomaly factor as defined by Cooper, Gulen, and Schill (2008); generally the year-over-year growth rate of total assets, used as a predictive factor for stock returns",VECTOR,86%,24,50
+mdl109_asset_ps_gr,Year-over-year growth rate in total assets on a per share basis (total assets divided by shares outstanding),VECTOR,86%,20,49
+mdl109_b_mtl_dlyspe,"Earnings yield based on last twelve months (LTM) reported earnings per share, using the basic (not diluted) calculation; measured as EPS divided by price",VECTOR,87%,31,87
+mdl109_b_mtl_ep,"Price-to-earnings ratio, based on trailing twelve months (LTM) basic EPS (not diluted), calculated as current price divided by basic EPS over the last year",VECTOR,72%,57,153
+mdl109_bb,"Bollinger Bands, a technical analysis indicator constructed from a moving average and standard deviation bands to measure price volatility and possible trading ranges",VECTOR,87%,46,97
+mdl109_berry,"Berry ratio, defined as gross profits divided by operating expenses",VECTOR,87%,16,38
+mdl109_bookp,"Book-to-market ratio, calculated as book value divided by market price; a value factor commonly used for valuation comparisons",VECTOR,87%,59,126
+mdl109_bookp_fy1,Book-to-market ratio (the inverse of price-to-book) using forecasted book value for the next fiscal year (FY1),VECTOR,72%,85,662
+mdl109_cfo_curr_liab,Ratio of cash flow from operations to current liabilities (measures a firm's ability to cover its short-term obligations with operational cash generation),VECTOR,69%,13,25
+mdl109_cfoyld,"Operating cash flow yield, calculated as operating cash flow divided by market capitalization (price), indicating the cash generation efficiency relative to stock price",VECTOR,85%,162,808
+mdl109_cfoyld_fy1,Operating cash flow yield (i.e. operating cash flow divided by market capitalization or enterprise value) projected or estimated for the next fiscal year (FY1),VECTOR,64%,42,62
+mdl109_cfps_sur,"Normalized cash flow per share (CFPS) surprise: standardized difference between actual reported CFPS and consensus analyst estimate, showing the degree to which actual results deviate from expectations",VECTOR,51%,29,59
+mdl109_cfrnoa,Cash flow return on net operating assets: cash flow from operations divided by net operating assets,VECTOR,76%,29,66
+mdl109_cfroa,"Cash flow return on assets, measuring operating cash flow generated as a percentage of total assets",VECTOR,76%,8,15
+mdl109_cfroe,"Cash flow return on equity, measuring operating cash flow generated as a percentage of shareholders’ equity",VECTOR,85%,21,46
+mdl109_cfroe_fy1,Forecasted Cash Flow Return on Equity for the next fiscal year (FY1),VECTOR,66%,8,17
+mdl109_current_r,"Current ratio, a liquidity metric defined as current assets divided by current liabilities",VECTOR,69%,12,39
+mdl109_d0252ntr,"Total return of the stock over the past 2520 days (approximately 120 months, or 10 years)",VECTOR,57%,24,61
+mdl109_d0621ntr,"Total return over the past 1260 trading days (approximately 60 months or 5 years), including price appreciation and any dividends",VECTOR,71%,15,62
+mdl109_d12ntr,Total return of the security over the past 21 trading days (approximately 1 month),VECTOR,87%,15,81
+mdl109_d252_ntr,"Stock price momentum as total return over the past 252 trading days, commonly representing one full year (12 months) of trading days",VECTOR,84%,13,21
+mdl109_d36ntr,"Cumulative total return over the past 63 trading days (approximately 3 months), including price appreciation and dividends if applicable",VECTOR,87%,27,67
+mdl109_d621_ntr,"Stock return (momentum) over past 126 trading days, roughly 6 months",VECTOR,86%,14,27
+mdl109_d981_ntr,"Stock price momentum as total return over the past 189 trading days, approximately equivalent to the last nine months",VECTOR,85%,8,8
+mdl109_d_mtl_dlyspe,"Diluted earnings yield for the last twelve months—LTM net income per diluted share divided by price, the inverse of the diluted P/E ratio",VECTOR,87%,32,46
+mdl109_d_mtl_ep,"Price-to-Earnings ratio calculated on trailing twelve months (LTM) earnings per share, using diluted earnings to account for potential share dilution",VECTOR,72%,33,95
+mdl109_debt_capital,"Ratio of total debt to total capital (i.e., total debt divided by the sum of total debt and equity, gauges overall leverage)",VECTOR,86%,18,64
+mdl109_debt_chg,Year-over-year change in total debt outstanding for the company,VECTOR,86%,7,20
+mdl109_debt_equity,"Ratio of total debt to total equity, measuring financial leverage",VECTOR,86%,21,67
+mdl109_debt_mktcapital,"Ratio of total debt to the market value of total capital (i.e., total debt divided by market capitalization plus debt, reflecting market-based leverage)",VECTOR,87%,19,57
+mdl109_div_payout,"Dividend payout ratio, trailing; proportion of earnings paid out as dividends over the trailing period",VECTOR,87%,43,119
+mdl109_divyld_bb,Total yield combining dividend yield and yield from share buybacks or share count reduction; represents shareholder return from both dividends and buyback activity,VECTOR,86%,22,116
+mdl109_divyld_exp,Expected future dividend yield based on analyst or company forecasts,VECTOR,87%,69,142
+mdl109_divyld_fy1,Forecasted dividend yield for the next fiscal year (FY1),VECTOR,73%,44,74
+mdl109_divyld_sh,"Shareholder total yield: combines dividend yield with net share buybacks minus share issuances, representing the total cash return to shareholders as a percent of price",VECTOR,87%,15,58
+mdl109_divyld_trl,"Trailing dividend yield, calculated as sum of dividends over past year divided by current price",VECTOR,87%,36,64
+mdl109_dly_lf_org,Growth flow yield,VECTOR,53%,49,103
+mdl109_dlyfcf,"Free cash flow yield, calculated as unlevered free cash flow divided by market capitalization (or enterprise value)",VECTOR,85%,54,164
+mdl109_dlyspe_rh,"Historical relative earnings yield, i.e., company earnings yield relative to some benchmark or cross-sectional group",VECTOR,87%,30,44
+mdl109_dps_sur,"Surprise metric for Dividends Per Share (DPS), typically measured as the deviation of reported DPS from consensus analyst estimates, possibly standardized as a z-score",VECTOR,36%,8,12
+mdl109_ebit_ev,Ratio of earnings before interest and tax (EBIT) to enterprise value (EV),VECTOR,86%,34,68
+mdl109_ebit_sur,"Actual reported EBIT minus consensus forecasted EBIT, typically normalized (EBIT surprise, measures recent performance versus expectations)",VECTOR,58%,19,23
+mdl109_ebitda_ev,"Ratio of earnings before interest, taxes, depreciation, and amortization to enterprise value (EBITDA/EV), a valuation metric",VECTOR,81%,38,128
+mdl109_ebitda_sur,"EBITDA surprise: normalized difference between reported EBITDA and the consensus estimate (e.g. z-score or percent deviation), quantifying how much the reported figure beat or missed expectations",VECTOR,59%,112,1017
+mdl109_eps_disp,"The cross-sectional or analyst dispersion (standard deviation or spread) of FY1 (next fiscal year) EPS estimates, measuring analyst disagreement about earnings",VECTOR,86%,15,29
+mdl109_eps_stab,"Historical stability of earnings per share (EPS), usually measured as the coefficient of determination (R-squared) of time-series EPS, reflecting consistency and forecasting reliability",VECTOR,77%,7,13
+mdl109_eps_sur_decay,"Earnings Per Share (EPS) surprise, as measured (e.g., deviation from analyst consensus), incorporating time-decay so that more recent surprises are weighted more heavily",VECTOR,83%,71,699
+mdl109_eps_varia,"Coefficient of variation (standard deviation divided by mean) of FY1 (next fiscal year) analyst EPS (Earnings Per Share) estimates, measuring the dispersion in EPS forecasts",VECTOR,86%,16,163
+mdl109_epsyld_gro_divy,Product of current trailing 12-month earnings yield and the sum of expected 5-year EPS growth and expected dividend yield; composite value/growth metric,VECTOR,82%,32,117
+mdl109_es_ebit_fy1_d1m,Ratio of upward to downward analyst revisions for FY1 EBIT estimates over the past 1 month (diffusion ratio),VECTOR,75%,15,58
+mdl109_es_ebit_fy1_d3m,Ratio of upward to downward analyst revisions for FY1 EBIT estimates over the past 3 months (diffusion ratio),VECTOR,74%,15,91
+mdl109_es_ebit_fy1_r1m,1-month rolling aggregated analyst revisions to next fiscal year's EBIT estimates,VECTOR,75%,22,66
+mdl109_es_ebit_fy1_r3m,Rolling 3-month aggregated analyst estimate revisions for next fiscal year EBIT (Earnings Before Interest and Taxes),VECTOR,74%,13,18
+mdl109_es_ebit_ntm_r1m,Aggregate 1-month rolling net change in consensus analyst estimates for next twelve months (NTM) EBIT for the stock,VECTOR,75%,23,133
+mdl109_es_ebit_ntm_r3m,Aggregate 3-month rolling net change in consensus analyst estimates for next twelve months (NTM) EBIT for the stock,VECTOR,74%,15,26
+mdl109_es_ebitda_fy1_d1m,Analyst FY1 EBITDA estimate diffusion (upward vs downward revisions ratio) over 1 month,VECTOR,76%,17,43
+mdl109_es_ebitda_fy1_d3m,Ratio of upward to downward analyst revisions for next fiscal year (FY1) EBITDA estimates over the past three months (3M); quantifies directional momentum in expected EBITDA,VECTOR,75%,10,18
+mdl109_es_ebitda_fy1_r1m,"Net analyst consensus revision in forecasted EBITDA for the next fiscal year (FY1) over the past 1 month, capturing how analyst estimates for next year EBITDA have changed in the last month",VECTOR,76%,16,51
+mdl109_es_ebitda_fy1_r3m,"Aggregate 3-month analyst revision metric for EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization) for the next fiscal year (FY1). Indicates the total upward or downward changes in consensus EBITDA estimates over the past 3 months",VECTOR,75%,12,38
+mdl109_es_ebitda_ntm_r1m,Aggregate 1-month revision in analyst estimates for next twelve months EBITDA,VECTOR,76%,16,144
+mdl109_es_ebitda_ntm_r3m,"Rolling 3-month aggregated analyst estimate revision for next twelve months’ (NTM) EBITDA, measuring changes in consensus forward EBITDA forecasts over the past three months",VECTOR,75%,15,100
+mdl109_es_gap,Difference between the analyst consensus expected 5-year compound annual growth rate and FY2 (second year forward) earnings growth; measures the medium-long term optimism gap in analyst forecasts,VECTOR,59%,5,16
+mdl109_es_neps_ntm_r3m,Net analyst revision in normalized next-twelve-month EPS estimate over the past 3 months,VECTOR,85%,15,71
+mdl109_es_roe_fy1_d1m,Ratio of upward to downward FY1 analyst revisions for return on equity over the past 1 month (diffusion measure),VECTOR,76%,15,40
+mdl109_es_roe_fy1_d3m,Ratio of upward to downward FY1 analyst revisions for return on equity over the past 3 months (diffusion measure),VECTOR,76%,9,17
+mdl109_es_roe_fy1_me,"Consensus analyst estimate of return on equity (ROE) for the next fiscal year (FY1), likely measured as mean or median estimate",VECTOR,75%,14,127
+mdl109_es_roe_fy1_r1m,"Change or net revision in analyst estimates for Return on Equity (ROE) for the next fiscal year (FY1), aggregated over the most recent 1 month",VECTOR,75%,7,27
+mdl109_es_roe_fy1_r3m,"Change in fiscal year 1 (FY1, next fiscal year) consensus analyst estimate for ROE, aggregated over the past 3 months",VECTOR,75%,18,92
+mdl109_es_roe_ntm_r1m,"Change in next twelve months (NTM) consensus analyst estimate for ROE, aggregated over the past 1 month",VECTOR,72%,10,39
+mdl109_es_roe_ntm_r3m,"Change in next twelve months (NTM) consensus analyst estimate for ROE, aggregated over the past 3 months",VECTOR,72%,3,7
+mdl109_es_sale_fy1_d1m,Ratio of the number of upward to downward analyst revisions for next fiscal year revenue estimates over the past month (1M); indicates directional momentum in analyst revenue forecasts for FY1,VECTOR,85%,13,25
+mdl109_es_sale_fy1_d3m,Diffusion (up/down ratio) of analyst estimate revisions for revenue (sales) for the next fiscal year (FY1) over the past 3 months; quantifies the ratio of upward versus downward estimate changes,VECTOR,85%,18,77
+mdl109_es_sale_fy1_r1m,"Aggregate 1-month analyst revision metric for revenue (sales) for the next fiscal year (FY1), summarizing consensus estimate changes over the past month",VECTOR,85%,11,39
+mdl109_es_sale_fy1_r3m,Aggregate 3-month rolling sum or average of analyst estimate revisions for next fiscal year (FY1) revenue (sales); measures momentum in sales forecasts,VECTOR,85%,16,41
+mdl109_es_sale_ntm_r1m,Cumulative analyst revisions to next twelve months (NTM) revenue forecasts over the past 1 month,VECTOR,85%,16,40
+mdl109_es_sale_ntm_r3m,Net analyst consensus revision in projected sales/revenue for the next twelve months (NTM) aggregated over the last 3 months,VECTOR,85%,7,10
+mdl109_es_vol_avg,"Mean forecasted volatility by analysts for the security, expressing aggregate analyst view on expected future price variability",VECTOR,54%,11,21
+mdl109_es_vol_r1m,Aggregate 1-month change in analyst estimates of forecasted earnings volatility,VECTOR,54%,4,35
+mdl109_es_vol_r3m,Aggregate 3-month change in analyst estimates of forecasted earnings volatility,VECTOR,52%,11,44
+mdl109_exp_div_payout,"Expected dividend payout ratio, which is the expected proportion of earnings paid out as dividends",VECTOR,74%,10,18
+mdl109_ext_fin_noa,"Amount of net external financing (e.g., through debt or equity issuance) as a ratio or relative to net operating assets, indicating external capital dependence",VECTOR,87%,19,34
+mdl109_float_to,"Float turnover over 12 months: measures the trading turnover of free-float shares over a 12-month period, indicating liquidity and investor activity",VECTOR,87%,12,30
+mdl109_fmc,"Chaikin Money Flow, a technical indicator combining price and volume to measure buying and selling pressure over a given period (usually 20–21 days)",VECTOR,87%,24,38
+mdl109_ghc_aor,"Year-over-year (YoY) change in Return on Assets (ROA), representing the difference or percent change from prior year to current",VECTOR,83%,10,26
+mdl109_ghc_qe_td_tl,"Year-over-year change in ratio of long-term debt to common equity, indicating how leverage has changed relative to equity over the last year",VECTOR,86%,25,41
+mdl109_gr_5y_sale,Historical 5-year compound annual growth rate or trend of company sales/revenue,VECTOR,84%,14,20
+mdl109_gr_eintr_sale,"Year-over-year expected growth rate of interim (i.e., period-to-date, possibly semiannual or quarterly) revenues, likely based on analyst estimates or company guidance",VECTOR,80%,12,32
+mdl109_gr_eps_stab,Stability (likely R² or similar) of consensus-expected 5-year EPS growth—measuring the consistency of these growth expectations over time,VECTOR,74%,3,10
+mdl109_gr_fy1_sale,Expected revenue growth for next fiscal year (FY1) based on analyst or company forecasts,VECTOR,84%,14,66
+mdl109_gr_fy2_sale,Projected growth rate in revenue for the fiscal year two years ahead,VECTOR,85%,12,31
+mdl109_gr_intr_sale,Year-over-year growth rate of interim total revenue based on historical actuals,VECTOR,86%,20,48
+mdl109_gr_reinv,"Reinvestment rate measured over the last twelve months (LTM), representing the proportion of earnings or cash flows reinvested back into the business rather than paid out as dividends or expenses",VECTOR,87%,18,43
+mdl109_gr_reinv_fy1,Forecasted reinvestment rate (the proportion of earnings expected to be reinvested in the business) for the next fiscal year (FY1),VECTOR,67%,6,19
+mdl109_gross_margin,"Gross profit margin, calculated as gross profit divided by sales, measuring the percentage of revenue remaining after cost of goods sold",VECTOR,87%,21,57
+mdl109_gross_margin_chg,"Year-over-year (YoY) change in gross profit margin, showing the difference in gross margin percentage compared to the same period last year",VECTOR,86%,14,78
+mdl109_gsubind,GICS (Global Industry Classification Standard) 8-digit sub-industry code,VECTOR,87%,13,27
+mdl109_gva_mmocer_se,"Mean analyst recommendation for the stock, typically coded numerically (e.g., 1=Buy, 5=Sell); gives the overall consensus rating among covering analysts",VECTOR,85%,8,11
+mdl109_icc,"Commodity Channel Index: measures deviation of price from its statistical mean, used to identify cyclical trends in securities",VECTOR,87%,22,44
+mdl109_ifm,"Money Flow Index, a volume-weighted momentum indicator",VECTOR,87%,11,25
+mdl109_ihw25_p,"Ratio of current price to 52-week high, measuring how close the stock is to its highest price in the last year",VECTOR,85%,14,45
+mdl109_im,"Mass Index, a technical indicator used to identify potential price trend reversals based on range expansion",VECTOR,87%,12,19
+mdl109_int_cover,Interest coverage component as defined in Altman's Z-score credit risk model (1968),VECTOR,75%,8,52
+mdl109_invent_to,"Inventory turnover ratio, measuring how many times inventory is sold or replaced over a specific period",VECTOR,85%,8,12
+mdl109_ip,Force Index: a technical analysis indicator combining price changes and trading volume to measure buying and selling pressure,VECTOR,87%,24,43
+mdl109_ist,"True Strength Index: a momentum oscillator that measures double-smoothed price changes to identify trend direction and strength, helping to filter out short-term price fluctuations",VECTOR,87%,15,42
+mdl109_iv,"Vortex Indicator, a technical analysis indicator to identify trend direction and strength",VECTOR,87%,16,24
+mdl109_ivn,"Negative Volume Index, a technical indicator that tracks price changes on days when trading volume decreases, used to identify trends driven by “smart money”",VECTOR,87%,23,103
+mdl109_kurt,"Kurtosis of daily stock returns calculated over the past 1 year, indicating ""tailedness"" or extremity of return distribution",VECTOR,85%,14,43
+mdl109_lda,"Accumulation/Distribution Line; a technical indicator measuring the cumulative money flow into or out of a stock, blending price and volume to indicate buying/selling pressure",VECTOR,87%,27,125
+mdl109_log_asset,"Natural logarithm of the company's total assets, likely for scaling/normalization purposes",VECTOR,87%,11,63
+mdl109_log_float,Natural logarithm of float-adjusted market capitalization (market cap adjusted for freely tradeable shares),VECTOR,87%,11,55
+mdl109_log_mktcap,Natural logarithm of the total market capitalization of the company,VECTOR,87%,18,33
+mdl109_log_price,Natural logarithm of the share price,VECTOR,87%,15,45
+mdl109_log_sale,"Natural logarithm of revenue, a transformed scale of the company’s total sales or revenue, often used to normalize distributions for modeling",VECTOR,86%,13,31
+mdl109_lottery,"Maximum single-day return over the last 1 month, used as a proxy for “lottery-like” return profiles",VECTOR,87%,16,32
+mdl109_lt_dt_capital,"Ratio of long-term debt to total capital, indicating financial leverage",VECTOR,87%,22,32
+mdl109_lt_dt_equity,"Ratio of long-term debt to common equity, a measure of financial leverage",VECTOR,87%,16,116
+mdl109_m1d_1yf_spb_se,Ratio of upward to downward FY1 analyst revisions for book value per share over the past 1 month (diffusion measure),VECTOR,75%,7,16
+mdl109_m1d_1yf_spd_se,Ratio of upward to downward analyst dividend per share revisions for fiscal year 1 in the past 1 month (“diffusion ratio”),VECTOR,73%,11,67
+mdl109_m1d_1yf_spe_se,Diffusion ratio of analyst upward versus downward revisions to the next fiscal year (FY1) EPS estimates over the past 1 month; measures analyst sentiment momentum for FY1 EPS,VECTOR,85%,20,90
+mdl109_m1d_1yf_spfc_se,Ratio of upward to downward FY1 analyst revisions for cash flow per share over the past 1 month (diffusion measure),VECTOR,65%,5,18
+mdl109_m1d_1yf_van_se,Ratio of upward to downward analyst revisions (diffusion) for next fiscal year Net Asset Value estimates over the past 1 month,VECTOR,55%,3,3
+mdl109_m1d_cer_se,Diffusion ratio (upward changes vs. downward changes) in analyst recommendation revisions over the past 1 month; reflects the direction of analyst consensus sentiment,VECTOR,85%,19,56
+mdl109_m1d_gtl_se,Ratio of upward to downward analyst revisions in long-term growth estimates over the past month (1M); measures consensus momentum for long-term growth outlook,VECTOR,79%,9,16
+mdl109_m1d_pt_se,Diffusion ratio (upward versus downward changes) of analyst target price estimates over the past 1 month,VECTOR,85%,18,63
+mdl109_m1m21_ntr,Total stock price return over the past 12 months excluding the most recent month (months -12 to -1),VECTOR,84%,8,21
+mdl109_m1r_1yf_spb_se,1-month rolling aggregated analyst revisions to next fiscal year's Book Value Per Share estimates,VECTOR,75%,15,38
+mdl109_m1r_1yf_spd_se,Aggregate revision in analysts' estimates for next fiscal year's dividend per share over the past 1 month,VECTOR,73%,9,14
+mdl109_m1r_1yf_spe_se,"Net analyst consensus revision in forecasted earnings per share (EPS) for the next fiscal year (FY1) over the past 1 month, reflecting recent changes in analyst expectations",VECTOR,85%,16,83
+mdl109_m1r_1yf_spfc_se,Rolling 1-month net analyst estimate revision for next fiscal year's cash flow per share,VECTOR,65%,49,540
+mdl109_m1r_1yf_van_se,Net analyst consensus revision in forecasted Net Asset Value (NAV) for the next fiscal year (FY1) over the past month,VECTOR,56%,8,86
+mdl109_m1r_cer_se,"1-month rolling sum or average of analyst recommendation revisions, tracking how analyst opinions (buy/hold/sell) have changed over the last month",VECTOR,85%,8,8
+mdl109_m1r_gtl_se,1-month rolling aggregated analyst revisions to long-term earnings growth forecasts,VECTOR,77%,8,18
+mdl109_m1r_mtn_spb_se,Change in consensus next twelve months (NTM) book value per share (BPS) analyst estimates aggregated over the trailing 1 month; reflects revision activity for BPS forecasts,VECTOR,71%,12,51
+mdl109_m1r_mtn_spd_se,Change in consensus next twelve months (NTM) dividend per share (DPS) analyst estimates over the trailing 1 month; measures revision in forward dividend outlook,VECTOR,72%,15,31
+mdl109_m1r_mtn_spe_se,Aggregate analyst estimate revision for next twelve months' earnings per share (EPS) over the past 1 month,VECTOR,85%,11,30
+mdl109_m1r_mtn_spfc_se,"Rolling 1-month aggregated analyst revision to the Next Twelve Months (forward-looking) Cash Flow Per Share estimate for the stock, as of the snapshot date",VECTOR,64%,7,64
+mdl109_m1r_mtn_van_se,"The net aggregate revision to next twelve months (NTM) Net Asset Value (NAV) estimates over the past month (1M), measuring recent analyst forecast changes in NTM NAV",VECTOR,55%,11,142
+mdl109_m1r_pt_se,"Net aggregate analyst revision activity to target price estimates over the past 1 month (rolling), reflecting the average change in consensus target price for the stock",VECTOR,85%,32,122
+mdl109_m21yf_ep,"Price to forward 12-month EPS ratio, i.e., next-twelve-month (NTM) projected P/E using consensus estimates",VECTOR,78%,33,91
+mdl109_m3d_1yf_spb_se,Diffusion (up/down ratio) of analyst estimate revisions for Book Value Per Share (BPS) for the next fiscal year (FY1) over the past 3 months; measures proportion of upward to downward revisions in estimates,VECTOR,75%,11,40
+mdl109_m3d_1yf_spd_se,Ratio of upward to downward analyst dividend per share revisions for fiscal year 1 in the past 3 months (“diffusion ratio”),VECTOR,73%,10,15
+mdl109_m3d_1yf_spe_se,Ratio of upward to downward analyst EPS revisions for fiscal year 1 in the past 3 months (“diffusion ratio”),VECTOR,85%,17,34
+mdl109_m3d_1yf_spfc_se,Diffusion ratio (ratio of upward to downward analyst estimate changes) for next fiscal year's cash flow per share (CFPS) forecast over the past 3 months,VECTOR,68%,9,30
+mdl109_m3d_1yf_van_se,Diffusion ratio: ratio of upward to downward analyst revisions in next fiscal year's (FY1) net asset value estimates over the past 3 months,VECTOR,55%,5,5
+mdl109_m3d_cer_se,"Ratio of upward to downward changes in analyst recommendations (i.e., upgrades vs downgrades) over the past 3 months",VECTOR,85%,21,86
+mdl109_m3d_gtl_se,Diffusion ratio (number of up vs. down) of analyst long-term growth estimate changes over the most recent 3 months; shows sentiment balance for long-range growth outlook,VECTOR,75%,15,21
+mdl109_m3d_pt_se,Target price diffusion ratio (upward revisions divided by total or downward revisions) over the past 3 months; shows the proportion of analysts revising target prices upward vs downward over this window,VECTOR,85%,8,34
+mdl109_m3r_1yf_spb_se,3-month rolling aggregated analyst revisions to next fiscal year's Book Value Per Share estimates,VECTOR,74%,8,32
+mdl109_m3r_1yf_spd_se,Cumulative net analyst revision to FY1 (next fiscal year) dividend per share (DPS) estimate over the past 3 months,VECTOR,72%,13,18
+mdl109_m3r_1yf_spe_se,Cumulative analyst revisions to next fiscal year's (FY1) earnings per share (EPS) forecast over the past 3 months,VECTOR,85%,31,100
+mdl109_m3r_1yf_spfc_se,"Rolling 3-month aggregated analyst revision to the Fiscal Year 1 (next full fiscal year) Cash Flow Per Share estimate for the stock, as of the snapshot date",VECTOR,64%,7,17
+mdl109_m3r_1yf_van_se,Three-month rolling sum or average of analyst estimate revisions to next fiscal year’s Net Asset Value (NAV) for a stock,VECTOR,55%,8,10
+mdl109_m3r_cer_se,Net change in analyst recommendation consensus over the past 3 months,VECTOR,85%,11,83
+mdl109_m3r_gtl_se,Aggregate 3-month rolling net change in consensus analyst estimates of long-term growth (LTG) for the stock,VECTOR,76%,5,14
+mdl109_m3r_mtn_spb_se,"Rolling 3-month aggregated analyst revision to the Next Twelve Months (forward-looking) Book Value Per Share estimate for the stock, as of the snapshot date",VECTOR,70%,6,7
+mdl109_m3r_mtn_spd_se,Net analyst revision in next twelve months (NTM) dividend per share (DPS) estimates over the past 3 months,VECTOR,71%,14,25
+mdl109_m3r_mtn_spe_se,Rolling 3-month net analyst revision to next-twelve-months EPS estimates,VECTOR,85%,16,41
+mdl109_m3r_mtn_spfc_se,"Rolling 3-month aggregated analyst revision to the Next Twelve Months (forward-looking) Cash Flow Per Share estimate for the stock, as of the snapshot date",VECTOR,63%,3,11
+mdl109_m3r_mtn_van_se,"Rolling 3-month aggregated analyst revision to the Next Twelve Months (forward-looking) Net Asset Value estimate for the stock, as of the snapshot date",VECTOR,55%,7,19
+mdl109_m3r_pt_se,Rolling 3-month aggregate analyst estimate revision to target price,VECTOR,84%,6,16
+mdl109_macd,"Moving Average Convergence/Divergence Oscillator, a widely used technical indicator based on the relationship between two moving averages of prices to identify trend direction and momentum",VECTOR,87%,15,110
+mdl109_margin_stab,"Stability or consistency of the company’s gross margin over the past 5 years, typically measured using a metric such as the R-squared of gross margin time series or a similar stability indicator",VECTOR,75%,5,7
+mdl109_matrix_abn_volm,"Abnormal trading volume, representing current volume scaled or compared to a normal or historical baseline to identify unusually high or low activity",MATRIX,87%,177,1120
+mdl109_matrix_ac_5y_sale,Acceleration of sales over the past 5 years (second derivative of revenue growth),MATRIX,84%,91,724
+mdl109_matrix_accruals,"Balance sheet accruals metric, following the Sloan (1996) definition, capturing the non-cash component of earnings; a proxy for earnings quality or manipulation risk",MATRIX,86%,108,650
+mdl109_matrix_altman1968,"Altman's Z-score (original 1968 version), a credit risk model that estimates the probability of bankruptcy based on a weighted blend of financial ratios",MATRIX,69%,42,164
+mdl109_matrix_altman1983,"Merton's distance to default, a structural credit risk measure quantifying how far a firm's assets are from the default threshold",MATRIX,69%,87,546
+mdl109_matrix_amihud,"Amihud illiquidity measure, representing the price impact per unit traded volume; higher values imply lower liquidity",MATRIX,87%,82,666
+mdl109_matrix_asset_gr,"Asset growth rate, measuring the annual growth of total assets, as in the Cooper, Gulen, Schill (2008) asset growth anomaly literature",MATRIX,86%,78,484
+mdl109_matrix_asset_ps_gr,"Asset growth anomaly per share; measures the growth rate of total assets on a per share basis, indicating balance sheet expansion normalized by share count",MATRIX,86%,76,536
+mdl109_matrix_bb,Bollinger Bands: volatility-based technical indicator forming upper and lower bands around a moving average using a multiple of standard deviations,MATRIX,87%,138,1383
+mdl109_matrix_berry,"Berry ratio, defined as gross profits divided by operating expenses; a measure of profitability or efficiency",MATRIX,87%,82,613
+mdl109_matrix_bookp,"Book-to-market ratio, calculated as book value per share divided by market price per share",MATRIX,87%,158,1025
+mdl109_matrix_bookp_fy1,Book-to-market ratio using forecasted book value for next fiscal year (FY1),MATRIX,72%,69,146
+mdl109_matrix_cfo_curr_liab,"Ratio of operating cash flow to current liabilities, assessing a company’s ability to cover short-term obligations with cash generated from operations",MATRIX,69%,77,842
+mdl109_matrix_cfoyld,"Operating cash flow yield, operating cash flow divided by market capitalization",MATRIX,85%,156,1026
+mdl109_matrix_cfoyld_fy1,"Operating cash flow yield (operating cash flow divided by market capitalization or equity value), based on analyst estimate for the coming fiscal year (FY1)",MATRIX,64%,56,132
+mdl109_matrix_cfps_sur,Cash Flow Per Share (CFPS) earnings surprise: the standardized deviation of actual reported CFPS from the consensus estimate,MATRIX,51%,104,1066
+mdl109_matrix_cfrnoa,Cash flow return on net operating assets; a profitability ratio showing the return produced by operating cash flow relative to net operating assets,MATRIX,76%,38,146
+mdl109_matrix_cfroa,"Cash flow return on assets; calculated as operating cash flow divided by total assets, reflecting the firm’s ability to generate cash returns from its asset base",MATRIX,76%,91,1220
+mdl109_matrix_icc,"Commodity Channel Index, a technical indicator measuring how far a security's price has deviated from its historical average, often used to identify cyclical overbought or oversold conditions",MATRIX,87%,118,958
+mdl109_matrix_lda,"Accumulation Distribution Line, a technical indicator measuring flow of volume in relation to price movement (gauges supply/demand pressure)",MATRIX,87%,119,1086
+mdl109_matrix_rg_ac,"Growth rate of current assets over a defined period, likely trailing year; measures recent expansion or contraction of a company’s current assets",MATRIX,68%,25,117
+mdl109_matrix_rg_sp_ac,"Growth rate in per share current assets, quantifying how current assets per share have increased or decreased over time",MATRIX,68%,25,96
+mdl109_matrix_rta,Average True Range; a technical indicator measuring market volatility by decomposing the entire range of a price for a given period,MATRIX,87%,87,715
+mdl109_matrix_spd_y5_ca,"Acceleration (second derivative) in the company’s dividend per share (DPS) growth rate over the past 5 years, measuring the change in growth trend",MATRIX,79%,30,162
+mdl109_matrix_spe_y5_ca,"Acceleration in historical earnings per share (EPS) growth measured over the last 5 years, indicating change in the rate of EPS growth over that period",MATRIX,85%,97,855
+mdl109_matrix_speo_y5_ca,"Acceleration in Operating Earnings Per Share growth, measured as the change in the growth rate over the past 5 years; captures inflection in historical OEPS growth",MATRIX,85%,103,721
+mdl109_matrix_spfc_y5_ca,"Acceleration in Cash Flow Per Share growth, measuring change in CFPS growth rate over the past 5 years—i.e., the second derivative of 5Y historical CFPS growth",MATRIX,80%,36,109
+mdl109_merton,"Merton's distance to default, a structural model-based measure estimating the likelihood a company will default based on asset value volatility and capital structure",VECTOR,77%,14,35
+mdl109_mktcap,Market capitalization of the company in exchange/local trading currency,VECTOR,87%,33,55
+mdl109_mtn_dlyspe,"Earnings yield (inverse of P/E) based on analyst consensus forecast EPS for the next twelve months (NTM), using the median estimate",VECTOR,86%,57,145
+mdl109_nav_sur,"The standardized surprise (deviation) between reported net asset value (NAV) and analyst consensus NAV estimate, indicating whether NAV beat or missed consensus expectations",VECTOR,51%,14,17
+mdl109_net_margin,Net income margin; net income as a percentage of total revenue,VECTOR,87%,13,23
+mdl109_news_abno_sent_1d,"Abnormal (z-scored versus 1-year baseline) aggregate sentiment of novel, relevant, and non-neutral news items for the prior day",VECTOR,81%,15,65
+mdl109_news_abno_vol_1d,"Abnormal (z-scored versus 1-year history) number of novel, relevant, and non-neutral news stories in 1 day, compared to baseline 365-day average",VECTOR,81%,21,57
+mdl109_news_sent_1m,"Average news sentiment score, aggregating positive/negative sentiment from relevant news articles over the past 1 month",VECTOR,81%,19,42
+mdl109_news_sent_3m,"Average news sentiment score over the trailing 3 months, quantifying the prevailing tone of news coverage for the stock during this period",VECTOR,81%,14,30
+mdl109_news_sentvol_1d,"Number of novel, relevant, and non-neutral news articles/events about the company in the past 1 day",VECTOR,81%,17,24
+mdl109_news_sentvol_91d,"Number of novel, relevant, and non-neutral news articles over the trailing 91 days",VECTOR,81%,20,52
+mdl109_ntr_pt,"Target price implied return, calculated as the percentage return from current price to consensus analyst target price",VECTOR,85%,63,134
+mdl109_oc,Chaikin Oscillator—technical indicator measuring accumulation/distribution momentum based on volume and price,VECTOR,87%,28,82
+mdl109_oeps_stab,"Historical stability (measured as coefficient of determination, e.g., R²) of operating earnings per share (EPS) over time",VECTOR,77%,4,4
+mdl109_oeps_sur,"Normalized EPS (Earnings Per Share) surprise, calculated as the standardized residual between reported and consensus expected EPS",VECTOR,81%,36,68
+mdl109_olw25_p,"Current price divided by the lowest price over the trailing 52 weeks, indicating proximity to the 1-year low",VECTOR,85%,9,10
+mdl109_ompd,DecisionPoint Price Momentum Oscillator: a price momentum oscillator that signals trend direction and potential reversals based on smoothed price changes,VECTOR,87%,9,22
+mdl109_on_1yf_spe_se,Number of analysts providing next fiscal year (FY1) earnings per share (EPS) estimates for the company,VECTOR,87%,13,30
+mdl109_on_cer_se,Number of analysts providing recommendations for the security,VECTOR,87%,18,27
+mdl109_op_margin,"Operating profit margin, also known as EBIT margin",VECTOR,87%,13,29
+mdl109_op_margin_chg,Year-over-year (YoY) change in operating profit margin,VECTOR,86%,28,49
+mdl109_opd,"Detrended Price Oscillator, a technical indicator showing price cycles by removing the trend from price data",VECTOR,87%,11,36
+mdl109_opp,"Percentage price oscillator—a technical analysis indicator showing the difference between two moving averages of a security’s price as a percentage, used to gauge momentum or trend",VECTOR,87%,14,28
+mdl109_org_dlyspe,"Product of trailing twelve months earnings yield and expected five-year earnings growth rate, capturing a value-growth combined factor",VECTOR,82%,31,79
+mdl109_os,"Stochastic Oscillator, a momentum indicator comparing a particular closing price to a range of prices over a set period to signal potential overbought or oversold conditions",VECTOR,87%,11,25
+mdl109_ovp,"Percentage Volume Oscillator, a technical indicator that measures the percentage difference between two moving averages of volume, used to gauge changes in trading volume trends",VECTOR,87%,13,132
+mdl109_p_trend,12-month price trend indicator measuring the overall direction or slope of a stock’s price movement over the past year,VECTOR,84%,11,25
+mdl109_payable_to,"Accounts payable turnover ratio, calculated as cost of goods sold or purchases divided by average accounts payable, indicating how quickly payables are paid",VECTOR,85%,10,36
+mdl109_pbt,"Tangible book-to-market ratio, calculated as tangible book value (book value excluding intangible assets) per share divided by market price per share",VECTOR,87%,41,110
+mdl109_perc_accru,"Percent accruals, a measure of the proportion of earnings attributable to non-cash (accrual-based) items",VECTOR,85%,15,65
+mdl109_pme,Number of employees at the reporting company,VECTOR,86%,14,22
+mdl109_psale,"Price-to-sales ratio, calculated as current market price divided by sales per share or revenue per share",VECTOR,87%,18,37
+mdl109_psale_fy1,Price-to-sales ratio using analyst estimate for sales in the next fiscal year (FY1); calculated as current price divided by forecasted FY1 sales per share,VECTOR,85%,16,104
+mdl109_quick_r,"Quick ratio (acid-test ratio), calculated as (current assets minus inventories) divided by current liabilities, measuring immediate liquidity",VECTOR,69%,8,58
+mdl109_real_vol,Realized volatility of the stock calculated using daily returns over the past 1 year,VECTOR,85%,14,68
+mdl109_real_vol3m,"Realized volatility, typically measured as the standard deviation of daily returns, computed over the past 3 months (about 63 trading days)",VECTOR,87%,35,85
+mdl109_receiva_to,"Accounts receivable turnover ratio, calculated as net sales divided by average accounts receivable, indicating how quickly receivables are collected",VECTOR,86%,20,44
+mdl109_rg_ac,Year-over-year growth rate in current assets (assets expected to be realized within one year),VECTOR,68%,9,38
+mdl109_rg_ao,"Growth rate of other assets, calculated as the percentage change in assets not classified as current or PPE, over a relevant period (usually year-over-year)",VECTOR,86%,18,50
+mdl109_rg_epp,"Growth rate of property, plant, and equipment, typically year-over-year",VECTOR,82%,22,107
+mdl109_rg_et,Year-over-year growth rate in total shareholders' equity (owners' equity in the business),VECTOR,86%,27,79
+mdl109_rg_lc,Year-over-year growth rate in current liabilities (liabilities due within one year),VECTOR,68%,7,10
+mdl109_rg_lt,Year-over-year growth rate of total liabilities,VECTOR,86%,21,165
+mdl109_rg_sp_ac,Year-over-year growth rate in current assets per share,VECTOR,68%,3,3
+mdl109_rg_sp_ao,Year-over-year growth rate in other assets per share,VECTOR,86%,17,79
+mdl109_rg_sp_epp,"Year-over-year growth rate in property, plant, and equipment per share",VECTOR,81%,13,24
+mdl109_rg_sp_et,"Growth rate of total equity per share, measuring how the total shareholders' equity per share has changed (likely year-over-year growth)",VECTOR,86%,18,51
+mdl109_rg_sp_lc,Year-over-year growth rate in current liabilities per share,VECTOR,68%,7,10
+mdl109_rg_sp_lt,Year-over-year growth rate in total liabilities per share,VECTOR,86%,25,75
+mdl109_rnoa,"Return on net operating assets, calculated on a trailing twelve month basis; measures profitability relative to operating assets deployed",VECTOR,87%,13,41
+mdl109_roa_stab,"Stability (consistency) of Return on Assets (ROA) over the past 5 years, likely measured as the time series R-squared or similar stability metric",VECTOR,74%,12,48
+mdl109_roe,Return on equity over the last twelve months,VECTOR,86%,13,27
+mdl109_roe_chg,Year-over-year change in return on equity,VECTOR,83%,17,25
+mdl109_roe_stab,"Stability (e.g., standard deviation, R-squared, or other consistency metric) of return on equity (ROE) over a 5-year period",VECTOR,74%,14,22
+mdl109_roic,Return on invested capital for the last twelve months,VECTOR,87%,14,33
+mdl109_rta,Average True Range: measures market volatility by decomposing the entire range of an asset price for a given period,VECTOR,87%,20,76
+mdl109_rw,"Williams %R, a momentum oscillator measuring a stock’s closing price relative to its high-low range over a specified period (typically 14 days), indicating overbought or oversold conditions",VECTOR,87%,54,147
+mdl109_sale_asset,"Sales divided by total assets, representing asset turnover",VECTOR,86%,36,129
+mdl109_sale_asset_chg,"Year-over-year change in asset turnover ratio, measuring change in sales relative to asset base",VECTOR,83%,12,80
+mdl109_sale_asset_fy1,Asset turnover ratio forecast for fiscal year 1 (FY1); calculated as sales divided by total assets for the next fiscal year,VECTOR,85%,16,24
+mdl109_sale_empl,"Revenue per employee, calculated as total sales or revenue divided by the number of employees, used as a measure of labor efficiency and productivity",VECTOR,85%,23,41
+mdl109_sale_ev,"Total revenue divided by total enterprise value (TEV), representing a valuation ratio (Revenue/TEV)",VECTOR,86%,13,15
+mdl109_sale_stab,"Historical stability (consistency) of company revenue over time, measured as the coefficient of determination (R-squared) of revenue time series, indicating how stable sales have been across periods",VECTOR,78%,3,3
+mdl109_sale_sur,Revenue surprise: the standardized or relative difference between actual revenue reported and consensus analyst estimates for the same period,VECTOR,80%,24,52
+mdl109_sale_varia,"Coefficient of variation (standard deviation divided by mean) of FY1 (next fiscal year) analyst revenue (sales) estimates, reflecting the dispersion in sales forecasts",VECTOR,85%,13,25
+mdl109_share_chg,Year-over-year change in the number of shares outstanding for the company,VECTOR,86%,13,101
+mdl109_skew,"Skewness of daily returns over the past year; captures the asymmetry of return distribution for the stock, which indicates downside or upside risk bias",VECTOR,85%,10,49
+mdl109_spd_1yf_rg,Forecasted growth rate of dividends per share (DPS) for the next fiscal year (FY1),VECTOR,68%,12,35
+mdl109_spd_2yf_rg,"Growth rate of Dividend Per Share (DPS) forecast for the second future fiscal year (FY2), typically reflecting expected DPS increase from FY1 to FY2 based on analyst estimates or consensus",VECTOR,70%,9,26
+mdl109_spd_rtni_rg,Year-over-year growth rate of interim Dividends Per Share based on historical actuals,VECTOR,43%,8,9
+mdl109_spd_y5_ca,"Acceleration of dividend per share (DPS) growth over the past 5 years, i.e., how the DPS growth rate has changed over that time",VECTOR,79%,15,26
+mdl109_spd_y5_rg,Historical 5-year compound annual growth rate or trend of company dividends per share (DPS),VECTOR,79%,6,12
+mdl109_spe_1yf_rg,"Forecasted growth rate of EPS for next fiscal year (FY1), likely relative to prior year",VECTOR,84%,8,18
+mdl109_spe_2yf_rg,Expected growth rate of Earnings Per Share for the second fiscal year ahead compared to the year before,VECTOR,85%,23,45
+mdl109_spe_rtni_rg,"Year-over-year growth rate of interim (e.g., quarterly or semiannual) Earnings Per Share based on historical actuals",VECTOR,87%,14,22
+mdl109_spe_rtnie_rg,"Year-over-year growth in expected interim Earnings Per Share, likely using consensus analyst forecasts",VECTOR,82%,89,155
+mdl109_spe_y5_ca,"Acceleration in earnings per share (EPS) growth rate over the previous five years, indicating whether EPS growth is speeding up or slowing down historically",VECTOR,85%,8,46
+mdl109_spe_y5_pxe_rg,"Consensus analyst estimate for expected compound annual growth rate (CAGR) of earnings per share (EPS) over the next 5 years, forward-looking",VECTOR,77%,10,27
+mdl109_spe_y5_rg,Historical 5-year compound annual growth rate or trend of company earnings per share (EPS),VECTOR,85%,13,22
+mdl109_speo_y5_ca,"Acceleration of operating earnings per share (OEPS) growth over the past 5 years, i.e., how rapidly the operating EPS growth rate has itself changed in this period",VECTOR,85%,22,34
+mdl109_speo_y5_rg,Historical 5-year compound annual growth rate or trend of company operating earnings per share (OEPS),VECTOR,85%,17,28
+mdl109_spfc_1yf_rg,"Growth rate of Cash Flow Per Share (CFPS) forecast for the next fiscal year (FY1) compared to the current/last year, commonly based on analyst projections",VECTOR,60%,10,39
+mdl109_spfc_2yf_rg,"Growth rate of Cash Flow Per Share (CFPS) forecast for the second next fiscal year (FY2) versus FY1, reflecting analyst or consensus expected CFPS increase",VECTOR,64%,11,20
+mdl109_spfc_rtni_rg,Year-over-year growth rate of interim Cash Flow Per Share based on historical actuals,VECTOR,85%,25,69
+mdl109_spfc_rtnie_rg,"Year-over-year growth of expected interim Cash Flow Per Share (CFPS), likely measuring the projected CFPS increase in an interim period (such as semi-annual versus prior year semi-annual), based on consensus or models",VECTOR,39%,15,24
+mdl109_spfc_y5_ca,"Acceleration of cash flow per share (CFPS) growth over the past 5 years, reflecting change in growth rate of per-share cash flow",VECTOR,80%,12,42
+mdl109_spfc_y5_rg,Historical 5-year compound annual growth rate or trend of company cash flow per share (CFPS),VECTOR,80%,9,18
+mdl109_sps_rtni_rg,"Year-over-year growth rate of interim Sales Per Share (i.e., revenue per share) based on historical actuals",VECTOR,85%,22,86
+mdl109_tpv,"Volume Price Trend: a cumulative indicator that integrates price direction and volume, intended to show the strength of price movements based on trading volume",VECTOR,87%,14,32
+mdl109_vbo,"On Balance Volume—a technical indicator that accumulates volume based on the direction of price movements, used to gauge momentum or confirm trends",VECTOR,87%,16,60
+mdl109_ve_fcf,Ratio of levered free cash flow to total enterprise value; a cash-based valuation metric,VECTOR,85%,108,769
+mdl109_vlc,"Close Location Value, a technical measure indicating where the closing price falls within the day’s range (high-low), used to gauge buying or selling pressure",VECTOR,87%,146,1552
+mdl109_vme,"Ease of Movement: a volume-based oscillator designed to measure the ""ease"" with which an asset price moves based on its volume and price change",VECTOR,58%,19,34
+mdl109_vol_vo_p_12m,Volatility of the ratio of trading volume to price over a 12-month period,VECTOR,87%,13,88
+mdl109_vol_vo_p_1m,Volatility of the ratio of trading volume to price over a 1-month period,VECTOR,87%,19,65

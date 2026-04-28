@@ -1,0 +1,85 @@
+Field,Description,Type,Coverage,Users,Alphas
+negative_sentiment_average,Average negative sentiment score.,MATRIX,90%,2,2
+negative_sentiment_average_3,"Average negative sentiment score for the stock on that day, aggregated from mapped stories",MATRIX,90%,0,0
+negative_sentiment_average_4,Average negative sentiment score for this version.,MATRIX,90%,0,0
+negative_sentiment_average_5,"Average negative-story sentiment score for the stock on that day, based on mapped Bloomberg market-moving news stories",MATRIX,90%,0,0
+negative_sentiment_confidence_lower,Lower bound of confidence interval for negative sentiment score.,MATRIX,90%,1,1
+negative_sentiment_confidence_lower_3,Lower 95% confidence bound of the daily mean negative sentiment score for the stock (mean ± 1.96 × std/√N),MATRIX,90%,0,0
+negative_sentiment_confidence_lower_4,Lower bound of confidence interval for negative sentiment score in this version.,MATRIX,90%,0,0
+negative_sentiment_confidence_lower_5,Lower 95 percent confidence bound of the negative mean sentiment for the stock on that day (mean minus 1.96 times std divided by sqrt of story count),MATRIX,90%,0,0
+negative_sentiment_confidence_upper,Upper bound of confidence interval for negative sentiment score.,MATRIX,90%,1,1
+negative_sentiment_confidence_upper_3,Upper 95% confidence bound of the daily mean negative sentiment score for the stock (mean ± 1.96 × std/√N),MATRIX,90%,0,0
+negative_sentiment_confidence_upper_4,Upper bound of confidence interval for negative sentiment score in this version.,MATRIX,90%,0,0
+negative_sentiment_confidence_upper_5,Upper 95 percent confidence bound of the negative mean sentiment for the stock on that day (mean plus 1.96 times std divided by sqrt of story count),MATRIX,90%,0,0
+negative_sentiment_maximum,Maximum negative sentiment score.,MATRIX,90%,1,1
+negative_sentiment_maximum_3,Maximum negative sentiment score among mapped stories for the stock on that day,MATRIX,90%,1,1
+negative_sentiment_maximum_4,Maximum negative sentiment score for this version.,MATRIX,90%,0,0
+negative_sentiment_maximum_5,Maximum observed negative sentiment score among the stock’s mapped news stories on that day,MATRIX,90%,2,2
+negative_sentiment_median,Median negative sentiment score.,MATRIX,90%,1,1
+negative_sentiment_median_3,"Median negative sentiment score for the stock on that day, aggregated from mapped stories",MATRIX,90%,0,0
+negative_sentiment_median_4,Median negative sentiment score for this version.,MATRIX,90%,0,0
+negative_sentiment_median_5,"Median negative-story sentiment score for the stock on that day, based on mapped Bloomberg market-moving news stories",MATRIX,90%,0,0
+negative_sentiment_minimum,Minimum negative sentiment score.,MATRIX,90%,0,0
+negative_sentiment_minimum_3,Minimum negative sentiment score among mapped stories for the stock on that day,MATRIX,90%,0,0
+negative_sentiment_minimum_4,Minimum negative sentiment score for this version.,MATRIX,90%,0,0
+negative_sentiment_minimum_5,Minimum observed negative sentiment score among the stock’s mapped news stories on that day,MATRIX,90%,1,1
+negative_sentiment_stddev,Standard deviation of negative sentiment scores.,MATRIX,90%,0,0
+negative_sentiment_stddev_3,Standard deviation of negative sentiment scores for the stock on that day,MATRIX,90%,0,0
+negative_sentiment_stddev_4,Standard deviation of negative sentiment scores for this version.,MATRIX,90%,0,0
+negative_sentiment_stddev_5,"Standard deviation of negative-story sentiment scores for the stock on that day, derived from mapped news stories",MATRIX,90%,0,0
+neutral_sentiment_average,Average neutral sentiment score.,MATRIX,90%,1,1
+neutral_sentiment_average_3,"Average neutral sentiment score for the stock on that day, aggregated from mapped stories",MATRIX,90%,0,0
+neutral_sentiment_average_4,Average neutral sentiment score for this version.,MATRIX,90%,0,0
+neutral_sentiment_average_5,"Average neutral-story sentiment score for the stock on that day, based on mapped Bloomberg market-moving news stories",MATRIX,90%,0,0
+neutral_sentiment_confidence_lower,Lower bound of confidence interval for neutral sentiment score.,MATRIX,90%,0,0
+neutral_sentiment_confidence_lower_3,Lower 95% confidence bound of the daily mean neutral sentiment score for the stock (mean ± 1.96 × std/√N),MATRIX,90%,0,0
+neutral_sentiment_confidence_lower_4,Lower bound of confidence interval for neutral sentiment score in this version.,MATRIX,90%,0,0
+neutral_sentiment_confidence_lower_5,Lower 95 percent confidence bound of the neutral mean sentiment for the stock on that day (mean minus 1.96 times std divided by sqrt of story count),MATRIX,90%,0,0
+neutral_sentiment_confidence_upper,Upper bound of confidence interval for neutral sentiment score.,MATRIX,90%,0,0
+neutral_sentiment_confidence_upper_3,Upper 95% confidence bound of the daily mean neutral sentiment score for the stock (mean ± 1.96 × std/√N),MATRIX,90%,0,0
+neutral_sentiment_confidence_upper_4,Upper bound of confidence interval for neutral sentiment score in this version.,MATRIX,90%,0,0
+neutral_sentiment_confidence_upper_5,Upper 95 percent confidence bound of the neutral mean sentiment for the stock on that day (mean plus 1.96 times std divided by sqrt of story count),MATRIX,90%,0,0
+neutral_sentiment_maximum,Maximum neutral sentiment score.,MATRIX,90%,0,0
+neutral_sentiment_maximum_3,Maximum neutral sentiment score among mapped stories for the stock on that day,MATRIX,90%,0,0
+neutral_sentiment_maximum_4,Maximum neutral sentiment score for this version.,MATRIX,90%,0,0
+neutral_sentiment_maximum_5,Maximum observed neutral sentiment score among the stock’s mapped news stories on that day,MATRIX,90%,0,0
+neutral_sentiment_median,Median neutral sentiment score.,MATRIX,90%,0,0
+neutral_sentiment_median_3,"Median neutral sentiment score for the stock on that day, aggregated from Bloomberg market‑moving news stories scored by WorldQuant’s model",MATRIX,90%,0,0
+neutral_sentiment_median_4,Median neutral sentiment score for this version.,MATRIX,90%,0,0
+neutral_sentiment_median_5,"Median neutral-story sentiment score for the stock on that day, based on mapped Bloomberg market-moving news stories",MATRIX,90%,0,0
+neutral_sentiment_minimum,Minimum neutral sentiment score.,MATRIX,90%,0,0
+neutral_sentiment_minimum_3,Minimum neutral sentiment score among mapped stories for the stock on that day,MATRIX,90%,0,0
+neutral_sentiment_minimum_4,Minimum neutral sentiment score for this version.,MATRIX,90%,0,0
+neutral_sentiment_minimum_5,Minimum observed neutral sentiment score among the stock’s mapped news stories on that day,MATRIX,90%,0,0
+neutral_sentiment_stddev,Standard deviation of neutral sentiment scores.,MATRIX,90%,0,0
+neutral_sentiment_stddev_3,Standard deviation of neutral sentiment scores for the stock on that day,MATRIX,90%,0,0
+neutral_sentiment_stddev_4,Standard deviation of neutral sentiment scores for this version.,MATRIX,90%,0,0
+neutral_sentiment_stddev_5,"Standard deviation of neutral-story sentiment scores for the stock on that day, derived from mapped news stories",MATRIX,90%,0,0
+positive_sentiment_average,Average positive sentiment score.,MATRIX,90%,1,1
+positive_sentiment_average_3,"Average positive sentiment score for the stock on that day, aggregated from mapped stories",MATRIX,90%,0,0
+positive_sentiment_average_4,Average positive sentiment score for this version.,MATRIX,90%,0,0
+positive_sentiment_average_5,"Average positive-story sentiment score for the stock on that day, based on mapped Bloomberg market-moving news stories",MATRIX,90%,0,0
+positive_sentiment_confidence_lower,Lower bound of confidence interval for positive sentiment score.,MATRIX,90%,0,0
+positive_sentiment_confidence_lower_3,Lower 95% confidence bound of the daily mean positive sentiment score for the stock (mean ± 1.96 × std/√N),MATRIX,90%,0,0
+positive_sentiment_confidence_lower_4,Lower bound of confidence interval for positive sentiment score in this version.,MATRIX,90%,0,0
+positive_sentiment_confidence_lower_5,Lower 95 percent confidence bound of the positive mean sentiment for the stock on that day (mean minus 1.96 times std divided by sqrt of story count),MATRIX,90%,0,0
+positive_sentiment_confidence_upper,Upper bound of confidence interval for positive sentiment score.,MATRIX,90%,1,1
+positive_sentiment_confidence_upper_3,Upper 95% confidence bound of the daily mean positive sentiment score for the stock (mean ± 1.96 × std/√N),MATRIX,90%,0,0
+positive_sentiment_confidence_upper_4,Upper bound of confidence interval for positive sentiment score in this version.,MATRIX,90%,1,1
+positive_sentiment_confidence_upper_5,Upper 95 percent confidence bound of the positive mean sentiment for the stock on that day (mean plus 1.96 times std divided by sqrt of story count),MATRIX,90%,0,0
+positive_sentiment_maximum,Maximum positive sentiment score.,MATRIX,90%,1,1
+positive_sentiment_maximum_3,Maximum positive sentiment score among mapped stories for the stock on that day,MATRIX,90%,0,0
+positive_sentiment_maximum_4,Maximum positive sentiment score for this version.,MATRIX,90%,0,0
+positive_sentiment_maximum_5,Maximum observed positive sentiment score among the stock’s mapped news stories on that day,MATRIX,90%,0,0
+positive_sentiment_median,Median positive sentiment score.,MATRIX,90%,0,0
+positive_sentiment_median_3,"Median positive sentiment score for the stock on that day, aggregated from mapped stories",MATRIX,90%,0,0
+positive_sentiment_median_4,Median positive sentiment score for this version.,MATRIX,90%,1,1
+positive_sentiment_median_5,"Median positive-story sentiment score for the stock on that day, based on mapped Bloomberg market-moving news stories",MATRIX,90%,0,0
+positive_sentiment_minimum,Minimum positive sentiment score.,MATRIX,90%,0,0
+positive_sentiment_minimum_3,Minimum positive sentiment score among mapped stories for the stock on that day,MATRIX,90%,0,0
+positive_sentiment_minimum_4,Minimum positive sentiment score for this version.,MATRIX,90%,0,0
+positive_sentiment_minimum_5,Minimum observed positive sentiment score among the stock’s mapped news stories on that day,MATRIX,90%,0,0
+positive_sentiment_stddev,Standard deviation of positive sentiment scores.,MATRIX,90%,0,0
+positive_sentiment_stddev_3,Standard deviation of positive sentiment scores for the stock on that day,MATRIX,90%,0,0
+positive_sentiment_stddev_4,Standard deviation of positive sentiment scores for this version.,MATRIX,90%,0,0
+positive_sentiment_stddev_5,"Standard deviation of positive-story sentiment scores for the stock on that day, derived from Bloomberg market-moving news mapped to the stock",MATRIX,90%,0,0

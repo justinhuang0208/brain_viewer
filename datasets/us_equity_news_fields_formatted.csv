@@ -1,0 +1,9 @@
+Field,Description,Type,Coverage,Users,Alphas
+count_negative_phrases,Number of negative words or phrases in the article.,VECTOR,96%,1,3
+count_positive_phrases,Number of positive words or phrases in the article.,VECTOR,96%,2,2
+maximum_sentiment_score,Highest sentiment score found within the article.,VECTOR,96%,0,0
+mean_sentiment_score_article,Average sentiment score calculated for the article.,VECTOR,96%,1,1
+minimum_sentiment_score,Lowest sentiment score found within the article.,VECTOR,96%,0,0
+security_relevance_percentage,Percentage indicating how relevant the article is to the referenced security.,VECTOR,96%,0,0
+sentiment_tagged_phrase_count,Number of words or phrases tagged with sentiment in the article.,VECTOR,96%,0,0
+total_word_count_article,Total number of words in the article.,VECTOR,96%,1,6

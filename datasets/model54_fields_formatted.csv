@@ -1,0 +1,34 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl54_daily_ets_bias,"A alpha signal with ""bias"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,28,54
+mdl54_daily_ets_bias_signal,"A alpha signal using ""ETC_Bias "". Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,32,80
+mdl54_daily_ets_confirmation,"A alpha signal with ""confirmation"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,27,80
+mdl54_daily_ets_fast,"A alpha signal with ""fast"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,67,396
+mdl54_daily_ets_std,"A alpha signal with ""std"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,56,243
+mdl54_dma_daily,It is a daily displaced moving average-based signal. Vendor doesn't explicitly explain what it is. No unit signal (value from 0.0-100.0).,MATRIX,42%,23,35
+mdl54_dma_monthly,It is a monthly displaced moving average-based signal. Vendor doesn't explicitly explain what it is. No unit signal (value from 0.0-100.0).,MATRIX,42%,22,50
+mdl54_dma_weekly,It is a weekly displaced moving average-based signal. Vendor doesn't explicitly explain what it is. No unit signal (value from 0.0-100.0).,MATRIX,42%,24,44
+mdl54_ec_daily,The daily crossover indicator. Vendor doesn't explicitly explain what it is. No unit signal (value +/-1).,MATRIX,42%,26,101
+mdl54_ec_daily_signal,Continuous daily Erlanger Crossover signal line; unitless value typically in the range -200 to 200,MATRIX,42%,13,18
+mdl54_ec_daily_spread,Momentum strength of the daily Erlanger Crossover signal (nonnegative spread; larger values indicate stronger momentum),MATRIX,42%,24,83
+mdl54_ec_monthly,The monthly crossover indicator. Vendor doesn't explicitly explain what it is. No unit signal (value +/-1).,MATRIX,42%,15,24
+mdl54_ec_monthly_signal,"Continuous monthly Erlanger Crossover signal used for crossover detection, roughly in range -200 to 200",MATRIX,40%,15,36
+mdl54_ec_monthly_spread,The momentum strength of EC_Monthly_Signal. No unit signal (value from 0.0-000.0).,MATRIX,40%,21,33
+mdl54_ec_weekly,The weekly crossover indicator. Vendor doesn't explicitly explain what it is. No unit signal (value +/-1).,MATRIX,42%,20,61
+mdl54_ec_weekly_signal,Continuous weekly Erlanger Crossover signal line; unitless value typically in the range -200 to 200,MATRIX,41%,23,122
+mdl54_ec_weekly_spread,Momentum strength of the weekly Erlanger Crossover signal (nonnegative spread; larger values indicate stronger momentum),MATRIX,41%,17,46
+mdl54_ezlm_month,Monthly Erlanger Zero Lag Momentum bias indicator measuring trend momentum at the monthly horizon,MATRIX,34%,16,19
+mdl54_group_avg_evs,Erlanger Volume Swing (EVS) index is a ratio between up and down volume. This is the monthly version. Value from [0.0-100.0],MATRIX,42%,15,23
+mdl54_high,High price for the trading day,MATRIX,42%,31,71
+mdl54_low,Low price for the trading day,MATRIX,42%,23,90
+mdl54_monthly_ets_bias,"A alpha signal with ""bias"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,40%,23,56
+mdl54_monthly_ets_bias_signal,"A alpha signal using ""ETC_Bias "". Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,40%,16,28
+mdl54_monthly_ets_confirmation,"A alpha signal with ""confirmation"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,40%,11,18
+mdl54_monthly_ets_fast,"A alpha signal with ""fast"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,40%,23,100
+mdl54_monthly_ets_std,"A alpha signal with ""std"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,40%,21,29
+mdl54_monthly_evs,"Monthly Erlanger Volume Swing index, ratio of up to down volume scaled 0 to 100",MATRIX,41%,19,64
+mdl54_price,Closing price of the trading day,MATRIX,42%,41,116
+mdl54_weekly_ets_bias,"A alpha signal with ""bias"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,18,36
+mdl54_weekly_ets_bias_signal,"A alpha signal using ""ETC_Bias "". Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,14,43
+mdl54_weekly_ets_confirmation,"A alpha signal with ""confirmation"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,27,113
+mdl54_weekly_ets_fast,"A alpha signal with ""fast"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,24,46
+mdl54_weekly_ets_std,"A alpha signal with ""std"" concept. Vendor doesn’t explicitly explain what it is. No unit signal (value from 0.0-100.0).",MATRIX,42%,24,56

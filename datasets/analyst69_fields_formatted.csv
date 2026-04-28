@@ -1,0 +1,611 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl69_aeps_best_crncy_iso,"ISO currency code (e.g., USD, EUR) for the consensus estimate values",MATRIX,100%,213,615
+anl69_aeps_best_cur_fiscal_qtr_period,Identifier indicating the current fiscal quarter period for the company as of the point-in-time estimate,MATRIX,100%,156,647
+anl69_aeps_best_cur_fiscal_year_period,"Current fiscal year period associated with the consensus or ""best"" estimate, likely denoting the fiscal year covered by consensus estimates",MATRIX,100%,89,169
+anl69_aeps_best_eeps_cur_yr,The current consensus estimate for Earnings Per Share (EPS) for the ongoing fiscal year,MATRIX,100%,172,490
+anl69_aeps_best_eeps_nxt_yr,The consensus estimate for Earnings Per Share (EPS) for the next fiscal year,MATRIX,100%,142,280
+anl69_aeps_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,33,52
+anl69_aeps_best_fperiod_override,Fiscal Period Override,VECTOR,100%,14,31
+anl69_aeps_expected_report_dt,The scheduled date when the company's earnings report is expected to be released,MATRIX,100%,100,363
+anl69_aeps_expected_report_period,Expected Earnings Report Period,VECTOR,100%,5,8
+anl69_aeps_expected_report_time,The expected specific time of day when the company's earnings report will be released,MATRIX,100%,74,341
+anl69_aeps_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,8,12
+anl69_aeps_market_status,Market Status,VECTOR,100%,4,7
+anl69_aeps_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,8,18
+anl69_analyst_best_crncy_iso,ISO currency code for the currency in which the consensus estimate is reported,MATRIX,100%,49,94
+anl69_analyst_best_cur_fiscal_qtr_period,Date representing the current fiscal quarter period for the company according to analyst consensus estimates,MATRIX,100%,59,256
+anl69_analyst_best_cur_fiscal_year_period,Date representing the current fiscal year period for the company according to analyst consensus estimates,MATRIX,100%,42,85
+anl69_analyst_best_eeps_cur_yr,Consensus estimate of earnings per share (EPS) for the current fiscal year,MATRIX,100%,54,117
+anl69_analyst_best_eeps_nxt_yr,Consensus estimate of earnings per share (EPS) for the next fiscal year,MATRIX,100%,109,355
+anl69_analyst_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,6,23
+anl69_analyst_best_fperiod_override,Fiscal Period Override,VECTOR,100%,6,8
+anl69_analyst_expected_report_dt,The expected date the company will release its earnings report,MATRIX,100%,40,95
+anl69_analyst_expected_report_period,Expected Earnings Report Period,VECTOR,100%,2,5
+anl69_analyst_expected_report_time,The expected time of day at which the earnings report will be released,MATRIX,100%,40,89
+anl69_analyst_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,3,3
+anl69_analyst_market_status,Market Status,VECTOR,100%,2,3
+anl69_analyst_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,3,3
+anl69_analyst_tot_analyst_rec,Total Analyst Recommendations,VECTOR,100%,8,9
+anl69_bbg_dividend_information_m21_hs_dvd_yqe,Dividend Per Share 12 Month (Net),MATRIX,50%,36,106
+anl69_bbg_equity_m21_hs_dvd_yqe,The total gross dividend paid per share over the past 12 months,MATRIX,55%,6,6
+anl69_best_aeps_lst_qtr,Actual Earnings per share Last Quarter,VECTOR,97%,17,18
+anl69_best_analyst_rating,Analyst Rating,VECTOR,100%,33,43
+anl69_best_bps_4wk_chg,Book value per share 4 wk Chg,VECTOR,79%,4,4
+anl69_best_bps_4wk_up,Book value per share 4 wk Up,VECTOR,100%,7,8
+anl69_best_bps_chg_pct,Book value per share % Chg,VECTOR,79%,3,6
+anl69_best_bps_hi,Book value per share High,VECTOR,80%,9,17
+anl69_best_bps_lo,Book value per share Low,VECTOR,80%,3,3
+anl69_best_bps_median,Book value per share Median,VECTOR,82%,5,5
+anl69_best_bps_numest,Book value per share # Ests,VECTOR,100%,2,7
+anl69_best_bps_stddev,Book value per share Std Dev,VECTOR,60%,0,0
+anl69_best_cps,Cash flow per share,VECTOR,68%,5,5
+anl69_best_cps_4wk_chg,Cash flow per share 4 wk Chg,VECTOR,67%,2,2
+anl69_best_cps_4wk_dn,Cash flow per share 4 wk Down,VECTOR,100%,4,7
+anl69_best_cps_4wk_up,Cash flow per share 4 wk Up,VECTOR,100%,8,9
+anl69_best_cps_chg_pct,Cash flow per share % Chg,VECTOR,65%,9,9
+anl69_best_cps_hi,Cash flow per share High,VECTOR,68%,2,3
+anl69_best_cps_lo,Cash flow per share Low,VECTOR,68%,2,3
+anl69_best_cps_median,Cash flow per share Median,VECTOR,68%,8,11
+anl69_best_cps_numest,Cash flow per share # Ests,VECTOR,100%,3,3
+anl69_best_cps_stddev,Cash flow per share Std Dev,VECTOR,45%,1,1
+anl69_best_crncy_iso,ISO currency code representing the currency of the reported or estimated financial metrics,MATRIX,100%,35,65
+anl69_best_cur_ev_to_ebitda,EV to EBITDA,VECTOR,80%,308,974
+anl69_best_cur_fiscal_qtr_period,Date (or identifier) for the company's current fiscal quarter period for which financial data or estimates apply,MATRIX,100%,33,62
+anl69_best_cur_fiscal_year_period,Date (or identifier) for the company's current fiscal year period for which financial data or estimates apply,MATRIX,100%,28,44
+anl69_best_dps_4wk_chg,Dividend per share 4 wk Chg,VECTOR,68%,1,1
+anl69_best_dps_4wk_up,Dividend per share 4 wk Up,VECTOR,100%,11,13
+anl69_best_dps_hi,Dividend per share High,VECTOR,69%,11,20
+anl69_best_dps_lo,Dividend per share Low,VECTOR,68%,2,2
+anl69_best_dps_median,Dividend per share Median,VECTOR,72%,4,4
+anl69_best_dps_numest,Dividend per share # Ests,VECTOR,100%,1,2
+anl69_best_dps_stddev,Dividend per share Std Dev,VECTOR,60%,3,3
+anl69_best_ebit,EBIT,VECTOR,77%,4,9
+anl69_best_ebit_4wk_dn,EBIT 4 wk Down,VECTOR,100%,2,5
+anl69_best_ebit_4wk_up,EBIT 4 wk Up,VECTOR,100%,7,10
+anl69_best_ebit_chg_pct,EBIT % Chg,VECTOR,75%,2,2
+anl69_best_ebit_hi,EBIT High,VECTOR,77%,6,8
+anl69_best_ebit_lo,EBIT Low,VECTOR,77%,5,7
+anl69_best_ebit_median,EBIT Median,VECTOR,78%,9,10
+anl69_best_ebit_numest,EBIT # Ests,VECTOR,100%,10,20
+anl69_best_ebit_stddev,EBIT Std Dev,VECTOR,60%,1,1
+anl69_best_ebit_to_sales,EBIT Margin,VECTOR,77%,18,26
+anl69_best_ebitda,EBITDA,VECTOR,87%,8,12
+anl69_best_ebitda_4wk_chg,EBITDA 4 wk Chg,VECTOR,87%,14,22
+anl69_best_ebitda_4wk_dn,EBITDA 4 wk Down,VECTOR,100%,7,8
+anl69_best_ebitda_4wk_up,EBITDA 4 wk Up,VECTOR,100%,0,0
+anl69_best_ebitda_chg_pct,EBITDA % Chg,VECTOR,85%,5,10
+anl69_best_ebitda_hi,EBITDA High,VECTOR,87%,4,4
+anl69_best_ebitda_lo,EBITDA Low,VECTOR,87%,6,7
+anl69_best_ebitda_median,EBITDA Median,VECTOR,86%,8,10
+anl69_best_ebitda_numest,EBITDA # Estimates,VECTOR,100%,5,23
+anl69_best_ebitda_stddev,EBITDA Std Dev,VECTOR,79%,5,5
+anl69_best_eeps_cur_yr,Consensus estimate for the company's earnings per share (EPS) for the current fiscal year,MATRIX,100%,43,106
+anl69_best_eeps_nxt_yr,Consensus estimate for the company's earnings per share (EPS) for the next fiscal year,MATRIX,100%,35,64
+anl69_best_eps_4wk_dn,Earnings per share 4 wk Down,VECTOR,100%,9,23
+anl69_best_eps_4wk_up,Earnings per share 4 wk Up,VECTOR,100%,6,6
+anl69_best_eps_chg_pct,Earnings per share % Chg,VECTOR,100%,17,24
+anl69_best_eps_gaap_4wk_dn,Earnings per share GAAP 4 wk Down,VECTOR,100%,3,13
+anl69_best_eps_gaap_4wk_up,Earnings per share GAAP 4 wk Up,VECTOR,100%,9,12
+anl69_best_eps_gaap_median,Earnings per share GAAP Median,VECTOR,99%,12,20
+anl69_best_eps_median,Earnings per share Median,VECTOR,100%,19,26
+anl69_best_eps_numest,Earnings per share # Ests,VECTOR,100%,12,23
+anl69_best_eps_stddev,Earnings per share Std Dev,VECTOR,97%,9,23
+anl69_best_ev_to_best_ebit,EV / EBIT,VECTOR,59%,77,131
+anl69_best_ffops_4wk_dn,Funds from Operations per share 4 wk Down,VECTOR,100%,5,11
+anl69_best_ffops_4wk_up,Funds from Operations per share 4 wk Up,VECTOR,100%,7,8
+anl69_best_ffops_numest,Funds from Operations per share # Ests,VECTOR,100%,0,0
+anl69_best_fperiod_override,Fiscal Period Override,VECTOR,100%,8,21
+anl69_best_ltg_4wk_chg,Long term EPS growth rate 4 wk Chg,VECTOR,78%,3,3
+anl69_best_ltg_4wk_dn,Long term EPS growth rate 4 wk Down,VECTOR,100%,4,8
+anl69_best_ltg_4wk_up,Long term EPS growth rate 4 wk Up,VECTOR,100%,4,6
+anl69_best_ltg_chg_pct,Long term EPS growth rate % Chg,VECTOR,69%,3,4
+anl69_best_ltg_eps,Long term EPS growth rate Earnings per share,VECTOR,79%,2,2
+anl69_best_ltg_hi,Long term EPS growth rate High,VECTOR,79%,1,6
+anl69_best_ltg_lo,Long term EPS growth rate Low,VECTOR,79%,3,3
+anl69_best_ltg_median,Long term EPS growth rate Median,VECTOR,73%,2,24
+anl69_best_ltg_numest,Long term EPS growth rate # Ests,VECTOR,100%,6,8
+anl69_best_ltg_stddev,Long Term Growth Rate Std Dev,VECTOR,54%,2,2
+anl69_best_nav,Net asset value,VECTOR,54%,3,4
+anl69_best_nav_4wk_chg,Net asset value 4 wk Chg,VECTOR,48%,3,3
+anl69_best_nav_4wk_dn,Net asset value 4 wk Down,VECTOR,100%,2,2
+anl69_best_nav_4wk_up,Net asset value 4 wk Up,VECTOR,100%,2,2
+anl69_best_nav_hi,Net asset value High,VECTOR,54%,1,1
+anl69_best_nav_lo,Net asset value Low,VECTOR,54%,1,1
+anl69_best_nav_median,Net asset value Median,VECTOR,64%,1,2
+anl69_best_nav_numest,Net asset value # Ests,VECTOR,100%,5,6
+anl69_best_nav_stddev,Net asset value Std Dev,VECTOR,27%,0,0
+anl69_best_ndebt_4wk_chg,NDEBT 4 wk Chg,VECTOR,65%,6,7
+anl69_best_ndebt_chg_pct,NDEBT % Chg,VECTOR,67%,8,8
+anl69_best_ndebt_hi,NDEBT High,VECTOR,66%,7,8
+anl69_best_ndebt_lo,NDEBT Low,VECTOR,66%,6,8
+anl69_best_ndebt_median,NDEBT Median,VECTOR,71%,8,11
+anl69_best_ndebt_numest,NDEBT # Ests,VECTOR,100%,8,13
+anl69_best_ndebt_stddev,NDEBT Std Dev,VECTOR,45%,0,0
+anl69_best_net_4wk_chg,Net Inc 4 wk Chg,VECTOR,100%,6,7
+anl69_best_net_4wk_dn,Net Inc 4 wk Down,VECTOR,100%,5,5
+anl69_best_net_4wk_up,Net Inc 4 wk Up,VECTOR,100%,3,3
+anl69_best_net_chg_pct,Net Inc % Chg,VECTOR,100%,11,12
+anl69_best_net_debt,Net Debt,VECTOR,66%,14,21
+anl69_best_net_gaap_4wk_chg,Net GAAP 4 wk Chg,VECTOR,96%,4,6
+anl69_best_net_gaap_4wk_dn,Net GAAP 4 wk Down,VECTOR,100%,4,5
+anl69_best_net_gaap_4wk_up,Net GAAP 4 wk Up,VECTOR,100%,9,9
+anl69_best_net_gaap_hi,Net GAAP High,VECTOR,97%,4,4
+anl69_best_net_gaap_lo,Net GAAP Low,VECTOR,97%,4,5
+anl69_best_net_gaap_median,Net GAAP Median,VECTOR,98%,5,9
+anl69_best_net_gaap_numest,Net GAAP # Ests,VECTOR,100%,11,13
+anl69_best_net_gaap_stddev,Net GAAP Std Dev,VECTOR,86%,5,5
+anl69_best_net_hi,Net Income High,VECTOR,100%,5,9
+anl69_best_net_income,Net Income,VECTOR,100%,21,254
+anl69_best_net_lo,Net Income Low,VECTOR,100%,6,8
+anl69_best_net_median,Net Inc Median,VECTOR,100%,7,8
+anl69_best_net_numest,Net Inc # Ests,VECTOR,100%,10,14
+anl69_best_net_stddev,Net Inc Std Dev,VECTOR,95%,5,6
+anl69_best_ni_adj_to_sales,Profit Margin,VECTOR,100%,17,27
+anl69_best_opp,Operating Profit,VECTOR,96%,6,6
+anl69_best_opp_4wk_chg,Operating Profit 4 wk Chg,VECTOR,96%,2,2
+anl69_best_opp_4wk_dn,Operating Profit 4 wk Down,VECTOR,100%,4,5
+anl69_best_opp_4wk_up,Operating Profit 4 wk Up,VECTOR,100%,10,20
+anl69_best_opp_hi,Operating Profit High,VECTOR,96%,4,4
+anl69_best_opp_lo,Operating Profit Low,VECTOR,96%,4,5
+anl69_best_opp_median,Operating Profit Median,VECTOR,97%,4,4
+anl69_best_opp_numest,Operating Profit # Ests,VECTOR,100%,3,3
+anl69_best_opp_stddev,Operating Profit Std Dev,VECTOR,87%,1,2
+anl69_best_opp_to_sales,Operating Margin,VECTOR,96%,11,11
+anl69_best_pe_ratio,P/E Ratio,VECTOR,94%,246,636
+anl69_best_ptp_4wk_chg,Pretax profit 4 wk Chg,VECTOR,99%,3,3
+anl69_best_ptp_4wk_dn,Pretax profit 4 wk Down,VECTOR,100%,8,11
+anl69_best_ptp_4wk_up,Pretax profit 4 wk Up,VECTOR,100%,5,6
+anl69_best_ptp_hi,Pretax profit High,VECTOR,100%,13,19
+anl69_best_ptp_lo,Pretax profit Low,VECTOR,100%,10,13
+anl69_best_ptp_median,Pretax profit Median,VECTOR,100%,6,9
+anl69_best_ptp_stddev,Pretax profit Std Dev,VECTOR,88%,2,2
+anl69_best_ptp_to_sales,Pre-Tax Margin,VECTOR,100%,11,21
+anl69_best_px_bps_ratio,P/Bk,VECTOR,79%,48,92
+anl69_best_px_cps_ratio,P/CF,VECTOR,65%,21,34
+anl69_best_roa,Return on Assets,VECTOR,70%,4,5
+anl69_best_roa_4wk_chg,Return on Assets 4 wk Chg,VECTOR,69%,0,0
+anl69_best_roa_4wk_dn,Return on Assets 4 wk Down,VECTOR,100%,11,18
+anl69_best_roa_4wk_up,Return on Assets 4 wk Up,VECTOR,100%,5,6
+anl69_best_roa_chg_pct,Return on Assets % Change,VECTOR,70%,4,4
+anl69_best_roa_hi,Return on Assets High,VECTOR,70%,2,3
+anl69_best_roa_lo,Return on Assets Low,VECTOR,70%,4,4
+anl69_best_roa_numest,Return on Assets # Ests,VECTOR,100%,4,5
+anl69_best_roa_stddev,Return on Assets Std Dev,VECTOR,43%,2,2
+anl69_best_roe,Return on Equity,VECTOR,88%,14,24
+anl69_best_roe_4wk_chg,Return on Equity 4 wk Chg,VECTOR,87%,1,1
+anl69_best_roe_4wk_dn,Return on Equity 4 wk Down,VECTOR,100%,5,7
+anl69_best_roe_4wk_up,Return on Equity 4 wk Up,VECTOR,100%,3,3
+anl69_best_roe_chg_pct,Return on Equity % Chg,VECTOR,86%,5,8
+anl69_best_roe_hi,Return on Equity High,VECTOR,88%,6,6
+anl69_best_roe_lo,Return on Equity Low,VECTOR,88%,11,16
+anl69_best_roe_median,Return on Equity Median,VECTOR,88%,18,55
+anl69_best_roe_numest,Return on Equity # Estimates,VECTOR,100%,2,3
+anl69_best_roe_stddev,Return on Equity Std Dev,VECTOR,68%,1,1
+anl69_best_sales,Sales,VECTOR,100%,4,5
+anl69_best_sales_4wk_chg,Sales 4 wk Chg,VECTOR,100%,4,7
+anl69_best_sales_4wk_dn,Sales 4 wk Down,VECTOR,100%,5,7
+anl69_best_sales_4wk_up,Sales 4 wk Up,VECTOR,100%,5,12
+anl69_best_sales_chg_pct,Sales % Chg,VECTOR,100%,12,24
+anl69_best_sales_hi,Sales High,VECTOR,100%,3,6
+anl69_best_sales_lo,Sales Low,VECTOR,100%,2,4
+anl69_best_sales_median,Sales Median,VECTOR,100%,8,13
+anl69_best_sales_numest,Sales # Ests,VECTOR,100%,12,39
+anl69_best_sales_stddev,Sales Std Dev,VECTOR,95%,5,19
+anl69_best_target_4wk_chg,Target Price 4 Wk Chg,VECTOR,100%,10,12
+anl69_best_target_hi,High Target Price,VECTOR,100%,9,14
+anl69_best_target_lo,Low Target Price,VECTOR,100%,14,25
+anl69_best_target_median,Median Target Price,VECTOR,100%,11,31
+anl69_best_target_price,Target Price,VECTOR,100%,18,26
+anl69_bps_best_bps,Book value per share,VECTOR,80%,4,6
+anl69_bps_best_crncy_iso,Currency (ISO),MATRIX,100%,13,23
+anl69_bps_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period D,MATRIX,100%,20,36
+anl69_bps_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,15,31
+anl69_bps_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,13,36
+anl69_bps_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,14,22
+anl69_bps_best_fperiod_override,Fiscal Period Override,VECTOR,100%,5,6
+anl69_bps_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,26,50
+anl69_bps_expected_report_time,Expected Earnings Report Time,MATRIX,100%,25,75
+anl69_bps_new_best_bps,Book value per share,VECTOR,82%,5,9
+anl69_bps_new_best_crncy_iso,Currency (ISO),MATRIX,100%,30,135
+anl69_bps_new_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period Date,MATRIX,100%,35,216
+anl69_bps_new_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,14,17
+anl69_bps_new_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,13,22
+anl69_bps_new_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,16,20
+anl69_bps_new_best_fperiod_override,Fiscal Period Override,VECTOR,100%,4,5
+anl69_bps_new_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,18,25
+anl69_bps_new_expected_report_period,Expected Earnings Report Period,VECTOR,100%,2,2
+anl69_bps_new_expected_report_time,Expected Earnings Report Time,MATRIX,100%,20,81
+anl69_bps_new_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,4,5
+anl69_bps_new_market_status,Market Status,VECTOR,100%,1,2
+anl69_cest_best_crncy_iso,"ISO currency code for the estimates in the dataset (e.g., USD, EUR)",MATRIX,100%,14,23
+anl69_cest_best_cur_fiscal_qtr_period,BEst Current Fiscal Quarter Period D,MATRIX,100%,20,34
+anl69_cest_best_cur_fiscal_year_period,The date or period identifier representing the current fiscal year for which the best estimate or consensus is provided,MATRIX,100%,15,18
+anl69_cest_best_eeps_cur_yr,Consensus or best-estimate expected earnings per share (EPS) for the current fiscal year,MATRIX,100%,16,29
+anl69_cest_best_eeps_nxt_yr,Consensus or best-estimate expected earnings per share (EPS) for the next fiscal year,MATRIX,100%,18,25
+anl69_cest_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,3,3
+anl69_cest_best_fperiod_override,Fiscal Period Override,VECTOR,100%,6,21
+anl69_cest_capexpend,Capital Expenditure,VECTOR,30%,8,9
+anl69_cest_eps,Earnings per share,VECTOR,33%,3,3
+anl69_cest_expected_report_dt,The scheduled or expected date for the company's upcoming earnings report release,MATRIX,100%,18,38
+anl69_cest_expected_report_period,Expected Earnings Report Period,VECTOR,100%,1,1
+anl69_cest_expected_report_time,The scheduled or expected time (hour/minute) for the company's upcoming earnings report release,MATRIX,100%,18,20
+anl69_cest_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,0,0
+anl69_cest_market_status,Market Status,VECTOR,100%,1,2
+anl69_cest_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,5,7
+anl69_cest_sales,Sales,VECTOR,38%,5,5
+anl69_cest_tax_rate,Tax Rate,VECTOR,36%,7,9
+anl69_cntry_of_domicile,Country of Domicile,MATRIX,100%,25,45
+anl69_cntry_of_incorporation,Country of Incorporation,MATRIX,100%,31,49
+anl69_country,Country,MATRIX,100%,30,42
+anl69_cps_best_crncy_iso,"The ISO currency code in which the consensus estimates are denominated (e.g., EUR, USD)",MATRIX,100%,14,42
+anl69_cps_best_cur_fiscal_qtr_period,Identifier or date for the current fiscal quarter being analyzed,MATRIX,100%,19,60
+anl69_cps_best_cur_fiscal_year_period,"The specific current fiscal year period (e.g., FY2023) being referenced for CPS estimates or reporting",MATRIX,100%,13,26
+anl69_cps_best_eeps_cur_yr,Consensus estimate of Earnings Per Share (EPS) for the current fiscal year,MATRIX,100%,19,47
+anl69_cps_best_eeps_nxt_yr,Consensus estimate of Earnings Per Share (EPS) for next fiscal year,MATRIX,100%,32,40
+anl69_cps_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,3,4
+anl69_cps_best_fperiod_override,Fiscal Period Override,VECTOR,100%,2,3
+anl69_cps_expected_report_dt,Scheduled date for the upcoming earnings report for the relevant period,MATRIX,100%,24,42
+anl69_cps_expected_report_period,Expected Earnings Report Period,VECTOR,100%,1,1
+anl69_cps_expected_report_time,The scheduled time of day for the upcoming earnings report release,MATRIX,100%,20,46
+anl69_cps_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,6,6
+anl69_cps_market_status,Market Status,VECTOR,100%,1,15
+anl69_cps_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,5,10
+anl69_dps_best_crncy_iso,Currency (ISO),MATRIX,100%,15,23
+anl69_dps_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period Date,MATRIX,100%,13,27
+anl69_dps_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,2,2
+anl69_dps_best_dps,Dividend per share,VECTOR,68%,1,1
+anl69_dps_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,9,18
+anl69_dps_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,20,33
+anl69_dps_best_fperiod_override,Fiscal Period Override,VECTOR,100%,4,4
+anl69_dps_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,16,24
+anl69_dps_expected_report_time,Expected Earnings Report Time,MATRIX,100%,16,23
+anl69_dps_new_best_crncy_iso,Currency (ISO),MATRIX,100%,8,18
+anl69_dps_new_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period Date,MATRIX,100%,13,31
+anl69_dps_new_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,3,4
+anl69_dps_new_best_dps,Dividend per share,VECTOR,68%,2,2
+anl69_dps_new_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,9,21
+anl69_dps_new_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,8,17
+anl69_dps_new_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,5,6
+anl69_dps_new_best_fperiod_override,Fiscal Period Override,VECTOR,100%,5,8
+anl69_dps_new_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,8,12
+anl69_dps_new_expected_report_period,Expected Earnings Report Period,VECTOR,100%,1,1
+anl69_dps_new_expected_report_time,Expected Earnings Report Time,MATRIX,100%,13,19
+anl69_dps_new_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,2,3
+anl69_dps_new_market_status,Market Status,VECTOR,100%,0,0
+anl69_dps_new_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,2,2
+anl69_dvd_declared_dt,Date on which the dividend was officially declared by the company,MATRIX,100%,8,13
+anl69_dvd_pay_dt,Date when the company begins distributing the latest reported dividend,MATRIX,100%,9,14
+anl69_dvd_record_dt,"Date on which shareholders must own the security to be entitled to the declared dividend (""record date"")",MATRIX,100%,15,24
+anl69_dvd_sh_last,Net dividend amount per share for the most recently announced dividend,MATRIX,59%,13,14
+anl69_dvd_typ_last,Dividend Type,MATRIX,100%,12,13
+anl69_ebit_best_crncy_iso,"ISO currency code (e.g. USD, EUR) for the EBIT estimate values",MATRIX,100%,11,42
+anl69_ebit_best_cur_fiscal_qtr_period,"Identifier/code for the current fiscal quarter in focus for the EBIT estimate (e.g., Q1, Q2)",MATRIX,100%,12,39
+anl69_ebit_best_cur_fiscal_year_period,The date (or identifier) representing the company's current fiscal year period as used for consensus EBIT estimates,MATRIX,100%,11,15
+anl69_ebit_best_eeps_cur_yr,Consensus estimated EPS (Earnings Per Share) for the current fiscal year,MATRIX,100%,14,32
+anl69_ebit_best_eeps_nxt_yr,Consensus estimate for earnings per share (EPS) for the next fiscal year,MATRIX,100%,24,42
+anl69_ebit_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,7,10
+anl69_ebit_best_fperiod_override,Fiscal Period Override,VECTOR,100%,3,3
+anl69_ebit_expected_report_dt,The scheduled date when the company's earnings report is expected to be released,MATRIX,100%,15,28
+anl69_ebit_expected_report_period,Expected Earnings Report Period,VECTOR,100%,2,2
+anl69_ebit_expected_report_time,The scheduled time when the company's earnings report is expected to be released,MATRIX,100%,10,11
+anl69_ebit_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,2,3
+anl69_ebit_market_status,Market Status,VECTOR,100%,0,0
+anl69_ebit_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,8,8
+anl69_ebitda_best_crncy_iso,"The ISO code for the currency in which the EBITDA estimate is reported (e.g., USD, CNY)",MATRIX,100%,3,5
+anl69_ebitda_best_cur_fiscal_qtr_period,"The date representing the best estimate of the current fiscal quarter period end for the company, as determined by consensus or guidance",MATRIX,100%,17,52
+anl69_ebitda_best_cur_fiscal_year_period,"The date representing the best estimate of the current fiscal year period end for the company, as determined by consensus or guidance",MATRIX,100%,7,10
+anl69_ebitda_best_eeps_cur_yr,Consensus or best estimate of Earnings Per Share (EPS) for the current fiscal year,MATRIX,100%,17,32
+anl69_ebitda_best_eeps_nxt_yr,The consensus analyst estimate for the company’s Earnings Per Share (EPS) for the next fiscal year,MATRIX,100%,12,16
+anl69_ebitda_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,5,5
+anl69_ebitda_best_fperiod_override,Fiscal Period Override,VECTOR,100%,4,6
+anl69_ebitda_expected_report_dt,The expected date when the company will release its earnings report relevant to the EBITDA estimate,MATRIX,100%,9,9
+anl69_ebitda_expected_report_period,Expected Earnings Report Period,VECTOR,100%,4,4
+anl69_ebitda_expected_report_time,Scheduled or projected time (of day) for the company's earnings or financial report related to EBITDA,MATRIX,100%,10,10
+anl69_ebitda_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,6,7
+anl69_ebitda_market_status,Market Status,VECTOR,100%,0,0
+anl69_ebitda_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,2,3
+anl69_eps_4wk_chg_best_crncy_iso,"Currency code (ISO standard, e.g., USD, EUR) for the estimate values",MATRIX,100%,11,29
+anl69_eps_4wk_chg_best_cur_fiscal_qtr_period,BEst Current Fiscal Quarter Period D,MATRIX,100%,21,34
+anl69_eps_4wk_chg_best_cur_fiscal_year_period,"Date representing the current fiscal year period for the ""best"" estimate as determined by consensus or latest available data",MATRIX,100%,10,13
+anl69_eps_4wk_chg_best_eeps_cur_yr,Consensus or best estimate of earnings per share for the current fiscal year,MATRIX,100%,13,19
+anl69_eps_4wk_chg_best_eeps_nxt_yr,Consensus or best estimate of earnings per share for the next fiscal year,MATRIX,100%,20,31
+anl69_eps_4wk_chg_best_eps_4wk_chg,Earnings per share 4 wk Chg,VECTOR,100%,5,5
+anl69_eps_4wk_chg_best_fperiod_override,Fiscal Period Override,VECTOR,100%,3,4
+anl69_eps_4wk_chg_expected_report_dt,Scheduled date for the next earnings report release for the company,MATRIX,100%,15,24
+anl69_eps_4wk_chg_expected_report_time,Scheduled time of day for the next earnings report release for the company,MATRIX,100%,10,12
+anl69_eps_best_crncy_iso,Currency (ISO),MATRIX,100%,15,20
+anl69_eps_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period D,MATRIX,100%,9,21
+anl69_eps_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,7,7
+anl69_eps_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,29,54
+anl69_eps_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,24,39
+anl69_eps_best_eps,Earnings per share,VECTOR,100%,19,30
+anl69_eps_best_eps_4wk_chg,Earnings per share 4 wk Chg,VECTOR,100%,7,10
+anl69_eps_best_eps_gaap,Earnings per share GAAP,VECTOR,99%,12,22
+anl69_eps_best_eps_gaap_4wk_chg,Earnings per share GAAP 4 wk Chg,VECTOR,98%,4,11
+anl69_eps_best_eps_gaap_hi,Earnings per share GAAP High,VECTOR,99%,6,7
+anl69_eps_best_eps_gaap_lo,Earnings per share GAAP Low,VECTOR,99%,12,16
+anl69_eps_best_eps_gaap_numest,Earnings per share GAAP # Ests,VECTOR,100%,20,30
+anl69_eps_best_eps_gaap_stddev,Earnings per share GAAP Std Dev,VECTOR,90%,6,15
+anl69_eps_best_eps_hi,Earnings per share High,VECTOR,100%,9,17
+anl69_eps_best_eps_lo,Earnings per share Low,VECTOR,100%,13,29
+anl69_eps_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,6,9
+anl69_eps_best_fperiod_override,Fiscal Period Override,VECTOR,100%,11,13
+anl69_eps_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,20,43
+anl69_eps_expected_report_period,Expected Earnings Report Period,VECTOR,100%,1,2
+anl69_eps_expected_report_time,Expected Earnings Report Time,MATRIX,100%,24,46
+anl69_eps_gaap_4wk_chg_best_crncy_iso,Currency (ISO),MATRIX,100%,5,9
+anl69_eps_gaap_4wk_chg_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period Date,MATRIX,100%,11,23
+anl69_eps_gaap_4wk_chg_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,16,22
+anl69_eps_gaap_4wk_chg_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,23,38
+anl69_eps_gaap_4wk_chg_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,9,21
+anl69_eps_gaap_4wk_chg_best_eps_gaap_4wk_chg,Earnings per share GAAP 4 wk Chg,VECTOR,98%,0,0
+anl69_eps_gaap_4wk_chg_best_fperiod_override,Fiscal Period Override,VECTOR,100%,0,0
+anl69_eps_gaap_4wk_chg_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,13,31
+anl69_eps_gaap_4wk_chg_expected_report_time,Expected Earnings Report Time,MATRIX,100%,7,9
+anl69_eps_gaap_best_crncy_iso,"ISO currency code in which the estimates are denominated (e.g., EUR, USD)",MATRIX,100%,3,11
+anl69_eps_gaap_best_cur_fiscal_qtr_period,Date or identifier representing the current fiscal quarter period for the company as considered in consensus estimates,MATRIX,100%,10,36
+anl69_eps_gaap_best_cur_fiscal_year_period,Date or identifier representing the current fiscal year period for the company as considered in consensus estimates,MATRIX,100%,12,19
+anl69_eps_gaap_best_eeps_cur_yr,The consensus estimate of GAAP earnings per share (EPS) for the current fiscal year,MATRIX,100%,16,27
+anl69_eps_gaap_best_eeps_nxt_yr,The consensus estimate of GAAP earnings per share (EPS) for the next fiscal year,MATRIX,100%,7,24
+anl69_eps_gaap_best_eps_gaap,Earnings per share GAAP,VECTOR,99%,6,7
+anl69_eps_gaap_best_eps_gaap_4wk_chg,Earnings per share GAAP 4 wk Chg,VECTOR,98%,2,2
+anl69_eps_gaap_best_eps_gaap_hi,Earnings per share GAAP High,VECTOR,99%,4,4
+anl69_eps_gaap_best_eps_gaap_lo,Earnings per share GAAP Low,VECTOR,99%,11,13
+anl69_eps_gaap_best_eps_gaap_numest,Earnings per share GAAP # Ests,VECTOR,100%,9,15
+anl69_eps_gaap_best_eps_gaap_stddev,Earnings per share GAAP Std Dev,VECTOR,90%,3,3
+anl69_eps_gaap_best_fperiod_override,Fiscal Period Override,VECTOR,100%,1,1
+anl69_eps_gaap_expected_report_dt,The expected date on which the company's earnings report will be released,MATRIX,100%,18,31
+anl69_eps_gaap_expected_report_time,The expected time of day at which the company's earnings report will be released,MATRIX,100%,12,33
+anl69_eps_gaap_hi_best_crncy_iso,Currency (ISO),MATRIX,100%,14,20
+anl69_eps_gaap_hi_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period Date,MATRIX,100%,3,12
+anl69_eps_gaap_hi_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,8,11
+anl69_eps_gaap_hi_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,9,14
+anl69_eps_gaap_hi_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,6,13
+anl69_eps_gaap_hi_best_eps_gaap_hi,Earnings per share GAAP High,VECTOR,99%,12,13
+anl69_eps_gaap_hi_best_fperiod_override,Fiscal Period Override,VECTOR,100%,3,5
+anl69_eps_gaap_hi_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,11,21
+anl69_eps_gaap_hi_expected_report_time,Expected Earnings Report Time,MATRIX,100%,13,59
+anl69_eps_gaap_lo_best_crncy_iso,Currency (ISO),MATRIX,100%,8,15
+anl69_eps_gaap_lo_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period D,MATRIX,100%,12,19
+anl69_eps_gaap_lo_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,9,15
+anl69_eps_gaap_lo_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,10,39
+anl69_eps_gaap_lo_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,13,30
+anl69_eps_gaap_lo_best_eps_gaap_lo,Earnings per share GAAP Low,VECTOR,99%,9,12
+anl69_eps_gaap_lo_best_fperiod_override,Fiscal Period Override,VECTOR,100%,2,2
+anl69_eps_gaap_lo_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,7,12
+anl69_eps_gaap_lo_expected_report_time,Expected Earnings Report Time,MATRIX,100%,10,11
+anl69_eps_hi_best_crncy_iso,"ISO code of the currency in which the consensus high EPS estimate is reported (e.g., USD, EUR)",MATRIX,100%,11,18
+anl69_eps_hi_best_cur_fiscal_qtr_period,BEst Current Fiscal Quarter Period D,MATRIX,100%,13,22
+anl69_eps_hi_best_cur_fiscal_year_period,BEst Current Fiscal Year Period Date,MATRIX,100%,14,20
+anl69_eps_hi_best_eeps_cur_yr,Consensus high estimate of earnings per share (EPS) for the current fiscal year,MATRIX,100%,11,40
+anl69_eps_hi_best_eeps_nxt_yr,Consensus high estimate of earnings per share (EPS) for the next fiscal year,MATRIX,100%,11,12
+anl69_eps_hi_best_eps_hi,Earnings per share High,VECTOR,100%,4,13
+anl69_eps_hi_best_fperiod_override,Fiscal Period Override,VECTOR,100%,1,2
+anl69_eps_hi_expected_report_dt,Anticipated calendar date of the upcoming earnings report,MATRIX,100%,16,27
+anl69_eps_hi_expected_report_time,Anticipated time of day when the earnings report will be released,MATRIX,100%,11,22
+anl69_eps_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,10,21
+anl69_eps_lo_best_crncy_iso,ISO currency code indicating the currency for the EPS estimate,MATRIX,100%,6,7
+anl69_eps_lo_best_cur_fiscal_qtr_period,BEst Current Fiscal Quarter Period D,MATRIX,100%,9,23
+anl69_eps_lo_best_cur_fiscal_year_period,BEst Current Fiscal Year Period Date,MATRIX,100%,7,13
+anl69_eps_lo_best_eeps_cur_yr,BEst Est EPS Curr Year,MATRIX,100%,10,20
+anl69_eps_lo_best_eeps_nxt_yr,Est EPS Next Year,MATRIX,100%,8,26
+anl69_eps_lo_best_eps_lo,Earnings per share Low,VECTOR,100%,7,8
+anl69_eps_lo_best_fperiod_override,Fiscal Period Override,VECTOR,100%,4,6
+anl69_eps_lo_expected_report_dt,The expected calendar date when the earnings report will be released,MATRIX,100%,7,12
+anl69_eps_lo_expected_report_time,The expected time of day when the earnings report will be released,MATRIX,100%,10,15
+anl69_eps_market_status,Market Status,VECTOR,100%,1,1
+anl69_eps_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,15,19
+anl69_eqy_best_crncy_iso,"ISO currency code representing the currency in which consensus estimates are denominated (e.g., USD, CNY)",MATRIX,100%,11,28
+anl69_eqy_best_cur_fiscal_qtr_period,"The current fiscal quarter period (e.g., Q1, Q2, Q3, Q4 date or code) used in consensus estimates",MATRIX,100%,12,30
+anl69_eqy_best_cur_fiscal_year_period,The date or period marking the current fiscal year for the company as used in consensus estimates,MATRIX,100%,6,11
+anl69_eqy_best_eeps_cur_yr,Consensus estimate of Earnings Per Share (EPS) for the current fiscal year,MATRIX,100%,17,32
+anl69_eqy_best_eeps_nxt_yr,Consensus estimate of Earnings Per Share (EPS) for the next fiscal year,MATRIX,100%,11,18
+anl69_eqy_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,4,5
+anl69_eqy_dvd_ex_flag,Ex-Dividend Flag,MATRIX,100%,10,55
+anl69_eqy_dvd_sh_12m_net,Net dividend (after tax withholding) paid per share over the past 12 months,MATRIX,55%,2,2
+anl69_eqy_dvd_sh_last,Dividend per share from the most recent dividend payment (latest declared or paid),MATRIX,53%,18,23
+anl69_eqy_dvd_typ_last,Dividend Type,MATRIX,99%,7,12
+anl69_eqy_expected_report_dt,The scheduled or expected date on which earnings or financial results will be reported for the company,MATRIX,100%,12,23
+anl69_eqy_expected_report_time,Time of day at which the company's earnings report is expected to be released,MATRIX,100%,12,27
+anl69_eqy_free_float_pct,"Percentage of total shares outstanding that are freely available for trading in the market (i.e., not closely held or restricted)",MATRIX,100%,19,29
+anl69_eqy_fund_crncy,Currency Override,VECTOR,100%,0,0
+anl69_eqy_init_po_dt,Date when the company first offered shares to the public (IPO date),MATRIX,100%,98,296
+anl69_eqy_last_dps_gross,Gross amount of the last dividend paid per share,MATRIX,53%,17,19
+anl69_eqy_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,4,5
+anl69_eqy_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,4,6
+anl69_eqy_prim_exch,Primary Exchange Name,MATRIX,100%,15,18
+anl69_eqy_rec_cons,Recommendation Consensus,VECTOR,100%,15,22
+anl69_eqy_recent_qt_end,Most Recent Quarter End,VECTOR,100%,5,14
+anl69_eqy_sh_out_dt,Date when the shares outstanding figure was last updated,MATRIX,100%,22,86
+anl69_eqy_sh_out_tot_mult_sh,Total number of shares outstanding across all share classes,MATRIX,100%,18,51
+anl69_eqy_split_dt,Date on which the most recent equity split occurred,MATRIX,100%,19,63
+anl69_eqy_split_ratio,Split Ratio,MATRIX,100%,6,22
+anl69_expected_report_dt,Date when the company is expected to release its earnings report,MATRIX,100%,20,68
+anl69_expected_report_time,"The anticipated time (hour/minute) at which the company is expected to release its earnings report, as forecast by Bloomberg",MATRIX,100%,14,34
+anl69_ffops_best_crncy_iso,"ISO currency code (e.g., USD, EUR) for the reported FFOPS estimate",MATRIX,100%,7,11
+anl69_ffops_best_cur_fiscal_qtr_period,Current fiscal quarter period for which the consensus FFOPS estimate applies,MATRIX,100%,8,20
+anl69_ffops_best_cur_fiscal_year_period,Current fiscal year and period for which the consensus FFOPS estimate applies,MATRIX,100%,11,28
+anl69_ffops_best_eeps_cur_yr,Consensus “best” estimate of Earnings Per Share (EPS) for the current fiscal year,MATRIX,100%,16,33
+anl69_ffops_best_eeps_nxt_yr,Consensus “best” estimate of Earnings Per Share (EPS) for the next fiscal year,MATRIX,100%,7,11
+anl69_ffops_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,5,5
+anl69_ffops_best_fperiod_override,Fiscal Period Override,VECTOR,100%,4,4
+anl69_ffops_expected_report_dt,Date on which the next earnings or financial report is expected to be released,MATRIX,100%,11,20
+anl69_ffops_expected_report_period,Expected Earnings Report Period,VECTOR,100%,3,3
+anl69_ffops_expected_report_time,Scheduled time at which the next earnings report is expected to be released,MATRIX,100%,12,32
+anl69_ffops_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,3,5
+anl69_ffops_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,7,9
+anl69_id_bb_company,Bloomberg unique identifier for the company,MATRIX,100%,8,21
+anl69_id_bb_prim_security_flag,Equity Primary Security Flag,MATRIX,100%,12,18
+anl69_last_dps_gross,"The gross dividend per share most recently announced, including any applicable tax credits",MATRIX,59%,16,26
+anl69_ltg_dif_best_crncy_iso,Currency (ISO),MATRIX,100%,5,9
+anl69_ltg_dif_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period Date,MATRIX,100%,13,24
+anl69_ltg_dif_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,12,18
+anl69_ltg_dif_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,11,22
+anl69_ltg_dif_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,6,15
+anl69_ltg_dif_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,2,2
+anl69_ltg_dif_best_fperiod_override,Fiscal Period Override,VECTOR,100%,3,3
+anl69_ltg_dif_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,16,42
+anl69_ltg_dif_expected_report_period,Expected Earnings Report Period,VECTOR,100%,1,1
+anl69_ltg_dif_expected_report_time,Expected Earnings Report Time,MATRIX,100%,14,32
+anl69_ltg_dif_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,4,4
+anl69_ltg_dif_market_status,Market Status,VECTOR,100%,0,0
+anl69_ltg_dif_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,5,5
+anl69_m21_hs_dvd,Gross total dividends per share paid over the past 12 months,MATRIX,56%,4,15
+anl69_multiple_share,Company Has Multiple Shares Indicator,MATRIX,100%,8,10
+anl69_name,Name,MATRIX,100%,37,46
+anl69_nav_best_crncy_iso,"ISO currency code used for the NAV estimates (e.g., EUR, USD, JPY)",MATRIX,100%,7,11
+anl69_nav_best_cur_fiscal_qtr_period,"The date or identifier for the current fiscal quarter period for the entity, as used in the estimate NAV module",MATRIX,100%,8,31
+anl69_nav_best_cur_fiscal_year_period,"The date or identifier representing the current fiscal year period for the entity, as used in the estimate NAV module",MATRIX,100%,9,21
+anl69_nav_best_eeps_cur_yr,"Consensus estimate for Earnings Per Share (EPS) for the current fiscal year, as aggregated by Bloomberg from analyst forecasts",MATRIX,100%,15,24
+anl69_nav_best_eeps_nxt_yr,"Consensus estimate for Earnings Per Share (EPS) for the next fiscal year, as assessed by analysts and aggregated by Bloomberg at the given observation date",MATRIX,100%,13,22
+anl69_nav_best_fperiod_override,Fiscal Period Override,VECTOR,100%,3,3
+anl69_nav_expected_report_dt,The scheduled date when the earnings or financial report is expected to be released for the entity,MATRIX,100%,15,24
+anl69_nav_expected_report_period,Expected Earnings Report Period,VECTOR,100%,2,3
+anl69_nav_expected_report_time,The specific scheduled time when the earnings or financial report is expected to be released for the entity,MATRIX,100%,12,17
+anl69_nav_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,2,2
+anl69_nav_market_status,Market Status,VECTOR,100%,2,2
+anl69_nav_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,3,4
+anl69_ndebt_best_crncy_iso,"The ISO currency code (e.g., USD, CNY) in which the best estimate values are reported",MATRIX,100%,4,9
+anl69_ndebt_best_cur_fiscal_qtr_period,Current fiscal quarter period being used for net debt estimates,MATRIX,100%,11,54
+anl69_ndebt_best_cur_fiscal_year_period,BEst Current Fiscal Year Period Date,MATRIX,100%,7,9
+anl69_ndebt_best_eeps_cur_yr,Best/latest consensus estimate for Earnings Per Share (EPS) for the current fiscal year,MATRIX,100%,12,17
+anl69_ndebt_best_eeps_nxt_yr,Consensus or best estimate of earnings per share (EPS) for the next fiscal year,MATRIX,100%,8,10
+anl69_ndebt_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,4,7
+anl69_ndebt_best_fperiod_override,Fiscal Period Override,VECTOR,100%,5,5
+anl69_ndebt_expected_report_dt,Expected date of the next earnings report,MATRIX,100%,12,36
+anl69_ndebt_expected_report_time,Expected time of day when the company's earnings report will be released,MATRIX,100%,13,51
+anl69_ndebt_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,1,1
+anl69_ndebt_market_status,Market Status,VECTOR,100%,0,0
+anl69_ndebt_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,1,1
+anl69_net_best_crncy_iso,"ISO currency code used for the net income estimate (e.g., USD, EUR)",MATRIX,100%,7,11
+anl69_net_best_cur_fiscal_qtr_period,The date or identifier for the current fiscal quarter period as relevant for the consensus/estimate snapshot,MATRIX,100%,9,21
+anl69_net_best_cur_fiscal_year_period,The date or identifier representing the most recent fiscal year period for which consensus or estimate data is calculated,MATRIX,100%,16,19
+anl69_net_best_eeps_cur_yr,Consensus or best estimate for Earnings Per Share (EPS) for the current fiscal year,MATRIX,100%,11,26
+anl69_net_best_eeps_nxt_yr,Consensus or best estimate for Earnings Per Share (EPS) for the next fiscal year,MATRIX,100%,21,33
+anl69_net_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,4,6
+anl69_net_best_fperiod_override,Fiscal Period Override,VECTOR,100%,4,4
+anl69_net_best_net_gaap,Net GAAP,VECTOR,97%,0,0
+anl69_net_expected_report_dt,The scheduled date for the company’s upcoming or most recent earnings report,MATRIX,100%,14,19
+anl69_net_expected_report_period,Expected Earnings Report Period,VECTOR,100%,2,2
+anl69_net_expected_report_time,The expected or announced time of day for the next earnings report release,MATRIX,100%,16,25
+anl69_net_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,3,12
+anl69_net_market_status,Market Status,VECTOR,100%,1,1
+anl69_net_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,3,4
+anl69_opp_best_crncy_iso,"ISO currency code in which the estimate is reported (e.g., USD, EUR, JPY)",MATRIX,100%,12,35
+anl69_opp_best_cur_fiscal_qtr_period,"The current fiscal quarter (like Q1, Q2, Q3, Q4) period for which the consensus OPP estimate is reported",MATRIX,100%,10,11
+anl69_opp_best_cur_fiscal_year_period,The identifier or label of the current fiscal year for which the consensus 'BEst' estimate is provided,MATRIX,100%,14,18
+anl69_opp_best_eeps_cur_yr,Consensus estimated Earnings Per Share (EPS) for the current fiscal year,MATRIX,100%,9,18
+anl69_opp_best_eeps_nxt_yr,The consensus (best estimate) for expected earnings per share (EPS) for the next fiscal year,MATRIX,100%,10,13
+anl69_opp_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,5,5
+anl69_opp_best_fperiod_override,Fiscal Period Override,VECTOR,100%,1,2
+anl69_opp_expected_report_dt,The anticipated calendar date on which the company's earnings report is expected to be released,MATRIX,100%,18,40
+anl69_opp_expected_report_period,Expected Earnings Report Period,VECTOR,100%,2,2
+anl69_opp_expected_report_time,The expected time of day at which the company's earnings report is scheduled to be released,MATRIX,100%,15,24
+anl69_opp_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,2,4
+anl69_opp_market_status,Market Status,VECTOR,100%,1,1
+anl69_opp_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,5,5
+anl69_out_best_crncy_iso,Currency (ISO),MATRIX,100%,9,49
+anl69_out_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period D,MATRIX,100%,8,26
+anl69_out_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,8,13
+anl69_out_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,6,13
+anl69_out_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,9,21
+anl69_out_best_fperiod_override,Fiscal Period Override,VECTOR,100%,6,15
+anl69_out_best_net_gaap,Net GAAP,VECTOR,97%,3,5
+anl69_out_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,11,22
+anl69_out_expected_report_time,Expected Earnings Report Time,MATRIX,100%,16,17
+anl69_pe_best_crncy_iso,"ISO currency code (e.g., USD, EUR, JPY) used for the estimates in this module",MATRIX,100%,20,23
+anl69_pe_best_cur_fiscal_qtr_period,The date or code representing the best estimate for the current fiscal quarter period for the company,MATRIX,100%,8,10
+anl69_pe_best_cur_fiscal_year_period,The date or identifier for the current fiscal year period which the best (consensus or most representative) estimates are based on,MATRIX,100%,8,33
+anl69_pe_best_eeps_cur_yr,Consensus or best estimate for Earnings Per Share (EPS) for the current fiscal year,MATRIX,100%,13,26
+anl69_pe_best_eeps_nxt_yr,Consensus or best estimate for Earnings Per Share (EPS) for the next fiscal year,MATRIX,100%,24,35
+anl69_pe_best_fperiod_override,Fiscal Period Override,VECTOR,100%,3,5
+anl69_pe_expected_report_dt,The expected date when the company's earnings report will be released,MATRIX,100%,4,10
+anl69_pe_expected_report_time,The expected specific time when the company's earnings report will be released,MATRIX,100%,16,31
+anl69_ptp_best_crncy_iso,"The ISO three-letter code for the currency in which the best/consensus PTP estimate is expressed (e.g., JPY, USD)",MATRIX,100%,6,7
+anl69_ptp_best_cur_fiscal_qtr_period,"The quarter identifier (such as Q1, Q2, etc.) for the current fiscal period associated with the best estimates",MATRIX,100%,11,19
+anl69_ptp_best_cur_fiscal_year_period,BEst Current Fiscal Year Period Date,MATRIX,100%,11,15
+anl69_ptp_best_eeps_cur_yr,Consensus estimate of earnings per share (EPS) for the current fiscal year,MATRIX,100%,8,14
+anl69_ptp_best_eeps_nxt_yr,Consensus estimate of earnings per share (EPS) for the company for the next fiscal year,MATRIX,100%,8,10
+anl69_ptp_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,6,6
+anl69_ptp_best_fperiod_override,Fiscal Period Override,VECTOR,100%,1,1
+anl69_ptp_expected_report_dt,Date on which the company is expected to report earnings for the relevant period,MATRIX,100%,15,33
+anl69_ptp_expected_report_period,Expected Earnings Report Period,VECTOR,100%,2,2
+anl69_ptp_expected_report_time,The scheduled or anticipated time for the company's upcoming earnings report,MATRIX,100%,10,11
+anl69_ptp_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,3,3
+anl69_ptp_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,8,15
+anl69_qerf_dvd,Dividend Frequency,MATRIX,100%,15,19
+anl69_qerf_dvd_yqe,Dividend Frequency,MATRIX,99%,2,2
+anl69_rec_best_crncy_iso,"ISO currency code in which the estimates are denominated (e.g., USD, CNY)",MATRIX,100%,4,7
+anl69_rec_best_cur_fiscal_qtr_period,"Best estimate of the current fiscal quarter period or end date for the company, as used for financial consensus and estimates",MATRIX,100%,7,8
+anl69_rec_best_cur_fiscal_year_period,"Best estimate of the current fiscal year period or end date for the company, as used for financial consensus and estimates",MATRIX,100%,10,16
+anl69_rec_best_eeps_cur_yr,"Consensus estimate of earnings per share (EPS) for the current fiscal year, based on analyst projections",MATRIX,100%,23,31
+anl69_rec_best_eeps_nxt_yr,"Consensus estimate of earnings per share (EPS) for the next fiscal year, based on analyst projections",MATRIX,100%,8,17
+anl69_rec_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,3,3
+anl69_rec_best_fperiod_override,Fiscal Period Override,VECTOR,100%,1,3
+anl69_rec_expected_report_dt,Date when the next earnings report for the company is expected to be published,MATRIX,100%,14,49
+anl69_rec_expected_report_period,Expected Earnings Report Period,VECTOR,100%,1,1
+anl69_rec_expected_report_time,Expected time of day when the company's earnings or financial report is scheduled for release,MATRIX,100%,11,76
+anl69_rec_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,1,2
+anl69_rec_market_status,Market Status,VECTOR,100%,2,2
+anl69_rec_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,12,17
+anl69_rec_tot_analyst_rec,Total Analyst Recommendations,VECTOR,100%,7,17
+anl69_roa_best_crncy_iso,"ISO currency code in which the ROA estimate is denominated (e.g., USD, EUR)",MATRIX,100%,9,10
+anl69_roa_best_cur_fiscal_qtr_period,Identifier or date for the current fiscal quarter covered by the ROA consensus estimate,MATRIX,100%,7,12
+anl69_roa_best_cur_fiscal_year_period,Identifier or date range for the current fiscal year relevant to the ROA consensus estimate,MATRIX,100%,11,22
+anl69_roa_best_eeps_cur_yr,Best consensus estimate of Earnings Per Share (EPS) for the current fiscal year,MATRIX,100%,12,32
+anl69_roa_best_eeps_nxt_yr,Best consensus estimate of Earnings Per Share (EPS) for the next fiscal year,MATRIX,100%,17,24
+anl69_roa_best_fperiod_override,Fiscal Period Override,VECTOR,100%,3,4
+anl69_roa_expected_report_dt,Expected date for the next earnings report for the company,MATRIX,100%,17,37
+anl69_roa_expected_report_period,Expected Earnings Report Period,VECTOR,100%,0,0
+anl69_roa_expected_report_time,Expected time of day the earnings report will be released,MATRIX,100%,12,19
+anl69_roa_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,2,2
+anl69_roa_market_status,Market Status,VECTOR,100%,1,1
+anl69_roa_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,4,4
+anl69_roe_best_crncy_iso,Currency (ISO),MATRIX,100%,12,14
+anl69_roe_best_cur_fiscal_qtr_period,Current Fiscal Quarter Period Date,MATRIX,100%,10,15
+anl69_roe_best_cur_fiscal_year_period,Current Fiscal Year Period Date,MATRIX,100%,30,47
+anl69_roe_best_eeps_cur_yr,Est Earnings per share Curr Year,MATRIX,100%,12,20
+anl69_roe_best_eeps_nxt_yr,Est Earnings per share Next Year,MATRIX,100%,14,24
+anl69_roe_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,4,9
+anl69_roe_best_fperiod_override,Fiscal Period Override,VECTOR,100%,2,2
+anl69_roe_expected_report_dt,Expected Earnings Report Date,MATRIX,100%,18,47
+anl69_roe_expected_report_period,Expected Earnings Report Period,VECTOR,100%,4,4
+anl69_roe_expected_report_time,Expected Earnings Report Time,MATRIX,100%,23,41
+anl69_roe_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,8,12
+anl69_roe_market_status,Market Status,VECTOR,100%,1,1
+anl69_roe_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,9,23
+anl69_sales_best_crncy_iso,The ISO code for the currency in which sales estimates are denominated,MATRIX,100%,7,19
+anl69_sales_best_cur_fiscal_qtr_period,The date or period representing the current fiscal quarter for which the 'best' consensus sales estimate applies,MATRIX,100%,5,23
+anl69_sales_best_cur_fiscal_year_period,"Date or period representing the current fiscal year for the company, as linked to sales estimates",MATRIX,100%,14,23
+anl69_sales_best_eeps_cur_yr,The consensus 'best' estimate for earnings per share (EPS) for the current fiscal year,MATRIX,100%,16,21
+anl69_sales_best_eeps_nxt_yr,"Consensus analyst estimate of earnings per share (EPS) for the next fiscal year, as of the observation date",MATRIX,100%,24,26
+anl69_sales_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,6,6
+anl69_sales_best_fperiod_override,Fiscal Period Override,VECTOR,100%,6,9
+anl69_sales_expected_report_dt,The scheduled date when the company's earnings report is expected to be released,MATRIX,100%,21,43
+anl69_sales_expected_report_period,Expected Earnings Report Period,VECTOR,100%,4,6
+anl69_sales_expected_report_time,The expected time at which the earnings report is scheduled to be released,MATRIX,100%,16,18
+anl69_sales_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,6,18
+anl69_sales_market_status,Market Status,VECTOR,100%,1,1
+anl69_sales_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,2,3
+anl69_security_typ,Security Type,MATRIX,100%,10,14
+anl69_security_typ2,Security Type,MATRIX,100%,8,12
+anl69_target_best_crncy_iso,"ISO currency code in which the estimates or target prices are denominated, such as JPY or USD",MATRIX,100%,19,30
+anl69_target_best_cur_fiscal_qtr_period,"Represents the identifier for the company's current best-estimate fiscal quarter (e.g., Q1, Q2, Q3, Q4), based on the latest available data",MATRIX,100%,9,9
+anl69_target_best_cur_fiscal_year_period,Date or identifier for the current fiscal year period as used in estimates,MATRIX,100%,14,34
+anl69_target_best_eeps_cur_yr,Consensus estimated earnings per share (EPS) for the current fiscal year,MATRIX,100%,13,26
+anl69_target_best_eeps_nxt_yr,The consensus estimated earnings per share (EPS) for the next fiscal year,MATRIX,100%,24,43
+anl69_target_best_fiscal_period_dt,Fiscal Period Date,VECTOR,100%,4,4
+anl69_target_best_fperiod_override,Fiscal Period Override,VECTOR,100%,3,3
+anl69_target_expected_report_dt,The expected calendar date when the company's earnings report will be released,MATRIX,100%,24,62
+anl69_target_expected_report_period,Expected Earnings Report Period,VECTOR,100%,3,3
+anl69_target_expected_report_time,"The expected time of day (e.g., before market open, after market close) when the upcoming earnings report will be released",MATRIX,100%,21,35
+anl69_target_latest_ann_dt_qtrly,Latest Announcement Date Quarterly,VECTOR,100%,3,8
+anl69_target_market_status,Market Status,VECTOR,100%,1,1
+anl69_target_most_recent_period_end_dt,Most Recent Period End Date,VECTOR,100%,3,3
+anl69_td_xe_dvd,"The ex-dividend date of the most recent dividend, which is the cutoff date to be eligible for the dividend",MATRIX,100%,20,42
+anl69_ticker_and_exch_code,Ticker and Exchange Code,MATRIX,100%,39,67
+anl69_tot_buy_rec,Total Buy Recommendations,VECTOR,100%,11,14
+anl69_tot_hold_rec,Total Hold Recommendations,VECTOR,100%,12,18
+anl69_tot_sell_rec,Total Sell Recommendations,VECTOR,100%,21,22
+anl69_when_issued,Indicates if the security does not have a firm settlement,MATRIX,100%,18,59
+anl69_ycnrc_dvd,Dividend Currency,MATRIX,100%,25,33

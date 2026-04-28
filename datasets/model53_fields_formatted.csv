@@ -1,0 +1,43 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl53_implied_ratings,"implied ratings modeling using ratings of Standard & Poor's as reported by S&P affiliate others, supplemented by a file with daily changes in ratings by Standard & Poor's",MATRIX,50%,232,1855
+mdl53_implied_spreads,"Model-implied credit spread level for the issuer on the given date, typically expressed in basis points",MATRIX,50%,187,748
+mdl53_jc5_10year,Annualized default probability at the 10-year horizon (percentage),MATRIX,50%,226,1079
+mdl53_jc5_1month,Annualized default probability at the 1-month horizon (percentage),MATRIX,50%,115,483
+mdl53_jc5_1year,Annualized default probability at the 1-year horizon (percentage),MATRIX,50%,222,850
+mdl53_jc5_2year,Annualized default probability at the 2-year horizon (percentage),MATRIX,50%,147,415
+mdl53_jc5_3month,Annualized default probability at the 3-month horizon (percentage),MATRIX,50%,123,849
+mdl53_jc5_3year,Annualized default probability at the 3-year horizon (percentage),MATRIX,50%,95,526
+mdl53_jc5_4year,Annualized default probability at the 4-year horizon (percentage),MATRIX,50%,127,317
+mdl53_jc5_5year,Annualized default probability at the 5-year horizon (percentage),MATRIX,50%,168,406
+mdl53_jc5_6month,Annualized default probability at the 6-month horizon (percentage),MATRIX,50%,114,471
+mdl53_jc5_7year,Annualized default probability at the 7-year horizon (percentage),MATRIX,50%,158,506
+mdl53_jc6_10year,Annualized default probability at the 10-year horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,60,184
+mdl53_jc6_1month,Annualized default probability at the 1-month horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,64,181
+mdl53_jc6_1year,Annualized default probability at the 1-year horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,93,468
+mdl53_jc6_2year,Annualized default probability at the 2-year horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,80,454
+mdl53_jc6_3month,Annualized default probability at the 3-month horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,62,563
+mdl53_jc6_3year,Annualized default probability at the 3-year horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,85,274
+mdl53_jc6_4year,Annualized default probability at the 4-year horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,148,390
+mdl53_jc6_5year,Annualized default probability at the 5-year horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,81,400
+mdl53_jc6_6month,Annualized default probability at the 6-month horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,62,314
+mdl53_jc6_7year,Annualized default probability at the 7-year horizon (percentage) from the Kamakura Jarrow–Chava v6 model for US issuers,MATRIX,50%,75,1064
+mdl53_jm5_10year,10-year annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,77,271
+mdl53_jm5_1month,1-month annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,55,252
+mdl53_jm5_1year,1-year annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,90,422
+mdl53_jm5_2year,2-year annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,105,319
+mdl53_jm5_3month,3-month annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,68,404
+mdl53_jm5_3year,3-year annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,68,345
+mdl53_jm5_4year,4-year annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,78,265
+mdl53_jm5_5year,5-year annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,68,249
+mdl53_jm5_6month,6-month annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,71,344
+mdl53_jm5_7year,7-year annualized default probability (percentage) from Kamakura hybrid Jarrow–Merton v5 model,MATRIX,50%,89,337
+mdl53_ms5_10year,"Annualized default probability at the 10-year horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,79,526
+mdl53_ms5_1month,"Annualized default probability at the 1-month horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,74,406
+mdl53_ms5_1year,"Annualized default probability at the 1-year horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,67,312
+mdl53_ms5_2year,"Annualized default probability at the 2-year horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,73,236
+mdl53_ms5_3month,"Annualized default probability at the 3-month horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,74,451
+mdl53_ms5_3year,"Annualized default probability at the 3-year horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,65,451
+mdl53_ms5_4year,"Annualized default probability at the 4-year horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,58,344
+mdl53_ms5_5year,"Annualized default probability at the 5-year horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,76,366
+mdl53_ms5_6month,"Annualized default probability at the 6-month horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,89,451
+mdl53_ms5_7year,"Annualized default probability at the 7-year horizon from Kamakura’s Merton structural model v5 (MS5), reported in percent",MATRIX,50%,93,456

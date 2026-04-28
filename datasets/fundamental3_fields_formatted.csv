@@ -1,0 +1,789 @@
+Field,Description,Type,Coverage,Users,Alphas
+annual_accounts_receivable_total,Total accounts receivable as of the year.,MATRIX,74%,13,17
+annual_accounts_receivable_total_fast_d1,Total accounts receivable as of the year.,MATRIX,74%,28,43
+annual_accrued_liabilities_change,Change in accrued liabilities during the year.,MATRIX,37%,4,5
+annual_accrued_liabilities_change_fast_d1,Change in accrued liabilities during the year.,MATRIX,37%,8,11
+annual_additional_paid_in_capital,Additional paid-in capital as of the year.,MATRIX,77%,10,10
+annual_additional_paid_in_capital_fast_d1,Additional paid-in capital as of the year.,MATRIX,77%,8,8
+annual_avg_diluted_shares_count,Average number of diluted shares outstanding during the year.,MATRIX,74%,4,5
+annual_avg_diluted_shares_count_fast_d1,Average number of diluted shares outstanding during the year.,MATRIX,74%,12,13
+annual_basic_eps_value,Earnings per basic share for the year.,MATRIX,81%,5,8
+annual_basic_eps_value_fast_d1,Earnings per basic share for the year.,MATRIX,81%,8,10
+annual_cash_change_amount,Net change in cash balance during the year.,MATRIX,77%,4,6
+annual_cash_change_amount_fast_d1,Net change in cash balance during the year.,MATRIX,77%,2,2
+annual_cost_of_sales_total,Total cost incurred to generate revenue for the year.,MATRIX,69%,2,2
+annual_cost_of_sales_total_fast_d1,Total cost incurred to generate revenue for the year.,MATRIX,69%,9,9
+annual_current_liabilities_total,Data date for total current liabilities,MATRIX,82%,6,8
+annual_current_liabilities_total_fast_d1,Data date for total current liabilities,MATRIX,82%,8,12
+annual_current_long_term_debt_total,Current portion of long-term debt as of the year.,MATRIX,47%,5,6
+annual_current_long_term_debt_total_fast_d1,Current portion of long-term debt as of the year.,MATRIX,46%,3,3
+annual_current_unearned_revenue_total,Total current deferred revenue as of the year.,MATRIX,26%,14,14
+annual_current_unearned_revenue_total_fast_d1,Total current deferred revenue as of the year.,MATRIX,26%,25,30
+annual_earnings_before_tax_total,Earnings before taxes for the year.,MATRIX,83%,4,4
+annual_earnings_before_tax_total_fast_d1,Earnings before taxes for the year.,MATRIX,83%,2,2
+annual_ebit_total,Earnings before interest and taxes for the year.,MATRIX,82%,1,1
+annual_ebit_total_fast_d1,Earnings before interest and taxes for the year.,MATRIX,82%,4,8
+annual_ebitda_total,"Earnings before interest, taxes, depreciation, and amortization for the year.",MATRIX,82%,0,0
+annual_ebitda_total_fast_d1,"Earnings before interest, taxes, depreciation, and amortization for the year.",MATRIX,82%,8,11
+annual_equity_compensation_expense,Expense from share-based compensation for the year.,MATRIX,68%,6,11
+annual_equity_compensation_expense_fast_d1,Expense from share-based compensation for the year.,MATRIX,68%,15,19
+annual_financing_cashflow_amount,Net cash flow from financing activities for the year.,MATRIX,83%,2,2
+annual_financing_cashflow_amount_fast_d1,Net cash flow from financing activities for the year.,MATRIX,82%,4,4
+annual_gross_capex_total,Gross capital expenditures for the year.,MATRIX,79%,4,5
+annual_gross_capex_total_fast_d1,Gross capital expenditures for the year.,MATRIX,79%,2,4
+annual_gross_profit_total,Data date for gross profit,MATRIX,81%,6,9
+annual_gross_profit_total_fast_d1,Data date for gross profit,MATRIX,81%,3,3
+annual_income_tax_expense,Total income tax expense for the year.,MATRIX,72%,3,3
+annual_income_tax_expense_fast_d1,Total income tax expense for the year.,MATRIX,72%,0,0
+annual_intangible_assets_excl_goodwill,Data date for intangible assets excluding goodwill,MATRIX,58%,2,2
+annual_intangible_assets_excl_goodwill_fast_d1,Data date for intangible assets excluding goodwill,MATRIX,58%,3,3
+annual_inventory_change_amount,Change in inventory during the year.,MATRIX,43%,3,5
+annual_inventory_change_amount_fast_d1,Change in inventory during the year.,MATRIX,43%,4,5
+annual_long_term_tax_liability,Total noncurrent tax liabilities as of the year.,MATRIX,45%,1,2
+annual_long_term_tax_liability_fast_d1,Total noncurrent tax liabilities as of the year.,MATRIX,45%,0,0
+annual_minority_interest_net_income,Data date for net income attributable to noncontrolling interests,MATRIX,36%,0,0
+annual_minority_interest_net_income_fast_d1,Data date for net income attributable to noncontrolling interests,MATRIX,36%,0,0
+annual_net_income_from_continuing_ops,Data date for net income from continuing operations,MATRIX,83%,4,6
+annual_net_income_from_continuing_ops_fast_d1,Data date for net income from continuing operations,MATRIX,83%,0,0
+annual_net_income_total,Net income for the year.,MATRIX,83%,2,2
+annual_net_income_total_fast_d1,Net income for the year.,MATRIX,83%,5,5
+annual_operating_cashflow_amount,Net cash flow from operating activities for the year.,MATRIX,83%,2,3
+annual_operating_cashflow_amount_fast_d1,Net cash flow from operating activities for the year.,MATRIX,83%,6,9
+annual_operating_cost_excl_specials,Operating expenses excluding special items for the year.,MATRIX,49%,0,0
+annual_operating_cost_excl_specials_fast_d1,Operating expenses excluding special items for the year.,MATRIX,49%,1,1
+annual_receivables_change_amount,Change in accounts receivable during the year.,MATRIX,66%,8,8
+annual_receivables_change_amount_fast_d1,Change in accounts receivable during the year.,MATRIX,66%,8,8
+annual_retained_earnings_total,Data date for retained earnings,MATRIX,80%,2,2
+annual_retained_earnings_total_fast_d1,Data date for retained earnings,MATRIX,80%,1,1
+annual_sales_total,Data date for total revenue,MATRIX,81%,8,13
+annual_sales_total_fast_d1,Data date for total revenue,MATRIX,81%,12,17
+annual_sga_cost_total,"Total selling, general, and administrative expenses for the year.",MATRIX,79%,2,2
+annual_sga_cost_total_fast_d1,"Total selling, general, and administrative expenses for the year.",MATRIX,79%,5,7
+annual_total_debt_amount,Total debt as of the year.,MATRIX,75%,1,1
+annual_total_debt_amount_fast_d1,Total debt as of the year.,MATRIX,75%,0,0
+annual_unearned_revenue_total,Total deferred revenue as of the year.,MATRIX,33%,25,26
+annual_unearned_revenue_total_fast_d1,Total deferred revenue as of the year.,MATRIX,33%,15,20
+current_unearned_revenue_balance,Amount of deferred revenue classified as current.,MATRIX,27%,1,2
+current_unearned_revenue_balance_acctadj,"Current deferred revenue (contract liabilities) balance, accounting-adjusted for the quarter",MATRIX,25%,1,1
+current_unearned_revenue_balance_acctadj_fast_d1,"Current deferred revenue (contract liabilities) balance, accounting-adjusted for the quarter",MATRIX,25%,2,3
+current_unearned_revenue_balance_fast_d1,Amount of deferred revenue classified as current.,MATRIX,27%,6,6
+current_unearned_revenue_total,Deferred revenue classified as current (contract liabilities expected to be recognized within one year),MATRIX,26%,3,4
+current_unearned_revenue_total_fast_d1,Deferred revenue classified as current (contract liabilities expected to be recognized within one year),MATRIX,26%,10,10
+fnd3_a__earbeforetaxes,Earnings before income taxes (pretax income),MATRIX,83%,66,160
+fnd3_a__earbeforetaxes_fast_d1,Earnings before income taxes (pretax income),MATRIX,83%,1,1
+fnd3_a__inc_tax,Annual Income Tax Provision,MATRIX,72%,37,62
+fnd3_a__inc_tax_fast_d1,Annual Income Tax Provision,MATRIX,72%,0,0
+fnd3_a_acc_abi_adj,Annual Increase or Decrease in Accrued Liabilities,MATRIX,37%,48,98
+fnd3_a_acc_abi_adj_fast_d1,Annual Increase or Decrease in Accrued Liabilities,MATRIX,37%,4,4
+fnd3_a_acc_dep,Annual Accumulated Depreciation,MATRIX,56%,25,36
+fnd3_a_acc_dep_fast_d1,Annual Accumulated Depreciation,MATRIX,56%,4,4
+fnd3_a_accpayable,Annual Accounts payable,MATRIX,76%,66,195
+fnd3_a_accpayable_fast_d1,Annual Accounts payable,MATRIX,76%,1,5
+fnd3_a_accreceivable,Accounts receivable (amounts owed by customers),MATRIX,74%,66,110
+fnd3_a_accreceivable_fast_d1,Accounts receivable (amounts owed by customers),MATRIX,74%,1,1
+fnd3_a_acq_dive,Annual Acquisition & Divestitures,MATRIX,64%,22,31
+fnd3_a_acq_dive_fast_d1,Annual Acquisition & Divestitures,MATRIX,64%,1,1
+fnd3_a_add_paid_cap,Share premium or capital contributed by shareholders in excess of par value,MATRIX,77%,62,257
+fnd3_a_add_paid_cap_fast_d1,Share premium or capital contributed by shareholders in excess of par value,MATRIX,77%,2,2
+fnd3_a_assets,Annual Total assets,MATRIX,83%,92,483
+fnd3_a_assets_fast_d1,Annual Total assets,MATRIX,83%,4,4
+fnd3_a_avg_shabasic,Average basic shares outstanding over the reporting period,MATRIX,74%,45,83
+fnd3_a_avg_shabasic_fast_d1,Average basic shares outstanding over the reporting period,MATRIX,74%,1,3
+fnd3_a_avgdiluted_sha,"Annual Average Common Shares Outstanding, Diluted",MATRIX,74%,60,147
+fnd3_a_avgdiluted_sha_fast_d1,"Annual Average Common Shares Outstanding, Diluted",MATRIX,74%,1,1
+fnd3_a_capex,"Capital expenditures (cash outflows for property, plant and equipment)",MATRIX,80%,66,340
+fnd3_a_capex_fast_d1,"Capital expenditures (cash outflows for property, plant and equipment)",MATRIX,80%,4,6
+fnd3_a_capexgross,Annual Capital Expenditure Payments (Gross),MATRIX,79%,43,82
+fnd3_a_capexgross_fast_d1,Annual Capital Expenditure Payments (Gross),MATRIX,79%,0,0
+fnd3_a_capitalassetsales,"Proceeds from sale of productive assets (e.g., PPE) during the period (flow)",MATRIX,49%,16,31
+fnd3_a_capitalassetsales_fast_d1,"Proceeds from sale of productive assets (e.g., PPE) during the period (flow)",MATRIX,49%,0,0
+fnd3_a_cash,Annual Cash & Cash Equivalents,MATRIX,83%,66,114
+fnd3_a_cash_fast_d1,Annual Cash & Cash Equivalents,MATRIX,83%,4,4
+fnd3_a_cashincrease,Annual Total Cash Increase/Decrease For Period,MATRIX,77%,26,44
+fnd3_a_cashincrease_fast_d1,Annual Total Cash Increase/Decrease For Period,MATRIX,77%,2,3
+fnd3_a_common,Annual Common Stock Value,MATRIX,75%,50,70
+fnd3_a_common_fast_d1,Annual Common Stock Value,MATRIX,75%,1,1
+fnd3_a_comstk_divpershare,Annual Common Stock Dividends Per Share,MATRIX,36%,8,9
+fnd3_a_comstk_divpershare_fast_d1,Annual Common Stock Dividends Per Share,MATRIX,36%,1,1
+fnd3_a_costofrevenue,Annual cost of revenue,MATRIX,69%,54,88
+fnd3_a_costofrevenue_fast_d1,Annual cost of revenue,MATRIX,69%,2,2
+fnd3_a_currentassets,Total current assets at period end,MATRIX,83%,66,129
+fnd3_a_currentassets_fast_d1,Total current assets at period end,MATRIX,83%,2,2
+fnd3_a_currentliabilities,Total current liabilities,MATRIX,82%,49,69
+fnd3_a_currentliabilities_fast_d1,Total current liabilities,MATRIX,82%,2,2
+fnd3_a_currentlongdebt,Current portion of long-term debt due within one year,MATRIX,47%,42,94
+fnd3_a_currentlongdebt_fast_d1,Current portion of long-term debt due within one year,MATRIX,46%,0,0
+fnd3_a_currenttaxasset,"Annual Deferred Tax Assets, Current",MATRIX,28%,9,11
+fnd3_a_currenttaxasset_fast_d1,"Annual Deferred Tax Assets, Current",MATRIX,28%,0,0
+fnd3_a_dnc,Depreciation and amortization expense for the period (CF011),MATRIX,80%,93,205
+fnd3_a_dnc_fast_d1,Depreciation and amortization expense for the period (CF011),MATRIX,80%,2,4
+fnd3_a_ebit,Earnings Before Interest and Taxes,MATRIX,82%,48,97
+fnd3_a_ebit_fast_d1,Earnings Before Interest and Taxes,MATRIX,82%,2,2
+fnd3_a_ebitda,"Earnings before interest, taxes, depreciation, and amortization for the period",MATRIX,82%,46,136
+fnd3_a_ebitda_fast_d1,"Earnings before interest, taxes, depreciation, and amortization for the period",MATRIX,82%,1,1
+fnd3_a_eff_excratecash,Annual Effect Of Exchange Rate On Cash And Cash Equivalents,MATRIX,49%,16,28
+fnd3_a_eff_excratecash_fast_d1,Annual Effect Of Exchange Rate On Cash And Cash Equivalents,MATRIX,49%,0,0
+fnd3_a_epp,"Annual Property, Plant & Equipment",MATRIX,79%,36,57
+fnd3_a_epp_fast_d1,"Annual Property, Plant & Equipment",MATRIX,79%,3,3
+fnd3_a_epsbasic,Basic earnings per share (net income divided by basic weighted average shares),MATRIX,81%,36,43
+fnd3_a_epsbasic_fast_d1,Basic earnings per share (net income divided by basic weighted average shares),MATRIX,81%,2,2
+fnd3_a_epsdiluted,Diluted earnings per share,MATRIX,80%,44,60
+fnd3_a_epsdiluted_fast_d1,Diluted earnings per share,MATRIX,80%,0,0
+fnd3_a_financing_cf,Net cash provided by or used in financing activities for the period,MATRIX,83%,26,37
+fnd3_a_financing_cf_fast_d1,Net cash provided by or used in financing activities for the period,MATRIX,82%,0,0
+fnd3_a_goodwill,Goodwill (intangible asset) balance,MATRIX,60%,25,44
+fnd3_a_goodwill_fast_d1,Goodwill (intangible asset) balance,MATRIX,60%,1,1
+fnd3_a_grossprofit,Annual Gross Profit,MATRIX,81%,62,135
+fnd3_a_grossprofit_fast_d1,Annual Gross Profit,MATRIX,81%,1,1
+fnd3_a_int_ass_ex_gwill,Annual Intangible Assets Excluding Goodwill,MATRIX,58%,41,58
+fnd3_a_int_ass_ex_gwill_fast_d1,Annual Intangible Assets Excluding Goodwill,MATRIX,58%,0,0
+fnd3_a_int_exp,Annual Interest Expense,MATRIX,73%,31,46
+fnd3_a_int_exp_fast_d1,Annual Interest Expense,MATRIX,73%,1,2
+fnd3_a_int_inc,Annual Noncontrolling Interest Income/Loss,MATRIX,36%,18,25
+fnd3_a_int_inc_fast_d1,Annual Noncontrolling Interest Income/Loss,MATRIX,36%,1,1
+fnd3_a_interestincome,Interest income earned during the period (IS011),MATRIX,50%,15,23
+fnd3_a_interestincome_fast_d1,Interest income earned during the period (IS011),MATRIX,50%,1,1
+fnd3_a_inv_cf,Net cash flows from investing activities for the period,MATRIX,82%,31,55
+fnd3_a_inv_cf_fast_d1,Net cash flows from investing activities for the period,MATRIX,82%,2,2
+fnd3_a_inventory,Inventory balance,MATRIX,49%,38,64
+fnd3_a_inventory_fast_d1,Inventory balance,MATRIX,49%,0,0
+fnd3_a_inventoryincdec,Annual Increase or Decrease in Inventory,MATRIX,43%,51,140
+fnd3_a_inventoryincdec_fast_d1,Annual Increase or Decrease in Inventory,MATRIX,43%,1,1
+fnd3_a_liabilities,Total liabilities at period end,MATRIX,83%,95,221
+fnd3_a_liabilities_fast_d1,Total liabilities at period end,MATRIX,83%,3,3
+fnd3_a_longdebt,Annual Long Term Debt,MATRIX,72%,40,72
+fnd3_a_longdebt_fast_d1,Annual Long Term Debt,MATRIX,72%,1,1
+fnd3_a_nic,Annual Net Income,MATRIX,83%,50,104
+fnd3_a_nic_fast_d1,Annual Net Income,MATRIX,83%,4,4
+fnd3_a_niccommonstockholders,Net income available to common shareholders (after preferred dividends),MATRIX,82%,34,80
+fnd3_a_niccommonstockholders_fast_d1,Net income available to common shareholders (after preferred dividends),MATRIX,82%,3,3
+fnd3_a_niccontinuingoperations,"Annual Net Income, Continuing Operations",MATRIX,83%,41,75
+fnd3_a_niccontinuingoperations_fast_d1,"Annual Net Income, Continuing Operations",MATRIX,83%,0,0
+fnd3_a_noncontrollinginterest,Annual Noncontrolling Interest,MATRIX,35%,7,8
+fnd3_a_noncontrollinginterest_fast_d1,Annual Noncontrolling Interest,MATRIX,35%,0,0
+fnd3_a_noncurrenttaxasset,"Annual Deferred Tax Assets, Noncurrent",MATRIX,32%,18,40
+fnd3_a_noncurrenttaxasset_fast_d1,"Annual Deferred Tax Assets, Noncurrent",MATRIX,32%,0,0
+fnd3_a_noncurrenttaxliability,"Annual Deferred Tax Liabilities, noncurrent",MATRIX,45%,24,49
+fnd3_a_noncurrenttaxliability_fast_d1,"Annual Deferred Tax Liabilities, noncurrent",MATRIX,45%,1,1
+fnd3_a_ope_cf,Cash flow from operating activities,MATRIX,83%,60,130
+fnd3_a_ope_cf_fast_d1,Cash flow from operating activities,MATRIX,83%,7,7
+fnd3_a_opeexpenseexitems,Annual Operating Expense Extraordinary Items,MATRIX,49%,17,19
+fnd3_a_opeexpenseexitems_fast_d1,Annual Operating Expense Extraordinary Items,MATRIX,49%,1,1
+fnd3_a_opeexpenses,Annual Total Operating Expenses,MATRIX,81%,51,97
+fnd3_a_opeexpenses_fast_d1,Annual Total Operating Expenses,MATRIX,81%,4,4
+fnd3_a_opeincome,Operating income (income from operations),MATRIX,83%,47,87
+fnd3_a_opeincome_fast_d1,Operating income (income from operations),MATRIX,83%,1,1
+fnd3_a_payables,Annual Increase or Decrease in Accounts Payable,MATRIX,65%,49,84
+fnd3_a_payables_fast_d1,Annual Increase or Decrease in Accounts Payable,MATRIX,65%,4,4
+fnd3_a_paymentsof_div,Cash dividends paid during the period,MATRIX,52%,8,12
+fnd3_a_paymentsof_div_fast_d1,Cash dividends paid during the period,MATRIX,52%,1,1
+fnd3_a_preferred,Annual Preferred Stock Value,MATRIX,41%,20,26
+fnd3_a_preferred_fast_d1,Annual Preferred Stock Value,MATRIX,41%,0,0
+fnd3_a_receivables,Annual Increase or Decrease in Receivables,MATRIX,66%,47,73
+fnd3_a_receivables_fast_d1,Annual Increase or Decrease in Receivables,MATRIX,66%,0,0
+fnd3_a_retained_ear,Annual Retained Earnings,MATRIX,80%,69,202
+fnd3_a_retained_ear_fast_d1,Annual Retained Earnings,MATRIX,80%,1,1
+fnd3_a_revenue,Annual Revenue,MATRIX,81%,33,60
+fnd3_a_revenue_fast_d1,Annual Revenue,MATRIX,81%,3,3
+fnd3_a_rnd,Research and development operating expenses,MATRIX,36%,20,31
+fnd3_a_rnd_fast_d1,Research and development operating expenses,MATRIX,36%,1,1
+fnd3_a_sgaexpense,"Selling, general and administrative expense for the period",MATRIX,79%,58,109
+fnd3_a_sgaexpense_fast_d1,"Selling, general and administrative expense for the period",MATRIX,79%,1,1
+fnd3_a_sha_endofperiod,Number of common shares outstanding at the end of the reporting period,MATRIX,58%,32,50
+fnd3_a_sha_endofperiod_fast_d1,Number of common shares outstanding at the end of the reporting period,MATRIX,58%,4,4
+fnd3_a_sharesauthorized,Annual Shares Authorized,MATRIX,55%,32,46
+fnd3_a_sharesauthorized_fast_d1,Annual Shares Authorized,MATRIX,55%,1,1
+fnd3_a_sharesissued,Annual Shares Issued,MATRIX,53%,30,40
+fnd3_a_sharesissued_fast_d1,Annual Shares Issued,MATRIX,53%,2,8
+fnd3_a_shcom,Expense for stock-based compensation,MATRIX,68%,35,44
+fnd3_a_shcom_fast_d1,Expense for stock-based compensation,MATRIX,68%,3,3
+fnd3_a_shodebt,Debt obligations due within one year,MATRIX,36%,12,38
+fnd3_a_shodebt_fast_d1,Debt obligations due within one year,MATRIX,36%,0,0
+fnd3_a_totaldebt,Total interest-bearing debt (short-term plus long-term),MATRIX,75%,33,52
+fnd3_a_totaldebt_fast_d1,Total interest-bearing debt (short-term plus long-term),MATRIX,75%,1,1
+fnd3_a_treasury,Annual Treasury Stock Value,MATRIX,38%,12,14
+fnd3_a_treasury_fast_d1,Annual Treasury Stock Value,MATRIX,38%,0,0
+fnd3_aaccadj_effecexcrate,Effect of exchange rate changes on cash and cash equivalents as reported on the cash flow statement,MATRIX,48%,27,60
+fnd3_aaccadj_effecexcrate_fast_d1,Effect of exchange rate changes on cash and cash equivalents as reported on the cash flow statement,MATRIX,48%,1,1
+fnd3_aaccadj_niccomhold,Net income available to common shareholders,MATRIX,81%,36,63
+fnd3_aaccadj_niccomhold_fast_d1,Net income available to common shareholders,MATRIX,81%,1,1
+fnd3_aaccadj_nicdis_ope,"Annual Accountance Adjustment Net Income, Continuing Operations",MATRIX,82%,58,163
+fnd3_aaccadj_nicdis_ope_fast_d1,"Annual Accountance Adjustment Net Income, Continuing Operations",MATRIX,82%,0,0
+fnd3_aaccadj_noncurtaxlib,"Annual Accountance Adjustment Deferred Tax Liabilities, noncurrent",MATRIX,43%,5,5
+fnd3_aaccadj_noncurtaxlib_fast_d1,"Annual Accountance Adjustment Deferred Tax Liabilities, noncurrent",MATRIX,43%,0,0
+fnd3_aacctadj__earbeforetaxes,Earnings before income taxes (pretax income),MATRIX,82%,35,53
+fnd3_aacctadj__earbeforetaxes_fast_d1,Earnings before income taxes (pretax income),MATRIX,82%,2,2
+fnd3_aacctadj__inc_tax,Annual Accountance Adjustment Income Tax Provision,MATRIX,71%,20,39
+fnd3_aacctadj__inc_tax_fast_d1,Annual Accountance Adjustment Income Tax Provision,MATRIX,71%,0,0
+fnd3_aacctadj_acc_abi_adj,Annual Accountance Adjustment Increase or Decrease in Accrued Liabilities,MATRIX,34%,39,145
+fnd3_aacctadj_acc_abi_adj_fast_d1,Annual Accountance Adjustment Increase or Decrease in Accrued Liabilities,MATRIX,34%,2,2
+fnd3_aacctadj_acc_dep,Accumulated depreciation (contra-asset) balance,MATRIX,51%,24,33
+fnd3_aacctadj_acc_dep_fast_d1,Accumulated depreciation (contra-asset) balance,MATRIX,51%,1,1
+fnd3_aacctadj_accpayable,Accounts payable balance,MATRIX,76%,67,338
+fnd3_aacctadj_accpayable_fast_d1,Accounts payable balance,MATRIX,76%,1,1
+fnd3_aacctadj_accreceivable,Annual Accountance Adjustment Accounts receivable,MATRIX,73%,33,75
+fnd3_aacctadj_accreceivable_fast_d1,Annual Accountance Adjustment Accounts receivable,MATRIX,73%,2,3
+fnd3_aacctadj_acq_dive,Annual Accountance Adjustment  Acquisition & Divestitures,MATRIX,60%,17,20
+fnd3_aacctadj_acq_dive_fast_d1,Annual Accountance Adjustment  Acquisition & Divestitures,MATRIX,60%,0,0
+fnd3_aacctadj_add_paid_cap,"Additional paid in capital, equity contributed above par value",MATRIX,76%,62,137
+fnd3_aacctadj_add_paid_cap_fast_d1,"Additional paid in capital, equity contributed above par value",MATRIX,76%,3,3
+fnd3_aacctadj_assets,Total assets on the balance sheet (accounting-adjusted),MATRIX,83%,44,90
+fnd3_aacctadj_assets_fast_d1,Total assets on the balance sheet (accounting-adjusted),MATRIX,83%,0,0
+fnd3_aacctadj_assets_old,Total assets (pre-accounting-adjustment Old series) at period end,MATRIX,83%,37,58
+fnd3_aacctadj_assets_old_fast_d1,Total assets (pre-accounting-adjustment Old series) at period end,MATRIX,83%,2,2
+fnd3_aacctadj_avg_shabasic,"Annual Accountance Adjustment Average Common Shares Outstanding, Basic",MATRIX,73%,26,57
+fnd3_aacctadj_avg_shabasic_fast_d1,"Annual Accountance Adjustment Average Common Shares Outstanding, Basic",MATRIX,73%,1,1
+fnd3_aacctadj_avgdiluted_sha,Weighted average diluted shares outstanding for the period,MATRIX,73%,31,47
+fnd3_aacctadj_avgdiluted_sha_fast_d1,Weighted average diluted shares outstanding for the period,MATRIX,73%,1,1
+fnd3_aacctadj_capex,"Capital expenditures (cash outflows for property, plant and equipment and related assets)",MATRIX,79%,21,24
+fnd3_aacctadj_capex_fast_d1,"Capital expenditures (cash outflows for property, plant and equipment and related assets)",MATRIX,79%,2,2
+fnd3_aacctadj_capexgross,Annual Accountance Adjustment Capital Expenditure Payments (Gross),MATRIX,78%,29,49
+fnd3_aacctadj_capexgross_fast_d1,Annual Accountance Adjustment Capital Expenditure Payments (Gross),MATRIX,78%,4,4
+fnd3_aacctadj_capitalassetsales,Annual Accountance Adjustment Proceeds from Sale of Productive Assets,MATRIX,43%,8,17
+fnd3_aacctadj_capitalassetsales_fast_d1,Annual Accountance Adjustment Proceeds from Sale of Productive Assets,MATRIX,43%,2,2
+fnd3_aacctadj_cash,Annual Accountance Adjustment Cash & Cash Equivalents,MATRIX,83%,32,70
+fnd3_aacctadj_cash_fast_d1,Annual Accountance Adjustment Cash & Cash Equivalents,MATRIX,83%,2,2
+fnd3_aacctadj_cashincrease,Annual Accountance Adjustment Total Cash Increase/Decrease For Period,MATRIX,75%,27,42
+fnd3_aacctadj_cashincrease_fast_d1,Annual Accountance Adjustment Total Cash Increase/Decrease For Period,MATRIX,75%,2,2
+fnd3_aacctadj_common,Annual Accountance Adjustment Common Stock Value,MATRIX,74%,41,93
+fnd3_aacctadj_common_fast_d1,Annual Accountance Adjustment Common Stock Value,MATRIX,74%,2,2
+fnd3_aacctadj_comstk_divpershare,Annual Accountance Adjustment Common Stock Dividends Per Share,MATRIX,33%,8,9
+fnd3_aacctadj_comstk_divpershare_fast_d1,Annual Accountance Adjustment Common Stock Dividends Per Share,MATRIX,33%,0,0
+fnd3_aacctadj_costofrevenue,Cost of revenue (cost of goods sold and related costs),MATRIX,68%,33,47
+fnd3_aacctadj_costofrevenue_fast_d1,Cost of revenue (cost of goods sold and related costs),MATRIX,68%,3,4
+fnd3_aacctadj_currentassets,Annual Accountance Adjustment Current Asset,MATRIX,83%,37,95
+fnd3_aacctadj_currentassets_fast_d1,Annual Accountance Adjustment Current Asset,MATRIX,83%,2,2
+fnd3_aacctadj_currentliabilities,Total current liabilities due within one year at period end,MATRIX,81%,68,143
+fnd3_aacctadj_currentliabilities_fast_d1,Total current liabilities due within one year at period end,MATRIX,81%,0,0
+fnd3_aacctadj_currentlongdebt,Annual Accountance Adjustment Current Portion Of Long-Term Debt,MATRIX,43%,51,137
+fnd3_aacctadj_currentlongdebt_fast_d1,Annual Accountance Adjustment Current Portion Of Long-Term Debt,MATRIX,43%,1,1
+fnd3_aacctadj_currenttaxasset,"Annual Accountance Adjustment Deferred Tax Assets, Current",MATRIX,27%,11,15
+fnd3_aacctadj_dnc,Depreciation and amortization expense for the period,MATRIX,80%,26,47
+fnd3_aacctadj_dnc_fast_d1,Depreciation and amortization expense for the period,MATRIX,80%,0,0
+fnd3_aacctadj_ebit,Earnings before interest and taxes,MATRIX,82%,30,46
+fnd3_aacctadj_ebit_fast_d1,Earnings before interest and taxes,MATRIX,82%,2,2
+fnd3_aacctadj_ebitda,"Earnings before interest, taxes, depreciation and amortization",MATRIX,82%,34,49
+fnd3_aacctadj_ebitda_fast_d1,"Earnings before interest, taxes, depreciation and amortization",MATRIX,82%,1,1
+fnd3_aacctadj_epp,"Annual Accountance Adjustment Property, Plant & Equipment",MATRIX,79%,39,79
+fnd3_aacctadj_epp_fast_d1,"Annual Accountance Adjustment Property, Plant & Equipment",MATRIX,79%,1,1
+fnd3_aacctadj_epsbasic,Basic earnings per share: net income divided by basic weighted average shares,MATRIX,80%,36,58
+fnd3_aacctadj_epsbasic_fast_d1,Basic earnings per share: net income divided by basic weighted average shares,MATRIX,80%,0,0
+fnd3_aacctadj_epsdiluted,"Diluted earnings per share, including effects of convertible and other dilutive securities",MATRIX,80%,31,91
+fnd3_aacctadj_epsdiluted_fast_d1,"Diluted earnings per share, including effects of convertible and other dilutive securities",MATRIX,80%,2,2
+fnd3_aacctadj_financing_cf,Net cash provided by or used in financing activities,MATRIX,82%,48,91
+fnd3_aacctadj_financing_cf_fast_d1,Net cash provided by or used in financing activities,MATRIX,82%,2,2
+fnd3_aacctadj_goodwill,Carrying amount of goodwill reported as an intangible asset on the balance sheet,MATRIX,59%,15,18
+fnd3_aacctadj_goodwill_fast_d1,Carrying amount of goodwill reported as an intangible asset on the balance sheet,MATRIX,59%,0,0
+fnd3_aacctadj_grossprofit,Gross profit (revenue minus cost of revenue),MATRIX,80%,35,52
+fnd3_aacctadj_grossprofit_fast_d1,Gross profit (revenue minus cost of revenue),MATRIX,80%,1,1
+fnd3_aacctadj_int_ass_ex_gwill,Annual Accountance Adjustment Intangible Assets Excluding Goodwill,MATRIX,57%,24,44
+fnd3_aacctadj_int_ass_ex_gwill_fast_d1,Annual Accountance Adjustment Intangible Assets Excluding Goodwill,MATRIX,57%,0,0
+fnd3_aacctadj_int_exp,Interest expense recognized on the income statement for the period,MATRIX,72%,31,73
+fnd3_aacctadj_int_exp_fast_d1,Interest expense recognized on the income statement for the period,MATRIX,72%,0,0
+fnd3_aacctadj_int_inc,Net income attributable to noncontrolling interests (minority interest) for the period,MATRIX,34%,15,33
+fnd3_aacctadj_int_inc_fast_d1,Net income attributable to noncontrolling interests (minority interest) for the period,MATRIX,34%,0,0
+fnd3_aacctadj_interestincome,Interest income recognized during the period,MATRIX,46%,15,19
+fnd3_aacctadj_interestincome_fast_d1,Interest income recognized during the period,MATRIX,46%,0,0
+fnd3_aacctadj_inv_cf,Net cash provided by or used in investing activities for the period,MATRIX,82%,22,36
+fnd3_aacctadj_inv_cf_fast_d1,Net cash provided by or used in investing activities for the period,MATRIX,82%,1,1
+fnd3_aacctadj_inventory,Annual Accountance Adjustment Increase or Decrease in Inventory,MATRIX,42%,48,122
+fnd3_aacctadj_inventory_fast_d1,Annual Accountance Adjustment Increase or Decrease in Inventory,MATRIX,42%,2,2
+fnd3_aacctadj_inventoryincdec,Inventory balance at period end,MATRIX,48%,40,69
+fnd3_aacctadj_inventoryincdec_fast_d1,Inventory balance at period end,MATRIX,48%,1,1
+fnd3_aacctadj_liabilities,"Annual Accountance Adjustment Liabilities, Total",MATRIX,83%,41,89
+fnd3_aacctadj_liabilities_fast_d1,"Annual Accountance Adjustment Liabilities, Total",MATRIX,83%,1,5
+fnd3_aacctadj_liabilities_old,Total liabilities at period end under the pre-adjustment (old) accounting presentation (balance sheet),MATRIX,83%,36,55
+fnd3_aacctadj_liabilities_old_fast_d1,Total liabilities at period end under the pre-adjustment (old) accounting presentation (balance sheet),MATRIX,83%,2,2
+fnd3_aacctadj_longdebt,Annual Accountance Adjustment Long Term Debt,MATRIX,71%,20,31
+fnd3_aacctadj_longdebt_fast_d1,Annual Accountance Adjustment Long Term Debt,MATRIX,71%,0,0
+fnd3_aacctadj_nic,Net income for the period,MATRIX,83%,35,56
+fnd3_aacctadj_nic_fast_d1,Net income for the period,MATRIX,83%,1,1
+fnd3_aacctadj_ope_cf,Net cash provided by operating activities for the period,MATRIX,82%,57,122
+fnd3_aacctadj_ope_cf_fast_d1,Net cash provided by operating activities for the period,MATRIX,82%,5,6
+fnd3_aacctadj_opeexpenseexitems,Annual Accountance Adjustment Operating Expense Extraordinary Items,MATRIX,44%,17,20
+fnd3_aacctadj_opeexpenseexitems_fast_d1,Annual Accountance Adjustment Operating Expense Extraordinary Items,MATRIX,44%,0,0
+fnd3_aacctadj_opeexpenses,Annual Accountance Adjustment Total Operating Expenses,MATRIX,81%,39,50
+fnd3_aacctadj_opeexpenses_fast_d1,Annual Accountance Adjustment Total Operating Expenses,MATRIX,81%,1,2
+fnd3_aacctadj_opeincome,Operating income or loss before interest and taxes,MATRIX,82%,33,64
+fnd3_aacctadj_opeincome_fast_d1,Operating income or loss before interest and taxes,MATRIX,82%,0,0
+fnd3_aacctadj_payables,Annual Accountance Adjustment Increase or Decrease in Accounts Payable,MATRIX,64%,52,64
+fnd3_aacctadj_payables_fast_d1,Annual Accountance Adjustment Increase or Decrease in Accounts Payable,MATRIX,64%,2,2
+fnd3_aacctadj_paymentsof_div,Annual Accountance Adjustment Payments Of Dividends,MATRIX,50%,9,11
+fnd3_aacctadj_paymentsof_div_fast_d1,Annual Accountance Adjustment Payments Of Dividends,MATRIX,50%,0,0
+fnd3_aacctadj_ppe_old,"Property, Plant and Equipment (pre-adjustment old variant), balance sheet stock",MATRIX,79%,18,26
+fnd3_aacctadj_ppe_old_fast_d1,"Property, Plant and Equipment (pre-adjustment old variant), balance sheet stock",MATRIX,79%,1,1
+fnd3_aacctadj_preferred,Annual Accountance Adjustment Preferred Stock Value,MATRIX,37%,8,9
+fnd3_aacctadj_preferred_fast_d1,Annual Accountance Adjustment Preferred Stock Value,MATRIX,37%,0,0
+fnd3_aacctadj_receivables,Annual Accountance Adjustment Increase or Decrease in Receivables,MATRIX,65%,44,76
+fnd3_aacctadj_receivables_fast_d1,Annual Accountance Adjustment Increase or Decrease in Receivables,MATRIX,65%,3,3
+fnd3_aacctadj_retained_ear,Retained earnings balance within shareholders equity at period end,MATRIX,79%,43,80
+fnd3_aacctadj_retained_ear_fast_d1,Retained earnings balance within shareholders equity at period end,MATRIX,79%,1,1
+fnd3_aacctadj_revenue,Total revenue or sales for the period,MATRIX,81%,21,41
+fnd3_aacctadj_revenue_fast_d1,Total revenue or sales for the period,MATRIX,81%,4,4
+fnd3_aacctadj_sgaexpense,"Selling, general and administrative expense for the period",MATRIX,78%,37,58
+fnd3_aacctadj_sgaexpense_fast_d1,"Selling, general and administrative expense for the period",MATRIX,78%,4,4
+fnd3_aacctadj_sha_endofperiod,Number of common shares outstanding at period end,MATRIX,44%,22,43
+fnd3_aacctadj_sha_endofperiod_fast_d1,Number of common shares outstanding at period end,MATRIX,44%,2,2
+fnd3_aacctadj_sharesauthorized,Annual Accountance Adjustment Shares Authorized,MATRIX,50%,45,74
+fnd3_aacctadj_sharesauthorized_fast_d1,Annual Accountance Adjustment Shares Authorized,MATRIX,50%,4,4
+fnd3_aacctadj_sharesissued,Annual Accountance Adjustment Shares Issued,MATRIX,48%,35,61
+fnd3_aacctadj_sharesissued_fast_d1,Annual Accountance Adjustment Shares Issued,MATRIX,48%,2,2
+fnd3_aacctadj_shcom,Share-based compensation expense,MATRIX,66%,45,91
+fnd3_aacctadj_shcom_fast_d1,Share-based compensation expense,MATRIX,66%,2,3
+fnd3_aacctadj_totaldebt,"Total interest bearing debt outstanding at period end, including short term and long term debt",MATRIX,74%,32,46
+fnd3_aacctadj_totaldebt_fast_d1,"Total interest bearing debt outstanding at period end, including short term and long term debt",MATRIX,74%,1,1
+fnd3_aacctadj_treasury,Annual Accountance Adjustment Treasury Stock Value,MATRIX,36%,6,7
+fnd3_aacctadj_treasury_fast_d1,Annual Accountance Adjustment Treasury Stock Value,MATRIX,36%,0,0
+fnd3_aacctadjequity,Total stockholders equity at period end,MATRIX,83%,86,260
+fnd3_aacctadjequity_fast_d1,Total stockholders equity at period end,MATRIX,83%,4,4
+fnd3_aacctadjequitybeforenci,Annual Accountance AdjustmentStockholders Equity Before Non-Controlling Interest,MATRIX,83%,59,191
+fnd3_aacctadjequitybeforenci_fast_d1,Annual Accountance AdjustmentStockholders Equity Before Non-Controlling Interest,MATRIX,83%,5,5
+fnd3_aequity,Total stockholders’ (shareholders’) equity at fiscal period end; balance sheet stock value,MATRIX,83%,87,291
+fnd3_aequity_fast_d1,Total stockholders’ (shareholders’) equity at fiscal period end; balance sheet stock value,MATRIX,83%,3,4
+fnd3_aequitybeforenci,Annual Stockholders Equity Before Non-Controlling Interest,MATRIX,83%,77,223
+fnd3_aequitybeforenci_fast_d1,Annual Stockholders Equity Before Non-Controlling Interest,MATRIX,83%,1,1
+fnd3_q__earbeforetaxes,Income before provision for income taxes (pre-tax income) for the period,MATRIX,80%,38,101
+fnd3_q__earbeforetaxes_fast_d1,Income before provision for income taxes (pre-tax income) for the period,MATRIX,80%,1,1
+fnd3_q__inc_tax,Quarterly Income Tax Provision,MATRIX,73%,43,147
+fnd3_q__inc_tax_fast_d1,Quarterly Income Tax Provision,MATRIX,73%,0,0
+fnd3_q_acc_abi_adj,Quarterly Increase or Decrease in Accrued Liabilities,MATRIX,37%,29,65
+fnd3_q_acc_abi_adj_fast_d1,Quarterly Increase or Decrease in Accrued Liabilities,MATRIX,37%,2,2
+fnd3_q_acc_dep,"Total accumulated depreciation (contra-asset) for property, plant, and equipment",MATRIX,60%,13,20
+fnd3_q_acc_dep_fast_d1,"Total accumulated depreciation (contra-asset) for property, plant, and equipment",MATRIX,60%,1,1
+fnd3_q_accpayable,Accounts payable balance,MATRIX,78%,49,94
+fnd3_q_accpayable_fast_d1,Accounts payable balance,MATRIX,78%,4,4
+fnd3_q_accreceivable,Amount owed by customers (trade receivables) reported as a current asset,MATRIX,76%,34,49
+fnd3_q_accreceivable_fast_d1,Amount owed by customers (trade receivables) reported as a current asset,MATRIX,75%,5,5
+fnd3_q_acq_dive,Quarterly Acquisition & Divestitures,MATRIX,58%,7,8
+fnd3_q_acq_dive_fast_d1,Quarterly Acquisition & Divestitures,MATRIX,58%,0,0
+fnd3_q_add_paid_cap,Additional paid in capital balance within shareholders’ equity,MATRIX,79%,46,99
+fnd3_q_add_paid_cap_fast_d1,Additional paid in capital balance within shareholders’ equity,MATRIX,79%,1,1
+fnd3_q_assets,Total assets on the balance sheet at quarter end,MATRIX,85%,38,70
+fnd3_q_assets_fast_d1,Total assets on the balance sheet at quarter end,MATRIX,85%,5,5
+fnd3_q_avg_shabasic,Average basic shares outstanding during the quarter,MATRIX,77%,31,41
+fnd3_q_avg_shabasic_fast_d1,Average basic shares outstanding during the quarter,MATRIX,77%,0,0
+fnd3_q_avgdiluted_sha,"Quarterly Average Common Shares Outstanding, Diluted",MATRIX,77%,38,83
+fnd3_q_avgdiluted_sha_fast_d1,"Quarterly Average Common Shares Outstanding, Diluted",MATRIX,77%,1,1
+fnd3_q_capex,"Quarterly Capital Expenditures, Net",MATRIX,76%,54,117
+fnd3_q_capex_fast_d1,"Quarterly Capital Expenditures, Net",MATRIX,76%,5,6
+fnd3_q_capexgross,Quarterly Capital Expenditure Payments (Gross),MATRIX,75%,46,95
+fnd3_q_capexgross_fast_d1,Quarterly Capital Expenditure Payments (Gross),MATRIX,75%,0,0
+fnd3_q_capitalassetsales,Proceeds from sale of productive/capital assets during the period (flow),MATRIX,43%,9,13
+fnd3_q_capitalassetsales_fast_d1,Proceeds from sale of productive/capital assets during the period (flow),MATRIX,43%,0,0
+fnd3_q_cash,Quarterly Cash & Cash Equivalents,MATRIX,85%,54,146
+fnd3_q_cash_fast_d1,Quarterly Cash & Cash Equivalents,MATRIX,85%,1,1
+fnd3_q_cashincrease,Quarterly Total Cash Increase/Decrease For Period,MATRIX,76%,27,56
+fnd3_q_cashincrease_fast_d1,Quarterly Total Cash Increase/Decrease For Period,MATRIX,76%,1,1
+fnd3_q_common,Quarterly Common Stock Value,MATRIX,79%,44,80
+fnd3_q_common_fast_d1,Quarterly Common Stock Value,MATRIX,79%,1,1
+fnd3_q_comstk_divpershare,Quarterly Common Stock Dividends Per Share,MATRIX,39%,8,11
+fnd3_q_comstk_divpershare_fast_d1,Quarterly Common Stock Dividends Per Share,MATRIX,39%,0,0
+fnd3_q_costofrevenue,Cost of revenue or cost of goods sold for the period,MATRIX,69%,33,50
+fnd3_q_costofrevenue_fast_d1,Cost of revenue or cost of goods sold for the period,MATRIX,69%,0,0
+fnd3_q_currentassets,Total current assets at quarter end,MATRIX,85%,45,78
+fnd3_q_currentassets_fast_d1,Total current assets at quarter end,MATRIX,85%,1,1
+fnd3_q_currentliabilities,Total current liabilities due within one year,MATRIX,84%,41,80
+fnd3_q_currentliabilities_fast_d1,Total current liabilities due within one year,MATRIX,84%,0,0
+fnd3_q_currentlongdebt,Current portion of long-term debt due within one year,MATRIX,50%,40,95
+fnd3_q_currentlongdebt_fast_d1,Current portion of long-term debt due within one year,MATRIX,50%,5,5
+fnd3_q_currenttaxasset,"Quarterly Deferred Tax Assets, Current",MATRIX,27%,10,15
+fnd3_q_currenttaxasset_fast_d1,"Quarterly Deferred Tax Assets, Current",MATRIX,27%,1,1
+fnd3_q_dnc,Depreciation and amortization expense for the quarter,MATRIX,77%,28,42
+fnd3_q_dnc_fast_d1,Depreciation and amortization expense for the quarter,MATRIX,77%,2,2
+fnd3_q_ebit,Earnings before interest and taxes,MATRIX,80%,40,96
+fnd3_q_ebit_fast_d1,Earnings before interest and taxes,MATRIX,80%,1,1
+fnd3_q_ebitda,"Earnings before interest, taxes, depreciation, and amortization",MATRIX,80%,28,35
+fnd3_q_ebitda_fast_d1,"Earnings before interest, taxes, depreciation, and amortization",MATRIX,80%,0,0
+fnd3_q_eff_exc_cash,Effect of foreign exchange rate changes on cash and cash equivalents,MATRIX,44%,17,27
+fnd3_q_eff_exc_cash_fast_d1,Effect of foreign exchange rate changes on cash and cash equivalents,MATRIX,44%,0,0
+fnd3_q_epp,"Quarterly Property, Plant & Equipment",MATRIX,81%,41,78
+fnd3_q_epp_fast_d1,"Quarterly Property, Plant & Equipment",MATRIX,81%,1,1
+fnd3_q_epsbasic,"Basic earnings per share, calculated as net income divided by basic weighted average shares",MATRIX,79%,23,69
+fnd3_q_epsbasic_fast_d1,"Basic earnings per share, calculated as net income divided by basic weighted average shares",MATRIX,79%,1,1
+fnd3_q_epsdiluted,"Diluted earnings per share for the period, including effects of convertible securities",MATRIX,79%,33,73
+fnd3_q_epsdiluted_fast_d1,"Diluted earnings per share for the period, including effects of convertible securities",MATRIX,79%,0,0
+fnd3_q_financing_cf,Quarterly Financing Cash Flow,MATRIX,79%,56,404
+fnd3_q_financing_cf_fast_d1,Quarterly Financing Cash Flow,MATRIX,79%,2,4
+fnd3_q_goodwill,Quarterly Goodwill,MATRIX,62%,33,75
+fnd3_q_goodwill_fast_d1,Quarterly Goodwill,MATRIX,62%,2,2
+fnd3_q_grossprofit,"Gross profit, calculated as revenue minus cost of revenue",MATRIX,78%,57,110
+fnd3_q_grossprofit_fast_d1,"Gross profit, calculated as revenue minus cost of revenue",MATRIX,78%,2,4
+fnd3_q_int_ass_ex_gwill,Quarterly Intangible Assets Excluding Goodwill,MATRIX,60%,40,72
+fnd3_q_int_ass_ex_gwill_fast_d1,Quarterly Intangible Assets Excluding Goodwill,MATRIX,60%,4,4
+fnd3_q_int_exp,Total interest expense recognized in the income statement for the period,MATRIX,72%,42,89
+fnd3_q_int_exp_fast_d1,Total interest expense recognized in the income statement for the period,MATRIX,72%,2,2
+fnd3_q_interestincome,Quarterly Interest & Investment Income,MATRIX,48%,18,23
+fnd3_q_interestincome_fast_d1,Quarterly Interest & Investment Income,MATRIX,48%,0,0
+fnd3_q_inv_cf,Quarterly Investing Cash Flow,MATRIX,79%,54,236
+fnd3_q_inv_cf_fast_d1,Quarterly Investing Cash Flow,MATRIX,79%,0,0
+fnd3_q_inventory,Balance sheet value of inventories,MATRIX,49%,42,152
+fnd3_q_inventory_fast_d1,Balance sheet value of inventories,MATRIX,49%,0,0
+fnd3_q_inventoryincdec,Quarterly Increase or Decrease in Inventory,MATRIX,39%,13,18
+fnd3_q_inventoryincdec_fast_d1,Quarterly Increase or Decrease in Inventory,MATRIX,39%,2,2
+fnd3_q_liabilities,"Quarterly  Liabilities, Total",MATRIX,85%,40,66
+fnd3_q_liabilities_fast_d1,"Quarterly  Liabilities, Total",MATRIX,85%,1,1
+fnd3_q_longdebt,Quarterly Long Term Debt,MATRIX,75%,45,198
+fnd3_q_longdebt_fast_d1,Quarterly Long Term Debt,MATRIX,75%,1,2
+fnd3_q_nic,Net income or net profit for the period (income statement item IS050),MATRIX,80%,24,49
+fnd3_q_nic_fast_d1,Net income or net profit for the period (income statement item IS050),MATRIX,80%,0,0
+fnd3_q_niccommonstockholders,Net income attributable to common shareholders,MATRIX,80%,26,45
+fnd3_q_niccommonstockholders_fast_d1,Net income attributable to common shareholders,MATRIX,80%,0,0
+fnd3_q_niccontinuingoperations,"Quarterly Net Income, Continuing Operations",MATRIX,80%,23,46
+fnd3_q_niccontinuingoperations_fast_d1,"Quarterly Net Income, Continuing Operations",MATRIX,80%,0,0
+fnd3_q_noncurrenttaxasset,"Quarterly Deferred Tax Assets, Noncurrent",MATRIX,32%,9,13
+fnd3_q_noncurrenttaxasset_fast_d1,"Quarterly Deferred Tax Assets, Noncurrent",MATRIX,32%,0,0
+fnd3_q_noncurrenttaxliability,"Quarterly Deferred Tax Liabilities, noncurrent",MATRIX,47%,10,22
+fnd3_q_noncurrenttaxliability_fast_d1,"Quarterly Deferred Tax Liabilities, noncurrent",MATRIX,47%,0,0
+fnd3_q_ope_cf,Cash flow from operating activities for the period,MATRIX,79%,77,321
+fnd3_q_ope_cf_fast_d1,Cash flow from operating activities for the period,MATRIX,79%,4,5
+fnd3_q_opeexpenseexitems,Quarterly Operating Expense Extraordinary Items,MATRIX,46%,11,18
+fnd3_q_opeexpenseexitems_fast_d1,Quarterly Operating Expense Extraordinary Items,MATRIX,46%,0,0
+fnd3_q_opeexpenses,Quarterly Total Operating Expenses,MATRIX,79%,35,62
+fnd3_q_opeexpenses_fast_d1,Quarterly Total Operating Expenses,MATRIX,79%,0,0
+fnd3_q_opeincome,Quarterly Operating Income,MATRIX,80%,60,149
+fnd3_q_opeincome_fast_d1,Quarterly Operating Income,MATRIX,80%,2,2
+fnd3_q_payables,Quarterly Increase or Decrease in Accounts Payable,MATRIX,62%,37,413
+fnd3_q_payables_fast_d1,Quarterly Increase or Decrease in Accounts Payable,MATRIX,62%,4,4
+fnd3_q_paymentsof_div,Cash dividends paid during the period,MATRIX,48%,6,7
+fnd3_q_paymentsof_div_fast_d1,Cash dividends paid during the period,MATRIX,48%,0,0
+fnd3_q_preferred,Quarterly Preferred Stock Value,MATRIX,45%,32,85
+fnd3_q_preferred_fast_d1,Quarterly Preferred Stock Value,MATRIX,46%,3,3
+fnd3_q_receivables,Change in receivables as a cash flow working capital adjustment,MATRIX,63%,26,51
+fnd3_q_receivables_fast_d1,Change in receivables as a cash flow working capital adjustment,MATRIX,63%,2,2
+fnd3_q_retained_ear,Cumulative net income less dividends retained in the business,MATRIX,82%,57,131
+fnd3_q_retained_ear_fast_d1,Cumulative net income less dividends retained in the business,MATRIX,82%,0,0
+fnd3_q_revenue,Sales or revenue for the reporting period,MATRIX,78%,45,95
+fnd3_q_revenue_fast_d1,Sales or revenue for the reporting period,MATRIX,78%,4,4
+fnd3_q_sgaexpense,"Quarterly Selling, General & Administrative Expense",MATRIX,77%,21,36
+fnd3_q_sgaexpense_fast_d1,"Quarterly Selling, General & Administrative Expense",MATRIX,77%,1,1
+fnd3_q_sha_endofperiod,Number of shares outstanding at the end of the reporting period,MATRIX,64%,25,39
+fnd3_q_sha_endofperiod_fast_d1,Number of shares outstanding at the end of the reporting period,MATRIX,64%,4,8
+fnd3_q_sharesauthorized,Total number of shares authorized under the company’s charter,MATRIX,62%,17,27
+fnd3_q_sharesauthorized_fast_d1,Total number of shares authorized under the company’s charter,MATRIX,62%,1,1
+fnd3_q_sharesissued,Quarterly Shares Issued,MATRIX,61%,28,36
+fnd3_q_sharesissued_fast_d1,Quarterly Shares Issued,MATRIX,61%,0,0
+fnd3_q_shcom,Quarterly Share Based Compensation,MATRIX,68%,43,91
+fnd3_q_shcom_fast_d1,Quarterly Share Based Compensation,MATRIX,68%,1,1
+fnd3_q_shodebt,Quarterly Short Term Debt,MATRIX,38%,4,5
+fnd3_q_shodebt_fast_d1,Quarterly Short Term Debt,MATRIX,38%,2,2
+fnd3_q_totaldebt,"Total debt outstanding, including short-term and long-term interest-bearing debt",MATRIX,78%,73,206
+fnd3_q_totaldebt_fast_d1,"Total debt outstanding, including short-term and long-term interest-bearing debt",MATRIX,78%,3,4
+fnd3_q_treasury,Quarterly Treasury Stock Value,MATRIX,39%,7,10
+fnd3_q_treasury_fast_d1,Quarterly Treasury Stock Value,MATRIX,39%,0,0
+fnd3_qaccadj_eff_exc_ratecas,"Effect of exchange rate changes on cash and cash equivalents in the period, accounting-adjusted",MATRIX,43%,16,31
+fnd3_qaccadj_eff_exc_ratecas_fast_d1,"Effect of exchange rate changes on cash and cash equivalents in the period, accounting-adjusted",MATRIX,43%,0,0
+fnd3_qaccadj_niccom_hold,Quarterly accounting-adjusted net income attributable to common shareholders,MATRIX,80%,23,37
+fnd3_qaccadj_niccom_hold_fast_d1,Quarterly accounting-adjusted net income attributable to common shareholders,MATRIX,80%,0,0
+fnd3_qaccadj_niccon_ope,Quarterly accounting-adjusted net income from continuing operations,MATRIX,80%,26,61
+fnd3_qaccadj_niccon_ope_fast_d1,Quarterly accounting-adjusted net income from continuing operations,MATRIX,80%,0,0
+fnd3_qaccadj_non_cur_lia,"Noncurrent deferred tax liabilities balance, accounting-adjusted",MATRIX,45%,7,9
+fnd3_qaccadj_non_cur_lia_fast_d1,"Noncurrent deferred tax liabilities balance, accounting-adjusted",MATRIX,45%,0,0
+fnd3_qacctadj__earbeforetaxes,Quarterly accounting-adjusted earnings before taxes (pre-tax income),MATRIX,80%,34,69
+fnd3_qacctadj__earbeforetaxes_fast_d1,Quarterly accounting-adjusted earnings before taxes (pre-tax income),MATRIX,80%,0,0
+fnd3_qacctadj__inc_tax,Quarterly accounting-adjusted income tax provision (expense),MATRIX,72%,48,136
+fnd3_qacctadj__inc_tax_fast_d1,Quarterly accounting-adjusted income tax provision (expense),MATRIX,72%,1,1
+fnd3_qacctadj_acc_abi_adj,Quarterly accounting adjustment for the change (increase/decrease) in accrued liabilities,MATRIX,35%,30,118
+fnd3_qacctadj_acc_abi_adj_fast_d1,Quarterly accounting adjustment for the change (increase/decrease) in accrued liabilities,MATRIX,35%,0,0
+fnd3_qacctadj_acc_dep,"Accumulated depreciation balance at period end, accounting-adjusted for the quarter",MATRIX,57%,33,44
+fnd3_qacctadj_acc_dep_fast_d1,"Accumulated depreciation balance at period end, accounting-adjusted for the quarter",MATRIX,57%,1,1
+fnd3_qacctadj_accpayable,Quarterly accounting-adjusted accounts payable,MATRIX,78%,55,130
+fnd3_qacctadj_accpayable_fast_d1,Quarterly accounting-adjusted accounts payable,MATRIX,78%,2,10
+fnd3_qacctadj_accreceivable,Quarterly Accountance Adjustment Accounts receivable,MATRIX,75%,35,55
+fnd3_qacctadj_accreceivable_fast_d1,Quarterly Accountance Adjustment Accounts receivable,MATRIX,75%,3,3
+fnd3_qacctadj_acq_dive,Quarterly Accountance Adjustment  Acquisition & Divestitures,MATRIX,55%,4,4
+fnd3_qacctadj_acq_dive_fast_d1,Quarterly Accountance Adjustment  Acquisition & Divestitures,MATRIX,55%,0,0
+fnd3_qacctadj_add_paid_cap,Quarterly accounting-adjusted additional paid-in capital,MATRIX,79%,26,57
+fnd3_qacctadj_add_paid_cap_fast_d1,Quarterly accounting-adjusted additional paid-in capital,MATRIX,79%,0,0
+fnd3_qacctadj_assets,"Total assets at period end, accounting-adjusted",MATRIX,85%,34,47
+fnd3_qacctadj_assets_fast_d1,"Total assets at period end, accounting-adjusted",MATRIX,85%,4,4
+fnd3_qacctadj_assets_old,Quarterly Before Accountance Adjustment Total assets,MATRIX,85%,24,44
+fnd3_qacctadj_assets_old_fast_d1,Quarterly Before Accountance Adjustment Total assets,MATRIX,85%,1,1
+fnd3_qacctadj_avg_shabasic,"Average basic shares outstanding during the quarter, accounting-adjusted",MATRIX,77%,26,51
+fnd3_qacctadj_avg_shabasic_fast_d1,"Average basic shares outstanding during the quarter, accounting-adjusted",MATRIX,77%,1,1
+fnd3_qacctadj_avgdiluted_sha,"Average diluted shares outstanding during the quarter, accounting-adjusted",MATRIX,77%,29,74
+fnd3_qacctadj_avgdiluted_sha_fast_d1,"Average diluted shares outstanding during the quarter, accounting-adjusted",MATRIX,77%,1,1
+fnd3_qacctadj_capex,"Quarterly Accountance Adjustment Capital Expenditures, Net",MATRIX,76%,46,121
+fnd3_qacctadj_capex_fast_d1,"Quarterly Accountance Adjustment Capital Expenditures, Net",MATRIX,76%,3,3
+fnd3_qacctadj_capexgross,Quarterly Accountance Adjustment Capital Expenditure Payments (Gross),MATRIX,75%,56,111
+fnd3_qacctadj_capexgross_fast_d1,Quarterly Accountance Adjustment Capital Expenditure Payments (Gross),MATRIX,75%,2,5
+fnd3_qacctadj_capitalassetsales,Quarterly Accountance Adjustment Proceeds from Sale of Productive Assets,MATRIX,39%,14,16
+fnd3_qacctadj_capitalassetsales_fast_d1,Quarterly Accountance Adjustment Proceeds from Sale of Productive Assets,MATRIX,39%,0,0
+fnd3_qacctadj_cash,"Cash and cash equivalents balance at period end, accounting-adjusted",MATRIX,85%,49,96
+fnd3_qacctadj_cash_fast_d1,"Cash and cash equivalents balance at period end, accounting-adjusted",MATRIX,85%,1,1
+fnd3_qacctadj_cashincrease,Quarterly accounting-adjusted net change in cash and cash equivalents for the period,MATRIX,76%,28,45
+fnd3_qacctadj_cashincrease_fast_d1,Quarterly accounting-adjusted net change in cash and cash equivalents for the period,MATRIX,75%,1,1
+fnd3_qacctadj_common,Quarterly Accountance Adjustment Common Stock Value,MATRIX,78%,49,96
+fnd3_qacctadj_common_fast_d1,Quarterly Accountance Adjustment Common Stock Value,MATRIX,78%,0,0
+fnd3_qacctadj_comstk_divpershare,Quarterly Accountance Adjustment Common Stock Dividends Per Share,MATRIX,38%,2,3
+fnd3_qacctadj_comstk_divpershare_fast_d1,Quarterly Accountance Adjustment Common Stock Dividends Per Share,MATRIX,38%,0,0
+fnd3_qacctadj_costofrevenue,Quarterly accounting-adjusted cost of revenue (cost of goods sold and direct costs),MATRIX,68%,29,53
+fnd3_qacctadj_costofrevenue_fast_d1,Quarterly accounting-adjusted cost of revenue (cost of goods sold and direct costs),MATRIX,68%,2,2
+fnd3_qacctadj_currentassets,Quarterly accounting-adjusted total current assets,MATRIX,85%,49,136
+fnd3_qacctadj_currentassets_fast_d1,Quarterly accounting-adjusted total current assets,MATRIX,85%,0,0
+fnd3_qacctadj_currentliabilities,"Total current liabilities (BS050) at period end, accounting-adjusted",MATRIX,83%,42,73
+fnd3_qacctadj_currentliabilities_fast_d1,"Total current liabilities (BS050) at period end, accounting-adjusted",MATRIX,83%,1,1
+fnd3_qacctadj_currentlongdebt,Quarterly accounting-adjusted current portion of long-term debt,MATRIX,47%,41,98
+fnd3_qacctadj_currentlongdebt_fast_d1,Quarterly accounting-adjusted current portion of long-term debt,MATRIX,47%,2,3
+fnd3_qacctadj_currenttaxasset,"Quarterly Accountance Adjustment Deferred Tax Assets, Current",MATRIX,28%,9,13
+fnd3_qacctadj_dnc,Depreciation and amortization expense for the quarter after accounting adjustments,MATRIX,77%,17,25
+fnd3_qacctadj_dnc_fast_d1,Depreciation and amortization expense for the quarter after accounting adjustments,MATRIX,77%,0,0
+fnd3_qacctadj_ebit,Quarterly accounting-adjusted earnings before interest and taxes (EBIT),MATRIX,80%,43,103
+fnd3_qacctadj_ebit_fast_d1,Quarterly accounting-adjusted earnings before interest and taxes (EBIT),MATRIX,80%,1,1
+fnd3_qacctadj_ebitda,"Quarterly accounting-adjusted earnings before interest, taxes, depreciation and amortization",MATRIX,80%,35,57
+fnd3_qacctadj_ebitda_fast_d1,"Quarterly accounting-adjusted earnings before interest, taxes, depreciation and amortization",MATRIX,80%,0,0
+fnd3_qacctadj_epp,"Quarterly Accountance Adjustment Property, Plant & Equipment",MATRIX,81%,52,111
+fnd3_qacctadj_epp_fast_d1,"Quarterly Accountance Adjustment Property, Plant & Equipment",MATRIX,81%,2,2
+fnd3_qacctadj_epsbasic,"Basic earnings per share for the quarter, accounting-adjusted",MATRIX,79%,25,51
+fnd3_qacctadj_epsbasic_fast_d1,"Basic earnings per share for the quarter, accounting-adjusted",MATRIX,79%,0,0
+fnd3_qacctadj_epsdiluted,"Diluted earnings per share for the quarter, accounting-adjusted",MATRIX,79%,24,34
+fnd3_qacctadj_epsdiluted_fast_d1,"Diluted earnings per share for the quarter, accounting-adjusted",MATRIX,79%,0,0
+fnd3_qacctadj_financing_cf,Quarterly Accountance Adjustment Financing Cash Flow,MATRIX,79%,57,433
+fnd3_qacctadj_financing_cf_fast_d1,Quarterly Accountance Adjustment Financing Cash Flow,MATRIX,79%,1,1
+fnd3_qacctadj_goodwill,Quarterly accounting-adjusted goodwill (balance),MATRIX,61%,30,51
+fnd3_qacctadj_goodwill_fast_d1,Quarterly accounting-adjusted goodwill (balance),MATRIX,61%,0,0
+fnd3_qacctadj_grossprofit,"Gross profit for the quarter (revenue minus cost of goods sold), accounting-adjusted",MATRIX,78%,45,90
+fnd3_qacctadj_grossprofit_fast_d1,"Gross profit for the quarter (revenue minus cost of goods sold), accounting-adjusted",MATRIX,78%,1,1
+fnd3_qacctadj_int_ass_ex_gwill,Quarterly Accountance Adjustment Intangible Assets Excluding Goodwill,MATRIX,59%,32,62
+fnd3_qacctadj_int_ass_ex_gwill_fast_d1,Quarterly Accountance Adjustment Intangible Assets Excluding Goodwill,MATRIX,59%,0,0
+fnd3_qacctadj_int_exp,"Interest expense for the quarter, accounting-adjusted",MATRIX,71%,39,99
+fnd3_qacctadj_int_exp_fast_d1,"Interest expense for the quarter, accounting-adjusted",MATRIX,71%,0,0
+fnd3_qacctadj_interestincome,"Interest and investment income for the quarter, accounting-adjusted",MATRIX,44%,7,16
+fnd3_qacctadj_interestincome_fast_d1,"Interest and investment income for the quarter, accounting-adjusted",MATRIX,44%,0,0
+fnd3_qacctadj_inv_cf,"Cash flow from investing activities for the quarter, accounting-adjusted",MATRIX,78%,39,237
+fnd3_qacctadj_inv_cf_fast_d1,"Cash flow from investing activities for the quarter, accounting-adjusted",MATRIX,78%,2,2
+fnd3_qacctadj_inventory,"Inventory balance (BS013) at period end, accounting-adjusted",MATRIX,48%,47,152
+fnd3_qacctadj_inventory_fast_d1,"Inventory balance (BS013) at period end, accounting-adjusted",MATRIX,48%,1,1
+fnd3_qacctadj_inventoryincdec,Quarterly Accountance Adjustment Increase or Decrease in Inventory,MATRIX,39%,10,19
+fnd3_qacctadj_inventoryincdec_fast_d1,Quarterly Accountance Adjustment Increase or Decrease in Inventory,MATRIX,39%,0,0
+fnd3_qacctadj_liabilities,Quarterly accounting-adjusted total liabilities,MATRIX,85%,32,58
+fnd3_qacctadj_liabilities_fast_d1,Quarterly accounting-adjusted total liabilities,MATRIX,85%,0,0
+fnd3_qacctadj_liabilities_old,"Quarterly Before Accountance Adjustment Liabilities, Total",MATRIX,85%,27,45
+fnd3_qacctadj_liabilities_old_fast_d1,"Quarterly Before Accountance Adjustment Liabilities, Total",MATRIX,85%,1,1
+fnd3_qacctadj_longdebt,Quarterly Accountance Adjustment Long Term Debt,MATRIX,74%,52,342
+fnd3_qacctadj_longdebt_fast_d1,Quarterly Accountance Adjustment Long Term Debt,MATRIX,74%,0,0
+fnd3_qacctadj_nic,Quarterly accounting-adjusted net income,MATRIX,80%,24,58
+fnd3_qacctadj_nic_fast_d1,Quarterly accounting-adjusted net income,MATRIX,80%,1,1
+fnd3_qacctadj_ope_cf,Quarterly accounting-adjusted net cash provided by operating activities,MATRIX,79%,61,332
+fnd3_qacctadj_ope_cf_fast_d1,Quarterly accounting-adjusted net cash provided by operating activities,MATRIX,79%,1,1
+fnd3_qacctadj_opeexpenseexitems,Quarterly Accountance Adjustment Operating Expense Extraordinary Items,MATRIX,42%,5,5
+fnd3_qacctadj_opeexpenseexitems_fast_d1,Quarterly Accountance Adjustment Operating Expense Extraordinary Items,MATRIX,42%,1,1
+fnd3_qacctadj_opeexpenses,Quarterly accounting-adjusted total operating expenses,MATRIX,79%,26,56
+fnd3_qacctadj_opeexpenses_fast_d1,Quarterly accounting-adjusted total operating expenses,MATRIX,79%,1,1
+fnd3_qacctadj_opeincome,Quarterly Accountance Adjustment Operating Income,MATRIX,80%,47,95
+fnd3_qacctadj_opeincome_fast_d1,Quarterly Accountance Adjustment Operating Income,MATRIX,80%,0,0
+fnd3_qacctadj_payables,Quarterly accounting adjustment representing the increase (positive) or decrease (negative) in accounts payable,MATRIX,61%,45,230
+fnd3_qacctadj_payables_fast_d1,Quarterly accounting adjustment representing the increase (positive) or decrease (negative) in accounts payable,MATRIX,61%,1,1
+fnd3_qacctadj_paymentsof_div,Quarterly Accountance Adjustment Payments Of Dividends,MATRIX,46%,2,2
+fnd3_qacctadj_paymentsof_div_fast_d1,Quarterly Accountance Adjustment Payments Of Dividends,MATRIX,46%,0,0
+fnd3_qacctadj_ppe_old,"Quarterly Before Accountance Adjustment Property, Plant & Equipment",MATRIX,81%,50,111
+fnd3_qacctadj_ppe_old_fast_d1,"Quarterly Before Accountance Adjustment Property, Plant & Equipment",MATRIX,81%,1,1
+fnd3_qacctadj_preferred,Quarterly Accountance Adjustment Preferred Stock Value,MATRIX,42%,23,41
+fnd3_qacctadj_preferred_fast_d1,Quarterly Accountance Adjustment Preferred Stock Value,MATRIX,42%,0,0
+fnd3_qacctadj_receivables,Quarterly Accountance Adjustment Increase or Decrease in Receivables,MATRIX,61%,21,54
+fnd3_qacctadj_receivables_fast_d1,Quarterly Accountance Adjustment Increase or Decrease in Receivables,MATRIX,61%,3,3
+fnd3_qacctadj_retained_ear,Quarterly accounting-adjusted retained earnings,MATRIX,82%,30,42
+fnd3_qacctadj_retained_ear_fast_d1,Quarterly accounting-adjusted retained earnings,MATRIX,82%,0,0
+fnd3_qacctadj_revenue,"Revenue (sales or turnover) for the quarter, accounting-adjusted",MATRIX,78%,37,88
+fnd3_qacctadj_revenue_fast_d1,"Revenue (sales or turnover) for the quarter, accounting-adjusted",MATRIX,78%,3,3
+fnd3_qacctadj_sgaexpense,"Quarterly accounting-adjusted selling, general and administrative expense",MATRIX,76%,30,90
+fnd3_qacctadj_sgaexpense_fast_d1,"Quarterly accounting-adjusted selling, general and administrative expense",MATRIX,76%,0,0
+fnd3_qacctadj_sha_endofperiod,"Shares outstanding at end of period, accounting-adjusted",MATRIX,53%,23,37
+fnd3_qacctadj_sha_endofperiod_fast_d1,"Shares outstanding at end of period, accounting-adjusted",MATRIX,53%,3,3
+fnd3_qacctadj_sharesauthorized,"Total number of shares authorized by the company’s charter, accounting-adjusted",MATRIX,61%,21,37
+fnd3_qacctadj_sharesauthorized_fast_d1,"Total number of shares authorized by the company’s charter, accounting-adjusted",MATRIX,61%,1,1
+fnd3_qacctadj_sharesissued,Quarterly Accountance Adjustment Number of Shares Issued,MATRIX,59%,24,44
+fnd3_qacctadj_sharesissued_fast_d1,Quarterly Accountance Adjustment Number of Shares Issued,MATRIX,59%,0,0
+fnd3_qacctadj_shcom,Quarterly accounting-adjusted share-based compensation expense,MATRIX,67%,33,70
+fnd3_qacctadj_shcom_fast_d1,Quarterly accounting-adjusted share-based compensation expense,MATRIX,67%,0,0
+fnd3_qacctadj_shodebt,Quarterly accounting-adjusted amount of short-term debt,MATRIX,35%,10,12
+fnd3_qacctadj_shodebt_fast_d1,Quarterly accounting-adjusted amount of short-term debt,MATRIX,35%,1,1
+fnd3_qacctadj_totaldebt,"Total debt outstanding, including short- and long-term borrowings, accounting-adjusted for the quarter",MATRIX,77%,73,413
+fnd3_qacctadj_totaldebt_fast_d1,"Total debt outstanding, including short- and long-term borrowings, accounting-adjusted for the quarter",MATRIX,77%,1,1
+fnd3_qacctadj_treasury,Quarterly Accountance Adjustment Treasury Stock Value,MATRIX,37%,9,10
+fnd3_qacctadj_treasury_fast_d1,Quarterly Accountance Adjustment Treasury Stock Value,MATRIX,37%,0,0
+fnd3_qacctadjequity,Quarterly Accountance Adjustment Stockholders Equity,MATRIX,85%,45,97
+fnd3_qacctadjequity_fast_d1,Quarterly Accountance Adjustment Stockholders Equity,MATRIX,85%,3,3
+fnd3_qacctadjequitybeforenci,Quarterly Accountance AdjustmentStockholders Equity Before Non-Controlling Interest,MATRIX,85%,32,63
+fnd3_qacctadjequitybeforenci_fast_d1,Quarterly Accountance AdjustmentStockholders Equity Before Non-Controlling Interest,MATRIX,85%,2,3
+fnd3_qequity,Quarterly Stockholders Equity,MATRIX,85%,61,143
+fnd3_qequity_fast_d1,Quarterly Stockholders Equity,MATRIX,85%,3,3
+fnd3_qequitybeforenci,Quarterly Equity Before Non-Controlling Interest,MATRIX,85%,40,76
+fnd3_qequitybeforenci_fast_d1,Quarterly Equity Before Non-Controlling Interest,MATRIX,85%,1,3
+fnd3_revision_number,Integer indicating the revision sequence of this data point; increases with subsequent revisions after the initial record,VECTOR,73%,16,33
+fnd3_revision_number_fast_d1,Integer indicating the revision sequence of this data point; increases with subsequent revisions after the initial record,VECTOR,73%,3,3
+fnd3_value,Numeric value of the reported metric for the specified period,VECTOR,73%,28,45
+fnd3_value_fast_d1,Numeric value of the reported metric for the specified period,VECTOR,73%,8,10
+income_taxes_accrued_balance,Amount of income taxes that have been accrued but not yet paid.,MATRIX,27%,1,1
+income_taxes_accrued_balance_fast_d1,Amount of income taxes that have been accrued but not yet paid.,MATRIX,27%,0,0
+lease_liability_acctadj,Value of operating lease liability (account-adjusted).,MATRIX,48%,2,4
+lease_liability_acctadj_fast_d1,Value of operating lease liability (account-adjusted).,MATRIX,48%,1,1
+lease_right_of_use_asset_acctadj,Value of operating lease right-of-use asset (account-adjusted).,MATRIX,48%,5,5
+lease_right_of_use_asset_acctadj_fast_d1,Value of operating lease right-of-use asset (account-adjusted).,MATRIX,48%,5,5
+long_term_investment_value,Balance of long-term investments on the balance sheet,MATRIX,27%,0,0
+long_term_investment_value_fast_d1,Balance of long-term investments on the balance sheet,MATRIX,27%,0,0
+long_term_investments_balance,Long-term investments balance sheet item (BS029),MATRIX,31%,0,0
+long_term_investments_balance_acctadj,"Carrying value of long-term investments on the balance sheet, accounting-adjusted for the quarter",MATRIX,28%,0,0
+long_term_investments_balance_acctadj_fast_d1,"Carrying value of long-term investments on the balance sheet, accounting-adjusted for the quarter",MATRIX,28%,0,0
+long_term_investments_balance_fast_d1,Long-term investments balance sheet item (BS029),MATRIX,31%,0,0
+long_term_tax_asset_value,"Quarterly accounting adjustment to deferred tax assets, noncurrent",MATRIX,26%,1,1
+long_term_tax_asset_value_fast_d1,"Quarterly accounting adjustment to deferred tax assets, noncurrent",MATRIX,26%,0,0
+minority_interest_acctadj,Value of noncontrolling (minority) interest (account-adjusted).,MATRIX,32%,0,0
+minority_interest_acctadj_fast_d1,Value of noncontrolling (minority) interest (account-adjusted).,MATRIX,32%,0,0
+minority_interest_balance,Amount of equity interest held by outside parties in subsidiaries.,MATRIX,36%,0,0
+minority_interest_balance_acctadj,Quarterly Accountance Adjustment Noncontrolling Interest,MATRIX,33%,0,0
+minority_interest_balance_acctadj_fast_d1,Quarterly Accountance Adjustment Noncontrolling Interest,MATRIX,33%,1,1
+minority_interest_balance_fast_d1,Amount of equity interest held by outside parties in subsidiaries.,MATRIX,36%,0,0
+minority_interest_net_income_balance,Net income attributable to noncontrolling interests.,MATRIX,33%,0,0
+minority_interest_net_income_balance_fast_d1,Net income attributable to noncontrolling interests.,MATRIX,33%,0,0
+minority_interest_net_income_total,Quarterly accounting-adjusted net income (loss) attributable to noncontrolling interests,MATRIX,31%,0,0
+minority_interest_net_income_total_fast_d1,Quarterly accounting-adjusted net income (loss) attributable to noncontrolling interests,MATRIX,31%,0,0
+operating_lease_obligation_total,Quarterly accounting-adjusted balance of operating lease liabilities (present value of lease payments),MATRIX,60%,0,0
+operating_lease_obligation_total_fast_d1,Quarterly accounting-adjusted balance of operating lease liabilities (present value of lease payments),MATRIX,60%,6,6
+operating_lease_right_of_use_asset_value,Quarterly accounting-adjusted carrying amount of operating lease right-of-use asset,MATRIX,58%,3,3
+operating_lease_right_of_use_asset_value_fast_d1,Quarterly accounting-adjusted carrying amount of operating lease right-of-use asset,MATRIX,58%,7,7
+quarterly_accounts_receivable_total,Fiscal period end date for accounting-adjusted accounts receivable,MATRIX,75%,3,3
+quarterly_accounts_receivable_total_fast_d1,Fiscal period end date for accounting-adjusted accounts receivable,MATRIX,75%,2,2
+quarterly_accrued_liabilities_change,"Fiscal period end date for the change in accrued liabilities (increase/decrease), accounting-adjusted",MATRIX,35%,1,1
+quarterly_accrued_liabilities_change_fast_d1,"Fiscal period end date for the change in accrued liabilities (increase/decrease), accounting-adjusted",MATRIX,35%,3,4
+quarterly_accumulated_depreciation_total,Fiscal period endate of Annual Accountance Adjustment  Accumulated Depreciation,MATRIX,57%,3,3
+quarterly_accumulated_depreciation_total_fast_d1,Fiscal period endate of Annual Accountance Adjustment  Accumulated Depreciation,MATRIX,57%,3,3
+quarterly_acquisition_divestiture_amount,Fiscal period endate of Annual Accountance Adjustment  Acquisition & Divestitures,MATRIX,55%,1,2
+quarterly_acquisition_divestiture_amount_fast_d1,Fiscal period endate of Annual Accountance Adjustment  Acquisition & Divestitures,MATRIX,55%,1,1
+quarterly_authorized_shares_count,Fiscal period endate of Annual Accountance Adjustment Shares Authorized,MATRIX,61%,1,1
+quarterly_authorized_shares_count_fast_d1,Fiscal period endate of Annual Accountance Adjustment Shares Authorized,MATRIX,61%,2,2
+quarterly_avg_basic_shares_count,Fiscal period end date for the accounting-adjusted average basic shares outstanding,MATRIX,77%,1,1
+quarterly_avg_basic_shares_count_fast_d1,Fiscal period end date for the accounting-adjusted average basic shares outstanding,MATRIX,77%,3,3
+quarterly_avg_diluted_shares_count,Fiscal period end date for accounting-adjusted average diluted shares outstanding,MATRIX,77%,0,0
+quarterly_avg_diluted_shares_count_fast_d1,Fiscal period end date for accounting-adjusted average diluted shares outstanding,MATRIX,77%,2,2
+quarterly_basic_eps_value,Fiscal period end date for accounting-adjusted basic earnings per share,MATRIX,79%,0,0
+quarterly_basic_eps_value_fast_d1,Fiscal period end date for accounting-adjusted basic earnings per share,MATRIX,79%,0,0
+quarterly_capital_asset_sales_total,Fiscal period endate of Annual Accountance Adjustment Proceeds from Sale of Productive Assets,MATRIX,39%,1,1
+quarterly_capital_asset_sales_total_fast_d1,Fiscal period endate of Annual Accountance Adjustment Proceeds from Sale of Productive Assets,MATRIX,39%,0,0
+quarterly_capital_expenditure_total,Fiscal period end date for the accounting-adjusted capital expenditures (net) figure,MATRIX,76%,0,0
+quarterly_capital_expenditure_total_fast_d1,Fiscal period end date for the accounting-adjusted capital expenditures (net) figure,MATRIX,76%,0,0
+quarterly_cash_change_amount,Fiscal period endate of Annual Accountance Adjustment Total Cash Increase/Decrease For Period,MATRIX,76%,1,1
+quarterly_cash_change_amount_fast_d1,Fiscal period endate of Annual Accountance Adjustment Total Cash Increase/Decrease For Period,MATRIX,75%,0,0
+quarterly_cash_total,Fiscal period end date for the accounting-adjusted cash and cash equivalents balance,MATRIX,85%,1,1
+quarterly_cash_total_fast_d1,Fiscal period end date for the accounting-adjusted cash and cash equivalents balance,MATRIX,85%,1,1
+quarterly_common_dividend_per_share,Fiscal period end date for accounting-adjusted common stock dividends per share,MATRIX,38%,1,2
+quarterly_common_dividend_per_share_fast_d1,Fiscal period end date for accounting-adjusted common stock dividends per share,MATRIX,38%,0,0
+quarterly_cost_of_sales_total,Fiscal period end date for the accounting-adjusted cost of revenue,MATRIX,68%,0,0
+quarterly_cost_of_sales_total_fast_d1,Fiscal period end date for the accounting-adjusted cost of revenue,MATRIX,68%,1,1
+quarterly_current_assets_total,Fiscal period endate of Annual Accountance Adjustment Current Asset,MATRIX,85%,1,1
+quarterly_current_assets_total_fast_d1,Fiscal period endate of Annual Accountance Adjustment Current Asset,MATRIX,85%,1,2
+quarterly_depreciation_amortization_expense,Fiscal period end date for the accounting-adjusted depreciation and amortization,MATRIX,77%,0,0
+quarterly_depreciation_amortization_expense_fast_d1,Fiscal period end date for the accounting-adjusted depreciation and amortization,MATRIX,77%,0,0
+quarterly_diluted_eps_value,Fiscal period end date for accounting-adjusted diluted earnings per share,MATRIX,79%,0,0
+quarterly_diluted_eps_value_fast_d1,Fiscal period end date for accounting-adjusted diluted earnings per share,MATRIX,79%,0,0
+quarterly_dividend_payments_total,"Fiscal period end date for payments of dividends figure (cash dividends), accounting-adjusted",MATRIX,46%,0,0
+quarterly_dividend_payments_total_fast_d1,"Fiscal period end date for payments of dividends figure (cash dividends), accounting-adjusted",MATRIX,46%,1,1
+quarterly_earnings_before_tax_total,Fiscal period endate of Annual Accoutance Adjustment Earnings Before Taxes,MATRIX,80%,1,1
+quarterly_earnings_before_tax_total_fast_d1,Fiscal period endate of Annual Accoutance Adjustment Earnings Before Taxes,MATRIX,80%,0,0
+quarterly_ebit_total,Fiscal period end date for the accounting-adjusted EBIT,MATRIX,80%,0,0
+quarterly_ebit_total_fast_d1,Fiscal period end date for the accounting-adjusted EBIT,MATRIX,80%,1,1
+quarterly_ebitda_total,"Fiscal period endate of Annual Accountance Adjustment Earnings Before Interest, Taxes, Depreciation and Amortization",MATRIX,80%,0,0
+quarterly_ebitda_total_fast_d1,"Fiscal period endate of Annual Accountance Adjustment Earnings Before Interest, Taxes, Depreciation and Amortization",MATRIX,80%,0,0
+quarterly_end_shares_outstanding,Fiscal period end date for accounting-adjusted shares outstanding at end of period,MATRIX,53%,1,1
+quarterly_end_shares_outstanding_fast_d1,Fiscal period end date for accounting-adjusted shares outstanding at end of period,MATRIX,53%,1,1
+quarterly_equity_compensation_expense,Fiscal period end date for the accounting-adjusted share-based compensation,MATRIX,67%,0,0
+quarterly_equity_compensation_expense_fast_d1,Fiscal period end date for the accounting-adjusted share-based compensation,MATRIX,67%,1,1
+quarterly_equity_excl_minority_interest,Fiscal period end date for accounting-adjusted stockholders’ equity before non-controlling interests,MATRIX,85%,2,2
+quarterly_equity_excl_minority_interest_fast_d1,Fiscal period end date for accounting-adjusted stockholders’ equity before non-controlling interests,MATRIX,85%,0,0
+quarterly_equity_total,Fiscal period end date for accounting-adjusted stockholders' equity,MATRIX,85%,2,2
+quarterly_equity_total_fast_d1,Fiscal period end date for accounting-adjusted stockholders' equity,MATRIX,85%,1,2
+quarterly_financing_cashflow_amount,Fiscal period end date for accounting-adjusted net cash from financing activities,MATRIX,79%,0,0
+quarterly_financing_cashflow_amount_fast_d1,Fiscal period end date for accounting-adjusted net cash from financing activities,MATRIX,79%,0,0
+quarterly_fx_effect_on_cash,Fiscal period end date for the effect of exchange rate changes on cash and cash equivalents (accounting-adjusted),MATRIX,43%,1,1
+quarterly_fx_effect_on_cash_fast_d1,Fiscal period end date for the effect of exchange rate changes on cash and cash equivalents (accounting-adjusted),MATRIX,43%,0,0
+quarterly_goodwill_total,Fiscal period end date for the accounting-adjusted goodwill balance,MATRIX,61%,0,0
+quarterly_goodwill_total_fast_d1,Fiscal period end date for the accounting-adjusted goodwill balance,MATRIX,61%,2,2
+quarterly_gross_capex_total,Fiscal period endate of Annual Accountance Adjustment Capital Expenditure Payments (Gross),MATRIX,75%,1,1
+quarterly_gross_capex_total_fast_d1,Fiscal period endate of Annual Accountance Adjustment Capital Expenditure Payments (Gross),MATRIX,75%,0,0
+quarterly_gross_profit_total,Fiscal period end date for accounting-adjusted gross profit,MATRIX,78%,2,2
+quarterly_gross_profit_total_fast_d1,Fiscal period end date for accounting-adjusted gross profit,MATRIX,78%,1,1
+quarterly_income_tax_expense,Fiscal period end date for accounting-adjusted income tax provision,MATRIX,72%,0,0
+quarterly_income_tax_expense_fast_d1,Fiscal period end date for accounting-adjusted income tax provision,MATRIX,72%,1,2
+quarterly_intangible_assets_excl_goodwill,Fiscal period end date for intangible assets excluding goodwill (accounting-adjusted),MATRIX,59%,1,1
+quarterly_intangible_assets_excl_goodwill_fast_d1,Fiscal period end date for intangible assets excluding goodwill (accounting-adjusted),MATRIX,59%,1,1
+quarterly_interest_cost_total,Fiscal period end date for the accounting-adjusted interest expense,MATRIX,71%,0,0
+quarterly_interest_cost_total_fast_d1,Fiscal period end date for the accounting-adjusted interest expense,MATRIX,71%,0,0
+quarterly_interest_income_total,Fiscal period endate of Annual Accountance Adjustment Interest & Investment Income,MATRIX,44%,1,1
+quarterly_interest_income_total_fast_d1,Fiscal period endate of Annual Accountance Adjustment Interest & Investment Income,MATRIX,44%,0,0
+quarterly_inventory_change_amount,Fiscal period endate of Annual Accountance Adjustment Increase or Decrease in Inventory,MATRIX,39%,1,1
+quarterly_inventory_change_amount_fast_d1,Fiscal period endate of Annual Accountance Adjustment Increase or Decrease in Inventory,MATRIX,39%,0,0
+quarterly_inventory_total,Fiscal period end date for accounting-adjusted inventory,MATRIX,48%,0,0
+quarterly_inventory_total_fast_d1,Fiscal period end date for accounting-adjusted inventory,MATRIX,48%,0,0
+quarterly_investing_cashflow_amount,Fiscal period end date for the accounting-adjusted cash flow from investing activities,MATRIX,78%,1,1
+quarterly_investing_cashflow_amount_fast_d1,Fiscal period end date for the accounting-adjusted cash flow from investing activities,MATRIX,78%,1,5
+quarterly_long_term_debt_total,Fiscal period end date for the accounting-adjusted long-term debt balance,MATRIX,74%,0,0
+quarterly_long_term_debt_total_fast_d1,Fiscal period end date for the accounting-adjusted long-term debt balance,MATRIX,74%,1,1
+quarterly_long_term_investments_total,Fiscal period end date for the accounting-adjusted long-term investments metric,MATRIX,28%,0,0
+quarterly_long_term_investments_total_fast_d1,Fiscal period end date for the accounting-adjusted long-term investments metric,MATRIX,28%,0,0
+quarterly_long_term_tax_asset_value,"Fiscal period endate of Annual Accountance Adjustment Deferred Tax Assets, Noncurrent",MATRIX,26%,0,0
+quarterly_long_term_tax_asset_value_fast_d1,"Fiscal period endate of Annual Accountance Adjustment Deferred Tax Assets, Noncurrent",MATRIX,26%,0,0
+quarterly_long_term_tax_liability,"Fiscal period end date for accounting-adjusted deferred tax liabilities, noncurrent",MATRIX,45%,0,0
+quarterly_long_term_tax_liability_fast_d1,"Fiscal period end date for accounting-adjusted deferred tax liabilities, noncurrent",MATRIX,45%,0,0
+quarterly_net_income_common_equity,Fiscal period end date for the accounting-adjusted net income attributable to common stockholders,MATRIX,80%,0,0
+quarterly_net_income_common_equity_fast_d1,Fiscal period end date for the accounting-adjusted net income attributable to common stockholders,MATRIX,80%,0,0
+quarterly_net_income_total,Fiscal period end date for accounting-adjusted net income,MATRIX,80%,1,1
+quarterly_net_income_total_fast_d1,Fiscal period end date for accounting-adjusted net income,MATRIX,80%,1,1
+quarterly_operating_cashflow_amount,Fiscal period end date for accounting-adjusted operating cash flow,MATRIX,79%,1,1
+quarterly_operating_cashflow_amount_fast_d1,Fiscal period end date for accounting-adjusted operating cash flow,MATRIX,79%,1,1
+quarterly_operating_cost_excl_specials,Fiscal period endate of Annual Accountance Adjustment Operating Expense Extraordinary Items,MATRIX,42%,0,0
+quarterly_operating_cost_excl_specials_fast_d1,Fiscal period endate of Annual Accountance Adjustment Operating Expense Extraordinary Items,MATRIX,42%,0,0
+quarterly_operating_profit_amount,Fiscal period end date associated with operating income accounting-adjusted figure,MATRIX,80%,1,1
+quarterly_operating_profit_amount_fast_d1,Fiscal period end date associated with operating income accounting-adjusted figure,MATRIX,80%,0,0
+quarterly_payables_change_amount,Fiscal period endate of Annual Accountance Adjustment Increase or Decrease in Accounts Payable,MATRIX,61%,2,2
+quarterly_payables_change_amount_fast_d1,Fiscal period endate of Annual Accountance Adjustment Increase or Decrease in Accounts Payable,MATRIX,61%,1,1
+quarterly_preferred_stock_value,Fiscal period end date for accounting-adjusted preferred stock value,MATRIX,42%,0,0
+quarterly_preferred_stock_value_fast_d1,Fiscal period end date for accounting-adjusted preferred stock value,MATRIX,42%,0,0
+quarterly_property_plant_equipment_total,"Fiscal period end date for accounting-adjusted property, plant and equipment",MATRIX,81%,0,0
+quarterly_property_plant_equipment_total_fast_d1,"Fiscal period end date for accounting-adjusted property, plant and equipment",MATRIX,81%,2,2
+quarterly_r_and_d_expense_total,Fiscal period endate of Annual Accountance Adjustment Research & Development Expense,MATRIX,32%,0,0
+quarterly_r_and_d_expense_total_fast_d1,Fiscal period endate of Annual Accountance Adjustment Research & Development Expense,MATRIX,32%,1,1
+quarterly_receivables_change_amount,Fiscal period endate of Annual Accountance Adjustment Increase or Decrease in Receivables,MATRIX,61%,0,0
+quarterly_receivables_change_amount_fast_d1,Fiscal period endate of Annual Accountance Adjustment Increase or Decrease in Receivables,MATRIX,61%,0,0
+quarterly_retained_earnings_total,Fiscal period endate of Annual Accountance Adjustment Retained Earnings,MATRIX,82%,1,1
+quarterly_retained_earnings_total_fast_d1,Fiscal period endate of Annual Accountance Adjustment Retained Earnings,MATRIX,82%,2,2
+quarterly_sales_total,Fiscal period end date for the accounting-adjusted revenue figure,MATRIX,78%,0,0
+quarterly_sales_total_fast_d1,Fiscal period end date for the accounting-adjusted revenue figure,MATRIX,78%,0,0
+quarterly_sga_cost_total,"Fiscal period end date associated with the accounting-adjusted Selling, General and Administrative (SG&A) expense",MATRIX,76%,0,0
+quarterly_sga_cost_total_fast_d1,"Fiscal period end date associated with the accounting-adjusted Selling, General and Administrative (SG&A) expense",MATRIX,76%,1,1
+quarterly_shares_issued_count,Fiscal period endate of Annual Accountance Adjustment Shares Issued,MATRIX,59%,0,0
+quarterly_shares_issued_count_fast_d1,Fiscal period endate of Annual Accountance Adjustment Shares Issued,MATRIX,59%,0,0
+quarterly_short_term_debt_total,Fiscal period end date for accounting-adjusted short-term debt,MATRIX,35%,1,1
+quarterly_short_term_debt_total_fast_d1,Fiscal period end date for accounting-adjusted short-term debt,MATRIX,35%,3,3
+quarterly_total_assets_amount,Fiscal period end date for accounting-adjusted total assets,MATRIX,85%,0,0
+quarterly_total_assets_amount_fast_d1,Fiscal period end date for accounting-adjusted total assets,MATRIX,85%,5,5
+quarterly_total_liabilities_amount,Fiscal period end date for accounting-adjusted total liabilities,MATRIX,85%,1,1
+quarterly_total_liabilities_amount_fast_d1,Fiscal period end date for accounting-adjusted total liabilities,MATRIX,85%,1,1
+quarterly_treasury_stock_value,Fiscal period end date for accounting-adjusted treasury stock value,MATRIX,37%,0,0
+quarterly_treasury_stock_value_fast_d1,Fiscal period end date for accounting-adjusted treasury stock value,MATRIX,37%,1,1
+quarterly_unearned_revenue_total,Fiscal period endate of Annual Accountance Adjustment Deferred Revenue,MATRIX,34%,3,3
+quarterly_unearned_revenue_total_fast_d1,Fiscal period endate of Annual Accountance Adjustment Deferred Revenue,MATRIX,34%,5,5
+r_and_d_expense_balance,GAAP research and development operating expense for the period,MATRIX,32%,2,2
+r_and_d_expense_balance_fast_d1,GAAP research and development operating expense for the period,MATRIX,32%,5,6
+r_and_d_expense_total,"Research and development expense (IM441) for the quarter, accounting-adjusted",MATRIX,32%,0,0
+r_and_d_expense_total_fast_d1,"Research and development expense (IM441) for the quarter, accounting-adjusted",MATRIX,32%,1,1
+research_development_expense_amount,Research and development operating expenses for the period,MATRIX,35%,0,0
+research_development_expense_amount_fast_d1,Research and development operating expenses for the period,MATRIX,35%,1,1
+short_term_borrowings_value,Outstanding value of short-term debt obligations.,MATRIX,32%,0,0
+short_term_borrowings_value_fast_d1,Outstanding value of short-term debt obligations.,MATRIX,32%,1,1
+short_term_investments_acctadj,Value of short-term investments (account-adjusted).,MATRIX,29%,2,2
+short_term_investments_acctadj_fast_d1,Value of short-term investments (account-adjusted).,MATRIX,29%,1,1
+temporary_investments,Value of short-term investments held by the company.,MATRIX,32%,3,3
+temporary_investments_balance,Balance of short-term marketable securities and other short-term investments,MATRIX,34%,2,3
+temporary_investments_balance_acctadj,"Carrying value of short-term investments, accounting-adjusted for the quarter",MATRIX,30%,3,4
+temporary_investments_balance_acctadj_fast_d1,"Carrying value of short-term investments, accounting-adjusted for the quarter",MATRIX,30%,7,7
+temporary_investments_balance_fast_d1,Balance of short-term marketable securities and other short-term investments,MATRIX,34%,7,7
+temporary_investments_fast_d1,Value of short-term investments held by the company.,MATRIX,32%,4,4
+unearned_revenue,Value of deferred revenue recognized by the company.,MATRIX,33%,10,11
+unearned_revenue_acctadj,"Total deferred revenue (contract liabilities) at period end, including current and noncurrent, accounting-adjusted",MATRIX,31%,11,12
+unearned_revenue_acctadj_fast_d1,"Total deferred revenue (contract liabilities) at period end, including current and noncurrent, accounting-adjusted",MATRIX,31%,8,10
+unearned_revenue_balance,Amount of revenue received but not yet earned.,MATRIX,36%,2,2
+unearned_revenue_balance_fast_d1,Amount of revenue received but not yet earned.,MATRIX,36%,2,2
+unearned_revenue_fast_d1,Value of deferred revenue recognized by the company.,MATRIX,33%,13,16
+unearned_revenue_total,Quarterly Accountance Adjustment Deferred Revenue,MATRIX,34%,2,2
+unearned_revenue_total_fast_d1,Quarterly Accountance Adjustment Deferred Revenue,MATRIX,34%,2,2
+yearly_long_term_investments_total,"Long-term investments (noncurrent investment securities and holdings), per balance sheet BS029",MATRIX,30%,1,2
+yearly_long_term_investments_total_fast_d1,"Long-term investments (noncurrent investment securities and holdings), per balance sheet BS029",MATRIX,30%,1,1

@@ -1,0 +1,236 @@
+Field,Description,Type,Coverage,Users,Alphas
+auditor_switch_indicator_prev_year,"Whether the company changed its external auditor during the last fiscal year (1 = yes, 0 = no)",MATRIX,96%,1,1
+auditor_switch_indicator_prev_year_v14,"Flag indicating whether the company changed its auditor during the previous fiscal year (1 if changed, 0 if not)",MATRIX,100%,1,1
+exclusion_factor_score_change_1d,1-day change in the Exclusions component percentile rank of the Earnings Quality model (1–100; higher is better),MATRIX,90%,1,1
+exclusion_factor_score_change_1fy,Change in percentile rank over the last fiscal year for the Exclusions factors of Earnings Quality Model,MATRIX,81%,1,1
+exclusion_factor_score_change_1q,Change in the Exclusions Component percentile rank over one quarter; measures improvement or deterioration in earnings quality regarding exclusions factors,MATRIX,88%,1,1
+exclusion_factor_score_previous_quarter,Prior quarter percentile rank of the Exclusions factors in the Earnings Quality Model; higher scores indicate better earnings quality with fewer exclusions or special items,MATRIX,90%,1,1
+exclusion_factor_score_previous_year,Prior year percentile rank of Exclusions factors in the Earnings Quality Model; higher scores indicate stronger quality by minimizing adjustments or exclusions,MATRIX,83%,1,1
+mdl31_ab1_acc_chg_1_day,The 1-day change of region-relative 1 to 100 percentile Accruals Component score. 100 is the best and 1 is the worst.,MATRIX,88%,1,4
+mdl31_ab1_acc_chg_1_fy,1 year change of region-relative 1 to 100 percentile Accruals Component score. 100 is the best and 1 is the worst.,MATRIX,88%,1,2
+mdl31_ab1_acc_chg_1_qtr,The 1 quarter change of region-relative 1 to 100 percentile Accruals Component score. 100 is the best and 1 is the worst.,MATRIX,92%,1,2
+mdl31_ab1_acc_prior_qtr,Prior quarter region-relative 1 to 100 percentile Accruals Component score. 100 is the best and 1 is the worst.,MATRIX,94%,1,13
+mdl31_ab1_acc_prior_y,Prior year region-relative 1 to 100 percentile Accruals Component score. 100 is the best and 1 is the worst.,MATRIX,89%,4,7
+mdl31_ab1_ass_tvr_last_qtr,Last quarter asset turnover,MATRIX,95%,2,11
+mdl31_ab1_ass_tvr_last_y,Last year asset turnover,MATRIX,97%,2,11
+mdl31_ab1_ass_tvr_prior_qtr,Prior quarter asset turnover,MATRIX,95%,2,3
+mdl31_ab1_ass_tvr_prior_y,Prior year turnover,MATRIX,96%,1,1
+mdl31_ab1_ass_tvr_t4q,Trailing 4 Quarters asset turnover,MATRIX,94%,3,6
+mdl31_ab1_bv_share_last_qtr,Last quarter book value per share,MATRIX,98%,2,12
+mdl31_ab1_bv_share_last_y,Last year book value per share,MATRIX,100%,1,5
+mdl31_ab1_bv_share_prior_qtr,Prior quarter book value per share,MATRIX,97%,1,6
+mdl31_ab1_bv_share_prior_y,Prior year book value per share,MATRIX,99%,36,80
+mdl31_ab1_cf_chg_1_day,1-day change of a percentile rank that reflects only the Cash Flow factors of the Earnings Quality Model. Scores of 100 indicate the highest rated stocks; scores of 1 indicate the lowest rated stocks. Requires Fundamental Module permissions.,MATRIX,79%,1,15
+mdl31_ab1_cf_chg_1_fy,1 year change of a percentile rank that reflects only the Cash Flow factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks. Requires Fundamental Module permissions.,MATRIX,86%,1,1
+mdl31_ab1_cf_chg_1_qtr,1 quarter change of a percentile rank that reflects only the Cash Flow factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks. Requires Fundamental Module permissions.,MATRIX,86%,1,11
+mdl31_ab1_cf_prior_qtr,Prior quarter value of a percentile rank that reflects only the Cash Flow factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks. Requires Fundamental Module permissions.,MATRIX,92%,1,7
+mdl31_ab1_cf_prior_y,Prior year value of a percentile rank that reflects only the Cash Flow factors of the Earnings Quality Model. Scores of 100 indicate the highest rated stocks; scores of 1 indicate the lowest rated stocks. Requires Fundamental Module permissions.,MATRIX,87%,2,4
+mdl31_ab1_cf_wc_mm_last_y,Last year working capital,MATRIX,26%,20,41
+mdl31_ab1_dps_last_qtr,Last quarter dividends per share,MATRIX,48%,2,3
+mdl31_ab1_dps_last_y,Last year dividends per share,MATRIX,75%,1,1
+mdl31_ab1_dps_t4q,Trailing 4 quarters dividends per share,MATRIX,73%,1,3
+mdl31_ab1_dse_last_qtr,Last quarter Debt/Equity,MATRIX,82%,1,3
+mdl31_ab1_dse_last_y,Last year Debt/Equity,MATRIX,82%,2,2
+mdl31_ab1_dse_prior_qtr,Prior quarter Debt/Equity,MATRIX,81%,1,8
+mdl31_ab1_dse_prior_y,Prior year Debt/Equity,MATRIX,81%,2,2
+mdl31_ab1_dty_mm_fcf,Year to date Free Cash from Operations,MATRIX,97%,1,9
+mdl31_ab1_dy_pct_current,Current dividends per share percentage,MATRIX,77%,1,9
+mdl31_ab1_erq_raw_prior_qtr,Prior Earnings Quality Region Rank before beta neutralization. Scores of 100 indicate the highest-rated stocks in the country; scores of 1 indicate the lowest-rated stocks in the country.,MATRIX,94%,1,3
+mdl31_ab1_erq_re_rk_chg_1_day,1-day change of Earnings Quality Region Rank. Scores of 100 indicate the highest rated stocks in the region; scores of 1 indicate the lowest rated stocks in the region.,MATRIX,93%,2,11
+mdl31_ab1_erq_re_rk_chg_1_fy,1-year change of Earnings Quality Region Rank. Scores of 100 indicate the highest rated stocks in the region; scores of 1 indicate the lowest rated stocks in the region.,MATRIX,88%,1,4
+mdl31_ab1_erq_re_rk_chg_1_qtr,1 quarter change of Earnings Quality Region Rank. Scores of 100 indicate the highest-rated stocks in the region; scores of 1 indicate the lowest-rated stocks in the region.,MATRIX,93%,1,2
+mdl31_ab1_erq_re_rk_prior_qtr,Prior quarter Earnings Quality Region Rank. Scores of 100 indicate the highest rated stocks in the region; scores of 1 indicate the lowest rated stocks in the region.,MATRIX,94%,1,4
+mdl31_ab1_erq_re_rk_prior_y,Prior year Earnings Quality Region Rank. Scores of 100 indicate the highest rated stocks in the region; scores of 1 indicate the lowest rated stocks in the region.,MATRIX,89%,1,1
+mdl31_ab1_exclusions_chg_1_day,1-day change of a percentile rank that reflects only the Exclusions factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks.,MATRIX,59%,17,39
+mdl31_ab1_exclusions_chg_1_fy,1 year change of a percentile rank that reflects only the Exclusions factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks.,MATRIX,82%,1,1
+mdl31_ab1_exclusions_chg_1_qtr,1-quarter change of a percentile rank that reflects only the Exclusions factors of the Earnings Quality Model. Scores of 100 indicate the highest rated stocks; scores of 1 indicate the lowest rated stocks.,MATRIX,90%,2,2
+mdl31_ab1_exclusions_prior_qtr,Prior quarter value of a percentile rank that reflects only the Exclusions factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks.,MATRIX,91%,1,2
+mdl31_ab1_exclusions_prior_y,Prior year value of a percentile rank that reflects only the Exclusions factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks.,MATRIX,84%,1,3
+mdl31_ab1_fcf_mm_last_qtr,Last quarter Free Cash from Operations,MATRIX,96%,2,6
+mdl31_ab1_fcf_mm_last_y,Last year Free Cash from Operations,MATRIX,100%,34,114
+mdl31_ab1_gm_pct_last_qtr,Last quarter gross margin,MATRIX,88%,2,11
+mdl31_ab1_gm_pct_last_y,Last year gross margin,MATRIX,89%,3,9
+mdl31_ab1_gm_pct_prior_qtr,Prior quarter gross margin,MATRIX,87%,1,4
+mdl31_ab1_gm_pct_prior_y,Prior year gross margin,MATRIX,89%,1,6
+mdl31_ab1_gm_pct_t4q,Trailing 4 quarter gross margin,MATRIX,85%,1,5
+mdl31_ab1_gva,average value,MATRIX,99%,1,4
+mdl31_ab1_oe_chg_1_day,1 day change of a percentile rank that reflects only the Operating Efficiency factors of the Earnings Quality Model. Scores of 100 indicate the highest rated stocks; scores of 1 indicate the lowest rated stocks.,MATRIX,88%,1,7
+mdl31_ab1_oe_chg_1_fy,1 year change of a percentile rank that reflects only the Operating Efficiency factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks,MATRIX,84%,1,4
+mdl31_ab1_oe_chg_1_qtr,1 quarter change of a percentile rank that reflects only the Operating Efficiency factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks,MATRIX,90%,1,8
+mdl31_ab1_oe_prior_qtr,Prior quarter value of a percentile rank that reflects only the Operating Efficiency factors of the Earnings Quality Model. Scores of 100 indicate the highest-rated stocks; scores of 1 indicate the lowest-rated stocks,MATRIX,92%,1,11
+mdl31_ab1_oe_prior_y,Prior year value of A percentile rank that reflects only the Operating Efficiency factors of the Earnings Quality Model. Scores of 100 indicate the highest rated stocks; scores of 1 indicate the lowest rated stocks,MATRIX,86%,21,55
+mdl31_ab1_om_pct_last_qtr,Last quarter operation efficiency percentage,MATRIX,96%,2,5
+mdl31_ab1_om_pct_last_y,Last year operation efficiency percentage,MATRIX,97%,1,3
+mdl31_ab1_om_pct_prior_qtr,Prior quarter operation efficiency percentage,MATRIX,95%,2,7
+mdl31_ab1_om_pct_prior_y,Prior year operation efficiency percentage,MATRIX,97%,2,8
+mdl31_ab1_om_pct_t4q,Trailing 4-quarter operation efficiency percentage,MATRIX,94%,1,4
+mdl31_ab1_pb_current,Current price to book ratio,MATRIX,96%,2,8
+mdl31_ab1_pb_last_qtr,Last quarter price-to-book ratio,MATRIX,94%,1,13
+mdl31_ab1_pb_last_y,Last year price to book ratio,MATRIX,93%,1,3
+mdl31_ab1_pb_prior_qtr,Prior quarter price to book ratio,MATRIX,92%,1,8
+mdl31_ab1_pb_prior_y,Prior year price-to-book ratio,MATRIX,89%,20,34
+mdl31_ab1_pricesales_current,Current price-to-sales ratio,MATRIX,97%,2,13
+mdl31_ab1_pricesales_last_qtr,Last quarter price-to-sales ratio,MATRIX,95%,2,5
+mdl31_ab1_pricesales_last_y,Last year price to sales ratio,MATRIX,94%,2,2
+mdl31_ab1_pricesales_prior_qtr,Prior quarter price to sales ratio,MATRIX,93%,2,6
+mdl31_ab1_pricesales_prior_y,Prior year price to sales ratio,MATRIX,90%,1,2
+mdl31_ab1_q4t_mm_fcf,Trailing 4 quarter Free Cash from Operations,MATRIX,97%,1,9
+mdl31_ab1_roe_pct_last_qtr,Last quarter return on equity,MATRIX,98%,1,7
+mdl31_ab1_roe_pct_last_y,Last year quarter return on equity,MATRIX,99%,2,5
+mdl31_ab1_roe_pct_prior_qtr,Prior quarter return on equity,MATRIX,97%,1,7
+mdl31_ab1_roe_pct_prior_y,Prior year quarter return on equity,MATRIX,98%,1,1
+mdl31_ab1_roe_pct_t4q,Trailing 4 quarter return on equity,MATRIX,95%,1,5
+mdl31_acc_chg_1_day,"Change in accruals component percentile rank for the company compared to the prior day; 100 is largest positive change, 1 is largest negative change",MATRIX,93%,1,1
+mdl31_acc_chg_1_fy,1-year change in the Accruals component percentile rank (1–100; higher is better),MATRIX,85%,1,1
+mdl31_acc_chg_1_qtr,"Change in Accruals Component percentile rank over the past quarter (region-relative, 1=worst, 100=best)",MATRIX,91%,1,1
+mdl31_acc_prior_qtr,Percentile score (1-100) for Accruals Component relative to region for prior quarter; higher is better earning quality,MATRIX,92%,3,3
+mdl31_acc_prior_y,"Percentile rank reflecting only the Accruals factors of the Earnings Quality Model for the prior fiscal year, where 100 is best",MATRIX,86%,2,2
+mdl31_ass_tvr_last_qtr,Asset turnover ratio for the last quarter; net revenue divided by total assets,MATRIX,94%,4,4
+mdl31_ass_tvr_last_y,Revenue generated per unit of total assets (Asset Turnover = Net Revenue/Total Assets) for the last year,MATRIX,96%,7,7
+mdl31_ass_tvr_prior_qtr,Revenue generated per unit of total assets (Asset Turnover = Net Revenue/Total Assets) for the prior quarter,MATRIX,94%,6,11
+mdl31_ass_tvr_prior_y,Asset turnover ratio for the prior fiscal year; net revenue divided by total assets,MATRIX,95%,3,3
+mdl31_ass_tvr_t4q,Revenue generated per unit of total assets (Asset Turnover = Net Revenue/Total Assets) over the trailing 4 quarters,MATRIX,93%,2,2
+mdl31_bv_share_last_qtr,"Book value per share for the last completed fiscal quarter, calculated as total shareholder equity divided by shares outstanding",MATRIX,95%,1,1
+mdl31_bv_share_last_y,Book value per share as of last completed fiscal year (book value divided by shares outstanding),MATRIX,96%,3,3
+mdl31_bv_share_prior_qtr,"Book value per share in the prior quarter, i.e., book value divided by total shares outstanding",MATRIX,94%,1,1
+mdl31_bv_share_prior_y,Book value per share as reported for the previous fiscal year,MATRIX,96%,3,3
+mdl31_cf_chg_1_day,1-day change in percentile rank for Cash Flow component of the Earnings Quality Model,MATRIX,89%,4,4
+mdl31_cf_chg_1_fy,Change in percentile rank over prior fiscal year for cash flow factors in Earnings Quality Model,MATRIX,83%,1,1
+mdl31_cf_chg_1_qtr,Change in percentile rank over the last quarter for the cash flow factors of Earnings Quality Model,MATRIX,87%,1,1
+mdl31_cf_prior_qtr,"Prior quarter percentile rank reflecting cash flow factors of the Earnings Quality Model for the company; 100 is best, 1 is worst",MATRIX,88%,2,3
+mdl31_cf_prior_y,"Prior year percentile rank reflecting cash flow factors of the Earnings Quality Model for the company; 100 is best, 1 is worst",MATRIX,85%,1,1
+mdl31_dps_last_qtr,All cash dividends declared per share (common and preferred stock) by the company in the last quarter,MATRIX,95%,1,1
+mdl31_dps_last_y,"Total cash dividends per share declared in the last fiscal year, including both common and preferred shares",MATRIX,58%,3,5
+mdl31_dps_t4q,"Total cash dividends declared over the trailing four quarters, on both common and preferred stock, per share",MATRIX,58%,1,1
+mdl31_dse_last_qtr,Ratio of long-term debt to total equity for the last quarter; higher values indicate greater leverage,MATRIX,95%,1,1
+mdl31_dse_last_y,"Ratio of long-term debt to total equity for the last fiscal year, measuring company leverage",MATRIX,96%,2,2
+mdl31_dse_prior_qtr,"Ratio of long-term debt to total equity for the prior quarter, measuring company leverage for that period",MATRIX,95%,1,1
+mdl31_dse_prior_y,Ratio of long-term debt to total equity for the prior year; higher values indicate greater leverage,MATRIX,96%,2,4
+mdl31_dty_mm_fcf,"Year-to-date free cash flow (operations minus capex), in millions",MATRIX,94%,1,1
+mdl31_dy_pct_current,"Current dividend yield percentage, calculated as dividends per share divided by current share price",MATRIX,61%,5,7
+mdl31_erq_raw_prior_qtr,"Prior quarter Earnings Quality region rank before beta neutralization (1–100, higher = better)",MATRIX,92%,2,2
+mdl31_erq_re_rk_chg_1_day,"1-day change in the regional percentile rank based on the Earnings Quality Model, comparing the security to all other securities in the same region",MATRIX,93%,1,1
+mdl31_erq_re_rk_chg_1_fy,"Change in Earnings Quality Region Rank over the past fiscal year (1=worst, 100=best improvement)",MATRIX,86%,1,1
+mdl31_erq_re_rk_chg_1_qtr,"Change in Earnings Quality Region Rank over the past quarter (1=worst, 100=best improvement)",MATRIX,91%,1,1
+mdl31_erq_re_rk_prior_qtr,"Percentile rank of earnings quality for the prior quarter compared to peers in the same region, with higher scores signaling better earnings quality",MATRIX,92%,2,2
+mdl31_erq_re_rk_prior_y,"Percentile rank of earnings quality from the prior year, comparing to others in the same region, higher scores indicate higher earnings quality",MATRIX,87%,3,3
+mdl31_fcf_mm_last_qtr,"Free Cash Flow in millions for the last completed fiscal quarter, calculated as cash from operations minus capital expenditures",MATRIX,93%,1,1
+mdl31_fcf_mm_last_y,"Free Cash Flow in millions for the most recently completed fiscal year, calculated as cash from operations minus capital expenditures",MATRIX,96%,2,2
+mdl31_gm_pct_last_qtr,Gross margin percentage for the last completed fiscal quarter,MATRIX,84%,3,4
+mdl31_gm_pct_last_y,Gross margin percentage for the last fiscal year,MATRIX,85%,2,2
+mdl31_gm_pct_prior_qtr,Gross margin percentage for the prior (most recent previous) fiscal quarter,MATRIX,84%,1,1
+mdl31_gm_pct_prior_y,Gross margin percentage for the prior year,MATRIX,84%,3,3
+mdl31_gm_pct_t4q,Gross margin percentage for the trailing four quarters,MATRIX,82%,1,1
+mdl31_gva,Average net operating assets in millions for the last quarter,MATRIX,95%,2,2
+mdl31_oe_chg_1_day,1-day change in the Operating Efficiency component percentile rank of the Earnings Quality model (1–100; higher is better),MATRIX,90%,2,2
+mdl31_oe_chg_1_fy,1-year change in the Operating Efficiency component percentile rank of the Earnings Quality model (1–100; higher is better),MATRIX,83%,1,1
+mdl31_oe_chg_1_qtr,Change in the Operating Efficiency Component percentile rank compared to the prior quarter; indicates improvement or deterioration in operating efficiency,MATRIX,89%,3,5
+mdl31_oe_prior_qtr,"Prior quarter percentile rank reflecting operating efficiency factors of the Earnings Quality Model for the company; 100 is best, 1 is worst",MATRIX,89%,1,1
+mdl31_oe_prior_y,"Prior year percentile rank reflecting operating efficiency factors of the Earnings Quality Model for the company; 100 is best, 1 is worst",MATRIX,84%,1,1
+mdl31_om_pct_last_qtr,Operating margin percentage for the last quarter,MATRIX,92%,1,1
+mdl31_om_pct_last_y,"Operating profit margin for the last completed fiscal year; operating income divided by revenue, as a percentage",MATRIX,93%,3,3
+mdl31_om_pct_prior_qtr,Operating margin percentage for the prior quarter,MATRIX,92%,2,2
+mdl31_om_pct_prior_y,Operating margin percentage for the prior year,MATRIX,93%,4,4
+mdl31_om_pct_t4q,Operating margin percentage measured over the trailing four quarters,MATRIX,91%,1,1
+mdl31_pb_current,Current price to book ratio,MATRIX,91%,3,3
+mdl31_pb_last_qtr,Price-to-book ratio for the last fiscal quarter,MATRIX,90%,1,1
+mdl31_pb_last_y,Price-to-book ratio for the last fiscal year,MATRIX,90%,3,3
+mdl31_pb_prior_qtr,Price-to-book ratio for the prior quarter,MATRIX,90%,1,1
+mdl31_pb_prior_y,Prior year price-to-book ratio,MATRIX,86%,1,1
+mdl31_pricesales_current,Current price-to-sales ratio,MATRIX,93%,2,2
+mdl31_pricesales_last_qtr,Price-to-sales ratio for the last quarter,MATRIX,91%,1,1
+mdl31_pricesales_last_y,Price-to-sales ratio for the last fiscal year,MATRIX,91%,1,1
+mdl31_pricesales_prior_qtr,Prior quarter price-to-sales ratio,MATRIX,90%,3,3
+mdl31_pricesales_prior_y,Price-to-sales ratio for the prior year,MATRIX,87%,1,1
+mdl31_q4t_mm_fcf,"Free cash flow from operations (CF from Ops minus capex) summed over the trailing four quarters, in millions of local currency",MATRIX,93%,1,1
+mdl31_roe_pct_last_qtr,Return on equity percentage for the last fiscal quarter,MATRIX,94%,4,6
+mdl31_roe_pct_last_y,Return on equity percentage for the last completed fiscal year,MATRIX,96%,2,3
+mdl31_roe_pct_prior_qtr,Return on equity percentage for the prior quarter,MATRIX,94%,3,3
+mdl31_roe_pct_prior_y,Return on equity percentage for the prior year,MATRIX,95%,2,2
+mdl31_roe_pct_t4q,"Return on equity over the trailing four quarters, as a percentage",MATRIX,93%,2,2
+mdl31_v14_ab1_acc_chg_1_day,1-day change in the Accruals Component percentile score,MATRIX,97%,57,158
+mdl31_v14_ab1_acc_chg_1_fy,1-fiscal-year change in the Accruals Component percentile score,MATRIX,88%,36,73
+mdl31_v14_ab1_acc_chg_1_qtr,1-quarter change in the Accruals Component percentile score,MATRIX,95%,52,116
+mdl31_v14_ab1_acc_prior_qtr,Prior quarter region-relative Accruals Component percentile score (1–100; higher is better),MATRIX,95%,53,151
+mdl31_v14_ab1_acc_prior_y,Prior year region-relative Accruals Component percentile score (1–100; higher is better),MATRIX,89%,42,96
+mdl31_v14_ab1_ass_tvr_last_qtr,Asset turnover ratio (Net Revenue/Total Assets) for the last quarter,MATRIX,99%,96,489
+mdl31_v14_ab1_ass_tvr_last_y,Asset turnover ratio (Net Revenue/Total Assets) for the last fiscal year,MATRIX,100%,53,221
+mdl31_v14_ab1_ass_tvr_prior_qtr,Asset turnover ratio (Net Revenue/Total Assets) for the prior quarter,MATRIX,99%,41,262
+mdl31_v14_ab1_ass_tvr_prior_y,Asset turnover ratio (Net Revenue/Total Assets) for the prior fiscal year,MATRIX,99%,33,83
+mdl31_v14_ab1_ass_tvr_t4q,Asset turnover ratio (Net Revenue/Total Assets) over the trailing four quarters,MATRIX,97%,54,193
+mdl31_v14_ab1_bv_share_last_qtr,Book value per share for the last completed fiscal quarter,MATRIX,100%,51,239
+mdl31_v14_ab1_bv_share_last_y,Book value per share for the last completed fiscal year,MATRIX,100%,51,243
+mdl31_v14_ab1_bv_share_prior_qtr,Book value per share as of the prior fiscal quarter,MATRIX,99%,37,225
+mdl31_v14_ab1_bv_share_prior_y,Book value per share as of the prior fiscal year,MATRIX,100%,38,82
+mdl31_v14_ab1_cf_chg_1_day,1-day change in the Cash Flow component percentile rank,MATRIX,93%,44,188
+mdl31_v14_ab1_cf_chg_1_fy,1-fiscal-year change in the Cash Flow component percentile rank,MATRIX,86%,20,68
+mdl31_v14_ab1_cf_chg_1_qtr,1-quarter change in the Cash Flow component percentile rank,MATRIX,90%,34,134
+mdl31_v14_ab1_cf_prior_qtr,Prior quarter percentile rank reflecting only the Cash Flow factors of the Earnings Quality model (1–100; higher is better),MATRIX,92%,44,127
+mdl31_v14_ab1_cf_prior_y,Prior year percentile rank reflecting only the Cash Flow factors of the Earnings Quality model (1–100; higher is better),MATRIX,88%,24,63
+mdl31_v14_ab1_cf_wc_mm_last_y,Last year working capital,MATRIX,25%,20,41
+mdl31_v14_ab1_dps_last_qtr,Cash dividends declared per share in the last quarter,MATRIX,99%,24,111
+mdl31_v14_ab1_dps_last_y,Cash dividends per share in the last year,MATRIX,61%,22,35
+mdl31_v14_ab1_dps_t4q,Cash dividends per share over the trailing four quarters,MATRIX,61%,21,60
+mdl31_v14_ab1_dse_last_qtr,Ratio of long-term debt to total equity for the last quarter,MATRIX,100%,38,176
+mdl31_v14_ab1_dse_last_y,Ratio of long-term debt to total equity for the last fiscal year,MATRIX,100%,26,59
+mdl31_v14_ab1_dse_prior_qtr,Ratio of long-term debt to total equity for the prior quarter,MATRIX,100%,37,226
+mdl31_v14_ab1_dse_prior_y,Ratio of long-term debt to total equity for the prior fiscal year,MATRIX,100%,31,160
+mdl31_v14_ab1_dty_mm_fcf,Free cash flow from operations (in millions of local currency) year-to-date (from the beginning of the current fiscal year),MATRIX,99%,48,306
+mdl31_v14_ab1_dy_pct_current,"Current dividend yield, expressed as a percentage of current share price, based on current dividends per share",MATRIX,64%,45,114
+mdl31_v14_ab1_erq_raw_prior_qtr,"Prior fiscal quarter's raw, unadjusted model score for Earnings Quality Region Rank, before normalization, higher means better earnings quality in the region",MATRIX,96%,18,49
+mdl31_v14_ab1_erq_re_rk_chg_1_day,Change in the region-relative Earnings Quality percentile rank over 1 day,MATRIX,97%,24,83
+mdl31_v14_ab1_erq_re_rk_chg_1_fy,Change in the region-relative Earnings Quality percentile rank over 1 fiscal year,MATRIX,89%,21,61
+mdl31_v14_ab1_erq_re_rk_chg_1_qtr,Change in the region-relative Earnings Quality percentile rank over 1 quarter,MATRIX,95%,33,125
+mdl31_v14_ab1_erq_re_rk_prior_qtr,Prior quarter region-relative Earnings Quality percentile rank (1–100; higher indicates better earnings quality),MATRIX,96%,25,74
+mdl31_v14_ab1_erq_re_rk_prior_y,Prior year region-relative Earnings Quality percentile rank (1–100; higher indicates better earnings quality),MATRIX,90%,24,51
+mdl31_v14_ab1_exclusions_chg_1_day,One-day change in the Exclusions component percentile rank of the Earnings Quality model (1–100 scale),MATRIX,94%,18,40
+mdl31_v14_ab1_exclusions_chg_1_fy,One-fiscal-year change in the Exclusions component percentile rank of the Earnings Quality model (1–100 scale),MATRIX,83%,16,40
+mdl31_v14_ab1_exclusions_chg_1_qtr,One-quarter change in the Exclusions component percentile rank of the Earnings Quality model (1–100 scale),MATRIX,91%,21,83
+mdl31_v14_ab1_exclusions_prior_qtr,Prior quarter percentile rank reflecting only the Exclusions factors of the Earnings Quality model (1–100; higher is better),MATRIX,93%,31,76
+mdl31_v14_ab1_exclusions_prior_y,"Prior year value of the Exclusions component percentile rank of the Earnings Quality model (1–100, higher = better)",MATRIX,86%,29,117
+mdl31_v14_ab1_fcf_mm_last_qtr,Free cash flow from operations (in millions of local currency) for the last completed quarter,MATRIX,98%,35,194
+mdl31_v14_ab1_fcf_mm_last_y,Free cash flow from operations (in millions of local currency) for the last completed fiscal year,MATRIX,100%,35,115
+mdl31_v14_ab1_gm_pct_last_qtr,Gross margin percentage for the last quarter,MATRIX,88%,48,213
+mdl31_v14_ab1_gm_pct_last_y,Gross margin percentage for the last fiscal year,MATRIX,89%,29,117
+mdl31_v14_ab1_gm_pct_prior_qtr,Gross margin percentage for the prior quarter,MATRIX,87%,33,137
+mdl31_v14_ab1_gm_pct_prior_y,Gross margin percentage for the prior fiscal year,MATRIX,88%,26,96
+mdl31_v14_ab1_gm_pct_t4q,Gross margin percentage over the trailing four quarters,MATRIX,85%,39,158
+mdl31_v14_ab1_gva,Average value of net operating assets (in millions of local currency units) during the last quarter,MATRIX,100%,53,378
+mdl31_v14_ab1_oe_chg_1_day,1-day change in the Operating Efficiency component percentile rank,MATRIX,94%,19,52
+mdl31_v14_ab1_oe_chg_1_fy,1-fiscal-year change in the Operating Efficiency component percentile rank,MATRIX,85%,26,108
+mdl31_v14_ab1_oe_chg_1_qtr,1-quarter change in the Operating Efficiency component percentile rank,MATRIX,93%,26,71
+mdl31_v14_ab1_oe_prior_qtr,Prior quarter percentile rank reflecting only the Operating Efficiency factors of the Earnings Quality model (1–100; higher is better),MATRIX,93%,25,96
+mdl31_v14_ab1_oe_prior_y,Prior year percentile rank reflecting only the Operating Efficiency factors of the Earnings Quality model (1–100; higher is better),MATRIX,87%,21,55
+mdl31_v14_ab1_om_pct_last_qtr,Operating margin percentage for the last quarter,MATRIX,96%,48,237
+mdl31_v14_ab1_om_pct_last_y,Operating margin percentage for the last fiscal year,MATRIX,98%,26,90
+mdl31_v14_ab1_om_pct_prior_qtr,Operating margin percentage for the prior quarter,MATRIX,96%,36,180
+mdl31_v14_ab1_om_pct_prior_y,Operating margin percentage for the prior fiscal year,MATRIX,97%,51,137
+mdl31_v14_ab1_om_pct_t4q,Operating margin percentage over the trailing four quarters,MATRIX,95%,40,229
+mdl31_v14_ab1_pb_current,Current price-to-book ratio,MATRIX,96%,43,209
+mdl31_v14_ab1_pb_last_qtr,Last quarter price-to-book ratio,MATRIX,94%,33,192
+mdl31_v14_ab1_pb_last_y,Last year price-to-book ratio,MATRIX,94%,22,53
+mdl31_v14_ab1_pb_prior_qtr,Prior quarter price-to-book ratio,MATRIX,93%,38,170
+mdl31_v14_ab1_pb_prior_y,Prior year price-to-book ratio,MATRIX,89%,21,35
+mdl31_v14_ab1_pricesales_current,Current price-to-sales ratio,MATRIX,97%,49,502
+mdl31_v14_ab1_pricesales_last_qtr,Last quarter price-to-sales ratio,MATRIX,95%,34,203
+mdl31_v14_ab1_pricesales_last_y,Last year price-to-sales ratio,MATRIX,95%,32,66
+mdl31_v14_ab1_pricesales_prior_qtr,Prior quarter price-to-sales ratio,MATRIX,94%,31,165
+mdl31_v14_ab1_pricesales_prior_y,Prior year price-to-sales ratio,MATRIX,90%,32,91
+mdl31_v14_ab1_q4t_mm_fcf,Free cash flow from operations (in millions of local currency) summed over the trailing four quarters,MATRIX,98%,43,255
+mdl31_v14_ab1_roe_pct_last_qtr,Return on equity percentage for the last quarter,MATRIX,99%,62,300
+mdl31_v14_ab1_roe_pct_last_y,Return on equity percentage for the last fiscal year,MATRIX,100%,36,124
+mdl31_v14_ab1_roe_pct_prior_qtr,Return on equity percentage for the prior quarter,MATRIX,99%,35,235
+mdl31_v14_ab1_roe_pct_prior_y,Return on equity percentage for the prior fiscal year,MATRIX,99%,33,78
+mdl31_v14_ab1_roe_pct_t4q,Return on equity percentage over the trailing four quarters,MATRIX,97%,37,182
+star_eq_accruals_rank,Current percentile rank for Accruals Component of Earnings Quality Model; higher scores indicate healthier accruals structure,MATRIX,93%,7,21
+star_eq_cashflow_rank,"Current percentile score (1-100) for Cash Flow factors, region-relative; higher is better earnings quality",MATRIX,89%,1,6
+star_eq_exclusions_rank,Current percentile rank for Exclusions factors; higher scores reflect fewer non-recurring/manipulated items in reported earnings,MATRIX,90%,3,5
+star_eq_ope_rank,Current value of percentile rank reflecting Operating Efficiency factors in Earnings Quality; 100=highest rated stock,MATRIX,90%,1,1
+star_eq_rank,"Earnings Quality region rank before beta neutralization (1–100, higher = better) for the current period",MATRIX,93%,5,8
+star_eq_region_rank,"Current percentile rank for earnings quality, comparing the security to all others in the same region, higher scores mean better earnings quality",MATRIX,93%,1,5
+star_v14_eq_accruals_rank,Current region-relative Accruals component percentile score (1–100; higher is better),MATRIX,97%,46,231
+star_v14_eq_cashflow_rank,Current value (1-100 percentile rank) for the cash flow component of the earnings quality model; higher scores indicate stronger cash flow backing for earnings,MATRIX,93%,35,90
+star_v14_eq_exclusions_rank,Current percentile rank reflecting only the Exclusions factors of the Earnings Quality model (1–100; higher is better),MATRIX,94%,32,70
+star_v14_eq_ope_rank,Current value (1-100 percentile rank) for operating efficiency component; higher scores reflect more efficient asset utilization and operational effectiveness,MATRIX,94%,22,49
+star_v14_eq_rank,"Current raw, unadjusted model score for Earnings Quality Region Rank, before statistical normalization, higher means better earnings quality in the region",MATRIX,97%,43,157
+star_v14_eq_region_rank,Current region-relative Earnings Quality percentile rank (1–100; higher is better),MATRIX,97%,37,97

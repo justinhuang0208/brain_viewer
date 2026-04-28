@@ -1,0 +1,27 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd110_calendar_period,Calendar quarter number to which the metric relates (0 indicates annual data),VECTOR,77%,59,78
+fnd110_calendar_period_fast_d1,Calendar quarter number to which the metric relates (0 indicates annual data),VECTOR,77%,22,28
+fnd110_calendar_year,Calendar year to which the metric relates,VECTOR,77%,26,28
+fnd110_calendar_year_fast_d1,Calendar year to which the metric relates,VECTOR,77%,22,25
+fnd110_filing_type,filing_type,VECTOR,89%,53,63
+fnd110_filing_type_fast_d1,filing_type,VECTOR,88%,22,27
+fnd110_fiscal_period,The fiscal period to which the metric relates The quarter (of fiscal year) to which the metric relates (0 for annual data),VECTOR,89%,25,30
+fnd110_fiscal_period_fast_d1,The fiscal period to which the metric relates The quarter (of fiscal year) to which the metric relates (0 for annual data),VECTOR,88%,22,22
+fnd110_kic,A unique code used for identifying companies,VECTOR,89%,16,17
+fnd110_kic_fast_d1,A unique code used for identifying companies,VECTOR,88%,12,14
+fnd110_lrbx,XBRL,VECTOR,89%,41,47
+fnd110_lrbx_fast_d1,XBRL,VECTOR,88%,33,37
+fnd110_metric,metric,VECTOR,89%,32,38
+fnd110_metric_fast_d1,metric,VECTOR,88%,17,17
+fnd110_original_value,Originally reported value before any revisions,VECTOR,77%,17,18
+fnd110_original_value_fast_d1,Originally reported value before any revisions,VECTOR,77%,11,11
+fnd110_period_end,Date on which the relevant fiscal period ended for the company,VECTOR,77%,28,33
+fnd110_period_end_fast_d1,Date on which the relevant fiscal period ended for the company,VECTOR,77%,18,19
+fnd110_period_start,period_start,VECTOR,77%,15,21
+fnd110_period_start_fast_d1,period_start,VECTOR,77%,18,23
+fnd110_preliminary,preliminary,VECTOR,89%,15,18
+fnd110_preliminary_fast_d1,preliminary,VECTOR,88%,16,17
+fnd110_revision_number,"Revision sequence number for the reported value; 0 if original, greater than 0 if revised",VECTOR,77%,15,15
+fnd110_revision_number_fast_d1,"Revision sequence number for the reported value; 0 if original, greater than 0 if revised",VECTOR,77%,13,20
+fnd110_value,Value in USD terms of the metric for the company,VECTOR,77%,25,34
+fnd110_value_fast_d1,Value in USD terms of the metric for the company,VECTOR,77%,12,13

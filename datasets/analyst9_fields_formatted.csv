@@ -1,0 +1,86 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl9_companyidmap,Company ID index,MATRIX,100%,42,86
+anl9_confirmtime,Intraday time of the most recent confirmation of the current estimate,VECTOR,75%,0,0
+anl9_consensusanalysis_dataitemvalue,Numeric consensus estimate value for the specified data item,VECTOR,85%,13,34
+anl9_consensusanalysis_effectivetime,Intra-day time when the consensus estimate calculation became effective,VECTOR,85%,0,0
+anl9_consensusv2span_balancesheet_dataitemvalue,Numeric value of the balance sheet data item consensus estimate in the specified currency and scale,VECTOR,76%,1,1
+anl9_consensusv2span_balancesheet_effectivetime,The time of calculation,VECTOR,76%,4,4
+anl9_consensusv2span_balancesheet_splitfactor,"Adjustment factor applied to account for corporate actions (e.g., stock splits) to keep estimates comparable",VECTOR,69%,11,24
+anl9_consensusv2span_balancesheet_totime,Intraday time when the estimate ceased to be effective,VECTOR,76%,3,5
+anl9_consensusv2span_cashflowstatement_dataitemvalue,Numeric consensus estimate value for the specified data item,VECTOR,76%,1,1
+anl9_consensusv2span_cashflowstatement_effectivetime,Start/effective time when the estimate became valid or was calculated,VECTOR,76%,1,1
+anl9_consensusv2span_cashflowstatement_splitfactor,Adjustment factor for corporate actions such as stock splits applied to normalize estimates,VECTOR,62%,7,8
+anl9_consensusv2span_cashflowstatement_totime,End time of the estimate's validity window,VECTOR,76%,7,10
+anl9_consensusv2span_incomeebt_dataitemvalue,The consensus estimate value for the specified metric (Income before taxes/EBT),VECTOR,85%,0,0
+anl9_consensusv2span_incomeebt_effectivetime,Start time-of-day when this consensus Income Before Taxes (EBT) estimate became effective,VECTOR,85%,0,0
+anl9_consensusv2span_incomeebt_splitfactor,"Adjustment factor for corporate actions (e.g., stock splits) applied to maintain estimate comparability",VECTOR,67%,0,0
+anl9_consensusv2span_incomeebt_totime,Intraday time when the consensus estimate record stops being effective (end of the validity window),VECTOR,85%,0,0
+anl9_consensusv2span_incomeeps_dataitemvalue,Numeric consensus estimate value for the specified data item,VECTOR,85%,0,0
+anl9_consensusv2span_incomeeps_effectivetime,Intra-day time when the estimate becomes effective or is calculated,VECTOR,85%,0,0
+anl9_consensusv2span_incomeeps_splitfactor,Ratio used to unadjust per-share EPS estimates for stock splits that occur after the estimate’s EffectiveDate,VECTOR,85%,0,0
+anl9_consensusv2span_incomeeps_totime,End time when the estimate’s validity window ends,VECTOR,85%,0,0
+anl9_consensusv2span_incomenetincome_dataitemvalue,Numeric value of the consensus net income estimate,VECTOR,85%,0,0
+anl9_consensusv2span_incomenetincome_effectivetime,Start time (intra-day) when the consensus estimate span becomes valid,VECTOR,85%,1,1
+anl9_consensusv2span_incomenetincome_splitfactor,Ratio used to unadjust per-share data for stock splits that occur after the estimate’s EffectiveDate,VECTOR,65%,1,1
+anl9_consensusv2span_incomenetincome_totime,Intra-day time marking when the estimate’s validity period ends,VECTOR,85%,1,3
+anl9_consensusv2span_incomeothers_dataitemvalue,Numeric consensus estimate value for the specified data item,VECTOR,86%,0,0
+anl9_consensusv2span_incomeothers_effectivetime,Intra-day time when the consensus estimate became effective (time of calculation),VECTOR,86%,0,0
+anl9_consensusv2span_incomeothers_splitfactor,"Adjustment factor for corporate actions (e.g., stock splits) applied to maintain comparability of estimates",VECTOR,80%,0,0
+anl9_consensusv2span_incomeothers_totime,Intra-day time when the estimate’s validity period ends,VECTOR,86%,0,0
+anl9_consensusv2span_others_dataitemvalue,Numeric value of the estimate for the specified data item,VECTOR,84%,7,17
+anl9_consensusv2span_others_effectivetime,Time of day when the estimate/calculation became effective or was calculated,VECTOR,84%,5,10
+anl9_consensusv2span_others_splitfactor,Ratio used to unadjust per-share estimates for stock splits occurring after the estimate’s EffectiveDate,VECTOR,82%,10,14
+anl9_consensusv2span_others_totime,Time of day when the estimate’s validity ended,VECTOR,84%,8,16
+anl9_d1_companyidmap,Mapping from companyId to internal company index (companyIdIx),MATRIX,100%,42,86
+anl9_d1_estanalystmap,Mapping from estimateAnalystId to the estimateAnalystIx lookup index,MATRIX,84%,0,0
+anl9_d1_recommendationnumericvalue,Standardized numeric broker recommendation (1–5; 6 = NA),MATRIX,97%,25,69
+anl9_d1_scaleconversionflag,[di][idx of dataItemIx],MATRIX,94%,30,100
+anl9_daily_numanalystall,"Total number of analysts contributing estimates for the company, including those excluded from the consensus",VECTOR,84%,0,0
+anl9_daily_numanalysts,Number of analysts whose estimates are included in the consensus for the revision period,VECTOR,84%,1,1
+anl9_daily_numdn,Count of downward revisions among analysts included in the consensus,VECTOR,84%,1,1
+anl9_daily_numdownunfiltered,"Total number of analysts whose estimates were revised downward, including those excluded from the consensus",VECTOR,84%,0,0
+anl9_daily_numnochangeunfiltered,"Total number of analysts that did not change their estimates, including those excluded from the consensus",VECTOR,84%,0,0
+anl9_daily_numnochg,Count of revisions with no change among analysts included in the consensus,VECTOR,84%,0,0
+anl9_daily_numup,Count of upward revisions among analysts included in the consensus,VECTOR,84%,1,1
+anl9_daily_numupunfiltered,"Total number of analysts whose estimates were revised upward, including those excluded from the consensus",VECTOR,84%,0,0
+anl9_detail_dataitemvalue,Numeric value of the estimated metric,VECTOR,76%,1,1
+anl9_detail_effectivetime,Time of day when the estimate became effective (start time of validity),VECTOR,76%,3,6
+anl9_detail_totime,End time of the estimate’s validity period (intraday),VECTOR,76%,2,2
+anl9_estanalystmap,Human-readable name/description of the analyst corresponding to estimateAnalystIx,MATRIX,84%,40,87
+anl9_estimatetime,Intra-day time at which the estimate was recorded/issued,VECTOR,76%,0,0
+anl9_guidancev2span_dataitemvalue,Numeric value of the estimate/guidance for the specified data item,VECTOR,58%,6,9
+anl9_guidancev2span_effectivetime,Intraday start time when the guidance estimate becomes effective,VECTOR,58%,8,10
+anl9_guidancev2span_splitfactor,Adjustment factor applied to estimate values for corporate actions such as stock splits,VECTOR,58%,10,17
+anl9_isexcluded,Flag indicating the estimate is excluded from consensus/analysis due to data quality rules,VECTOR,76%,0,0
+anl9_isnmflag,Flag indicating the estimate is not meaningful (NM),VECTOR,85%,8,12
+anl9_parentflag,"Entity consolidation flag: 0=consolidated entity estimate, 1=parent-only entity estimate",VECTOR,76%,0,0
+anl9_recommendationbrokeroptioncode,[di][recommendationScaleId] = Recommendation code received from the contributing broker,MATRIX,100%,15,21
+anl9_recommendationnumericvalue,Standardized S&P Capital IQ broker recommendation on a 1–5 scale (6 = Not Available),MATRIX,97%,25,69
+anl9_revisiondaily_effectivetime,Time when the revision metrics were calculated or became effective,VECTOR,84%,0,0
+anl9_scaleconversionflag,[di][idx of dataItemIx],MATRIX,94%,1,2
+anl9_sconsensusanalysis_dataitemvalue,Value of the DataItem,VECTOR,94%,1,8
+anl9_sconsensusv2span_balancesheet_dataitemvalue,Value of the DataItem,VECTOR,68%,1,1
+anl9_sconsensusv2span_balancesheet_effectivetime,The time of calculation,VECTOR,68%,4,4
+anl9_sconsensusv2span_balancesheet_splitfactor,Split factor,VECTOR,66%,1,2
+anl9_sconsensusv2span_balancesheet_totime,The time an estimate ends,VECTOR,64%,3,5
+anl9_sconsensusv2span_cashflowstatement_effectivetime,The time of calculation,VECTOR,77%,1,1
+anl9_sconsensusv2span_cashflowstatement_splitfactor,Split factor,VECTOR,74%,7,8
+anl9_sconsensusv2span_cashflowstatement_totime,The time an estimate ends,VECTOR,73%,7,10
+anl9_sconsensusv2span_others_dataitemvalue,Value of the DataItem,VECTOR,94%,1,7
+anl9_sconsensusv2span_others_effectivetime,The time of calculation,VECTOR,94%,5,10
+anl9_sconsensusv2span_others_splitfactor,Split factor,VECTOR,93%,1,7
+anl9_sconsensusv2span_others_totime,The time an estimate ends,VECTOR,93%,1,2
+anl9_sdetail_effectivetime,The time of calculation,VECTOR,49%,3,6
+anl9_sdetail_totime,The time an estimate ends,VECTOR,47%,2,2
+balancesheet_consensus_value,Integer index referencing the consensus category in the module’s consensus lookup table,VECTOR,76%,0,0
+base_currency_conversion_indicator,Flag indicating currency conversion capability,MATRIX,94%,0,0
+cashflow_consensus_estimate_value,"Integer index identifying the consensus estimate category or type, joinable to ConsensusIdIx",VECTOR,76%,0,0
+consensus_analysis_value,<baseModule>.ConsensusIdIx idx,VECTOR,85%,0,0
+currency_conversion_indicator,Flag indicating whether the item can be currency-converted,MATRIX,94%,0,0
+ebt_consensus_estimate_value,<baseModule>.ConsensusIdIx idx,VECTOR,85%,0,0
+eps_consensus_estimate_value,Lookup index identifying the consensus category/type for the estimate,VECTOR,85%,2,2
+guidance_consensus_value,Consensus value for company guidance estimates.,VECTOR,58%,0,0
+income_other_consensus_value,<baseModule>.ConsensusIdIx idx,VECTOR,86%,0,0
+net_income_consensus_value,Index identifier for the consensus estimate category from the base module’s ConsensusId lookup,VECTOR,85%,0,0
+other_metric_consensus_value,Consensus value for other financial metric estimates.,VECTOR,84%,0,0
+revision_consensus_value,Index key referencing the consensus estimate category in the ConsensusId lookup,VECTOR,84%,0,0

@@ -1,0 +1,64 @@
+Field,Description,Type,Coverage,Users,Alphas
+bbk_market_impact_indicator,Market-moving potential indicator for BBK unique news stories.,VECTOR,25%,1,1
+entity_relevance_scores,Scores indicating the relevance of the news story to various entities.,VECTOR,25%,2,2
+longform_market_impact_indicator,Market-moving potential indicator for longform news stories.,VECTOR,90%,0,0
+market_impact_indicator,Indicator of the news story's potential to move markets.,VECTOR,90%,0,0
+mws38_action,News action,VECTOR,90%,6,11
+mws38_entitlement,News entitlement ID (EID),VECTOR,90%,6,7
+mws38_headlinetones_entitlement,News entitlement ID (EID),VECTOR,90%,5,5
+mws38_headlinetones_sg_entitlement,News entitlement ID (EID),VECTOR,85%,2,6
+mws38_headlinetones_sg_time,News time,VECTOR,85%,1,2
+mws38_headlinetones_tc_entitlement,News entitlement ID (EID),VECTOR,90%,2,3
+mws38_headlinetones_tc_time,News time,VECTOR,90%,2,3
+mws38_headlinetones_time,News time,VECTOR,90%,2,2
+mws38_negative_freq,Negative frequency,VECTOR,90%,3,3
+mws38_negative_score,Negative score,VECTOR,90%,6,9
+mws38_positive_freq,Positive frequency,VECTOR,90%,2,2
+mws38_positive_score,Positive score,VECTOR,90%,8,9
+mws38_related_num,Number of stocks related to or affected by the news,VECTOR,90%,3,3
+mws38_relevances,Degree of relevance the news is to the corresponding stock,VECTOR,90%,4,5
+mws38_sg_entitlement,News entitlement ID (EID),VECTOR,90%,2,6
+mws38_sg_negative_freq,Negative frequency,VECTOR,90%,4,4
+mws38_sg_negative_score,Negative score,VECTOR,90%,3,6
+mws38_sg_positive_freq,Positive frequency,VECTOR,90%,3,3
+mws38_sg_positive_score,Positive score,VECTOR,90%,9,11
+mws38_sg_time,News time,VECTOR,90%,1,2
+mws38_sg_tone_score,Tone score,VECTOR,90%,4,4
+mws38_storyanalytics_entitlement,News entitlement ID (EID),VECTOR,90%,7,10
+mws38_storyanalytics_score,News score,VECTOR,90%,4,5
+mws38_storyanalytics_time,News time,VECTOR,90%,6,13
+mws38_storyanalytics_type,News type,VECTOR,90%,4,5
+mws38_storyanalytics_value,News value,VECTOR,90%,6,10
+mws38_tc_negative_freq,Negative frequency,VECTOR,90%,5,5
+mws38_tc_negative_score,Negative score,VECTOR,90%,4,5
+mws38_tc_positive_freq,Positive frequency,VECTOR,90%,4,5
+mws38_tc_positive_score,Positive score,VECTOR,90%,11,17
+mws38_tc_tone_score,Tone score,VECTOR,90%,2,2
+mws38_time,News time,VECTOR,90%,4,5
+mws38_tone_score,Tone score,VECTOR,90%,7,7
+mws38_uniq_action,News action,VECTOR,90%,1,2
+mws38_uniq_entitlement,News entitlement ID (EID),VECTOR,90%,6,11
+mws38_uniq_hotlevel,News hotlevel (all 0),VECTOR,90%,0,0
+mws38_uniq_long_action,News action,VECTOR,90%,3,5
+mws38_uniq_long_entitlement,News entitlement ID (EID),VECTOR,90%,1,1
+mws38_uniq_long_related_num,Number of stocks related to or affected by the news,VECTOR,90%,2,2
+mws38_uniq_long_relevances,Degree of relevance the news is to the corresponding stock,VECTOR,90%,3,3
+mws38_uniq_long_time,News time,VECTOR,90%,5,21
+mws38_uniq_long_version,News version,VECTOR,90%,0,0
+mws38_uniq_new_action,News action,VECTOR,90%,3,6
+mws38_uniq_new_entitlement,News entitlement ID (EID),VECTOR,90%,1,1
+mws38_uniq_new_related_num,Number of stocks related to or affected by the news,VECTOR,90%,0,0
+mws38_uniq_new_relevances,Degree of relevance the news is to the corresponding stock,VECTOR,90%,7,10
+mws38_uniq_new_time,News time,VECTOR,90%,2,2
+mws38_uniq_new_version,News version,VECTOR,90%,2,3
+mws38_uniq_related_num,Number of stocks related to or affected by the news,VECTOR,90%,1,1
+mws38_uniq_relevances,Degree of relevance the news is to the corresponding stock,VECTOR,90%,3,3
+mws38_uniq_time,News time,VECTOR,90%,2,4
+mws38_uniq_version,News version,VECTOR,90%,2,4
+mws38_version,News version,VECTOR,90%,8,8
+new_market_impact_indicator,Market-moving potential indicator for new unique news stories.,VECTOR,90%,1,1
+related_stocks_count,Number of stocks related to or affected by the news story.,VECTOR,25%,0,0
+story_analytics_category,Type or category of analytics value for the news story.,VECTOR,90%,1,1
+story_analytics_metric_value,Numeric value of the analytics metric for the news story.,VECTOR,90%,1,1
+story_analytics_relevance_score,Relevance or sentiment score assigned to the news story.,VECTOR,90%,1,1
+story_event_action_type,Type of action or update associated with the news story event.,VECTOR,25%,0,0

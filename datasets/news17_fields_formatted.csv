@@ -1,0 +1,39 @@
+Field,Description,Type,Coverage,Users,Alphas
+nws17_acb,"Earnings-focused sentiment classifier score: -1 negative, 0 neutral, 1 positive",VECTOR,91%,41,68
+nws17_bam,"BCA classifier sentiment score for corporate action reports: -1 negative, 0 neutral, 1 positive",VECTOR,91%,28,51
+nws17_bee,"Sentiment score from the earnings evaluations classifier, values -1 (negative), 0 (neutral), or 1 (positive)",VECTOR,91%,23,28
+nws17_ber,"Analyst recommendation change score for the company mention when an ANL-CHG event is detected: -1 downgrade, 0 neutral, 1 upgrade",VECTOR,100%,20,33
+nws17_country_code,Two-letter ISO-3166 country code associated with the entity (XX for global entities),VECTOR,100%,35,56
+nws17_d1_acb,"A score that represents the news sentiment of the given story according to the BER classifier, which specializes in news stories about earnings releases. Scores can take values of -1, 0, or 1, indicating negative, neutral, or positive sentiment, respectively",VECTOR,74%,3,4
+nws17_d1_bam,"A score that represents the news sentiment of the given news story according to the BCA classifier, which specializes in reports on corporate action announcements. Scores can take values of -1, 0, or 1, indicating negative, neutral, or positive sentiment, respectively.",VECTOR,27%,2,4
+nws17_d1_bee,"A score that represents the news sentiment of the given story according to the BEE classifier, which specializes in news stories about earnings evaluations. Scores can take values of -1, 0, or 1 indicating negative, neutral, or positive sentiment, respectively",VECTOR,59%,21,26
+nws17_d1_ber,"A score that represents a change in recommendation by an analyst firm in the form of a numerical score. When the mention of a company in a story matches the criteria for ANL-CHG, scores can take values of -1, 0, or 1, indicating a downgrade, neutral, or upgrade rating, depending on the recommendation change by the analyst.",VECTOR,76%,17,30
+nws17_d1_country_code,"The two-character ISO-3166 country code associated with an entity. Companies and organizations are associated with the country of incorporation, currencies are associated with the country where the central bank resides. Entities such as commodities have a country code of XX as they are global and not associated with any specific country",VECTOR,100%,3,5
+nws17_d1_event_end_time_utc,The time when the event ends in UTC.,VECTOR,100%,30,45
+nws17_d1_event_relevance,An integer between 0-100 that reflects the relevance of the event in the story.,VECTOR,100%,9,19
+nws17_d1_event_sentiment_score,A granular score between -1.00 and +1.00 with 2 decimal places that represents the news sentiment for a given entity by measuring various proxies sampled from the news.,VECTOR,98%,11,16
+nws17_d1_event_similarity_days,A granular number with up to 5 decimal places which indicates the number of days since a similar event was detected over the last 365 days. Values range between 0.00000 and 365 inclusive,VECTOR,100%,14,19
+nws17_d1_event_start_time_utc,The time when the event starts in UTC.,VECTOR,100%,23,39
+nws17_d1_event_text,A short text summary of an event captured in a document,VECTOR,100%,25,29
+nws17_d1_headline,The headline or summary text for the document,VECTOR,100%,18,34
+nws17_d1_nip,A granular score between -1.00 and 1.00 with up to 2 decimal places that represents the degree of impact a news flash has on the market over the following 2-hour period.,VECTOR,100%,1,1
+nws17_d1_qcm,"A score that represents the news sentiment based on the tone; applicable only towards the most relevant entities mentioned in a story. The score is derived from a combination of analytics values produced by the BMQ, BEE, BCA, and ANL-CHG classifiers.",VECTOR,94%,1,1
+nws17_d1_qep,"A score that represents the news sentiment of the given news item according to the PEQ classifier, which specializes in identifying positive and negative words and phrases in articles about global equities.",VECTOR,94%,1,1
+nws17_d1_qmb,"A score that represents the news sentiment of the given story according to the BAM classifier, which specializes in news stories about mergers, acquisitions, and takeovers. Scores can take values of -1, 0, or 1, indicating negative, neutral, or positive sentiment, respectively.",VECTOR,98%,14,26
+nws17_d1_relevance,"An integer score between 0-100 that indicates how strongly related the mention of an entity is to the underlying news story, with higher values indicating greater relevance. For any news story that mentions an entity, RavenPack provides a relevance score. A score of 0 means the entity was passively mentioned while a score of 100 means the entity was prominent in the news story. Values above 75 are considered significantly relevant",VECTOR,100%,2,3
+nws17_d1_reporting_end_time_utc,The end time of the reporting period associated with the event.,VECTOR,100%,2,3
+nws17_d1_reporting_start_time_utc,The start time of the reporting period associated with the event.,VECTOR,100%,1,1
+nws17_d1_rp_story_event_count,Represents the total entity records published by the vendor per news story,VECTOR,100%,17,31
+nws17_d1_rp_story_event_index,Represents the order in which entity records are published by the vendor per news story. This integer can be equal to or less than the RP_STORY_EVENT_COUNT,VECTOR,100%,11,11
+nws17_d1_ssc,A granular score between -1.00 and +1.00 with up to 2 decimal places that represents the news sentiment of a given story by combining various sentiment analysis techniques,VECTOR,100%,1,1
+nws17_d1_timestamp_utc_time,Time of news arrival as received by WorldQuant,VECTOR,100%,3,4
+nws17_ghc_lna,"A sentiment score based on tone for the most relevant entities, derived from BMQ, BEE, BCA, and ANL-CHG classifiers",VECTOR,100%,3,3
+nws17_nip,-1.00 to 1.00 score estimating market impact over the next two hours after the news flash,VECTOR,91%,10,15
+nws17_qcm,"Composite tone-based sentiment score for the most relevant entities, derived from BMQ, BEE, BCA, and ANL-CHG",VECTOR,100%,11,18
+nws17_qep,Sentiment score from the PEQ classifier focused on equities-related positive/negative language,VECTOR,100%,9,16
+nws17_qmb,"M&A/takeover sentiment score: -1 negative, 0 neutral, 1 positive",VECTOR,100%,16,28
+nws17_relevance,0–100 score indicating how central the entity is to the story; higher means more relevant,VECTOR,91%,17,29
+nws17_reporting_end_time_utc,UTC time marking the end of the reporting period referenced by the event,VECTOR,86%,18,29
+nws17_reporting_start_time_utc,UTC start time of the reporting period associated with the event,VECTOR,86%,14,26
+nws17_ssc,Continuous sentiment score from -1.00 to +1.00 (two decimals) combining multiple techniques,VECTOR,100%,17,20
+nws17_timestamp_utc_time,UTC time the news arrived as received by WorldQuant,VECTOR,100%,7,11

@@ -1,0 +1,11 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth335_combined_all_region_hedge,Score from the hedge model component,MATRIX,46%,188,231
+oth335_combined_all_region_linear,Score from the linear model component,MATRIX,46%,368,588
+oth335_combined_all_region_mind,"Final composite Wolfe MIND dividend/income score (daily, point-in-time)",MATRIX,46%,301,441
+oth335_combined_all_region_mktcap,Market capitalization in USD,MATRIX,46%,26,33
+oth335_combined_all_region_shield,Score from the SHIELD (defensive) model,MATRIX,46%,51,65
+oth335_hc_combined_all_region_hedge,Hedge model score (daily point-in-time),MATRIX,45%,495,784
+oth335_hc_combined_all_region_linear,Linear model score (daily point-in-time),MATRIX,45%,164,213
+oth335_hc_combined_all_region_mind,Final composite MIND score (daily point-in-time),MATRIX,45%,346,499
+oth335_hc_combined_all_region_mktcap,Market capitalization in USD,MATRIX,45%,31,41
+oth335_hc_combined_all_region_shield,Defensive SHIELD model score (daily point-in-time),MATRIX,45%,88,112

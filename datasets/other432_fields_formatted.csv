@@ -1,0 +1,1140 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth432_aacr_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Accounts Receivable,MATRIX,65%,26,70
+oth432_aacr_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Accounts Receivable,MATRIX,81%,21,42
+oth432_aacr_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Accounts Receivable,MATRIX,69%,18,36
+oth432_aacr_trkdpitdeltapredict_funda_predict,Predict value of Accounts Receivable,MATRIX,81%,36,83
+oth432_acae_a_profitability_profitability1,1st profitability field of Annual Cash & Equivalents,MATRIX,95%,36,129
+oth432_acae_a_profitability_profitability10,10th profitability field of Annual Cash & Equivalents,MATRIX,59%,23,26
+oth432_acae_a_profitability_profitability11,11th profitability field of Annual Cash & Equivalents,MATRIX,60%,20,31
+oth432_acae_a_profitability_profitability12,12th profitability field of Annual Cash & Equivalents,MATRIX,77%,15,35
+oth432_acae_a_profitability_profitability2,2nd profitability field of Annual Cash & Equivalents,MATRIX,95%,29,37
+oth432_acae_a_profitability_profitability3,3rd profitability field of Annual Cash & Equivalents,MATRIX,92%,24,38
+oth432_acae_a_profitability_profitability4,4th profitability field of Annual Cash & Equivalents,MATRIX,92%,36,93
+oth432_acae_a_profitability_profitability5,5th Profitability Field of Annual Cash & Equivalents,MATRIX,89%,32,61
+oth432_acae_a_profitability_profitability6,6th profitability field of Annual Cash & Equivalents,MATRIX,79%,12,23
+oth432_acae_a_profitability_profitability7,7th Profitability field of Annual Cash & Equivalents,MATRIX,74%,11,38
+oth432_acae_a_profitability_profitability8,8th profitability field of annual cash & equivalents,MATRIX,74%,12,19
+oth432_acae_a_profitability_profitability9,9th profitability field of Annual Cash & Equivalents,MATRIX,81%,12,32
+oth432_acae_mae,Mean Average Error of the model of Cash & Equivalents,MATRIX,38%,5,26
+oth432_acae_predict,Predict value of Cash & Equivalents,MATRIX,88%,24,97
+oth432_acae_q_profitability_profitability1,1st profitability field of Quarterly Cash & Equivalents,MATRIX,86%,19,84
+oth432_acae_q_profitability_profitability10,10th profitability field of Quarterly Cash & Equivalents,MATRIX,60%,17,87
+oth432_acae_q_profitability_profitability11,11th Profitability Field of Quarterly Cash & Equivalents,MATRIX,60%,11,14
+oth432_acae_q_profitability_profitability12,12th profitability field of Quarterly Cash & Equivalents,MATRIX,79%,17,70
+oth432_acae_q_profitability_profitability2,2nd profitability field of Quarterly Cash & Equivalents,MATRIX,86%,22,46
+oth432_acae_q_profitability_profitability3,3rd profitability field of Quarterly Cash & Equivalents,MATRIX,86%,52,122
+oth432_acae_q_profitability_profitability4,4th profitability field of Quarterly Cash & Equivalents,MATRIX,86%,12,19
+oth432_acae_q_profitability_profitability5,5th Profitability Field of Quarterly Cash & Equivalents,MATRIX,84%,28,75
+oth432_acae_q_profitability_profitability6,6th profitability field of Quarterly Cash & Equivalents,MATRIX,74%,21,45
+oth432_acae_q_profitability_profitability7,7th profitability field of Quarterly Cash & Equivalents,MATRIX,76%,7,14
+oth432_acae_q_profitability_profitability8,8th profitability field of Quarterly Cash & Equivalents,MATRIX,76%,21,51
+oth432_acae_q_profitability_profitability9,9th profitability field of Quarterly Cash & Equivalents,MATRIX,86%,16,35
+oth432_acae_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Cash & Equivalents,MATRIX,97%,17,51
+oth432_acae_trkdpitdeltapredict_annual_funda_predict,Predicted value of Annual Cash & Equivalents,MATRIX,95%,6,8
+oth432_acae_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Quarterly Cash & Equivalents,MATRIX,69%,13,14
+oth432_acae_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Quarterly Cash & Equivalents,MATRIX,85%,8,10
+oth432_acae_trkdpitdeltapredict_funda_mae,Mean Average Error of the Model of Quarterly Cash & Equivalents,MATRIX,73%,10,15
+oth432_acae_trkdpitdeltapredict_funda_predict,Predicted Value of Quarterly Cash & Equivalents,MATRIX,85%,18,34
+oth432_accruals_oeps12_mae,Mean Average Error of the model of Earnings Per Share from Operations - 12 Months Moving,MATRIX,55%,12,15
+oth432_accruals_oeps12_predict,Predict value of Earnings Per Share from Operations - 12 Months Moving,MATRIX,89%,13,63
+oth432_acoq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Other Current Assets,MATRIX,65%,6,6
+oth432_acoq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Other Current Assets,MATRIX,100%,25,66
+oth432_acoq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Other Current Assets,MATRIX,70%,6,7
+oth432_acoq_compustatdeltapredict_funda_predict,Predict value of Other Current Assets,MATRIX,93%,16,18
+oth432_acoq_mae,Mean Average Error of the model of Current Assets - Other - Total,MATRIX,47%,9,9
+oth432_acoq_predict,Predicted Value of Current Assets - Other - Total,MATRIX,82%,4,17
+oth432_act_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Current Assets,MATRIX,97%,12,45
+oth432_act_compustatdeltapredict_annual_funda_predict,Predicted value of Annual Current Assets,MATRIX,97%,12,12
+oth432_actq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Current Assets,MATRIX,62%,3,5
+oth432_actq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Current Assets,MATRIX,100%,10,17
+oth432_actq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Current Assets,MATRIX,67%,4,4
+oth432_actq_compustatdeltapredict_funda_predict,Predicted value of Current Assets,MATRIX,100%,18,73
+oth432_ad,Debt to Asset ratio of Predictive models,MATRIX,81%,17,57
+oth432_aint_predict,"Predicted value of Intangibles, Net",MATRIX,87%,17,98
+oth432_aitl_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Total Inventories,MATRIX,47%,9,13
+oth432_aitl_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Total Inventories,MATRIX,60%,3,7
+oth432_aitl_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Total Inventories,MATRIX,50%,4,4
+oth432_aitl_trkdpitdeltapredict_funda_predict,Predicted value of Total Inventories,MATRIX,60%,10,12
+oth432_altman,Altman Z-Score estimates of Predictive Models,MATRIX,75%,17,106
+oth432_ancq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Non-current Assets,MATRIX,57%,2,2
+oth432_ancq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Non-current Assets,MATRIX,100%,12,55
+oth432_ancq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Non-current Assets,MATRIX,65%,3,3
+oth432_ancq_compustatdeltapredict_funda_predict,Predict value of Non-current Assets,MATRIX,100%,17,27
+oth432_ancq_predict,Predicted value of Non-Current Assets - Total,MATRIX,90%,10,27
+oth432_ap_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Accounts Payable,MATRIX,97%,5,5
+oth432_ap_compustatdeltapredict_annual_funda_predict,Predicted value of Annual Accounts Payable,MATRIX,96%,3,3
+oth432_appn_predict,"Predict value of Property/Plant/Equipment, Total - Net",MATRIX,88%,16,48
+oth432_appn_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Property/Plant/Equipment,MATRIX,69%,7,22
+oth432_appn_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Property/Plant/Equipment,MATRIX,93%,9,16
+oth432_appn_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Property/Plant/Equipment,MATRIX,79%,5,7
+oth432_appn_trkdpitdeltapredict_funda_predict,Predicted Value of Property/Plant/Equipment,MATRIX,93%,8,16
+oth432_apq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Accounts Payable,MATRIX,77%,6,42
+oth432_apq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Accounts Payable,MATRIX,100%,12,44
+oth432_apq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Accounts Payable,MATRIX,82%,6,9
+oth432_apq_compustatdeltapredict_funda_predict,Predict value of Accounts Payable,MATRIX,100%,12,25
+oth432_apq_mae,Mean Average Error of the model of Account Payable/Creditors - Trade,MATRIX,55%,2,2
+oth432_apq_predict,Predicted Value of Account Payable/Creditors - Trade,MATRIX,89%,10,14
+oth432_assets_otlo_predict,Predict value of Cash from Operating Activities,MATRIX,89%,15,46
+oth432_assets_revtq_predict,Predicted value of Revenue - Total,MATRIX,90%,7,10
+oth432_at_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Total Assets,MATRIX,97%,6,63
+oth432_at_compustatdeltapredict_annual_funda_predict,Predicted Value of Total Assets,MATRIX,97%,8,11
+oth432_atca_mae,Mean Average Error of the model of Total Current Assets,MATRIX,28%,0,0
+oth432_atca_predict,Predict value of Total Current Assets,MATRIX,88%,8,25
+oth432_atca_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Total Current Assets,MATRIX,62%,7,7
+oth432_atca_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Total Current Assets,MATRIX,78%,13,42
+oth432_atca_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Total Current Assets,MATRIX,66%,3,4
+oth432_atca_trkdpitdeltapredict_funda_predict,Predict value of Total Current Assets,MATRIX,78%,9,19
+oth432_atot_predict,Predicted value of Total Assets,MATRIX,89%,9,146
+oth432_atq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Total Assets,MATRIX,76%,2,28
+oth432_atq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Total Assets,MATRIX,100%,13,18
+oth432_atq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Total Assets,MATRIX,85%,5,16
+oth432_atq_compustatdeltapredict_funda_predict,Predicted Value of Total Assets,MATRIX,100%,14,26
+oth432_atq_predict,Predict value of Assets - Total,MATRIX,90%,8,9
+oth432_atrc_mae,"Mean Average Error of the model of Total Receivables, Net",MATRIX,28%,4,8
+oth432_atrc_predict,"Predicted Value of Total Receivables, Net",MATRIX,88%,3,24
+oth432_aul3_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Assets Level 3 (unobservable),MATRIX,97%,11,28
+oth432_aul3_compustatdeltapredict_annual_funda_predict,Predict value of Assets Level 3 (unobservable),MATRIX,44%,3,3
+oth432_bkvlps_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Book value per share,MATRIX,97%,10,29
+oth432_bkvlps_compustatdeltapredict_annual_funda_predict,Predicted value of book value per share,MATRIX,97%,15,51
+oth432_capital_otlo_predict,Predict value of Cash from Operating Activities,MATRIX,90%,9,97
+oth432_capital_revtq_mae,Mean Average Error of the model of Revenue - Total,MATRIX,42%,4,21
+oth432_capital_revtq_predict,Predict value of Revenue - Total,MATRIX,89%,6,10
+oth432_captq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Capitalized Costs,MATRIX,76%,5,6
+oth432_captq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Capitalized Costs,MATRIX,100%,6,7
+oth432_captq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Capitalized Costs,MATRIX,84%,5,5
+oth432_captq_compustatdeltapredict_funda_predict,Predict value of Capitalized Costs,MATRIX,100%,10,54
+oth432_capx_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Capital Expenditure,MATRIX,97%,4,7
+oth432_capx_compustatdeltapredict_annual_funda_predict,Predicted Value of Capital Expenditure,MATRIX,91%,8,27
+oth432_cash_otlo_mae,Mean Average Error of the model of Cash from Operating Activities,MATRIX,38%,2,2
+oth432_cash_otlo_predict,Predicted value of Cash from Operating Activities,MATRIX,89%,6,9
+oth432_cash_rtlr_mae,Mean Average Error of the model of Total Revenue,MATRIX,38%,3,4
+oth432_cash_rtlr_predict,Predicted value of Total Revenue,MATRIX,88%,9,21
+oth432_cashflows_otlo_mae,Mean Average Error of the model of Cash from Operating Activities,MATRIX,42%,1,1
+oth432_cashflows_otlo_predict,Predicted value of Cash from Operating Activities,MATRIX,89%,9,27
+oth432_cashflows_rtlr_mae,Mean Average Error of the model of Total Revenue,MATRIX,42%,3,8
+oth432_cashflows_rtlr_predict,Predict value of Total Revenue,MATRIX,88%,3,7
+oth432_ceq_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Common Equity,MATRIX,97%,12,52
+oth432_ceq_compustatdeltapredict_annual_funda_predict,Predicted value of Common Equity,MATRIX,97%,9,20
+oth432_cfo_cap,CFO to cap ratio of Predictive models,MATRIX,88%,34,134
+oth432_cfo_yield,CFO Yield of Predictive models,MATRIX,76%,73,234
+oth432_che_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Cash and Short-term Investments,MATRIX,97%,9,21
+oth432_che_compustatdeltapredict_annual_funda_predict,Predict value of Annual Cash and Short-term Investments,MATRIX,97%,8,29
+oth432_che_profitability_profitability1,1st profitability field of Cash and Short-term Investments,MATRIX,97%,4,14
+oth432_che_profitability_profitability10,10th profitability field of Cash and Short-term Investments,MATRIX,66%,8,61
+oth432_che_profitability_profitability11,11th profitability field of Cash and Short-term Investments,MATRIX,73%,30,565
+oth432_che_profitability_profitability12,12th profitability field of Cash and Short-term Investments,MATRIX,92%,9,36
+oth432_che_profitability_profitability2,2nd profitability field of Cash and Short-term Investments,MATRIX,97%,21,30
+oth432_che_profitability_profitability3,3rd profitability field of Cash and Short-term Investments,MATRIX,93%,19,49
+oth432_che_profitability_profitability4,4th profitability field of Cash and Short-term Investments,MATRIX,93%,17,25
+oth432_che_profitability_profitability5,5th profitability field of Cash and Short-term Investments,MATRIX,89%,26,92
+oth432_che_profitability_profitability6,6th profitability field of Cash and Short-term Investments,MATRIX,79%,9,18
+oth432_che_profitability_profitability7,7th profitability field of Cash and Short-term Investments,MATRIX,74%,3,4
+oth432_che_profitability_profitability8,8th profitability field of Cash and Short-term Investments,MATRIX,74%,16,183
+oth432_che_profitability_profitability9,9th profitability field of Cash and Short-term Investments,MATRIX,93%,11,32
+oth432_cheq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Cash and Short-term Investments,MATRIX,79%,2,10
+oth432_cheq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Cash and Short-term Investments,MATRIX,100%,21,84
+oth432_cheq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Cash and Short-term Investments,MATRIX,84%,1,1
+oth432_cheq_compustatdeltapredict_funda_predict,Predicted value of Cash and Short-term Investments,MATRIX,100%,27,74
+oth432_cheq_mae,Mean Average Error of the model of Cash and Short-Term Investments,MATRIX,47%,2,15
+oth432_cheq_predict,Predicted value of Cash and Short-Term Investments,MATRIX,89%,9,24
+oth432_cheq_profitability_profitability1,1st profitability field of Cash and Short-term Investments,MATRIX,100%,23,92
+oth432_cheq_profitability_profitability10,10th profitability field of Cash and Short-term Investments,MATRIX,69%,17,44
+oth432_cheq_profitability_profitability11,11th profitability field of Cash and Short-term Investments,MATRIX,78%,12,41
+oth432_cheq_profitability_profitability12,12th profitability field of Cash and Short-term Investments,MATRIX,97%,19,68
+oth432_cheq_profitability_profitability2,2nd profitability field of Cash and Short-term Investments,MATRIX,100%,19,32
+oth432_cheq_profitability_profitability3,3rd profitability field of Cash and Short-term Investments,MATRIX,99%,23,60
+oth432_cheq_profitability_profitability4,4th profitability field of Cash and Short-term Investments,MATRIX,99%,16,63
+oth432_cheq_profitability_profitability5,5th profitability field of Cash and Short-term Investments,MATRIX,96%,40,79
+oth432_cheq_profitability_profitability6,6th profitability field of Cash and Short-term Investments,MATRIX,84%,20,44
+oth432_cheq_profitability_profitability7,7th profitability field of Cash and Short-term Investments,MATRIX,79%,14,44
+oth432_cheq_profitability_profitability8,8th profitability field of Cash and Short-term Investments,MATRIX,79%,8,34
+oth432_cheq_profitability_profitability9,9th profitability field of Cash and Short-term Investments,MATRIX,99%,25,46
+oth432_ciac_mae,Mean average error of the model of income available to com excl extraordinary items,MATRIX,31%,1,1
+oth432_ciac_predict,Predict value of Income Available to Com Excl ExtraOrd,MATRIX,89%,15,26
+oth432_cogs_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Cost of Goods Sold,MATRIX,97%,10,26
+oth432_cogs_compustatdeltapredict_annual_funda_predict,Predicted value of Annual Cost of Goods Sold,MATRIX,96%,6,17
+oth432_cogsq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Quarterly Cost of Goods Sold,MATRIX,80%,11,86
+oth432_cogsq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Quarterly Cost of Goods Sold,MATRIX,100%,14,38
+oth432_cogsq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Quarterly Cost of Goods Sold,MATRIX,85%,3,4
+oth432_cogsq_compustatdeltapredict_funda_predict,Predict value of Quarterly Cost of Goods Sold,MATRIX,100%,16,25
+oth432_cogsq_mae,Mean Average Error of the model of Cost of Goods Sold,MATRIX,39%,2,3
+oth432_cogsq_predict,Predicted value of Cost of Goods Sold,MATRIX,89%,14,113
+oth432_compustat_models_leverage_payoff1,1st deleveraged profitability measure of Predictive models,MATRIX,75%,6,6
+oth432_compustat_models_leverage_payoff2,2nd deleveraged profitability measure of Predictive models,MATRIX,75%,9,21
+oth432_compustat_models_leverage_payoff3,3rd deleveraged profitability measure of Predictive models,MATRIX,75%,4,7
+oth432_compustat_models_leverage_payoff4,4th deleveraged profitability measure of Predictive models,MATRIX,75%,8,15
+oth432_compustat_models_leverage_payoff5,5th deleveraged profitability measure of Predictive models,MATRIX,75%,9,21
+oth432_compustat_models_profitability1,1st profitability field of Predictive models,MATRIX,86%,7,8
+oth432_compustat_models_profitability10,10th profitability field of Predictive models,MATRIX,83%,9,24
+oth432_compustat_models_profitability11,11th profitability field of Predictive models,MATRIX,80%,5,5
+oth432_compustat_models_profitability12,12th profitability field of Predictive models,MATRIX,80%,10,11
+oth432_compustat_models_profitability13,13th profitability field of Predictive models,MATRIX,80%,5,21
+oth432_compustat_models_profitability14,14th profitability field of Predictive models,MATRIX,80%,5,11
+oth432_compustat_models_profitability15,15th profitability field of Predictive models,MATRIX,80%,4,10
+oth432_compustat_models_profitability2,2nd profitability field of Predictive models,MATRIX,86%,5,5
+oth432_compustat_models_profitability3,3rd profitability field of Predictive models,MATRIX,86%,11,23
+oth432_compustat_models_profitability4,4th profitability field of Predictive models,MATRIX,86%,13,25
+oth432_compustat_models_profitability5,5th profitability field of Predictive models,MATRIX,86%,7,16
+oth432_compustat_models_profitability6,6th profitability field of Predictive models,MATRIX,83%,7,12
+oth432_compustat_models_profitability7,7th profitability field of Predictive models,MATRIX,83%,14,18
+oth432_compustat_models_profitability8,8th profitability field of Predictive models,MATRIX,83%,7,11
+oth432_compustat_models_profitability9,9th profitability field of Predictive models,MATRIX,83%,6,8
+oth432_compustat_models_tot_rev_cap,Total Revenue to market cap ratio of Predictive models,MATRIX,86%,15,18
+oth432_compustat_models_tot_rev_yield,Total Revenue Yield of Predictive models,MATRIX,85%,28,38
+oth432_compustatpredictiveacoq_mad_act,Mean Absolute Deviation of scaled actual value of Other Current Assets,MATRIX,86%,13,42
+oth432_compustatpredictiveacoq_mad_pred,Mean Absolute Deviation of predicted value of Other Current Assets,MATRIX,86%,6,8
+oth432_compustatpredictiveacoq_mae,Mean Average Error of the model of Other Current Assets,MATRIX,86%,8,23
+oth432_compustatpredictiveacoq_prediction,Predicted Value of Other Current Assets,MATRIX,87%,8,14
+oth432_compustatpredictiveancq_mad_act,Mean Absolute Deviation of scaled actual value of Non-current Assets,MATRIX,80%,10,19
+oth432_compustatpredictiveancq_mad_pred,Mean Absolute Deviation of predicted value of Non-current Assets,MATRIX,80%,10,14
+oth432_compustatpredictiveancq_mae,Mean Average Error of the model of Non-current Assets,MATRIX,80%,14,48
+oth432_compustatpredictiveancq_prediction,Predict value of Non-current Assets,MATRIX,80%,12,27
+oth432_compustatpredictiveapq_mad_act,Mean Absolute Deviation of scaled actual value of Accounts Payable,MATRIX,100%,5,5
+oth432_compustatpredictiveapq_mad_pred,Mean Absolute Deviation of predicted value of Accounts Payable,MATRIX,100%,7,10
+oth432_compustatpredictiveapq_mae,Mean Average Error of the model of Accounts Payable,MATRIX,100%,14,21
+oth432_compustatpredictiveapq_prediction,Predicted value of Accounts Payable,MATRIX,100%,6,10
+oth432_compustatpredictiveatq_mad_act,Mean Absolute Deviation of scaled actual value of Total Assets,MATRIX,100%,3,10
+oth432_compustatpredictiveatq_mad_pred,Mean Absolute Deviation of predicted value of Total Assets,MATRIX,100%,14,40
+oth432_compustatpredictiveatq_mae,Mean Average Error of the model of Total Assets,MATRIX,100%,9,24
+oth432_compustatpredictiveatq_prediction,Predicted Value of Total Assets,MATRIX,100%,13,55
+oth432_compustatpredictivecheq_mad_act,Mean Absolute Deviation of scaled actual value of Cash and Short-term Investments,MATRIX,100%,13,68
+oth432_compustatpredictivecheq_mad_pred,Mean Absolute Deviation of predicted value of Cash and Short-term Investments,MATRIX,100%,7,8
+oth432_compustatpredictivecheq_mae,Mean Average Error of the model of Cash and Short-term Investments,MATRIX,100%,7,13
+oth432_compustatpredictivecheq_prediction,Predicted value of Cash and Short-term Investments,MATRIX,100%,4,4
+oth432_compustatpredictivecogsq_mad_act,Mean Absolute Deviation of scaled actual value of Quarterly Cost of Goods Sold,MATRIX,100%,16,75
+oth432_compustatpredictivecogsq_mad_pred,Mean Absolute Deviation of predicted value of Quarterly Cost of Goods Sold,MATRIX,100%,28,66
+oth432_compustatpredictivecogsq_mae,Mean Average Error of the model of Quarterly Cost of Goods Sold,MATRIX,100%,27,61
+oth432_compustatpredictivecogsq_prediction,Predicted value of Quarterly Cost of Goods Sold,MATRIX,100%,6,14
+oth432_compustatpredictivedlttq_mad_act,Mean Absolute Deviation of scaled actual value of Long-term Debt,MATRIX,92%,18,48
+oth432_compustatpredictivedlttq_mad_pred,Mean Absolute Deviation of predicted value of Long-term Debt,MATRIX,92%,16,30
+oth432_compustatpredictivedlttq_mae,Mean Average Error of the model of Long-term Debt,MATRIX,92%,5,20
+oth432_compustatpredictivedlttq_prediction,Predicted Value of Long-term Debt,MATRIX,92%,6,8
+oth432_compustatpredictiveepsfiq_mad_act,"Mean Absolute Deviation of scaled actual value of Earnings per Share (Diluted), including extraordinary items",MATRIX,100%,18,84
+oth432_compustatpredictiveepsfiq_mad_pred,"Mean Absolute Deviation of predicted value of earnings per share (diluted), including extraordinary items",MATRIX,100%,11,16
+oth432_compustatpredictiveepsfiq_mae,"Mean Average Error of the model of earnings per share (diluted), including extraordinary items",MATRIX,100%,6,6
+oth432_compustatpredictiveepsfiq_prediction,"Predicted value of Earnings per Share (Diluted), including extraordinary items",MATRIX,100%,8,19
+oth432_compustatpredictiveepsfxq_mad_act,"Mean Absolute Deviation of scaled actual value of Earnings per Share (Diluted), excluding extraordinary items",MATRIX,100%,8,10
+oth432_compustatpredictiveepsfxq_mad_pred,"Mean Absolute Deviation of predicted value of Earnings per Share (Diluted), excluding extraordinary items",MATRIX,100%,15,29
+oth432_compustatpredictiveepsfxq_mae,"Mean Average Error of the model of Earnings Per Share (Diluted), excluding extraordinary items",MATRIX,100%,8,29
+oth432_compustatpredictiveepsfxq_prediction,"Predicted value of Earnings per Share (Diluted), excluding extraordinary items",MATRIX,100%,4,18
+oth432_compustatpredictiveepspiq_mad_act,"Mean Absolute Deviation of scaled actual value of Earnings per Share (Basic), including extraordinary items",MATRIX,100%,16,25
+oth432_compustatpredictiveepspiq_mad_pred,"Mean Absolute Deviation of Predicted Value of Earnings Per Share (Basic), Including Extraordinary Items",MATRIX,100%,6,6
+oth432_compustatpredictiveepspiq_mae,"Mean Average Error of the model of Earnings per Share (Basic), including extraordinary items",MATRIX,100%,15,27
+oth432_compustatpredictiveepspiq_prediction,"Predict Value of Earnings Per Share (Basic), Including Extraordinary Items",MATRIX,100%,1,1
+oth432_compustatpredictiveepsx12_mad_act,"Mean Absolute Deviation of scaled actual value of Earnings per Share (Basic), excluding extraordinary items, 12 months moving",MATRIX,100%,17,72
+oth432_compustatpredictiveepsx12_mad_pred,"Mean Absolute Deviation of predicted value of earnings per share (basic), excluding extraordinary items, 12 months moving",MATRIX,100%,7,14
+oth432_compustatpredictiveepsx12_mae,"Mean average error of the model of earnings per share (basic), excluding extraordinary items, 12 months moving",MATRIX,100%,37,84
+oth432_compustatpredictiveepsx12_prediction,"Predict value of Earnings per Share (Basic), excluding extraordinary items, 12 months moving",MATRIX,100%,7,13
+oth432_compustatpredictivegdwlq_mad_act,Mean Absolute Deviation of scaled actual value of Goodwill,MATRIX,73%,12,94
+oth432_compustatpredictivegdwlq_mad_pred,Mean Absolute Deviation of predicted value of Goodwill,MATRIX,73%,12,17
+oth432_compustatpredictivegdwlq_mae,Mean Average Error of the model of Goodwill,MATRIX,73%,7,24
+oth432_compustatpredictivegdwlq_prediction,Predicted value of Goodwill,MATRIX,76%,9,24
+oth432_compustatpredictiveintanoq_mad_act,Mean Absolute Deviation of scaled actual value of Other Intangibles,MATRIX,74%,11,26
+oth432_compustatpredictiveintanoq_mad_pred,Mean Absolute Deviation of predicted value of Other Intangibles,MATRIX,74%,10,52
+oth432_compustatpredictiveintanoq_mae,Mean Average Error of the model of Other Intangibles,MATRIX,74%,12,17
+oth432_compustatpredictiveintanoq_prediction,Predict value of Other Intangibles,MATRIX,79%,8,22
+oth432_compustatpredictiveinvtq_mad_act,Mean Absolute Deviation of scaled actual value of Total Inventories,MATRIX,71%,10,19
+oth432_compustatpredictiveinvtq_mad_pred,Mean Absolute Deviation of predicted value of Total Inventories,MATRIX,71%,7,13
+oth432_compustatpredictiveinvtq_mae,Mean Average Error of the model of Total Inventories,MATRIX,71%,10,15
+oth432_compustatpredictiveinvtq_prediction,Predicted value of Total Inventories,MATRIX,72%,10,35
+oth432_compustatpredictivelctq_mad_act,Mean Absolute Deviation of scaled actual value of Total Current Liabilities,MATRIX,82%,8,21
+oth432_compustatpredictivelctq_mad_pred,Mean Absolute Deviation of predicted value of Total Current Liabilities,MATRIX,82%,7,10
+oth432_compustatpredictivelctq_mae,Mean Average Error of the model of Total Current Liabilities,MATRIX,82%,2,8
+oth432_compustatpredictivelctq_prediction,Predicted value of Total Current Liabilities,MATRIX,83%,11,25
+oth432_compustatpredictiveltq_mad_act,Mean Absolute Deviation of scaled actual value of Total Liabilities,MATRIX,100%,9,24
+oth432_compustatpredictiveltq_mad_pred,Mean Absolute Deviation of predicted value of Total Liabilities,MATRIX,100%,6,18
+oth432_compustatpredictiveltq_mae,Mean Average Error of the model of Total Liabilities,MATRIX,100%,14,30
+oth432_compustatpredictiveltq_prediction,Predicted Value of Total Liabilities,MATRIX,100%,2,24
+oth432_compustatpredictiveniq_mad_act,Mean Absolute Deviation of scaled actual value of Net Income,MATRIX,100%,29,47
+oth432_compustatpredictiveniq_mad_pred,Mean Absolute Deviation of predicted value of Net Income,MATRIX,100%,15,52
+oth432_compustatpredictiveniq_mae,Mean Average Error of the model of Net Income,MATRIX,100%,17,28
+oth432_compustatpredictiveniq_prediction,Predict value of Net Income,MATRIX,100%,1,2
+oth432_compustatpredictiveoeps12_mad_act,"Mean Absolute Deviation of scaled actual value of Earnings per Share from Operations, 12 months moving",MATRIX,100%,8,55
+oth432_compustatpredictiveoeps12_mad_pred,"Mean Absolute Deviation of predicted value of Earnings per Share from Operations, 12 months moving",MATRIX,100%,4,5
+oth432_compustatpredictiveoeps12_mae,"Mean Average Error of the model of Earnings per Share from Operations, 12 months moving",MATRIX,100%,23,73
+oth432_compustatpredictiveoeps12_prediction,"Predict value of Earnings per Share from Operations, 12 months moving",MATRIX,100%,16,78
+oth432_compustatpredictiveoiadpq_mad_act,Mean Absolute Deviation of scaled actual value of Operating income after Depreciation,MATRIX,100%,36,75
+oth432_compustatpredictiveoiadpq_mad_pred,Mean Absolute Deviation of predicted value of Operating income after Depreciation,MATRIX,100%,16,27
+oth432_compustatpredictiveoiadpq_mae,Mean Average Error of the model of Operating income after Depreciation,MATRIX,100%,14,25
+oth432_compustatpredictiveoiadpq_prediction,Predicted value of operating income after depreciation,MATRIX,100%,5,33
+oth432_compustatpredictivepiq_mad_act,Mean Absolute Deviation of scaled actual value of Pretax Income,MATRIX,100%,6,31
+oth432_compustatpredictivepiq_mad_pred,Mean Absolute Deviation of predicted value of Pretax Income,MATRIX,100%,3,4
+oth432_compustatpredictivepiq_mae,Mean Average Error of the model of Pretax Income,MATRIX,100%,12,26
+oth432_compustatpredictivepiq_prediction,Predicted value of Pretax Income,MATRIX,100%,3,5
+oth432_compustatpredictiveppentq_mad_act,"Mean Absolute Deviation of scaled actual value of Property, Plant, and Equipment - Total (Net)",MATRIX,95%,13,26
+oth432_compustatpredictiveppentq_mad_pred,Mean Absolute Deviation of predicted value of Property Plant and Equipment - Total (Net),MATRIX,95%,7,10
+oth432_compustatpredictiveppentq_mae,Mean Average Error of the model of Property Plant and Equipment - Total (Net),MATRIX,95%,11,34
+oth432_compustatpredictiveppentq_prediction,Predict value of Property Plant and Equipment - Total (Net),MATRIX,96%,7,13
+oth432_compustatpredictiverectq_mad_act,Mean Absolute Deviation of scaled actual value of Receivables - Total,MATRIX,99%,15,20
+oth432_compustatpredictiverectq_mad_pred,Mean Absolute Deviation of predicted value of Receivables - Total,MATRIX,99%,8,8
+oth432_compustatpredictiverectq_mae,Mean Average Error of the model of Receivables - Total,MATRIX,99%,8,12
+oth432_compustatpredictiverectq_prediction,Predict value of Receivables - Total,MATRIX,100%,5,8
+oth432_compustatpredictiverevtq_mad_act,Mean Absolute Deviation of scaled actual value of Revenue - Total,MATRIX,94%,5,6
+oth432_compustatpredictiverevtq_mad_pred,Mean Absolute Deviation of predicted value of Revenue - Total,MATRIX,94%,14,47
+oth432_compustatpredictiverevtq_mae,Mean Average Error of the model of Revenue - Total,MATRIX,94%,6,12
+oth432_compustatpredictiverevtq_prediction,Predicted value of Revenue - Total,MATRIX,94%,5,6
+oth432_compustatpredictivetxtq_mad_act,Mean Absolute Deviation of scaled actual value of Income Taxes - Total,MATRIX,96%,3,5
+oth432_compustatpredictivetxtq_mad_pred,Mean Absolute Deviation of predicted value of Income Taxes - Total,MATRIX,96%,7,8
+oth432_compustatpredictivetxtq_mae,Mean Average Error of the model of Income Taxes - Total,MATRIX,96%,7,10
+oth432_compustatpredictivetxtq_prediction,Predicted value of Income Taxes - Total,MATRIX,96%,14,22
+oth432_compustatpredictivexintq_mad_act,Mean Absolute Deviation of scaled actual value of Interest and Related Expense - Total,MATRIX,83%,11,17
+oth432_compustatpredictivexintq_mad_pred,Mean Absolute Deviation of predicted value of Interest and Related Expense - Total,MATRIX,83%,9,20
+oth432_compustatpredictivexintq_mae,Mean Average Error of the model of Interest and Related Expense - Total,MATRIX,83%,10,16
+oth432_compustatpredictivexintq_prediction,Predict value of Interest and Related Expense - Total,MATRIX,83%,1,1
+oth432_currents_oeps12_mae,Mean Average Error of the model of Earnings Per Share from Operations - 12 Months Moving,MATRIX,47%,1,1
+oth432_currents_oeps12_predict,Predict value of Earnings Per Share from Operations - 12 Months Moving,MATRIX,89%,7,35
+oth432_currents_otlo_mae,Mean Average Error of the model of Cash from Operating Activities,MATRIX,28%,1,16
+oth432_currents_otlo_predict,Predicted Value of Cash from Operating Activities,MATRIX,89%,5,9
+oth432_ddps1_predict,Predicted value of DPS - Common Stock Primary Issue,MATRIX,55%,17,31
+oth432_ddps1_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of DPS - Common Stock Primary Issue,MATRIX,97%,7,22
+oth432_ddps1_trkdpitdeltapredict_annual_funda_predict,Predicted value of DPS - Common Stock Primary Issue,MATRIX,58%,8,11
+oth432_debt_rtlr_predict,Predicted value of Total Revenue,MATRIX,88%,7,7
+oth432_deltapredictebit_a_mae,Mean Average Error of the model of Earnings before Interest and Tax,MATRIX,29%,3,3
+oth432_deltapredictebit_a_predict,Predicted value of Earnings Before Interest and Tax,MATRIX,100%,7,25
+oth432_deltapredictebit_q_mae,Mean Average Error of the model of Earnings before Interest and Tax,MATRIX,29%,5,5
+oth432_deltapredictebit_q_predict,Predicted value of Earnings before Interest and Tax,MATRIX,100%,15,37
+oth432_deltapredictebit_ttm_mae,Mean Average Error of the model of Earnings before Interest and Tax,MATRIX,29%,2,2
+oth432_deltapredictebit_ttm_predict,Predicted value of Earnings before Interest and Tax,MATRIX,100%,23,68
+oth432_deltapredictebitd_a_mae,"Mean Average Error of the Model of Earnings Before Interest, Tax, and Depreciation",MATRIX,29%,0,0
+oth432_deltapredictebitd_a_predict,"Predicted value of Earnings before Interest, Tax and Depreciation",MATRIX,100%,8,18
+oth432_deltapredictebitd_q_mae,"Mean Average Error of the model of Earnings Before Interest, Tax, and Depreciation",MATRIX,29%,0,0
+oth432_deltapredictebitd_q_predict,"Predicted value of Earnings before Interest, Tax and Depreciation",MATRIX,100%,23,44
+oth432_deltapredictebitd_ttm_mae,"Mean Average Error of the model of Earnings before Interest, Tax and Depreciation",MATRIX,29%,0,0
+oth432_deltapredictebitd_ttm_predict,"Predicted value of Earnings before Interest, Tax, and Depreciation",MATRIX,100%,12,41
+oth432_deltapredictebt_a_mae,Mean Average Error of the model of Earnings before tax,MATRIX,28%,1,1
+oth432_deltapredictebt_a_predict,Predicted Value of Earnings Before Tax,MATRIX,100%,14,23
+oth432_deltapredictebt_q_mae,Mean Average Error of the model of Earnings before tax,MATRIX,28%,0,0
+oth432_deltapredictebt_q_predict,Predicted Value of Earnings Before Tax,MATRIX,100%,15,39
+oth432_deltapredictebt_ttm_mae,Mean Average Error of the model of Earnings before tax,MATRIX,28%,0,0
+oth432_deltapredictebt_ttm_predict,Predicted Value of Earnings Before Tax,MATRIX,100%,29,207
+oth432_deltapredictev_cur_mae,Mean Average Error of the model of Enterprise Value,MATRIX,92%,21,54
+oth432_deltapredictev_cur_predict,Predict value of Enterprise Value,MATRIX,100%,17,29
+oth432_deltapredictfcf_a_mae,Mean Average Error of the model of Free Cash Flow,MATRIX,26%,0,0
+oth432_deltapredictfcf_a_predict,Predicted value of Free Cash Flow,MATRIX,100%,23,83
+oth432_deltapredictfcf_q_mae,Mean Average Error of the model of Free Cash Flow,MATRIX,26%,0,0
+oth432_deltapredictfcf_q_predict,Predicted Value of Free Cash Flow,MATRIX,100%,45,246
+oth432_deltapredictfcf_ttm_mae,Mean Average Error of the model of Free Cash Flow,MATRIX,26%,1,1
+oth432_deltapredictfcf_ttm_predict,Predicted value of Free Cash Flow,MATRIX,100%,44,113
+oth432_deltapredictni_a_mae,Mean Average Error of the model of Net Income,MATRIX,28%,0,0
+oth432_deltapredictni_a_predict,Predict value of Net Income,MATRIX,100%,10,23
+oth432_deltapredictni_q_mae,Mean Average Error of the model of Net Income,MATRIX,28%,1,1
+oth432_deltapredictni_q_predict,Predicted value of Net Income,MATRIX,100%,19,28
+oth432_deltapredictni_ttm_mae,Mean Average Error of the model of Net Income,MATRIX,28%,1,4
+oth432_deltapredictni_ttm_predict,Predicted value of Net Income,MATRIX,100%,23,52
+oth432_deltapredictrev_a_mae,Mean Average Error of the model of Revenue - Total,MATRIX,27%,0,0
+oth432_deltapredictrev_a_predict,Predicted Value of Revenue - Total,MATRIX,100%,19,41
+oth432_deltapredictrev_q_mae,Mean Average Error of the model of Revenue - Total,MATRIX,27%,2,2
+oth432_deltapredictrev_q_predict,Predicted value of Revenue - Total,MATRIX,100%,24,50
+oth432_deltapredictrev_ttm_mae,Mean Average Error of the model of Revenue - Total,MATRIX,27%,1,1
+oth432_deltapredictrev_ttm_predict,Predicted value of Revenue - Total,MATRIX,100%,21,101
+oth432_deltapredicttotd_a_predict,Predicted value of Total Debt,MATRIX,91%,18,31
+oth432_deltapredicttotd_q_predict,Predicted Value of Total Debt,MATRIX,92%,17,57
+oth432_div_yield,Dividend Yield of Predictive models,MATRIX,43%,11,28
+oth432_divp,Dividend to Price ratio of Predictive models,MATRIX,52%,12,23
+oth432_dlc_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Debt in Current Liabilities - Total,MATRIX,97%,17,40
+oth432_dlc_compustatdeltapredict_annual_funda_predict,Predict value of Annual Debt in Current Liabilities - Total,MATRIX,81%,6,13
+oth432_dlcq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Debt in Current Liabilities,MATRIX,51%,2,2
+oth432_dlcq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Debt in Current Liabilities,MATRIX,100%,5,6
+oth432_dlcq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Debt in Current Liabilities,MATRIX,57%,2,8
+oth432_dlcq_compustatdeltapredict_funda_predict,Predicted value of Debt in Current Liabilities,MATRIX,84%,5,11
+oth432_dltt_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Long-Term Debt - Total,MATRIX,97%,10,11
+oth432_dltt_compustatdeltapredict_annual_funda_predict,Predicted value of Annual Long-Term Debt - Total,MATRIX,87%,8,10
+oth432_dlttq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Long-Term Debt - Total,MATRIX,63%,2,24
+oth432_dlttq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Long-Term Debt - Total,MATRIX,100%,12,22
+oth432_dlttq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Long-Term Debt - Total,MATRIX,70%,1,1
+oth432_dlttq_compustatdeltapredict_funda_predict,Predicted value of Long-Term Debt - Total,MATRIX,91%,8,11
+oth432_dlttq_mae,Mean Average Error of the model of Long-Term Debt - Total,MATRIX,42%,4,5
+oth432_dlttq_predict,Predicted value of Long-Term Debt - Total,MATRIX,83%,6,9
+oth432_dpact_compustatdeltapredict_annual_funda_madp,"Mean Absolute Deviation of predicted value of Depreciation, Depletion and Amortization (Accumulated)",MATRIX,97%,9,22
+oth432_dpact_compustatdeltapredict_annual_funda_predict,"Predict value of Depreciation, Depletion, and Amortization (Accumulated)",MATRIX,95%,7,8
+oth432_dpc_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Depreciation and Amortization (Cash Flow),MATRIX,97%,13,47
+oth432_dpc_compustatdeltapredict_annual_funda_predict,Predicted value of Depreciation and Amortization (Cash Flow),MATRIX,96%,9,17
+oth432_dpq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Depreciation and Amortization - Total,MATRIX,66%,1,1
+oth432_dpq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Depreciation and Amortization - Total,MATRIX,100%,16,22
+oth432_dpq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Depreciation and Amortization - Total,MATRIX,73%,1,1
+oth432_dpq_compustatdeltapredict_funda_predict,Predict value of Depreciation and Amortization - Total,MATRIX,100%,15,32
+oth432_earnings_cap1,Earnings to cap ratio of Predictive models,MATRIX,86%,63,315
+oth432_earnings_cap2,Earnings to cap ratio of Predictive models,MATRIX,86%,83,295
+oth432_earnings_cap3,Earnings to cap ratio of Predictive models,MATRIX,86%,70,229
+oth432_earnings_yield1,Earnings Yield of Predictive models,MATRIX,86%,60,196
+oth432_earnings_yield2,Earnings Yield of Predictive models,MATRIX,86%,47,281
+oth432_earnings_yield3,Earnings Yield of Predictive models,MATRIX,86%,139,536
+oth432_ebit_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Earnings Before Interest and Taxes,MATRIX,97%,7,27
+oth432_ebit_compustatdeltapredict_annual_funda_predict,Predicted Value of Annual Earnings Before Interest and Taxes,MATRIX,97%,6,11
+oth432_ebit_profitability_profitability1,1st profitability field of Earnings Before Interest and Taxes,MATRIX,97%,9,30
+oth432_ebit_profitability_profitability10,10th profitability field of Earnings Before Interest and Taxes,MATRIX,66%,4,48
+oth432_ebit_profitability_profitability11,11th profitability field of Earnings Before Interest and Taxes,MATRIX,73%,5,7
+oth432_ebit_profitability_profitability12,12th profitability field of Earnings Before Interest and Taxes,MATRIX,92%,10,14
+oth432_ebit_profitability_profitability2,2nd profitability field of Earnings Before Interest and Taxes,MATRIX,97%,22,46
+oth432_ebit_profitability_profitability3,3rd profitability field of Earnings Before Interest and Taxes,MATRIX,93%,29,59
+oth432_ebit_profitability_profitability4,4th profitability field of Earnings Before Interest and Taxes,MATRIX,93%,6,11
+oth432_ebit_profitability_profitability5,5th profitability field of Earnings Before Interest and Taxes,MATRIX,89%,11,29
+oth432_ebit_profitability_profitability6,6th profitability field of Earnings Before Interest and Taxes,MATRIX,79%,2,2
+oth432_ebit_profitability_profitability7,7th profitability field of Earnings Before Interest and Taxes,MATRIX,74%,6,11
+oth432_ebit_profitability_profitability8,8th profitability field of Earnings Before Interest and Taxes,MATRIX,74%,2,2
+oth432_ebit_profitability_profitability9,9th profitability field of Earnings Before Interest and Taxes,MATRIX,93%,16,26
+oth432_ebitda_cap,EBITDA to cap ratio of Predictive models,MATRIX,88%,19,69
+oth432_ebitda_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Earnings Before Interest,MATRIX,97%,8,12
+oth432_ebitda_compustatdeltapredict_annual_funda_predict,Predicted value of Annual Earnings Before Interest,MATRIX,97%,6,11
+oth432_ebitda_debt,EBITDA to debt ratio of Predictive models,MATRIX,63%,7,17
+oth432_ebitda_ev,EBITDA to EV ratio of Predictive models,MATRIX,89%,40,117
+oth432_ebitda_profitability_profitability1,1st profitability field of Earnings Before Interest,MATRIX,97%,8,92
+oth432_ebitda_profitability_profitability10,10th profitability field of Earnings Before Interest,MATRIX,66%,6,17
+oth432_ebitda_profitability_profitability11,11th profitability field of Earnings Before Interest,MATRIX,73%,18,51
+oth432_ebitda_profitability_profitability12,12th profitability field of Earnings Before Interest,MATRIX,92%,9,40
+oth432_ebitda_profitability_profitability2,2nd profitability field of Earnings Before Interest,MATRIX,97%,16,26
+oth432_ebitda_profitability_profitability3,3rd profitability field of Earnings Before Interest,MATRIX,93%,14,26
+oth432_ebitda_profitability_profitability4,4th profitability field of Earnings Before Interest,MATRIX,93%,6,8
+oth432_ebitda_profitability_profitability5,5th profitability field of Earnings Before Interest,MATRIX,89%,8,16
+oth432_ebitda_profitability_profitability6,6th profitability field of Earnings Before Interest,MATRIX,79%,9,29
+oth432_ebitda_profitability_profitability7,7th profitability field of Earnings Before Interest,MATRIX,74%,8,10
+oth432_ebitda_profitability_profitability8,8th profitability field of Earnings Before Interest,MATRIX,74%,5,14
+oth432_ebitda_profitability_profitability9,9th profitability field of Earnings Before Interest,MATRIX,93%,9,10
+oth432_ebitda_yield,EBITDA Yield of Predictive models,MATRIX,76%,51,159
+oth432_ecor_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Cost of Revenue,MATRIX,64%,8,11
+oth432_ecor_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Cost of Revenue,MATRIX,80%,5,8
+oth432_ecor_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Cost of Revenue,MATRIX,69%,8,94
+oth432_ecor_trkdpitdeltapredict_funda_predict,Predict value of Cost of Revenue,MATRIX,80%,11,23
+oth432_ed,Debt to Equity ratio of Predictive models,MATRIX,81%,4,53
+oth432_efcf,Free Cash Flow Equity of Predictive models,MATRIX,75%,5,5
+oth432_eibt_a_profitability_profitability1,1st profitability field of Annual Net Income Before Taxes,MATRIX,97%,9,27
+oth432_eibt_a_profitability_profitability10,10th profitability field of Annual Net Income Before Taxes,MATRIX,59%,2,8
+oth432_eibt_a_profitability_profitability11,11th profitability field of Annual Net Income Before Taxes,MATRIX,60%,9,15
+oth432_eibt_a_profitability_profitability12,12th profitability field of Annual Net Income Before Taxes,MATRIX,78%,12,24
+oth432_eibt_a_profitability_profitability2,2nd profitability field of Annual Net Income Before Taxes,MATRIX,97%,41,140
+oth432_eibt_a_profitability_profitability3,3rd profitability field of Annual Net Income Before Taxes,MATRIX,93%,46,118
+oth432_eibt_a_profitability_profitability4,4th profitability field of Annual Net Income Before Taxes,MATRIX,93%,3,5
+oth432_eibt_a_profitability_profitability5,5th profitability field of Annual Net Income Before Taxes,MATRIX,90%,6,49
+oth432_eibt_a_profitability_profitability6,6th profitability field of Annual Net Income Before Taxes,MATRIX,81%,9,18
+oth432_eibt_a_profitability_profitability7,7th profitability field of Annual Net Income Before Taxes,MATRIX,75%,7,11
+oth432_eibt_a_profitability_profitability8,8th profitability field of Annual Net Income Before Taxes,MATRIX,75%,7,15
+oth432_eibt_a_profitability_profitability9,9th profitability field of Annual Net Income Before Taxes,MATRIX,81%,17,23
+oth432_eibt_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Net Income Before Taxes,MATRIX,97%,7,16
+oth432_eibt_trkdpitdeltapredict_annual_funda_predict,Predicted value of Net Income Before Taxes,MATRIX,97%,14,100
+oth432_eps_oeps12_mae,Mean Average Error of the model of Earnings Per Share from Operations - 12 Months Moving,MATRIX,67%,5,6
+oth432_eps_oeps12_predict,Predict value of Earnings Per Share from Operations - 12 Months Moving,MATRIX,89%,5,6
+oth432_epsfi_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Earnings Per Share (Diluted) - Including Extraordinary items,MATRIX,97%,9,16
+oth432_epsfi_compustatdeltapredict_annual_funda_predict,Predict value of Earnings Per Share (Diluted) - Including Extraordinary items,MATRIX,97%,14,25
+oth432_epsfiq_mae,Mean Average Error of the model of Earnings Per Share (Diluted) - Including Extraordinary Items,MATRIX,67%,4,42
+oth432_epsfiq_predict,Predicted value of Earnings Per Share (Diluted) - Including Extraordinary Items,MATRIX,89%,7,13
+oth432_epsfxq_mae,Mean Average Error of the model of Earnings Per Share (Diluted) - Excluding Extraordinary items,MATRIX,67%,2,3
+oth432_epsfxq_predict,Predicted value of Earnings Per Share (Diluted) - Excluding Extraordinary items,MATRIX,89%,9,26
+oth432_epspi_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Earnings Per Share (Basic) Including Extraordinary Items,MATRIX,97%,10,13
+oth432_epspi_compustatdeltapredict_annual_funda_predict,Predicted value of Earnings Per Share (Basic) Including Extraordinary Items,MATRIX,97%,6,7
+oth432_epspiq_mae,Mean Average Error of the model of Earnings Per Share (Basic) - Including Extraordinary Items,MATRIX,67%,0,0
+oth432_epspiq_predict,Predicted value of Earnings Per Share (Basic) - Including Extraordinary Items,MATRIX,89%,6,7
+oth432_epsx12_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Earnings Per Share (Basic) Excluding Extraordinary Items 12 Months Moving,MATRIX,76%,3,25
+oth432_epsx12_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Earnings Per Share (Basic) Excluding Extraordinary Items 12 Months Moving,MATRIX,100%,6,8
+oth432_epsx12_compustatdeltapredict_funda_mae,Mean Average Error of the model of Earnings Per Share (Basic) Excluding Extraordinary Items 12 Months Moving,MATRIX,84%,2,2
+oth432_epsx12_compustatdeltapredict_funda_predict,Predict value of Earnings Per Share (Basic) Excluding Extraordinary Items 12 Months Moving,MATRIX,100%,15,30
+oth432_epsx12_mae,Mean Average Error of the model of Earnings Per Share (Basic) - Excluding Extraordinary Items - 12 Months Moving,MATRIX,67%,4,54
+oth432_epsx12_predict,Predicted value of Earnings Per Share (Basic) - excluding extraordinary items - 12 months moving,MATRIX,89%,7,41
+oth432_expense_oeps12_mae,Mean Average Error of the model of Earnings Per Share from Operations - 12 Months Moving,MATRIX,39%,3,3
+oth432_expense_oeps12_predict,Predicted value of Earnings Per Share from Operations - 12 Months Moving,MATRIX,89%,3,4
+oth432_expense_piq_mae,Mean Average Error of the model of Pretax Income,MATRIX,39%,3,9
+oth432_expense_piq_predict,Predicted value of Pretax Income,MATRIX,89%,7,17
+oth432_fcfe_cap,FCFE to cap ratio of Predictive models,MATRIX,75%,5,32
+oth432_fcfe_yield,FCFE yield of Predictive models,MATRIX,75%,8,13
+oth432_fcff_cap,FCFF to cap ratio of Predictive models,MATRIX,76%,13,70
+oth432_fcff_yield,FCFF yield of Predictive models,MATRIX,70%,22,104
+oth432_fcsn_trkdpitdeltapredict_annual_funda_madp,"Mean Absolute Deviation of predicted value of Common Stock, Net",MATRIX,97%,3,3
+oth432_fcsn_trkdpitdeltapredict_annual_funda_predict,"Predicted Value of Common Stock, Net",MATRIX,87%,9,22
+oth432_ffcf,Free cash flow Firm of Predictive models,MATRIX,76%,6,42
+oth432_ffcf_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Other Financing Cash Flow,MATRIX,97%,23,90
+oth432_ffcf_trkdpitdeltapredict_annual_funda_predict,Predicted value of Other Financing Cash Flow,MATRIX,91%,49,121
+oth432_fincf_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Financing Activities - Net Cash Flow,MATRIX,97%,17,27
+oth432_fincf_compustatdeltapredict_annual_funda_predict,Predict value of Financing Activities - Net Cash Flow,MATRIX,97%,8,9
+oth432_fldn_predict,"Predicted value of Long Term Debt, Net",MATRIX,83%,0,0
+oth432_flows_acae_mae,Mean Average Error of the model of Cash & Equivalents,MATRIX,42%,2,17
+oth432_flows_acae_predict,Predicted value of Cash & Equivalents,MATRIX,88%,12,26
+oth432_fprd_predict,"Predict value of Issuance (Retirement) of Debt, Net",MATRIX,84%,5,6
+oth432_fprd_trkdpitdeltapredict_annual_funda_madp,"Mean Absolute Deviation of predicted value of Issuance (Retirement) of Debt, Net",MATRIX,97%,9,15
+oth432_fprd_trkdpitdeltapredict_annual_funda_predict,"Predicted value of Issuance (Retirement) of Debt, Net",MATRIX,90%,16,95
+oth432_fsic_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Sale/Issuance of Common,MATRIX,97%,12,28
+oth432_fsic_trkdpitdeltapredict_annual_funda_predict,Predict value of Sale/Issuance of Common,MATRIX,74%,10,16
+oth432_ftlf_mae,Mean Average Error of the model of Cash from Financing Activities,MATRIX,42%,0,0
+oth432_ftlf_predict,Predict value of Cash from Financing Activities,MATRIX,89%,9,22
+oth432_ftlf_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Cash from Financing Activities,MATRIX,75%,3,8
+oth432_ftlf_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Cash from Financing Activities,MATRIX,95%,14,34
+oth432_ftlf_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Cash from Financing Activities,MATRIX,79%,6,51
+oth432_ftlf_trkdpitdeltapredict_funda_predict,Predict value of Cash from Financing Activities,MATRIX,95%,7,17
+oth432_gdwlq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Goodwill,MATRIX,36%,3,11
+oth432_gdwlq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Goodwill,MATRIX,100%,5,8
+oth432_gdwlq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Goodwill,MATRIX,41%,2,2
+oth432_gdwlq_compustatdeltapredict_funda_predict,Predict value of Goodwill,MATRIX,80%,8,26
+oth432_gdwlq_predict,Predicted Value of Goodwill (Net),MATRIX,74%,2,2
+oth432_gp_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Gross Profit (Loss),MATRIX,97%,4,8
+oth432_gp_compustatdeltapredict_annual_funda_predict,Predicted Value of Gross Profit (Loss),MATRIX,96%,2,5
+oth432_iicf_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Other Investing Cash Flow,MATRIX,97%,6,8
+oth432_iicf_trkdpitdeltapredict_annual_funda_predict,Predicted Value of Other Investing Cash Flow,MATRIX,83%,11,28
+oth432_income_oeps12_mae,Mean Average Error of the model of Earnings Per Share from Operations - 12 Months Moving,MATRIX,59%,5,61
+oth432_income_oeps12_predict,Predict value of Earnings Per Share from Operations - 12 Months Moving,MATRIX,89%,7,15
+oth432_income_otlo_mae,Mean Average Error of the model of Cash from Operating Activities,MATRIX,31%,1,1
+oth432_income_otlo_predict,Predict value of Cash from Operating Activities,MATRIX,89%,4,6
+oth432_income_piq_mae,Mean Average Error of the model of Pretax Income,MATRIX,59%,8,86
+oth432_income_piq_predict,Predict value of Pretax Income,MATRIX,89%,4,6
+oth432_income_revtq_mae,Mean Average Error of the model of Revenue - Total,MATRIX,59%,9,17
+oth432_income_revtq_predict,Predicted value of Revenue - Total,MATRIX,89%,5,12
+oth432_intanoq_predict,Predict value of Other Intangibles,MATRIX,78%,10,84
+oth432_invt_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Inventories - Total,MATRIX,97%,4,5
+oth432_invt_compustatdeltapredict_annual_funda_predict,Predicted Value of Annual Inventories - Total,MATRIX,74%,5,13
+oth432_itli_mae,Mean Average Error of the model of Cash from Investing Activities,MATRIX,42%,2,2
+oth432_itli_predict,Predicted value of cash from investing activities,MATRIX,88%,14,21
+oth432_itli_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Cash from Investing Activities,MATRIX,76%,2,2
+oth432_itli_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Cash from Investing Activities,MATRIX,95%,9,21
+oth432_itli_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Cash from Investing Activities,MATRIX,79%,1,1
+oth432_itli_trkdpitdeltapredict_funda_predict,Predicted value of Cash from Investing Activities,MATRIX,95%,14,47
+oth432_ivncf_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Investing Activities - Net Cash Flow,MATRIX,97%,6,8
+oth432_ivncf_compustatdeltapredict_annual_funda_predict,Predicted Value of Investing Activities - Net Cash Flow,MATRIX,96%,5,9
+oth432_lapb_mae,Mean Average Error of the model of Accounts Payable,MATRIX,28%,3,15
+oth432_lapb_predict,Predicted value of Accounts Payable,MATRIX,86%,12,116
+oth432_lapb_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Accounts Payable,MATRIX,97%,6,9
+oth432_lapb_trkdpitdeltapredict_annual_funda_predict,Predicted value of Annual Accounts Payable,MATRIX,94%,5,5
+oth432_lapb_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Accounts Payable,MATRIX,61%,4,9
+oth432_lapb_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Accounts Payable,MATRIX,77%,4,8
+oth432_lapb_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Accounts Payable,MATRIX,64%,1,2
+oth432_lapb_trkdpitdeltapredict_funda_predict,Predict value of Accounts Payable,MATRIX,77%,10,17
+oth432_lco_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Current Liabilities - Other - Total,MATRIX,97%,4,8
+oth432_lco_compustatdeltapredict_annual_funda_predict,Predict value of Annual Current Liabilities - Other - Total,MATRIX,92%,10,12
+oth432_lcoq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Current Liabilities - Other - Total,MATRIX,68%,4,5
+oth432_lcoq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Current Liabilities - Other - Total,MATRIX,100%,6,7
+oth432_lcoq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Current Liabilities - Other - Total,MATRIX,73%,6,19
+oth432_lcoq_compustatdeltapredict_funda_predict,Predicted Value of Current Liabilities - Other - Total,MATRIX,97%,19,91
+oth432_lct_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Current Liabilities - Total,MATRIX,97%,11,19
+oth432_lct_compustatdeltapredict_annual_funda_predict,Predicted value of Annual Current Liabilities - Total,MATRIX,97%,10,52
+oth432_lctq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Current Liabilities - Total,MATRIX,63%,3,4
+oth432_lctq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Current Liabilities - Total,MATRIX,100%,14,27
+oth432_lctq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Current Liabilities - Total,MATRIX,67%,3,7
+oth432_lctq_compustatdeltapredict_funda_predict,Predicted value of Current Liabilities - Total,MATRIX,100%,14,26
+oth432_lctq_mae,Mean Average Error of the model of Current Liabilities - Total,MATRIX,47%,1,1
+oth432_lctq_predict,Predicted value of Current Liabilities - Total,MATRIX,89%,8,13
+oth432_lo_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Liabilities - Other,MATRIX,97%,3,3
+oth432_lo_compustatdeltapredict_annual_funda_predict,Predict value of Liabilities - Other,MATRIX,94%,8,53
+oth432_lt_compustatdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Liabilities - Total,MATRIX,97%,1,1
+oth432_lt_compustatdeltapredict_annual_funda_predict,Predict value of Annual Liabilities - Total,MATRIX,97%,11,76
+oth432_ltcl_mae,Mean Average Error of the model of Total Current Liabilities,MATRIX,28%,0,0
+oth432_ltcl_predict,Predict value of Total Current Liabilities,MATRIX,88%,3,10
+oth432_ltq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Liabilities - Total,MATRIX,77%,1,1
+oth432_ltq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Liabilities - Total,MATRIX,100%,7,25
+oth432_ltq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Liabilities - Total,MATRIX,84%,6,7
+oth432_ltq_compustatdeltapredict_funda_predict,Predicted Value of Liabilities - Total,MATRIX,100%,19,62
+oth432_ltq_mae,Mean Average Error of the model of Liabilities - Total,MATRIX,42%,2,3
+oth432_ltq_predict,Predicted value of Liabilities - Total,MATRIX,89%,6,42
+oth432_lttd_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Total Long Term Debt,MATRIX,57%,3,4
+oth432_lttd_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Total Long-Term Debt,MATRIX,78%,5,15
+oth432_lttd_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Total Long-Term Debt,MATRIX,63%,4,6
+oth432_lttd_trkdpitdeltapredict_funda_predict,Predicted value of Total Long Term Debt,MATRIX,78%,5,8
+oth432_ninc_mae,Mean Average Error of the model of Net Income (Loss) - Nonconsolidated,MATRIX,31%,4,42
+oth432_ninc_predict,Predict value of Net Income (Loss) - Nonconsolidated,MATRIX,89%,8,32
+oth432_ninc_q_profitability_profitability1,1st profitability field of Income Incl Extra Before Distributions,MATRIX,97%,14,39
+oth432_ninc_q_profitability_profitability10,10th profitability field of Income Incl Extra Before Distributions,MATRIX,62%,2,11
+oth432_ninc_q_profitability_profitability11,11th profitability field of Income Incl Extra Before Distributions,MATRIX,62%,28,130
+oth432_ninc_q_profitability_profitability12,12th profitability field of Income Incl Extra Before Distributions,MATRIX,82%,13,24
+oth432_ninc_q_profitability_profitability2,2nd profitability field of Income Including Extra Before Distributions,MATRIX,97%,76,353
+oth432_ninc_q_profitability_profitability3,3rd profitability field of Income Incl Extra Before Distributions,MATRIX,97%,54,178
+oth432_ninc_q_profitability_profitability4,4th profitability field of Income Incl Extra Before Distributions,MATRIX,97%,18,88
+oth432_ninc_q_profitability_profitability5,5th profitability field of Income Incl Extra Before Distributions,MATRIX,95%,8,44
+oth432_ninc_q_profitability_profitability6,6th profitability field of Income Incl Extra Before Distributions,MATRIX,84%,12,21
+oth432_ninc_q_profitability_profitability7,7th profitability field of Income Including Extra Before Distributions,MATRIX,79%,14,58
+oth432_ninc_q_profitability_profitability8,8th profitability field of Income Incl. Extra Before Distributions,MATRIX,79%,18,33
+oth432_ninc_q_profitability_profitability9,9th profitability field of Income Incl Extra Before Distributions,MATRIX,86%,24,167
+oth432_ninc_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Income Incl Extra Before Distributions,MATRIX,79%,6,81
+oth432_ninc_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Income Including Extra Before Distributions,MATRIX,97%,9,15
+oth432_ninc_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Income Including Extra Before Distributions,MATRIX,83%,3,3
+oth432_ninc_trkdpitdeltapredict_funda_predict,Predicted value of Income Incl Extra Before Distributions,MATRIX,97%,12,26
+oth432_niq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Net Income,MATRIX,81%,6,7
+oth432_niq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Net Income,MATRIX,100%,9,30
+oth432_niq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Net Income,MATRIX,85%,8,17
+oth432_niq_compustatdeltapredict_funda_predict,Predicted Value of Net Income,MATRIX,100%,25,81
+oth432_niq_mae,Mean Average Error of the model of Net Income (Loss),MATRIX,59%,3,48
+oth432_niq_predict,Predict value of Net Income (Loss),MATRIX,89%,4,4
+oth432_niq_profitability_profitability1,1st profitability field of Net Income,MATRIX,100%,9,56
+oth432_niq_profitability_profitability10,10th profitability field of Net Income,MATRIX,69%,13,38
+oth432_niq_profitability_profitability11,11th profitability field of Net Income,MATRIX,78%,17,33
+oth432_niq_profitability_profitability12,12th profitability field of Net Income,MATRIX,97%,14,31
+oth432_niq_profitability_profitability2,2nd profitability field of Net Income,MATRIX,100%,61,256
+oth432_niq_profitability_profitability3,3rd profitability field of Net Income,MATRIX,99%,65,224
+oth432_niq_profitability_profitability4,4th profitability field of Net Income,MATRIX,99%,6,36
+oth432_niq_profitability_profitability5,5th profitability field of Net Income,MATRIX,96%,18,48
+oth432_niq_profitability_profitability6,6th profitability field of Net Income,MATRIX,85%,7,19
+oth432_niq_profitability_profitability7,7th profitability field of Net Income,MATRIX,80%,12,42
+oth432_niq_profitability_profitability8,8th profitability field of Net Income,MATRIX,79%,4,13
+oth432_niq_profitability_profitability9,9th profitability field of Net Income,MATRIX,99%,28,138
+oth432_oiadpq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Operating Income After Depreciation,MATRIX,80%,3,3
+oth432_oiadpq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Operating Income After Depreciation,MATRIX,100%,9,43
+oth432_oiadpq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Operating Income After Depreciation,MATRIX,85%,6,14
+oth432_oiadpq_compustatdeltapredict_funda_predict,Predicted value of Operating Income After Depreciation,MATRIX,100%,14,122
+oth432_oiadpq_mae,Mean Average Error of the model of Operating Income After Depreciation,MATRIX,59%,0,0
+oth432_oiadpq_predict,Predicted value of Operating Income After Depreciation,MATRIX,89%,8,8
+oth432_oiadpq_profitability_profitability1,1st profitability field of Operating Income After Depreciation,MATRIX,100%,19,78
+oth432_oiadpq_profitability_profitability10,10th profitability field of Operating Income After Depreciation,MATRIX,69%,9,74
+oth432_oiadpq_profitability_profitability11,11th profitability field of Operating Income After Depreciation,MATRIX,78%,15,43
+oth432_oiadpq_profitability_profitability12,12th profitability field of Operating Income After Depreciation,MATRIX,97%,22,94
+oth432_oiadpq_profitability_profitability2,2nd profitability field of Operating Income After Depreciation,MATRIX,100%,61,240
+oth432_oiadpq_profitability_profitability3,3rd profitability field of Operating Income After Depreciation,MATRIX,99%,98,358
+oth432_oiadpq_profitability_profitability4,4th profitability field of Operating Income After Depreciation,MATRIX,99%,19,52
+oth432_oiadpq_profitability_profitability5,5th profitability field of Operating Income After Depreciation,MATRIX,96%,25,55
+oth432_oiadpq_profitability_profitability6,6th profitability field of Operating Income After Depreciation,MATRIX,85%,17,48
+oth432_oiadpq_profitability_profitability7,7th profitability field of Operating Income After Depreciation,MATRIX,80%,19,58
+oth432_oiadpq_profitability_profitability8,8th profitability field of Operating Income After Depreciation,MATRIX,79%,14,50
+oth432_oiadpq_profitability_profitability9,9th profitability field of Operating Income After Depreciation,MATRIX,99%,40,288
+oth432_oibdpq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Operating Income Before Depreciation,MATRIX,72%,2,2
+oth432_oibdpq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Operating Income Before Depreciation,MATRIX,100%,8,12
+oth432_oibdpq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Operating Income Before Depreciation,MATRIX,77%,7,7
+oth432_oibdpq_compustatdeltapredict_funda_predict,Predict value of Operating Income Before Depreciation,MATRIX,100%,15,40
+oth432_oibdpq_profitability_profitability1,1st profitability field of Operating Income Before Depreciation,MATRIX,100%,19,73
+oth432_oibdpq_profitability_profitability10,10th profitability field of Operating Income Before Depreciation,MATRIX,69%,11,61
+oth432_oibdpq_profitability_profitability11,11th profitability field of Operating Income Before Depreciation,MATRIX,78%,20,73
+oth432_oibdpq_profitability_profitability12,12th profitability field of Operating Income Before Depreciation,MATRIX,97%,17,54
+oth432_oibdpq_profitability_profitability2,2nd profitability field of Operating Income Before Depreciation,MATRIX,100%,45,129
+oth432_oibdpq_profitability_profitability3,3rd profitability field of Operating Income Before Depreciation,MATRIX,99%,129,612
+oth432_oibdpq_profitability_profitability4,4th profitability field of Operating Income Before Depreciation,MATRIX,99%,27,123
+oth432_oibdpq_profitability_profitability5,5th profitability field of Operating Income Before Depreciation,MATRIX,96%,11,12
+oth432_oibdpq_profitability_profitability6,6th profitability field of Operating Income Before Depreciation,MATRIX,85%,15,20
+oth432_oibdpq_profitability_profitability7,7th profitability field of Operating Income Before Depreciation,MATRIX,80%,13,71
+oth432_oibdpq_profitability_profitability8,8th profitability field of Operating Income Before Depreciation,MATRIX,79%,16,79
+oth432_oibdpq_profitability_profitability9,9th profitability field of Operating Income Before Depreciation,MATRIX,99%,18,70
+oth432_op_yield,Operating Yield of Predictive models,MATRIX,86%,43,158
+oth432_opr_margin,Operating Margin of Predictive models,MATRIX,92%,5,10
+oth432_otlo_a_profitability_profitability1,1st profitability field of Cash from Operating Activities,MATRIX,97%,7,26
+oth432_otlo_a_profitability_profitability10,10th profitability field of Cash from Operating Activities,MATRIX,59%,5,6
+oth432_otlo_a_profitability_profitability11,11th profitability field of Cash from Operating Activities,MATRIX,60%,1,2
+oth432_otlo_a_profitability_profitability12,12th profitability field of Cash from Operating Activities,MATRIX,78%,6,11
+oth432_otlo_a_profitability_profitability2,2nd profitability field of Cash from Operating Activities,MATRIX,97%,22,42
+oth432_otlo_a_profitability_profitability3,3rd profitability field of Cash from Operating Activities,MATRIX,93%,30,97
+oth432_otlo_a_profitability_profitability4,4th profitability field of Cash from Operating Activities,MATRIX,93%,9,12
+oth432_otlo_a_profitability_profitability5,5th profitability field of Cash from Operating Activities,MATRIX,90%,6,13
+oth432_otlo_a_profitability_profitability6,6th profitability field of Cash from Operating Activities,MATRIX,81%,4,4
+oth432_otlo_a_profitability_profitability7,7th profitability field of Cash from Operating Activities,MATRIX,75%,12,78
+oth432_otlo_a_profitability_profitability8,8th profitability field of Cash from Operating Activities,MATRIX,75%,8,8
+oth432_otlo_a_profitability_profitability9,9th profitability field of Cash from Operating Activities,MATRIX,81%,8,12
+oth432_otlo_q_profitability_profitability1,1st profitability field of Cash from Operating Activities,MATRIX,96%,6,6
+oth432_otlo_q_profitability_profitability10,10th profitability field of Cash from Operating Activities,MATRIX,62%,6,12
+oth432_otlo_q_profitability_profitability11,11th profitability field of Cash from Operating Activities,MATRIX,62%,10,21
+oth432_otlo_q_profitability_profitability12,12th profitability field of Cash from Operating Activities,MATRIX,81%,18,32
+oth432_otlo_q_profitability_profitability2,2nd profitability field of Cash from Operating Activities,MATRIX,96%,21,58
+oth432_otlo_q_profitability_profitability3,3rd profitability field of Cash from Operating Activities,MATRIX,96%,21,74
+oth432_otlo_q_profitability_profitability4,4th profitability field of Cash from Operating Activities,MATRIX,96%,11,13
+oth432_otlo_q_profitability_profitability5,5th profitability field of Cash from Operating Activities,MATRIX,94%,8,19
+oth432_otlo_q_profitability_profitability6,6th profitability field of Cash from Operating Activities,MATRIX,84%,6,19
+oth432_otlo_q_profitability_profitability7,7th profitability field of Cash from Operating Activities,MATRIX,78%,5,10
+oth432_otlo_q_profitability_profitability8,8th profitability field of Cash from Operating Activities,MATRIX,78%,4,7
+oth432_otlo_q_profitability_profitability9,9th profitability field of Cash from Operating Activities,MATRIX,86%,11,16
+oth432_otlo_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Cash from Operating Activities,MATRIX,97%,7,28
+oth432_otlo_trkdpitdeltapredict_annual_funda_predict,Predict value of Annual Cash from Operating Activities,MATRIX,97%,10,57
+oth432_otlo_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Cash from Operating Activities,MATRIX,77%,4,5
+oth432_otlo_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Cash from Operating Activities,MATRIX,95%,8,29
+oth432_otlo_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Cash from Operating Activities,MATRIX,80%,6,7
+oth432_otlo_trkdpitdeltapredict_funda_predict,Predicted value of Cash from Operating Activities,MATRIX,95%,11,21
+oth432_ouie_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Unusual Items,MATRIX,97%,7,8
+oth432_ouie_trkdpitdeltapredict_annual_funda_predict,Predicted value of Unusual Items,MATRIX,89%,12,45
+oth432_pbt,Tangible book-to-price ratio of Predictive models,MATRIX,93%,10,59
+oth432_pe_po,Operating Earnings to Price ratio of Predictive models,MATRIX,86%,75,240
+oth432_piq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Pretax Income,MATRIX,80%,6,11
+oth432_piq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Pretax Income,MATRIX,100%,23,42
+oth432_piq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Pretax Income,MATRIX,85%,2,2
+oth432_piq_compustatdeltapredict_funda_predict,Predict value of Pretax Income,MATRIX,100%,24,90
+oth432_piq_profitability_profitability1,1st profitability field of Pretax Income,MATRIX,100%,17,70
+oth432_piq_profitability_profitability10,10th profitability field of Pretax Income,MATRIX,69%,16,21
+oth432_piq_profitability_profitability11,11th profitability field of Pretax Income,MATRIX,78%,20,47
+oth432_piq_profitability_profitability12,12th profitability field of Pre-Tax Income,MATRIX,97%,24,53
+oth432_piq_profitability_profitability2,2nd profitability field of Pretax Income,MATRIX,100%,95,429
+oth432_piq_profitability_profitability3,3rd profitability field of Pretax Income,MATRIX,99%,129,1308
+oth432_piq_profitability_profitability4,4th profitability field of Pretax Income,MATRIX,99%,15,32
+oth432_piq_profitability_profitability5,5th profitability field of Pretax Income,MATRIX,96%,31,87
+oth432_piq_profitability_profitability6,6th profitability field of Pretax Income,MATRIX,85%,17,65
+oth432_piq_profitability_profitability7,7th profitability field of Pretax Income,MATRIX,80%,16,45
+oth432_piq_profitability_profitability8,8th profitability field of Pretax Income,MATRIX,79%,16,107
+oth432_piq_profitability_profitability9,9th profitability field of Pretax Income,MATRIX,99%,37,292
+oth432_ppentq_compustatdeltapredict_funda_mada,"Mean Absolute Deviation of scaled actual value of Property, Plant, and Equipment - Total (Net)",MATRIX,66%,2,2
+oth432_ppentq_compustatdeltapredict_funda_madp,"Mean Absolute Deviation of predicted value of Property, Plant, and Equipment - Total (Net)",MATRIX,100%,15,24
+oth432_ppentq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Property Plant and Equipment - Total (Net),MATRIX,78%,7,9
+oth432_ppentq_compustatdeltapredict_funda_predict,"Predict value of Property, Plant, and Equipment - Total (Net)",MATRIX,100%,16,36
+oth432_ppentq_mae,"Mean Average Error of the model of Property, Plant and Equipment - Total (Net)",MATRIX,42%,2,2
+oth432_ppentq_predict,"Predict value of Property, Plant, and Equipment - Total (Net)",MATRIX,88%,3,13
+oth432_pred_cfo_yield,CFO Yield of Predictive models,MATRIX,90%,14,47
+oth432_pred_fcfe_yield,FCFE yield of Predictive models,MATRIX,86%,4,7
+oth432_pred_fcff_yield,FCFF yield of Predictive models,MATRIX,79%,9,31
+oth432_predictive_models_profitability1,1st profitability field of Predictive models,MATRIX,100%,14,37
+oth432_predictive_models_profitability2,2nd profitability field of Predictive models,MATRIX,87%,3,3
+oth432_predictive_models_profitability3,3rd profitability field of Predictive models,MATRIX,90%,1,4
+oth432_predictive_models_profitability4,4th profitability field of Predictive models,MATRIX,90%,8,10
+oth432_predictive_models_profitability5,5th profitability field of Predictive models,MATRIX,87%,4,5
+oth432_predictive_models_profitability6,6th profitability field of Predictive models,MATRIX,92%,23,75
+oth432_predictiveebit_a_predict,Predicted Value of Earnings Before Interest and Tax,MATRIX,89%,5,13
+oth432_predictiveebit_q_predict,Predict value of Earnings before Interest and Tax,MATRIX,89%,3,4
+oth432_predictiveebit_ttm_predict,Predicted Value of Earnings Before Interest and Tax,MATRIX,89%,8,12
+oth432_predictiveebitd_a_predict,"Predicted value of Earnings before Interest, Tax and Depreciation",MATRIX,90%,4,8
+oth432_predictiveebitd_q_predict,"Predicted Value of Earnings Before Interest, Tax, and Depreciation",MATRIX,90%,6,11
+oth432_predictiveebitd_ttm_predict,"Predict value of Earnings before Interest, Tax and Depreciation",MATRIX,90%,6,31
+oth432_predictiveebt_a_predict,Predict value of Earnings before tax,MATRIX,90%,7,11
+oth432_predictiveebt_q_predict,Predicted value of Earnings before Tax,MATRIX,90%,1,1
+oth432_predictiveebt_ttm_predict,Predicted value of Earnings before Tax,MATRIX,90%,9,17
+oth432_predictiveev_cur_mae,Mean Average Error of the model of Enterprise Value,MATRIX,78%,6,11
+oth432_predictiveev_cur_predict,Predicted value of Enterprise Value,MATRIX,89%,11,25
+oth432_predictivefcf_a_predict,Predicted Value of Free Cash Flow,MATRIX,90%,4,5
+oth432_predictivefcf_q_predict,Predicted value of Free Cash Flow,MATRIX,90%,5,9
+oth432_predictivefcf_ttm_predict,Predict value of Free Cash Flow,MATRIX,90%,6,8
+oth432_predictiveni_a_predict,Predicted value of Net Income,MATRIX,90%,2,3
+oth432_predictiveni_q_predict,Predict value of Net Income,MATRIX,90%,11,11
+oth432_predictiveni_ttm_predict,Predicted value of Net Income,MATRIX,90%,4,7
+oth432_predictiverev_a_predict,Predicted value of Revenue - Total,MATRIX,89%,7,14
+oth432_predictiverev_q_predict,Predict value of Revenue - Total,MATRIX,89%,4,9
+oth432_predictiverev_ttm_predict,Predict value of Revenue - Total,MATRIX,89%,5,8
+oth432_predictivetotd_a_predict,Predicted Value of Total Debt,MATRIX,83%,7,16
+oth432_predictivetotd_q_predict,Predict value of Total Debt,MATRIX,84%,12,23
+oth432_qcom_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Other Comprehensive Income,MATRIX,97%,7,15
+oth432_qcom_trkdpitdeltapredict_annual_funda_predict,Predicted value of Other Comprehensive Income,MATRIX,90%,6,7
+oth432_qpic_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Additional Paid-In Capital,MATRIX,97%,8,28
+oth432_qpic_trkdpitdeltapredict_annual_funda_predict,Predict value of Additional Paid-In Capital,MATRIX,94%,12,14
+oth432_qtco_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Total Common Shares Outstanding,MATRIX,59%,10,48
+oth432_qtco_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Total Common Shares Outstanding,MATRIX,92%,6,8
+oth432_qtco_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Total Common Shares Outstanding,MATRIX,74%,5,8
+oth432_qtco_trkdpitdeltapredict_funda_predict,Predicted value of Total Common Shares Outstanding,MATRIX,92%,6,18
+oth432_qtel_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Total Liabilities & Shareholders' Equity,MATRIX,74%,5,8
+oth432_qtel_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Total Liabilities & Shareholders' Equity,MATRIX,97%,5,16
+oth432_qtel_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Total Liabilities & Shareholders' Equity,MATRIX,83%,2,3
+oth432_qtel_trkdpitdeltapredict_funda_predict,Predicted value of total liabilities & shareholders' equity,MATRIX,97%,19,46
+oth432_qtle_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Total Equity,MATRIX,72%,2,3
+oth432_qtle_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Total Equity,MATRIX,97%,4,7
+oth432_qtle_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Total Equity,MATRIX,83%,4,7
+oth432_qtle_trkdpitdeltapredict_funda_predict,Predicted value of Total Equity,MATRIX,97%,14,16
+oth432_qtll_predict,Predict value of Total Equity & Minority Interest,MATRIX,90%,6,23
+oth432_rasv2splitprofitabilityebit_q_profitability1,1st profitability field of Earnings before Interest and Tax,MATRIX,89%,12,74
+oth432_rasv2splitprofitabilityebit_q_profitability10,10th profitability field of Earnings before Interest and Tax,MATRIX,51%,2,5
+oth432_rasv2splitprofitabilityebit_q_profitability11,11th profitability field of Earnings before Interest and Tax,MATRIX,49%,3,6
+oth432_rasv2splitprofitabilityebit_q_profitability12,12th profitability field of Earnings before Interest and Tax,MATRIX,68%,6,11
+oth432_rasv2splitprofitabilityebit_q_profitability2,2nd profitability field of Earnings before Interest and Tax,MATRIX,89%,31,50
+oth432_rasv2splitprofitabilityebit_q_profitability3,3rd profitability field of Earnings before Interest and Tax,MATRIX,81%,24,52
+oth432_rasv2splitprofitabilityebit_q_profitability4,4th profitability field of Earnings before Interest and Tax,MATRIX,81%,5,14
+oth432_rasv2splitprofitabilityebit_q_profitability5,5th profitability field of Earnings before Interest and Tax,MATRIX,78%,6,7
+oth432_rasv2splitprofitabilityebit_q_profitability6,6th profitability field of Earnings before Interest and Tax,MATRIX,71%,5,7
+oth432_rasv2splitprofitabilityebit_q_profitability7,7th profitability field of Earnings before Interest and Tax,MATRIX,64%,6,13
+oth432_rasv2splitprofitabilityebit_q_profitability8,8th profitability field of Earnings before Interest and Tax,MATRIX,64%,7,9
+oth432_rasv2splitprofitabilityebit_q_profitability9,9th profitability field of Earnings before Interest and Tax,MATRIX,81%,6,8
+oth432_rasv2splitprofitabilityebit_ttm_profitability1,"1st profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,89%,3,3
+oth432_rasv2splitprofitabilityebit_ttm_profitability10,"10th profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,52%,7,9
+oth432_rasv2splitprofitabilityebit_ttm_profitability11,"11th profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,50%,3,3
+oth432_rasv2splitprofitabilityebit_ttm_profitability12,"12th profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,68%,2,3
+oth432_rasv2splitprofitabilityebit_ttm_profitability2,"2nd profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,89%,24,53
+oth432_rasv2splitprofitabilityebit_ttm_profitability3,"3rd profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,81%,21,32
+oth432_rasv2splitprofitabilityebit_ttm_profitability4,"4th profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,81%,10,27
+oth432_rasv2splitprofitabilityebit_ttm_profitability5,"5th profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,79%,5,8
+oth432_rasv2splitprofitabilityebit_ttm_profitability6,"6th profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,71%,9,27
+oth432_rasv2splitprofitabilityebit_ttm_profitability7,"7th profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,64%,4,6
+oth432_rasv2splitprofitabilityebit_ttm_profitability8,"8th profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,64%,6,7
+oth432_rasv2splitprofitabilityebit_ttm_profitability9,"9th profitability field of Earnings before Interest and Tax, trailing 12 months",MATRIX,81%,7,8
+oth432_rasv2splitprofitabilityebitd_q_profitability1,"1st profitability field of Earnings Before Interest, Tax, and Depreciation",MATRIX,90%,7,10
+oth432_rasv2splitprofitabilityebitd_q_profitability10,"10th profitability field of earnings before interest, tax and depreciation",MATRIX,51%,2,3
+oth432_rasv2splitprofitabilityebitd_q_profitability11,"11th profitability field of Earnings before Interest, Tax, and Depreciation",MATRIX,49%,6,17
+oth432_rasv2splitprofitabilityebitd_q_profitability12,"12th profitability field of Earnings Before Interest, Tax, and Depreciation",MATRIX,68%,5,6
+oth432_rasv2splitprofitabilityebitd_q_profitability2,"2nd profitability field of Earnings Before Interest, Tax and Depreciation",MATRIX,90%,25,33
+oth432_rasv2splitprofitabilityebitd_q_profitability3,"3rd profitability field of earnings before interest, tax and depreciation",MATRIX,81%,72,210
+oth432_rasv2splitprofitabilityebitd_q_profitability4,"4th profitability field of Earnings Before Interest, Tax, and Depreciation",MATRIX,81%,10,22
+oth432_rasv2splitprofitabilityebitd_q_profitability5,"5th Profitability Field of Earnings Before Interest, Tax and Depreciation",MATRIX,78%,4,6
+oth432_rasv2splitprofitabilityebitd_q_profitability6,"6th profitability field of Earnings Before Interest, Tax and Depreciation",MATRIX,71%,10,20
+oth432_rasv2splitprofitabilityebitd_q_profitability7,"7th profitability field of Earnings Before Interest, Tax, and Depreciation",MATRIX,64%,4,4
+oth432_rasv2splitprofitabilityebitd_q_profitability8,"8th profitability field of Earnings Before Interest, Tax and Depreciation",MATRIX,64%,6,8
+oth432_rasv2splitprofitabilityebitd_q_profitability9,"9th profitability field of Earnings Before Interest, Tax and Depreciation",MATRIX,81%,5,5
+oth432_rasv2splitprofitabilityebitd_ttm_profitability1,"1st profitability field of Earnings before Interest, Tax and Depreciation, trailing 12 months",MATRIX,90%,10,16
+oth432_rasv2splitprofitabilityebitd_ttm_profitability10,"10th profitability field of Earnings Before Interest, Tax, and Depreciation, trailing 12 months",MATRIX,52%,7,11
+oth432_rasv2splitprofitabilityebitd_ttm_profitability11,"11th profitability field of earnings before interest, tax and depreciation, trailing 12 months",MATRIX,50%,3,4
+oth432_rasv2splitprofitabilityebitd_ttm_profitability12,"12th profitability field of Earnings before Interest, Tax and Depreciation, trailing 12 months",MATRIX,68%,4,11
+oth432_rasv2splitprofitabilityebitd_ttm_profitability2,"2nd Profitability Field of Earnings Before Interest, Tax and Depreciation, Trailing 12 Months",MATRIX,90%,15,30
+oth432_rasv2splitprofitabilityebitd_ttm_profitability3,"3rd Profitability field of Earnings before Interest, Tax and Depreciation, trailing 12 months",MATRIX,81%,24,51
+oth432_rasv2splitprofitabilityebitd_ttm_profitability4,"4th profitability field of Earnings Before Interest, Tax, and Depreciation, trailing 12 months",MATRIX,81%,5,12
+oth432_rasv2splitprofitabilityebitd_ttm_profitability5,"5th profitability field of Earnings before Interest, Tax and Depreciation, trailing 12 months",MATRIX,79%,9,21
+oth432_rasv2splitprofitabilityebitd_ttm_profitability6,"6th Profitability field of Earnings Before Interest, Tax, and Depreciation, trailing 12 months",MATRIX,71%,2,4
+oth432_rasv2splitprofitabilityebitd_ttm_profitability7,"7th profitability field of earnings before interest, tax and depreciation, trailing 12 months",MATRIX,64%,6,15
+oth432_rasv2splitprofitabilityebitd_ttm_profitability8,"8th Profitability Field of Earnings Before Interest, Tax, and Depreciation, Trailing 12 Months",MATRIX,64%,1,2
+oth432_rasv2splitprofitabilityebitd_ttm_profitability9,"9th profitability field of Earnings Before Interest, Tax and Depreciation, trailing 12 months",MATRIX,81%,7,10
+oth432_rasv2splitprofitabilityebt_q_profitability1,1st profitability field of Earnings before tax,MATRIX,90%,5,8
+oth432_rasv2splitprofitabilityebt_q_profitability10,10th profitability field of Earnings before tax,MATRIX,51%,5,6
+oth432_rasv2splitprofitabilityebt_q_profitability11,11th profitability field of Earnings before tax,MATRIX,49%,9,28
+oth432_rasv2splitprofitabilityebt_q_profitability12,12th profitability field of Earnings before tax,MATRIX,68%,9,13
+oth432_rasv2splitprofitabilityebt_q_profitability2,2nd profitability field of Earnings before tax,MATRIX,90%,44,154
+oth432_rasv2splitprofitabilityebt_q_profitability3,3rd profitability field of Earnings before tax,MATRIX,81%,25,45
+oth432_rasv2splitprofitabilityebt_q_profitability4,4th profitability field of Earnings before tax,MATRIX,81%,0,0
+oth432_rasv2splitprofitabilityebt_q_profitability5,5th profitability field of Earnings before tax,MATRIX,78%,1,1
+oth432_rasv2splitprofitabilityebt_q_profitability6,6th profitability field of Earnings before tax,MATRIX,71%,7,17
+oth432_rasv2splitprofitabilityebt_q_profitability7,7th profitability field of Earnings before tax,MATRIX,64%,7,32
+oth432_rasv2splitprofitabilityebt_q_profitability8,8th profitability field of Earnings before tax,MATRIX,64%,6,8
+oth432_rasv2splitprofitabilityebt_q_profitability9,9th profitability field of Earnings before tax,MATRIX,81%,21,68
+oth432_rasv2splitprofitabilityebt_ttm_profitability1,"1st profitability field of Earnings before tax, trailing 12 months",MATRIX,90%,8,8
+oth432_rasv2splitprofitabilityebt_ttm_profitability10,"10th profitability field of Earnings before tax, trailing 12 months",MATRIX,52%,3,3
+oth432_rasv2splitprofitabilityebt_ttm_profitability11,"11th profitability field of Earnings before tax, trailing 12 months",MATRIX,50%,5,7
+oth432_rasv2splitprofitabilityebt_ttm_profitability12,"12th profitability field of Earnings before tax, trailing 12 months",MATRIX,68%,8,25
+oth432_rasv2splitprofitabilityebt_ttm_profitability2,"2nd profitability field of Earnings before tax, trailing 12 months",MATRIX,90%,57,192
+oth432_rasv2splitprofitabilityebt_ttm_profitability3,"3rd profitability field of Earnings before tax, trailing 12 months",MATRIX,81%,25,42
+oth432_rasv2splitprofitabilityebt_ttm_profitability4,"4th profitability field of Earnings before tax, trailing 12 months",MATRIX,81%,1,5
+oth432_rasv2splitprofitabilityebt_ttm_profitability5,"5th profitability field of Earnings before tax, trailing 12 months",MATRIX,79%,3,3
+oth432_rasv2splitprofitabilityebt_ttm_profitability6,"6th profitability field of Earnings before tax, trailing 12 months",MATRIX,71%,5,13
+oth432_rasv2splitprofitabilityebt_ttm_profitability7,"7th profitability field of Earnings before tax, trailing 12 months",MATRIX,64%,4,11
+oth432_rasv2splitprofitabilityebt_ttm_profitability8,"8th profitability field of Earnings before tax, trailing 12 months",MATRIX,64%,3,3
+oth432_rasv2splitprofitabilityebt_ttm_profitability9,"9th profitability field of Earnings before tax, trailing 12 months",MATRIX,81%,13,54
+oth432_rasv2splitprofitabilityfcf_q_profitability1,1st profitability field of Free Cash Flow,MATRIX,90%,5,9
+oth432_rasv2splitprofitabilityfcf_q_profitability10,10th profitability field of Free Cash Flow,MATRIX,51%,12,74
+oth432_rasv2splitprofitabilityfcf_q_profitability11,11th profitability field of Free Cash Flow,MATRIX,49%,7,11
+oth432_rasv2splitprofitabilityfcf_q_profitability12,12th profitability field of Free Cash Flow,MATRIX,68%,9,18
+oth432_rasv2splitprofitabilityfcf_q_profitability2,2nd profitability field of Free Cash Flow,MATRIX,90%,18,37
+oth432_rasv2splitprofitabilityfcf_q_profitability3,3rd profitability field of Free Cash Flow,MATRIX,81%,35,122
+oth432_rasv2splitprofitabilityfcf_q_profitability4,4th profitability field of Free Cash Flow,MATRIX,81%,23,230
+oth432_rasv2splitprofitabilityfcf_q_profitability5,5th profitability field of Free Cash Flow,MATRIX,78%,0,0
+oth432_rasv2splitprofitabilityfcf_q_profitability6,6th profitability field of Free Cash Flow,MATRIX,71%,8,16
+oth432_rasv2splitprofitabilityfcf_q_profitability7,7th profitability field of Free Cash Flow,MATRIX,64%,22,61
+oth432_rasv2splitprofitabilityfcf_q_profitability8,8th profitability field of Free Cash Flow,MATRIX,64%,3,20
+oth432_rasv2splitprofitabilityfcf_q_profitability9,9th profitability field of Free Cash Flow,MATRIX,81%,3,4
+oth432_rasv2splitprofitabilityfcf_ttm_profitability1,"1st profitability field of Free Cash Flow, trailing 12 months",MATRIX,90%,6,8
+oth432_rasv2splitprofitabilityfcf_ttm_profitability10,"10th profitability field of Free Cash Flow, trailing 12 months",MATRIX,52%,7,9
+oth432_rasv2splitprofitabilityfcf_ttm_profitability11,"11th profitability field of Free Cash Flow, trailing 12 months",MATRIX,50%,3,26
+oth432_rasv2splitprofitabilityfcf_ttm_profitability12,"12th profitability field of Free Cash Flow, trailing 12 months",MATRIX,68%,9,15
+oth432_rasv2splitprofitabilityfcf_ttm_profitability2,"2nd profitability field of Free Cash Flow, trailing 12 months",MATRIX,90%,38,183
+oth432_rasv2splitprofitabilityfcf_ttm_profitability3,"3rd profitability field of Free Cash Flow, trailing 12 months",MATRIX,81%,29,83
+oth432_rasv2splitprofitabilityfcf_ttm_profitability4,"4th profitability field of Free Cash Flow, trailing 12 months",MATRIX,81%,9,18
+oth432_rasv2splitprofitabilityfcf_ttm_profitability5,"5th profitability field of Free Cash Flow, trailing 12 months",MATRIX,79%,14,44
+oth432_rasv2splitprofitabilityfcf_ttm_profitability6,"6th profitability field of Free Cash Flow, trailing 12 months",MATRIX,71%,7,11
+oth432_rasv2splitprofitabilityfcf_ttm_profitability7,"7th profitability field of Free Cash Flow, trailing 12 months",MATRIX,64%,8,21
+oth432_rasv2splitprofitabilityfcf_ttm_profitability8,"8th profitability field of Free Cash Flow, trailing 12 months",MATRIX,64%,15,39
+oth432_rasv2splitprofitabilityfcf_ttm_profitability9,"9th profitability field of Free Cash Flow, trailing 12 months",MATRIX,81%,8,18
+oth432_rasv2splitprofitabilityni_q_profitability1,1st profitability field of Net Income,MATRIX,90%,7,12
+oth432_rasv2splitprofitabilityni_q_profitability10,10th profitability field of Net Income,MATRIX,51%,5,6
+oth432_rasv2splitprofitabilityni_q_profitability11,11th profitability field of Net Income,MATRIX,49%,2,3
+oth432_rasv2splitprofitabilityni_q_profitability12,12th profitability field of Net Income,MATRIX,68%,8,10
+oth432_rasv2splitprofitabilityni_q_profitability2,2nd profitability field of Net Income,MATRIX,90%,47,164
+oth432_rasv2splitprofitabilityni_q_profitability3,3rd profitability field of Net Income,MATRIX,81%,20,49
+oth432_rasv2splitprofitabilityni_q_profitability4,4th profitability field of Net Income,MATRIX,81%,5,5
+oth432_rasv2splitprofitabilityni_q_profitability5,5th profitability field of Net Income,MATRIX,78%,9,16
+oth432_rasv2splitprofitabilityni_q_profitability6,6th profitability field of Net Income,MATRIX,71%,3,3
+oth432_rasv2splitprofitabilityni_q_profitability7,7th profitability field of Net Income,MATRIX,64%,3,3
+oth432_rasv2splitprofitabilityni_q_profitability8,8th profitability field of Net Income,MATRIX,64%,12,39
+oth432_rasv2splitprofitabilityni_q_profitability9,9th profitability field of Net Income,MATRIX,81%,13,28
+oth432_rasv2splitprofitabilityni_ttm_profitability1,"1st profitability field of Net Income, trailing 12 months",MATRIX,90%,11,20
+oth432_rasv2splitprofitabilityni_ttm_profitability10,"10th profitability field of Net Income, trailing 12 months",MATRIX,52%,14,24
+oth432_rasv2splitprofitabilityni_ttm_profitability11,"11th profitability field of Net Income, trailing 12 months",MATRIX,50%,4,4
+oth432_rasv2splitprofitabilityni_ttm_profitability12,"12th profitability field of Net Income, trailing 12 months",MATRIX,68%,7,9
+oth432_rasv2splitprofitabilityni_ttm_profitability2,"2nd profitability field of Net Income, trailing 12 months",MATRIX,90%,45,101
+oth432_rasv2splitprofitabilityni_ttm_profitability3,"3rd profitability field of Net Income, trailing 12 months",MATRIX,81%,33,63
+oth432_rasv2splitprofitabilityni_ttm_profitability4,"4th profitability field of Net Income, trailing 12 months",MATRIX,81%,3,3
+oth432_rasv2splitprofitabilityni_ttm_profitability5,"5th profitability field of Net Income, trailing 12 months",MATRIX,79%,4,6
+oth432_rasv2splitprofitabilityni_ttm_profitability6,"6th profitability field of Net Income, trailing 12 months",MATRIX,71%,8,14
+oth432_rasv2splitprofitabilityni_ttm_profitability7,"7th profitability field of Net Income, trailing 12 months",MATRIX,64%,2,2
+oth432_rasv2splitprofitabilityni_ttm_profitability8,"8th profitability field of Net Income, trailing 12 months",MATRIX,64%,5,6
+oth432_rasv2splitprofitabilityni_ttm_profitability9,"9th profitability field of Net Income, trailing 12 months",MATRIX,81%,5,8
+oth432_rasv2splitprofitabilityrev_q_profitability1,1st profitability field of Revenue - Total,MATRIX,89%,5,15
+oth432_rasv2splitprofitabilityrev_q_profitability10,10th profitability field of Revenue - Total,MATRIX,51%,8,17
+oth432_rasv2splitprofitabilityrev_q_profitability11,11th profitability field of Revenue - Total,MATRIX,49%,1,1
+oth432_rasv2splitprofitabilityrev_q_profitability12,12th profitability field of Revenue - Total,MATRIX,68%,7,10
+oth432_rasv2splitprofitabilityrev_q_profitability2,2nd profitability field of Revenue - Total,MATRIX,89%,15,21
+oth432_rasv2splitprofitabilityrev_q_profitability3,3rd profitability field of Revenue - Total,MATRIX,80%,27,50
+oth432_rasv2splitprofitabilityrev_q_profitability4,4th profitability field of Revenue - Total,MATRIX,80%,9,13
+oth432_rasv2splitprofitabilityrev_q_profitability5,5th profitability field of Revenue - Total,MATRIX,78%,25,113
+oth432_rasv2splitprofitabilityrev_q_profitability6,6th profitability field of Revenue - Total,MATRIX,71%,9,25
+oth432_rasv2splitprofitabilityrev_q_profitability7,7th profitability field of Revenue - Total,MATRIX,64%,6,11
+oth432_rasv2splitprofitabilityrev_q_profitability8,8th profitability field of Revenue - Total,MATRIX,64%,10,22
+oth432_rasv2splitprofitabilityrev_q_profitability9,9th profitability field of Revenue - Total,MATRIX,80%,15,16
+oth432_rasv2splitprofitabilityrev_ttm_profitability1,"1st profitability field of Revenue - Total, trailing 12 months",MATRIX,89%,7,10
+oth432_rasv2splitprofitabilityrev_ttm_profitability10,"10th profitability field of Revenue - Total, trailing 12 months",MATRIX,51%,12,57
+oth432_rasv2splitprofitabilityrev_ttm_profitability11,"11th profitability field of Revenue - Total, trailing 12 months",MATRIX,50%,3,6
+oth432_rasv2splitprofitabilityrev_ttm_profitability12,"12th profitability field of Revenue - Total, trailing 12 months",MATRIX,68%,5,20
+oth432_rasv2splitprofitabilityrev_ttm_profitability2,"2nd profitability field of Revenue - Total, trailing 12 months",MATRIX,89%,12,24
+oth432_rasv2splitprofitabilityrev_ttm_profitability3,"3rd profitability field of Revenue - Total, trailing 12 months",MATRIX,81%,9,9
+oth432_rasv2splitprofitabilityrev_ttm_profitability4,"4th profitability field of Revenue - Total, trailing 12 months",MATRIX,80%,10,14
+oth432_rasv2splitprofitabilityrev_ttm_profitability5,"5th profitability field of Revenue - Total, trailing 12 months",MATRIX,78%,10,13
+oth432_rasv2splitprofitabilityrev_ttm_profitability6,"6th profitability field of Revenue - Total, trailing 12 months",MATRIX,71%,6,35
+oth432_rasv2splitprofitabilityrev_ttm_profitability7,"7th profitability field of Revenue - Total, trailing 12 months",MATRIX,64%,3,4
+oth432_rasv2splitprofitabilityrev_ttm_profitability8,"8th profitability field of Revenue - Total, trailing 12 months",MATRIX,64%,7,12
+oth432_rasv2splitprofitabilityrev_ttm_profitability9,"9th profitability field of Revenue - Total, trailing 12 months",MATRIX,80%,6,6
+oth432_rc,Current Ratio of Predictive models,MATRIX,73%,7,70
+oth432_rectq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Receivables - Total,MATRIX,75%,3,39
+oth432_rectq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Receivables - Total,MATRIX,100%,9,16
+oth432_rectq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Receivables - Total,MATRIX,81%,3,6
+oth432_rectq_compustatdeltapredict_funda_predict,Predicted value of Receivables - Total,MATRIX,100%,19,28
+oth432_rectq_mae,Mean Average Error of the model of Receivables - Total,MATRIX,55%,2,2
+oth432_rectq_predict,Predict value of Receivables - Total,MATRIX,88%,8,13
+oth432_rid,Defensive Interval Ratio of Predictive models,MATRIX,80%,11,35
+oth432_rnts_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Net Sales,MATRIX,65%,4,7
+oth432_rnts_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Net Sales,MATRIX,82%,2,11
+oth432_rnts_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Net Sales,MATRIX,70%,7,24
+oth432_rnts_trkdpitdeltapredict_funda_predict,Predicted value of Net Sales,MATRIX,82%,6,53
+oth432_rtlr_q_profitability_profitability1,1st profitability field of Total Revenue,MATRIX,89%,9,13
+oth432_rtlr_q_profitability_profitability10,10th profitability field of Total Revenue,MATRIX,62%,14,25
+oth432_rtlr_q_profitability_profitability11,11th profitability field of Total Revenue,MATRIX,62%,6,8
+oth432_rtlr_q_profitability_profitability12,12th profitability field of Total Revenue,MATRIX,82%,14,20
+oth432_rtlr_q_profitability_profitability2,2nd profitability field of Total Revenue,MATRIX,89%,20,48
+oth432_rtlr_q_profitability_profitability3,3rd profitability field of Total Revenue,MATRIX,89%,17,38
+oth432_rtlr_q_profitability_profitability4,4th profitability field of Total Revenue,MATRIX,89%,20,25
+oth432_rtlr_q_profitability_profitability5,5th profitability field of Total Revenue,MATRIX,86%,47,159
+oth432_rtlr_q_profitability_profitability6,6th profitability field of Total Revenue,MATRIX,77%,8,8
+oth432_rtlr_q_profitability_profitability7,7th profitability field of Total Revenue,MATRIX,77%,9,16
+oth432_rtlr_q_profitability_profitability8,8th profitability field of Total Revenue,MATRIX,77%,7,9
+oth432_rtlr_q_profitability_profitability9,9th profitability field of Total Revenue,MATRIX,85%,7,14
+oth432_rtlr_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Total Revenue,MATRIX,70%,7,95
+oth432_rtlr_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Total Revenue,MATRIX,89%,7,21
+oth432_rtlr_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Total Revenue,MATRIX,76%,4,14
+oth432_rtlr_trkdpitdeltapredict_funda_predict,Predict value of Total Revenue,MATRIX,89%,7,10
+oth432_saleq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Sales/Turnover (Net),MATRIX,77%,10,80
+oth432_saleq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Sales/Turnover (Net),MATRIX,100%,9,12
+oth432_saleq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Sales/Turnover (Net),MATRIX,84%,3,7
+oth432_saleq_compustatdeltapredict_funda_predict,Predicted Value of Sales/Turnover (Net),MATRIX,100%,14,45
+oth432_saleq_profitability_profitability1,1st profitability field of Sales/Turnover (Net),MATRIX,100%,16,80
+oth432_saleq_profitability_profitability10,10th profitability field of Sales/Turnover (Net),MATRIX,69%,6,10
+oth432_saleq_profitability_profitability11,11th profitability field of Sales/Turnover (Net),MATRIX,77%,10,78
+oth432_saleq_profitability_profitability12,12th profitability field of Sales/Turnover (Net),MATRIX,97%,11,28
+oth432_saleq_profitability_profitability2,2nd profitability field of Sales/Turnover (Net),MATRIX,100%,24,57
+oth432_saleq_profitability_profitability3,3rd profitability field of Sales/Turnover (Net),MATRIX,97%,48,123
+oth432_saleq_profitability_profitability4,4th profitability field of Sales/Turnover (Net),MATRIX,98%,36,87
+oth432_saleq_profitability_profitability5,5th profitability field of Sales/Turnover (Net),MATRIX,94%,68,211
+oth432_saleq_profitability_profitability6,6th profitability field of Sales/Turnover (Net),MATRIX,84%,12,42
+oth432_saleq_profitability_profitability7,7th profitability field of Sales/Turnover (Net),MATRIX,78%,11,16
+oth432_saleq_profitability_profitability8,8th profitability field of Sales/Turnover (Net),MATRIX,78%,11,31
+oth432_saleq_profitability_profitability9,9th profitability field of Sales/Turnover (Net),MATRIX,97%,10,58
+oth432_sales_ev,Sales to Enterprise value ratio of Predictive models,MATRIX,89%,11,13
+oth432_sbda_a_profitability_profitability1,1st profitability field of Normalized EBITDA,MATRIX,96%,8,75
+oth432_sbda_a_profitability_profitability10,10th profitability field of Normalized EBITDA,MATRIX,59%,3,3
+oth432_sbda_a_profitability_profitability11,11th profitability field of Normalized EBITDA,MATRIX,60%,5,5
+oth432_sbda_a_profitability_profitability12,12th profitability field of Normalized EBITDA,MATRIX,78%,5,5
+oth432_sbda_a_profitability_profitability2,2nd profitability field of Normalized EBITDA,MATRIX,96%,15,23
+oth432_sbda_a_profitability_profitability3,3rd profitability field of Normalized EBITDA,MATRIX,93%,20,26
+oth432_sbda_a_profitability_profitability4,4th profitability field of Normalized EBITDA,MATRIX,93%,11,19
+oth432_sbda_a_profitability_profitability5,5th profitability field of Normalized EBITDA,MATRIX,90%,6,12
+oth432_sbda_a_profitability_profitability6,6th profitability field of Normalized EBITDA,MATRIX,80%,5,6
+oth432_sbda_a_profitability_profitability7,7th profitability field of Normalized EBITDA,MATRIX,75%,4,4
+oth432_sbda_a_profitability_profitability8,8th profitability field of Normalized EBITDA,MATRIX,75%,8,20
+oth432_sbda_a_profitability_profitability9,9th profitability field of Normalized EBITDA,MATRIX,80%,16,25
+oth432_sbda_mae,Mean Average Error of the model of Normalized EBITDA,MATRIX,31%,2,2
+oth432_sbda_predict,Predict value of Normalized EBITDA,MATRIX,88%,9,15
+oth432_sbda_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Annual Normalized EBITDA,MATRIX,97%,4,7
+oth432_sbda_trkdpitdeltapredict_annual_funda_predict,Predicted value of Annual Normalized EBITDA,MATRIX,96%,6,24
+oth432_scex_predict,Predicted Value of Capital Expenditures,MATRIX,90%,9,21
+oth432_scex_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Capital Expenditures,MATRIX,74%,5,45
+oth432_scex_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Capital Expenditures,MATRIX,92%,4,8
+oth432_scex_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Capital Expenditures,MATRIX,77%,1,1
+oth432_scex_trkdpitdeltapredict_funda_predict,Predict value of Capital Expenditures,MATRIX,92%,7,12
+oth432_scip_trkdpitdeltapredict_funda_mada,"Mean Absolute Deviation of scaled actual value of Cash Interest Paid, Supplemental",MATRIX,37%,2,2
+oth432_scip_trkdpitdeltapredict_funda_madp,"Mean Absolute Deviation of predicted value of Cash Interest Paid, Supplemental",MATRIX,64%,3,11
+oth432_scip_trkdpitdeltapredict_funda_mae,"Mean Average Error of the model of Cash Interest Paid, Supplemental",MATRIX,39%,3,9
+oth432_scip_trkdpitdeltapredict_funda_predict,"Predicted value of Cash Interest Paid, Supplemental",MATRIX,64%,4,8
+oth432_scor_mae,"Mean Average Error of the model of Cost of Revenue, Total",MATRIX,31%,1,1
+oth432_scor_predict,"Predicted Value of Cost of Revenue, Total",MATRIX,87%,4,5
+oth432_scsi_mae,Mean Average Error of the Model of Cash and Short-Term Investments,MATRIX,38%,2,2
+oth432_scsi_predict,Predicted value of Cash and Short Term Investments,MATRIX,88%,11,26
+oth432_scsi_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Cash and Short-Term Investments,MATRIX,70%,6,58
+oth432_scsi_trkdpitdeltapredict_funda_madp,Mean absolute deviation of predicted value of cash and short-term investments,MATRIX,87%,5,8
+oth432_scsi_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Cash and Short Term Investments,MATRIX,74%,5,6
+oth432_scsi_trkdpitdeltapredict_funda_predict,Predicted Value of Cash and Short-Term Investments,MATRIX,87%,19,38
+oth432_sctp_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Cash Taxes Paid,MATRIX,97%,8,14
+oth432_sctp_trkdpitdeltapredict_annual_funda_predict,Predict value of Cash Taxes Paid,MATRIX,94%,4,16
+oth432_scui_mae,Mean Average Error of the model of Total Current Assets less Inventory,MATRIX,28%,2,8
+oth432_scui_predict,Predict value of Total Current Assets less Inventory,MATRIX,88%,13,63
+oth432_sdaj_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Dilution Adjustment,MATRIX,97%,19,34
+oth432_sdaj_trkdpitdeltapredict_annual_funda_predict,Predict value of Dilution Adjustment,MATRIX,27%,3,3
+oth432_sfcf_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Financing Cash Flow Items,MATRIX,97%,10,17
+oth432_sfcf_trkdpitdeltapredict_annual_funda_predict,Predicted value of Financing Cash Flow Items,MATRIX,91%,48,144
+oth432_sgpp_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Gross Margin,MATRIX,64%,5,14
+oth432_sgpp_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Gross Margin,MATRIX,79%,2,2
+oth432_sgpp_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Gross Margin,MATRIX,68%,5,11
+oth432_sgpp_trkdpitdeltapredict_funda_predict,Predicted value of Gross Margin,MATRIX,79%,17,37
+oth432_sgrp_mae,Mean Average Error of the model of Gross Profit,MATRIX,31%,1,1
+oth432_sgrp_predict,Predict value of Gross Profit,MATRIX,87%,7,12
+oth432_sgrp_q_profitability_profitability1,1st profitability field of Gross Margin,MATRIX,81%,8,68
+oth432_sgrp_q_profitability_profitability10,10th profitability field of Gross Margin,MATRIX,59%,8,11
+oth432_sgrp_q_profitability_profitability11,11th profitability field of Gross Margin,MATRIX,59%,6,11
+oth432_sgrp_q_profitability_profitability12,12th profitability field of Gross Margin,MATRIX,79%,16,50
+oth432_sgrp_q_profitability_profitability2,2nd profitability field of Gross Margin,MATRIX,81%,15,32
+oth432_sgrp_q_profitability_profitability3,3rd profitability field of Gross Margin,MATRIX,81%,29,84
+oth432_sgrp_q_profitability_profitability4,4th profitability field of Gross Margin,MATRIX,81%,36,104
+oth432_sgrp_q_profitability_profitability5,5th profitability field of Gross Margin,MATRIX,78%,72,369
+oth432_sgrp_q_profitability_profitability6,6th profitability field of Gross Margin,MATRIX,70%,9,11
+oth432_sgrp_q_profitability_profitability7,7th profitability field of Gross Margin,MATRIX,73%,7,15
+oth432_sgrp_q_profitability_profitability8,8th profitability field of Gross Margin,MATRIX,73%,15,40
+oth432_sgrp_q_profitability_profitability9,9th profitability field of Gross Margin,MATRIX,78%,13,45
+oth432_sgrp_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Gross Margin,MATRIX,64%,4,6
+oth432_sgrp_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Gross Margin,MATRIX,81%,12,21
+oth432_sgrp_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Gross Margin,MATRIX,69%,8,37
+oth432_sgrp_trkdpitdeltapredict_funda_predict,Predict value of Gross Margin,MATRIX,80%,15,37
+oth432_sicf_trkdpitdeltapredict_annual_funda_madp,"Mean Absolute Deviation of predicted value of Other Investing Cash Flow Items, Total",MATRIX,97%,2,5
+oth432_sicf_trkdpitdeltapredict_annual_funda_predict,"Predicted value of Other Investing Cash Flow Items, Total",MATRIX,96%,4,9
+oth432_sncc_mae,Mean Average Error of the model of Net Change in Cash,MATRIX,38%,1,1
+oth432_sncc_predict,Predict value of Net Change in Cash,MATRIX,88%,7,8
+oth432_sncc_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Net Change in Cash,MATRIX,97%,11,18
+oth432_sncc_trkdpitdeltapredict_annual_funda_predict,Predict value of Net Change in Cash,MATRIX,97%,11,18
+oth432_snce_mae,Mean Average Error of the model of Net Cash - Ending Balance,MATRIX,38%,1,1
+oth432_snce_predict,Predicted value of Net Cash - Ending Balance,MATRIX,88%,9,64
+oth432_sntd_predict,Predicted value of Net Debt Incl. Pref. Stock & Min. Interest,MATRIX,88%,2,2
+oth432_sntd_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Net Debt Incl. Pref. Stock & Min. Interest,MATRIX,97%,10,20
+oth432_sntd_trkdpitdeltapredict_annual_funda_predict,Predict value of net debt incl. pref. stock & min. interest,MATRIX,97%,11,43
+oth432_socf_predict,Predicted value of Changes in Working Capital,MATRIX,90%,18,129
+oth432_socf_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Changes in Working Capital,MATRIX,97%,16,25
+oth432_socf_trkdpitdeltapredict_annual_funda_predict,Predicted Value of Changes in Working Capital,MATRIX,97%,9,12
+oth432_socf_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Changes in Working Capital,MATRIX,77%,2,8
+oth432_socf_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Changes in Working Capital,MATRIX,95%,5,5
+oth432_socf_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Changes in Working Capital,MATRIX,80%,3,3
+oth432_socf_trkdpitdeltapredict_funda_predict,Predicted value of Changes in Working Capital,MATRIX,95%,12,84
+oth432_sola_trkdpitdeltapredict_annual_funda_madp,"Mean Absolute Deviation of predicted value of Other Long-Term Assets, Total",MATRIX,97%,12,16
+oth432_sola_trkdpitdeltapredict_annual_funda_predict,"Predict value of Other Long Term Assets, Total",MATRIX,95%,10,21
+oth432_sptm_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Pretax Margin,MATRIX,97%,5,9
+oth432_sptm_trkdpitdeltapredict_annual_funda_predict,Predict value of Pretax Margin,MATRIX,97%,21,41
+oth432_srev_mae,Mean Average Error of the model of Revenue,MATRIX,31%,1,2
+oth432_srev_predict,Predict value of Revenue,MATRIX,88%,5,7
+oth432_srev_q_profitability_profitability1,1st profitability field of Revenue,MATRIX,86%,12,50
+oth432_srev_q_profitability_profitability10,10th profitability field of Revenue,MATRIX,62%,4,9
+oth432_srev_q_profitability_profitability11,11th profitability field of Revenue,MATRIX,62%,3,6
+oth432_srev_q_profitability_profitability12,12th profitability field of Revenue,MATRIX,81%,15,54
+oth432_srev_q_profitability_profitability2,2nd profitability field of Revenue,MATRIX,86%,10,12
+oth432_srev_q_profitability_profitability3,3rd profitability field of Revenue,MATRIX,86%,34,98
+oth432_srev_q_profitability_profitability4,4th profitability field of Revenue,MATRIX,86%,17,47
+oth432_srev_q_profitability_profitability5,5th profitability field of Revenue,MATRIX,83%,27,76
+oth432_srev_q_profitability_profitability6,6th profitability field of Revenue,MATRIX,74%,9,29
+oth432_srev_q_profitability_profitability7,7th profitability field of Revenue,MATRIX,77%,5,19
+oth432_srev_q_profitability_profitability8,8th profitability field of Revenue,MATRIX,77%,7,22
+oth432_srev_q_profitability_profitability9,9th profitability field of Revenue,MATRIX,83%,10,85
+oth432_srev_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Revenue,MATRIX,68%,3,3
+oth432_srev_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Revenue,MATRIX,86%,11,26
+oth432_srev_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Revenue,MATRIX,74%,6,10
+oth432_srev_trkdpitdeltapredict_funda_predict,Predicted Value of Revenue,MATRIX,86%,13,22
+oth432_stbp_predict,"Predict value of Tangible Book Value per Share, Common Eq",MATRIX,89%,5,21
+oth432_stld_predict,Predicted value of Total Debt,MATRIX,82%,9,16
+oth432_stld_trkdpitdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Total Debt,MATRIX,63%,3,3
+oth432_stld_trkdpitdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Total Debt,MATRIX,83%,5,8
+oth432_stld_trkdpitdeltapredict_funda_mae,Mean Average Error of the model of Total Debt,MATRIX,68%,5,10
+oth432_stld_trkdpitdeltapredict_funda_predict,Predict value of Total Debt,MATRIX,83%,9,10
+oth432_total_coverage,Total Coverage of Predictive models,MATRIX,79%,3,3
+oth432_trkdpit_models_leverage_payoff1,1st deleveraged profitability measure of Predictive models,MATRIX,52%,8,13
+oth432_trkdpit_models_leverage_payoff2,2nd deleveraged profitability measure of Predictive models,MATRIX,52%,6,11
+oth432_trkdpit_models_leverage_payoff3,3rd deleveraged profitability measure of Predictive models,MATRIX,49%,4,14
+oth432_trkdpit_models_leverage_payoff4,4th deleveraged profitability measure of Predictive models,MATRIX,51%,1,1
+oth432_trkdpit_models_leverage_payoff5,5th deleveraged profitability measure of Predictive models,MATRIX,52%,2,2
+oth432_trkdpit_models_profitability1,1st profitability field of Predictive models,MATRIX,85%,15,80
+oth432_trkdpit_models_profitability10,10th profitability field of Predictive models,MATRIX,75%,3,3
+oth432_trkdpit_models_profitability11,11th profitability field of Predictive models,MATRIX,73%,4,8
+oth432_trkdpit_models_profitability12,12th profitability field of Predictive models,MATRIX,50%,7,18
+oth432_trkdpit_models_profitability13,13th profitability field of Predictive models,MATRIX,85%,2,8
+oth432_trkdpit_models_profitability14,14th profitability field of Predictive models,MATRIX,83%,2,2
+oth432_trkdpit_models_profitability15,15th profitability field of Predictive models,MATRIX,52%,7,8
+oth432_trkdpit_models_profitability2,2nd profitability field of Predictive models,MATRIX,83%,11,35
+oth432_trkdpit_models_profitability3,3rd profitability field of Predictive models,MATRIX,52%,13,27
+oth432_trkdpit_models_profitability4,4th profitability field of Predictive models,MATRIX,85%,3,3
+oth432_trkdpit_models_profitability5,5th profitability field of Predictive models,MATRIX,83%,10,41
+oth432_trkdpit_models_profitability6,6th profitability field of Predictive models,MATRIX,52%,2,2
+oth432_trkdpit_models_profitability7,7th profitability field of Predictive models,MATRIX,76%,7,10
+oth432_trkdpit_models_profitability8,8th profitability field of Predictive models,MATRIX,74%,2,2
+oth432_trkdpit_models_profitability9,9th profitability field of Predictive models,MATRIX,49%,3,10
+oth432_trkdpit_models_tot_rev_cap,Total Revenue to market cap ratio of Predictive models,MATRIX,88%,8,14
+oth432_trkdpit_models_tot_rev_yield,Total Revenue Yield of Predictive models,MATRIX,76%,21,40
+oth432_trkdpitpredictiveaccpayable_mad_act,Mean Absolute Deviation of scaled actual value of Account Payable,MATRIX,83%,10,51
+oth432_trkdpitpredictiveaccpayable_mad_pred,Mean Absolute Deviation of predicted value of Account Payable,MATRIX,83%,12,26
+oth432_trkdpitpredictiveaccpayable_mae,Mean Average Error of the Model of Accounts Payable,MATRIX,83%,30,72
+oth432_trkdpitpredictiveaccpayable_prediction,Predicted Value of Account Payable,MATRIX,84%,7,10
+oth432_trkdpitpredictivecapex_mad_act,Mean Absolute Deviation of scaled actual value of Capital Expenditure,MATRIX,95%,11,36
+oth432_trkdpitpredictivecapex_mad_pred,Mean Absolute Deviation of predicted value of Capital Expenditure,MATRIX,95%,11,16
+oth432_trkdpitpredictivecapex_mae,Mean Average Error of the model of Capital Expenditure,MATRIX,95%,6,6
+oth432_trkdpitpredictivecapex_prediction,Predicted value of Capital Expenditure,MATRIX,97%,8,46
+oth432_trkdpitpredictivecfo_mad_act,Mean Absolute Deviation of scaled actual value of CFO,MATRIX,97%,24,46
+oth432_trkdpitpredictivecfo_mad_pred,Mean Absolute Deviation of predicted value of CFO,MATRIX,97%,7,13
+oth432_trkdpitpredictivecfo_mae,Mean Average Error of the model of CFO,MATRIX,97%,22,134
+oth432_trkdpitpredictivecfo_prediction,Predict value of CFO,MATRIX,100%,9,27
+oth432_trkdpitpredictivecogs_mad_act,Mean Absolute Deviation of scaled actual value of Cost of Goods sold,MATRIX,64%,9,15
+oth432_trkdpitpredictivecogs_mad_pred,Mean Absolute Deviation of predicted value of Cost of Goods sold,MATRIX,64%,16,55
+oth432_trkdpitpredictivecogs_mae,Mean Average Error of the model of Cost of Goods sold,MATRIX,64%,9,23
+oth432_trkdpitpredictivecogs_prediction,Predicted value of Cost of Goods Sold,MATRIX,65%,11,47
+oth432_trkdpitpredictivecurrassets_mad_act,Mean Absolute Deviation of scaled actual value of Current Assets,MATRIX,80%,12,92
+oth432_trkdpitpredictivecurrassets_mad_pred,Mean Absolute Deviation of predicted value of Current Assets,MATRIX,80%,9,35
+oth432_trkdpitpredictivecurrassets_mae,Mean Average Error of the model of Current Assets,MATRIX,80%,11,23
+oth432_trkdpitpredictivecurrassets_prediction,Predicted value of Current Assets,MATRIX,82%,11,26
+oth432_trkdpitpredictivecurrliabilities_mad_act,Mean Absolute Deviation of scaled actual value of Current Liabilities,MATRIX,80%,10,46
+oth432_trkdpitpredictivecurrliabilities_mad_pred,Mean Absolute Deviation of predicted value of Current Liabilities,MATRIX,80%,7,10
+oth432_trkdpitpredictivecurrliabilities_mae,Mean Average Error of the model of Current Liabilities,MATRIX,80%,8,12
+oth432_trkdpitpredictivecurrliabilities_prediction,Predicted value of Current Liabilities,MATRIX,82%,4,9
+oth432_trkdpitpredictivedebtissuance_mad_act,Mean Absolute Deviation of scaled actual value of Debt Issuance,MATRIX,91%,31,83
+oth432_trkdpitpredictivedebtissuance_mad_pred,Mean Absolute Deviation of predicted value of Debt Issuance,MATRIX,91%,7,8
+oth432_trkdpitpredictivedebtissuance_mae,Mean Average Error of the model of Debt Issuance,MATRIX,91%,7,19
+oth432_trkdpitpredictivedebtissuance_prediction,Predict value of Debt Issuance,MATRIX,90%,7,16
+oth432_trkdpitpredictivedps_mad_act,Mean Absolute Deviation of scaled actual value of Dividend per share,MATRIX,53%,7,33
+oth432_trkdpitpredictivedps_mad_pred,Mean Absolute Deviation of predicted value of Dividend per share,MATRIX,53%,8,12
+oth432_trkdpitpredictivedps_mae,Mean Average Error of the model of Dividend per share,MATRIX,53%,4,10
+oth432_trkdpitpredictivedps_prediction,Predicted Value of Dividend Per Share,MATRIX,52%,6,14
+oth432_trkdpitpredictiveebit_mad_act,Mean Absolute Deviation of scaled actual value of Earnings before Interest and Tax,MATRIX,88%,12,50
+oth432_trkdpitpredictiveebit_mad_pred,Mean Absolute Deviation of predicted value of Earnings before Interest and Tax,MATRIX,88%,16,57
+oth432_trkdpitpredictiveebit_mae,Mean Average Error of the model of Earnings before Interest and Tax,MATRIX,88%,10,24
+oth432_trkdpitpredictiveebit_prediction,Predicted Value of Earnings Before Interest and Tax,MATRIX,90%,11,70
+oth432_trkdpitpredictiveebitda_mad_act,Mean Absolute Deviation of scaled actual value of Earnings Before Interest,MATRIX,88%,9,41
+oth432_trkdpitpredictiveebitda_mad_pred,Mean Absolute Deviation of predicted value of Earnings Before Interest,MATRIX,88%,15,19
+oth432_trkdpitpredictiveebitda_mae,Mean Average Error of the model of Earnings Before Interest,MATRIX,88%,11,24
+oth432_trkdpitpredictiveebitda_prediction,Predicted value of Earnings Before Interest,MATRIX,90%,7,13
+oth432_trkdpitpredictiveev_mad_act,Mean Absolute Deviation of scaled actual value of Enterprise Value,MATRIX,90%,9,12
+oth432_trkdpitpredictiveev_mad_pred,Mean Absolute Deviation of predicted value of Enterprise Value,MATRIX,90%,13,22
+oth432_trkdpitpredictiveev_mae,Mean Average Error of the model of Enterprise Value,MATRIX,90%,9,34
+oth432_trkdpitpredictiveev_prediction,Predicted value of enterprise value,MATRIX,90%,11,34
+oth432_trkdpitpredictivefcfe_mad_act,Mean Absolute Deviation of scaled actual value of Free Cash Flow Equity,MATRIX,86%,25,72
+oth432_trkdpitpredictivefcfe_mad_pred,Mean Absolute Deviation of predicted value of Free Cash Flow Equity,MATRIX,86%,13,20
+oth432_trkdpitpredictivefcfe_mae,Mean Average Error of the model of Free Cash Flow Equity,MATRIX,86%,17,56
+oth432_trkdpitpredictivefcfe_prediction,Predicted value of Free Cash Flow Equity,MATRIX,87%,5,40
+oth432_trkdpitpredictivefcff_mad_act,Mean Absolute Deviation of scaled actual value of Free Cash Flow Firm,MATRIX,85%,7,12
+oth432_trkdpitpredictivefcff_mad_pred,Mean Absolute Deviation of predicted value of Free Cash Flow Firm,MATRIX,85%,3,3
+oth432_trkdpitpredictivefcff_mae,Mean Average Error of the model of Free Cash Flow Firm,MATRIX,85%,4,10
+oth432_trkdpitpredictivefcff_prediction,Predicted value of Free Cash Flow Firm,MATRIX,87%,10,19
+oth432_trkdpitpredictiveltcashnequivalents_mad_act,Mean Absolute Deviation of scaled actual value of Long-term Cash & Equivalents,MATRIX,78%,12,21
+oth432_trkdpitpredictiveltcashnequivalents_mad_pred,Mean Absolute Deviation of predicted value of Long-term Cash & Equivalents,MATRIX,78%,14,56
+oth432_trkdpitpredictiveltcashnequivalents_mae,Mean Average Error of the model of Long-term Cash & Equivalents,MATRIX,78%,14,35
+oth432_trkdpitpredictiveltcashnequivalents_prediction,Predicted value of Long-term Cash & Equivalents,MATRIX,79%,6,13
+oth432_trkdpitpredictiveltdebt_mad_act,Mean Absolute Deviation of scaled actual value of Long-term debt,MATRIX,87%,20,57
+oth432_trkdpitpredictiveltdebt_mad_pred,Mean Absolute Deviation of predicted value of Long-term debt,MATRIX,87%,11,28
+oth432_trkdpitpredictiveltdebt_mae,Mean Average Error of the model of Long-term debt,MATRIX,87%,18,38
+oth432_trkdpitpredictiveltdebt_prediction,Predicted value of long-term debt,MATRIX,87%,5,5
+oth432_trkdpitpredictivenetdebt_mad_act,Mean Absolute Deviation of scaled actual value of Net Debt,MATRIX,88%,16,25
+oth432_trkdpitpredictivenetdebt_mad_pred,Mean Absolute Deviation of predicted value of Net Debt,MATRIX,88%,15,18
+oth432_trkdpitpredictivenetdebt_mae,Mean Average Error of the model of Net Debt,MATRIX,88%,9,33
+oth432_trkdpitpredictivenetdebt_prediction,Predict value of Net Debt,MATRIX,91%,3,3
+oth432_trkdpitpredictivenetincome_mad_act,Mean Absolute Deviation of scaled actual value of Net Income,MATRIX,98%,5,16
+oth432_trkdpitpredictivenetincome_mad_pred,Mean Absolute Deviation of predicted value of Net Income,MATRIX,98%,11,16
+oth432_trkdpitpredictivenetincome_mae,Mean Average Error of the model of Net Income,MATRIX,98%,6,11
+oth432_trkdpitpredictivenetincome_prediction,Predicted value of Net Income,MATRIX,100%,15,28
+oth432_trkdpitpredictivenetreceivables_mad_act,Mean Absolute Deviation of scaled actual value of Net Receivables,MATRIX,88%,19,72
+oth432_trkdpitpredictivenetreceivables_mad_pred,Mean Absolute Deviation of predicted value of Net Receivables,MATRIX,88%,24,50
+oth432_trkdpitpredictivenetreceivables_mae,Mean Average Error of the model of Net Receivables,MATRIX,88%,17,30
+oth432_trkdpitpredictivenetreceivables_prediction,Predicted value of Net Receivables,MATRIX,90%,7,32
+oth432_trkdpitpredictiverndexpense_mad_act,Mean Absolute Deviation of scaled actual value of Research & Development Expense,MATRIX,36%,10,23
+oth432_trkdpitpredictiverndexpense_mad_pred,Mean Absolute Deviation of predicted value of Research & Development Expense,MATRIX,36%,4,7
+oth432_trkdpitpredictiverndexpense_mae,Mean Average Error of the model of Research & Development Expense,MATRIX,36%,6,28
+oth432_trkdpitpredictiverndexpense_prediction,Predict value of Research & Development Expense,MATRIX,36%,3,5
+oth432_trkdpitpredictiveroa_mad_act,Mean Absolute Deviation of scaled actual value of Return on Assets,MATRIX,100%,12,34
+oth432_trkdpitpredictiveroa_mad_pred,Mean Absolute Deviation of predicted value of Return on Assets,MATRIX,100%,6,16
+oth432_trkdpitpredictiveroa_mae,Mean Average Error of the model of Return on Assets,MATRIX,100%,11,30
+oth432_trkdpitpredictiveroa_prediction,Predict value of Return on Assets,MATRIX,100%,9,22
+oth432_trkdpitpredictiveroe_mad_act,Mean Absolute Deviation of scaled actual value of Return on Equity,MATRIX,100%,21,167
+oth432_trkdpitpredictiveroe_mad_pred,Mean Absolute Deviation of predicted value of Return on Equity,MATRIX,100%,12,41
+oth432_trkdpitpredictiveroe_mae,Mean Average Error of the model of Return on Equity,MATRIX,100%,17,61
+oth432_trkdpitpredictiveroe_prediction,Predict value of Return on Equity,MATRIX,100%,16,43
+oth432_trkdpitpredictivetangiblebvps_mad_act,Mean Absolute Deviation of scaled actual value of Tangible book value per share,MATRIX,91%,6,24
+oth432_trkdpitpredictivetangiblebvps_mad_pred,Mean Absolute Deviation of predicted value of Tangible book value per share,MATRIX,91%,12,81
+oth432_trkdpitpredictivetangiblebvps_mae,Mean Average Error of the model of Tangible book value per share,MATRIX,91%,12,36
+oth432_trkdpitpredictivetangiblebvps_prediction,Predict value of Tangible book value per share,MATRIX,93%,4,5
+oth432_trkdpitpredictivetotassets_mad_act,Mean Absolute Deviation of scaled actual value of Total Assets,MATRIX,98%,11,60
+oth432_trkdpitpredictivetotassets_mad_pred,Mean Absolute Deviation of predicted value of Total Assets,MATRIX,98%,6,12
+oth432_trkdpitpredictivetotassets_mae,Mean Average Error of the model of Total Assets,MATRIX,98%,13,41
+oth432_trkdpitpredictivetotassets_prediction,Predicted value of Total Assets,MATRIX,100%,16,44
+oth432_trkdpitpredictivetotinventory_mad_act,Mean Absolute Deviation of scaled actual value of Total Inventories,MATRIX,90%,15,45
+oth432_trkdpitpredictivetotinventory_mad_pred,Mean Absolute Deviation of predicted value of Total Inventories,MATRIX,90%,9,17
+oth432_trkdpitpredictivetotinventory_mae,Mean Average Error of the model of Total Inventories,MATRIX,90%,13,19
+oth432_trkdpitpredictivetotinventory_prediction,Predicted value of Total Inventories,MATRIX,92%,10,28
+oth432_trkdpitpredictivetotrevenue_mad_act,Mean Absolute Deviation of scaled actual value of Total Revenue,MATRIX,90%,20,58
+oth432_trkdpitpredictivetotrevenue_mad_pred,Mean Absolute Deviation of predicted value of Total Revenue,MATRIX,90%,8,10
+oth432_trkdpitpredictivetotrevenue_mae,Mean Average Error of the model of Total Revenue,MATRIX,90%,10,12
+oth432_trkdpitpredictivetotrevenue_prediction,Predicted value of Total Revenue,MATRIX,92%,7,9
+oth432_txtq_compustatdeltapredict_funda_mada,Mean Absolute Deviation of scaled actual value of Income Taxes - Total,MATRIX,75%,0,0
+oth432_txtq_compustatdeltapredict_funda_madp,Mean Absolute Deviation of predicted value of Income Taxes - Total,MATRIX,100%,12,30
+oth432_txtq_compustatdeltapredict_funda_mae,Mean Average Error of the model of Income Taxes - Total,MATRIX,79%,5,5
+oth432_txtq_compustatdeltapredict_funda_predict,Predict value of Income Taxes - Total,MATRIX,96%,22,43
+oth432_txtq_mae,Mean Average Error of the model of Income Taxes - Total,MATRIX,39%,4,8
+oth432_txtq_predict,Predicted value of Income Taxes - Total,MATRIX,85%,5,7
+oth432_ve,Enterprise Value of Predictive models,MATRIX,89%,15,42
+oth432_viex_trkdpitdeltapredict_annual_funda_madp,"Mean Absolute Deviation of predicted value of Interest Expense, Supplemental",MATRIX,97%,19,48
+oth432_viex_trkdpitdeltapredict_annual_funda_predict,"Predicted Value of Interest Expense, Supplemental",MATRIX,92%,7,13
+oth432_visibility,Visibility of Predictive models,MATRIX,100%,53,564
+oth432_vitt_trkdpitdeltapredict_annual_funda_madp,Mean Absolute Deviation of predicted value of Income Tax - Total,MATRIX,97%,4,21
+oth432_vitt_trkdpitdeltapredict_annual_funda_predict,Predicted value of Income Tax - Total,MATRIX,96%,10,45
+oth432_xintq_mae,Mean Average Error of the model of Interest and Related Expense - Total,MATRIX,39%,2,29
+oth432_xintq_predict,Predicted value of Interest and Related Expense - Total,MATRIX,86%,6,9
+oth432_yoy_change_cr,YOY change in current ratio of Predictive models,MATRIX,72%,6,11
+oth432_yoy_change_da,YOY change in debt to asset ratio of Predictive models,MATRIX,81%,16,29
+oth432_yoy_change_de,YOY change in debt to equity ratio of Predictive models,MATRIX,78%,13,23

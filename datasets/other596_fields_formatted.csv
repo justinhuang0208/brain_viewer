@@ -1,0 +1,211 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth596_2dts_gen_441,Standard deviation of negative sentiment scores.,MATRIX,100%,14,16
+oth596_2dts_sop_428,Standard deviation of positive sentiment scores.,MATRIX,100%,7,7
+oth596_2dts_tuen_422,Standard deviation of neutral sentiment scores.,MATRIX,100%,5,5
+oth596_2neg_conf_low_425,Lower confidence bound for negative sentiment scores.,MATRIX,100%,8,8
+oth596_2neg_conf_up_431,Upper confidence bound for negative sentiment scores.,MATRIX,100%,6,7
+oth596_2neg_max_429,Maximum value of negative sentiment scores.,MATRIX,100%,7,7
+oth596_2neg_mean_432,Mean value of negative sentiment scores.,MATRIX,100%,8,9
+oth596_2neg_median_426,Median value of negative sentiment scores.,MATRIX,100%,6,6
+oth596_2neg_min_430,Minimum value of negative sentiment scores.,MATRIX,100%,16,17
+oth596_2neut_conf_low_423,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,3,3
+oth596_2neut_conf_up_436,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,3,3
+oth596_2neut_max_421,Maximum value of neutral sentiment scores.,MATRIX,100%,3,3
+oth596_2neut_mean_424,Mean value of neutral sentiment scores.,MATRIX,100%,3,3
+oth596_2neut_median_438,Median value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_2neut_min_433,Minimum value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_2pos_conf_low_439,Lower confidence bound for positive sentiment scores.,MATRIX,100%,5,5
+oth596_2pos_conf_up_427,Upper confidence bound for positive sentiment scores.,MATRIX,100%,3,3
+oth596_2pos_max_437,Maximum value of positive sentiment scores.,MATRIX,100%,5,5
+oth596_2pos_mean_440,Mean value of positive sentiment scores.,MATRIX,100%,5,5
+oth596_2pos_median_435,Median value of positive sentiment scores.,MATRIX,100%,7,7
+oth596_2pos_min_434,Minimum value of positive sentiment scores.,MATRIX,100%,4,4
+oth596_3dts_gen_567,Standard deviation of negative sentiment scores.,MATRIX,100%,5,5
+oth596_3dts_sop_562,Standard deviation of positive sentiment scores.,MATRIX,100%,5,5
+oth596_3dts_tuen_560,Standard deviation of neutral sentiment scores.,MATRIX,100%,4,4
+oth596_3neg_conf_low_549,Lower confidence bound for negative sentiment scores.,MATRIX,100%,2,2
+oth596_3neg_conf_up_566,Upper confidence bound for negative sentiment scores.,MATRIX,100%,3,5
+oth596_3neg_max_559,Maximum value of negative sentiment scores.,MATRIX,100%,4,4
+oth596_3neg_mean_555,Mean value of negative sentiment scores.,MATRIX,100%,3,3
+oth596_3neg_median_554,Median value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_3neg_min_547,Minimum value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_3neut_conf_low_563,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,3,3
+oth596_3neut_conf_up_550,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,2,2
+oth596_3neut_max_548,Maximum value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_3neut_mean_553,Mean value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_3neut_median_565,Median value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_3neut_min_551,Minimum value of neutral sentiment scores.,MATRIX,100%,3,3
+oth596_3pos_conf_low_552,Lower confidence bound for positive sentiment scores.,MATRIX,100%,3,3
+oth596_3pos_conf_up_561,Upper confidence bound for positive sentiment scores.,MATRIX,100%,6,6
+oth596_3pos_max_558,Maximum value of positive sentiment scores.,MATRIX,100%,3,3
+oth596_3pos_mean_557,Mean value of positive sentiment scores.,MATRIX,100%,4,4
+oth596_3pos_median_564,Median value of positive sentiment scores.,MATRIX,100%,2,2
+oth596_3pos_min_556,Minimum value of positive sentiment scores.,MATRIX,100%,3,3
+oth596_4dts_gen_326,Standard deviation of negative sentiment scores.,MATRIX,100%,1,1
+oth596_4dts_sop_321,Standard deviation of positive sentiment scores.,MATRIX,100%,2,2
+oth596_4dts_tuen_317,Standard deviation of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_4neg_conf_low_330,Lower confidence bound for negative sentiment scores.,MATRIX,100%,3,3
+oth596_4neg_conf_up_318,Upper confidence bound for negative sentiment scores.,MATRIX,100%,3,3
+oth596_4neg_max_331,Maximum value of negative sentiment scores.,MATRIX,100%,1,1
+oth596_4neg_mean_322,Mean value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_4neg_median_335,Median value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_4neg_min_320,Minimum value of negative sentiment scores.,MATRIX,100%,1,1
+oth596_4neut_conf_low_336,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,1,1
+oth596_4neut_conf_up_328,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,1,1
+oth596_4neut_max_334,Maximum value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_4neut_mean_327,Mean value of neutral sentiment scores.,MATRIX,100%,3,3
+oth596_4neut_median_323,Median value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_4neut_min_324,Minimum value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_4pos_conf_low_333,Lower confidence bound for positive sentiment scores.,MATRIX,100%,3,3
+oth596_4pos_conf_up_316,Upper confidence bound for positive sentiment scores.,MATRIX,100%,1,1
+oth596_4pos_max_319,Maximum value of positive sentiment scores.,MATRIX,100%,1,1
+oth596_4pos_mean_325,Mean value of positive sentiment scores.,MATRIX,100%,2,2
+oth596_4pos_median_332,Median value of positive sentiment scores.,MATRIX,100%,2,2
+oth596_4pos_min_329,Minimum value of positive sentiment scores.,MATRIX,100%,2,2
+oth596_5dts_gen_408,Standard deviation of negative sentiment scores.,MATRIX,100%,1,1
+oth596_5dts_sop_401,Standard deviation of positive sentiment scores.,MATRIX,100%,1,1
+oth596_5dts_tuen_419,Standard deviation of neutral sentiment scores.,MATRIX,100%,4,5
+oth596_5neg_conf_low_413,Lower confidence bound for negative sentiment scores.,MATRIX,100%,2,2
+oth596_5neg_conf_up_410,Upper confidence bound for negative sentiment scores.,MATRIX,100%,1,1
+oth596_5neg_max_414,Maximum value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_5neg_mean_415,Mean value of negative sentiment scores.,MATRIX,100%,3,3
+oth596_5neg_median_400,Median value of negative sentiment scores.,MATRIX,100%,3,3
+oth596_5neg_min_411,Minimum value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_5neut_conf_low_406,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,2,2
+oth596_5neut_conf_up_402,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,1,1
+oth596_5neut_max_404,Maximum value of neutral sentiment scores.,MATRIX,100%,4,4
+oth596_5neut_mean_403,Mean value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_5neut_median_420,Median value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_5neut_min_416,Minimum value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_5pos_conf_low_407,Lower confidence bound for positive sentiment scores.,MATRIX,100%,1,1
+oth596_5pos_conf_up_409,Upper confidence bound for positive sentiment scores.,MATRIX,100%,6,8
+oth596_5pos_max_412,Maximum value of positive sentiment scores.,MATRIX,100%,3,3
+oth596_5pos_mean_417,Mean value of positive sentiment scores.,MATRIX,100%,2,2
+oth596_5pos_median_418,Median value of positive sentiment scores.,MATRIX,100%,2,2
+oth596_5pos_min_405,Minimum value of positive sentiment scores.,MATRIX,100%,1,1
+oth596_t2dts_gen_311,Standard deviation of negative sentiment scores.,MATRIX,100%,3,3
+oth596_t2dts_sop_306,Standard deviation of positive sentiment scores.,MATRIX,100%,2,2
+oth596_t2dts_tuen_305,Standard deviation of neutral sentiment scores.,MATRIX,100%,3,3
+oth596_t2neg_conf_low_302,Lower confidence bound for negative sentiment scores.,MATRIX,100%,1,1
+oth596_t2neg_conf_up_300,Upper confidence bound for negative sentiment scores.,MATRIX,100%,2,2
+oth596_t2neg_max_312,Maximum value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_t2neg_mean_299,Mean value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_t2neg_median_297,Median value of negative sentiment scores.,MATRIX,100%,3,3
+oth596_t2neg_min_295,Minimum value of negative sentiment scores.,MATRIX,100%,3,3
+oth596_t2neut_conf_low_298,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,2,2
+oth596_t2neut_conf_up_309,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,4,4
+oth596_t2neut_max_314,Maximum value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t2neut_mean_304,Mean value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t2neut_median_310,Median value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_t2neut_min_296,Minimum value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_t2pos_conf_low_307,Lower confidence bound for positive sentiment scores.,MATRIX,100%,1,1
+oth596_t2pos_conf_up_301,Upper confidence bound for positive sentiment scores.,MATRIX,100%,1,1
+oth596_t2pos_max_303,Maximum value of positive sentiment scores.,MATRIX,100%,0,0
+oth596_t2pos_mean_313,Mean value of positive sentiment scores.,MATRIX,100%,1,1
+oth596_t2pos_median_315,Median value of positive sentiment scores.,MATRIX,100%,1,1
+oth596_t2pos_min_308,Minimum value of positive sentiment scores.,MATRIX,100%,0,0
+oth596_t3dts_gen_218,Standard deviation of negative sentiment scores.,MATRIX,100%,2,9
+oth596_t3dts_sop_224,Standard deviation of positive sentiment scores.,MATRIX,100%,1,1
+oth596_t3dts_tuen_215,Standard deviation of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t3neg_conf_low_229,Lower confidence bound for negative sentiment scores.,MATRIX,100%,0,0
+oth596_t3neg_conf_up_220,Upper confidence bound for negative sentiment scores.,MATRIX,100%,0,0
+oth596_t3neg_max_225,Maximum value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_t3neg_mean_231,Mean value of negative sentiment scores.,MATRIX,100%,0,0
+oth596_t3neg_median_212,Median value of negative sentiment scores.,MATRIX,100%,0,0
+oth596_t3neg_min_211,Minimum value of negative sentiment scores.,MATRIX,100%,1,3
+oth596_t3neut_conf_low_221,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t3neut_conf_up_216,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,2,2
+oth596_t3neut_max_217,Maximum value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_t3neut_mean_214,Mean value of neutral sentiment scores.,MATRIX,100%,0,0
+oth596_t3neut_median_223,Median value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t3neut_min_219,Minimum value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t3pos_conf_low_228,Lower confidence bound for positive sentiment scores.,MATRIX,100%,1,1
+oth596_t3pos_conf_up_222,Upper confidence bound for positive sentiment scores.,MATRIX,100%,1,1
+oth596_t3pos_max_230,Maximum value of positive sentiment scores.,MATRIX,100%,1,1
+oth596_t3pos_mean_213,Mean value of positive sentiment scores.,MATRIX,100%,2,2
+oth596_t3pos_median_226,Median value of positive sentiment scores.,MATRIX,100%,0,0
+oth596_t3pos_min_227,Minimum value of positive sentiment scores.,MATRIX,100%,0,0
+oth596_t4dts_gen_393,Standard deviation of negative sentiment scores.,MATRIX,100%,0,0
+oth596_t4dts_sop_379,Standard deviation of positive sentiment scores.,MATRIX,100%,0,0
+oth596_t4dts_tuen_381,Standard deviation of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t4neg_conf_low_387,Lower confidence bound for negative sentiment scores.,MATRIX,100%,1,1
+oth596_t4neg_conf_up_396,Upper confidence bound for negative sentiment scores.,MATRIX,100%,0,0
+oth596_t4neg_max_398,Maximum value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_t4neg_mean_390,Mean value of negative sentiment scores.,MATRIX,100%,1,1
+oth596_t4neg_median_384,Median value of negative sentiment scores.,MATRIX,100%,1,1
+oth596_t4neg_min_395,Minimum value of negative sentiment scores.,MATRIX,100%,0,0
+oth596_t4neut_conf_low_399,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,0,0
+oth596_t4neut_conf_up_383,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t4neut_max_389,Maximum value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t4neut_mean_380,Mean value of neutral sentiment scores.,MATRIX,100%,0,0
+oth596_t4neut_median_394,Median value of neutral sentiment scores.,MATRIX,100%,0,0
+oth596_t4neut_min_386,Minimum value of neutral sentiment scores.,MATRIX,100%,0,0
+oth596_t4pos_conf_low_382,Lower confidence bound for positive sentiment scores.,MATRIX,100%,1,1
+oth596_t4pos_conf_up_392,Upper confidence bound for positive sentiment scores.,MATRIX,100%,0,0
+oth596_t4pos_max_385,Maximum value of positive sentiment scores.,MATRIX,100%,0,0
+oth596_t4pos_mean_397,Mean value of positive sentiment scores.,MATRIX,100%,0,0
+oth596_t4pos_median_391,Median value of positive sentiment scores.,MATRIX,100%,0,0
+oth596_t4pos_min_388,Minimum value of positive sentiment scores.,MATRIX,100%,3,3
+oth596_t5dts_gen_376,Standard deviation of negative sentiment scores.,MATRIX,100%,1,1
+oth596_t5dts_sop_369,Standard deviation of positive sentiment scores.,MATRIX,100%,1,1
+oth596_t5dts_tuen_368,Standard deviation of neutral sentiment scores.,MATRIX,100%,2,3
+oth596_t5neg_conf_low_362,Lower confidence bound for negative sentiment scores.,MATRIX,100%,0,0
+oth596_t5neg_conf_up_378,Upper confidence bound for negative sentiment scores.,MATRIX,100%,2,3
+oth596_t5neg_max_374,Maximum value of negative sentiment scores.,MATRIX,100%,1,1
+oth596_t5neg_mean_360,Mean value of negative sentiment scores.,MATRIX,100%,1,1
+oth596_t5neg_median_372,Median value of negative sentiment scores.,MATRIX,100%,1,1
+oth596_t5neg_min_371,Minimum value of negative sentiment scores.,MATRIX,100%,1,1
+oth596_t5neut_conf_low_361,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,1,1
+oth596_t5neut_conf_up_367,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,0,0
+oth596_t5neut_max_373,Maximum value of neutral sentiment scores.,MATRIX,100%,0,0
+oth596_t5neut_mean_370,Mean value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_t5neut_median_377,Median value of neutral sentiment scores.,MATRIX,100%,0,0
+oth596_t5neut_min_358,Minimum value of neutral sentiment scores.,MATRIX,100%,0,0
+oth596_t5pos_conf_low_366,Lower confidence bound for positive sentiment scores.,MATRIX,100%,2,2
+oth596_t5pos_conf_up_364,Upper confidence bound for positive sentiment scores.,MATRIX,100%,1,1
+oth596_t5pos_max_365,Maximum value of positive sentiment scores.,MATRIX,100%,1,1
+oth596_t5pos_mean_375,Mean value of positive sentiment scores.,MATRIX,100%,2,2
+oth596_t5pos_median_363,Median value of positive sentiment scores.,MATRIX,100%,1,1
+oth596_t5pos_min_359,Minimum value of positive sentiment scores.,MATRIX,100%,0,0
+oth596_tdts_gen_495,Standard deviation of negative sentiment scores.,MATRIX,100%,2,2
+oth596_tdts_sop_503,Standard deviation of positive sentiment scores.,MATRIX,100%,1,1
+oth596_tdts_tuen_501,Standard deviation of neutral sentiment scores.,MATRIX,100%,0,0
+oth596_tneg_conf_low_494,Lower confidence bound for negative sentiment scores.,MATRIX,100%,1,1
+oth596_tneg_conf_up_504,Upper confidence bound for negative sentiment scores.,MATRIX,100%,0,0
+oth596_tneg_max_486,Maximum value of negative sentiment scores.,MATRIX,100%,1,1
+oth596_tneg_mean_489,Mean value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_tneg_median_488,Median value of negative sentiment scores.,MATRIX,100%,2,6
+oth596_tneg_min_484,Minimum value of negative sentiment scores.,MATRIX,100%,2,2
+oth596_tneut_conf_low_487,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,0,0
+oth596_tneut_conf_up_492,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,0,0
+oth596_tneut_max_490,Maximum value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_tneut_mean_499,Mean value of neutral sentiment scores.,MATRIX,100%,3,4
+oth596_tneut_median_485,Median value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596_tneut_min_497,Minimum value of neutral sentiment scores.,MATRIX,100%,2,2
+oth596_tpos_conf_low_496,Lower confidence bound for positive sentiment scores.,MATRIX,100%,0,0
+oth596_tpos_conf_up_498,Upper confidence bound for positive sentiment scores.,MATRIX,100%,0,0
+oth596_tpos_max_502,Maximum value of positive sentiment scores.,MATRIX,100%,4,4
+oth596_tpos_mean_493,Mean value of positive sentiment scores.,MATRIX,100%,2,2
+oth596_tpos_median_491,Median value of positive sentiment scores.,MATRIX,100%,0,0
+oth596_tpos_min_500,Minimum value of positive sentiment scores.,MATRIX,100%,0,0
+oth596dts_gen_595,Standard deviation of negative sentiment scores.,MATRIX,100%,1,1
+oth596dts_sop_591,Standard deviation of positive sentiment scores.,MATRIX,100%,6,7
+oth596dts_tuen_590,Standard deviation of neutral sentiment scores.,MATRIX,100%,2,2
+oth596neg_conf_low_594,Lower confidence bound for negative sentiment scores.,MATRIX,100%,1,1
+oth596neg_conf_up_596,Upper confidence bound for negative sentiment scores.,MATRIX,100%,0,0
+oth596neg_max_608,Maximum value of negative sentiment scores.,MATRIX,100%,1,1
+oth596neg_mean_597,Mean value of negative sentiment scores.,MATRIX,100%,0,0
+oth596neg_median_599,Median value of negative sentiment scores.,MATRIX,100%,2,2
+oth596neg_min_602,Minimum value of negative sentiment scores.,MATRIX,100%,1,1
+oth596neut_conf_low_589,Lower confidence bound for neutral sentiment scores.,MATRIX,100%,1,1
+oth596neut_conf_up_604,Upper confidence bound for neutral sentiment scores.,MATRIX,100%,1,1
+oth596neut_max_603,Maximum value of neutral sentiment scores.,MATRIX,100%,1,1
+oth596neut_mean_605,Mean value of neutral sentiment scores.,MATRIX,100%,0,0
+oth596neut_median_609,Median value of neutral sentiment scores.,MATRIX,100%,0,0
+oth596neut_min_606,Minimum value of neutral sentiment scores.,MATRIX,100%,3,4
+oth596pos_conf_low_592,Lower confidence bound for positive sentiment scores.,MATRIX,100%,0,0
+oth596pos_conf_up_600,Upper confidence bound for positive sentiment scores.,MATRIX,100%,4,4
+oth596pos_max_598,Maximum value of positive sentiment scores.,MATRIX,100%,7,7
+oth596pos_mean_601,Mean value of positive sentiment scores.,MATRIX,100%,0,0
+oth596pos_median_593,Median value of positive sentiment scores.,MATRIX,100%,1,1
+oth596pos_min_607,Minimum value of positive sentiment scores.,MATRIX,100%,1,1

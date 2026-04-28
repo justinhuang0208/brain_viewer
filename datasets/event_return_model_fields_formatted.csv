@@ -1,0 +1,60 @@
+Field,Description,Type,Coverage,Users,Alphas
+earnings_bin_label1,Indicator for whether the earnings event falls into the first bin or category.,MATRIX,100%,2,2
+news_relevance_score_2,Score indicating the relevance of news items to a stock or entity.,MATRIX,94%,3,3
+prob_rank_bin1_10d_img_news,Continuous regression output (unbounded float) predicting 10-day forward return based on newscount image data; must be winsorized before use,MATRIX,100%,2,3
+prob_rank_bin1_20d_img_news,"Continuous regression output representing 20-day forward predicted return based on newscount image data; must be winsorized before use, not a quantile",MATRIX,100%,0,0
+prob_rank_bin1_5d_img_news,"Continuous regression output, unbounded predicted forward 5-day return derived from news count image input; must be winsorized before use",MATRIX,100%,0,0
+prob_rank_bin2_label0_10d_img_news,Probability assigned to label 0 in the 2-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin2_label0_20d_img_news,Probability assigned to label 0 in the 2-quantile ranking for 20-day image-based news count.,MATRIX,100%,1,1
+prob_rank_bin2_label0_5d_img_news,Probability assigned to label 0 in the 2-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin2_label1_10d_img_news,Probability assigned to label 1 in the 2-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin2_label1_20d_img_news,Probability assigned to label 1 in the 2-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin2_label1_5d_img_news,Probability assigned to label 1 in the 2-quantile ranking for 5-day image-based news count.,MATRIX,100%,2,2
+prob_rank_bin3_label0_10d_img_news,Probability assigned to label 0 in the 3-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin3_label0_20d_img_news,Probability assigned to label 0 in the 3-quantile ranking for 20-day image-based news count.,MATRIX,100%,2,2
+prob_rank_bin3_label0_5d_img_news,Probability assigned to label 0 in the 3-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin3_label1_10d_img_news,Probability assigned to label 1 in the 3-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin3_label1_20d_img_news,Probability assigned to label 1 in the 3-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin3_label1_5d_img_news,Probability assigned to label 1 in the 3-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin3_label2_10d_img_news,Probability assigned to label 2 in the 3-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin3_label2_20d_img_news,Probability assigned to label 2 in the 3-quantile ranking for 20-day image-based news count.,MATRIX,100%,2,3
+prob_rank_bin3_label2_5d_img_news,Probability assigned to label 2 in the 3-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label0_10d_img_news,Probability assigned to label 0 in the 4-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label0_20d_img_news,Probability assigned to label 0 in the 4-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label0_5d_img_news,Probability assigned to label 0 in the 4-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label1_10d_img_news,Probability assigned to label 1 in the 4-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label1_20d_img_news,Probability assigned to label 1 in the 4-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label1_5d_img_news,Probability assigned to label 1 in the 4-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label2_10d_img_news,Probability assigned to label 2 in the 4-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label2_20d_img_news,Probability assigned to label 2 in the 4-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label2_5d_img_news,Probability assigned to label 2 in the 4-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label3_10d_img_news,Probability assigned to label 3 in the 4-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label3_20d_img_news,Probability assigned to label 3 in the 4-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin4_label3_5d_img_news,Probability assigned to label 3 in the 4-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label0_10d_img_news,Probability assigned to label 0 in the 5-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label0_20d_img_news,Probability assigned to label 0 in the 5-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label0_5d_img_news,Probability assigned to label 0 in the 5-quantile ranking for 5-day image-based news count.,MATRIX,100%,2,2
+prob_rank_bin5_label1_10d_img_news,Probability assigned to label 1 in the 5-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label1_20d_img_news,Probability assigned to label 1 in the 5-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label1_5d_img_news,Probability assigned to label 1 in the 5-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label2_10d_img_news,Probability assigned to label 2 in the 5-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label2_20d_img_news,Probability assigned to label 2 in the 5-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label2_5d_img_news,Probability assigned to label 2 in the 5-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label3_10d_img_news,Probability assigned to label 3 in the 5-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label3_20d_img_news,Probability assigned to label 3 in the 5-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label3_5d_img_news,Probability assigned to label 3 in the 5-quantile ranking for 5-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label4_10d_img_news,Probability assigned to label 4 in the 5-quantile ranking for 10-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label4_20d_img_news,Probability assigned to label 4 in the 5-quantile ranking for 20-day image-based news count.,MATRIX,100%,0,0
+prob_rank_bin5_label4_5d_img_news,Probability assigned to label 4 in the 5-quantile ranking for 5-day image-based news count.,MATRIX,100%,2,2
+rank_bin2_10d_img_news,Quantile bucket assignment (0-based integer from 0 to 1) in a 2-quantile classification for 10-day forward return based on the newscount image input,MATRIX,100%,0,0
+rank_bin2_20d_img_news,"Quantile assignment (0-based) of the observation into one of 2 buckets (binary classification) for 20-day forward returns, from newscount image model",MATRIX,100%,0,0
+rank_bin2_5d_img_news,Quantile rank (out of 2) for 5-day image-based news count prediction.,MATRIX,100%,1,1
+rank_bin3_10d_img_news,Quantile assignment (bucket index 0 to 2) of a 3-quantile model predicting 10-day forward return based on newscount image data,MATRIX,100%,0,0
+rank_bin3_20d_img_news,"Quantile assignment to one of 3 buckets (0-based index: 0,1,2) representing predicted equity return quantiles over a 20-day horizon using newscount image data",MATRIX,100%,0,0
+rank_bin3_5d_img_news,Quantile assignment integer (0-based) from the tertile (3-quantile) model assigning the stock-date to one of 3 buckets for 5-day forward prediction using newscount image input,MATRIX,100%,2,2
+rank_bin4_10d_img_news,Quantile bucket assignment (0-based integer from 0 to 3) in a 4-quantile classification for 10-day forward return based on the newscount image input,MATRIX,100%,0,0
+rank_bin4_20d_img_news,Quantile assignment (0-based) of the observation into one of 4 buckets for 20-day forward return prediction from newscount image model,MATRIX,100%,0,0
+rank_bin4_5d_img_news,Quantile rank (out of 4) for 5-day image-based news count prediction.,MATRIX,100%,0,0
+rank_bin5_10d_img_news,Quantile assignment (bucket index 0 to 4) of a 5-quantile model predicting 10-day forward return based on newscount image data,MATRIX,100%,0,0
+rank_bin5_20d_img_news,Quantile assignment to one of 5 buckets (0-based index 0 to 4) representing predicted equity return quantiles over a 20-day horizon using newscount image data,MATRIX,100%,0,0
+rank_bin5_5d_img_news,Quantile rank (out of 5) for 5-day image-based news count prediction.,MATRIX,100%,0,0

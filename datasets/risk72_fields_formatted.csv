@@ -1,0 +1,4 @@
+Field,Description,Type,Coverage,Users,Alphas
+rsk72_top1000_dsrt,Daily reproducible specific returns in % units,MATRIX,37%,130,281
+rsk72_top2000_dsrt,Daily reproducible specific returns in % units,MATRIX,72%,251,681
+rsk72_top3000_dsrt,Daily reproducible specific returns in % units,MATRIX,100%,342,1149

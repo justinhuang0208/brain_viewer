@@ -1,0 +1,798 @@
+Field,Description,Type,Coverage,Users,Alphas
+basicmat_method1_group10_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT1 methodology, partitioned into 10 clusters",MATRIX,100%,10,12
+basicmat_method1_group20_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT1 methodology, partitioned into 20 clusters",MATRIX,100%,1,1
+basicmat_method1_group2_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT1 methodology, partitioned into 2 clusters",MATRIX,100%,1,1
+basicmat_method1_group5_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT1 methodology, partitioned into 5 clusters",MATRIX,100%,0,0
+basicmat_method2_group10_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT2 methodology, partitioned into 10 clusters",MATRIX,100%,1,1
+basicmat_method2_group20_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT2 methodology, partitioned into 20 clusters",MATRIX,100%,0,0
+basicmat_method2_group2_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT2 methodology, partitioned into 2 clusters",MATRIX,100%,3,3
+basicmat_method2_group5_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT2 methodology, partitioned into 5 clusters",MATRIX,100%,6,6
+basicmat_method3_group10_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT3 methodology, partitioned into 10 clusters",MATRIX,100%,0,0
+basicmat_method3_group20_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT3 methodology, partitioned into 20 clusters",MATRIX,100%,2,2
+basicmat_method3_group2_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT3 methodology, partitioned into 2 clusters",MATRIX,100%,0,0
+basicmat_method3_group5_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT3 methodology, partitioned into 5 clusters",MATRIX,100%,0,0
+basicmat_method4_group10_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT4 methodology, partitioned into 10 clusters",MATRIX,100%,0,0
+basicmat_method4_group20_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT4 methodology, partitioned into 20 clusters",MATRIX,100%,0,0
+basicmat_method4_group2_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT4 methodology, partitioned into 2 clusters",MATRIX,100%,1,1
+basicmat_method4_group5_score,"Categorical label indicating robust return-based industry cluster membership for securities in the USECTOR BasicMaterials universe using FACT4 methodology, partitioned into 5 clusters",MATRIX,100%,2,2
+comm_sector_factor1_group10_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 10 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,2,2
+comm_sector_factor1_group20_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 20 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+comm_sector_factor1_group2_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 2 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,1,1
+comm_sector_factor1_group5_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 5 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,1,1
+comm_sector_factor2_group10_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 10 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,1,1
+comm_sector_factor2_group20_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 20 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,1,1
+comm_sector_factor2_group2_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 2 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,1,1
+comm_sector_factor2_group5_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 5 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+comm_sector_factor3_group10_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 10 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,1,1
+comm_sector_factor3_group20_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 20 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,1,1
+comm_sector_factor3_group2_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 2 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,1,1
+comm_sector_factor3_group5_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 5 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+comm_sector_factor4_group10_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 10 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+comm_sector_factor4_group20_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 20 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+comm_sector_factor4_group2_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 2 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+comm_sector_factor4_group5_score,"Categorical integer label assigning each stock in the US Top 3000 Communications universe to one of 5 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,2,2
+communications_factor1_grouping10,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 10 robust return-based clusters using the FACT1 method,MATRIX,100%,0,0
+communications_factor1_grouping2,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 2 robust return-based clusters using the FACT1 method,MATRIX,100%,0,0
+communications_factor1_grouping20,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 20 robust return-based clusters using the FACT1 method,MATRIX,100%,11,11
+communications_factor1_grouping5,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 5 robust return-based clusters using the FACT1 method,MATRIX,100%,2,2
+communications_factor2_grouping10,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 10 robust return-based clusters using the FACT2 method,MATRIX,100%,1,1
+communications_factor2_grouping2,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 2 robust return-based clusters using the FACT2 method,MATRIX,100%,0,0
+communications_factor2_grouping20,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 20 robust return-based clusters using the FACT2 method,MATRIX,100%,1,1
+communications_factor2_grouping5,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 5 robust return-based clusters using the FACT2 method,MATRIX,100%,0,0
+communications_factor3_grouping10,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 10 robust return-based clusters using the FACT3 method,MATRIX,100%,0,0
+communications_factor3_grouping2,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 2 robust return-based clusters using the FACT3 method,MATRIX,100%,0,0
+communications_factor3_grouping20,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 20 robust return-based clusters using the FACT3 method,MATRIX,100%,0,0
+communications_factor3_grouping5,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 5 robust return-based clusters using the FACT3 method,MATRIX,100%,0,0
+communications_factor4_grouping10,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 10 robust return-based clusters using the FACT4 method,MATRIX,100%,0,0
+communications_factor4_grouping2,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 2 robust return-based clusters using the FACT4 method,MATRIX,100%,1,1
+communications_factor4_grouping20,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 20 robust return-based clusters using the FACT4 method,MATRIX,100%,0,0
+communications_factor4_grouping5,Categorical cluster label (integer) assigning a US Communications-sector stock to one of 5 robust return-based clusters using the FACT4 method,MATRIX,100%,0,0
+cons_cyclical_method1_group10_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT1, with 10 clusters; integer label of cluster membership",MATRIX,100%,0,0
+cons_cyclical_method1_group20_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT1, with 20 clusters; integer label of cluster membership",MATRIX,100%,0,0
+cons_cyclical_method1_group2_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT1, with 2 clusters; integer label of cluster membership",MATRIX,100%,1,1
+cons_cyclical_method1_group5_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT1, with 5 clusters; integer label of cluster membership",MATRIX,100%,0,0
+cons_cyclical_method2_group10_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT2, with 10 clusters; integer label of cluster membership",MATRIX,100%,0,0
+cons_cyclical_method2_group20_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT2, with 20 clusters; integer label of cluster membership",MATRIX,100%,0,0
+cons_cyclical_method2_group2_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT2, with 2 clusters; integer label of cluster membership",MATRIX,100%,0,0
+cons_cyclical_method2_group5_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT2, with 5 clusters; integer label of cluster membership",MATRIX,100%,3,3
+cons_cyclical_method3_group10_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT3, with 10 clusters; integer label of cluster membership",MATRIX,100%,2,2
+cons_cyclical_method3_group2_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT3, with 2 clusters; integer label of cluster membership",MATRIX,100%,0,0
+cons_cyclical_method3_group5_score,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT3, with 5 clusters; integer label of cluster membership",MATRIX,100%,0,0
+consumer_cyclical_factor3_grouping_20,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT3, with 20 clusters; integer label of cluster membership",MATRIX,100%,0,0
+consumer_cyclical_factor4_grouping20,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT4, with 20 clusters; integer label of cluster membership",MATRIX,100%,0,0
+consumer_cyclical_factor4_grouping_10,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT4, with 10 clusters; integer label of cluster membership",MATRIX,100%,0,0
+consumer_cyclical_factor4_grouping_2,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT4, with 2 clusters; integer label of cluster membership",MATRIX,100%,0,0
+consumer_cyclical_factor4_grouping_5,"Robust return-based industry cluster assignment for the Consumer Cyclical sector universe using FACT4, with 5 clusters; integer label of cluster membership",MATRIX,100%,0,0
+energy_sector_factor1_group10_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT1 method; partitioned into 10 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor1_group20_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT1 method; partitioned into 20 clusters (IDs are categorical, not ordinal)",MATRIX,100%,1,1
+energy_sector_factor1_group2_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT1 method; partitioned into 2 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor1_group5_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT1 method; partitioned into 5 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor2_group10_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT2 method; partitioned into 10 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor2_group20_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT2 method; partitioned into 20 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor2_group2_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT2 method; partitioned into 2 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor2_group5_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT2 method; partitioned into 5 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor3_group10_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT3 method; partitioned into 10 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor3_group20_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT3 method; partitioned into 20 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor3_group2_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT3 method; partitioned into 2 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor3_group5_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT3 method; partitioned into 5 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor4_group10_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT4 method; partitioned into 10 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_factor4_group20_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT4 method; partitioned into 20 clusters (IDs are categorical, not ordinal)",MATRIX,100%,1,1
+energy_sector_factor4_group2_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT4 method; partitioned into 2 clusters (IDs are categorical, not ordinal)",MATRIX,100%,4,4
+energy_sector_factor4_group5_score,"Integer cluster ID assigning each stock in the US TOP3000 Energy universe to a robust, return-based industry group using the FACT4 method; partitioned into 5 clusters (IDs are categorical, not ordinal)",MATRIX,100%,0,0
+energy_sector_pca_grouping_method1_10clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 10 robust return-based industry clusters (FACT1 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method1_20clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 20 robust return-based industry clusters (FACT1 method),MATRIX,100%,3,3
+energy_sector_pca_grouping_method1_2clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 2 robust return-based industry clusters (FACT1 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method1_5clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 5 robust return-based industry clusters (FACT1 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method2_10clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 10 robust return-based industry clusters (FACT2 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method2_20clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 20 robust return-based industry clusters (FACT2 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method2_2clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 2 robust return-based industry clusters (FACT2 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method2_5clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 5 robust return-based industry clusters (FACT2 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method3_10clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 10 robust return-based industry clusters (FACT3 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method3_20clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 20 robust return-based industry clusters (FACT3 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method3_2clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 2 robust return-based industry clusters (FACT3 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method3_5clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 5 robust return-based industry clusters (FACT3 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method4_10clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 10 robust return-based industry clusters (FACT4 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method4_20clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 20 robust return-based industry clusters (FACT4 method),MATRIX,100%,0,0
+energy_sector_pca_grouping_method4_2clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 2 robust return-based industry clusters (FACT4 method),MATRIX,100%,1,1
+energy_sector_pca_grouping_method4_5clusters,Integer cluster ID assigning each security in the USECTOR Energy universe to one of 5 robust return-based industry clusters (FACT4 method),MATRIX,100%,0,0
+fin_nonreit_industry_grouping_method1_10,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 10 robust return-based industry clusters using the FACT1 method,MATRIX,100%,0,0
+fin_nonreit_industry_grouping_method1_2,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 2 robust return-based industry clusters using the FACT1 method,MATRIX,100%,2,2
+fin_nonreit_industry_grouping_method1_20,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 20 robust return-based industry clusters using the FACT1 method,MATRIX,100%,0,0
+fin_nonreit_industry_grouping_method1_5,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 5 robust return-based industry clusters using the FACT1 method,MATRIX,100%,0,0
+fin_nonreit_industry_grouping_method2_10,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 10 robust return-based industry clusters using the FACT2 method,MATRIX,100%,1,1
+fin_nonreit_industry_grouping_method2_2,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 2 robust return-based industry clusters using the FACT2 method,MATRIX,100%,0,0
+fin_nonreit_industry_grouping_method2_20,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 20 robust return-based industry clusters using the FACT2 method,MATRIX,100%,0,0
+fin_nonreit_industry_grouping_method2_5,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 5 robust return-based industry clusters using the FACT2 method,MATRIX,100%,1,1
+fin_nonreit_industry_grouping_method3_10,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 10 robust return-based industry clusters using the FACT3 method,MATRIX,100%,1,1
+fin_nonreit_industry_grouping_method3_2,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 2 robust return-based industry clusters using the FACT3 method,MATRIX,100%,3,3
+fin_nonreit_industry_grouping_method3_20,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 20 robust return-based industry clusters using the FACT3 method,MATRIX,100%,0,0
+fin_nonreit_industry_grouping_method3_5,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 5 robust return-based industry clusters using the FACT3 method,MATRIX,100%,1,1
+fin_nonreit_industry_grouping_method4_10,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 10 robust return-based industry clusters using the FACT4 method,MATRIX,100%,0,0
+fin_nonreit_industry_grouping_method4_2,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 2 robust return-based industry clusters using the FACT4 method,MATRIX,100%,1,1
+fin_nonreit_industry_grouping_method4_20,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 20 robust return-based industry clusters using the FACT4 method,MATRIX,100%,0,0
+fin_nonreit_industry_grouping_method4_5,Integer cluster label assigning each stock in the US Financials (excluding REITs) universe to one of 5 robust return-based industry clusters using the FACT4 method,MATRIX,100%,0,0
+fin_nonreit_method4_group10_score,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 10 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+fin_nonreit_method4_group20_score,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 20 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+fin_nonreit_method4_group5_score,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 5 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method1_10clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 10 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,3,3
+fin_nonreit_sector_pca_grouping_method1_20clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 20 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method1_2clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 2 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method1_5clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 5 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method2_10clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 10 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method2_20clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 20 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method2_2clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 2 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,1,1
+fin_nonreit_sector_pca_grouping_method2_5clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 5 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method3_10clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 10 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method3_20clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 20 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method3_2clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 2 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method3_5clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 5 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+fin_nonreit_sector_pca_grouping_method4_2clusters,"Integer categorical cluster label assigning each stock in the US Top 3000 (excluding REITs) universe to one of 2 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+financial_pca_factor1_grouping10,Integer label indicating membership in one of 10 robust return-based industry clusters for the USECTOR_Financial universe using method FACT1,MATRIX,100%,0,0
+financial_pca_factor1_grouping2,Integer label indicating membership in one of 2 robust return-based industry clusters for the USECTOR_Financial universe using method FACT1,MATRIX,100%,0,0
+financial_pca_factor1_grouping20,Integer label indicating membership in one of 20 robust return-based industry clusters for the USECTOR_Financial universe using method FACT1,MATRIX,100%,0,0
+financial_pca_factor1_grouping5,Integer label indicating membership in one of 5 robust return-based industry clusters for the USECTOR_Financial universe using method FACT1,MATRIX,100%,0,0
+financial_pca_factor2_grouping10,Integer label indicating membership in one of 10 robust return-based industry clusters for the USECTOR_Financial universe using method FACT2,MATRIX,100%,0,0
+financial_pca_factor2_grouping2,Integer label indicating membership in one of 2 robust return-based industry clusters for the USECTOR_Financial universe using method FACT2,MATRIX,100%,0,0
+financial_pca_factor2_grouping20,Integer label indicating membership in one of 20 robust return-based industry clusters for the USECTOR_Financial universe using method FACT2,MATRIX,100%,0,0
+financial_pca_factor2_grouping5,Integer label indicating membership in one of 5 robust return-based industry clusters for the USECTOR_Financial universe using method FACT2,MATRIX,100%,1,2
+financial_pca_factor3_grouping10,Integer label indicating membership in one of 10 robust return-based industry clusters for the USECTOR_Financial universe using method FACT3,MATRIX,100%,0,0
+financial_pca_factor3_grouping2,Integer label indicating membership in one of 2 robust return-based industry clusters for the USECTOR_Financial universe using method FACT3,MATRIX,100%,0,0
+financial_pca_factor3_grouping20,Integer label indicating membership in one of 20 robust return-based industry clusters for the USECTOR_Financial universe using method FACT3,MATRIX,100%,0,0
+financial_pca_factor3_grouping5,Integer label indicating membership in one of 5 robust return-based industry clusters for the USECTOR_Financial universe using method FACT3,MATRIX,100%,0,0
+financial_pca_factor4_grouping10,Integer label indicating membership in one of 10 robust return-based industry clusters for the USECTOR_Financial universe using method FACT4,MATRIX,100%,0,0
+financial_pca_factor4_grouping2,Integer label indicating membership in one of 2 robust return-based industry clusters for the USECTOR_Financial universe using method FACT4,MATRIX,100%,0,0
+financial_pca_factor4_grouping20,Integer label indicating membership in one of 20 robust return-based industry clusters for the USECTOR_Financial universe using method FACT4,MATRIX,100%,3,4
+financial_pca_factor4_grouping5,Integer label indicating membership in one of 5 robust return-based industry clusters for the USECTOR_Financial universe using method FACT4,MATRIX,100%,0,0
+financial_sector_pca_grouping_method1_10clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 10 clusters using the FACT1 method,MATRIX,100%,1,1
+financial_sector_pca_grouping_method1_20clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 20 clusters using the FACT1 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method1_2clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 2 clusters using the FACT1 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method1_5clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 5 clusters using the FACT1 method,MATRIX,100%,2,2
+financial_sector_pca_grouping_method2_10clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 10 clusters using the FACT2 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method2_20clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 20 clusters using the FACT2 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method2_2clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 2 clusters using the FACT2 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method2_5clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 5 clusters using the FACT2 method,MATRIX,100%,2,2
+financial_sector_pca_grouping_method3_10clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 10 clusters using the FACT3 method,MATRIX,100%,2,2
+financial_sector_pca_grouping_method3_20clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 20 clusters using the FACT3 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method3_2clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 2 clusters using the FACT3 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method3_5clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 5 clusters using the FACT3 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method4_10clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 10 clusters using the FACT4 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method4_20clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 20 clusters using the FACT4 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method4_2clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 2 clusters using the FACT4 method,MATRIX,100%,0,0
+financial_sector_pca_grouping_method4_5clusters,Return-based robust industry cluster label (integer) assigning each stock in the USECTOR TOP3000 Financial universe to one of 5 clusters using the FACT4 method,MATRIX,100%,2,2
+industrial_factor1_grouping10,statistical industry classification,MATRIX,100%,3,4
+industrial_factor1_grouping2,statistical industry classification,MATRIX,100%,1,1
+industrial_factor1_grouping20,statistical industry classification,MATRIX,100%,0,0
+industrial_factor1_grouping5,statistical industry classification,MATRIX,100%,1,1
+industrial_factor2_grouping10,statistical industry classification,MATRIX,100%,1,1
+industrial_factor2_grouping2,statistical industry classification,MATRIX,100%,1,1
+industrial_factor2_grouping20,statistical industry classification,MATRIX,100%,0,0
+industrial_factor2_grouping5,statistical industry classification,MATRIX,100%,1,1
+industrial_factor3_grouping10,statistical industry classification,MATRIX,100%,0,0
+industrial_factor3_grouping2,statistical industry classification,MATRIX,100%,0,0
+industrial_factor3_grouping20,statistical industry classification,MATRIX,100%,0,0
+industrial_factor3_grouping5,statistical industry classification,MATRIX,100%,0,0
+industrial_factor4_grouping10,statistical industry classification,MATRIX,100%,0,0
+industrial_factor4_grouping2,statistical industry classification,MATRIX,100%,0,0
+industrial_factor4_grouping20,statistical industry classification,MATRIX,100%,0,0
+industrial_factor4_grouping5,statistical industry classification,MATRIX,100%,0,0
+industrial_pca_factor1_grouping10,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 10 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+industrial_pca_factor1_grouping2,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 2 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,1,1
+industrial_pca_factor1_grouping20,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 20 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+industrial_pca_factor1_grouping5,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 5 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,1,1
+industrial_pca_factor2_grouping10,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 10 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+industrial_pca_factor2_grouping2,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 2 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,1,1
+industrial_pca_factor2_grouping20,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 20 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,1,1
+industrial_pca_factor2_grouping5,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 5 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+industrial_pca_factor3_grouping10,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 10 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+industrial_pca_factor3_grouping2,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 2 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+industrial_pca_factor3_grouping20,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 20 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+industrial_pca_factor3_grouping5,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 5 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+industrial_pca_factor4_grouping10,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 10 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,1,1
+industrial_pca_factor4_grouping2,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 2 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,1,1
+industrial_pca_factor4_grouping20,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 20 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,1,2
+industrial_pca_factor4_grouping5,"Categorical cluster label assigning each stock in the US Industrial sector Top 3000 universe to one of 5 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method1_10clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 10 robust return-based industry clusters, method FACT1",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method1_20clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 20 robust return-based industry clusters, method FACT1",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method1_2clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 2 robust return-based industry clusters, method FACT1",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method1_5clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 5 robust return-based industry clusters, method FACT1",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method2_10clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 10 robust return-based industry clusters, method FACT2",MATRIX,100%,1,1
+noncyclical_sector_pca_grouping_method2_20clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 20 robust return-based industry clusters, method FACT2",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method2_2clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 2 robust return-based industry clusters, method FACT2",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method2_5clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 5 robust return-based industry clusters, method FACT2",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method3_10clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 10 robust return-based industry clusters, method FACT3",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method3_20clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 20 robust return-based industry clusters, method FACT3",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method3_2clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 2 robust return-based industry clusters, method FACT3",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method3_5clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 5 robust return-based industry clusters, method FACT3",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method4_10clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 10 robust return-based industry clusters, method FACT4",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method4_20clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 20 robust return-based industry clusters, method FACT4",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method4_2clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 2 robust return-based industry clusters, method FACT4",MATRIX,100%,0,0
+noncyclical_sector_pca_grouping_method4_5clusters,"Categorical cluster ID (integer) assigning each stock in the US Top 3000 Consumer Non-Cyclical universe to one of 5 robust return-based industry clusters, method FACT4",MATRIX,100%,0,0
+pca_factor_0_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_10_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_11_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_12_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_13_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_14_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_1_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_2_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_3_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_4_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_5_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_6_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_7_top1000,statistical industry classification,MATRIX,39%,1,1
+pca_factor_8_top1000,statistical industry classification,MATRIX,39%,0,0
+pca_factor_9_top1000,statistical industry classification,MATRIX,39%,0,0
+principal_component1_grouping10_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component1_grouping10_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT1 method with 10 clusters",MATRIX,100%,0,0
+principal_component1_grouping10_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component1_grouping10_top3000,"Statistical/robust industry cluster label: membership in 10 clusters for the TOP3000 universe using method FACT1 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component1_grouping10_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 10 robust, return-based industry clusters (FACT1 variant)",MATRIX,100%,1,1
+principal_component1_grouping20_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component1_grouping20_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT1 method with 20 clusters",MATRIX,100%,1,1
+principal_component1_grouping20_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component1_grouping20_top3000,"Statistical/robust industry cluster label: membership in 20 clusters for the TOP3000 universe using method FACT1 (513 variant); categorical integer, not ordinal",MATRIX,100%,2,2
+principal_component1_grouping20_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 20 robust, return-based industry clusters (FACT1 variant)",MATRIX,100%,0,0
+principal_component1_grouping2_basic_materials,statistical industry classification,MATRIX,100%,1,1
+principal_component1_grouping2_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT1 method with 2 clusters",MATRIX,100%,0,0
+principal_component1_grouping2_top3000,"Statistical/robust industry cluster label: membership in 2 clusters for the TOP3000 universe using method FACT1 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component1_grouping2_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 2 robust, return-based industry clusters (FACT1 variant)",MATRIX,100%,0,0
+principal_component1_grouping50_top3000,"Statistical/robust industry cluster label: membership in 50 clusters for the TOP3000 universe using method FACT1 (513 variant); categorical integer, not ordinal",MATRIX,100%,1,1
+principal_component1_grouping5_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component1_grouping5_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT1 method with 5 clusters",MATRIX,100%,2,3
+principal_component1_grouping5_top3000,"Statistical/robust industry cluster label: membership in 5 clusters for the TOP3000 universe using method FACT1 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component1_grouping5_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 5 robust, return-based industry clusters (FACT1 variant)",MATRIX,100%,0,0
+principal_component2_grouping10_basic_materials,statistical industry classification,MATRIX,100%,1,1
+principal_component2_grouping10_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT2 method with 10 clusters",MATRIX,100%,0,0
+principal_component2_grouping10_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component2_grouping10_top3000,"Statistical/robust industry cluster label: membership in 10 clusters for the TOP3000 universe using method FACT2 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component2_grouping10_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 10 robust, return-based industry clusters (FACT2 variant)",MATRIX,100%,0,0
+principal_component2_grouping20_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component2_grouping20_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT2 method with 20 clusters",MATRIX,100%,0,0
+principal_component2_grouping20_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component2_grouping20_top3000,"Statistical/robust industry cluster label: membership in 20 clusters for the TOP3000 universe using method FACT2 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component2_grouping20_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 20 robust, return-based industry clusters (FACT2 variant)",MATRIX,100%,0,0
+principal_component2_grouping2_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component2_grouping2_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT2 method with 2 clusters",MATRIX,100%,0,0
+principal_component2_grouping2_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component2_grouping2_top3000,"Statistical/robust industry cluster label: membership in 2 clusters for the TOP3000 universe using method FACT2 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component2_grouping2_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 2 robust, return-based industry clusters (FACT2 variant)",MATRIX,100%,0,0
+principal_component2_grouping50_top3000,"Statistical/robust industry cluster label: membership in 50 clusters for the TOP3000 universe using method FACT2 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component2_grouping5_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component2_grouping5_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT2 method with 5 clusters",MATRIX,100%,0,0
+principal_component2_grouping5_reit,statistical industry classification,MATRIX,100%,1,1
+principal_component2_grouping5_top3000,"Statistical/robust industry cluster label: membership in 5 clusters for the TOP3000 universe using method FACT2 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component2_grouping5_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 5 robust, return-based industry clusters (FACT2 variant)",MATRIX,100%,0,0
+principal_component3_grouping10_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component3_grouping10_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT3 method with 10 clusters",MATRIX,100%,0,0
+principal_component3_grouping10_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component3_grouping10_top3000,"Statistical/robust industry cluster label: membership in 10 clusters for the TOP3000 universe using method FACT3 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component3_grouping10_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 10 robust, return-based industry clusters (FACT3 variant)",MATRIX,100%,0,0
+principal_component3_grouping20_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component3_grouping20_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT3 method with 20 clusters",MATRIX,100%,0,0
+principal_component3_grouping20_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component3_grouping20_top3000,"Statistical/robust industry cluster label: membership in 20 clusters for the TOP3000 universe using method FACT3 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component3_grouping20_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 20 robust, return-based industry clusters (FACT3 variant)",MATRIX,100%,0,0
+principal_component3_grouping2_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component3_grouping2_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT3 method with 2 clusters",MATRIX,100%,1,1
+principal_component3_grouping2_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component3_grouping2_top3000,"Statistical/robust industry cluster label: membership in 2 clusters for the TOP3000 universe using method FACT3 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component3_grouping2_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 2 robust, return-based industry clusters (FACT3 variant)",MATRIX,100%,0,0
+principal_component3_grouping50_top3000,"Statistical/robust industry cluster label: membership in 50 clusters for the TOP3000 universe using method FACT3 (513 variant); categorical integer, not ordinal",MATRIX,100%,1,1
+principal_component3_grouping5_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component3_grouping5_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT3 method with 5 clusters",MATRIX,100%,0,0
+principal_component3_grouping5_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component3_grouping5_top3000,"Statistical/robust industry cluster label: membership in 5 clusters for the TOP3000 universe using method FACT3 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component3_grouping5_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 5 robust, return-based industry clusters (FACT3 variant)",MATRIX,100%,0,0
+principal_component4_grouping10_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component4_grouping10_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT4 method with 10 clusters",MATRIX,100%,0,0
+principal_component4_grouping10_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component4_grouping10_top3000,"Statistical/robust industry cluster label: membership in 10 clusters for the TOP3000 universe using method FACT4 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component4_grouping10_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 10 robust, return-based industry clusters (FACT4 variant)",MATRIX,100%,0,0
+principal_component4_grouping20_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component4_grouping20_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT4 method with 20 clusters",MATRIX,100%,0,0
+principal_component4_grouping20_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component4_grouping20_top3000,"Statistical/robust industry cluster label: membership in 20 clusters for the TOP3000 universe using method FACT4 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component4_grouping20_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 20 robust, return-based industry clusters (FACT4 variant)",MATRIX,100%,0,0
+principal_component4_grouping2_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component4_grouping2_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT4 method with 2 clusters",MATRIX,100%,1,1
+principal_component4_grouping2_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component4_grouping2_top3000,"Statistical/robust industry cluster label: membership in 2 clusters for the TOP3000 universe using method FACT4 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component4_grouping2_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 2 robust, return-based industry clusters (FACT4 variant)",MATRIX,100%,0,0
+principal_component4_grouping50_top3000,"Statistical/robust industry cluster label: membership in 50 clusters for the TOP3000 universe using method FACT4 (513 variant); categorical integer, not ordinal",MATRIX,100%,1,1
+principal_component4_grouping5_basic_materials,statistical industry classification,MATRIX,100%,0,0
+principal_component4_grouping5_consumer_noncyclical,"Statistical industry cluster label (integer) for stocks in the USECTOR Consumer NonCyclical universe, computed via the Robust FACT4 method with 5 clusters",MATRIX,100%,0,0
+principal_component4_grouping5_reit,statistical industry classification,MATRIX,100%,0,0
+principal_component4_grouping5_top3000,"Statistical/robust industry cluster label: membership in 5 clusters for the TOP3000 universe using method FACT4 (513 variant); categorical integer, not ordinal",MATRIX,100%,0,0
+principal_component4_grouping5_utilities,"Cluster label (integer) assigning a stock in the US Utilities sector universe to one of 5 robust, return-based industry clusters (FACT4 variant)",MATRIX,100%,0,0
+principal_component_0_all513,"Continuous loading on the 1st robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_0_top1000,Continuous factor exposure (loading) to the 1st robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_0_top3000_513,statistical industry classification,MATRIX,100%,0,0
+principal_component_0_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_10_all513,"Continuous loading on the 11th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,1,1
+principal_component_10_top1000,Continuous factor exposure (loading) to the 11th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,1,1
+principal_component_10_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_11_all513,"Continuous loading on the 12th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_11_top1000,Continuous factor exposure (loading) to the 12th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_11_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_12_all513,"Continuous loading on the 13th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_12_top1000,Continuous factor exposure (loading) to the 13th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_12_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_13_all513,"Continuous loading on the 14th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_13_top1000,Continuous factor exposure (loading) to the 14th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_13_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_14_all513,"Continuous loading on the 15th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_14_top1000,Continuous factor exposure (loading) to the 15th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_14_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_1_all513,"Continuous loading on the 2nd robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_1_top1000,Continuous factor exposure (loading) to the 2nd robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_1_top3000_513,statistical industry classification,MATRIX,100%,0,0
+principal_component_1_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_2_all513,"Continuous loading on the 3rd robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_2_top1000,Continuous factor exposure (loading) to the 3rd robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_2_top3000_513,statistical industry classification,MATRIX,100%,1,1
+principal_component_2_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_3_all513,"Continuous loading on the 4th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_3_top1000,Continuous factor exposure (loading) to the 4th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_3_top3000_513,statistical industry classification,MATRIX,100%,1,1
+principal_component_3_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_4_all513,"Continuous loading on the 5th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_4_top1000,Continuous factor exposure (loading) to the 5th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_4_top3000_513,statistical industry classification,MATRIX,100%,0,0
+principal_component_4_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_5_all513,"Continuous loading on the 6th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_5_top1000,Continuous factor exposure (loading) to the 6th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_5_top3000_513,statistical industry classification,MATRIX,100%,0,0
+principal_component_5_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_6_all513,"Continuous loading on the 7th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_6_top1000,Continuous factor exposure (loading) to the 7th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,1,2
+principal_component_6_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_7_all513,"Continuous loading on the 8th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,3,3
+principal_component_7_top1000,Continuous factor exposure (loading) to the 8th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_7_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_8_all513,"Continuous loading on the 9th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_8_top1000,Continuous factor exposure (loading) to the 9th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,1,1
+principal_component_8_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_9_all513,"Continuous loading on the 10th robust principal component (statistical industry factor) for the ALL universe, computed with the 513 variant",MATRIX,100%,0,0
+principal_component_9_top1000,Continuous factor exposure (loading) to the 10th robust PCA statistical industry component for the TOP1000 universe,MATRIX,35%,0,0
+principal_component_9_top500,statistical industry classification,MATRIX,18%,0,0
+principal_component_grouping_method3_10clusters,Integer label assigning the stock to one of 10 return-based statistical industry clusters for the TOP1500 universe using the FACT3 robust method,MATRIX,56%,0,0
+principal_component_grouping_method3_20clusters,Integer label assigning the stock to one of 20 return-based statistical industry clusters for the TOP1500 universe using the FACT3 robust method,MATRIX,56%,0,0
+principal_component_grouping_method3_50clusters,Integer label assigning the stock to one of 50 return-based statistical industry clusters for the TOP1500 universe using the FACT3 robust method,MATRIX,56%,0,0
+principal_component_grouping_method4_10clusters,Integer label assigning the stock to one of 10 return-based statistical industry clusters for the TOP1500 universe using the FACT4 robust method,MATRIX,56%,1,2
+principal_component_grouping_method4_20clusters,Integer label assigning the stock to one of 20 return-based statistical industry clusters for the TOP1500 universe using the FACT4 robust method,MATRIX,56%,0,0
+principal_component_grouping_method4_2clusters,Integer label assigning the stock to one of 2 return-based statistical industry clusters for the TOP1500 universe using the FACT4 robust method,MATRIX,56%,1,1
+principal_component_grouping_method4_50clusters,Integer label assigning the stock to one of 50 return-based statistical industry clusters for the TOP1500 universe using the FACT4 robust method,MATRIX,56%,0,0
+principal_component_grouping_method4_5clusters,Integer label assigning the stock to one of 5 return-based statistical industry clusters for the TOP1500 universe using the FACT4 robust method,MATRIX,56%,0,0
+principal_component_score_0_all,Continuous factor exposure (loading) to the robust industry principal component (index 0) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_0_top3000,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_0_top500_513,statistical industry classification,MATRIX,20%,1,1
+principal_component_score_10_all,Continuous factor exposure (loading) to the robust industry principal component (index 10) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_10_top3000,statistical industry classification,MATRIX,100%,0,0
+principal_component_score_10_top3000_2,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_10_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_11_all,Continuous factor exposure (loading) to the robust industry principal component (index 11) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_11_top3000,statistical industry classification,MATRIX,100%,0,0
+principal_component_score_11_top3000_2,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_11_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_12_all,Continuous factor exposure (loading) to the robust industry principal component (index 12) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_12_top3000,statistical industry classification,MATRIX,100%,0,0
+principal_component_score_12_top3000_2,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_12_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_13_all,Continuous factor exposure (loading) to the robust industry principal component (index 13) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_13_top3000,statistical industry classification,MATRIX,100%,0,0
+principal_component_score_13_top3000_2,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_13_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_14_all,Continuous factor exposure (loading) to the robust industry principal component (index 14) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_14_top3000,statistical industry classification,MATRIX,100%,0,0
+principal_component_score_14_top3000_2,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_14_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_1_all,Continuous factor exposure (loading) to the robust industry principal component (index 1) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_1_top3000,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_1_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_2_all,Continuous factor exposure (loading) to the robust industry principal component (index 2) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_2_top3000,statistical industry classification,MATRIX,99%,1,1
+principal_component_score_2_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_3_all,Continuous factor exposure (loading) to the robust industry principal component (index 3) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_3_top3000,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_3_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_4_all,Continuous factor exposure (loading) to the robust industry principal component (index 4) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_4_top3000,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_4_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_5_all,Continuous factor exposure (loading) to the robust industry principal component (index 5) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_5_top3000,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_5_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_6_all,Continuous factor exposure (loading) to the robust industry principal component (index 6) derived from statistical industry classification,MATRIX,100%,2,2
+principal_component_score_6_top3000,statistical industry classification,MATRIX,100%,1,1
+principal_component_score_6_top3000_2,statistical industry classification,MATRIX,99%,8,8
+principal_component_score_6_top500_513,statistical industry classification,MATRIX,20%,4,4
+principal_component_score_7_all,Continuous factor exposure (loading) to the robust industry principal component (index 7) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_7_top3000,statistical industry classification,MATRIX,100%,0,0
+principal_component_score_7_top3000_v2,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_7_top500_513,statistical industry classification,MATRIX,20%,0,0
+principal_component_score_8_all,Continuous factor exposure (loading) to the robust industry principal component (index 8) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_8_top3000,statistical industry classification,MATRIX,100%,0,0
+principal_component_score_8_top3000_v2,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_8_top500_513,statistical industry classification,MATRIX,20%,5,7
+principal_component_score_9_all,Continuous factor exposure (loading) to the robust industry principal component (index 9) derived from statistical industry classification,MATRIX,100%,0,0
+principal_component_score_9_top3000,statistical industry classification,MATRIX,100%,0,0
+principal_component_score_9_top3000_v2,statistical industry classification,MATRIX,99%,0,0
+principal_component_score_9_top500_513,statistical industry classification,MATRIX,20%,0,0
+reit_factor1_grouping10,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 10 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,2,2
+reit_factor1_grouping2,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 2 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+reit_factor1_grouping20,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 20 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+reit_factor1_grouping5,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 5 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,2,2
+reit_factor2_grouping10,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 10 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+reit_factor2_grouping2,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 2 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+reit_factor2_grouping20,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 20 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,1,1
+reit_factor2_grouping5,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 5 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,2,2
+reit_factor3_grouping10,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 10 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,1,1
+reit_factor3_grouping2,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 2 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,1,1
+reit_factor3_grouping20,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 20 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+reit_factor3_grouping5,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 5 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+reit_factor4_grouping10,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 10 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,1,1
+reit_factor4_grouping2,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 2 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+reit_factor4_grouping20,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 20 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,1,3
+reit_factor4_grouping5,"Integer cluster label (categorical) assigning each security in the USECTOR_REITs universe to one of 5 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+reit_industry_grouping_method1_2,statistical industry classification,MATRIX,100%,0,0
+reit_industry_grouping_method1_5,statistical industry classification,MATRIX,100%,0,0
+robust_factor_0_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 0 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_10_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 10 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_11_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 11 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_12_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 12 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_13_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 13 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_14_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 14 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_1_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 1 (zero-indexed) for the TOP2000 universe,MATRIX,68%,1,1
+robust_factor_2_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 2 (zero-indexed) for the TOP2000 universe,MATRIX,68%,1,1
+robust_factor_3_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 3 (zero-indexed) for the TOP2000 universe,MATRIX,68%,1,1
+robust_factor_4_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 4 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_5_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 5 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_6_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 6 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_7_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 7 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_8_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 8 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+robust_factor_9_top2000,Continuous exposure (factor loading) to robust statistical industry principal component 9 (zero-indexed) for the TOP2000 universe,MATRIX,68%,0,0
+sectoral_pca_grouping_method1_10clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 10 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method1_20clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 20 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method1_2clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 2 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method1_5clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 5 robust, return-based industry clusters using the FACT1 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method2_10clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 10 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method2_20clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 20 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method2_2clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 2 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method2_5clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 5 robust, return-based industry clusters using the FACT2 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method3_10clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 10 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method3_20clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 20 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method3_2clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 2 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method3_5clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 5 robust, return-based industry clusters using the FACT3 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method4_10clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 10 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method4_20clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 20 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+sectoral_pca_grouping_method4_2clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 2 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,1,1
+sectoral_pca_grouping_method4_5clusters,"Categorical cluster label (integer) assigning each US Top 3000 Consumer Cyclical stock to one of 5 robust, return-based industry clusters using the FACT4 method",MATRIX,100%,0,0
+sta2_all_fact1_c10,Integer cluster ID assigning the security to one of 10 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT1 method,GROUP,100%,104,371
+sta2_all_fact1_c2,Integer cluster ID assigning the security to one of 2 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT1 method,GROUP,100%,95,368
+sta2_all_fact1_c20,Integer cluster ID assigning the security to one of 20 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT1 method,GROUP,100%,92,359
+sta2_all_fact1_c5,Integer cluster ID assigning the security to one of 5 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT1 method,GROUP,100%,97,327
+sta2_all_fact1_c50,Integer cluster ID assigning the security to one of 50 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT1 method,GROUP,100%,91,353
+sta2_all_fact2_c10,Integer cluster ID assigning the security to one of 10 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT2 method,GROUP,100%,69,270
+sta2_all_fact2_c2,Integer cluster ID assigning the security to one of 2 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT2 method,GROUP,100%,93,390
+sta2_all_fact2_c20,Integer cluster ID assigning the security to one of 20 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT2 method,GROUP,100%,89,306
+sta2_all_fact2_c5,Integer cluster ID assigning the security to one of 5 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT2 method,GROUP,100%,82,296
+sta2_all_fact2_c50,Integer cluster ID assigning the security to one of 50 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT2 method,GROUP,100%,122,497
+sta2_all_fact3_c10,Integer cluster ID assigning the security to one of 10 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT3 method,GROUP,100%,84,316
+sta2_all_fact3_c2,Integer cluster ID assigning the security to one of 2 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT3 method,GROUP,100%,82,442
+sta2_all_fact3_c20,Integer cluster ID assigning the security to one of 20 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT3 method,GROUP,100%,104,370
+sta2_all_fact3_c5,Integer cluster ID assigning the security to one of 5 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT3 method,GROUP,100%,80,302
+sta2_all_fact3_c50,Integer cluster ID assigning the security to one of 50 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT3 method,GROUP,100%,90,381
+sta2_all_fact4_c10,Integer cluster ID assigning the security to one of 10 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT4 method,GROUP,100%,100,367
+sta2_all_fact4_c2,Integer cluster ID assigning the security to one of 2 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT4 method,GROUP,100%,91,399
+sta2_all_fact4_c20,Integer cluster ID assigning the security to one of 20 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT4 method,GROUP,100%,85,391
+sta2_all_fact4_c5,Integer cluster ID assigning the security to one of 5 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT4 method,GROUP,100%,93,338
+sta2_all_fact4_c50,Integer cluster ID assigning the security to one of 50 statistically derived (return-based) industry clusters for the ALLRobust ALL universe using the FACT4 method,GROUP,100%,102,477
+sta2_top1000_fact1_c10,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT1 method, with 10 clusters",GROUP,39%,3,3
+sta2_top1000_fact1_c2,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT1 method, with 2 clusters",GROUP,39%,6,6
+sta2_top1000_fact1_c20,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT1 method, with 20 clusters",GROUP,39%,2,4
+sta2_top1000_fact1_c5,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT1 method, with 5 clusters",GROUP,39%,2,3
+sta2_top1000_fact1_c50,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT1 method, with 50 clusters",GROUP,39%,3,4
+sta2_top1000_fact2_c10,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT2 method, with 10 clusters",GROUP,39%,4,5
+sta2_top1000_fact2_c2,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT2 method, with 2 clusters",GROUP,39%,0,0
+sta2_top1000_fact2_c20,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT2 method, with 20 clusters",GROUP,39%,0,0
+sta2_top1000_fact2_c5,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT2 method, with 5 clusters",GROUP,39%,4,6
+sta2_top1000_fact2_c50,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT2 method, with 50 clusters",GROUP,39%,2,2
+sta2_top1000_fact3_c10,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT3 method, with 10 clusters",GROUP,39%,1,1
+sta2_top1000_fact3_c2,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT3 method, with 2 clusters",GROUP,39%,3,6
+sta2_top1000_fact3_c20,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT3 method, with 20 clusters",GROUP,39%,0,0
+sta2_top1000_fact3_c5,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT3 method, with 5 clusters",GROUP,39%,1,1
+sta2_top1000_fact3_c50,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT3 method, with 50 clusters",GROUP,39%,3,3
+sta2_top1000_fact4_c10,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT4 method, with 10 clusters",GROUP,39%,1,1
+sta2_top1000_fact4_c2,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT4 method, with 2 clusters",GROUP,39%,2,3
+sta2_top1000_fact4_c20,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT4 method, with 20 clusters",GROUP,39%,2,2
+sta2_top1000_fact4_c5,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT4 method, with 5 clusters",GROUP,39%,2,2
+sta2_top1000_fact4_c50,"Statistically derived industry cluster label (integer) for the TOP1000 universe using the FACT4 method, with 50 clusters",GROUP,39%,0,0
+sta2_top200_fact1_c10,Categorical label assigning each security in the TOP200 universe to one of 10 statistical industry clusters (FACT1 method),GROUP,9%,2,2
+sta2_top200_fact1_c2,Categorical label assigning each security in the TOP200 universe to one of 2 statistical industry clusters (FACT1 method),GROUP,9%,0,0
+sta2_top200_fact1_c20,Categorical label assigning each security in the TOP200 universe to one of 20 statistical industry clusters (FACT1 method),GROUP,9%,0,0
+sta2_top200_fact1_c5,Categorical label assigning each security in the TOP200 universe to one of 5 statistical industry clusters (FACT1 method),GROUP,9%,0,0
+sta2_top200_fact1_c50,Categorical label assigning each security in the TOP200 universe to one of 50 statistical industry clusters (FACT1 method),GROUP,9%,0,0
+sta2_top200_fact2_c10,Categorical label assigning each security in the TOP200 universe to one of 10 statistical industry clusters (FACT2 method),GROUP,9%,0,0
+sta2_top200_fact2_c2,Categorical label assigning each security in the TOP200 universe to one of 2 statistical industry clusters (FACT2 method),GROUP,9%,1,1
+sta2_top200_fact2_c20,Categorical label assigning each security in the TOP200 universe to one of 20 statistical industry clusters (FACT2 method),GROUP,9%,3,4
+sta2_top200_fact2_c5,Categorical label assigning each security in the TOP200 universe to one of 5 statistical industry clusters (FACT2 method),GROUP,9%,2,2
+sta2_top200_fact2_c50,Categorical label assigning each security in the TOP200 universe to one of 50 statistical industry clusters (FACT2 method),GROUP,9%,1,1
+sta2_top200_fact3_c10,Categorical label assigning each security in the TOP200 universe to one of 10 statistical industry clusters (FACT3 method),GROUP,9%,4,5
+sta2_top200_fact3_c2,Categorical label assigning each security in the TOP200 universe to one of 2 statistical industry clusters (FACT3 method),GROUP,9%,2,3
+sta2_top200_fact3_c20,Categorical label assigning each security in the TOP200 universe to one of 20 statistical industry clusters (FACT3 method),GROUP,9%,0,0
+sta2_top200_fact3_c5,Categorical label assigning each security in the TOP200 universe to one of 5 statistical industry clusters (FACT3 method),GROUP,9%,0,0
+sta2_top200_fact3_c50,"Return-based robust industry cluster label (categorical) for the TOP200 universe using method FACT3, with 50 clusters",GROUP,9%,0,0
+sta2_top200_fact4_c10,"Return-based robust industry cluster label (categorical) for the TOP200 universe using method FACT4, with 10 clusters",GROUP,9%,0,0
+sta2_top200_fact4_c2,"Return-based robust industry cluster label (categorical) for the TOP200 universe using method FACT4, with 2 clusters",GROUP,9%,1,3
+sta2_top200_fact4_c20,"Return-based robust industry cluster label (categorical) for the TOP200 universe using method FACT4, with 20 clusters",GROUP,9%,1,1
+sta2_top200_fact4_c5,"Return-based robust industry cluster label (categorical) for the TOP200 universe using method FACT4, with 5 clusters",GROUP,9%,1,2
+sta2_top200_fact4_c50,"Return-based robust industry cluster label (categorical) for the TOP200 universe using method FACT4, with 50 clusters",GROUP,9%,2,2
+sta2_top3000_fact1_c10,"Categorical integer label assigning each Top 3000 stock to one of 10 robust, return-based industry clusters using the FACT1 method",GROUP,100%,105,494
+sta2_top3000_fact1_c2,"Categorical integer label assigning each Top 3000 stock to one of 2 robust, return-based industry clusters using the FACT1 method",GROUP,100%,77,425
+sta2_top3000_fact1_c20,"Categorical integer label assigning each Top 3000 stock to one of 20 robust, return-based industry clusters using the FACT1 method",GROUP,100%,89,334
+sta2_top3000_fact1_c5,"Categorical integer label assigning each Top 3000 stock to one of 5 robust, return-based industry clusters using the FACT1 method",GROUP,100%,84,367
+sta2_top3000_fact1_c50,"Categorical integer label assigning each Top 3000 stock to one of 50 robust, return-based industry clusters using the FACT1 method",GROUP,100%,111,460
+sta2_top3000_fact2_c10,"Categorical integer label assigning each Top 3000 stock to one of 10 robust, return-based industry clusters using the FACT2 method",GROUP,100%,81,374
+sta2_top3000_fact2_c2,"Categorical integer label assigning each Top 3000 stock to one of 2 robust, return-based industry clusters using the FACT2 method",GROUP,100%,90,454
+sta2_top3000_fact2_c20,"Categorical integer label assigning each Top 3000 stock to one of 20 robust, return-based industry clusters using the FACT2 method",GROUP,100%,74,305
+sta2_top3000_fact2_c5,"Categorical integer label assigning each Top 3000 stock to one of 5 robust, return-based industry clusters using the FACT2 method",GROUP,100%,100,401
+sta2_top3000_fact2_c50,"Categorical integer label assigning each Top 3000 stock to one of 50 robust, return-based industry clusters using the FACT2 method",GROUP,100%,107,484
+sta2_top3000_fact3_c10,"Categorical integer label assigning each Top 3000 stock to one of 10 robust, return-based industry clusters using the FACT3 method",GROUP,100%,82,424
+sta2_top3000_fact3_c2,"Categorical integer label assigning each Top 3000 stock to one of 2 robust, return-based industry clusters using the FACT3 method",GROUP,100%,92,430
+sta2_top3000_fact3_c20,"Categorical integer label assigning each Top 3000 stock to one of 20 robust, return-based industry clusters using the FACT3 method",GROUP,100%,103,516
+sta2_top3000_fact3_c5,"Categorical integer label assigning each Top 3000 stock to one of 5 robust, return-based industry clusters using the FACT3 method",GROUP,100%,77,404
+sta2_top3000_fact3_c50,"Categorical integer label assigning each Top 3000 stock to one of 50 robust, return-based industry clusters using the FACT3 method",GROUP,100%,380,1302
+sta2_top3000_fact4_c10,"Categorical integer label assigning each Top 3000 stock to one of 10 robust, return-based industry clusters using the FACT4 method",GROUP,100%,323,881
+sta2_top3000_fact4_c2,"Categorical integer label assigning each Top 3000 stock to one of 2 robust, return-based industry clusters using the FACT4 method",GROUP,100%,75,351
+sta2_top3000_fact4_c20,"Categorical integer label assigning each Top 3000 stock to one of 20 robust, return-based industry clusters using the FACT4 method",GROUP,100%,322,904
+sta2_top3000_fact4_c5,"Categorical integer label assigning each Top 3000 stock to one of 5 robust, return-based industry clusters using the FACT4 method",GROUP,100%,95,450
+sta2_top3000_fact4_c50,"Categorical integer label assigning each Top 3000 stock to one of 50 robust, return-based industry clusters using the FACT4 method",GROUP,100%,107,434
+sta2_top500_fact1_c10,Return-based robust industry cluster label for the TOP500 universe using FACT1 method with 10 clusters (categorical),GROUP,20%,1,1
+sta2_top500_fact1_c2,Return-based robust industry cluster label for the TOP500 universe using FACT1 method with 2 clusters (categorical),GROUP,20%,2,2
+sta2_top500_fact1_c20,Return-based robust industry cluster label for the TOP500 universe using FACT1 method with 20 clusters (categorical),GROUP,20%,0,0
+sta2_top500_fact1_c5,Return-based robust industry cluster label for the TOP500 universe using FACT1 method with 5 clusters (categorical),GROUP,20%,0,0
+sta2_top500_fact1_c50,Return-based robust industry cluster label for the TOP500 universe using FACT1 method with 50 clusters (categorical),GROUP,20%,3,4
+sta2_top500_fact2_c10,Return-based robust industry cluster label for the TOP500 universe using FACT2 method with 10 clusters (categorical),GROUP,20%,1,1
+sta2_top500_fact2_c2,Return-based robust industry cluster label for the TOP500 universe using FACT2 method with 2 clusters (categorical),GROUP,20%,0,0
+sta2_top500_fact2_c20,Return-based robust industry cluster label for the TOP500 universe using FACT2 method with 20 clusters (categorical),GROUP,20%,19,141
+sta2_top500_fact2_c5,Return-based robust industry cluster label for the TOP500 universe using FACT2 method with 5 clusters (categorical),GROUP,20%,22,154
+sta2_top500_fact2_c50,Return-based robust industry cluster label for the TOP500 universe using FACT2 method with 50 clusters (categorical),GROUP,20%,22,127
+sta2_top500_fact3_c10,Return-based robust industry cluster label for the TOP500 universe using FACT3 method with 10 clusters (categorical),GROUP,20%,24,180
+sta2_top500_fact3_c2,Return-based robust industry cluster label for the TOP500 universe using FACT3 method with 2 clusters (categorical),GROUP,20%,24,172
+sta2_top500_fact3_c20,Return-based robust industry cluster label for the TOP500 universe using FACT3 method with 20 clusters (categorical),GROUP,20%,22,119
+sta2_top500_fact3_c5,Return-based robust industry cluster label for the TOP500 universe using FACT3 method with 5 clusters (categorical),GROUP,20%,23,211
+sta2_top500_fact3_c50,Return-based robust industry cluster label for the TOP500 universe using FACT3 method with 50 clusters (categorical),GROUP,20%,22,98
+sta2_top500_fact4_c10,Return-based robust industry cluster label for the TOP500 universe using FACT4 method with 10 clusters (categorical),GROUP,20%,26,201
+sta2_top500_fact4_c2,Return-based robust industry cluster label for the TOP500 universe using FACT4 method with 2 clusters (categorical),GROUP,20%,25,195
+sta2_top500_fact4_c20,Return-based robust industry cluster label for the TOP500 universe using FACT4 method with 20 clusters (categorical),GROUP,20%,19,184
+sta2_top500_fact4_c5,Return-based robust industry cluster label for the TOP500 universe using FACT4 method with 5 clusters (categorical),GROUP,20%,23,182
+sta2_top500_fact4_c50,Return-based robust industry cluster label for the TOP500 universe using FACT4 method with 50 clusters (categorical),GROUP,20%,22,124
+tech_sector_factor1_group10_score,statistical industry classification,MATRIX,100%,1,1
+tech_sector_factor1_group20_score,statistical industry classification,MATRIX,100%,0,0
+tech_sector_factor1_group2_score,statistical industry classification,MATRIX,100%,1,1
+tech_sector_factor1_group5_score,statistical industry classification,MATRIX,100%,2,3
+tech_sector_factor2_group10_score,statistical industry classification,MATRIX,100%,2,3
+tech_sector_factor2_group20_score,statistical industry classification,MATRIX,100%,0,0
+tech_sector_factor2_group2_score,statistical industry classification,MATRIX,100%,2,4
+tech_sector_factor2_group5_score,statistical industry classification,MATRIX,100%,3,3
+tech_sector_factor3_group10_score,statistical industry classification,MATRIX,100%,1,2
+tech_sector_factor3_group20_score,statistical industry classification,MATRIX,100%,0,0
+tech_sector_factor3_group2_score,statistical industry classification,MATRIX,100%,1,1
+tech_sector_factor3_group5_score,statistical industry classification,MATRIX,100%,0,0
+tech_sector_factor4_group10_score,statistical industry classification,MATRIX,100%,0,0
+tech_sector_factor4_group20_score,statistical industry classification,MATRIX,100%,1,1
+tech_sector_factor4_group2_score,statistical industry classification,MATRIX,100%,0,0
+tech_sector_factor4_group5_score,statistical industry classification,MATRIX,100%,2,2
+technology_pca_factor1_grouping10,statistical industry classification,MATRIX,100%,3,5
+technology_pca_factor1_grouping2,statistical industry classification,MATRIX,100%,3,4
+technology_pca_factor1_grouping20,statistical industry classification,MATRIX,100%,0,0
+technology_pca_factor1_grouping5,statistical industry classification,MATRIX,100%,2,2
+technology_pca_factor2_grouping10,statistical industry classification,MATRIX,100%,1,1
+technology_pca_factor2_grouping2,statistical industry classification,MATRIX,100%,1,2
+technology_pca_factor2_grouping20,statistical industry classification,MATRIX,100%,1,1
+technology_pca_factor2_grouping5,statistical industry classification,MATRIX,100%,1,2
+technology_pca_factor3_grouping10,statistical industry classification,MATRIX,100%,1,1
+technology_pca_factor3_grouping2,statistical industry classification,MATRIX,100%,4,5
+technology_pca_factor3_grouping20,statistical industry classification,MATRIX,100%,2,2
+technology_pca_factor3_grouping5,statistical industry classification,MATRIX,100%,0,0
+technology_pca_factor4_grouping10,statistical industry classification,MATRIX,100%,1,1
+technology_pca_factor4_grouping2,statistical industry classification,MATRIX,100%,2,2
+technology_pca_factor4_grouping20,statistical industry classification,MATRIX,100%,0,0
+technology_pca_factor4_grouping5,statistical industry classification,MATRIX,100%,1,1
+top1000_pca_factor1_grouping10,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 10 robust, return-based industry groups using the FACT1 method (513-window variant)",MATRIX,37%,1,1
+top1000_pca_factor1_grouping2,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 2 robust, return-based industry groups using the FACT1 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor1_grouping20,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 20 robust, return-based industry groups using the FACT1 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor1_grouping5,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 5 robust, return-based industry groups using the FACT1 method (513-window variant)",MATRIX,37%,1,1
+top1000_pca_factor1_grouping50,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 50 robust, return-based industry groups using the FACT1 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor2_grouping10,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 10 robust, return-based industry groups using the FACT2 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor2_grouping2,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 2 robust, return-based industry groups using the FACT2 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor2_grouping20,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 20 robust, return-based industry groups using the FACT2 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor2_grouping5,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 5 robust, return-based industry groups using the FACT2 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor2_grouping50,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 50 robust, return-based industry groups using the FACT2 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor3_grouping10,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 10 robust, return-based industry groups using the FACT3 method (513-window variant)",MATRIX,37%,3,3
+top1000_pca_factor3_grouping2,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 2 robust, return-based industry groups using the FACT3 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor3_grouping20,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 20 robust, return-based industry groups using the FACT3 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor3_grouping5,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 5 robust, return-based industry groups using the FACT3 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor3_grouping50,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 50 robust, return-based industry groups using the FACT3 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor4_grouping10,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 10 robust, return-based industry groups using the FACT4 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor4_grouping2,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 2 robust, return-based industry groups using the FACT4 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor4_grouping20,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 20 robust, return-based industry groups using the FACT4 method (513-window variant)",MATRIX,37%,0,0
+top1000_pca_factor4_grouping5,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 5 robust, return-based industry groups using the FACT4 method (513-window variant)",MATRIX,37%,1,1
+top1000_pca_factor4_grouping50,"Categorical cluster ID assigning each stock in the TOP1000 universe to one of 50 robust, return-based industry groups using the FACT4 method (513-window variant)",MATRIX,37%,0,0
+top1500_pca_factor1_grouping10,Integer label assigning the stock to one of 10 return-based statistical industry clusters for the TOP1500 universe using the FACT1 robust method,MATRIX,56%,1,1
+top1500_pca_factor1_grouping2,Integer label assigning the stock to one of 2 return-based statistical industry clusters for the TOP1500 universe using the FACT1 robust method,MATRIX,56%,0,0
+top1500_pca_factor1_grouping20,Integer label assigning the stock to one of 20 return-based statistical industry clusters for the TOP1500 universe using the FACT1 robust method,MATRIX,56%,0,0
+top1500_pca_factor1_grouping5,Integer label assigning the stock to one of 5 return-based statistical industry clusters for the TOP1500 universe using the FACT1 robust method,MATRIX,56%,0,0
+top1500_pca_factor1_grouping50,Integer label assigning the stock to one of 50 return-based statistical industry clusters for the TOP1500 universe using the FACT1 robust method,MATRIX,56%,0,0
+top1500_pca_factor2_grouping10,Integer label assigning the stock to one of 10 return-based statistical industry clusters for the TOP1500 universe using the FACT2 robust method,MATRIX,56%,0,0
+top1500_pca_factor2_grouping2,Integer label assigning the stock to one of 2 return-based statistical industry clusters for the TOP1500 universe using the FACT2 robust method,MATRIX,56%,0,0
+top1500_pca_factor2_grouping20,Integer label assigning the stock to one of 20 return-based statistical industry clusters for the TOP1500 universe using the FACT2 robust method,MATRIX,56%,0,0
+top1500_pca_factor2_grouping5,Integer label assigning the stock to one of 5 return-based statistical industry clusters for the TOP1500 universe using the FACT2 robust method,MATRIX,56%,0,0
+top1500_pca_factor2_grouping50,Integer label assigning the stock to one of 50 return-based statistical industry clusters for the TOP1500 universe using the FACT2 robust method,MATRIX,56%,0,0
+top1500_pca_factor3_grouping2,Integer label assigning the stock to one of 2 return-based statistical industry clusters for the TOP1500 universe using the FACT3 robust method,MATRIX,56%,0,0
+top1500_pca_factor3_grouping5,Integer label assigning the stock to one of 5 return-based statistical industry clusters for the TOP1500 universe using the FACT3 robust method,MATRIX,56%,0,0
+top2000_factor10_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor11_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor12_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor13_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor14_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor15_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor1_group10_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT1 method, with 10 clusters",MATRIX,74%,0,0
+top2000_factor1_group20_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT1 method, with 20 clusters",MATRIX,74%,0,0
+top2000_factor1_group2_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT1 method, with 2 clusters",MATRIX,74%,0,0
+top2000_factor1_group50_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT1 method, with 50 clusters",MATRIX,74%,0,0
+top2000_factor1_group5_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT1 method, with 5 clusters",MATRIX,74%,0,0
+top2000_factor1_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor2_group10_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT2 method, with 10 clusters",MATRIX,74%,0,0
+top2000_factor2_group20_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT2 method, with 20 clusters",MATRIX,74%,1,1
+top2000_factor2_group2_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT2 method, with 2 clusters",MATRIX,74%,0,0
+top2000_factor2_group50_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT2 method, with 50 clusters",MATRIX,74%,0,0
+top2000_factor2_group5_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT2 method, with 5 clusters",MATRIX,74%,0,0
+top2000_factor2_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor3_group10_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT3 method, with 10 clusters",MATRIX,74%,0,0
+top2000_factor3_group20_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT3 method, with 20 clusters",MATRIX,74%,0,0
+top2000_factor3_group2_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT3 method, with 2 clusters",MATRIX,74%,0,0
+top2000_factor3_group50_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT3 method, with 50 clusters",MATRIX,74%,0,0
+top2000_factor3_group5_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT3 method, with 5 clusters",MATRIX,74%,0,0
+top2000_factor3_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor4_group10_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT4 method, with 10 clusters",MATRIX,74%,0,0
+top2000_factor4_group20_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT4 method, with 20 clusters",MATRIX,74%,0,0
+top2000_factor4_group2_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT4 method, with 2 clusters",MATRIX,74%,0,0
+top2000_factor4_group50_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT4 method, with 50 clusters",MATRIX,74%,0,0
+top2000_factor4_group5_score,"Categorical label (integer) indicating robust, return-based industry cluster membership for the TOP2000 universe using the FACT4 method, with 5 clusters",MATRIX,74%,0,0
+top2000_factor4_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor5_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor6_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor7_value,statistical industry classification,MATRIX,74%,0,0
+top2000_factor8_value,statistical industry classification,MATRIX,74%,2,2
+top2000_factor9_value,statistical industry classification,MATRIX,74%,1,1
+top2000_pca_factor1_grouping10,"Integer cluster label assigning each TOP2000 stock to one of 10 robust, return-based statistical industry clusters using the FACT1 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor1_grouping2,"Integer cluster label assigning each TOP2000 stock to one of 2 robust, return-based statistical industry clusters using the FACT1 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor1_grouping20,"Integer cluster label assigning each TOP2000 stock to one of 20 robust, return-based statistical industry clusters using the FACT1 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor1_grouping5,"Integer cluster label assigning each TOP2000 stock to one of 5 robust, return-based statistical industry clusters using the FACT1 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor1_grouping50,"Integer cluster label assigning each TOP2000 stock to one of 50 robust, return-based statistical industry clusters using the FACT1 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor2_grouping10,"Integer cluster label assigning each TOP2000 stock to one of 10 robust, return-based statistical industry clusters using the FACT2 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor2_grouping2,"Integer cluster label assigning each TOP2000 stock to one of 2 robust, return-based statistical industry clusters using the FACT2 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor2_grouping20,"Integer cluster label assigning each TOP2000 stock to one of 20 robust, return-based statistical industry clusters using the FACT2 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor2_grouping5,"Integer cluster label assigning each TOP2000 stock to one of 5 robust, return-based statistical industry clusters using the FACT2 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor2_grouping50,"Integer cluster label assigning each TOP2000 stock to one of 50 robust, return-based statistical industry clusters using the FACT2 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor3_grouping10,"Integer cluster label assigning each TOP2000 stock to one of 10 robust, return-based statistical industry clusters using the FACT3 method (513 variant); categorical, not ordinal",MATRIX,75%,1,1
+top2000_pca_factor3_grouping2,"Integer cluster label assigning each TOP2000 stock to one of 2 robust, return-based statistical industry clusters using the FACT3 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor3_grouping20,"Integer cluster label assigning each TOP2000 stock to one of 20 robust, return-based statistical industry clusters using the FACT3 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor3_grouping5,"Integer cluster label assigning each TOP2000 stock to one of 5 robust, return-based statistical industry clusters using the FACT3 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor3_grouping50,"Integer cluster label assigning each TOP2000 stock to one of 50 robust, return-based statistical industry clusters using the FACT3 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor4_grouping10,"Integer cluster label assigning each TOP2000 stock to one of 10 robust, return-based statistical industry clusters using the FACT4 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor4_grouping2,"Integer cluster label assigning each TOP2000 stock to one of 2 robust, return-based statistical industry clusters using the FACT4 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor4_grouping20,"Integer cluster label assigning each TOP2000 stock to one of 20 robust, return-based statistical industry clusters using the FACT4 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor4_grouping5,"Integer cluster label assigning each TOP2000 stock to one of 5 robust, return-based statistical industry clusters using the FACT4 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top2000_pca_factor4_grouping50,"Integer cluster label assigning each TOP2000 stock to one of 50 robust, return-based statistical industry clusters using the FACT4 method (513 variant); categorical, not ordinal",MATRIX,75%,0,0
+top200_method1_group10_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT1 (variant _513); 10 clusters",MATRIX,9%,0,0
+top200_method1_group20_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT1 (variant _513); 20 clusters",MATRIX,9%,0,0
+top200_method1_group2_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT1 (variant _513); 2 clusters",MATRIX,9%,0,0
+top200_method1_group50_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT1 (variant _513); 50 clusters",MATRIX,9%,0,0
+top200_method1_group5_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT1 (variant _513); 5 clusters",MATRIX,9%,0,0
+top200_method2_group10_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT2 (variant _513); 10 clusters",MATRIX,9%,0,0
+top200_method2_group20_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT2 (variant _513); 20 clusters",MATRIX,9%,0,0
+top200_method2_group2_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT2 (variant _513); 2 clusters",MATRIX,9%,0,0
+top200_method2_group50_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT2 (variant _513); 50 clusters",MATRIX,9%,0,0
+top200_method2_group5_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT2 (variant _513); 5 clusters",MATRIX,9%,0,0
+top200_method3_group10_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT3 (variant _513); 10 clusters",MATRIX,9%,0,0
+top200_method3_group20_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT3 (variant _513); 20 clusters",MATRIX,9%,0,0
+top200_method3_group2_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT3 (variant _513); 2 clusters",MATRIX,9%,0,0
+top200_method3_group50_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT3 (variant _513); 50 clusters",MATRIX,9%,0,0
+top200_method3_group5_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT3 (variant _513); 5 clusters",MATRIX,9%,0,0
+top200_method4_group10_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT4 (variant _513); 10 clusters",MATRIX,9%,0,0
+top200_method4_group20_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT4 (variant _513); 20 clusters",MATRIX,9%,0,0
+top200_method4_group2_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT4 (variant _513); 2 clusters",MATRIX,9%,0,0
+top200_method4_group50_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT4 (variant _513); 50 clusters",MATRIX,9%,0,0
+top200_method4_group5_score,"Categorical cluster ID for a robust, return-based statistical industry classification in the TOP200 universe using method FACT4 (variant _513); 5 clusters",MATRIX,9%,0,0
+top3000_pca_component1,First principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component10,Tenth principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component11,Eleventh principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component12,Twelfth principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component13,Thirteenth principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component14,Fourteenth principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component15,Fifteenth principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component2,Second principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component3,Third principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component4,Fourth principal component value for top 3000 securities.,MATRIX,99%,1,1
+top3000_pca_component5,Fifth principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component6,Sixth principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component7,Seventh principal component value for top 3000 securities.,MATRIX,99%,0,0
+top3000_pca_component8,Eighth principal component value for top 3000 securities.,MATRIX,99%,1,1
+top3000_pca_component9,Ninth principal component value for top 3000 securities.,MATRIX,99%,0,0
+top300_factor1_group10_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT1 method, with 10 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor1_group20_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT1 method, with 20 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor1_group2_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT1 method, with 2 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor1_group50_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT1 method, with 50 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor1_group5_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT1 method, with 5 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor2_group10_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT2 method, with 10 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor2_group20_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT2 method, with 20 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor2_group2_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT2 method, with 2 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor2_group50_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT2 method, with 50 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor2_group5_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT2 method, with 5 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor3_group10_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT3 method, with 10 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor3_group20_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT3 method, with 20 clusters (513-window variant)",MATRIX,12%,1,1
+top300_factor3_group2_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT3 method, with 2 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor3_group50_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT3 method, with 50 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor3_group5_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT3 method, with 5 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor4_group10_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT4 method, with 10 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor4_group20_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT4 method, with 20 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor4_group2_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT4 method, with 2 clusters (513-window variant)",MATRIX,12%,1,1
+top300_factor4_group50_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT4 method, with 50 clusters (513-window variant)",MATRIX,12%,0,0
+top300_factor4_group5_score,"Integer label for statistically derived, return-based industry cluster membership in the TOP300 universe using the FACT4 method, with 5 clusters (513-window variant)",MATRIX,12%,0,0
+top300_industry_grouping_method1_10,"Integer label assigning each security in the TOP300 universe to one of 10 robust, return-based industry clusters (FACT1 method)",MATRIX,12%,0,0
+top300_industry_grouping_method1_2,"Integer label assigning each security in the TOP300 universe to one of 2 robust, return-based industry clusters (FACT1 method)",MATRIX,12%,0,0
+top300_industry_grouping_method1_20,"Integer label assigning each security in the TOP300 universe to one of 20 robust, return-based industry clusters (FACT1 method)",MATRIX,12%,1,1
+top300_industry_grouping_method1_5,"Integer label assigning each security in the TOP300 universe to one of 5 robust, return-based industry clusters (FACT1 method)",MATRIX,12%,0,0
+top300_industry_grouping_method1_50,"Integer label assigning each security in the TOP300 universe to one of 50 robust, return-based industry clusters (FACT1 method)",MATRIX,12%,0,0
+top300_industry_grouping_method2_10,"Integer label assigning each security in the TOP300 universe to one of 10 robust, return-based industry clusters (FACT2 method)",MATRIX,12%,0,0
+top300_industry_grouping_method2_2,"Integer label assigning each security in the TOP300 universe to one of 2 robust, return-based industry clusters (FACT2 method)",MATRIX,12%,0,0
+top300_industry_grouping_method2_20,"Integer label assigning each security in the TOP300 universe to one of 20 robust, return-based industry clusters (FACT2 method)",MATRIX,12%,0,0
+top300_industry_grouping_method2_5,"Integer label assigning each security in the TOP300 universe to one of 5 robust, return-based industry clusters (FACT2 method)",MATRIX,12%,0,0
+top300_industry_grouping_method2_50,"Integer label assigning each security in the TOP300 universe to one of 50 robust, return-based industry clusters (FACT2 method)",MATRIX,12%,0,0
+top300_industry_grouping_method3_10,"Integer label assigning each security in the TOP300 universe to one of 10 robust, return-based industry clusters (FACT3 method)",MATRIX,12%,0,0
+top300_industry_grouping_method3_2,"Integer label assigning each security in the TOP300 universe to one of 2 robust, return-based industry clusters (FACT3 method)",MATRIX,12%,0,0
+top300_industry_grouping_method3_20,"Integer label assigning each security in the TOP300 universe to one of 20 robust, return-based industry clusters (FACT3 method)",MATRIX,12%,0,0
+top300_industry_grouping_method3_5,"Integer label assigning each security in the TOP300 universe to one of 5 robust, return-based industry clusters (FACT3 method)",MATRIX,12%,0,0
+top300_industry_grouping_method3_50,"Integer label assigning each security in the TOP300 universe to one of 50 robust, return-based industry clusters (FACT3 method)",MATRIX,12%,0,0
+top300_industry_grouping_method4_10,"Integer label assigning each security in the TOP300 universe to one of 10 robust, return-based industry clusters (FACT4 method)",MATRIX,12%,0,0
+top300_industry_grouping_method4_2,"Integer label assigning each security in the TOP300 universe to one of 2 robust, return-based industry clusters (FACT4 method)",MATRIX,12%,0,0
+top300_industry_grouping_method4_20,"Integer label assigning each security in the TOP300 universe to one of 20 robust, return-based industry clusters (FACT4 method)",MATRIX,12%,0,0
+top300_industry_grouping_method4_5,"Integer label assigning each security in the TOP300 universe to one of 5 robust, return-based industry clusters (FACT4 method)",MATRIX,12%,0,0
+top300_industry_grouping_method4_50,"Integer label assigning each security in the TOP300 universe to one of 50 robust, return-based industry clusters (FACT4 method)",MATRIX,12%,2,2
+top500_industry_grouping_method1_10,Categorical industry cluster label assigning each TOP500 stock to 1 of 10 clusters using the robust FACT1 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method1_2,Categorical industry cluster label assigning each TOP500 stock to 1 of 2 clusters using the robust FACT1 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method1_20,Categorical industry cluster label assigning each TOP500 stock to 1 of 20 clusters using the robust FACT1 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method1_5,Categorical industry cluster label assigning each TOP500 stock to 1 of 5 clusters using the robust FACT1 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method1_50,Categorical industry cluster label assigning each TOP500 stock to 1 of 50 clusters using the robust FACT1 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method2_10,Categorical industry cluster label assigning each TOP500 stock to 1 of 10 clusters using the robust FACT2 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method2_2,Categorical industry cluster label assigning each TOP500 stock to 1 of 2 clusters using the robust FACT2 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method2_20,Categorical industry cluster label assigning each TOP500 stock to 1 of 20 clusters using the robust FACT2 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method2_5,Categorical industry cluster label assigning each TOP500 stock to 1 of 5 clusters using the robust FACT2 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method2_50,Categorical industry cluster label assigning each TOP500 stock to 1 of 50 clusters using the robust FACT2 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method3_10,Categorical industry cluster label assigning each TOP500 stock to 1 of 10 clusters using the robust FACT3 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method3_2,Categorical industry cluster label assigning each TOP500 stock to 1 of 2 clusters using the robust FACT3 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method3_20,Categorical industry cluster label assigning each TOP500 stock to 1 of 20 clusters using the robust FACT3 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method3_5,Categorical industry cluster label assigning each TOP500 stock to 1 of 5 clusters using the robust FACT3 method (513-window variant),MATRIX,20%,1,1
+top500_industry_grouping_method3_50,Categorical industry cluster label assigning each TOP500 stock to 1 of 50 clusters using the robust FACT3 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method4_10,Categorical industry cluster label assigning each TOP500 stock to 1 of 10 clusters using the robust FACT4 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method4_2,Categorical industry cluster label assigning each TOP500 stock to 1 of 2 clusters using the robust FACT4 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method4_20,Categorical industry cluster label assigning each TOP500 stock to 1 of 20 clusters using the robust FACT4 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method4_5,Categorical industry cluster label assigning each TOP500 stock to 1 of 5 clusters using the robust FACT4 method (513-window variant),MATRIX,20%,0,0
+top500_industry_grouping_method4_50,Categorical industry cluster label assigning each TOP500 stock to 1 of 50 clusters using the robust FACT4 method (513-window variant),MATRIX,20%,0,0
+utilities_method1_group10_score,"Categorical cluster label assigning the stock to one of 10 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT1 method)",MATRIX,100%,1,1
+utilities_method1_group20_score,"Categorical cluster label assigning the stock to one of 20 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT1 method)",MATRIX,100%,0,0
+utilities_method1_group2_score,"Categorical cluster label assigning the stock to one of 2 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT1 method)",MATRIX,100%,2,2
+utilities_method1_group5_score,"Categorical cluster label assigning the stock to one of 5 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT1 method)",MATRIX,100%,2,2
+utilities_method2_group10_score,"Categorical cluster label assigning the stock to one of 10 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT2 method)",MATRIX,100%,0,0
+utilities_method2_group20_score,"Categorical cluster label assigning the stock to one of 20 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT2 method)",MATRIX,100%,0,0
+utilities_method2_group2_score,"Categorical cluster label assigning the stock to one of 2 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT2 method)",MATRIX,100%,0,0
+utilities_method2_group5_score,"Categorical cluster label assigning the stock to one of 5 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT2 method)",MATRIX,100%,1,1
+utilities_method3_group10_score,"Categorical cluster label assigning the stock to one of 10 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT3 method)",MATRIX,100%,0,0
+utilities_method3_group20_score,"Categorical cluster label assigning the stock to one of 20 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT3 method)",MATRIX,100%,0,0
+utilities_method3_group2_score,"Categorical cluster label assigning the stock to one of 2 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT3 method)",MATRIX,100%,0,0
+utilities_method3_group5_score,"Categorical cluster label assigning the stock to one of 5 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT3 method)",MATRIX,100%,0,0
+utilities_method4_group10_score,"Categorical cluster label assigning the stock to one of 10 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT4 method)",MATRIX,100%,1,1
+utilities_method4_group20_score,"Categorical cluster label assigning the stock to one of 20 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT4 method)",MATRIX,100%,1,1
+utilities_method4_group2_score,"Categorical cluster label assigning the stock to one of 2 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT4 method)",MATRIX,100%,1,1
+utilities_method4_group5_score,"Categorical cluster label assigning the stock to one of 5 robust, return-based industry clusters in the US Utilities TOP3000 universe (FACT4 method)",MATRIX,100%,0,0

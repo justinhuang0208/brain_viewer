@@ -1,0 +1,55 @@
+Field,Description,Type,Coverage,Users,Alphas
+avg_first_biasfree_fundamental_estimate,The average value of the first bias-free fundamental estimate for the period.,MATRIX,84%,1,1
+avg_first_biasfree_price_target_estimate,The average value of the first bias-free price target estimate for the period.,MATRIX,94%,25,40
+avg_first_biasfree_quarterly_fundamental,The average value of the first bias-free quarterly fundamental estimate for the period.,MATRIX,84%,0,0
+avg_second_biasfree_fundamental_estimate,The average value of the second bias-free fundamental estimate for the period.,MATRIX,84%,1,1
+avg_second_biasfree_price_target_estimate,The average value of the second bias-free price target estimate for the period.,MATRIX,94%,9,14
+avg_second_biasfree_quarterly_fundamental,The average value of the second bias-free quarterly fundamental estimate for the period.,MATRIX,84%,1,1
+avg_third_biasfree_price_target_estimate,The average value of the third bias-free price target estimate for the period.,MATRIX,94%,13,15
+biasfree_analyst_fundamental_estimate,A single analyst's bias-adjusted fundamental estimate for a security.,VECTOR,85%,1,1
+biasfree_analyst_price_target,A single analyst's bias-adjusted price target estimate for a security.,VECTOR,89%,0,0
+count_bias_adjusted_fundamental_estimates,The number of available bias-adjusted fundamental estimates for the period.,MATRIX,84%,0,0
+count_bias_adjusted_price_target_estimates,The number of available bias-adjusted price target estimates for the period.,MATRIX,94%,1,1
+count_biasfree_quarterly_fundamental_estimates,The number of available bias-adjusted quarterly fundamental estimates for the period.,MATRIX,84%,0,0
+estimate_currency_code_9,The currency in which the current fundamental estimate is recorded.,VECTOR,85%,0,0
+first_biasfree_fundamental_analogue,The first bias-free analogue value for a fundamental forecast from an analyst.,VECTOR,85%,1,1
+first_biasfree_price_target_analogue,The first bias-free analogue value for a price target forecast from an analyst.,VECTOR,89%,7,9
+forecast_horizon_months,The time horizon in months for which the price target estimate is made.,VECTOR,89%,0,0
+max_bias_adjusted_fundamental_estimate,The highest value among bias-adjusted fundamental estimates for the period.,MATRIX,84%,0,0
+max_bias_adjusted_price_target,The highest value among bias-adjusted price target estimates for the period.,MATRIX,94%,1,1
+max_biasfree_quarterly_fundamental_estimate,The highest value among bias-adjusted quarterly fundamental estimates for the period.,MATRIX,84%,0,0
+mean_bias_adjusted_fundamental_estimate,The mean of bias-adjusted fundamental estimates for the period.,MATRIX,84%,2,2
+mean_bias_adjusted_price_target,The mean of bias-adjusted price target estimates for the period.,MATRIX,94%,2,2
+mean_biasfree_quarterly_fundamental_estimate,The mean of bias-adjusted quarterly fundamental estimates for the period.,MATRIX,84%,2,2
+median_bias_adjusted_fundamental_estimate,The median of bias-adjusted fundamental estimates for the period.,MATRIX,84%,0,0
+median_bias_adjusted_price_target,The median of bias-adjusted price target estimates for the period.,MATRIX,94%,1,1
+median_biasfree_quarterly_fundamental_estimate,The median of bias-adjusted quarterly fundamental estimates for the period.,MATRIX,84%,0,0
+median_first_biasfree_fundamental_estimate,The median value of the first bias-free fundamental estimate for the period.,MATRIX,84%,0,0
+median_first_biasfree_price_target_estimate,The median value of the first bias-free price target estimate for the period.,MATRIX,94%,23,27
+median_first_biasfree_quarterly_fundamental,The median value of the first bias-free quarterly fundamental estimate for the period.,MATRIX,84%,0,0
+median_second_biasfree_fundamental_estimate,The median value of the second bias-free fundamental estimate for the period.,MATRIX,84%,0,0
+median_second_biasfree_price_target_estimate,The median value of the second bias-free price target estimate for the period.,MATRIX,94%,5,6
+median_second_biasfree_quarterly_fundamental,The median value of the second bias-free quarterly fundamental estimate for the period.,MATRIX,84%,1,1
+median_third_biasfree_price_target_estimate,The median value of the third bias-free price target estimate for the period.,MATRIX,94%,0,0
+min_bias_adjusted_fundamental_estimate,The lowest value among bias-adjusted fundamental estimates for the period.,MATRIX,84%,0,0
+min_bias_adjusted_price_target,The lowest value among bias-adjusted price target estimates for the period.,MATRIX,94%,0,0
+min_biasfree_quarterly_fundamental_estimate,The lowest value among bias-adjusted quarterly fundamental estimates for the period.,MATRIX,84%,1,1
+num_downward_biasfree_fundamental_revisions,The number of times analysts have lowered their bias-adjusted fundamental estimates.,MATRIX,84%,0,0
+num_downward_biasfree_price_target_revisions,The number of times analysts have lowered their bias-adjusted price target estimates.,MATRIX,94%,0,0
+num_downward_biasfree_quarterly_fundamental_revisions,The number of times analysts have lowered their bias-adjusted quarterly fundamental estimates.,MATRIX,84%,0,0
+num_upward_biasfree_fundamental_revisions,The number of times analysts have raised their bias-adjusted fundamental estimates.,MATRIX,84%,0,0
+num_upward_biasfree_price_target_revisions,The number of times analysts have raised their bias-adjusted price target estimates.,MATRIX,94%,1,3
+num_upward_biasfree_quarterly_fundamental_revisions,The number of times analysts have raised their bias-adjusted quarterly fundamental estimates.,MATRIX,84%,0,0
+second_biasfree_fundamental_analogue,The second bias-free analogue value for a fundamental forecast from an analyst.,VECTOR,85%,2,2
+second_biasfree_price_target_analogue,The second bias-free analogue value for a price target forecast from an analyst.,VECTOR,89%,0,0
+stddev_bias_adjusted_fundamental_estimate,The standard deviation of bias-adjusted fundamental estimates for the period.,MATRIX,84%,0,0
+stddev_bias_adjusted_price_target,The standard deviation of bias-adjusted price target estimates for the period.,MATRIX,94%,1,1
+stddev_biasfree_quarterly_fundamental_estimate,The standard deviation of bias-adjusted quarterly fundamental estimates for the period.,MATRIX,84%,0,0
+stddev_first_biasfree_fundamental_estimate,The standard deviation of the first bias-free fundamental estimate for the period.,MATRIX,84%,0,0
+stddev_first_biasfree_price_target_estimate,The standard deviation of the first bias-free price target estimate for the period.,MATRIX,94%,3,3
+stddev_first_biasfree_quarterly_fundamental,The standard deviation of the first bias-free quarterly fundamental estimate for the period.,MATRIX,84%,1,1
+stddev_second_biasfree_fundamental_estimate,The standard deviation of the second bias-free fundamental estimate for the period.,MATRIX,84%,0,0
+stddev_second_biasfree_price_target_estimate,The standard deviation of the second bias-free price target estimate for the period.,MATRIX,94%,0,0
+stddev_second_biasfree_quarterly_fundamental,The standard deviation of the second bias-free quarterly fundamental estimate for the period.,MATRIX,84%,0,0
+stddev_third_biasfree_price_target_estimate,The standard deviation of the third bias-free price target estimate for the period.,MATRIX,94%,1,1
+third_biasfree_price_target_analogue,The third bias-free analogue value for a price target forecast from an analyst.,VECTOR,89%,3,5

@@ -1,13 +1,19 @@
 Field,Description,Type,Coverage,Users,Alphas
-scl12_alltype_buzzvec,sentiment volume,Vector,95%,1709,2528
-scl12_alltype_sentvec,sentiment,Vector,95%,114,193
-scl12_alltype_typevec,instrument type index,Vector,95%,58,103
-scl12_buzz,relative sentiment volume,Matrix,95%,7435,10942
-scl12_cubealltype_buzzvec,sentiment volume,Vector,99%,3,5
-scl12_cubealltype_sentvec,sentiment,Vector,99%,14,21
-scl12_cubealltype_typevec,instrument type index,Vector,99%,5,8
-scl12_sentiment,sentiment,Matrix,94%,485,1840
-snt_buzz,"negative relative sentiment volume, fill nan with 0",Matrix,95%,712,2511
-snt_buzz_bfl,"negative relative sentiment volume, fill nan with 1",Matrix,100%,787,2249
-snt_buzz_ret,negative return of relative sentiment volume,Matrix,95%,1049,2541
-snt_value,"negative sentiment, fill nan with 0",Matrix,94%,332,1591
+scl12_alltype_buzzvec,sentiment volume,VECTOR,95%,124,185
+scl12_alltype_sentvec,sentiment,VECTOR,95%,39,73
+scl12_alltype_typevec,instrument type index,VECTOR,95%,52,73
+scl12_buzz,relative sentiment volume,MATRIX,100%,13281,20037
+scl12_buzz_fast_d1,relative sentiment volume,MATRIX,98%,101,117
+scl12_buzzvec,Vector representing the volume of social media sentiment/mentions related to the instrument,VECTOR,100%,2532,4122
+scl12_sentiment,sentiment,MATRIX,100%,1189,3239
+scl12_sentiment_fast_d1,sentiment,MATRIX,98%,112,127
+scl12_sentvec,Vector representing the sentiment score (bullish/bearish/neutral) derived from social media data for the instrument,VECTOR,100%,336,633
+scl12_typevec,Vector containing the type indices identifying the categories of instruments in the dataset,VECTOR,100%,275,530
+snt_buzz,"Negative relative sentiment volume measure for current day, with missing values filled as 0",MATRIX,100%,2981,9142
+snt_buzz_bfl,"Negative relative sentiment volume measure for current day, with missing values filled as 1",MATRIX,100%,2541,5778
+snt_buzz_bfl_fast_d1,"Negative relative sentiment volume measure for current day, with missing values filled as 1",MATRIX,100%,108,116
+snt_buzz_fast_d1,"Negative relative sentiment volume measure for current day, with missing values filled as 0",MATRIX,98%,113,127
+snt_buzz_ret,negative return of relative sentiment volume,MATRIX,100%,1730,3851
+snt_buzz_ret_fast_d1,negative return of relative sentiment volume,MATRIX,98%,43,53
+snt_value,"Negative sentiment score/indicator for current day, with missing values filled as 0",MATRIX,100%,828,2451
+snt_value_fast_d1,"Negative sentiment score/indicator for current day, with missing values filled as 0",MATRIX,98%,110,147

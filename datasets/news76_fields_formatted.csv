@@ -1,0 +1,7 @@
+Field,Description,Type,Coverage,Users,Alphas
+mws76_classnum,Numeric classification label for the specified newswire or story,VECTOR,90%,11,11
+mws76_confidence,Per-entity confidence values aligned with Score sentiment uses 0 to 100 MMN uses 0 to 1 probability of market move,VECTOR,90%,7,7
+mws76_score,Per-entity analytics score array: sentiment uses -1 negative 0 neutral 1 positive; MMN and MMN_1STPASS are 1 for tagged entities,VECTOR,90%,2,2
+mws76_timeofarrival,UTC timestamp when the story was first created in Bloomberg systems,VECTOR,90%,2,2
+mws76_version,Version number of the underlying analytics model used to generate the record,VECTOR,90%,9,12
+news_story_title,Story headline text subject to entitlements,VECTOR,90%,10,12

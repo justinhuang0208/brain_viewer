@@ -1,0 +1,189 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl162_22_efcf,Predicting fcfe Field,MATRIX,91%,45,218
+mdl162_22_ffcf,Predicting 252-day future FFCF,MATRIX,91%,23,114
+mdl162_22_q_adbs,Predicting SBDA Field,MATRIX,91%,29,116
+mdl162_22_q_cnin,Predicting fundamental field for 22 days,MATRIX,91%,29,170
+mdl162_22_q_drpf,Predicting fprd Field,MATRIX,91%,18,61
+mdl162_22_q_dtns,Predicting fundamental Field 22 days,MATRIX,91%,14,26
+mdl162_22_q_eaca,Predicting fundamental Field 22 days,MATRIX,91%,11,33
+mdl162_22_q_fltf,Predicting FTLF Field,MATRIX,91%,30,85
+mdl162_22_q_ilti,Predicting fundamental Field 22 days,MATRIX,91%,16,30
+mdl162_22_q_in,Predicting NI Field,MATRIX,89%,17,69
+mdl162_22_q_ip,Predicted quarterly fundamental value 22 trading days forward,MATRIX,89%,47,167
+mdl162_22_q_ndlf,Predicting fldn Field,MATRIX,91%,16,114
+mdl162_22_q_oca,"Forecast of Accrued Other Current liabilities (Compustat ACO) 22 business days ahead, quarterly series",MATRIX,89%,18,32
+mdl162_22_q_olto,Predicting fundamental Field 22 days,MATRIX,91%,23,169
+mdl162_22_q_pa,Predicting fundamental Field 22 days,MATRIX,89%,18,146
+mdl162_22_q_pdaio,Predicting fundamental Field 22 days,MATRIX,89%,24,49
+mdl162_22_q_ta,Predicting fundamental Field 22 days,MATRIX,89%,22,84
+mdl162_22_q_tcl,Predicting lct Field,MATRIX,89%,17,39
+mdl162_22_q_xfspe,Predicting fundamental field for 22 days,MATRIX,89%,15,68
+mdl162_252_a_adbs,Predicting SBDA Field,MATRIX,91%,20,25
+mdl162_252_a_cnin,Predicting fundamental Field 252 days,MATRIX,91%,14,75
+mdl162_252_a_drpf,Predicting fprd Field,MATRIX,91%,13,34
+mdl162_252_a_dtns,Predicting fundamental Field 252 days,MATRIX,91%,13,43
+mdl162_252_a_eaca,Predicting fundamental Field 252 days,MATRIX,91%,20,84
+mdl162_252_a_fltf,Predicting FTLF Field,MATRIX,91%,24,136
+mdl162_252_a_ilti,Predicting fundamental Field 252 days,MATRIX,91%,15,94
+mdl162_252_a_in,Predicting NI Field,MATRIX,89%,10,67
+mdl162_252_a_ip,Predicted annual fundamental value 252 trading days forward,MATRIX,89%,22,41
+mdl162_252_a_ndlf,Predicting fldn Field,MATRIX,91%,8,16
+mdl162_252_a_oca,Predicting ACO Field,MATRIX,89%,11,12
+mdl162_252_a_olto,Predicting fundamental Field 252 days,MATRIX,91%,9,15
+mdl162_252_a_pa,Predicting fundamental Field 252 days,MATRIX,89%,7,47
+mdl162_252_a_pdaio,Predicting fundamental Field 252 days,MATRIX,89%,12,70
+mdl162_252_a_ta,Predicting fundamental Field 252 days,MATRIX,89%,25,110
+mdl162_252_a_tcl,Predicting lct Field,MATRIX,89%,8,10
+mdl162_252_a_xfspe,Predicting fundamental field for 252 days,MATRIX,89%,16,37
+mdl162_252_efcf,Predicting fcfe Field,MATRIX,91%,15,150
+mdl162_252_ffcf,Predicting fundamental Field 22 days,MATRIX,91%,12,43
+mdl162_621_a_adbs,Predicting SBDA Field,MATRIX,91%,18,99
+mdl162_621_a_cnin,Predicting fundamental Field 126 days,MATRIX,91%,24,101
+mdl162_621_a_drpf,Predicting fprd Field,MATRIX,91%,11,28
+mdl162_621_a_dtns,Predicting fundamental field for 126 days,MATRIX,91%,21,83
+mdl162_621_a_eaca,Predicting fundamental Field 126 days,MATRIX,91%,17,137
+mdl162_621_a_fltf,Predicting FTLF Field,MATRIX,91%,21,91
+mdl162_621_a_ilti,Predicting fundamental Field 126 days,MATRIX,91%,8,52
+mdl162_621_a_in,Predicting NI Field,MATRIX,89%,17,71
+mdl162_621_a_ip,Predicted annual fundamental value 126 trading days forward,MATRIX,89%,15,19
+mdl162_621_a_ndlf,Predicting fldn Field,MATRIX,91%,11,15
+mdl162_621_a_oca,Predicting ACO Field,MATRIX,89%,13,16
+mdl162_621_a_olto,Predicting fundamental field for 126 days,MATRIX,91%,7,14
+mdl162_621_a_pa,Predicting fundamental Field 126 days,MATRIX,89%,6,12
+mdl162_621_a_pdaio,Predicting fundamental Field 126 days,MATRIX,89%,9,24
+mdl162_621_a_ta,Predicting fundamental Field 126 days,MATRIX,89%,12,25
+mdl162_621_a_tcl,Predicting lct Field,MATRIX,89%,6,6
+mdl162_621_a_xfspe,Predicting fundamental Field 126 days,MATRIX,89%,19,104
+mdl162_621_efcf,Predicting fcfe Field,MATRIX,91%,9,10
+mdl162_621_ffcf,Predicting fundamental Field 126 days,MATRIX,91%,12,17
+mdl162_66_efcf,Predicting fcfe Field,MATRIX,91%,16,29
+mdl162_66_ffcf,Predicting fundamental Field 66 days,MATRIX,91%,17,37
+mdl162_66_q_adbs,Predicting SBDA Field,MATRIX,91%,9,16
+mdl162_66_q_cnin,Predicting fundamental Field 66 days,MATRIX,91%,24,142
+mdl162_66_q_drpf,Predicting fprd Field,MATRIX,91%,24,157
+mdl162_66_q_dtns,Predicting fundamental Field 66 days,MATRIX,91%,12,69
+mdl162_66_q_eaca,Predicting fundamental Field 66 days,MATRIX,91%,9,25
+mdl162_66_q_fltf,Predicting FTLF Field,MATRIX,91%,16,46
+mdl162_66_q_ilti,Predicting fundamental Field 66 days,MATRIX,91%,7,18
+mdl162_66_q_in,Predicting NI Field,MATRIX,89%,9,9
+mdl162_66_q_ip,Predicted quarterly fundamental value 66 trading days forward,MATRIX,89%,13,28
+mdl162_66_q_ndlf,Predicting fldn Field,MATRIX,91%,11,59
+mdl162_66_q_oca,Predicting ACO Field,MATRIX,89%,8,15
+mdl162_66_q_olto,Predicting fundamental Field for 66 days,MATRIX,91%,21,96
+mdl162_66_q_pa,Predicting fundamental Field 66 days,MATRIX,89%,13,56
+mdl162_66_q_pdaio,Predicting fundamental Field 66 days,MATRIX,89%,15,27
+mdl162_66_q_ta,Predicting fundamental Field 66 days,MATRIX,89%,15,81
+mdl162_66_q_tcl,Predicting lct Field,MATRIX,89%,21,28
+mdl162_66_q_xfspe,Predicting fundamental Field 66 days,MATRIX,89%,14,38
+mdl162_acae_a_126_error,Erroneous field,MATRIX,86%,12,46
+mdl162_acae_a_252_error,Erroneous field,MATRIX,86%,5,8
+mdl162_acae_q_22_error,Erroneous field,MATRIX,86%,7,47
+mdl162_acae_q_66_error,Erroneous field,MATRIX,86%,8,49
+mdl162_aco_a_126_error,Erroneous field,MATRIX,84%,8,64
+mdl162_aco_a_252_error,Erroneous field,MATRIX,84%,12,25
+mdl162_aco_q_22_error,Estimation error for the 22-day quarterly ACO forecast,MATRIX,84%,6,83
+mdl162_aco_q_66_error,Erroneous field,MATRIX,84%,5,7
+mdl162_ap_a_126_error,Erroneous field,MATRIX,84%,9,56
+mdl162_ap_a_252_error,Erroneous field,MATRIX,84%,7,14
+mdl162_ap_q_22_error,Erroneous field,MATRIX,84%,8,23
+mdl162_ap_q_66_error,Erroneous field,MATRIX,84%,7,16
+mdl162_at_a_126_error,Erroneous field,MATRIX,84%,12,54
+mdl162_at_a_252_error,Erroneous field,MATRIX,84%,7,54
+mdl162_at_q_22_error,Erroneous field,MATRIX,84%,7,21
+mdl162_at_q_66_error,Erronenous field,MATRIX,84%,3,4
+mdl162_atot_a_126,Predicting fundamental Field 126 days,MATRIX,91%,7,20
+mdl162_atot_a_126_error,Erroneous field,MATRIX,86%,14,27
+mdl162_atot_a_252,Predicting fundamental field for 252 days,MATRIX,91%,8,12
+mdl162_atot_a_252_error,Erroneous field,MATRIX,86%,8,15
+mdl162_atot_q_22,Predicting fundamental Field 22 days,MATRIX,91%,11,22
+mdl162_atot_q_22_error,Erroneous field,MATRIX,86%,6,47
+mdl162_atot_q_66,Predicting 66-day future ATOT,MATRIX,91%,22,92
+mdl162_atot_q_66_error,Erroneous field,MATRIX,86%,3,38
+mdl162_che_a_126,Predicting CHE Field,MATRIX,89%,16,41
+mdl162_che_a_126_error,Erroneous field,MATRIX,84%,8,79
+mdl162_che_a_252,Predicting CHE Field,MATRIX,89%,14,43
+mdl162_che_a_252_error,Erroneous field,MATRIX,84%,7,7
+mdl162_che_q_22,Cash and Cash Equivalents forecast 22 business days ahead,MATRIX,89%,18,52
+mdl162_che_q_22_error,Estimation error for the 22-business-day Cash and Cash Equivalents forecast,MATRIX,84%,3,4
+mdl162_che_q_66,Predicting CHE Field,MATRIX,89%,20,65
+mdl162_che_q_66_error,Erroneous field,MATRIX,84%,5,36
+mdl162_epsfx_a_126_error,Erroneous field,MATRIX,84%,10,22
+mdl162_epsfx_a_252_error,Erroneous field,MATRIX,84%,9,16
+mdl162_epsfx_q_22_error,Erronenous field,MATRIX,84%,6,11
+mdl162_epsfx_q_66_error,Erroneous field,MATRIX,84%,16,54
+mdl162_fcfe_126_error,Erroneous field,MATRIX,86%,18,30
+mdl162_fcfe_22_error,Erroneous field,MATRIX,86%,10,14
+mdl162_fcfe_252_error,Erroneous field,MATRIX,86%,24,111
+mdl162_fcfe_66_error,Erroneous field,MATRIX,86%,10,81
+mdl162_fcff_126_error,Erroneous field,MATRIX,84%,13,103
+mdl162_fcff_22_error,Erroneous field,MATRIX,84%,7,12
+mdl162_fcff_252_error,Erroneous field,MATRIX,84%,5,82
+mdl162_fcff_66_error,Erroneous field,MATRIX,84%,7,65
+mdl162_fldn_a_126_error,Erroneous field,MATRIX,86%,14,21
+mdl162_fldn_a_252_error,Erroneous field,MATRIX,86%,11,14
+mdl162_fldn_q_22_error,Erroneous field,MATRIX,86%,11,17
+mdl162_fldn_q_66_error,Erroneous field,MATRIX,86%,7,12
+mdl162_fprd_a_126_error,Erroneous field,MATRIX,86%,12,22
+mdl162_fprd_a_252_error,Erroneous field,MATRIX,86%,7,10
+mdl162_fprd_q_22_error,Erroneous field,MATRIX,86%,16,25
+mdl162_fprd_q_66_error,Erroneous field,MATRIX,86%,11,27
+mdl162_ftlf_a_126_error,Erroneous field,MATRIX,86%,8,16
+mdl162_ftlf_a_252_error,Erroneous field,MATRIX,86%,5,9
+mdl162_ftlf_q_22_error,Erroneous field,MATRIX,86%,9,14
+mdl162_ftlf_q_66_error,Erroneous field,MATRIX,86%,6,6
+mdl162_itli_a_126_error,Erroneous field,MATRIX,86%,4,15
+mdl162_itli_a_252_error,Erroneous field,MATRIX,86%,7,11
+mdl162_itli_q_22_error,Erronenous field,MATRIX,86%,8,9
+mdl162_itli_q_66_error,Erroneous field,MATRIX,86%,6,7
+mdl162_lct_a_126_error,Erroneous or invalid field; do not use,MATRIX,84%,7,60
+mdl162_lct_a_252_error,Erroneous or invalid field; do not use,MATRIX,84%,6,9
+mdl162_lct_q_22_error,Erroneous or invalid field; do not use,MATRIX,84%,5,61
+mdl162_lct_q_66_error,Erroneous or invalid field; do not use,MATRIX,84%,9,81
+mdl162_ni_a_126_error,Erroneous field,MATRIX,84%,5,6
+mdl162_ni_a_252_error,Erroneous field,MATRIX,84%,14,22
+mdl162_ni_q_22_error,Erroneous field,MATRIX,84%,8,15
+mdl162_ni_q_66_error,Erroneous field,MATRIX,84%,16,94
+mdl162_ninc_a_126_error,Erroneous field,MATRIX,86%,5,5
+mdl162_ninc_a_252_error,Erronenous field,MATRIX,86%,5,10
+mdl162_ninc_q_22_error,Erroneous field,MATRIX,86%,8,14
+mdl162_ninc_q_66_error,Erroneous field,MATRIX,86%,14,42
+mdl162_oiadp_a_126_error,Erroneous/invalid field (do not use),MATRIX,84%,5,11
+mdl162_oiadp_a_252_error,Erroneous/invalid field (do not use),MATRIX,84%,3,6
+mdl162_oiadp_q_22_error,Erroneous/invalid field (do not use),MATRIX,84%,4,4
+mdl162_oiadp_q_66_error,Erroneous/invalid field (do not use),MATRIX,84%,12,135
+mdl162_otlo_a_126_error,Erroneous field,MATRIX,86%,9,19
+mdl162_otlo_a_252_error,Erroneous field,MATRIX,86%,11,26
+mdl162_otlo_q_22_error,Erroneous field,MATRIX,86%,12,23
+mdl162_otlo_q_66_error,Erroneous field,MATRIX,86%,12,64
+mdl162_pi_a_126_error,Erroneous or invalid field; not for use,MATRIX,84%,7,9
+mdl162_pi_a_252_error,Erroneous or invalid field; not for use,MATRIX,84%,10,14
+mdl162_pi_q_22_error,Erroneous or invalid field; not for use,MATRIX,84%,11,18
+mdl162_pi_q_66_error,Erroneous or invalid field; not for use,MATRIX,84%,10,15
+mdl162_rect_a_126,Predicting fundamental Field 126 days,MATRIX,89%,19,43
+mdl162_rect_a_126_error,Erroneous field,MATRIX,84%,10,21
+mdl162_rect_a_252,Predicting fundamental Field 252 days,MATRIX,89%,13,63
+mdl162_rect_a_252_error,Erroneous field,MATRIX,84%,6,11
+mdl162_rect_q_22,Predicting fundamental Field 22 days,MATRIX,89%,21,129
+mdl162_rect_q_22_error,Erroneous field,MATRIX,84%,6,9
+mdl162_rect_q_66,Predicting fundamental Field 66 days,MATRIX,89%,12,28
+mdl162_rect_q_66_error,Erroneous field,MATRIX,84%,4,47
+mdl162_revt_a_126,Predicting fundamental Field 126 days,MATRIX,89%,11,58
+mdl162_revt_a_126_error,Erroneous field,MATRIX,84%,9,88
+mdl162_revt_a_252,Predicting 252-day future revenue,MATRIX,89%,20,48
+mdl162_revt_a_252_error,Erroneous field,MATRIX,84%,10,22
+mdl162_revt_q_22,Predicting fundamental field for 22 days,MATRIX,89%,12,22
+mdl162_revt_q_22_error,Erroneous field,MATRIX,84%,6,11
+mdl162_revt_q_66,Predicting fundamental Field 66 days,MATRIX,89%,8,48
+mdl162_revt_q_66_error,Erronenous field,MATRIX,84%,15,102
+mdl162_sbda_a_126_error,Erroneous field,MATRIX,86%,2,3
+mdl162_sbda_a_252_error,Erroneous field,MATRIX,86%,9,12
+mdl162_sbda_q_22_error,Erroneous field,MATRIX,86%,12,19
+mdl162_sbda_q_66_error,Erroneous field,MATRIX,86%,7,12
+mdl162_sntd_a_126_error,Erroneous field,MATRIX,86%,8,17
+mdl162_sntd_a_252_error,Erroneous field,MATRIX,86%,10,40
+mdl162_sntd_q_22_error,Erroneous field,MATRIX,86%,4,10
+mdl162_sntd_q_66_error,Erroneous field,MATRIX,86%,7,12
+mdl162_vwap_126,"Predicted volume-weighted average price 126 trading days after the verified earnings conference call (D1-lagged, local currency, event-only rows)",MATRIX,91%,24,95
+mdl162_vwap_22,"Predicted volume-weighted average price 22 trading days after the verified earnings conference call (D1-lagged, local currency, event-only rows)",MATRIX,91%,26,140
+mdl162_vwap_5,"Predicted volume-weighted average price 5 trading days after the verified earnings conference call (D1-lagged, local currency, event-only rows)",MATRIX,91%,31,134
+mdl162_vwap_66,"Predicted volume-weighted average price 66 trading days after the verified earnings conference call (D1-lagged, local currency, event-only rows)",MATRIX,91%,36,160

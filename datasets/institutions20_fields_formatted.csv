@@ -1,0 +1,12 @@
+Field,Description,Type,Coverage,Users,Alphas
+inst20_ra_sev,No field description,MATRIX,67%,11,15
+inst20_ra_sv,No field description,MATRIX,100%,7,13
+inst20_ra_tv,No field description,MATRIX,100%,6,7
+inst20_sq_market,Reporting Facility identifier,MATRIX,100%,32,44
+inst20_sq_sev,"Total shares executed under a short sale exemption during regular trading hours, reported to the FINRA/Nasdaq TRF Carteret facility",MATRIX,100%,22,36
+inst20_sq_sv,"Total shares executed as short sales during regular trading hours, including those marked as short sale exempt, reported to the FINRA/Nasdaq TRF Carteret facility",MATRIX,100%,111,139
+inst20_sq_tv,"Total shares traded (all executions, short and long) during regular trading hours, reported to the FINRA/Nasdaq TRF Carteret facility",MATRIX,100%,259,401
+inst20_yx_market,Reporting Facility identifier,MATRIX,100%,21,55
+inst20_yx_sev,Shares reported as short-sale exempt trades during regular trading hours on the FINRA/NYSE TRF (a subset of ShortVolume),MATRIX,69%,27,75
+inst20_yx_sv,"Total shares reported as short sales during regular trading hours on the FINRA/NYSE TRF, including the subset executed under short-sale exemption",MATRIX,100%,35,90
+inst20_yx_tv,Total shares of all executed trades (short and long) during regular trading hours reported to the FINRA/NYSE TRF,MATRIX,100%,109,183

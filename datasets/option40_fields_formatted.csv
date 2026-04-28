@@ -1,0 +1,152 @@
+Field,Description,Type,Coverage,Users,Alphas
+opt40_01vhp,Historical Parkinson volatility for approximately 10 calendar days,MATRIX,98%,39,104
+opt40_021vh,Historical close-to-close volatility for approximately 120 calendar days,MATRIX,98%,34,89
+opt40_021vhp,Parkinson historical volatility over last 120 trading days; annualized %,MATRIX,98%,29,87
+opt40_02vh,Historical close-to-close volatility for approximately 20 calendar days,MATRIX,98%,18,92
+opt40_02vhp,Annualized historical Parkinson volatility (based on high‑low prices) over approximately the prior 20 days,MATRIX,98%,20,59
+opt40_03vh,Historical volatility over last 30 trading days; annualized %,MATRIX,98%,18,49
+opt40_03vhp,Annualized historical Parkinson volatility (based on high‑low prices) over approximately the prior 30 days,MATRIX,98%,21,80
+opt40_051vh,Historical close-to-close volatility for approximately 150 calendar days,MATRIX,98%,25,69
+opt40_051vhp,Historical Parkinson volatility for approximately 150 calendar days,MATRIX,98%,36,98
+opt40_06vh,Historical close-to-close volatility for approximately 60 calendar days,MATRIX,98%,21,72
+opt40_06vhp,Historical Parkinson volatility for approximately 60 calendar days,MATRIX,98%,25,79
+opt40_081vh,Historical close-to-close volatility for approximately 180 calendar days,MATRIX,98%,25,69
+opt40_081vhp,Historical Parkinson volatility for approximately 180 calendar days,MATRIX,98%,24,76
+opt40_09vh,Annualized historical close‑to‑close realized volatility over approximately the prior 90 days,MATRIX,98%,20,68
+opt40_09vhp,Historical Parkinson volatility for approximately 90 calendar days,MATRIX,98%,29,151
+opt40_call_delta_122days,Delta of the standardized call option at 122 days to expiry on the OptionMetrics standard surface,MATRIX,97%,85,205
+opt40_call_delta_152days,Delta of the call option at 152 days to expiry (price sensitivity per $1 move in the underlying),MATRIX,97%,20,30
+opt40_call_delta_182days,Delta (price sensitivity to underlying) of call options at 182 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,28,33
+opt40_call_delta_273days,Delta (price sensitivity to underlying) of call options at 273 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,27,34
+opt40_call_delta_365days,Delta (sensitivity of option price to underlying price) for the 365-day tenor call option,MATRIX,97%,21,29
+opt40_call_delta_730days,Delta (sensitivity of option price to underlying price) for the 730-day tenor call option,MATRIX,97%,29,30
+opt40_call_forwardprice_122days,Forward price used for the 122-day tenor call option gridpoint (model forward at that maturity),MATRIX,97%,15,27
+opt40_call_forwardprice_152days,Forward price of the underlying used for the call option surface at 152 days to expiry,MATRIX,97%,7,7
+opt40_call_forwardprice_182days,182-day forward price of the underlying used for the call option point on the OptionMetrics standard surface,MATRIX,97%,4,4
+opt40_call_forwardprice_273days,Forward price of the underlying used for the call option surface at 273 days to expiry,MATRIX,97%,12,14
+opt40_call_forwardprice_547days,Model-implied forward price of the underlying at 547 days to expiry used for the standardized call on the OptionMetrics standard surface,MATRIX,97%,4,4
+opt40_call_forwardprice_730days,Forward price of the underlying corresponding to the standardized call option at 730 days to expiry from the OptionMetrics surface,MATRIX,97%,8,9
+opt40_call_forwardprice_91days,91-day forward price of the underlying used for the call option point on the OptionMetrics standard surface,MATRIX,97%,6,7
+opt40_call_gamma_122days,Gamma (sensitivity of delta to underlying) for call options at 122 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,4,7
+opt40_call_gamma_182days,Gamma (sensitivity of delta to price changes) of the standardized call option at 182 days to expiry on the OptionMetrics standard surface,MATRIX,97%,5,5
+opt40_call_gamma_273days,Gamma (second derivative of option price with respect to underlying price) for the 273-day tenor call option,MATRIX,97%,13,15
+opt40_call_gamma_30days,Gamma (sensitivity of delta to price changes) of the standardized call option at 30 days to expiry on the OptionMetrics standard surface,MATRIX,97%,4,4
+opt40_call_gamma_60days,Gamma for call options with 60 days to expiration.,MATRIX,97%,10,21
+opt40_call_gamma_730days,Gamma of the call option at 730 days to expiry (change in delta per $1 move in the underlying),MATRIX,97%,8,10
+opt40_call_gamma_91days,Gamma (second derivative of option price with respect to underlying price) for the 91-day tenor call option,MATRIX,97%,9,9
+opt40_call_premium_122days,Call option premium (price) at 122 days to expiry from the standard surface,MATRIX,97%,7,7
+opt40_call_premium_152days,Call option premium (price) at 152 days to expiry from the standard surface,MATRIX,97%,5,6
+opt40_call_premium_547days,Option premium (price) for call options at 547 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,5,5
+opt40_call_premium_730days,Option premium (price) for the standard 730-day tenor call option from the OptionMetrics surface,MATRIX,97%,4,4
+opt40_call_strikeprice_122days,Strike price corresponding to the call option gridpoint at 122 days to expiry on the standard surface,MATRIX,97%,11,11
+opt40_call_strikeprice_152days,Strike price corresponding to the standardized call option gridpoint at 152 days to expiry,MATRIX,97%,6,6
+opt40_call_strikeprice_30days,Strike price corresponding to the standardized call option gridpoint at 30 days to expiry,MATRIX,97%,4,4
+opt40_call_strikeprice_365days,Strike price corresponding to the call option gridpoint at 365 days to expiry on the standard surface,MATRIX,97%,4,4
+opt40_call_strikeprice_547days,Strike price corresponding to the standardized call option gridpoint at 547 days to expiry,MATRIX,97%,2,4
+opt40_call_strikeprice_60days,Strike price corresponding to the 60-day tenor call option gridpoint,MATRIX,97%,3,3
+opt40_call_strikeprice_91days,Strike price for call options with 91 days to expiration.,MATRIX,97%,6,7
+opt40_call_theta_122days,Theta (time decay) for call options at 122 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,16,27
+opt40_call_theta_182days,Theta (time decay) for call options at 182 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,14,14
+opt40_call_theta_547days,Theta (time decay) of the standardized call option at 547 days to expiry on the OptionMetrics standard surface,MATRIX,97%,17,17
+opt40_call_theta_60days,Theta for call options with 60 days to expiration.,MATRIX,97%,15,19
+opt40_call_theta_730days,Theta (time decay per day) for the 730-day tenor call option,MATRIX,97%,3,3
+opt40_call_theta_91days,Theta (time decay) of the standardized call option at 91 days to expiry on the OptionMetrics standard surface,MATRIX,97%,39,61
+opt40_call_vega_122days,Vega (sensitivity to implied volatility) of the standardized call option at 122 days to expiry on the OptionMetrics standard surface,MATRIX,97%,10,37
+opt40_call_vega_152days,Vega (sensitivity to implied volatility) of the standardized call option at 152 days to expiry on the OptionMetrics standard surface,MATRIX,97%,6,24
+opt40_call_vega_273days,Vega for call options with 273 days to expiration.,MATRIX,97%,14,25
+opt40_call_vega_365days,Vega for call options with 365 days to expiration.,MATRIX,97%,26,39
+opt40_call_vega_547days,Vega for call options with 547 days to expiration.,MATRIX,97%,7,7
+opt40_call_vega_60days,Vega for call options with 60 days to expiration.,MATRIX,97%,8,15
+opt40_call_vega_730days,Vega (sensitivity to implied volatility) of the standardized call option at 730 days to expiry on the OptionMetrics standard surface,MATRIX,97%,3,3
+opt40_call_volatility_152days,"Implied volatility for the at-the-money call option at the standard 152-day tenor from the OptionMetrics surface, annualized (decimal)",MATRIX,97%,33,43
+opt40_call_volatility_182days,Implied volatility for calls with 182-day tenor; annualized percentage,MATRIX,97%,16,22
+opt40_call_volatility_273days,Implied volatility from OptionMetrics IvyDB US standardized surface for the 273-day tenor call at the ATM/forward gridpoint; D1-lagged and masked if unreliable,MATRIX,97%,25,28
+opt40_call_volatility_30days,Annualized implied volatility of the call option at 30 days to expiry,MATRIX,97%,18,21
+opt40_call_volatility_365days,Annualized implied volatility of the call option at 365 days to expiry,MATRIX,97%,15,15
+opt40_call_volatility_547days,Implied volatility from OptionMetrics IvyDB US standardized surface for the 547-day tenor call at the ATM/forward gridpoint; D1-lagged and masked if unreliable,MATRIX,97%,30,42
+opt40_call_volatility_60days,"Implied volatility for the at-the-money call option at the standard 60-day tenor from the OptionMetrics US surface, annualized (decimal)",MATRIX,97%,17,18
+opt40_call_volatility_730days,Implied volatility for calls with 730-day tenor; annualized percentage,MATRIX,97%,13,14
+opt40_ivcall10,Annualized implied volatility of the at-the-money call option with expiration 10 days from the measurement date,MATRIX,98%,10,14
+opt40_ivcall1080,Implied volatility of the at-the-money call for the stock with an expiration 1080 calendar days from the measurement date,MATRIX,98%,16,18
+opt40_ivcall120,Annualized implied volatility of the at-the-money call option with expiration 120 days from the measurement date,MATRIX,98%,49,133
+opt40_ivcall150,Implied volatility of the at-the-money call for the stock with an expiration 150 calendar days from the measurement date,MATRIX,98%,68,250
+opt40_ivcall180,Implied volatility of the at-the-money call for the stock with an expiration 180 calendar days from the measurement date,MATRIX,98%,30,47
+opt40_ivcall20,Annualized implied volatility of the at-the-money call option with expiration 20 days from the measurement date,MATRIX,98%,19,21
+opt40_ivcall270,Implied volatility of the at-the-money call for the stock with an expiration 270 calendar days from the measurement date,MATRIX,98%,23,30
+opt40_ivcall30,Annualized implied volatility of the at-the-money call option with expiration 30 days from the measurement date,MATRIX,98%,40,58
+opt40_ivcall360,Annualized implied volatility of the at-the-money call option with expiration 360 days from the measurement date,MATRIX,98%,22,27
+opt40_ivcall60,Annualized implied volatility of the at-the-money call option with expiration 60 days from the measurement date,MATRIX,98%,50,135
+opt40_ivcall720,Implied volatility of the at-the-money call for the stock with an expiration 720 calendar days from the measurement date,MATRIX,98%,32,114
+opt40_ivcall90,Annualized implied volatility of the at-the-money call option with expiration 90 days from the measurement date,MATRIX,98%,41,56
+opt40_ivmean10,The average of IvCall10 and IvPut10 representing mean implied volatility for 10 calendar days,MATRIX,98%,7,8
+opt40_ivmean1080,The average of IvCall1080 and IvPut1080,MATRIX,98%,6,8
+opt40_ivmean120,The average of IvCall120 and IvPut120,MATRIX,98%,41,116
+opt40_ivmean150,The average of IvCall150 and IvPut150,MATRIX,98%,20,24
+opt40_ivmean180,Mean implied volatility (calls and puts) over 180-day window; annualized %,MATRIX,98%,26,32
+opt40_ivmean20,The average of IvCall20 and IvPut20 representing mean implied volatility for 20 calendar days,MATRIX,98%,14,16
+opt40_ivmean270,Average of the at-the-money call and put annualized implied volatilities at a 270‑day expiration,MATRIX,98%,14,16
+opt40_ivmean30,Average of the at-the-money call and put annualized implied volatilities at a 30‑day expiration,MATRIX,98%,18,20
+opt40_ivmean360,Average of the at-the-money call and put annualized implied volatilities at a 360‑day expiration,MATRIX,98%,11,14
+opt40_ivmean60,The average of IvCall60 and IvPut60,MATRIX,98%,34,101
+opt40_ivmean720,The average of IvCall720 and IvPut720,MATRIX,98%,12,14
+opt40_ivmean90,Average of the at-the-money call and put annualized implied volatilities at a 90‑day expiration,MATRIX,98%,31,42
+opt40_ivput10,Implied volatility of the at-the-money put for the stock with an expiration 10 calendar days from the measurement date,MATRIX,98%,21,25
+opt40_ivput1080,Implied volatility of the at-the-money put for the stock with an expiration 1080 calendar days from the measurement date,MATRIX,98%,17,23
+opt40_ivput120,Annualized implied volatility of the at-the-money put option with expiration 120 days from the measurement date,MATRIX,98%,34,50
+opt40_ivput150,Annualized implied volatility of the at-the-money put option with expiration 150 days from the measurement date,MATRIX,98%,38,73
+opt40_ivput180,Annualized implied volatility of the at-the-money put option with expiration 180 days from the measurement date,MATRIX,98%,22,37
+opt40_ivput20,Implied volatility of the at-the-money put for the stock with an expiration 20 calendar days from the measurement date,MATRIX,98%,35,82
+opt40_ivput270,Annualized implied volatility of the at-the-money put option with expiration 270 days from the measurement date,MATRIX,98%,28,36
+opt40_ivput30,Implied volatility of the at-the-money put for the stock with an expiration 30 calendar days from the measurement date,MATRIX,98%,43,61
+opt40_ivput360,Annualized implied volatility of the at-the-money put option with expiration 360 days from the measurement date,MATRIX,98%,16,23
+opt40_ivput60,Implied volatility of the at-the-money put for the stock with an expiration 60 calendar days from the measurement date,MATRIX,98%,48,118
+opt40_ivput720,Annualized implied volatility of the at-the-money put option with expiration 720 days from the measurement date,MATRIX,98%,14,20
+opt40_ivput90,Annualized implied volatility of the at-the-money put option with expiration 90 days from the measurement date,MATRIX,98%,24,32
+opt40_put_delta_152days,Delta (price sensitivity to underlying) of put options at 152 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,11,12
+opt40_put_delta_60days,Delta of the standardized put option at 60 days to expiry on the OptionMetrics standard surface,MATRIX,97%,8,10
+opt40_put_delta_730days,Delta of the put option at 730 days to expiry (price sensitivity per $1 move in the underlying),MATRIX,97%,6,7
+opt40_put_forwardprice_182days,Forward price of the underlying used for the standardized 182-day tenor put point on the OptionMetrics surface; D1-lagged and masked if unreliable,MATRIX,97%,5,8
+opt40_put_forwardprice_273days,Forward price of the underlying used for the standardized 273-day tenor put point on the OptionMetrics surface; D1-lagged and masked if unreliable,MATRIX,97%,6,7
+opt40_put_forwardprice_365days,Forward price of the underlying used for the put option surface at 365 days to expiry,MATRIX,97%,2,5
+opt40_put_forwardprice_60days,Forward price of the underlying used for the put option surface at 60 days to expiry,MATRIX,97%,5,5
+opt40_put_forwardprice_91days,Forward price of the underlying used for the put option surface at 91 days to expiry,MATRIX,97%,6,6
+opt40_put_gamma_152days,Gamma (second derivative of option price with respect to underlying price) for the 152-day tenor put option,MATRIX,97%,3,3
+opt40_put_gamma_182days,Gamma of the put option at 182 days to expiry (change in delta per $1 move in the underlying),MATRIX,97%,7,7
+opt40_put_gamma_273days,Gamma for put options with 273 days to expiration.,MATRIX,97%,8,10
+opt40_put_gamma_547days,Gamma (second derivative of option price with respect to underlying price) for the 547-day tenor put option,MATRIX,97%,8,8
+opt40_put_gamma_60days,Gamma (second derivative of option price with respect to underlying price) for the 60-day tenor put option,MATRIX,97%,16,27
+opt40_put_gamma_91days,Gamma (second derivative of option price with respect to underlying price) for the 91-day tenor put option,MATRIX,97%,8,8
+opt40_put_premium_182days,Premium for put options with 182 days to expiration.,MATRIX,97%,7,11
+opt40_put_premium_273days,Premium for put options with 273 days to expiration.,MATRIX,97%,2,2
+opt40_put_premium_30days,Option premium (price) for put options at 30 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,1,2
+opt40_put_premium_365days,Put option premium (price) at 365 days to expiry from the standard surface,MATRIX,97%,2,2
+opt40_put_premium_547days,Premium for put options with 547 days to expiration.,MATRIX,97%,1,1
+opt40_put_premium_60days,Premium for put options with 60 days to expiration.,MATRIX,97%,5,5
+opt40_put_premium_730days,Option premium (price) for the standard 730-day tenor put option from the OptionMetrics surface,MATRIX,97%,3,3
+opt40_put_strikeprice_152days,Strike price corresponding to the put option gridpoint at 152 days to expiry on the standard surface,MATRIX,97%,7,8
+opt40_put_strikeprice_182days,Strike price corresponding to the 182-day tenor put option gridpoint,MATRIX,97%,6,7
+opt40_put_strikeprice_30days,Strike price for put options with 30 days to expiration.,MATRIX,97%,11,15
+opt40_put_strikeprice_547days,Strike price corresponding to the 547-day tenor put option gridpoint,MATRIX,97%,5,7
+opt40_put_strikeprice_60days,Strike price of the standardized put option at 60 days to expiry on the OptionMetrics standard surface,MATRIX,97%,14,17
+opt40_put_strikeprice_91days,Strike price corresponding to the put option gridpoint at 91 days to expiry on the standard surface,MATRIX,97%,7,8
+opt40_put_theta_122days,Theta (time decay) of the standardized put option at 122 days to expiry on the OptionMetrics standard surface,MATRIX,97%,22,36
+opt40_put_theta_152days,Theta (time decay per day) for the 152-day tenor put option,MATRIX,97%,12,12
+opt40_put_theta_182days,Theta (time decay) of the standardized put option at 182 days to expiry on the OptionMetrics standard surface,MATRIX,97%,6,6
+opt40_put_theta_273days,Theta (time decay per day) for the 273-day tenor put option,MATRIX,97%,2,2
+opt40_put_theta_30days,Theta for put options with 30 days to expiration.,MATRIX,97%,7,7
+opt40_put_theta_365days,Daily time decay (theta) of the put option price at 365 days to expiry,MATRIX,97%,8,8
+opt40_put_theta_547days,Theta (time decay) for put options at 547 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,13,13
+opt40_put_theta_60days,Time decay (theta) for put options at 60 days to expiry,MATRIX,97%,10,12
+opt40_put_theta_730days,Daily time decay (theta) of the put option price at 730 days to expiry,MATRIX,97%,15,20
+opt40_put_theta_91days,Theta (time decay) of the standardized put option at 91 days to expiry on the OptionMetrics standard surface,MATRIX,97%,23,29
+opt40_put_vega_182days,Vega (sensitivity to implied volatility) for put options at 182 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,6,23
+opt40_put_vega_30days,Vega (sensitivity of option price to changes in implied volatility) for the 30-day tenor put option,MATRIX,97%,5,7
+opt40_put_vega_365days,Vega (sensitivity of option price to changes in implied volatility) for the 365-day tenor put option,MATRIX,97%,21,21
+opt40_put_vega_547days,Vega (sensitivity to implied volatility) for put options at 547 days to expiry from the OptionMetrics standardized surface,MATRIX,97%,1,2
+opt40_put_vega_60days,Vega (sensitivity to implied volatility) of the standardized put option at 60 days to expiry on the OptionMetrics standard surface,MATRIX,97%,10,18
+opt40_put_vega_730days,Vega for put options with 730 days to expiration.,MATRIX,97%,6,8
+opt40_put_volatility_122days,Implied volatility of the standardized put option at 122 days to expiry on the OptionMetrics standard surface,MATRIX,97%,11,11
+opt40_put_volatility_152days,Implied volatility from OptionMetrics IvyDB US standardized surface for the 152-day tenor put at the ATM/forward gridpoint; D1-lagged and masked if unreliable,MATRIX,97%,17,19
+opt40_put_volatility_273days,Implied volatility of the standardized put option at 273 days to expiry on the OptionMetrics standard surface,MATRIX,97%,28,32
+opt40_put_volatility_547days,Implied volatility for put options at 547 days to expiry from the OptionMetrics standardized surface (annualized),MATRIX,97%,21,24
+opt40_put_volatility_60days,Annualized implied volatility of the put option at 60 days to expiry,MATRIX,97%,7,11

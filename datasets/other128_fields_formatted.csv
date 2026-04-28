@@ -1,0 +1,6 @@
+Field,Description,Type,Coverage,Users,Alphas
+chief_exec_investor_sentiment_score,investor confidence on CEO,VECTOR,11%,0,0
+finance_exec_investor_sentiment_score,investor confidence on CFO,VECTOR,16%,5,5
+oth128_cfocashcompensation,CFO cash compensation,VECTOR,70%,14,17
+oth128_cfononcashcompensation,CFO non cash compensation,VECTOR,68%,12,17
+oth128_marketcap,market cap,VECTOR,75%,12,16

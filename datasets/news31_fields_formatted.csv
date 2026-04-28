@@ -1,0 +1,61 @@
+Field,Description,Type,Coverage,Users,Alphas
+explicit_company_mention_count,Number of companies specifically listed or scored in the subjects field of the news item,VECTOR,99%,1,1
+first_appearance_sentence_number,Index of the first sentence (starting with headline as 1) in which the scored asset is mentioned in the news item,VECTOR,99%,0,0
+negative_sentiment_probability_2,Probability (0-1) that the sentiment expressed in the news item is negative towards the asset,VECTOR,99%,2,2
+neutral_sentiment_probability_2,Probability (0-1) that the sentiment expressed is neutral towards the asset,VECTOR,99%,0,0
+news_relevance_score,A value between 0 and 1 quantifying how relevant the news item is to the asset,VECTOR,99%,0,0
+news_urgency_level,"Integer indicating news urgency (1 = alert/breaking, 3 = full article)",VECTOR,99%,1,1
+nws31_amertimestamp_date,The date when the news arrived (American time),VECTOR,89%,104,423
+nws31_amertimestamp_time,Time the news arrived in the Refinitiv system (American time zone),VECTOR,100%,150,815
+nws31_apactimestamp_date,The date when the news arrived (Asian time),VECTOR,89%,93,288
+nws31_apactimestamp_time,Time the news arrived in the Refinitiv system (Asian time zone),VECTOR,100%,97,466
+nws31_audiences,"Code(s) representing groups targeted by the news item, such as investors or analysts",VECTOR,100%,29,41
+nws31_bodysize,Number of characters in the current version of the story body,VECTOR,100%,1,1
+nws31_companycount,The number of companies explicitly listed in the news item in the subjects field,VECTOR,100%,0,0
+nws31_d1_bodysize,The size of the current version of the story body in characters,VECTOR,89%,20,27
+nws31_d1_companycount,The number of companies explicitly listed in the news item in the subjects field,VECTOR,89%,16,24
+nws31_d1_feedtimestamp_date,The date when the data was available on the feed,VECTOR,89%,13,25
+nws31_d1_feedtimestamp_time,The time when the data was available on the feed,VECTOR,89%,21,53
+nws31_d1_firstcreated_date,UTC timestamp for the first version of the story (date),VECTOR,89%,22,33
+nws31_d1_firstcreated_time,UTC timestamp for the first version of the story (time),VECTOR,89%,22,61
+nws31_d1_firstmentionsentence,"The first sentence, starting with the headline, in which the scored asset is mentioned. Thus, a value of 1 denotes the headline, 2 the first sentence of the story body, 3 the second sentence, etc.",VECTOR,88%,28,38
+nws31_d1_noveltycounts,"The number of similar items on a particular asset within 5 time windows. The periods are 12 hours, 24 hours, 3 days, 5 days and 7 days prior to the news item's timestamp.",VECTOR,89%,19,33
+nws31_d1_relevance,The number indicating the relevance of the news item to the asset. It ranges from 0 to 1.,VECTOR,89%,21,29
+nws31_d1_sentencecount,The total number of sentences in the news item,VECTOR,89%,15,24
+nws31_d1_sentimentclass,This field indicates the predominant sentiment class for this news item with respect to this asset,VECTOR,88%,24,31
+nws31_d1_sentimentnegative,The probability that the sentiment of the news item was negative for the asset,VECTOR,89%,28,91
+nws31_d1_sentimentneutral,The probability that the sentiment of the news item was neutral for the asset,VECTOR,89%,19,32
+nws31_d1_sentimentpositive,The probability that the sentiment of the news item was positive for the asset,VECTOR,89%,28,43
+nws31_d1_sentimentwordcount,The number of lexical tokens (words and punctuation) in the sections of the item text that are deemed relevant to the asset,VECTOR,89%,37,52
+nws31_d1_sourcetimestamp_date,UTC timestamp of this news item (date),VECTOR,89%,17,26
+nws31_d1_sourcetimestamp_time,UTC timestamp of this news item (time),VECTOR,89%,22,38
+nws31_d1_urgency,"Differentiates story types: 1: alert, 3: article",VECTOR,89%,41,70
+nws31_d1_volumecounts,"The number of items on a particular asset within 5 time windows. The periods are 12 hours, 24 hours, 3 days, 5 days, and 7 days prior to the news item's timestamp",VECTOR,89%,26,32
+nws31_d1_wordcount,The total number of lexical tokens (words and punctuation) in the news item. Can be used in conjunction with sentimentWordCount to determine the proportion of the news item discussing an asset,VECTOR,89%,14,21
+nws31_emeatimestamp_date,The date when the news arrived (European time),VECTOR,89%,37,64
+nws31_emeatimestamp_time,Time when the news item arrived in the EMEA (Europe/Middle East/Africa) regional feed,VECTOR,100%,41,123
+nws31_feedtimestamp_time,Time when the data was available on the feed,VECTOR,100%,2,2
+nws31_firstcreated_time,UTC timestamp for the first version of the news story,VECTOR,100%,0,0
+nws31_firstmentionsentence,"Index of the first sentence in which the scored asset appears (1=headline, 2=first body sentence, etc.)",VECTOR,100%,2,2
+nws31_linkedidpositions,"Positions of the linked IDs within the complete list of related items, with 0 as the oldest",VECTOR,100%,13,27
+nws31_linkedidvalues,IDs of linked (related) news items,VECTOR,100%,18,36
+nws31_noveltycounts,"Array with count of similar news items for the asset in the 5 rolling windows (12H, 24H, 3D, 5D, 7D before timestamp)",VECTOR,100%,1,1
+nws31_relevance,"Number indicating the relevance of the news item to the asset, ranging from 0 to 1",VECTOR,100%,0,0
+nws31_sentencecount,Total number of sentences in the news item,VECTOR,100%,1,1
+nws31_sentimentclass,"Predominant sentiment class for the news item regarding the asset (-1=negative, 0=neutral, 1=positive)",VECTOR,0%,1,1
+nws31_sentimentnegative,Probability that the sentiment of the news item is negative towards the asset,VECTOR,100%,0,0
+nws31_sentimentneutral,Probability that the sentiment of the news item was neutral for the asset,VECTOR,100%,1,1
+nws31_sentimentpositive,Probability that the sentiment of the news item was positive for the asset,VECTOR,100%,0,0
+nws31_sentimentwordcount,Number of lexical tokens (words and punctuation) in text sections relevant to the asset,VECTOR,100%,2,2
+nws31_sourcetimestamp_time,UTC timestamp when the news item was originally published,VECTOR,100%,1,1
+nws31_subjects,Array of topic codes and company identifiers related to the news item,VECTOR,100%,14,42
+nws31_urgency,"Integer differentiating story type (1=alert/breaking, 3=article/full story)",VECTOR,100%,0,0
+nws31_volumecounts,"Array showing the total number of news items about the asset within 12H, 24H, 3D, 5D, and 7D before this item's timestamp",VECTOR,100%,3,3
+nws31_windows,"Standardized time windows used for associating counts such as noveltyCounts and volumeCounts (e.g., “12H”, “24H”, “3D”, “5D”, “7D”)",VECTOR,100%,25,41
+nws31_wordcount,Total number of words and punctuation tokens in the news item,VECTOR,100%,1,1
+positive_sentiment_probability_2,Probability (0-1) that the sentiment expressed is positive towards the asset,VECTOR,99%,2,2
+predominant_sentiment_class,"Primary sentiment classification for the news item regarding the asset (-1: negative, 0: neutral, 1: positive)",VECTOR,99%,1,1
+sentiment_analysis_word_count,Number of words and punctuation in text deemed relevant for sentiment scoring for the asset,VECTOR,99%,2,2
+story_body_character_count,Number of characters in the body of the current news story version,VECTOR,99%,0,0
+total_sentence_count,Total number of sentences in the news item's body text,VECTOR,99%,0,0
+total_word_token_count,"Total number of lexical tokens (words, punctuation) in the news item",VECTOR,99%,0,0

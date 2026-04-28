@@ -1,0 +1,118 @@
+Field,Description,Type,Coverage,Users,Alphas
+aerospace_defense_score,Score indicating exposure to aerospace and defense sector.,MATRIX,100%,3,5
+airline_industry_score,Daily exposure of each stock to the Airlines industry factor in the MFMCR universal risk model,MATRIX,100%,1,1
+aluminum_steel_producers_score,Score indicating exposure to aluminum and steel production sector.,MATRIX,100%,1,1
+apparel_accessories_score,Score reflecting exposure to apparel and accessories sector.,MATRIX,100%,1,2
+automobile_manufacturing_score,Score reflecting exposure to automobile manufacturing sector.,MATRIX,100%,0,0
+banking_services_score,Daily stock exposures to the Banks industry factor,MATRIX,100%,0,0
+beverage_tobacco_score,Score indicating exposure to beverage and tobacco sector.,MATRIX,100%,0,0
+biotechnology_life_sciences_score,Score reflecting exposure to biotechnology and life sciences sector.,MATRIX,100%,0,0
+broad_market_factor_score_2,Daily stock exposures to the broad Market factor,MATRIX,100%,0,0
+building_products_score,Daily stock exposures to the Building Products industry factor,MATRIX,100%,0,0
+chemicals_sector_score,Daily stock exposures to the Chemicals industry factor,MATRIX,100%,0,0
+commercial_equipment_score,Score indicating exposure to commercial equipment and supplies sector.,MATRIX,100%,0,0
+communication_services_score,Score reflecting exposure to communication services sector.,MATRIX,100%,0,0
+computer_electronics_score,Score reflecting exposure to computer and electronics manufacturing sector.,MATRIX,100%,0,0
+conglomerate_sector_score,Score indicating exposure to diversified conglomerate companies.,MATRIX,100%,0,0
+construction_engineering_score,Daily stock exposures to the Construction & Engineering industry factor,MATRIX,100%,0,0
+construction_machinery_score,Score reflecting exposure to construction machinery and heavy equipment sector.,MATRIX,100%,0,0
+construction_materials_score,Daily stock exposures to the Construction Materials industry factor,MATRIX,100%,1,1
+container_packaging_score,Score indicating exposure to container and packaging sector.,MATRIX,100%,1,1
+discount_store_retail_score,"Daily specific (idiosyncratic) returns for stocks, in percent",MATRIX,100%,5,6
+distribution_services_score,Score representing exposure to distribution and wholesale services sector.,MATRIX,100%,0,0
+diversified_financials_score,Score indicating exposure to diversified financial services sector.,MATRIX,100%,0,0
+electric_utilities_score,Daily stock exposures to the Electric Utilities industry factor,MATRIX,100%,0,0
+electrical_equipment_score,Score reflecting exposure to electrical equipment manufacturing sector.,MATRIX,100%,0,0
+food_producers_score,Score representing exposure to food production and processing sector.,MATRIX,100%,0,0
+food_retail_score,Daily stock exposures to the Food Retail industry factor,MATRIX,100%,1,1
+gas_utilities_score,Score reflecting exposure to gas utilities sector.,MATRIX,100%,0,0
+healthcare_equipment_score,Score representing exposure to healthcare equipment and supplies sector.,MATRIX,100%,0,0
+healthcare_services_score,Daily stock exposures to the Health Care Services industry factor,MATRIX,100%,0,0
+hedge_fund_ownership_factor0,Factor score based on hedge fund ownership metric 0 for US equities.,MATRIX,100%,20,29
+hedge_fund_ownership_factor1,Factor score based on hedge fund ownership metric 1 for US equities.,MATRIX,100%,4,4
+homebuilding_sector_score,Score representing exposure to homebuilding and construction sector.,MATRIX,100%,0,0
+household_durables_score,Score reflecting exposure to household durables manufacturing sector.,MATRIX,100%,1,1
+industrial_machinery_score,Score representing exposure to industrial machinery and equipment sector.,MATRIX,100%,0,0
+industry_advertising_flag,Indicator for companies classified in the advertising and marketing industry.,MATRIX,100%,0,0
+industry_aerospace_defense_flag,Indicator for companies classified in the aerospace and defense industry.,MATRIX,100%,0,0
+industry_airlines_flag,Indicator for companies classified in the airline and air transport industry.,MATRIX,94%,0,0
+industry_apparel_flag,Indicator for companies classified in the apparel and clothing industry.,MATRIX,100%,1,1
+industry_auto_manufacturing_flag,Indicator for companies classified in the automobile manufacturing industry.,MATRIX,100%,1,1
+industry_banking_flag,Indicator for companies classified in the banking and financial services industry.,MATRIX,100%,0,0
+industry_beverages_flag,Indicator for companies classified in the beverages industry.,MATRIX,100%,1,1
+industry_biotechnology_flag,Indicator for companies classified in the biotechnology and life sciences industry.,MATRIX,100%,0,0
+industry_building_materials_flag,Indicator for companies classified in the building materials and supplies industry.,MATRIX,100%,0,0
+industry_chemicals_flag,Indicator for companies classified in the chemicals and specialty chemicals industry.,MATRIX,100%,0,0
+industry_computer_hardware_flag,Indicator for companies classified in the computer hardware and systems industry.,MATRIX,100%,0,0
+industry_cosmetics_personal_care_flag,Indicator for companies classified in the cosmetics and personal care products industry.,MATRIX,100%,0,0
+industry_distribution_services_flag,Indicator for companies classified in the distribution and wholesale services industry.,MATRIX,94%,0,0
+industry_diversified_flag,Indicator for companies classified as diversified across multiple industries.,MATRIX,100%,0,0
+industry_electric_utilities_flag,Indicator for companies classified in the electric utilities industry.,MATRIX,100%,0,0
+industry_electrical_components_flag,Indicator for companies classified in the electrical components and equipment industry.,MATRIX,100%,0,0
+industry_electronics_flag,Indicator for companies classified in the electronics and electrical equipment industry.,MATRIX,100%,0,0
+industry_engineering_services_flag,Indicator for companies classified in the engineering and technical services industry.,MATRIX,94%,1,1
+industry_entertainment_flag,Indicator for companies classified in the entertainment and media industry.,MATRIX,100%,0,0
+industry_environmental_services_flag,Indicator for companies classified in the environmental services and solutions industry.,MATRIX,100%,0,0
+industry_forest_products_flag,Indicator for companies classified in the forest products and paper industry.,MATRIX,100%,0,0
+industry_gas_utilities_flag,Indicator for companies classified in the gas utilities and distribution industry.,MATRIX,100%,0,0
+industry_handheld_machinery_flag,Indicator for companies classified in the handheld machinery and tools industry.,MATRIX,100%,0,0
+industry_healthcare_services_flag,Indicator for companies classified in the healthcare services and medical industry.,MATRIX,100%,0,0
+industry_home_furnishings_flag,Indicator for companies classified in the home furnishings and decor industry.,MATRIX,100%,0,0
+industry_housewares_flag,Indicator for companies classified in the housewares and home products industry.,MATRIX,94%,0,0
+industry_internet_services_flag,Indicator for companies classified in the internet services and online platforms industry.,MATRIX,100%,4,4
+industry_iron_steel_flag,Indicator for companies classified in the iron and steel industry.,MATRIX,100%,0,0
+industry_metal_fabrication_flag,Indicator for companies classified in the metal fabrication industry.,MATRIX,100%,0,0
+industry_mining_flag,Indicator for companies classified in the mining and extraction industry.,MATRIX,100%,0,0
+industry_office_business_services_flag,Indicator for companies classified in the office and business support services industry.,MATRIX,94%,0,0
+industry_office_furniture_flag,Indicator for companies classified in the office furniture and fixtures industry.,MATRIX,94%,0,0
+industry_pharmaceuticals_flag,Indicator for companies classified in the pharmaceuticals and drug manufacturing industry.,MATRIX,100%,0,0
+industry_real_estate_flag,Indicator for companies classified in the real estate and property industry.,MATRIX,100%,0,0
+industry_reit_flag,Indicator for companies classified as real estate investment trusts (REITs).,MATRIX,100%,0,0
+industry_retail_flag,Indicator for companies classified in the retail and consumer goods industry.,MATRIX,100%,0,0
+industry_semiconductors_flag,Indicator for companies classified in the semiconductors and semiconductor equipment industry.,MATRIX,100%,0,0
+industry_shipbuilding_flag,Indicator for companies classified in the shipbuilding and marine engineering industry.,MATRIX,100%,0,0
+industry_storage_warehouse_flag,Indicator for companies classified in the storage and warehousing industry.,MATRIX,100%,4,4
+industry_telecommunications_flag,Indicator for companies classified in the telecommunications and network services industry.,MATRIX,94%,0,0
+industry_textiles_flag,Indicator for companies classified in the textiles and fabric industry.,MATRIX,100%,0,0
+industry_toys_games_flag,Indicator for companies classified in the toys and games industry.,MATRIX,100%,0,0
+industry_transportation_flag,Indicator for companies classified in the transportation and logistics industry.,MATRIX,100%,0,0
+industry_water_utilities_flag,Indicator for companies classified in the water utilities industry.,MATRIX,100%,0,0
+insurance_services_score,Daily stock exposures to the Insurance industry factor,MATRIX,100%,0,0
+internet_services_score,Score reflecting exposure to internet services and related companies.,MATRIX,100%,0,0
+leisure_products_score,Daily stock exposures to the Leisure Products industry factor,MATRIX,100%,0,0
+leisure_services_score,Score representing exposure to leisure services sector.,MATRIX,100%,0,0
+life_insurance_score,Daily stock exposures to the Life Insurance industry factor,MATRIX,100%,0,0
+managed_healthcare_score,Score indicating exposure to managed healthcare companies.,MATRIX,100%,0,0
+media_entertainment_score,Score indicating exposure to media and entertainment sector.,MATRIX,100%,0,0
+momentum_factor_score,Daily exposure of each stock to the Momentum style factor in the MFMCR universal risk model,MATRIX,100%,0,0
+multi_utilities_score,Daily stock exposures to the Multi-Utilities industry factor,MATRIX,100%,0,0
+net_retail_score,Score indicating exposure to internet and direct retail companies.,MATRIX,100%,0,0
+oil_gas_consumers_score,"Daily exposure of each stock to the Oil, Gas & Consumable Fuels industry factor in the MFMCR universal risk model",MATRIX,100%,0,0
+oil_gas_drilling_score,Daily stock exposures to the Oil & Gas Drilling industry factor,MATRIX,100%,0,0
+oil_gas_equipment_services_score,Score representing exposure to the oil and gas equipment and services sector.,MATRIX,100%,0,0
+oil_gas_exploration_score,Daily stock exposures to the Oil & Gas Exploration & Production industry factor,MATRIX,100%,0,0
+paper_forest_products_score,Score indicating exposure to paper and forest products sector.,MATRIX,100%,0,0
+personal_products_score,Score indicating exposure to personal products sector.,MATRIX,100%,0,0
+pharmaceuticals_sector_score,Daily stock exposures to the Pharmaceuticals industry factor,MATRIX,100%,0,0
+precious_metals_mining_score,Score representing exposure to precious metals and mining sector.,MATRIX,100%,0,0
+real_estate_sector_score,Score representing exposure to the real estate sector.,MATRIX,100%,1,1
+relative_leverage_factor,A quantitative measure of a company's financial leverage relative to its peers or universe.,MATRIX,100%,0,0
+relative_liquidity_factor,A factor measuring the relative trading liquidity of a security compared to its peers or market.,MATRIX,100%,6,8
+relative_momentum_factor,A factor capturing the relative price momentum of a security compared to its peers or market.,MATRIX,100%,1,1
+relative_size_factor,"A factor representing the relative size of a company, typically based on market capitalization.",MATRIX,100%,1,1
+relative_volatility_factor,A risk factor capturing the relative price volatility of a security compared to the market or group.,MATRIX,100%,6,8
+restaurant_services_score,Score reflecting exposure to restaurant and food services sector.,MATRIX,100%,0,0
+road_rail_transport_score,Score indicating exposure to road and rail transportation sector.,MATRIX,100%,0,0
+semiconductor_equipment_score,Score indicating exposure to semiconductor equipment sector.,MATRIX,100%,1,1
+semiconductor_industry_score,Daily stock exposures to the Semiconductors industry factor,MATRIX,100%,0,0
+short_interest_factor_score_2,Score based on the level of short interest in the security.,MATRIX,100%,2,2
+software_services_score,Daily stock exposures to the Software industry factor,MATRIX,100%,0,0
+specialty_chemicals_score,Score indicating exposure to specialty chemicals sector.,MATRIX,100%,0,0
+specialty_retail_score,Score reflecting exposure to specialty retail sector.,MATRIX,100%,1,1
+specialty_stores_score,Score representing exposure to specialty stores sector.,MATRIX,100%,0,0
+systemic_risk_factor_score,"Specific risk matrix per stock per day, annualized percent-squared",MATRIX,100%,0,0
+systemic_risk_measure_2,A metric estimating a firm's contribution to systemic financial risk.,MATRIX,100%,1,1
+telecommunications_services_score,Daily exposure of each stock to the Telecommunication Services industry factor in the MFMCR universal risk model,MATRIX,100%,2,3
+trading_companies_score,Score reflecting exposure to trading companies and distributors sector.,MATRIX,100%,0,0
+transportation_services_score,Score indicating exposure to transportation services sector.,MATRIX,100%,0,0
+wireless_communications_score,Score representing exposure to wireless communication services sector.,MATRIX,100%,0,0

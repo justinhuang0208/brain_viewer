@@ -1,0 +1,5 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl55_shrs_y0_estgrowth,Estimated growth rate of Shares Outstanding for fiscal year 0 versus the prior period,VECTOR,25%,17,22
+anl55_shrs_yall_estgrowth,estimated growth rate: average diluted shares outstanding estimations,VECTOR,25%,18,26
+anl55_y_0_snlinstitutionkey,SNL's unique identifier for the institution/entity,VECTOR,26%,1,1
+anl55_y_all_stat_snlinstitutionkey,institution keys,VECTOR,26%,5,5

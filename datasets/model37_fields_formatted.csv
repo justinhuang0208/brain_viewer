@@ -1,0 +1,96 @@
+Field,Description,Type,Coverage,Users,Alphas
+balance_sheet_language_score,"Global 1–100 rank based on language related to how the company structures its debt, stock, and accounts; higher scores indicate lower credit risk",MATRIX,88%,3,3
+balance_sheet_language_score_2,"The global 1-100 rank based on language related to how the company structures its debt, stock, and accounts; higher rank indicates safer credit",MATRIX,92%,2,2
+credit_model_structural_letter_grade,"Agency-equivalent implied credit rating (e.g., AAA to CC) derived from the structural credit risk model’s forward 1-year default probability; higher rating means lower expected default risk over the next year",MATRIX,100%,2,3
+credit_model_structural_letter_grade_float,"Credit rating grade inferred from the structural risk model, as a floating point value.",MATRIX,88%,1,1
+credit_risk_broker_research_component_score,Global 1–100 rank of credit riskiness based on textual data in broker research documents; higher scores indicate lower risk,MATRIX,86%,5,6
+credit_risk_broker_research_component_score_2,The global 1-100 rank of a company's credit riskiness based on textual data in broker research documents; higher rank indicates safer credit,MATRIX,89%,1,2
+credit_risk_broker_research_component_score_float,0-100 scaled score from broker research text indicating credit safety (higher = safer),MATRIX,86%,3,4
+credit_risk_broker_research_component_score_float_2,Float-scaled (0–100) broker research component score from the StarMine Text Mining Credit Risk Model; higher values indicate lower credit risk,MATRIX,86%,3,6
+credit_risk_broker_research_component_score_float_3,Scaled 0-100 float version of the global rank of a company's credit riskiness based on broker research textual data; higher values indicate safer credit,MATRIX,89%,2,4
+credit_risk_country_percentile_score,"Percentile rank from 1 to 100 by country of the company’s 1-year default probability, where higher values indicate safer credit",MATRIX,88%,2,2
+credit_risk_country_percentile_score_2,The 1-100 percentile rank of the company’s 1-year default probability within its country; higher rank indicates safer credit,MATRIX,92%,0,0
+credit_risk_country_percentile_score_float,Country peer percentile rank of 1-year default probability scaled 0-100 (higher = safer),MATRIX,88%,0,0
+credit_risk_country_percentile_score_float_2,"The 0–100 float percentile rank, by country, of the company’s 1‑year default probability; higher values indicate lower risk",MATRIX,88%,2,2
+credit_risk_country_percentile_score_float_3,Scaled 0-100 float percentile rank of the company’s 1-year default probability within its country; higher values indicate safer credit,MATRIX,92%,1,1
+credit_risk_filings_component_score,"Global 1–100 rank of credit riskiness based on textual data in regulatory filings (e.g., 10-K, 10-Q, 8-K); higher scores indicate lower risk",MATRIX,74%,0,0
+credit_risk_filings_component_score_2,"The global 1–100 rank of a company's credit riskiness based on textual data in 10-K, 10-Q, and 8-K filings according to the StarMine Text Mining Credit Risk Model; lower risk companies receive higher scores",MATRIX,77%,1,1
+credit_risk_filings_component_score_float,"0-100 scaled score from regulatory filings text (e.g., 10-K, 10-Q, 8-K) indicating credit safety (higher = safer)",MATRIX,74%,1,1
+credit_risk_filings_component_score_float_2,"Float-scaled (0–100) filings component score from the StarMine Text Mining Credit Risk Model using 10-K, 10-Q, 8-K–type texts; higher values indicate lower credit risk",MATRIX,74%,0,0
+credit_risk_filings_component_score_float_3,"Scaled 0-100 float version of the global rank of a company's credit riskiness based on textual data in 10-K, 10-Q, and 8-K filings; higher values indicate safer credit",MATRIX,77%,0,0
+credit_risk_global_percentile_score,Global 1–100 percentile rank of the company’s 1-year default probability based on the StarMine Text Mining Credit Risk Model; higher scores indicate lower risk,MATRIX,88%,2,4
+credit_risk_global_percentile_score_2,The global 1–100 percentile rank of a company’s 1-year default probability based on the StarMine Text Mining Credit Risk Model; higher scores indicate lower likelihood of default within the next year,MATRIX,92%,1,1
+credit_risk_global_percentile_score_float,Global peer percentile rank of 1-year default probability scaled 0-100 (higher = safer),MATRIX,88%,0,0
+credit_risk_global_percentile_score_float_2,Global peer percentile rank of 1-year PD scaled 0–100; higher value indicates safer credit,MATRIX,88%,0,0
+credit_risk_global_percentile_score_float_3,Scaled 0-100 float percentile rank of the company’s 1-year default probability globally; higher values indicate safer credit (lower PD),MATRIX,92%,1,1
+credit_risk_industry_percentile_score,1–100 percentile rank of 1-year default probability within the same region and TRBC Industry Group; higher scores indicate lower default risk,MATRIX,88%,0,0
+credit_risk_industry_percentile_score_2,The 1-100 percentile rank of the company’s 1-year default probability among firms in the same region and industry; higher rank indicates safer credit,MATRIX,91%,1,1
+credit_risk_industry_percentile_score_float,Industry peer percentile rank of 1-year default probability scaled 0-100 (higher = safer),MATRIX,88%,1,1
+credit_risk_industry_percentile_score_float_2,Industry peer-relative safety rank expressed as a 0–100 percentile (higher = safer),MATRIX,88%,0,0
+credit_risk_industry_percentile_score_float_3,Scaled 0-100 float percentile rank of the company’s 1-year default probability among firms in the same region and industry; higher values indicate safer credit,MATRIX,91%,2,2
+credit_risk_news_component_score,Global 1–100 rank of a company’s credit riskiness based on textual data in Reuters news articles from the StarMine Text Mining Credit Risk Model; higher scores indicate lower risk,MATRIX,87%,0,0
+credit_risk_news_component_score_2,The global 1-100 rank of a company's credit riskiness based on news textual data; higher rank indicates safer credit,MATRIX,91%,0,0
+credit_risk_news_component_score_float,0-100 scaled score from news text indicating credit safety (higher = safer),MATRIX,87%,3,3
+credit_risk_news_component_score_float_2,Float-scaled (0–100) News-based credit risk component score from the StarMine Text Mining Credit Risk Model using Reuters news articles; higher values indicate lower credit risk,MATRIX,87%,0,0
+credit_risk_news_component_score_float_3,Scaled 0-100 float version of the global rank of a company's credit riskiness based on news textual data; higher values indicate safer credit,MATRIX,91%,0,0
+credit_risk_region_percentile_score,1–100 percentile rank of the company’s 1-year default probability among firms in the same region; higher scores indicate lower default risk,MATRIX,88%,3,3
+credit_risk_region_percentile_score_2,The 1-100 percentile rank of the company’s 1-year default probability within its region; higher rank indicates safer credit,MATRIX,92%,0,0
+credit_risk_region_percentile_score_float,Regional peer percentile rank of 1-year default probability scaled 0-100 (higher = safer),MATRIX,88%,1,1
+credit_risk_region_percentile_score_float_2,Regional peer-relative safety rank expressed as a 0–100 percentile (higher = safer),MATRIX,88%,1,1
+credit_risk_region_percentile_score_float_3,Scaled 0-100 float percentile rank of the company’s 1-year default probability within its region; higher values indicate safer credit,MATRIX,92%,1,1
+credit_risk_sector_percentile_score,"Percentile rank (1–100) of the company’s 1-year default probability within its region and TRBC economic sector, based on the StarMine Text Mining Credit Risk model; higher rank indicates lower default risk",MATRIX,100%,8,9
+credit_risk_sector_percentile_score_2,1–100 percentile rank of the company’s 1-year default probability among firms in the same region and TRBC Economic Sector; higher scores indicate lower default risk,MATRIX,88%,0,0
+credit_risk_sector_percentile_score_3,The 1-100 percentile rank of the company’s 1-year default probability among firms in the same region and sector; higher rank indicates safer credit,MATRIX,92%,1,1
+credit_risk_transcripts_component_score,Global 1–100 rank of a company’s credit riskiness based on textual data in StreetEvents conference call transcripts from the StarMine Text Mining Credit Risk Model; higher scores indicate lower risk,MATRIX,80%,5,5
+credit_risk_transcripts_component_score_2,The global 1-100 rank of a company's credit riskiness based on conference call transcripts text; higher rank indicates safer credit,MATRIX,82%,1,1
+credit_risk_transcripts_component_score_float,0-100 scaled score from earnings call transcripts indicating credit safety (higher = safer),MATRIX,80%,7,13
+credit_risk_transcripts_component_score_float_2,The 0–100 scaled transcripts-based component score from the StarMine Text Mining Credit Risk Model based on conference call transcripts; higher values indicate lower credit risk,MATRIX,80%,1,1
+credit_risk_transcripts_component_score_float_3,Scaled 0-100 float version of the global rank of a company's credit riskiness based on conference call transcripts text; higher values indicate safer credit,MATRIX,82%,1,1
+default_probability_percent,"Probability of default over the next 1-year period, expressed as a decimal fraction (e.g., 0.005)",MATRIX,88%,6,8
+default_probability_percent_2,A decimal value (0 to 1) indicating the probability that the company will default over the next 1-year period; higher values indicate higher credit risk,MATRIX,92%,1,1
+external_event_language_score,Global 1–100 rank based on language about market conditions or third parties materially impacting the company; higher scores indicate lower credit risk,MATRIX,88%,1,1
+external_event_language_score_2,The global 1-100 rank based on language regarding market conditions or third parties affecting the company; higher rank indicates safer credit,MATRIX,92%,2,2
+legal_obligation_language_score,Global 1–100 rank based on language regarding the company’s agreements with partners or financiers; higher scores indicate lower credit risk,MATRIX,88%,1,1
+legal_obligation_language_score_2,The global 1-100 rank based on language regarding the company’s agreements with partners or financers; higher rank indicates safer credit,MATRIX,92%,1,1
+mdl37_bk_broker_research,Global 1–100 rank of credit riskiness based on broker research text signals (higher = safer),MATRIX,86%,122,424
+mdl37_bk_country_rank,1-100 percentile rank of 1-year default probability within the country (higher = safer),MATRIX,88%,92,338
+mdl37_bk_credit_textscore,Global 1-100 rank from conference call transcripts text indicating credit safety (higher = safer),MATRIX,80%,90,247
+mdl37_bk_external,Global 1–100 score reflecting language about external factors (market conditions/third parties) impacting the company (higher = safer),MATRIX,88%,80,292
+mdl37_bk_filings,"Global 1-100 rank from regulatory filings text (10-K, 10-Q, 8-K) indicating credit safety (higher = safer)",MATRIX,74%,47,151
+mdl37_bk_global_rank,Global 1-100 percentile rank of the company’s 1-year default probability (higher = safer),MATRIX,88%,83,397
+mdl37_bk_income,Global 1-100 rank based on language related to earnings and profitability (higher = safer),MATRIX,88%,100,311
+mdl37_bk_index_rating,"probability of default by quantitatively analyzing textual content including transcripts, news, filings, and research",MATRIX,57%,70,250
+mdl37_bk_industry_rank,1-100 percentile rank of 1-year default probability within the same region and industry (higher = safer),MATRIX,88%,65,270
+mdl37_bk_legal,Global 1-100 rank based on language about legal agreements with partners or financiers (higher = safer),MATRIX,88%,70,282
+mdl37_bk_news,Global 1-100 rank derived from news text indicating the company’s credit safety based on text mining (higher = safer),MATRIX,87%,65,222
+mdl37_bk_pd_pct,"Probability of default over the next 1 year expressed as a decimal fraction (e.g., 0.005 = 0.5%)",MATRIX,88%,67,252
+mdl37_bk_region_rank,1-100 percentile rank of 1-year default probability within the region (higher = safer),MATRIX,88%,72,294
+mdl37_bk_sector_rank,1-100 percentile rank of 1-year default probability within the same region and sector (higher = safer),MATRIX,88%,70,259
+mdl37_bk_structural,"Global 1-100 rank based on language about how the company structures its debt, equity, and accounts (higher = safer)",MATRIX,88%,67,252
+mdl37_bk_structural_rating,"rating indicating probability of default based on structural leverage, asset volatility, and asset drift",MATRIX,57%,64,196
+mdl37_bk_t12m_brc,Number of broker research documents in the trailing 12 months,MATRIX,88%,62,218
+mdl37_bk_t12m_filings_count,Number of regulatory filing documents within the trailing 12 months,MATRIX,88%,54,178
+mdl37_bk_t12m_news_count,Number of news documents within the trailing 12 months,MATRIX,88%,77,230
+mdl37_bk_t12m_tr_cnt,Number of earnings call transcript documents within the trailing 12 months,MATRIX,88%,74,246
+mdl37_bk_t1m_brc,Number of broker research documents within the trailing 1 month,MATRIX,88%,73,224
+mdl37_bk_t1m_filings_count,Number of regulatory filing documents within the trailing 1 month,MATRIX,88%,45,142
+mdl37_bk_t1m_news_count,Number of news documents within the trailing 1 month,MATRIX,88%,68,251
+mdl37_bk_t1m_tr_cnt,Number of earnings call transcript documents within the trailing 1 month,MATRIX,88%,113,383
+profitability_language_score,Global 1–100 rank based on language related to the company’s earnings and profitability; higher scores indicate lower credit risk,MATRIX,88%,2,2
+profitability_language_score_2,The global 1-100 rank based on language related to the company's earnings and profitability; higher rank indicates safer credit,MATRIX,92%,2,2
+recent_broker_research_document_count,The number of broker research documents within the trailing 30 days before the Data-Through Date,MATRIX,88%,3,3
+recent_broker_research_document_count_2,Number of broker research documents in the trailing 30 days before the Data-Through Date,MATRIX,92%,1,1
+recent_filings_document_count,Number of filing documents within the 30 days prior to the Data-Through Date,MATRIX,88%,1,1
+recent_filings_document_count_2,The number of filing documents within the trailing 1 month,MATRIX,92%,1,1
+recent_news_document_count,Number of news documents within the 30 days prior to the Data-Through Date,MATRIX,88%,4,4
+recent_news_document_count_2,The number of news documents within the trailing 1 month,MATRIX,92%,1,7
+recent_transcript_document_count,Number of earnings call transcript documents in the trailing 30 days before the Data-Through Date,MATRIX,88%,4,7
+recent_transcript_document_count_2,Number of transcript documents in the trailing 30 days before the Data-Through Date,MATRIX,92%,2,2
+yearly_broker_research_document_count,Number of broker research documents within the 12 months prior to the Data-Through Date,MATRIX,88%,4,4
+yearly_broker_research_document_count_2,The number of broker research documents within the trailing 12 months,MATRIX,92%,2,3
+yearly_filings_document_count,Number of filing documents within the 12 months prior to the Data-Through Date,MATRIX,88%,3,3
+yearly_filings_document_count_2,The number of filing documents within the trailing 12 months,MATRIX,92%,4,4
+yearly_news_document_count,The number of news documents within the trailing 12 months before the Data-Through Date,MATRIX,88%,3,3
+yearly_news_document_count_2,The number of news documents within the trailing 12 months,MATRIX,92%,2,3
+yearly_transcript_document_count,Number of transcript documents within the trailing 12 months before the Data-Through Date,MATRIX,88%,2,2
+yearly_transcript_document_count_2,The number of conference call transcript documents within the trailing 12 months,MATRIX,92%,4,5

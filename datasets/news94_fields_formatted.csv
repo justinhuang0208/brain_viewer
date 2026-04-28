@@ -1,0 +1,55 @@
+Field,Description,Type,Coverage,Users,Alphas
+nws94_pr_v2_comp_dollarvolume10mins,Average dollar volume after the event (10 mins),VECTOR,50%,2,2
+nws94_pr_v2_comp_dollarvolume30mins,Average dollar volume after the event (30 mins),VECTOR,50%,0,0
+nws94_pr_v2_comp_dollarvolume5mins,Average dollar volume after the event (5 mins),VECTOR,50%,0,0
+nws94_pr_v2_comp_dollarvolume60mins,Average dollar volume after the event (60 mins),VECTOR,50%,2,2
+nws94_pr_v2_comp_dollarvolumeafterevent,Average dollar volume after the event (until the close of the trading day),VECTOR,50%,1,1
+nws94_pr_v2_comp_dollarvolumebeforeevent,Average dollar volume before the event (from the open of the trading day),VECTOR,50%,2,2
+nws94_pr_v2_comp_flag_intraday,Flag to show if the news item arrived overnight (0) or intraday (1),VECTOR,50%,7,8
+nws94_pr_v2_comp_postevhightoev,Return from the price before the event to the low price after the event.,VECTOR,50%,1,1
+nws94_pr_v2_comp_postevlowtoev,Return from the price before the event to the high price after the event.,VECTOR,50%,2,2
+nws94_pr_v2_comp_preevhightoclose,Return from the previous close to the intraday low price (before the event),VECTOR,50%,3,5
+nws94_pr_v2_comp_preevlowtoclose,Return from the previous close to the intraday high price (before the event),VECTOR,50%,1,1
+nws94_pr_v2_comp_return10mins,Average return after the event (10 mins),VECTOR,50%,5,5
+nws94_pr_v2_comp_return30mins,Average return after the event (30 mins),VECTOR,50%,1,1
+nws94_pr_v2_comp_return5mins,Average return after the event (5 mins),VECTOR,50%,1,1
+nws94_pr_v2_comp_return60mins,Average return after the event (60 mins),VECTOR,50%,1,1
+nws94_pr_v2_comp_returnafterevent,Average return after the event (until the close of the trading day),VECTOR,50%,3,3
+nws94_pr_v2_comp_returnbeforeevent,Average return before the event (from the open of the trading day),VECTOR,50%,3,3
+nws94_pr_v2_comp_utc_time,Time of the news item (HHmmss),VECTOR,50%,4,4
+nws94_v2_comp_dollarvolume10mins,Average dollar volume after the event (10 mins),VECTOR,50%,1,1
+nws94_v2_comp_dollarvolume30mins,Average dollar volume after the event (30 mins),VECTOR,50%,0,0
+nws94_v2_comp_dollarvolume5mins,Average dollar volume after the event (5 mins),VECTOR,50%,0,0
+nws94_v2_comp_dollarvolume60mins,Average dollar volume after the event (60 mins),VECTOR,50%,1,1
+nws94_v2_comp_dollarvolumeafterevent,Average dollar volume after the event (until the close of the trading day),VECTOR,50%,1,1
+nws94_v2_comp_dollarvolumebeforeevent,Average dollar volume before the event (from the open of the trading day),VECTOR,50%,6,6
+nws94_v2_comp_flag_intraday,Flag to show if the news item arrived overnight (0) or intraday (1),VECTOR,50%,2,2
+nws94_v2_comp_postevhightoev,Return from the price before the event to the low price after the event.,VECTOR,50%,2,2
+nws94_v2_comp_postevlowtoev,Return from the price before the event to the high price after the event.,VECTOR,50%,1,1
+nws94_v2_comp_preevhightoclose,Return from the previous close to the intraday low price (before the event),VECTOR,50%,4,4
+nws94_v2_comp_preevlowtoclose,Return from the previous close to the intraday high price (before the event),VECTOR,50%,3,3
+nws94_v2_comp_return10mins,Average return after the event (10 mins),VECTOR,50%,1,1
+nws94_v2_comp_return30mins,Average return after the event (30 mins),VECTOR,50%,0,0
+nws94_v2_comp_return5mins,Average return after the event (5 mins),VECTOR,50%,2,2
+nws94_v2_comp_return60mins,Average return after the event (60 mins),VECTOR,50%,1,1
+nws94_v2_comp_returnafterevent,Average return after the event (until the close of the trading day),VECTOR,50%,0,0
+nws94_v2_comp_returnbeforeevent,Average return before the event (from the open of the trading day),VECTOR,50%,14,15
+nws94_v2_comp_utc_time,Time of the news item (HHmmss),VECTOR,50%,1,1
+nws94_web_v2_comp_dollarvolume10mins,Average dollar volume after the event (10 mins),VECTOR,50%,2,2
+nws94_web_v2_comp_dollarvolume30mins,Average dollar volume after the event (30 mins),VECTOR,50%,1,1
+nws94_web_v2_comp_dollarvolume5mins,Average dollar volume after the event (5 mins),VECTOR,50%,1,1
+nws94_web_v2_comp_dollarvolume60mins,Average dollar volume after the event (60 mins),VECTOR,50%,1,1
+nws94_web_v2_comp_dollarvolumeafterevent,Average dollar volume after the event (until the close of the trading day),VECTOR,50%,0,0
+nws94_web_v2_comp_dollarvolumebeforeevent,Average dollar volume before the event (from the open of the trading day),VECTOR,50%,1,1
+nws94_web_v2_comp_flag_intraday,Flag to show if the news item arrived overnight (0) or intraday (1),VECTOR,50%,1,1
+nws94_web_v2_comp_postevhightoev,Return from the price before the event to the low price after the event.,VECTOR,50%,0,0
+nws94_web_v2_comp_postevlowtoev,Return from the price before the event to the high price after the event.,VECTOR,50%,1,1
+nws94_web_v2_comp_preevhightoclose,Return from the previous close to the intraday low price (before the event),VECTOR,50%,1,1
+nws94_web_v2_comp_preevlowtoclose,Return from the previous close to the intraday high price (before the event),VECTOR,50%,1,1
+nws94_web_v2_comp_return10mins,Average return after the event (10 mins),VECTOR,50%,0,0
+nws94_web_v2_comp_return30mins,Average return after the event (30 mins),VECTOR,50%,0,0
+nws94_web_v2_comp_return5mins,Average return after the event (5 mins),VECTOR,50%,2,2
+nws94_web_v2_comp_return60mins,Average return after the event (60 mins),VECTOR,50%,2,2
+nws94_web_v2_comp_returnafterevent,Average return after the event (until the close of the trading day),VECTOR,50%,1,1
+nws94_web_v2_comp_returnbeforeevent,Average return before the event (from the open of the trading day),VECTOR,50%,4,4
+nws94_web_v2_comp_utc_time,Time of the news item (HHmmss),VECTOR,50%,2,2

@@ -1,0 +1,67 @@
+Field,Description,Type,Coverage,Users,Alphas
+annualized_asset_drift_pct,Annualized rate of change in asset value used in default modeling.,MATRIX,95%,3,3
+annualized_asset_volatility_pct,Annualized volatility of asset value used in default modeling.,MATRIX,95%,2,3
+country_default_risk_percentile,Percentile rank of default likelihood within the same country.,MATRIX,95%,0,0
+default_risk_country_percentile,Percentile rank of default likelihood within the same country.,MATRIX,99%,2,2
+default_risk_country_percentile_v2,Percentile rank of default likelihood within the same country (version 2).,MATRIX,99%,0,0
+default_risk_global_percentile,Percentile rank of default likelihood compared to all companies worldwide.,MATRIX,100%,1,3
+default_risk_global_percentile_v2,Percentile rank of default likelihood compared to all companies worldwide (version 2).,MATRIX,99%,2,3
+default_risk_industry_percentile,Percentile rank of default likelihood within the same industry group.,MATRIX,99%,0,0
+default_risk_industry_percentile_v2,Percentile rank of default likelihood within the same industry group (version 2).,MATRIX,99%,0,0
+default_risk_region_percentile,Percentile rank of default likelihood within the same geographic region.,MATRIX,99%,0,0
+default_risk_region_percentile_v2,Percentile rank of default likelihood within the same geographic region (version 2).,MATRIX,99%,0,0
+default_risk_sector_percentile,Percentile rank of default likelihood within the same economic sector.,MATRIX,99%,0,0
+default_risk_sector_percentile_v2,Percentile rank of default likelihood within the same economic sector (version 2).,MATRIX,99%,0,0
+distance_to_default_stddev,Number of standard deviations between asset value and default threshold.,MATRIX,95%,1,1
+global_default_risk_percentile,Percentile rank of default likelihood compared to all companies globally.,MATRIX,95%,2,2
+industry_default_risk_percentile,Percentile rank of default likelihood within the same industry.,MATRIX,95%,0,0
+leverage_ratio_to_assets,Ratio comparing the default threshold to total asset value.,MATRIX,96%,1,1
+mdl28_az1l_asset_drift_pct,1-100 rank of the annualized rate of change of the market value of the firm's assets,MATRIX,80%,2,24
+mdl28_az1l_asset_volatility_pct,annualized volatility of the market value of the firm's assets,MATRIX,80%,1,5
+mdl28_az1l_distance_to_default,Number of standard deviations difference between the market value of the firm's assets and its estimated default point.,MATRIX,80%,1,8
+mdl28_az1l_global_rank,The current global 1-100 percentile rank of a company's 1-year default probability,MATRIX,80%,1,12
+mdl28_az1l_implied_rating,Credit rating implied by the current estimated forward 1-year SCR default probability,MATRIX,82%,44,217
+mdl28_az1l_industry_rank,"The current 1-100 percentile rank, among other firms in the same region and industry, of a company's 1-year default probability",MATRIX,80%,1,8
+mdl28_az1l_leverage,"The current 1-100 percentile rank, among other firms in the same region and industry, of a company's 1-year default probability",MATRIX,81%,3,10
+mdl28_az1l_pd_pct,A percentage that indicates the probability that the company will go bankrupt or default on its debt obligations over the next 1-year period,MATRIX,80%,1,16
+mdl28_az1l_region_rank,"The current 1-100 percentile rank, among other firms in the same region, of a company's 1-year default probability",MATRIX,80%,1,3
+mdl28_az1l_sector_rank,"The current 1-100 percentile rank, among other firms in the same region and industrial sector, of a company's 1-year default probability",MATRIX,80%,1,11
+mdl28_az2_country_rank,"The current 1-100 percentile rank, by country, of a company's 1-year default probability",MATRIX,80%,1,15
+mdl28_v14_az1l_asset_drift_pct,1-100 rank of the annualized rate of change of the market value of the firm’s assets,MATRIX,99%,76,332
+mdl28_v14_az1l_asset_volatility_pct,annualized volatility of the market value of the firm’s assets,MATRIX,99%,62,217
+mdl28_v14_az1l_distance_to_default,Number of standard deviations difference between the market value of the firm's assets and its estimated default point.,MATRIX,99%,47,181
+mdl28_v14_az1l_global_rank,The current global 1-100 percentile rank of a company's 1-year default probability,MATRIX,99%,49,225
+mdl28_v14_az1l_industry_rank,"the current 1-100 percentile rank, among other firms in the same region and industry, of a company's 1.year default probability b",MATRIX,99%,48,188
+mdl28_v14_az1l_leverage,"The current 1-100 percentile rank, among other firms in the same region and industry, of a company's 1.year default probability",MATRIX,100%,65,255
+mdl28_v14_az1l_pd_pct,"A percentage that indicates the probability,that the company will go bankrupt, or default on its debt obligations,
+over the next 1-year period",MATRIX,99%,54,237
+mdl28_v14_az1l_region_rank,"The current 1-100 percentile rank, among other firms in the same region, of a company's 1.year default probability",MATRIX,99%,44,173
+mdl28_v14_az1l_sector_rank,"The current 1-100 percentile rank, among other firms in the same region and industrial sector, of a company's 1.year default probability",MATRIX,99%,42,116
+mdl28_v14_az2_country_rank,"The current 1-100 percentile rank, by country, of a company's 1.year default probabilit",MATRIX,99%,42,146
+model_based_letter_grade,Agency-style rating derived from model-estimated default probability.,MATRIX,99%,0,0
+model_based_letter_grade_v2,Agency-style rating derived from updated model-estimated default probability.,MATRIX,99%,0,0
+one_year_default_probability_pct,"Estimated probability of default over the next year, expressed as a percent.",MATRIX,95%,0,0
+region_default_risk_percentile,Percentile rank of default likelihood within the same region.,MATRIX,95%,1,3
+sector_default_risk_percentile,Percentile rank of default likelihood within the same sector.,MATRIX,95%,1,1
+star_cr_asset_drift_pct,1-100 rank of the annualized rate of change of the market value of the firm's assets,MATRIX,80%,1,23
+star_cr_asset_volatility_pct,annualized volatility of the market value of the firm's assets,MATRIX,80%,2,23
+star_cr_country_rank,"The current 1-100 percentile rank, by country, of a company's 1-year default probability",MATRIX,80%,6,39
+star_cr_dist_to_default,Number of standard deviations difference between the market value of the firm's assets and its estimated default point.,MATRIX,80%,1,16
+star_cr_global_rank,The current global 1-100 percentile rank of a company's 1-year default probability,MATRIX,80%,6,16
+star_cr_implied_rating,Credit rating implied by the current estimated forward 1-year SCR default probability,MATRIX,82%,79,497
+star_cr_industry_rank,"The current 1-100 percentile rank, among other firms in the same region and industry, of a company's 1-year default probability",MATRIX,80%,5,13
+star_cr_leverage,"The current 1-100 percentile rank, among other firms in the same region and industry, of a company's 1-year default probability",MATRIX,81%,3,14
+star_cr_pd_pct,A percentage that indicates the probability that the company will go bankrupt or default on its debt obligations over the next 1-year period,MATRIX,80%,2,11
+star_cr_region_rank,"The current 1-100 percentile rank, among other firms in the same region, of a company's 1-year default probability",MATRIX,80%,1,11
+star_cr_sector_rank,"The current 1-100 percentile rank, among other firms in the same region and industrial sector, of a company's 1-year default probability",MATRIX,80%,3,12
+star_v14_cr_asset_drift_pct,1-100 rank of the annualized rate of change of the market value of the firm’s assets,MATRIX,99%,69,351
+star_v14_cr_asset_volatility_pct,annualized volatility of the market value of the firm’s assets,MATRIX,99%,64,295
+star_v14_cr_country_rank,"The current 1-100 percentile rank, by country, of a company's 1.year default probabilit",MATRIX,99%,50,229
+star_v14_cr_dist_to_default,Number of standard deviations difference between the market value of the firm's assets and its estimated default point.,MATRIX,99%,58,348
+star_v14_cr_global_rank,The current global 1-100 percentile rank of a company's 1-year default probability,MATRIX,99%,53,206
+star_v14_cr_industry_rank,"the current 1-100 percentile rank, among other firms in the same region and industry, of a company's 1.year default probability b",MATRIX,99%,53,220
+star_v14_cr_leverage,"The current 1-100 percentile rank, among other firms in the same region and industry, of a company's 1.year default probability",MATRIX,100%,60,382
+star_v14_cr_pd_pct,"A percentage that indicates the probability,that the company will go bankrupt, or default on its debt obligations,
+over the next 1-year period",MATRIX,99%,45,297
+star_v14_cr_region_rank,"The current 1-100 percentile rank, among other firms in the same region, of a company's 1.year default probability",MATRIX,99%,58,281
+star_v14_cr_sector_rank,"The current 1-100 percentile rank, among other firms in the same region and industrial sector, of a company's 1.year default probability",MATRIX,99%,59,186

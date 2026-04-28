@@ -1,0 +1,3 @@
+Field,Description,Type,Coverage,Users,Alphas
+commercial_realty_exposure_beta,Statistical measure of a stock’s sensitivity to commercial real estate market movements.,VECTOR,79%,2,2
+residential_realty_exposure_beta,Statistical measure of a stock’s sensitivity to residential real estate market movements.,VECTOR,79%,0,0

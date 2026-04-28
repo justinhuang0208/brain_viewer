@@ -1,0 +1,10 @@
+Field,Description,Type,Coverage,Users,Alphas
+atm_call_put_iv_spread,The difference in implied volatility between at-the-money call and put options.,VECTOR,31%,1,1
+earnings_volatility_risk_premium,"The difference between implied earnings volatility and realized volatility, indicating potential mispricing.",VECTOR,30%,1,1
+five_day_ma_earnings_volatility,The five-day moving average of the implied volatility attributed to upcoming earnings events.,VECTOR,30%,1,1
+five_day_realized_volatility,The realized volatility of a stock calculated over a five-day period.,VECTOR,31%,0,0
+implied_earnings_volatility_estimate,The level of implied volatility attributed to upcoming earnings events for a stock.,VECTOR,30%,0,0
+iv_spread_to_atm_volatility_ratio,The ratio of the implied volatility spread between call and put options to the at-the-money volatility level.,VECTOR,31%,1,1
+last_quarter_earnings_price_move,The actual price movement of a stock on its most recent earnings announcement date.,VECTOR,29%,0,0
+predicted_earnings_related_price_move,The expected price movement of a stock due to earnings risk as forecasted by the model.,VECTOR,30%,0,0
+three_year_avg_earnings_move,The trailing three-year average of actual price movements on earnings announcement dates.,VECTOR,28%,0,0

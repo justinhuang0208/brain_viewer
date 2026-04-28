@@ -1,0 +1,7 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv141_global_1c,Close price,VECTOR,100%,60,185
+pv141_market,The last broadcasted VWAP from the live ticks,MATRIX,100%,48,301
+pv141_us_1c,Close price,VECTOR,100%,35,65
+pv141_volume_ratio_wq_w_close_market,The ratio of total volume used in the calculation,MATRIX,100%,42,325
+pv141_wq_w_close,VWAP calculated using tick data including the close auction (same with the end-of-day VWAP above),MATRIX,100%,77,425
+pv141_wq_wo_close,VWAP calculated using tick data excluding the close auction,MATRIX,100%,59,459

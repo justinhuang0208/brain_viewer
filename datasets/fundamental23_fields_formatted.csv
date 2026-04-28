@@ -1,0 +1,1733 @@
+Field,Description,Type,Coverage,Users,Alphas
+accounts_cash_and_equivalents,Total value of cash and cash equivalents at the end of the period.,MATRIX,82%,12,15
+accounts_current_assets_equity,Current assets related to equity accounts.,MATRIX,92%,6,17
+accounts_payable_current,Accounts payable due within one year.,MATRIX,75%,3,3
+accounts_payable_current_2,[Quarterly] Construction in Progress - Gross,MATRIX,50%,1,1
+accounts_payable_deferred,[Quarterly] Pension Obligation - Domestic,MATRIX,34%,1,1
+accounts_payable_noncurrent,Accounts payable that are not due within the next year.,MATRIX,99%,6,8
+accounts_payable_nontrade,Accounts payable not related to trade transactions.,MATRIX,100%,0,0
+accounts_payable_notes,Notes payable included in accounts payable.,MATRIX,100%,1,6
+accounts_payable_trade_creditors,Accounts payable to trade creditors.,MATRIX,79%,1,1
+accounts_payable_year_end,Accounts payable balance at fiscal year end.,MATRIX,74%,0,0
+accounts_receivable_current,Current accounts receivable at period end.,MATRIX,90%,5,8
+accounts_receivable_current_assets,Accounts receivable included in current assets for the annual period.,MATRIX,34%,1,1
+accounts_receivable_gross,Gross amount of accounts receivable outstanding.,MATRIX,62%,6,6
+accounts_receivable_gross_2,"[Quarterly] Accounts Receivable - Trade, Gross",MATRIX,64%,0,0
+accounts_receivable_long_term,"Restricted Cash – Long-Termrepresents cash or cash equivalents that are prepared for specific
+purposes, subject to long-term restrictions, and not readily available for operational uses.",MATRIX,36%,1,1
+accounts_receivable_total_5,Total accounts receivable as of the reporting date.,MATRIX,92%,2,2
+accounts_receivable_total_6,Total value of accounts receivable outstanding at period end.,MATRIX,90%,0,0
+accounts_total_current_assets,Total current assets as reported in accounts.,MATRIX,84%,8,9
+accounts_total_current_assets_2,Total current assets as reported in accounts.,MATRIX,84%,2,2
+accounts_total_receivables_current,Total current receivables as reported in accounts.,MATRIX,91%,5,5
+accrued_acquisition_costs,Total value of accrued acquisition costs at the end of the period.,MATRIX,87%,2,3
+accrued_assets_total,Total accrued assets as of the reporting date.,MATRIX,88%,4,4
+accrued_expenses_total_2,Total value of accrued expenses at the end of the period.,MATRIX,90%,2,2
+accrued_interest_income,Interest income accrued but not yet received.,MATRIX,61%,4,4
+accrued_interest_liabilities,Total accrued interest payable at the end of the period.,MATRIX,64%,2,2
+accrued_interest_liabilities_2,Interest liabilities accrued but not yet paid.,MATRIX,63%,0,0
+accrued_interest_long_term,Interest accrued on long-term obligations.,MATRIX,64%,1,1
+accrued_interest_payable,Interest expense that has been accrued but not yet paid.,MATRIX,84%,2,3
+accrued_interest_payable_2,Interest expense accrued but not yet paid.,MATRIX,82%,5,6
+accrued_short_term_interest,Interest accrued on short-term obligations.,MATRIX,47%,3,3
+accumulated_amortization_contracts,Cumulative amortization recorded for contracts or similar intangible assets.,MATRIX,86%,1,1
+accumulated_amortization_expense,Cumulative amortization expense recognized to date.,MATRIX,91%,1,1
+accumulated_amortization_of_capital_assets,Total accumulated amortization of capital assets.,MATRIX,90%,0,0
+accumulated_depletion_value,Deferred Revenue - Long Term,MATRIX,38%,3,3
+accumulated_depreciation,Cumulative depreciation expense recognized to date.,MATRIX,77%,0,0
+accumulated_depreciation_2,Total depreciation accumulated on tangible assets to date.,MATRIX,96%,1,1
+accumulated_depreciation_other_assets,Assets classified as discontinued operations,MATRIX,27%,0,0
+accumulated_other_assets,Total accumulated other assets at period end.,MATRIX,78%,0,0
+accumulated_other_comprehensive_assets,Accumulated other comprehensive assets at period end.,MATRIX,62%,2,2
+accumulated_provision_depreciation_assets,[Quarterly] Provision for Doubtful Accounts,MATRIX,61%,0,0
+acquired_goodwill,Goodwill acquired through business combinations.,MATRIX,77%,0,0
+acquisition_purchase_price,Total price paid for acquisitions during the period.,MATRIX,100%,2,2
+allowance_for_doubtful_accounts,"[Quarterly] Advertising Expense, Supplemental",MATRIX,39%,1,1
+allowance_for_investment_gain,[Quarterly] Inventories - Finished Goods,MATRIX,37%,0,0
+allowance_for_investment_writeoff,[Quarterly] Inventories - Work In Progress,MATRIX,29%,0,0
+amortization_goodwill_intangibles,Amortization expense for goodwill and intangibles.,MATRIX,77%,2,2
+amortization_of_acquired_assets,Amortization expense related to acquired assets during the period.,MATRIX,80%,1,1
+amortization_of_acquired_goodwill,Amortization expense for acquired goodwill.,MATRIX,68%,0,0
+amortization_of_intangible_assets,Amortization expense for intangible assets.,MATRIX,75%,4,4
+annual_earnings_from_associates,Share of annual profit or loss from investments in associates.,MATRIX,44%,1,2
+annual_fiscal_month_number,The fiscal month number corresponding to the end of the annual period.,MATRIX,26%,1,1
+annual_fiscal_year_number,The fiscal year associated with the annual reporting period.,MATRIX,26%,0,0
+annual_income_tax_expense_2,Total income tax expense for the annual period.,MATRIX,63%,1,1
+annual_net_income_value,Net income reported for the annual period.,MATRIX,97%,2,2
+annual_prepaid_taxes,Prepaid taxes for the annual reporting period.,MATRIX,96%,1,2
+annual_reporting_currency_code,The currency code in which annual financial values are presented after conversion.,MATRIX,26%,1,34
+assets_managed_investment,Total assets under management for investment purposes.,MATRIX,87%,0,0
+assets_total_2,Total assets held by the company.,MATRIX,100%,7,9
+assets_total_3,Total assets held by the company at period end.,MATRIX,100%,3,3
+bad_debt_expense,Expense recognized for uncollectible accounts receivable.,MATRIX,67%,4,4
+bank_borrowings_total,Total bank borrowings outstanding.,MATRIX,100%,2,3
+bank_deposits_assets,Assets held as deposits in banks.,MATRIX,92%,1,1
+bank_deposits_assets_2,Total value of deposits held as assets in banks.,MATRIX,91%,3,3
+bank_interest_total,Total interest expense related to banking operations.,MATRIX,93%,6,17
+benefit_expense_supplemental,Supplemental benefit expense recognized in the period.,MATRIX,100%,0,0
+benefit_expense_total,Total benefit expense for the period.,MATRIX,100%,0,0
+book_value_total_equity,Book value of total equity as reported on the balance sheet.,MATRIX,100%,3,3
+capital_invested_accumulated_cost,Capital invested at accumulated cost for the interim period.,MATRIX,100%,0,0
+cash_and_marketable_equivalents_annual,miscellaneous earnings adjustment.,MATRIX,30%,0,0
+cash_and_marketable_investments,Cash and marketable investment securities held at period end.,MATRIX,49%,0,0
+cash_in_acquisition,Cash acquired as part of business acquisitions.,MATRIX,100%,1,1
+cash_interest_accrued,Interest accrued but not yet paid in cash.,MATRIX,100%,2,3
+cash_proceeds_received,Cash proceeds received during the period.,MATRIX,30%,0,0
+common_shares_outstanding,Number of common shares currently issued and outstanding.,MATRIX,100%,0,0
+common_shares_outstanding_quarter_2,Number of common shares outstanding at quarter end.,MATRIX,100%,0,0
+currency_in_circulation,Total currency in circulation for the company.,MATRIX,84%,0,0
+currency_of_converted_financials,Currency in which the financial values have been converted for reporting.,MATRIX,92%,0,0
+current_assets_total_3,Total value of assets expected to be converted to cash or used within one year.,MATRIX,84%,3,3
+current_maturities_long_term_debt,Current maturities of long-term debt obligations.,MATRIX,100%,0,0
+current_maturities_short_term,Current maturities of short-term debt obligations.,MATRIX,100%,0,0
+current_portion_of_long_term_debt,Current portion of long-term debt due within one year.,MATRIX,28%,1,1
+current_tax_expense,[Quarterly] Current Tax - Foreign,MATRIX,53%,0,0
+current_tax_liability,[Quarterly] NOT_SELECTED Current Tax - Local,MATRIX,64%,1,1
+current_tax_payable,Current tax payable as of the reporting date.,MATRIX,88%,0,0
+current_tax_receivable,Amount of tax receivables expected to be collected within one year.,MATRIX,35%,0,0
+customer_securities_investment,Customer securities held for investment purposes.,MATRIX,93%,0,0
+deferred_capital_gains,Total value of deferred capital gains at the end of the period.,MATRIX,100%,1,1
+deferred_charge_goodwill,Amount of deferred charges related to goodwill.,MATRIX,100%,2,2
+deferred_charge_goodwill_2,Deferred charges related to goodwill.,MATRIX,100%,0,0
+deferred_charge_goodwill_3,Amount of deferred charges related to goodwill on the balance sheet.,MATRIX,100%,0,0
+deferred_compensation_granted,Total value of deferred compensation granted during the period.,MATRIX,100%,0,0
+deferred_income_noncurrent,Deferred income classified as non-current.,MATRIX,100%,0,0
+deferred_revenue_debt,[Quarterly] Discount Rate - Domestic,MATRIX,31%,0,0
+deferred_tax_benefit,[Quarterly] Deferred Tax - Foreign,MATRIX,50%,1,1
+deferred_tax_credits,Tax credits that are deferred to future periods.,MATRIX,87%,0,0
+deferred_tax_reserve,Reserve for deferred tax liabilities.,MATRIX,37%,0,0
+deposits_total_value,Total value of deposits held by the company.,MATRIX,100%,2,31
+depreciation_and_amortization_expense,[Quarterly] Deferred Tax - Local,MATRIX,60%,0,0
+depreciation_expense,Expense recognized for the allocation of tangible asset costs over their useful lives.,MATRIX,42%,0,0
+depreciation_expense_total,Total depreciation expense for the period.,MATRIX,100%,1,1
+depreciation_of_property_plant_equipment,[Quarterly] Domestic Pension Plan Expense,MATRIX,36%,0,0
+dividend_income_received,"[Quarterly] Depreciation of Right-of-Use Assets, Supplemental",MATRIX,30%,1,1
+dividend_per_share_declared,Dividend per share declared for the period.,MATRIX,100%,0,0
+dividends_noncontrolling_interest,Dividends paid to noncontrolling interest holders during the period.,MATRIX,98%,0,0
+dividends_withheld_settled,Dividends withheld and settled during the period.,MATRIX,100%,0,0
+earnings_before_income_tax,Earnings before deduction of income tax expense.,MATRIX,100%,1,2
+earnings_before_tax,Earnings before tax expenses are deducted.,MATRIX,100%,3,5
+earnings_before_tax_2,Earnings before income tax expense is deducted.,MATRIX,100%,1,1
+earnings_from_associates,[Quarterly] Research & Development,MATRIX,41%,1,12
+earnings_from_residual_operations,[Quarterly] Restructuring Charge,MATRIX,33%,1,1
+earnings_from_subsidiaries,Earnings derived from subsidiary companies.,MATRIX,95%,1,3
+earnings_retained_adjusted,Adjusted retained earnings for the reporting period.,MATRIX,76%,1,1
+employee_retirement_assets,Total value of assets held for employee retirement benefits.,MATRIX,45%,0,0
+environmental_social_governance_assets,"Assets related to environmental, social, and governance initiatives.",MATRIX,91%,1,2
+equipment_depreciation_expense,Depreciation expense for equipment during the period.,MATRIX,42%,0,0
+equity_accounted_minority_interest,Minority interest accounted for under equity method.,MATRIX,29%,0,0
+equity_accounted_minority_interest_2,Minority interest accounted for under the equity method.,MATRIX,30%,0,0
+equity_corrections,Adjustments or corrections made to equity.,MATRIX,88%,1,1
+equity_corrections_2,Corrections or adjustments made to equity accounts.,MATRIX,85%,0,0
+equity_investments_at_cost,Value of equity investments recorded at cost on the balance sheet.,MATRIX,83%,1,1
+equity_securities_gain_loss,Net gain or loss on equity securities during the period.,MATRIX,92%,0,0
+equity_to_equity_transfers,Transfers between equity accounts during the period.,MATRIX,96%,0,0
+equity_to_equity_transfers_2,Transfers between equity accounts during the period.,MATRIX,94%,0,0
+equity_to_equityholders,Equity attributable to equity holders of the parent.,MATRIX,96%,1,1
+equity_total_owners,Total equity attributable to owners of the parent company.,MATRIX,96%,2,2
+equity_total_reported,Total equity as reported in the financial statements.,MATRIX,94%,0,0
+extraordinary_adjustments,Adjustments related to extraordinary items.,MATRIX,44%,2,2
+extraordinary_gains,[Quarterly] Actuarial Gains and Losses - Domestic,MATRIX,29%,0,0
+extraordinary_items_2,Gains or losses from events considered unusual and infrequent.,MATRIX,48%,0,0
+extraordinary_items_discontinued_operations,Extraordinary items related to discontinued operations.,MATRIX,35%,0,0
+extraordinary_items_other,Other extraordinary items reported in the financials.,MATRIX,34%,0,0
+extraordinary_items_total_2,Total extraordinary items reported for the period.,MATRIX,100%,0,0
+extraordinary_items_total_3,Total extraordinary items recognized during the period.,MATRIX,51%,0,0
+extraordinary_losses,[Quarterly] Expected Return on Assets - Domestic,MATRIX,31%,0,0
+extraordinary_net_income_component,Net income component classified as extraordinary.,MATRIX,100%,1,1
+extraordinary_net_income_credit,Net income credits from extraordinary items.,MATRIX,100%,0,0
+finance_costs_debt_premium,Finance costs related to debt premium amortization.,MATRIX,63%,0,0
+finance_costs_deferred_portion,Deferred portion of finance costs.,MATRIX,64%,0,0
+finance_lease_debt_total,Total finance lease debt outstanding.,MATRIX,96%,0,0
+finance_lease_liabilities,Outstanding finance lease liabilities at period end.,MATRIX,100%,0,0
+financial_services_investment_property,Sale/Issuance of Preferred represents cash inflow from issuance of preferred stock.,MATRIX,30%,0,0
+financial_statements_including_comparatives,Financial statements including comparatives for the interim period.,MATRIX,87%,0,0
+financing_cash_flow_2,Net cash flow from financing activities.,MATRIX,100%,0,0
+financing_cashflow_net,Net cash flow from financing activities.,MATRIX,100%,0,0
+fixed_long_term_debt_issued,Amount of fixed long-term debt issued during the period.,MATRIX,90%,0,0
+fixed_long_term_debt_repayment,Repayment amount of fixed long-term debt during the period.,MATRIX,92%,0,0
+fixed_production_assets,Value of fixed assets used in production.,MATRIX,99%,1,1
+fixed_property_assets,"Value of fixed property, plant, and equipment owned by the company.",MATRIX,97%,0,0
+fnd23_1spsd,Special DPS - Common Stock Primary Issue,MATRIX,52%,35,65
+fnd23_54dls,Standardized Long Term Debt Maturing in Years 4 and 5,MATRIX,37%,23,34
+fnd23_acc_payable,accounts payable,MATRIX,91%,137,549
+fnd23_acra,Restricted Cash - Current not available for use immediately and due within a year,MATRIX,27%,20,36
+fnd23_amae,Amortization of capitalized acquisition costs or goodwill,MATRIX,54%,21,34
+fnd23_annfv1a_1dls,"Long Term Debt Maturing within 1
+Year",MATRIX,84%,55,114
+fnd23_annfv1a_1los,Operating Lease Payments Due in Year 1,MATRIX,96%,52,102
+fnd23_annfv1a_1nstq,Treasury Shares - Common Stock Primary Issue,MATRIX,100%,63,111
+fnd23_annfv1a_1oscq,"represents the number of common shares outstanding in a company. When a company has two or more different types of common shares outstanding, Shares Outstanding – Common Stock Primary Issue represents the primary issue, which is most actively traded in the market.",MATRIX,100%,46,120
+fnd23_annfv1a_1spdd,common dividends per share for common stock primary issues.,MATRIX,90%,31,47
+fnd23_annfv1a_2dls,Standardized Long Term Debt Maturing in Year 2,MATRIX,83%,25,28
+fnd23_annfv1a_2los,Operating Lease Payments Due in Year 2,MATRIX,96%,48,91
+fnd23_annfv1a_32dls,Standardized Long Term Debt Maturing in Years 2 and 3 represents the summation of Standardized Long Term Debt Maturing in Year 2 and Standardized Long Term Debt Maturing in Year 3.,MATRIX,83%,27,38
+fnd23_annfv1a_32los,Standardized Operating Lease Payments Due in Years 2 and 3 represents the summation of Standardized Operating Lease Payments Due in Year 2 and Standardized Operating Lease Payments Due in Year 3.,MATRIX,96%,67,161
+fnd23_annfv1a_3los,Standardized Operating Lease Payments Due in Year 3.,MATRIX,96%,66,152
+fnd23_annfv1a_4los,Standardized Operating Lease Payments Due in Year 4.,MATRIX,95%,47,88
+fnd23_annfv1a_54los,Standardized Operating Lease Payments Due in Years 4 and 5 represents the summation of Standardized Operating Lease Payments Due in Year 4 and Standardized Operating Lease Payments Due in Year 5.,MATRIX,95%,54,100
+fnd23_annfv1a_5los,Standardized Operating Lease Payments Due in Year 5.,MATRIX,93%,54,126
+fnd23_annfv1a_abpl,payable or accrued liabilities.,MATRIX,31%,0,0
+fnd23_annfv1a_abpo,"represents changes in accounts payable and accrued expenses during the period when a company does not delineate the two components. An increase in accounts payable and accrued expenses has a positive impact on cash flow from operating activities, and vice versa.",MATRIX,43%,12,17
+fnd23_annfv1a_acda,current assets of discontinued operations.,MATRIX,32%,1,1
+fnd23_annfv1a_acoa,other current assets.,MATRIX,65%,42,74
+fnd23_annfv1a_acos,"Other Current Assets, Total.",MATRIX,76%,30,67
+fnd23_annfv1a_acta,"total current assets. Sum of cash and short term investments, total receivables (net), total inventory, prepaid expenses, other current assets.",MATRIX,82%,41,98
+fnd23_annfv1a_adbs,"Normalized Earnings before Interest, Taxes, Depreciation and Amortization",MATRIX,91%,36,65
+fnd23_annfv1a_adpa,represents provisions established for doubtful accounts receivable. Provision for doubtful accounts is usually established on the basis of maturities of receivables and the company’s experience on collecting such receivables.,MATRIX,66%,23,69
+fnd23_annfv1a_afsi,Sale of assets to be leased out under operating lease contracts.,MATRIX,75%,29,66
+fnd23_annfv1a_agse,Selling/General/Administrative Expense.,MATRIX,91%,53,107
+fnd23_annfv1a_agss,"Selling/General/Administrative Expenses, Total.",MATRIX,92%,34,78
+fnd23_annfv1a_aiav,"Accumulated Intangible Amortization represents accumulated amortization against intangible fixed
+assets.",MATRIX,76%,27,52
+fnd23_annfv1a_aieo,"represents a reversal of non-cash earnings/losses from investments under the Equity Method. For such investments, undistributed earnings/losses of the investee are included in the net income computation of the investor. Since the earnings are non-cash, these are reversed out of cash flow from operations.",MATRIX,41%,13,49
+fnd23_annfv1a_aiev,"Equity in Affiliates, Supplemental represents the total share of earnings/losses, net of taxes, that the
+company is entitled to from unconsolidated associated companies, affiliates or joint ventures, which have
+not been distributed as dividends.",MATRIX,41%,13,21
+fnd23_annfv1a_alge,loss/gain on sale of assets listed in the operating section.,MATRIX,30%,0,0
+fnd23_annfv1a_algn,Gain (Loss) on Sale of Assets.,MATRIX,27%,0,0
+fnd23_annfv1a_alos,"Other Long-Term Assets, Total.",MATRIX,98%,30,48
+fnd23_annfv1a_artx,Extraordinary Item.,MATRIX,53%,6,13
+fnd23_annfv1a_atcq,represents translation gains (losses) on financial statements of foreign subsidiaries. Such adjustments may be required when the currency of a subsidiary is different from the reporting currency of the reporting company.,MATRIX,45%,22,27
+fnd23_annfv1a_atda,deferred income taxes - long term. These are credits being applied to income taxes that will be paid in future years.,MATRIX,61%,21,28
+fnd23_annfv1a_b6los,"Standardized Operating Lease Payments Due in Year 6 and Beyond represents Total Operating Leases,
+Supplemental  less Standardized Operating Lease Payments Due within 1 Year, Standardized
+Operating Lease Payments Due in Year 2, Standardized Operating Lease Payments Due in Year 3, Standardized Operating Lease Payments Due in Year 4 and Standardized Operating Lease
+Payments Due in Year 5.",MATRIX,96%,120,763
+fnd23_annfv1a_bcns,"Net Cash – Beginning Balance represents the beginning balance of cash and cash equivalents, as
+defined by a company.",MATRIX,100%,37,66
+fnd23_annfv1a_bfpv,"Basic EPS After Stock-Based Compensation Expense represents Net Income After Stock-Based
+Compensation Expense divided by Basic/Primary Weighted Average Shares.",MATRIX,48%,34,58
+fnd23_annfv1a_bloo,other liabilities,MATRIX,80%,18,39
+fnd23_annfv1a_bosi,Deconsolidation of a subsidiary classified as Sale of Business.,MATRIX,49%,11,17
+fnd23_annfv1a_bpal,"Accrued interest expenses, interest payable in commercial banks.",MATRIX,91%,55,132
+fnd23_annfv1a_bpao,"represents changes in accounts payable during the period. An increase inaccounts payable has a positive impact on cash flow from operating activities, and vice versa.",MATRIX,71%,26,35
+fnd23_annfv1a_caic,Income Available to Common Excl. Extraordinary Items,MATRIX,100%,37,87
+fnd23_annfv1a_caiv,"Normalized Income Available to Common represents the bottom-line net income available to
+common shareholders, excluding the effects of all non-recurring/unusual/one-off/extraordinary items, after
+minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other
+adjustments to net income.",MATRIX,100%,32,78
+fnd23_annfv1a_cbpa,"represents the gross amount of buildings and their attachments, before being reduced by accumulated depreciation of the buildings.",MATRIX,80%,38,63
+fnd23_annfv1a_ccns,Net Change in Cash,MATRIX,100%,24,73
+fnd23_annfv1a_cdav,Deferred Revenue - Current,MATRIX,59%,59,143
+fnd23_annfv1a_cema,"represents the acquisition cost of machinery and other equipment (including delivery equipment, office equipment, machinery, furniture and fixtures, furnishings, factory, equipment, tools, etc.) in a company, before being reduced by accumulated depreciation.",MATRIX,86%,36,111
+fnd23_annfv1a_cets,Effect of Special Items on Income Taxes.,MATRIX,92%,28,48
+fnd23_annfv1a_cila,"represents land and improvements on land at acquisition cost. Land is not depreciated, but land improvements are normally depreciated over time.",MATRIX,64%,17,25
+fnd23_annfv1a_cinx,"Income Available to Common Stocks Incl. Extraordinary Items represents the bottom-line net
+income available to common stockholders, including the effects of extraordinary items – adjusted by
+minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other
+adjustments to net income.",MATRIX,100%,26,52
+fnd23_annfv1a_cipq,represents capital contributed by shareholders in excess of par value of common stock in return for shares issued to them.,MATRIX,96%,38,81
+fnd23_annfv1a_cisf,"represents cash inflow from the issuance of common stock. It also includes cash inflow from the sale of treasury shares. However, issuance of additional shares from a stock split is not included in Sale/Issuance of Common",MATRIX,84%,20,35
+fnd23_annfv1a_cnin,"Net income after taxes, adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment and extraordinary items, before preferred distributions and other adjustments to net income classified as Income Incl Extra Before Distributions",MATRIX,100%,42,63
+fnd23_annfv1a_cpdf,common cash dividends paid,MATRIX,61%,3,6
+fnd23_annfv1a_croa,other receivables.,MATRIX,61%,17,38
+fnd23_annfv1a_crrf,"Treasury Stock, when reported in the financing section of the cash flow statement, is henceforth classified as Sale/Issuance of Common or Repurchase/Retirement Common",MATRIX,77%,20,32
+fnd23_annfv1a_crta,total net receivables.,MATRIX,90%,30,62
+fnd23_annfv1a_cstq,"represents the value of common stock owned by the issuing company or its consolidated subsidiaries. Treasury stock is recorded at purchase cost, which is inclusive of par value, additional paid-in capital and retained earnings.",MATRIX,53%,36,63
+fnd23_annfv1a_ctcv,"Current Tax – Total reflects the sum of Current Tax – Domestic, Current Tax – Foreign, Current Tax – Local, Current Tax – Other and Current Tax – Total.",MATRIX,88%,30,82
+fnd23_annfv1a_ctda,"represents deferred tax assets with a current maturity. When there is a timing difference between financial reporting and tax preparation practices, a company
+might have credits or additional tax liabilities from the government. Such credits or additional tax liabilities
+may be reported on a net basis, but if not, government credits may be reported as an asset and additional
+liabilities may be reported as a liability. The current portion of such assets are generally reported in the
+current assets section and classified as Deferred Income Tax – Current Asset [ADTC].",MATRIX,48%,26,41
+fnd23_annfv1a_ctpa,"gross property, plant & equipment.",MATRIX,97%,37,80
+fnd23_annfv1a_dare,Research and development costs expensed directly in the income statement.,MATRIX,45%,27,35
+fnd23_annfv1a_darv,"Research and development costs expensed directly in the income statement classified as Research & Development Expense, Supplemental",MATRIX,51%,18,41
+fnd23_annfv1a_deds,Depreciation/Depletion represents the sum of Depreciation and Depletion.,MATRIX,98%,47,82
+fnd23_annfv1a_derq,"represents residual earnings from operations, not distributed to shareholders. It may represent accumulated deficit when a company incurs losses over time.",MATRIX,100%,53,136
+fnd23_annfv1a_dfpv,"Diluted EPS After Stock-Based Compensation Expense represents Net Income After Stock-Based
+Compensation Expense plus the Dilution Adjustment divided by Diluted Weighted
+Average Shares.",MATRIX,48%,17,33
+fnd23_annfv1a_dgcd,gross dividends on common stock.,MATRIX,100%,11,12
+fnd23_annfv1a_dlcl,Current Port. of LT Debt/Capital Leases.,MATRIX,75%,27,67
+fnd23_annfv1a_dlts,Total Debt represents total interest-bearing debt outstanding.,MATRIX,100%,26,31
+fnd23_annfv1a_dltv,"Total Long Term Debt, Supplemental reflects the sum of Long Term Debt Maturing within 1 through
+10 Years and Long Term Debt – Remaining Maturities.",MATRIX,84%,12,38
+fnd23_annfv1a_drpc,represents the total amount of the current dividend requirement on issued preferred stock of a company (including its subsidiaries).,MATRIX,35%,12,28
+fnd23_annfv1a_drpf,"If debt issuances and reductions are not delineated separately, the total is classified as Issuance (Retirement) of Debt, Net",MATRIX,98%,20,26
+fnd23_annfv1a_dtll,"represents interest-bearing debt with maturities beyond one year. Long-term debt may consist of long-term bank borrowings, bonds, convertible bonds, etc.",MATRIX,92%,32,49
+fnd23_annfv1a_dtns,Net Debt Including Preferred Stock & Minority Interest.,MATRIX,92%,40,84
+fnd23_annfv1a_dtsl,notes payable/short term debt.,MATRIX,94%,32,76
+fnd23_annfv1a_dttl,"represents interest-bearing debt with maturities beyond one year. Long-term debt may consist of long-term bank borrowings, bonds, convertible bonds, etc.",MATRIX,100%,17,46
+fnd23_annfv1a_eaca,cash & equivalents.,MATRIX,90%,48,351
+fnd23_annfv1a_ecns,Net Cash – Ending Balance represents the sum of Net Change in Cash and Net Cash –Beginning Balance.,MATRIX,100%,27,121
+fnd23_annfv1a_eefs,Foreign Exchange Effects represents the increase/decrease in cash and cash equivalents due to changes in exchange rates.,MATRIX,63%,17,23
+fnd23_annfv1a_eiue,Acquisition costs/expenses.,MATRIX,71%,21,25
+fnd23_annfv1a_eiuo,"is applicable only if Net Income/Starting Line [ONET] is income after gains/losses from unusual activities. Because the operating section of the cash flow pursues changes in cash flow from operating activities, any unusual gain/loss included in net income computation needs to be reversed.",MATRIX,97%,38,73
+fnd23_annfv1a_eius,Unusual Expense (Income).,MATRIX,83%,17,44
+fnd23_annfv1a_eltq,total equity.,MATRIX,100%,33,57
+fnd23_annfv1a_eooe,"Depreciation of investment properties disclosed outside of the cost of goods sold, for companies reporting in the IFRS or in other standards that treat these as investments",MATRIX,41%,8,14
+fnd23_annfv1a_eoos,"Other Operating Expenses, Total.",MATRIX,57%,14,19
+fnd23_annfv1a_eote,"represents total expenses that are operating in nature, including variable costs directly related to the volume of sales, indirect operating costs, depreciation or amortization, operating provisions and other expenses incurred from operating activities.",MATRIX,94%,49,101
+fnd23_annfv1a_etoq,represents any residual value of shareholders’ equity that belongs to shareholders.,MATRIX,57%,16,30
+fnd23_annfv1a_etos,"Other Equity, Total.",MATRIX,94%,25,74
+fnd23_annfv1a_fbbs,"represents the bottom-line earnings per share
+available to common stockholders, excluding the effects of extraordinary items – adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to earnings per share.",MATRIX,100%,49,97
+fnd23_annfv1a_fbds,"Diluted EPS Excluding Extraordinary Items represents the bottom-line earnings per share available to common stockholders, excluding extraordinary items, adjusted by the effects of dilution. This value is adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to earnings per share.",MATRIX,100%,45,170
+fnd23_annfv1a_fcff,other financing cash flow,MATRIX,99%,45,190
+fnd23_annfv1a_fcfs,"financing cash flow items represents sum of increase/decrease ind eposits, increase/decrease in federal funds sold or REPOs and FHLB plus other financing cash flow.",MATRIX,99%,49,240
+fnd23_annfv1a_fcii,Cash used for discontinued operations classified as Other Investing Cash Flow,MATRIX,87%,19,67
+fnd23_annfv1a_fcis,"Other Investing Cash Flow Items, Total represents all items reported within the investing activities in the cash flow statement, other than capital expenditures.",MATRIX,99%,18,47
+fnd23_annfv1a_fcoo,"represents the impact of other operating cash flow items that cannot be classified as an adjustment item to net income, or an asset/liability as part of changes in non-cash working capital.",MATRIX,62%,9,15
+fnd23_annfv1a_fcos,Changes in Working Capital,MATRIX,100%,38,151
+fnd23_annfv1a_fltf,"cash from financing activities that is the sum of financing cash flow items, cash dividends paid, issuance of stock, net and issuance of debt, net.",MATRIX,100%,21,39
+fnd23_annfv1a_gfia,represents inventories of unsold finished goods on hand. These goods may have been produced internally or purchased for resale.,MATRIX,41%,30,56
+fnd23_annfv1a_gnia,"represents the gross purchase value of assets that lack physical existence, before
+being reduced by accumulated impairment and intangible amortization.",MATRIX,76%,26,49
+fnd23_annfv1a_graa,gross accounts receivable from sales of trading assets such as inventories or from services provided.,MATRIX,69%,24,27
+fnd23_annfv1a_iabs,"represents the bottom-line earnings per share available to common stockholders, including the effects of extraordinary items – adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to earnings per share.",MATRIX,100%,36,195
+fnd23_annfv1a_iads,"Diluted EPS Including Extraordinary Items represents the bottom-line earnings per share available to common stockholders, including extraordinary items, adjusted by the effects of dilution.",MATRIX,100%,49,95
+fnd23_annfv1a_icno,other non cash items.,MATRIX,100%,56,184
+fnd23_annfv1a_icns,non-cash items.,MATRIX,100%,58,226
+fnd23_annfv1a_idlf,"represents cash inflow on the issuance of long-term debt instruments in a company. Long-term debt may include long-term bank borrowings, corporate bonds, convertible bonds, etc.",MATRIX,88%,19,55
+fnd23_annfv1a_idsf,"represents cash inflow due to the issuance of short-term debt. If short-term debt issuances and reductions are not delineated separately, the total is classified as Short Term Debt, Net",MATRIX,35%,10,16
+fnd23_annfv1a_ifpv,Net Income After Stock-Based Compensation Expense,MATRIX,48%,33,57
+fnd23_annfv1a_ilti,Cash from Investing Activities.,MATRIX,100%,16,44
+fnd23_annfv1a_imae,amortization of intangible assets reported outside the cost of goods and services sold,MATRIX,32%,0,0
+fnd23_annfv1a_imao,"When the Indirect Method is utilized, and the company delineates amortization and depreciation separately, the amortization is classified as Amortization of Intangibles",MATRIX,32%,12,23
+fnd23_annfv1a_imav,Amortization.,MATRIX,80%,26,51
+fnd23_annfv1a_inas,"total adjustments to net income represents sum of preferred dividend, general partners distributions, misc. earnings adjustments, pro forma adjustment and interest adjustments.",MATRIX,50%,12,25
+fnd23_annfv1a_inds,"Diluted Net Income represents the bottom-line net income available to common shareholders, including extraordinary items, adjusted by the effects of dilution.",MATRIX,100%,45,130
+fnd23_annfv1a_ipos,Operating Income.,MATRIX,94%,36,70
+fnd23_annfv1a_iqea,"represents long-term investment in securities (loans, bonds,
+and equity) of affiliate companies, where the affiliation may be defined as associated companies, joint
+ventures, and unconsolidated subsidiaries.",MATRIX,40%,2,13
+fnd23_annfv1a_iscs,cash and short-term investments.,MATRIX,92%,26,40
+fnd23_annfv1a_ists,"Total Special Items represents the sum of all non-recurring/unusual/extraordinary/one-off/special
+gains and losses that impact a company in any given period.",MATRIX,92%,20,33
+fnd23_annfv1a_itla,represents long-term investments with maturities of one year or longer.,MATRIX,54%,10,13
+fnd23_annfv1a_itpv,"Normalized Income Before Taxes represents net income before taxes, excluding the effects of all non-recurring/unusual/one-off/extraordinary items.",MATRIX,100%,19,58
+fnd23_annfv1a_itsa,Short-Term Investments,MATRIX,54%,23,35
+fnd23_annfv1a_iucs,Total Current Assets less Inventory represents Total Current Assets minus Total Inventory.,MATRIX,82%,37,168
+fnd23_annfv1a_iwga,net goodwill.,MATRIX,79%,38,59
+fnd23_annfv1a_ixts,Total Extraordinary Items,MATRIX,70%,26,48
+fnd23_annfv1a_jads,"Dilution Adjustment represents the adding back to reported net income the interest expense of debentures when assumed converted, and the adding back to the reported net income the convertible preferred dividends when assumed converted.",MATRIX,81%,0,0
+fnd23_annfv1a_kcqs,Quick Ratio represents Total Current Assets less Inventory divided by Total Current Liabilities.,MATRIX,82%,37,64
+fnd23_annfv1a_laoo,"represents the changes in the combined sum of assets and liabilities when a company reports these totals as a single line. If the value of the assets is greater than the value of the liabilities, the result has a negative impact on cash flow, and vice versa.",MATRIX,44%,7,30
+fnd23_annfv1a_lcol,other current liabilities.,MATRIX,69%,21,44
+fnd23_annfv1a_lcos,"Other Current Liabilities, Total.",MATRIX,93%,21,48
+fnd23_annfv1a_lctl,represents current liabilities for industrial and utility companies. Current liabilities are liabilities that are incurred from operating activities and expected to be due within one year or an operating cycle of the company.,MATRIX,82%,22,33
+fnd23_annfv1a_letq,sum of total liabilities and total equity.,MATRIX,100%,15,26
+fnd23_annfv1a_lltl,total liabilities.,MATRIX,100%,37,74
+fnd23_annfv1a_lltq,represents the sum of Total Equity and Equity Non-Controlling Interests.,MATRIX,100%,17,57
+fnd23_annfv1a_lotv,"Total Operating Leases, Supplemental reflects the sum of Operating Leases Maturing within 1
+through 10 Years, Operating Leases – Remaining Maturities and
+Operating Leases - Interest Cost.",MATRIX,96%,49,155
+fnd23_annfv1a_ltia,total inventory.,MATRIX,64%,36,72
+fnd23_annfv1a_ltio,"represents changes in inventories during the period. An increase in inventories has a negative impact on cash flow from operating activities, and vice versa.",MATRIX,58%,60,208
+fnd23_annfv1a_ltll,Long-term obligations from right-of-use contracts related to operating leases.,MATRIX,80%,22,39
+fnd23_annfv1a_ltls,"Other Liabilities, Total",MATRIX,99%,31,70
+fnd23_annfv1a_mocq,other comprehensive income.,MATRIX,88%,21,98
+fnd23_annfv1a_mpns,Net Profit Margin represents Income Available to Common Excluding Extraordinary Items divided by Total Revenue.,MATRIX,98%,17,32
+fnd23_annfv1a_mria,annual inventories - raw material.,MATRIX,42%,25,32
+fnd23_annfv1a_mtps,Pretax Margin.,MATRIX,98%,39,81
+fnd23_annfv1a_ndlf,"If long-term debt issuances and reductions are not delineated separately, the total is classified as Long Term Debt, Net",MATRIX,94%,39,195
+fnd23_annfv1a_ndsf,"If short-term debt issuances and reductions are not delineated separately, the total is classified as Short Term Debt, Net",MATRIX,61%,14,30
+fnd23_annfv1a_nein,"represents interest expense on debt of non-financial service companies, including insurance companies.",MATRIX,81%,22,45
+fnd23_annfv1a_neis,"Interest Expense, Net Non-Operating represents Interest Expense, Non-Operating, reduced by Interest Capitalized, Non-Operating, and is usually a negative value.",MATRIX,81%,9,33
+fnd23_annfv1a_niin,"represents non-operating interest income, which is generated from non-operating investment securities such as certificates of deposit or bonds for non-financial service companies.",MATRIX,63%,38,63
+fnd23_annfv1a_niis,"Interest/Investment Income, Non-Operating",MATRIX,81%,19,32
+fnd23_annfv1a_nimc,"represents the share of earnings/losses in subsidiaries that belongs to shareholders other than the parent company when the parent company owns less than 100%, but more than 50%, of a subsidiary. Since the subsidiary’s financials are consolidated with the company, this value is a negative number to represent the amount the company does not own.",MATRIX,51%,14,34
+fnd23_annfv1a_niml,represents accumulated interest for minority shareholders in subsidiaries that are less than 100 percent owned by the reporting parent company. The net worth of a subsidiary is assumed to be proportionally owned by parent company and other minority shareholders according to their respective ownership percentage.,MATRIX,52%,17,35
+fnd23_annfv1a_nimv,"Minority Interest, Supplemental represents the share of earnings/losses in subsidiaries that belongs
+to shareholders other than the parent company when the parent company owns less than 100%, but more
+than 50%, of a subsidiary.",MATRIX,51%,22,142
+fnd23_annfv1a_nins,"Interest Expense (Income), Net- Non-Operating, Total",MATRIX,91%,8,20
+fnd23_annfv1a_nnin,Interest expense that is reduced by interest income.,MATRIX,58%,13,28
+fnd23_annfv1a_nnis,"Net - Net Operating, Total",MATRIX,32%,5,5
+fnd23_annfv1a_nppa,"net property, plant and equipment.",MATRIX,99%,35,61
+fnd23_annfv1a_nscf,"If the sale, issuance or repurchase of common stock is not separately delineated, then the total is classified as Common Stock, Net",MATRIX,98%,42,108
+fnd23_annfv1a_nspf,represents the sum of Sale/Issuance of Preferred and Repurchase/Retirement of Preferred.,MATRIX,35%,5,14
+fnd23_annfv1a_ntiv,"Income Taxes Excluding Impact of Special Items represents total income taxes, adjusted by the tax
+impact of adding back non-recurring items, used in the computation of normalized",MATRIX,100%,23,94
+fnd23_annfv1a_nvii,"represents changes in investments in securities and other investments. Investment, Net is utilized when a company does not delineate the sale of investments and the purchase of investments on the cash flow statement.",MATRIX,45%,2,8
+fnd23_annfv1a_octq,represents the number of primary common shares equivalent outstanding.,MATRIX,100%,42,189
+fnd23_annfv1a_odio,is applicable only if Net Income/Starting Line is income after gains/losses from discontinued operations.,MATRIX,31%,6,13
+fnd23_annfv1a_odix,Discontinued Operations.,MATRIX,42%,7,7
+fnd23_annfv1a_oiis,Interest/Investment Income – Operating,MATRIX,25%,0,0
+fnd23_annfv1a_olto,"includes diverse cash flows that are reported outside of the operating, investing and financing sections of the cash flow statement.",MATRIX,100%,55,149
+fnd23_annfv1a_pacv,"Interest Capitalized,
+Supplemental",MATRIX,28%,2,13
+fnd23_annfv1a_pbts,"Tangible Book Value per Share, Common Equity.",MATRIX,100%,31,91
+fnd23_annfv1a_pdcf,Total Cash Dividends Paid.,MATRIX,65%,5,7
+fnd23_annfv1a_peda,aggregate of accumulated depreciation for each fixed asset.,MATRIX,96%,34,61
+fnd23_annfv1a_pede,Depreciation of fixed assets reported outside of the cost of goods and services sold.,MATRIX,44%,8,10
+fnd23_annfv1a_peds,depreciation.,MATRIX,99%,52,121
+fnd23_annfv1a_pedv,Deprecation,MATRIX,99%,38,92
+fnd23_annfv1a_pics,cash interest paid represents interest paid in cash during the period Cash Interest.,MATRIX,94%,17,41
+fnd23_annfv1a_pnii,Acquisition of investment securities of a company (rather than the whole business unit) classified as Purchase of Investments,MATRIX,79%,8,9
+fnd23_annfv1a_ppgs,Gross Margin  represents Gross Profit  divided by Revenue. Gross Margin is not available if either Gross Profit or Revenue is missing or if Revenue is negative.,MATRIX,83%,58,185
+fnd23_annfv1a_ppos,Operating Margin.,MATRIX,89%,16,25
+fnd23_annfv1a_prgs,Gross Profit represents a measure of a company’s operating performance. Gross Profit states the profits earned from a company’s revenues and direct costs.,MATRIX,83%,30,71
+fnd23_annfv1a_ptcs,"cash taxes paid represents taxes paid in cash, net of tax refunds received, as reported by the company.",MATRIX,90%,32,51
+fnd23_annfv1a_pwia,inventories that are WIP or work-in-progress.,MATRIX,33%,11,19
+fnd23_annfv1a_pxrv,"Rental Expense, Supplemental represents the total value of rental expenses paid for offices, factories, machinery and equipment.",MATRIX,93%,32,84
+fnd23_annfv1a_pxtl,"Income Taxes Payable represents income taxes payable to the government, where such tax liability
+is already confirmed in terms of amount and payable date.",MATRIX,63%,4,4
+fnd23_annfv1a_pxto,"represents changes in taxes payable during the period. An increase in income taxes payable has a positive impact on cash flow from operating activities, and vice versa.",MATRIX,40%,11,11
+fnd23_annfv1a_qabi,represents cash outflow for acquiring new businesses. Reporting the cash flow for acquiring new businesses is not consistent among companies.,MATRIX,78%,33,90
+fnd23_annfv1a_qaii,Franchise acquired (classified as Purchase/Acquisition of Intangibles).,MATRIX,32%,0,0
+fnd23_annfv1a_rale,"Labor costs reported outside of the cost of goods sold, or not clearly labeled as part of the cost of goods sold, for businesses other than manufacturing and mining companies",MATRIX,56%,14,42
+fnd23_annfv1a_rcaa,accounts receivable value.,MATRIX,86%,20,36
+fnd23_annfv1a_rcao,"represents changes in accounts receivable during the period. An increase in accounts receivable has a negative impact on cash flow from operating activities, and vice versa.",MATRIX,87%,22,36
+fnd23_annfv1a_rdlf,represents cash outflow on the repayment of long-term debt in a company. Long-term debt obligations may be repaid upon maturity or replaced with new debt.,MATRIX,91%,46,80
+fnd23_annfv1a_rdsf,"represents cash outflow due to the repayment of short-term debt. If short-term debt issuances and reductions are not delineated separately, the total is classified as Short Term Debt, Net",MATRIX,35%,2,2
+fnd23_annfv1a_rltr,"total revenue represents all items clearly presented as revenues, before the cost of goods sold and the gross profit.",MATRIX,94%,32,73
+fnd23_annfv1a_roce,cost of revenue including labor coasts reported within cost of goods sold & that are not clearly labeled as cost of goods sold.,MATRIX,83%,45,105
+fnd23_annfv1a_rocs,cost of revenue represents total costs that can be directly attributed to the goods and services produced/purchased and sold.,MATRIX,84%,56,137
+fnd23_annfv1a_rpds,"Depreciation/amortization represents sum of depreciation, amortization of intangibles and amortization of acquisition costs.",MATRIX,62%,9,22
+fnd23_annfv1a_rtcv,Current Tax – Total,MATRIX,38%,0,0
+fnd23_annfv1a_rtes,Effective Tax Rate represents Provision for Income Taxes divided by Income Before Tax.,MATRIX,85%,11,25
+fnd23_annfv1a_rtla,"represents long-term notes receivable, excluding the current portion of the long-term receivables. It also represents all other long term receivables reported in the Non-current Assets section.",MATRIX,37%,17,40
+fnd23_annfv1a_rucs,Current Ratio represents Total Current Assets divided by Total Current Liabilities.,MATRIX,82%,10,18
+fnd23_annfv1a_sabs,represents the weighted average common shares outstanding less the dilution of stock options for a given period. These shares are used to calculate Basic EPS.,MATRIX,100%,31,55
+fnd23_annfv1a_saoa,non operational fixed assets that are long term.,MATRIX,79%,27,50
+fnd23_annfv1a_saoo,Accrued interest income for companies other than financial service companies.,MATRIX,77%,13,25
+fnd23_annfv1a_sebv,"Basic Normalized EPS  represents the bottom-line earnings per share available to common
+stockholders, excluding the effects of all non-recurring/unusual/one-off/extraordinary items, after minority
+interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to
+earnings per share.",MATRIX,100%,40,108
+fnd23_annfv1a_sedv,Diluted Normalized EPS,MATRIX,100%,41,84
+fnd23_annfv1a_sere,Restructuring Charge is an unusual or non-recurring item related to a significant rearrangement of a company’s assets and/or liabilities.,MATRIX,40%,13,21
+fnd23_annfv1a_smcq,"Common Stock represents the value of the most frequently issued class of stock; usually it provides a voting right, but is secondary to preferred stock in dividend and liquidation rights.",MATRIX,100%,24,70
+fnd23_annfv1a_smcs,total common stock represets the combined value of common stock and limited partner.,MATRIX,100%,46,71
+fnd23_annfv1a_snii,Deconsolidation of subsidiaries if ownership interest in a subsidiary is reduced classified as Sale/Maturity of Investment,MATRIX,75%,20,49
+fnd23_annfv1a_srps,"Preferred Stock – Non-Redeemable, Total.",MATRIX,48%,10,22
+fnd23_annfv1a_sspf,"If the sale, issuance or repurchase of common and preferred stock is not separately delineated, then the total is classified as Issuance (Retirement) of Stock, Net.",MATRIX,99%,35,90
+fnd23_annfv1a_stnr,net sales.,MATRIX,87%,51,170
+fnd23_annfv1a_swds,Diluted Weighted Average Shares represents the number of shares for Diluted EPS computation.,MATRIX,100%,46,109
+fnd23_annfv1a_tait,"Net
+Income After Taxes",MATRIX,100%,54,241
+fnd23_annfv1a_taiv,Normalized Income After Taxes.,MATRIX,100%,49,100
+fnd23_annfv1a_tbie,"represents a company’s total revenues reduced by total expenses, before taxes on net income and all after-tax adjustments.",MATRIX,100%,23,55
+fnd23_annfv1a_tdbl,"represents income taxes estimated and expected to be paid within one year or an operating cycle, whichever is longer.",MATRIX,70%,13,16
+fnd23_annfv1a_tdbo,Deferred Taxes for indirect Cash Flow,MATRIX,80%,8,17
+fnd23_annfv1a_tdbs,represents the sum of Deferred Income Tax – Long Term Liability and Deferred Investment Tax Credit,MATRIX,70%,17,22
+fnd23_annfv1a_teno,is the first line of a cash flow statement when a company employs the Indirect Method in the operating cash flow section.,MATRIX,100%,39,76
+fnd23_annfv1a_tibs,Normalized Earnings before Interest and Taxes.,MATRIX,92%,39,83
+fnd23_annfv1a_tmaa,accumulated intangible amortization.,MATRIX,76%,20,30
+fnd23_annfv1a_tmas,"amortization representes sum of amortization of intangibles, amortization of acquisition costs, amortization of deferred policy costs.",MATRIX,35%,4,5
+fnd23_annfv1a_tnia,"represents the net value of assets that lack physical existence, reduced by accumulated impairment and intangible amortization.",MATRIX,84%,27,81
+fnd23_annfv1a_tnoe,Income from external grants received to cover research and development expenses.,MATRIX,34%,0,0
+fnd23_annfv1a_tnon,represents any non-operating income or expense item that a company reports before income taxes,MATRIX,79%,18,50
+fnd23_annfv1a_tnos,other net income.,MATRIX,80%,17,43
+fnd23_annfv1a_tota,total assets of the company.,MATRIX,100%,22,62
+fnd23_annfv1a_ttiv,"Income Tax – Total reflects the sum of Domestic Tax - Other, Foreign Tax – Other,
+Local Tax – Other and Other Tax.",MATRIX,88%,25,41
+fnd23_annfv1a_uaie,"form of an unusual item related to the impairment of longlived assets, certain identifiable intangibles, and goodwill related to those assets.",MATRIX,57%,20,181
+fnd23_annfv1a_vacl,Advances/deposits from customers for the products to be sold or services to be rendered classified as Customer Advances.,MATRIX,58%,39,60
+fnd23_annfv1a_vbts,"Tangible Book Value, Common Equity.",MATRIX,100%,20,30
+fnd23_annfv1a_vdav,"Advertising Expense - Supplemental represents the total cost of advertising incurred by the
+company.",MATRIX,45%,10,24
+fnd23_annfv1a_veev,"Pro Forma Stock Compensation Expense represents employee compensation paid in the form of
+stock options that have not yet been exercised and are not disclosed on the income statement.",MATRIX,48%,16,27
+fnd23_annfv1a_vers,"Revenue represents revenues from the sale of merchandise goods, manufactured products and
+services, and the distribution of regulated energy resources, depending on a specific company’s industry.
+The item is used for industrial and utility companies.",MATRIX,90%,25,55
+fnd23_annfv1a_vnin,"represents income or losses, other than interest, from investment securities. Such income may include dividend income, gain/loss on sale of investment securities, unrealized investment income or loss, equity earnings in affiliates, unconsolidated subsidiaries or joint ventures (before taxes), or any other net investment income.",MATRIX,67%,9,11
+fnd23_annfv1a_vnis,Long-Term Investments represents the sum of LT Investments – Affiliate Companies and LT Investments – Other.,MATRIX,66%,12,21
+fnd23_annfv1a_xatt,Provision for Income Taxes.,MATRIX,99%,39,150
+fnd23_annfv1a_xbin,"represents net income after taxes, adjusted by minority interest, equity in affiliates and the U.S. GAAP adjustment, before extraordinary items, preferred distributions and other adjustments to net income.",MATRIX,100%,45,120
+fnd23_annfv1a_xeal,"represents operational expenses accrued, but not yet paid. As current liabilities, such expenses are expected to be paid within one year or one operating cycle, whichever is longer.",MATRIX,95%,32,140
+fnd23_annfv1a_xeao,"represents changes in accrued expenses during the period. An increase in accrued expenses has a positive impact on cash flow from operating activities, and vice versa.",MATRIX,61%,19,37
+fnd23_annfv1a_xeci,purchase of fixed assets.,MATRIX,98%,15,23
+fnd23_annfv1a_xecs,capital expenditures.,MATRIX,98%,56,172
+fnd23_annfv1a_xeiv,"Interest Expense, Supplemental.",MATRIX,86%,17,51
+fnd23_annfv1a_xpof,"represents cash inflow due to stock options exercised, which results in an increase of common stock.",MATRIX,61%,21,43
+fnd23_annfv1a_yppa,prepaid expenses.,MATRIX,78%,36,56
+fnd23_annfv1a_yppo,"represents changes in prepaid expenses during the period. An increase in prepaid expenses has a negative impact on cash flow from operating activities, and vice versa.",MATRIX,61%,34,66
+fnd23_annfv_item,integer index of the item description field. You can use this index to find out what the value is from itemIx.,VECTOR,45%,8,9
+fnd23_annfv_value,annual financial values.,VECTOR,68%,4,11
+fnd23_annfvadjfieldsacctadj_cpoa,Other Properties/Plant/Equipment – Gross,MATRIX,87%,14,30
+fnd23_annfvadjfieldsacctadj_ctpa,"gross property, plant & equipment.",MATRIX,97%,31,39
+fnd23_annfvadjfieldsacctadj_dlo_cpoa,Other Properties/Plant/Equipment – Gross,MATRIX,87%,11,14
+fnd23_annfvadjfieldsacctadj_dlo_ctpa,"gross property, plant & equipment.",MATRIX,97%,33,51
+fnd23_annfvadjfieldsacctadj_dlo_lctl,represents current liabilities for industrial and utility companies. Current liabilities are liabilities that are incurred from operating activities and expected to be due within one year or an operating cycle of the company.,MATRIX,82%,10,23
+fnd23_annfvadjfieldsacctadj_dlo_lltl,total liabilities.,MATRIX,100%,25,47
+fnd23_annfvadjfieldsacctadj_dlo_ltll,Long-term obligations from right-of-use contracts related to operating leases.,MATRIX,80%,48,101
+fnd23_annfvadjfieldsacctadj_dlo_ltls,"Other Liabilities, Total",MATRIX,99%,25,55
+fnd23_annfvadjfieldsacctadj_dlo_nppa,"net property, plant and equipment.",MATRIX,99%,29,61
+fnd23_annfvadjfieldsacctadj_dlo_peda,aggregate of accumulated depreciation for each fixed asset.,MATRIX,96%,22,37
+fnd23_annfvadjfieldsacctadj_dlo_tota,total assets of the company.,MATRIX,100%,22,44
+fnd23_annfvadjfieldsacctadj_dlo_xeal,"represents operational expenses accrued, but not yet paid. As current liabilities, such expenses are expected to be paid within one year or one operating cycle, whichever is longer.",MATRIX,95%,20,32
+fnd23_annfvadjfieldsacctadj_lctl,represents current liabilities for industrial and utility companies. Current liabilities are liabilities that are incurred from operating activities and expected to be due within one year or an operating cycle of the company.,MATRIX,82%,31,58
+fnd23_annfvadjfieldsacctadj_lltl,total liabilities.,MATRIX,100%,15,24
+fnd23_annfvadjfieldsacctadj_lolv,"Long-Term Operating Lease Liabilities, Supplemental",MATRIX,71%,14,39
+fnd23_annfvadjfieldsacctadj_ltll,Long-term obligations from right-of-use contracts related to operating leases.,MATRIX,80%,19,29
+fnd23_annfvadjfieldsacctadj_ltls,"Other Liabilities, Total",MATRIX,99%,23,40
+fnd23_annfvadjfieldsacctadj_nouv,"Right-of-Use Assets - Operating Lease, Net - Supplemental",MATRIX,69%,24,44
+fnd23_annfvadjfieldsacctadj_nppa,"net property, plant and equipment.",MATRIX,99%,20,44
+fnd23_annfvadjfieldsacctadj_peda,aggregate of accumulated depreciation for each fixed asset.,MATRIX,96%,27,35
+fnd23_annfvadjfieldsacctadj_tota,total assets of the company.,MATRIX,100%,52,134
+fnd23_annfvadjfieldsacctadj_xeal,"represents operational expenses accrued, but not yet paid. As current liabilities, such expenses are expected to be paid within one year or one operating cycle, whichever is longer.",MATRIX,95%,30,128
+fnd23_annfvmfm_inds,"Diluted Net Income represents the bottom-line net income available to common shareholders, including extraordinary items, adjusted by the effects of dilution.",MATRIX,100%,63,378
+fnd23_annfvmfm_olto,"includes diverse cash flows that are reported outside of the operating, investing and financing sections of the cash flow statement.",MATRIX,100%,71,334
+fnd23_annfvmfm_rltr,"total revenue represents all items clearly presented as revenues, before the cost of goods sold and the gross profit.",MATRIX,94%,47,106
+fnd23_annfvmfm_tota,total assets of the company.,MATRIX,100%,30,79
+fnd23_aor,return on assets,MATRIX,100%,124,599
+fnd23_apxv,Expected Return on Assets - Post-Retirement,MATRIX,54%,10,13
+fnd23_arningsrelease_eventtype,event type index,VECTOR,79%,3,4
+fnd23_arningsrelease_origtype,origin index.,VECTOR,79%,8,15
+fnd23_arningsrelease_source,news source index.,VECTOR,79%,5,5
+fnd23_arningsrelease_subtype1,subtype 1 index.,VECTOR,79%,9,10
+fnd23_ayfv,Actuarial Gains and Losses - Foreign,MATRIX,53%,3,3
+fnd23_b6dls,Standardized Long Term Debt Maturing in Year 6 & Beyond,MATRIX,62%,8,9
+fnd23_blsm_1dls,[Quarterly] Long Term Debt Maturing within 1 Year,MATRIX,76%,0,0
+fnd23_blsm_1los,[Quarterly] Operating Lease Payments Due in Year 1,MATRIX,90%,0,0
+fnd23_blsm_2dls,[Quarterly] Long Term Debt Maturing in Year 2,MATRIX,75%,0,0
+fnd23_blsm_2los,[Quarterly] Operating Lease Payments Due in Year 2,MATRIX,90%,0,0
+fnd23_blsm_3dls,[Quarterly] Long Term Debt Maturing in Year 3,MATRIX,75%,0,0
+fnd23_blsm_3los,[Quarterly] Operating Lease Payments Due in Year 3,MATRIX,90%,0,0
+fnd23_blsm_4dls,[Quarterly] Long Term Debt Maturing in Year 4,MATRIX,73%,0,0
+fnd23_blsm_4los,[Quarterly] Operating Lease Payments Due in Year 4,MATRIX,89%,0,0
+fnd23_blsm_5dls,[Quarterly] Long Term Debt Maturing in Year 5,MATRIX,71%,0,0
+fnd23_blsm_5los,[Quarterly] Operating Lease Payments Due in Year 5,MATRIX,87%,1,1
+fnd23_blsm_acoa,[Quarterly] Other Current Assets,MATRIX,57%,0,0
+fnd23_blsm_acos,"[Quarterly] Other Current Assets, Total",MATRIX,70%,0,0
+fnd23_blsm_acta,[Quarterly] Total Current Assets,MATRIX,76%,0,0
+fnd23_blsm_aiav,"[Quarterly] Accumulated Intangible Amort, Supplemental",MATRIX,70%,0,0
+fnd23_blsm_alos,"[Quarterly] Other Long Term Assets, Total",MATRIX,91%,0,0
+fnd23_blsm_atda,[Quarterly] Deferred Income Tax - Long Term Asset,MATRIX,54%,0,0
+fnd23_blsm_bpal,[Quarterly] Accounts Payable,MATRIX,83%,0,0
+fnd23_blsm_cbpa,[Quarterly] Buildings Gross,MATRIX,74%,0,0
+fnd23_blsm_cema,[Quarterly] Machinery/Equipment - Gross,MATRIX,79%,0,0
+fnd23_blsm_cila,[Quarterly] Land/Improvements - Gross,MATRIX,58%,0,0
+fnd23_blsm_cipq,[Quarterly] Additional Paid-In Capital,MATRIX,88%,0,0
+fnd23_blsm_croa,[Quarterly] Receivables - Other,MATRIX,53%,0,0
+fnd23_blsm_crta,"[Quarterly] Total Receivables, Net",MATRIX,84%,1,1
+fnd23_blsm_ctda,[Quarterly] Deferred Income Tax - Current Asset,MATRIX,41%,0,0
+fnd23_blsm_ctpa,"[Quarterly] Property/Plant/Equipment, Total - Gross",MATRIX,90%,1,1
+fnd23_blsm_derq,[Quarterly] Retained Earnings (Accumulated Deficit),MATRIX,94%,1,1
+fnd23_blsm_dlcl,[Quarterly] Current Portion of LT Debt/Capital Leases,MATRIX,67%,0,0
+fnd23_blsm_dlts,[Quarterly] Total Debt,MATRIX,94%,0,0
+fnd23_blsm_dltv,"[Quarterly] Total Long Term Debt, Supplemental",MATRIX,76%,0,0
+fnd23_blsm_dtll,[Quarterly] Long Term Debt,MATRIX,85%,0,0
+fnd23_blsm_dtns,[Quarterly] Net Debt Including Preferred Stock & Minority Interest,MATRIX,85%,0,0
+fnd23_blsm_dtsl,[Quarterly] Notes Payable/Short Term Debt,MATRIX,88%,0,0
+fnd23_blsm_dttl,[Quarterly] Total Long Term Debt,MATRIX,94%,0,0
+fnd23_blsm_eaca,[Quarterly] Cash & Equivalents,MATRIX,84%,0,0
+fnd23_blsm_eltq,[Quarterly] Total Equity,MATRIX,94%,0,0
+fnd23_blsm_etos,"[Quarterly] Other Equity, Total",MATRIX,88%,0,0
+fnd23_blsm_gnia,[Quarterly] Intangibles - Gross,MATRIX,70%,0,0
+fnd23_blsm_iscs,[Quarterly] Cash and Short Term Investments,MATRIX,85%,0,0
+fnd23_blsm_itla,[Quarterly] Long-Term Investments - Other,MATRIX,45%,0,0
+fnd23_blsm_itsa,[Quarterly] Short Term Investments,MATRIX,43%,0,0
+fnd23_blsm_iucs,[Quarterly] Total Current Assets less Inventory,MATRIX,76%,0,0
+fnd23_blsm_iwga,"[Quarterly] Goodwill, Net",MATRIX,72%,0,0
+fnd23_blsm_kcqs,[Quarterly] Quick Ratio,MATRIX,76%,0,0
+fnd23_blsm_lcol,[Quarterly] Other Current Liabilities,MATRIX,63%,0,0
+fnd23_blsm_lcos,"[Quarterly] Other Current liabilities, Total",MATRIX,86%,0,0
+fnd23_blsm_lctl,[Quarterly] Total Current Liabilities,MATRIX,76%,0,0
+fnd23_blsm_letq,[Quarterly] Total Liabilities & Shareholders' Equity,MATRIX,94%,0,0
+fnd23_blsm_lltl,[Quarterly] Total Liabilities,MATRIX,94%,1,1
+fnd23_blsm_lotv,"[Quarterly] Total Operating Leases, Supplemental",MATRIX,90%,0,0
+fnd23_blsm_ltia,[Quarterly] Total Inventory,MATRIX,59%,0,0
+fnd23_blsm_ltll,[Quarterly] Other Long Term Liabilities,MATRIX,75%,0,0
+fnd23_blsm_ltls,"[Quarterly] Other Liabilities, Total",MATRIX,92%,0,0
+fnd23_blsm_mocq,[Quarterly] Other Comprehensive Income,MATRIX,81%,0,0
+fnd23_blsm_mria,[Quarterly] Inventories - Raw Materials,MATRIX,38%,0,0
+fnd23_blsm_nppa,"[Quarterly] Property/Plant/Equipment,Total - Net",MATRIX,92%,0,0
+fnd23_blsm_octq,[Quarterly] Total Common Shares Outstanding,MATRIX,94%,0,0
+fnd23_blsm_pbts,"[Quarterly] Tangible Book Value per Share, Common Eq",MATRIX,95%,0,0
+fnd23_blsm_peda,"[Quarterly] Accumulated Depreciation, Total",MATRIX,89%,0,0
+fnd23_blsm_pxtl,[Quarterly] Income Taxes Payable,MATRIX,54%,0,0
+fnd23_blsm_rcaa,"[Quarterly] Accounts Receivable - Trade, Net",MATRIX,80%,1,1
+fnd23_blsm_rucs,[Quarterly] Current Ratio,MATRIX,76%,1,1
+fnd23_blsm_saoa,[Quarterly] Other Long Term Assets,MATRIX,73%,0,0
+fnd23_blsm_smcq,[Quarterly] Common Stock,MATRIX,94%,0,0
+fnd23_blsm_smcs,"[Quarterly] Common Stock, Total",MATRIX,94%,0,0
+fnd23_blsm_tdbl,[Quarterly] NOT_SELECTED Deferred Income Tax - LT Liability,MATRIX,63%,0,0
+fnd23_blsm_tdbs,[Quarterly] Deferred Income Tax,MATRIX,63%,0,0
+fnd23_blsm_tmaa,[Quarterly] Accumulated Intangible Amortization,MATRIX,70%,0,0
+fnd23_blsm_tnia,"[Quarterly] Intangibles, Net",MATRIX,78%,0,0
+fnd23_blsm_tota,[Quarterly] Total Assets,MATRIX,94%,0,0
+fnd23_blsm_vbts,"[Quarterly] Tangible Book Value, Common Equity",MATRIX,94%,0,0
+fnd23_blsm_vnis,[Quarterly] Long Term Investments,MATRIX,58%,0,0
+fnd23_blsm_xeal,[Quarterly] Accrued Expenses,MATRIX,88%,0,0
+fnd23_blsm_yppa,[Quarterly] Prepaid Expenses,MATRIX,70%,0,0
+fnd23_blsmvb_1dls,Long Term Debt Maturing within 1 Year,MATRIX,74%,20,44
+fnd23_blsmvb_1los,Operating Lease Payments Due in Year 1,MATRIX,88%,30,51
+fnd23_blsmvb_2dls,Standardized long-term debt maturing in year 12,MATRIX,72%,15,21
+fnd23_blsmvb_2los,Operating Lease Payments Due in Year 2,MATRIX,88%,47,142
+fnd23_blsmvb_3dls,Long Term Debt Maturing in Year 3,MATRIX,71%,22,29
+fnd23_blsmvb_3los,Standardized Operating Lease Payments Due in Year 3.,MATRIX,88%,30,50
+fnd23_blsmvb_4dls,Long Term Debt Maturing in Year 4,MATRIX,69%,5,9
+fnd23_blsmvb_4los,Standardized Operating Lease Payments Due in Year 4.,MATRIX,87%,37,85
+fnd23_blsmvb_5dls,Standardized long-term debt maturing in year 5,MATRIX,66%,5,6
+fnd23_blsmvb_5los,Standardized Operating Lease Payments Due in Year 5.,MATRIX,84%,15,37
+fnd23_blsmvb_acoa,other current assets.,MATRIX,47%,26,45
+fnd23_blsmvb_acos,"Other Current Assets, Total.",MATRIX,65%,14,18
+fnd23_blsmvb_acta,"Total current assets. Sum of cash and short-term investments, total receivables (net), total inventory, prepaid expenses, other current assets.",MATRIX,69%,17,33
+fnd23_blsmvb_adpa,represents provisions established for doubtful accounts receivable. Provision for doubtful accounts is usually established on the basis of maturities of receivables and the company's experience on collecting such receivables.,MATRIX,62%,28,118
+fnd23_blsmvb_aiav,Accumulated Intangible Amortization represents accumulated amortization against intangible fixed assets.,MATRIX,61%,26,45
+fnd23_blsmvb_alos,"Other Long-Term Assets, Total.",MATRIX,82%,22,31
+fnd23_blsmvb_atda,deferred income taxes - long term. These are credits being applied to income taxes that will be paid in future years.,MATRIX,42%,12,17
+fnd23_blsmvb_bpal,"Accrued interest expenses, interest payable in commercial banks.",MATRIX,74%,22,49
+fnd23_blsmvb_cbpa,"represents the gross amount of buildings and their attachments, before being reduced by accumulated depreciation of the buildings.",MATRIX,73%,30,49
+fnd23_blsmvb_cdav,Deferred Revenue - Current,MATRIX,41%,50,119
+fnd23_blsmvb_cema,"Represents the acquisition cost of machinery and other equipment (including delivery equipment, office equipment, machinery, furniture and fixtures, furnishings, factory equipment, tools, etc.) in a company, before being reduced by accumulated depreciation.",MATRIX,82%,35,55
+fnd23_blsmvb_cila,"represents land and improvements on land at acquisition cost. Land is not depreciated, but land improvements are normally depreciated over time.",MATRIX,61%,13,25
+fnd23_blsmvb_cipq,represents capital contributed by shareholders in excess of par value of common stock in return for shares issued to them.,MATRIX,82%,23,53
+fnd23_blsmvb_cpca,Construction in Progress - Gross represents the cost of construction in progress of fixed assets for a company's own use. The cost of construction in progress is normally not depreciated until the fixed assets are completed and placed in production.,MATRIX,44%,45,106
+fnd23_blsmvb_croa,other receivables.,MATRIX,41%,5,5
+fnd23_blsmvb_crta,total net receivables.,MATRIX,77%,19,51
+fnd23_blsmvb_cstq,"represents the value of common stock owned by the issuing company or its consolidated subsidiaries. Treasury stock is recorded at purchase cost, which is inclusive of par value, additional paid-in capital and retained earnings.",MATRIX,45%,11,26
+fnd23_blsmvb_ctda,"Represents deferred tax assets with a current maturity. When there is a timing difference between financial reporting and tax preparation practices, a company might have credits or additional tax liabilities from the government. Such credits or additional tax liabilities may be reported on a net basis, but if not, government credits may be reported as an asset and additional liabilities may be reported as a liability. The current portion of such assets is generally reported in the current assets section and classified as Deferred Income Tax - Current Asset [ADTC].",MATRIX,45%,16,23
+fnd23_blsmvb_ctpa,"gross property, plant & equipment.",MATRIX,90%,25,35
+fnd23_blsmvb_derq,"represents residual earnings from operations, not distributed to shareholders. It may represent accumulated deficit when a company incurs losses over time.",MATRIX,89%,42,205
+fnd23_blsmvb_dlcl,Current Port. of LT Debt/Capital Leases.,MATRIX,54%,18,28
+fnd23_blsmvb_dlts,Total Debt represents total interest-bearing debt outstanding.,MATRIX,87%,22,37
+fnd23_blsmvb_dltv,"Total Long Term Debt, Supplemental reflects the sum of Long Term Debt Maturing within 1 through 10 Years and Long Term Debt - Remaining Maturities.",MATRIX,74%,12,18
+fnd23_blsmvb_dtll,"Represents interest-bearing debt with maturities beyond 1 year. Long-term debt may consist of long-term bank borrowings, bonds, convertible bonds, etc.",MATRIX,73%,10,23
+fnd23_blsmvb_dtns,Net Debt Including Preferred Stock & Minority Interest.,MATRIX,78%,48,108
+fnd23_blsmvb_dtsl,Notes payable/short-term debt.,MATRIX,86%,13,38
+fnd23_blsmvb_dttl,"Represents interest-bearing debt with maturities beyond 1 year. Long-term debt may consist of long-term bank borrowings, bonds, convertible bonds, etc.",MATRIX,86%,10,23
+fnd23_blsmvb_eaca,cash & equivalents.,MATRIX,75%,39,125
+fnd23_blsmvb_eltq,total equity.,MATRIX,84%,21,60
+fnd23_blsmvb_etos,"Other Equity, Total.",MATRIX,83%,31,80
+fnd23_blsmvb_gfia,represents inventories of unsold finished goods on hand. These goods may have been produced internally or purchased for resale.,MATRIX,38%,6,17
+fnd23_blsmvb_gnia,"Represents the gross purchase value of assets that lack physical existence, before being reduced by accumulated impairment and intangible amortization.",MATRIX,60%,20,60
+fnd23_blsmvb_graa,gross accounts receivable from sales of trading assets such as inventories or from services provided.,MATRIX,62%,29,60
+fnd23_blsmvb_ilos,Operating Leases - Interest Cost,MATRIX,28%,28,42
+fnd23_blsmvb_iscs,cash and short-term investments.,MATRIX,75%,18,37
+fnd23_blsmvb_itla,Represents long-term investments with maturities of 1 year or longer.,MATRIX,38%,6,16
+fnd23_blsmvb_itsa,Short-Term Investments,MATRIX,37%,5,5
+fnd23_blsmvb_iucs,Total Current Assets less Inventory represents Total Current Assets minus Total Inventory.,MATRIX,69%,25,50
+fnd23_blsmvb_iwga,net goodwill.,MATRIX,64%,11,25
+fnd23_blsmvb_kcqs,Quick Ratio represents Total Current Assets less Inventory divided by Total Current Liabilities.,MATRIX,70%,16,68
+fnd23_blsmvb_lcol,other current liabilities.,MATRIX,48%,14,22
+fnd23_blsmvb_lcos,"Other Current Liabilities, Total.",MATRIX,79%,17,33
+fnd23_blsmvb_lctl,Represents current liabilities for industrial and utility companies. Current liabilities are liabilities that are incurred from operating activities and expected to be due within 1 year or an operating cycle of the company.,MATRIX,69%,15,23
+fnd23_blsmvb_letq,sum of total liabilities and total equity.,MATRIX,85%,14,33
+fnd23_blsmvb_lltl,total liabilities.,MATRIX,86%,28,53
+fnd23_blsmvb_lolv,"Long-Term Operating Lease Liabilities, Supplemental",MATRIX,27%,14,18
+fnd23_blsmvb_lotv,"Total Operating Leases, Supplemental reflects the sum of Operating Leases Maturing within 1 through 10 Years, Operating Leases - Remaining Maturities, and Operating Leases - Interest Cost.",MATRIX,88%,65,192
+fnd23_blsmvb_ltia,total inventory.,MATRIX,54%,21,51
+fnd23_blsmvb_ltll,Long-term obligations from right-of-use contracts related to operating leases.,MATRIX,66%,24,38
+fnd23_blsmvb_ltls,"Other Liabilities, Total",MATRIX,81%,34,78
+fnd23_blsmvb_mocq,other comprehensive income.,MATRIX,75%,24,73
+fnd23_blsmvb_mria,annual inventories - raw material.,MATRIX,39%,16,23
+fnd23_blsmvb_nouv,"Right-of-Use Assets - Operating Lease, Net - Supplemental",MATRIX,26%,19,30
+fnd23_blsmvb_nppa,"net property, plant and equipment.",MATRIX,82%,32,53
+fnd23_blsmvb_octq,represents the number of primary common shares equivalent outstanding.,MATRIX,91%,36,223
+fnd23_blsmvb_pbts,"Tangible Book Value per Share, Common Equity",MATRIX,92%,31,69
+fnd23_blsmvb_peda,aggregate of accumulated depreciation for each fixed asset.,MATRIX,88%,17,20
+fnd23_blsmvb_pwia,inventories that are WIP or work-in-progress.,MATRIX,30%,16,24
+fnd23_blsmvb_pxtl,"Income taxes payable represents income taxes payable to the government, where such tax liability is already confirmed in terms of amount and payable date.",MATRIX,48%,21,25
+fnd23_blsmvb_rcaa,accounts receivable value.,MATRIX,73%,21,77
+fnd23_blsmvb_rucs,Current Ratio represents Total Current Assets divided by Total Current Liabilities.,MATRIX,69%,5,12
+fnd23_blsmvb_saoa,Non-Operational Fixed Assets That Are Long Term.,MATRIX,68%,22,33
+fnd23_blsmvb_smcq,"Common Stock represents the value of the most frequently issued class of stock; usually, it provides a voting right but is secondary to preferred stock in dividend and liquidation rights.",MATRIX,88%,14,110
+fnd23_blsmvb_smcs,Total common stock represents the combined value of common stock and limited partner.,MATRIX,88%,29,59
+fnd23_blsmvb_tdbl,"Represents income taxes estimated and expected to be paid within 1 year or an operating cycle, whichever is longer.",MATRIX,53%,19,32
+fnd23_blsmvb_tdbs,represents the sum of Deferred Income Tax - Long Term Liability and Deferred Investment Tax Credit,MATRIX,53%,17,31
+fnd23_blsmvb_tmaa,accumulated intangible amortization.,MATRIX,59%,17,38
+fnd23_blsmvb_tnia,"represents the net value of assets that lack physical existence, reduced by accumulated impairment and intangible amortization.",MATRIX,66%,22,43
+fnd23_blsmvb_tota,total assets of the company.,MATRIX,85%,22,34
+fnd23_blsmvb_vacl,Advances/deposits from customers for the products to be sold or services to be rendered classified as Customer Advances.,MATRIX,41%,45,95
+fnd23_blsmvb_vbts,"Tangible Book Value, Common Equity.",MATRIX,88%,26,41
+fnd23_blsmvb_vnis,Long-term investments represent the sum of LT Investments - Affiliate Companies and LT Investments - Other.,MATRIX,48%,14,26
+fnd23_blsmvb_xeal,"Represents operational expenses accrued, but not yet paid. As current liabilities, such expenses are expected to be paid within 1 year or 1 operating cycle, whichever is longer.",MATRIX,78%,31,168
+fnd23_blsmvb_yppa,prepaid expenses.,MATRIX,60%,11,18
+fnd23_capex,capital expenditure,MATRIX,99%,67,282
+fnd23_cash_n_equivalents,cash equivalents,MATRIX,80%,55,128
+fnd23_cf_m_afsi,[Quarterly] Sale of Fixed Assets,MATRIX,65%,0,0
+fnd23_cf_m_bcns,[Quarterly] Net Cash - Beginning Balance,MATRIX,94%,1,1
+fnd23_cf_m_bloo,[Quarterly] Other Liabilities,MATRIX,71%,0,0
+fnd23_cf_m_ccns,[Quarterly] Net Change in Cash,MATRIX,94%,0,0
+fnd23_cf_m_cisf,[Quarterly] Sale/Issuance of Common,MATRIX,70%,1,1
+fnd23_cf_m_deds,[Quarterly] Depreciation/Depletion,MATRIX,92%,0,0
+fnd23_cf_m_drpf,"[Quarterly] Issuance (Retirement) of Debt, Net",MATRIX,90%,1,16
+fnd23_cf_m_ecns,[Quarterly] Net Cash - Ending Balance,MATRIX,94%,1,16
+fnd23_cf_m_eiuo,[Quarterly] Unusual Items,MATRIX,89%,0,0
+fnd23_cf_m_fcff,[Quarterly] Other Financing Cash Flow,MATRIX,92%,0,0
+fnd23_cf_m_fcfs,[Quarterly] Financing Cash Flow Items,MATRIX,92%,0,0
+fnd23_cf_m_fcii,[Quarterly] Other Investing Cash Flow,MATRIX,78%,0,0
+fnd23_cf_m_fcis,"[Quarterly] Other Investing Cash Flow Items, Total",MATRIX,93%,0,0
+fnd23_cf_m_fcos,[Quarterly] Changes in Working Capital,MATRIX,94%,0,0
+fnd23_cf_m_fltf,[Quarterly] Cash from Financing Activities,MATRIX,94%,0,0
+fnd23_cf_m_icno,[Quarterly] Other Non-Cash Items,MATRIX,93%,0,0
+fnd23_cf_m_icns,[Quarterly] Non-Cash Items,MATRIX,94%,0,0
+fnd23_cf_m_idlf,[Quarterly] Long Term Debt Issued,MATRIX,79%,0,0
+fnd23_cf_m_ilti,[Quarterly] Cash from Investing Activities,MATRIX,94%,0,0
+fnd23_cf_m_ltio,[Quarterly] Inventories,MATRIX,53%,0,0
+fnd23_cf_m_ndlf,"[Quarterly] Long Term Debt, Net",MATRIX,87%,0,0
+fnd23_cf_m_nscf,"[Quarterly] Common Stock, Net",MATRIX,91%,0,0
+fnd23_cf_m_olto,[Quarterly] Cash from Operating Activities,MATRIX,94%,1,2
+fnd23_cf_m_pdcf,[Quarterly] Total Cash Dividends Paid,MATRIX,60%,0,0
+fnd23_cf_m_peds,[Quarterly] Depreciation,MATRIX,92%,0,0
+fnd23_cf_m_pics,[Quarterly] Cash Interest Paid,MATRIX,86%,1,1
+fnd23_cf_m_ptcs,[Quarterly] Cash Taxes Paid,MATRIX,84%,0,0
+fnd23_cf_m_rcao,[Quarterly] Accounts Receivable,MATRIX,81%,0,0
+fnd23_cf_m_rdlf,[Quarterly] Long Term Debt Reduction,MATRIX,84%,0,0
+fnd23_cf_m_saoo,[Quarterly] Other Assets,MATRIX,66%,0,0
+fnd23_cf_m_sspf,"[Quarterly] Issuance (Retirement) of Stock, Net",MATRIX,93%,0,0
+fnd23_cf_m_tdbo,[Quarterly] Deferred Taxes,MATRIX,74%,0,0
+fnd23_cf_m_teno,[Quarterly] Net Income/Starting Line,MATRIX,94%,0,0
+fnd23_cf_m_xeci,[Quarterly] Capital Expenditures,MATRIX,91%,0,0
+fnd23_cf_m_xecs,[Quarterly] Capital Expenditures,MATRIX,91%,0,0
+fnd23_cf_mvb_afsi,Sale of assets to be leased out under operating lease contracts.,MATRIX,60%,22,40
+fnd23_cf_mvb_bcns,"Net Cash - Beginning Balance represents the beginning balance of cash and cash equivalents, as defined by a company.",MATRIX,90%,37,79
+fnd23_cf_mvb_bloo,other liabilities,MATRIX,65%,21,34
+fnd23_cf_mvb_bpao,"Represents changes in accounts payable during the period. An increase in accounts payable has a positive impact on cash flow from operating activities, and vice versa.",MATRIX,56%,21,45
+fnd23_cf_mvb_ccns,Net Change in Cash,MATRIX,90%,28,236
+fnd23_cf_mvb_cisf,"represents cash inflow from the issuance of common stock. It also includes cash inflow from the sale of treasury shares. However, issuance of additional shares from a stock split is not included in Sale/Issuance of Common",MATRIX,62%,19,49
+fnd23_cf_mvb_deds,Depreciation/Depletion represents the sum of Depreciation and Depletion.,MATRIX,89%,17,23
+fnd23_cf_mvb_drpf,"If debt issuances and reductions are not delineated separately, the total is classified as Issuance (Retirement) of Debt, Net.",MATRIX,86%,16,28
+fnd23_cf_mvb_ecns,Net Cash - Ending Balance represents the sum of Net Change in Cash and Net Cash - Beginning Balance.,MATRIX,90%,26,91
+fnd23_cf_mvb_eiuo,"is applicable only if Net Income/Starting Line [ONET] is income after gains/losses from unusual activities. Because the operating section of the cash flow pursues changes in cash flow from operating activities, any unusual gain/loss included in net income computation needs to be reversed.",MATRIX,83%,12,23
+fnd23_cf_mvb_fcff,other financing cash flow,MATRIX,82%,55,253
+fnd23_cf_mvb_fcfs,"Financing cash flow items represent the sum of increase/decrease in deposits, increase/decrease in federal funds sold or REPOs, and FHLB plus other financing cash flow.",MATRIX,83%,49,180
+fnd23_cf_mvb_fcii,Cash used for discontinued operations classified as Other Investing Cash Flow,MATRIX,73%,12,31
+fnd23_cf_mvb_fcis,"Other Investing Cash Flow Items, Total represents all items reported within the investing activities in the cash flow statement, other than capital expenditures.",MATRIX,88%,13,19
+fnd23_cf_mvb_fcos,Changes in Working Capital,MATRIX,93%,25,57
+fnd23_cf_mvb_fltf,"Cash from financing activities that is the sum of financing cash flow items, cash dividends paid, issuance of stock, net, and issuance of debt, net.",MATRIX,90%,24,55
+fnd23_cf_mvb_icno,Other non-cash items.,MATRIX,90%,50,304
+fnd23_cf_mvb_icns,non-cash items.,MATRIX,92%,43,97
+fnd23_cf_mvb_idlf,"represents cash inflow on the issuance of long-term debt instruments in a company. Long-term debt may include long-term bank borrowings, corporate bonds, convertible bonds, etc.",MATRIX,69%,8,25
+fnd23_cf_mvb_ilti,Cash from Investing Activities.,MATRIX,90%,27,42
+fnd23_cf_mvb_ltio,"represents changes in inventories during the period. An increase in inventories has a negative impact on cash flow from operating activities, and vice versa.",MATRIX,55%,37,56
+fnd23_cf_mvb_ndlf,"If long-term debt issuances and reductions are not delineated separately, the total is classified as long-term debt, net",MATRIX,82%,17,19
+fnd23_cf_mvb_nscf,"If the sale, issuance or repurchase of common stock is not separately delineated, then the total is classified as Common Stock, Net",MATRIX,85%,41,84
+fnd23_cf_mvb_olto,"Includes diverse cash flows that are reported outside of the operating, investing, and financing sections of the cash flow statement.",MATRIX,91%,81,404
+fnd23_cf_mvb_pdcf,Total Cash Dividends Paid.,MATRIX,54%,13,22
+fnd23_cf_mvb_peds,depreciation.,MATRIX,90%,41,119
+fnd23_cf_mvb_pics,Cash interest paid represents interest paid in cash during the period.,MATRIX,88%,37,86
+fnd23_cf_mvb_ptcs,"cash taxes paid represents taxes paid in cash, net of tax refunds received, as reported by the company.",MATRIX,86%,17,35
+fnd23_cf_mvb_rcao,"represents changes in accounts receivable during the period. An increase in accounts receivable has a negative impact on cash flow from operating activities, and vice versa.",MATRIX,79%,24,34
+fnd23_cf_mvb_rdlf,represents cash outflow on the repayment of long-term debt in a company. Long-term debt obligations may be repaid upon maturity or replaced with new debt.,MATRIX,77%,11,15
+fnd23_cf_mvb_saoo,Accrued interest income for companies other than financial service companies.,MATRIX,62%,17,65
+fnd23_cf_mvb_sspf,"If the sale, issuance or repurchase of common and preferred stock is not separately delineated, then the total is classified as Issuance (Retirement) of Stock, Net.",MATRIX,89%,36,73
+fnd23_cf_mvb_tdbo,Deferred Taxes for indirect Cash Flow,MATRIX,73%,20,68
+fnd23_cf_mvb_teno,is the first line of a cash flow statement when a company employs the Indirect Method in the operating cash flow section.,MATRIX,90%,38,80
+fnd23_cf_mvb_xeci,purchase of fixed assets.,MATRIX,88%,41,81
+fnd23_cf_mvb_xecs,capital expenditures.,MATRIX,88%,41,88
+fnd23_cifv,Interest Cost - Foreign,MATRIX,53%,1,2
+fnd23_cogs,cost of goods sold,MATRIX,65%,66,348
+fnd23_csfv,Service Cost,MATRIX,53%,8,8
+fnd23_csxv,Prior Service Cost,MATRIX,55%,10,21
+fnd23_ctxv,Transition Costs - Post-Retirement,MATRIX,53%,11,16
+fnd23_curr_assets,current assets,MATRIX,84%,54,180
+fnd23_curr_liabilities,current liabilities,MATRIX,84%,29,102
+fnd23_debt_issuance,debt issuance,MATRIX,99%,67,249
+fnd23_descriptionfull,full description index,VECTOR,84%,9,12
+fnd23_ebit,EBIT - Earnings before interest & tax,MATRIX,92%,47,348
+fnd23_ebitda,"EBITDA - Interest before interest, taxes, depreciation & amortization",MATRIX,92%,38,93
+fnd23_efcf,free cash flow to equity.,MATRIX,89%,41,161
+fnd23_eiuv,"Other Unusual Expense (Income), Supplemental",MATRIX,56%,24,48
+fnd23_epxv,"Other Post-Retirement, Net",MATRIX,54%,18,42
+fnd23_eventname,event name index,VECTOR,79%,12,22
+fnd23_fcdv,Defined Contribution Expense - Foreign,MATRIX,53%,13,16
+fnd23_fcpv,"Other Pension, Net - Foreign",MATRIX,53%,7,7
+fnd23_ffcf,free cash flow to the firm,MATRIX,88%,27,38
+fnd23_fieldfull,Full field which is string value's starting index in fieldfull_str,VECTOR,84%,1,1
+fnd23_fotv,[Quarterly] All Other Fees Paid to Auditor,MATRIX,81%,0,0
+fnd23_frontpage,Indicates whether a given development is coming from a front page story,VECTOR,84%,4,6
+fnd23_fttv,[Quarterly] Tax Fees,MATRIX,85%,1,1
+fnd23_headline,story headline index,VECTOR,84%,7,9
+fnd23_headlinefull,full story headline index,VECTOR,84%,9,10
+fnd23_icsm_m_adbs,[Quarterly] Normalized EBITDA,MATRIX,85%,2,2
+fnd23_icsm_m_agse,[Quarterly] Selling/General/Administrative Expense,MATRIX,85%,0,0
+fnd23_icsm_m_agss,"[Quarterly] Selling/General/Admin. Expenses, Total",MATRIX,85%,0,0
+fnd23_icsm_m_caic,[Quarterly] Income Available to Com Excl ExtraOrd,MATRIX,94%,0,0
+fnd23_icsm_m_caiv,[Quarterly] Normalized Inc. Avail to Com.,MATRIX,94%,0,0
+fnd23_icsm_m_cets,[Quarterly] Effect of Special Items on Income Taxes,MATRIX,85%,0,0
+fnd23_icsm_m_cinx,[Quarterly] Income Available to Com Incl ExtraOrd,MATRIX,94%,0,0
+fnd23_icsm_m_cnin,[Quarterly] Income Incl Extra Before Distributions,MATRIX,94%,1,1
+fnd23_icsm_m_ctcv,[Quarterly] Current Tax - Total,MATRIX,82%,0,0
+fnd23_icsm_m_ctdv,[Quarterly] Deferred Tax - Total,MATRIX,82%,1,1
+fnd23_icsm_m_darv,"[Quarterly] Research & Development Expense, Supplemental",MATRIX,46%,1,1
+fnd23_icsm_m_dcdv,[Quarterly] Defined Contribution Expense - Domestic,MATRIX,70%,1,1
+fnd23_icsm_m_dgcd,[Quarterly] Gross Dividends - Common Stock,MATRIX,94%,0,0
+fnd23_icsm_m_dtcv,[Quarterly] Current Tax - Domestic,MATRIX,74%,0,0
+fnd23_icsm_m_dtdv,[Quarterly] Deferred Tax - Domestic,MATRIX,76%,0,0
+fnd23_icsm_m_eius,[Quarterly] Unusual Expense (Income),MATRIX,76%,1,2
+fnd23_icsm_m_eoos,"[Quarterly] Other Operating Expenses, Total",MATRIX,47%,1,1
+fnd23_icsm_m_eote,[Quarterly] Total Operating Expenses,MATRIX,88%,1,1
+fnd23_icsm_m_eptv,[Quarterly] Total Pension Expense,MATRIX,76%,0,0
+fnd23_icsm_m_fbbs,[Quarterly] Basic EPS Excluding Extraordinary Items,MATRIX,94%,0,0
+fnd23_icsm_m_fbds,[Quarterly] Diluted EPS Excluding ExtraOrd Items,MATRIX,94%,0,0
+fnd23_icsm_m_iabs,[Quarterly] Basic EPS Including Extraordinary Items,MATRIX,94%,0,0
+fnd23_icsm_m_iads,[Quarterly] Diluted EPS Including ExtraOrd Items,MATRIX,94%,0,0
+fnd23_icsm_m_imav,"[Quarterly] Amortization of Intangibles, Supplemental",MATRIX,73%,0,0
+fnd23_icsm_m_inds,[Quarterly] Diluted Net Income,MATRIX,94%,0,0
+fnd23_icsm_m_ipos,[Quarterly] Operating Income,MATRIX,88%,0,0
+fnd23_icsm_m_ists,[Quarterly] Total Special Items,MATRIX,85%,0,0
+fnd23_icsm_m_itpv,[Quarterly] Normalized Income Before Taxes,MATRIX,94%,0,0
+fnd23_icsm_m_mpns,[Quarterly] Net Profit Margin,MATRIX,92%,2,2
+fnd23_icsm_m_mtps,[Quarterly] Pretax Margin,MATRIX,92%,0,0
+fnd23_icsm_m_nein,[Quarterly] Interest Expense - Non-Operating,MATRIX,74%,0,0
+fnd23_icsm_m_neis,"[Quarterly] Interest Expense, Net Non-Operating",MATRIX,74%,0,0
+fnd23_icsm_m_niin,[Quarterly] Interest/Investment Income,MATRIX,55%,0,0
+fnd23_icsm_m_niis,[Quarterly] Interest/Invest Income - Non-Operating,MATRIX,74%,0,0
+fnd23_icsm_m_nimc,[Quarterly] Minority Interest,MATRIX,45%,0,0
+fnd23_icsm_m_nimv,"[Quarterly] Minority Interest, Supplemental",MATRIX,45%,0,0
+fnd23_icsm_m_nins,"[Quarterly] Interest Income (Exp), Net- Non-Operating, Total",MATRIX,85%,0,0
+fnd23_icsm_m_nnin,"[Quarterly] Interest Income (Expense), Net",MATRIX,34%,0,0
+fnd23_icsm_m_nnis,"[Quarterly] Interest Expense (Income), Net - Operating, Total",MATRIX,27%,0,0
+fnd23_icsm_m_ntiv,[Quarterly] Income Taxes Excluding Impact of Special Items,MATRIX,93%,0,0
+fnd23_icsm_m_pede,[Quarterly] Depreciation/Amortization,MATRIX,40%,0,0
+fnd23_icsm_m_pedv,"[Quarterly] Depreciation, Supplemental",MATRIX,93%,2,2
+fnd23_icsm_m_ppgs,[Quarterly] Gross Margin,MATRIX,78%,0,0
+fnd23_icsm_m_ppos,[Quarterly] Operating Margin,MATRIX,83%,0,0
+fnd23_icsm_m_prgs,[Quarterly] Gross Profit,MATRIX,78%,1,1
+fnd23_icsm_m_pxrv,"[Quarterly] Rental Expense, Supplemental",MATRIX,86%,0,0
+fnd23_icsm_m_rltr,[Quarterly] Total Revenue,MATRIX,88%,1,2
+fnd23_icsm_m_roce,[Quarterly] Cost of Revenue,MATRIX,78%,0,0
+fnd23_icsm_m_rocs,"[Quarterly] Cost of Revenue, Total",MATRIX,79%,0,0
+fnd23_icsm_m_rpds,[Quarterly] epreciation/Amortization,MATRIX,55%,0,0
+fnd23_icsm_m_rtes,[Quarterly] Effective Tax Rate,MATRIX,79%,0,0
+fnd23_icsm_m_sabs,[Quarterly] Basic Weighted Average Shares,MATRIX,94%,3,3
+fnd23_icsm_m_sebv,[Quarterly] Basic Normalized EPS,MATRIX,94%,0,0
+fnd23_icsm_m_sedv,[Quarterly] Diluted Normalized EPS,MATRIX,94%,0,0
+fnd23_icsm_m_stnr,[Quarterly] Net Sales,MATRIX,81%,0,0
+fnd23_icsm_m_swds,[Quarterly] Diluted Weighted Average Shares,MATRIX,94%,0,0
+fnd23_icsm_m_tait,[Quarterly] Net Income After Taxes,MATRIX,94%,1,1
+fnd23_icsm_m_taiv,[Quarterly] Normalized Income After Taxes,MATRIX,94%,0,0
+fnd23_icsm_m_tbie,[Quarterly] Net Income Before Taxes,MATRIX,94%,0,0
+fnd23_icsm_m_tibs,[Quarterly] Normalized EBIT,MATRIX,85%,0,0
+fnd23_icsm_m_tnon,[Quarterly] Other Non-Operating Income (Expense),MATRIX,71%,0,0
+fnd23_icsm_m_tnos,"[Quarterly] Other, Net",MATRIX,71%,0,0
+fnd23_icsm_m_ttiv,[Quarterly] Income Tax - Total,MATRIX,83%,0,0
+fnd23_icsm_m_uatv,[Quarterly] Audit Fees,MATRIX,89%,0,0
+fnd23_icsm_m_vers,[Quarterly] Revenue,MATRIX,84%,1,1
+fnd23_icsm_m_vnin,[Quarterly] Investment Income - Non-Operating,MATRIX,60%,0,0
+fnd23_icsm_m_xatt,[Quarterly] Provision for Income Taxes,MATRIX,92%,0,0
+fnd23_icsm_m_xbin,[Quarterly] Net Income Before Extra. Items,MATRIX,94%,0,0
+fnd23_icsm_m_xeiv,"[Quarterly] Interest Expense, Supplemental",MATRIX,79%,0,0
+fnd23_icsm_mvb_adbs,"Normalized Earnings before Interest, Taxes, Depreciation and Amortization",MATRIX,83%,52,192
+fnd23_icsm_mvb_agse,Selling/General/Administrative Expense.,MATRIX,75%,28,54
+fnd23_icsm_mvb_agss,"Selling/General/Administrative Expenses, Total.",MATRIX,75%,10,25
+fnd23_icsm_mvb_caic,Income Available to Common Excl. Extraordinary Items,MATRIX,85%,17,20
+fnd23_icsm_mvb_caiv,"Normalized income available to common represents the bottom-line net income available to common shareholders, excluding the effects of all non-recurring/unusual/one-off/extraordinary items, after minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to net income.",MATRIX,89%,16,25
+fnd23_icsm_mvb_cets,Effect of Special Items on Income Taxes.,MATRIX,75%,24,55
+fnd23_icsm_mvb_cinx,"Income Available to Common Stocks Incl. Extraordinary Items represents the bottom-line net income available to common stockholders, including the effects of extraordinary items - adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions, and all other adjustments to net income.",MATRIX,83%,18,35
+fnd23_icsm_mvb_cipv,Interest Cost - Post-Retirement,MATRIX,25%,2,20
+fnd23_icsm_mvb_cnin,"Net income after taxes, adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment and extraordinary items, before preferred distributions and other adjustments to net income classified as Income Incl Extra Before Distributions",MATRIX,83%,25,44
+fnd23_icsm_mvb_ctcv,"Current Tax - Total reflects the sum of Current Tax - Domestic, Current Tax - Foreign, Current Tax - Local, Current Tax - Other and Current Tax - Total.",MATRIX,82%,26,70
+fnd23_icsm_mvb_ctdv,Deferred Tax - Total,MATRIX,82%,36,99
+fnd23_icsm_mvb_dare,Research and development costs expensed directly in the income statement.,MATRIX,31%,30,52
+fnd23_icsm_mvb_darv,"Research and development costs expensed directly in the income statement classified as Research & Development Expense, Supplemental",MATRIX,40%,15,38
+fnd23_icsm_mvb_dcdv,Defined Contribution Expense - Domestic,MATRIX,73%,28,54
+fnd23_icsm_mvb_dciv,Interest Cost - Domestic,MATRIX,36%,7,11
+fnd23_icsm_mvb_dcsv,Service Cost - Domestic,MATRIX,34%,11,19
+fnd23_icsm_mvb_ddrv,Discount Rate - Domestic,MATRIX,33%,2,13
+fnd23_icsm_mvb_dfpv,Diluted EPS After Stock-Based Compensation Expense represents Net Income After Stock-Based Compensation Expense plus the Dilution Adjustment divided by Diluted Weighted Average Shares.,MATRIX,25%,7,8
+fnd23_icsm_mvb_dgcd,gross dividends on common stock.,MATRIX,47%,19,29
+fnd23_icsm_mvb_dpxv,Expected Return on Plan Assets - Domestic,MATRIX,33%,9,28
+fnd23_icsm_mvb_dtcv,Current Tax - Domestic,MATRIX,73%,32,73
+fnd23_icsm_mvb_dtdv,Deferred Tax - Domestic,MATRIX,70%,7,17
+fnd23_icsm_mvb_dtrv,Compensation Rate - Domestic,MATRIX,28%,9,22
+fnd23_icsm_mvb_eius,Unusual Expense (Income).,MATRIX,63%,24,89
+fnd23_icsm_mvb_eoos,"Other Operating Expenses, Total.",MATRIX,36%,5,11
+fnd23_icsm_mvb_eote,"Represents total expenses that are operating in nature, including variable costs directly related to the volume of sales, indirect operating costs, depreciation or amortization, operating provisions, and other expenses incurred from operating activities.",MATRIX,79%,26,44
+fnd23_icsm_mvb_eprv,Post-Retirement Plan Expense,MATRIX,27%,5,10
+fnd23_icsm_mvb_epts,Total Plan Expected Return,MATRIX,35%,4,5
+fnd23_icsm_mvb_eptv,Total Pension Expense,MATRIX,78%,28,47
+fnd23_icsm_mvb_fbbs,"Represents the bottom-line earnings per share available to common stockholders, excluding the effects of extraordinary items - adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to earnings per share.",MATRIX,86%,27,170
+fnd23_icsm_mvb_fbds,"Diluted EPS Excluding Extraordinary Items represents the bottom-line earnings per share available to common stockholders, excluding extraordinary items, adjusted by the effects of dilution. This value is adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to earnings per share.",MATRIX,86%,16,32
+fnd23_icsm_mvb_ftcv,Current Tax - Foreign,MATRIX,50%,23,36
+fnd23_icsm_mvb_gaxv,Actuarial Gains and Losses - Domestic,MATRIX,29%,3,5
+fnd23_icsm_mvb_iabs,"Represents the bottom-line earnings per share available to common stockholders, including the effects of extraordinary items - adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions, and all other adjustments to earnings per share.",MATRIX,85%,23,70
+fnd23_icsm_mvb_iads,"Diluted EPS Including Extraordinary Items represents the bottom-line earnings per share available to common stockholders, including extraordinary items, adjusted by the effects of dilution.",MATRIX,85%,16,20
+fnd23_icsm_mvb_ifpv,Net Income After Stock-Based Compensation Expense,MATRIX,25%,3,5
+fnd23_icsm_mvb_imav,Amortization.,MATRIX,66%,17,40
+fnd23_icsm_mvb_inds,"Diluted Net Income represents the bottom-line net income available to common shareholders, including extraordinary items, adjusted by the effects of dilution.",MATRIX,84%,55,159
+fnd23_icsm_mvb_ipos,Operating Income.,MATRIX,79%,34,45
+fnd23_icsm_mvb_ipts,Total Plan Interest Cost,MATRIX,38%,10,29
+fnd23_icsm_mvb_ists,Total Special Items represents the sum of all non-recurring/unusual/extraordinary/one-off/special gains and losses that impact a company in any given period.,MATRIX,74%,15,34
+fnd23_icsm_mvb_itpv,"Normalized Income Before Taxes represents net income before taxes, excluding the effects of all non-recurring/unusual/one-off/extraordinary items.",MATRIX,88%,48,83
+fnd23_icsm_mvb_ixts,Total Extraordinary Items,MATRIX,42%,15,22
+fnd23_icsm_mvb_ltcv,Current Tax - Local,MATRIX,64%,15,24
+fnd23_icsm_mvb_ltdv,Deferred Tax - Local,MATRIX,57%,24,56
+fnd23_icsm_mvb_mpns,Net Profit Margin represents Income Available to Common Excluding Extraordinary Items divided by Total Revenue.,MATRIX,84%,32,167
+fnd23_icsm_mvb_mtps,Pretax Margin.,MATRIX,83%,49,168
+fnd23_icsm_mvb_nein,"represents interest expense on debt of non-financial service companies, including insurance companies.",MATRIX,61%,31,64
+fnd23_icsm_mvb_neis,"Interest Expense, Net Non-Operating represents Interest Expense, Non-Operating, reduced by Interest Capitalized, Non-Operating, and is usually a negative value.",MATRIX,60%,10,11
+fnd23_icsm_mvb_niin,"represents non-operating interest income, which is generated from non-operating investment securities such as certificates of deposit or bonds for non-financial service companies.",MATRIX,47%,20,28
+fnd23_icsm_mvb_niis,"Interest/Investment Income, Non-Operating",MATRIX,62%,31,65
+fnd23_icsm_mvb_nimc,"Count of unique IDs of industry participants. Industry stands for an aggregate view of all  equity clearance activity for the date, symbol, and transaction type in question.",MATRIX,32%,15,68
+fnd23_icsm_mvb_nimv,"Minority Interest, Supplemental represents the share of earnings/losses in subsidiaries that belongs to shareholders other than the parent company when the parent company owns less than 100%, but more than 50%, of a subsidiary.",MATRIX,36%,23,57
+fnd23_icsm_mvb_nins,"Interest Expense (Income), Net - Non-Operating, Total",MATRIX,76%,24,36
+fnd23_icsm_mvb_nnin,Interest expense that is reduced by interest income.,MATRIX,38%,17,45
+fnd23_icsm_mvb_ntiv,"Income Taxes Excluding Impact of Special Items represents total income taxes, adjusted by the tax impact of adding back non-recurring items, used in the computation of normalized",MATRIX,87%,21,26
+fnd23_icsm_mvb_odrv,Expected Rate of Return - Domestic,MATRIX,32%,11,18
+fnd23_icsm_mvb_pede,Depreciation of fixed assets reported outside of the cost of goods and services sold.,MATRIX,32%,13,25
+fnd23_icsm_mvb_pedv,Depreciation,MATRIX,91%,32,48
+fnd23_icsm_mvb_ppdv,Domestic Pension Plan Expense,MATRIX,38%,19,25
+fnd23_icsm_mvb_ppgs,Gross margin represents gross profit divided by revenue. Gross margin is not available if either gross profit or revenue is missing or if revenue is negative.,MATRIX,72%,18,32
+fnd23_icsm_mvb_ppos,Operating Margin.,MATRIX,75%,40,89
+fnd23_icsm_mvb_prgs,Gross Profit represents a measure of a company's operating performance. Gross Profit states the profits earned from a company's revenues and direct costs.,MATRIX,72%,26,40
+fnd23_icsm_mvb_pxrv,"Rental Expense, Supplemental represents the total value of rental expenses paid for offices, factories, machinery, and equipment.",MATRIX,86%,38,90
+fnd23_icsm_mvb_rltr,"total revenue represents all items clearly presented as revenues, before the cost of goods sold and the gross profit.",MATRIX,77%,38,77
+fnd23_icsm_mvb_roce,Cost of revenue including labor costs reported within cost of goods sold & that are not clearly labeled as cost of goods sold.,MATRIX,71%,33,57
+fnd23_icsm_mvb_rocs,cost of revenue represents total costs that can be directly attributed to the goods and services produced/purchased and sold.,MATRIX,72%,32,41
+fnd23_icsm_mvb_rpds,"Depreciation/amortization represents the sum of depreciation, amortization of intangibles, and amortization of acquisition costs.",MATRIX,45%,11,12
+fnd23_icsm_mvb_rtes,Effective Tax Rate represents Provision for Income Taxes divided by Income Before Tax.,MATRIX,71%,22,33
+fnd23_icsm_mvb_sabs,represents the weighted average common shares outstanding less the dilution of stock options for a given period. These shares are used to calculate Basic EPS.,MATRIX,83%,17,29
+fnd23_icsm_mvb_sebv,"Basic Normalized EPS represents the bottom-line earnings per share available to common stockholders, excluding the effects of all non-recurring/unusual/one-off/extraordinary items, after minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions, and all other adjustments to earnings per share.",MATRIX,89%,31,63
+fnd23_icsm_mvb_sedv,Diluted Normalized EPS,MATRIX,89%,20,46
+fnd23_icsm_mvb_spts,Total Plan Service Cost,MATRIX,37%,2,7
+fnd23_icsm_mvb_sptv,Prior Service Cost - Domestic,MATRIX,26%,9,21
+fnd23_icsm_mvb_stnr,net sales.,MATRIX,71%,12,15
+fnd23_icsm_mvb_swds,Diluted Weighted Average Shares represents the number of shares for Diluted EPS computation.,MATRIX,83%,24,39
+fnd23_icsm_mvb_tait,Net Income After Taxes,MATRIX,84%,34,94
+fnd23_icsm_mvb_taiv,Normalized Income After Taxes.,MATRIX,88%,34,60
+fnd23_icsm_mvb_tbie,"represents a company's total revenues reduced by total expenses, before taxes on net income and all after-tax adjustments.",MATRIX,84%,10,14
+fnd23_icsm_mvb_tibs,Normalized Earnings before Interest and Taxes.,MATRIX,78%,25,39
+fnd23_icsm_mvb_tnon,Represents any non-operating income or expense item that a company reports before income taxes.,MATRIX,56%,33,64
+fnd23_icsm_mvb_tnos,other net income.,MATRIX,56%,12,19
+fnd23_icsm_mvb_ttiv,"Income Tax - Total reflects the sum of Domestic Tax - Other, Foreign Tax - Other, Local Tax - Other and Other Tax.",MATRIX,82%,27,112
+fnd23_icsm_mvb_uatv,Audit Fees,MATRIX,84%,19,30
+fnd23_icsm_mvb_vdav,Advertising Expense - Supplemental represents the total cost of advertising incurred by the company.,MATRIX,37%,24,33
+fnd23_icsm_mvb_vers,"Revenue represents revenues from the sale of merchandise goods, manufactured products, and services, and the distribution of regulated energy resources, depending on a specific company's industry. The item is used for industrial and utility companies.",MATRIX,75%,33,61
+fnd23_icsm_mvb_vnin,"represents income or losses, other than interest, from investment securities. Such income may include dividend income, gain/loss on sale of investment securities, unrealized investment income or loss, equity earnings in affiliates, unconsolidated subsidiaries or joint ventures (before taxes), or any other net investment income.",MATRIX,43%,10,13
+fnd23_icsm_mvb_xatt,Provision for Income Taxes.,MATRIX,82%,27,80
+fnd23_icsm_mvb_xbin,"represents net income after taxes, adjusted by minority interest, equity in affiliates and the U.S. GAAP adjustment, before extraordinary items, preferred distributions and other adjustments to net income.",MATRIX,84%,9,19
+fnd23_icsm_mvb_xeiv,"Interest Expense, Supplemental.",MATRIX,71%,20,35
+fnd23_intfv_item,integer index of the item description field. You can use this index to find out what the value is from itemIx.,VECTOR,90%,8,13
+fnd23_intfv_value,value.,VECTOR,98%,6,6
+fnd23_intfvadjfieldsacctadj_abpl,payable or accrued liabilities.,MATRIX,33%,6,14
+fnd23_intfvadjfieldsacctadj_colv,"Current Portion of Long-Term Operating Leases,Supplemental",MATRIX,69%,10,11
+fnd23_intfvadjfieldsacctadj_cpoa,Other Properties/Plant/Equipment – Gross,MATRIX,73%,9,13
+fnd23_intfvadjfieldsacctadj_ctpa,"gross property, plant & equipment.",MATRIX,82%,28,38
+fnd23_intfvadjfieldsacctadj_dlo_abpl,payable or accrued liabilities.,MATRIX,33%,12,33
+fnd23_intfvadjfieldsacctadj_dlo_cpoa,Other Properties/Plant/Equipment – Gross,MATRIX,73%,6,9
+fnd23_intfvadjfieldsacctadj_dlo_ctpa,"gross property, plant & equipment.",MATRIX,82%,12,26
+fnd23_intfvadjfieldsacctadj_dlo_lctl,represents current liabilities for industrial and utility companies. Current liabilities are liabilities that are incurred from operating activities and expected to be due within one year or an operating cycle of the company.,MATRIX,84%,16,23
+fnd23_intfvadjfieldsacctadj_dlo_lltl,total liabilities.,MATRIX,100%,27,53
+fnd23_intfvadjfieldsacctadj_dlo_ltll,Long-term obligations from right-of-use contracts related to operating leases.,MATRIX,82%,17,31
+fnd23_intfvadjfieldsacctadj_dlo_ltls,"Other Liabilities, Total",MATRIX,100%,23,55
+fnd23_intfvadjfieldsacctadj_dlo_nppa,"net property, plant and equipment.",MATRIX,100%,22,39
+fnd23_intfvadjfieldsacctadj_dlo_peda,aggregate of accumulated depreciation for each fixed asset.,MATRIX,80%,14,46
+fnd23_intfvadjfieldsacctadj_dlo_tota,total assets of the company.,MATRIX,100%,35,87
+fnd23_intfvadjfieldsacctadj_dlo_xeal,"represents operational expenses accrued, but not yet paid. As current liabilities, such expenses are expected to be paid within one year or one operating cycle, whichever is longer.",MATRIX,95%,24,39
+fnd23_intfvadjfieldsacctadj_lctl,represents current liabilities for industrial and utility companies. Current liabilities are liabilities that are incurred from operating activities and expected to be due within one year or an operating cycle of the company.,MATRIX,84%,22,64
+fnd23_intfvadjfieldsacctadj_lltl,total liabilities.,MATRIX,100%,26,44
+fnd23_intfvadjfieldsacctadj_lolv,"Long-Term Operating Lease Liabilities, Supplemental",MATRIX,82%,15,19
+fnd23_intfvadjfieldsacctadj_ltll,Long-term obligations from right-of-use contracts related to operating leases.,MATRIX,82%,28,66
+fnd23_intfvadjfieldsacctadj_ltls,"Other Liabilities, Total",MATRIX,100%,13,15
+fnd23_intfvadjfieldsacctadj_nouv,"Right-of-Use Assets - Operating Lease, Net - Supplemental",MATRIX,81%,30,56
+fnd23_intfvadjfieldsacctadj_nppa,"net property, plant and equipment.",MATRIX,100%,28,42
+fnd23_intfvadjfieldsacctadj_peda,aggregate of accumulated depreciation for each fixed asset.,MATRIX,80%,20,29
+fnd23_intfvadjfieldsacctadj_tota,total assets of the company.,MATRIX,100%,52,121
+fnd23_intfvadjfieldsacctadj_xeal,"represents operational expenses accrued, but not yet paid. As current liabilities, such expenses are expected to be paid within one year or one operating cycle, whichever is longer.",MATRIX,95%,23,43
+fnd23_intfvm2_1spsd,Special DPS – Common Stock Primary Issue,MATRIX,66%,35,65
+fnd23_intfvm2_3dls,Long Term Debt Maturing in Year 3,MATRIX,58%,12,21
+fnd23_intfvm2_4dls,Long Term Debt Maturing in Year 4,MATRIX,57%,7,8
+fnd23_intfvm2_54dls,Standardized Long Term Debt Maturing in Years 4 and 5,MATRIX,57%,23,34
+fnd23_intfvm2_5dls,Standardized Long Term Debt Maturing in Year 5,MATRIX,54%,6,6
+fnd23_intfvm2_acra,Restricted Cash – Current not available for use immediately and due within a year,MATRIX,38%,20,36
+fnd23_intfvm2_amae,Amortization of capitalized acquisition costs or goodwill,MATRIX,59%,21,34
+fnd23_intfvm2_amav,"Amortization of Acquisition Costs, Supplemental",MATRIX,65%,6,7
+fnd23_intfvm2_apxv,Expected Return on Assets – Post-Retirement,MATRIX,65%,10,13
+fnd23_intfvm2_artx,Extraordinary Item.,MATRIX,79%,9,11
+fnd23_intfvm2_ayfv,Actuarial Gains and Losses – Foreign,MATRIX,64%,3,3
+fnd23_intfvm2_b6dls,Standardized Long Term Debt Maturing in Year 6 & Beyond,MATRIX,69%,8,9
+fnd23_intfvm2_bpol,"Other
+Payables",MATRIX,33%,0,0
+fnd23_intfvm2_cclv,"Current Portion of Long-Term Capital Leases,Supplemental",MATRIX,37%,7,23
+fnd23_intfvm2_cfda,Deferred costs when reported other than as a part of tangible or intangible assets,MATRIX,36%,1,1
+fnd23_intfvm2_cifv,Interest Cost – Foreign,MATRIX,64%,1,2
+fnd23_intfvm2_cipv,Interest Cost – Post-Retirement,MATRIX,67%,17,26
+fnd23_intfvm2_colv,"Current Portion of Long-Term Operating Leases,Supplemental",MATRIX,69%,13,13
+fnd23_intfvm2_cpca,"Construction in Progress – Gross represents the cost of construction in progress of fixed assets for a
+company’s own use. The cost of construction in progress is normally not depreciated until the fixed assets
+are completed and placed in production.",MATRIX,42%,13,29
+fnd23_intfvm2_cpoa,Other Properties/Plant/Equipment – Gross,MATRIX,73%,10,14
+fnd23_intfvm2_csfv,Service Cost,MATRIX,64%,8,8
+fnd23_intfvm2_cspv,Service Cost – Post-Retirement,MATRIX,67%,13,15
+fnd23_intfvm2_csxv,Prior Service Cost,MATRIX,66%,10,21
+fnd23_intfvm2_ctdv,Deferred Tax – Total,MATRIX,68%,12,25
+fnd23_intfvm2_ctxv,Transition Costs – Post-Retirement,MATRIX,63%,11,16
+fnd23_intfvm2_dcdv,Defined Contribution Expense – Domestic,MATRIX,70%,4,7
+fnd23_intfvm2_dciv,Interest Cost – Domestic,MATRIX,69%,24,42
+fnd23_intfvm2_dcsv,Service Cost - Domestic,MATRIX,69%,5,7
+fnd23_intfvm2_ddrv,Discount Rate – Domestic,MATRIX,63%,16,17
+fnd23_intfvm2_dpxv,Expected Return on Plan Assets - Domestic,MATRIX,69%,30,46
+fnd23_intfvm2_dtcv,Current Tax – Domestic,MATRIX,66%,19,43
+fnd23_intfvm2_dtdv,Deferred Tax – Domestic,MATRIX,66%,9,15
+fnd23_intfvm2_dtrv,Compensation Rate – Domestic,MATRIX,63%,16,20
+fnd23_intfvm2_eiuv,"Other Unusual Expense (Income), Supplemental",MATRIX,76%,25,49
+fnd23_intfvm2_eprv,Post-Retirement Plan Expense,MATRIX,67%,11,15
+fnd23_intfvm2_epts,Total Plan Expected Return,MATRIX,69%,11,32
+fnd23_intfvm2_eptv,Total Pension Expense,MATRIX,74%,14,26
+fnd23_intfvm2_epxv,"Other Post-Retirement, Net",MATRIX,65%,18,42
+fnd23_intfvm2_fcdv,Defined Contribution Expense – Foreign,MATRIX,63%,13,16
+fnd23_intfvm2_fcpv,"Other Pension, Net – Foreign",MATRIX,63%,7,7
+fnd23_intfvm2_ftcv,Current Tax – Foreign,MATRIX,64%,30,52
+fnd23_intfvm2_gaxv,Actuarial Gains and Losses – Domestic,MATRIX,68%,6,7
+fnd23_intfvm2_hsca,"Cash represents cash on hand, balances on demand deposits, and near-term savings and time
+deposits. These should be readily available for use and must be free from any contractual restrictions that
+limit their use in satisfying debts and other operational cash needs.",MATRIX,26%,0,0
+fnd23_intfvm2_ilos,Operating Leases - Interest Cost,MATRIX,75%,16,19
+fnd23_intfvm2_ipts,Total Plan Interest Cost,MATRIX,70%,20,28
+fnd23_intfvm2_iwgv,Goodwill - Net,MATRIX,77%,34,92
+fnd23_intfvm2_laxv,Actuarial Gains and Losses – Post-Retirement,MATRIX,66%,14,17
+fnd23_intfvm2_lbpl,Pension Benefits - Underfunded,MATRIX,28%,0,0
+fnd23_intfvm2_leiv,"Interest Expense on Lease Liabilities, Supplemental",MATRIX,41%,12,22
+fnd23_intfvm2_lolv,"Long-Term Operating Lease Liabilities, Supplemental",MATRIX,82%,13,26
+fnd23_intfvm2_ltcv,Current Tax – Local,MATRIX,64%,13,16
+fnd23_intfvm2_ltdv,Deferred Tax – Local,MATRIX,64%,19,28
+fnd23_intfvm2_nouv,"Right-of-Use Assets - Operating Lease, Net - Supplemental",MATRIX,81%,31,38
+fnd23_intfvm2_nppv,Other Property/Plant/Equipment - Net,MATRIX,98%,29,98
+fnd23_intfvm2_odrv,Expected Rate of Return – Domestic,MATRIX,63%,7,11
+fnd23_intfvm2_olcl,Capital Lease Obligations,MATRIX,40%,0,0
+fnd23_intfvm2_opxv,"Other Pension, Net - Domestic",MATRIX,66%,12,16
+fnd23_intfvm2_pcsv,"Stock-Based Compensation, Supplemental",MATRIX,98%,44,126
+fnd23_intfvm2_ppdv,Domestic Pension Plan Expense,MATRIX,70%,12,17
+fnd23_intfvm2_ppfv,Foreign Pension Plan Expense,MATRIX,65%,8,11
+fnd23_intfvm2_ptfv,Prior Service Cost – Foreign,MATRIX,64%,4,5
+fnd23_intfvm2_qftm,Retail Sales represents the total value of sales at retail locations (physical stores) during the period.,MATRIX,64%,13,24
+fnd23_intfvm2_rcdv,Defined Contribution Expense Post-Retirement,MATRIX,63%,3,3
+fnd23_intfvm2_rpts,"Total Plan Other Expense represents the total amount of other expenses on all of a company’s
+pension and post-retirement plans.",MATRIX,67%,16,31
+fnd23_intfvm2_rtdv,Deferred Tax – Total,MATRIX,66%,5,10
+fnd23_intfvm2_rtxv,Transition Costs – Domestic,MATRIX,63%,3,3
+fnd23_intfvm2_rxfv,Expected Return on Assets – Foreign,MATRIX,64%,9,26
+fnd23_intfvm2_saiv,"Impairment-Assets Held for Sale, Supplemental",MATRIX,64%,10,14
+fnd23_intfvm2_scxv,Curtailments & Settlements – Post-Retirement,MATRIX,65%,5,11
+fnd23_intfvm2_serv,"Restructuring Charge, Supplemental",MATRIX,68%,20,34
+fnd23_intfvm2_spts,Total Plan Service Cost,MATRIX,70%,7,14
+fnd23_intfvm2_sptv,Prior Service Cost – Domestic,MATRIX,68%,17,31
+fnd23_intfvm2_tcxv,Curtailments and Settlements – Domestic,MATRIX,67%,27,71
+fnd23_intfvm2_tius,"Non-Recurring Items, Total",MATRIX,79%,26,56
+fnd23_intfvm2_uaiv,"Impairment-Assets Held for Use,Supplemental",MATRIX,66%,7,21
+fnd23_intfvm2_uatv,Audit Fees,MATRIX,63%,15,29
+fnd23_intfvm2_urdv,"Depreciation of Right-of-Use Assets, Supplemental",MATRIX,41%,16,23
+fnd23_intfvm_1dls,"Long Term Debt Maturing within 1
+Year",MATRIX,69%,21,31
+fnd23_intfvm_1los,Operating Lease Payments Due in Year 1,MATRIX,83%,33,72
+fnd23_intfvm_1nstq,Treasury Shares - Common Stock Primary Issue,MATRIX,100%,26,38
+fnd23_intfvm_1oscq,"represents the number of common shares outstanding in a company. When a company has two or more different types of common shares outstanding, Shares Outstanding – Common Stock Primary Issue represents the primary issue, which is most actively traded in the market.",MATRIX,100%,53,108
+fnd23_intfvm_1spdd,common dividends per share for common stock primary issues.,MATRIX,100%,17,36
+fnd23_intfvm_2dls,Standardized Long Term Debt Maturing in Year 4,MATRIX,66%,10,24
+fnd23_intfvm_2los,Operating Lease Payments Due in Year 2,MATRIX,83%,13,38
+fnd23_intfvm_2spdd,common dividends per share for common stock issue 2.,MATRIX,73%,14,19
+fnd23_intfvm_32dls,Standardized Long Term Debt Maturing in Years 2 and 3 represents the summation of Standardized Long Term Debt Maturing in Year 2 and Standardized Long Term Debt Maturing in Year 3.,MATRIX,66%,16,37
+fnd23_intfvm_32los,Standardized Operating Lease Payments Due in Years 2 and 3 represents the summation of Standardized Operating Lease Payments Due in Year 2 and Standardized Operating Lease Payments Due in Year 3.,MATRIX,82%,14,20
+fnd23_intfvm_3los,Standardized Operating Lease Payments Due in Year 3.,MATRIX,82%,25,51
+fnd23_intfvm_4los,Standardized Operating Lease Payments Due in Year 4.,MATRIX,82%,24,41
+fnd23_intfvm_54los,Standardized Operating Lease Payments Due in Years 4 and 5 represents the summation of Standardized Operating Lease Payments Due in Year 4 and Standardized Operating Lease Payments Due in Year 5.,MATRIX,82%,27,91
+fnd23_intfvm_5los,Standardized Operating Lease Payments Due in Year 5.,MATRIX,80%,20,50
+fnd23_intfvm_abpl,payable or accrued liabilities.,MATRIX,33%,12,24
+fnd23_intfvm_abpo,"represents changes in accounts payable and accrued expenses during the period when a company does not delineate the two components. An increase in accounts payable and accrued expenses has a positive impact on cash flow from operating activities, and vice versa.",MATRIX,47%,8,12
+fnd23_intfvm_acda,current assets of discontinued operations.,MATRIX,35%,0,0
+fnd23_intfvm_acoa,other current assets.,MATRIX,67%,34,51
+fnd23_intfvm_acos,"Other Current Assets, Total.",MATRIX,78%,45,78
+fnd23_intfvm_acta,"total current assets. Sum of cash and short term investments, total receivables (net), total inventory, prepaid expenses, other current assets.",MATRIX,84%,26,62
+fnd23_intfvm_adbs,"Normalized Earnings before Interest, Taxes, Depreciation and Amortization",MATRIX,92%,35,98
+fnd23_intfvm_adpa,represents provisions established for doubtful accounts receivable. Provision for doubtful accounts is usually established on the basis of maturities of receivables and the company’s experience on collecting such receivables.,MATRIX,60%,22,47
+fnd23_intfvm_aemc,miscellaneous earnings adjustment.,MATRIX,73%,11,77
+fnd23_intfvm_afsi,Sale of assets to be leased out under operating lease contracts.,MATRIX,78%,28,50
+fnd23_intfvm_agse,Selling/General/Administrative Expense.,MATRIX,94%,42,121
+fnd23_intfvm_agss,"Selling/General/Administrative Expenses, Total.",MATRIX,95%,29,50
+fnd23_intfvm_aiav,"Accumulated Intangible Amortization represents accumulated amortization against intangible fixed
+assets.",MATRIX,64%,26,98
+fnd23_intfvm_aiec,"This item represents the share of earnings/losses that the company is entitled to from unconsolidated affiliated companies, but that has not been distributed as dividends.",MATRIX,66%,10,11
+fnd23_intfvm_aieo,"represents a reversal of non-cash earnings/losses from investments under the Equity Method. For such investments, undistributed earnings/losses of the investee are included in the net income computation of the investor. Since the earnings are non-cash, these are reversed out of cash flow from operations.",MATRIX,43%,8,10
+fnd23_intfvm_aiev,"Equity in Affiliates, Supplemental represents the total share of earnings/losses, net of taxes, that the
+company is entitled to from unconsolidated associated companies, affiliates or joint ventures, which have
+not been distributed as dividends.",MATRIX,73%,18,24
+fnd23_intfvm_alge,loss/gain on sale of assets listed in the operating section.,MATRIX,61%,29,56
+fnd23_intfvm_algn,Gain (Loss) on Sale of Assets.,MATRIX,63%,12,19
+fnd23_intfvm_alos,"Other Long-Term Assets, Total.",MATRIX,99%,51,161
+fnd23_intfvm_artx,Extraordinary Item.,MATRIX,79%,5,13
+fnd23_intfvm_atcq,represents translation gains (losses) on financial statements of foreign subsidiaries. Such adjustments may be required when the currency of a subsidiary is different from the reporting currency of the reporting company.,MATRIX,43%,15,18
+fnd23_intfvm_atda,deferred income taxes - long term. These are credits being applied to income taxes that will be paid in future years.,MATRIX,61%,47,113
+fnd23_intfvm_b6los,"Standardized Operating Lease Payments Due in Year 6 and Beyond represents Total Operating Leases,
+Supplemental  less Standardized Operating Lease Payments Due within 1 Year, Standardized
+Operating Lease Payments Due in Year 2, Standardized Operating Lease Payments Due in Year 3, Standardized Operating Lease Payments Due in Year 4 and Standardized Operating Lease
+Payments Due in Year 5.",MATRIX,83%,46,189
+fnd23_intfvm_bcns,"Net Cash – Beginning Balance represents the beginning balance of cash and cash equivalents, as
+defined by a company.",MATRIX,100%,50,113
+fnd23_intfvm_bfpv,"Basic EPS After Stock-Based Compensation Expense represents Net Income After Stock-Based
+Compensation Expense divided by Basic/Primary Weighted Average Shares.",MATRIX,70%,14,39
+fnd23_intfvm_bloo,other liabilities,MATRIX,83%,48,207
+fnd23_intfvm_bosi,Deconsolidation of a subsidiary classified as Sale of Business.,MATRIX,55%,16,41
+fnd23_intfvm_bpal,"Accrued interest expenses, interest payable in commercial banks.",MATRIX,91%,60,132
+fnd23_intfvm_bpao,"represents changes in accounts payable during the period. An increase inaccounts payable has a positive impact on cash flow from operating activities, and vice versa.",MATRIX,72%,22,32
+fnd23_intfvm_caic,Income Available to Common Excl. Extraordinary Items,MATRIX,100%,36,93
+fnd23_intfvm_caiv,"Normalized Income Available to Common represents the bottom-line net income available to
+common shareholders, excluding the effects of all non-recurring/unusual/one-off/extraordinary items, after
+minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other
+adjustments to net income.",MATRIX,100%,38,103
+fnd23_intfvm_cbpa,"represents the gross amount of buildings and their attachments, before being reduced by accumulated depreciation of the buildings.",MATRIX,60%,19,31
+fnd23_intfvm_ccns,Net Change in Cash,MATRIX,100%,33,85
+fnd23_intfvm_cdav,Deferred Revenue - Current,MATRIX,58%,172,690
+fnd23_intfvm_cema,"represents the acquisition cost of machinery and other equipment (including delivery equipment, office equipment, machinery, furniture and fixtures, furnishings, factory, equipment, tools, etc.) in a company, before being reduced by accumulated depreciation.",MATRIX,64%,30,56
+fnd23_intfvm_cets,Effect of Special Items on Income Taxes.,MATRIX,96%,28,51
+fnd23_intfvm_cila,"represents land and improvements on land at acquisition cost. Land is not depreciated, but land improvements are normally depreciated over time.",MATRIX,45%,12,22
+fnd23_intfvm_cinx,"Income Available to Common Stocks Incl. Extraordinary Items represents the bottom-line net
+income available to common stockholders, including the effects of extraordinary items – adjusted by
+minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other
+adjustments to net income.",MATRIX,100%,19,44
+fnd23_intfvm_cipq,represents capital contributed by shareholders in excess of par value of common stock in return for shares issued to them.,MATRIX,98%,43,69
+fnd23_intfvm_cisf,"represents cash inflow from the issuance of common stock. It also includes cash inflow from the sale of treasury shares. However, issuance of additional shares from a stock split is not included in Sale/Issuance of Common",MATRIX,87%,36,83
+fnd23_intfvm_cnin,"Net income after taxes, adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment and extraordinary items, before preferred distributions and other adjustments to net income classified as Income Incl Extra Before Distributions",MATRIX,100%,38,178
+fnd23_intfvm_cpdf,common cash dividends paid,MATRIX,62%,0,0
+fnd23_intfvm_croa,other receivables.,MATRIX,62%,9,12
+fnd23_intfvm_crrf,"Treasury Stock, when reported in the financing section of the cash flow statement, is henceforth classified as Sale/Issuance of Common or Repurchase/Retirement Common",MATRIX,79%,9,31
+fnd23_intfvm_crta,total net receivables.,MATRIX,92%,25,41
+fnd23_intfvm_cstq,"represents the value of common stock owned by the issuing company or its consolidated subsidiaries. Treasury stock is recorded at purchase cost, which is inclusive of par value, additional paid-in capital and retained earnings.",MATRIX,55%,45,80
+fnd23_intfvm_ctcv,"Current Tax – Total reflects the sum of Current Tax – Domestic, Current Tax – Foreign, Current Tax – Local, Current Tax – Other and Current Tax – Total.",MATRIX,68%,14,16
+fnd23_intfvm_ctda,"represents deferred tax assets with a current maturity. When there is a timing difference between financial reporting and tax preparation practices, a company
+might have credits or additional tax liabilities from the government. Such credits or additional tax liabilities
+may be reported on a net basis, but if not, government credits may be reported as an asset and additional
+liabilities may be reported as a liability. The current portion of such assets are generally reported in the
+current assets section and classified as Deferred Income Tax – Current Asset [ADTC].",MATRIX,47%,7,9
+fnd23_intfvm_ctpa,"gross property, plant & equipment.",MATRIX,82%,22,50
+fnd23_intfvm_dare,Research and development costs expensed directly in the income statement.,MATRIX,76%,42,70
+fnd23_intfvm_darv,"Research and development costs expensed directly in the income statement classified as Research & Development Expense, Supplemental",MATRIX,83%,44,80
+fnd23_intfvm_deds,Depreciation/Depletion represents the sum of Depreciation and Depletion.,MATRIX,99%,32,44
+fnd23_intfvm_derq,"represents residual earnings from operations, not distributed to shareholders. It may represent accumulated deficit when a company incurs losses over time.",MATRIX,100%,17,31
+fnd23_intfvm_dfpv,"Diluted EPS After Stock-Based Compensation Expense represents Net Income After Stock-Based
+Compensation Expense plus the Dilution Adjustment divided by Diluted Weighted
+Average Shares.",MATRIX,70%,19,28
+fnd23_intfvm_dgcd,gross dividends on common stock.,MATRIX,100%,26,49
+fnd23_intfvm_dlcl,Current Port. of LT Debt/Capital Leases.,MATRIX,77%,17,33
+fnd23_intfvm_dlts,Total Debt represents total interest-bearing debt outstanding.,MATRIX,100%,33,53
+fnd23_intfvm_dltv,"Total Long Term Debt, Supplemental reflects the sum of Long Term Debt Maturing within 1 through
+10 Years and Long Term Debt – Remaining Maturities.",MATRIX,69%,17,22
+fnd23_intfvm_drpc,represents the total amount of the current dividend requirement on issued preferred stock of a company (including its subsidiaries).,MATRIX,73%,8,15
+fnd23_intfvm_drpf,"If debt issuances and reductions are not delineated separately, the total is classified as Issuance (Retirement) of Debt, Net",MATRIX,99%,57,185
+fnd23_intfvm_dtll,"represents interest-bearing debt with maturities beyond one year. Long-term debt may consist of long-term bank borrowings, bonds, convertible bonds, etc.",MATRIX,94%,58,194
+fnd23_intfvm_dtns,Net Debt Including Preferred Stock & Minority Interest.,MATRIX,93%,43,130
+fnd23_intfvm_dtsl,notes payable/short term debt.,MATRIX,96%,20,34
+fnd23_intfvm_dttl,"represents interest-bearing debt with maturities beyond one year. Long-term debt may consist of long-term bank borrowings, bonds, convertible bonds, etc.",MATRIX,100%,39,92
+fnd23_intfvm_eaca,cash & equivalents.,MATRIX,92%,61,287
+fnd23_intfvm_ecns,Net Cash – Ending Balance represents the sum of Net Change in Cash and Net Cash –Beginning Balance.,MATRIX,100%,39,83
+fnd23_intfvm_eefs,Foreign Exchange Effects represents the increase/decrease in cash and cash equivalents due to changes in exchange rates.,MATRIX,66%,21,76
+fnd23_intfvm_eiue,Acquisition costs/expenses.,MATRIX,81%,15,19
+fnd23_intfvm_eiuo,"is applicable only if Net Income/Starting Line [ONET] is income after gains/losses from unusual activities. Because the operating section of the cash flow pursues changes in cash flow from operating activities, any unusual gain/loss included in net income computation needs to be reversed.",MATRIX,97%,36,82
+fnd23_intfvm_eius,Unusual Expense (Income).,MATRIX,87%,10,49
+fnd23_intfvm_eltq,total equity.,MATRIX,100%,47,162
+fnd23_intfvm_eooe,"Depreciation of investment properties disclosed outside of the cost of goods sold, for companies reporting in the IFRS or in other standards that treat these as investments",MATRIX,72%,40,106
+fnd23_intfvm_eoos,"Other Operating Expenses, Total.",MATRIX,79%,24,54
+fnd23_intfvm_eote,"represents total expenses that are operating in nature, including variable costs directly related to the volume of sales, indirect operating costs, depreciation or amortization, operating provisions and other expenses incurred from operating activities.",MATRIX,96%,30,74
+fnd23_intfvm_eror,other revenue.,MATRIX,56%,21,38
+fnd23_intfvm_eros,"Other Revenue, Total.",MATRIX,61%,11,13
+fnd23_intfvm_etoq,represents any residual value of shareholders’ equity that belongs to shareholders.,MATRIX,61%,23,32
+fnd23_intfvm_etos,"Other Equity, Total.",MATRIX,96%,17,74
+fnd23_intfvm_fbbs,"represents the bottom-line earnings per share
+available to common stockholders, excluding the effects of extraordinary items – adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to earnings per share.",MATRIX,100%,28,105
+fnd23_intfvm_fbds,"Diluted EPS Excluding Extraordinary Items represents the bottom-line earnings per share available to common stockholders, excluding extraordinary items, adjusted by the effects of dilution. This value is adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to earnings per share.",MATRIX,100%,19,38
+fnd23_intfvm_fcff,other financing cash flow,MATRIX,100%,39,163
+fnd23_intfvm_fcfs,"financing cash flow items represents sum of increase/decrease ind eposits, increase/decrease in federal funds sold or REPOs and FHLB plus other financing cash flow.",MATRIX,100%,56,274
+fnd23_intfvm_fcii,Cash used for discontinued operations classified as Other Investing Cash Flow,MATRIX,90%,15,34
+fnd23_intfvm_fcis,"Other Investing Cash Flow Items, Total represents all items reported within the investing activities in the cash flow statement, other than capital expenditures.",MATRIX,100%,12,20
+fnd23_intfvm_fcoo,"represents the impact of other operating cash flow items that cannot be classified as an adjustment item to net income, or an asset/liability as part of changes in non-cash working capital.",MATRIX,72%,22,33
+fnd23_intfvm_fcos,Changes in Working Capital,MATRIX,100%,47,134
+fnd23_intfvm_fltf,"cash from financing activities that is the sum of financing cash flow items, cash dividends paid, issuance of stock, net and issuance of debt, net.",MATRIX,100%,20,46
+fnd23_intfvm_gfia,represents inventories of unsold finished goods on hand. These goods may have been produced internally or purchased for resale.,MATRIX,39%,10,15
+fnd23_intfvm_gnia,"represents the gross purchase value of assets that lack physical existence, before
+being reduced by accumulated impairment and intangible amortization.",MATRIX,65%,26,72
+fnd23_intfvm_graa,gross accounts receivable from sales of trading assets such as inventories or from services provided.,MATRIX,64%,20,29
+fnd23_intfvm_iabs,"represents the bottom-line earnings per share available to common stockholders, including the effects of extraordinary items – adjusted by minority interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to earnings per share.",MATRIX,100%,42,171
+fnd23_intfvm_iads,"Diluted EPS Including Extraordinary Items represents the bottom-line earnings per share available to common stockholders, including extraordinary items, adjusted by the effects of dilution.",MATRIX,100%,43,120
+fnd23_intfvm_icno,other non cash items.,MATRIX,100%,23,79
+fnd23_intfvm_icns,non-cash items.,MATRIX,100%,19,59
+fnd23_intfvm_idlf,"represents cash inflow on the issuance of long-term debt instruments in a company. Long-term debt may include long-term bank borrowings, corporate bonds, convertible bonds, etc.",MATRIX,90%,65,156
+fnd23_intfvm_idsf,"represents cash inflow due to the issuance of short-term debt. If short-term debt issuances and reductions are not delineated separately, the total is classified as Short Term Debt, Net",MATRIX,43%,15,18
+fnd23_intfvm_ifpv,Net Income After Stock-Based Compensation Expense,MATRIX,70%,20,34
+fnd23_intfvm_ilti,Cash from Investing Activities.,MATRIX,100%,20,59
+fnd23_intfvm_imae,amortization of intangible assets reported outside the cost of goods and services sold,MATRIX,68%,28,52
+fnd23_intfvm_imao,"When the Indirect Method is utilized, and the company delineates amortization and depreciation separately, the amortization is classified as Amortization of Intangibles",MATRIX,36%,10,18
+fnd23_intfvm_imav,Amortization.,MATRIX,87%,41,85
+fnd23_intfvm_inas,"total adjustments to net income represents sum of preferred dividend, general partners distributions, misc. earnings adjustments, pro forma adjustment and interest adjustments.",MATRIX,79%,28,77
+fnd23_intfvm_inds,"Diluted Net Income represents the bottom-line net income available to common shareholders, including extraordinary items, adjusted by the effects of dilution.",MATRIX,100%,38,102
+fnd23_intfvm_ipos,Operating Income.,MATRIX,96%,29,67
+fnd23_intfvm_iqea,"represents long-term investment in securities (loans, bonds,
+and equity) of affiliate companies, where the affiliation may be defined as associated companies, joint
+ventures, and unconsolidated subsidiaries.",MATRIX,39%,6,10
+fnd23_intfvm_iscs,cash and short-term investments.,MATRIX,93%,53,121
+fnd23_intfvm_ists,"Total Special Items represents the sum of all non-recurring/unusual/extraordinary/one-off/special
+gains and losses that impact a company in any given period.",MATRIX,96%,21,73
+fnd23_intfvm_itla,represents long-term investments with maturities of one year or longer.,MATRIX,55%,1,1
+fnd23_intfvm_itpv,"Normalized Income Before Taxes represents net income before taxes, excluding the effects of all non-recurring/unusual/one-off/extraordinary items.",MATRIX,100%,44,182
+fnd23_intfvm_itsa,Short-Term Investments,MATRIX,55%,33,47
+fnd23_intfvm_iucs,Total Current Assets less Inventory represents Total Current Assets minus Total Inventory.,MATRIX,84%,50,119
+fnd23_intfvm_iwga,net goodwill.,MATRIX,79%,45,105
+fnd23_intfvm_ixts,Total Extraordinary Items,MATRIX,82%,10,28
+fnd23_intfvm_jads,"Dilution Adjustment represents the adding back to reported net income the interest expense of debentures when assumed converted, and the adding back to the reported net income the convertible preferred dividends when assumed converted.",MATRIX,90%,0,0
+fnd23_intfvm_kcqs,Quick Ratio represents Total Current Assets less Inventory divided by Total Current Liabilities.,MATRIX,84%,13,19
+fnd23_intfvm_laoo,"represents the changes in the combined sum of assets and liabilities when a company reports these totals as a single line. If the value of the assets is greater than the value of the liabilities, the result has a negative impact on cash flow, and vice versa.",MATRIX,51%,8,35
+fnd23_intfvm_lcol,other current liabilities.,MATRIX,71%,12,21
+fnd23_intfvm_lcos,"Other Current Liabilities, Total.",MATRIX,94%,96,279
+fnd23_intfvm_lctl,represents current liabilities for industrial and utility companies. Current liabilities are liabilities that are incurred from operating activities and expected to be due within one year or an operating cycle of the company.,MATRIX,84%,21,37
+fnd23_intfvm_letq,sum of total liabilities and total equity.,MATRIX,100%,44,125
+fnd23_intfvm_lltl,total liabilities.,MATRIX,100%,23,75
+fnd23_intfvm_lltq,represents the sum of Total Equity and Equity Non-Controlling Interests.,MATRIX,100%,22,31
+fnd23_intfvm_lotv,"Total Operating Leases, Supplemental reflects the sum of Operating Leases Maturing within 1
+through 10 Years, Operating Leases – Remaining Maturities and
+Operating Leases - Interest Cost.",MATRIX,83%,62,146
+fnd23_intfvm_ltia,total inventory.,MATRIX,65%,58,261
+fnd23_intfvm_ltio,"represents changes in inventories during the period. An increase in inventories has a negative impact on cash flow from operating activities, and vice versa.",MATRIX,59%,22,35
+fnd23_intfvm_ltll,Long-term obligations from right-of-use contracts related to operating leases.,MATRIX,82%,23,45
+fnd23_intfvm_ltls,"Other Liabilities, Total",MATRIX,100%,28,41
+fnd23_intfvm_mocq,other comprehensive income.,MATRIX,90%,26,130
+fnd23_intfvm_mpns,Net Profit Margin represents Income Available to Common Excluding Extraordinary Items divided by Total Revenue.,MATRIX,100%,46,119
+fnd23_intfvm_mria,annual inventories - raw material.,MATRIX,39%,25,58
+fnd23_intfvm_mtps,Pretax Margin.,MATRIX,100%,39,113
+fnd23_intfvm_ndlf,"If long-term debt issuances and reductions are not delineated separately, the total is classified as Long Term Debt, Net",MATRIX,95%,71,245
+fnd23_intfvm_ndsf,"If short-term debt issuances and reductions are not delineated separately, the total is classified as Short Term Debt, Net",MATRIX,66%,11,15
+fnd23_intfvm_nein,"represents interest expense on debt of non-financial service companies, including insurance companies.",MATRIX,87%,9,13
+fnd23_intfvm_neis,"Interest Expense, Net Non-Operating represents Interest Expense, Non-Operating, reduced by Interest Capitalized, Non-Operating, and is usually a negative value.",MATRIX,87%,17,33
+fnd23_intfvm_nicn,non operating interest capitalized.,MATRIX,59%,11,13
+fnd23_intfvm_niie,interest income from operating section.,MATRIX,57%,14,21
+fnd23_intfvm_niin,"represents non-operating interest income, which is generated from non-operating investment securities such as certificates of deposit or bonds for non-financial service companies.",MATRIX,80%,32,49
+fnd23_intfvm_niis,"Interest/Investment Income, Non-Operating",MATRIX,88%,8,17
+fnd23_intfvm_nimc,"represents the share of earnings/losses in subsidiaries that belongs to shareholders other than the parent company when the parent company owns less than 100%, but more than 50%, of a subsidiary. Since the subsidiary’s financials are consolidated with the company, this value is a negative number to represent the amount the company does not own.",MATRIX,78%,19,37
+fnd23_intfvm_niml,represents accumulated interest for minority shareholders in subsidiaries that are less than 100 percent owned by the reporting parent company. The net worth of a subsidiary is assumed to be proportionally owned by parent company and other minority shareholders according to their respective ownership percentage.,MATRIX,54%,9,11
+fnd23_intfvm_nimv,"Minority Interest, Supplemental represents the share of earnings/losses in subsidiaries that belongs
+to shareholders other than the parent company when the parent company owns less than 100%, but more
+than 50%, of a subsidiary.",MATRIX,78%,9,34
+fnd23_intfvm_nins,"Interest Expense (Income), Net- Non-Operating, Total",MATRIX,94%,14,16
+fnd23_intfvm_nnie,interest expense from net operating income.,MATRIX,60%,15,17
+fnd23_intfvm_nnin,Interest expense that is reduced by interest income.,MATRIX,76%,32,62
+fnd23_intfvm_nnis,"Net - Net Operating, Total",MATRIX,64%,4,4
+fnd23_intfvm_nppa,"net property, plant and equipment.",MATRIX,100%,28,88
+fnd23_intfvm_nscf,"If the sale, issuance or repurchase of common stock is not separately delineated, then the total is classified as Common Stock, Net",MATRIX,99%,31,46
+fnd23_intfvm_nspf,represents the sum of Sale/Issuance of Preferred and Repurchase/Retirement of Preferred.,MATRIX,39%,9,14
+fnd23_intfvm_ntiv,"Income Taxes Excluding Impact of Special Items represents total income taxes, adjusted by the tax
+impact of adding back non-recurring items, used in the computation of normalized",MATRIX,100%,51,134
+fnd23_intfvm_nvii,"represents changes in investments in securities and other investments. Investment, Net is utilized when a company does not delineate the sale of investments and the purchase of investments on the cash flow statement.",MATRIX,52%,1,1
+fnd23_intfvm_octq,represents the number of primary common shares equivalent outstanding.,MATRIX,100%,47,168
+fnd23_intfvm_odio,is applicable only if Net Income/Starting Line is income after gains/losses from discontinued operations.,MATRIX,35%,6,8
+fnd23_intfvm_odix,Discontinued Operations.,MATRIX,70%,24,47
+fnd23_intfvm_oeis,"Interest Expense, Net – Operating",MATRIX,60%,13,15
+fnd23_intfvm_oiis,Interest/Investment Income – Operating,MATRIX,62%,12,13
+fnd23_intfvm_olto,"includes diverse cash flows that are reported outside of the operating, investing and financing sections of the cash flow statement.",MATRIX,100%,40,103
+fnd23_intfvm_pacv,"Interest Capitalized,
+Supplemental",MATRIX,66%,10,18
+fnd23_intfvm_pbts,"Tangible Book Value per Share, Common Equity.",MATRIX,100%,42,192
+fnd23_intfvm_pdcf,Total Cash Dividends Paid.,MATRIX,67%,4,6
+fnd23_intfvm_peda,aggregate of accumulated depreciation for each fixed asset.,MATRIX,80%,13,22
+fnd23_intfvm_pede,Depreciation of fixed assets reported outside of the cost of goods and services sold.,MATRIX,72%,30,37
+fnd23_intfvm_peds,depreciation.,MATRIX,99%,21,38
+fnd23_intfvm_pedv,Deprecation,MATRIX,100%,40,108
+fnd23_intfvm_pics,cash interest paid represents interest paid in cash during the period Cash Interest.,MATRIX,92%,31,58
+fnd23_intfvm_pnii,Acquisition of investment securities of a company (rather than the whole business unit) classified as Purchase of Investments,MATRIX,82%,15,20
+fnd23_intfvm_ppgs,Gross Margin  represents Gross Profit  divided by Revenue. Gross Margin is not available if either Gross Profit or Revenue is missing or if Revenue is negative.,MATRIX,86%,39,76
+fnd23_intfvm_ppos,Operating Margin.,MATRIX,91%,43,89
+fnd23_intfvm_prgs,Gross Profit represents a measure of a company’s operating performance. Gross Profit states the profits earned from a company’s revenues and direct costs.,MATRIX,86%,28,97
+fnd23_intfvm_ptcs,"cash taxes paid represents taxes paid in cash, net of tax refunds received, as reported by the company.",MATRIX,88%,10,30
+fnd23_intfvm_pwia,inventories that are WIP or work-in-progress.,MATRIX,32%,24,40
+fnd23_intfvm_pxrv,"Rental Expense, Supplemental represents the total value of rental expenses paid for offices, factories, machinery and equipment.",MATRIX,87%,30,76
+fnd23_intfvm_pxtl,"Income Taxes Payable represents income taxes payable to the government, where such tax liability
+is already confirmed in terms of amount and payable date.",MATRIX,62%,16,31
+fnd23_intfvm_pxto,"represents changes in taxes payable during the period. An increase in income taxes payable has a positive impact on cash flow from operating activities, and vice versa.",MATRIX,43%,4,9
+fnd23_intfvm_qabi,represents cash outflow for acquiring new businesses. Reporting the cash flow for acquiring new businesses is not consistent among companies.,MATRIX,79%,30,71
+fnd23_intfvm_qaii,Franchise acquired (classified as Purchase/Acquisition of Intangibles).,MATRIX,36%,9,26
+fnd23_intfvm_rale,"Labor costs reported outside of the cost of goods sold, or not clearly labeled as part of the cost of goods sold, for businesses other than manufacturing and mining companies",MATRIX,80%,57,185
+fnd23_intfvm_rcaa,accounts receivable value.,MATRIX,87%,18,35
+fnd23_intfvm_rcao,"represents changes in accounts receivable during the period. An increase in accounts receivable has a negative impact on cash flow from operating activities, and vice versa.",MATRIX,88%,20,41
+fnd23_intfvm_rdlf,represents cash outflow on the repayment of long-term debt in a company. Long-term debt obligations may be repaid upon maturity or replaced with new debt.,MATRIX,92%,21,31
+fnd23_intfvm_rdsf,"represents cash outflow due to the repayment of short-term debt. If short-term debt issuances and reductions are not delineated separately, the total is classified as Short Term Debt, Net",MATRIX,42%,1,1
+fnd23_intfvm_rltr,"total revenue represents all items clearly presented as revenues, before the cost of goods sold and the gross profit.",MATRIX,96%,33,58
+fnd23_intfvm_roce,cost of revenue including labor coasts reported within cost of goods sold & that are not clearly labeled as cost of goods sold.,MATRIX,88%,25,63
+fnd23_intfvm_rocs,cost of revenue represents total costs that can be directly attributed to the goods and services produced/purchased and sold.,MATRIX,88%,33,161
+fnd23_intfvm_rpds,"Depreciation/amortization represents sum of depreciation, amortization of intangibles and amortization of acquisition costs.",MATRIX,79%,24,45
+fnd23_intfvm_rtcv,Current Tax – Total,MATRIX,66%,11,27
+fnd23_intfvm_rtes,Effective Tax Rate represents Provision for Income Taxes divided by Income Before Tax.,MATRIX,94%,8,18
+fnd23_intfvm_rtla,"represents long-term notes receivable, excluding the current portion of the long-term receivables. It also represents all other long term receivables reported in the Non-current Assets section.",MATRIX,36%,0,0
+fnd23_intfvm_rucs,Current Ratio represents Total Current Assets divided by Total Current Liabilities.,MATRIX,84%,29,38
+fnd23_intfvm_sabs,represents the weighted average common shares outstanding less the dilution of stock options for a given period. These shares are used to calculate Basic EPS.,MATRIX,100%,35,127
+fnd23_intfvm_saie,Impairment/write-down/write-off/revaluation of investment securities arising from an unusual event.,MATRIX,62%,18,28
+fnd23_intfvm_saoa,non operational fixed assets that are long term.,MATRIX,81%,62,145
+fnd23_intfvm_saoo,Accrued interest income for companies other than financial service companies.,MATRIX,80%,10,15
+fnd23_intfvm_sebv,"Basic Normalized EPS  represents the bottom-line earnings per share available to common
+stockholders, excluding the effects of all non-recurring/unusual/one-off/extraordinary items, after minority
+interest, equity in affiliates, the U.S. GAAP adjustment, preferred distributions and all other adjustments to
+earnings per share.",MATRIX,100%,37,116
+fnd23_intfvm_sedv,Diluted Normalized EPS,MATRIX,100%,45,110
+fnd23_intfvm_sere,Restructuring Charge is an unusual or non-recurring item related to a significant rearrangement of a company’s assets and/or liabilities.,MATRIX,69%,26,48
+fnd23_intfvm_smcq,"Common Stock represents the value of the most frequently issued class of stock; usually it provides a voting right, but is secondary to preferred stock in dividend and liquidation rights.",MATRIX,100%,25,42
+fnd23_intfvm_smcs,total common stock represets the combined value of common stock and limited partner.,MATRIX,100%,47,106
+fnd23_intfvm_snii,Deconsolidation of subsidiaries if ownership interest in a subsidiary is reduced classified as Sale/Maturity of Investment,MATRIX,78%,9,20
+fnd23_intfvm_srps,"Preferred Stock – Non-Redeemable, Total.",MATRIX,52%,11,15
+fnd23_intfvm_sspf,"If the sale, issuance or repurchase of common and preferred stock is not separately delineated, then the total is classified as Issuance (Retirement) of Stock, Net.",MATRIX,100%,19,61
+fnd23_intfvm_stnr,net sales.,MATRIX,89%,40,106
+fnd23_intfvm_swds,Diluted Weighted Average Shares represents the number of shares for Diluted EPS computation.,MATRIX,100%,52,132
+fnd23_intfvm_tait,"Net
+Income After Taxes",MATRIX,100%,41,282
+fnd23_intfvm_taiv,Normalized Income After Taxes.,MATRIX,100%,40,102
+fnd23_intfvm_tbie,"represents a company’s total revenues reduced by total expenses, before taxes on net income and all after-tax adjustments.",MATRIX,100%,36,135
+fnd23_intfvm_tdbl,"represents income taxes estimated and expected to be paid within one year or an operating cycle, whichever is longer.",MATRIX,70%,10,17
+fnd23_intfvm_tdbo,Deferred Taxes for indirect Cash Flow,MATRIX,81%,42,107
+fnd23_intfvm_tdbs,represents the sum of Deferred Income Tax – Long Term Liability and Deferred Investment Tax Credit,MATRIX,70%,18,30
+fnd23_intfvm_teno,is the first line of a cash flow statement when a company employs the Indirect Method in the operating cash flow section.,MATRIX,100%,16,31
+fnd23_intfvm_tibs,Normalized Earnings before Interest and Taxes.,MATRIX,93%,32,91
+fnd23_intfvm_tile,litigation costs. These are non-recurring/unusual items reported within the cost of goods and services sold.,MATRIX,63%,13,27
+fnd23_intfvm_tmaa,accumulated intangible amortization.,MATRIX,64%,21,61
+fnd23_intfvm_tmas,"amortization representes sum of amortization of intangibles, amortization of acquisition costs, amortization of deferred policy costs.",MATRIX,39%,4,11
+fnd23_intfvm_tnia,"represents the net value of assets that lack physical existence, reduced by accumulated impairment and intangible amortization.",MATRIX,84%,63,212
+fnd23_intfvm_tnir,interest income.,MATRIX,58%,10,14
+fnd23_intfvm_tnoe,Income from external grants received to cover research and development expenses.,MATRIX,67%,6,7
+fnd23_intfvm_tnon,represents any non-operating income or expense item that a company reports before income taxes,MATRIX,89%,19,35
+fnd23_intfvm_tnos,other net income.,MATRIX,89%,13,23
+fnd23_intfvm_tota,total assets of the company.,MATRIX,100%,34,85
+fnd23_intfvm_trsr,sales returns and allowances.,MATRIX,54%,7,7
+fnd23_intfvm_ttiv,"Income Tax – Total reflects the sum of Domestic Tax - Other, Foreign Tax – Other,
+Local Tax – Other and Other Tax.",MATRIX,69%,13,32
+fnd23_intfvm_txee,"Excise taxes payment including Sales taxes, value-added tax (VAT) and other excise taxes reported within the cost of goods sold",MATRIX,56%,2,2
+fnd23_intfvm_txer,"represents government-levied taxes on the manufacture, sale, or consumption of goods and services, which are included in the sale price, collected by the seller, and returned to the government.",MATRIX,56%,7,14
+fnd23_intfvm_uaie,"form of an unusual item related to the impairment of longlived assets, certain identifiable intangibles, and goodwill related to those assets.",MATRIX,74%,6,8
+fnd23_intfvm_vacl,Advances/deposits from customers for the products to be sold or services to be rendered classified as Customer Advances.,MATRIX,58%,187,582
+fnd23_intfvm_vbts,"Tangible Book Value, Common Equity.",MATRIX,100%,31,84
+fnd23_intfvm_vdae,advertising expense reported outside the cost of goods and services sold,MATRIX,61%,18,25
+fnd23_intfvm_vdav,"Advertising Expense - Supplemental represents the total cost of advertising incurred by the
+company.",MATRIX,68%,12,17
+fnd23_intfvm_veev,"Pro Forma Stock Compensation Expense represents employee compensation paid in the form of
+stock options that have not yet been exercised and are not disclosed on the income statement.",MATRIX,70%,20,29
+fnd23_intfvm_verr,gross revenue.,MATRIX,55%,14,18
+fnd23_intfvm_vers,"Revenue represents revenues from the sale of merchandise goods, manufactured products and
+services, and the distribution of regulated energy resources, depending on a specific company’s industry.
+The item is used for industrial and utility companies.",MATRIX,92%,31,80
+fnd23_intfvm_vnie,investing income from operating section.,MATRIX,61%,30,88
+fnd23_intfvm_vnin,"represents income or losses, other than interest, from investment securities. Such income may include dividend income, gain/loss on sale of investment securities, unrealized investment income or loss, equity earnings in affiliates, unconsolidated subsidiaries or joint ventures (before taxes), or any other net investment income.",MATRIX,81%,17,31
+fnd23_intfvm_vnis,Long-Term Investments represents the sum of LT Investments – Affiliate Companies and LT Investments – Other.,MATRIX,67%,12,16
+fnd23_intfvm_wdre,"The portion of acquired in-process research and development costs (IPR&D) that was directly expensed in the income statement, or written off as a result of impairment testing",MATRIX,58%,14,21
+fnd23_intfvm_xatt,Provision for Income Taxes.,MATRIX,100%,61,174
+fnd23_intfvm_xbin,"represents net income after taxes, adjusted by minority interest, equity in affiliates and the U.S. GAAP adjustment, before extraordinary items, preferred distributions and other adjustments to net income.",MATRIX,100%,37,75
+fnd23_intfvm_xeal,"represents operational expenses accrued, but not yet paid. As current liabilities, such expenses are expected to be paid within one year or one operating cycle, whichever is longer.",MATRIX,95%,27,53
+fnd23_intfvm_xeao,"represents changes in accrued expenses during the period. An increase in accrued expenses has a positive impact on cash flow from operating activities, and vice versa.",MATRIX,65%,14,47
+fnd23_intfvm_xeci,purchase of fixed assets.,MATRIX,99%,34,84
+fnd23_intfvm_xecs,capital expenditures.,MATRIX,99%,44,124
+fnd23_intfvm_xeie,interest expense.,MATRIX,60%,8,25
+fnd23_intfvm_xeiv,"Interest Expense, Supplemental.",MATRIX,94%,16,21
+fnd23_intfvm_xpof,"represents cash inflow due to stock options exercised, which results in an increase of common stock.",MATRIX,66%,27,62
+fnd23_intfvm_yppa,prepaid expenses.,MATRIX,77%,21,38
+fnd23_intfvm_yppo,"represents changes in prepaid expenses during the period. An increase in prepaid expenses has a negative impact on cash flow from operating activities, and vice versa.",MATRIX,64%,29,85
+fnd23_intfvmfm_dttl,"represents interest-bearing debt with maturities beyond one year. Long-term debt may consist of long-term bank borrowings, bonds, convertible bonds, etc.",MATRIX,100%,66,257
+fnd23_intfvmfm_eltq,total equity.,MATRIX,100%,36,75
+fnd23_intfvmfm_inds,"Diluted Net Income represents the bottom-line net income available to common shareholders, including extraordinary items, adjusted by the effects of dilution.",MATRIX,100%,52,208
+fnd23_intfvmfm_lctl,represents current liabilities for industrial and utility companies. Current liabilities are liabilities that are incurred from operating activities and expected to be due within one year or an operating cycle of the company.,MATRIX,84%,25,108
+fnd23_intfvmfm_olto,"includes diverse cash flows that are reported outside of the operating, investing and financing sections of the cash flow statement.",MATRIX,100%,45,116
+fnd23_intfvmfm_rltr,"total revenue represents all items clearly presented as revenues, before the cost of goods sold and the gross profit.",MATRIX,96%,22,41
+fnd23_intfvmfm_srps,"Preferred Stock – Non-Redeemable, Total.",MATRIX,52%,13,27
+fnd23_intfvmfm_tota,total assets of the company.,MATRIX,100%,55,219
+fnd23_ishistorical,if value is historical value.,VECTOR,100%,62,115
+fnd23_iwgv,Goodwill - Net,MATRIX,44%,1,1
+fnd23_laxv,Actuarial Gains and Losses - Post-Retirement,MATRIX,55%,14,17
+fnd23_lt_debt,long term debt.,MATRIX,100%,40,150
+fnd23_ltem,[Quarterly] Number of Employees,MATRIX,93%,1,1
+fnd23_net_debt,net debt,MATRIX,93%,49,125
+fnd23_net_income,net income,MATRIX,100%,71,236
+fnd23_net_reveivables,net receivables.,MATRIX,92%,35,110
+fnd23_nppv,Other Property/Plant/Equipment - Net,MATRIX,52%,29,98
+fnd23_ofc,cash flow from operating activities.,MATRIX,100%,40,183
+fnd23_opxv,"Other Pension, Net - Domestic",MATRIX,55%,12,16
+fnd23_pamonper,maps each rep identifier to an instrument on a given day.,MATRIX,27%,1,1
+fnd23_pcsv,"Stock-Based Compensation, Supplemental",MATRIX,74%,44,126
+fnd23_ppfv,Foreign Pension Plan Expense,MATRIX,54%,8,11
+fnd23_ptfv,Prior Service Cost - Foreign,MATRIX,53%,4,5
+fnd23_qftm,Retail sales represent the total value of sales at retail locations (physical stores) during the period.,MATRIX,52%,1,2
+fnd23_ratv,[Quarterly] Audit-Related Fees,MATRIX,84%,0,0
+fnd23_rcdv,Defined Contribution Expense Post-Retirement,MATRIX,53%,1,1
+fnd23_repnotickermap,maps each rep to a ticker on a given day.,MATRIX,100%,38,130
+fnd23_rnd_expense,R&D expenses.,MATRIX,76%,35,121
+fnd23_roe,return on equity,MATRIX,100%,59,260
+fnd23_rpts,Total Plan Other Expense represents the total amount of other expenses on all of a company's pension and post-retirement plans.,MATRIX,55%,15,30
+fnd23_rtdv,Deferred Tax - Total,MATRIX,55%,5,10
+fnd23_rtxv,Transition Costs - Domestic,MATRIX,53%,3,3
+fnd23_rxfv,Expected Return on Assets - Foreign,MATRIX,53%,9,26
+fnd23_saiv,"Impairment-Assets Held for Sale, Supplemental",MATRIX,52%,10,14
+fnd23_scxv,Curtailments & Settlements - Post-Retirement,MATRIX,53%,5,11
+fnd23_serv,"Restructuring Charge, Supplemental",MATRIX,53%,20,34
+fnd23_significance,"Indicates the level of importance for the given development (1 = High, 2 = Medium, 3 = Low)",VECTOR,84%,4,13
+fnd23_sl_ric,instrument RIC code index.,VECTOR,100%,6,18
+fnd23_spd,dividend per share,MATRIX,100%,31,78
+fnd23_ssfv,[Quarterly] Total Funded Status,MATRIX,37%,0,0
+fnd23_supercalendar_interval,time interval for which value is given.,MATRIX,93%,44,208
+fnd23_superearningsrelease_description,description index,VECTOR,79%,4,5
+fnd23_tangible_bvps,tangible book value per share.,MATRIX,95%,46,186
+fnd23_tcxv,Curtailments and Settlements - Domestic,MATRIX,55%,27,71
+fnd23_tius,"Non-Recurring Items, Total",MATRIX,58%,26,56
+fnd23_topic1,parent topic code.,VECTOR,84%,7,19
+fnd23_topic2,second-tier topic mapped to parent topic.,VECTOR,84%,3,3
+fnd23_topic3,third tier topic mapped to parent topic.,VECTOR,84%,2,8
+fnd23_tot_assets,total assets.,MATRIX,100%,69,247
+fnd23_tot_inventory,total inventory.,MATRIX,96%,46,205
+fnd23_tot_revenue,total revenue.,MATRIX,96%,44,135
+fnd23_trsigdev_description,description index,VECTOR,84%,3,7
+fnd23_uaiv,"Impairment-Assets Held for Use, Supplemental",MATRIX,52%,7,21
+fnd23_vb_apts,Total Plan Assets,MATRIX,36%,14,23
+fnd23_vb_dapv,Plan Assets - Domestic,MATRIX,34%,5,12
+fnd23_vb_dcrv,Compensation Rate - Domestic,MATRIX,27%,13,20
+fnd23_vb_dlav,Accrued Liabilities - Domestic,MATRIX,35%,5,9
+fnd23_vb_dpav,Pension Obligation - Domestic,MATRIX,36%,11,36
+fnd23_vb_dppv,Funded Status - Domestic,MATRIX,36%,10,16
+fnd23_vb_drdv,Discount Rate - Domestic,MATRIX,33%,10,14
+fnd23_vb_fotv,All Other Fees Paid to Auditor,MATRIX,76%,30,61
+fnd23_vb_ftdv,Deferred Tax - Foreign,MATRIX,44%,22,35
+fnd23_vb_fttv,Tax Fees,MATRIX,79%,19,30
+fnd23_vb_ltem,Full-Time Employees,MATRIX,92%,39,128
+fnd23_vb_opts,Total Plan Obligations,MATRIX,40%,5,12
+fnd23_vb_pppv,Funded Status - Post-Retirement,MATRIX,26%,1,1
+fnd23_vb_ratv,Audit-Related Fees,MATRIX,80%,27,78
+fnd23_vb_rpav,Post-Retirement Obligation,MATRIX,26%,6,17
+fnd23_vb_sonm,Number of Common Shareholders,MATRIX,87%,42,81
+fnd23_vb_ssfv,Total Funded Status,MATRIX,40%,17,48
+fnd23_ve,enterprise value,MATRIX,93%,184,877
+fnd23_ventsv101_eventtype,event type index,VECTOR,100%,17,48
+fnd23_ventsv101_origtype,origin index.,VECTOR,100%,15,18
+fnd23_ventsv101_source,news source index.,VECTOR,100%,14,29
+fnd23_ventsv101_subtype1,subtype 1 index.,VECTOR,100%,12,22
+fnd23_ventsv101_subtype2,subtype 2 index.,VECTOR,100%,15,15
+fnd23_wqrearncal_interval,time interval for which value is given.,MATRIX,93%,71,254
+free_cash_flow_firm,Free cash flow available to all capital providers of the firm.,MATRIX,100%,0,0
+fully_paid_share_capital,Total value of fully paid share capital issued by the company.,MATRIX,100%,0,0
+fully_paid_share_capital_quarterly,Total value of fully paid share capital issued by the company for the quarter.,MATRIX,100%,0,0
+fully_paid_shares_outstanding,Total number of shares that have been fully paid and are currently outstanding.,MATRIX,99%,0,0
+funds_provided_by_share_issuance,Funds raised through the issuance of shares.,MATRIX,100%,0,0
+funds_settled_due_next,Funds that are due to be settled in the next period.,MATRIX,61%,0,0
+future_provisions_recorded,Future provisions recorded for anticipated liabilities.,MATRIX,98%,0,0
+future_tax_liabilities_fair_value,Fair value of future tax liabilities.,MATRIX,100%,0,0
+future_tax_liabilities_fund,Future tax liabilities fund for the interim period.,MATRIX,100%,1,1
+goodwill_and_intangibles,Total value of goodwill and intangible assets on the balance sheet.,MATRIX,86%,5,27
+gross_profit,Revenue minus cost of goods sold for the period.,MATRIX,83%,8,11
+gross_profit_current,Gross profit for the current reporting period.,MATRIX,86%,0,0
+gross_profit_total,Total gross profit for the period.,MATRIX,86%,0,0
+hedge_funds_financial_obligations,Financial obligations related to hedge fund activities.,MATRIX,61%,0,0
+income_before_income_tax,Earnings before provision for income taxes is deducted.,MATRIX,92%,3,8
+income_before_tax,[Quarterly] Total Plan Interest Cost,MATRIX,35%,0,0
+income_before_tax_current,Earnings before provision for income taxes for the current period.,MATRIX,93%,4,5
+income_before_tax_value,Earnings before provision for income taxes for the period.,MATRIX,89%,3,60
+income_from_discontinued_operations,[Quarterly] Interest Cost - Domestic,MATRIX,33%,0,0
+income_tax_expense_3,[Quarterly] Total Extraordinary Items,MATRIX,60%,0,0
+income_tax_liabilities,Outstanding income tax liabilities at period end.,MATRIX,100%,1,1
+intangible_assets_net_2,Net value of intangible assets after amortization.,MATRIX,100%,0,0
+intangible_liabilities,Total value of intangible liabilities at the end of the period.,MATRIX,100%,0,0
+intangible_liabilities_total,Total intangible liabilities outstanding.,MATRIX,100%,0,0
+interest_accrued_on_capital,Interest accrued on capital for the reporting period.,MATRIX,100%,0,0
+interest_and_tax_expense,Total interest and tax expense for the period.,MATRIX,100%,0,0
+interest_expense_net,Net interest expense for the period.,MATRIX,87%,0,0
+interest_expense_on_loans,"[Quarterly] Interest Expense on Lease Liabilities, Supplemental",MATRIX,29%,0,0
+interest_income,Income earned from interest-bearing assets.,MATRIX,83%,1,1
+interest_income_cashflow,Cash flow from interest income activities.,MATRIX,90%,1,1
+interest_income_total_2,Total interest income earned by the company.,MATRIX,88%,0,0
+interim_fiscal_month,The fiscal month corresponding to the interim reporting period.,MATRIX,92%,0,0
+interim_fiscal_month_number,The fiscal month number corresponding to the end of the interim period.,MATRIX,100%,0,0
+interim_fiscal_year,The fiscal year corresponding to the interim reporting period.,MATRIX,92%,2,2
+interim_fiscal_year_number,The fiscal year associated with the interim reporting period.,MATRIX,100%,0,0
+interim_long_term_contract_liabilities,Long-term contract liabilities reported for the interim period.,MATRIX,84%,0,0
+interim_period_sequence_number,The sequence number of the interim period within the fiscal year.,MATRIX,100%,1,1
+interim_period_sequence_number_2,Sequence number of the interim period within the fiscal year.,MATRIX,92%,1,1
+interim_quasi_equity_contracts,Quasi-equity contracts reported for the interim period.,MATRIX,100%,0,0
+interim_reporting_currency_code,The currency code in which interim financial values are presented after conversion.,MATRIX,100%,0,0
+investment_contracts_total,Total value of investment contracts held.,MATRIX,100%,0,0
+investment_income_3,Income earned from investments during the period.,MATRIX,36%,1,1
+investment_income_nonoperating,Income from investments not related to core operations.,MATRIX,38%,0,0
+lease_assets_present_balance,Present balance of assets under lease agreements.,MATRIX,88%,0,0
+lease_expense_total,Total lease expenses incurred during the period.,MATRIX,94%,0,0
+liabilities_accrued_expenses,Accrued expenses classified as liabilities for the interim period.,MATRIX,95%,0,0
+liabilities_equity_total,Sum of total liabilities and equity for the reporting period.,MATRIX,100%,0,0
+loans_advances_to_public_banks,Loans and advances made to public sector banks.,MATRIX,91%,0,0
+loans_current_assets_value,[Quarterly] Customer Advances,MATRIX,53%,2,4
+loans_current_liabilities,Loans classified as current liabilities due within one year.,MATRIX,67%,0,0
+long_term_accumulated_pension_benefit,Long-term accumulated pension benefit obligation.,MATRIX,89%,0,0
+long_term_assets_excluding_intangibles,Long-term assets excluding intangible assets.,MATRIX,94%,0,0
+long_term_capital_commitments,"[Quarterly] Current Portion of Long-Term Capital Leases, Supplemental",MATRIX,33%,1,1
+long_term_collateral_debt,Long-term collateralized debt reported for the annual period.,MATRIX,73%,1,1
+long_term_collateralized_debt,Long-term collateralized debt outstanding at period end.,MATRIX,71%,0,0
+long_term_contract_liabilities,Long-term contract liabilities reported for the annual period.,MATRIX,79%,0,0
+long_term_contract_liabilities_2,Obligations from long-term contracts not due within one year.,MATRIX,84%,1,1
+long_term_contractual_liabilities,Long-term contractual liabilities outstanding at period end.,MATRIX,82%,0,0
+long_term_current_liabilities,Total value of long-term current liabilities outstanding.,MATRIX,82%,1,1
+long_term_current_liabilities_2,Current portion of long-term liabilities due within one year.,MATRIX,84%,0,0
+long_term_current_liabilities_3,Current portion of long-term liabilities due within one year.,MATRIX,79%,1,1
+long_term_current_liabilities_due,Long-term liabilities due within the current period.,MATRIX,73%,1,1
+long_term_debt,Total value of long-term debt obligations outstanding.,MATRIX,96%,1,1
+long_term_debt_current_liabilities,Discontinued Operations – Current Liability,MATRIX,27%,0,0
+long_term_debt_total,Total long-term debt reported for the annual period.,MATRIX,90%,1,1
+long_term_debt_total_2,Total long-term debt outstanding.,MATRIX,100%,0,0
+long_term_debt_value,Total amount of long-term debt obligations for the period.,MATRIX,98%,0,0
+long_term_expenses,Expenses that are expected to be incurred beyond one year.,MATRIX,57%,0,0
+long_term_lease_liabilities,Obligations for leases due beyond one year.,MATRIX,100%,0,0
+long_term_liabilities,Total value of long-term liabilities outstanding at period end.,MATRIX,100%,0,0
+long_term_liabilities_2,Total amount of liabilities due beyond one year.,MATRIX,100%,0,0
+long_term_liabilities_total_2,Total long-term liabilities as of the reporting date.,MATRIX,100%,0,0
+long_term_liabilities_total_3,Total long-term liabilities outstanding at period end.,MATRIX,82%,0,0
+long_term_loans_2,Loans and borrowings due beyond one year.,MATRIX,80%,0,0
+long_term_loans_due,Long-term loans due beyond one year.,MATRIX,92%,0,0
+long_term_loans_liabilities,Long-term loans and liabilities reported for the annual period.,MATRIX,97%,0,0
+long_term_loans_liabilities_2,Long-term loans and related liabilities outstanding.,MATRIX,100%,0,0
+long_term_loans_payable,Outstanding long-term loans payable at period end.,MATRIX,90%,0,0
+long_term_loans_total_debt,Total long-term loans and debt reported for the interim period.,MATRIX,94%,1,1
+long_term_minority_interest,Long-term minority interest in consolidated subsidiaries.,MATRIX,50%,0,0
+long_term_minority_interest_2,Long-term minority interest in consolidated subsidiaries.,MATRIX,49%,0,0
+long_term_obligations_commitments,"[Quarterly] Current Portion of Long-Term Operating Leases, Supplemental",MATRIX,56%,1,1
+long_term_other_current_liabilities,Other current liabilities classified as long-term.,MATRIX,67%,0,0
+long_term_other_liabilities,"[Quarterly] Long-Term Operating Lease Liabilities, Supplemental",MATRIX,67%,0,0
+long_term_pension_benefit_assets,payable or accrued liabilities.,MATRIX,31%,1,1
+long_term_secured_debt,Long-term secured debt outstanding at period end.,MATRIX,96%,0,0
+long_term_tax_payable,Total value of long-term tax liabilities outstanding.,MATRIX,63%,0,0
+long_term_tax_payable_2,Long-term tax liabilities due beyond one year.,MATRIX,56%,0,0
+long_term_trade_debt,Long-term trade debt reported for the annual period.,MATRIX,97%,0,0
+long_term_trade_debt_2,Long-term trade debt outstanding at period end.,MATRIX,100%,0,0
+minority_equity_total,Total value of equity attributable to minority interests.,MATRIX,99%,0,0
+minority_interest,Portion of net assets or earnings attributable to minority shareholders.,MATRIX,48%,0,0
+minority_interest_value,Portion of net assets or earnings attributable to minority shareholders for the period.,MATRIX,52%,0,0
+minority_ownership_shares,[Quarterly] Number of Common Shareholders,MATRIX,84%,1,1
+minority_shares_outstanding,Number of shares held by minority shareholders.,MATRIX,91%,0,0
+net_cash_equivalents,Net cash and cash equivalents held by the company.,MATRIX,100%,2,2
+net_current_borrowings,Net current borrowings outstanding.,MATRIX,100%,0,0
+net_income_4,Net income for the reporting period.,MATRIX,100%,1,2
+net_income_5,"Total profit after all expenses, taxes, and costs have been deducted.",MATRIX,100%,3,5
+net_income_after_tax_stpe,[Quarterly] Total Plan Expected Return,MATRIX,32%,0,0
+net_income_before_extraordinary,Net income before extraordinary items.,MATRIX,100%,0,0
+net_income_before_extras,Net income before accounting for extraordinary items.,MATRIX,100%,1,1
+net_income_before_tax,Net income before tax for the period.,MATRIX,100%,0,0
+net_income_current,Net income for the current period.,MATRIX,100%,1,1
+net_income_current_2,Net income for the current reporting period.,MATRIX,100%,0,0
+net_income_current_period,Net income for the current reporting period.,MATRIX,100%,0,0
+net_income_total_3,Total net income earned by the company during the period.,MATRIX,100%,0,0
+net_income_value_3,"Total profit after all expenses, taxes, and costs for the period.",MATRIX,96%,0,0
+net_interest_earned,Net interest earned during the period.,MATRIX,87%,1,1
+net_premiums_written,Net premiums written during the period.,MATRIX,100%,0,0
+non_operating_income_total,Total non-operating income for the period.,MATRIX,90%,2,3
+notes_payable_total_3,Total amount of notes payable outstanding at the reporting date.,MATRIX,92%,0,0
+operating_cash_flow,Net cash generated from operating activities during the period.,MATRIX,100%,12,12
+operating_cashflow,Net cash generated from operating activities during the period.,MATRIX,97%,4,7
+operating_income_2,Income generated from regular business operations.,MATRIX,96%,5,7
+operating_income_3,Income from core business operations before interest and taxes.,MATRIX,94%,2,2
+operating_profit_3,Profit from core business operations before interest and taxes.,MATRIX,91%,1,1
+operating_profit_pre_tax,Profit from operations before deducting income taxes.,MATRIX,89%,0,0
+operating_profit_total_2,Total operating profit earned by the company during the period.,MATRIX,89%,0,0
+other_accumulated_reserves,Other accumulated reserves reported for the annual period.,MATRIX,84%,1,1
+other_amortization_items,Other amortization items reported for the annual period.,MATRIX,31%,0,0
+other_appropriations_balance,Other appropriations balance reported for the annual period.,MATRIX,68%,0,0
+other_assets_current,Other current assets not classified elsewhere.,MATRIX,88%,0,0
+other_assets_prepaid_balance,[Quarterly] Accounts Payable,MATRIX,63%,1,1
+other_borrowings_total,Total other borrowings reported for the annual period.,MATRIX,77%,0,0
+other_current_assets_3,Current assets not classified elsewhere on the balance sheet.,MATRIX,61%,0,0
+other_current_financial_assets,Other financial assets classified as current.,MATRIX,100%,0,0
+other_current_liabilities_3,Other liabilities classified as current.,MATRIX,94%,5,5
+other_current_receivables,Other receivables classified as current assets.,MATRIX,88%,0,0
+other_interest_liabilities,Other interest-bearing liabilities reported for the annual period.,MATRIX,56%,3,3
+other_long_term_assets,Assets not classified elsewhere and expected to be held beyond one year.,MATRIX,97%,0,0
+other_long_term_liabilities,Other liabilities due beyond one year not classified elsewhere.,MATRIX,100%,2,2
+other_long_term_obligations,Other long-term obligations reported for the annual period.,MATRIX,97%,1,1
+other_long_term_obligations_2,Other long-term obligations not classified elsewhere.,MATRIX,100%,1,1
+other_long_term_obligations_3,Total value of other long-term obligations outstanding.,MATRIX,100%,0,0
+other_long_term_obligations_4,Other long-term obligations not classified elsewhere.,MATRIX,100%,1,1
+other_long_term_obligations_5,Other long-term obligations not classified elsewhere.,MATRIX,100%,2,2
+other_long_term_obligations_6,Other obligations due beyond one year not classified elsewhere.,MATRIX,98%,1,3
+other_net_earnings_total,Total net earnings from other sources.,MATRIX,100%,2,2
+other_net_equity_total,Total of other net equity items for the annual period.,MATRIX,96%,0,0
+other_net_income_total,Total other net income for the period.,MATRIX,100%,0,0
+other_non_current_investments,Other non-current investments held by the company.,MATRIX,100%,0,0
+other_noncurrent_assets_value,"Right-of-Use Assets - Operating Lease, Gross - Supplemental",MATRIX,39%,1,1
+other_off_balance_liabilities,Other off-balance sheet liabilities for the annual period.,MATRIX,77%,1,1
+other_operating_assets,Other operating assets reported for the annual period.,MATRIX,74%,0,0
+other_unusual_income_expense,Other unusual income or expense items not classified elsewhere.,MATRIX,98%,0,0
+preferred_investment_capital,Preferred investment capital outstanding.,MATRIX,98%,0,0
+preferred_shares_issued,Number of preferred shares issued and outstanding for the period.,MATRIX,50%,0,0
+preferred_shares_outstanding,Number of preferred shares currently issued and outstanding.,MATRIX,43%,0,0
+preferred_stock_dividends,[Quarterly] Total Plan Service Cost,MATRIX,34%,0,0
+preferred_stock_issued_value,"represents the value of non-redeemable/convertible preferred stock, usually with a fixed amount of dividend. Preferred stock usually has a fixed rate of dividend to the nominal value without any specific maturity. However, most non redeemable preferred stock has redemption, voting and conversion clauses for certain conditions.",MATRIX,27%,0,0
+preferred_stock_outstanding_qty,"Shares Outstanding - Preferred Stock Primary
+Issue",MATRIX,25%,0,0
+prepaid_expenses_value,[Quarterly] Funded Status - Domestic,MATRIX,34%,0,0
+prior_long_term_pension_benefit_assets,payable or accrued liabilities.,MATRIX,31%,0,0
+property_plant_equipment_investment,"Investment in property, plant, and equipment.",MATRIX,100%,0,0
+provision_for_asset_depreciation,[Quarterly] Plan Assets - Domestic,MATRIX,32%,0,0
+provision_for_tax_incentives,Provision made for tax incentives or credits.,MATRIX,100%,0,0
+quarterly_cash_market_securities,Cash and marketable securities at quarter end.,MATRIX,100%,0,0
+quarterly_common_equity_4,Value of common equity for the quarter.,MATRIX,90%,0,0
+quarterly_retained_earnings,Retained earnings at the end of the quarter.,MATRIX,100%,2,2
+quarterly_total_current_obligations,Total current obligations at the end of the quarter.,MATRIX,100%,0,0
+quarterly_total_equity_liabilities,Total equity and liabilities at the end of the quarter.,MATRIX,100%,0,0
+quarterly_total_liabilities_and_equity,Total liabilities and equity for the quarter.,MATRIX,100%,1,1
+quarterly_total_liabilities_equity,Total liabilities and equity for the quarter.,MATRIX,100%,1,1
+quarterly_total_liabilities_equity_2,Total liabilities and equity at the end of the quarter.,MATRIX,100%,0,0
+quarterly_total_share_capital,Total share capital at the end of the quarter.,MATRIX,51%,0,0
+quarterly_treasury_securities,Value of treasury securities for the quarter.,MATRIX,100%,0,0
+quasi_equity_contracts,Quasi-equity contracts reported for the annual period.,MATRIX,97%,0,0
+quasi_equity_liabilities,Quasi-equity liabilities reported for the annual period.,MATRIX,97%,1,1
+quasi_equity_liabilities_2,Value of quasi-equity liabilities reported by the company.,MATRIX,100%,1,1
+quick_assets_total,"Total value of quick assets, typically cash and equivalents.",MATRIX,84%,1,1
+receivables_premium_total,Total value of premium receivables.,MATRIX,87%,0,0
+redeemable_equity_debt,Redeemable equity and debt instruments outstanding.,MATRIX,100%,3,4
+redeemable_equity_debt_2,Amount of equity or debt securities that are redeemable at the holder's option.,MATRIX,100%,0,0
+redeemable_equity_debt_value,Value of equity or debt securities that are redeemable at the holder's option.,MATRIX,100%,0,0
+rental_expense,Total rental expense incurred during the period.,MATRIX,89%,2,3
+rental_expense_2,Total rental expense incurred during the period.,MATRIX,87%,0,0
+rental_income_total,Total rental income earned during the period.,MATRIX,89%,0,0
+research_and_development_expense,[Quarterly] Discount Rate - Domestic,MATRIX,30%,0,0
+retained_earnings_3,Cumulative net income retained in the business after dividends.,MATRIX,96%,0,0
+retained_earnings_4,Cumulative retained earnings at period end.,MATRIX,94%,0,0
+retained_earnings_5,Cumulative net income retained in the business after dividends.,MATRIX,91%,0,0
+retained_earnings_liabilities,Retained earnings classified as liabilities for the annual period.,MATRIX,90%,0,0
+retained_earnings_value,Cumulative net income retained in the business after dividends for the period.,MATRIX,28%,5,7
+revenue_from_domestic_operations,[Quarterly] Expected Rate of Return - Domestic,MATRIX,29%,1,1
+revenue_total,Total revenue generated from business activities during the period.,MATRIX,90%,0,0
+sales_income_net,Net sales or revenue recognized during the period.,MATRIX,28%,0,0
+sales_revenue_total,Total revenue from sales for the period.,MATRIX,92%,0,0
+sales_revenue_total_2,Total sales or revenue generated during the period.,MATRIX,90%,3,6
+sales_revenue_total_3,Total sales revenue recognized during the period.,MATRIX,92%,3,6
+securities_deferred_net_income,Deferred net income related to securities for the annual period.,MATRIX,97%,0,0
+segment_bad_debt_allowance,Allowance for bad debts in a specific business segment.,MATRIX,92%,0,0
+segment_debt_finance,Debt financing attributed to a specific business segment.,MATRIX,100%,1,1
+segment_revenue,Revenue generated by a specific business segment.,MATRIX,92%,1,1
+selling_general_admin_expense_2,"Total selling, general, and administrative expenses.",MATRIX,93%,0,0
+senior_long_term_liabilities,Senior long-term liabilities outstanding at period end.,MATRIX,100%,0,0
+service_contract_revenue,[Quarterly] Service Cost - Domestic,MATRIX,32%,0,0
+share_based_awards,Value of share-based awards granted to employees or management.,MATRIX,100%,2,3
+share_based_deferred_awards,Value of deferred share-based awards outstanding.,MATRIX,91%,0,0
+share_based_deferred_tax,Deferred tax liabilities related to share-based compensation.,MATRIX,67%,0,0
+share_capital_expense,Expenses related to share capital issuance or management.,MATRIX,98%,1,1
+share_capital_extraordinary,Extraordinary share capital reported for the annual period.,MATRIX,94%,1,1
+share_capital_in_preference,Share capital in preference reported for the interim period.,MATRIX,92%,0,0
+share_capital_level3,Capital Lease Payments Due in Year 3,MATRIX,34%,0,0
+share_capital_ordinary,Ordinary share capital reported for the annual period.,MATRIX,81%,1,1
+share_capital_ordinary_2,Total value of ordinary share capital issued by the company.,MATRIX,84%,1,1
+share_capital_ordinary_quarterly,Total value of ordinary share capital issued by the company for the quarter.,MATRIX,85%,0,0
+share_capital_subscribed,Share capital subscribed reported for the annual period.,MATRIX,88%,0,0
+share_capital_subscribed_2,Total value of subscribed share capital at the end of the period.,MATRIX,93%,1,1
+share_capital_total,Total value of all issued share capital.,MATRIX,55%,0,0
+share_deposit_equity,Share deposit equity reported for the annual period.,MATRIX,95%,2,2
+share_dividend_equity,Share dividend equity reported for the annual period.,MATRIX,94%,0,0
+share_dividend_proposed,Total value of proposed share dividends for the period.,MATRIX,62%,0,0
+share_equity_transfer,Total value of equity transferred between shareholders during the period.,MATRIX,86%,0,0
+share_grant_paid_in,Total value of share grants paid in during the period.,MATRIX,83%,0,0
+share_options_classified_liability,Value of share options classified as liabilities.,MATRIX,93%,4,8
+share_premium,Total value of share premium or additional paid-in capital.,MATRIX,99%,1,1
+share_redemption_premium,Share redemption premium reported for the annual period.,MATRIX,26%,1,1
+share_redemption_premium_reserve,"Redeemable Preferred Stock, Total",MATRIX,29%,2,2
+shareholder_dividends_adjustments,Adjustments made to dividends attributable to shareholders.,MATRIX,90%,0,0
+shareholder_net_investment,Net investment made by shareholders during the period.,MATRIX,91%,0,0
+shareholders_net_total_dividends,Total net dividends to shareholders for the interim period.,MATRIX,93%,0,0
+shareholders_other_equity,Other equity items attributable to shareholders for the interim period.,MATRIX,97%,1,1
+shares_outstanding_total,Total number of shares currently issued and outstanding for the company.,MATRIX,90%,0,0
+short_term_bank_acceptances_issued,Short-term bank acceptances issued during the period.,MATRIX,100%,1,1
+short_term_bank_advances,Short-term bank advances outstanding at period end.,MATRIX,100%,0,0
+short_term_bank_advances_investments,Short-term bank advances and investments.,MATRIX,100%,0,0
+short_term_bank_borrowings,Short-term borrowings from banks outstanding.,MATRIX,100%,0,0
+short_term_bank_borrowings_2,Amount of short-term borrowings from banks.,MATRIX,100%,0,0
+short_term_bank_debt_amount,Amount of short-term bank debt outstanding.,MATRIX,92%,0,0
+short_term_bank_investment_total,Total short-term bank investments at period end.,MATRIX,93%,1,2
+short_term_bonds_and_bills_floating,Short-term floating rate bonds and bills held at period end.,MATRIX,100%,0,0
+short_term_bonds_payable_2,Short-term bonds payable at the end of the period.,MATRIX,100%,0,0
+short_term_borrowings_2,Total value of short-term borrowings outstanding.,MATRIX,92%,0,0
+short_term_borrowings_value_2,Value of short-term borrowings outstanding.,MATRIX,100%,1,1
+short_term_cash_market_securities,Short-term cash and marketable securities held.,MATRIX,100%,0,0
+short_term_commercial_mortgage_securities,Short-term commercial mortgage securities held at period end.,MATRIX,100%,0,0
+short_term_commercial_securities_issued,Short-term commercial securities issued and outstanding.,MATRIX,92%,1,1
+short_term_contract_expenses,Expenses related to short-term contracts.,MATRIX,100%,0,0
+short_term_corporate_obligations,Short-term corporate obligations outstanding at period end.,MATRIX,84%,2,3
+short_term_currency_instruments,Short-term currency instruments held by the company.,MATRIX,84%,0,0
+short_term_debt,Debt obligations due within one year.,MATRIX,94%,1,1
+short_term_debt_amortization_incurred,Amortization expense incurred on short-term debt.,MATRIX,100%,0,0
+short_term_debt_bonds_face_value,Face value of short-term debt bonds outstanding.,MATRIX,100%,0,0
+short_term_debt_ending_balance,Ending balance of short-term debt for the period.,MATRIX,99%,1,2
+short_term_gross_premiums_payable,Short-term gross premiums payable at period end.,MATRIX,86%,0,0
+short_term_group_payables,Short-term payables to group companies.,MATRIX,85%,0,0
+short_term_interest_notes,Short-term interest-bearing notes outstanding.,MATRIX,30%,0,0
+short_term_investment_cashflow,Cash flow from short-term investment activities.,MATRIX,100%,0,0
+short_term_investments_3,Short-term investments held at period end.,MATRIX,61%,0,0
+short_term_investments_4,Short-term investments held at period end.,MATRIX,61%,0,0
+short_term_investments_5,Investments expected to be liquidated within one year.,MATRIX,46%,0,0
+short_term_lease_liabilities,Short-term lease liabilities outstanding at period end.,MATRIX,99%,1,1
+short_term_loans_3,Total value of short-term loans outstanding at period end.,MATRIX,100%,1,1
+short_term_loans_advances,Short-term loans and advances provided by the company.,MATRIX,99%,1,1
+short_term_loans_advances_quarterly,Short-term loans and advances provided by the company for the quarter.,MATRIX,98%,0,0
+short_term_loans_debt,Short-term loans and debt reported for the interim period.,MATRIX,100%,0,0
+short_term_loans_debt_2,Short-term loans and debt obligations due within one year.,MATRIX,98%,0,0
+short_term_loans_drawn,Short-term loans drawn and outstanding at period end.,MATRIX,100%,0,0
+short_term_loans_payable,Short-term loans payable outstanding at period end.,MATRIX,100%,1,1
+short_term_long_term_liabilities,Short-term portion of long-term liabilities.,MATRIX,100%,1,1
+short_term_non_current_cash,Short-term cash classified as non-current.,MATRIX,100%,0,0
+short_term_non_current_investments,Short-term investments that are classified as non-current.,MATRIX,100%,0,0
+short_term_noncurrent_investments,Short-term portion of noncurrent investments.,MATRIX,100%,0,0
+short_term_notes_and_commercial_instruments,Short-term notes and commercial instruments outstanding.,MATRIX,100%,2,2
+short_term_notes_commercial_credit,Short-term notes and commercial credit outstanding.,MATRIX,100%,0,0
+short_term_notes_current,Short-term notes currently outstanding.,MATRIX,100%,0,0
+short_term_notes_discounted,Short-term notes discounted and outstanding at period end.,MATRIX,93%,0,0
+short_term_notes_interest,Interest on short-term notes payable.,MATRIX,93%,0,0
+short_term_notes_interest_2,Interest on short-term notes for the reporting period.,MATRIX,91%,0,0
+short_term_notes_issued_net,Net amount of short-term notes issued during the period.,MATRIX,94%,0,0
+short_term_notes_payable,Short-term notes payable outstanding at period end.,MATRIX,100%,0,0
+short_term_notes_payable_matured,Short-term notes payable that matured during the period.,MATRIX,98%,1,1
+short_term_operating_lease_liabilities,Short-term operating lease liabilities at period end.,MATRIX,92%,1,1
+short_term_other_current_assets,Other current assets classified as short-term.,MATRIX,75%,0,0
+short_term_payables_other,[Quarterly] Total Plan Obligations,MATRIX,37%,0,0
+short_term_portion_total_mortgage,Short-term portion of total mortgage obligations.,MATRIX,100%,0,0
+short_term_premium_maturities,Short-term premium maturities due within one year.,MATRIX,98%,0,0
+short_term_provisions,Short-term provisions reported for the annual period.,MATRIX,47%,0,0
+short_term_provisions_2,Short-term provisions for liabilities and charges.,MATRIX,46%,0,0
+short_term_provisions_assets,[Quarterly] Total Plan Assets,MATRIX,34%,0,0
+short_term_securities_gain_adjustment,Adjustment for gains on short-term securities.,MATRIX,95%,2,2
+short_term_securities_investments,Short-term securities investments reported for the interim period.,MATRIX,96%,0,0
+short_term_securities_investments_2,Short-term investments in securities at period end.,MATRIX,91%,0,0
+short_term_securities_investments_3,Investments in securities expected to be sold or matured within one year.,MATRIX,91%,0,0
+short_term_selling_general_admin_expense,"Short-term selling, general, and administrative expenses.",MATRIX,91%,0,0
+short_term_tax_incentives,Short-term tax incentives recognized during the period.,MATRIX,63%,0,0
+solicitation_liabilities,[Quarterly] Operating Leases - Interest Cost,MATRIX,67%,0,0
+special_items_effect_on_income_taxes,Effect of special items on income taxes for the interim period.,MATRIX,96%,2,2
+special_premium_trust_monetary,Special premium trust monetary value for the interim period.,MATRIX,100%,0,0
+statement_of_cash_flows,Statement of cash flows for the annual period.,MATRIX,97%,3,3
+stock_dividends_payable,Dividends payable in the form of stock.,MATRIX,58%,0,0
+stock_dividends_payable_recorded,Stock dividends declared but not yet paid.,MATRIX,58%,0,0
+stock_option_compensation_fair_value,Fair value of stock option compensation recognized.,MATRIX,100%,2,2
+stockholders_other_comprehensive_assets,Other comprehensive assets attributable to stockholders.,MATRIX,77%,0,0
+stockholders_other_comprehensive_funds,Other comprehensive funds attributable to stockholders.,MATRIX,100%,1,1
+stockholders_other_paid_in_capital,Other paid-in capital attributable to stockholders.,MATRIX,90%,0,0
+stockholders_other_paid_in_items,Other paid-in items attributable to stockholders.,MATRIX,96%,0,0
+taxes_incurred_after_tax,Taxes incurred after accounting for tax effects.,MATRIX,100%,2,2
+total_assets_3,Total assets owned by the company at the end of the period.,MATRIX,100%,2,2
+total_assets_4,Sum of all assets owned by the company.,MATRIX,98%,1,2
+total_assets_5,Sum of all assets owned by the company.,MATRIX,100%,1,1
+total_assets_annual_atot,Total assets reported for the annual period.,MATRIX,97%,0,0
+total_assets_reported,Sum of all assets owned by the company at the reporting date.,MATRIX,100%,1,1
+total_current_assets_4,Total current assets reported for the annual period.,MATRIX,79%,1,2
+total_current_assets_5,Sum of all assets expected to be converted to cash or used within one year.,MATRIX,82%,2,3
+total_current_obligations,Sum of all current liabilities due within one year.,MATRIX,100%,0,0
+total_equity_book_value,Book value of total equity as reported on the balance sheet.,MATRIX,98%,0,0
+total_equity_liabilities,Total equity and liabilities combined.,MATRIX,100%,1,3
+total_equity_liabilities_2,Sum of total equity and total liabilities on the balance sheet.,MATRIX,100%,1,1
+total_income_after_taxes,Total income after all taxes have been deducted.,MATRIX,100%,0,0
+total_intangible_assets_3,Gross value of all intangible assets held by the company.,MATRIX,88%,0,0
+total_interest_and_tax,Total interest and tax recognized in the period.,MATRIX,100%,0,0
+total_liabilities_equity,Sum of total liabilities and equity as reported on the balance sheet.,MATRIX,98%,0,0
+total_liabilities_long_term,Total long-term liabilities outstanding.,MATRIX,100%,0,0
+total_long_term_debt_2,Total amount of debt obligations due beyond one year.,MATRIX,100%,0,0
+total_rental_expense,Total rental expenses incurred during the period.,MATRIX,96%,1,1
+total_share_capital_2,Aggregate value of all issued share capital.,MATRIX,50%,0,0
+total_tax_expense,Total tax expense for the period.,MATRIX,100%,0,0
+total_tax_expense_2,Total tax expense recognized during the period.,MATRIX,100%,1,1
+total_taxes,Total taxes recognized in the reporting period.,MATRIX,99%,0,0
+trade_payables_short_term,Short-term trade payables owed by the company.,MATRIX,100%,0,0
+treasury_stock_current,[Quarterly] Treasury Stock - Common,MATRIX,47%,1,1
+treasury_stock_outstanding_qty,Total Preferred Shares Outstanding,MATRIX,26%,0,0
+unrealized_currency_gain,"[Quarterly] Right-of-Use Assets - Capital Lease, Gross - Supplemental",MATRIX,29%,0,0
+unrealized_currency_net,"Right-of-Use Assets - Capital Lease, Net -
+Supplemental",MATRIX,29%,1,1
+unrealized_currency_net_balancesheet,"[Quarterly] Right-of-Use Assets - Capital Lease, Net - Supplemental",MATRIX,26%,0,0
+unrealized_investment_expense,Unrealized expense related to investments.,MATRIX,87%,0,0
+unrealized_other_gain,"Right-of-Use Assets - Operating Lease, Gross - Supplemental",MATRIX,39%,0,0
+unrealized_other_gain_balancesheet,"[Quarterly] Right-of-Use Assets - Operating Lease, Gross - Supplemental",MATRIX,60%,1,1
+unrealized_other_net_balancesheet,"[Quarterly] Right-of-Use Assets - Operating Lease, Net - Supplemental",MATRIX,65%,0,0
+valuation_allowance_intangible_assets,Valuation allowance for intangible assets.,MATRIX,60%,2,2
+valuation_allowance_investment_assets,Valuation allowance for investment assets.,MATRIX,74%,0,0
+valuation_bond_equity_securities,Valuation allowance for bond and equity securities.,MATRIX,100%,2,2
+valuation_difference_amount,[Quarterly] Accrued Liabilities - Domestic,MATRIX,31%,0,0
+valuation_difference_credit,[Quarterly] Deferred Revenue - Current,MATRIX,53%,2,4
+valuation_intangible_assets_net,Net valuation allowance for intangible assets.,MATRIX,100%,0,0
+valuation_investment_account,Valuation allowance for investment account.,MATRIX,100%,1,2
+valuation_investment_assets_total,Total valuation allowance for investment assets.,MATRIX,100%,0,0
+valuation_loss_on_contracts,"Current Portion of Long-Term Operating Leases,Supplemental",MATRIX,59%,3,3
+valuation_provision_trade_investments,Valuation provision for trade investments.,MATRIX,100%,0,0
+valuation_reserves_adjustment,Valuation reserves adjustment for the interim period.,MATRIX,83%,3,3
+valuation_unrealized_other_gross,"Right-of-Use Assets - Operating Lease, Gross - Supplemental",MATRIX,64%,0,0
+value_debt_equity_securities,Value of debt and equity securities held.,MATRIX,100%,1,1
+value_investment_assets_total,Total value of investment assets held.,MATRIX,100%,0,0
+value_investment_expenditures,Total value of investment expenditures made during the period.,MATRIX,94%,0,0
+vendor_trade_liabilities,Total value of trade liabilities owed to vendors.,MATRIX,84%,0,0
+voting_amortized_investments,Voting amortized investments reported for the annual period.,MATRIX,78%,0,0
+voting_beneficial_equity_shares,Voting beneficial equity shares reported for the annual period.,MATRIX,97%,0,0
+voting_interest_acquired,Percentage or value of voting interest acquired in subsidiaries or investments.,MATRIX,100%,1,1
+voting_interest_total,Total voting interest held by the company in subsidiaries or investments.,MATRIX,100%,2,2
+voting_trust_liabilities,Liabilities associated with voting trusts.,MATRIX,69%,0,0

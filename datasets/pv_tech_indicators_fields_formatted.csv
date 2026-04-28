@@ -1,0 +1,57 @@
+Field,Description,Type,Coverage,Users,Alphas
+momentum_shift_indicator,An indicator for shifts in price momentum.,MATRIX,100%,1,2
+momentum_strength_index,An index measuring the strength of recent price momentum.,MATRIX,100%,0,0
+price_acceleration_factor,A factor quantifying the acceleration of price changes.,MATRIX,100%,2,2
+price_acceleration_index,An index measuring the acceleration of price changes.,MATRIX,100%,0,0
+price_acceleration_score,A score measuring the acceleration of price changes.,MATRIX,100%,0,0
+price_change_index,An index measuring the magnitude of price changes.,MATRIX,100%,0,0
+price_change_indicator,An indicator for significant changes in price.,MATRIX,100%,1,1
+price_change_intensity,An intensity score for recent price changes.,MATRIX,100%,1,1
+price_change_score,A score measuring the magnitude of price changes.,MATRIX,100%,1,1
+price_fluctuation_index,An index quantifying the degree of price fluctuations.,MATRIX,100%,1,1
+price_fluctuation_score,A score quantifying the degree of price fluctuations.,MATRIX,100%,0,0
+price_momentum_factor,A factor measuring the momentum of price changes.,MATRIX,100%,0,0
+price_momentum_index,An index measuring the momentum of price changes.,MATRIX,100%,1,1
+price_movement_factor,A factor quantifying the movement in price over a period.,MATRIX,100%,0,0
+price_movement_index,An index quantifying the movement in price.,MATRIX,100%,0,0
+price_movement_score,A score quantifying the movement in price.,MATRIX,100%,0,0
+price_reversal_factor,A factor indicating the likelihood of price reversals.,MATRIX,100%,0,0
+price_reversal_index,An index indicating the likelihood of price reversals.,MATRIX,100%,0,0
+price_reversal_signal,A signal suggesting a potential reversal in price direction.,MATRIX,100%,1,1
+price_spike_factor,A factor indicating sudden spikes in price.,MATRIX,100%,0,0
+price_spike_indicator,An indicator for sudden spikes in price.,MATRIX,100%,0,0
+price_trend_factor,A factor indicating the direction and strength of price trends.,MATRIX,100%,0,0
+price_trend_index,An index representing the direction and strength of price trends.,MATRIX,100%,0,0
+price_trend_indicator,An indicator for the direction and strength of price trends.,MATRIX,100%,0,0
+price_trend_score,A score quantifying the current price trend.,MATRIX,100%,0,0
+price_variation_factor,A factor representing the variation in price over time.,MATRIX,100%,1,1
+price_variation_index,An index representing the variation in price over time.,MATRIX,100%,0,0
+price_variation_score,A score representing the variation in price over time.,MATRIX,100%,0,0
+price_volatility_score,A score representing the volatility of price movements.,MATRIX,100%,0,0
+relative_strength_measure,A measure of the relative strength of price changes over time.,MATRIX,100%,0,0
+short_term_trend_score,A score indicating the short-term trend in price data.,MATRIX,100%,0,0
+trend_direction_factor,A factor indicating the direction of the current price trend.,MATRIX,100%,0,0
+trend_reversal_score,A score indicating the likelihood of a trend reversal.,MATRIX,100%,0,0
+trend_strength_score,A score representing the strength of the current price trend.,MATRIX,100%,0,0
+volume_acceleration_index,An index measuring the acceleration of trading volume changes.,MATRIX,100%,0,0
+volume_acceleration_score,A score measuring the acceleration of trading volume changes.,MATRIX,100%,1,1
+volume_activity_ratio,A ratio reflecting the level of trading activity based on volume.,MATRIX,100%,0,0
+volume_change_indicator,An indicator for significant changes in trading volume.,MATRIX,100%,1,1
+volume_change_intensity,An intensity score for changes in trading volume.,MATRIX,100%,0,0
+volume_fluctuation_index,An index quantifying fluctuations in trading volume.,MATRIX,100%,0,0
+volume_fluctuation_score,A score quantifying the degree of volume fluctuations.,MATRIX,100%,0,0
+volume_momentum_factor,A factor measuring the momentum in trading volume.,MATRIX,100%,1,1
+volume_momentum_score,A score representing the momentum in trading volume.,MATRIX,100%,0,0
+volume_movement_factor,A factor quantifying the movement in trading volume.,MATRIX,100%,0,0
+volume_movement_index,An index quantifying the movement in trading volume.,MATRIX,100%,0,0
+volume_reversal_index,An index indicating the likelihood of volume reversals.,MATRIX,100%,0,0
+volume_reversal_signal,A signal suggesting a potential reversal in trading volume.,MATRIX,100%,0,0
+volume_spike_factor,A factor indicating sudden spikes in trading volume.,MATRIX,100%,0,0
+volume_spike_index,An index quantifying the magnitude of volume spikes.,MATRIX,100%,0,0
+volume_spike_indicator,An indicator for sudden increases in trading volume.,MATRIX,100%,0,0
+volume_spike_score,A score representing the magnitude of volume spikes.,MATRIX,100%,1,1
+volume_trend_factor,A factor indicating the trend in trading volume.,MATRIX,100%,0,0
+volume_trend_index,An index representing the trend in trading volume.,MATRIX,100%,0,0
+volume_trend_score,A score representing the trend in trading volume.,MATRIX,100%,0,0
+volume_variation_factor,A factor representing the variation in trading volume.,MATRIX,100%,0,0
+volume_variation_index,An index representing the variation in trading volume.,MATRIX,100%,0,0

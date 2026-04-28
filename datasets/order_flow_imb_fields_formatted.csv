@@ -1,0 +1,121 @@
+Field,Description,Type,Coverage,Users,Alphas
+broker_dealer_bearish_contracts_noto,"Total contracts from selling calls and buying puts by brokers and dealers, showing negative sentiment.",MATRIX,77%,1,1
+broker_dealer_bearish_trade_count,Number of bearish trades (selling calls and buying puts) by brokers and dealers.,MATRIX,91%,2,2
+broker_dealer_bearish_trade_count_ise,"Number of bearish trades (selling calls and buying puts) by brokers and dealers, based on ISE data.",MATRIX,79%,3,3
+broker_dealer_bearish_trade_count_noto,"Number of bearish trades (selling calls and buying puts) by brokers and dealers, based on NOTO data.",MATRIX,77%,1,1
+broker_dealer_bearish_trade_count_otm,"Number of bearish trades (selling calls and buying puts) by brokers and dealers, for out-of-the-money contracts.",MATRIX,77%,0,0
+broker_dealer_bearish_vol,Total volume of bearish trades (selling calls and buying puts) by brokers and dealers.,MATRIX,91%,0,0
+broker_dealer_bearish_vol_ise,"Total volume of bearish trades (selling calls and buying puts) by brokers and dealers, based on ISE data.",MATRIX,79%,0,0
+broker_dealer_bearish_vol_otm,"Total volume of bearish trades (selling calls and buying puts) by brokers and dealers, for out-of-the-money contracts.",MATRIX,77%,0,0
+broker_dealer_bullish_contracts_noto,"Total contracts from buying calls and selling puts by brokers and dealers, showing positive sentiment.",MATRIX,77%,0,0
+broker_dealer_bullish_trade_count,Number of bullish trades (buying calls and selling puts) by brokers and dealers.,MATRIX,91%,0,0
+broker_dealer_bullish_trade_count_ise,"Number of bullish trades (buying calls and selling puts) by brokers and dealers, based on ISE data.",MATRIX,79%,0,0
+broker_dealer_bullish_trade_count_otm,"Number of bullish trades (buying calls and selling puts) by brokers and dealers, for out-of-the-money contracts.",MATRIX,77%,0,0
+broker_dealer_bullish_trades_noto,"Count of trades from buying calls and selling puts by brokers and dealers, reflecting positive sentiment.",MATRIX,77%,0,0
+broker_dealer_bullish_vol,Total volume of bullish trades (buying calls and selling puts) by brokers and dealers.,MATRIX,91%,0,0
+broker_dealer_bullish_vol_ise,"Total volume of bullish trades (buying calls and selling puts) by brokers and dealers, based on ISE data.",MATRIX,79%,0,0
+broker_dealer_bullish_vol_otm,"Total volume of bullish trades (buying calls and selling puts) by brokers and dealers, for out-of-the-money contracts.",MATRIX,77%,0,0
+broker_dealer_trade_imbalance,Normalized difference between bullish and bearish trade counts for brokers and dealers.,MATRIX,91%,0,0
+broker_dealer_trade_imbalance_ise,"Normalized difference between bullish and bearish trade counts for brokers and dealers, based on ISE data.",MATRIX,79%,0,0
+broker_dealer_trade_imbalance_noto,"Normalized difference between bullish and bearish trade counts for brokers and dealers, based on NOTO data.",MATRIX,77%,0,0
+broker_dealer_trade_imbalance_otm,"Normalized difference between bullish and bearish trade counts for brokers and dealers, for out-of-the-money contracts.",MATRIX,77%,0,0
+broker_dealer_vol_imbalance,Normalized difference between bullish and bearish trade volumes for brokers and dealers.,MATRIX,91%,0,0
+broker_dealer_vol_imbalance_ise,"Normalized difference between bullish and bearish trade volumes for brokers and dealers, based on ISE data.",MATRIX,79%,0,0
+broker_dealer_vol_imbalance_noto_2,Normalized difference between bullish and bearish contract volume for brokers and dealers.,MATRIX,77%,0,0
+broker_dealer_vol_imbalance_otm,"Normalized difference between bullish and bearish trade volumes for brokers and dealers, for out-of-the-money contracts.",MATRIX,77%,0,0
+customer_bearish_contracts_noto,"Aggregate contracts from selling calls and buying puts by customers, indicating negative outlook.",MATRIX,77%,0,0
+customer_bearish_trade_count,Number of bearish trades (selling calls and buying puts) by customers.,MATRIX,91%,0,0
+customer_bearish_trade_count_ise,"Number of bearish trades (selling calls and buying puts) by customers, based on ISE data.",MATRIX,79%,0,0
+customer_bearish_trade_count_otm,"Number of bearish trades (selling calls and buying puts) by customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+customer_bearish_trades_noto,"Number of trades from selling calls and buying puts by customers, indicating negative activity.",MATRIX,77%,0,0
+customer_bearish_vol,Total volume of bearish trades (selling calls and buying puts) by customers.,MATRIX,91%,0,0
+customer_bearish_vol_ise,"Total volume of bearish trades (selling calls and buying puts) by customers, based on ISE data.",MATRIX,79%,0,0
+customer_bearish_vol_otm,"Total volume of bearish trades (selling calls and buying puts) by customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+customer_bullish_contracts_noto,"Aggregate contracts from buying calls and selling puts by customers, reflecting positive outlook.",MATRIX,77%,0,0
+customer_bullish_trade_count,Number of bullish trades (buying calls and selling puts) by customers.,MATRIX,91%,0,0
+customer_bullish_trade_count_ise,"Number of bullish trades (buying calls and selling puts) by customers, based on ISE data.",MATRIX,79%,0,0
+customer_bullish_trade_count_otm,"Number of bullish trades (buying calls and selling puts) by customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+customer_bullish_trades_noto,"Number of trades from buying calls and selling puts by customers, reflecting positive activity.",MATRIX,77%,0,0
+customer_bullish_vol,Total volume of bullish trades (buying calls and selling puts) by customers.,MATRIX,91%,0,0
+customer_bullish_vol_ise,"Total volume of bullish trades (buying calls and selling puts) by customers, based on ISE data.",MATRIX,79%,0,0
+customer_bullish_vol_otm,"Total volume of bullish trades (buying calls and selling puts) by customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+customer_trade_imbalance,Normalized difference between bullish and bearish trade counts for customers.,MATRIX,91%,0,0
+customer_trade_imbalance_ise,"Normalized difference between bullish and bearish trade counts for customers, based on ISE data.",MATRIX,79%,1,1
+customer_trade_imbalance_noto_2,Normalized difference between bullish and bearish trade counts for customers.,MATRIX,77%,1,2
+customer_trade_imbalance_otm,"Normalized difference between bullish and bearish trade counts for customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+customer_vol_imbalance,Normalized difference between bullish and bearish trade volumes for customers.,MATRIX,91%,3,3
+customer_vol_imbalance_ise,"Normalized difference between bullish and bearish trade volumes for customers, based on ISE data.",MATRIX,79%,4,5
+customer_vol_imbalance_noto,"Normalized difference between bullish and bearish trade volumes for customers, based on NOTO data.",MATRIX,77%,2,2
+customer_vol_imbalance_otm,"Normalized difference between bullish and bearish trade volumes for customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+firm_bearish_contracts_noto,"Total contracts from selling calls and buying puts by firms, indicating negative sentiment.",MATRIX,77%,0,0
+firm_bearish_trade_count,"Number of trades by firms classified as bearish, i.e., selling calls and buying puts.",MATRIX,91%,0,0
+firm_bearish_trade_count_ise,"Number of bearish trades (selling calls and buying puts) by firms, based on ISE data.",MATRIX,79%,0,0
+firm_bearish_trade_count_otm,"Number of bearish trades (selling calls and buying puts) by firms, for out-of-the-money contracts.",MATRIX,77%,0,0
+firm_bearish_trades_noto,"Number of trades from selling calls and buying puts by firms, indicating negative positioning.",MATRIX,77%,0,0
+firm_bearish_vol,Total volume of bearish trades (selling calls and buying puts) by firms.,MATRIX,91%,0,0
+firm_bearish_vol_ise,"Total volume of bearish trades (selling calls and buying puts) by firms, based on ISE data.",MATRIX,79%,0,0
+firm_bearish_vol_otm,"Total volume of bearish trades (selling calls and buying puts) by firms, for out-of-the-money contracts.",MATRIX,77%,0,0
+firm_bullish_contracts_noto,"Total contracts from buying calls and selling puts by firms, indicating positive sentiment.",MATRIX,77%,0,0
+firm_bullish_trade_count,Number of bullish trades (buying calls and selling puts) by firms.,MATRIX,91%,0,0
+firm_bullish_trade_count_ise,"Number of bullish trades (buying calls and selling puts) by firms, based on ISE data.",MATRIX,79%,0,0
+firm_bullish_trade_count_noto,"Number of bullish trades (buying calls and selling puts) by firms, based on NOTO data.",MATRIX,77%,0,0
+firm_bullish_trade_count_otm,"Number of bullish trades (buying calls and selling puts) by firms, for out-of-the-money contracts.",MATRIX,77%,0,0
+firm_bullish_vol,Total volume of bullish trades (buying calls and selling puts) by firms.,MATRIX,91%,0,0
+firm_bullish_vol_ise,"Total volume of bullish trades (buying calls and selling puts) by firms, based on ISE data.",MATRIX,79%,0,0
+firm_bullish_vol_otm,"Total volume of bullish trades (buying calls and selling puts) by firms, for out-of-the-money contracts.",MATRIX,77%,0,0
+firm_trade_imbalance,Normalized difference between bullish and bearish trade counts for firms.,MATRIX,91%,0,0
+firm_trade_imbalance_ise,"Normalized difference between bullish and bearish trade counts for firms, based on ISE data.",MATRIX,79%,0,0
+firm_trade_imbalance_noto_2,Normalized difference between bullish and bearish trade counts for firms.,MATRIX,77%,0,0
+firm_trade_imbalance_otm,"Normalized difference between bullish and bearish trade counts for firms, for out-of-the-money contracts.",MATRIX,77%,0,0
+firm_vol_imbalance,Normalized difference between bullish and bearish trade volumes for firms.,MATRIX,91%,1,1
+firm_vol_imbalance_ise,"Normalized difference between bullish and bearish trade volumes for firms, based on ISE data.",MATRIX,79%,0,0
+firm_vol_imbalance_noto,"Normalized difference between bullish and bearish trade volumes for firms, based on NOTO data.",MATRIX,77%,0,0
+firm_vol_imbalance_otm,"Normalized difference between bullish and bearish trade volumes for firms, for out-of-the-money contracts.",MATRIX,77%,0,0
+market_maker_bearish_contracts_noto,"Total contracts from selling calls and buying puts by market makers, indicating negative sentiment.",MATRIX,77%,0,0
+market_maker_bearish_trade_count,Number of bearish trades (selling calls and buying puts) by market makers.,MATRIX,91%,0,0
+market_maker_bearish_trades_noto,"Count of trades from selling calls and buying puts by market makers, indicating pessimistic activity.",MATRIX,77%,0,0
+market_maker_bearish_vol,Total volume of bearish trades (selling calls and buying puts) by market makers.,MATRIX,91%,1,1
+market_maker_bullish_contracts_noto,"Total contracts from buying calls and selling puts by market makers, showing optimistic positioning.",MATRIX,77%,0,0
+market_maker_bullish_trade_count,Number of bullish trades (buying calls and selling puts) by market makers.,MATRIX,91%,0,0
+market_maker_bullish_trade_count_noto,"Number of bullish trades (buying calls and selling puts) by market makers, based on NOTO data.",MATRIX,77%,1,1
+market_maker_bullish_vol,Total volume of bullish trades (buying calls and selling puts) by market makers.,MATRIX,91%,0,0
+market_maker_trade_imbalance,Normalized difference between bullish and bearish trade counts for market makers.,MATRIX,91%,0,0
+market_maker_trade_imbalance_noto_2,Normalized difference between bullish and bearish trade counts for market makers.,MATRIX,77%,1,1
+market_maker_vol_imbalance,Normalized difference between bullish and bearish trade volumes for market makers.,MATRIX,91%,0,0
+market_maker_vol_imbalance_noto_2,Normalized difference between bullish and bearish contract volume for market makers.,MATRIX,77%,1,1
+pro_customer_bearish_contracts_noto,"Total contracts from selling calls and buying puts by professional customers, indicating negative sentiment.",MATRIX,77%,0,0
+pro_customer_bearish_trade_count,Number of bearish trades (selling calls and buying puts) by professional customers.,MATRIX,91%,1,1
+pro_customer_bearish_trade_count_ise,"Number of bearish trades (selling calls and buying puts) by professional customers, based on ISE data.",MATRIX,79%,0,0
+pro_customer_bearish_trade_count_otm,"Number of bearish trades (selling calls and buying puts) by professional customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+pro_customer_bearish_trades_noto,"Number of trades from selling calls and buying puts by professional customers, reflecting negative sentiment.",MATRIX,77%,0,0
+pro_customer_bearish_vol,Total volume of bearish trades (selling calls and buying puts) by professional customers.,MATRIX,91%,1,1
+pro_customer_bearish_vol_ise,"Total volume of bearish trades (selling calls and buying puts) by professional customers, based on ISE data.",MATRIX,79%,0,0
+pro_customer_bearish_vol_otm,"Total volume of bearish trades (selling calls and buying puts) by professional customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+pro_customer_bullish_contracts_noto,"Total contracts from buying calls and selling puts by professional customers, showing positive sentiment.",MATRIX,77%,0,0
+pro_customer_bullish_trade_count,Number of bullish trades (buying calls and selling puts) by professional customers.,MATRIX,91%,1,1
+pro_customer_bullish_trade_count_ise,"Number of bullish trades (buying calls and selling puts) by professional customers, based on ISE data.",MATRIX,79%,1,1
+pro_customer_bullish_trade_count_otm,"Number of bullish trades (buying calls and selling puts) by professional customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+pro_customer_bullish_trades_noto,"Number of trades from buying calls and selling puts by professional customers, reflecting positive activity.",MATRIX,77%,0,0
+pro_customer_bullish_vol,Total volume of bullish trades (buying calls and selling puts) by professional customers.,MATRIX,91%,0,0
+pro_customer_bullish_vol_ise,"Total volume of bullish trades (buying calls and selling puts) by professional customers, based on ISE data.",MATRIX,79%,0,0
+pro_customer_bullish_vol_otm,"Total volume of bullish trades (buying calls and selling puts) by professional customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+pro_customer_trade_imbalance,Normalized difference between bullish and bearish trade counts for professional customers.,MATRIX,91%,0,0
+pro_customer_trade_imbalance_ise,"Normalized difference between bullish and bearish trade counts for professional customers, based on ISE data.",MATRIX,79%,0,0
+pro_customer_trade_imbalance_noto_2,Normalized difference between bullish and bearish trade counts for professional customers.,MATRIX,77%,0,0
+pro_customer_trade_imbalance_otm,"Normalized difference between bullish and bearish trade counts for professional customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+pro_customer_vol_imbalance,Normalized difference between bullish and bearish trade volumes for professional customers.,MATRIX,91%,2,2
+pro_customer_vol_imbalance_ise,"Normalized difference between bullish and bearish trade volumes for professional customers, based on ISE data.",MATRIX,79%,0,0
+pro_customer_vol_imbalance_noto,"Normalized difference between bullish and bearish trade volumes for professional customers, based on NOTO data.",MATRIX,77%,0,0
+pro_customer_vol_imbalance_otm,"Normalized difference between bullish and bearish trade volumes for professional customers, for out-of-the-money contracts.",MATRIX,77%,0,0
+proprietary_bearish_trade_count,Number of bearish trades (selling calls and buying puts) by proprietary traders.,MATRIX,79%,0,0
+proprietary_bearish_trade_count_otm,"Number of bearish trades (selling calls and buying puts) by proprietary traders, for out-of-the-money contracts.",MATRIX,77%,0,0
+proprietary_bearish_vol,Total volume of bearish trades (selling calls and buying puts) by proprietary traders.,MATRIX,79%,0,0
+proprietary_bearish_vol_otm,"Total volume of bearish trades (selling calls and buying puts) by proprietary traders, for out-of-the-money contracts.",MATRIX,77%,0,0
+proprietary_bullish_trade_count,Number of bullish trades (buying calls and selling puts) by proprietary traders.,MATRIX,79%,0,0
+proprietary_bullish_trade_count_otm,"Number of bullish trades (buying calls and selling puts) by proprietary traders, for out-of-the-money contracts.",MATRIX,77%,0,0
+proprietary_bullish_vol,Total volume of bullish trades (buying calls and selling puts) by proprietary traders.,MATRIX,79%,0,0
+proprietary_bullish_vol_otm,"Total volume of bullish trades (buying calls and selling puts) by proprietary traders, for out-of-the-money contracts.",MATRIX,77%,0,0
+proprietary_trade_imbalance,Normalized difference between bullish and bearish trade counts for proprietary traders.,MATRIX,79%,0,0
+proprietary_trade_imbalance_otm,"Normalized difference between bullish and bearish trade counts for proprietary traders, for out-of-the-money contracts.",MATRIX,77%,0,0
+proprietary_vol_imbalance,Normalized difference between bullish and bearish trade volumes for proprietary traders.,MATRIX,79%,0,0
+proprietary_vol_imbalance_otm,"Normalized difference between bullish and bearish trade volumes for proprietary traders, for out-of-the-money contracts.",MATRIX,77%,0,0

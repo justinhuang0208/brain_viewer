@@ -1,0 +1,67 @@
+Field,Description,Type,Coverage,Users,Alphas
+company_name_match_score,Similarity score indicating confidence in entity mapping/match (0–1),VECTOR,82%,5,10
+company_name_match_score_fast_d1,Similarity score indicating confidence in entity mapping/match (0–1),VECTOR,82%,13,17
+conference_analyst_attendees,List of analyst participants on the call,VECTOR,82%,1,1
+conference_analyst_attendees_fast_d1,List of analyst participants on the call,VECTOR,82%,2,2
+conference_company_attendees,List of company participant names for the event,VECTOR,82%,1,1
+conference_company_attendees_fast_d1,List of company participant names for the event,VECTOR,82%,3,3
+event_full_title,"Official title of the event (e.g., “Q1 2018 Apple Inc Earnings Conference Call”)",VECTOR,82%,2,2
+event_full_title_fast_d1,"Official title of the event (e.g., “Q1 2018 Apple Inc Earnings Conference Call”)",VECTOR,82%,0,0
+event_headline_text,Headline or title text of the event or transcript,VECTOR,82%,2,2
+event_headline_text_fast_d1,Headline or title text of the event or transcript,VECTOR,82%,1,1
+oth384_oecsi,Indicator flag showing whether a CEO is listed among the participants,VECTOR,82%,45,77
+oth384_oecsi_fast_d1,Indicator flag showing whether a CEO is listed among the participants,VECTOR,82%,2,2
+oth384_ofcsi,"Flag indicating if a CFO participant is present (1=yes, 0=no)",VECTOR,82%,25,62
+oth384_ofcsi_fast_d1,"Flag indicating if a CFO participant is present (1=yes, 0=no)",VECTOR,82%,3,3
+oth384_presentation_count,"Number of content words in the presentation section, excluding annotations and speaker names",VECTOR,82%,28,41
+oth384_presentation_count_fast_d1,"Number of content words in the presentation section, excluding annotations and speaker names",VECTOR,82%,1,1
+oth384_presentation_negfreq,Frequency (ratio) of negative sentiment in the presentation section,VECTOR,82%,39,105
+oth384_presentation_negfreq_fast_d1,Frequency (ratio) of negative sentiment in the presentation section,VECTOR,82%,2,2
+oth384_presentation_negnum,Number of negative sentiment word instances in the presentation,VECTOR,82%,33,55
+oth384_presentation_negnum_fast_d1,Number of negative sentiment word instances in the presentation,VECTOR,82%,2,2
+oth384_presentation_paragraphcount,Number of paragraphs in the presentation section,VECTOR,82%,19,29
+oth384_presentation_paragraphcount_fast_d1,Number of paragraphs in the presentation section,VECTOR,82%,1,1
+oth384_presentation_posfreq,Ratio of positive words to total content words in the presentation (Presentation_posNum / Presentation_count),VECTOR,82%,42,67
+oth384_presentation_posfreq_fast_d1,Ratio of positive words to total content words in the presentation (Presentation_posNum / Presentation_count),VECTOR,82%,6,9
+oth384_presentation_posnum,Count of positive sentiment instances in the presentation section,VECTOR,82%,26,36
+oth384_presentation_posnum_fast_d1,Count of positive sentiment instances in the presentation section,VECTOR,82%,1,1
+oth384_presentation_questions,Number of questions asked during the presentation if any,VECTOR,82%,17,21
+oth384_presentation_questions_fast_d1,Number of questions asked during the presentation if any,VECTOR,82%,0,0
+oth384_presentation_sentcount,Number of sentences in the presentation section,VECTOR,82%,15,15
+oth384_presentation_sentcount_fast_d1,Number of sentences in the presentation section,VECTOR,82%,1,1
+oth384_presentation_tone,Sentiment tone score for the presentation section,VECTOR,82%,57,134
+oth384_presentation_tone_fast_d1,Sentiment tone score for the presentation section,VECTOR,82%,9,9
+oth384_presentation_wordcount,Number of words in the presentation section including annotations and speaker names,VECTOR,82%,21,41
+oth384_presentation_wordcount_fast_d1,Number of words in the presentation section including annotations and speaker names,VECTOR,82%,1,1
+oth384_qa_count,"Number of content words in the Q&A section, excluding annotations and speaker names",VECTOR,82%,27,41
+oth384_qa_count_fast_d1,"Number of content words in the Q&A section, excluding annotations and speaker names",VECTOR,82%,3,3
+oth384_qa_negnum,Count of negative sentiment instances in the Q&A section,VECTOR,82%,36,52
+oth384_qa_negnum_fast_d1,Count of negative sentiment instances in the Q&A section,VECTOR,82%,6,7
+oth384_qa_paragraphcount,Number of paragraphs in the Q&A section,VECTOR,82%,15,18
+oth384_qa_paragraphcount_fast_d1,Number of paragraphs in the Q&A section,VECTOR,82%,2,3
+oth384_qa_posnum,Count of positive sentiment instances in the Q&A section,VECTOR,82%,45,68
+oth384_qa_posnum_fast_d1,Count of positive sentiment instances in the Q&A section,VECTOR,82%,12,16
+oth384_qa_questions,Total number of questions asked during the Q&A,VECTOR,82%,16,44
+oth384_qa_questions_fast_d1,Total number of questions asked during the Q&A,VECTOR,82%,1,1
+oth384_qa_sentcount,Number of sentences in the Q&A section,VECTOR,82%,10,14
+oth384_qa_sentcount_fast_d1,Number of sentences in the Q&A section,VECTOR,82%,0,0
+oth384_qa_tone,Sentiment tone score for the Q&A section,VECTOR,82%,30,45
+oth384_qa_tone_fast_d1,Sentiment tone score for the Q&A section,VECTOR,82%,0,0
+oth384_qa_wordcount,"Number of words in the Q&A section of the transcript, including annotations and speaker names",VECTOR,82%,21,44
+oth384_qa_wordcount_fast_d1,"Number of words in the Q&A section of the transcript, including annotations and speaker names",VECTOR,82%,2,2
+oth384_qerfgen_aq,Ratio of negative words to total content words in the Q&A section,VECTOR,82%,23,43
+oth384_qerfgen_aq_fast_d1,Ratio of negative words to total content words in the Q&A section,VECTOR,82%,4,4
+oth384_qerfsop_aq,Frequency of positive words in the Q&A calculated as QA_posNum divided by QA_count,VECTOR,82%,78,324
+oth384_qerfsop_aq_fast_d1,Frequency of positive words in the Q&A calculated as QA_posNum divided by QA_count,VECTOR,82%,7,14
+presentation_laughter_count,Count of laughter annotations during the presentation segment,VECTOR,82%,0,0
+presentation_laughter_count_fast_d1,Count of laughter annotations during the presentation segment,VECTOR,82%,3,3
+presentation_section_speaker_list,List of speakers during the presentation section including roles and counts,VECTOR,82%,0,0
+presentation_section_speaker_list_fast_d1,List of speakers during the presentation section including roles and counts,VECTOR,82%,4,4
+qa_section_laughter_count,Count of laughter annotations during the Q&A session,VECTOR,82%,1,1
+qa_section_laughter_count_fast_d1,Count of laughter annotations during the Q&A session,VECTOR,82%,1,1
+qa_section_speaker_list,"List of speakers in the Q&A section, possibly with roles and counts",VECTOR,82%,2,2
+qa_section_speaker_list_fast_d1,"List of speakers in the Q&A section, possibly with roles and counts",VECTOR,82%,2,2
+transcript_body_headline,Headline extracted from the body of the transcript,VECTOR,82%,1,2
+transcript_body_headline_fast_d1,Headline extracted from the body of the transcript,VECTOR,82%,3,4
+transcript_is_initial_version,Flag indicating whether the transcript is a preliminary version from the vendor,VECTOR,82%,6,7
+transcript_is_initial_version_fast_d1,Flag indicating whether the transcript is a preliminary version from the vendor,VECTOR,82%,1,1

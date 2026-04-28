@@ -1,6 +1,7 @@
 Field,Description,Type,Coverage,Users,Alphas
-top1000,universe,Universe,33%,3,3
-top200,universe,Universe,7%,1,5
-top3000,universe,Universe,100%,17,54
-top500,universe,Universe,17%,8,28
-topsp500,universe,Universe,0%,2,2
+top1000,No field description,UNIVERSE,33%,7,8
+top200,No field description,UNIVERSE,7%,2,7
+top2000,No field description,UNIVERSE,0%,0,0
+top3000,No field description,UNIVERSE,100%,18,55
+top500,No field description,UNIVERSE,17%,10,31
+topsp500,No field description,UNIVERSE,22%,3,3

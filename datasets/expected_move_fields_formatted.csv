@@ -1,0 +1,111 @@
+Field,Description,Type,Coverage,Users,Alphas
+daily_option_contracts_traded,Total number of option contracts traded in a day.,MATRIX,94%,3,3
+daily_option_contracts_traded_2,Total number of option contracts traded in a day.,MATRIX,84%,1,1
+daily_option_contracts_traded_3,"Trailing 5-day notional option trading volume in USD, used for liquidity gating",MATRIX,86%,0,0
+daily_option_contracts_traded_365,Trailing 5-day actual option notional volume in USD used for liquidity gating,MATRIX,80%,0,0
+daily_option_contracts_traded_4,"Trailing 5-day, as-of-date notional option volume in USD used for liquidity gating",MATRIX,81%,0,0
+daily_option_contracts_traded_5,Total number of option contracts traded in a day.,MATRIX,93%,0,0
+daily_option_contracts_traded_6,Total number of option contracts traded in a day.,MATRIX,95%,0,0
+daily_option_contracts_traded_7,Total number of option contracts traded in a day.,MATRIX,96%,1,1
+daily_option_contracts_traded_8,Total number of option contracts traded in a day.,MATRIX,95%,0,0
+daily_option_contracts_traded_9,"Trailing 5-day as-of-date total notional option trading volume, used for liquidity assessment at 91-day horizon",MATRIX,84%,1,1
+downward_lognorm_expected_change,Estimated downward price move using a log-normal model.,MATRIX,79%,1,1
+downward_lognorm_expected_change_10,Model-implied expected down-move in USD over 365-day horizon based on lognormal distribution,MATRIX,80%,0,0
+downward_lognorm_expected_change_2,"Model-implied downward absolute price move (lognormal, always negative/tail) over a 60-day horizon",MATRIX,84%,0,0
+downward_lognorm_expected_change_3,"Model-implied expected downward price move (lognormal distribution, down tail) over the 30-day horizon in absolute USD terms",MATRIX,85%,0,0
+downward_lognorm_expected_change_4,Model-implied lognormal expected downward absolute price move in USD over the 182-day horizon,MATRIX,81%,0,0
+downward_lognorm_expected_change_5,Estimated downward price move using a log-normal model.,MATRIX,25%,0,0
+downward_lognorm_expected_change_6,Estimated downward price move using a log-normal model.,MATRIX,93%,0,0
+downward_lognorm_expected_change_7,Estimated downward price move using a log-normal model.,MATRIX,95%,1,1
+downward_lognorm_expected_change_8,Estimated downward price move using a log-normal model.,MATRIX,92%,0,0
+downward_lognorm_expected_change_9,Lognormal model-implied expected absolute down-move in USD over 91 days,MATRIX,84%,0,0
+downward_lognorm_move_percent,Expected downward move as percent of price using log-normal model.,MATRIX,79%,0,0
+downward_lognorm_move_percent_2,Model-implied expected downward price move over 60 days as a percentage of the current stock price,MATRIX,84%,0,0
+downward_lognorm_move_percent_3,"Percent of spot price representing the model-implied expected downward price move over a 30-day horizon for US stocks, based on a lognormal model",MATRIX,85%,0,0
+downward_lognorm_move_percent_365,Model-implied expected down-move as a percentage of spot price over 365-day horizon,MATRIX,80%,0,0
+downward_lognorm_move_percent_4,Percent of spot representing model-implied lognormal downward expected move over the 182-day horizon,MATRIX,81%,0,0
+downward_lognorm_move_percent_5,Expected downward move as percent of price using log-normal model.,MATRIX,25%,0,0
+downward_lognorm_move_percent_6,Expected downward move as percent of price using log-normal model.,MATRIX,93%,1,1
+downward_lognorm_move_percent_7,Expected downward move as percent of price using log-normal model.,MATRIX,95%,0,0
+downward_lognorm_move_percent_8,Expected downward move as percent of price using log-normal model.,MATRIX,92%,0,0
+downward_lognorm_move_percent_9,Lognormal model-implied down-move over 91 days expressed as a percentage of the current stock price,MATRIX,84%,0,0
+gaussian_expected_change_365,Model/surface-based expected absolute price move in USD over 365-day horizon,MATRIX,80%,0,0
+gaussian_expected_move,Expected price change based on normal distribution.,MATRIX,79%,0,0
+gaussian_expected_move_2,Model or surface-based expected absolute price move (fair value estimate) over a 60-day horizon,MATRIX,84%,0,0
+gaussian_expected_move_3,Absolute expected price move in USD estimated from the model/surface over a 30-day horizon,MATRIX,85%,0,0
+gaussian_expected_move_4,Model or surface-based fair value estimate of the absolute expected move in USD over the 182-day horizon,MATRIX,81%,0,0
+gaussian_expected_move_5,Expected price change based on normal distribution.,MATRIX,25%,1,1
+gaussian_expected_move_6,Expected price change based on normal distribution.,MATRIX,93%,0,0
+gaussian_expected_move_7,Expected price change based on normal distribution.,MATRIX,95%,0,0
+gaussian_expected_move_8,Expected price change based on normal distribution.,MATRIX,92%,0,0
+gaussian_expected_move_9,Model-derived expected absolute price move in USD over 91 days,MATRIX,84%,0,0
+gaussian_move_percent,Expected move as percent of price based on normal distribution.,MATRIX,79%,0,0
+gaussian_move_percent_2,Model-based expected absolute price move over 60 days expressed as a percentage of the current stock price,MATRIX,84%,2,2
+gaussian_move_percent_3,Percent of spot price representing the absolute expected price move estimated from the model/surface over a 30-day horizon,MATRIX,85%,0,0
+gaussian_move_percent_365,Model/surface-based expected price move as percent of spot over 365-day horizon,MATRIX,80%,0,0
+gaussian_move_percent_4,"Absolute expected price move from the model/surface (fair value) over a 182-day horizon, normalized as a percentage of the spot price",MATRIX,81%,1,1
+gaussian_move_percent_5,Expected move as percent of price based on normal distribution.,MATRIX,25%,0,0
+gaussian_move_percent_6,Expected move as percent of price based on normal distribution.,MATRIX,93%,1,1
+gaussian_move_percent_7,Expected move as percent of price based on normal distribution.,MATRIX,95%,0,0
+gaussian_move_percent_8,Expected move as percent of price based on normal distribution.,MATRIX,92%,1,2
+gaussian_move_percent_9,Model-derived expected absolute price move over 91 days expressed as a percentage of the current stock price,MATRIX,84%,0,0
+straddle_move_percent,Expected move as percent of price from straddle strategy.,MATRIX,94%,2,2
+straddle_move_percent_2,Expected move as percent of price from straddle strategy.,MATRIX,84%,0,0
+straddle_move_percent_3,Percent of spot price represented by the market-observed ATM straddle mid price implied move over the 30-day horizon,MATRIX,86%,0,0
+straddle_move_percent_365,"Expected price move implied by the market ATM straddle price over the 365-day horizon, expressed as a percentage of spot",MATRIX,80%,3,4
+straddle_move_percent_4,"Expected price move implied by the market ATM straddle mid price over a 182-day horizon, expressed as a percentage of the spot price",MATRIX,81%,0,0
+straddle_move_percent_5,Expected move as percent of price from straddle strategy.,MATRIX,93%,0,0
+straddle_move_percent_6,Expected move as percent of price from straddle strategy.,MATRIX,95%,0,0
+straddle_move_percent_7,Expected move as percent of price from straddle strategy.,MATRIX,96%,0,0
+straddle_move_percent_8,Expected move as percent of price from straddle strategy.,MATRIX,95%,0,0
+straddle_move_percent_9,Market-observed implied price move from ATM option straddle expressed as a percent of the current stock price over a 91-day horizon,MATRIX,84%,0,0
+straddle_strangle_expected_change_365,Expected price move over one year from combined straddle and strangle strategies.,MATRIX,80%,0,0
+straddle_strangle_expected_move,Expected price change from combined straddle and strangle strategies.,MATRIX,94%,0,0
+straddle_strangle_expected_move_2,"One-sided (""1σ"") expected absolute price move from the model or surface over a 60-day horizon",MATRIX,84%,0,0
+straddle_strangle_expected_move_3,Model-derived single-sided (one standard deviation) expected absolute price move for the stock over the 30-day horizon,MATRIX,86%,0,0
+straddle_strangle_expected_move_4,"Single-sided (one-standard-deviation) expected move from the model/surface over a 182-day horizon, expressed in USD",MATRIX,81%,0,0
+straddle_strangle_expected_move_5,Expected price change from combined straddle and strangle strategies.,MATRIX,93%,0,0
+straddle_strangle_expected_move_6,Expected price change from combined straddle and strangle strategies.,MATRIX,95%,0,0
+straddle_strangle_expected_move_7,Expected price change from combined straddle and strangle strategies.,MATRIX,96%,0,0
+straddle_strangle_expected_move_8,Expected price change from combined straddle and strangle strategies.,MATRIX,95%,0,0
+straddle_strangle_expected_move_9,Model-based single-sided (one standard deviation) expected absolute price move over a 91-day horizon,MATRIX,84%,0,0
+straddle_strangle_move_percent,Combined straddle and strangle expected move as percent of price.,MATRIX,94%,0,0
+straddle_strangle_move_percent_2,"One-sided (""1σ"") expected price move as a percentage of the current stock price from the model or surface over a 60-day horizon",MATRIX,84%,0,0
+straddle_strangle_move_percent_3,Percent of spot price represented by the single-sided (one sigma) expected move from the model over the 30-day horizon,MATRIX,86%,0,0
+straddle_strangle_move_percent_365,Model/surface-based one-sided (1σ) expected move as a percentage of spot over 365-day horizon,MATRIX,80%,0,0
+straddle_strangle_move_percent_4,Combined straddle and strangle expected move as percent of price.,MATRIX,81%,0,0
+straddle_strangle_move_percent_5,Combined straddle and strangle expected move as percent of price.,MATRIX,93%,0,0
+straddle_strangle_move_percent_6,Combined straddle and strangle expected move as percent of price.,MATRIX,95%,1,1
+straddle_strangle_move_percent_7,Combined straddle and strangle expected move as percent of price.,MATRIX,96%,0,0
+straddle_strangle_move_percent_8,Combined straddle and strangle expected move as percent of price.,MATRIX,95%,0,0
+straddle_strangle_move_percent_9,Combined straddle and strangle expected move as percent of price.,MATRIX,84%,0,0
+straddle_strategy_expected_change_365,Observed market ATM straddle mid price implied move in USD over 365-day horizon,MATRIX,80%,0,0
+straddle_strategy_expected_move,Expected price change derived from straddle strategy cost.,MATRIX,94%,0,0
+straddle_strategy_expected_move_2,Observed market price of the at-the-money straddle option representing expected absolute move over 60 days in USD,MATRIX,84%,0,0
+straddle_strategy_expected_move_3,"Observed market price of the At-The-Money (ATM) straddle mid, reflecting the expected absolute price move over a 30-day horizon in USD",MATRIX,86%,0,0
+straddle_strategy_expected_move_4,Observed market ATM straddle mid price implying expected absolute move in USD over the 182-day horizon,MATRIX,81%,0,0
+straddle_strategy_expected_move_5,Expected price change derived from straddle strategy cost.,MATRIX,93%,0,0
+straddle_strategy_expected_move_6,Expected price change derived from straddle strategy cost.,MATRIX,95%,0,0
+straddle_strategy_expected_move_7,Expected price change derived from straddle strategy cost.,MATRIX,96%,0,0
+straddle_strategy_expected_move_8,Expected price change derived from straddle strategy cost.,MATRIX,95%,0,0
+straddle_strategy_expected_move_9,"Observed market ATM straddle mid-price move in USD over 91 days, representing market-implied expected move",MATRIX,84%,1,1
+upward_lognorm_expected_change,Estimated upward price move using a log-normal model.,MATRIX,79%,2,2
+upward_lognorm_expected_change_2,"Model-implied upward absolute price move (lognormal, always up/tail) over a 60-day horizon",MATRIX,84%,0,0
+upward_lognorm_expected_change_3,Model-implied expected upward price move in USD over a 30-day horizon using the lognormal tail approach,MATRIX,85%,0,0
+upward_lognorm_expected_change_365,Expected price increase over one year using a log-normal model.,MATRIX,80%,0,0
+upward_lognorm_expected_change_4,"Model-implied upward price move (lognormal distribution tail) over a 182-day horizon, expressed in USD",MATRIX,81%,0,0
+upward_lognorm_expected_change_5,Estimated upward price move using a log-normal model.,MATRIX,25%,0,0
+upward_lognorm_expected_change_6,Estimated upward price move using a log-normal model.,MATRIX,93%,0,0
+upward_lognorm_expected_change_7,Estimated upward price move using a log-normal model.,MATRIX,95%,0,0
+upward_lognorm_expected_change_8,Estimated upward price move using a log-normal model.,MATRIX,92%,0,0
+upward_lognorm_expected_change_9,Lognormal model-implied expected absolute up-move in USD over 91 days,MATRIX,84%,0,0
+upward_lognorm_move_percent,Expected upward move as percent of price using log-normal model.,MATRIX,79%,1,1
+upward_lognorm_move_percent_2,"Model-implied upward price move as a percentage of the current stock price, based on a lognormal distribution over a 60-day horizon",MATRIX,84%,0,0
+upward_lognorm_move_percent_3,"Percent of spot price representing the model-implied expected upward price move over a 30-day horizon for US stocks, based on a lognormal model",MATRIX,85%,0,0
+upward_lognorm_move_percent_365,Expected percentage price increase over one year using a log-normal model.,MATRIX,80%,0,0
+upward_lognorm_move_percent_4,Percent of spot representing the model-implied lognormal upward expected price move over the 182-day horizon,MATRIX,81%,0,0
+upward_lognorm_move_percent_5,Expected upward move as percent of price using log-normal model.,MATRIX,25%,0,0
+upward_lognorm_move_percent_6,Expected upward move as percent of price using log-normal model.,MATRIX,93%,1,1
+upward_lognorm_move_percent_7,Expected upward move as percent of price using log-normal model.,MATRIX,95%,0,0
+upward_lognorm_move_percent_8,Expected upward move as percent of price using log-normal model.,MATRIX,92%,0,0
+upward_lognorm_move_percent_9,Lognormal model-implied up-move over 91 days expressed as a percentage of the current stock price,MATRIX,84%,0,0

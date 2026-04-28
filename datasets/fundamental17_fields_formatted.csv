@@ -1,0 +1,403 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd17_1_2anrhsfcfq,"Free cash flow per share for the prior quarter, not annualized",MATRIX,91%,206,481
+fnd17_1_2rhsfcfq,Free cash flow per share for the same quarter one year ago,MATRIX,91%,155,334
+fnd17_1_anrhsfcfq,"Free cash flow per share for the most recent quarter, not annualized",MATRIX,92%,98,248
+fnd17_1_reptoprcexrate,Reporting Currency to base/pricing currency exchange rate,MATRIX,94%,153,276
+fnd17_1_rhsfcfq,Free Cash Flow per share for the most recent quarter (annualized),MATRIX,92%,124,348
+fnd17_1_usdtorepexrate,Exchange rate from reporting currency to USD,MATRIX,94%,98,197
+fnd17_2_ev2ebitda_cur,Current enterprise value divided by EBITDA,MATRIX,79%,331,2480
+fnd17_2_reptoprcexrate,Reporting Currency to base currency exchange rate,MATRIX,94%,92,153
+fnd17_2_ttmgrosmgn,Gross margin over the trailing 12 months,MATRIX,75%,91,237
+fnd17_2_usdtorepexrate,Reporting Currency to USD exchange rate,MATRIX,94%,72,122
+fnd17_2anrhsfcfq,Free Cash Flow per share - most recent quarter - 1 (not annualized),MATRIX,91%,65,130
+fnd17_2anrhsfcq,Cash Flow per share - most recent quarter - 1 (not annualized),MATRIX,89%,87,181
+fnd17_2qe2dtlq,Long-term debt to equity ratio for the most recent quarter one year ago,MATRIX,87%,77,152
+fnd17_2rhsfca,Cash flow per share for the prior fiscal year (as defined by the dataset; divided by average shares outstanding),MATRIX,91%,74,162
+fnd17_2rhsfcfq,"Free Cash Flow per share - most recent quarter, 1 year ago",MATRIX,91%,87,256
+fnd17_2rhsfcq,"Cash Flow per share - most recent quarter, 1 year ago",MATRIX,89%,60,132
+fnd17_2tcpngmpoa,Operating Margin - 2nd historical fiscal year,MATRIX,90%,102,265
+fnd17_3_ev2ebitda_cur,"Enterprise value divided by ebitda, current",MATRIX,81%,4,7
+fnd17_3_reptoprcexrate,Exchange rate from the company’s reporting currency to the dataset’s base price currency,MATRIX,94%,66,153
+fnd17_3_usdtorepexrate,Exchange rate from USD to reporting currency,MATRIX,94%,68,173
+fnd17_4_reptoprcexrate,Exchange rate from reporting currency to base currency,MATRIX,94%,57,126
+fnd17_4_usdtorepexrate,Reporting currency to USD exchange rate,MATRIX,94%,69,118
+fnd17_5_reptoprcexrate,Reporting Currency to base currency exchange rate,MATRIX,94%,58,141
+fnd17_5_usdtorepexrate,Reporting currency to USD exchange rate,MATRIX,94%,51,90
+fnd17_6_2anrhsfcfq,Free Cash Flow per share - most recent quarter - 1 (not annualized),MATRIX,92%,3,3
+fnd17_6_2rhsfcfq,"Free Cash Flow per share - most recent quarter, 1 year ago",MATRIX,89%,1,1
+fnd17_6_anrhsfcfq,Free Cash Flow per share - most recent quarter (not annualized),MATRIX,91%,2,2
+fnd17_6_reptoprcexrate,Exchange rate from reporting currency to base/price currency,MATRIX,94%,63,140
+fnd17_6_rhsfcfq,Free Cash Flow per share - most recent quarter (annualized),MATRIX,91%,3,8
+fnd17_6_usdtorepexrate,Exchange rate from reporting currency to USD,MATRIX,94%,35,68
+fnd17_7_reptoprcexrate,Exchange rate from the company’s reporting currency to the dataset’s base/pricing currency,MATRIX,94%,64,135
+fnd17_7_usdtorepexrate,Exchange rate from the reporting currency to USD,MATRIX,94%,57,105
+fnd17_8_reptoprcexrate,Reporting Currency to base currency exchange rate,MATRIX,94%,66,172
+fnd17_8_ttmgrosmgn,Gross margin - trailing 12 months,MATRIX,78%,2,3
+fnd17_8_usdtorepexrate,Reporting currency to USD exchange rate,MATRIX,94%,41,97
+fnd17_9_reptoprcexrate,Reporting Currency to base currency exchange rate,MATRIX,94%,67,124
+fnd17_9_usdtorepexrate,Reporting Currency to USD exchange rate,MATRIX,94%,57,112
+fnd17_a2netmrgn,Net Profit Margin % - 2nd historical fiscal year,MATRIX,90%,87,259
+fnd17_aastturn,Asset turnover - most recent fiscal year,MATRIX,86%,107,263
+fnd17_abepsxclxo,Basic earnings per share excluding extraordinary items for the most recent fiscal year,MATRIX,94%,86,237
+fnd17_acapspps,Capital Spending per share - most recent fiscal year,MATRIX,90%,83,224
+fnd17_acogs,Cost of goods sold for the most recent fiscal year,MATRIX,75%,88,254
+fnd17_acurast,Total current assets for the most recent fiscal year,MATRIX,74%,73,226
+fnd17_acurliab,Current liabilities - most recent fiscal year,MATRIX,75%,45,114
+fnd17_acurratio,Current ratio for the most recent fiscal year (current assets divided by current liabilities),MATRIX,74%,56,116
+fnd17_adebteps,Debt service to earnings per share ratio for the most recent fiscal year,MATRIX,53%,21,24
+fnd17_adepexp,Depreciation expense from statement of cash flows - most recent fiscal year,MATRIX,90%,68,129
+fnd17_adeprescfz,"Accumulated depreciation, most recent fiscal year",MATRIX,85%,58,153
+fnd17_adiv5yavg,Dividend per share 5-year average,MATRIX,46%,20,35
+fnd17_adivchg,Year-over-year percentage change in annual dividends per share,MATRIX,45%,14,40
+fnd17_adivshr,Dividend per share - most recent fiscal year,MATRIX,58%,17,23
+fnd17_aebit,Earnings before interest and taxes for the most recent fiscal year,MATRIX,94%,73,180
+fnd17_aebitd,EBITDA for the most recent fiscal year,MATRIX,94%,64,133
+fnd17_aebitd2,EBITDA for the previous fiscal year,MATRIX,93%,55,105
+fnd17_aebitd5yr,EBITD Margin - 5 year average,MATRIX,80%,33,63
+fnd17_aebitdmg,EBITD Margin - most recent fiscal year,MATRIX,90%,59,143
+fnd17_aebtnorm,Normalized earnings before taxes for the most recent fiscal year,MATRIX,94%,52,162
+fnd17_aepsinclxo,Earnings per share including extraordinary items for the most recent fiscal year,MATRIX,94%,60,176
+fnd17_aepsnorm,EPS normalized - most recent fiscal year,MATRIX,94%,57,242
+fnd17_agrosmgn,Gross Margin - 1st historical fiscal year,MATRIX,74%,63,121
+fnd17_agrosmgn2,Gross Margin - 2nd historical fiscal year,MATRIX,73%,62,151
+fnd17_aintcov,"Interest coverage ratio for the most recent fiscal year, calculated as EBIT divided by interest expense",MATRIX,62%,55,108
+fnd17_aintexpz,Total interest expense for the most recent fiscal year,MATRIX,72%,23,41
+fnd17_ainventory,Inventory - most recent fiscal year,MATRIX,54%,52,126
+fnd17_ainvturn,Inventory turnover - most recent fiscal year,MATRIX,52%,37,67
+fnd17_altd2ast,Long-term debt to total assets for the most recent fiscal year,MATRIX,87%,40,115
+fnd17_altd2cap,Long-term Debt to Total Capital: long-term debt divided by total capital (short-term debt + current portion of long-term debt + long-term debt + capitalized leases + shareholders’ equity),MATRIX,86%,72,170
+fnd17_altd2eq,Long-term Debt to Equity: long-term debt divided by total shareholders’ equity,MATRIX,90%,33,68
+fnd17_altdps,Long-term debt per share for the most recent fiscal year,MATRIX,87%,39,56
+fnd17_ani,Net income (earnings after taxes) for the most recent fiscal year,MATRIX,94%,58,109
+fnd17_aniac,Net income available to common shareholders for the most recent fiscal year,MATRIX,94%,46,88
+fnd17_aniacinclx,Net income available to common including extraordinary items for the most recent fiscal year,MATRIX,94%,47,96
+fnd17_aniacnorm,Normalized net income available to common (excludes unusual/one-time items) for the most recent fiscal year,MATRIX,94%,53,155
+fnd17_anichg,Year-over-year percentage change in net income,MATRIX,93%,67,136
+fnd17_aniexclxor,Net income excluding extraordinary items for the most recent fiscal year,MATRIX,94%,55,155
+fnd17_aniinclxor,Net income including extraordinary items for the most recent fiscal year,MATRIX,94%,38,114
+fnd17_aninorm,Net income after taxes excluding unusual or one-time items for the most recent fiscal year,MATRIX,94%,49,138
+fnd17_aniperemp,Net income per employee for the most recent fiscal year,MATRIX,86%,61,123
+fnd17_annperiods,Number of historical periods - Annual,MATRIX,94%,62,136
+fnd17_anrhsfcfq,"Free cash flow per share for the most recent quarter, not annualized",MATRIX,92%,51,105
+fnd17_anrhsfcq,"Cash flow per share for the most recent quarter, not annualized",MATRIX,89%,52,98
+fnd17_apayratio,Payout ratio for the most recent fiscal year,MATRIX,63%,28,48
+fnd17_apayratio2,Payout ratio for the prior fiscal year,MATRIX,65%,24,31
+fnd17_apeexclxor,Price-to-earnings ratio excluding extraordinary items for the most recent fiscal year,MATRIX,67%,66,120
+fnd17_apenorm,Normalized price-to-earnings ratio for the most recent fiscal year,MATRIX,69%,57,134
+fnd17_apr2rev,Price to sales - most recent fiscal year,MATRIX,90%,110,558
+fnd17_apr2tanbk,Price to Tangible Book - most fiscal year,MATRIX,73%,67,161
+fnd17_aprice2bk,Price-to-book ratio for the most recent fiscal year,MATRIX,89%,85,248
+fnd17_aptmgnpct,Pretax margin - 1st historical fiscal year,MATRIX,90%,78,171
+fnd17_aptmgnpct2,Pretax Margin - 2nd historical fiscal year,MATRIX,90%,79,247
+fnd17_aquickrati,Quick ratio for the most recent fiscal year: (cash + short-term investments + accounts receivable) divided by current liabilities,MATRIX,52%,50,92
+fnd17_arecturn,Receivables turnover - most recent fiscal year,MATRIX,78%,90,284
+fnd17_arecvbl,Receivables - most recent fiscal year,MATRIX,80%,57,144
+fnd17_arev,Total revenue (sales) for the most recent fiscal year,MATRIX,94%,76,187
+fnd17_arevchg,Year-over-year percentage change in revenue,MATRIX,90%,63,138
+fnd17_arevperemp,Revenue per employee - most recent fiscal year,MATRIX,84%,59,127
+fnd17_arevps,Revenue per share for the most recent fiscal year,MATRIX,94%,66,164
+fnd17_arevstrt,"Reinvestment rate for the most recent fiscal year, defined as 100 minus the payout ratio (percent of earnings retained)",MATRIX,67%,15,39
+fnd17_aroa5yavg,Five-year average return on average assets,MATRIX,78%,12,16
+fnd17_aroapct,Return on average assets for the most recent fiscal year,MATRIX,93%,67,195
+fnd17_aroe5yavg,Five-year average return on average equity,MATRIX,76%,20,25
+fnd17_aroepct,Return on average equity for the most recent fiscal year,MATRIX,88%,55,135
+fnd17_aroi5yravg,Five-year average return on investment,MATRIX,69%,24,65
+fnd17_aroipct,Return on investment for the most recent fiscal year,MATRIX,83%,41,97
+fnd17_asga2rev,SG&A expenses / net sales - most recent fiscal year,MATRIX,80%,51,127
+fnd17_ata,Total assets - most recent fiscal year,MATRIX,94%,69,176
+fnd17_atachg,Year-over-year percentage change in total assets for the most recent fiscal year,MATRIX,93%,149,282
+fnd17_atanbvdolr,"Tangible book value in dollars, most recent fiscal year",MATRIX,94%,62,175
+fnd17_atanbvps,Tangible book value per share for the most recent fiscal year,MATRIX,94%,43,115
+fnd17_ataxpd,Income taxes paid in the most recent fiscal year,MATRIX,88%,46,146
+fnd17_ataxrat5yr,Five-year average effective tax rate,MATRIX,60%,14,24
+fnd17_ataxrate,Effective tax rate for the most recent fiscal year,MATRIX,66%,23,38
+fnd17_ataxrate2,Effective tax rate for the prior fiscal year,MATRIX,65%,24,31
+fnd17_atmtt,"Total assets, trailing twelve months",MATRIX,91%,52,136
+fnd17_atotce,Common equity (book value) - most recent fiscal year,MATRIX,94%,75,234
+fnd17_atotd,Total debt - most recent fiscal year,MATRIX,94%,49,116
+fnd17_atotd2ast,Total debt to total assets for the most recent fiscal year,MATRIX,94%,64,123
+fnd17_atotd2cap,"Total debt to total capital percentage, most recent fiscal year",MATRIX,86%,79,281
+fnd17_atotd2eq,Total debt to shareholders’ equity for the most recent fiscal year,MATRIX,90%,58,136
+fnd17_atotltd,Long-term debt (total) - most recent fiscal year,MATRIX,94%,31,66
+fnd17_atotse,Shareholders' equity - most recent fiscal year,MATRIX,94%,59,152
+fnd17_atq,Total assets - most recent quarter,MATRIX,94%,61,161
+fnd17_awcappspr,"Working capital per share divided by price, most recent fiscal year",MATRIX,74%,52,200
+fnd17_beta,Beta,MATRIX,79%,45,106
+fnd17_beta_down,Downside beta calculated during down-market periods,MATRIX,84%,58,107
+fnd17_beta_up,Upside beta calculated during up-market periods,MATRIX,89%,25,49
+fnd17_bvtrendgr,Five-year compound annual growth rate of book value per share,MATRIX,73%,32,45
+fnd17_cainmtt,Net income available to common shareholders over the trailing twelve months,MATRIX,93%,57,165
+fnd17_cainq,Net income available to common shareholders for the most recent quarter,MATRIX,94%,60,178
+fnd17_cftrendgr,5-year compound annual growth rate of cash flow,MATRIX,61%,8,19
+fnd17_chpctpricemtd,Month-to-date price percent change,MATRIX,94%,36,101
+fnd17_chpctpriceqtd,Quarter-to-date price percent change,MATRIX,93%,37,71
+fnd17_chpctpricewtd,Week-to-date price percent change,MATRIX,94%,51,160
+fnd17_csptrendgr,Five year compound annual growth rate of capital spending,MATRIX,76%,16,19
+fnd17_dai,"Dividend rate, indicated annual",MATRIX,48%,16,22
+fnd17_debtcap_a,Debt-to-capitalization ratio for the last fiscal year,MATRIX,87%,48,158
+fnd17_debtcap_i,Debt-to-capitalization ratio for the latest interim period,MATRIX,87%,54,98
+fnd17_div,Dividends paid from the statement of cash flows - most recent fiscal year,MATRIX,53%,18,23
+fnd17_divgrpct,Three-year compound annual growth rate of dividends per share,MATRIX,41%,7,14
+fnd17_divnq,Dividend - next quarterly declared,MATRIX,49%,19,21
+fnd17_divnqpdt,Dividend - next quarterly pay date,MATRIX,49%,15,29
+fnd17_divnqxdt,Dividend - next quarterly ex-date,MATRIX,49%,10,13
+fnd17_divtrend10,Ten-year compound annual growth rate of dividends per share,MATRIX,31%,12,16
+fnd17_divtrendgr,Five-year compound annual growth rate of dividends per share,MATRIX,38%,5,10
+fnd17_dvolshsout,Daily trading volume as a percentage of shares outstanding,MATRIX,94%,276,700
+fnd17_ebitda2ev,"EBITDA divided by Enterprise Value, current",MATRIX,94%,278,2879
+fnd17_ebitda2ev_a,EBITDA to enterprise value using last fiscal year EBITDA and current enterprise value,MATRIX,93%,137,758
+fnd17_ebitda2ev_ttm,Ratio of EBITDA to enterprise value for the trailing twelve months (current),MATRIX,92%,224,2185
+fnd17_epschngin,Percent change in EPS from the prior quarter,MATRIX,93%,60,165
+fnd17_epschngyri,EPS Change % - year to date,MATRIX,96%,10,27
+fnd17_epstrend10,Ten-year compound annual growth rate of earnings per share,MATRIX,46%,8,18
+fnd17_epstrendgr,EPS growth rate over the past 5 years,MATRIX,53%,8,21
+fnd17_ev2ebitda_cur,"Enterprise value divided by EBITDA, current",MATRIX,79%,183,1093
+fnd17_ev2rev_cur,"Enterprise value divided by revenue, current",MATRIX,81%,164,825
+fnd17_ev_cur,Current Enterprise Value (market capitalization plus net debt),MATRIX,94%,154,695
+fnd17_fcf1a,Free cash flow - most recent fiscal year,MATRIX,94%,66,148
+fnd17_fcfmtt,Free cash flow - trailing 12 months,MATRIX,91%,100,377
+fnd17_fcfq,Free cash flow for the most recent quarter,MATRIX,92%,60,134
+fnd17_float,Public float (shares available for trading),MATRIX,94%,61,181
+fnd17_ghcspea,Year-over-year percent change in annual earnings per share compared to the previous fiscal year,MATRIX,93%,80,193
+fnd17_ghcspemtt,Percent change in trailing-twelve-month EPS versus the prior trailing-twelve-month period,MATRIX,91%,42,125
+fnd17_gihn,12-month high price,MATRIX,94%,52,106
+fnd17_gmntrendgr,Five-year growth rate of gross margin,MATRIX,65%,16,25
+fnd17_grosmgn5yr,Gross Margin - 5 year average,MATRIX,64%,32,65
+fnd17_gvary5ep,Five-year average P/E excluding extraordinary items,MATRIX,58%,4,20
+fnd17_gvay5dly,Dividend yield - 5 year average,MATRIX,44%,12,13
+fnd17_histrelpe,Historical relative price-to-earnings ratio,MATRIX,60%,101,320
+fnd17_hsca,Cash and cash equivalents at fiscal year-end,MATRIX,94%,58,148
+fnd17_inmtt,Net income after taxes over the trailing 12 months,MATRIX,93%,67,269
+fnd17_inq,Net income (earnings after taxes) for the most recent quarter,MATRIX,94%,49,90
+fnd17_lbvcerq,Receivables - most recent quarter,MATRIX,80%,39,129
+fnd17_lcxspebmtp,EPS Basic excluding extraordinary items - prior trailing 12 months,MATRIX,91%,39,104
+fnd17_lcxspebmtt,EPS Basic excluding extraordinary items - trailing 12 months,MATRIX,93%,56,132
+fnd17_lta,Total liabilities - most recent fiscal year,MATRIX,94%,32,87
+fnd17_ltq,"Total liabilities, most recent quarter",MATRIX,94%,51,116
+fnd17_margin5yr,Net Profit Margin - 5 year average,MATRIX,80%,28,59
+fnd17_mktcap,Market capitalization,MATRIX,94%,142,1300
+fnd17_mtpbshs,"Shares outstanding basic, average prior trailing 12 months",MATRIX,91%,33,87
+fnd17_mtpshs,"Shares outstanding, average prior trailing 12 months",MATRIX,91%,35,123
+fnd17_mttbshs,"Shares outstanding basic, average trailing 12 months",MATRIX,93%,41,82
+fnd17_mttshs,Shares outstanding - average trailing 12 month,MATRIX,93%,68,159
+fnd17_mvolshsout,Monthly trading volume as a percentage of shares outstanding,MATRIX,93%,149,872
+fnd17_netdebt_a,Net debt (total debt minus cash and equivalents) for the last fiscal year,MATRIX,94%,36,115
+fnd17_netdebt_i,Net debt (total debt minus cash and equivalents) for the latest interim period,MATRIX,94%,66,146
+fnd17_ngmpnmtp,Net Profit Margin % - prior trailing 12 month,MATRIX,88%,69,181
+fnd17_ngmpnmtt,Net Profit Margin % - trailing 12 month,MATRIX,90%,75,247
+fnd17_ngmtpmtt,Pretax margin over the trailing 12 months,MATRIX,90%,46,177
+fnd17_nichngin,Percent change in net income versus the prior quarter,MATRIX,93%,42,92
+fnd17_nichngyr,Percent change in net income for the most recent quarter versus the same quarter a year ago,MATRIX,93%,74,205
+fnd17_nichngyri,Net Income Change % - year to date,MATRIX,96%,7,10
+fnd17_nigrpct,Growth rate % - net income,MATRIX,57%,11,24
+fnd17_nitrendgr,Five-year compound annual growth rate of net income,MATRIX,53%,11,12
+fnd17_nlow,12-month low price,MATRIX,94%,37,107
+fnd17_npmtrendgr,Five-year growth rate of net profit margin,MATRIX,54%,11,14
+fnd17_nprice,Closing price or last bid,MATRIX,94%,107,471
+fnd17_oxlcxebepp,"Basic P/E excluding extraordinary items, prior trailing twelve months",MATRIX,65%,23,56
+fnd17_oxlcxspebq,Basic earnings per share excluding extraordinary items for the most recent quarter,MATRIX,94%,56,144
+fnd17_payout5yr,Five-year average payout ratio,MATRIX,58%,9,15
+fnd17_peexclxor,"P/E excluding extraordinary items, trailing twelve months",MATRIX,68%,124,351
+fnd17_pehigh,High value of P/E excluding extraordinary items,MATRIX,72%,12,26
+fnd17_pelow,Low value of P/E excluding extraordinary items,MATRIX,72%,21,31
+fnd17_ppeexclxor,"P/E excluding extraordinary items, prior trailing twelve months",MATRIX,65%,12,31
+fnd17_pr1dayprc,Percent change in the stock price for the most recent trading day,MATRIX,94%,94,261
+fnd17_pr2tanbk,Price to Tangible Book - most recent quarter,MATRIX,73%,83,231
+fnd17_pr5dayprc,Percent change in the stock price over the last 5 trading days,MATRIX,94%,51,125
+fnd17_price2bk,Price-to-book ratio based on the most recent quarter,MATRIX,85%,113,286
+fnd17_price2bk2,"Price to Book - most recent quarter, 1 year ago",MATRIX,85%,40,64
+fnd17_priceavg150day,Average price of the last 150 days,MATRIX,92%,24,48
+fnd17_priceavg200day,Average price of the last 200 days,MATRIX,91%,37,96
+fnd17_priceavg50day,Average price of the last 50 days,MATRIX,93%,67,157
+fnd17_prytdpct,Year-to-date price percent change,MATRIX,92%,28,89
+fnd17_prytdpctr,Relative (S&P500) price percent change - Year to Date,MATRIX,92%,44,103
+fnd17_ptmepsincx,EPS including extraordinary items - prior trailing 12 month,MATRIX,91%,41,95
+fnd17_ptmintcov,"Interest coverage for the prior trailing 12 months, defined as EBIT divided by interest expense",MATRIX,64%,19,35
+fnd17_ptmpr2rev,Price to sales - prior trailing 12 month,MATRIX,86%,48,132
+fnd17_ptmrev,Revenue for the prior trailing twelve months,MATRIX,91%,53,163
+fnd17_ptmroepct,Return on average equity for the prior trailing twelve months,MATRIX,83%,18,24
+fnd17_pxedra,Research and development expense for the most recent fiscal year,MATRIX,39%,48,109
+fnd17_pxedrmtp,Research and development expense for the prior trailing twelve months,MATRIX,35%,59,140
+fnd17_pxedrmtt,Research and development expense over the trailing 12 months; units: millions,MATRIX,36%,27,37
+fnd17_pxedrq,Research and development expense for the most recent quarter,MATRIX,36%,40,97
+fnd17_pxepedmtt,Depreciation expense from statement of cash flows - trailing 12 months,MATRIX,86%,37,77
+fnd17_pxepedq,Depreciation expense from the statement of cash flows - most recent quarter,MATRIX,87%,46,83
+fnd17_qastturn,"Asset turnover ratio for the most recent quarter, annualized",MATRIX,86%,129,324
+fnd17_qcapspps,Capital Spending per share - most recent quarter,MATRIX,87%,65,190
+fnd17_qcash,Cash and cash equivalents for the most recent quarter,MATRIX,94%,43,144
+fnd17_qcogs,Cost of goods sold for the most recent quarter,MATRIX,75%,53,118
+fnd17_qcurast,Current assets - most recent quarter,MATRIX,74%,32,75
+fnd17_qcurliab,Current liabilities - most recent quarter,MATRIX,74%,42,75
+fnd17_qcurratio,Current ratio for the most recent quarter,MATRIX,74%,57,89
+fnd17_qcurratio2,"Current ratio - most recent quarter, 1 year ago",MATRIX,72%,49,141
+fnd17_qdebteps,Debt service to earnings per share ratio for the most recent quarter,MATRIX,57%,8,13
+fnd17_qe2dtlq,Long-term debt to shareholder equity ratio for the most recent quarter,MATRIX,90%,33,68
+fnd17_qebit,Earnings before interest and taxes for the most recent quarter,MATRIX,94%,54,168
+fnd17_qebitd,EBITDA for the most recent quarter,MATRIX,93%,49,122
+fnd17_qepsinclxo,Earnings per share including extraordinary items for the most recent quarter,MATRIX,94%,50,136
+fnd17_qgrosmgn,Gross Margin - most recent quarter,MATRIX,75%,53,132
+fnd17_qinventory,Inventory for the most recent quarter,MATRIX,53%,24,37
+fnd17_qinvturn,Inventory turnover - most recent quarter (annualized),MATRIX,52%,27,50
+fnd17_qltd2ast,Long-term debt to total assets for the most recent quarter,MATRIX,87%,37,90
+fnd17_qltd2cap,"Long-term debt to total capital ratio for the most recent quarter (total capital includes short-term debt, current portion of long-term debt, long-term debt, capitalized leases, and shareholders’ equity)",MATRIX,86%,33,72
+fnd17_qniperemp,Net Income per employee - most recent quarter (annualized),MATRIX,79%,59,153
+fnd17_qpayratio,Payout ratio for the most recent quarter,MATRIX,71%,19,21
+fnd17_qpehigh,"P/E excluding extraordinary items high, most recent quarter",MATRIX,97%,13,41
+fnd17_qpelow,"P/E excluding extraordinary items low, most recent quarter",MATRIX,97%,13,43
+fnd17_qpr2rev,Price to sales - most recent quarter,MATRIX,90%,92,485
+fnd17_qquickrat2,Quick ratio for the most recent quarter one year ago,MATRIX,50%,48,130
+fnd17_qquickrati,Quick ratio for the most recent quarter,MATRIX,51%,52,112
+fnd17_qrecturn,Receivables turnover - most recent quarter (annualized),MATRIX,77%,77,281
+fnd17_qrev,Revenue for the most recent quarter,MATRIX,94%,43,97
+fnd17_qrevperemp,Revenue per employee - most recent quarter (annualized),MATRIX,82%,82,167
+fnd17_qrevps,Revenue/share - most recent quarter (annualized),MATRIX,94%,42,98
+fnd17_qrevpsna,Revenue/share - most recent quarter (not annualized),MATRIX,94%,43,89
+fnd17_qrevstrt,"Reinvestment rate for the most recent quarter; 100 minus payout ratio, percent of earnings retained",MATRIX,72%,21,40
+fnd17_qroepct,Return on average equity for the most recent quarter (annualized),MATRIX,89%,68,114
+fnd17_qroipct,Return on investment for the most recent quarter (annualized),MATRIX,84%,65,192
+fnd17_qsga2rev,SG&A expenses / net sales - most recent quarter,MATRIX,79%,41,85
+fnd17_qtachg,Year over year percent change in total assets as of one year ago,MATRIX,91%,39,135
+fnd17_qtanbvdolr,"Tangible book value in dollars, most recent quarter",MATRIX,94%,44,130
+fnd17_qtanbvps,Tangible book value per share for the most recent quarter,MATRIX,94%,48,137
+fnd17_qtaxpd,Income taxes paid in the most recent quarter,MATRIX,87%,31,82
+fnd17_qtaxrate,Effective tax rate for the most recent quarter,MATRIX,70%,11,21
+fnd17_qtotce,Common equity (book value) - most recent quarter,MATRIX,94%,48,96
+fnd17_qtotce2,"Common equity (book value), most recent quarter one year ago",MATRIX,91%,63,163
+fnd17_qtotd,Total debt - most recent quarter,MATRIX,94%,47,89
+fnd17_qtotd2ast,Total debt to total assets for the most recent quarter,MATRIX,94%,63,136
+fnd17_qtotd2cap,Ratio of total debt to total capital for the most recent quarter,MATRIX,86%,60,136
+fnd17_qtotd2eq,Total debt to shareholder equity ratio for the most recent quarter,MATRIX,90%,44,78
+fnd17_qtotd2eq2,"Total debt to shareholder equity ratio for the most recent quarter, measured one year ago",MATRIX,87%,61,152
+fnd17_qtotltd,"Long-term debt (total), most recent quarter",MATRIX,94%,54,164
+fnd17_qtotse,Shareholders' equity - most recent quarter,MATRIX,94%,46,106
+fnd17_qtrperiods,Number of historical quarterly periods available for the company,MATRIX,94%,58,157
+fnd17_qwcappspr,Working capital per share divided by current price for the most recent quarter,MATRIX,74%,57,153
+fnd17_revchngin,Percentage change in revenue versus the immediately preceding quarter,MATRIX,90%,71,195
+fnd17_revchngyr,Percent change in revenue for the most recent quarter versus the same quarter a year ago,MATRIX,89%,83,229
+fnd17_revchngyri,Revenue Change % - year to date,MATRIX,96%,15,50
+fnd17_revgrpct,Three-year revenue growth rate (percent),MATRIX,85%,41,108
+fnd17_revps5ygr,Five-year growth rate of revenue per share,MATRIX,78%,24,46
+fnd17_revtrend10,Ten-year revenue growth rate,MATRIX,65%,23,44
+fnd17_revtrendgr,Five-year revenue growth rate,MATRIX,78%,26,68
+fnd17_rhsfca,Cash flow per share for the most recent fiscal year (as defined by the dataset; divided by average shares outstanding),MATRIX,91%,59,152
+fnd17_rhsfcf1a,Free cash flow per share for the most recent fiscal year,MATRIX,94%,56,147
+fnd17_rhsfcf2a,Free cash flow per share for the fiscal year prior to the most recent (FCF divided by average shares outstanding),MATRIX,93%,72,184
+fnd17_rhsfcfmtt,Free cash flow per share over the trailing 12 months,MATRIX,90%,78,294
+fnd17_rhsfcfq,"Free cash flow per share for the most recent quarter, annualized",MATRIX,92%,75,247
+fnd17_rhsfcmtp,Cash Flow per share - prior trailing 12 month,MATRIX,87%,40,80
+fnd17_rhsfcmtt,Cash Flow per share - trailing 12 month,MATRIX,89%,58,140
+fnd17_rhsfcq,"Cash flow per share for the most recent quarter, annualized",MATRIX,89%,41,127
+fnd17_roxlcniep,"P/E including extraordinary items, trailing twelve months",MATRIX,67%,75,180
+fnd17_roxlcxebep,"Basic P/E excluding extraordinary items, trailing twelve months",MATRIX,67%,37,113
+fnd17_roxlcxspea,Earnings per share excluding extraordinary items for the most recent fiscal year,MATRIX,94%,52,130
+fnd17_roxlcxspeq,Earnings per share excluding extraordinary items for the most recent quarter,MATRIX,94%,45,133
+fnd17_rtcpkw25rp,Relative (S&P500) price percent change - 52 week,MATRIX,90%,20,31
+fnd17_rtcpkw31rp,Relative (S&P500) price percent change - 13 week,MATRIX,93%,27,83
+fnd17_rtcpkw40rp,Four-week price percent change relative to the S&P 500,MATRIX,94%,29,67
+fnd17_rtcpkw62rp,Relative (S&P500) price percent change - 26 week,MATRIX,92%,21,36
+fnd17_ry5ngmpo,Operating Margin - 5 year average,MATRIX,79%,24,44
+fnd17_ry5ngmtp,Pretax Margin - 5 year average,MATRIX,80%,31,58
+fnd17_rygnhcspe,Year-over-year percent change in EPS for the most recent quarter compared to the same quarter last year,MATRIX,93%,80,274
+fnd17_shboutavgq,"Shares outstanding basic, average, most recent quarter",MATRIX,94%,63,229
+fnd17_shsboutavg,"Shares outstanding Basic - average, most recent fiscal year",MATRIX,94%,40,90
+fnd17_shsout,"Shares outstanding, current",MATRIX,94%,41,92
+fnd17_shsoutabs,"Shares outstanding on the balance sheet, most recent fiscal year",MATRIX,94%,40,69
+fnd17_shsoutavg,"Shares outstanding - average, most recent fiscal year",MATRIX,94%,55,132
+fnd17_shsoutavgq,"Shares outstanding, average, most recent quarter",MATRIX,94%,40,102
+fnd17_shsoutbs,"Shares outstanding on the balance sheet, most recent quarter",MATRIX,94%,53,116
+fnd17_shsoutbs2,"Shares outstanding on the balance sheet, most recent quarter one year ago",MATRIX,91%,58,218
+fnd17_spdq,Dividend - most recent quarter,MATRIX,93%,22,33
+fnd17_spdtlq,LT debt/share - most recent quarter,MATRIX,87%,34,87
+fnd17_spfcfrpa,Price to Free Cash Flow per Share - most recent fiscal year,MATRIX,60%,80,396
+fnd17_spfcfrpmtt,Price to Free Cash Flow per Share - trailing 12 months,MATRIX,61%,109,724
+fnd17_spfcrpa,Price to Cash Flow per share - most recent fiscal year,MATRIX,73%,44,138
+fnd17_spfcrpmtp,Price to Cash Flow per share - prior trailing 12 month,MATRIX,69%,21,29
+fnd17_spfcrpmtt,Price to Cash Flow per share - trailing 12 month,MATRIX,72%,87,380
+fnd17_spfcrpq,Price to Cash Flow per share - most recent quarter,MATRIX,74%,102,451
+fnd17_sphsca,Cash per share - most recent fiscal year,MATRIX,94%,51,95
+fnd17_sphscq,Cash and equivalents per share for the most recent quarter,MATRIX,94%,73,171
+fnd17_spvba,Book value of common equity per share for the most recent fiscal year,MATRIX,94%,71,182
+fnd17_spvbq,Book value (common equity) per share for the most recent quarter,MATRIX,94%,62,145
+fnd17_tbea,Earnings before taxes for the most recent fiscal year,MATRIX,94%,60,101
+fnd17_tbemtt,Earnings before taxes over the trailing 12 months,MATRIX,93%,60,242
+fnd17_tbeq,Earnings before taxes for the most recent quarter,MATRIX,94%,73,318
+fnd17_tcpaormtp,Return on average assets for the prior trailing twelve months,MATRIX,86%,39,76
+fnd17_tcpaormtt,Return on average assets over the trailing 12 months (percentage),MATRIX,91%,76,290
+fnd17_tcpaorq,Return on average assets for the most recent quarter (annualized),MATRIX,93%,50,114
+fnd17_tcpkw25rp,Percent change in the stock price over the last 52 weeks,MATRIX,90%,24,55
+fnd17_tcpkw31rp,Percent change in the stock price over the last 13 weeks,MATRIX,93%,25,44
+fnd17_tcpkw40rp,Four-week price percent change,MATRIX,94%,28,99
+fnd17_tcpkw62rp,Percent change in the stock price over the last 26 weeks,MATRIX,92%,27,72
+fnd17_tcpngmpna,Net Profit Margin % - 1st historical fiscal year,MATRIX,90%,53,155
+fnd17_tcpngmpnq,Net Profit Margin % - most recent quarter,MATRIX,90%,46,120
+fnd17_tcpngmpoa,Operating margin - 1st historical fiscal year,MATRIX,90%,45,72
+fnd17_tcpngmpoq,Operating margin - most recent quarter,MATRIX,90%,46,119
+fnd17_tcpngmtpq,Pretax margin - most recent quarter,MATRIX,90%,51,107
+fnd17_tcprgspe,Three-year compound annual growth rate of earnings per share,MATRIX,57%,10,27
+fnd17_ttmastturn,Asset turnover - trailing 12 months,MATRIX,84%,73,177
+fnd17_ttmcapspps,Capital Spending per share - trailing 12 months,MATRIX,87%,56,98
+fnd17_ttmcogs,Cost of goods sold over the trailing 12 months,MATRIX,75%,50,102
+fnd17_ttmdebteps,Debt Service to EPS - trailing 12 months,MATRIX,55%,18,29
+fnd17_ttmdivshr,Dividends per share - trailing 12 months,MATRIX,93%,30,50
+fnd17_ttmebit,EBIT over the trailing 12 months,MATRIX,93%,52,130
+fnd17_ttmebitd,EBITDA over the trailing 12 months,MATRIX,93%,44,85
+fnd17_ttmebitdmg,EBITD Margin - trailing 12 month,MATRIX,90%,49,72
+fnd17_ttmebitdps,EBITD per share - trailing 12 months,MATRIX,93%,43,111
+fnd17_ttmepsincx,EPS including extraordinary items - trailing 12 months,MATRIX,93%,77,319
+fnd17_ttmgrosmgn,Gross margin over the trailing 12 months,MATRIX,75%,76,236
+fnd17_ttmintcov,Interest coverage ratio (EBIT divided by interest expense) over the trailing 12 months,MATRIX,65%,51,128
+fnd17_ttmintexp,Interest expense over the trailing 12 months,MATRIX,68%,66,426
+fnd17_ttminvturn,Inventory turnover - trailing 12 months,MATRIX,51%,25,34
+fnd17_ttmnichg,Percent change in trailing 12-month net income versus the prior TTM,MATRIX,91%,45,164
+fnd17_ttmniperem,Net Income per employee - trailing 12 months,MATRIX,82%,75,174
+fnd17_ttmopmgn,Operating margin over the trailing 12 months,MATRIX,90%,54,112
+fnd17_ttmpayrat,"Payout ratio over the trailing 12 months, defined as cash dividends as a percent of earnings",MATRIX,67%,9,15
+fnd17_ttmpehigh,"P/E excluding extraordinary items high, trailing 12 months",MATRIX,72%,25,64
+fnd17_ttmpelow,"P/E excluding extraordinary items low, trailing 12 months",MATRIX,72%,19,39
+fnd17_ttmpr2rev,Price to sales - trailing 12 month,MATRIX,90%,106,428
+fnd17_ttmrecturn,Receivables turnover - trailing 12 months,MATRIX,76%,59,141
+fnd17_ttmrev,Revenue over the trailing 12 months; units: millions,MATRIX,93%,51,134
+fnd17_ttmrevchg,"Percent change in revenue, trailing 12 months over trailing 12 months",MATRIX,85%,65,177
+fnd17_ttmrevpere,Revenue per employee - trailing 12 months,MATRIX,82%,47,135
+fnd17_ttmrevps,Revenue/share - trailing 12 month,MATRIX,93%,57,188
+fnd17_ttmrevstrt,Reinvestment rate over the trailing 12 months,MATRIX,68%,23,51
+fnd17_ttmroepct,Return on average equity - trailing 12 month,MATRIX,87%,54,174
+fnd17_ttmroipct,Return on investment - trailing 12 month,MATRIX,81%,78,266
+fnd17_ttmsga2rev,SG&A expenses / net sales - trailing 12 month,MATRIX,79%,41,78
+fnd17_ttmtaxpd,Taxes paid over the trailing 12 months; units: millions,MATRIX,88%,39,116
+fnd17_ttmtaxrate,Tax rate - trailing 12 month,MATRIX,66%,27,64
+fnd17_voctniq,Interest coverage ratio for the most recent quarter,MATRIX,67%,50,85
+fnd17_vol10davg,Volume - avg. trading volume for the last ten days,MATRIX,94%,152,501
+fnd17_vol1davg,Volume - 1 Day Average,MATRIX,93%,128,528
+fnd17_vol1dprc,Volume - 1 Day % Change,MATRIX,94%,42,105
+fnd17_vol3mavg,Volume - avg. trading volume for the last 3 months,MATRIX,93%,166,997
+fnd17_xlcxspemtp,EPS excluding extraordinary items - prior trailing 12 month,MATRIX,91%,58,178
+fnd17_xlcxspemtt,EPS excluding extraordinary items - trailing 12 months,MATRIX,93%,79,238
+fnd17_yield,Dividend yield - indicated annual dividend divided by closing price,MATRIX,48%,165,336
+fnd17_yragoprc1,Price - year ago,MATRIX,90%,31,69
+fnd17_zfcserpedq,Accumulated depreciation for the most recent quarter,MATRIX,51%,24,37
+fnd17_zpxetniq,Total interest expense for the most recent quarter,MATRIX,66%,46,112
+pricing_currency_code_4,Base currency,MATRIX,94%,1,1
+pricing_currency_code_ras1,Base currency,MATRIX,94%,1,1
+pricing_currency_code_ras2,Base currency,MATRIX,94%,1,1
+pricing_currency_code_ras3,Base currency used for pricing in this dataset,MATRIX,94%,2,2
+pricing_currency_code_ras4,Base currency used for price or market values,MATRIX,94%,0,0
+pricing_currency_code_ras5,Base currency,MATRIX,94%,1,2
+pricing_currency_code_ras6,base currency,MATRIX,94%,1,1
+pricing_currency_code_ras8,base currency,MATRIX,94%,1,1
+pricing_currency_code_ras9,Base (price) currency,MATRIX,94%,0,0
+pricing_currency_code_rasv2ff,Base/pricing currency code,MATRIX,94%,1,1
+public_float_shares,"Free float shares, in millions",MATRIX,94%,1,2
+reporting_currency_code_11,Reporting currency,MATRIX,94%,3,3
+reporting_currency_code_ras1,Company’s reporting currency code,MATRIX,94%,2,3
+reporting_currency_code_ras2,Reporting currency,MATRIX,94%,0,0
+reporting_currency_code_ras3,Reporting currency code,MATRIX,94%,0,0
+reporting_currency_code_ras4,Company’s financial reporting currency,MATRIX,94%,1,1
+reporting_currency_code_ras5,Reporting currency,MATRIX,94%,2,4
+reporting_currency_code_ras6,Reporting currency of the company,MATRIX,94%,0,0
+reporting_currency_code_ras8,Reporting currency,MATRIX,94%,2,3
+reporting_currency_code_ras9,Reporting currency of the company’s financials,MATRIX,94%,1,1
+reporting_currency_code_rasv2ff,Company’s reporting currency code,MATRIX,94%,1,1
+reporting_to_pricing_fx_rate,Exchange rate converting the company’s reporting currency into the base/pricing currency,MATRIX,94%,0,0
+shares_outstanding_current,"Shares outstanding – current, in millions",MATRIX,94%,1,1
+usd_to_reporting_fx_rate,USD to Reporting Currency exchange rate,MATRIX,94%,1,1

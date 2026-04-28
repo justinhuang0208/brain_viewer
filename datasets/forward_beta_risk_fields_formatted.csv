@@ -1,0 +1,29 @@
+Field,Description,Type,Coverage,Users,Alphas
+beta_lower_confidence_band,Lower bound (2.5% quantile) of the Bayesian credible interval for the 3-month forward beta change forecast,MATRIX,80%,0,0
+beta_lower_confidence_band_2,2.5% quantile (lower bound) of the Bayesian posterior predictive distribution for the 3-month forward beta change; represents the lower end of the 95% credible interval,VECTOR,82%,0,0
+beta_prediction_dispersion,"Dispersion (spread) of the Bayesian predictive distribution for 3-month forward beta change, reflecting variability and shape beyond standard deviation",MATRIX,80%,0,0
+beta_prediction_dispersion_2,"Posterior dispersion (spread) metric of the forecasted 3-month forward beta change, measuring the width or variability of the Bayesian predictive distribution, reflecting uncertainty and tail risk in the beta change forecast",VECTOR,82%,0,0
+beta_prediction_uncertainty,"Posterior standard deviation (uncertainty) of the forecasted beta change from the Bayesian model, indicating confidence in the beta change prediction",MATRIX,80%,0,0
+beta_prediction_uncertainty_2,Posterior standard deviation (uncertainty) of the Bayesian model's forecast for 3-month forward beta change; quantifies how uncertain the model is about its beta change prediction,VECTOR,82%,0,0
+beta_risk_surprise_probability,Normalized Bayesian forecast probability that the future 3-month beta will have a risk surprise (substantial deviation outside forecast credible interval),MATRIX,82%,1,1
+beta_risk_surprise_probability_2,"Forecasted Bayesian probability (posterior mean) that the realized 3-month forward beta will experience a risk surprise, i.e., a substantial deviation from the credible interval; normalized probability of risk event",VECTOR,82%,1,1
+beta_upper_confidence_band,Upper bound (97.5% quantile) of the Bayesian credible interval for the 3-month forward beta change forecast,MATRIX,80%,0,0
+beta_upper_confidence_band_2,97.5% quantile (upper bound) of the Bayesian posterior predictive distribution for the 3-month forward beta change; represents the upper end of the 95% credible interval,VECTOR,82%,0,0
+capm_residual_volatility,Volatility of the stock’s CAPM model residuals (idiosyncratic volatility) over the past 252 trading days,MATRIX,80%,0,0
+capm_residual_volatility_2,Idiosyncratic volatility measured as the standard deviation of CAPM model residuals over the last 252 trading days; represents risk not explained by the market factor,VECTOR,82%,0,0
+downside_market_beta,"Beta of the stock to the market, calculated using only days when the market performed below its 252-day moving average, indicating downside sensitivity to market downturns",MATRIX,80%,0,0
+downside_market_beta_2,"CAPM beta calculated using only those days when the market index return is below its 252-day average, capturing sensitivity to market downturns",VECTOR,82%,0,0
+downside_tail_dependence,"Lower tail dependence between the stock and market, measuring the probability of joint extreme negative moves, calculated using a rotated Gumbel copula",MATRIX,80%,0,0
+downside_tail_dependence_2,"Lower tail dependence between the stock return and the market index, estimated using a rotated Gumbel copula; quantifies joint downside risk or the probability of both stock and market experiencing extreme negative returns",VECTOR,82%,0,0
+forward_looking_beta,"Classic CAPM beta (possibly with shrinkage applied), representing the stock’s historical sensitivity to market returns using covariance and variance",MATRIX,80%,0,0
+forward_looking_beta_2,"Classical CAPM beta (possibly tail-shrunk); the stock's sensitivity to market returns, calculated as the covariance of stock return and market index return divided by the market index variance",VECTOR,82%,0,0
+historical_realized_volatility,"Empirical realized volatility of the stock, calculated as the standard deviation of daily returns over the last 252 trading days",MATRIX,82%,0,0
+historical_realized_volatility_2,Standard deviation of daily stock returns computed over the past 252 trading days (about 1 year); empirical historical volatility of the stock,VECTOR,82%,0,0
+market_capitalization_usd_3,"Market capitalization of the company, usually in USD, representing the total market value of a company's outstanding shares",MATRIX,82%,0,0
+market_capitalization_usd_4,"Market capitalization of the stock, typically in units of US dollars, representing the company's total equity value",VECTOR,82%,0,0
+multifactor_residual_volatility,Standard deviation of the residuals (idiosyncratic volatility) from the Wolfe QES multifactor risk model over past 252 trading days,MATRIX,82%,0,0
+multifactor_residual_volatility_2,Standard deviation of regression residuals (idiosyncratic volatility) from Wolfe's QES multifactor risk model over past 252 days; captures risk not explained by systematic factors,VECTOR,82%,0,0
+predicted_beta_change_3m,"Point forecast of the 3-month forward change in market beta for the stock, estimated by a Bayesian model",MATRIX,80%,0,0
+predicted_beta_change_3m_2,Point forecast (posterior mean) of the 3-month forward change in market beta as predicted by the Bayesian model,VECTOR,82%,0,0
+systematic_risk_exposure,"Systematic beta of the stock estimated by Wolfe’s multifactor QES risk model (“US All Cap Model”), reflecting sensitivity to systematic risk factors",MATRIX,82%,0,0
+systematic_risk_exposure_2,"Systematic beta, estimated via Wolfe’s multifactor QES US All Cap Model, representing market sensitivity derived from the model",VECTOR,82%,0,0

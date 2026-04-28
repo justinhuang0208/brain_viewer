@@ -1,0 +1,18 @@
+Field,Description,Type,Coverage,Users,Alphas
+board_member_count,Number of board members at the company,MATRIX,79%,8,8
+count_connected_companies,Number of distinct companies connected via shared board members,MATRIX,79%,0,0
+count_external_board_connections,Number of unique external board members connected via the company’s board members,MATRIX,79%,0,0
+mean_connected_company_market_value,Average market capitalization of companies connected via shared board members,MATRIX,79%,0,0
+mean_connection_significance_score,Average Importance of the connected people,MATRIX,79%,0,0
+mean_connection_significance_weighted_by_market_value,Average Importance scaled by Market Cap of external company,MATRIX,79%,0,0
+network_authority_centrality_metric,Authority Score in the resulting Director Network,MATRIX,79%,0,0
+network_betweenness_centrality_metric,Betweenness centrality score in the director network,MATRIX,79%,1,1
+network_constraint_redundancy_metric,Burt’s constraint score (structural holes measure) in the director network,MATRIX,79%,0,0
+network_eigenvector_centrality_metric,Eigenvector centrality score in the director network,MATRIX,79%,0,0
+network_hub_centrality_metric,Hub Score in the resulting Director Network,MATRIX,79%,0,0
+network_inward_coreness_metric,(In) Score in the resulting Director Network,MATRIX,79%,0,0
+network_outward_coreness_metric,(Out) Score in the resulting Director Network,MATRIX,79%,0,0
+network_pagerank_centrality_metric,PageRank centrality score in the director network,MATRIX,79%,0,0
+overall_board_network_strength_score,QES BoardNet Score,MATRIX,79%,1,1
+total_board_network_links,"Total number of connections, allowing multiple connections to the same person via different board members",MATRIX,79%,0,0
+total_company_market_value,Company market capitalization in millions,MATRIX,79%,1,1

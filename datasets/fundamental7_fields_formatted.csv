@@ -1,0 +1,141 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd7_ointfund_21fpeo,"Diluted earnings per share from operations, trailing 12 months",MATRIX,100%,322,2925
+fnd7_ointfund_21fspe,Trailing 12-month diluted earnings per share excluding extraordinary items,MATRIX,100%,164,825
+fnd7_ointfund_21speo,"Earnings per share from operations, trailing 12 months",MATRIX,100%,251,1871
+fnd7_ointfund_21xspe,Trailing 12-month basic earnings per share excluding extraordinary items (consolidated),MATRIX,100%,147,950
+fnd7_ointfund_q21hsc,Common shares used to calculate EPS on a 12-month moving basis,MATRIX,100%,76,386
+fnd7_ointfund_qacf,"Foreign exchange income (loss), quarterly",MATRIX,37%,35,72
+fnd7_ointfund_qagsx,"Selling, general, and administrative expense, quarterly",MATRIX,81%,100,824
+fnd7_ointfund_qbi,Income before extraordinary items (quarterly),MATRIX,100%,157,929
+fnd7_ointfund_qcbi,Quarterly income before extraordinary items from the Statement of Cash Flows,MATRIX,97%,82,269
+fnd7_ointfund_qcbuse,Equity in net loss earnings in the cash flow statement quarterly,MATRIX,81%,98,589
+fnd7_ointfund_qcdxt,Quarterly deferred taxes reported in the statement of cash flows (non-cash operating item),MATRIX,88%,103,411
+fnd7_ointfund_qcktsrp,Purchases of common and preferred stock cash outflow during the quarter,MATRIX,49%,55,147
+fnd7_ointfund_qcld,"Current debt (debt in current liabilities), quarterly",MATRIX,73%,66,162
+fnd7_ointfund_qcpd,Quarterly depreciation and amortization from the statement of cash flows (non-cash addback),MATRIX,94%,92,384
+fnd7_ointfund_qcqa,Quarterly acquisitions amount as reported in the statement of cash flows,MATRIX,38%,67,176
+fnd7_ointfund_qctidxt,Quarterly balance sheet amount for deferred taxes and investment tax credit,MATRIX,85%,64,202
+fnd7_ointfund_qdfhsc,Common shares used to calculate diluted EPS for the quarter,MATRIX,100%,93,293
+fnd7_ointfund_qdpxt,"Income taxes paid (cash flow), quarterly",MATRIX,69%,60,135
+fnd7_ointfund_qdrx,Quarterly research and development expense,MATRIX,53%,98,538
+fnd7_ointfund_qehc,Cash and short-term investments at quarter end,MATRIX,100%,143,1376
+fnd7_ointfund_qelas,Quarterly income statement item: net sales (sales/turnover),MATRIX,99%,137,637
+fnd7_ointfund_qepps,"Quarterly cash inflow from sale of property, plant, and equipment (statement of cash flows)",MATRIX,79%,111,273
+fnd7_ointfund_qer,"Retained earnings, quarterly",MATRIX,99%,102,401
+fnd7_ointfund_qerxe,Exchange rate effect on cash as reported in the quarterly cash flow statement,MATRIX,49%,62,156
+fnd7_ointfund_qfcnao,"Net cash flow from operating activities (cash flow statement, quarterly)",MATRIX,98%,154,436
+fnd7_ointfund_qfcnif,"Net cash flow from financing activities (cash flow statement, quarterly)",MATRIX,98%,91,714
+fnd7_ointfund_qfcnvi,Net cash flow from investing activities during the quarter,MATRIX,98%,68,494
+fnd7_ointfund_qhcaxt,Quarterly change in accrued income taxes (increase/decrease) per statement of cash flows,MATRIX,61%,58,251
+fnd7_ointfund_qhccer,Quarterly cash flow item: change in accounts receivable (Decrease/Increase) from the statement of cash flows,MATRIX,81%,82,336
+fnd7_ointfund_qhccld,"Changes in current debt (cash flow statement, quarterly)",MATRIX,53%,44,104
+fnd7_ointfund_qhcehc,Increase/(decrease) in cash and cash equivalents reported on the statement of cash flows (quarterly),MATRIX,98%,98,797
+fnd7_ointfund_qhclapa,"Accounts payable and accrued liabilities – increase/(decrease) (statement of cash flows, quarter)",MATRIX,59%,94,246
+fnd7_ointfund_qhcoloa,"Other assets and liabilities – net change (statement of cash flows, quarter)",MATRIX,96%,117,1008
+fnd7_ointfund_qhctsvi,Quarterly change in short-term investments reported on the statement of cash flows,MATRIX,73%,127,237
+fnd7_ointfund_qhcvi,Cash outflow for increases in investments during the quarter,MATRIX,43%,54,191
+fnd7_ointfund_qhcvni,Cash flow effect of change in inventories (decrease/increase) during the quarter,MATRIX,85%,97,1514
+fnd7_ointfund_qidxt,Deferred income taxes for the quarter,MATRIX,74%,38,188
+fnd7_ointfund_qifspe,Quarterly diluted earnings per share including extraordinary items,MATRIX,100%,146,1256
+fnd7_ointfund_qiim,Noncontrolling interest on the income statement for the quarter,MATRIX,32%,103,373
+fnd7_ointfund_qiimbi,Quarterly income before extraordinary items and noncontrolling interests,MATRIX,72%,115,913
+fnd7_ointfund_qin,Quarterly net income (loss),MATRIX,100%,147,1182
+fnd7_ointfund_qip,Quarterly pretax income,MATRIX,100%,210,1737
+fnd7_ointfund_qipon,"Quarterly nonoperating income (expense), as reported point-in-time",MATRIX,93%,95,713
+fnd7_ointfund_qips,Quarterly income statement item: abandonments and disallowances adjustment plus special items,MATRIX,58%,65,306
+fnd7_ointfund_qipspe,Quarterly basic earnings per share including extraordinary items,MATRIX,100%,133,803
+fnd7_ointfund_qivd,Current indicated annual dividend rate per share (as of the quarter),MATRIX,50%,48,149
+fnd7_ointfund_qjdabi,Quarterly Income Before Extraordinary Items adjusted for common stock equivalents,MATRIX,100%,112,501
+fnd7_ointfund_qktsc,"Common stock (capital) balance, quarterly",MATRIX,97%,96,682
+fnd7_ointfund_qktss,Quarterly cash inflow from sale/issuance of common and preferred stock (statement of cash flows),MATRIX,80%,77,433
+fnd7_ointfund_qktst,Treasury stock total dollar amount at quarter end,MATRIX,47%,69,242
+fnd7_ointfund_qmocbi,Income before extraordinary items available for common (quarterly),MATRIX,100%,112,527
+fnd7_ointfund_qnbim,Nonredeemable noncontrolling interest on the balance sheet at quarter end,MATRIX,70%,53,144
+fnd7_ointfund_qnptni,Net interest paid during the quarter per the cash flow statement,MATRIX,69%,77,151
+fnd7_ointfund_qoa,Other assets (quarter),MATRIX,100%,90,467
+fnd7_ointfund_qoaif,"Financing activities other (cash flow statement, quarterly)",MATRIX,67%,57,393
+fnd7_ointfund_qoca,Other current assets – total (quarter),MATRIX,83%,70,179
+fnd7_ointfund_qocavi,Other cash flows from investing activities during the quarter,MATRIX,69%,58,220
+fnd7_ointfund_qocl,"Other current liabilities, total (quarterly)",MATRIX,86%,89,381
+fnd7_ointfund_qohsc,Common shares outstanding at quarter end,MATRIX,100%,62,231
+fnd7_ointfund_qol,"Other liabilities, total, quarterly",MATRIX,94%,67,191
+fnd7_ointfund_qopof,"Funds from operations – other (cash flow statement, quarterly)",MATRIX,95%,94,521
+fnd7_ointfund_qpa,Accounts payable (quarter),MATRIX,98%,72,242
+fnd7_ointfund_qpd,Total depreciation and amortization expense for the quarter,MATRIX,90%,76,251
+fnd7_ointfund_qpdbio,"Quarterly operating income before depreciation, as reported",MATRIX,93%,130,524
+fnd7_ointfund_qpja,Cumulative adjustment factor at dividend payable date used to adjust per share data for splits and dividends,MATRIX,100%,122,709
+fnd7_ointfund_qpspvd,Dividends per share by payable date (quarterly),MATRIX,48%,38,79
+fnd7_ointfund_qpxt,Quarterly income taxes payable (balance sheet current liability),MATRIX,85%,64,236
+fnd7_ointfund_qqec,Total common equity (quarterly),MATRIX,100%,103,357
+fnd7_ointfund_qqes,Quarterly balance sheet item: total parent stockholders’ equity,MATRIX,100%,98,726
+fnd7_ointfund_qqet,Quarterly total stockholders’ equity,MATRIX,100%,94,440
+fnd7_ointfund_qrphsc,Common shares used to calculate basic EPS for the quarter,MATRIX,100%,74,201
+fnd7_ointfund_qrtld,Reduction repayment of long-term debt as reported in the quarterly cash flow statement,MATRIX,74%,44,137
+fnd7_ointfund_qsgoc,Cost of goods sold for the quarter,MATRIX,99%,67,218
+fnd7_ointfund_qsitld,Cash inflow from issuance of long-term debt during the quarter,MATRIX,56%,67,377
+fnd7_ointfund_qspac,Capital surplus or share premium reserve (quarterly),MATRIX,91%,81,290
+fnd7_ointfund_qspepo,"Quarterly earnings per share from operations, as reported",MATRIX,100%,145,980
+fnd7_ointfund_qta,Total assets at quarter end,MATRIX,100%,100,344
+fnd7_ointfund_qtbim,Quarterly total noncontrolling interests,MATRIX,34%,62,169
+fnd7_ointfund_qtca,"Total current assets, quarterly",MATRIX,81%,86,277
+fnd7_ointfund_qtcapd,"Accumulated depreciation, depletion, and amortization on the balance sheet (quarterly balance at period end)",MATRIX,65%,55,204
+fnd7_ointfund_qtcer,Total receivables quarterly,MATRIX,97%,98,252
+fnd7_ointfund_qtcl,Total current liabilities at quarter end,MATRIX,81%,104,347
+fnd7_ointfund_qtgepp,Gross property plant and equipment at quarter end,MATRIX,64%,64,235
+fnd7_ointfund_qtl,Total liabilities quarterly,MATRIX,100%,79,259
+fnd7_ointfund_qtnepp,"Quarterly net property, plant and equipment (total)",MATRIX,94%,65,253
+fnd7_ointfund_qtnix,Interest expense (quarterly),MATRIX,84%,61,143
+fnd7_ointfund_qtpaci,Total invested capital as reported for the quarter,MATRIX,100%,80,287
+fnd7_ointfund_qttld,Total long-term debt outstanding at quarter end,MATRIX,85%,66,226
+fnd7_ointfund_qtvni,Total inventories at quarter end,MATRIX,70%,83,410
+fnd7_ointfund_qtxt,Total income taxes for the quarter,MATRIX,92%,97,473
+fnd7_ointfund_qvalid,"Dilution available excluding extraordinary items, quarterly",MATRIX,100%,118,729
+fnd7_ointfund_qvd,Quarterly cash dividends paid (from the cash flow statement),MATRIX,50%,38,114
+fnd7_ointfund_qvipps,Gain or loss from sale of property plant and equipment and investments reported in the cash flow statement for the quarter,MATRIX,53%,50,149
+fnd7_ointfund_qvis,Quarterly cash flow item: sale of investments,MATRIX,40%,33,73
+fnd7_ointfund_qxeja,"Adjustment factor (company), cumulative by ex-date, quarterly",MATRIX,100%,156,922
+fnd7_ointfund_qxfspe,Diluted earnings per share excluding extraordinary items (quarterly),MATRIX,100%,141,792
+fnd7_ointfund_qxpac,Capital expenditures reported on the statement of cash flows (quarterly),MATRIX,91%,73,383
+fnd7_ointfund_qxpspe,Basic earnings per share excluding extraordinary items for the quarter,MATRIX,100%,147,1118
+fnd7_ointfund_qxspeo,"Quarterly diluted earnings per share from operations, as reported",MATRIX,100%,144,703
+fnd7_ointfund_qxspvd,"Quarterly dividends per share by ex-dividend date (gross of withholding), as known at the point in time",MATRIX,48%,27,82
+fnd7_ointfund_r21fpeo,Quarterly fundamental item: Earnings Per Share -> Diluted -> from Operations -> 12 Months Moving (unrestated),MATRIX,29%,28,62
+fnd7_ointfund_r21speo,Quarterly Fundamental Item: Earnings per Share from Operations -> 12 Months Moving (Unrestated),MATRIX,29%,18,36
+fnd7_ointfund_rq21hsc,Quarterly fundamental item: Common shares used to calculate earnings per share -> 12 months moving (unrestated),MATRIX,34%,18,42
+fnd7_ointfund_rqelas,Quarterly Fundamental Item: Net Sales (Unrestated),MATRIX,34%,18,41
+fnd7_ointfund_rqer,Quarterly fundamental item: Retained earnings (unrestated),MATRIX,29%,10,25
+fnd7_ointfund_rqoa,Quarterly fundamental item: Other assets (unrestated),MATRIX,30%,12,34
+fnd7_ointfund_rqpdbio,Quarterly fundamental item: Operating income before depreciation (unrestated),MATRIX,29%,29,190
+fnd7_ointfund_rqqec,Quarterly Fundamental Item: Total Common Equity (Unrestated),MATRIX,38%,31,266
+fnd7_ointfund_rqqes,Quarterly fundamental item: Total Parent Stockholders' Equity (unrestated),MATRIX,39%,10,18
+fnd7_ointfund_rqsgoc,Quarterly fundamental item: Cost of Goods Sold (unrestated),MATRIX,37%,9,25
+fnd7_ointfund_rqspac,Quarterly fundamental item: Capital surplus (unrestated),MATRIX,29%,11,22
+fnd7_ointfund_rqta,Quarterly fundamental item: Assets - Total/Liabilities and Stockholders' Equity - Total (unrestated),MATRIX,48%,21,38
+fnd7_ointfund_rqtca,Quarterly fundamental item: Total Current Assets (unrestated),MATRIX,27%,10,18
+fnd7_ointfund_rqtl,Quarterly Fundamental Item: Total Liabilities (Unrestated),MATRIX,43%,19,33
+fnd7_ointfund_rqtpaci,Quarterly fundamental item : Total invested capital (unrestated),MATRIX,41%,9,13
+fnd7_ointfundfn_fqsgoc,Quarterly footnote information for Cost of goods sold (second file),MATRIX,46%,70,405
+fnd7_ointfundfn_fqspepo,Quarterly footnote information: Earnings per share from operations,MATRIX,60%,46,108
+fnd7_ointfundfn_fqta,Quarterly footnote information for Total assets (second file),MATRIX,38%,30,63
+fnd7_ointfundfn_fqtnix,Quarterly footnote information: Interest expense,MATRIX,26%,53,84
+fnd7_ointhstfund_h21fpeo,"Diluted earnings per share from operations, trailing 12 months (historical)",MATRIX,38%,107,247
+fnd7_ointhstfund_h21speo,"Earnings per share from operations, 12‑month moving (historical quarterly footnote)",MATRIX,38%,51,148
+fnd7_ointhstfund_hq21hsc,Historical Quarterly footnote information: Common Shares Used to Calculate Earnings per Share -> 12-Months Moving (second file),MATRIX,37%,12,31
+fnd7_ointhstfund_hqagsx,"Historical Quarterly footnote information: Selling, General, and Administrative Expense (second file)",MATRIX,28%,50,235
+fnd7_ointhstfund_hqelas,Historical Quarterly footnote information: Net Sales (second file),MATRIX,37%,45,101
+fnd7_ointhstfund_hqer,Historical Quarterly Footnote Information: Retained Earnings (Second File),MATRIX,29%,11,25
+fnd7_ointhstfund_hqipon,Historical Quarterly footnote information: Nonoperating Income (Expense) (second file),MATRIX,28%,31,89
+fnd7_ointhstfund_hqoa,Historical Quarterly footnote information: Other Assets (second file),MATRIX,31%,18,32
+fnd7_ointhstfund_hqpdbio,Historical Quarterly footnote information: Operating Income Before Depreciation (second file),MATRIX,37%,43,381
+fnd7_ointhstfund_hqqec,Historical Quarterly Footnote Information: Total Common Equity (Second File),MATRIX,38%,16,33
+fnd7_ointhstfund_hqqes,Historical Quarterly footnote information: Total Parent Stockholder's equity (second file),MATRIX,39%,27,92
+fnd7_ointhstfund_hqsgoc,Historical Quarterly Footnote Information: Cost of Goods Sold (Second File),MATRIX,44%,31,62
+fnd7_ointhstfund_hqspac,Historical Quarterly Footnote Information: Capital Surplus (Second File),MATRIX,29%,29,70
+fnd7_ointhstfund_hqspepo,Historical quarterly footnote information: Earnings per share from operations (second file),MATRIX,30%,36,61
+fnd7_ointhstfund_hqta,Historical Quarterly Footnote Information: Total Gross Assets (Liabilities + Stockholder's Equity) (Second File),MATRIX,48%,6,27
+fnd7_ointhstfund_hqtca,Historical Quarterly Footnote Information: Total Current Assets (Second File),MATRIX,27%,28,67
+fnd7_ointhstfund_hqtl,Historical Quarterly Footnote Information: Total Liabilities (Includes Long-Term Debt + Deferred Credits as Well) (Second File),MATRIX,44%,17,48
+fnd7_ointhstfund_hqtpaci,Historical Quarterly footnote information: Total Invested Capital (second file),MATRIX,42%,45,76
+fnd7_ointhstfund_hqxspeo,Historical Quarterly footnote information: Earnings Per Share - Diluted - from Operations (second file),MATRIX,29%,53,203
+fnd7_ointhstfundfn_hfqohsc,Historical Quarterly footnote information: Common shares outstanding (second file),MATRIX,26%,16,29
+fnd7_ointhstfundfn_hfqspepo,Historical quarterly footnote information (second file) for earnings per share from operations,MATRIX,30%,43,106

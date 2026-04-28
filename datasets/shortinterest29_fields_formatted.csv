@@ -1,0 +1,13 @@
+Field,Description,Type,Coverage,Users,Alphas
+shrt29_data1,Total monthly short sale volume (number of shares sold short) for a security and venue,MATRIX,88%,16,32
+shrt29_data2,Total monthly short sale notional value (sum of price × shares) for a security and venue,MATRIX,88%,11,19
+shrt29_data3,data3,MATRIX,88%,10,12
+shrt29_monthly_data1,Total monthly short sale volume (number of shares sold short per security across all venues for the month),MATRIX,88%,14,16
+shrt29_monthly_data2,"Total monthly short sale notional value, calculated as the sum of price × shares for all short sales per security across all venues",MATRIX,88%,10,11
+shrt29_monthly_data3,Count of short sale trades or reported short sale events for each security across all venues during the month,MATRIX,88%,7,7
+shrt29_monthly_truemonth_data1,"Total short sale volume (shares) for the true calendar month, point-in-time aligned, per security across all venues",MATRIX,88%,17,32
+shrt29_monthly_truemonth_data2,"Total short sale notional value (price × shares) for the true calendar month, aligned to calendar and regulatory standards, per security across all venues",MATRIX,88%,6,6
+shrt29_monthly_truemonth_data3,"Count of short sale trades/events for the true calendar month, point-in-time aligned and compliance-ready, per security across all venues",MATRIX,88%,7,7
+shrt29_truemonth_data1,Calendar-month aligned total short sale volume (number of shares sold short) for compliance and regulatory use,MATRIX,88%,9,21
+shrt29_truemonth_data2,Calendar-month aligned total short sale notional value (sum of price × shares) for compliance and regulatory use,MATRIX,88%,7,7
+shrt29_truemonth_data3,Calendar-month aligned total count of short sale trades/events for compliance and regulatory use,MATRIX,88%,7,13

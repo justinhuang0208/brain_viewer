@@ -1,0 +1,199 @@
+Field,Description,Type,Coverage,Users,Alphas
+ask_order_deletion_count,Number of ask-side order deletions/cancellations during the day,VECTOR,73%,2,3
+ask_order_execution_count,Number of execution events that filled resting ask-side orders during the day,VECTOR,73%,0,0
+ask_order_insertion_count_2,Number of new limit order insert events on the ask side during the day,VECTOR,73%,0,0
+ask_order_modification_count,"Number of modification events (e.g., size changes) on the ask side during the day",VECTOR,73%,0,0
+ask_order_replacement_count,Number of order replacement events on the ask side during the day,VECTOR,73%,0,0
+ask_order_volume_after_modification_2,Refers to the total volume of modified ask orders,VECTOR,73%,0,0
+ask_order_volume_after_replacement,Refers to the total volume of replaced ask orders,VECTOR,73%,1,1
+ask_order_volume_before_modification,Refers to the total volume of modified ask orders,VECTOR,73%,0,0
+ask_order_volume_change_modification,Refers to the total change in volume of ask orders due to orders being modified.,VECTOR,73%,0,0
+ask_order_volume_change_replacement,Refers to the total change in volume of ask orders due to orders being replaced.,VECTOR,73%,0,0
+ask_order_volume_deleted,Total share volume removed via cancellations on the ask side during the day,VECTOR,73%,3,3
+ask_order_volume_executed,Total share volume executed from resting ask-side orders during the day,VECTOR,73%,1,1
+ask_trade_imbalance_1_level,"Refers to the volume of aggressive asks executed 1 level or more away from the best offer, as a percentage of the total volume traded in that period.",VECTOR,73%,0,0
+ask_trade_imbalance_2_levels,"Refers to the volume of aggressive asks executed 2 levels or more away from the best offer, as a percentage of the total volume traded in that period.",VECTOR,73%,0,0
+ask_trade_imbalance_3_levels,"Refers to the volume of aggressive asks executed 3 levels or more away from the best offer, as a percentage of the total volume traded in that period.",VECTOR,73%,0,0
+ask_trade_imbalance_all_levels,Refers to the volume of aggressive asks executed as a percentage of the total volume traded in that period.,VECTOR,73%,0,0
+auction_order_imbalance_absolute,Refers to the excess volume after the closing auction that stays on the book after the auction execution. This is the volume of bid orders at  the crossing price minus the volume of ask orders at the crossing price.,VECTOR,72%,0,0
+auction_order_imbalance_notional,Refers to the excess notional volume after the closing auction that stays on the book after the auction execution. This is the notional volume of bid orders at the crossing price minus the notional volume of ask orders at the crossing price.,VECTOR,72%,1,1
+auction_order_imbalance_pct_adv,Closing auction order imbalance expressed as a percentage of the stock’s Average Daily Volume,VECTOR,72%,0,0
+auction_order_imbalance_pct_auction,Refers to the excess volume after the closing auction that stays on the book after the auction execution as a percentage of volume traded during the auction. This is the volume of bid orders at the crossing price minus the volume of ask orders at the crossing price.,VECTOR,71%,0,0
+avg_rest_time_ask_cancelled_lvl1,Refers to the mean resting time (in seconds) of ask orders placed at the 1st level of the book which were subsequently cancelled.,VECTOR,73%,0,0
+avg_rest_time_ask_cancelled_lvl2,Average resting time in seconds for ask-side orders at depth level 2 away from the EBBO that were cancelled,VECTOR,73%,0,0
+avg_rest_time_ask_cancelled_lvl3,Average time in seconds that ask-side limit orders resting 3 levels away from the EBBO remained on the book before being cancelled,VECTOR,73%,0,0
+avg_rest_time_ask_cancelled_lvl4,Refers to the mean resting time (in seconds) of ask orders placed at the 4th level of the book which were subsequently cancelled.,VECTOR,73%,0,0
+avg_rest_time_ask_cancelled_lvl5,Refers to the mean resting time (in seconds) of ask orders placed at the 5th level of the book which were subsequently cancelled.,VECTOR,73%,0,0
+avg_rest_time_ask_filled_lvl1,Refers to the mean resting time (in seconds) of ask orders placed at the 1st level of the book which were subsequently completely filled.,VECTOR,73%,0,0
+avg_rest_time_ask_filled_lvl2,Average resting time in seconds for ask-side orders at depth level 2 away from the EBBO that were fully filled,VECTOR,73%,0,0
+avg_rest_time_ask_filled_lvl3,Average resting time in seconds for ask-side orders at depth level 3 away from the EBBO that were fully filled,VECTOR,73%,0,0
+avg_rest_time_ask_filled_lvl4,Refers to the mean resting time (in seconds) of ask orders placed at the 4th level of the book which were subsequently completely filled.,VECTOR,72%,0,0
+avg_rest_time_ask_filled_lvl5,Refers to the mean resting time (in seconds) of ask orders placed at the 5th level of the book which were subsequently completely filled.,VECTOR,72%,0,0
+avg_rest_time_ask_partial_lvl1,Refers to the mean resting time (in seconds) of ask orders placed at the 1st level of the book which were subsequently partially filled.,VECTOR,73%,0,0
+avg_rest_time_ask_partial_lvl2,Average resting time in seconds for ask-side orders at depth level 2 away from the EBBO that were partially filled,VECTOR,73%,0,0
+avg_rest_time_ask_partial_lvl3,Average resting time in seconds for ask-side orders at depth level 3 away from the EBBO that were partially filled,VECTOR,73%,0,0
+avg_rest_time_ask_partial_lvl4,Average time in seconds that ask-side limit orders resting 4 levels away from the EBBO remained on the book before being partially filled,VECTOR,72%,0,0
+avg_rest_time_ask_partial_lvl5,Average time in seconds that ask-side limit orders resting 5 levels away from the EBBO remained on the book before being partially filled,VECTOR,72%,0,0
+avg_rest_time_bid_cancelled_lvl1,Average time in seconds that bid-side limit orders resting 1 level away from the EBBO remained on the book before being cancelled,VECTOR,73%,1,1
+avg_rest_time_bid_cancelled_lvl2,Average resting time in seconds for bid-side orders at depth level 2 away from the EBBO that were cancelled,VECTOR,73%,0,0
+avg_rest_time_bid_cancelled_lvl3,Refers to the mean resting time (in seconds) of bid orders placed at the 3rd level of the book which were subsequently cancelled.,VECTOR,73%,0,0
+avg_rest_time_bid_cancelled_lvl4,Refers to the mean resting time (in seconds) of bid orders placed at the 4th level of the book which were subsequently cancelled.,VECTOR,73%,0,0
+avg_rest_time_bid_cancelled_lvl5,Refers to the mean resting time (in seconds) of bid orders placed at the 5th level of the book which were subsequently cancelled.,VECTOR,73%,0,0
+avg_rest_time_bid_filled_lvl1,Average time in seconds that bid-side limit orders resting 1 level away from the EBBO remained on the book before being fully filled,VECTOR,73%,0,0
+avg_rest_time_bid_filled_lvl2,Average resting time in seconds for bid-side orders at depth level 2 away from the EBBO that were fully filled,VECTOR,73%,0,0
+avg_rest_time_bid_filled_lvl3,Average resting time in seconds for bid-side orders at depth level 3 away from the EBBO that were fully filled,VECTOR,73%,1,1
+avg_rest_time_bid_filled_lvl4,Refers to the mean resting time (in seconds) of bid orders placed at the 4th level of the book which were subsequently completely filled.,VECTOR,73%,1,1
+avg_rest_time_bid_filled_lvl5,Average time in seconds that bid-side limit orders resting 5 levels away from the EBBO remained on the book before being fully filled,VECTOR,72%,0,0
+avg_rest_time_bid_partial_lvl1,Refers to the mean resting time (in seconds) of bid orders placed at the 1st level of the book which were subsequently partially filled.,VECTOR,73%,1,1
+avg_rest_time_bid_partial_lvl2,Average resting time in seconds for bid-side orders at depth level 2 away from the EBBO that were partially filled,VECTOR,73%,0,0
+avg_rest_time_bid_partial_lvl3,Average time in seconds that bid-side limit orders resting 3 levels away from the EBBO remained on the book before being partially filled,VECTOR,73%,0,0
+avg_rest_time_bid_partial_lvl4,Refers to the mean resting time (in seconds) of bid orders placed at the 4th level of the book which were subsequently partially filled.,VECTOR,72%,0,0
+avg_rest_time_bid_partial_lvl5,Refers to the mean resting time (in seconds) of bid orders placed at the 5th level of the book which were subsequently partially filled.,VECTOR,72%,0,0
+bid_order_deletion_count,Number of deletion/cancellation events on the bid side during the day,VECTOR,73%,1,2
+bid_order_execution_count,Number of execution events that filled resting bid-side orders during the day,VECTOR,73%,0,0
+bid_order_insertion_count,Number of new limit order insert events on the bid side during the day,VECTOR,73%,0,0
+bid_order_modification_count,"Number of modification events (e.g., size changes) on the bid side during the day",VECTOR,73%,0,0
+bid_order_replacement_count_2,Number of order replacement events on the bid side during the day,VECTOR,73%,0,0
+bid_order_volume_after_modification,Cumulative new volume (shares) set by modify events on the bid side during the day,VECTOR,73%,0,0
+bid_order_volume_after_replacement,Cumulative new volume (shares) set by replace events on the bid side during the day,VECTOR,73%,0,0
+bid_order_volume_before_modification,Sum of original volumes (before modification) for bid-side orders that were modified,VECTOR,73%,0,0
+bid_order_volume_change_modification_2,"Cumulative change in volume (new minus old, in shares) caused by bid-side modify events during the day",VECTOR,73%,0,0
+bid_order_volume_change_replacement_2,Cumulative change in volume (shares) caused by bid-side replace events during the day,VECTOR,73%,0,0
+bid_order_volume_deleted,Total share volume removed via cancellations on the bid side during the day,VECTOR,73%,2,2
+bid_order_volume_executed,Total share volume executed from resting bid-side orders during the day,VECTOR,73%,0,0
+bid_trade_imbalance_1_level,"Refers to the volume of aggressive bids executed 1 level or more away from the best bid, as a percentage of the total volume traded in that period.",VECTOR,73%,0,0
+bid_trade_imbalance_2_levels,"Refers to the volume of aggressive bids executed 2 levels or more away from the best bid, as a percentage of the total volume traded in that period.",VECTOR,73%,0,0
+bid_trade_imbalance_3_levels,"Refers to the volume of aggressive bids executed 3 levels or more away from the best bid, as a percentage of the total volume traded in that period.",VECTOR,73%,0,0
+bid_trade_imbalance_all_levels,Refers to the volume of aggressive bids executed as a percentage of the total volume traded in that period.,VECTOR,73%,0,0
+bilateral_trade_count,"Refers to the number of executions classified as bilateral addressable. This corresponds to the liquidity that is part of the price forming process, but requires a bilateral agreement between two parties to be accessible.",VECTOR,73%,1,1
+bilateral_trade_notional_value,"Refers to the notional value traded classified as bilateral addressable. This corresponds to the liquidity that is part of the price forming process, but requires a bilateral agreement between two parties to be accessible.",VECTOR,73%,0,0
+bilateral_trade_volume,"Refers to the number of shares trades classified as bilateral addressable. This corresponds to the liquidity that is part of the price forming process, but requires a bilateral agreement between two parties to be accessible.",VECTOR,73%,0,0
+closing_auction_dislocation_1min,Refers to the change (in basis points) between the mid-point price 1 minute prior to the end of continuous trading and the closing price of the auction on the regulated market.,VECTOR,72%,0,0
+closing_auction_dislocation_5min,Refers to the change (in basis points) between the mid-point price 5 minutes prior to the end of continuous trading and the closing price of the auction on the regulated market.,VECTOR,72%,0,0
+closing_auction_dislocation_last,Refers to the change (in basis points) between the last mid-point price during continuous trading and the closing price of the auction on the regulated market.,VECTOR,72%,0,0
+dark_trade_count,Number of trades executed on dark venues/non-displayed books during the day,VECTOR,73%,0,0
+dark_trade_notional_value,"Refers to the notional value traded classified as dark addressable. This corresponds to the liquidity that is open to all market participants, but has limited or is exempt from pre-trade transparency disclosure.",VECTOR,73%,0,0
+dark_trade_volume,"Refers to the number of shares trades classified as dark addressable. This corresponds to the liquidity that is open to all market participants, but has limited or is exempt from pre-trade transparency disclosure.",VECTOR,73%,0,0
+fill_prob_ask_lvl1,Refers to the probability that an ask order placed at the 1st level of the book will be filled within 60 seconds.,VECTOR,73%,1,1
+fill_prob_ask_lvl2,Refers to the probability that an ask order placed at the 2nd level of the book will be filled within 60 seconds.,VECTOR,73%,0,0
+fill_prob_ask_lvl3,Refers to the probability that an ask order placed at the 3rd level of the book will be filled within 60 seconds.,VECTOR,73%,0,0
+fill_prob_ask_lvl4,Refers to the probability that an ask order placed at the 4th level of the book will be filled within 60 seconds.,VECTOR,73%,0,0
+fill_prob_ask_lvl5,Refers to the probability that an ask order placed at the 5th level of the book will be filled within 60 seconds.,VECTOR,73%,0,0
+fill_prob_bid_lvl1,Refers to the probability that a bid order placed at the 1st level of the book will be filled within 60 seconds.,VECTOR,73%,0,0
+fill_prob_bid_lvl2,Refers to the probability that a bid order placed at the 2nd level of the book will be filled within 60 seconds.,VECTOR,73%,0,0
+fill_prob_bid_lvl3,Refers to the probability that a bid order placed at the 3rd level of the book will be filled within 60 seconds.,VECTOR,73%,0,0
+fill_prob_bid_lvl4,Refers to the probability that a bid order placed at the 4th level of the book will be filled within 60 seconds.,VECTOR,73%,0,0
+fill_prob_bid_lvl5,Refers to the probability that a bid order placed at the 5th level of the book will be filled within 60 seconds.,VECTOR,73%,0,0
+final_bid_ask_spread_bps,Last observed relative bid-ask spread of the day,VECTOR,73%,0,0
+final_executed_trade_price,Last executed trade price of the trading day,VECTOR,73%,0,0
+final_midpoint_price,End-of-day midpoint of the best bid and ask price,VECTOR,73%,2,2
+inserted_ask_order_volume,Total volume (shares) of orders inserted on the ask side during the day,VECTOR,73%,0,0
+inserted_bid_order_volume,Total share volume added via new limit orders on the bid side during the day,VECTOR,73%,0,0
+intraday_price_volatility,Realized intraday volatility estimate for the instrument on the given date,VECTOR,73%,0,0
+last_absolute_bid_ask_spread,Last observed absolute bid-ask spread of the day in price units,VECTOR,73%,0,0
+last_bid_ask_spread_ticks,Last observed absolute bid-ask spread of the day measured in tick increments,VECTOR,73%,0,0
+lit_trade_count,Number of trades executed on lit/transparent order books during the day,VECTOR,73%,0,0
+lit_trade_notional_value,"Refers to the notional value traded classified as lit addressable. This corresponds to liquidity open to all market participants, has full pre-trade transparency and can be used for benchmark and reference price calculations.",VECTOR,73%,0,0
+lit_trade_volume,Total share volume traded on lit/transparent order books during the day,VECTOR,73%,0,0
+lowest_executed_price,Lowest executed trade price observed during the trading day,VECTOR,73%,0,0
+lowest_midpoint_price,Lowest midpoint of the best bid and ask observed during the trading day,VECTOR,73%,0,0
+max_executed_trade_price,Highest executed trade price observed during the trading day,VECTOR,73%,0,0
+max_midpoint_price_daily,Highest midpoint of the best bid and ask observed during the trading day,VECTOR,73%,0,0
+mean_absolute_bid_ask_spread,Arithmetic mean absolute bid-ask spread over the day in price units,VECTOR,73%,0,0
+mean_bid_ask_spread_ticks,Arithmetic mean absolute bid-ask spread over the day expressed in tick units,VECTOR,73%,0,0
+mean_relative_bid_ask_spread,Arithmetic mean of the relative bid-ask spread over the day,VECTOR,73%,1,1
+min_rest_time_ask_cancelled_lvl1,Minimum observed time in seconds that ask-side limit orders resting 1 level away from the EBBO remained on the book before being cancelled,VECTOR,73%,0,0
+min_rest_time_ask_cancelled_lvl2,Refers to the minimum resting time (in microseconds) of ask orders placed at the 2nd level of the book which were subsequently cancelled.,VECTOR,73%,0,0
+min_rest_time_ask_cancelled_lvl3,Minimum observed time in seconds that ask-side limit orders resting 3 levels away from the EBBO remained on the book before being cancelled,VECTOR,73%,0,0
+min_rest_time_ask_cancelled_lvl4,Minimum observed time in seconds that ask-side limit orders resting 4 levels away from the EBBO remained on the book before being cancelled,VECTOR,73%,0,0
+min_rest_time_ask_cancelled_lvl5,Minimum resting time in seconds for ask-side orders at depth level 5 away from the EBBO that were cancelled,VECTOR,73%,0,0
+min_rest_time_ask_filled_lvl1,Refers to the minimum resting time (in microseconds) of ask orders placed at the 1st level of the book which were subsequently completely filled.,VECTOR,73%,0,0
+min_rest_time_ask_filled_lvl2,Minimum observed time in seconds that ask-side limit orders resting 2 levels away from the EBBO remained on the book before being fully filled,VECTOR,73%,0,0
+min_rest_time_ask_filled_lvl3,Refers to the minimum resting time (in microseconds) of ask orders placed at the 3rd level of the book which were subsequently completely filled.,VECTOR,73%,0,0
+min_rest_time_ask_filled_lvl4,Minimum resting time in seconds for ask-side orders at depth level 4 away from the EBBO that were fully filled,VECTOR,73%,0,0
+min_rest_time_ask_filled_lvl5,Refers to the minimum resting time (in microseconds) of ask orders placed at the 5th level of the book which were subsequently completely filled.,VECTOR,72%,0,0
+min_rest_time_ask_partial_lvl1,Minimum resting time in seconds for ask-side orders at depth level 1 away from the EBBO that were partially filled,VECTOR,73%,0,0
+min_rest_time_ask_partial_lvl2,Refers to the minimum resting time (in microseconds) of ask orders placed at the 2nd level of the book which were subsequently partially filled.,VECTOR,73%,0,0
+min_rest_time_ask_partial_lvl3,Minimum observed time in seconds that ask-side limit orders resting 3 levels away from the EBBO remained on the book before being partially filled,VECTOR,73%,0,0
+min_rest_time_ask_partial_lvl4,Refers to the minimum resting time (in microseconds) of ask orders placed at the 4th level of the book which were subsequently partially filled.,VECTOR,72%,0,0
+min_rest_time_ask_partial_lvl5,Minimum observed time in seconds that ask-side limit orders resting 5 levels away from the EBBO remained on the book before being partially filled,VECTOR,72%,0,0
+min_rest_time_bid_cancelled_lvl1,Minimum observed time in seconds that bid-side limit orders resting 1 level away from the EBBO remained on the book before being cancelled,VECTOR,73%,1,1
+min_rest_time_bid_cancelled_lvl2,Minimum observed time in seconds that bid-side limit orders resting 2 levels away from the EBBO remained on the book before being cancelled,VECTOR,73%,0,0
+min_rest_time_bid_cancelled_lvl3,Minimum observed time in seconds that bid-side limit orders resting 3 levels away from the EBBO remained on the book before being cancelled,VECTOR,73%,0,0
+min_rest_time_bid_cancelled_lvl4,Minimum observed time in seconds that bid-side limit orders resting 4 levels away from the EBBO remained on the book before being cancelled,VECTOR,73%,0,0
+min_rest_time_bid_cancelled_lvl5,Minimum resting time in seconds for bid-side orders at depth level 5 away from the EBBO that were cancelled,VECTOR,73%,0,0
+min_rest_time_bid_filled_lvl1,Minimum resting time in seconds for bid-side orders at depth level 1 away from the EBBO that were fully filled,VECTOR,73%,0,0
+min_rest_time_bid_filled_lvl2,Minimum resting time in seconds for bid-side orders at depth level 2 away from the EBBO that were fully filled,VECTOR,73%,0,0
+min_rest_time_bid_filled_lvl3,Minimum resting time in seconds for bid-side orders at depth level 3 away from the EBBO that were fully filled,VECTOR,73%,0,0
+min_rest_time_bid_filled_lvl4,Refers to the minimum resting time (in microseconds) of bid orders placed at the 4th level of the book which were subsequently completely filled.,VECTOR,72%,0,0
+min_rest_time_bid_filled_lvl5,Refers to the minimum resting time (in microseconds) of bid orders placed at the 5th level of the book which were subsequently completely filled.,VECTOR,72%,0,0
+min_rest_time_bid_partial_lvl1,Refers to the minimum resting time (in microseconds) of bid orders placed at the 1st level of the book which were subsequently partially filled.,VECTOR,73%,0,0
+min_rest_time_bid_partial_lvl2,Minimum observed time in seconds that bid-side limit orders resting 2 levels away from the EBBO remained on the book before being partially filled,VECTOR,73%,0,0
+min_rest_time_bid_partial_lvl3,Refers to the minimum resting time (in microseconds) of bid orders placed at the 3rd level of the book which were subsequently partially filled.,VECTOR,73%,0,0
+min_rest_time_bid_partial_lvl4,Refers to the minimum resting time (in microseconds) of bid orders placed at the 4th level of the book which were subsequently partially filled.,VECTOR,72%,0,0
+min_rest_time_bid_partial_lvl5,Minimum observed time in seconds that bid-side limit orders resting 5 levels away from the EBBO remained on the book before being partially filled,VECTOR,72%,0,0
+nonaddressable_trade_count,"Refers to the number of executions classified as non-addressable. This corresponds to the liquidity that is not part of the price forming process, or open to general market participants.",VECTOR,73%,0,0
+nonaddressable_trade_notional_value,"Refers to the notional value traded classified as non-addressable. This corresponds to the liquidity that is not part of the price forming process, or open to general market participants.",VECTOR,73%,1,1
+nonaddressable_trade_volume,"Refers to the number of shares trades classified as non-addressable. This corresponds to the liquidity that is not part of the price forming process, or open to general market participants.",VECTOR,73%,0,0
+opening_executed_price,First executed trade price of the trading day,VECTOR,73%,0,0
+opening_midpoint_price,Opening midpoint of the best bid and ask price,VECTOR,73%,0,0
+quote_to_trade_ratio,"Ratio of quote volume to trade volume away from the EBBO (off-best), used as a proxy for execution quality",VECTOR,73%,0,0
+replaced_ask_order_volume_before,Sum of original volumes (before replacement) for ask-side orders that were replaced,VECTOR,73%,0,0
+replaced_bid_order_volume_before,Sum of original volumes (before replacement) for bid-side orders that were replaced,VECTOR,73%,0,0
+time_weighted_avg_trade_price,Time-weighted average trade price over the trading day,VECTOR,73%,0,0
+time_weighted_spread_bps,Time-weighted average relative bid-ask spread over the trading day (normalized by price),VECTOR,73%,0,0
+time_weighted_spread_price_units,Time-weighted average absolute bid-ask spread over the day in price units,VECTOR,73%,0,0
+time_weighted_spread_ticks,Time-weighted average absolute bid-ask spread over the day in tick units,VECTOR,73%,0,0
+trade_market_impact_coefficient,Refers to the immediate impact of making a trade on the next price that is traded,VECTOR,73%,0,0
+twa_notional_ask_10bps,Time-weighted average notional (local currency amount) of displayed sell-side liquidity within 10 basis points of the best ask price,VECTOR,73%,0,0
+twa_notional_ask_1_level,Time-weighted average notional (local currency amount) of displayed sell-side liquidity at the top (best) ask level,VECTOR,73%,0,0
+twa_notional_ask_2_levels,Time-weighted average notional (local currency amount) of displayed sell-side liquidity within the top 2 ask order book levels near the best ask price,VECTOR,73%,0,0
+twa_notional_ask_30bps,"Time-weighted average notional available on the ask within 30 basis points of the best ask price, in the local trading currency",VECTOR,73%,0,0
+twa_notional_ask_3_levels,Time-weighted average notional (local currency amount) of displayed sell-side liquidity within the top 3 ask order book levels near the best ask price,VECTOR,73%,0,0
+twa_notional_ask_4_levels,Time-weighted average notional (local currency amount) of displayed sell-side liquidity within the top 4 ask order book levels near the best ask price,VECTOR,73%,0,0
+twa_notional_ask_50bps,Time-weighted average notional (local currency amount) of displayed sell-side liquidity within 50 basis points of the best ask price,VECTOR,73%,0,0
+twa_notional_ask_5_levels,Time-weighted average notional (local currency) available on the ask side within the top 5 order book levels,VECTOR,73%,0,0
+twa_notional_bid_10bps,Time-weighted average notional (local currency amount) of displayed buy-side liquidity within 10 basis points of the best bid price,VECTOR,73%,0,0
+twa_notional_bid_1_level,Time-weighted average notional (local currency) available at the best bid (level 1),VECTOR,73%,0,0
+twa_notional_bid_2_levels,"Time-weighted average notional available on the bid within the top 2 order book levels near the best bid, in the local trading currency",VECTOR,73%,0,0
+twa_notional_bid_30bps,Time-weighted average notional (local currency) available on the bid side within 30 bps of the best bid price,VECTOR,73%,0,0
+twa_notional_bid_3_levels,Time-weighted average notional (local currency amount) of displayed buy-side liquidity within the top 3 bid order book levels near the best bid price,VECTOR,73%,0,0
+twa_notional_bid_4_levels,Time-weighted average notional (local currency amount) of displayed buy-side liquidity within the top 4 bid order book levels near the best bid price,VECTOR,73%,0,0
+twa_notional_bid_50bps,Time-weighted average notional (local currency) available on the bid side within 50 bps of the best bid price,VECTOR,73%,0,0
+twa_notional_bid_5_levels,Time-weighted average notional (local currency amount) of displayed buy-side liquidity within the top 5 bid order book levels near the best bid price,VECTOR,73%,0,0
+twa_order_count_ask_10bps,Time-weighted average number of resting limit orders on the ask side within 10 basis points of the best ask price during the day,VECTOR,73%,0,0
+twa_order_count_ask_1_level,Time-weighted average number of resting orders at the best ask (level 1),VECTOR,73%,0,0
+twa_order_count_ask_2_levels,Time-weighted average number of displayed sell-side limit orders within the top 2 ask order book levels near the best ask price,VECTOR,73%,0,0
+twa_order_count_ask_30bps,Time-weighted average number of displayed sell-side limit orders within 30 basis points of the best ask price,VECTOR,73%,1,1
+twa_order_count_ask_3_levels,Time-weighted average number of displayed sell-side limit orders within the top 3 ask order book levels near the best ask price,VECTOR,73%,1,1
+twa_order_count_ask_4_levels,Time-weighted average number of displayed sell-side limit orders within the top 4 ask order book levels near the best ask price,VECTOR,73%,0,0
+twa_order_count_ask_50bps,Time-weighted average number of displayed sell-side limit orders within 50 basis points of the best ask price,VECTOR,73%,0,0
+twa_order_count_ask_5_levels,Time-weighted average count of limit orders on the ask side across the first 5 price levels from the best ask,VECTOR,73%,0,0
+twa_order_count_bid_10bps,Time-weighted average number of displayed buy-side limit orders within 10 basis points of the best bid price,VECTOR,73%,0,0
+twa_order_count_bid_1_level,Time-weighted average number of displayed buy-side limit orders at the top (best) bid level,VECTOR,73%,0,0
+twa_order_count_bid_2_levels,Time-weighted average count of limit orders on the bid side across the first 2 price levels from the best bid,VECTOR,73%,1,1
+twa_order_count_bid_30bps,Time-weighted average count of limit orders on the bid side within 30 bps of the best bid price,VECTOR,73%,1,1
+twa_order_count_bid_3_levels,Time-weighted average count of limit orders on the bid side across the first 3 price levels from the best bid,VECTOR,73%,0,0
+twa_order_count_bid_4_levels,Time-weighted average count of limit orders on the bid side across the first 4 price levels from the best bid,VECTOR,73%,0,0
+twa_order_count_bid_50bps,Time-weighted average count of resting limit orders on the bid within 50 basis points of the best bid price,VECTOR,73%,0,0
+twa_order_count_bid_5_levels,Time-weighted average number of displayed buy-side limit orders within the top 5 bid order book levels near the best bid price,VECTOR,73%,0,0
+twa_share_count_ask_10bps,Time-weighted average number of shares resting on the ask side within 10 bps of the best ask price,VECTOR,73%,0,0
+twa_share_count_ask_1_level,Time-weighted average number of shares on the ask side at the first price level (best ask),VECTOR,73%,0,0
+twa_share_count_ask_2_levels,Time-weighted average shares available on the ask side within the top 2 order book levels near the best ask price over the trading day,VECTOR,73%,0,0
+twa_share_count_ask_30bps,Time-weighted average share count of displayed sell-side liquidity within 30 basis points of the best ask price,VECTOR,73%,0,0
+twa_share_count_ask_3_levels,Time-weighted average share count of displayed sell-side liquidity within the top 3 ask order book levels near the best ask price,VECTOR,73%,0,0
+twa_share_count_ask_4_levels,Time-weighted average number of shares on the ask side across the first 4 price levels from the best ask,VECTOR,73%,0,0
+twa_share_count_ask_50bps,Time-weighted average shares available on the ask side within 50 bps of the best ask price,VECTOR,73%,0,0
+twa_share_count_ask_5_levels,Time-weighted average shares available on the ask side within the top 5 order book levels,VECTOR,73%,0,0
+twa_share_count_bid_10bps,Time-weighted average number of shares available on the bid within 10 basis points of the best bid price,VECTOR,73%,0,0
+twa_share_count_bid_1_level,Time-weighted average number of shares on the bid side at the first price level (best bid),VECTOR,73%,1,1
+twa_share_count_bid_2_levels,Time-weighted average number of shares on the bid side across the first 2 price levels from the best bid,VECTOR,73%,1,1
+twa_share_count_bid_30bps,Time-weighted average number of shares resting on the bid side within 30 bps of the best bid price,VECTOR,73%,0,0
+twa_share_count_bid_3_levels,Time-weighted average share count of displayed buy-side liquidity within the top 3 bid order book levels near the best bid price,VECTOR,73%,0,0
+twa_share_count_bid_4_levels,Time-weighted average share count of displayed buy-side liquidity within the top 4 bid order book levels near the best bid price,VECTOR,73%,0,0
+twa_share_count_bid_50bps,Time-weighted average number of shares resting on the bid side within 50 bps of the best bid price,VECTOR,73%,0,0
+twa_share_count_bid_5_levels,Time-weighted average share count of displayed buy-side liquidity within the top 5 bid order book levels near the best bid price,VECTOR,73%,0,0
+volume_weighted_avg_trade_price,Volume-weighted average trade price over the trading day,VECTOR,73%,0,0
+volume_weighted_relative_spread,Volume-weighted average relative bid-ask spread over the trading day,VECTOR,73%,0,0
+volume_weighted_spread_price_units,Volume-weighted average absolute bid-ask spread in price units,VECTOR,73%,0,0
+volume_weighted_spread_ticks,Volume-weighted average absolute bid-ask spread over the day in tick units,VECTOR,73%,0,0

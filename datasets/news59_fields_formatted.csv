@@ -1,0 +1,5 @@
+Field,Description,Type,Coverage,Users,Alphas
+mws59_event_fiscal_year,Fiscal year in which the event takes place,VECTOR,100%,22,51
+mws59_event_fiscal_year_fast_d1,Fiscal year in which the event takes place,VECTOR,100%,4,6
+mws59_event_time_value,Scheduled time of the event in UTC (if MarketTime is specified); integer value,VECTOR,100%,24,51
+mws59_event_time_value_fast_d1,Scheduled time of the event in UTC (if MarketTime is specified); integer value,VECTOR,100%,3,4

@@ -1,0 +1,3 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl144_predict,Raw output score from the StarPerformer (wolfe_star) deep learning model for each stock,MATRIX,85%,6,6
+mdl144_score,"The post-processed and normalized model score designed for systematic alpha generation, usually clipped to [0,1]",MATRIX,85%,21,36

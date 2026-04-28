@@ -1,0 +1,502 @@
+Field,Description,Type,Coverage,Users,Alphas
+atm_call_volatility_1080d_long_term_2,"Annualized implied volatility for at-the-money call options with 1080-day maturity, long-horizon overlay",MATRIX,97%,2,2
+atm_call_volatility_1080d_medium_term_2,"Annualized implied volatility for at-the-money call options with 1080-day maturity, medium-horizon overlay",MATRIX,97%,1,1
+atm_call_volatility_1080d_short_term,"Implied volatility for at-the-money call options with 1080-day maturity, short-term overlay",MATRIX,97%,0,0
+atm_call_volatility_10d_long_term_2,"Implied volatility for at-the-money call options with 10-day maturity, long-term overlay",MATRIX,97%,0,0
+atm_call_volatility_10d_medium_term,"Implied volatility for at-the-money call options with 10-day maturity, medium-term contracts",MATRIX,97%,0,0
+atm_call_volatility_120d_long_term_2,"Implied volatility for at-the-money call options with 120-day maturity, long-term overlay",MATRIX,97%,0,0
+atm_call_volatility_120d_medium_term_2,"Implied volatility for at-the-money call options with 120-day maturity, medium-term overlay",MATRIX,97%,0,0
+atm_call_volatility_120d_short_term,"Implied volatility for at-the-money call options with 120-day maturity, short-term contracts",MATRIX,97%,0,0
+atm_call_volatility_150d_medium_term_2,"Implied volatility for at-the-money call options with 150-day maturity, medium-term contracts",MATRIX,97%,0,0
+atm_call_volatility_150d_short_term,"Implied volatility for at-the-money call options with 150-day maturity, short-term contracts",MATRIX,97%,0,0
+atm_call_volatility_180d_medium_term_2,"Annualized implied volatility for at-the-money call options with 180-day maturity, medium-horizon overlay",MATRIX,97%,2,2
+atm_call_volatility_20d_medium_term_2,"Implied volatility for at-the-money call options with 20-day maturity, medium-term contracts",MATRIX,97%,0,0
+atm_call_volatility_20d_short_term_2,"Implied volatility for at-the-money call options with 20-day maturity, short-term overlay",MATRIX,97%,0,0
+atm_call_volatility_270d_medium_term_2,"Implied volatility for at-the-money call options with 270-day maturity, medium-term overlay",MATRIX,97%,0,0
+atm_call_volatility_270d_short_term,"Implied volatility for at-the-money call options with 270-day maturity, short-horizon overlay",MATRIX,97%,1,1
+atm_call_volatility_30d_long_term_2,"Implied volatility for at-the-money call options with 30-day maturity, long-term overlay",MATRIX,97%,0,0
+atm_call_volatility_30d_medium_term_2,"Annualized implied volatility for at-the-money call options with 30-day maturity, medium-horizon overlay",MATRIX,97%,0,0
+atm_call_volatility_30d_short_term_2,"Annualized implied volatility for at-the-money call options with 30-day maturity, short-horizon overlay",MATRIX,97%,0,0
+atm_call_volatility_60d_long_term_2,"Annualized implied volatility for at-the-money call options with 60-day maturity, long-horizon overlay",MATRIX,97%,1,1
+atm_call_volatility_60d_medium_term_2,"Implied volatility for at-the-money call options with 60-day maturity, medium-horizon overlay",MATRIX,97%,0,0
+atm_call_volatility_720d_long_term_2,"Implied volatility for at-the-money call options with 720-day maturity, long-term overlay",MATRIX,97%,2,2
+atm_call_volatility_720d_medium_term_2,"Implied volatility for at-the-money call options with 720-day maturity, medium-term overlay",MATRIX,97%,0,0
+atm_call_volatility_720d_short_term,"Implied volatility for at-the-money call options with 720-day maturity, short-term contracts",MATRIX,97%,0,0
+atm_call_volatility_90d_long_term,"Implied volatility for at-the-money call options with 90-day maturity, long-horizon overlay",MATRIX,97%,0,0
+atm_call_volatility_90d_short_term_2,"Implied volatility for at-the-money call options with 90-day maturity, short-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_1080d_long_term,"Implied volatility for at-the-money put options with 1080-day maturity, long-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_1080d_short_term,"Implied volatility for at-the-money put options with 1080-day maturity, short-term contracts",MATRIX,97%,0,0
+atm_put_volatility_10d_short_term,"Implied volatility for at-the-money put options with 10-day maturity, short-term contracts",MATRIX,97%,0,0
+atm_put_volatility_120d_long_term,"Annualized at-the-money put implied volatility for 120-day maturity, long-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_120d_medium_term_2,"Annualized implied volatility for at-the-money put options with 120-day maturity, medium-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_150d_long_term_2,"Implied volatility for at-the-money put options with 150-day maturity, long-term overlay",MATRIX,97%,0,0
+atm_put_volatility_150d_medium_term,"Implied volatility for at-the-money put options with 150-day maturity, medium-term contracts",MATRIX,97%,0,0
+atm_put_volatility_150d_short_term_2,"Annualized implied volatility for at-the-money put options with 150-day maturity, short-horizon overlay",MATRIX,97%,1,1
+atm_put_volatility_180d_long_term,"Implied volatility for at-the-money put options with 180-day maturity, long-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_180d_medium_term,"Implied volatility for at-the-money put options with 180-day maturity, medium-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_180d_short_term,"Implied volatility for at-the-money put options with 180-day maturity, short-term contracts",MATRIX,97%,0,0
+atm_put_volatility_20d_long_term,"Implied volatility for at-the-money put options with 20-day maturity, long-term contracts",MATRIX,97%,0,0
+atm_put_volatility_20d_medium_term_2,"Annualized implied volatility for at-the-money put options with 20-day maturity, medium-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_20d_short_term_2,"Implied volatility for at-the-money put options with 20-day maturity, short-term overlay",MATRIX,97%,0,0
+atm_put_volatility_270d_long_term,"Annualized at-the-money put implied volatility for 270-day maturity, long-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_270d_medium_term,"Implied volatility for at-the-money put options with 270-day maturity, medium-term contracts",MATRIX,97%,0,0
+atm_put_volatility_270d_short_term,"Implied volatility for at-the-money put options with 270-day maturity, short-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_30d_long_term_2,"Implied volatility for at-the-money put options with 30-day maturity, long-term contracts",MATRIX,97%,0,0
+atm_put_volatility_30d_medium_term,"Implied volatility for at-the-money put options with 30-day maturity, medium-term contracts",MATRIX,97%,0,0
+atm_put_volatility_360d_long_term,"Implied volatility for at-the-money put options with 360-day maturity, long-term contracts",MATRIX,97%,0,0
+atm_put_volatility_360d_medium_term_2,"Implied volatility for at-the-money put options with 360-day maturity, medium-term contracts",MATRIX,97%,0,0
+atm_put_volatility_360d_short_term_2,"Annualized implied volatility for at-the-money put options with 360-day maturity, short-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_60d_long_term,"Annualized at-the-money put implied volatility for 60-day maturity, long-horizon overlay",MATRIX,97%,0,0
+atm_put_volatility_60d_medium_term_2,"Implied volatility for at-the-money put options with 60-day maturity, medium-term overlay",MATRIX,97%,1,1
+atm_put_volatility_60d_short_term,"Implied volatility for at-the-money put options with 60-day maturity, short-term contracts",MATRIX,97%,0,0
+atm_put_volatility_720d_long_term_2,"Implied volatility for at-the-money put options with 720-day maturity, long-term contracts",MATRIX,97%,2,2
+atm_put_volatility_720d_medium_term_2,"Implied volatility for at-the-money put options with 720-day maturity, medium-term overlay",MATRIX,97%,0,0
+atm_put_volatility_90d_long_term,"Implied volatility for at-the-money put options with 90-day maturity, long-term contracts",MATRIX,97%,0,0
+atm_put_volatility_90d_medium_term,"Implied volatility for at-the-money put options with 90-day maturity, medium-term contracts",MATRIX,97%,0,0
+atm_put_volatility_90d_short_term_2,"Implied volatility for at-the-money put options with 90-day maturity, short-term overlay",MATRIX,97%,0,0
+call_option_breakeven_1080d_long_term,"Call option breakeven price for options with 1080-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_1080d_medium_term,"Call option breakeven price for options with 1080-day maturity, medium-term contracts",MATRIX,98%,1,1
+call_option_breakeven_1080d_short_term_2,"Call option breakeven price for options with 1080-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_10d_long_term_2,"Call option breakeven price for options with 10-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_10d_medium_term,"Call option breakeven price for options with 10-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_10d_short_term_2,"Call option breakeven price for options with 10-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_120d_long_term_2,"Call option breakeven price for options with 120-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_120d_medium_term_3,"Call option breakeven price for options with 120-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_120d_short_term,"Call option breakeven price for options with 120-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_150d_long_term,"Call option breakeven price for options with 150-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_150d_medium_term_2,"Call option breakeven price for options with 150-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_150d_short_term_2,"Call option breakeven price for options with 150-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_180d_long_term_3,"Call option breakeven price for options with 180-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_180d_medium_term_2,"Call option breakeven price for options with 180-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_180d_short_term_3,"Call option breakeven price for options with 180-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_20d_long_term_2,"Call option breakeven price for options with 20-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_20d_medium_term_2,"Call option breakeven price for options with 20-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_20d_short_term,"Call option breakeven price for options with 20-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_270d_long_term_2,"Call option breakeven price for options with 270-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_270d_medium_term_2,"Call option breakeven price for options with 270-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_270d_short_term,"Call option breakeven price for options with 270-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_30d_long_term_2,"Call option breakeven price for options with 30-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_30d_medium_term_2,"Call option breakeven price for options with 30-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_30d_short_term,"Call option breakeven price for options with 30-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_360d_long_term,"Call option breakeven price for options with 360-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_360d_medium_term,"Call option breakeven price for options with 360-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_360d_short_term,"Call option breakeven price for options with 360-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_60d_long_term,"Call option breakeven price for options with 60-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_60d_medium_term_2,"Call option breakeven price for options with 60-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_60d_short_term,"Call option breakeven price for options with 60-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_720d_long_term,"Call option breakeven price for options with 720-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_720d_medium_term,"Call option breakeven price for options with 720-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_720d_short_term,"Call option breakeven price for options with 720-day maturity, short-term contracts",MATRIX,98%,0,0
+call_option_breakeven_90d_long_term_2,"Call option breakeven price for options with 90-day maturity, long-term contracts",MATRIX,98%,0,0
+call_option_breakeven_90d_medium_term_2,"Call option breakeven price for options with 90-day maturity, medium-term contracts",MATRIX,98%,0,0
+call_option_breakeven_90d_short_term_2,"Call option breakeven price for options with 90-day maturity, short-term contracts",MATRIX,98%,0,0
+close_to_close_volatility_10d_long_term,"Historical volatility (close-to-close) over 10 days, long-term contracts",MATRIX,98%,1,1
+close_to_close_volatility_10d_medium_term_2,"Realized historical volatility (close-to-close, annualized) over the past 10 trading days, medium-horizon overlay",MATRIX,98%,0,0
+close_to_close_volatility_10d_short_term,"Annualized realized close-to-close historical volatility over the prior 10 trading days, short-horizon overlay",MATRIX,98%,0,0
+close_to_close_volatility_120d_long_term_2,"Realized historical volatility (close-to-close, annualized) over the past 120 trading days, long-horizon overlay",MATRIX,98%,0,0
+close_to_close_volatility_120d_medium_term_2,"Historical volatility (close-to-close) over 120 days, medium-term overlay",MATRIX,98%,0,0
+close_to_close_volatility_150d_long_term,"Historical volatility (close-to-close) over 150 days, long-term contracts",MATRIX,98%,0,0
+close_to_close_volatility_150d_short_term,"Historical volatility (close-to-close) over 150 days, short-term contracts",MATRIX,98%,0,0
+close_to_close_volatility_180d_long_term,"Historical volatility (close-to-close) over 180 days, long-term contracts",MATRIX,98%,0,0
+close_to_close_volatility_180d_medium_term,"Historical volatility (close-to-close) over 180 days, medium-term contracts",MATRIX,98%,0,0
+close_to_close_volatility_20d_long_term_2,"Historical volatility (close-to-close) over 20 days, long-term contracts",MATRIX,98%,0,0
+close_to_close_volatility_20d_medium_term_2,"Historical volatility (close-to-close) over 20 days, medium-term contracts",MATRIX,98%,1,1
+close_to_close_volatility_20d_short_term,"Historical volatility (close-to-close) over 20 days, short-term contracts",MATRIX,98%,0,0
+close_to_close_volatility_30d_long_term,"Annualized realized close-to-close historical volatility over the prior 30 trading days, long-horizon overlay",MATRIX,98%,0,0
+close_to_close_volatility_30d_medium_term,"Historical volatility (close-to-close) over 30 days, medium-term contracts",MATRIX,98%,0,0
+close_to_close_volatility_30d_short_term,"Historical volatility (close-to-close) over 30 days, short-term contracts",MATRIX,98%,0,0
+close_to_close_volatility_60d_long_term_2,"Historical volatility (close-to-close) over 60 days, long-term overlay",MATRIX,98%,0,0
+close_to_close_volatility_60d_medium_term_2,"Historical volatility (close-to-close) over 60 days, medium-term overlay",MATRIX,98%,0,0
+close_to_close_volatility_60d_short_term_2,"Historical volatility (close-to-close) over 60 days, short-term overlay",MATRIX,98%,0,0
+close_to_close_volatility_90d_long_term_2,"Realized historical volatility (close-to-close, annualized) over the past 90 trading days, long-horizon overlay",MATRIX,98%,0,0
+close_to_close_volatility_90d_medium_term,"Historical (close-to-close) realized volatility over 90 days, medium-horizon overlay",MATRIX,98%,1,1
+close_to_close_volatility_90d_short_term_2,"Realized historical volatility (close-to-close, annualized) over the past 90 trading days, short-horizon overlay",MATRIX,98%,0,0
+forward_contract_price_1080d_long_term_2,"Forward price for options with 1080-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_1080d_medium_term,"Forward price for options with 1080-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_1080d_short_term,"Forward price for options with 1080-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_10d_long_term,"Forward price for options with 10-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_10d_medium_term_2,"Forward price for options with 10-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_10d_short_term,"Forward price for options with 10-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_120d_long_term_3,"Forward price for options with 120-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_120d_medium_term,"Forward price for options with 120-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_120d_short_term,"Forward price for options with 120-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_150d_long_term_2,"Forward price for options with 150-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_150d_medium_term,"Forward price for options with 150-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_150d_short_term_2,"Forward price for options with 150-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_180d_long_term,"Forward price for options with 180-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_180d_medium_term,"Forward price for options with 180-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_180d_short_term,"Forward price for options with 180-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_20d_long_term_2,"Forward price for options with 20-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_20d_medium_term_3,"Forward price for options with 20-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_20d_short_term_2,"Forward price for options with 20-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_270d_long_term,"Forward price for options with 270-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_270d_medium_term_2,"Forward price for options with 270-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_270d_short_term,"Forward price for options with 270-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_30d_long_term,"Forward price for options with 30-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_30d_medium_term_3,"Forward price for options with 30-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_30d_short_term,"Forward price for options with 30-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_360d_long_term_3,"Forward price for options with 360-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_360d_medium_term,"Forward price for options with 360-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_360d_short_term,"Forward price for options with 360-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_60d_long_term,"Forward price for options with 60-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_60d_medium_term_2,"Forward price for options with 60-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_60d_short_term_2,"Forward price for options with 60-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_720d_long_term_2,"Forward price for options with 720-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_720d_medium_term,"Forward price for options with 720-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_720d_short_term_2,"Forward price for options with 720-day maturity, short-term contracts",MATRIX,98%,0,0
+forward_contract_price_90d_long_term_2,"Forward price for options with 90-day maturity, long-term contracts",MATRIX,98%,0,0
+forward_contract_price_90d_medium_term_2,"Forward price for options with 90-day maturity, medium-term contracts",MATRIX,98%,0,0
+forward_contract_price_90d_short_term,"Forward price for options with 90-day maturity, short-term contracts",MATRIX,98%,0,0
+historical_volatility_120d_short_term,"Historical volatility (close-to-close) over 120 days, short-term contracts",MATRIX,98%,0,0
+historical_volatility_150d_medium_term,"Historical volatility (close-to-close) over 150 days, medium-term contracts",MATRIX,98%,0,0
+historical_volatility_180d_short_term,"Historical (close-to-close) realized volatility over 180 days, short-horizon overlay",MATRIX,98%,1,1
+idiosyncratic_risk_30d_long_term,"Unsystematic risk relative to SPY index, measured over last 30 days, long-term",MATRIX,96%,0,0
+idiosyncratic_risk_30d_medium_term,"Unsystematic risk relative to SPY index, measured over last 30 days, medium-term",MATRIX,96%,0,0
+idiosyncratic_risk_30d_short_term,Unsystematic (idiosyncratic) risk relative to SPY measured over the last 30 days; short-term horizon overlay component,MATRIX,96%,0,0
+idiosyncratic_risk_360d_long_term,Unsystematic (idiosyncratic) risk relative to SPY measured over the last 360 days; long-term horizon overlay component,MATRIX,94%,0,0
+idiosyncratic_risk_360d_medium_term,"Unsystematic risk relative to SPY index, measured over last 360 days, medium-term",MATRIX,94%,1,1
+idiosyncratic_risk_360d_short_term,"Unsystematic risk relative to SPY index, measured over last 360 days, short-term",MATRIX,94%,1,1
+idiosyncratic_risk_60d_long_term,Unsystematic (idiosyncratic) risk relative to SPY measured over the last 60 days; long-term horizon overlay component,MATRIX,96%,0,0
+idiosyncratic_risk_60d_medium_term,Unsystematic (idiosyncratic) risk relative to SPY measured over the last 60 days; medium-term horizon overlay component,MATRIX,96%,1,1
+idiosyncratic_risk_60d_short_term,"Unsystematic risk relative to SPY index, measured over last 60 days, short-term",MATRIX,96%,1,1
+idiosyncratic_risk_90d_long_term,Unsystematic (idiosyncratic) risk relative to SPY measured over the last 90 days; long-term horizon overlay component,MATRIX,96%,0,0
+idiosyncratic_risk_90d_medium_term,Unsystematic (idiosyncratic) risk relative to SPY measured over the last 90 days; medium-term horizon overlay component,MATRIX,96%,1,2
+idiosyncratic_risk_90d_short_term,Unsystematic (idiosyncratic) risk relative to SPY measured over the last 90 days; short-term horizon overlay component,MATRIX,96%,1,1
+implied_volatility_30d_percentile_long_term,"Implied volatility percentile based on 30-day IV using one year of historical data, long-term contracts",MATRIX,97%,1,1
+implied_volatility_30d_percentile_medium_term,"Implied volatility percentile based on 30-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_30d_percentile_short_term,"Implied volatility percentile based on 30-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_30d_rank_long_term,"Implied volatility rank based on 30-day IV using one year of historical data, long-term contracts",MATRIX,97%,0,0
+implied_volatility_30d_rank_medium_term,"Implied volatility rank based on 30-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_30d_rank_short_term,"Implied volatility rank based on 30-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_30d_rating_long_term,"Implied volatility rating based on 30-day IV using one year of historical data, long-term contracts",MATRIX,97%,0,0
+implied_volatility_30d_rating_medium_term,"Implied volatility rating based on 30-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_30d_rating_short_term,"Implied volatility rating based on 30-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_360d_percentile_long_term,"Implied volatility percentile based on 360-day IV using one year of historical data, long-term contracts",MATRIX,97%,0,0
+implied_volatility_360d_percentile_medium_term,"Implied volatility percentile based on 360-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_360d_percentile_short_term,"Implied volatility percentile based on 360-day IV using one year of historical data, short-term contracts",MATRIX,97%,1,1
+implied_volatility_360d_rank_long_term,"Implied volatility rank based on 360-day IV using one year of historical data, long-term contracts",MATRIX,97%,0,0
+implied_volatility_360d_rank_medium_term,"Implied volatility rank based on 360-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_360d_rank_short_term,"Implied volatility rank based on 360-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_360d_rating_long_term,"Implied volatility rating based on 360-day IV using one year of historical data, long-term contracts",MATRIX,97%,0,0
+implied_volatility_360d_rating_medium_term,"Implied volatility rating based on 360-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_360d_rating_short_term,"Implied volatility rating based on 360-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_60d_percentile_long_term,"Implied volatility percentile based on 60-day IV using one year of historical data, long-term contracts",MATRIX,97%,0,0
+implied_volatility_60d_percentile_medium_term,"Implied volatility percentile based on 60-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_60d_percentile_short_term,"Implied volatility percentile based on 60-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_60d_rank_long_term,"Implied volatility rank based on 60-day IV using one year of historical data, long-term contracts",MATRIX,97%,2,2
+implied_volatility_60d_rank_medium_term,"Implied volatility rank based on 60-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_60d_rank_short_term,"Implied volatility rank based on 60-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_60d_rating_long_term,"Implied volatility rating based on 60-day IV using one year of historical data, long-term contracts",MATRIX,97%,0,0
+implied_volatility_60d_rating_medium_term,"Implied volatility rating based on 60-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_60d_rating_short_term,"Implied volatility rating based on 60-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_90d_percentile_long_term,"Implied volatility percentile based on 90-day IV using one year of historical data, long-term contracts",MATRIX,97%,1,1
+implied_volatility_90d_percentile_medium_term,"Implied volatility percentile based on 90-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_90d_percentile_short_term,"Implied volatility percentile based on 90-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_90d_rank_long_term,"Implied volatility rank based on 90-day IV using one year of historical data, long-term contracts",MATRIX,97%,1,1
+implied_volatility_90d_rank_medium_term,"Implied volatility rank based on 90-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_90d_rank_short_term,"Implied volatility rank based on 90-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_90d_rating_long_term,"Implied volatility rating based on 90-day IV using one year of historical data, long-term contracts",MATRIX,97%,0,0
+implied_volatility_90d_rating_medium_term,"Implied volatility rating based on 90-day IV using one year of historical data, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_90d_rating_short_term,"Implied volatility rating based on 90-day IV using one year of historical data, short-term contracts",MATRIX,97%,0,0
+implied_volatility_call_10d_short_term,"Implied volatility for at-the-money call options with 10-day maturity, short-term contracts",MATRIX,97%,0,0
+implied_volatility_call_150d_long_term,"Implied volatility for at-the-money call options with 150-day maturity, long-term contracts",MATRIX,97%,0,0
+implied_volatility_call_180d_long_term,"Implied volatility for at-the-money call options with 180-day maturity, long-term contracts",MATRIX,97%,0,0
+implied_volatility_call_180d_short_term,"Implied volatility for at-the-money call options with 180-day maturity, short-term contracts",MATRIX,97%,0,0
+implied_volatility_call_20d_long_term,"Implied volatility for at-the-money call options with 20-day maturity, long-term contracts",MATRIX,97%,0,0
+implied_volatility_call_270d_long_term,"Implied volatility for at-the-money call options with 270-day maturity, long-horizon overlay",MATRIX,97%,0,0
+implied_volatility_call_360d_long_term,"Implied volatility for at-the-money call options with 360-day maturity, long-term contracts",MATRIX,97%,0,0
+implied_volatility_call_360d_medium_term,"Implied volatility for at-the-money call options with 360-day maturity, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_call_360d_short_term,"Implied volatility for at-the-money call options with 360-day maturity, short-term contracts",MATRIX,97%,0,0
+implied_volatility_call_60d_short_term,"Implied volatility for at-the-money call options with 60-day maturity, short-term contracts",MATRIX,97%,0,0
+implied_volatility_call_90d_medium_term,"Implied volatility for at-the-money call options with 90-day maturity, medium-horizon overlay",MATRIX,97%,1,1
+implied_volatility_put_1080d_medium_term,"Implied volatility for at-the-money put options with 1080-day maturity, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_put_10d_long_term,"Implied volatility for at-the-money put options with 10-day maturity, long-term contracts",MATRIX,97%,1,1
+implied_volatility_put_10d_medium_term,"Implied volatility for at-the-money put options with 10-day maturity, medium-term contracts",MATRIX,97%,0,0
+implied_volatility_put_120d_short_term,"Implied volatility for at-the-money put options with 120-day maturity, short-horizon overlay",MATRIX,97%,0,0
+implied_volatility_put_30d_short_term,"Implied volatility for at-the-money put options with 30-day maturity, short-term contracts",MATRIX,97%,0,0
+implied_volatility_put_720d_short_term,"Implied volatility for at-the-money put options with 720-day maturity, short-term contracts",MATRIX,97%,0,0
+market_beta_30d_long_term,Beta relative to the SPY index computed over the last 30 days; long-term horizon overlay component,MATRIX,98%,0,0
+market_beta_30d_medium_term,Beta relative to the SPY index computed over the last 30 days; medium-term horizon overlay component,MATRIX,98%,0,0
+market_beta_30d_short_term,Beta relative to the SPY index computed over the last 30 days; short-term horizon overlay component,MATRIX,98%,0,0
+market_beta_360d_long_term,"Beta relative to SPY index, calculated over last 360 days, long-term",MATRIX,95%,0,0
+market_beta_360d_medium_term,Beta relative to the SPY index computed over the last 360 days; medium-term horizon overlay component,MATRIX,95%,0,0
+market_beta_360d_short_term,Beta relative to the SPY index computed over the last 360 days; short-term horizon overlay component,MATRIX,95%,0,0
+market_beta_60d_long_term,Beta relative to the SPY index computed over the last 60 days; long-term horizon overlay component,MATRIX,98%,0,0
+market_beta_60d_medium_term,Beta relative to the SPY index computed over the last 60 days; medium-term horizon overlay component,MATRIX,98%,0,0
+market_beta_60d_short_term,Beta relative to the SPY index computed over the last 60 days; short-term horizon overlay component,MATRIX,98%,0,0
+market_beta_90d_long_term,Beta relative to the SPY index computed over the last 90 days; long-term horizon overlay component,MATRIX,97%,0,0
+market_beta_90d_medium_term,Beta relative to the SPY index computed over the last 90 days; medium-term horizon overlay component,MATRIX,97%,0,0
+market_beta_90d_short_term,Beta relative to the SPY index computed over the last 90 days; short-term horizon overlay component,MATRIX,97%,0,0
+market_correlation_30d_long_term,Correlation with the SPY index computed over the last 30 days; long-term horizon overlay component,MATRIX,98%,0,0
+market_correlation_30d_medium_term,Correlation with the SPY index computed over the last 30 days; medium-term horizon overlay component,MATRIX,98%,0,0
+market_correlation_30d_short_term,"Correlation with SPY index, calculated over last 30 days, short-term",MATRIX,98%,0,0
+market_correlation_360d_long_term,Correlation with the SPY index computed over the last 360 days; long-term horizon overlay component,MATRIX,95%,0,0
+market_correlation_360d_medium_term,Correlation with the SPY index computed over the last 360 days; medium-term horizon overlay component,MATRIX,95%,0,0
+market_correlation_360d_short_term,"Correlation with SPY index, calculated over last 360 days, short-term",MATRIX,95%,0,0
+market_correlation_60d_long_term,Correlation with the SPY index computed over the last 60 days; long-term horizon overlay component,MATRIX,98%,0,0
+market_correlation_60d_medium_term,"Correlation with SPY index, calculated over last 60 days, medium-term",MATRIX,98%,0,0
+market_correlation_60d_short_term,Correlation with the SPY index computed over the last 60 days; short-term horizon overlay component,MATRIX,98%,0,0
+market_correlation_90d_long_term,"Correlation with SPY index, calculated over last 90 days, long-term",MATRIX,97%,0,0
+market_correlation_90d_medium_term,"Correlation with SPY index, calculated over last 90 days, medium-term",MATRIX,97%,0,0
+market_correlation_90d_short_term,"Correlation with SPY index, calculated over last 90 days, short-term",MATRIX,97%,0,0
+mean_implied_volatility_1080d_long_term,"Annualized average at-the-money implied volatility for 1080-day maturity, long-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_1080d_medium_term_2,"Average annualized at-the-money implied volatility for 1080-day maturity, medium-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_1080d_short_term,"Mean implied volatility at-the-money mean for 1080-day maturity, short-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_10d_long_term_2,"Average annualized at-the-money implied volatility for 10-day maturity, long-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_10d_medium_term_2,"Mean implied volatility at-the-money mean for 10-day maturity, medium-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_10d_short_term,"Mean implied volatility at-the-money mean for 10-day maturity, short-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_120d_long_term_2,"Average implied volatility (at-the-money) for 120-day maturity, long-term overlay",MATRIX,97%,0,0
+mean_implied_volatility_120d_medium_term_3,"Average implied volatility (at-the-money) for 120-day maturity, medium-term overlay",MATRIX,97%,0,0
+mean_implied_volatility_120d_short_term_2,"Average at-the-money implied volatility for 120-day maturity, short-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_150d_long_term,"Mean implied volatility at-the-money for 150-day maturity, long-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_150d_medium_term,"Mean implied volatility at-the-money for 150-day maturity, medium-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_150d_short_term_2,"Average annualized at-the-money implied volatility for 150-day maturity, short-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_180d_long_term,"Mean implied volatility at-the-money mean for 180-day maturity, long-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_180d_medium_term,"Mean implied volatility at-the-money mean for 180-day maturity, medium-term contracts",MATRIX,97%,1,1
+mean_implied_volatility_180d_short_term,"Annualized average at-the-money implied volatility for 180-day maturity, short-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_20d_long_term,"Mean implied volatility at-the-money mean for 20-day maturity, long-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_20d_medium_term,"Mean implied volatility at-the-money mean for 20-day maturity, medium-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_20d_short_term,"Average at-the-money implied volatility for 20-day maturity, short-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_270d_long_term,"Annualized average at-the-money implied volatility for 270-day maturity, long-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_270d_medium_term,"Mean implied volatility at-the-money for 270-day maturity, medium-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_270d_short_term_2,"Average annualized at-the-money implied volatility for 270-day maturity, short-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_30d_long_term,"Annualized average at-the-money implied volatility for 30-day maturity, long-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_30d_medium_term_2,"Average at-the-money implied volatility for 30-day maturity, medium-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_30d_short_term,"Average at-the-money implied volatility for 30-day maturity, short-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_360d_long_term,"Mean implied volatility at-the-money for 360-day maturity, long-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_360d_medium_term_3,"Average annualized at-the-money implied volatility for 360-day maturity, medium-horizon overlay",MATRIX,97%,1,1
+mean_implied_volatility_360d_short_term_2,"Average annualized at-the-money implied volatility for 360-day maturity, short-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_60d_long_term_2,"Average annualized at-the-money implied volatility for 60-day maturity, long-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_60d_medium_term_2,"Average at-the-money implied volatility for 60-day maturity, medium-horizon overlay",MATRIX,97%,0,0
+mean_implied_volatility_60d_short_term_2,"Mean implied volatility at-the-money mean for 60-day maturity, short-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_720d_long_term,"Mean implied volatility at-the-money mean for 720-day maturity, long-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_720d_medium_term_2,"Mean implied volatility at-the-money mean for 720-day maturity, medium-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_720d_short_term,"Mean implied volatility at-the-money mean for 720-day maturity, short-term contracts",MATRIX,97%,0,0
+mean_implied_volatility_90d_long_term_2,"Average implied volatility (at-the-money) for 90-day maturity, long-term overlay",MATRIX,97%,0,0
+mean_implied_volatility_90d_medium_term_2,"Average implied volatility (at-the-money) for 90-day maturity, medium-term overlay",MATRIX,97%,0,0
+mean_implied_volatility_90d_short_term_2,"Average annualized at-the-money implied volatility for 90-day maturity, short-horizon overlay",MATRIX,97%,0,0
+mean_volatility_skew_1080d_long_term,"Mean implied volatility skew for 1080-day maturity, long-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_1080d_medium_term,"Mean implied volatility skew for 1080-day maturity, medium-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_1080d_short_term_2,"Mean skew of implied volatility at-the-money for 1080-day maturity, short-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_10d_long_term_2,"Mean skew of implied volatility at-the-money for 10-day maturity, long-term overlay",MATRIX,95%,1,1
+mean_volatility_skew_10d_medium_term_2,"Implied volatility skew (annualized) for at-the-money options with 10-day maturity, medium-horizon overlay",MATRIX,95%,1,1
+mean_volatility_skew_10d_short_term,"Mean implied volatility skew for 10-day maturity, short-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_120d_long_term_2,"Mean skew of implied volatility at-the-money for 120-day maturity, long-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_120d_medium_term,"Mean skew of implied volatility at-the-money for 120-day maturity, medium-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_120d_short_term_2,"Mean skew of implied volatility at-the-money for 120-day maturity, short-term overlay",MATRIX,95%,0,0
+mean_volatility_skew_150d_long_term,"Mean skew of implied volatility at-the-money for 150-day maturity, long-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_150d_medium_term_2,"Implied volatility skew (annualized) for at-the-money options with 150-day maturity, medium-horizon overlay",MATRIX,95%,1,1
+mean_volatility_skew_150d_short_term_2,"Mean implied volatility skew for 150-day maturity, short-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_180d_long_term_2,"Implied volatility skew (annualized) for at-the-money options with 180-day maturity, long-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_180d_medium_term_2,"Mean implied volatility skew for 180-day maturity, medium-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_180d_short_term,"Mean skew of implied volatility at-the-money for 180-day maturity, short-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_20d_long_term,"Mean skew of implied volatility at-the-money for 20-day maturity, long-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_20d_medium_term,"Mean skew of implied volatility at-the-money for 20-day maturity, medium-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_20d_short_term_2,"Mean skew of implied volatility at-the-money for 20-day maturity, short-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_270d_long_term_2,"Mean skew of implied volatility at-the-money for 270-day maturity, long-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_270d_medium_term,"Annualized implied volatility skew (mean) for 270-day maturity, medium-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_270d_short_term_2,"Implied volatility skew (annualized) for at-the-money options with 270-day maturity, short-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_30d_long_term_2,"Implied volatility skew (annualized) for at-the-money options with 30-day maturity, long-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_30d_medium_term_2,"Mean implied volatility skew for 30-day maturity, medium-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_30d_short_term_2,"Implied volatility skew (annualized) for at-the-money options with 30-day maturity, short-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_360d_long_term_2,"Mean implied volatility skew for 360-day maturity, long-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_360d_medium_term_2,"Mean implied volatility skew for 360-day maturity, medium-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_360d_short_term_2,"Mean implied volatility skew for 360-day maturity, short-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_60d_long_term,"Mean skew of implied volatility at-the-money for 60-day maturity, long-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_60d_medium_term,"Mean skew of implied volatility at-the-money for 60-day maturity, medium-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_60d_short_term_2,"Mean skew of implied volatility at-the-money for 60-day maturity, short-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_720d_long_term_2,"Mean skew of implied volatility at-the-money for 720-day maturity, long-term overlay",MATRIX,95%,0,0
+mean_volatility_skew_720d_medium_term_2,"Mean skew of implied volatility at-the-money for 720-day maturity, medium-term overlay",MATRIX,95%,0,0
+mean_volatility_skew_720d_short_term_2,"Implied volatility skew (annualized) for at-the-money options with 720-day maturity, short-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_90d_long_term_2,"Implied volatility skew (annualized) for at-the-money options with 90-day maturity, long-horizon overlay",MATRIX,95%,0,0
+mean_volatility_skew_90d_medium_term,"Mean skew of implied volatility at-the-money for 90-day maturity, medium-term contracts",MATRIX,95%,0,0
+mean_volatility_skew_90d_short_term,"Annualized implied volatility skew (mean) for 90-day maturity, short-horizon overlay",MATRIX,95%,0,0
+option_breakeven_1080d_long_term,"Option breakeven price for options with 1080-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_1080d_medium_term,"Option breakeven price for options with 1080-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_1080d_short_term_2,"Option breakeven price for options with 1080-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_10d_long_term,"Option breakeven price for options with 10-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_10d_medium_term_2,"Option breakeven price for options with 10-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_10d_short_term,"Option breakeven price for options with 10-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_120d_long_term_2,"Option breakeven price for options with 120-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_120d_medium_term,"Option breakeven price for options with 120-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_120d_short_term,"Option breakeven price for options with 120-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_150d_long_term,"Option breakeven price for options with 150-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_150d_medium_term_3,"Option breakeven price for options with 150-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_150d_short_term_2,"Option breakeven price for options with 150-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_180d_long_term,"Option breakeven price for options with 180-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_180d_medium_term,"Option breakeven price for options with 180-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_180d_short_term_2,"Option breakeven price for options with 180-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_20d_long_term,"Option breakeven price for options with 20-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_20d_medium_term,"Option breakeven price for options with 20-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_20d_short_term,"Option breakeven price for options with 20-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_270d_long_term_2,"Option breakeven price for options with 270-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_270d_medium_term_2,"Option breakeven price for options with 270-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_270d_short_term,"Option breakeven price for options with 270-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_30d_long_term_2,"Option breakeven price for options with 30-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_30d_medium_term_2,"Option breakeven price for options with 30-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_30d_short_term,"Option breakeven price for options with 30-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_360d_long_term,"Option breakeven price for options with 360-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_360d_medium_term_3,"Option breakeven price for options with 360-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_360d_short_term_2,"Option breakeven price for options with 360-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_60d_long_term,"Option breakeven price for options with 60-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_60d_medium_term_2,"Option breakeven price for options with 60-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_60d_short_term,"Option breakeven price for options with 60-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_720d_long_term,"Option breakeven price for options with 720-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_720d_medium_term,"Option breakeven price for options with 720-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_720d_short_term,"Option breakeven price for options with 720-day maturity, short-term contracts",MATRIX,98%,0,0
+option_breakeven_90d_long_term_2,"Option breakeven price for options with 90-day maturity, long-term contracts",MATRIX,98%,0,0
+option_breakeven_90d_medium_term_2,"Option breakeven price for options with 90-day maturity, medium-term contracts",MATRIX,98%,0,0
+option_breakeven_90d_short_term_2,"Option breakeven price for options with 90-day maturity, short-term contracts",MATRIX,98%,0,0
+option_liquidity_score_long_term,"Liquidity rating of option liquidity for the stock, scale 1 to 5, long-term contracts",MATRIX,98%,0,0
+option_liquidity_score_medium_term,"Liquidity rating of option liquidity for the stock, scale 1 to 5, medium-term contracts",MATRIX,98%,0,0
+option_liquidity_score_short_term,"Liquidity rating of option liquidity for the stock, scale 1 to 5, short-term contracts",MATRIX,98%,0,0
+parkinson_volatility_10d_long_term_2,"Parkinson high-low volatility over 10 days, long-term overlay",MATRIX,98%,0,0
+parkinson_volatility_10d_medium_term,"Projected historical volatility, 10-day window, medium-term contracts",MATRIX,98%,0,0
+parkinson_volatility_10d_short_term,"Projected historical volatility, 10-day window, short-term contracts",MATRIX,98%,2,2
+parkinson_volatility_120d_long_term,"Projected historical volatility, 120-day window, long-term contracts",MATRIX,98%,0,0
+parkinson_volatility_120d_medium_term,"Projected historical volatility, 120-day window, medium-term",MATRIX,98%,1,1
+parkinson_volatility_120d_short_term_2,"Parkinson high-low historical volatility over 120 days, short-horizon overlay",MATRIX,98%,0,0
+parkinson_volatility_150d_long_term_2,"Parkinson high-low historical volatility over 150 days, long-horizon overlay",MATRIX,98%,0,0
+parkinson_volatility_150d_medium_term,"Projected historical volatility, 150-day window, medium-term",MATRIX,98%,0,0
+parkinson_volatility_150d_short_term,"Projected historical volatility, 150-day window, short-term",MATRIX,98%,0,0
+parkinson_volatility_180d_long_term,"Projected historical volatility, 180-day window, long-term",MATRIX,98%,0,0
+parkinson_volatility_180d_medium_term_2,"Projected historical volatility, 180-day window, medium-term",MATRIX,98%,0,0
+parkinson_volatility_180d_short_term_2,"Parkinson high-low volatility over 180 days, short-term overlay",MATRIX,98%,1,1
+parkinson_volatility_20d_long_term,"Projected historical volatility, 20-day window, long-term",MATRIX,98%,0,0
+parkinson_volatility_20d_medium_term_2,"Parkinson high-low volatility over 20 days, medium-term overlay",MATRIX,98%,0,0
+parkinson_volatility_20d_short_term_2,"Projected historical volatility, 20-day window, short-term",MATRIX,98%,0,0
+parkinson_volatility_30d_long_term,"Projected historical volatility, 30-day window, long-term contracts",MATRIX,98%,0,0
+parkinson_volatility_30d_medium_term_2,"Projected historical volatility over 30 days, medium-term contracts",MATRIX,98%,1,1
+parkinson_volatility_30d_short_term,"Projected historical volatility, 30-day window, short-term contracts",MATRIX,98%,0,0
+parkinson_volatility_60d_long_term,"Projected historical volatility, 60-day window, long-term contracts",MATRIX,98%,0,0
+parkinson_volatility_60d_medium_term,"Annualized Parkinson high-low historical volatility over a 60-day window, medium-horizon overlay",MATRIX,98%,0,0
+parkinson_volatility_60d_short_term_2,"Parkinson high-low historical volatility over 60 days, short-horizon overlay",MATRIX,98%,0,0
+parkinson_volatility_90d_long_term_2,"Parkinson high-low volatility over 90 days, long-term overlay",MATRIX,98%,0,0
+parkinson_volatility_90d_medium_term,"Projected historical volatility, 90-day window, medium-term contracts",MATRIX,98%,0,0
+parkinson_volatility_90d_short_term_2,"Projected historical volatility over 90 days, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_1080d_long_term_2,"Put-call ratio by open interest for options with 1080-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_1080d_medium_term_2,"Put-call ratio by open interest for options with 1080-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_1080d_short_term,"Put-call ratio by open interest for options with 1080-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_10d_long_term,"Put-call ratio by open interest for options with 10-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_10d_medium_term_2,"Put-call ratio by open interest for options with 10-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_10d_short_term_2,"Put-call ratio by open interest for options with 10-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_120d_long_term_2,"Put-call ratio by open interest for options with 120-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_120d_medium_term_2,"Put-call ratio by open interest for options with 120-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_120d_short_term,"Put-call ratio by open interest for options with 120-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_150d_long_term,"Put-call ratio by open interest for options with 150-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_150d_medium_term,"Put-call ratio by open interest for options with 150-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_150d_short_term_2,"Put-call ratio by open interest for options with 150-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_180d_long_term,"Put-call ratio by open interest for options with 180-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_180d_medium_term_2,"Put-call ratio by open interest for options with 180-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_180d_short_term,"Put-call ratio by open interest for options with 180-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_20d_long_term,"Put-call ratio by open interest for options with 20-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_20d_medium_term_2,"Put-call ratio by open interest for options with 20-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_20d_short_term_2,"Put-call ratio by open interest for options with 20-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_270d_long_term_2,"Put-call ratio by open interest for options with 270-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_270d_medium_term_2,"Put-call ratio by open interest for options with 270-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_270d_short_term,"Put-call ratio by open interest for options with 270-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_30d_long_term_2,"Put-call ratio by open interest for options with 30-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_30d_medium_term,"Put-call ratio by open interest for options with 30-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_30d_short_term_2,"Put-call ratio by open interest for options with 30-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_360d_long_term_2,"Put-call ratio by open interest for options with 360-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_360d_medium_term_2,"Put-call ratio by open interest for options with 360-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_360d_short_term,"Put-call ratio by open interest for options with 360-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_60d_long_term,"Put-call ratio by open interest for options with 60-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_60d_medium_term_2,"Put-call ratio by open interest for options with 60-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_60d_short_term,"Put-call ratio by open interest for options with 60-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_720d_long_term,"Put-call ratio by open interest for options with 720-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_720d_medium_term,"Put-call ratio by open interest for options with 720-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_720d_short_term,"Put-call ratio by open interest for options with 720-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_90d_long_term_2,"Put-call ratio by open interest for options with 90-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_90d_medium_term_2,"Put-call ratio by open interest for options with 90-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_90d_short_term,"Put-call ratio by open interest for options with 90-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_all_long_term,"Put/call ratio by open interest across all expirations, long-term contracts",MATRIX,98%,0,0
+put_call_open_interest_ratio_all_medium_term,"Put/call ratio by open interest, all durations, medium-term",MATRIX,98%,1,1
+put_call_open_interest_ratio_all_short_term_2,"Put/call ratio by open interest, all available period, short-term",MATRIX,98%,0,0
+put_call_volume_ratio_1080d_long_term,"Put-call ratio by volume for options with 1080-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_1080d_medium_term_2,"Put-call ratio by volume for options with 1080-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_1080d_short_term,"Put-call ratio by volume for options with 1080-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_10d_long_term,"Put-call ratio by volume for options with 10-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_10d_medium_term,"Put-call ratio by volume for options with 10-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_10d_short_term_2,"Put-call ratio by volume for options with 10-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_120d_long_term_2,"Put-call ratio by volume for options with 120-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_120d_medium_term,"Put-call ratio by volume for options with 120-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_120d_short_term,"Put-call ratio by volume for options with 120-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_150d_long_term_2,"Put-call ratio by volume for options with 150-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_150d_medium_term_2,"Put-call ratio by volume for options with 150-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_150d_short_term,"Put-call ratio by volume for options with 150-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_180d_long_term_2,"Put-call ratio by volume for options with 180-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_180d_medium_term,"Put-call ratio by volume for options with 180-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_180d_short_term,"Put-call ratio by volume for options with 180-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_20d_long_term_3,"Put-call ratio by volume for options with 20-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_20d_medium_term_2,"Put-call ratio by volume for options with 20-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_20d_short_term,"Put-call ratio by volume for options with 20-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_270d_long_term,"Put-call ratio by volume for options with 270-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_270d_medium_term_2,"Put-call ratio by volume for options with 270-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_270d_short_term,"Put-call ratio by volume for options with 270-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_30d_long_term,"Put-call ratio by volume for options with 30-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_30d_medium_term,"Put-call ratio by volume for options with 30-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_30d_short_term,"Put-call ratio by volume for options with 30-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_360d_long_term,"Put-call ratio by volume for options with 360-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_360d_medium_term,"Put-call ratio by volume for options with 360-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_360d_short_term,"Put-call ratio by volume for options with 360-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_60d_long_term,"Put-call ratio by volume for options with 60-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_60d_medium_term,"Put-call ratio by volume for options with 60-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_60d_short_term_2,"Put-call ratio by volume for options with 60-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_720d_long_term_3,"Put-call ratio by volume for options with 720-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_720d_medium_term,"Put-call ratio by volume for options with 720-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_720d_short_term,"Put-call ratio by volume for options with 720-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_90d_long_term,"Put-call ratio by volume for options with 90-day maturity, long-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_90d_medium_term,"Put-call ratio by volume for options with 90-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_90d_short_term,"Put-call ratio by volume for options with 90-day maturity, short-term contracts",MATRIX,98%,0,0
+put_call_volume_ratio_all_long_term_2,"Put/call ratio by volume, all available period, long-term",MATRIX,98%,0,0
+put_call_volume_ratio_all_medium_term,"Put/call ratio by volume, all durations, medium-term",MATRIX,98%,0,0
+put_call_volume_ratio_all_short_term_2,"Put/call ratio by volume, all available period, short-term",MATRIX,98%,0,0
+put_option_breakeven_1080d_long_term,"Put option breakeven price for options with 1080-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_1080d_medium_term_2,"Put option breakeven price for options with 1080-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_1080d_short_term_2,"Put option breakeven price for options with 1080-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_10d_long_term,"Put option breakeven price for options with 10-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_10d_medium_term,"Put option breakeven price for options with 10-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_10d_short_term_2,"Put option breakeven price for options with 10-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_120d_long_term_2,"Put option breakeven price for options with 120-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_120d_medium_term_2,"Put option breakeven price for options with 120-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_120d_short_term,"Put option breakeven price for options with 120-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_150d_long_term_2,"Put option breakeven price for options with 150-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_150d_medium_term,"Put option breakeven price for options with 150-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_150d_short_term_3,"Put option breakeven price for options with 150-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_180d_long_term_2,"Put option breakeven price for options with 180-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_180d_medium_term,"Put option breakeven price for options with 180-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_180d_short_term,"Put option breakeven price for options with 180-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_20d_long_term_2,"Put option breakeven price for options with 20-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_20d_medium_term_2,"Put option breakeven price for options with 20-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_20d_short_term,"Put option breakeven price for options with 20-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_270d_long_term_2,"Put option breakeven price for options with 270-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_270d_medium_term,"Put option breakeven price for options with 270-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_270d_short_term,"Put option breakeven price for options with 270-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_30d_long_term_2,"Put option breakeven price for options with 30-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_30d_medium_term,"Put option breakeven price for options with 30-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_30d_short_term_2,"Put option breakeven price for options with 30-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_360d_long_term_2,"Put option breakeven price for options with 360-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_360d_medium_term,"Put option breakeven price for options with 360-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_360d_short_term,"Put option breakeven price for options with 360-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_60d_long_term_2,"Put option breakeven price for options with 60-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_60d_medium_term,"Put option breakeven price for options with 60-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_60d_short_term_2,"Put option breakeven price for options with 60-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_720d_long_term_2,"Put option breakeven price for options with 720-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_720d_medium_term_2,"Put option breakeven price for options with 720-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_720d_short_term_2,"Put option breakeven price for options with 720-day maturity, short-term contracts",MATRIX,98%,0,0
+put_option_breakeven_90d_long_term,"Put option breakeven price for options with 90-day maturity, long-term contracts",MATRIX,98%,0,0
+put_option_breakeven_90d_medium_term_3,"Put option breakeven price for options with 90-day maturity, medium-term contracts",MATRIX,98%,0,0
+put_option_breakeven_90d_short_term_2,"Put option breakeven price for options with 90-day maturity, short-term contracts",MATRIX,98%,0,0
+systematic_market_risk_90d_short_term_2,"Systematic risk measured over last 90 days, short-term",MATRIX,96%,0,0
+systematic_risk_30d_long_term,Systematic (market) risk measured over the last 30 days; long-term horizon overlay component,MATRIX,96%,0,0
+systematic_risk_30d_medium_term,"Systematic risk measured over last 30 days, medium-term",MATRIX,96%,0,0
+systematic_risk_30d_short_term,Systematic (market) risk measured over the last 30 days; short-term horizon overlay component,MATRIX,96%,0,0
+systematic_risk_360d_long_term,Systematic (market) risk measured over the last 360 days; long-term horizon overlay component,MATRIX,94%,0,0
+systematic_risk_360d_medium_term,Systematic (market) risk measured over the last 360 days; medium-term horizon overlay component,MATRIX,94%,0,0
+systematic_risk_360d_short_term,Systematic (market) risk measured over the last 360 days; short-term horizon overlay component,MATRIX,94%,0,0
+systematic_risk_60d_long_term,"Systematic risk measured over last 60 days, long-term",MATRIX,96%,0,0
+systematic_risk_60d_medium_term,"Systematic risk measured over last 60 days, medium-term",MATRIX,96%,0,0
+systematic_risk_60d_short_term,"Systematic risk measured over last 60 days, short-term",MATRIX,96%,0,0
+systematic_risk_90d_long_term,"Systematic risk measured over last 90 days, long-term",MATRIX,96%,0,0
+systematic_risk_90d_medium_term,Systematic (market) risk measured over the last 90 days; medium-term horizon overlay component,MATRIX,96%,0,0

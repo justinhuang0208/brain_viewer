@@ -1,0 +1,33 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth434_convention_cng_longdebt_equity,Change in Long Term Debt to Equity,MATRIX,80%,52,289
+oth434_convention_current_ratio,Current Ratio,MATRIX,69%,20,85
+oth434_convention_debt_capital,Total Debt to Total Capital,MATRIX,80%,22,96
+oth434_convention_debt_equity,Debt to Equity,MATRIX,81%,28,133
+oth434_convention_debt_mktcapital,Total Debt to Market Capital,MATRIX,81%,10,43
+oth434_convention_longdebt_capital,Long Term Debt to Total Capital,MATRIX,81%,28,162
+oth434_convention_longdebt_equity,Long Term Debt to Common Equity,MATRIX,81%,17,78
+oth434_convention_ocf_currliab,Operating Cashflow to Current Liabilities,MATRIX,69%,13,25
+oth434_convention_quick_ratio,Quick Ratio,MATRIX,69%,15,106
+oth434_mktcap,Market Capitalization,MATRIX,81%,27,116
+oth434_model_altman_zscore,Altman's Z-score,MATRIX,69%,40,306
+oth434_model_chs_default,CHS Default Prediction Model,MATRIX,73%,11,13
+oth434_model_merton,Merton Distance to Default,MATRIX,71%,5,24
+oth434_model_ohlson_oscore,Ohlson's O-score,MATRIX,68%,16,76
+oth434_qes_alter_debt_weighted_duration,Debt Weighted Average Duration,MATRIX,77%,13,75
+oth434_qes_alter_debt_weighted_interest_rate,Debt Weighted Average Interest Rate,MATRIX,72%,21,73
+oth434_qes_alter_distance_insolvency_1y,Distance to Insolvency (1 Year),MATRIX,67%,5,15
+oth434_qes_alter_extreme_insolvency_stress_1y,Measures a firm's extreme Insolvency risk over the next 1 Year based on its capital structure,MATRIX,72%,12,36
+oth434_qes_alter_extreme_insolvency_stress_9m,Measures a firm's extreme insolvency risk over the next 9 months based on its capital structure,MATRIX,72%,13,47
+oth434_qes_alter_growth_shortterm_debt,Year-over-Year Growth in Short Term Debt Due within 5 Years,MATRIX,70%,18,149
+oth434_qes_alter_insolvency_stress_1y,Measures a firm's Insolvency risk over the next 1 Year based on its capital structure,MATRIX,72%,10,29
+oth434_qes_alter_insolvency_stress_2y,Measures a firm's insolvency risk over the next 2 years based on its capital structure,MATRIX,72%,12,67
+oth434_qes_alter_insolvency_stress_9m,Measures a firm's Insolvency risk over the next 9 months based on its capital structure,MATRIX,72%,13,49
+oth434_qes_alter_moderate_insolvency_stress_1y,Measures a firm's moderate insolvency risk over the next 1 year based on its capital structure,MATRIX,72%,10,23
+oth434_qes_alter_moderate_insolvency_stress_2y,Measures a firm's moderate insolvency risk over the next 2 years based on its capital structure,MATRIX,72%,10,23
+oth434_qes_alter_moderate_insolvency_stress_9m,Measures a firm's moderate insolvency risk over the next 9 months based on its capital structure,MATRIX,72%,9,25
+oth434_qes_alter_revolver_debt,Cash available on Revolver to Total Debt,MATRIX,71%,24,257
+oth434_qes_alter_short_longterm_debt_ratio,Short Term Debt to Debt Due Within 5 years,MATRIX,72%,13,57
+oth434_qes_alter_shortterm_debt_ratio,Short Term Debt to Total Debt,MATRIX,67%,12,24
+oth434_qes_model_impliedalpha,Model's Implied Alpha score,MATRIX,81%,13,81
+oth434_qes_model_prelimcomposite,Model's Preliminary Composite,MATRIX,81%,21,108
+oth434_qes_model_score,Model score,MATRIX,81%,25,71

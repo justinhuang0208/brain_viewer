@@ -1,0 +1,23 @@
+Field,Description,Type,Coverage,Users,Alphas
+nws73_djnindustry,Dow Jones news industry tag(s),VECTOR,100%,7,12
+nws73_djnsubject,Dow Jones news subject tag(s),VECTOR,100%,3,3
+nws73_entitiescounter,Dictionary of recognized financial entities in the story mapped to their mention counts,VECTOR,100%,6,10
+nws73_entitiessent_certaintypartscr,"List of per-entity certainty partial sentiment scores, ordered to entitiesCounter_str",VECTOR,100%,2,2
+nws73_entitiessent_fearpartscr,"List of per-entity fear partial sentiment scores, ordered to entitiesCounter_str",VECTOR,100%,5,5
+nws73_entitiessent_findownpartscr,"List of per-entity financial down/negative directional partial sentiment scores, ordered to entitiesCounter_str",VECTOR,100%,5,6
+nws73_entitiessent_finhypepartscr,"Per-entity Financial Hype partial score vector, aligned with entitiesCounter_str",VECTOR,100%,3,3
+nws73_entitiessent_finuppartscr,"List of per-entity financial up/upgrade partial sentiment scores, ordered to entitiesCounter_str",VECTOR,100%,4,5
+nws73_entitiessent_finvolatilepartscr,"List of per-entity financial volatility partial sentiment scores, ordered to entitiesCounter_str",VECTOR,100%,2,2
+nws73_entitiessent_negativepartscr,"List of per-entity negative partial sentiment scores, ordered to entitiesCounter_str",VECTOR,100%,2,2
+nws73_entitiessent_positivepartscr,"List of per-entity positive partial sentiment scores, ordered to entitiesCounter_str",VECTOR,100%,6,7
+nws73_entitiessent_uncertaintypartscr,"List of per-entity uncertainty partial sentiment scores, ordered to entitiesCounter_str",VECTOR,100%,1,1
+nws73_globalsent_certaintyscore,Global Certainty score at the article level,VECTOR,100%,8,10
+nws73_globalsent_fearscore,Document-level fear sentiment score,VECTOR,100%,2,2
+nws73_globalsent_findownscore,Global Financial Down score at the article level,VECTOR,100%,2,2
+nws73_globalsent_finhypescore,Global Financial Hype score at the article level (Acuity),VECTOR,100%,7,13
+nws73_globalsent_finupscore,Story-level financial “up/upgrade” sentiment score indicating positive directional financial tone,VECTOR,100%,3,3
+nws73_globalsent_finvolatilescore,Story-level financial volatility sentiment score indicating emphasis on volatility,VECTOR,100%,3,3
+nws73_globalsent_negativescore,Story-level negative sentiment score indicating overall negativity of the article,VECTOR,100%,1,1
+nws73_globalsent_positivescore,Story-level positive sentiment score indicating overall positivity of the article,VECTOR,100%,5,9
+nws73_globalsent_uncertaintyscore,Global Uncertainty score at the article level,VECTOR,100%,6,10
+nws73_headlines,Primary headline text of the story,VECTOR,100%,3,4

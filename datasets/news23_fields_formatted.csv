@@ -1,0 +1,130 @@
+Field,Description,Type,Coverage,Users,Alphas
+actual_investment_round_total,Total amount invested in a particular investment round,VECTOR,72%,1,1
+aggregate_dollar_amount,"Total principal amount of the entire syndicated loan transaction, in millions of dollars",VECTOR,38%,0,0
+aggregate_transaction_proceeds,"Total proceeds amount for the entire transaction, representing all tranches",VECTOR,28%,0,0
+basis_point_spread_to_benchmark,"Basis point spread to benchmark; the yield difference, expressed in basis points, between the new issue and a specified benchmark instrument",VECTOR,28%,2,2
+bond_to_equity_exchange_ratio,Ratio specifying how many shares of common stock are received for each exchangeable bond or preferred share upon conversion,VECTOR,5%,1,1
+bookrunner_proceeds_amount,Proceeds amount of the issue in this market per book runner for this market,VECTOR,28%,0,0
+company_employee_count,Number of employees at the company.,VECTOR,12%,0,0
+company_employee_count_2,Number of employees at the company.,VECTOR,19%,1,2
+company_inception_year,Year the company was founded or established,VECTOR,61%,0,0
+company_industry_code,Industry classification code for the company.,VECTOR,72%,0,0
+company_industry_sic_code,Standard Industrial Classification code for the company.,VECTOR,6%,1,1
+company_offer_size_value,"Size of the offer made to the company, typically in monetary terms.",VECTOR,6%,0,0
+company_offer_total_size,Total size of the offer for company shares or assets.,VECTOR,10%,0,0
+company_offer_unit_price,Unit price offered for company shares or assets.,VECTOR,10%,0,0
+company_offered_price,Price offered for the company's shares or assets.,VECTOR,6%,0,0
+company_purchase_price,Price paid to purchase the company.,VECTOR,19%,0,0
+company_purchase_price_2,Purchase price paid for the company.,VECTOR,25%,0,0
+company_sales_amount,Reported sales amount for the company.,VECTOR,17%,0,0
+company_sales_amount_2,Reported sales amount for the company.,VECTOR,23%,1,1
+company_sic_code,Standard Industrial Classification code for the company.,VECTOR,10%,0,0
+company_veic6_category,VEIC6 category classification for the company.,VECTOR,82%,0,0
+deal_amount_in_issue_currency,Amount of the transaction/deal in the currency of issuance (host currency),VECTOR,13%,0,0
+equity_bookrunner_proceeds_amount,Proceeds amount per book runner in the market for the issue,VECTOR,26%,1,1
+equity_highest_filing_price,"Highest price, in the original filing price range, at which the issuer expects securities to be offered",VECTOR,26%,0,0
+equity_lowest_filing_price,"Lowest price, in the original filing price range, at which the issuer expects securities to be offered",VECTOR,26%,0,0
+equity_total_proceeds_with_overallotment,Total proceeds from the issue in this market including overallotment sold,VECTOR,28%,0,0
+equity_total_proceeds_with_overallotment_all_markets,"Total proceeds from the transaction plus overallotment amount sold, in millions of dollars",VECTOR,28%,0,0
+equity_years_to_final_maturity,Number of years from the offer date until the final maturity date of the security,VECTOR,5%,0,0
+estimated_investment_round_total,Estimated total amount for the investment round.,VECTOR,72%,0,0
+euro_total_proceeds_amount,"Total proceeds amount for the syndicated loan transaction, expressed in Euros",VECTOR,38%,0,0
+euro_total_proceeds_with_overallotment,"Proceeds amount plus overallotment sold in all markets, expressed in million Euros",VECTOR,28%,0,0
+firm_capital_under_management,Amount of capital managed by the private equity firm (AUM or similar metric),VECTOR,49%,0,0
+firm_capital_under_management_2,Total capital managed by the firm.,VECTOR,45%,0,0
+firm_establishment_year,Year when the private equity firm was founded,VECTOR,72%,1,1
+firm_inception_year,Date when the private equity firm was founded,VECTOR,72%,0,0
+floating_rate_spread_to_index,Basis point spread of issue relative to a specified floating-rate index,VECTOR,26%,0,0
+fund_establishment_year,Year the fund was founded or established,VECTOR,72%,0,0
+fund_inception_year,Year the fund was established/founded,VECTOR,72%,2,2
+fund_raising_quarter_amount,Fundraising amount (capital raised or committed) during a specific quarter,VECTOR,30%,0,0
+fund_raising_quarter_amount_2,Total capital raised by the fund in a specific quarter,VECTOR,32%,0,0
+fund_raising_year,Calendar year in which fundraising activity or report occurred,VECTOR,30%,0,0
+fund_total_size,"Size of the fund, typically measured in monetary terms such as total committed capital",VECTOR,61%,1,1
+fund_total_size_2,Total committed or raised capital of a private equity/venture capital fund,VECTOR,67%,0,0
+fund_total_target_amount,Target amount for the fund raising round.,VECTOR,21%,0,0
+fund_total_target_amount_2,Total target amount for the fund's capital raise.,VECTOR,18%,0,0
+fundraising_commitment_amount,Amount of committed capital in the fund’s fundraising round,VECTOR,30%,0,0
+fundraising_commitment_amount_2,Total amount of committed capital raised for the venture capital fund in the fundraising round,VECTOR,32%,0,0
+global_equity_overallotment_amount,"Total overallotment amount option for the equity new issue, expressed in millions of dollars",VECTOR,28%,0,0
+global_shares_filed_initial,Total number of shares worldwide filed for the offering at the time of the original filing,VECTOR,25%,0,0
+gross_spread_percent_of_principal,Total managers' fee as a percent of issue's domestic principal amount,VECTOR,26%,1,1
+individual_job_title,"Job title of the individual (e.g., Managing Director, Partner, Analyst)",VECTOR,59%,0,0
+individual_job_title_2,"Professional title/role of the individual (e.g., Partner, CEO, Analyst)",VECTOR,73%,0,0
+investment_age_months,Age of the investment in months since inception.,VECTOR,60%,0,0
+investment_deal_value,The total monetary value of the investment/deal disclosed for this buyout transaction,VECTOR,48%,1,1
+investment_detail_age_months,Age of the investment detail in months.,VECTOR,73%,0,0
+investment_detail_age_years,"Age (in years) of the company or asset involved, typically since founding or incorporation",VECTOR,60%,1,1
+investment_detail_age_years_2,Age of the investment detail in years.,VECTOR,73%,0,0
+investment_detail_deal_value,Investment amount or deal value for the funding round,VECTOR,62%,1,1
+investment_detail_disclosed_valuation,Disclosed valuation amount for the investee company at the time of the VC investment round,VECTOR,82%,0,0
+investment_detail_estimated_fund_total,Estimated total funding amount involved in the investment deal details for the VC round,VECTOR,82%,0,0
+investment_detail_estimated_round_total,Estimated total investment amount for the funding round,VECTOR,82%,0,0
+investment_detail_stage_one,"Primary investment stage (e.g., seed, early, growth) for the funding round",VECTOR,82%,1,1
+investment_detail_stage_three,Stage three classification for the investment detail.,VECTOR,82%,0,0
+investment_detail_stage_two,Stage two classification for the investment detail.,VECTOR,82%,0,0
+investment_disclosed_valuation,Amount of the company's valuation disclosed at the time of the deal,VECTOR,72%,1,1
+investment_estimated_total_funding,Estimated total funding amount for the investment.,VECTOR,72%,0,0
+investment_round_number,The numeric sequence or designation of the investment round for a company or deal,VECTOR,72%,1,1
+investment_round_total_amount,Total amount invested in the round for the company/deal,VECTOR,82%,0,0
+investment_stage_category,"Category describing the stage of the investment (e.g., seed, growth, exit).",VECTOR,72%,0,0
+investment_stage_primary,"Primary stage of the investment (e.g., seed, growth).",VECTOR,72%,1,1
+investment_stage_secondary,"Secondary stage of the investment (e.g., expansion, late).",VECTOR,72%,0,0
+lead_manager_fee_amount,"Portion of the gross spread paid specifically to the lead manager(s), expressed in dollars per share or bond",VECTOR,27%,0,0
+loan_principal_amount,Amount of the loan tranche in millions of US dollars,VECTOR,38%,0,0
+lockup_period_duration_days,Minimum number of days shares must be held before lock-up restrictions expire,VECTOR,20%,2,3
+non_buyback_years_post_issue,Number of years from the offer date during which the security cannot be called or bought back by the issuer,VECTOR,5%,0,0
+nws23_acquiror_akw1rpa,Acquiror's stock price one week after deal announcement,VECTOR,37%,6,9
+nws23_acquiror_apr1daya,Acquiror's stock price one day after the deal announcement,VECTOR,38%,4,4
+nws23_acquiror_apr1dayb,Acquiror's stock price one day before deal announcement,VECTOR,39%,7,12
+nws23_acquiror_asalesltm,Acquiror Net Sales in Last 12 Months,VECTOR,45%,8,14
+nws23_acquiror_emu_hostvalue,Deal value in million Euros,VECTOR,45%,5,8
+nws23_acquiror_laitni_rp,Initial price per common share or partnership unit offered by the acquiror,VECTOR,45%,0,0
+nws23_acquiror_mtlspe,Earnings per share of the target for the last financial year prior to deal announcement,VECTOR,45%,1,1
+nws23_acquiror_niltm,Net income of target in last financial year prior to deal announcement,VECTOR,45%,0,0
+nws23_acquiror_pctown,"Percentage of shares owned by acquiror after the transaction, including previously owned shares",VECTOR,45%,8,10
+nws23_acquiror_pricebook,Offering price in the deal divided by target's book value per share as of the date of the most current financial information prior to the announcement of the transaction,VECTOR,17%,0,0
+nws23_acquiror_psought,"Percentage of common, or common equivalent, shares outstanding sought by the acquiror in this transaction",VECTOR,45%,8,10
+nws23_acquiror_qcatcp,Percentage of shares acquired by the acquirer in the transaction (acquired shares over total outstanding),VECTOR,45%,4,5
+nws23_acquiror_rank_rankval,Rank value calculated by subtracting liabilities assumed from transaction value and adding target's net debt,VECTOR,45%,4,8
+nws23_acquiror_rp,Price per common shares or partnership unit paid by the acquiror in the transaction,VECTOR,45%,0,0
+nws23_acquiror_saleslltm,Net sales of the target company in the last 12 months,VECTOR,45%,0,0
+nws23_acquiror_spea,Acquiror’s earnings per share for last fiscal year before deal announcement,VECTOR,45%,4,12
+nws23_acquiror_value,Total value of consideration paid by the acquiror,VECTOR,45%,6,24
+nws23_target_akw1rpa,Acquiror stock price 1 week after announcement,VECTOR,27%,0,0
+nws23_target_apr1daya,Acquiror stock price one day after deal announcement,VECTOR,28%,2,4
+nws23_target_apr1dayb,Acquiror's stock price 1 day prior to announcement of the deal,VECTOR,28%,2,10
+nws23_target_asalesltm,Acquiror net sales in the last 12 months,VECTOR,40%,0,0
+nws23_target_emu_hostvalue,Deal value converted to million Euros,VECTOR,40%,2,3
+nws23_target_laitni_rp,Initial price per common shares or partnership units offered by the acquiror in the transaction,VECTOR,40%,0,0
+nws23_target_mtlspe,Earnings per share of the target in the last financial year prior to announcement,VECTOR,40%,1,1
+nws23_target_niltm,Net income of the target in the last financial year prior to announcement,VECTOR,40%,0,0
+nws23_target_pctown,Percentage of shares owned after the transaction (shares acquired plus previously owned divided by total outstanding),VECTOR,40%,0,0
+nws23_target_pricebook,Offering price in the deal divided by target's book value per share as of the date of the most current financial information prior to the announcement of the transaction,VECTOR,14%,0,0
+nws23_target_psought,Percentage of shares outstanding sought by acquiror in the transaction,VECTOR,40%,1,1
+nws23_target_qcatcp,Percentage of shares acquired: shares acquired divided by total shares outstanding,VECTOR,40%,0,0
+nws23_target_rank_rankval,"Rank value: transaction value minus any liabilities assumed, plus target’s net debt",VECTOR,40%,2,3
+nws23_target_rp,Price per common share or partnership unit paid by the acquiror in the transaction,VECTOR,40%,0,0
+nws23_target_saleslltm,Net sales of the target in the last 12 months,VECTOR,40%,0,0
+nws23_target_spea,Earnings per share of acquiror in last financial year prior to deal announcement,VECTOR,40%,0,0
+nws23_target_value,Total value of consideration paid by the acquiror,VECTOR,40%,2,11
+offer_premium_four_weeks_prior,Premium of offer price to target's closing stock price four weeks before announcement.,VECTOR,10%,0,0
+offer_premium_four_weeks_prior_2,Premium of offer price to target closing stock price four weeks before announcement.,VECTOR,13%,0,0
+offer_premium_one_day_prior,Premium of offer price over target's closing price one day before announcement.,VECTOR,10%,0,0
+offer_premium_one_day_prior_2,Percentage premium of offer price over target's closing price one day before announcement.,VECTOR,13%,0,0
+offer_premium_one_week_prior,Premium of offer price to target's closing stock price one week before announcement.,VECTOR,10%,0,0
+offer_premium_one_week_prior_2,Premium of offer price to target closing stock price one week before announcement.,VECTOR,13%,0,0
+preferred_to_common_conversion_ratio,"Offer price of preferred stock divided by conversion price, representing conversion ratio",VECTOR,5%,0,0
+primary_shares_filed_pct_of_total,Percentage of total globally filed shares that are primary shares (newly issued) at original filing,VECTOR,23%,0,0
+principal_amount_host_currency,Amount of the loan tranche in millions of host (original) currency,VECTOR,38%,0,0
+security_offering_price,Price per share or bond at which the security is offered to the public,VECTOR,28%,1,1
+security_offering_unit_price,Price per share or bond offered to the public,VECTOR,26%,0,0
+selling_concession_amount,"Portion of the gross spread allocated to the selling group, expressed in dollars per share or bond",VECTOR,27%,0,0
+shares_eligible_post_lockup,Number of shares eligible for sale after lockup agreement or restriction period expires,VECTOR,19%,1,1
+shares_sold_by_existing_shareholders,Actual number of shares sold by selling shareholders or the company in the offering,VECTOR,9%,1,1
+total_manager_fee_amount,"Total manager's fee (gross spread), expressed in dollars per share or bond",VECTOR,27%,0,0
+total_proceeds_with_overallotment,Proceeds amount of the issue in this market plus the overallotment amount sold in this market,VECTOR,28%,0,0
+total_tranche_count,Total number of tranches (distinct parts/loans) within the loan package,VECTOR,38%,1,1
+total_transaction_value,"Total syndicated loan package amount in US dollars, summing all tranches across markets",VECTOR,38%,0,0
+underwriting_fee_amount,"Portion of underwriting fee paid to lead/co-managers, expressed in dollars per share or bond",VECTOR,27%,0,0
+years_to_final_maturity,Number of years from offer date to final maturity,VECTOR,38%,0,0

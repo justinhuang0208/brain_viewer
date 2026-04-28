@@ -1,0 +1,209 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd14_03_aijd,"Flag indicating whether the company is part of the Dow Jones Industrial Average 30 Index (0=No, 1=Yes)",VECTOR,100%,45,68
+fnd14_1_mtt_vqe_hsc_hsc_nhc_hsc_stl,"Trailing Twelve Months change in cash and cash equivalents, summed from the cash flow statement over the last four quarters, possibly fiscal year change if last quarter ends the fiscal year",VECTOR,100%,112,191
+fnd14_1_pc_krm_sto_rhs_ltt_stl,Market capitalization of the company calculated at the end of the reported quarter,VECTOR,100%,53,86
+fnd14_1_rtq_vqe_hsc_hsc_nhc_hsc_stl,Change in cash and cash equivalents as reported in the cash flow statement for the most recent fiscal quarter,VECTOR,88%,104,158
+fnd14_1_sto_rhs_ltt_stl,Total number of shares outstanding for the company at the end of the reported quarter,VECTOR,100%,54,84
+fnd14_1_td_sto_rhs_ltt_stl,Date and time when the number of shares outstanding was recorded for the company,VECTOR,100%,35,51
+fnd14_1_vqe_hsc_hsc_slb_stl,"Total cash and cash equivalents on hand, as listed in the company’s balance sheet at the end of the latest reported quarter",VECTOR,100%,29,39
+fnd14_2_mtt_vqe_hsc_hsc_nhc_hsc_stl,"Trailing Twelve Months (TTM) change in cash and cash equivalents, summed from the previous four quarters from the cash flow statement; if the quarter ends a fiscal year, this is also the fiscal year's change",VECTOR,93%,32,46
+fnd14_2_pc_krm_sto_rhs_ltt_stl,Market capitalization at the end of the reported quarter,VECTOR,100%,17,22
+fnd14_2_rtq_vqe_hsc_hsc_nhc_hsc_stl,"Change in cash and cash equivalents for the company during the reported quarter, from the cash flow statement",VECTOR,90%,21,26
+fnd14_2_sto_rhs_ltt_stl,Number of outstanding shares at the recorded date,VECTOR,100%,39,60
+fnd14_2_td_sto_rhs_ltt_stl,Date and time when the number of outstanding shares was recorded,VECTOR,100%,24,33
+fnd14_2_vqe_hsc_hsc_slb_stl,Total cash and cash equivalents from the balance sheet as of the end of the reported quarter,VECTOR,96%,32,42
+fnd14_acc_flr_prd_end_dt_nm,Date marking period end for which the accelerated filer source information was provided (typically fiscal year or quarter end),VECTOR,99%,24,36
+fnd14_accel_filer_accounting_basis,"Indicates which basis of accounting the registrant has prepared the financial statements in the most recent periodic report (as disclosed in the document header). For which periodic report this data corresponds, please refer to the fields Accelerated Filer Source and Source Date. Note that only 20-F filers are required to disclose this in the document header.",VECTOR,100%,15,19
+fnd14_accel_filer_form_fkey,Most recent filing analyzed which contained information regarding the registrant's accelerated filer status,VECTOR,100%,12,15
+fnd14_accel_filer_is_shell_company,"Indicator of whether the registrant identified itself as a shell company (1=Yes, 2=Did not disclose, 0=No)",VECTOR,100%,120,157
+fnd14_accel_filer_is_voluntary_filer,"Indicator of whether the registrant filed as a voluntary filer (1=Yes, 2=Did not disclose, 0=No)",VECTOR,100%,20,22
+fnd14_bus_addr,Business address of registrant (complete),VECTOR,100%,23,25
+fnd14_bus_city,Current business address information. Programmatically extracted and matched from the sec.gov's registrant header page,VECTOR,100%,27,40
+fnd14_bus_county_name,"Count of unique IDs of industry participants. Industry stands for an aggregate view of all  equity clearance activity for the date, symbol, and transaction type in question.",VECTOR,100%,32,42
+fnd14_bus_phone,Business phone of registrant,VECTOR,100%,10,11
+fnd14_bus_state,Current business address information. Programmatically extracted and matched from the sec.gov's registrant header page,VECTOR,100%,15,18
+fnd14_bus_state_country,Business country region of registrant,VECTOR,100%,28,32
+fnd14_bus_state_name,Current business address information. Translation of state code field,VECTOR,100%,18,18
+fnd14_bus_state_region,Business state region of registrant,VECTOR,100%,24,29
+fnd14_bus_street1,Current business address information. Programmatically extracted and matched from the sec.gov's registrant header page,VECTOR,100%,10,14
+fnd14_bus_street2,Current business address information. Programmatically extracted and matched from the sec.gov's registrant header page,VECTOR,100%,33,42
+fnd14_bus_zip,Business zip address of registrant,VECTOR,100%,21,23
+fnd14_cca_lf_nlf_drp_ncr,Date and time when the most recent periodic SEC filing was accepted,VECTOR,100%,16,20
+fnd14_cmp_nn_tck_sbs,"Identifies if a registrant has no ticker and a CIK number in the ""Parent CIK"" column when Parent CIK is found in the CIK Code column. 1 for yes, 0 for no",VECTOR,100%,5,6
+fnd14_cmp_off_bnk_hld_cmp,"Indicates if the registrant is a bank holding company based on NAICS code 551111 or 551112. 1 for yes, 0 for no",VECTOR,100%,7,10
+fnd14_company_is_active_filer,Indicator of whether the registrant is currently an active filer (Prime Filer status),VECTOR,100%,437,874
+fnd14_company_is_asset_backed_security,An Asset Backed Security is a type of F,VECTOR,100%,15,16
+fnd14_company_is_emerging_registrant,"Indicates if the company is an ""Emerging"" registrant, i.e., filed an S-1, SB-1, or F-1 but has not yet submitted a Periodic Report or Termination. 1 for yes, 0 for no",VECTOR,100%,30,40
+fnd14_company_is_fund_or_trust,Indicates whether the company is identified as a fund or trust,VECTOR,100%,15,23
+fnd14_company_is_inactive_registrant,"Indicates if the company is classified as an ""Inactive"" registrant, meaning it has not filed a Termination and has not filed documents or shown activity within the last 18 months. 1 for yes",VECTOR,100%,9,10
+fnd14_company_is_reit,Indicates whether the company is a Real Estate Investment Trust (REIT),VECTOR,100%,15,17
+fnd14_company_key,Edgar’s Central Index Key; unique numeric identifier for each company registrant as filed with the SEC,VECTOR,100%,15,19
+fnd14_crr_adt_aff_hm_off_stt,2-character auditor affiliate state code.,VECTOR,100%,21,29
+fnd14_crr_adt_aff_hm_off_stt_nm,Auditor affiliate state name.,VECTOR,100%,6,7
+fnd14_crr_adt_aff_hm_off_stt_rgn,Auditor affiliate region.,VECTOR,100%,8,8
+fnd14_curr_auditor_affiliate_fkey,Unique internal identifier for the affiliate of the current auditor,VECTOR,100%,12,14
+fnd14_curr_auditor_affiliate_name,Auditor affiliate name.,VECTOR,100%,24,32
+fnd14_curr_auditor_fkey,Unique internal identifier for the current auditor assigned to the company,VECTOR,100%,38,49
+fnd14_curr_auditor_latest_event_type,"Count of unique IDs of industry participants. Industry stands for an aggregate view of all  equity clearance activity for the date, symbol, and transaction type in question.",VECTOR,100%,49,61
+fnd14_curr_auditor_name,Current auditor name,VECTOR,100%,52,67
+fnd14_curr_auditor_since_event_type,"Event type associated with the earliest event date. This code indicates the source of our current auditor information. D = end engagement, auditor dismissed on event date. E = start engagement, auditor engaged on event date. F = engagement active sometime in FY ended event date. L = historical engagement since at least this date. O = engagement active, signed opinion on event date. S = historical engagement since this date.",VECTOR,100%,40,48
+fnd14_current_price_close,Latest closing price of the company's security as of the current reporting date,VECTOR,100%,25,31
+fnd14_current_total_shares_outstanding,Most recent total number of shares outstanding for the company,VECTOR,100%,12,14
+fnd14_egc_earliest_file_accepted,Date and time the initial Emerging Growth status filing was accepted by the SEC,VECTOR,33%,27,38
+fnd14_egc_earliest_form_fkey,The SEC Form type filed with the registrant's initial disclosure of Emerging Growth status.,VECTOR,100%,12,25
+fnd14_egc_file_accepted,Date and time the Emerging Growth Company filing was accepted by the SEC,VECTOR,100%,16,19
+fnd14_egc_form_fkey,Form type the registrant disclosed Emerging Growth status,VECTOR,100%,44,63
+fnd14_egc_is_emerging_company,Flag indicating whether the registrant has identified as an Emerging Growth Company,VECTOR,100%,24,29
+fnd14_filer_act,The Securities Act that requires a company to submit filings to the SEC,VECTOR,100%,20,21
+fnd14_filer_assistant_director,Numeric code representing the office/division at the SEC reviewing the company's filing,VECTOR,100%,18,25
+fnd14_fiscal_ye,Month and day marking the fiscal year end for the registrant,VECTOR,100%,36,54
+fnd14_flr_ass_drc_off_nm,The office/division within the SEC that is responsible for reviewing a particular company's filing.,VECTOR,100%,30,56
+fnd14_former_name1,Registrant's first (oldest) former name as filed with SEC,VECTOR,100%,23,24
+fnd14_former_name2,Registrant second (2nd oldest) former name as filed with the SEC,VECTOR,100%,12,14
+fnd14_former_name3,Registrant's third (3rd oldest) former name as filed with SEC,VECTOR,100%,5,6
+fnd14_grd_mrt_pmc,"Indicates whether the company has filed a Termination/Deregistration with the SEC (such as Form 15 or SC 13E3). Value is 1 if yes, 0 if no",VECTOR,100%,7,8
+fnd14_hiwater_balsh_book_value,"Highest reported total book value (BALSH) for the company, historically",VECTOR,97%,13,17
+fnd14_hiwater_balsh_total_assets,"Highest reported total assets for the company, historically",VECTOR,100%,33,40
+fnd14_hiwater_incmst_net_income_fy,The highest annual (fiscal year) net income reported for the company in its income statement,VECTOR,77%,13,14
+fnd14_hiwater_incmst_net_income_qtr,The highest net income achieved by the company in any single fiscal quarter,VECTOR,97%,17,19
+fnd14_hiwater_incmst_net_income_ttm,The highest trailing twelve months (TTM) net income figure for the company,VECTOR,100%,20,26
+fnd14_hiwater_incmst_revenue_fy,"The highest annual (fiscal year) revenue reported for the company, as shown in the income statement",VECTOR,100%,49,64
+fnd14_hiwater_incmst_revenue_qtr,The highest total revenue reported on the income statement for any fiscal quarter for the company,VECTOR,100%,22,28
+fnd14_hiwater_incmst_revenue_ttm,"The highest trailing twelve months (TTM) revenue for the company, regardless of the reporting interval",VECTOR,100%,18,24
+fnd14_hiwater_price_close,Highest historical closing price for the company's security,VECTOR,100%,18,40
+fnd14_hiwater_total_shares_outstanding,Highest historical number of total shares outstanding for the company,VECTOR,100%,10,14
+fnd14_hwt_bls_ttl_ass_dt_qtr,Date of the highest reported quarterly total assets for the company,VECTOR,100%,23,26
+fnd14_inc_state,Registrant state of incorporation code,VECTOR,100%,16,19
+fnd14_inc_state_country,Region of country of company incorporation per SEC,VECTOR,100%,23,41
+fnd14_inc_state_name,Registrant incorporation state name,VECTOR,100%,25,32
+fnd14_inc_state_region,Region of state of company incorporation per SEC,VECTOR,100%,17,19
+fnd14_irs_number,Describes IRS assigned number,VECTOR,100%,14,18
+fnd14_is_accelerated_filer,"Indicator of whether the registrant identified their accelerated filer status (1=Yes, 2=Did not disclose, 0=No)",VECTOR,100%,14,14
+fnd14_last_known_auditor_event_type,"Event type associated with the last known event date. This code indicates the source of our last known auditor information. D = end engagement, auditor dismissed on event date. E = start engagement, auditor engaged on event date. F = engagement active sometime in FY ended event date. L = historical engagement since at least this date. O = engagement active, signed opinion on event date. S = historical engagement since this date.",VECTOR,100%,39,54
+fnd14_last_known_auditor_fkey,Unique identifier key for the last known auditor of the company,VECTOR,100%,34,44
+fnd14_last_known_auditor_name,Last known auditor name.,VECTOR,100%,29,37
+fnd14_last_reported_auditor_event_type,"Event type associated with the last reported event date. This code indicates the source of our last reported auditor information. D = end engagement, auditor dismissed on event date. E = start engagement, auditor engaged on event date. F = engagement active sometime in FY ended event date. L = historical engagement since at least this date. O = engagement active, signed opinion on event date. S = historical engagement since this date.",VECTOR,100%,45,54
+fnd14_last_reported_auditor_fkey,Unique key designation for the last reported auditor of the company,VECTOR,100%,23,25
+fnd14_last_reported_auditor_name,Last reported auditor name.,VECTOR,100%,34,41
+fnd14_latest_audit_fees_sum,"Sum of the latest reported audit fees for the fiscal year, including restatements if available",VECTOR,100%,16,18
+fnd14_latest_audit_related_fees_sum,"Sum of the latest reported audit-related fees (distinct from main audit fees) for the fiscal year, including restatements if available",VECTOR,100%,8,14
+fnd14_latest_benefits_fees_sum,"Sum of the latest reported employee or benefits-related fees for the fiscal year, including restatements if available",VECTOR,100%,12,17
+fnd14_latest_fees_fiscal_year_ended,"Most recent value for a particular fee type for the fiscal year, including restatements if available",VECTOR,97%,26,32
+fnd14_latest_it_fees_sum,"Sum of the latest reported IT-related fees for the fiscal year, including restatements if available",VECTOR,100%,2,2
+fnd14_latest_non_audit_fees_sum,"Sum of the latest reported non-audit fees for the fiscal year, including restatements if available",VECTOR,100%,17,22
+fnd14_latest_other_fees_sum,"Sum of the latest reported fees for other categories (not covered above) for the fiscal year, including restatements if available",VECTOR,100%,22,32
+fnd14_latest_tax_fees_sum,"Sum of the latest reported tax-related fees for the fiscal year, including restatements if available",VECTOR,100%,21,26
+fnd14_latest_total_fees_sum,"Sum of latest total fees for the fiscal year, including restatements when available",VECTOR,100%,9,12
+fnd14_latestfy_balsh_book_value,"Book value of the company as of the end of the latest reported quarter; calculated as Total Assets minus Total Liabilities, Intangible Assets, and Goodwill",VECTOR,84%,8,9
+fnd14_latestfy_balsh_total_assets,Total assets reported on the company’s balance sheet as of the end of the latest reported quarter,VECTOR,100%,13,21
+fnd14_latestfy_filing_type_code_qtr,SEC filing type is often a 10-Q,VECTOR,100%,13,18
+fnd14_latestfy_filing_type_code_ttm,SEC filing type is often a 10-K,VECTOR,100%,8,9
+fnd14_latestfy_incmst_ebitda_qtr,"EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization) for the most recent quarter from the income statement; calculated as Earnings Before Taxes plus Interest Expense plus Depreciation",VECTOR,80%,18,24
+fnd14_latestfy_incmst_ebitda_ttm,"Trailing Twelve Months EBITDA, summing the last four quarters from the income statement, possibly representing fiscal year EBITDA if the last quarter ends the fiscal year; calculated as Earnings Before Taxes plus Interest Expense plus Depreciation",VECTOR,91%,31,39
+fnd14_latestfy_incmst_net_income_qtr,"Net income reported for the most recent fiscal quarter, as shown on the income statement",VECTOR,89%,17,21
+fnd14_latestfy_incmst_net_income_ttm,"Trailing Twelve Months net income from the company's income statement, summing the last four reported quarters, possibly representing fiscal year net income if the last quarter ends the fiscal year",VECTOR,100%,21,24
+fnd14_latestfy_incmst_revenue_qtr,"Total revenue for the latest reported quarter, as per the company's income statement",VECTOR,100%,41,49
+fnd14_latestfy_incmst_revenue_ttm,"Trailing Twelve Months total revenue from the company's income statement, summing the last four reported quarters, possibly representing fiscal year revenue if the last quarter ends the fiscal year",VECTOR,100%,40,61
+fnd14_latestfy_price_close,Closing share price for the company's stock on the latest fiscal year date recorded,VECTOR,100%,19,24
+fnd14_latestqu_balsh_book_value,Book value as of the end of the reported quarter (Total Assets – Total Liabilities – Intangible Assets – Goodwill),VECTOR,76%,12,14
+fnd14_latestqu_balsh_total_assets,Total assets from the balance sheet as of the end of the reported quarter,VECTOR,100%,21,25
+fnd14_latestqu_filing_type_code_qtr,SEC filing type is often a 10-Q,VECTOR,100%,9,11
+fnd14_latestqu_filing_type_code_ttm,SEC filing type is often a 10-K,VECTOR,100%,8,9
+fnd14_latestqu_incmst_ebitda_qtr,"Quarterly EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization) from the income statement",VECTOR,79%,19,29
+fnd14_latestqu_incmst_ebitda_ttm,"EBITDA for the trailing twelve months (TTM) from the income statement, summing four quarters ending with the reported quarter",VECTOR,83%,10,14
+fnd14_latestqu_incmst_net_income_qtr,Net income for the reported quarter from the income statement,VECTOR,91%,13,17
+fnd14_latestqu_incmst_net_income_ttm,"Net income for the trailing twelve months (TTM) from the income statement, summing four quarters ending with the reported quarter",VECTOR,100%,34,39
+fnd14_latestqu_incmst_revenue_qtr,Total revenue for the reported quarter from the income statement,VECTOR,100%,43,54
+fnd14_latestqu_incmst_revenue_ttm,"Total revenue for the trailing twelve months (TTM) from the income statement, summing four quarters ending with the reported quarter",VECTOR,100%,17,23
+fnd14_latestqu_price_close,Closing share price for the recorded date,VECTOR,100%,15,17
+fnd14_loc_state,Registrant location state,VECTOR,100%,10,12
+fnd14_loc_state_country,Registrant location country/region,VECTOR,100%,17,21
+fnd14_loc_state_name,Registrant location state name,VECTOR,100%,20,24
+fnd14_loc_state_region,Registrant location state region,VECTOR,100%,19,26
+fnd14_lst_knw_adt_aff_hm_off_stt,2-character auditor affiliate state code.,VECTOR,100%,8,8
+fnd14_lst_knw_adt_aff_hm_off_stt_nm,Auditor affiliate state name.,VECTOR,100%,15,42
+fnd14_lst_knw_adt_aff_hm_off_stt_rgn,Auditor affiliate region.,VECTOR,100%,8,8
+fnd14_lst_rpr_adt_aff_hm_off_stt,2-character auditor affiliate state code.,VECTOR,100%,12,18
+fnd14_lst_rpr_adt_aff_hm_off_stt_nm,Auditor affiliate state name.,VECTOR,100%,10,10
+fnd14_lst_rpr_adt_aff_hm_off_stt_rgn,Auditor affiliate region.,VECTOR,100%,10,12
+fnd14_lts_ann_qrt_ind_1,"Indicates whether this quarter also ends a fiscal year. This indicator shows when the TTM (Trailing Twelve Months) fields from the cash flow statement and the income statement are also for a fiscal year. N.B. This indicator does not mean that the financials are for a fiscal year rather than a quarter; it simply means that a fiscal year ended with this quarter so that the TTM figures in this row happen to be for the fiscal year. This indicator will always show an A for the PRIORFY and the MATCHFY groups. This indicator will sometimes show an A for the PRIORQU or the MATCHQU groups. This will mean that the quarter in question ended with a fiscal year. However, to be sure of the correct event matching fiscal year figures, the data from the PRIORFY or the MATCHFY groups must be used because it is one thing to match the current or prior quarter and another thing to match the current or prior fiscal year",VECTOR,100%,25,39
+fnd14_lts_ann_qrt_ind_2,"Indicates whether this quarter also ends a Fiscal Year. This indicator shows when the TTM (Trailing Twelve Months) fields from the cash flow statement and the income statement are also for a fiscal year. N.B. This indicator does not mean that the financials are for a Fiscal Year rather than a quarter; it simply means that a fiscal year ended with this quarter so that the TTM figures in this row happen to be for the fiscal year. This indicator will always show an A for the PRIORFY and the MATCHFY groups. This indicator will sometimes show an A for the PRIORQU or the MATCHQU groups. This will mean that the quarter in question ended with a fiscal year. However, to be sure of the correct event matching Fiscal Year Figures, the data from the PRIORFY or the MATCHFY groups must be used because it is one thing to match the current or prior quarter and another thing to match the current or prior Fiscal Year",VECTOR,100%,6,6
+fnd14_lts_csh_csh_fnn_act_qtr_1,Cash flow from financing activities as reported in the cash flow statement for the most recent fiscal quarter,VECTOR,88%,12,18
+fnd14_lts_csh_csh_fnn_act_qtr_2,"Cash flow from financing activities for the company during the reported quarter, from the cash flow statement",VECTOR,90%,12,13
+fnd14_lts_csh_csh_fnn_act_ttm_1,"Trailing Twelve Months cash flow from financing activities, summed from the cash flow statement over the last four quarters, possibly fiscal year financing cash flow if last quarter ends the fiscal year",VECTOR,100%,21,25
+fnd14_lts_csh_csh_fnn_act_ttm_2,"Trailing Twelve Months (TTM) cash flow from financing activities, summed over the most recent four quarters, as reported in the cash flow statement; if the latest quarter ends a fiscal year, represents the fiscal year total",VECTOR,94%,15,17
+fnd14_lts_csh_csh_inv_act_qtr_1,Cash flow from investing activities as reported in the cash flow statement for the most recent fiscal quarter,VECTOR,87%,9,9
+fnd14_lts_csh_csh_inv_act_qtr_2,"Cash flow from investing activities for the company during the reported quarter, taken from the cash flow statement",VECTOR,89%,16,17
+fnd14_lts_csh_csh_inv_act_ttm_1,"Trailing Twelve Months cash flow from investing activities, summed from the cash flow statement over the last four quarters, possibly fiscal year investing cash flow if last quarter ends the fiscal year",VECTOR,100%,22,34
+fnd14_lts_csh_csh_inv_act_ttm_2,"Trailing Twelve Months (TTM) cash flow from investing activities, summed over the most recent four quarters from the cash flow statement; if the latest quarter ends a fiscal year, this field represents the fiscal year total",VECTOR,93%,15,20
+fnd14_lts_csh_csh_opr_act_qtr_1,"Cash flow from operating activities, as reported in the cash flow statement for the most recent fiscal quarter",VECTOR,88%,20,21
+fnd14_lts_csh_csh_opr_act_qtr_2,"Cash flow from operating activities for the company during the reported quarter, taken from the cash flow statement",VECTOR,90%,13,17
+fnd14_lts_csh_csh_opr_act_ttm_1,"Trailing Twelve Months cash flow from operating activities, summed from the cash flow statement over the last four quarters, possibly fiscal year cash flow if last quarter ends the fiscal year",VECTOR,100%,28,41
+fnd14_lts_csh_csh_opr_act_ttm_2,"Trailing Twelve Months (TTM) cash flow from operating activities, summed over the most recent four quarters from the cash flow statement; if the latest quarter ends a fiscal year, it represents the fiscal year total",VECTOR,94%,19,27
+fnd14_mail_addr,Mail address of registrant (complete),VECTOR,100%,21,26
+fnd14_mail_city,Mail city of registrant,VECTOR,100%,23,25
+fnd14_mail_county_name,County of the company mailing address. County is most probable since multiple counties per zip code can exist.,VECTOR,100%,23,27
+fnd14_mail_state,Mail state code of registrant,VECTOR,100%,9,9
+fnd14_mail_state_country,Mail state country of registrant,VECTOR,100%,18,19
+fnd14_mail_state_name,Mail state name of registrant,VECTOR,100%,9,9
+fnd14_mail_state_region,Mail state region of registrant,VECTOR,100%,18,20
+fnd14_mail_street1,Mail street address 1 of registrant,VECTOR,100%,13,16
+fnd14_mail_street2,Mail street address 2 of registrant,VECTOR,100%,29,35
+fnd14_mail_zip,Mail zip address of registrant,VECTOR,100%,14,14
+fnd14_market,Principal exchange the registrant's stock currently trades on. Programmatically extracted and matched from a third-party data provider,VECTOR,100%,24,27
+fnd14_meta_add_change_delete_flag,"Flag designates whether row is added, changed, or deleted. The meta_add_change_delete_flag is a value of I, U, or D which corresponds to the action that was tracked. Was the record inserted, updated, or deleted.",VECTOR,100%,49,64
+fnd14_mn_ffa_tda_rpr_tsl,Auditor affiliate name,VECTOR,100%,9,9
+fnd14_mn_ffa_tda_wnk_tsl,Auditor affiliate name,VECTOR,100%,4,4
+fnd14_mth_mn_lf_tth_nlf_drp_ncr,SEC file name of their most recent periodic filing -- html version,VECTOR,100%,11,14
+fnd14_naics_code_description,Translation of NAICS Code,VECTOR,100%,37,41
+fnd14_naics_code_fkey,"Six-digit NAICS industry classification code for the company, used as a foreign key",VECTOR,100%,87,108
+fnd14_name,Registrant's current name as filed with the SEC. Programmatically extracted and matched from the sec.gov's registrant header page,VECTOR,100%,15,18
+fnd14_nasdaq_composite,"Flag indicating whether the company is included in the Nasdaq Composite Index (0=No, 1=Yes)",VECTOR,100%,8,8
+fnd14_parent_company_name,"The name of the parent company, if the registrant is the subsidiary of another SEC registrant. Assigned by internal researchers",VECTOR,100%,10,10
+fnd14_pc_krm_sto_rhs_ltt_rrc,"Current market capitalization, calculated using total shares outstanding and latest price",VECTOR,100%,29,37
+fnd14_pc_krm_sto_rhs_ltt_twh,"Highest historical market capitalization for the company, based on shares outstanding and closing price",VECTOR,100%,10,13
+fnd14_pmc_rpr_lms_rlf_cca,"Indicator of whether registrant is a smaller reporting company (1=Yes, 2=Did not disclose, 0=No)",VECTOR,100%,14,18
+fnd14_prev_auditor_affiliate_fkey,Unique internal identifier for the affiliate of the previous auditor,VECTOR,100%,5,5
+fnd14_prev_auditor_affiliate_name,Auditor affiliate name.,VECTOR,100%,18,23
+fnd14_prev_auditor_event_type,"Event type associated with the previous event date. This code indicates the source of our previous auditor information. D = end engagement, auditor dismissed on event date. E = start engagement, auditor engaged on event date. F = engagement active sometime in FY ended event date. L = historical engagement since at least this date. O = engagement active, signed opinion on event date. S = historical engagement since this date.",VECTOR,100%,51,72
+fnd14_prev_auditor_fkey,Unique internal identifier for the previous auditor assigned to the company,VECTOR,100%,28,32
+fnd14_prev_auditor_name,Previous auditor name.,VECTOR,100%,52,79
+fnd14_prv_adt_aff_hm_off_stt,2-character auditor affiliate state code.,VECTOR,100%,8,8
+fnd14_prv_adt_aff_hm_off_stt_nm,Auditor affiliate state name.,VECTOR,100%,17,17
+fnd14_prv_adt_aff_hm_off_stt_rgn,Auditor affiliate region.,VECTOR,100%,3,3
+fnd14_pyt_nve_cns_tda_rpr_tsl,"Count of unique IDs of industry participants. Industry stands for an aggregate view of all  equity clearance activity for the date, symbol, and transaction type in question.",VECTOR,100%,27,47
+fnd14_rlf_cca_grl_rlf_cca,"Indicator of whether the registrant identified as a large accelerated filer (1=Yes, 2=Did not disclose, 0=No)",VECTOR,100%,7,11
+fnd14_rpo_nn_chc_nlb_lhs_pmc,"Indicates whether the company self-designates as a ""Shell Company"" by checking the relevant box on SEC forms or reporting via Item 5.06 in Form 8-K or a shell company report on Form 20-F. 1 for yes, 0 for no",VECTOR,100%,152,268
+fnd14_rtq_td_lv_kb_slb_twh,Date of the highest reported quarterly total book value (BALSH) for the company,VECTOR,100%,21,24
+fnd14_rtq_td_mtt_cni_tn_cni_twh,"The highest trailing twelve months (TTM) net income, calculated from quarterly data and based on specific quarter reporting dates",VECTOR,100%,19,20
+fnd14_rtq_td_mtt_nvr_cni_twh,"The highest trailing twelve months (TTM) revenue, as calculated by aggregating quarterly figures, with a quarter-based reporting date",VECTOR,100%,17,22
+fnd14_rtq_td_rtq_cni_tn_cni_twh,"The highest net income figure reported for any fiscal quarter, using quarter-based reporting dates",VECTOR,100%,17,20
+fnd14_rtq_td_rtq_nvr_cni_twh,Date of the highest reported quarterly income statement revenue for the company,VECTOR,100%,46,62
+fnd14_rtq_td_yf_cni_tn_cni_twh,Highest fiscal year net income as reported quarterly,VECTOR,100%,33,47
+fnd14_rtq_td_yf_nvr_cni_twh,Highest yearly revenue as reported quarterly,VECTOR,100%,16,16
+fnd14_russell_2000,"Indicator for Russell index constituency (0=Not in either, 1=Russell 1000, 2=Russell 2000)",VECTOR,100%,18,20
+fnd14_sgr_bcp_ffa_tda_rpr_tsl,"Boolean flag indicating if the auditor affiliate is registered with PCAOB (0=false, 1=true)",VECTOR,100%,16,18
+fnd14_sgr_bcp_ffa_tda_rrc,"Flag indicating whether the current auditor affiliate is registered with PCAOB (0 = no, 1 = yes)",VECTOR,100%,8,17
+fnd14_sgr_bcp_ffa_tda_vrp,"Indicates if the previous auditor affiliate is registered with PCAOB (0 = not registered, 1 = registered)",VECTOR,100%,10,13
+fnd14_sgr_bcp_ffa_tda_wnk_tsl,"Indicates if the last known auditor affiliate is a PCAOB registrant (0 = false, 1 = true)",VECTOR,100%,15,17
+fnd14_sgr_bcp_tda_rrc,Flag indicating whether the current auditor is a PCAOB registrant,VECTOR,100%,16,21
+fnd14_short_name,Short or street version of company name,VECTOR,100%,22,29
+fnd14_sic_code_description,Translation of SIC Code,VECTOR,100%,20,21
+fnd14_sic_code_fkey,"Four-digit SIC industry classification code assigned to company, used as a foreign key",VECTOR,100%,8,8
+fnd14_sp_index,"Indicator of whether the company is included in specific S&P indices (5=SP500, 4=SP400 MidCap)",VECTOR,100%,9,11
+fnd14_td_lf_nlf_drp_ncr,Date the most recent periodic SEC report was filed,VECTOR,100%,10,12
+fnd14_td_lf_rlf_lmt_nn_ncr,Date the registrant’s most recent non-timely (NT) filing was filed with the SEC,VECTOR,34%,8,8
+fnd14_td_lf_sgr_ncr,Date the registrant’s most recent securities registration was filed,VECTOR,100%,36,51
+fnd14_td_nve_cns_tda_rpr_tsl,Earliest calculated start date of the company’s last reported auditor engagement,VECTOR,100%,20,21
+fnd14_td_sto_rhs_ltt_twh,Date when the highest number of shares outstanding for the company was reported historically,VECTOR,100%,9,15
+fnd14_termination_form_fkey,Form type the registrant filed to deregister with the SEC,VECTOR,100%,16,44
+fnd14_termination_ftp_file_name_fkey,"The termination/deregistration SEC filing, ftp file format",VECTOR,100%,7,11
+fnd14_txt_mn_lf_tth_nlf_drp_ncr,SEC file name of their most recent periodic filing -- text version,VECTOR,100%,96,251
+fnd14_ultimate_parent_company_name,Ultimate parent company name,VECTOR,100%,10,32
+fnd14_ykf_ffa_tda_rpr_tsl,"Auto-incremented internal key for the last reported auditor affiliate, if applicable",VECTOR,100%,8,9
+fnd14_ykf_ffa_tda_wnk_tsl,"Auto-incremented internal key for the last known auditor affiliate, if applicable",VECTOR,100%,15,21
+fnd14_ykf_mn_lf_ptf_nlf_drp_ncr,SEC file name of their most recent periodic filing -- ftp version,VECTOR,100%,21,27
+fnd14_ykf_mrf_nlf_drp_ncr,"The registrant's most recent periodic report filing. A periodic report would include any of the following form types: 10-K, 10-Q, 10KSB, 10QSB, 20-F, 40-F, 485APOS, 485BPOS, N-CSR, and N-SAR",VECTOR,100%,8,8
+fnd14_ykf_mrf_rlf_lmt_nn_ncr,The registrant's most recent NT-filing form type,VECTOR,100%,23,31
+fnd14_ykf_mrf_sgr_ncr,"The registrant's most recent securities registration filing. A securities registration would include any of the following form types: S-1, S-3, S-4, S-6, S-8, S-11, S-20, SB-1, SB-2, F-1, F-3, F-4, F-6, F-7, F-8, F-9, F-10, F-80, N-1, N-2, N-3, N-4, N-5, N-6",VECTOR,100%,101,178
+fnd14_zs_lf_nlf_drp_ncr,File size of their most recent periodic filing,VECTOR,100%,17,19

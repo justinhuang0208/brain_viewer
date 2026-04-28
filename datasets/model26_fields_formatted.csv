@@ -1,0 +1,840 @@
+Field,Description,Type,Coverage,Users,Alphas
+count_negative_bold_estimates_fy1,Count of negative bold FY1 earnings estimates,MATRIX,100%,6,6
+count_negative_bold_estimates_quarter2,Count of analysts who issued negative bold (unusually large downward) earnings estimates for Fiscal Quarter 2,MATRIX,100%,3,5
+count_negative_bold_estimates_quarter3,Count of negative bold (below-consensus) earnings estimates for Fiscal Quarter 3,MATRIX,100%,3,4
+count_negative_bold_estimates_quarter4,Count of analysts who issued negative bold earnings estimates for Fiscal Quarter 4,MATRIX,100%,7,7
+count_positive_bold_estimates_fy1,Count of positive bold FY1 earnings estimates,MATRIX,100%,1,2
+count_positive_bold_estimates_fy2,Count of positive ‘bold’ (significantly higher than consensus) FY2 earnings estimates,MATRIX,100%,7,9
+count_positive_bold_estimates_quarter2,Count of analysts who issued positive bold (unusually large upward) earnings estimates for Fiscal Quarter 2,MATRIX,100%,1,1
+count_positive_bold_estimates_quarter3,number of positive rough estimates FQTR3 earnings,MATRIX,100%,3,5
+count_positive_bold_estimates_quarter4,Count of positive bold (above-consensus) earnings estimates for Fiscal Quarter 4,MATRIX,100%,1,1
+country_percentile_rank_float,Numeric percentile rank of the ARM score within the company’s country (float representation),MATRIX,100%,0,0
+days_since_positive_bold_estimate_fy2,Number of days since the last positive ‘bold’ FY2 earnings estimate,MATRIX,26%,6,6
+global_percentile_rank_float,Numeric percentile rank of the ARM score across the global universe (float representation),MATRIX,100%,4,4
+is_parent_entity_flag,"Indicator whether the company is a parent/consolidated reporting entity in a corporate group (1=yes, 0=no)",MATRIX,100%,3,3
+is_parent_entity_flag_v14,Indicator flag showing whether the company is a parent (consolidated) entity in a corporate group,MATRIX,100%,0,0
+max_positive_bold_estimate_deviation_fy2,maximum positive bold estimate difference FYEAR2 earnings,MATRIX,26%,1,1
+mdl26_5yr_hstrcl_grwth_rt,5year historical growth rate,MATRIX,74%,86,507
+mdl26_60dy_srprs_lst_q_rnngs,60day surprise (actual value - predicted value) last QTR earnings,MATRIX,95%,257,1511
+mdl26_60dy_srprs_lst_y_rnngs,60day surprise (actual value - predicted value) last YEAR earnings,MATRIX,96%,200,854
+mdl26_7dy_bld_stmt_flg_fq1_rnngs,Flag indicating a bold FQ1 earnings estimate occurred within the past 7 days,MATRIX,31%,37,149
+mdl26_7dy_bld_stmt_flg_fq2_rnngs,7day rough estimate flag FQTR2 earnings,MATRIX,32%,23,80
+mdl26_7dy_bld_stmt_flg_fq3_rnngs,Flag indicating a bold earnings estimate occurred within the past 7 days for Fiscal Quarter 3,MATRIX,30%,17,33
+mdl26_7dy_bld_stmt_flg_fq4_rnngs,Flag indicating a bold earnings estimate occurred within the past 7 days for Fiscal Quarter 4,MATRIX,30%,26,52
+mdl26_7dy_bld_stmt_flg_fy2_rnngs,7day rough estimate flag FYEAR2 earnings,MATRIX,37%,91,217
+mdl26_7dy_mn_chng_flg_fq1_rnngs,7day mean change flag FQTR1 earnings,MATRIX,79%,92,386
+mdl26_7dy_mn_chng_flg_fq2_rnngs,7day mean change flag FQTR2 earnings,MATRIX,76%,50,123
+mdl26_7dy_mn_chng_flg_fq3_rnngs,7day mean change flag FQTR3 earnings,MATRIX,74%,71,312
+mdl26_7dy_mn_chng_flg_fq4_rnngs,7day mean change flag FQTR4 earnings,MATRIX,77%,44,57
+mdl26_7dy_mn_chng_flg_fy1_rnngs,7day mean change flag FYEAR1 earnings,MATRIX,71%,69,208
+mdl26_7dy_mn_chng_flg_fy2_rnngs,7day mean change flag FYEAR2 earnings,MATRIX,72%,44,160
+mdl26_actual_last_q_earnings,Actual earnings reported for the most recent fiscal quarter,MATRIX,96%,134,812
+mdl26_actual_last_q_ebitda,actual last QTR EBITDA,MATRIX,76%,1,1
+mdl26_actual_last_q_revenue,Actual last quarter revenue,MATRIX,93%,2,3
+mdl26_actual_last_y_earnings,Actual earnings reported for the most recent fiscal year,MATRIX,96%,88,283
+mdl26_actual_last_y_ebitda,actual last YEAR EBITDA,MATRIX,79%,1,1
+mdl26_actual_last_y_revenue,actual last YEAR revenue,MATRIX,94%,2,2
+mdl26_arm_new_activity_flag,"Flag indicating newly detected analyst activity or revisions impacting ARM on this date; 1 = new activity present, 0 = none",MATRIX,100%,0,0
+mdl26_arm_score_change_1,score change for days: 1,MATRIX,98%,5,21
+mdl26_arm_score_change_3,score change for days: 3,MATRIX,98%,2,5
+mdl26_arm_score_change_60,score change for days: 60,MATRIX,98%,1,1
+mdl26_arm_score_change_7,score change for days: 7,MATRIX,98%,1,6
+mdl26_arm_score_change_90,score change for days: 90,MATRIX,97%,1,2
+mdl26_avrevsn_fq1_earnings_30,average revision FQTR1 earnings: 30 days,MATRIX,93%,121,436
+mdl26_avrevsn_fq2_earnings_30,average revision FQTR2 earnings: 30 days,MATRIX,92%,34,81
+mdl26_avrevsn_fq3_earnings_30,average revision FQTR3 earnings: 30 days,MATRIX,91%,54,183
+mdl26_avrevsn_fq4_earnings_30,average revision FQTR4 earnings: 30 days,MATRIX,89%,65,175
+mdl26_avrevsn_fy1_earnings_30,average revision FYEAR1 earnings: 30 days,MATRIX,96%,52,106
+mdl26_avrevsn_fy2_earnings_30,average revision FYEAR2 earnings: 30 days,MATRIX,96%,38,105
+mdl26_bld_stmt_flg_fq1_rnngs,Flag indicating whether the current fiscal quarter 1 earnings estimate is bold (significantly different from consensus),MATRIX,100%,30,125
+mdl26_bld_stmt_flg_fq2_rnngs,Flag indicating that a bold earnings estimate event occurred for Fiscal Quarter 2,MATRIX,100%,21,71
+mdl26_bld_stmt_flg_fq3_rnngs,rough estimate flag FQTR3 earnings,MATRIX,100%,24,90
+mdl26_bld_stmt_flg_fq4_rnngs,Indicator flag showing whether there is currently a bold analyst estimate for FQ4 earnings,MATRIX,100%,24,85
+mdl26_bld_stmt_flg_fy1_rnngs,Flag indicating the presence of a bold (significantly different from consensus) FY1 earnings estimate,MATRIX,100%,42,90
+mdl26_bld_stmt_flg_fy2_rnngs,Flag indicating the presence of a ‘bold’ (significantly different from consensus) FY2 earnings estimate,MATRIX,100%,41,230
+mdl26_blndd_grwth_ndstry_prcntl,blended growth industry percentile,MATRIX,88%,82,398
+mdl26_blndd_grwth_rt_smrtstmt,blended growth rate smartestimate,MATRIX,88%,80,212
+mdl26_blndd_grwth_sctr_prcntl,blended growth sector percentile,MATRIX,88%,61,258
+mdl26_chng_frm_52wk_hgh_prc,Percentage price change from the 52-week high price,MATRIX,100%,151,515
+mdl26_chng_frm_52wk_lw_prc,Percentage change from the 52-week low price to the current price,MATRIX,100%,115,380
+mdl26_chng_rltv_t_cc_40_30,Change relative to CAC 40 index over 30 days,MATRIX,100%,72,239
+mdl26_chng_rltv_t_cntry_bnchmrk_30,Percentage change relative to the country benchmark over the last 30 trading days,MATRIX,99%,73,289
+mdl26_chng_rltv_t_dj_stxx_600_30,Change relative to DJ STOXX 600 index over 30 days,MATRIX,100%,69,270
+mdl26_chng_rltv_t_fts_100_30,Change relative to FTSE 100 index over 30 days,MATRIX,100%,54,126
+mdl26_chng_rltv_t_hng_sng_30,Change relative to Hang Seng index over 30 days,MATRIX,100%,66,207
+mdl26_chng_rltv_t_js_ll_shr_30,Change relative to JSE All Share index over 30 days,MATRIX,100%,59,284
+mdl26_chng_rltv_t_msc_f_30,Change relative to MSCI EAFE index over 30 days,MATRIX,100%,41,96
+mdl26_chng_rltv_t_msc_mf_30,Change relative to MSCI Emerging Markets Free index over 30 days,MATRIX,100%,54,199
+mdl26_chng_rltv_t_msc_pc_x_jp_30,Change relative to MSCI Pacific excluding Japan index over 30 days,MATRIX,100%,55,139
+mdl26_chng_rltv_t_msc_rp_30,Change relative to MSCI Europe index over 30 days,MATRIX,100%,39,120
+mdl26_chng_rltv_t_ndstry_bnchmrk_30,Percentage change relative to the industry benchmark over the last 30 trading days,MATRIX,99%,66,212
+mdl26_chng_rltv_t_r1000_grwth_30,Change relative to Russell 1000 Growth index over 30 days,MATRIX,100%,66,297
+mdl26_chng_rltv_t_rssll_2000_30,Change relative to Russell 2000 index over 30 days,MATRIX,100%,62,382
+mdl26_chng_rltv_t_rssll_mdcp_30,Change relative to Russell Midcap index over 30 days,MATRIX,100%,72,268
+mdl26_chng_rltv_t_sp_400_30,Change relative to S&P 400 index over 30 days,MATRIX,100%,63,280
+mdl26_chng_rltv_t_sp_500_30,Change relative to S&P 500 index over 30 days,MATRIX,100%,63,193
+mdl26_chng_rltv_t_sp_600_30,The stock’s 30-day percentage price change minus the S&P 600 index’s 30-day percentage change,MATRIX,100%,62,235
+mdl26_chng_rltv_t_sx_100_30,Change relative to ASX 100 index over 30 days,MATRIX,100%,47,177
+mdl26_chng_rltv_t_sx_200_30,Change relative to ASX 200 index over 30 days,MATRIX,100%,43,138
+mdl26_chng_rltv_t_sx_300_30,Change relative to ASX 300 index over 30 days,MATRIX,100%,46,126
+mdl26_chng_rltv_t_sx_ll_rd_30,Change relative to ASX All Ordinaries over 30 days,MATRIX,100%,44,156
+mdl26_chng_rltv_t_tpx_30,Stock’s 30-day percentage price change minus the TOPIX index’s 30-day percentage change,MATRIX,100%,48,142
+mdl26_chng_rltv_t_tsx_cmpst_30,Stock’s 30-day percentage price change minus the TSX Composite index’s 30-day percentage change,MATRIX,100%,54,174
+mdl26_days_since_last_report,Model days since last report,MATRIX,100%,174,1582
+mdl26_dff_frm_200dy_mvng_vrg,Difference between the current price and the 200-day moving average price,MATRIX,100%,86,318
+mdl26_dff_frm_50dy_mvng_vrg,Difference between the current price and the 50-day moving average price,MATRIX,100%,82,243
+mdl26_dffrnc_frm_hstrcl_p,difference from historical (Price/Earnings ratio),MATRIX,82%,206,1038
+mdl26_dffrnc_frm_hstrcl_prc_rt_rnngs,Percent difference between the current P/E and the company’s historical median P/E,MATRIX,83%,160,404
+mdl26_divisor_fq1_earnings,Scaling divisor used in calculations for FQ1 earnings,MATRIX,97%,1,1
+mdl26_dsnc_bld_stmt_fq1_rnngs,Number of days since any bold estimate was observed for fiscal quarter 1 earnings,MATRIX,36%,24,88
+mdl26_dsnc_bld_stmt_fq2_rnngs,Number of days since any bold analyst estimate occurred for FQ2 earnings,MATRIX,37%,17,39
+mdl26_dsnc_bld_stmt_fq3_rnngs,Number of days since a bold (outlier) earnings estimate was last observed for Fiscal Quarter 3,MATRIX,35%,21,35
+mdl26_dsnc_bld_stmt_fq4_rnngs,Number of days since the last bold (either positive or negative) earnings estimate for Fiscal Quarter 4,MATRIX,35%,23,42
+mdl26_dsnc_bld_stmt_fy1_rnngs,Number of days since the last bold FY1 earnings estimate revision,MATRIX,33%,24,49
+mdl26_dsnc_bld_stmt_fy2_rnngs,Number of days since the last ‘bold’ FY2 earnings estimate,MATRIX,42%,13,37
+mdl26_dsnc_clstr_bgn_fq1_rnngs,Number of days since the current revision cluster for Fiscal Quarter 1 earnings began,MATRIX,91%,77,425
+mdl26_dsnc_clstr_bgn_fq2_rnngs,days since cluster began FQTR2 earnings,MATRIX,90%,43,126
+mdl26_dsnc_clstr_bgn_fq3_rnngs,Number of days since the revision cluster for FQ3 earnings began,MATRIX,87%,35,129
+mdl26_dsnc_clstr_bgn_fq4_rnngs,Number of days since the revision cluster for FQ4 earnings began,MATRIX,84%,57,259
+mdl26_dsnc_clstr_bgn_fy1_rnngs,Number of days since the current FY1 earnings revision cluster began,MATRIX,95%,72,368
+mdl26_dsnc_clstr_bgn_fy2_rnngs,Number of days since the current/last revision cluster began for FY2 earnings,MATRIX,93%,60,159
+mdl26_dsnc_clstr_dtctd_fq1_rnngs,Number of days since a revision cluster was detected for fiscal quarter 1 earnings,MATRIX,91%,39,92
+mdl26_dsnc_clstr_dtctd_fq2_rnngs,Number of days since a revision cluster was detected for FQ2 earnings,MATRIX,90%,47,131
+mdl26_dsnc_clstr_dtctd_fq3_rnngs,days since cluster detected FQTR3 earnings,MATRIX,87%,38,111
+mdl26_dsnc_clstr_dtctd_fq4_rnngs,Number of days since a revision cluster was detected for Fiscal Quarter 4 earnings,MATRIX,84%,59,200
+mdl26_dsnc_clstr_dtctd_fy1_rnngs,Number of days since the FY1 earnings revision cluster was detected,MATRIX,95%,55,140
+mdl26_dsnc_clstr_dtctd_fy2_rnngs,Number of days since a revision cluster was detected for FY2 earnings,MATRIX,93%,66,226
+mdl26_dsnc_lst_bss_chng_rnngs,"Count of unique IDs of industry participants. Industry stands for an aggregate view of all  equity clearance activity for the date, symbol, and transaction type in question.",MATRIX,26%,24,64
+mdl26_dsnc_lst_ng_prnnncmnt,Number of days since the company’s last negative pre-announcement,MATRIX,41%,24,112
+mdl26_dsnc_lst_ps_prnnncmnt,Number of days since the company’s last positive pre-announcement,MATRIX,46%,38,129
+mdl26_dsnc_ngtv_bld_stmt_fy2_rnngs,Number of days since the last negative ‘bold’ FY2 earnings estimate,MATRIX,28%,22,58
+mdl26_dsnc_prd_srprs_flg_chg_fq1_rnngs,Number of days since the predicted surprise flag last changed for fiscal quarter 1 earnings,MATRIX,77%,51,197
+mdl26_dsnc_prd_srprs_flg_chg_fq2_rnngs,Number of days since the predicted surprise flag for FQ2 earnings last changed status,MATRIX,76%,32,90
+mdl26_dsnc_prd_srprs_flg_chg_fq3_rnngs,days since pred surprise (actual value - predicted value) flag chg FQTR3 earnings,MATRIX,74%,40,70
+mdl26_dsnc_prd_srprs_flg_chg_fq4_rnngs,Number of days since the predicted surprise flag for FQ4 earnings last changed,MATRIX,73%,27,80
+mdl26_dsnc_prd_srprs_flg_chg_fy1_rnngs,Number of days since the predicted surprise flag last changed for FY1 earnings,MATRIX,76%,42,178
+mdl26_dsnc_prd_srprs_flg_chg_fy2_rnngs,Number of days since the predicted surprise flag last changed for FY2 earnings,MATRIX,80%,46,161
+mdl26_ep_industry_percentile_fy1,Percentile rank within industry of the Fiscal Year 1 earnings yield (E/P),MATRIX,99%,165,1215
+mdl26_ep_sector_percentile_fy1,Percentile rank within sector of the Fiscal Year 1 earnings yield (E/P),MATRIX,99%,145,432
+mdl26_ep_yield_smartestimate_fy1,"Earnings yield (earnings-to-price ratio) for next fiscal year based on StarMine SmartEstimate, expressed as a percentage",MATRIX,99%,374,2185
+mdl26_forward_pe_mean_f12m,forward (Price/Earnings ratio) mean F-12MonthsRolling,MATRIX,85%,1,1
+mdl26_forward_pe_mean_fy1,Forward price-to-earnings ratio using the mean analyst EPS estimate for Fiscal Year 1,MATRIX,80%,79,225
+mdl26_forward_pe_mean_fy2,forward (Price/Earnings ratio) mean FYEAR2,MATRIX,86%,3,6
+mdl26_frwrd_p_stm_f12m,Forward (Price/Earnings ratio) Estimate F-12MonthsRolling,MATRIX,85%,3,3
+mdl26_frwrd_p_stm_fy1,Forward price-to-earnings ratio using StarMine SmartEstimate for Fiscal Year 1 EPS,MATRIX,80%,89,248
+mdl26_frwrd_p_stm_fy2,Forward (Price/Earnings ratio) Estimate FYEAR2,MATRIX,86%,3,5
+mdl26_grwth_nxt_yr_ndstry_prcntl_rnngs,Industry percentile rank of next fiscal year’s earnings growth (SmartEstimate),MATRIX,81%,44,119
+mdl26_grwth_nxt_yr_sctr_prcntl_rnngs,Sector percentile rank of next fiscal year’s earnings growth (SmartEstimate),MATRIX,81%,15,28
+mdl26_grwth_ths_yr_ndstry_prcntl_rnngs,Industry percentile rank of this fiscal year’s earnings growth (SmartEstimate),MATRIX,77%,38,71
+mdl26_grwth_ths_yr_sctr_prcntl_rnngs,Percentile rank versus sector peers of expected earnings growth for the current fiscal year higher indicates faster expected growth,MATRIX,77%,33,101
+mdl26_hgh_stmt_chng_fq1_rnngs_30,Change in the highest FQ1 earnings estimate over the past 30 days,MATRIX,97%,81,532
+mdl26_hgh_stmt_chng_fq2_rnngs_30,Change in the highest individual analyst FQ2 earnings estimate over the last 30 days,MATRIX,97%,35,130
+mdl26_hgh_stmt_chng_fq3_rnngs_30,Change in the highest individual analyst FQ3 earnings estimate over the last 30 days,MATRIX,96%,45,176
+mdl26_hgh_stmt_chng_fq4_rnngs_30,high estimate FQTR4 earnings change over days: 30,MATRIX,95%,51,117
+mdl26_hgh_stmt_chng_fy1_rnngs_30,high estimate FYEAR1 earnings change over days: 30,MATRIX,99%,35,99
+mdl26_hgh_stmt_chng_fy2_rnngs_30,high estimate FYEAR2 earnings change over days: 30,MATRIX,99%,37,103
+mdl26_hgh_stmt_prr_fq1_rnngs_30,Highest earnings estimate for Fiscal Quarter 1 recorded 30 days prior,MATRIX,97%,124,560
+mdl26_hgh_stmt_prr_fq2_rnngs_30,Highest individual analyst FQ2 earnings estimate as of 30 days ago,MATRIX,97%,57,175
+mdl26_hgh_stmt_prr_fq3_rnngs_30,Highest individual analyst FQ3 earnings estimate as of 30 days ago,MATRIX,96%,39,114
+mdl26_hgh_stmt_prr_fq4_rnngs_30,Highest analyst FQ4 earnings estimate as of 30 days prior,MATRIX,95%,40,120
+mdl26_hgh_stmt_prr_fy1_rnngs_30,high estimate prior FYEAR1 earnings: 30 days,MATRIX,99%,56,202
+mdl26_hgh_stmt_prr_fy2_rnngs_30,high estimate prior FYEAR2 earnings: 30 days,MATRIX,99%,42,142
+mdl26_high_price_52,high price 52 days,MATRIX,98%,2,6
+mdl26_high_price_52_5,high price 52 days,MATRIX,100%,64,282
+mdl26_last_fiscal_year_pe,Price-to-earnings ratio using the last fiscal year’s actual earnings,MATRIX,76%,37,138
+mdl26_low_price_52,low price 52 days,MATRIX,98%,2,4
+mdl26_low_price_52_5,low price 52 days,MATRIX,100%,66,377
+mdl26_lst_ngtv_bld_stmt_fy2_rnngs,Value of the most recent negative ‘bold’ FY2 earnings estimate,MATRIX,28%,24,52
+mdl26_lt_grwth_ndstry_prcntl,Industry percentile rank of long-term growth,MATRIX,87%,37,73
+mdl26_lt_grwth_sctr_prcntl,Sector percentile rank of long-term growth,MATRIX,87%,26,71
+mdl26_lw_stmt_chng_fq1_rnngs_30,Change in the lowest FQ1 earnings estimate over the past 30 days,MATRIX,97%,78,480
+mdl26_lw_stmt_chng_fq2_rnngs_30,Change in the lowest individual analyst FQ2 earnings estimate over the last 30 days,MATRIX,97%,42,159
+mdl26_lw_stmt_chng_fq3_rnngs_30,Change in the lowest individual analyst FQ3 earnings estimate over the last 30 days,MATRIX,96%,43,153
+mdl26_lw_stmt_chng_fq4_rnngs_30,low estimate FQTR4 earnings change over days: 30,MATRIX,95%,44,118
+mdl26_lw_stmt_chng_fy1_rnngs_30,low estimate FYEAR1 earnings change over days: 30,MATRIX,99%,50,103
+mdl26_lw_stmt_chng_fy2_rnngs_30,low estimate FYEAR2 earnings change over days: 30,MATRIX,99%,48,111
+mdl26_lw_stmt_prr_fq1_rnngs_30,Lowest earnings estimate for Fiscal Quarter 1 recorded 30 days prior,MATRIX,97%,211,1466
+mdl26_lw_stmt_prr_fq2_rnngs_30,Lowest individual analyst FQ2 earnings estimate as of 30 days ago,MATRIX,97%,51,158
+mdl26_lw_stmt_prr_fq3_rnngs_30,Lowest individual analyst FQ3 earnings estimate as of 30 days ago,MATRIX,96%,44,104
+mdl26_lw_stmt_prr_fq4_rnngs_30,Lowest analyst FQ4 earnings estimate as of 30 days prior,MATRIX,95%,50,142
+mdl26_lw_stmt_prr_fy1_rnngs_30,low estimate prior FYEAR1 earnings: 30 days,MATRIX,99%,74,346
+mdl26_lw_stmt_prr_fy2_rnngs_30,low estimate prior FYEAR2 earnings: 30 days,MATRIX,99%,45,142
+mdl26_market_cap_l,market cap Local Currency,MATRIX,98%,8,79
+mdl26_market_cap_l_5,Market capitalization of the company in local currency,MATRIX,100%,275,1526
+mdl26_market_cap_u,market cap USD,MATRIX,98%,18,99
+mdl26_market_cap_u_5,Market capitalization of the company in USD,MATRIX,100%,477,4491
+mdl26_mdn_hstrcl_f12m_prc_rt_rnngs,Median historical forward 12-month price-to-earnings ratio for the company,MATRIX,88%,44,149
+mdl26_median_historical_f12m_pe,Median historical Price-to-Earnings ratio for the last twelve months,MATRIX,88%,44,125
+mdl26_mn_f_rvsnclstr_nlysts_fq1_rnngs,Average revision amount among analysts in the detected revision cluster for Fiscal Quarter 1 earnings,MATRIX,91%,68,327
+mdl26_mn_f_rvsnclstr_nlysts_fq2_rnngs,mean of revisioncluster(cluster of similar companies that are generally revised together) analysts FQTR2 earnings,MATRIX,90%,66,187
+mdl26_mn_f_rvsnclstr_nlysts_fq3_rnngs,mean of revisioncluster(cluster of similar companies that are generally revised together) analysts FQTR3 earnings,MATRIX,87%,49,136
+mdl26_mn_f_rvsnclstr_nlysts_fq4_rnngs,mean of revisioncluster(cluster of similar companies that are generally revised together) analysts FQTR4 earnings,MATRIX,83%,45,125
+mdl26_mn_f_rvsnclstr_nlysts_fy1_rnngs,Mean FY1 earnings forecast among analysts in the revision cluster,MATRIX,95%,47,113
+mdl26_mn_f_rvsnclstr_nlysts_fy2_rnngs,Mean estimate value from the analysts in the FY2 earnings revision cluster,MATRIX,93%,51,144
+mdl26_mn_stmt_prc_rt_f12m_btd,mean estimate (Price/EBITDA ratio) F-12MonthsRolling,MATRIX,77%,1,2
+mdl26_mn_stmt_prc_rt_f12m_rnngs,mean estimate (Price/Earnings ratio) F-12MonthsRolling,MATRIX,86%,57,130
+mdl26_mn_stmt_prc_rt_f12m_rvn,mean estimate (Price/revenue ratio) F-12MonthsRolling,MATRIX,97%,2,3
+mdl26_mn_stmt_prc_rt_fy1_btd,mean estimate (Price/EBITDA ratio) FYEAR1,MATRIX,76%,36,74
+mdl26_mn_stmt_prc_rt_fy1_rnngs,Mean analyst estimate Price-to-Earnings ratio for FY1,MATRIX,81%,56,91
+mdl26_mn_stmt_prc_rt_fy1_rvn,mean estimate (Price/revenue ratio) FYEAR1,MATRIX,96%,1,1
+mdl26_mn_stmt_prc_rt_fy2_btd,mean estimate (Price/EBITDA ratio) FYEAR2,MATRIX,78%,1,1
+mdl26_mn_stmt_prc_rt_fy2_rnngs,mean estimate (Price/Earnings ratio) FYEAR2,MATRIX,87%,2,5
+mdl26_mn_stmt_prc_rt_fy2_rvn,mean estimate (Price/revenue ratio) FYEAR2,MATRIX,96%,1,3
+mdl26_mn_stmt_prr_fq1_rnngs_7,Mean FQ1 earnings estimate as of 7 days prior,MATRIX,97%,118,765
+mdl26_mn_stmt_prr_fq2_rnngs_7,Consensus mean FQ2 earnings estimate as of 7 days ago,MATRIX,97%,61,179
+mdl26_mn_stmt_prr_fq3_rnngs_7,Consensus mean FQ3 earnings estimate as of 7 days ago,MATRIX,96%,51,158
+mdl26_mn_stmt_prr_fq4_rnngs_7,Consensus mean FQ4 earnings estimate as of 7 days prior,MATRIX,95%,48,157
+mdl26_mn_stmt_prr_fy1_rnngs_7,mean estimate prior FYEAR1 earnings: 7 days,MATRIX,100%,71,245
+mdl26_mn_stmt_prr_fy2_rnngs_7,mean estimate prior FYEAR2 earnings: 7 days,MATRIX,100%,48,84
+mdl26_mstchg_fq1_rnngs_30,Change in the mean earnings estimate for Fiscal Quarter 1 over the last 30 days,MATRIX,97%,56,308
+mdl26_mstchg_fq2_rnngs_30,Change in the consensus mean FQ2 earnings estimate over the last 30 days (current minus 30-days-ago),MATRIX,97%,47,141
+mdl26_mstchg_fq3_rnngs_30,Change in the consensus mean FQ3 earnings estimate over the last 30 days (current minus 30-days-ago),MATRIX,96%,42,151
+mdl26_mstchg_fq4_rnngs_30,Change in the consensus mean FQ4 earnings estimate over the past 30 days,MATRIX,95%,36,102
+mdl26_mstchg_fy1_rnngs_30,mean estimate FYEAR1 earnings change over days: 30,MATRIX,99%,44,131
+mdl26_mstchg_fy2_rnngs_30,mean estimate FYEAR2 earnings change over days: 30,MATRIX,99%,45,136
+mdl26_mstchg_pct_f12m_btd_14,mean estimate F-12MonthsRolling EBITDA change percentage for days: 14,MATRIX,84%,30,97
+mdl26_mstchg_pct_f12m_btd_30,mean estimate F-12MonthsRolling EBITDA change percentage for days: 30,MATRIX,84%,24,62
+mdl26_mstchg_pct_f12m_btd_60,mean estimate F-12MonthsRolling EBITDA change percentage for days: 60,MATRIX,83%,24,41
+mdl26_mstchg_pct_f12m_btd_7,mean estimate F-12MonthsRolling EBITDA change percentage for days: 7,MATRIX,84%,20,62
+mdl26_mstchg_pct_f12m_btd_90,mean estimate F-12MonthsRolling EBITDA change percentage for days: 90,MATRIX,82%,1,1
+mdl26_mstchg_pct_f12m_rnngs_14,mean estimate F-12MonthsRolling earnings change percentage for days: 14,MATRIX,95%,28,101
+mdl26_mstchg_pct_f12m_rnngs_30,mean estimate F-12MonthsRolling earnings change percentage for days: 30,MATRIX,96%,1,1
+mdl26_mstchg_pct_f12m_rnngs_60,mean estimate F-12MonthsRolling earnings change percentage for days: 60,MATRIX,97%,2,5
+mdl26_mstchg_pct_f12m_rnngs_7,mean estimate F-12MonthsRolling earnings change percentage for days: 7,MATRIX,95%,29,102
+mdl26_mstchg_pct_f12m_rnngs_90,mean estimate F-12MonthsRolling earnings change percentage for days: 90,MATRIX,96%,21,74
+mdl26_mstchg_pct_f12m_rvn_14,mean estimate F-12MonthsRolling revenue change percentage for days: 14,MATRIX,94%,1,2
+mdl26_mstchg_pct_f12m_rvn_30,mean estimate F-12MonthsRolling revenue change percentage for days: 30,MATRIX,94%,2,2
+mdl26_mstchg_pct_f12m_rvn_60,mean estimate F-12MonthsRolling revenue change percentage for days: 60,MATRIX,95%,1,2
+mdl26_mstchg_pct_f12m_rvn_7,mean estimate F-12MonthsRolling revenue change percentage for days: 7,MATRIX,93%,1,2
+mdl26_mstchg_pct_f12m_rvn_90,mean estimate F-12MonthsRolling revenue change percentage for days: 90,MATRIX,95%,2,2
+mdl26_mstchg_pct_fq1_btd_14,mean estimate FQTR1 EBITDA change percentage for days: 14,MATRIX,78%,1,1
+mdl26_mstchg_pct_fq1_btd_30,mean estimate FQTR1 EBITDA change percentage for days: 30,MATRIX,78%,2,2
+mdl26_mstchg_pct_fq1_btd_60,mean estimate FQTR1 EBITDA change percentage for days: 60,MATRIX,77%,1,1
+mdl26_mstchg_pct_fq1_btd_7,mean estimate FQTR1 EBITDA change percentage for days: 7,MATRIX,79%,1,1
+mdl26_mstchg_pct_fq1_btd_90,mean estimate FQTR1 EBITDA change percentage for days: 90,MATRIX,76%,3,3
+mdl26_mstchg_pct_fq1_rnngs_14,mean estimate FQTR1 earnings change percentage for days: 14,MATRIX,92%,2,9
+mdl26_mstchg_pct_fq1_rnngs_30,mean estimate FQTR1 earnings change percentage for days: 30,MATRIX,93%,1,1
+mdl26_mstchg_pct_fq1_rnngs_60,mean estimate FQTR1 earnings change percentage for days: 60,MATRIX,94%,1,3
+mdl26_mstchg_pct_fq1_rnngs_7,mean estimate FQTR1 earnings change percentage for days: 7,MATRIX,91%,1,2
+mdl26_mstchg_pct_fq1_rnngs_90,mean estimate FQTR1 earnings change percentage for days: 90,MATRIX,94%,2,2
+mdl26_mstchg_pct_fq1_rvn_14,mean estimate FQTR1 revenue change percentage for days: 14,MATRIX,89%,2,6
+mdl26_mstchg_pct_fq1_rvn_30,mean estimate FQTR1 revenue change percentage for days: 30,MATRIX,90%,1,1
+mdl26_mstchg_pct_fq1_rvn_60,mean estimate FQTR1 revenue change percentage for days: 60,MATRIX,91%,2,3
+mdl26_mstchg_pct_fq1_rvn_7,mean estimate FQTR1 revenue change percentage for days: 7,MATRIX,88%,2,2
+mdl26_mstchg_pct_fq1_rvn_90,mean estimate FQTR1 revenue change percentage for days: 90,MATRIX,91%,3,8
+mdl26_mstchg_pct_fq2_btd_14,mean estimate FQTR2 EBITDA change percentage for days: 14,MATRIX,77%,21,178
+mdl26_mstchg_pct_fq2_btd_30,mean estimate FQTR2 EBITDA change percentage for days: 30,MATRIX,76%,18,87
+mdl26_mstchg_pct_fq2_btd_60,mean estimate FQTR2 EBITDA change percentage for days: 60,MATRIX,75%,15,32
+mdl26_mstchg_pct_fq2_btd_7,mean estimate FQTR2 EBITDA change percentage for days: 7,MATRIX,77%,2,2
+mdl26_mstchg_pct_fq2_btd_90,mean estimate FQTR2 EBITDA change percentage for days: 90,MATRIX,74%,19,32
+mdl26_mstchg_pct_fq2_rnngs_14,mean estimate FQTR2 earnings change percentage for days: 14,MATRIX,91%,1,1
+mdl26_mstchg_pct_fq2_rnngs_30,mean estimate FQTR2 earnings change percentage for days: 30,MATRIX,92%,1,1
+mdl26_mstchg_pct_fq2_rnngs_60,mean estimate FQTR2 earnings change percentage for days: 60,MATRIX,93%,1,3
+mdl26_mstchg_pct_fq2_rnngs_7,Mean estimate FQ2 earnings change percentage for 7 days,MATRIX,90%,2,2
+mdl26_mstchg_pct_fq2_rnngs_90,mean estimate FQTR2 earnings change percentage for days: 90,MATRIX,93%,26,78
+mdl26_mstchg_pct_fq2_rvn_14,mean estimate FQTR2 revenue change percentage for days: 14,MATRIX,88%,1,1
+mdl26_mstchg_pct_fq2_rvn_30,mean estimate FQTR2 revenue change percentage for days: 30,MATRIX,89%,2,2
+mdl26_mstchg_pct_fq2_rvn_60,mean estimate FQTR2 revenue change percentage for days: 60,MATRIX,90%,1,1
+mdl26_mstchg_pct_fq2_rvn_7,mean estimate FQTR2 revenue change percentage for days: 7,MATRIX,87%,1,5
+mdl26_mstchg_pct_fq2_rvn_90,mean estimate FQTR2 revenue change percentage for days: 90,MATRIX,90%,3,3
+mdl26_mstchg_pct_fy1_btd_14,mean estimate FYEAR1 EBITDA change percentage for days: 14,MATRIX,84%,1,1
+mdl26_mstchg_pct_fy1_btd_30,mean estimate FYEAR1 EBITDA change percentage for days: 30,MATRIX,84%,1,1
+mdl26_mstchg_pct_fy1_btd_60,mean estimate FYEAR1 EBITDA change percentage for days: 60,MATRIX,83%,1,1
+mdl26_mstchg_pct_fy1_btd_7,mean estimate FYEAR1 EBITDA change percentage for days: 7,MATRIX,85%,26,74
+mdl26_mstchg_pct_fy1_btd_90,mean estimate FYEAR1 EBITDA change percentage for days: 90,MATRIX,83%,29,69
+mdl26_mstchg_pct_fy1_rnngs_14,mean estimate FYEAR1 earnings change percentage for days: 14,MATRIX,95%,2,7
+mdl26_mstchg_pct_fy1_rnngs_30,mean estimate FYEAR1 earnings change percentage for days: 30,MATRIX,96%,2,2
+mdl26_mstchg_pct_fy1_rnngs_60,Mean estimate FY1 earnings change percentage for 60 days,MATRIX,97%,2,2
+mdl26_mstchg_pct_fy1_rnngs_7,mean estimate FYEAR1 earnings change percentage for days: 7,MATRIX,94%,1,2
+mdl26_mstchg_pct_fy1_rnngs_90,mean estimate FYEAR1 earnings change percentage for days: 90,MATRIX,97%,23,45
+mdl26_mstchg_pct_fy1_rvn_14,mean estimate FYEAR1 revenue change percentage for days: 14,MATRIX,93%,21,56
+mdl26_mstchg_pct_fy1_rvn_30,mean estimate FYEAR1 revenue change percentage for days: 30,MATRIX,94%,4,6
+mdl26_mstchg_pct_fy1_rvn_60,mean estimate FYEAR1 revenue change percentage for days: 60,MATRIX,95%,25,92
+mdl26_mstchg_pct_fy1_rvn_7,mean estimate FYEAR1 revenue change percentage for days: 7,MATRIX,92%,1,3
+mdl26_mstchg_pct_fy1_rvn_90,mean estimate FYEAR1 revenue change percentage for days: 90,MATRIX,95%,1,1
+mdl26_mxmm_ngtv_bld_st_dff_fy2_rnngs,maximum negative bold estimate difference FYEAR2 earnings,MATRIX,28%,19,115
+mdl26_nm_mn_nlysts_prr_fq1_rnngs_7,Number of analysts contributing to the mean FQ1 earnings estimate 7 days prior,MATRIX,97%,54,183
+mdl26_nm_mn_nlysts_prr_fq2_rnngs_7,Number of analysts contributing to the consensus (mean) FQ2 earnings estimate 7 days ago,MATRIX,97%,44,105
+mdl26_nm_mn_nlysts_prr_fq3_rnngs_7,Number of analysts contributing to the consensus (mean) FQ3 earnings estimate 7 days ago,MATRIX,96%,52,269
+mdl26_nm_mn_nlysts_prr_fq4_rnngs_7,Count of analysts contributing to the consensus mean FQ4 earnings estimate as of 7 days prior,MATRIX,95%,48,113
+mdl26_nm_mn_nlysts_prr_fy1_rnngs_7,number of mean analysts prior FYEAR1 earnings: 7 days,MATRIX,100%,58,176
+mdl26_nm_mn_nlysts_prr_fy2_rnngs_7,number of mean analysts prior FYEAR2 earnings: 7 days,MATRIX,100%,51,176
+mdl26_nm_ngtv_bld_stmts_fq1_rnngs,Count of negative bold (significantly below consensus) estimates for fiscal quarter 1 earnings,MATRIX,100%,0,0
+mdl26_nm_ngtv_bld_stmts_fy2_rnngs,Count of negative ‘bold’ (significantly lower than consensus) FY2 earnings estimates,MATRIX,100%,45,224
+mdl26_nm_pstv_bld_stmts_fq1_rnngs,Count of positive bold estimates for fiscal quarter 1 earnings,MATRIX,100%,2,2
+mdl26_nm_rvsnclstr_nlysts_fq1_rnngs,Count of analysts included in the current revision cluster for Fiscal Quarter 1 earnings,MATRIX,91%,36,152
+mdl26_nm_rvsnclstr_nlysts_fq2_rnngs,number of revisioncluster(cluster of similar companies that are generally revised together) analysts FQTR2 earnings,MATRIX,90%,29,59
+mdl26_nm_rvsnclstr_nlysts_fq3_rnngs,number of revisioncluster(cluster of similar companies that are generally revised together) analysts FQTR3 earnings,MATRIX,87%,42,107
+mdl26_nm_rvsnclstr_nlysts_fq4_rnngs,number of revisioncluster(cluster of similar companies that are generally revised together) analysts FQTR4 earnings,MATRIX,83%,54,150
+mdl26_nm_rvsnclstr_nlysts_fy1_rnngs,Number of analysts contributing to the FY1 earnings revision cluster,MATRIX,95%,41,105
+mdl26_nm_rvsnclstr_nlysts_fy2_rnngs,Number of analysts participating in the FY2 earnings revision cluster,MATRIX,93%,50,145
+mdl26_nm_stm_nlysts_fq1_rnngs,Number of analyst estimates included in the SmartEstimate for FQ1 earnings,MATRIX,100%,72,203
+mdl26_nm_stm_nlysts_fq2_rnngs,Count of analysts contributing to the SmartEstimate for Fiscal Quarter 2 earnings,MATRIX,100%,30,139
+mdl26_nm_stm_nlysts_fq3_rnngs,Number of analysts contributing to the SmartEstimate for Fiscal Quarter 3 earnings,MATRIX,100%,38,106
+mdl26_nm_stm_nlysts_fq4_rnngs,Number of analysts contributing to the SmartEstimate for Fiscal Quarter 4 earnings,MATRIX,100%,48,172
+mdl26_nm_stm_nlysts_fy1_rnngs,Number of analysts contributing to the SmartEstimate for FY1 earnings,MATRIX,100%,65,190
+mdl26_nm_stm_nlysts_fy2_rnngs,Number of analysts contributing to the FY2 earnings SmartEstimate,MATRIX,100%,43,237
+mdl26_nnlyst_rvsng_dwn_fq1_btd_14,number of analysts revising down FQTR1 EBITDA: 14 days,MATRIX,64%,1,2
+mdl26_nnlyst_rvsng_dwn_fq1_btd_30,number of analysts revising down FQTR1 EBITDA: 30 days,MATRIX,66%,23,38
+mdl26_nnlyst_rvsng_dwn_fq1_btd_7,number of analysts revising down FQTR1 EBITDA: 7 days,MATRIX,62%,32,52
+mdl26_nnlyst_rvsng_dwn_fq1_rnngs_14,number of analysts revising down FQTR1 earnings: 14 days,MATRIX,83%,1,2
+mdl26_nnlyst_rvsng_dwn_fq1_rnngs_30,Count of analysts who lowered their Fiscal Quarter 1 earnings estimates in the last 30 days,MATRIX,100%,53,135
+mdl26_nnlyst_rvsng_dwn_fq1_rnngs_7,number of analysts revising down FQTR1 earnings: 7 days,MATRIX,81%,1,1
+mdl26_nnlyst_rvsng_dwn_fq1_rvn_14,number of analysts revising down FQTR1 revenue: 14 days,MATRIX,78%,24,68
+mdl26_nnlyst_rvsng_dwn_fq1_rvn_30,number of analysts revising down FQTR1 revenue: 30 days,MATRIX,80%,2,5
+mdl26_nnlyst_rvsng_dwn_fq1_rvn_7,number of analysts revising down FQTR1 revenue: 7 days,MATRIX,75%,2,4
+mdl26_nnlyst_rvsng_dwn_fq2_btd_14,number of analysts revising down FQTR2 EBITDA: 14 days,MATRIX,61%,1,2
+mdl26_nnlyst_rvsng_dwn_fq2_btd_30,number of analysts revising down FQTR2 EBITDA: 30 days,MATRIX,64%,33,83
+mdl26_nnlyst_rvsng_dwn_fq2_btd_7,number of analysts revising down FQTR2 EBITDA: 7 days,MATRIX,59%,18,126
+mdl26_nnlyst_rvsng_dwn_fq2_rnngs_14,number of analysts revising down FQTR2 earnings: 14 days,MATRIX,82%,1,2
+mdl26_nnlyst_rvsng_dwn_fq2_rnngs_7,number of analysts revising down FQTR2 earnings: 7 days,MATRIX,79%,1,2
+mdl26_nnlyst_rvsng_dwn_fq2_rvn_14,number of analysts revising down FQTR2 revenue: 14 days,MATRIX,76%,1,2
+mdl26_nnlyst_rvsng_dwn_fq2_rvn_30,number of analysts revising down FQTR2 revenue: 30 days,MATRIX,79%,1,2
+mdl26_nnlyst_rvsng_dwn_fq2_rvn_7,number of analysts revising down FQTR2 revenue: 7 days,MATRIX,74%,1,1
+mdl26_nnlyst_rvsng_dwn_fq3_rnngs_30,Number of analysts who lowered their FQ3 earnings estimates in the last 30 days,MATRIX,100%,70,227
+mdl26_nnlyst_rvsng_dwn_fq4_rnngs_30,Number of analysts who lowered their FQ4 earnings estimates in the past 30 days,MATRIX,100%,52,234
+mdl26_nnlyst_rvsng_dwn_fy1_btd_14,number of analysts revising down FYEAR1 EBITDA: 14 days,MATRIX,70%,1,1
+mdl26_nnlyst_rvsng_dwn_fy1_btd_30,number of analysts revising down FYEAR1 EBITDA: 30 days,MATRIX,72%,26,57
+mdl26_nnlyst_rvsng_dwn_fy1_btd_7,number of analysts revising down FYEAR1 EBITDA: 7 days,MATRIX,68%,22,53
+mdl26_nnlyst_rvsng_dwn_fy1_rnngs_14,number of analysts revising down FYEAR1 earnings: 14 days,MATRIX,82%,1,1
+mdl26_nnlyst_rvsng_dwn_fy1_rnngs_7,number of analysts revising down FYEAR1 earnings: 7 days,MATRIX,80%,2,4
+mdl26_nnlyst_rvsng_dwn_fy1_rvn_14,number of analysts revising down FYEAR1 revenue: 14 days,MATRIX,81%,37,76
+mdl26_nnlyst_rvsng_dwn_fy1_rvn_30,number of analysts revising down FYEAR1 revenue: 30 days,MATRIX,84%,29,90
+mdl26_nnlyst_rvsng_dwn_fy1_rvn_7,number of analysts revising down FYEAR1 revenue: 7 days,MATRIX,79%,1,2
+mdl26_nnlyst_rvsng_dwn_fy2_rnngs_30,Number of analysts who lowered FY2 earnings estimates in the past 30 days,MATRIX,100%,53,208
+mdl26_nnlyst_rvsng_p_fq1_btd_14,number of analysts revising up FQTR1 EBITDA: 14 days,MATRIX,56%,29,261
+mdl26_nnlyst_rvsng_p_fq1_btd_30,number of analysts revising up FQTR1 EBITDA: 30 days,MATRIX,58%,26,76
+mdl26_nnlyst_rvsng_p_fq1_btd_7,number of analysts revising up FQTR1 EBITDA: 7 days,MATRIX,53%,1,1
+mdl26_nnlyst_rvsng_p_fq1_rnngs_14,number of analysts revising up FQTR1 earnings: 14 days,MATRIX,74%,1,1
+mdl26_nnlyst_rvsng_p_fq1_rnngs_30,Count of analysts who raised their Fiscal Quarter 1 earnings estimates in the last 30 days,MATRIX,100%,82,309
+mdl26_nnlyst_rvsng_p_fq1_rnngs_7,number of analysts revising up FQTR1 earnings: 7 days,MATRIX,71%,1,2
+mdl26_nnlyst_rvsng_p_fq1_rvn_14,number of analysts revising up FQTR1 revenue: 14 days,MATRIX,73%,1,3
+mdl26_nnlyst_rvsng_p_fq1_rvn_30,number of analysts revising up FQTR1 revenue: 30 days,MATRIX,76%,1,4
+mdl26_nnlyst_rvsng_p_fq1_rvn_7,number of analysts revising up FQTR1 revenue: 7 days,MATRIX,70%,1,1
+mdl26_nnlyst_rvsng_p_fq2_btd_14,number of analysts revising up FQTR2 EBITDA: 14 days,MATRIX,55%,23,108
+mdl26_nnlyst_rvsng_p_fq2_btd_30,number of analysts revising up FQTR2 EBITDA: 30 days,MATRIX,58%,1,1
+mdl26_nnlyst_rvsng_p_fq2_btd_7,number of analysts revising up FQTR2 EBITDA: 7 days,MATRIX,53%,26,75
+mdl26_nnlyst_rvsng_p_fq2_rnngs_14,number of analysts revising up FQTR2 earnings: 14 days,MATRIX,76%,2,2
+mdl26_nnlyst_rvsng_p_fq2_rnngs_7,number of analysts revising up FQTR2 earnings: 7 days,MATRIX,73%,2,4
+mdl26_nnlyst_rvsng_p_fq2_rvn_14,number of analysts revising up FQTR2 revenue: 14 days,MATRIX,72%,1,1
+mdl26_nnlyst_rvsng_p_fq2_rvn_30,number of analysts revising up FQTR2 revenue: 30 days,MATRIX,75%,1,1
+mdl26_nnlyst_rvsng_p_fq2_rvn_7,number of analysts revising up FQTR2 revenue: 7 days,MATRIX,69%,25,53
+mdl26_nnlyst_rvsng_p_fq3_rnngs_30,Number of analysts who raised their FQ3 earnings estimates in the last 30 days,MATRIX,100%,38,144
+mdl26_nnlyst_rvsng_p_fq4_rnngs_30,Number of analysts who raised their FQ4 earnings estimates in the past 30 days,MATRIX,100%,29,99
+mdl26_nnlyst_rvsng_p_fy1_btd_14,number of analysts revising up FYEAR1 EBITDA: 14 days,MATRIX,67%,27,102
+mdl26_nnlyst_rvsng_p_fy1_btd_30,number of analysts revising up FYEAR1 EBITDA: 30 days,MATRIX,69%,1,3
+mdl26_nnlyst_rvsng_p_fy1_btd_7,number of analysts revising up FYEAR1 EBITDA: 7 days,MATRIX,65%,1,1
+mdl26_nnlyst_rvsng_p_fy1_rnngs_14,number of analysts revising up FYEAR1 earnings: 14 days,MATRIX,80%,1,1
+mdl26_nnlyst_rvsng_p_fy1_rnngs_7,number of analysts revising up FYEAR1 earnings: 7 days,MATRIX,78%,1,2
+mdl26_nnlyst_rvsng_p_fy1_rvn_14,number of analysts revising up FYEAR1 revenue: 14 days,MATRIX,80%,1,6
+mdl26_nnlyst_rvsng_p_fy1_rvn_30,number of analysts revising up FYEAR1 revenue: 30 days,MATRIX,83%,2,3
+mdl26_nnlyst_rvsng_p_fy1_rvn_7,number of analysts revising up FYEAR1 revenue: 7 days,MATRIX,78%,1,2
+mdl26_nnlyst_rvsng_p_fy2_btd_14,number of analysts revising up FYEAR2 EBITDA: 14 days,MATRIX,67%,1,1
+mdl26_nnlyst_rvsng_p_fy2_btd_30,number of analysts revising up FYEAR2 EBITDA: 30 days,MATRIX,69%,27,61
+mdl26_nnlyst_rvsng_p_fy2_btd_7,number of analysts revising up FYEAR2 EBITDA: 7 days,MATRIX,65%,28,76
+mdl26_nnlyst_rvsng_p_fy2_rnngs_14,number of analysts revising up FYEAR2 earnings: 14 days,MATRIX,81%,1,1
+mdl26_nnlyst_rvsng_p_fy2_rnngs_7,number of analysts revising up FYEAR2 earnings: 7 days,MATRIX,79%,11,42
+mdl26_nnlyst_rvsng_p_fy2_rvn_14,number of analysts revising up FYEAR2 revenue: 14 days,MATRIX,80%,26,61
+mdl26_nnlyst_rvsng_p_fy2_rvn_30,number of analysts revising up FYEAR2 revenue: 30 days,MATRIX,82%,1,3
+mdl26_nnlyst_rvsng_p_fy2_rvn_7,number of analysts revising up FYEAR2 revenue: 7 days,MATRIX,78%,1,4
+mdl26_num_downgrades_14,number of downgrades in 14 days,MATRIX,32%,1,2
+mdl26_num_downgrades_60,number of downgrades in 60 days,MATRIX,41%,21,36
+mdl26_num_downgrades_7,number of downgrades in 7 days,MATRIX,30%,2,5
+mdl26_num_downgrades_90,number of downgrades in 90 days,MATRIX,45%,2,2
+mdl26_num_upgrades_14,number of upgrades in 14 days,MATRIX,29%,2,3
+mdl26_num_upgrades_60,number of upgrades in 60 days,MATRIX,37%,1,2
+mdl26_num_upgrades_7,number of upgrades in 7 days,MATRIX,27%,1,1
+mdl26_num_upgrades_90,number of upgrades in 90 days,MATRIX,41%,1,2
+mdl26_p_yld_pct_stm_f12m,(Earnings/Price ratio) yield percentage Estimate F-12MonthsRolling,MATRIX,98%,5,19
+mdl26_p_yld_pct_stm_fy1,(Earnings/Price ratio) yield percentage Estimate FYEAR1,MATRIX,98%,3,20
+mdl26_p_yld_pct_stm_fy2,(Earnings/Price ratio) yield percentage smart estimate FYEAR2,MATRIX,98%,8,23
+mdl26_peg_mean_fy1,PEG ratio computed using forward FY1 P/E from mean estimates and the corresponding growth estimate,MATRIX,70%,66,298
+mdl26_peg_smartestimate_fy1,(Price/Earnings-to-growth) smartestimate FYEAR1,MATRIX,70%,151,609
+mdl26_preferred,preferred,MATRIX,100%,63,366
+mdl26_price_change_30,Percentage price change over the last 30 trading days,MATRIX,100%,79,374
+mdl26_prsprise_f12m_earnings,predicted surprise (actual value - predicted value) F-12MonthsRolling earnings,MATRIX,95%,1,3
+mdl26_prsprise_f12m_ebitda,predicted surprise (actual value - predicted value) F-12MonthsRolling EBITDA,MATRIX,84%,38,76
+mdl26_prsprise_f12m_revenue,predicted surprise (actual value - predicted value) F-12MonthsRolling revenue,MATRIX,92%,4,7
+mdl26_prsprise_flag_fq1_earnings,"Flag indicating the predicted surprise status such as positive, negative, or neutral for fiscal quarter 1 earnings",MATRIX,100%,33,139
+mdl26_prsprise_flag_fq2_earnings,predicted surprise (actual value - predicted value) flag FQTR2 earnings,MATRIX,100%,27,97
+mdl26_prsprise_flag_fq3_earnings,predicted surprise (actual value - predicted value) flag FQTR3 earnings,MATRIX,100%,41,109
+mdl26_prsprise_flag_fq4_earnings,predicted surprise (actual value - predicted value) flag FQTR4 earnings,MATRIX,100%,44,123
+mdl26_prsprise_flag_fy1_earnings,"Directional flag for predicted FY1 earnings surprise (1 positive, -1 negative, 0 no significant surprise)",MATRIX,100%,43,120
+mdl26_prsprise_flag_fy2_earnings,Flag indicating the prediction status/validity of the FY2 predicted earnings surprise (-1 typically denotes missing or invalid),MATRIX,100%,44,134
+mdl26_prsprise_fq1_earnings,"Predicted earnings surprise amount for fiscal quarter 1, i.e., SmartEstimate minus consensus mean",MATRIX,97%,63,269
+mdl26_prsprise_fq1_ebitda,predicted surprise (actual value - predicted value) FQTR1 EBITDA,MATRIX,78%,20,62
+mdl26_prsprise_fq1_revenue,predicted surprise (actual value - predicted value) FQTR1 revenue,MATRIX,88%,2,2
+mdl26_prsprise_fq2_ebitda,predicted surprise (actual value - predicted value) FQTR2 EBITDA,MATRIX,77%,1,2
+mdl26_prsprise_fq2_revenue,predicted surprise (actual value - predicted value) FQTR2 revenue,MATRIX,87%,30,129
+mdl26_prsprise_fq3_earnings,predicted surprise (actual value - predicted value) FQTR3 earnings,MATRIX,96%,34,208
+mdl26_prsprise_fq4_earnings,predicted surprise (actual value - predicted value) FQTR4 earnings,MATRIX,95%,38,139
+mdl26_prsprise_fy1_ebitda,predicted surprise (actual value - predicted value) FYEAR1 EBITDA,MATRIX,84%,1,1
+mdl26_prsprise_fy1_revenue,predicted surprise (actual value - predicted value) FYEAR1 revenue,MATRIX,92%,1,1
+mdl26_prsprise_fy2_ebitda,predicted surprise (actual value - predicted value) FYEAR2 EBITDA,MATRIX,84%,1,3
+mdl26_prsprise_fy2_revenue,predicted surprise (actual value - predicted value) FYEAR2 revenue,MATRIX,92%,28,78
+mdl26_prsprise_pct_f12m_earnings,predicted surprise (actual value - predicted value) percentage F-12MonthsRolling earnings,MATRIX,95%,1,4
+mdl26_prsprise_pct_f12m_ebitda,predicted surprise (actual value - predicted value) percentage F-12MonthsRolling EBITDA,MATRIX,84%,31,67
+mdl26_prsprise_pct_f12m_revenue,predicted surprise (actual value - predicted value) percentage F-12MonthsRolling revenue,MATRIX,92%,2,4
+mdl26_prsprise_pct_fq1_earnings,predicted surprise (actual value - predicted value) percentage FQTR1 earnings,MATRIX,91%,2,3
+mdl26_prsprise_pct_fq1_ebitda,predicted surprise (actual value - predicted value) percentage FQTR1 EBITDA,MATRIX,78%,2,2
+mdl26_prsprise_pct_fq1_revenue,predicted surprise (actual value - predicted value) percentage FQTR1 revenue,MATRIX,88%,1,5
+mdl26_prsprise_pct_fq2_earnings,predicted surprise (actual value - predicted value) percentage FQTR2 earnings,MATRIX,91%,1,2
+mdl26_prsprise_pct_fq2_ebitda,predicted surprise (actual value - predicted value) percentage FQTR2 EBITDA,MATRIX,77%,1,1
+mdl26_prsprise_pct_fq2_revenue,predicted surprise (actual value - predicted value) percentage FQTR2 revenue,MATRIX,87%,1,1
+mdl26_prsprise_pct_fy1_earnings,predicted surprise (actual value - predicted value) percentage FYEAR1 earnings,MATRIX,94%,1,3
+mdl26_prsprise_pct_fy1_ebitda,predicted surprise (actual value - predicted value) percentage FYEAR1 EBITDA,MATRIX,84%,35,81
+mdl26_prsprise_pct_fy1_revenue,predicted surprise (actual value - predicted value) percentage FYEAR1 revenue,MATRIX,92%,33,57
+mdl26_prsprise_pct_fy2_earnings,predicted surprise (actual value - predicted value) percentage FYEAR2 earnings,MATRIX,94%,2,3
+mdl26_prsprise_pct_fy2_ebitda,predicted surprise (actual value - predicted value) percentage FYEAR2 EBITDA,MATRIX,84%,1,2
+mdl26_prsprise_pct_fy2_revenue,predicted surprise (actual value - predicted value) percentage FYEAR2 revenue,MATRIX,92%,26,58
+mdl26_prsprise_per_fq1_earnings,predicted surprise (actual value - predicted value) per FQTR1 earnings,MATRIX,97%,73,279
+mdl26_prsprs_fq2_rnngs_rt,predicted surprise (actual value - predicted value) FQTR2 earnings ratio,MATRIX,97%,51,302
+mdl26_prsprs_fq3_rnngs_rt,predicted surprise (actual value - predicted value) FQTR3 earnings ratio,MATRIX,96%,55,143
+mdl26_prsprs_fq4_rnngs_rt,predicted surprise (actual value - predicted value) FQTR4 earnings ratio,MATRIX,95%,48,134
+mdl26_prsprs_fy1_rnngs_rt,predicted surprise (actual value - predicted value) FYEAR1 earnings ratio,MATRIX,99%,51,168
+mdl26_prsprs_fy2_rnngs_rt,predicted surprise (actual value - predicted value) FYEAR2 earnings ratio,MATRIX,99%,52,191
+mdl26_rank,Time series of the security’s percentile rank of the overall ARM score within its universe,MATRIX,100%,75,331
+mdl26_rcmmndtn_mn_chng_14,recommendation mean change for days: 14,MATRIX,71%,1,1
+mdl26_rcmmndtn_mn_chng_60,recommendation mean change for days: 60,MATRIX,79%,1,1
+mdl26_rcmmndtn_mn_chng_7,recommendation mean change for days: 7,MATRIX,68%,25,56
+mdl26_rcmmndtn_mn_chng_90,recommendation mean change for days: 90,MATRIX,82%,1,1
+mdl26_recommendations,Recommendations component of ARM history capturing analyst recommendation changes and momentum,MATRIX,100%,70,352
+mdl26_revenue,Revenue component of ARM history capturing analyst revenue estimate revisions,MATRIX,100%,71,370
+mdl26_revisions,revisions,MATRIX,100%,62,433
+mdl26_rm02fqn_prsprs_fq2_rnngs,Predicted earnings surprise amount for Fiscal Quarter 2 (SmartEstimate minus consensus mean),MATRIX,97%,51,321
+mdl26_rm02fqn_stm_fq2_rnngs,StarMine SmartEstimate (proprietary weighted consensus) for Fiscal Quarter 2 earnings,MATRIX,97%,61,201
+mdl26_rm02fy_prsprs_fy1_rnngs,Predicted FY1 earnings surprise amount equal to SmartEstimate_FY1_Earnings minus the consensus mean estimate,MATRIX,99%,62,374
+mdl26_rm02fy_prsprs_fy2_rnngs,predicted surprise (actual value - predicted value) FYEAR2 earnings,MATRIX,99%,45,139
+mdl26_rm02fy_stm_fy1_rnngs,Current StarMine SmartEstimate (weighted consensus) for FY1 earnings,MATRIX,99%,56,188
+mdl26_rm02fy_stm_fy2_rnngs,StarMine SmartEstimate (proprietary weighted consensus) for FY2 earnings,MATRIX,99%,39,92
+mdl26_rm03_nly_rvs_d_fq2_rnd_30,Number of analysts who lowered their FQ2 earnings estimates in the last 30 days,MATRIX,100%,62,406
+mdl26_rm03_nly_rvs_d_fy1_rnd_30,Number of analysts who lowered FY1 earnings estimates in the past 30 days,MATRIX,100%,78,170
+mdl26_rm03_nly_rvs_p_fq2_rnd_30,Number of analysts who raised their FQ2 earnings estimates in the last 30 days,MATRIX,100%,29,75
+mdl26_rm03fy_nnlyst_rvsng_p_fy1_rnngs_30,Number of analysts who raised FY1 earnings estimates in the past 30 days,MATRIX,100%,56,221
+mdl26_rm03fy_nnlyst_rvsng_p_fy2_rnngs_30,Number of analysts who raised FY2 earnings estimates in the past 30 days,MATRIX,100%,47,121
+mdl26_rvsnclstr_flg_fq1_rnngs,"Flag indicating whether a revision cluster is present for Fiscal Quarter 1 earnings; e.g., -1 indicates no cluster detected",MATRIX,63%,69,349
+mdl26_rvsnclstr_flg_fq2_rnngs,revisioncluster(cluster of similar companies that are generally revised together) flag FQTR2 earnings,MATRIX,56%,45,113
+mdl26_rvsnclstr_flg_fq3_rnngs,Flag indicating the stock is in a revision cluster for Fiscal Quarter 3 earnings (coordinated cluster of revisions),MATRIX,51%,20,53
+mdl26_rvsnclstr_flg_fq4_rnngs,Flag indicating the stock is in a revision cluster for Fiscal Quarter 4 earnings,MATRIX,56%,31,98
+mdl26_rvsnclstr_flg_fy1_rnngs,Flag indicating the stock is in an analyst estimate revision cluster for FY1 earnings,MATRIX,53%,30,50
+mdl26_rvsnclstr_flg_fy2_rnngs,Flag indicating the presence of a revision cluster (concentrated analyst revision activity) for FY2 earnings,MATRIX,52%,18,30
+mdl26_rvsnclstr_vg_rvsn_fq1_rnngs,Average revision amount within the detected revision cluster for Fiscal Quarter 1 earnings,MATRIX,90%,138,326
+mdl26_rvsnclstr_vg_rvsn_fq2_rnngs,revisioncluster(cluster of similar companies that are generally revised together) avg revision FQTR2 earnings,MATRIX,89%,33,117
+mdl26_rvsnclstr_vg_rvsn_fq2_rnngs_rt,Average revision magnitude within the revision cluster for FQ2 earnings expressed as a ratio,MATRIX,89%,58,184
+mdl26_rvsnclstr_vg_rvsn_fq3_rnngs,Average revision magnitude within the revision cluster for Fiscal Quarter 3 earnings,MATRIX,86%,37,92
+mdl26_rvsnclstr_vg_rvsn_fq3_rnngs_rt,revisioncluster(cluster of similar companies that are generally revised together) avg revision FQTR3 earnings ratio,MATRIX,86%,51,191
+mdl26_rvsnclstr_vg_rvsn_fq4_rnngs,revisioncluster(cluster of similar companies that are generally revised together) avg revision FQTR4 earnings,MATRIX,82%,46,174
+mdl26_rvsnclstr_vg_rvsn_fq4_rnngs_rt,revisioncluster(cluster of similar companies that are generally revised together) avg revision FQTR4 earnings ratio,MATRIX,82%,63,237
+mdl26_rvsnclstr_vg_rvsn_fy1_rnngs,Average absolute revision amount within the FY1 earnings revision cluster,MATRIX,94%,41,111
+mdl26_rvsnclstr_vg_rvsn_fy1_rnngs_rt,revisioncluster(cluster of similar companies that are generally revised together) avg revision FYEAR1 earnings ratio,MATRIX,94%,49,149
+mdl26_rvsnclstr_vg_rvsn_fy2_rnngs,Average absolute revision value within the FY2 earnings revision cluster,MATRIX,92%,45,138
+mdl26_rvsnclstr_vg_rvsn_fy2_rnngs_rt,revisioncluster(cluster of similar companies that are generally revised together) avg revision FYEAR2 earnings ratio,MATRIX,92%,43,182
+mdl26_rvsnclstr_vg_rvsn_pr_fq1_rnngs,revisioncluster(cluster of similar companies that are generally revised together) avg revision per FQTR1 earnings,MATRIX,90%,120,290
+mdl26_score,Time series of the overall ARM composite score (1–100) for the security,MATRIX,100%,77,258
+mdl26_secondary,secondary,MATRIX,86%,51,176
+mdl26_sm_frwrd_p_stm_fy1,Model forward (Price/Earnings ratio) smartestimate FYEAR1,MATRIX,83%,2,2
+mdl26_sm_mn_stmt_prc_rt_fy1_rnngs,Model mean estimate (Price/Earnings ratio) FYEAR1,MATRIX,84%,1,1
+mdl26_sm_nlyst_rvsns_scr,Model analyst revisions score,MATRIX,79%,2,3
+mdl26_sm_nnlyst_rvsng_dwn_fq1_rnngs_30,Model number of analysts revising down FQTR1 earnings: 30 days,MATRIX,86%,1,3
+mdl26_sm_nnlyst_rvsng_dwn_fq2_rnngs_30,Model number of analysts revising down FQTR2 earnings: 30 days,MATRIX,84%,25,78
+mdl26_sm_nnlyst_rvsng_dwn_fy1_rnngs_30,Model number of analysts revising down FYEAR1 earnings: 30 days,MATRIX,85%,2,2
+mdl26_sm_nnlyst_rvsng_p_fq1_rnngs_30,Model number of analysts revising up FQTR1 earnings: 30 days,MATRIX,78%,2,4
+mdl26_sm_nnlyst_rvsng_p_fq2_rnngs_30,Model number of analysts revising up FQTR2 earnings: 30 days,MATRIX,79%,1,1
+mdl26_sm_nnlyst_rvsng_p_fy1_rnngs_30,Model number of analysts revising up FYEAR1 earnings: 30 days,MATRIX,83%,25,144
+mdl26_sm_nnlyst_rvsng_p_fy2_rnngs_30,Model number of analysts revising up FYEAR2 earnings: 30 days,MATRIX,83%,33,159
+mdl26_sm_rcmmndtn_mn_chng_30,Model recommendation mean change for days: 30,MATRIX,75%,1,1
+mdl26_sm_rm_prfrrd_rnngs_cmpnnt,Model preferred earnings component i.e. portion of final score,MATRIX,79%,1,1
+mdl26_sm_rm_rcmmndtns_cmpnnt,Model recommendations component i.e. portion of final score,MATRIX,79%,1,5
+mdl26_sm_rm_rgn_rnk_dcml,Model region rank (i.e. relative score) decimal,MATRIX,99%,2,5
+mdl26_sm_rm_scndry_rnngs_cmpnnt,Model secondary earnings component i.e. portion of final score,MATRIX,66%,1,1
+mdl26_sm_smrtst_grwth_nxt_yrths_yr_rnngs,Model Estimate earnings growth (next yr/this yr),MATRIX,84%,21,99
+mdl26_sm_smrtst_grwth_ths_yrlst_yr_rnngs,Model Estimate earnings growth (this year/last year),MATRIX,80%,1,1
+mdl26_sm_stm_fq1_rnngs,Model Estimate FQTR1 earnings,MATRIX,96%,6,8
+mdl26_sm_stm_fq2_rnngs,Model smartestimate FQTR2 earnings,MATRIX,95%,3,3
+mdl26_sm_stm_fy1_rnngs,Model Estimate FYEAR1 earnings,MATRIX,98%,36,80
+mdl26_sm_stm_fy2_rnngs,Model smartestimate FYEAR2 earnings,MATRIX,98%,47,112
+mdl26_sm_stm_prc_rt_fy1_rnngs,Model smart estimate (Price/Earnings ratio) FYEAR1,MATRIX,84%,5,7
+mdl26_sma_actual_last_q_earnings,Model actual last QTR earnings,MATRIX,95%,1,2
+mdl26_sma_actual_last_y_earnings,Model actual last YEAR earnings,MATRIX,96%,1,1
+mdl26_sma_arm_country_rank,"Model country rank (i.e., relative score)",MATRIX,99%,1,3
+mdl26_sma_arm_global_rank,Model global rank (i.e. relative score),MATRIX,79%,1,3
+mdl26_sma_arm_revenue_component,Model revenue component i.e. portion of final score,MATRIX,77%,1,2
+mdl26_sma_arm_score_5,Model score average for days: 5,MATRIX,79%,2,2
+mdl26_sma_arm_score_change_30,Model score change for days: 30,MATRIX,98%,1,1
+mdl26_sma_days_since_last_report,Model days since last report,MATRIX,99%,1,12
+mdl26_sma_forward_pe_mean_fy1,Model forward (Price/Earnings ratio) mean FYEAR1,MATRIX,83%,1,1
+mdl26_sma_last_fiscal_year_pe,Model last fiscal year (Price/Earnings ratio),MATRIX,79%,1,1
+mdl26_sma_num_downgrades_30,Model number of downgrades in 30 days,MATRIX,36%,1,2
+mdl26_sma_num_upgrades_30,Model number of upgrades in 30 days,MATRIX,32%,1,1
+mdl26_sma_prsprise_fq1_earnings,Model predicted surprise (actual value - predicted value) FQTR1 earnings,MATRIX,91%,1,3
+mdl26_sma_prsprise_fq2_earnings,Model predicted surprise (actual value - predicted value) FQTR2 earnings,MATRIX,91%,1,1
+mdl26_sma_prsprise_fy1_earnings,Model predicted surprise (actual value - predicted value) FYEAR1 earnings,MATRIX,94%,1,3
+mdl26_sma_prsprise_fy2_earnings,Model predicted surprise (actual value - predicted value) FYEAR2 earnings,MATRIX,94%,2,4
+mdl26_sma_trailing_4_quarter_pe,Model trailing 4 quarter (Price/Earnings ratio),MATRIX,75%,3,6
+mdl26_smartestimate_f12m_ebitda,Estimate F-12MonthsRolling EBITDA,MATRIX,84%,1,1
+mdl26_smartestimate_f12m_revenue,Estimate F-12MonthsRolling revenue,MATRIX,96%,1,3
+mdl26_smartestimate_fq1_earnings,StarMine SmartEstimate for fiscal Q1 earnings,MATRIX,97%,108,508
+mdl26_smartestimate_fq1_ebitda,Estimate FQTR1 EBITDA,MATRIX,78%,46,120
+mdl26_smartestimate_fq1_revenue,Estimate FQTR1 revenue,MATRIX,93%,1,2
+mdl26_smartestimate_fq2_ebitda,Estimate FQTR2 EBITDA,MATRIX,77%,37,175
+mdl26_smartestimate_fq2_revenue,Estimate FQTR2 revenue,MATRIX,92%,1,7
+mdl26_smartestimate_fq3_earnings,StarMine SmartEstimate for Fiscal Quarter 3 earnings,MATRIX,96%,60,261
+mdl26_smartestimate_fq4_earnings,StarMine SmartEstimate for Fiscal Quarter 4 earnings,MATRIX,95%,41,168
+mdl26_smartestimate_fy1_ebitda,Estimate FYEAR1 EBITDA,MATRIX,84%,32,114
+mdl26_smartestimate_fy1_revenue,Estimate FYEAR1 revenue,MATRIX,96%,2,2
+mdl26_smartestimate_fy2_ebitda,Estimate FYEAR2 EBITDA,MATRIX,84%,1,1
+mdl26_smartestimate_fy2_revenue,Estimate FYEAR2 revenue,MATRIX,96%,1,1
+mdl26_smrtst_grwth_f12mt12m_rnngs,Expected earnings growth from trailing 12 months to forward 12 months based on SmartEstimate,MATRIX,78%,18,30
+mdl26_smrtst_grwth_f24mf12m_rnngs,Expected earnings growth from forward 12 months to forward 24 months based on SmartEstimate,MATRIX,75%,30,54
+mdl26_smrtst_grwth_nxt_yrths_yr_btd,Estimate growth next yrthis yr EBITDA,MATRIX,76%,1,1
+mdl26_smrtst_grwth_nxt_yrths_yr_rnngs,Expected earnings growth from this fiscal year to next fiscal year based on the StarMine SmartEstimate,MATRIX,81%,21,37
+mdl26_smrtst_grwth_nxt_yrths_yr_rvn,Estimate growth next yrthis yr revenue,MATRIX,96%,2,2
+mdl26_smrtst_grwth_ths_yrlst_yr_btd,Estimate growth this yr last yr EBITDA,MATRIX,70%,1,1
+mdl26_smrtst_grwth_ths_yrlst_yr_rnngs,Earnings growth from last fiscal year to this fiscal year based on the StarMine SmartEstimate,MATRIX,77%,22,47
+mdl26_smrtst_grwth_ths_yrlst_yr_rvn,Estimate growth this yrlast yr revenue,MATRIX,93%,1,4
+mdl26_smrtst_pg_ndstry_prcntl_f12m,Industry percentile ranking of the PEG ratio based on SmartEstimate and forward 12-month growth,MATRIX,71%,106,580
+mdl26_smrtst_pg_sctr_prcntl_f12m,Sector percentile ranking of the PEG ratio based on SmartEstimate and forward 12-month growth,MATRIX,71%,90,232
+mdl26_srprs_pct_lst_q_rnngs,surprise (actual value - predicted value) percentage last QTR earnings,MATRIX,95%,1,4
+mdl26_srprs_pct_lst_q_rvn,surprise (actual value - predicted value) percentage last QTR revenue,MATRIX,93%,1,3
+mdl26_srprs_pct_lst_y_rnngs,surprise (actual value - predicted value) percentage last YEAR earnings,MATRIX,95%,2,2
+mdl26_srprs_pct_lst_y_rvn,surprise (actual value - predicted value) percentage last YEAR revenue,MATRIX,93%,3,4
+mdl26_stdv_rvsnclstr_nlysts_fq1_rnngs,Standard deviation of revision amounts among analysts in the revision cluster for Fiscal Quarter 1 earnings,MATRIX,91%,47,207
+mdl26_stdv_rvsnclstr_nlysts_fq2_rnngs,Std. Deviation of revisioncluster(cluster of similar companies that are generally revised together) analysts FQTR2 earnings,MATRIX,90%,37,134
+mdl26_stdv_rvsnclstr_nlysts_fq3_rnngs,Std. Deviation of revisioncluster(cluster of similar companies that are generally revised together) analysts FQTR3 earnings,MATRIX,87%,29,97
+mdl26_stdv_rvsnclstr_nlysts_fq4_rnngs,Std. Deviation of revisioncluster(cluster of similar companies that are generally revised together) analysts FQTR4 earnings,MATRIX,83%,50,191
+mdl26_stdv_rvsnclstr_nlysts_fy1_rnngs,Standard deviation of FY1 earnings forecasts among analysts in the revision cluster,MATRIX,95%,41,224
+mdl26_stdv_rvsnclstr_nlysts_fy2_rnngs,Standard deviation of the estimates from analysts in the FY2 earnings revision cluster,MATRIX,93%,56,264
+mdl26_stdv_stm_nlysts_fq1_rnngs,Standard deviation of analyst estimates contributing to the FQ1 earnings SmartEstimate,MATRIX,97%,47,146
+mdl26_stdv_stm_nlysts_fq2_rnngs,Std. Deviation of smartestimate analysts FQTR2 earnings,MATRIX,97%,45,129
+mdl26_stdv_stm_nlysts_fq3_rnngs,Cross-sectional standard deviation of the analyst estimates contributing to the SmartEstimate for Fiscal Quarter 3 earnings,MATRIX,96%,44,191
+mdl26_stdv_stm_nlysts_fq4_rnngs,Std. Deviation of smartestimate analysts FQTR4 earnings,MATRIX,95%,30,162
+mdl26_stdv_stm_nlysts_fy1_rnngs,Standard deviation of FY1 earnings estimates among analysts contributing to the SmartEstimate,MATRIX,99%,102,1296
+mdl26_stdv_stm_nlysts_fy2_rnngs,Standard deviation of analysts’ FY2 earnings estimates used in the SmartEstimate,MATRIX,99%,47,184
+mdl26_stm_chng_fq1_rnngs_30,Change in the SmartEstimate for FQ1 earnings over the past 30 days,MATRIX,96%,62,311
+mdl26_stm_chng_fq2_rnngs_30,Change in the SmartEstimate for Fiscal Quarter 2 earnings over the last 30 days,MATRIX,96%,30,140
+mdl26_stm_chng_fq3_rnngs_30,Change in the SmartEstimate for FQ3 earnings over the past 30 days,MATRIX,95%,34,151
+mdl26_stm_chng_fq4_rnngs_30,Change in the SmartEstimate for FQ4 earnings over the past 30 days,MATRIX,94%,37,89
+mdl26_stm_chng_fy1_rnngs_30,Change in FY1 earnings SmartEstimate over the past 30 days (current value minus value 30 days ago),MATRIX,99%,47,86
+mdl26_stm_chng_fy2_rnngs_30,Change in the SmartEstimate for FY2 earnings over the past 30 days,MATRIX,99%,41,142
+mdl26_stm_f12m_rnngs,Estimate F-12MonthsRolling earnings,MATRIX,98%,1,1
+mdl26_stm_prc_rt_f12m_btd,Estimate (Price/EBITDA ratio) F-12MonthsRolling,MATRIX,77%,2,8
+mdl26_stm_prc_rt_f12m_rnngs,Estimate (Price/Earnings ratio) F-12MonthsRolling,MATRIX,86%,3,4
+mdl26_stm_prc_rt_f12m_rvn,Estimate (Price/revenue ratio) F-12MonthsRolling,MATRIX,96%,2,2
+mdl26_stm_prc_rt_fy1_btd,Estimate (Price/EBITDA ratio) FYEAR1,MATRIX,76%,36,100
+mdl26_stm_prc_rt_fy1_rnngs,Price-to-earnings ratio based on the StarMine SmartEstimate for FY1 earnings,MATRIX,81%,57,103
+mdl26_stm_prc_rt_fy1_rvn,Estimate (Price/revenue ratio) FYEAR1,MATRIX,96%,3,4
+mdl26_stm_prc_rt_fy2_btd,Estimate (Price/EBITDA ratio) FYEAR2,MATRIX,77%,25,97
+mdl26_stm_prc_rt_fy2_rnngs,Smart estimate (Price/Earnings ratio) FYEAR2,MATRIX,87%,3,4
+mdl26_stm_prc_rt_fy2_rvn,Estimate (Price/revenue ratio) FYEAR2,MATRIX,96%,1,4
+mdl26_stm_prr_fq1_rnngs_7,The StarMine SmartEstimate for Fiscal Quarter 1 earnings as of seven days prior,MATRIX,97%,86,733
+mdl26_stm_prr_fq2_rnngs_7,SmartEstimate for FQ2 earnings as of 7 days prior,MATRIX,97%,51,146
+mdl26_stm_prr_fq3_rnngs_7,SmartEstimate for FQ3 earnings as of 7 days prior,MATRIX,96%,53,163
+mdl26_stm_prr_fq4_rnngs_7,The SmartEstimate for Fiscal Quarter 4 earnings as of 7 days prior,MATRIX,95%,52,161
+mdl26_stm_prr_fy1_rnngs_7,StarMine SmartEstimate for FY1 earnings from 7 days prior,MATRIX,99%,59,216
+mdl26_stm_prr_fy2_rnngs_7,SmartEstimate for FY2 earnings as of 7 days ago,MATRIX,99%,64,394
+mdl26_stmt_dffsn_fq1_rnngs_30,Measure of dispersion (variability) among analysts’ earnings estimates for Fiscal Quarter 1 over the past 30 days,MATRIX,93%,69,328
+mdl26_stmt_dffsn_fq2_rnngs_30,"Net breadth of FQ2 earnings revisions over the last 30 days, typically (up revisions − down revisions) divided by total revisers",MATRIX,92%,30,70
+mdl26_stmt_dffsn_fq3_rnngs_30,"Net breadth of FQ3 earnings revisions over the last 30 days, typically (up revisions − down revisions) divided by total revisers",MATRIX,91%,33,141
+mdl26_stmt_dffsn_fq4_rnngs_30,estimate diffusion FQTR4 earnings: 30 days,MATRIX,89%,28,112
+mdl26_stmt_dffsn_fy1_rnngs_30,estimate diffusion FYEAR1 earnings: 30 days,MATRIX,96%,35,87
+mdl26_stmt_dffsn_fy2_rnngs_30,estimate diffusion FYEAR2 earnings: 30 days,MATRIX,96%,40,112
+mdl26_surprise_last_q_earnings,Earnings surprise for the last reported quarter calculated as actual minus predicted estimate,MATRIX,96%,80,450
+mdl26_surprise_last_y_earnings,"Earnings surprise for the last fiscal year, calculated as actual minus predicted",MATRIX,96%,63,165
+mdl26_surprise_pct_last_q_ebitda,Surprise (actual value - predicted value) percentage last quarter EBITDA,MATRIX,76%,1,1
+mdl26_surprise_pct_last_y_ebitda,surprise (actual value - predicted value) percentage last YEAR EBITDA,MATRIX,79%,10,10
+mdl26_traded_volume,traded volume (in 1000s),MATRIX,98%,7,28
+mdl26_traded_volume_5,traded volume (in 1000s),MATRIX,100%,142,822
+mdl26_traded_volume_l,Traded volume (in 1000s) - Local Currency,MATRIX,98%,2,4
+mdl26_traded_volume_l_5,traded volume (in 1000s)-Local Currency,MATRIX,100%,42,162
+mdl26_traded_volume_u,traded volume (in 1000s)-USD,MATRIX,98%,1,3
+mdl26_traded_volume_u_5,traded volume (in 1000s)-USD,MATRIX,100%,56,288
+mdl26_trailing_4_quarter_pe,Price-to-earnings ratio using the sum of earnings per share over the most recent four reported quarters,MATRIX,73%,54,133
+mdl26_v14_actual_last_q_ebitda,Actual EBITDA reported for the most recent fiscal quarter,MATRIX,78%,52,111
+mdl26_v14_actual_last_q_revenue,Actual revenue reported for the most recent fiscal quarter,MATRIX,97%,65,197
+mdl26_v14_actual_last_y_ebitda,Actual EBITDA reported for the most recent fiscal year,MATRIX,80%,46,88
+mdl26_v14_actual_last_y_revenue,Actual revenue reported for the most recent fiscal year,MATRIX,97%,56,136
+mdl26_v14_arm_score_change_1,Change in the ARM composite score over the last 1 day,MATRIX,100%,77,348
+mdl26_v14_arm_score_change_3,Change in the StarMine ARM composite score over the last 3 days,MATRIX,100%,40,94
+mdl26_v14_arm_score_change_60,Change in the StarMine ARM composite score over the last 60 days,MATRIX,99%,46,121
+mdl26_v14_arm_score_change_7,Change in the ARM composite score over the last 7 days,MATRIX,100%,47,438
+mdl26_v14_arm_score_change_90,Change in the ARM composite score over the past 90 days,MATRIX,99%,30,61
+mdl26_v14_forward_pe_mean_f12m,Forward price-to-earnings ratio using the mean analyst estimate for next 12 months earnings,MATRIX,83%,91,353
+mdl26_v14_forward_pe_mean_fy2,Forward price-to-earnings ratio using the mean analyst estimate for fiscal year 2,MATRIX,84%,75,174
+mdl26_v14_frwrd_p_stm_f12m,Forward price-to-earnings ratio using StarMine SmartEstimate for next 12 months earnings,MATRIX,83%,123,301
+mdl26_v14_frwrd_p_stm_fy2,Forward price-to-earnings ratio using StarMine SmartEstimate for fiscal year 2,MATRIX,84%,108,359
+mdl26_v14_mn_stmt_prc_rt_f12m_btd,Price-to-EBITDA ratio using consensus mean estimates for the next 12 months,MATRIX,76%,32,119
+mdl26_v14_mn_stmt_prc_rt_f12m_rnngs,Price-to-earnings ratio using consensus mean estimates for the next 12 months,MATRIX,84%,57,131
+mdl26_v14_mn_stmt_prc_rt_f12m_rvn,Price-to-revenue (price-to-sales) ratio using consensus mean estimates for the next 12 months,MATRIX,98%,54,97
+mdl26_v14_mn_stmt_prc_rt_fy1_btd,Price-to-EBITDA ratio using consensus mean estimates for fiscal year 1,MATRIX,75%,37,75
+mdl26_v14_mn_stmt_prc_rt_fy1_rvn,Price-to-revenue (price-to-sales) ratio using consensus mean estimates for fiscal year 1,MATRIX,97%,40,102
+mdl26_v14_mn_stmt_prc_rt_fy2_btd,Price-to-EBITDA ratio using consensus mean estimates for fiscal year 2,MATRIX,76%,37,64
+mdl26_v14_mn_stmt_prc_rt_fy2_rnngs,Price-to-earnings ratio using consensus mean estimates for fiscal year 2,MATRIX,85%,74,159
+mdl26_v14_mn_stmt_prc_rt_fy2_rvn,Price-to-revenue (price-to-sales) ratio using consensus mean estimates for fiscal year 2,MATRIX,97%,52,119
+mdl26_v14_mstchg_pct_f12m_btd_14,Mean percentage change in EBITDA estimates for the next 12 months over the last 14 days,MATRIX,86%,31,98
+mdl26_v14_mstchg_pct_f12m_btd_30,Mean percentage change in EBITDA estimates for the next 12 months over the last 30 days,MATRIX,85%,25,63
+mdl26_v14_mstchg_pct_f12m_btd_60,Average percent change in forward 12 month EBITDA estimates over the past 60 days,MATRIX,85%,24,41
+mdl26_v14_mstchg_pct_f12m_btd_7,Percentage change in the mean next-12-months EBITDA estimate over the past 7 days,MATRIX,86%,21,63
+mdl26_v14_mstchg_pct_f12m_btd_90,Mean percentage change in EBITDA estimates for the next 12 months over the last 90 days,MATRIX,84%,21,60
+mdl26_v14_mstchg_pct_f12m_rnngs_14,Percent change in the mean earnings estimate for the next 12 months over the last 14 days,MATRIX,100%,28,101
+mdl26_v14_mstchg_pct_f12m_rnngs_30,Mean percentage change in forward 12 months earnings estimates over the past 30 days,MATRIX,100%,15,29
+mdl26_v14_mstchg_pct_f12m_rnngs_60,Percent change in the mean earnings estimate for the next 12 months over the last 60 days,MATRIX,99%,26,147
+mdl26_v14_mstchg_pct_f12m_rnngs_7,Percentage change in the mean next-12-months earnings estimate over the past 7 days,MATRIX,100%,29,102
+mdl26_v14_mstchg_pct_f12m_rnngs_90,Mean percentage change in earnings estimates for the next 12 months over the last 90 days,MATRIX,98%,22,75
+mdl26_v14_mstchg_pct_f12m_rvn_14,Mean percentage change in revenue estimates for the next 12 months over the last 14 days,MATRIX,99%,20,56
+mdl26_v14_mstchg_pct_f12m_rvn_30,Percent change in the mean revenue estimate for the next 12 months over the last 30 days,MATRIX,99%,25,64
+mdl26_v14_mstchg_pct_f12m_rvn_60,Percentage change in the mean next-12-months revenue estimate over the past 60 days,MATRIX,98%,20,82
+mdl26_v14_mstchg_pct_f12m_rvn_7,Percentage change in the mean next-12-months revenue estimate over the past 7 days,MATRIX,99%,25,69
+mdl26_v14_mstchg_pct_f12m_rvn_90,Mean percentage change in next 12 months revenue estimates over the last 90 days,MATRIX,98%,25,82
+mdl26_v14_mstchg_pct_fq1_btd_14,Mean percentage change in the consensus FQ1 EBITDA estimate over the last 14 days,MATRIX,80%,37,208
+mdl26_v14_mstchg_pct_fq1_btd_30,Percentage change in the mean Fiscal Quarter 1 EBITDA estimate over the past 30 days,MATRIX,80%,29,80
+mdl26_v14_mstchg_pct_fq1_btd_60,Mean percentage change in the consensus mean EBITDA estimate for fiscal quarter 1 (FQ1) over the last 60 days,MATRIX,79%,35,115
+mdl26_v14_mstchg_pct_fq1_btd_7,Mean percentage change in FQ1 EBITDA estimates over the last 7 days,MATRIX,80%,29,90
+mdl26_v14_mstchg_pct_fq1_btd_90,Percentage change in the mean fiscal quarter 1 EBITDA estimate over the past 90 days,MATRIX,78%,35,99
+mdl26_v14_mstchg_pct_fq1_rnngs_14,Average percentage change in FQ1 earnings estimates over the past 14 days,MATRIX,98%,56,294
+mdl26_v14_mstchg_pct_fq1_rnngs_30,Average percentage change in FQ1 earnings estimates over the past 30 days,MATRIX,97%,35,177
+mdl26_v14_mstchg_pct_fq1_rnngs_60,Mean percentage change in first fiscal quarter earnings estimates over the past 60 days,MATRIX,97%,25,89
+mdl26_v14_mstchg_pct_fq1_rnngs_7,Percentage change in the mean Fiscal Quarter 1 earnings estimate over the past 7 days,MATRIX,98%,34,81
+mdl26_v14_mstchg_pct_fq1_rnngs_90,Mean percentage change in first fiscal quarter earnings estimates over the past 90 days,MATRIX,96%,49,142
+mdl26_v14_mstchg_pct_fq1_rvn_14,Mean percentage change in FQ1 revenue estimates over the last 14 days,MATRIX,97%,47,199
+mdl26_v14_mstchg_pct_fq1_rvn_30,Mean percentage change in analyst revenue estimates for fiscal quarter 1 over the last 30 days,MATRIX,96%,56,112
+mdl26_v14_mstchg_pct_fq1_rvn_60,Mean percentage change in the consensus FQ1 revenue estimate over the last 60 days,MATRIX,96%,49,145
+mdl26_v14_mstchg_pct_fq1_rvn_7,Percentage change in the mean fiscal quarter 1 revenue estimate over the past 7 days,MATRIX,97%,54,136
+mdl26_v14_mstchg_pct_fq1_rvn_90,Mean percentage change in analyst revenue estimates for fiscal quarter 1 over the last 90 days,MATRIX,95%,58,126
+mdl26_v14_mstchg_pct_fq2_btd_14,Mean percentage change in the consensus mean EBITDA estimate for fiscal quarter 2 (FQ2) over the last 14 days,MATRIX,79%,21,178
+mdl26_v14_mstchg_pct_fq2_btd_30,Percentage change in the mean Fiscal Quarter 2 EBITDA estimate over the past 30 days,MATRIX,78%,18,87
+mdl26_v14_mstchg_pct_fq2_btd_60,Percentage change in the mean Fiscal Quarter 2 EBITDA estimate over the past 60 days,MATRIX,77%,15,32
+mdl26_v14_mstchg_pct_fq2_btd_7,Percentage change in the consensus mean EBITDA estimate for Fiscal Quarter 2 over the last 7 days,MATRIX,79%,21,83
+mdl26_v14_mstchg_pct_fq2_btd_90,Average percentage change in FQ2 EBITDA estimates over the past 90 days,MATRIX,76%,21,35
+mdl26_v14_mstchg_pct_fq2_rnngs_14,Mean percentage change in the consensus mean earnings estimate for fiscal quarter 2 (FQ2) over the last 14 days,MATRIX,97%,28,127
+mdl26_v14_mstchg_pct_fq2_rnngs_30,Percentage change in the mean Fiscal Quarter 2 earnings estimate over the past 30 days,MATRIX,97%,31,100
+mdl26_v14_mstchg_pct_fq2_rnngs_60,Mean percentage change in the consensus FQ2 earnings estimate over the last 60 days,MATRIX,96%,23,85
+mdl26_v14_mstchg_pct_fq2_rnngs_7,Percent change in the mean FQ2 earnings estimate over the last 7 days,MATRIX,97%,28,139
+mdl26_v14_mstchg_pct_fq2_rnngs_90,Mean percentage change in second fiscal quarter earnings estimates over the past 90 days,MATRIX,95%,26,78
+mdl26_v14_mstchg_pct_fq2_rvn_14,Average percentage change in FQ2 revenue estimates over the past 14 days,MATRIX,96%,30,105
+mdl26_v14_mstchg_pct_fq2_rvn_30,Mean percentage change in FQ2 revenue estimates over the last 30 days,MATRIX,96%,28,81
+mdl26_v14_mstchg_pct_fq2_rvn_60,Mean percentage change in analyst revenue estimates for fiscal quarter 2 over the last 60 days,MATRIX,95%,32,99
+mdl26_v14_mstchg_pct_fq2_rvn_7,Percent change in the mean FQ2 revenue estimate over the last 7 days,MATRIX,96%,36,132
+mdl26_v14_mstchg_pct_fq2_rvn_90,Mean percentage change in the consensus revenue estimate for fiscal quarter 2 over the last 90 days,MATRIX,94%,20,42
+mdl26_v14_mstchg_pct_fy1_btd_14,Percentage change in the mean fiscal year 1 EBITDA estimate over the past 14 days,MATRIX,86%,35,108
+mdl26_v14_mstchg_pct_fy1_btd_30,Mean percentage change in FY1 EBITDA estimates over the last 30 days,MATRIX,86%,16,49
+mdl26_v14_mstchg_pct_fy1_btd_60,Mean percentage change in the consensus EBITDA estimate for Fiscal Year 1 over the past 60 days,MATRIX,85%,31,93
+mdl26_v14_mstchg_pct_fy1_btd_7,Percent change in the mean FY1 EBITDA estimate over the last 7 days,MATRIX,86%,27,76
+mdl26_v14_mstchg_pct_fy1_btd_90,Mean percentage change in FY1 EBITDA estimates over the last 90 days,MATRIX,84%,29,69
+mdl26_v14_mstchg_pct_fy1_rnngs_14,Mean percentage change in FY1 earnings estimates over the last 14 days,MATRIX,100%,30,126
+mdl26_v14_mstchg_pct_fy1_rnngs_30,Mean percentage change in the consensus FY1 earnings estimate over the last 30 days,MATRIX,100%,32,67
+mdl26_v14_mstchg_pct_fy1_rnngs_60,Mean percentage change in the consensus earnings estimate for Fiscal Year 1 over the past 60 days,MATRIX,99%,19,63
+mdl26_v14_mstchg_pct_fy1_rnngs_7,Mean percentage change in the consensus FY1 earnings estimate over the last 7 days,MATRIX,100%,32,63
+mdl26_v14_mstchg_pct_fy1_rnngs_90,Mean percentage change in the consensus earnings estimate for Fiscal Year 1 over the past 90 days,MATRIX,99%,24,48
+mdl26_v14_mstchg_pct_fy1_rvn_14,Mean percentage change in the consensus revenue estimate for Fiscal Year 1 over the past 14 days,MATRIX,100%,21,56
+mdl26_v14_mstchg_pct_fy1_rvn_30,Mean percentage change in FY1 revenue estimates over the last 30 days,MATRIX,99%,29,125
+mdl26_v14_mstchg_pct_fy1_rvn_60,Average percentage change in FY1 revenue estimates over the past 60 days,MATRIX,99%,25,92
+mdl26_v14_mstchg_pct_fy1_rvn_7,Mean percentage change in FY1 revenue estimates over the last 7 days,MATRIX,100%,25,114
+mdl26_v14_mstchg_pct_fy1_rvn_90,Mean percentage change in FY1 revenue estimates over the last 90 days,MATRIX,98%,26,56
+mdl26_v14_nnlyst_rvsng_dwn_fq1_btd_14,Number of analysts who lowered their FQ1 EBITDA estimates in the last 14 days,MATRIX,100%,37,224
+mdl26_v14_nnlyst_rvsng_dwn_fq1_btd_30,Count of analysts who lowered their Fiscal Quarter 1 EBITDA estimates over the past 30 days,MATRIX,100%,24,40
+mdl26_v14_nnlyst_rvsng_dwn_fq1_btd_7,Number of analysts who lowered their FQ1 EBITDA estimates in the last 7 days,MATRIX,100%,32,52
+mdl26_v14_nnlyst_rvsng_dwn_fq1_rnngs_14,Count of analysts who lowered their earnings estimates for Fiscal Quarter 1 in the past 14 days,MATRIX,100%,32,41
+mdl26_v14_nnlyst_rvsng_dwn_fq1_rnngs_7,Count of analysts who lowered their FQ1 earnings estimates in the past 7 days,MATRIX,100%,18,74
+mdl26_v14_nnlyst_rvsng_dwn_fq1_rvn_14,Number of analysts who lowered their FQ1 revenue estimates in the past 14 days,MATRIX,100%,24,68
+mdl26_v14_nnlyst_rvsng_dwn_fq1_rvn_30,Number of analysts who lowered their FQ1 revenue estimates in the past 30 days,MATRIX,100%,29,99
+mdl26_v14_nnlyst_rvsng_dwn_fq1_rvn_7,Number of analysts who lowered their FQ1 revenue estimates in the last 7 days,MATRIX,100%,31,100
+mdl26_v14_nnlyst_rvsng_dwn_fq2_btd_14,Number of analysts who lowered Fiscal Quarter 2 EBITDA estimates in the past 14 days,MATRIX,100%,18,53
+mdl26_v14_nnlyst_rvsng_dwn_fq2_btd_30,Count of analysts who lowered their FQ2 EBITDA estimates over the past 30 days,MATRIX,100%,33,83
+mdl26_v14_nnlyst_rvsng_dwn_fq2_btd_7,Number of analysts who lowered their FQ2 EBITDA estimates in the past 7 days,MATRIX,100%,18,126
+mdl26_v14_nnlyst_rvsng_dwn_fq2_rnngs_14,Number of covering analysts who lowered their FQ2 earnings estimates in the last 14 days,MATRIX,100%,38,118
+mdl26_v14_nnlyst_rvsng_dwn_fq2_rnngs_7,Count of analysts who lowered FQ2 earnings estimates in the past 7 days,MATRIX,100%,35,91
+mdl26_v14_nnlyst_rvsng_dwn_fq2_rvn_14,Number of analysts who lowered their FQ2 revenue estimates in the past 14 days,MATRIX,100%,20,92
+mdl26_v14_nnlyst_rvsng_dwn_fq2_rvn_30,Number of covering analysts who lowered their FQ2 revenue estimates in the last 30 days,MATRIX,100%,18,50
+mdl26_v14_nnlyst_rvsng_dwn_fq2_rvn_7,Number of covering analysts who lowered their FQ2 revenue estimates in the last 7 days,MATRIX,100%,21,54
+mdl26_v14_nnlyst_rvsng_dwn_fy1_btd_14,Number of analysts who lowered their FY1 EBITDA estimates in the past 14 days,MATRIX,100%,46,168
+mdl26_v14_nnlyst_rvsng_dwn_fy1_btd_30,Number of analysts who revised down fiscal year 1 EBITDA estimates in the past 30 days,MATRIX,100%,28,59
+mdl26_v14_nnlyst_rvsng_dwn_fy1_btd_7,Number of analysts who lowered their FY1 EBITDA estimates in the past 7 days,MATRIX,100%,22,53
+mdl26_v14_nnlyst_rvsng_dwn_fy1_rnngs_14,Number of analysts who revised down fiscal year 1 earnings estimates in the past 14 days,MATRIX,100%,37,92
+mdl26_v14_nnlyst_rvsng_dwn_fy1_rnngs_7,Number of analysts who revised down fiscal year 1 earnings estimates in the past 7 days,MATRIX,100%,30,128
+mdl26_v14_nnlyst_rvsng_dwn_fy1_rvn_14,Count of analysts who lowered FY1 revenue estimates in the past 14 days,MATRIX,100%,38,77
+mdl26_v14_nnlyst_rvsng_dwn_fy1_rvn_30,Number of analysts who lowered their FY1 revenue estimates in the last 30 days,MATRIX,100%,29,90
+mdl26_v14_nnlyst_rvsng_dwn_fy1_rvn_7,Count of analysts who lowered fiscal year 1 revenue estimates in the last 7 days,MATRIX,100%,25,35
+mdl26_v14_nnlyst_rvsng_p_fq1_btd_14,Number of analysts who raised their FQ1 EBITDA estimates in the past 14 days,MATRIX,100%,29,261
+mdl26_v14_nnlyst_rvsng_p_fq1_btd_30,Number of analysts who raised Fiscal Quarter 1 EBITDA estimates in the past 30 days,MATRIX,100%,28,79
+mdl26_v14_nnlyst_rvsng_p_fq1_btd_7,Count of analysts who raised fiscal quarter 1 EBITDA estimates in the last 7 days,MATRIX,100%,26,78
+mdl26_v14_nnlyst_rvsng_p_fq1_rnngs_14,Number of analysts who raised their FQ1 earnings estimates in the past 14 days,MATRIX,100%,45,96
+mdl26_v14_nnlyst_rvsng_p_fq1_rnngs_7,Number of analysts who revised up fiscal quarter 1 earnings estimates in the past 7 days,MATRIX,100%,29,139
+mdl26_v14_nnlyst_rvsng_p_fq1_rvn_14,Count of analysts who raised their FQ1 revenue estimates over the past 14 days,MATRIX,100%,51,197
+mdl26_v14_nnlyst_rvsng_p_fq1_rvn_30,Number of analysts who raised Fiscal Quarter 1 revenue estimates in the past 30 days,MATRIX,100%,53,180
+mdl26_v14_nnlyst_rvsng_p_fq1_rvn_7,Count of analysts who raised their Fiscal Quarter 1 revenue estimates over the past 7 days,MATRIX,100%,38,105
+mdl26_v14_nnlyst_rvsng_p_fq2_btd_14,Number of analysts who raised their FQ2 EBITDA estimates in the last 14 days,MATRIX,100%,23,108
+mdl26_v14_nnlyst_rvsng_p_fq2_btd_30,Count of analysts who raised their Fiscal Quarter 2 EBITDA estimates over the past 30 days,MATRIX,100%,22,88
+mdl26_v14_nnlyst_rvsng_p_fq2_btd_7,Number of analysts who raised their FQ2 EBITDA estimates in the last 7 days,MATRIX,100%,26,75
+mdl26_v14_nnlyst_rvsng_p_fq2_rnngs_14,Number of analysts who raised their FQ2 earnings estimates in the past 14 days,MATRIX,100%,33,73
+mdl26_v14_nnlyst_rvsng_p_fq2_rnngs_7,Count of analysts who raised their FQ2 earnings estimates over the past 7 days,MATRIX,100%,31,124
+mdl26_v14_nnlyst_rvsng_p_fq2_rvn_14,Number of analysts who raised their FQ2 revenue estimates in the past 14 days,MATRIX,100%,30,77
+mdl26_v14_nnlyst_rvsng_p_fq2_rvn_30,Count of analysts who raised their Fiscal Quarter 2 revenue estimates over the past 30 days,MATRIX,100%,22,41
+mdl26_v14_nnlyst_rvsng_p_fq2_rvn_7,Count of analysts who raised their revenue estimates for Fiscal Quarter 2 in the past 7 days,MATRIX,100%,27,55
+mdl26_v14_nnlyst_rvsng_p_fy1_btd_14,Count of analysts who raised their EBITDA estimates for Fiscal Year 1 in the past 14 days,MATRIX,100%,27,102
+mdl26_v14_nnlyst_rvsng_p_fy1_btd_30,Count of analysts who raised their EBITDA estimates for Fiscal Year 1 in the past 30 days,MATRIX,100%,25,66
+mdl26_v14_nnlyst_rvsng_p_fy1_btd_7,Number of analysts who raised their FY1 EBITDA estimates in the last 7 days,MATRIX,100%,22,33
+mdl26_v14_nnlyst_rvsng_p_fy1_rnngs_14,Count of analysts who raised their earnings estimates for Fiscal Year 1 in the past 14 days,MATRIX,100%,32,71
+mdl26_v14_nnlyst_rvsng_p_fy1_rnngs_7,Count of analysts who raised their earnings estimates for Fiscal Year 1 in the past 7 days,MATRIX,100%,25,107
+mdl26_v14_nnlyst_rvsng_p_fy1_rvn_14,Count of analysts who raised their revenue estimates for Fiscal Year 1 in the past 14 days,MATRIX,100%,28,104
+mdl26_v14_nnlyst_rvsng_p_fy1_rvn_30,Count of analysts who raised their revenue estimates for Fiscal Year 1 in the past 30 days,MATRIX,100%,31,92
+mdl26_v14_nnlyst_rvsng_p_fy1_rvn_7,Count of analysts who raised their Fiscal Year 1 revenue estimates over the past 7 days,MATRIX,100%,24,80
+mdl26_v14_nnlyst_rvsng_p_fy2_btd_14,Count of analysts who raised their Fiscal Year 2 EBITDA estimates over the past 14 days,MATRIX,100%,28,81
+mdl26_v14_nnlyst_rvsng_p_fy2_btd_30,Count of analysts who raised their EBITDA estimates for Fiscal Year 2 in the past 30 days,MATRIX,100%,27,61
+mdl26_v14_nnlyst_rvsng_p_fy2_btd_7,Count of analysts who raised their EBITDA estimates for Fiscal Year 2 in the past 7 days,MATRIX,100%,29,77
+mdl26_v14_nnlyst_rvsng_p_fy2_rnngs_14,Count of analysts who raised their earnings estimates for Fiscal Year 2 in the past 14 days,MATRIX,100%,26,122
+mdl26_v14_nnlyst_rvsng_p_fy2_rnngs_7,Count of analysts who raised their earnings estimates for Fiscal Year 2 in the past 7 days,MATRIX,100%,11,42
+mdl26_v14_nnlyst_rvsng_p_fy2_rvn_14,Count of analysts who raised their revenue estimates for Fiscal Year 2 in the past 14 days,MATRIX,100%,26,61
+mdl26_v14_nnlyst_rvsng_p_fy2_rvn_30,Count of analysts who raised their revenue estimates for Fiscal Year 2 in the past 30 days,MATRIX,100%,21,112
+mdl26_v14_nnlyst_rvsng_p_fy2_rvn_7,Count of analysts who raised their revenue estimates for Fiscal Year 2 in the past 7 days,MATRIX,100%,33,70
+mdl26_v14_num_downgrades_14,Number of analyst recommendation downgrades in the last 14 days,MATRIX,100%,27,109
+mdl26_v14_num_downgrades_60,Number of analyst recommendation downgrades in the last 60 days,MATRIX,100%,21,36
+mdl26_v14_num_downgrades_7,Number of analyst recommendation downgrades in the past 7 days,MATRIX,100%,25,66
+mdl26_v14_num_downgrades_90,Number of analyst recommendation downgrades over the last 90 days,MATRIX,100%,28,85
+mdl26_v14_num_upgrades_14,Number of analyst recommendation upgrades in the last 14 days,MATRIX,100%,34,79
+mdl26_v14_num_upgrades_60,Number of analyst recommendation upgrades in the past 60 days,MATRIX,100%,15,34
+mdl26_v14_num_upgrades_7,Number of analyst recommendation upgrades over the last 7 days,MATRIX,100%,24,43
+mdl26_v14_num_upgrades_90,Number of analyst recommendation upgrades in the last 90 days,MATRIX,100%,21,47
+mdl26_v14_p_yld_pct_stm_f12m,"Earnings yield (E/P) expressed as a percentage, based on StarMine SmartEstimate for next 12 months",MATRIX,100%,131,456
+mdl26_v14_p_yld_pct_stm_fy1,Earnings-to-price yield percentage based on the SmartEstimate for fiscal year 1,MATRIX,99%,104,767
+mdl26_v14_p_yld_pct_stm_fy2,Earnings-to-Price yield percentage based on StarMine SmartEstimate for fiscal year 2,MATRIX,99%,178,448
+mdl26_v14_prsprise_f12m_earnings,"Difference between the StarMine SmartEstimate and the consensus mean estimate for forward 12 months earnings (amount, in the same units as the estimate)",MATRIX,100%,37,180
+mdl26_v14_prsprise_f12m_ebitda,"Predicted surprise amount for forward 12 months EBITDA, defined as actual minus predicted",MATRIX,86%,38,76
+mdl26_v14_prsprise_f12m_revenue,"Predicted surprise amount for forward 12 months revenue, defined as actual minus predicted",MATRIX,98%,34,169
+mdl26_v14_prsprise_fq1_ebitda,"StarMine predicted surprise amount for FQ1 EBITDA, typically SmartEstimate minus the consensus mean estimate",MATRIX,80%,21,63
+mdl26_v14_prsprise_fq1_revenue,"Predicted surprise amount for Fiscal Quarter 1 revenue, calculated as SmartEstimate minus consensus mean (currency units)",MATRIX,96%,49,149
+mdl26_v14_prsprise_fq2_ebitda,"Predicted surprise amount for second fiscal quarter EBITDA, defined as actual minus predicted",MATRIX,79%,24,132
+mdl26_v14_prsprise_fq2_revenue,Predicted revenue surprise amount for FQ2 based on SmartEstimate minus consensus mean,MATRIX,96%,30,129
+mdl26_v14_prsprise_fy1_ebitda,"Difference between the StarMine SmartEstimate and the consensus mean estimate for Fiscal Year 1 EBITDA (amount, in the same units as the estimate)",MATRIX,86%,36,94
+mdl26_v14_prsprise_fy1_revenue,"Predicted surprise amount for Fiscal Year 1 revenue, defined as actual minus predicted",MATRIX,99%,28,172
+mdl26_v14_prsprise_fy2_ebitda,"StarMine predicted surprise amount for FY2 EBITDA, typically SmartEstimate minus the consensus mean estimate",MATRIX,86%,28,164
+mdl26_v14_prsprise_fy2_revenue,"Predicted surprise amount for Fiscal Year 2 revenue, calculated as SmartEstimate minus consensus mean (currency units)",MATRIX,99%,28,78
+mdl26_v14_prsprise_pct_f12m_earnings,"Predicted surprise percentage for forward 12 months earnings, calculated as actual minus predicted expressed as a percentage",MATRIX,100%,52,200
+mdl26_v14_prsprise_pct_f12m_ebitda,"Predicted surprise percentage for forward 12 months EBITDA, defined as actual minus predicted as a percent",MATRIX,86%,32,68
+mdl26_v14_prsprise_pct_f12m_revenue,Predicted percentage difference between SmartEstimate and the consensus mean for next 12 months revenue,MATRIX,98%,23,74
+mdl26_v14_prsprise_pct_fq1_earnings,Predicted percentage surprise for FQ1 earnings based on SmartEstimate versus consensus mean,MATRIX,98%,45,181
+mdl26_v14_prsprise_pct_fq1_ebitda,"Predicted percentage EBITDA surprise for the next fiscal quarter (FQ1), measured as the percent difference between SmartEstimate and mean consensus",MATRIX,80%,24,69
+mdl26_v14_prsprise_pct_fq1_revenue,Predicted percentage difference between SmartEstimate and mean consensus for FQ1 revenue,MATRIX,96%,30,63
+mdl26_v14_prsprise_pct_fq2_earnings,"Percentage difference between the StarMine SmartEstimate and the consensus mean estimate for Fiscal Quarter 2 earnings, expressed as a percent of the consensus",MATRIX,97%,33,128
+mdl26_v14_prsprise_pct_fq2_ebitda,"Percentage difference between the StarMine SmartEstimate and the consensus mean estimate for Fiscal Quarter 2 EBITDA, expressed as a percent of the consensus",MATRIX,79%,29,75
+mdl26_v14_prsprise_pct_fq2_revenue,Predicted percentage revenue surprise for FQ2 (SmartEstimate vs mean consensus),MATRIX,96%,31,103
+mdl26_v14_prsprise_pct_fy1_earnings,Predicted percentage surprise for FY1 earnings based on SmartEstimate versus consensus mean,MATRIX,100%,38,126
+mdl26_v14_prsprise_pct_fy1_ebitda,Predicted percentage difference between SmartEstimate and the consensus mean for FY1 EBITDA,MATRIX,86%,35,81
+mdl26_v14_prsprise_pct_fy1_revenue,"Predicted percentage revenue surprise for Fiscal Year 1, calculated as (SmartEstimate minus consensus mean) divided by the consensus",MATRIX,99%,33,57
+mdl26_v14_prsprise_pct_fy2_earnings,"Predicted percentage earnings surprise for Fiscal Year 2, calculated as (SmartEstimate minus consensus mean) divided by the consensus",MATRIX,100%,52,174
+mdl26_v14_prsprise_pct_fy2_ebitda,Predicted surprise percentage for FY2 EBITDA (SmartEstimate vs. mean consensus),MATRIX,86%,25,72
+mdl26_v14_prsprise_pct_fy2_revenue,Predicted percentage difference between SmartEstimate and the consensus mean for FY2 revenue,MATRIX,99%,27,62
+mdl26_v14_rcmmndtn_mn_chng_14,Change in the average analyst recommendation over the past 14 days,MATRIX,100%,36,137
+mdl26_v14_rcmmndtn_mn_chng_60,Change in the average analyst recommendation over the past 60 days,MATRIX,99%,34,176
+mdl26_v14_rcmmndtn_mn_chng_7,Change in the average analyst recommendation over the past 7 days,MATRIX,100%,25,56
+mdl26_v14_rcmmndtn_mn_chng_90,Change in the average analyst recommendation over the past 90 days,MATRIX,99%,34,161
+mdl26_v14_sm_frwrd_p_stm_fy1,Forward price-to-earnings ratio using StarMine SmartEstimate for fiscal year 1,MATRIX,80%,72,276
+mdl26_v14_sm_mn_stmt_prc_rt_fy1_rnngs,Price-to-earnings ratio using consensus mean estimates for fiscal year 1,MATRIX,82%,52,202
+mdl26_v14_sm_nlyst_rvsns_scr,Composite ARM score indicating the strength and direction of analyst estimate revisions,MATRIX,100%,33,93
+mdl26_v14_sm_nnlyst_rvsng_dwn_fq1_rnngs_30,Count of analysts who lowered their earnings estimates for Fiscal Quarter 1 in the past 30 days,MATRIX,100%,39,269
+mdl26_v14_sm_nnlyst_rvsng_dwn_fq2_rnngs_30,Count of analysts who lowered their Fiscal Quarter 2 earnings estimates over the past 30 days,MATRIX,100%,26,79
+mdl26_v14_sm_nnlyst_rvsng_dwn_fy1_rnngs_30,Number of analysts who lowered their FY1 earnings estimates in the last 30 days,MATRIX,100%,46,89
+mdl26_v14_sm_nnlyst_rvsng_p_fq1_rnngs_30,Number of analysts who raised their FQ1 earnings estimates in the last 30 days,MATRIX,100%,46,85
+mdl26_v14_sm_nnlyst_rvsng_p_fq2_rnngs_30,Number of analysts who revised up fiscal quarter 2 earnings estimates in the past 30 days,MATRIX,100%,21,64
+mdl26_v14_sm_nnlyst_rvsng_p_fy1_rnngs_30,Number of analysts who raised their Fiscal Year 1 earnings estimates in the past 30 days,MATRIX,100%,25,144
+mdl26_v14_sm_nnlyst_rvsng_p_fy2_rnngs_30,Count of analysts who raised their Fiscal Year 2 earnings estimates over the past 30 days,MATRIX,100%,34,160
+mdl26_v14_sm_rcmmndtn_mn_chng_30,Change in the average analyst recommendation over the past 30 days,MATRIX,100%,25,70
+mdl26_v14_sm_rm_prfrrd_rnngs_cmpnnt,Preferred earnings subcomponent percentile score contributing to the final ARM score,MATRIX,100%,46,175
+mdl26_v14_sm_rm_rcmmndtns_cmpnnt,ARM subcomponent percentile score reflecting momentum in analyst recommendations,MATRIX,100%,37,173
+mdl26_v14_sm_rm_rgn_rnk_dcml,Region-level percentile rank of the ARM score expressed in decimal form,MATRIX,100%,70,315
+mdl26_v14_sm_rm_scndry_rnngs_cmpnnt,Secondary earnings subcomponent percentile score contributing to the final ARM score,MATRIX,86%,43,215
+mdl26_v14_sm_smrtst_grwth_nxt_yrths_yr_rnngs,"SmartEstimate earnings growth rate, next year versus this year (next year / this year)",MATRIX,81%,21,99
+mdl26_v14_sm_smrtst_grwth_ths_yrlst_yr_rnngs,"SmartEstimate earnings growth rate, this year versus last year (this year / last year)",MATRIX,77%,12,25
+mdl26_v14_sm_stm_fq1_rnngs,StarMine SmartEstimate (weighted consensus) for earnings for Fiscal Quarter 1,MATRIX,98%,63,456
+mdl26_v14_sm_stm_fq2_rnngs,StarMine SmartEstimate (weighted consensus) for fiscal quarter 2 earnings,MATRIX,97%,34,151
+mdl26_v14_sm_stm_fy1_rnngs,StarMine SmartEstimate (weighted consensus) for FY1 earnings,MATRIX,100%,36,80
+mdl26_v14_sm_stm_fy2_rnngs,SmartEstimate for Fiscal Year 2 earnings,MATRIX,100%,48,113
+mdl26_v14_sm_stm_prc_rt_fy1_rnngs,Price-to-earnings ratio based on StarMine SmartEstimate for fiscal year 1,MATRIX,81%,46,114
+mdl26_v14_sma_actual_last_q_earnings,Actual earnings reported for the most recent fiscal quarter,MATRIX,97%,45,159
+mdl26_v14_sma_actual_last_y_earnings,Actual earnings reported for the most recent fiscal year,MATRIX,97%,26,38
+mdl26_v14_sma_arm_country_rank,Country-level percentile rank of the ARM score for the company,MATRIX,100%,50,232
+mdl26_v14_sma_arm_global_rank,Global percentile rank of the ARM signal (relative score),MATRIX,100%,30,132
+mdl26_v14_sma_arm_revenue_component,Subcomponent score reflecting revenue estimate revisions that contributes to the final ARM score,MATRIX,100%,39,157
+mdl26_v14_sma_arm_score_5,Five day average of the ARM composite score,MATRIX,100%,37,176
+mdl26_v14_sma_arm_score_change_30,Change in the ARM composite score over the last 30 days,MATRIX,100%,30,79
+mdl26_v14_sma_days_since_last_report,Model days since last report,MATRIX,100%,62,325
+mdl26_v14_sma_forward_pe_mean_fy1,Forward price-to-earnings ratio based on the mean analyst earnings estimate for Fiscal Year 1,MATRIX,81%,49,134
+mdl26_v14_sma_last_fiscal_year_pe,Price-to-earnings ratio based on last fiscal year results as defined by the ARM model,MATRIX,77%,20,85
+mdl26_v14_sma_num_downgrades_30,Number of analyst recommendation downgrades in the last 30 days,MATRIX,100%,25,70
+mdl26_v14_sma_num_upgrades_30,Number of analyst recommendation upgrades in the past 30 days,MATRIX,100%,33,84
+mdl26_v14_sma_prsprise_fq1_earnings,"Predicted absolute earnings surprise for FQ1, equal to SmartEstimate minus the consensus mean estimate",MATRIX,98%,51,212
+mdl26_v14_sma_prsprise_fq2_earnings,Predicted earnings surprise amount for FQ2 based on SmartEstimate minus consensus mean,MATRIX,97%,28,39
+mdl26_v14_sma_prsprise_fy1_earnings,"Difference between the StarMine SmartEstimate and the consensus mean estimate for Fiscal Year 1 earnings (amount, in the same units as the estimate)",MATRIX,100%,40,119
+mdl26_v14_sma_prsprise_fy2_earnings,"Predicted surprise amount for Fiscal Year 2 earnings, defined as actual minus predicted",MATRIX,100%,35,149
+mdl26_v14_sma_trailing_4_quarter_pe,Price-to-earnings ratio based on trailing four quarters of earnings,MATRIX,73%,56,161
+mdl26_v14_smartestimate_f12m_ebitda,StarMine SmartEstimate (accuracy- and timeliness-weighted consensus) for forward 12 months EBITDA,MATRIX,86%,36,217
+mdl26_v14_smartestimate_f12m_revenue,StarMine SmartEstimate (accuracy- and timeliness-weighted consensus) for forward 12 months revenue,MATRIX,98%,37,79
+mdl26_v14_smartestimate_fq1_ebitda,StarMine SmartEstimate for EBITDA for fiscal quarter 1,MATRIX,80%,48,122
+mdl26_v14_smartestimate_fq1_revenue,StarMine SmartEstimate for revenue for fiscal quarter 1,MATRIX,96%,39,107
+mdl26_v14_smartestimate_fq2_ebitda,StarMine SmartEstimate for EBITDA for fiscal quarter 2,MATRIX,79%,37,175
+mdl26_v14_smartestimate_fq2_revenue,SmartEstimate for Fiscal Quarter 2 revenue,MATRIX,96%,34,155
+mdl26_v14_smartestimate_fy1_ebitda,StarMine SmartEstimate (accuracy- and timeliness-weighted consensus) for FY1 EBITDA,MATRIX,86%,34,116
+mdl26_v14_smartestimate_fy1_revenue,StarMine SmartEstimate for FY1 revenue,MATRIX,99%,24,54
+mdl26_v14_smartestimate_fy2_ebitda,StarMine SmartEstimate (weighted consensus) for FY2 EBITDA,MATRIX,86%,32,192
+mdl26_v14_smartestimate_fy2_revenue,StarMine SmartEstimate (weighted consensus) for FY2 revenue,MATRIX,99%,30,112
+mdl26_v14_smrtst_grwth_nxt_yrths_yr_btd,"SmartEstimate EBITDA growth rate, next year versus this year (next year / this year)",MATRIX,75%,30,91
+mdl26_v14_smrtst_grwth_nxt_yrths_yr_rvn,"SmartEstimate revenue growth rate, next year versus this year (next year / this year)",MATRIX,97%,23,95
+mdl26_v14_smrtst_grwth_ths_yrlst_yr_btd,"SmartEstimate EBITDA growth rate, this year versus last year (this year / last year)",MATRIX,69%,12,21
+mdl26_v14_smrtst_grwth_ths_yrlst_yr_rvn,"SmartEstimate revenue growth rate, this year versus last year (this year / last year)",MATRIX,94%,28,77
+mdl26_v14_srprs_pct_lst_q_rnngs,Percentage earnings surprise for the last reported quarter: (actual minus predicted) divided by predicted,MATRIX,97%,43,325
+mdl26_v14_srprs_pct_lst_q_rvn,Percentage revenue surprise for the last reported quarter: (actual minus predicted) divided by predicted,MATRIX,96%,43,81
+mdl26_v14_srprs_pct_lst_y_rnngs,Percentage earnings surprise for the last reported fiscal year: (actual minus predicted) divided by predicted,MATRIX,97%,37,82
+mdl26_v14_srprs_pct_lst_y_rvn,Percentage revenue surprise for the last reported fiscal year: (actual minus predicted) divided by predicted,MATRIX,97%,64,154
+mdl26_v14_stm_f12m_rnngs,StarMine SmartEstimate (accuracy- and timeliness-weighted consensus) for forward 12 months earnings,MATRIX,100%,40,113
+mdl26_v14_stm_prc_rt_f12m_btd,Price-to-EBITDA ratio based on the StarMine SmartEstimate for EBITDA over the next 12 months (forward rolling),MATRIX,76%,68,234
+mdl26_v14_stm_prc_rt_f12m_rnngs,StarMine SmartEstimate of the price-to-earnings ratio for the next 12 months,MATRIX,83%,91,280
+mdl26_v14_stm_prc_rt_f12m_rvn,Price-to-revenue ratio using StarMine SmartEstimate for the next 12 months of revenue,MATRIX,97%,60,165
+mdl26_v14_stm_prc_rt_fy1_btd,Price-to-EBITDA ratio based on StarMine SmartEstimate for fiscal year 1,MATRIX,74%,39,103
+mdl26_v14_stm_prc_rt_fy1_rvn,Price-to-revenue (price-to-sales) ratio based on StarMine SmartEstimate for fiscal year 1,MATRIX,97%,27,43
+mdl26_v14_stm_prc_rt_fy2_btd,Price-to-EBITDA ratio based on StarMine SmartEstimate for fiscal year 2,MATRIX,76%,25,97
+mdl26_v14_stm_prc_rt_fy2_rnngs,Price-to-earnings ratio based on StarMine SmartEstimate for fiscal year 2,MATRIX,85%,70,137
+mdl26_v14_stm_prc_rt_fy2_rvn,Price-to-revenue (price-to-sales) ratio based on StarMine SmartEstimate for fiscal year 2,MATRIX,97%,56,130
+mdl26_v14_surprise_pct_last_q_ebitda,Percentage EBITDA surprise for the last reported quarter: (actual minus predicted) divided by predicted,MATRIX,78%,20,174
+mdl26_v14_surprise_pct_last_y_ebitda,Percentage EBITDA surprise for the last reported fiscal year: (actual minus predicted) divided by predicted,MATRIX,80%,58,127
+mdl26_yld_ndstry_prcntl_fy1_rnngs,Industry percentile ranking of the dividend yield based on FY1 estimates,MATRIX,99%,73,319
+mdl26_yld_sctr_prcntl_fy1_rnngs,Sector percentile ranking of the dividend yield based on FY1 estimates,MATRIX,99%,104,309
+mdl26_yld_stm_fy1_rnngs,Dividend yield percentage estimated using StarMine SmartEstimate for fiscal year 1,MATRIX,99%,274,1528
+most_recent_positive_bold_estimate_fy2,Value of the most recent positive ‘bold’ FY2 earnings estimate,MATRIX,26%,0,0
+new_analyst_activity_indicator,"Flag indicating newly identified ARM activity for the security/date (1 = new activity, 0 = no new activity)",MATRIX,100%,1,1
+preferred_earnings_revision_score_float,"Score component based on analyst preferred earnings revisions, as a float value.",MATRIX,100%,2,2
+primary_earnings_measure_type,"The earnings measure used as the primary basis for ARM analysis and surprises (e.g., EPS, FFO)",MATRIX,100%,0,0
+primary_earnings_measure_type_float,"Main earnings metric used for analysis, as a float value.",MATRIX,100%,0,0
+recommendation_change_score_float,"Score component based on changes in analyst recommendations, as a float value.",MATRIX,100%,1,1
+revenue_revision_score_float,"Score component based on analyst revenue revisions, as a float value.",MATRIX,100%,1,1
+scaling_factor_fy1_earnings,Divisor value used for scaling or normalization in Fiscal Year 1 earnings-related calculations,MATRIX,100%,2,3
+scaling_factor_fy2_earnings,Divisor FY2 Earnings,MATRIX,100%,3,3
+scaling_factor_quarter2_earnings,Divisor FQ2 Earnings,MATRIX,97%,2,2
+scaling_factor_quarter3_earnings,Divisor FQ3 Earnings,MATRIX,96%,1,1
+scaling_factor_quarter4_earnings,Divisor FQ4 Earnings,MATRIX,95%,2,2
+secondary_earnings_revision_score_float,"Score component based on analyst secondary earnings revisions, as a float value.",MATRIX,86%,0,0
+seven_day_bold_estimate_indicator_fy1,Flag indicating a bold (significantly different) FY1 earnings estimate occurred within the past 7 days,MATRIX,29%,0,0
+star_arm_country_rank,Country-level percentile rank of the ARM signal (higher means stronger revisions vs country peers),MATRIX,99%,200,1091
+star_arm_global_rank,Global percentile rank of the ARM signal (higher means stronger revisions vs global peers),MATRIX,99%,194,934
+star_arm_pref_earnings_score,Percentile sub-score for the company’s preferred earnings metric revisions used by ARM; contributes to the overall ARM score,MATRIX,99%,136,600
+star_arm_rec_change_flag,7day recommendation mean chg flag,MATRIX,18%,38,74
+star_arm_rec_days_since_2lv_change,Number of days since a two-level change in analyst recommendation occurred,MATRIX,86%,69,196
+star_arm_rec_days_since_new,Number of calendar days since the most recent new analyst recommendation was issued,MATRIX,100%,89,361
+star_arm_rec_days_since_newsell,Number of calendar days since the latest new Sell recommendation was issued for the stock,MATRIX,75%,46,88
+star_arm_rec_mean_change30,Change in the average analyst recommendation over the past 30 calendar days,MATRIX,99%,85,251
+star_arm_rec_mean_prior7,The mean analyst recommendation as of 7 calendar days ago,MATRIX,99%,129,1023
+star_arm_rec_ndown_30,Count of analyst rating downgrades in the last 30 days,MATRIX,100%,67,359
+star_arm_rec_nup_30,Count of analyst rating upgrades in the last 30 days,MATRIX,100%,65,201
+star_arm_recommendations_score,Percentile sub-score capturing analyst recommendation momentum; contributes to the overall ARM score,MATRIX,99%,97,412
+star_arm_region_rank_decimal,Regional percentile rank expressed as a decimal between 0 and 1 for the ARM signal,MATRIX,99%,153,753
+star_arm_revenue_score,Percentile sub-score for revenue estimate revisions; contributes to the overall ARM score,MATRIX,99%,126,591
+star_arm_score,Headline ARM composite score summarizing analyst estimate and recommendation revisions,MATRIX,99%,105,526
+star_arm_score_5,Five-day moving average of the ARM composite (Analyst Revisions) score,MATRIX,99%,91,361
+star_arm_score_change_1m,Change in the ARM composite score over the last 30 days,MATRIX,99%,75,451
+star_arm_secondary_earnings_score,Percentile sub-score for the secondary earnings metric revisions; contributes to the overall ARM score,MATRIX,86%,96,304
+suspect_data_indicator_any_earnings,"Indicator flag showing whether any earnings-related data (across forecast/reporting periods) is considered suspect; 1 = suspect, 0 = not suspect",MATRIX,100%,0,0
+suspect_data_indicator_fy1_earnings,Flag indicating suspected data irregularity for FY1 earnings (0 = no suspicion),MATRIX,100%,2,2
+suspect_data_indicator_fy2_earnings,"Indicator flag for suspected data quality issues in Fiscal Year 2 earnings estimates (e.g., restatements or anomalies); 1 = flagged, 0 = not flagged",MATRIX,100%,0,0
+suspect_data_indicator_model,"Indicator that the ARM calculation/data for this record are suspect (1=flagged, 0=clean)",MATRIX,100%,1,1
+suspect_data_indicator_quarter1_earnings,"Indicator that FQ1 earnings data are suspect (1=flagged, 0=clean)",MATRIX,100%,2,2
+suspect_data_indicator_quarter2_earnings,Flag indicating suspect or questionable data for Fiscal Quarter 2 earnings,MATRIX,100%,1,1
+suspect_data_indicator_quarter3_earnings,Flag indicating suspect or questionable data for Fiscal Quarter 3 earnings,MATRIX,100%,8,8
+suspect_data_indicator_quarter4_earnings,Indicator flag that the FQ4 earnings data or inputs are suspect or questionable for ARM calculations,MATRIX,100%,0,0

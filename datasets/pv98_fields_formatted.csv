@@ -1,0 +1,199 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv98_21_03ftni_rd,Interval factor data for the 30th interval in the 12th series,MATRIX,100%,3,5
+pv98_21_13ftni_rd,Interval factor data for the 31st interval in the 12th series,MATRIX,100%,1,1
+pv98_21_23ftni_rd,Interval factor data for the 32nd interval in the 12th series,MATRIX,100%,2,2
+pv98_21_33ftni_rd,Interval factor data for the 33rd interval in the 12th series,MATRIX,100%,4,4
+pv98_21_43ftni_rd,Interval factor data for the 34th interval in the 12th series,MATRIX,100%,1,1
+pv98_21_53ftni_rd,Interval factor data for the 35th interval in the 12th series,MATRIX,100%,1,1
+pv98_21_63ftni_rd,Interval factor data for the 36th interval in the 12th series,MATRIX,100%,10,13
+pv98_21_73ftni_rd,Interval factor data for the 37th interval in the 12th series,MATRIX,100%,0,0
+pv98_21_83ftni_rd,Interval factor data for the 38th interval in the 12th series,MATRIX,100%,1,1
+pv98_afternoon_mean_allh_allh_mean,The average of the highest prices recorded across all intervals during the afternoon session for a given instrument on a given day,MATRIX,100%,2,2
+pv98_afternoon_mean_alll_alll_mean,Mean value of all low prices recorded during intraday intervals in the afternoon trading session for USA equities,MATRIX,100%,1,1
+pv98_afternoon_mean_cumv_cumv_mean,"Average cumulative trading volume for US equities during the afternoon session, computed across eligible instruments for the specified interval and as-of-date in the lc_ecntickstat dataset",MATRIX,100%,2,3
+pv98_afternoon_mean_inth_inth_mean,"Mean of interval high prices during the afternoon trading session for U.S. equities, calculated across specified intervals",MATRIX,100%,1,1
+pv98_afternoon_mean_intl_intl_mean,"Average of interval low prices (INTL) for US equities during the afternoon trading session, computed within the USA_afternoon_mean_INTL module",MATRIX,100%,0,0
+pv98_afternoon_mean_intv_intv_mean,Average interval trading volume (sum of shares) during the afternoon session (post-midday) for US equities in this module,MATRIX,100%,1,3
+pv98_afternoon_mean_ivwp_ivwp_mean,Average of the volume weighted average price for US equities during the afternoon session on a specific day,MATRIX,100%,0,0
+pv98_afternoon_mean_taks_taks_mean,Mean of TAKS in the afternoon,MATRIX,100%,0,0
+pv98_afternoon_mean_task_task_mean,Mean time-weighted ask price for US equities during the afternoon session,MATRIX,100%,0,0
+pv98_afternoon_mean_tbid_tbid_mean,The mean value of the time-weighted bid price during the afternoon trading session in the USA regional module,MATRIX,100%,0,0
+pv98_cap_10,Market capitalization snapshot at 10:00 AM on the trading day,MATRIX,100%,5,6
+pv98_cap_10_backfill,Market capitalization at 10:00,MATRIX,100%,1,1
+pv98_cap_11,Market capitalization of the instrument at 11:00 AM,MATRIX,100%,0,0
+pv98_cap_11_backfill,"The market capitalization of the instrument at 11:00, calculated or backfilled using available price and share data",MATRIX,100%,1,1
+pv98_cap_12_backfill,"Market capitalization of the security as of 12:00, using backfilled data to supplement missing values",MATRIX,100%,1,1
+pv98_cap_13_backfill,"Market capitalization as of 13:00 calculated from shares outstanding and price at that snapshot, backfilled if necessary",MATRIX,100%,1,1
+pv98_cap_1430,"Market capitalization calculated at 14:30, typically price times shares outstanding",MATRIX,100%,6,8
+pv98_cap_1430_backfill,"Market capitalization as of 14:30, computed from latest price and shares outstanding, backfilled if needed",MATRIX,100%,0,0
+pv98_cap_14_backfill,"The market capitalization of the instrument computed or backfilled at 14:00, likely using price and share data",MATRIX,100%,0,0
+pv98_cap_150000,Market capitalization at 15:00,MATRIX,100%,3,4
+pv98_cap_1530,"Daily total market capitalization of the equity instrument, measured in millions",MATRIX,100%,4,7
+pv98_cap_1530_backfill,"Market capitalization of the instrument at 15:30, expressed in millions",MATRIX,100%,1,3
+pv98_cap_1530to1530,"Market capitalization measured at 15:30, typically shares outstanding multiplied by the price at session close",MATRIX,100%,0,0
+pv98_cap_15_backfill,"Market capitalization of the security at 15:00, calculated using backfilled price and relevant share count",MATRIX,100%,0,0
+pv98_cap_16,Market capitalization of the instrument at 16:00,MATRIX,100%,6,13
+pv98_cap_16_backfill,Market cap at 16:00 backfilled,MATRIX,100%,6,7
+pv98_cap_945,Market capitalization snapshot at 9:45 AM,MATRIX,100%,4,8
+pv98_close_10,Close price at 10:00,MATRIX,100%,2,3
+pv98_close_10_backfill,"Close price for the intraday bar ending at 10:00 (local market time), with backfilling applied to handle missing ticks",MATRIX,100%,1,1
+pv98_close_11,Last traded price (close price) recorded at 11:00 AM,MATRIX,100%,0,0
+pv98_close_11_backfill,The closing price of the instrument as recorded or backfilled at 11:00 (typically based on a snapshot or an engineered estimate for that timestamp),MATRIX,100%,0,0
+pv98_close_12_backfill,"Closing price of the security as of 12:00, with missing data backfilled from reliable sources or prior ticks",MATRIX,100%,1,1
+pv98_close_13_backfill,"Last traded or quoted price as of the 13:00 snapshot, backfilled from intraday data if no exact 13:00 tick exists",MATRIX,100%,0,0
+pv98_close_1430,"Closing or last traded price at the 14:30 snapshot, representing the last transaction price at that time",MATRIX,100%,2,2
+pv98_close_1430_backfill,"Closing price at 14:30, reconstructed or imputed if not directly observed",MATRIX,100%,1,1
+pv98_close_14_backfill,"The closing price of the instrument as of 14:00 in the trading session, recorded or backfilled as needed",MATRIX,100%,1,1
+pv98_close_150000,Closing price at 15:00,MATRIX,100%,0,0
+pv98_close_1530,Daily closing price of the equity instrument,MATRIX,100%,2,3
+pv98_close_1530_backfill,Closing price of the instrument at 15:30 (using backfill data to address missing or delayed ticks),MATRIX,100%,1,1
+pv98_close_1530to1530,"Final traded price at the session close defined at 15:30, i.e., the closing price for the 15:30-to-15:30 window",MATRIX,100%,1,1
+pv98_close_15_backfill,"Backfilled closing price of the security at 15:00, often sourced from data feeds when the standard close is unavailable or for snapshot analytics",MATRIX,100%,0,0
+pv98_close_16,Closing price of the instrument at 16:00,MATRIX,100%,4,4
+pv98_close_16_backfill,"Close price of the instrument at 16:00, with missing values filled using backfill methodology",MATRIX,100%,3,3
+pv98_close_945,Closing price snapshot at 9:45 AM,MATRIX,100%,2,6
+pv98_cumv_last,"Most recent cumulative traded volume for a US equity on the evaluated date, summarizing total volume up to the last microstructure tick",MATRIX,100%,1,1
+pv98_cvwp_mean,Average value of the composite volume-weighted price (CVWP) for US equities during the afternoon session,MATRIX,100%,2,2
+pv98_daily_mean_allh_allh_mean,The average of the daily maximum high prices across all intraday intervals for a given instrument,MATRIX,100%,1,1
+pv98_daily_mean_alll_alll_mean,Daily mean of the maximum of all interval low price.,MATRIX,100%,0,0
+pv98_daily_mean_cumv_cumv_mean,The average cumulative trading volume for an instrument across the trading day in US markets,MATRIX,100%,0,0
+pv98_daily_mean_inth_inth_mean,Average of the high prices recorded in each interval throughout the day for the instrument,MATRIX,100%,1,1
+pv98_daily_mean_intl_intl_mean,International daily mean,MATRIX,100%,1,1
+pv98_daily_mean_intv_intv_mean,"Average number of shares traded per intraday interval for a US equity on a given day, computed by averaging interval volumes across all intervals in the USA_daily_mean_INTV module",MATRIX,100%,2,2
+pv98_daily_mean_ivwp_ivwp_mean,Average of interval-level volume-weighted price (VWAP) for a given US equity across a single trading day,MATRIX,100%,0,0
+pv98_daily_mean_taks_taks_mean,"The average size of ask orders (number of shares or contracts available for sale at the ask price) for a US equity instrument over a trading day, calculated using time-weighted methodology",MATRIX,100%,0,0
+pv98_daily_mean_task_task_mean,The average time-weighted ask price calculated over all 1-minute intervals within a single U.S. trading day for U.S. equities,MATRIX,100%,0,0
+pv98_daily_mean_tbid_tbid_mean,Average time-weighted bid price for each instrument across the trading day within the USA region module,MATRIX,100%,2,2
+pv98_daily_mean_ttrp_ttrp_mean,Mean of TTRP,MATRIX,100%,0,0
+pv98_high_10,Highest price at 10:00,MATRIX,100%,2,3
+pv98_high_10_backfill,"Highest price within the 10:00 intraday interval, backfilled if needed",MATRIX,100%,6,11
+pv98_high_11,Highest traded price of the day up to 11:00 AM,MATRIX,100%,1,1
+pv98_high_11_backfill,The highest price of the instrument observed or backfilled up to 11:00 (maximum price by 11:00),MATRIX,100%,2,2
+pv98_high_12_backfill,"Highest price reached by the security at 12:00, using backfilled data when necessary",MATRIX,100%,2,3
+pv98_high_13_backfill,"Highest traded or quoted price from session start up to and including 13:00, backfilled if necessary",MATRIX,100%,3,3
+pv98_high_1430,Highest traded price recorded at 14:30 local market time or specified session time,MATRIX,100%,1,1
+pv98_high_1430_backfill,"Highest traded price as of 14:30 within the session, backfilled if missing",MATRIX,100%,2,2
+pv98_high_14_backfill,The highest price reached by the instrument as of 14:00 in the trading session,MATRIX,100%,1,1
+pv98_high_150000,High price at 15:00,MATRIX,100%,1,1
+pv98_high_1530,Daily highest price reached by the equity instrument,MATRIX,100%,1,1
+pv98_high_1530_backfill,Highest price reached by the instrument as of 15:30 (on that day),MATRIX,100%,0,0
+pv98_high_1530to1530,Highest traded price observed during the session from 15:30 on one day to 15:30 on the next day,MATRIX,100%,0,0
+pv98_high_15_backfill,"Highest price of the security observed at 15:00 or during the interval snapped at 15:00, backfilled if standard data is missing",MATRIX,100%,2,2
+pv98_high_16,Highest traded price of the instrument at 16:00,MATRIX,100%,3,4
+pv98_high_16_backfill,Highest price at 16:00,MATRIX,100%,2,7
+pv98_high_945,High price snapshot at 9:45 AM,MATRIX,100%,0,0
+pv98_intv_sum,Total volume traded across all intervals during the USA daily trading session,MATRIX,100%,0,0
+pv98_low_10,Low price at 10:00,MATRIX,100%,2,2
+pv98_low_10_backfill,"Lowest price within the 10:00 intraday interval, backfilled if needed",MATRIX,100%,1,1
+pv98_low_11,Lowest traded price of the day up to 11:00 AM,MATRIX,100%,0,0
+pv98_low_11_backfill,The lowest price of the instrument observed or backfilled up to 11:00 (minimum price by 11:00),MATRIX,100%,0,0
+pv98_low_12_backfill,"Lowest price reached by the security at 12:00, using backfilled data when necessary",MATRIX,100%,0,0
+pv98_low_13_backfill,"Lowest traded or quoted price from session start up to and including 13:00, backfilled if necessary",MATRIX,100%,0,0
+pv98_low_1430,Lowest traded price recorded at 14:30 local market time or specified session time,MATRIX,100%,0,0
+pv98_low_1430_backfill,"Lowest traded price as of 14:30 within the session, backfilled if missing",MATRIX,100%,0,0
+pv98_low_14_backfill,"The lowest price of the instrument as of 14:00, possibly adjusted or backfilled if not directly observable",MATRIX,100%,0,0
+pv98_low_150000,Low price at 15:00,MATRIX,100%,0,0
+pv98_low_1530,Daily lowest price reached by the equity instrument,MATRIX,100%,0,0
+pv98_low_1530_backfill,Lowest price of the instrument as of 15:30 (on that day),MATRIX,100%,1,1
+pv98_low_1530to1530,Lowest traded price observed during the session from 15:30 on one day to 15:30 on the next day,MATRIX,100%,0,0
+pv98_low_15_backfill,"Lowest price of the security observed at 15:00 or during the snapshot interval, backfilled from upstream or reconstructed data",MATRIX,100%,0,0
+pv98_low_16,Lowest traded price of the instrument at 16:00,MATRIX,100%,2,2
+pv98_low_16_backfill,Low price at 16:00 with backfill data,MATRIX,100%,2,2
+pv98_low_945,Low price snapshot at 9:45 AM,MATRIX,100%,1,1
+pv98_lstp_mean,Average of last traded prices for a given instrument across the trading day in the USA_daily_mean_LSTP module,MATRIX,100%,0,0
+pv98_lsts_mean,Average last trade size (last size) per instrument computed over the day within the USA_daily_mean_LSTS module,MATRIX,100%,0,0
+pv98_morning_mean_allh_allh_mean,Average of the highest prices recorded for each interval during the morning session for US equities,MATRIX,100%,0,0
+pv98_morning_mean_intl_intl_mean,Mean of International values,MATRIX,100%,0,0
+pv98_morning_mean_task_task_mean,"Daily average of the time-weighted ask price during the morning session, calculated over 1-minute intervals for USA equities",MATRIX,100%,0,0
+pv98_morning_mean_tbid_tbid_mean,"Average time-weighted bid price for US equities during the morning session, computed as the mean across all 1-minute intervals for each day",MATRIX,100%,0,0
+pv98_morning_mean_ttrp_ttrp_mean,Mean of TTRP,MATRIX,100%,0,0
+pv98_open_10,Open price at 10:00,MATRIX,100%,1,1
+pv98_open_10_backfill,"Open price for the intraday bar at 10:00 (local market time), with backfilling applied to handle missing ticks",MATRIX,100%,0,0
+pv98_open_11,Opening price of the instrument at 11:00 AM,MATRIX,100%,0,0
+pv98_open_11_backfill,"The opening price of the instrument as recorded or backfilled at 11:00 (first trade or quote at or near 11:00, possibly reconstructed if not available exactly at that time)",MATRIX,100%,0,0
+pv98_open_12_backfill,"Opening price of the security as of 12:00, with missing data backfilled from reliable sources or prior ticks",MATRIX,100%,0,0
+pv98_open_13_backfill,"First traded or quoted price of the trading session (day’s open) as known by 13:00, backfilled if necessary",MATRIX,100%,0,0
+pv98_open_1430,Opening or first traded price at the 14:30 session snapshot,MATRIX,100%,1,1
+pv98_open_1430_backfill,"Opening price at 14:30, reconstructed or imputed if not directly observed",MATRIX,100%,0,0
+pv98_open_14_backfill,"The opening price of the instrument for the interval ending at 14:00, determined using backfilling methods",MATRIX,100%,0,0
+pv98_open_150000,Opening price at 15:00,MATRIX,100%,0,0
+pv98_open_1530,Daily opening price of the equity instrument,MATRIX,100%,1,1
+pv98_open_1530_backfill,Open price at 15:30,MATRIX,100%,0,0
+pv98_open_1530to1530,"First traded price at the start of the session defined at 15:30, i.e., the opening price for the 15:30-to-15:30 window",MATRIX,100%,0,0
+pv98_open_15_backfill,"Opening price of the security at 15:00, likely the first trade after 15:00 for interval or snapshot analysis",MATRIX,100%,0,0
+pv98_open_16,Opening price of the instrument at 16:00,MATRIX,100%,0,0
+pv98_open_16_backfill,Open price at 16:00,MATRIX,100%,0,0
+pv98_open_945,Opening price snapshot at 9:45 AM,MATRIX,100%,2,2
+pv98_pricesnap1530_cap_153000,"Daily market capitalization measured in millions of currency units, representing the total value of all outstanding shares at the end of the trading day",MATRIX,100%,2,2
+pv98_pricesnap1530_close_153000,Price of the security at the close of the trading day,MATRIX,100%,0,0
+pv98_pricesnap1530_high_153000,Highest traded price of the security during the trading day,MATRIX,100%,1,1
+pv98_pricesnap1530_low_153000,Lowest traded price of the security during the trading day,MATRIX,100%,0,0
+pv98_pricesnap1530_open_153000,Price of the security at the open of the trading day,MATRIX,100%,1,1
+pv98_pricesnap1530_volume_153000,Total number of shares traded during the trading day,MATRIX,100%,2,2
+pv98_pricesnap1530_vwap_153000,"Volume weighted average price of the security for the trading day, factoring both price and volume throughout the session",MATRIX,100%,1,1
+pv98_quote_size_mean,The average quoted size at the best bid/ask (number of shares or units available) for the security over the full trading day in the USA region,MATRIX,100%,1,1
+pv98_tbds_mean,Average time-weighted bid size for US equities during the daily session,MATRIX,100%,0,0
+pv98_usa_pricesnap_12_cap_12,Market capitalization of the security calculated at 12:00 PM,MATRIX,100%,1,1
+pv98_usa_pricesnap_12_close_12,Closing price of the security at 12:00 PM (noon),MATRIX,100%,0,0
+pv98_usa_pricesnap_12_high_12,Daily high price at 12:00,MATRIX,100%,1,1
+pv98_usa_pricesnap_12_low_12,Low price at 12:00,MATRIX,100%,1,1
+pv98_usa_pricesnap_12_open_12,Open price at 12:00,MATRIX,100%,2,5
+pv98_usa_pricesnap_12_volume_12,Total trading volume of the security up to 12:00 PM,MATRIX,100%,2,2
+pv98_usa_pricesnap_12_vwap_12,Volume-weighted average price of the security up to 12:00 PM,MATRIX,100%,1,1
+pv98_usa_pricesnap_13_cap_13,"The calculated market capitalization of the instrument at 13:00, based on price and shares outstanding",MATRIX,100%,0,0
+pv98_usa_pricesnap_13_close_13,The price at which the instrument last traded or was quoted in the market at 13:00,MATRIX,100%,0,0
+pv98_usa_pricesnap_13_high_13,The highest price at which the instrument traded up to 13:00 during the day,MATRIX,100%,0,0
+pv98_usa_pricesnap_13_low_13,The lowest price at which the instrument traded up to 13:00 during the day,MATRIX,100%,1,2
+pv98_usa_pricesnap_13_open_13,The price at which the instrument first traded or was quoted in the market at 13:00,MATRIX,100%,2,2
+pv98_usa_pricesnap_13_volume_13,The cumulative number of shares/contracts traded up to 13:00,MATRIX,100%,4,4
+pv98_usa_pricesnap_13_vwap_13,The volume weighted average price of the instrument calculated up to 13:00,MATRIX,100%,2,2
+pv98_usa_pricesnap_14_cap_14,Calculated market capitalization of the instrument at 14:00 (price × shares outstanding),MATRIX,100%,0,0
+pv98_usa_pricesnap_14_close_14,Price of the instrument recorded as the “close” at 14:00 snapshot,MATRIX,100%,1,1
+pv98_usa_pricesnap_14_high_14,Highest traded price of the instrument at 14:00 (local market/session time),MATRIX,100%,0,0
+pv98_usa_pricesnap_14_low_14,Lowest traded price of the instrument at 14:00 (local market/session time),MATRIX,100%,0,0
+pv98_usa_pricesnap_14_open_14,Open price at 14:00,MATRIX,100%,0,0
+pv98_usa_pricesnap_14_volume_14,Total traded volume of the instrument at 14:00,MATRIX,100%,5,7
+pv98_usa_pricesnap_14_vwap_14,Volume Weighted Average Price of the instrument at 14:00 snapshot,MATRIX,100%,0,0
+pv98_usa_pricesnap_15_cap_15,Market capitalization of the instrument calculated at 15:00 session time,MATRIX,100%,1,1
+pv98_usa_pricesnap_15_close_15,Closing price of the instrument recorded or snapshotted at 15:00 session time,MATRIX,100%,0,0
+pv98_usa_pricesnap_15_high_15,Highest price of the instrument observed at 15:00 session time,MATRIX,100%,2,2
+pv98_usa_pricesnap_15_low_15,Lowest price of the instrument observed at 15:00 session time,MATRIX,100%,1,1
+pv98_usa_pricesnap_15_open_15,Opening price of the instrument as of 15:00 session time,MATRIX,100%,0,0
+pv98_usa_pricesnap_15_volume_15,Trading volume of the instrument observed at 15:00 session time,MATRIX,100%,1,4
+pv98_usa_pricesnap_15_vwap_15,Volume Weighted Average Price of the instrument calculated at 15:00 session time,MATRIX,100%,4,5
+pv98_volume_10,Volume for the past 10 days,MATRIX,100%,2,2
+pv98_volume_10_backfill,10-day backfilled volume,MATRIX,100%,3,3
+pv98_volume_11,Total trading volume accumulated up to 11:00 AM,MATRIX,100%,2,2
+pv98_volume_11_backfill,"The total trading volume for the instrument at or up to 11:00, backfilled if necessary due to missing or delayed data",MATRIX,100%,1,1
+pv98_volume_12_backfill,"Total traded volume of the security as of 12:00, with missing values backfilled",MATRIX,100%,1,1
+pv98_volume_13_backfill,"Cumulative traded volume from session start up to 13:00, backfilled from tick or interval data as needed",MATRIX,100%,0,0
+pv98_volume_1430,Total trading volume (number of shares or contracts traded) at 14:30,MATRIX,100%,2,3
+pv98_volume_1430_backfill,"Cumulative trading volume as of 14:30, reconstructed or filled if required",MATRIX,100%,1,1
+pv98_volume_14_backfill,The total trading volume for the instrument accumulated by 14:00,MATRIX,100%,2,2
+pv98_volume_150000,Trading volume at 15:00,MATRIX,100%,1,1
+pv98_volume_1530,Daily traded volume of the equity instrument,MATRIX,100%,2,2
+pv98_volume_1530_backfill,Total traded volume of the instrument at 15:30,MATRIX,100%,1,1
+pv98_volume_1530to1530,Total trading volume accumulated during the session from 15:30 on one day to 15:30 on the next day,MATRIX,100%,3,3
+pv98_volume_15_backfill,"Total traded volume of the security at 15:00, the sum of shares traded up to or at that timestamp using backfilled data",MATRIX,100%,1,1
+pv98_volume_16,Total traded volume of the instrument at 16:00,MATRIX,100%,0,0
+pv98_volume_16_backfill,"Total traded volume at 16:00, backfilled for missing values",MATRIX,100%,1,1
+pv98_volume_945,Volume snapshot at 9:45 AM,MATRIX,100%,3,3
+pv98_vwap_10,Volume weighted average price for 10 days,MATRIX,100%,1,1
+pv98_vwap_10_backfill,Volume weighted average price for the past 10 days,MATRIX,100%,2,2
+pv98_vwap_11,Volume weighted average price calculated up to 11:00 AM,MATRIX,100%,0,0
+pv98_vwap_11_backfill,The volume weighted average price of the instrument calculated or backfilled at 11:00,MATRIX,100%,2,2
+pv98_vwap_12_backfill,"Volume-weighted average price of the security at 12:00, backfilled if the exact value is unavailable",MATRIX,100%,1,1
+pv98_vwap_13_backfill,"Volume weighted average price of trades from session start up to 13:00, backfilled from intraday price and volume data",MATRIX,100%,0,0
+pv98_vwap_1430,"Volume-weighted average trading price at 14:30, reflecting the average price weighted by traded volume at that time",MATRIX,100%,1,1
+pv98_vwap_1430_backfill,"Volume-weighted average trade price as of 14:30, possibly backfilled using intraday trades and volumes",MATRIX,100%,0,0
+pv98_vwap_14_backfill,The volume-weighted average price of the instrument calculated or backfilled at 14:00,MATRIX,100%,0,0
+pv98_vwap_150000,Volume weighted average price at 15:00,MATRIX,100%,0,0
+pv98_vwap_1530,Daily volume weighted average price of the equity instrument,MATRIX,100%,1,1
+pv98_vwap_1530_backfill,Volume Weighted Average Price of the instrument at 15:30,MATRIX,100%,1,1
+pv98_vwap_1530to1530,Volume-weighted average price computed over the session from 15:30 on one day to 15:30 on the next day,MATRIX,100%,0,0
+pv98_vwap_15_backfill,"Volume weighted average price of the security at 15:00, calculated using trades and volumes at that time or interval, backfilled if necessary",MATRIX,100%,0,0
+pv98_vwap_15m_delay_minus_1_returns_returns_fast_d1,Returns based on the USA VWAP with a 15-minute delay and a 180-period lookback,MATRIX,100%,2,5
+pv98_vwap_16,Volume weighted average price of the instrument at 16:00,MATRIX,100%,3,4
+pv98_vwap_16_backfill,"Volume-weighted average price at 16:00, backfilled for gaps in the raw data",MATRIX,100%,3,3
+pv98_vwap_945,Volume-weighted average price snapshot at 9:45 AM,MATRIX,100%,1,1
+vwap_price_15m_lagged_1_fast_d1,"Volume-weighted average price for the 15-minute interval, lagged by one period.",MATRIX,0%,1,1

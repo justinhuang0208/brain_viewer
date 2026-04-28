@@ -1,0 +1,869 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl14_actvalue_bvps_fp0,Book Value Per Share - recent last quarter,MATRIX,50%,172,552
+anl14_actvalue_bvps_fy0,Book Value Per Share - Recent Last Year,MATRIX,50%,144,453
+anl14_actvalue_capex_fp0,Capital Expenditures - Recent Last Quarter,MATRIX,50%,142,459
+anl14_actvalue_capex_fy0,Capital Expenditures - recent last year,MATRIX,50%,112,406
+anl14_actvalue_cfps_fp0,Cash Flow Per Share - recent last quarter,MATRIX,50%,88,183
+anl14_actvalue_cfps_fy0,Cash Flow Per Share - recent last year,MATRIX,50%,94,453
+anl14_actvalue_div_fp0,Dividend - recent last quarter,MATRIX,50%,66,96
+anl14_actvalue_div_fy0,Dividend - recent last year,MATRIX,50%,66,102
+anl14_actvalue_ebit_fp0,Earnings Before Interest & Taxes - recent last quarter,MATRIX,50%,252,1547
+anl14_actvalue_ebit_fy0,Earnings before interest & taxes - recent last year,MATRIX,50%,108,395
+anl14_actvalue_ebitda_fp0,"Earnings Before Interest, Taxes, Depreciation & Amortization - recent last quarter",MATRIX,50%,123,679
+anl14_actvalue_ebitda_fy0,"Earnings Before Interest, Taxes, Depreciation & Amortization - recent last year",MATRIX,50%,91,467
+anl14_actvalue_eps_fp0,Earnings per share - recent last quarter,MATRIX,50%,213,2003
+anl14_actvalue_eps_fy0,Earnings Per Share - Recent Last Year,MATRIX,50%,140,374
+anl14_actvalue_epsrep_fp0,Reported Earnings Per Share - recent last quarter,MATRIX,50%,178,1342
+anl14_actvalue_epsrep_fy0,Reported Earnings Per Share - recent last year,MATRIX,50%,122,602
+anl14_actvalue_nav_fy0,Net Asset Value - recent last year,MATRIX,50%,62,96
+anl14_actvalue_ndebt_fp0,Net Debt - recent last quarter,MATRIX,50%,39,69
+anl14_actvalue_ndebt_fy0,Net Debt - recent last year,MATRIX,50%,56,145
+anl14_actvalue_ntp_fp0,Net Profit - recent last quarter,MATRIX,50%,272,3043
+anl14_actvalue_ntp_fy0,Net Profit - recent last year,MATRIX,50%,94,364
+anl14_actvalue_ntprep_fp0,Reported Net Profit - recent last quarter,MATRIX,50%,176,1107
+anl14_actvalue_ntprep_fy0,Reported Net Profit - recent last year,MATRIX,50%,82,211
+anl14_actvalue_ptp_fp0,Pretax profit - recent last quarter,MATRIX,50%,27,40
+anl14_actvalue_ptp_fy0,Pretax Profit - Recent Last Year,MATRIX,50%,23,40
+anl14_actvalue_ptprep_fp0,Reported pretax profit - recent last quarter,MATRIX,50%,19,31
+anl14_actvalue_ptprep_fy0,Reported pretax profit - recent last year,MATRIX,50%,23,35
+anl14_actvalue_revenue_fp0,Revenue - recent last quarter,MATRIX,50%,134,953
+anl14_actvalue_revenue_fy0,Revenue - recent last year,MATRIX,50%,135,734
+anl14_actvalue_roa_fy0,Returns on assets - recent last year,MATRIX,50%,50,89
+anl14_actvalue_roe_fp0,Returns on equity - recent last quarter,MATRIX,50%,19,27
+anl14_actvalue_roe_fy0,Returns on Equity - recent last year,MATRIX,50%,58,137
+anl14_buy,Number of recommendations to buy -,MATRIX,50%,174,1344
+anl14_curperiodtype,Type of Period -,MATRIX,50%,158,735
+anl14_cursharesoutstanding,Current Share Outstanding -,MATRIX,50%,159,636
+anl14_estimatetype,Type of Estimation,VECTOR,50%,65,350
+anl14_estq_broker,Broker name -,VECTOR,50%,58,474
+anl14_estvalue,Estimation Value -,VECTOR,50%,52,495
+anl14_estvalue_fp1,Estimation Value - Upcoming Quarter,VECTOR,50%,65,336
+anl14_estvalue_fp2,Estimation value - upcoming 2 quarters,VECTOR,50%,52,322
+anl14_estvalue_fp3,Estimation Value - upcoming 3 quarters,VECTOR,50%,57,421
+anl14_estvalue_fp4,Estimation value - upcoming 4 quarters,VECTOR,50%,40,191
+anl14_estvalue_fp5,Estimation value - upcoming 5 quarters,VECTOR,50%,59,580
+anl14_high_bvps_fp1,The Highest Estimation of Book Value Per Share - Upcoming Quarter,MATRIX,50%,50,117
+anl14_high_bvps_fp2,The Highest Estimation of Book Value Per Share - Upcoming 2 Quarters,MATRIX,50%,34,144
+anl14_high_bvps_fp3,The Highest Estimation of Book Value Per Share - upcoming 3 quarters,MATRIX,50%,32,72
+anl14_high_bvps_fp4,The highest estimation of book value per share - upcoming 4 quarters,MATRIX,50%,19,25
+anl14_high_bvps_fp5,The Highest Estimation of Book Value Per Share - Upcoming 5 Quarters,MATRIX,50%,28,49
+anl14_high_bvps_fy1,The highest estimation of Book Value Per Share - upcoming year,MATRIX,50%,57,102
+anl14_high_bvps_fy2,The highest estimation of Book Value Per Share - upcoming 2 years,MATRIX,50%,73,166
+anl14_high_bvps_fy3,The highest estimation of Book Value Per Share - upcoming 3 years,MATRIX,50%,29,50
+anl14_high_capex_fp1,The highest estimation of capital expenditures - upcoming quarter,MATRIX,50%,52,128
+anl14_high_capex_fp2,The Highest estimation of Capital Expenditures - upcoming 2 quarters,MATRIX,50%,28,65
+anl14_high_capex_fp3,The Highest Estimation of Capital Expenditures - upcoming 3 quarters,MATRIX,50%,31,55
+anl14_high_capex_fp4,The Highest Estimation of Capital Expenditures - Upcoming 4 Quarters,MATRIX,50%,40,68
+anl14_high_capex_fp5,The Highest Estimation of Capital Expenditures - upcoming 5 quarters,MATRIX,50%,25,138
+anl14_high_capex_fy1,The highest estimation of Capital Expenditures - upcoming year,MATRIX,50%,53,148
+anl14_high_capex_fy2,The Highest Estimation of Capital Expenditures - upcoming 2 years,MATRIX,50%,123,1539
+anl14_high_capex_fy3,The highest estimation of capital expenditures - upcoming 3 years,MATRIX,50%,36,98
+anl14_high_capex_fy4,The highest estimation of capital expenditures - upcoming 4 years,MATRIX,50%,25,39
+anl14_high_capex_fy5,The Highest Estimation of Capital Expenditures - upcoming 5 years,MATRIX,50%,18,27
+anl14_high_cfps_fp1,The Highest Estimation of Cash Flow Per Share - upcoming quarter,MATRIX,50%,38,77
+anl14_high_cfps_fp2,The Highest Estimation of Cash Flow Per Share - upcoming 2 quarters,MATRIX,50%,30,47
+anl14_high_cfps_fp3,The highest estimation of cash flow per share - upcoming 3 quarters,MATRIX,50%,20,32
+anl14_high_cfps_fp4,The Highest Estimation of Cash Flow Per Share - upcoming 4 quarters,MATRIX,50%,15,25
+anl14_high_cfps_fp5,The highest estimation of cash flow per share - upcoming 5 quarters,MATRIX,50%,23,49
+anl14_high_cfps_fy1,The highest estimation of cash flow per share - upcoming year,MATRIX,50%,36,79
+anl14_high_cfps_fy2,The Highest estimation of Cash Flow Per Share - upcoming 2 years,MATRIX,50%,65,203
+anl14_high_cfps_fy3,The Highest Estimation of Cash Flow Per Share - Upcoming 3 Years,MATRIX,50%,15,29
+anl14_high_div_fp1,The highest estimation of dividend - upcoming quarter,MATRIX,50%,22,42
+anl14_high_div_fp2,The highest estimation of dividend - upcoming 2 quarters,MATRIX,50%,32,45
+anl14_high_div_fp3,The highest estimation of dividend - upcoming 3 quarters,MATRIX,50%,11,16
+anl14_high_div_fp4,The highest estimation of dividend - upcoming 4 quarters,MATRIX,50%,13,13
+anl14_high_div_fp5,The Highest estimation of Dividend - upcoming 5 quarters,MATRIX,50%,20,29
+anl14_high_div_fy1,The Highest Estimation of Dividend - Upcoming Year,MATRIX,50%,44,73
+anl14_high_div_fy2,The Highest Estimation of Dividend - Upcoming 2 Years,MATRIX,50%,85,220
+anl14_high_div_fy3,The Highest Estimation of Dividend - Upcoming 3 Years,MATRIX,50%,33,52
+anl14_high_div_fy4,The Highest Estimation of Dividend - upcoming 4 years,MATRIX,50%,11,11
+anl14_high_ebit_fp1,The highest estimation of earnings before interest & taxes - upcoming quarter,MATRIX,50%,151,1056
+anl14_high_ebit_fp2,The Highest Estimation of Earnings Before Interest & Taxes - upcoming 2 quarters,MATRIX,50%,183,2089
+anl14_high_ebit_fp3,The Highest Estimation of Earnings Before Interest & Taxes - upcoming 3 quarters,MATRIX,50%,102,610
+anl14_high_ebit_fp4,The highest estimation of earnings before interest & taxes - upcoming 4 quarters,MATRIX,50%,75,280
+anl14_high_ebit_fp5,The Highest Estimation of Earnings Before Interest & Taxes - upcoming 5 quarters,MATRIX,50%,66,210
+anl14_high_ebit_fy1,The Highest Estimation of Earnings Before Interest & Taxes - Upcoming Year,MATRIX,50%,81,508
+anl14_high_ebit_fy2,The highest estimation of Earnings Before Interest & Taxes - upcoming 2 years,MATRIX,50%,102,809
+anl14_high_ebit_fy3,The Highest Estimation of Earnings Before Interest & Taxes - upcoming 3 years,MATRIX,50%,89,417
+anl14_high_ebit_fy4,The Highest Estimation of Earnings Before Interest & Taxes - upcoming 4 years,MATRIX,50%,20,42
+anl14_high_ebit_fy5,The Highest Estimation of Earnings Before Interest & Taxes - upcoming 5 years,MATRIX,50%,15,42
+anl14_high_ebitda_fp1,"The highest estimation of earnings before interest, taxes, depreciation & amortization - upcoming quarter",MATRIX,50%,124,804
+anl14_high_ebitda_fp2,"The Highest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 2 quarters",MATRIX,50%,106,928
+anl14_high_ebitda_fp3,"The highest estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 3 quarters",MATRIX,50%,81,810
+anl14_high_ebitda_fp4,"The highest estimation of earnings before interest, taxes, depreciation & amortization - upcoming 4 quarters",MATRIX,50%,76,395
+anl14_high_ebitda_fp5,"The Highest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 quarters",MATRIX,50%,50,133
+anl14_high_ebitda_fy1,"The Highest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming year",MATRIX,50%,65,169
+anl14_high_ebitda_fy2,"The Highest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 2 years",MATRIX,50%,77,600
+anl14_high_ebitda_fy3,"The Highest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - Upcoming 3 Years",MATRIX,50%,79,433
+anl14_high_ebitda_fy4,"The highest estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 4 years",MATRIX,50%,14,18
+anl14_high_ebitda_fy5,"The Highest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 years",MATRIX,50%,19,34
+anl14_high_eps_fp1,The highest estimation of Earnings Per Share - upcoming quarter,MATRIX,50%,205,1534
+anl14_high_eps_fp2,The highest estimation of Earnings Per Share - upcoming 2 quarters,MATRIX,50%,195,1862
+anl14_high_eps_fp3,The Highest estimation of Earnings Per Share - upcoming 3 quarters,MATRIX,50%,108,510
+anl14_high_eps_fp4,The Highest Estimation of Earnings Per Share - upcoming 4 quarters,MATRIX,50%,115,600
+anl14_high_eps_fp5,The highest estimation of Earnings Per Share - upcoming 5 quarters,MATRIX,50%,97,582
+anl14_high_eps_fy1,The Highest Estimation of Earnings Per Share - Upcoming Year,MATRIX,50%,82,498
+anl14_high_eps_fy2,The Highest Estimation of Earnings Per Share - upcoming 2 years,MATRIX,50%,117,741
+anl14_high_eps_fy3,The highest estimation of Earnings Per Share - upcoming 3 years,MATRIX,50%,88,370
+anl14_high_eps_fy4,The Highest Estimation of Earnings Per Share - upcoming 4 years,MATRIX,50%,33,68
+anl14_high_eps_fy5,The highest estimation of earnings per share - upcoming 5 years,MATRIX,50%,16,24
+anl14_high_epsrep_fp1,The highest estimation of reported earnings per share - upcoming quarter,MATRIX,50%,199,1343
+anl14_high_epsrep_fp2,The Highest Estimation of Reported Earnings Per Share - upcoming 2 quarters,MATRIX,50%,99,499
+anl14_high_epsrep_fp3,The Highest Estimation of Reported Earnings Per Share - upcoming 3 quarters,MATRIX,50%,88,343
+anl14_high_epsrep_fp4,The highest estimation of reported earnings per share - upcoming 4 quarters,MATRIX,50%,76,336
+anl14_high_epsrep_fp5,The highest estimation of reported earnings per share - upcoming 5 quarters,MATRIX,50%,68,371
+anl14_high_epsrep_fy1,The Highest Estimation of Reported Earnings Per Share - upcoming year,MATRIX,50%,111,687
+anl14_high_epsrep_fy2,The highest estimation of reported earnings per share - upcoming 2 years,MATRIX,50%,121,1266
+anl14_high_epsrep_fy3,The Highest Estimation of Reported Earnings Per Share - upcoming 3 years,MATRIX,50%,70,340
+anl14_high_epsrep_fy4,The Highest estimation of Reported Earnings Per Share - upcoming 4 years,MATRIX,50%,27,53
+anl14_high_epsrep_fy5,The highest estimation of reported earnings per share - upcoming 5 years,MATRIX,50%,13,17
+anl14_high_nav_fy1,The Highest Estimation of Net Asset Value - upcoming year,MATRIX,50%,27,38
+anl14_high_nav_fy2,The Highest Estimation of Net Asset Value - Upcoming 2 Years,MATRIX,50%,19,34
+anl14_high_ndebt_fp1,The Highest Estimation of Net Debt - upcoming quarter,MATRIX,50%,52,97
+anl14_high_ndebt_fp2,The Highest Estimation of Net Debt - Upcoming 2 Quarters,MATRIX,50%,36,69
+anl14_high_ndebt_fp3,The highest estimation of Net Debt - upcoming 3 quarters,MATRIX,50%,9,14
+anl14_high_ndebt_fp4,The Highest Estimation of Net Debt - upcoming 4 quarters,MATRIX,50%,20,30
+anl14_high_ndebt_fp5,The highest estimation of net debt - upcoming 5 quarters,MATRIX,50%,21,38
+anl14_high_ndebt_fy1,The Highest Estimation of Net Debt - upcoming year,MATRIX,50%,43,95
+anl14_high_ndebt_fy2,The highest estimation of Net Debt - upcoming 2 years,MATRIX,50%,41,91
+anl14_high_ndebt_fy3,The Highest Estimation of Net Debt - upcoming 3 years,MATRIX,50%,51,87
+anl14_high_ntp_fp1,The Highest Estimation of Net Profit - Upcoming Quarter,MATRIX,50%,151,1050
+anl14_high_ntp_fp2,The highest estimation of Net Profit - upcoming 2 quarters,MATRIX,50%,142,1114
+anl14_high_ntp_fp3,The Highest Estimation of Net Profit - upcoming 3 quarters,MATRIX,50%,84,420
+anl14_high_ntp_fp4,The Highest Estimation of Net Profit - upcoming 4 quarters,MATRIX,50%,77,308
+anl14_high_ntp_fp5,The highest estimation of Net Profit - upcoming 5 quarters,MATRIX,50%,86,455
+anl14_high_ntp_fy1,The highest estimation of Net Profit - upcoming year,MATRIX,50%,99,559
+anl14_high_ntp_fy2,The Highest Estimation of Net Profit - upcoming 2 years,MATRIX,50%,119,789
+anl14_high_ntp_fy3,The highest estimation of net profit - upcoming 3 years,MATRIX,50%,87,500
+anl14_high_ntp_fy4,The highest estimation of net profit - upcoming 4 years,MATRIX,50%,11,16
+anl14_high_ntp_fy5,The Highest Estimation of Net Profit - Upcoming 5 Years,MATRIX,50%,8,21
+anl14_high_ntprep_fp1,The Highest Estimation of Reported Net Profit - upcoming quarter,MATRIX,50%,145,1234
+anl14_high_ntprep_fp2,The Highest Estimation of Reported Net Profit - Upcoming 2 Quarters,MATRIX,50%,113,587
+anl14_high_ntprep_fp3,The highest estimation of reported net profit - upcoming 3 quarters,MATRIX,50%,77,384
+anl14_high_ntprep_fp4,The Highest Estimation of Reported Net Profit - upcoming 4 quarters,MATRIX,50%,56,198
+anl14_high_ntprep_fp5,The highest estimation of Reported Net Profit - upcoming 5 quarters,MATRIX,50%,70,197
+anl14_high_ntprep_fy1,The Highest Estimation of Reported Net Profit - upcoming year,MATRIX,50%,74,375
+anl14_high_ntprep_fy2,The highest estimation of reported net profit - upcoming 2 years,MATRIX,50%,79,514
+anl14_high_ntprep_fy3,The Highest Estimation of Reported Net Profit - Upcoming 3 Years,MATRIX,50%,65,392
+anl14_high_ntprep_fy4,The highest estimation of Reported Net Profit - upcoming 4 years,MATRIX,50%,18,35
+anl14_high_ntprep_fy5,The highest estimation of Reported Net Profit - upcoming 5 years,MATRIX,50%,9,21
+anl14_high_opp_fp1,The Highest Estimation of Operating Profit - upcoming quarter,MATRIX,50%,22,31
+anl14_high_opp_fy1,The Highest Estimation of Operating Profit - Upcoming Year,MATRIX,50%,7,8
+anl14_high_opp_fy2,The highest estimation of operating profit - upcoming 2 years,MATRIX,50%,11,17
+anl14_high_revenue_fp1,The highest estimation of Revenue - upcoming quarter,MATRIX,50%,148,1490
+anl14_high_revenue_fp2,The highest estimation of revenue - upcoming 2 quarters,MATRIX,50%,163,2101
+anl14_high_revenue_fp3,The highest estimation of Revenue - upcoming 3 quarters,MATRIX,50%,100,772
+anl14_high_revenue_fp4,The Highest Estimation of Revenue - upcoming 4 quarters,MATRIX,50%,91,684
+anl14_high_revenue_fp5,The highest estimation of Revenue - upcoming 5 quarters,MATRIX,50%,112,896
+anl14_high_revenue_fy1,The Highest Estimation of Revenue - upcoming year,MATRIX,50%,96,517
+anl14_high_revenue_fy2,The highest estimation of revenue - upcoming 2 years,MATRIX,50%,107,575
+anl14_high_revenue_fy3,The highest estimation of revenue - upcoming 3 years,MATRIX,50%,93,663
+anl14_high_revenue_fy4,The highest estimation of Revenue - upcoming 4 years,MATRIX,50%,24,40
+anl14_high_revenue_fy5,The highest estimation of revenue - upcoming 5 years,MATRIX,50%,15,43
+anl14_high_roa_fp1,The highest estimation of returns on assets - upcoming quarter,MATRIX,50%,12,13
+anl14_high_roa_fp2,The highest estimation of returns on assets - upcoming 2 quarters,MATRIX,50%,8,10
+anl14_high_roa_fp3,The Highest Estimation of Returns on Assets - upcoming 3 quarters,MATRIX,50%,18,39
+anl14_high_roa_fp4,The Highest Estimation of Returns on Assets - upcoming 4 quarters,MATRIX,50%,10,13
+anl14_high_roa_fp5,The Highest Estimation of Returns on Assets - Upcoming 5 Quarters,MATRIX,50%,6,6
+anl14_high_roa_fy1,The Highest Estimation of Returns on Assets - upcoming year,MATRIX,50%,63,188
+anl14_high_roa_fy2,The Highest Estimation of Returns on Assets - upcoming 2 years,MATRIX,50%,40,78
+anl14_high_roa_fy3,The Highest Estimation of Returns on Assets - Upcoming 3 Years,MATRIX,50%,11,14
+anl14_high_roe_fp1,The highest estimation of Returns on Equity - upcoming quarter,MATRIX,50%,33,76
+anl14_high_roe_fp2,The highest estimation of returns on equity - upcoming 2 quarters,MATRIX,50%,16,32
+anl14_high_roe_fp3,The highest estimation of returns on equity - upcoming 3 quarters,MATRIX,50%,29,54
+anl14_high_roe_fp4,The Highest Estimation of Returns on Equity - upcoming 4 quarters,MATRIX,50%,15,20
+anl14_high_roe_fp5,The Highest Estimation of Returns on Equity - Upcoming 5 Quarters,MATRIX,50%,13,18
+anl14_high_roe_fy1,The Highest Estimation of Returns on Equity - upcoming year,MATRIX,50%,97,450
+anl14_high_roe_fy2,The highest estimation of returns on equity - upcoming 2 years,MATRIX,50%,96,609
+anl14_high_roe_fy3,The Highest Estimation of Returns on Equity - upcoming 3 years,MATRIX,50%,43,85
+anl14_hold,Num of recommendations to hold -,MATRIX,50%,99,507
+anl14_low_bvps_fp1,The lowest estimation of book value per share - upcoming quarter,MATRIX,50%,33,97
+anl14_low_bvps_fp2,The lowest estimation of book value per share - upcoming 2 quarters,MATRIX,50%,13,19
+anl14_low_bvps_fp3,The Lowest Estimation of Book Value Per Share - upcoming 3 quarters,MATRIX,50%,22,29
+anl14_low_bvps_fp4,The lowest estimation of book value per share - upcoming 4 quarters,MATRIX,50%,16,22
+anl14_low_bvps_fp5,The lowest estimation of Book Value Per Share - upcoming 5 quarters,MATRIX,50%,18,18
+anl14_low_bvps_fy1,The Lowest Estimation of Book Value Per Share - Upcoming Year,MATRIX,50%,38,65
+anl14_low_bvps_fy2,The Lowest estimation of Book Value Per Share - upcoming 2 years,MATRIX,50%,56,136
+anl14_low_bvps_fy3,The Lowest Estimation of Book Value Per Share - upcoming 3 years,MATRIX,50%,22,35
+anl14_low_capex_fp1,The Lowest Estimation of Capital Expenditures - upcoming quarter,MATRIX,50%,34,79
+anl14_low_capex_fp2,The Lowest Estimation of Capital Expenditures - upcoming 2 quarters,MATRIX,50%,31,50
+anl14_low_capex_fp3,The Lowest Estimation of Capital Expenditures - upcoming 3 quarters,MATRIX,50%,35,92
+anl14_low_capex_fp4,The lowest estimation of capital expenditures - upcoming 4 quarters,MATRIX,50%,21,63
+anl14_low_capex_fp5,The lowest estimation of Capital Expenditures - upcoming 5 quarters,MATRIX,50%,27,53
+anl14_low_capex_fy1,The lowest estimation of capital expenditures - upcoming year,MATRIX,50%,66,193
+anl14_low_capex_fy2,The Lowest Estimation of Capital Expenditures - Upcoming 2 Years,MATRIX,50%,99,963
+anl14_low_capex_fy3,The Lowest estimation of Capital Expenditures - upcoming 3 years,MATRIX,50%,52,102
+anl14_low_capex_fy4,The Lowest Estimation of Capital Expenditures - upcoming 4 years,MATRIX,50%,18,28
+anl14_low_capex_fy5,The Lowest Estimation of Capital Expenditures - upcoming 5 years,MATRIX,50%,12,21
+anl14_low_cfps_fp1,The lowest estimation of cash flow per share - upcoming quarter,MATRIX,50%,26,42
+anl14_low_cfps_fp2,The lowest estimation of Cash Flow Per Share - upcoming 2 quarters,MATRIX,50%,15,32
+anl14_low_cfps_fp3,The lowest estimation of Cash Flow Per Share - upcoming 3 quarters,MATRIX,50%,6,8
+anl14_low_cfps_fp4,The Lowest Estimation of Cash Flow Per Share - upcoming 4 quarters,MATRIX,50%,8,11
+anl14_low_cfps_fp5,The lowest estimation of cash flow per share - upcoming 5 quarters,MATRIX,50%,21,22
+anl14_low_cfps_fy1,The lowest estimation of cash flow per share - upcoming year,MATRIX,50%,33,48
+anl14_low_cfps_fy2,The Lowest Estimation of Cash Flow Per Share - upcoming 2 years,MATRIX,50%,29,62
+anl14_low_cfps_fy3,The Lowest Estimation of Cash Flow Per Share - Upcoming 3 Years,MATRIX,50%,11,12
+anl14_low_div_fp1,The Lowest Estimation of Dividend - Upcoming Quarter,MATRIX,50%,9,10
+anl14_low_div_fp2,The Lowest Estimation of Dividend - Upcoming 2 Quarters,MATRIX,50%,10,11
+anl14_low_div_fp3,The lowest estimation of dividend - upcoming 3 quarters,MATRIX,50%,5,6
+anl14_low_div_fp4,The Lowest Estimation of Dividend - Upcoming 4 Quarters,MATRIX,50%,5,11
+anl14_low_div_fp5,The lowest estimation of dividend - upcoming 5 quarters,MATRIX,50%,7,12
+anl14_low_div_fy1,The lowest estimation of dividend - upcoming year,MATRIX,50%,25,46
+anl14_low_div_fy2,The Lowest Estimation of Dividend - Upcoming 2 Years,MATRIX,50%,39,186
+anl14_low_div_fy3,The lowest estimation of Dividend - upcoming 3 years,MATRIX,50%,24,31
+anl14_low_div_fy4,The lowest estimation of Dividend - upcoming 4 years,MATRIX,50%,11,17
+anl14_low_ebit_fp1,The lowest estimation of earnings before interest & taxes - upcoming quarter,MATRIX,50%,123,748
+anl14_low_ebit_fp2,The Lowest estimation of Earnings Before Interest & Taxes - upcoming 2 quarters,MATRIX,50%,131,735
+anl14_low_ebit_fp3,The Lowest Estimation of Earnings Before Interest & Taxes - Upcoming 3 Quarters,MATRIX,50%,64,325
+anl14_low_ebit_fp4,The Lowest Estimation of Earnings Before Interest & Taxes - Upcoming 4 Quarters,MATRIX,50%,74,254
+anl14_low_ebit_fp5,The Lowest estimation of Earnings Before Interest & Taxes - upcoming 5 quarters,MATRIX,50%,56,260
+anl14_low_ebit_fy1,The Lowest Estimation of Earnings Before Interest & Taxes - upcoming year,MATRIX,50%,75,569
+anl14_low_ebit_fy2,The lowest estimation of earnings before interest & taxes - upcoming 2 years,MATRIX,50%,80,449
+anl14_low_ebit_fy3,The lowest estimation of Earnings Before Interest & Taxes - upcoming 3 years,MATRIX,50%,61,283
+anl14_low_ebit_fy4,The lowest estimation of earnings before interest & taxes - upcoming 4 years,MATRIX,50%,15,19
+anl14_low_ebit_fy5,The Lowest Estimation of Earnings Before Interest & Taxes - Upcoming 5 Years,MATRIX,50%,11,28
+anl14_low_ebitda_fp1,"The lowest estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming quarter",MATRIX,50%,120,999
+anl14_low_ebitda_fp2,"The Lowest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 2 quarters",MATRIX,50%,127,1234
+anl14_low_ebitda_fp3,"The Lowest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 3 quarters",MATRIX,50%,90,689
+anl14_low_ebitda_fp4,"The lowest estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 4 quarters",MATRIX,50%,75,329
+anl14_low_ebitda_fp5,"The lowest estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 quarters",MATRIX,50%,32,100
+anl14_low_ebitda_fy1,"The lowest estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming year",MATRIX,50%,42,83
+anl14_low_ebitda_fy2,"The Lowest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - Upcoming 2 Years",MATRIX,50%,68,391
+anl14_low_ebitda_fy3,"The Lowest Estimation of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 3 years",MATRIX,50%,65,570
+anl14_low_ebitda_fy4,"The lowest estimation of earnings before interest, taxes, depreciation & amortization - upcoming 4 years",MATRIX,50%,18,31
+anl14_low_ebitda_fy5,"The lowest estimation of earnings before interest, taxes, depreciation & amortization - upcoming 5 years",MATRIX,50%,8,11
+anl14_low_eps_fp1,The lowest estimation of earnings per share - upcoming quarter,MATRIX,50%,146,1799
+anl14_low_eps_fp2,The Lowest Estimation of Earnings Per Share - Upcoming 2 Quarters,MATRIX,50%,117,713
+anl14_low_eps_fp3,The Lowest Estimation of Earnings Per Share - upcoming 3 quarters,MATRIX,50%,104,501
+anl14_low_eps_fp4,The lowest estimation of earnings per share - upcoming 4 quarters,MATRIX,50%,89,665
+anl14_low_eps_fp5,The lowest estimation of Earnings Per Share - upcoming 5 quarters,MATRIX,50%,94,722
+anl14_low_eps_fy1,The lowest estimation of earnings per share - upcoming year,MATRIX,50%,93,626
+anl14_low_eps_fy2,The lowest estimation of earnings per share - upcoming 2 years,MATRIX,50%,100,891
+anl14_low_eps_fy3,The Lowest Estimation of Earnings Per Share - upcoming 3 years,MATRIX,50%,83,573
+anl14_low_eps_fy4,The lowest estimation of earnings per share - upcoming 4 years,MATRIX,50%,29,41
+anl14_low_eps_fy5,The Lowest Estimation of Earnings Per Share - upcoming 5 years,MATRIX,50%,12,35
+anl14_low_epsrep_fp1,The Lowest Estimation of Reported Earnings Per Share - Upcoming Quarter,MATRIX,50%,152,1659
+anl14_low_epsrep_fp2,The Lowest Estimation of Reported Earnings Per Share - upcoming 2 quarters,MATRIX,50%,79,383
+anl14_low_epsrep_fp3,The lowest estimation of reported earnings per share - upcoming 3 quarters,MATRIX,50%,86,516
+anl14_low_epsrep_fp4,The Lowest Estimation of Reported Earnings Per Share - upcoming 4 quarters,MATRIX,50%,64,303
+anl14_low_epsrep_fp5,The Lowest Estimation of Reported Earnings Per Share - upcoming 5 quarters,MATRIX,50%,85,785
+anl14_low_epsrep_fy1,The Lowest Estimation of Reported Earnings Per Share - upcoming year,MATRIX,50%,123,1350
+anl14_low_epsrep_fy2,The Lowest Estimation of Reported Earnings Per Share - upcoming 2 years,MATRIX,50%,95,640
+anl14_low_epsrep_fy3,The lowest estimation of Reported Earnings Per Share - upcoming 3 years,MATRIX,50%,48,157
+anl14_low_epsrep_fy4,The Lowest Estimation of Reported Earnings Per Share - upcoming 4 years,MATRIX,50%,28,58
+anl14_low_epsrep_fy5,The Lowest Estimation of Reported Earnings Per Share - upcoming 5 years,MATRIX,50%,26,30
+anl14_low_nav_fy1,The lowest estimation of net asset value - upcoming year,MATRIX,50%,26,39
+anl14_low_nav_fy2,The lowest estimation of net asset value - upcoming 2 years,MATRIX,50%,16,24
+anl14_low_ndebt_fp1,The Lowest Estimation of Net Debt - upcoming quarter,MATRIX,50%,79,165
+anl14_low_ndebt_fp2,The Lowest Estimation of Net Debt - Upcoming 2 Quarters,MATRIX,50%,20,53
+anl14_low_ndebt_fp3,The Lowest Estimation of Net Debt - Upcoming 3 Quarters,MATRIX,50%,19,38
+anl14_low_ndebt_fp4,The lowest estimation of net debt - upcoming 4 quarters,MATRIX,50%,25,40
+anl14_low_ndebt_fp5,The lowest estimation of net debt - upcoming 5 quarters,MATRIX,50%,20,27
+anl14_low_ndebt_fy1,The lowest estimation of net debt - upcoming year,MATRIX,50%,56,100
+anl14_low_ndebt_fy2,The Lowest Estimation of Net Debt - upcoming 2 years,MATRIX,50%,41,86
+anl14_low_ndebt_fy3,The lowest estimation of net debt - upcoming 3 years,MATRIX,50%,33,70
+anl14_low_ntp_fp1,The lowest estimation of net profit - upcoming quarter,MATRIX,50%,128,1116
+anl14_low_ntp_fp2,The lowest estimation of net profit - upcoming 2 quarters,MATRIX,50%,108,928
+anl14_low_ntp_fp3,The lowest estimation of net profit - upcoming 3 quarters,MATRIX,50%,68,303
+anl14_low_ntp_fp4,The lowest estimation of net profit - upcoming 4 quarters,MATRIX,50%,57,159
+anl14_low_ntp_fp5,The lowest estimation of Net Profit - upcoming 5 quarters,MATRIX,50%,76,419
+anl14_low_ntp_fy1,The Lowest estimation of Net Profit - upcoming year,MATRIX,50%,92,449
+anl14_low_ntp_fy2,The Lowest Estimation of Net Profit - Upcoming 2 Years,MATRIX,50%,68,388
+anl14_low_ntp_fy3,The Lowest Estimation of Net Profit - Upcoming 3 Years,MATRIX,50%,45,294
+anl14_low_ntp_fy4,The lowest estimation of net profit - upcoming 4 years,MATRIX,50%,16,38
+anl14_low_ntp_fy5,The Lowest Estimation of Net Profit - upcoming 5 years,MATRIX,50%,20,34
+anl14_low_ntprep_fp1,The lowest estimation of reported net profit - upcoming quarter,MATRIX,50%,134,1169
+anl14_low_ntprep_fp2,The Lowest Estimation of Reported Net Profit - upcoming 2 quarters,MATRIX,50%,108,533
+anl14_low_ntprep_fp3,The lowest estimation of reported net profit - upcoming 3 quarters,MATRIX,50%,67,574
+anl14_low_ntprep_fp4,The lowest estimation of reported net profit - upcoming 4 quarters,MATRIX,50%,52,131
+anl14_low_ntprep_fp5,The Lowest Estimation of Reported Net Profit - upcoming 5 quarters,MATRIX,50%,78,301
+anl14_low_ntprep_fy1,The Lowest Estimation of Reported Net Profit - Upcoming Year,MATRIX,50%,85,571
+anl14_low_ntprep_fy2,The lowest estimation of reported net profit - upcoming 2 years,MATRIX,50%,104,906
+anl14_low_ntprep_fy3,The lowest estimation of reported net profit - upcoming 3 years,MATRIX,50%,34,226
+anl14_low_ntprep_fy4,The lowest estimation of Reported Net Profit - upcoming 4 years,MATRIX,50%,13,18
+anl14_low_ntprep_fy5,The lowest estimation of reported net profit - upcoming 5 years,MATRIX,50%,6,12
+anl14_low_opp_fp1,The Lowest estimation of Operating Profit - upcoming quarter,MATRIX,50%,16,23
+anl14_low_opp_fy1,The lowest estimation of operating profit - upcoming year,MATRIX,50%,10,15
+anl14_low_opp_fy2,The Lowest Estimation of Operating Profit - upcoming 2 years,MATRIX,50%,9,14
+anl14_low_revenue_fp1,The lowest estimation of revenue - upcoming quarter,MATRIX,50%,120,777
+anl14_low_revenue_fp2,The lowest estimation of Revenue - upcoming 2 quarters,MATRIX,50%,161,2308
+anl14_low_revenue_fp3,The lowest estimation of revenue - upcoming 3 quarters,MATRIX,50%,103,500
+anl14_low_revenue_fp4,The Lowest Estimation of Revenue - upcoming 4 quarters,MATRIX,50%,96,470
+anl14_low_revenue_fp5,The lowest estimation of revenue - upcoming 5 quarters,MATRIX,50%,101,727
+anl14_low_revenue_fy1,The Lowest Estimation of Revenue - upcoming year,MATRIX,50%,87,693
+anl14_low_revenue_fy2,The Lowest Estimation of Revenue - upcoming 2 years,MATRIX,50%,113,839
+anl14_low_revenue_fy3,The Lowest Estimation of Revenue - upcoming 3 years,MATRIX,50%,85,592
+anl14_low_revenue_fy4,The Lowest Estimation of Revenue - upcoming 4 years,MATRIX,50%,34,67
+anl14_low_revenue_fy5,The Lowest Estimation of Revenue - upcoming 5 years,MATRIX,50%,26,33
+anl14_low_roa_fp1,The Lowest Estimation of Returns on Assets - Upcoming Quarter,MATRIX,50%,12,35
+anl14_low_roa_fp2,The Lowest Estimation of Returns on Assets - upcoming 2 quarters,MATRIX,50%,21,29
+anl14_low_roa_fp3,The lowest estimation of Returns on Assets - upcoming 3 quarters,MATRIX,50%,12,16
+anl14_low_roa_fp4,The lowest estimation of Returns on Assets - upcoming 4 quarters,MATRIX,50%,5,6
+anl14_low_roa_fp5,The lowest estimation of Returns on Assets - upcoming 5 quarters,MATRIX,50%,6,11
+anl14_low_roa_fy1,The Lowest estimation of Returns on Assets - upcoming year,MATRIX,50%,35,89
+anl14_low_roa_fy2,The lowest estimation of Returns on Assets - upcoming 2 years,MATRIX,50%,52,94
+anl14_low_roa_fy3,The lowest estimation of returns on assets - upcoming 3 years,MATRIX,50%,29,69
+anl14_low_roe_fp1,The Lowest Estimation of Returns on Equity - upcoming quarter,MATRIX,50%,16,45
+anl14_low_roe_fp2,The lowest estimation of returns on equity - upcoming 2 quarters,MATRIX,50%,13,22
+anl14_low_roe_fp3,The Lowest Estimation of Returns on Equity - Upcoming 3 Quarters,MATRIX,50%,18,26
+anl14_low_roe_fp4,The lowest estimation of returns on equity - upcoming 4 quarters,MATRIX,50%,16,40
+anl14_low_roe_fp5,The lowest estimation of returns on equity - upcoming 5 quarters,MATRIX,50%,13,22
+anl14_low_roe_fy1,The Lowest Estimation of Returns on Equity - Upcoming Year,MATRIX,50%,72,207
+anl14_low_roe_fy2,The Lowest Estimation of Returns on Equity - Upcoming 2 Years,MATRIX,50%,82,402
+anl14_low_roe_fy3,The Lowest Estimation of Returns on Equity - upcoming 3 years,MATRIX,50%,39,128
+anl14_ltg_high,The highest of price target,MATRIX,50%,65,165
+anl14_ltg_low,The Lowest of Price Target,MATRIX,50%,39,196
+anl14_ltg_mean,Mean of Price Target,MATRIX,50%,48,114
+anl14_ltg_median,Median of Price Target -,MATRIX,50%,50,156
+anl14_ltg_numofests,Num of Price Target -,MATRIX,50%,36,231
+anl14_ltg_stddev,Standard Deviation of Price Target -,MATRIX,50%,28,61
+anl14_mean_bvps_fp1,Mean of estimations of book value per share - upcoming quarter,MATRIX,50%,31,334
+anl14_mean_bvps_fp2,Mean of Estimations of Book Value Per Share - upcoming 2 quarters,MATRIX,50%,18,38
+anl14_mean_bvps_fp3,Mean of estimations of book value per share - upcoming 3 quarters,MATRIX,50%,12,21
+anl14_mean_bvps_fp4,Mean of estimations of book value per share - upcoming 4 quarters,MATRIX,50%,10,16
+anl14_mean_bvps_fp5,Mean of estimations of book value per share - upcoming 5 quarters,MATRIX,50%,11,20
+anl14_mean_bvps_fy1,Mean of Estimations of Book Value Per Share - upcoming year,MATRIX,50%,68,215
+anl14_mean_bvps_fy2,Mean of Estimations of Book Value Per Share - upcoming 2 years,MATRIX,50%,58,146
+anl14_mean_bvps_fy3,Mean of Estimations of Book Value Per Share - Upcoming 3 Years,MATRIX,50%,31,62
+anl14_mean_capex_fp1,Mean of Estimations of Capital Expenditures - upcoming quarter,MATRIX,50%,27,58
+anl14_mean_capex_fp2,Mean of Estimations of Capital Expenditures - Upcoming 2 Quarters,MATRIX,50%,31,70
+anl14_mean_capex_fp3,Mean of estimations of capital expenditures - upcoming 3 quarters,MATRIX,50%,24,47
+anl14_mean_capex_fp4,Mean of estimations of Capital Expenditures - upcoming 4 quarters,MATRIX,50%,21,44
+anl14_mean_capex_fp5,Mean of estimations of capital expenditures - upcoming 5 quarters,MATRIX,50%,23,39
+anl14_mean_capex_fy1,Mean of Estimations of Capital Expenditures - upcoming year,MATRIX,50%,75,223
+anl14_mean_capex_fy2,Mean of Estimations of Capital Expenditures - upcoming 2 years,MATRIX,50%,136,2219
+anl14_mean_capex_fy3,Mean of Estimations of Capital Expenditures - upcoming 3 years,MATRIX,50%,35,89
+anl14_mean_capex_fy4,Mean of Estimations of Capital Expenditures - Upcoming 4 Years,MATRIX,50%,12,18
+anl14_mean_capex_fy5,Mean of Estimations of Capital Expenditures - upcoming 5 years,MATRIX,50%,7,7
+anl14_mean_cfps_fp1,Mean of Estimations of Cash Flow Per Share - Upcoming Quarter,MATRIX,50%,23,121
+anl14_mean_cfps_fp2,Mean of estimations of cash flow per share - upcoming 2 quarters,MATRIX,50%,27,42
+anl14_mean_cfps_fp3,Mean of Estimations of Cash Flow Per Share - Upcoming 3 Quarters,MATRIX,50%,12,34
+anl14_mean_cfps_fp4,Mean of Estimations of Cash Flow Per Share - upcoming 4 quarters,MATRIX,50%,15,37
+anl14_mean_cfps_fp5,Mean of Estimations of Cash Flow Per Share - upcoming 5 quarters,MATRIX,50%,21,50
+anl14_mean_cfps_fy1,Mean of Estimations of Cash Flow Per Share - upcoming year,MATRIX,50%,32,71
+anl14_mean_cfps_fy2,Mean of Estimations of Cash Flow Per Share - upcoming 2 years,MATRIX,50%,26,58
+anl14_mean_cfps_fy3,Mean of estimations of cash flow per share - upcoming 3 years,MATRIX,50%,16,40
+anl14_mean_div_fp1,Mean of Estimations of Dividend - upcoming quarter,MATRIX,50%,8,10
+anl14_mean_div_fp2,Mean of Estimations of Dividend - Upcoming 2 Quarters,MATRIX,50%,16,40
+anl14_mean_div_fp3,Mean of Estimations of Dividend - upcoming 3 quarters,MATRIX,50%,5,8
+anl14_mean_div_fp4,Mean of estimations of dividend - upcoming 4 quarters,MATRIX,50%,8,10
+anl14_mean_div_fp5,Mean of Estimations of Dividend - upcoming 5 quarters,MATRIX,50%,14,20
+anl14_mean_div_fy1,Mean of estimations of dividend - upcoming year,MATRIX,50%,26,54
+anl14_mean_div_fy2,Mean of estimations of dividend - upcoming 2 years,MATRIX,50%,60,181
+anl14_mean_div_fy3,Mean of Estimations of Dividend - Upcoming 3 Years,MATRIX,50%,21,28
+anl14_mean_div_fy4,Mean of Estimations of Dividend - Upcoming 4 Years,MATRIX,50%,4,4
+anl14_mean_ebit_fp1,Mean of estimations of Earnings Before Interest & Taxes - upcoming quarter,MATRIX,50%,132,1051
+anl14_mean_ebit_fp2,Mean of estimations of earnings before interest & taxes - upcoming 2 quarters,MATRIX,50%,176,1939
+anl14_mean_ebit_fp3,Mean of Estimations of Earnings Before Interest & Taxes - Upcoming 3 Quarters,MATRIX,50%,72,435
+anl14_mean_ebit_fp4,Mean of estimations of earnings before interest & taxes - upcoming 4 quarters,MATRIX,50%,69,336
+anl14_mean_ebit_fp5,Mean of estimations of earnings before interest & taxes - upcoming 5 quarters,MATRIX,50%,73,343
+anl14_mean_ebit_fy1,Mean of Estimations of Earnings Before Interest & Taxes - upcoming year,MATRIX,50%,89,668
+anl14_mean_ebit_fy2,Mean of Estimations of Earnings Before Interest & Taxes - upcoming 2 years,MATRIX,50%,90,801
+anl14_mean_ebit_fy3,Mean of Estimations of Earnings Before Interest & Taxes - Upcoming 3 Years,MATRIX,50%,62,443
+anl14_mean_ebit_fy4,Mean of Estimations of Earnings Before Interest & Taxes - Upcoming 4 Years,MATRIX,50%,15,19
+anl14_mean_ebit_fy5,Mean of Estimations of Earnings Before Interest & Taxes - upcoming 5 years,MATRIX,50%,12,19
+anl14_mean_ebitda_fp1,"Mean of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming quarter",MATRIX,50%,85,685
+anl14_mean_ebitda_fp2,"Mean of estimations of earnings before interest, taxes, depreciation & amortization - upcoming 2 quarters",MATRIX,50%,117,1046
+anl14_mean_ebitda_fp3,"Mean of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - Upcoming 3 Quarters",MATRIX,50%,70,416
+anl14_mean_ebitda_fp4,"Mean of estimations of earnings before interest, taxes, depreciation & amortization - upcoming 4 quarters",MATRIX,50%,58,372
+anl14_mean_ebitda_fp5,"Mean of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 quarters",MATRIX,50%,43,143
+anl14_mean_ebitda_fy1,"Mean of estimations of earnings before interest, taxes, depreciation & amortization - upcoming year",MATRIX,50%,62,197
+anl14_mean_ebitda_fy2,"Mean of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 2 years",MATRIX,50%,81,549
+anl14_mean_ebitda_fy3,"Mean of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 3 years",MATRIX,50%,75,324
+anl14_mean_ebitda_fy4,"Mean of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 4 years",MATRIX,50%,13,25
+anl14_mean_ebitda_fy5,"Mean of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 years",MATRIX,50%,16,27
+anl14_mean_eps_fp1,Mean of estimations of earnings per share - upcoming quarter,MATRIX,50%,172,1364
+anl14_mean_eps_fp2,Mean of Estimations of Earnings Per Share - upcoming 2 quarters,MATRIX,50%,181,988
+anl14_mean_eps_fp3,Mean of estimations of Earnings Per Share - upcoming 3 quarters,MATRIX,50%,118,795
+anl14_mean_eps_fp4,Mean of Estimations of Earnings Per Share - Upcoming 4 Quarters,MATRIX,50%,86,369
+anl14_mean_eps_fp5,Mean of Estimations of Earnings Per Share - upcoming 5 quarters,MATRIX,50%,70,503
+anl14_mean_eps_fy1,Mean of Estimations of Earnings Per Share - upcoming year,MATRIX,50%,104,568
+anl14_mean_eps_fy2,Mean of Estimations of Earnings Per Share - upcoming 2 years,MATRIX,50%,110,760
+anl14_mean_eps_fy3,Mean of Estimations of Earnings Per Share - Upcoming 3 Years,MATRIX,50%,75,556
+anl14_mean_eps_fy4,Mean of Estimations of Earnings Per Share - Upcoming 4 Years,MATRIX,50%,28,49
+anl14_mean_eps_fy5,Mean of Estimations of Earnings Per Share - upcoming 5 years,MATRIX,50%,11,25
+anl14_mean_epsrep_fp1,Mean of Estimations of Reported Earnings Per Share - upcoming quarter,MATRIX,50%,186,2089
+anl14_mean_epsrep_fp2,Mean of estimations of reported earnings per share - upcoming 2 quarters,MATRIX,50%,109,579
+anl14_mean_epsrep_fp3,Mean of Estimations of Reported Earnings Per Share - upcoming 3 quarters,MATRIX,50%,101,990
+anl14_mean_epsrep_fp4,Mean of Estimations of Reported Earnings Per Share - Upcoming 4 Quarters,MATRIX,50%,82,336
+anl14_mean_epsrep_fp5,Mean of estimations of Reported Earnings Per Share - upcoming 5 quarters,MATRIX,50%,73,277
+anl14_mean_epsrep_fy1,Mean of Estimations of Reported Earnings Per Share - Upcoming Year,MATRIX,50%,135,1074
+anl14_mean_epsrep_fy2,Mean of Estimations of Reported Earnings Per Share - Upcoming 2 Years,MATRIX,50%,108,753
+anl14_mean_epsrep_fy3,Mean of Estimations of Reported Earnings Per Share - upcoming 3 years,MATRIX,50%,53,170
+anl14_mean_epsrep_fy4,Mean of Estimations of Reported Earnings Per Share - upcoming 4 years,MATRIX,50%,25,36
+anl14_mean_epsrep_fy5,Mean of Estimations of Reported Earnings Per Share - upcoming 5 years,MATRIX,50%,22,894
+anl14_mean_nav_fy1,Mean of estimations of net asset value - upcoming year,MATRIX,50%,22,46
+anl14_mean_nav_fy2,Mean of Estimations of Net Asset Value - Upcoming 2 Years,MATRIX,50%,28,40
+anl14_mean_ndebt_fp1,Mean of Estimations of Net Debt - upcoming quarter,MATRIX,50%,61,126
+anl14_mean_ndebt_fp2,Mean of estimations of net debt - upcoming 2 quarters,MATRIX,50%,25,51
+anl14_mean_ndebt_fp3,Mean of Estimations of Net Debt - Upcoming 3 Quarters,MATRIX,50%,13,25
+anl14_mean_ndebt_fp4,Mean of Estimations of Net Debt - Upcoming 4 Quarters,MATRIX,50%,10,14
+anl14_mean_ndebt_fp5,Mean of Estimations of Net Debt - upcoming 5 quarters,MATRIX,50%,12,24
+anl14_mean_ndebt_fy1,Mean of estimations of Net Debt - upcoming year,MATRIX,50%,34,53
+anl14_mean_ndebt_fy2,Mean of Estimations of Net Debt - upcoming 2 years,MATRIX,50%,38,77
+anl14_mean_ndebt_fy3,Mean of Estimations of Net Debt - upcoming 3 years,MATRIX,50%,48,128
+anl14_mean_ntp_fp1,Mean of Estimations of Net Profit - upcoming quarter,MATRIX,50%,109,599
+anl14_mean_ntp_fp2,Mean of estimations of net profit - upcoming 2 quarters,MATRIX,50%,147,1257
+anl14_mean_ntp_fp3,Mean of Estimations of Net Profit - upcoming 3 quarters,MATRIX,50%,60,332
+anl14_mean_ntp_fp4,Mean of estimations of net profit - upcoming 4 quarters,MATRIX,50%,51,181
+anl14_mean_ntp_fp5,Mean of estimations of Net Profit - upcoming 5 quarters,MATRIX,50%,62,236
+anl14_mean_ntp_fy1,Mean of Estimations of Net Profit - Upcoming Year,MATRIX,50%,85,475
+anl14_mean_ntp_fy2,Mean of estimations of net profit - upcoming 2 years,MATRIX,50%,107,795
+anl14_mean_ntp_fy3,Mean of estimations of net profit - upcoming 3 years,MATRIX,50%,61,398
+anl14_mean_ntp_fy4,Mean of estimations of net profit - upcoming 4 years,MATRIX,50%,12,23
+anl14_mean_ntp_fy5,Mean of estimations of net profit - upcoming 5 years,MATRIX,50%,10,18
+anl14_mean_ntprep_fp1,Mean of estimations of reported net profit - upcoming quarter,MATRIX,50%,141,1234
+anl14_mean_ntprep_fp2,Mean of Estimations of Reported Net Profit - upcoming 2 quarters,MATRIX,50%,125,637
+anl14_mean_ntprep_fp3,Mean of Estimations of Reported Net Profit - upcoming 3 quarters,MATRIX,50%,95,521
+anl14_mean_ntprep_fp4,Mean of estimations of reported net profit - upcoming 4 quarters,MATRIX,50%,60,216
+anl14_mean_ntprep_fp5,Mean of Estimations of Reported Net Profit - upcoming 5 quarters,MATRIX,50%,60,179
+anl14_mean_ntprep_fy1,Mean of Estimations of Reported Net Profit - upcoming year,MATRIX,50%,88,372
+anl14_mean_ntprep_fy2,Mean of Estimations of Reported Net Profit - upcoming 2 years,MATRIX,50%,78,586
+anl14_mean_ntprep_fy3,Mean of Estimations of Reported Net Profit - upcoming 3 years,MATRIX,50%,50,175
+anl14_mean_ntprep_fy4,Mean of Estimations of Reported Net Profit - upcoming 4 years,MATRIX,50%,9,18
+anl14_mean_ntprep_fy5,Mean of Estimations of Reported Net Profit - upcoming 5 years,MATRIX,50%,10,17
+anl14_mean_opp_fp1,Mean of Estimations of Operating Profit - upcoming quarter,MATRIX,50%,13,20
+anl14_mean_opp_fy1,Mean of Estimations of Operating Profit - upcoming year,MATRIX,50%,9,16
+anl14_mean_opp_fy2,Mean of Estimations of Operating Profit - upcoming 2 years,MATRIX,50%,6,11
+anl14_mean_revenue_fp1,Mean of Estimations of Revenue - Upcoming Quarter,MATRIX,50%,113,700
+anl14_mean_revenue_fp2,Mean of Estimations of Revenue - upcoming 2 quarters,MATRIX,50%,151,1766
+anl14_mean_revenue_fp3,Mean of estimations of revenue - upcoming 3 quarters,MATRIX,50%,79,540
+anl14_mean_revenue_fp4,Mean of Estimations of Revenue - upcoming 4 quarters,MATRIX,50%,96,595
+anl14_mean_revenue_fp5,Mean of estimations of revenue - upcoming 5 quarters,MATRIX,50%,89,593
+anl14_mean_revenue_fy1,Mean of Estimations of Revenue - upcoming year,MATRIX,50%,78,570
+anl14_mean_revenue_fy2,Mean of estimations of revenue - upcoming 2 years,MATRIX,50%,106,1135
+anl14_mean_revenue_fy3,Mean of estimations of Revenue - upcoming 3 years,MATRIX,50%,104,1269
+anl14_mean_revenue_fy4,Mean of estimations of revenue - upcoming 4 years,MATRIX,50%,29,78
+anl14_mean_revenue_fy5,Mean of Estimations of Revenue - Upcoming 5 Years,MATRIX,50%,14,21
+anl14_mean_roa_fp1,Mean of estimations of Returns on Assets - upcoming quarter,MATRIX,50%,14,18
+anl14_mean_roa_fp2,Mean of estimations of returns on assets - upcoming 2 quarters,MATRIX,50%,9,24
+anl14_mean_roa_fp3,Mean of Estimations of Returns on Assets - Upcoming 3 Quarters,MATRIX,50%,26,45
+anl14_mean_roa_fp4,Mean of estimations of returns on assets - upcoming 4 quarters,MATRIX,50%,9,19
+anl14_mean_roa_fp5,Mean of Estimations of Returns on Assets - upcoming 5 quarters,MATRIX,50%,11,13
+anl14_mean_roa_fy1,Mean of estimations of returns on assets - upcoming year,MATRIX,50%,63,174
+anl14_mean_roa_fy2,Mean of Estimations of Returns on Assets - upcoming 2 years,MATRIX,50%,59,357
+anl14_mean_roa_fy3,Mean of estimations of returns on assets - upcoming 3 years,MATRIX,50%,26,58
+anl14_mean_roe_fp1,Mean of estimations of returns on equity - upcoming quarter,MATRIX,50%,23,53
+anl14_mean_roe_fp2,Mean of Estimations of Returns on Equity - upcoming 2 quarters,MATRIX,50%,16,29
+anl14_mean_roe_fp3,Mean of Estimations of Returns on Equity - upcoming 3 quarters,MATRIX,50%,18,33
+anl14_mean_roe_fp4,Mean of estimations of returns on equity - upcoming 4 quarters,MATRIX,50%,23,90
+anl14_mean_roe_fp5,Mean of estimations of returns on equity - upcoming 5 quarters,MATRIX,50%,16,29
+anl14_mean_roe_fy1,Mean of Estimations of Returns on Equity - upcoming year,MATRIX,50%,77,419
+anl14_mean_roe_fy2,Mean of Estimations of Returns on Equity - upcoming 2 years,MATRIX,50%,86,1270
+anl14_mean_roe_fy3,Mean of Estimations of Returns on Equity - upcoming 3 years,MATRIX,50%,43,515
+anl14_meanrating,Mean of rating -,MATRIX,50%,147,1190
+anl14_median_bvps_fp1,Median of Estimations of Book Value Per Share - upcoming quarter,MATRIX,50%,23,89
+anl14_median_bvps_fp2,Median of Estimations of Book Value Per Share - Upcoming 2 Quarters,MATRIX,50%,15,22
+anl14_median_bvps_fp3,Median of Estimations of Book Value Per Share - Upcoming 3 Quarters,MATRIX,50%,10,28
+anl14_median_bvps_fp4,Median of Estimations of Book Value Per Share - upcoming 4 quarters,MATRIX,50%,10,26
+anl14_median_bvps_fp5,Median of Estimations of Book Value Per Share - upcoming 5 quarters,MATRIX,50%,12,18
+anl14_median_bvps_fy1,Median of Estimations of Book Value Per Share - upcoming year,MATRIX,50%,39,104
+anl14_median_bvps_fy2,Median of Estimations of Book Value Per Share - upcoming 2 years,MATRIX,50%,44,123
+anl14_median_bvps_fy3,Median of Estimations of Book Value Per Share - Upcoming 3 Years,MATRIX,50%,15,36
+anl14_median_capex_fp1,Median of Estimations of Capital Expenditures - Upcoming Quarter,MATRIX,50%,32,55
+anl14_median_capex_fp2,Median of Estimations of Capital Expenditures - upcoming 2 quarters,MATRIX,50%,24,54
+anl14_median_capex_fp3,Median of estimations of capital expenditures - upcoming 3 quarters,MATRIX,50%,23,38
+anl14_median_capex_fp4,Median of Estimations of Capital Expenditures - upcoming 4 quarters,MATRIX,50%,21,46
+anl14_median_capex_fp5,Median of Estimations of Capital Expenditures - upcoming 5 quarters,MATRIX,50%,22,37
+anl14_median_capex_fy1,Median of estimations of Capital Expenditures - upcoming year,MATRIX,50%,61,186
+anl14_median_capex_fy2,Median of Estimations of Capital Expenditures - upcoming 2 years,MATRIX,50%,100,1529
+anl14_median_capex_fy3,Median of estimations of capital expenditures - upcoming 3 years,MATRIX,50%,32,66
+anl14_median_capex_fy4,Median of Estimations of Capital Expenditures - upcoming 4 years,MATRIX,50%,9,33
+anl14_median_capex_fy5,Median of estimations of capital expenditures - upcoming 5 years,MATRIX,50%,11,15
+anl14_median_cfps_fp1,Median of Estimations of Cash Flow Per Share - upcoming quarter,MATRIX,50%,23,44
+anl14_median_cfps_fp2,Median of estimations of cash flow per share - upcoming 2 quarters,MATRIX,50%,23,29
+anl14_median_cfps_fp3,Median of estimations of cash flow per share - upcoming 3 quarters,MATRIX,50%,16,29
+anl14_median_cfps_fp4,Median of Estimations of Cash Flow Per Share - upcoming 4 quarters,MATRIX,50%,3,3
+anl14_median_cfps_fp5,Median of estimations of cash flow per share - upcoming 5 quarters,MATRIX,50%,19,39
+anl14_median_cfps_fy1,Median of Estimations of Cash Flow Per Share - Upcoming Year,MATRIX,50%,19,53
+anl14_median_cfps_fy2,Median of Estimations of Cash Flow Per Share - upcoming 2 years,MATRIX,50%,31,90
+anl14_median_cfps_fy3,Median of estimations of cash flow per share - upcoming 3 years,MATRIX,50%,5,7
+anl14_median_div_fp1,Median of Estimations of Dividend - upcoming quarter,MATRIX,50%,7,11
+anl14_median_div_fp2,Median of Estimations of Dividend - upcoming 2 quarters,MATRIX,50%,8,11
+anl14_median_div_fp3,Median of Estimations of Dividend - upcoming 3 quarters,MATRIX,50%,4,6
+anl14_median_div_fp4,Median of estimations of dividend - upcoming 4 quarters,MATRIX,50%,6,9
+anl14_median_div_fp5,Median of Estimations of Dividend - upcoming 5 quarters,MATRIX,50%,4,4
+anl14_median_div_fy1,Median of estimations of dividend - upcoming year,MATRIX,50%,9,13
+anl14_median_div_fy2,Median of estimations of Dividend - upcoming 2 years,MATRIX,50%,53,117
+anl14_median_div_fy3,Median of estimations of dividend - upcoming 3 years,MATRIX,50%,17,26
+anl14_median_div_fy4,Median of Estimations of Dividend - Upcoming 4 Years,MATRIX,50%,2,4
+anl14_median_ebit_fp1,Median of Estimations of Earnings Before Interest & Taxes - Upcoming Quarter,MATRIX,50%,121,1195
+anl14_median_ebit_fp2,Median of Estimations of Earnings Before Interest & Taxes - Upcoming 2 Quarters,MATRIX,50%,143,1192
+anl14_median_ebit_fp3,Median of estimations of earnings before interest & taxes - upcoming 3 quarters,MATRIX,50%,81,567
+anl14_median_ebit_fp4,Median of estimations of earnings before interest & taxes - upcoming 4 quarters,MATRIX,50%,69,249
+anl14_median_ebit_fp5,Median of estimations of earnings before interest & taxes - upcoming 5 quarters,MATRIX,50%,68,282
+anl14_median_ebit_fy1,Median of estimations of earnings before interest & taxes - upcoming year,MATRIX,50%,105,679
+anl14_median_ebit_fy2,Median of estimations of earnings before interest & taxes - upcoming 2 years,MATRIX,50%,88,784
+anl14_median_ebit_fy3,Median of Estimations of Earnings Before Interest & Taxes - upcoming 3 years,MATRIX,50%,78,379
+anl14_median_ebit_fy4,Median of estimations of earnings before interest & taxes - upcoming 4 years,MATRIX,50%,12,22
+anl14_median_ebit_fy5,Median of Estimations of Earnings Before Interest & Taxes - upcoming 5 years,MATRIX,50%,8,25
+anl14_median_ebitda_fp1,"Median of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming quarter",MATRIX,50%,77,540
+anl14_median_ebitda_fp2,"Median of estimations of earnings before interest, taxes, depreciation & amortization - upcoming 2 quarters",MATRIX,50%,123,1152
+anl14_median_ebitda_fp3,"Median of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 3 quarters",MATRIX,50%,86,459
+anl14_median_ebitda_fp4,"Median of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 4 quarters",MATRIX,50%,65,308
+anl14_median_ebitda_fp5,"Median of estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 quarters",MATRIX,50%,29,82
+anl14_median_ebitda_fy1,"Median of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - Upcoming Year",MATRIX,50%,72,170
+anl14_median_ebitda_fy2,"Median of estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 2 years",MATRIX,50%,74,528
+anl14_median_ebitda_fy3,"Median of estimations of earnings before interest, taxes, depreciation & amortization - upcoming 3 years",MATRIX,50%,55,495
+anl14_median_ebitda_fy4,"Median of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 4 years",MATRIX,50%,10,15
+anl14_median_ebitda_fy5,"Median of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 years",MATRIX,50%,10,20
+anl14_median_eps_fp1,Median of Estimations of Earnings Per Share - upcoming quarter,MATRIX,50%,159,1453
+anl14_median_eps_fp2,Median of estimations of earnings per share - upcoming 2 quarters,MATRIX,50%,154,1122
+anl14_median_eps_fp3,Median of estimations of Earnings Per Share - upcoming 3 quarters,MATRIX,50%,101,570
+anl14_median_eps_fp4,Median of Estimations of Earnings Per Share - upcoming 4 quarters,MATRIX,50%,77,326
+anl14_median_eps_fp5,Median of estimations of earnings per share - upcoming 5 quarters,MATRIX,50%,95,633
+anl14_median_eps_fy1,Median of Estimations of Earnings Per Share - upcoming year,MATRIX,50%,92,538
+anl14_median_eps_fy2,Median of Estimations of Earnings Per Share - upcoming 2 years,MATRIX,50%,84,560
+anl14_median_eps_fy3,Median of Estimations of Earnings Per Share - Upcoming 3 Years,MATRIX,50%,73,523
+anl14_median_eps_fy4,Median of estimations of earnings per share - upcoming 4 years,MATRIX,50%,13,25
+anl14_median_eps_fy5,Median of estimations of earnings per share - upcoming 5 years,MATRIX,50%,11,30
+anl14_median_epsrep_fp1,Median of Estimations of Reported Earnings Per Share - upcoming quarter,MATRIX,50%,160,1423
+anl14_median_epsrep_fp2,Median of estimations of reported earnings per share - upcoming 2 quarters,MATRIX,50%,88,405
+anl14_median_epsrep_fp3,Median of estimations of Reported Earnings Per Share - upcoming 3 quarters,MATRIX,50%,90,457
+anl14_median_epsrep_fp4,Median of Estimations of Reported Earnings Per Share - upcoming 4 quarters,MATRIX,50%,85,292
+anl14_median_epsrep_fp5,Median of estimations of reported earnings per share - upcoming 5 quarters,MATRIX,50%,72,309
+anl14_median_epsrep_fy1,Median of estimations of reported earnings per share - upcoming year,MATRIX,50%,104,949
+anl14_median_epsrep_fy2,Median of Estimations of Reported Earnings Per Share - upcoming 2 years,MATRIX,50%,88,760
+anl14_median_epsrep_fy3,Median of Estimations of Reported Earnings Per Share - upcoming 3 years,MATRIX,50%,52,178
+anl14_median_epsrep_fy4,Median of Estimations of Reported Earnings Per Share - upcoming 4 years,MATRIX,50%,19,53
+anl14_median_epsrep_fy5,Median of Estimations of Reported Earnings Per Share - upcoming 5 years,MATRIX,50%,16,37
+anl14_median_nav_fy1,Median of estimations of Net Asset Value - upcoming year,MATRIX,50%,16,35
+anl14_median_nav_fy2,Median of estimations of net asset value - upcoming 2 years,MATRIX,50%,18,34
+anl14_median_ndebt_fp1,Median of Estimations of Net Debt - upcoming quarter,MATRIX,50%,57,109
+anl14_median_ndebt_fp2,Median of Estimations of Net Debt - Upcoming 2 Quarters,MATRIX,50%,18,38
+anl14_median_ndebt_fp3,Median of estimations of net debt - upcoming 3 quarters,MATRIX,50%,14,23
+anl14_median_ndebt_fp4,Median of Estimations of Net Debt - upcoming 4 quarters,MATRIX,50%,14,17
+anl14_median_ndebt_fp5,Median of Estimations of Net Debt - upcoming 5 quarters,MATRIX,50%,16,51
+anl14_median_ndebt_fy1,Median of estimations of net debt - upcoming year,MATRIX,50%,25,65
+anl14_median_ndebt_fy2,Median of estimations of Net Debt - upcoming 2 years,MATRIX,50%,33,70
+anl14_median_ndebt_fy3,Median of estimations of net debt - upcoming 3 years,MATRIX,50%,40,80
+anl14_median_ntp_fp1,Median of estimations of net profit - upcoming quarter,MATRIX,50%,116,1241
+anl14_median_ntp_fp2,Median of estimations of net profit - upcoming 2 quarters,MATRIX,50%,137,974
+anl14_median_ntp_fp3,Median of estimations of net profit - upcoming 3 quarters,MATRIX,50%,66,394
+anl14_median_ntp_fp4,Median of estimations of net profit - upcoming 4 quarters,MATRIX,50%,59,263
+anl14_median_ntp_fp5,Median of estimations of net profit - upcoming 5 quarters,MATRIX,50%,62,286
+anl14_median_ntp_fy1,Median of Estimations of Net Profit - upcoming year,MATRIX,50%,67,408
+anl14_median_ntp_fy2,Median of estimations of Net Profit - upcoming 2 years,MATRIX,50%,89,572
+anl14_median_ntp_fy3,Median of Estimations of Net Profit - Upcoming 3 Years,MATRIX,50%,57,343
+anl14_median_ntp_fy4,Median of estimations of net profit - upcoming 4 years,MATRIX,50%,11,11
+anl14_median_ntp_fy5,Median of Estimations of Net Profit - upcoming 5 years,MATRIX,50%,8,15
+anl14_median_ntprep_fp1,Median of Estimations of Reported Net Profit - upcoming quarter,MATRIX,50%,132,1020
+anl14_median_ntprep_fp2,Median of Estimations of Reported Net Profit - upcoming 2 quarters,MATRIX,50%,121,873
+anl14_median_ntprep_fp3,Median of estimations of reported net profit - upcoming 3 quarters,MATRIX,50%,78,344
+anl14_median_ntprep_fp4,Median of estimations of Reported Net Profit - upcoming 4 quarters,MATRIX,50%,76,353
+anl14_median_ntprep_fp5,Median of estimations of reported net profit - upcoming 5 quarters,MATRIX,50%,50,152
+anl14_median_ntprep_fy1,Median of estimations of reported net profit - upcoming year,MATRIX,50%,89,590
+anl14_median_ntprep_fy2,Median of estimations of reported net profit - upcoming 2 years,MATRIX,50%,76,452
+anl14_median_ntprep_fy3,Median of Estimations of Reported Net Profit - upcoming 3 years,MATRIX,50%,48,299
+anl14_median_ntprep_fy4,Median of estimations of reported net profit - upcoming 4 years,MATRIX,50%,6,7
+anl14_median_ntprep_fy5,Median of Estimations of Reported Net Profit - upcoming 5 years,MATRIX,50%,5,5
+anl14_median_opp_fp1,Median of Estimations of Operating Profit - upcoming quarter,MATRIX,50%,8,10
+anl14_median_opp_fy1,Median of Estimations of Operating Profit - upcoming year,MATRIX,50%,17,35
+anl14_median_opp_fy2,Median of Estimations of Operating Profit - upcoming 2 years,MATRIX,50%,11,23
+anl14_median_revenue_fp1,Median of estimations of revenue - upcoming quarter,MATRIX,50%,105,940
+anl14_median_revenue_fp2,Median of Estimations of Revenue - upcoming 2 quarters,MATRIX,50%,159,1908
+anl14_median_revenue_fp3,Median of estimations of Revenue - upcoming 3 quarters,MATRIX,50%,98,702
+anl14_median_revenue_fp4,Median of estimations of revenue - upcoming 4 quarters,MATRIX,50%,88,376
+anl14_median_revenue_fp5,Median of Estimations of Revenue - upcoming 5 quarters,MATRIX,50%,104,741
+anl14_median_revenue_fy1,Median of Estimations of Revenue - Upcoming Year,MATRIX,50%,92,611
+anl14_median_revenue_fy2,Median of estimations of revenue - upcoming 2 years,MATRIX,50%,116,976
+anl14_median_revenue_fy3,Median of Estimations of Revenue - Upcoming 3 Years,MATRIX,50%,116,2069
+anl14_median_revenue_fy4,Median of Estimations of Revenue - upcoming 4 years,MATRIX,50%,30,51
+anl14_median_revenue_fy5,Median of Estimations of Revenue - upcoming 5 years,MATRIX,50%,13,23
+anl14_median_roa_fp1,Median of estimations of Returns on Assets - upcoming quarter,MATRIX,50%,6,21
+anl14_median_roa_fp2,Median of estimations of returns on assets - upcoming 2 quarters,MATRIX,50%,3,4
+anl14_median_roa_fp3,Median of estimations of Returns on Assets - upcoming 3 quarters,MATRIX,50%,24,46
+anl14_median_roa_fp4,Median of Estimations of Returns on Assets - upcoming 4 quarters,MATRIX,50%,9,18
+anl14_median_roa_fp5,Median of Estimations of Returns on Assets - upcoming 5 quarters,MATRIX,50%,6,10
+anl14_median_roa_fy1,Median of Estimations of Returns on Assets - upcoming year,MATRIX,50%,44,75
+anl14_median_roa_fy2,Median of Estimations of Returns on Assets - Upcoming 2 Years,MATRIX,50%,35,60
+anl14_median_roa_fy3,Median of Estimations of Returns on Assets - Upcoming 3 Years,MATRIX,50%,28,48
+anl14_median_roe_fp1,Median of Estimations of Returns on Equity - upcoming quarter,MATRIX,50%,18,77
+anl14_median_roe_fp2,Median of Estimations of Returns on Equity - Upcoming 2 Quarters,MATRIX,50%,13,25
+anl14_median_roe_fp3,Median of Estimations of Returns on Equity - upcoming 3 quarters,MATRIX,50%,15,20
+anl14_median_roe_fp4,Median of estimations of Returns on Equity - upcoming 4 quarters,MATRIX,50%,19,56
+anl14_median_roe_fp5,Median of Estimations of Returns on Equity - upcoming 5 quarters,MATRIX,50%,15,31
+anl14_median_roe_fy1,Median of Estimations of Returns on Equity - Upcoming Year,MATRIX,50%,83,348
+anl14_median_roe_fy2,Median of Estimations of Returns on Equity - Upcoming 2 Years,MATRIX,50%,113,818
+anl14_median_roe_fy3,Median of Estimations of Returns on Equity - Upcoming 3 Years,MATRIX,50%,76,177
+anl14_numofests_bvps_fp1,Num of estimations of Book Value Per Share - upcoming quarter,MATRIX,50%,12,52
+anl14_numofests_bvps_fp2,Num of Estimations of Book Value Per Share - Upcoming 2 Quarters,MATRIX,50%,16,28
+anl14_numofests_bvps_fp3,Num of Estimations of Book Value Per Share - upcoming 3 quarters,MATRIX,50%,16,27
+anl14_numofests_bvps_fp4,Num of Estimations of Book Value Per Share - upcoming 4 quarters,MATRIX,50%,18,36
+anl14_numofests_bvps_fp5,Num of Estimations of Book Value Per Share - upcoming 5 quarters,MATRIX,50%,24,36
+anl14_numofests_bvps_fy1,Num of Estimations of Book Value Per Share - Upcoming Year,MATRIX,50%,25,39
+anl14_numofests_bvps_fy2,Num of estimations of Book Value Per Share - upcoming 2 years,MATRIX,50%,34,113
+anl14_numofests_bvps_fy3,Number of estimations of book value per share - upcoming 3 years,MATRIX,50%,19,47
+anl14_numofests_capex_fp1,Num of estimations of capital expenditures - upcoming quarter,MATRIX,50%,53,101
+anl14_numofests_capex_fp2,Number of Estimations of Capital Expenditures - Upcoming 2 Quarters,MATRIX,50%,18,41
+anl14_numofests_capex_fp3,Num of Estimations of Capital Expenditures - Upcoming 3 Quarters,MATRIX,50%,36,54
+anl14_numofests_capex_fp4,Num of Estimations of Capital Expenditures - upcoming 4 quarters,MATRIX,50%,27,37
+anl14_numofests_capex_fp5,Num of Estimations of Capital Expenditures - Upcoming 5 Quarters,MATRIX,50%,13,28
+anl14_numofests_capex_fy1,Num of estimations of capital expenditures - upcoming year,MATRIX,50%,39,74
+anl14_numofests_capex_fy2,Num of Estimations of Capital Expenditures - upcoming 2 years,MATRIX,50%,63,248
+anl14_numofests_capex_fy3,Num of Estimations of Capital Expenditures - Upcoming 3 Years,MATRIX,50%,25,55
+anl14_numofests_capex_fy4,Num of Estimations of Capital Expenditures - Upcoming 4 Years,MATRIX,50%,6,7
+anl14_numofests_capex_fy5,Num of Estimations of Capital Expenditures - upcoming 5 years,MATRIX,50%,16,21
+anl14_numofests_cfps_fp1,Num of estimations of Cash Flow Per Share - upcoming quarter,MATRIX,50%,25,39
+anl14_numofests_cfps_fp2,Num of Estimations of Cash Flow Per Share - Upcoming 2 Quarters,MATRIX,50%,13,37
+anl14_numofests_cfps_fp3,Number of estimations of Cash Flow Per Share - upcoming 3 quarters,MATRIX,50%,12,29
+anl14_numofests_cfps_fp4,Num of estimations of cash flow per share - upcoming 4 quarters,MATRIX,50%,9,11
+anl14_numofests_cfps_fp5,Num of Estimations of Cash Flow Per Share - upcoming 5 quarters,MATRIX,50%,23,34
+anl14_numofests_cfps_fy1,Num of estimations of cash flow per share - upcoming year,MATRIX,50%,16,37
+anl14_numofests_cfps_fy2,Num of Estimations of Cash Flow Per Share - upcoming 2 years,MATRIX,50%,29,69
+anl14_numofests_cfps_fy3,Num of estimations of Cash Flow Per Share - upcoming 3 years,MATRIX,50%,10,21
+anl14_numofests_div_fp1,Num of estimations of Dividend - upcoming quarter,MATRIX,50%,10,45
+anl14_numofests_div_fp2,Num of Estimations of Dividend - upcoming 2 quarters,MATRIX,50%,11,17
+anl14_numofests_div_fp3,Num of Estimations of Dividend - upcoming 3 quarters,MATRIX,50%,13,18
+anl14_numofests_div_fp4,Num of estimations of Dividend - upcoming 4 quarters,MATRIX,50%,14,19
+anl14_numofests_div_fp5,Number of estimations of dividend - upcoming 5 quarters,MATRIX,50%,8,8
+anl14_numofests_div_fy1,Number of estimations of dividend - upcoming year,MATRIX,50%,29,42
+anl14_numofests_div_fy2,Number of Estimations of Dividend - upcoming 2 years,MATRIX,50%,34,111
+anl14_numofests_div_fy3,Num of Estimations of Dividend - upcoming 3 years,MATRIX,50%,13,17
+anl14_numofests_div_fy4,Num of Estimations of Dividend - upcoming 4 years,MATRIX,50%,4,5
+anl14_numofests_ebit_fp1,Num of Estimations of Earnings Before Interest & Taxes - upcoming quarter,MATRIX,50%,66,245
+anl14_numofests_ebit_fp2,Num of Estimations of Earnings Before Interest & Taxes - upcoming 2 quarters,MATRIX,50%,61,281
+anl14_numofests_ebit_fp3,Num of Estimations of Earnings Before Interest & Taxes - upcoming 3 quarters,MATRIX,50%,102,542
+anl14_numofests_ebit_fp4,Num of Estimations of Earnings Before Interest & Taxes - upcoming 4 quarters,MATRIX,50%,39,107
+anl14_numofests_ebit_fp5,Number of estimations of earnings before interest & taxes - upcoming 5 quarters,MATRIX,50%,79,284
+anl14_numofests_ebit_fy1,Num of Estimations of Earnings Before Interest & Taxes - upcoming year,MATRIX,50%,67,240
+anl14_numofests_ebit_fy2,Num of estimations of earnings before interest & taxes - upcoming 2 years,MATRIX,50%,55,273
+anl14_numofests_ebit_fy3,Num of Estimations of Earnings Before Interest & Taxes - upcoming 3 years,MATRIX,50%,54,137
+anl14_numofests_ebit_fy4,Number of estimations of earnings before interest & taxes - upcoming 4 years,MATRIX,50%,14,25
+anl14_numofests_ebit_fy5,Num of Estimations of Earnings Before Interest & Taxes - Upcoming 5 Years,MATRIX,50%,10,24
+anl14_numofests_ebitda_fp1,"Num of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming quarter",MATRIX,50%,81,311
+anl14_numofests_ebitda_fp2,"Num of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - Upcoming 2 Quarters",MATRIX,50%,41,168
+anl14_numofests_ebitda_fp3,"Number of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 3 quarters",MATRIX,50%,102,447
+anl14_numofests_ebitda_fp4,"Num of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - Upcoming 4 Quarters",MATRIX,50%,52,331
+anl14_numofests_ebitda_fp5,"Num of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 quarters",MATRIX,50%,23,56
+anl14_numofests_ebitda_fy1,"Num of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming year",MATRIX,50%,67,198
+anl14_numofests_ebitda_fy2,"Num of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - Upcoming 2 Years",MATRIX,50%,76,339
+anl14_numofests_ebitda_fy3,"Num of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - Upcoming 3 Years",MATRIX,50%,46,218
+anl14_numofests_ebitda_fy4,"Num of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 4 years",MATRIX,50%,12,19
+anl14_numofests_ebitda_fy5,"Num of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 years",MATRIX,50%,3,3
+anl14_numofests_eps_fp1,Num of Estimations of Earnings Per Share - upcoming quarter,MATRIX,50%,84,432
+anl14_numofests_eps_fp2,Num of estimations of earnings per share - upcoming 2 quarters,MATRIX,50%,83,645
+anl14_numofests_eps_fp3,Num of estimations of earnings per share - upcoming 3 quarters,MATRIX,50%,101,656
+anl14_numofests_eps_fp4,Number of estimations of earnings per share - upcoming 4 quarters,MATRIX,50%,69,410
+anl14_numofests_eps_fp5,Number of Estimations of Earnings Per Share - upcoming 5 quarters,MATRIX,50%,68,199
+anl14_numofests_eps_fy1,Num of estimations of earnings per share - upcoming year,MATRIX,50%,71,405
+anl14_numofests_eps_fy2,Num of estimations of Earnings Per Share - upcoming 2 years,MATRIX,50%,71,473
+anl14_numofests_eps_fy3,Num of estimations of Earnings Per Share - upcoming 3 years,MATRIX,50%,54,360
+anl14_numofests_eps_fy4,Number of Estimations of Earnings Per Share - Upcoming 4 Years,MATRIX,50%,12,13
+anl14_numofests_eps_fy5,Num of Estimations of Earnings Per Share - upcoming 5 years,MATRIX,50%,8,16
+anl14_numofests_epsrep_fp1,Num of estimations of reported earnings per share - upcoming quarter,MATRIX,50%,108,659
+anl14_numofests_epsrep_fp2,Num of Estimations of Reported Earnings Per Share - upcoming 2 quarters,MATRIX,50%,85,471
+anl14_numofests_epsrep_fp3,Num of Estimations of Reported Earnings Per Share - upcoming 3 quarters,MATRIX,50%,96,623
+anl14_numofests_epsrep_fp4,Num of Estimations of Reported Earnings Per Share - upcoming 4 quarters,MATRIX,50%,57,290
+anl14_numofests_epsrep_fp5,Num of Estimations of Reported Earnings Per Share - upcoming 5 quarters,MATRIX,50%,65,263
+anl14_numofests_epsrep_fy1,Num of Estimations of Reported Earnings Per Share - Upcoming Year,MATRIX,50%,106,504
+anl14_numofests_epsrep_fy2,Number of Estimations of Reported Earnings Per Share - upcoming 2 years,MATRIX,50%,62,372
+anl14_numofests_epsrep_fy3,Number of Estimations of Reported Earnings Per Share - Upcoming 3 Years,MATRIX,50%,33,87
+anl14_numofests_epsrep_fy4,Num of estimations of reported earnings per share - upcoming 4 years,MATRIX,50%,12,33
+anl14_numofests_epsrep_fy5,Number of estimations of reported earnings per share - upcoming 5 years,MATRIX,50%,11,22
+anl14_numofests_nav_fy1,Num of Estimations of Net Asset Value - upcoming year,MATRIX,50%,21,27
+anl14_numofests_nav_fy2,Num of Estimations of Net Asset Value - upcoming 2 years,MATRIX,50%,21,46
+anl14_numofests_ndebt_fp1,Num of Estimations of Net Debt - upcoming quarter,MATRIX,50%,14,16
+anl14_numofests_ndebt_fp2,Num of Estimations of Net Debt - upcoming 2 quarters,MATRIX,50%,9,25
+anl14_numofests_ndebt_fp3,Number of Estimations of Net Debt - Upcoming 3 Quarters,MATRIX,50%,9,11
+anl14_numofests_ndebt_fp4,Num of Estimations of Net Debt - upcoming 4 quarters,MATRIX,50%,17,36
+anl14_numofests_ndebt_fp5,Num of Estimations of Net Debt - upcoming 5 quarters,MATRIX,50%,16,33
+anl14_numofests_ndebt_fy1,Number of estimations of net debt - upcoming year,MATRIX,50%,29,66
+anl14_numofests_ndebt_fy2,Num of Estimations of Net Debt - upcoming 2 years,MATRIX,50%,18,28
+anl14_numofests_ndebt_fy3,Num of Estimations of Net Debt - Upcoming 3 Years,MATRIX,50%,32,53
+anl14_numofests_ntp_fp1,Num of Estimations of Net Profit - upcoming quarter,MATRIX,50%,72,443
+anl14_numofests_ntp_fp2,Num of Estimations of Net Profit - upcoming 2 quarters,MATRIX,50%,60,384
+anl14_numofests_ntp_fp3,Num of Estimations of Net Profit - upcoming 3 quarters,MATRIX,50%,85,618
+anl14_numofests_ntp_fp4,Num of estimations of net profit - upcoming 4 quarters,MATRIX,50%,65,282
+anl14_numofests_ntp_fp5,Num of estimations of Net Profit - upcoming 5 quarters,MATRIX,50%,40,124
+anl14_numofests_ntp_fy1,Num of Estimations of Net Profit - upcoming year,MATRIX,50%,77,349
+anl14_numofests_ntp_fy2,Num of Estimations of Net Profit - upcoming 2 years,MATRIX,50%,60,420
+anl14_numofests_ntp_fy3,Num of Estimations of Net Profit - upcoming 3 years,MATRIX,50%,40,173
+anl14_numofests_ntp_fy4,Number of estimations of net profit - upcoming 4 years,MATRIX,50%,7,26
+anl14_numofests_ntp_fy5,Num of estimations of Net Profit - upcoming 5 years,MATRIX,50%,12,17
+anl14_numofests_ntprep_fp1,Num of Estimations of Reported Net Profit - Upcoming Quarter,MATRIX,50%,82,452
+anl14_numofests_ntprep_fp2,Num of Estimations of Reported Net Profit - upcoming 2 quarters,MATRIX,50%,87,499
+anl14_numofests_ntprep_fp3,Num of Estimations of Reported Net Profit - upcoming 3 quarters,MATRIX,50%,67,465
+anl14_numofests_ntprep_fp4,Number of estimations of reported net profit - upcoming 4 quarters,MATRIX,50%,47,231
+anl14_numofests_ntprep_fp5,Number of Estimations of Reported Net Profit - upcoming 5 quarters,MATRIX,50%,70,279
+anl14_numofests_ntprep_fy1,Number of estimations of reported net profit - upcoming year,MATRIX,50%,62,266
+anl14_numofests_ntprep_fy2,Num of estimations of reported net profit - upcoming 2 years,MATRIX,50%,39,110
+anl14_numofests_ntprep_fy3,Num of Estimations of Reported Net Profit - Upcoming 3 Years,MATRIX,50%,38,122
+anl14_numofests_ntprep_fy4,Num of Estimations of Reported Net Profit - upcoming 4 years,MATRIX,50%,9,15
+anl14_numofests_ntprep_fy5,Num of Estimations of Reported Net Profit - Upcoming 5 Years,MATRIX,50%,6,7
+anl14_numofests_opp_fp1,Num of estimations of operating profit - upcoming quarter,MATRIX,50%,7,11
+anl14_numofests_opp_fy1,Num of Estimations of Operating Profit - upcoming year,MATRIX,50%,5,18
+anl14_numofests_opp_fy2,Num of estimations of operating profit - upcoming 2 years,MATRIX,50%,12,17
+anl14_numofests_revenue_fp1,Num of Estimations of Revenue - upcoming quarter,MATRIX,50%,90,457
+anl14_numofests_revenue_fp2,Num of estimations of revenue - upcoming 2 quarters,MATRIX,50%,71,373
+anl14_numofests_revenue_fp3,Num of Estimations of Revenue - Upcoming 3 Quarters,MATRIX,50%,91,487
+anl14_numofests_revenue_fp4,Num of Estimations of Revenue - upcoming 4 quarters,MATRIX,50%,68,365
+anl14_numofests_revenue_fp5,Num of Estimations of Revenue - upcoming 5 quarters,MATRIX,50%,58,214
+anl14_numofests_revenue_fy1,Num of estimations of revenue - upcoming year,MATRIX,50%,63,168
+anl14_numofests_revenue_fy2,Num of Estimations of Revenue - Upcoming 2 Years,MATRIX,50%,67,422
+anl14_numofests_revenue_fy3,Num of Estimations of Revenue - upcoming 3 years,MATRIX,50%,47,420
+anl14_numofests_revenue_fy4,Number of estimations of revenue - upcoming 4 years,MATRIX,50%,14,44
+anl14_numofests_revenue_fy5,Num of estimations of revenue - upcoming 5 years,MATRIX,50%,10,15
+anl14_numofests_roa_fp1,Number of estimations of returns on assets - upcoming quarter,MATRIX,50%,11,23
+anl14_numofests_roa_fp2,Number of estimations of Returns on Assets - upcoming 2 quarters,MATRIX,50%,9,11
+anl14_numofests_roa_fp3,Num of Estimations of Returns on Assets - Upcoming 3 Quarters,MATRIX,50%,7,11
+anl14_numofests_roa_fp4,Num of estimations of returns on assets - upcoming 4 quarters,MATRIX,50%,2,3
+anl14_numofests_roa_fp5,Num of Estimations of Returns on Assets - upcoming 5 quarters,MATRIX,50%,3,3
+anl14_numofests_roa_fy1,Num of Estimations of Returns on Assets - Upcoming Year,MATRIX,50%,41,98
+anl14_numofests_roa_fy2,Num of Estimations of Returns on Assets - Upcoming 2 Years,MATRIX,50%,18,41
+anl14_numofests_roa_fy3,Num of Estimations of Returns on Assets - upcoming 3 years,MATRIX,50%,18,26
+anl14_numofests_roe_fp1,Num of estimations of returns on equity - upcoming quarter,MATRIX,50%,12,27
+anl14_numofests_roe_fp2,Num of Estimations of Returns on Equity - upcoming 2 quarters,MATRIX,50%,13,18
+anl14_numofests_roe_fp3,Num of estimations of returns on equity - upcoming 3 quarters,MATRIX,50%,11,14
+anl14_numofests_roe_fp4,Num of Estimations of Returns on Equity - upcoming 4 quarters,MATRIX,50%,11,29
+anl14_numofests_roe_fp5,Num of Estimations of Returns on Equity - Upcoming 5 Quarters,MATRIX,50%,9,12
+anl14_numofests_roe_fy1,Num of Estimations of Returns on Equity - upcoming year,MATRIX,50%,42,85
+anl14_numofests_roe_fy2,Num of Estimations of Returns on Equity - Upcoming 2 Years,MATRIX,50%,55,194
+anl14_numofests_roe_fy3,Number of estimations of returns on equity - upcoming 3 years,MATRIX,50%,15,44
+anl14_outperform,Num of recommendations on being outperform of this stock,MATRIX,50%,60,252
+anl14_ptg_broker,Broker Name -,VECTOR,50%,33,78
+anl14_rec_broker,Broker name -,VECTOR,50%,50,269
+anl14_recvalue,Recommendation value,VECTOR,50%,53,251
+anl14_sell,Number of recommendations to sell,MATRIX,50%,20,33
+anl14_stddev_bvps_fp1,Standard deviation of estimations of book value per share - upcoming quarter,MATRIX,50%,10,120
+anl14_stddev_bvps_fp2,Standard Deviation of Estimations of Book Value Per Share - upcoming 2 quarters,MATRIX,50%,8,21
+anl14_stddev_bvps_fp3,Standard Deviation of Estimations of Book Value Per Share - Upcoming 3 Quarters,MATRIX,50%,14,15
+anl14_stddev_bvps_fp4,Standard deviation of estimations of Book Value Per Share - upcoming 4 quarters,MATRIX,50%,28,42
+anl14_stddev_bvps_fp5,Standard Deviation of Estimations of Book Value Per Share - Upcoming 5 Quarters,MATRIX,50%,34,49
+anl14_stddev_bvps_fy1,Standard deviation of estimations of book value per share - upcoming year,MATRIX,50%,15,41
+anl14_stddev_bvps_fy2,Standard deviation of estimations of book value per share - upcoming 2 years,MATRIX,50%,14,34
+anl14_stddev_bvps_fy3,Standard Deviation of Estimations of Book Value Per Share - upcoming 3 years,MATRIX,50%,16,41
+anl14_stddev_capex_fp1,Standard Deviation of Estimations of Capital Expenditures - upcoming quarter,MATRIX,50%,29,77
+anl14_stddev_capex_fp2,Standard Deviation of Estimations of Capital Expenditures - upcoming 2 quarters,MATRIX,50%,8,36
+anl14_stddev_capex_fp3,Standard Deviation of Estimations of Capital Expenditures - upcoming 3 quarters,MATRIX,50%,14,57
+anl14_stddev_capex_fp4,Standard deviation of estimations of capital expenditures - upcoming 4 quarters,MATRIX,50%,22,48
+anl14_stddev_capex_fp5,Standard Deviation of Estimations of Capital Expenditures - Upcoming 5 Quarters,MATRIX,50%,9,21
+anl14_stddev_capex_fy1,Standard deviation of estimations of capital expenditures - upcoming year,MATRIX,50%,39,89
+anl14_stddev_capex_fy2,Standard Deviation of Estimations of Capital Expenditures - upcoming 2 years,MATRIX,50%,35,159
+anl14_stddev_capex_fy3,Standard Deviation of Estimations of Capital Expenditures - upcoming 3 years,MATRIX,50%,18,35
+anl14_stddev_capex_fy4,Standard Deviation of Estimations of Capital Expenditures - upcoming 4 years,MATRIX,50%,6,18
+anl14_stddev_capex_fy5,Standard Deviation of Estimations of Capital Expenditures - upcoming 5 years,MATRIX,50%,13,25
+anl14_stddev_cfps_fp1,Standard deviation of estimations of cash flow per share - upcoming quarter,MATRIX,50%,13,27
+anl14_stddev_cfps_fp2,Standard Deviation of Estimations of Cash Flow Per Share - Upcoming 2 Quarters,MATRIX,50%,16,19
+anl14_stddev_cfps_fp3,Standard deviation of estimations of cash flow per share - upcoming 3 quarters,MATRIX,50%,10,23
+anl14_stddev_cfps_fp4,Standard deviation of estimations of Cash Flow Per Share - upcoming 4 quarters,MATRIX,50%,12,73
+anl14_stddev_cfps_fp5,Standard Deviation of Estimations of Cash Flow Per Share - upcoming 5 quarters,MATRIX,50%,10,20
+anl14_stddev_cfps_fy1,Standard deviation of estimations of cash flow per share - upcoming year,MATRIX,50%,10,16
+anl14_stddev_cfps_fy2,Standard Deviation of Estimations of Cash Flow Per Share - upcoming 2 years,MATRIX,50%,32,65
+anl14_stddev_cfps_fy3,Standard deviation of estimations of cash flow per share - upcoming 3 years,MATRIX,50%,14,18
+anl14_stddev_div_fp1,Standard deviation of estimations of dividend - upcoming quarter,MATRIX,50%,9,9
+anl14_stddev_div_fp2,Standard deviation of estimations of dividend - upcoming 2 quarters,MATRIX,50%,7,12
+anl14_stddev_div_fp3,Standard Deviation of Estimations of Dividend - upcoming 3 quarters,MATRIX,50%,4,9
+anl14_stddev_div_fp4,Standard Deviation of Estimations of Dividend - upcoming 4 quarters,MATRIX,50%,11,15
+anl14_stddev_div_fp5,Standard Deviation of Estimations of Dividend - Upcoming 5 Quarters,MATRIX,50%,10,11
+anl14_stddev_div_fy1,Standard Deviation of Estimations of Dividend - upcoming year,MATRIX,50%,9,18
+anl14_stddev_div_fy2,Standard Deviation of Estimations of Dividend - Upcoming 2 Years,MATRIX,50%,14,31
+anl14_stddev_div_fy3,Standard Deviation of Estimations of Dividend - upcoming 3 years,MATRIX,50%,6,25
+anl14_stddev_div_fy4,Standard Deviation of Estimations of Dividend - upcoming 4 years,MATRIX,50%,3,3
+anl14_stddev_ebit_fp1,Standard Deviation of Estimations of Earnings Before Interest & Taxes - upcoming quarter,MATRIX,50%,69,263
+anl14_stddev_ebit_fp2,Standard deviation of estimations of Earnings Before Interest & Taxes - upcoming 2 quarters,MATRIX,50%,44,212
+anl14_stddev_ebit_fp3,Standard Deviation of Estimations of Earnings Before Interest & Taxes - upcoming 3 quarters,MATRIX,50%,55,430
+anl14_stddev_ebit_fp4,Standard deviation of estimations of earnings before interest & taxes - upcoming 4 quarters,MATRIX,50%,42,167
+anl14_stddev_ebit_fp5,Standard deviation of estimations of earnings before interest & taxes - upcoming 5 quarters,MATRIX,50%,45,127
+anl14_stddev_ebit_fy1,Standard Deviation of Estimations of Earnings Before Interest & Taxes - upcoming year,MATRIX,50%,66,165
+anl14_stddev_ebit_fy2,Standard Deviation of Estimations of Earnings Before Interest & Taxes - upcoming 2 years,MATRIX,50%,97,720
+anl14_stddev_ebit_fy3,Standard Deviation of Estimations of Earnings Before Interest & Taxes - upcoming 3 years,MATRIX,50%,27,85
+anl14_stddev_ebit_fy4,Standard Deviation of Estimations of Earnings Before Interest & Taxes - upcoming 4 years,MATRIX,50%,10,19
+anl14_stddev_ebit_fy5,Standard Deviation of Estimations of Earnings Before Interest & Taxes - upcoming 5 years,MATRIX,50%,14,37
+anl14_stddev_ebitda_fp1,"Standard Deviation of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming quarter",MATRIX,50%,71,314
+anl14_stddev_ebitda_fp2,"Standard Deviation of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 2 quarters",MATRIX,50%,50,208
+anl14_stddev_ebitda_fp3,"Standard deviation of estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 3 quarters",MATRIX,50%,38,199
+anl14_stddev_ebitda_fp4,"Standard deviation of estimations of earnings before interest, taxes, depreciation & amortization - upcoming 4 quarters",MATRIX,50%,18,98
+anl14_stddev_ebitda_fp5,"Standard Deviation of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 5 quarters",MATRIX,50%,19,59
+anl14_stddev_ebitda_fy1,"Standard deviation of estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming year",MATRIX,50%,28,60
+anl14_stddev_ebitda_fy2,"Standard Deviation of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 2 years",MATRIX,50%,46,117
+anl14_stddev_ebitda_fy3,"Standard Deviation of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 3 years",MATRIX,50%,39,279
+anl14_stddev_ebitda_fy4,"Standard Deviation of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - upcoming 4 years",MATRIX,50%,10,14
+anl14_stddev_ebitda_fy5,"Standard Deviation of Estimations of Earnings Before Interest, Taxes, Depreciation & Amortization - Upcoming 5 Years",MATRIX,50%,11,16
+anl14_stddev_eps_fp1,Standard deviation of estimations of earnings per share - upcoming quarter,MATRIX,50%,116,957
+anl14_stddev_eps_fp2,Standard Deviation of Estimations of Earnings Per Share - Upcoming 2 Quarters,MATRIX,50%,162,1397
+anl14_stddev_eps_fp3,Standard deviation of estimations of earnings per share - upcoming 3 quarters,MATRIX,50%,82,633
+anl14_stddev_eps_fp4,Standard Deviation of Estimations of Earnings Per Share - upcoming 4 quarters,MATRIX,50%,72,424
+anl14_stddev_eps_fp5,Standard Deviation of Estimations of Earnings Per Share - upcoming 5 quarters,MATRIX,50%,80,595
+anl14_stddev_eps_fy1,Standard deviation of estimations of earnings per share - upcoming year,MATRIX,50%,67,266
+anl14_stddev_eps_fy2,Standard deviation of estimations of earnings per share - upcoming 2 years,MATRIX,50%,77,538
+anl14_stddev_eps_fy3,Standard Deviation of Estimations of Earnings Per Share - upcoming 3 years,MATRIX,50%,62,207
+anl14_stddev_eps_fy4,Standard deviation of estimations of earnings per share - upcoming 4 years,MATRIX,50%,12,22
+anl14_stddev_eps_fy5,Standard deviation of estimations of earnings per share - upcoming 5 years,MATRIX,50%,14,25
+anl14_stddev_epsrep_fp1,Standard deviation of estimations of reported earnings per share - upcoming quarter,MATRIX,50%,87,437
+anl14_stddev_epsrep_fp2,Standard Deviation of Estimations of Reported Earnings Per Share - Upcoming 2 Quarters,MATRIX,50%,65,499
+anl14_stddev_epsrep_fp3,Standard Deviation of Estimations of Reported Earnings Per Share - Upcoming 3 Quarters,MATRIX,50%,78,506
+anl14_stddev_epsrep_fp4,Standard Deviation of Estimations of Reported Earnings Per Share - Upcoming 4 Quarters,MATRIX,50%,56,115
+anl14_stddev_epsrep_fp5,Standard Deviation of Estimations of Reported Earnings Per Share - upcoming 5 quarters,MATRIX,50%,58,210
+anl14_stddev_epsrep_fy1,Standard Deviation of Estimations of Reported Earnings Per Share - upcoming year,MATRIX,50%,53,211
+anl14_stddev_epsrep_fy2,Standard Deviation of Estimations of Reported Earnings Per Share - Upcoming 2 Years,MATRIX,50%,84,507
+anl14_stddev_epsrep_fy3,Standard deviation of estimations of reported earnings per share - upcoming 3 years,MATRIX,50%,35,80
+anl14_stddev_epsrep_fy4,Standard Deviation of Estimations of Reported Earnings Per Share - Upcoming 4 Years,MATRIX,50%,12,18
+anl14_stddev_epsrep_fy5,Standard deviation of estimations of reported earnings per share - upcoming 5 years,MATRIX,50%,6,7
+anl14_stddev_nav_fy1,Standard Deviation of Estimations of Net Asset Value - upcoming year,MATRIX,50%,13,24
+anl14_stddev_nav_fy2,Standard Deviation of Estimations of Net Asset Value - upcoming 2 years,MATRIX,50%,9,15
+anl14_stddev_ndebt_fp1,Standard deviation of estimations of Net Debt - upcoming quarter,MATRIX,50%,15,29
+anl14_stddev_ndebt_fp2,Standard deviation of estimations of net debt - upcoming 2 quarters,MATRIX,50%,26,87
+anl14_stddev_ndebt_fp3,Standard Deviation of Estimations of Net Debt - upcoming 3 quarters,MATRIX,50%,14,24
+anl14_stddev_ndebt_fp4,Standard deviation of estimations of net debt - upcoming 4 quarters,MATRIX,50%,7,8
+anl14_stddev_ndebt_fp5,Standard Deviation of Estimations of Net Debt - upcoming 5 quarters,MATRIX,50%,11,23
+anl14_stddev_ndebt_fy1,Standard deviation of estimations of net debt - upcoming year,MATRIX,50%,21,37
+anl14_stddev_ndebt_fy2,Standard deviation of estimations of Net Debt - upcoming 2 years,MATRIX,50%,24,46
+anl14_stddev_ndebt_fy3,Standard deviation of estimations of net debt - upcoming 3 years,MATRIX,50%,17,30
+anl14_stddev_ntp_fp1,Standard Deviation of Estimations of Net Profit - Upcoming Quarter,MATRIX,50%,81,656
+anl14_stddev_ntp_fp2,Standard deviation of estimations of net profit - upcoming 2 quarters,MATRIX,50%,72,448
+anl14_stddev_ntp_fp3,Standard Deviation of Estimations of Net Profit - upcoming 3 quarters,MATRIX,50%,62,219
+anl14_stddev_ntp_fp4,Standard Deviation of Estimations of Net Profit - upcoming 4 quarters,MATRIX,50%,58,265
+anl14_stddev_ntp_fp5,Standard deviation of estimations of net profit - upcoming 5 quarters,MATRIX,50%,51,301
+anl14_stddev_ntp_fy1,Standard Deviation of Estimations of Net Profit - upcoming year,MATRIX,50%,38,363
+anl14_stddev_ntp_fy2,Standard deviation of estimations of net profit - upcoming 2 years,MATRIX,50%,66,321
+anl14_stddev_ntp_fy3,Standard Deviation of Estimations of Net Profit - Upcoming 3 Years,MATRIX,50%,44,143
+anl14_stddev_ntp_fy4,Standard Deviation of Estimations of Net Profit - upcoming 4 years,MATRIX,50%,21,42
+anl14_stddev_ntp_fy5,Standard Deviation of Estimations of Net Profit - upcoming 5 years,MATRIX,50%,14,21
+anl14_stddev_ntprep_fp1,Standard Deviation of Estimations of Reported Net Profit - upcoming quarter,MATRIX,50%,101,715
+anl14_stddev_ntprep_fp2,Standard Deviation of Estimations of Reported Net Profit - upcoming 2 quarters,MATRIX,50%,60,429
+anl14_stddev_ntprep_fp3,Standard deviation of estimations of reported net profit - upcoming 3 quarters,MATRIX,50%,69,298
+anl14_stddev_ntprep_fp4,Standard Deviation of Estimations of Reported Net Profit - upcoming 4 quarters,MATRIX,50%,43,170
+anl14_stddev_ntprep_fp5,Standard deviation of estimations of reported net profit - upcoming 5 quarters,MATRIX,50%,58,209
+anl14_stddev_ntprep_fy1,Standard Deviation of Estimations of Reported Net Profit - Upcoming Year,MATRIX,50%,44,76
+anl14_stddev_ntprep_fy2,Standard Deviation of Estimations of Reported Net Profit - upcoming 2 years,MATRIX,50%,84,266
+anl14_stddev_ntprep_fy3,Standard Deviation of Estimations of Reported Net Profit - upcoming 3 years,MATRIX,50%,29,182
+anl14_stddev_ntprep_fy4,Standard Deviation of Estimations of Reported Net Profit - upcoming 4 years,MATRIX,50%,10,13
+anl14_stddev_ntprep_fy5,Standard Deviation of Estimations of Reported Net Profit - Upcoming 5 Years,MATRIX,50%,10,13
+anl14_stddev_opp_fp1,Standard Deviation of Estimations of Operating Profit - upcoming quarter,MATRIX,50%,9,18
+anl14_stddev_opp_fy1,Standard Deviation of Estimations of Operating Profit - upcoming year,MATRIX,50%,3,3
+anl14_stddev_opp_fy2,Standard Deviation of Estimations of Operating Profit - Upcoming 2 Years,MATRIX,50%,9,10
+anl14_stddev_revenue_fp1,Standard Deviation of Estimations of Revenue - Upcoming Quarter,MATRIX,50%,83,616
+anl14_stddev_revenue_fp2,Standard deviation of estimations of revenue - upcoming 2 quarters,MATRIX,50%,89,878
+anl14_stddev_revenue_fp3,Standard Deviation of Estimations of Revenue - upcoming 3 quarters,MATRIX,50%,62,255
+anl14_stddev_revenue_fp4,Standard deviation of estimations of revenue - upcoming 4 quarters,MATRIX,50%,76,347
+anl14_stddev_revenue_fp5,Standard Deviation of Estimations of Revenue - Upcoming 5 Quarters,MATRIX,50%,84,239
+anl14_stddev_revenue_fy1,Standard Deviation of Estimations of Revenue - upcoming year,MATRIX,50%,67,252
+anl14_stddev_revenue_fy2,Standard Deviation of Estimations of Revenue - upcoming 2 years,MATRIX,50%,72,484
+anl14_stddev_revenue_fy3,Standard Deviation of Estimations of Revenue - upcoming 3 years,MATRIX,50%,47,131
+anl14_stddev_revenue_fy4,Standard deviation of estimations of revenue - upcoming 4 years,MATRIX,50%,14,22
+anl14_stddev_revenue_fy5,Standard Deviation of Estimations of Revenue - Upcoming 5 Years,MATRIX,50%,12,30
+anl14_stddev_roa_fp1,Standard Deviation of Estimations of Returns on Assets - upcoming quarter,MATRIX,50%,8,17
+anl14_stddev_roa_fp2,Standard Deviation of Estimations of Returns on Assets - upcoming 2 quarters,MATRIX,50%,7,18
+anl14_stddev_roa_fp3,Standard Deviation of Estimations of Returns on Assets - upcoming 3 quarters,MATRIX,50%,6,8
+anl14_stddev_roa_fp4,Standard Deviation of Estimations of Returns on Assets - upcoming 4 quarters,MATRIX,50%,6,6
+anl14_stddev_roa_fp5,Standard deviation of estimations of returns on assets - upcoming 5 quarters,MATRIX,50%,5,7
+anl14_stddev_roa_fy1,Standard Deviation of Estimations of Returns on Assets - upcoming year,MATRIX,50%,26,49
+anl14_stddev_roa_fy2,Standard Deviation of Estimations of Returns on Assets - upcoming 2 years,MATRIX,50%,35,66
+anl14_stddev_roa_fy3,Standard deviation of estimations of returns on assets - upcoming 3 years,MATRIX,50%,10,15
+anl14_stddev_roe_fp1,Standard Deviation of Estimations of Returns on Equity - upcoming quarter,MATRIX,50%,12,21
+anl14_stddev_roe_fp2,Standard Deviation of Estimations of Returns on Equity - Upcoming 2 Quarters,MATRIX,50%,12,13
+anl14_stddev_roe_fp3,Standard Deviation of Estimations of Returns on Equity - upcoming 3 quarters,MATRIX,50%,5,5
+anl14_stddev_roe_fp4,Standard deviation of estimations of returns on equity - upcoming 4 quarters,MATRIX,50%,14,23
+anl14_stddev_roe_fp5,Standard deviation of estimations of returns on equity - upcoming 5 quarters,MATRIX,50%,10,16
+anl14_stddev_roe_fy1,Standard Deviation of Estimations of Returns on Equity - Upcoming Year,MATRIX,50%,21,35
+anl14_stddev_roe_fy2,Standard deviation of estimations of returns on equity - upcoming 2 years,MATRIX,50%,46,110
+anl14_stddev_roe_fy3,Standard Deviation of Estimations of Returns on Equity - Upcoming 3 Years,MATRIX,50%,39,57
+anl14_underperform,Num of recommendations of being underperform for this stock,MATRIX,50%,21,54
+anl14_xrefmap,Reference Map to Stock -,MATRIX,50%,47,202
+rtk_ptg_high,The highest of Price Target -,MATRIX,50%,116,1029
+rtk_ptg_low,The Lowest of Price Target,MATRIX,50%,92,1060
+rtk_ptg_mean,Mean of Price Target -,MATRIX,50%,99,1075
+rtk_ptg_median,Median of price target,MATRIX,50%,104,1249
+rtk_ptg_number,Num of Price Target -,MATRIX,50%,71,263
+rtk_ptg_stddev,Standard Deviation of Price Target,MATRIX,50%,46,218

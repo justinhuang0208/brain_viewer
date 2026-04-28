@@ -1,0 +1,11 @@
+Field,Description,Type,Coverage,Users,Alphas
+prior_short_interest_predicted_change,The predicted change in short interest from the previous period.,MATRIX,100%,13,16
+prior_short_interest_predicted_value,The predicted value of short interest for the previous period based on historical data.,MATRIX,100%,6,6
+prior_short_interest_surprise_amount,The magnitude of deviation between actual and predicted short interest for the previous period.,MATRIX,100%,3,3
+prior_short_interest_surprise_ratio,"The ratio of actual to predicted short interest for the previous period, indicating deviation.",MATRIX,100%,5,6
+prior_short_interest_surprise_value,The difference between actual and predicted short interest for the previous period.,MATRIX,100%,0,0
+short_interest_predicted_change,The predicted change in short interest for the current period.,MATRIX,100%,12,27
+short_interest_predicted_value,Model’s next-day forecast of short interest in market value (dollars),MATRIX,100%,2,2
+short_interest_surprise_amount,The difference between actual and predicted short interest for the current period.,MATRIX,100%,1,1
+short_interest_surprise_ratio,The ratio of actual to predicted short interest for the current period.,MATRIX,100%,5,5
+short_interest_surprise_value,The difference between actual and predicted short interest for the current period.,MATRIX,100%,2,2

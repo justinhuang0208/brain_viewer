@@ -1,0 +1,916 @@
+Field,Description,Type,Coverage,Users,Alphas
+confidence_five_quantile_prediction,Model confidence score for five-quantile classification of future returns.,MATRIX,100%,0,0
+confidence_four_quantile_prediction,Model confidence score for four-quantile classification of future returns.,MATRIX,100%,0,0
+confidence_hundred_quantile_prediction,Model confidence score for hundred-quantile classification of future returns.,MATRIX,100%,0,0
+confidence_three_quantile_prediction,Model confidence score for three-quantile classification of future returns.,MATRIX,100%,0,0
+confidence_two_quantile_prediction,Model confidence score for two-quantile classification of future returns.,MATRIX,100%,1,1
+likelihood_fifth_quantile_five_day_bucket_four,"Probability that the five-day return falls in the fifth quantile, bucket four.",MATRIX,96%,1,1
+likelihood_fifth_quantile_five_day_bucket_four_10,"Probability that the 5-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,1,1
+likelihood_fifth_quantile_five_day_bucket_four_3,"Probability that the stock falls into the fifth quantile for five-day return, bucket four.",MATRIX,100%,1,1
+likelihood_fifth_quantile_five_day_bucket_four_31,"Probability that the five-day return falls in the fifth quantile, bucket four.",MATRIX,98%,2,2
+likelihood_fifth_quantile_five_day_bucket_four_4,"Probability that the five-day return falls in the fifth quantile, bucket four.",MATRIX,96%,2,2
+likelihood_fifth_quantile_five_day_bucket_four_5,"Probability that the next 5-day return falls in the fifth quantile, bucket 4.",MATRIX,100%,3,4
+likelihood_fifth_quantile_five_day_bucket_four_8,"Probability that the 5-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,1,1
+likelihood_fifth_quantile_five_day_bucket_four_9,"Probability that the 5-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_one_3,"Probability that the five-day return falls in the fifth quantile, bucket one.",MATRIX,100%,0,0
+likelihood_fifth_quantile_five_day_bucket_one_4,"Probability that the stock falls into the fifth quantile for five-day return, bucket one.",MATRIX,100%,1,1
+likelihood_fifth_quantile_five_day_bucket_one_41,"Probability that the five-day return falls in the fifth quantile, bucket one.",MATRIX,96%,1,1
+likelihood_fifth_quantile_five_day_bucket_one_5,"Probability that the next 5-day return falls in the fifth quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_fifth_quantile_five_day_bucket_one_8,"Probability that the 5-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_one_9,"Probability that the 5-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_three_3,"Probability that the stock falls into the fifth quantile for five-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_three_31,"Probability that the five-day return falls in the fifth quantile, bucket three.",MATRIX,98%,0,0
+likelihood_fifth_quantile_five_day_bucket_three_4,"Probability that the stock falls into the fifth quantile for five-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_three_41,"Probability that the five-day return falls in the fifth quantile, bucket three.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_three_5,"Probability that the next 5-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_three_7,"Probability that the next 5-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_three_9,"Probability that the 5-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_two_3,Probability that the stock is in the second bucket of the fifth quantile for five-day predicted returns.,MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_two_31,"Probability that the stock falls into the fifth quantile for five-day return, bucket two.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_two_32,"Probability that the five-day return falls in the fifth quantile, bucket two.",MATRIX,98%,0,0
+likelihood_fifth_quantile_five_day_bucket_two_4,"Probability that the stock falls into the fifth quantile for five-day return, bucket two.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_two_5,"Probability that the next 5-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_two_6,"Probability that the next 5-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_two_8,"Probability that the 5-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_two_9,"Probability that the 5-day return falls in the fifth quantile, bucket 2.",MATRIX,100%,0,0
+likelihood_fifth_quantile_five_day_bucket_zero_3,Probability that the stock is in the zero-th bucket of the fifth quantile for five-day predicted returns.,MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_zero_31,"Probability that the stock falls into the fifth quantile for five-day return, bucket zero.",MATRIX,100%,0,0
+likelihood_fifth_quantile_five_day_bucket_zero_32,"Probability that the five-day return falls in the fifth quantile, bucket zero.",MATRIX,100%,0,0
+likelihood_fifth_quantile_five_day_bucket_zero_4,"Probability that the stock falls into the fifth quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_zero_41,"Probability that the five-day return falls in the fifth quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_fifth_quantile_five_day_bucket_zero_5,"Probability that the next 5-day return falls in the fifth quantile, bucket 0.",MATRIX,100%,1,2
+likelihood_fifth_quantile_five_day_bucket_zero_8,"Probability that the 5-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,1,1
+likelihood_fifth_quantile_five_day_bucket_zero_9,"Probability that the 5-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_four_3,"Probability that the stock falls into the fifth quantile for one-day return, bucket four.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_four_31,"Probability that the next-day return falls in the fifth quantile, bucket four.",MATRIX,100%,0,0
+likelihood_fifth_quantile_one_day_bucket_four_4,"Probability that the stock falls into the fifth quantile for one-day return, bucket four.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_four_41,"Probability that the next-day return falls in the fifth quantile, bucket four.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_four_5,"Probability that the next 1-day return falls in the fifth quantile, bucket 4.",MATRIX,100%,0,0
+likelihood_fifth_quantile_one_day_bucket_four_8,"Probability that the 1-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_four_9,"Probability that the 1-day return falls in the fifth quantile, bucket 4.",MATRIX,100%,0,0
+likelihood_fifth_quantile_one_day_bucket_one_3,Probability that the stock is in the first bucket of the fifth quantile for one-day predicted returns.,MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_one_31,"Probability that the stock falls into the fifth quantile for one-day return, bucket one.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_one_32,"Probability that the next-day return falls in the fifth quantile, bucket one.",MATRIX,98%,0,0
+likelihood_fifth_quantile_one_day_bucket_one_4,"Probability that the stock falls into the fifth quantile for one-day return, bucket one.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_one_5,"Probability that the next 1-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_one_6,"Probability that the next 1-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_one_8,"Probability that the 1-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_one_9,"Probability that the 1-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_three_3,"Probability that the stock falls into the fifth quantile for one-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_three_31,"Probability that the next-day return falls in the fifth quantile, bucket three.",MATRIX,98%,0,0
+likelihood_fifth_quantile_one_day_bucket_three_4,"Probability that the stock falls into the fifth quantile for one-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_three_41,"Probability that the next-day return falls in the fifth quantile, bucket three.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_three_5,"Probability that the next 1-day return falls in the fifth quantile, bucket 3.",MATRIX,100%,0,0
+likelihood_fifth_quantile_one_day_bucket_three_8,"Probability that the 1-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_three_9,"Probability that the 1-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_two_3,Probability that the stock is in the second bucket of the fifth quantile for one-day predicted returns.,MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_two_31,"Probability that the stock falls into the fifth quantile for one-day return, bucket two.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_two_32,"Probability that the next-day return falls in the fifth quantile, bucket two.",MATRIX,100%,1,1
+likelihood_fifth_quantile_one_day_bucket_two_4,"Probability that the stock falls into the fifth quantile for one-day return, bucket two.",MATRIX,100%,0,0
+likelihood_fifth_quantile_one_day_bucket_two_41,"Probability that the next-day return falls in the fifth quantile, bucket two.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_two_5,"Probability that the next 1-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_two_8,"Probability that the 1-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_two_9,"Probability that the 1-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_zero_3,"Probability that the stock falls into the fifth quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_zero_31,"Probability that the next-day return falls in the fifth quantile, bucket zero.",MATRIX,100%,0,0
+likelihood_fifth_quantile_one_day_bucket_zero_4,Probability that the stock is in the zero-th bucket of the fifth quantile for one-day predicted returns.,MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_zero_41,"Probability that the stock falls into the fifth quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_zero_5,"Probability that the next 1-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_zero_6,"Probability that the next 1-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_zero_8,"Probability that the 1-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fifth_quantile_one_day_bucket_zero_9,"Probability that the 1-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_four_3,"Probability that the stock falls into the fifth quantile for ten-day return, bucket four.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_four_31,"Probability that the ten-day return falls in the fifth quantile, bucket four.",MATRIX,98%,0,0
+likelihood_fifth_quantile_ten_day_bucket_four_4,"Probability that the stock falls into the fifth quantile for ten-day return, bucket four.",MATRIX,96%,1,1
+likelihood_fifth_quantile_ten_day_bucket_four_41,"Probability that the ten-day return falls in the fifth quantile, bucket four.",MATRIX,96%,2,2
+likelihood_fifth_quantile_ten_day_bucket_four_5,"Probability that the next 10-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_four_8,"Probability that the 10-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_four_9,"Probability that the 10-day return falls in the fifth quantile, bucket 4.",MATRIX,100%,1,1
+likelihood_fifth_quantile_ten_day_bucket_one_3,"Probability that the stock falls into the fifth quantile for ten-day return, bucket one.",MATRIX,96%,1,1
+likelihood_fifth_quantile_ten_day_bucket_one_31,"Probability that the ten-day return falls in the fifth quantile, bucket one.",MATRIX,100%,0,0
+likelihood_fifth_quantile_ten_day_bucket_one_4,"Probability that the stock falls into the fifth quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_one_41,"Probability that the ten-day return falls in the fifth quantile, bucket one.",MATRIX,96%,1,1
+likelihood_fifth_quantile_ten_day_bucket_one_5,"Probability that the next 10-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_one_7,"Probability that the next 10-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_one_9,"Probability that the 10-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_three_3,"Probability that the stock falls into the fifth quantile for ten-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_three_31,"Probability that the ten-day return falls in the fifth quantile, bucket three.",MATRIX,98%,0,0
+likelihood_fifth_quantile_ten_day_bucket_three_4,"Probability that the stock falls into the fifth quantile for ten-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_three_5,"Probability that the next 10-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_three_6,"Probability that the next 10-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_three_7,"Probability that the next 10-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_three_9,"Probability that the 10-day return falls in the fifth quantile, bucket 3.",MATRIX,100%,0,0
+likelihood_fifth_quantile_ten_day_bucket_two_3,Probability that the stock is in the second bucket of the fifth quantile for ten-day predicted returns.,MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_two_31,"Probability that the stock falls into the fifth quantile for ten-day return, bucket two.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_two_32,"Probability that the ten-day return falls in the fifth quantile, bucket two.",MATRIX,98%,0,0
+likelihood_fifth_quantile_ten_day_bucket_two_5,"Probability that the next 10-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_two_6,"Probability that the next 10-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_two_8,"Probability that the 10-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_two_9,"Probability that the 10-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_zero_3,Probability that the stock is in the zero-th bucket of the fifth quantile for ten-day predicted returns.,MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_zero_31,"Probability that the ten-day return falls in the fifth quantile, bucket zero.",MATRIX,100%,0,0
+likelihood_fifth_quantile_ten_day_bucket_zero_4,"Probability that the stock falls into the fifth quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_zero_41,"Probability that the ten-day return falls in the fifth quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_zero_5,"Probability that the next 10-day return falls in the fifth quantile, bucket 0.",MATRIX,100%,0,0
+likelihood_fifth_quantile_ten_day_bucket_zero_8,"Probability that the 10-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fifth_quantile_ten_day_bucket_zero_9,"Probability that the 10-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_one,"Probability that the five-day return falls in the fourth quantile, bucket one.",MATRIX,100%,0,0
+likelihood_fourth_quantile_five_day_bucket_one_3,Probability that the stock is in the first bucket of the fourth quantile for five-day predicted returns.,MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_one_31,"Probability that the stock falls into the fourth quantile for five-day return, bucket one.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_one_32,"Probability that the five-day return falls in the fourth quantile, bucket one.",MATRIX,98%,0,0
+likelihood_fourth_quantile_five_day_bucket_one_4,"Probability that the five-day return falls in the fourth quantile, bucket one.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_one_5,"Probability that the next 5-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_one_8,"Probability that the 5-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_one_9,"Probability that the 5-day return falls in the fourth quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_fourth_quantile_five_day_bucket_three,Probability that the stock falls into the third bucket of the fourth quantile for five-day predicted returns.,MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_three_3,"Probability that the stock falls into the fourth quantile for five-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_three_31,"Probability that the five-day return falls in the fourth quantile, bucket three.",MATRIX,98%,0,0
+likelihood_fourth_quantile_five_day_bucket_three_4,"Probability that the stock falls into the fourth quantile for five-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_three_5,"Probability that the next 5-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,1,1
+likelihood_fourth_quantile_five_day_bucket_three_6,"Probability that the next 5-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_three_7,"Probability that the next 5-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_three_9,"Probability that the 5-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_two,"Probability that the stock falls into the fourth quantile for five-day return, bucket two.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_two_3,Probability that the stock is in the second bucket of the fourth quantile for five-day predicted returns.,MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_two_31,"Probability that the five-day return falls in the fourth quantile, bucket two.",MATRIX,100%,0,0
+likelihood_fourth_quantile_five_day_bucket_two_4,"Probability that the stock falls into the fourth quantile for five-day return, bucket two.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_two_5,"Probability that the next 5-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_two_6,"Probability that the next 5-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_two_8,"Probability that the 5-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_two_9,"Probability that the 5-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_zero_2,"Probability that the stock falls into the fourth quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_zero_3,"Probability that the five-day return falls in the fourth quantile, bucket zero.",MATRIX,98%,0,0
+likelihood_fourth_quantile_five_day_bucket_zero_4,"Probability that the stock falls into the fourth quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_zero_5,"Probability that the next 5-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_zero_6,"Probability that the next 5-day return falls in the fourth quantile, bucket 0.",MATRIX,100%,0,0
+likelihood_fourth_quantile_five_day_bucket_zero_8,"Probability that the 5-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fourth_quantile_five_day_bucket_zero_9,"Probability that the 5-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_one_3,"Probability that the stock falls into the fourth quantile for one-day return, bucket one.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_one_31,"Probability that the next-day return falls in the fourth quantile, bucket one.",MATRIX,98%,0,0
+likelihood_fourth_quantile_one_day_bucket_one_4,"Probability that the stock falls into the fourth quantile for one-day return, bucket one.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_one_41,"Probability that the next-day return falls in the fourth quantile, bucket one.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_one_5,"Probability that the next 1-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_one_8,"Probability that the 1-day return falls in the fourth quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_fourth_quantile_one_day_bucket_one_9,"Probability that the 1-day return falls in the fourth quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_fourth_quantile_one_day_bucket_three_10,"Probability that the 1-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_three_3,"Probability that the stock falls into the fourth quantile for one-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_three_31,"Probability that the next-day return falls in the fourth quantile, bucket three.",MATRIX,100%,0,0
+likelihood_fourth_quantile_one_day_bucket_three_4,"Probability that the stock falls into the fourth quantile for one-day return, bucket three.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_three_5,"Probability that the next 1-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_three_6,"Probability that the next 1-day return falls in the fourth quantile, bucket 3.",MATRIX,100%,0,0
+likelihood_fourth_quantile_one_day_bucket_three_8,"Probability that the 1-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_three_9,"Probability that the 1-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_two_3,"Probability that the stock falls into the fourth quantile for one-day return, bucket two.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_two_31,"Probability that the next-day return falls in the fourth quantile, bucket two.",MATRIX,98%,0,0
+likelihood_fourth_quantile_one_day_bucket_two_4,"Probability that the stock falls into the fourth quantile for one-day return, bucket two.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_two_5,"Probability that the next 1-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_two_6,"Probability that the next 1-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_two_8,"Probability that the 1-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_two_9,"Probability that the 1-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_zero,"Probability that the next-day return falls in the fourth quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_zero_3,"Probability that the stock falls into the fourth quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_zero_31,"Probability that the next-day return falls in the fourth quantile, bucket zero.",MATRIX,98%,0,0
+likelihood_fourth_quantile_one_day_bucket_zero_4,"Probability that the next-day return falls in the fourth quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_zero_5,"Probability that the next 1-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_zero_6,"Probability that the next 1-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fourth_quantile_one_day_bucket_zero_9,"Probability that the 1-day return falls in the fourth quantile, bucket 0.",MATRIX,100%,0,0
+likelihood_fourth_quantile_ten_day_bucket_one_3,"Probability that the stock falls into the fourth quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_one_31,"Probability that the ten-day return falls in the fourth quantile, bucket one.",MATRIX,100%,0,0
+likelihood_fourth_quantile_ten_day_bucket_one_4,"Probability that the stock falls into the fourth quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_one_5,"Probability that the next 10-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_one_6,"Probability that the next 10-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_one_8,"Probability that the 10-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_one_9,"Probability that the 10-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_three,"Probability that the ten-day return falls in the fourth quantile, bucket three.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_three_3,"Probability that the ten-day return falls in the fourth quantile, bucket three.",MATRIX,98%,0,0
+likelihood_fourth_quantile_ten_day_bucket_three_5,"Probability that the next 10-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,1,1
+likelihood_fourth_quantile_ten_day_bucket_three_6,"Probability that the next 10-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_three_8,"Probability that the 10-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,1,1
+likelihood_fourth_quantile_ten_day_bucket_three_9,"Probability that the 10-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_two,"Probability that the ten-day return falls in the fourth quantile, bucket two.",MATRIX,100%,0,0
+likelihood_fourth_quantile_ten_day_bucket_two_3,"Probability that the stock falls into the fourth quantile for ten-day return, bucket two.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_two_31,"Probability that the ten-day return falls in the fourth quantile, bucket two.",MATRIX,100%,0,0
+likelihood_fourth_quantile_ten_day_bucket_two_4,"Probability that the ten-day return falls in the fourth quantile, bucket two.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_two_6,"Probability that the next 10-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_two_7,"Probability that the next 10-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_two_9,"Probability that the 10-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_zero_10,"Probability that the 10-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_zero_3,Probability that the stock is in the zero-th bucket of the fourth quantile for ten-day predicted returns.,MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_zero_31,"Probability that the stock falls into the fourth quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_zero_32,"Probability that the ten-day return falls in the fourth quantile, bucket zero.",MATRIX,100%,0,0
+likelihood_fourth_quantile_ten_day_bucket_zero_4,"Probability that the stock falls into the fourth quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_zero_5,"Probability that the next 10-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_zero_6,"Probability that the next 10-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_fourth_quantile_ten_day_bucket_zero_7,"Probability that the next 10-day return falls in the fourth quantile, bucket 0.",MATRIX,100%,0,0
+likelihood_fourth_quantile_ten_day_bucket_zero_9,"Probability that the 10-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_second_quantile_five_day_bucket_one_3,"Probability that the stock falls into the second quantile for five-day return, bucket one.",MATRIX,96%,0,0
+likelihood_second_quantile_five_day_bucket_one_31,"Probability that the five-day return falls in the second quantile, bucket one.",MATRIX,98%,0,0
+likelihood_second_quantile_five_day_bucket_one_4,"Probability that the stock falls into the second quantile for five-day return, bucket one.",MATRIX,100%,0,0
+likelihood_second_quantile_five_day_bucket_one_41,"Probability that the five-day return falls in the second quantile, bucket one.",MATRIX,96%,0,0
+likelihood_second_quantile_five_day_bucket_one_5,"Probability that the next 5-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_second_quantile_five_day_bucket_one_8,"Probability that the 5-day return falls in the second quantile, bucket 1.",MATRIX,96%,1,1
+likelihood_second_quantile_five_day_bucket_one_9,"Probability that the 5-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_second_quantile_five_day_bucket_zero,"Probability that the five-day return falls in the second quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_second_quantile_five_day_bucket_zero_3,"Probability that the stock falls into the second quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_second_quantile_five_day_bucket_zero_31,"Probability that the five-day return falls in the second quantile, bucket zero.",MATRIX,98%,0,0
+likelihood_second_quantile_five_day_bucket_zero_4,"Probability that the five-day return falls in the second quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_second_quantile_five_day_bucket_zero_5,"Probability that the next 5-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_second_quantile_five_day_bucket_zero_6,"Probability that the next 5-day return falls in the second quantile, bucket 0.",MATRIX,96%,1,1
+likelihood_second_quantile_five_day_bucket_zero_9,"Probability that the 5-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_one,"Probability that the next-day return falls in the second quantile, bucket one.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_one_3,"Probability that the stock falls into the second quantile for one-day return, bucket one.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_one_31,"Probability that the next-day return falls in the second quantile, bucket one.",MATRIX,98%,0,0
+likelihood_second_quantile_one_day_bucket_one_5,"Probability that the next 1-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_one_6,"Probability that the next 1-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_one_8,"Probability that the 1-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_one_9,"Probability that the 1-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_zero_3,"Probability that the stock falls into the second quantile for one-day return, bucket zero.",MATRIX,100%,0,0
+likelihood_second_quantile_one_day_bucket_zero_31,"Probability that the next-day return falls in the second quantile, bucket zero.",MATRIX,98%,0,0
+likelihood_second_quantile_one_day_bucket_zero_4,"Probability that the stock falls into the second quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_zero_5,"Probability that the next 1-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_zero_6,"Probability that the next 1-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_zero_8,"Probability that the 1-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_second_quantile_one_day_bucket_zero_9,"Probability that the 1-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_one_3,Probability that the stock is in the first bucket of the second quantile for ten-day predicted returns.,MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_one_31,"Probability that the stock falls into the second quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_one_32,"Probability that the ten-day return falls in the second quantile, bucket one.",MATRIX,100%,0,0
+likelihood_second_quantile_ten_day_bucket_one_4,"Probability that the stock falls into the second quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_one_5,"Probability that the next 10-day return falls in the second quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_second_quantile_ten_day_bucket_one_6,"Probability that the next 10-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_one_8,"Probability that the 10-day return falls in the second quantile, bucket 1.",MATRIX,96%,1,1
+likelihood_second_quantile_ten_day_bucket_one_9,"Probability that the 10-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_zero_3,Probability that the stock is in the zero-th bucket of the second quantile for ten-day predicted returns.,MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_zero_31,"Probability that the stock falls into the second quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_zero_32,"Probability that the ten-day return falls in the second quantile, bucket zero.",MATRIX,98%,0,0
+likelihood_second_quantile_ten_day_bucket_zero_4,"Probability that the stock falls into the second quantile for ten-day return, bucket zero.",MATRIX,96%,1,1
+likelihood_second_quantile_ten_day_bucket_zero_41,"Probability that the ten-day return falls in the second quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_zero_5,"Probability that the next 10-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_second_quantile_ten_day_bucket_zero_7,"Probability that the next 10-day return falls in the second quantile, bucket 0.",MATRIX,96%,1,1
+likelihood_second_quantile_ten_day_bucket_zero_9,"Probability that the 10-day return falls in the second quantile, bucket 0.",MATRIX,100%,0,0
+likelihood_third_quantile_five_day_bucket_one_10,"Probability that the 5-day return falls in the third quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_third_quantile_five_day_bucket_one_3,"Probability that the stock falls into the third quantile for five-day return, bucket one.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_one_31,"Probability that the five-day return falls in the third quantile, bucket one.",MATRIX,98%,0,0
+likelihood_third_quantile_five_day_bucket_one_4,"Probability that the stock falls into the third quantile for five-day return, bucket one.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_one_41,"Probability that the five-day return falls in the third quantile, bucket one.",MATRIX,100%,0,0
+likelihood_third_quantile_five_day_bucket_one_5,"Probability that the next 5-day return falls in the third quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_third_quantile_five_day_bucket_one_8,"Probability that the 5-day return falls in the third quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_one_9,"Probability that the 5-day return falls in the third quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_two_3,Probability that the stock is in the second bucket of the third quantile for five-day predicted returns.,MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_two_31,"Probability that the stock falls into the third quantile for five-day return, bucket two.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_two_32,"Probability that the five-day return falls in the third quantile, bucket two.",MATRIX,98%,0,0
+likelihood_third_quantile_five_day_bucket_two_4,"Probability that the stock falls into the third quantile for five-day return, bucket two.",MATRIX,100%,1,1
+likelihood_third_quantile_five_day_bucket_two_41,"Probability that the five-day return falls in the third quantile, bucket two.",MATRIX,96%,2,2
+likelihood_third_quantile_five_day_bucket_two_5,"Probability that the next 5-day return falls in the third quantile, bucket 2.",MATRIX,100%,1,1
+likelihood_third_quantile_five_day_bucket_two_8,"Probability that the 5-day return falls in the third quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_two_9,"Probability that the 5-day return falls in the third quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_zero,Probability that a stock's five-day return falls into the third quantile and is assigned to bucket zero.,MATRIX,96%,2,2
+likelihood_third_quantile_five_day_bucket_zero_2,Probability that the stock is in the zero-th bucket of the third quantile for five-day predicted returns.,MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_zero_3,"Probability that the stock falls into the third quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_zero_31,"Probability that the five-day return falls in the third quantile, bucket zero.",MATRIX,98%,0,0
+likelihood_third_quantile_five_day_bucket_zero_4,"Probability that the stock falls into the third quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_zero_41,"Probability that the five-day return falls in the third quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_zero_5,"Probability that the next 5-day return falls in the third quantile, bucket 0.",MATRIX,100%,0,0
+likelihood_third_quantile_five_day_bucket_zero_6,"Probability that the next 5-day return falls in the third quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_third_quantile_five_day_bucket_zero_9,"Probability that the 5-day return falls in the third quantile, bucket 0.",MATRIX,100%,0,0
+likelihood_third_quantile_one_day_bucket_one_3,Probability that the stock is in the first bucket of the third quantile for one-day predicted returns.,MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_one_31,"Probability that the stock falls into the third quantile for one-day return, bucket one.",MATRIX,100%,0,0
+likelihood_third_quantile_one_day_bucket_one_32,"Probability that the next-day return falls in the third quantile, bucket one.",MATRIX,98%,0,0
+likelihood_third_quantile_one_day_bucket_one_4,"Probability that the stock falls into the third quantile for one-day return, bucket one.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_one_41,"Probability that the next-day return falls in the third quantile, bucket one.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_one_5,"Probability that the next 1-day return falls in the third quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_third_quantile_one_day_bucket_one_8,"Probability that the 1-day return falls in the third quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_third_quantile_one_day_bucket_one_9,"Probability that the 1-day return falls in the third quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_two_3,"Probability that the stock falls into the third quantile for one-day return, bucket two.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_two_31,"Probability that the next-day return falls in the third quantile, bucket two.",MATRIX,98%,0,0
+likelihood_third_quantile_one_day_bucket_two_4,"Probability that the stock falls into the third quantile for one-day return, bucket two.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_two_41,"Probability that the next-day return falls in the third quantile, bucket two.",MATRIX,96%,1,1
+likelihood_third_quantile_one_day_bucket_two_5,"Probability that the next 1-day return falls in the third quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_two_8,"Probability that the 1-day return falls in the third quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_two_9,"Probability that the 1-day return falls in the third quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_zero_10,"Probability that the 1-day return falls in the third quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_zero_3,Probability that the stock is in the zero-th bucket of the third quantile for one-day predicted returns.,MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_zero_31,"Probability that the stock falls into the third quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_zero_32,"Probability that the next-day return falls in the third quantile, bucket zero.",MATRIX,98%,0,0
+likelihood_third_quantile_one_day_bucket_zero_4,"Probability that the stock falls into the third quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_zero_41,"Probability that the next-day return falls in the third quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_zero_5,"Probability that the next 1-day return falls in the third quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_zero_6,"Probability that the next 1-day return falls in the third quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_third_quantile_one_day_bucket_zero_9,"Probability that the 1-day return falls in the third quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_one_3,"Probability that the stock falls into the third quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_one_31,"Probability that the ten-day return falls in the third quantile, bucket one.",MATRIX,100%,0,0
+likelihood_third_quantile_ten_day_bucket_one_4,"Probability that the stock falls into the third quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_one_41,"Probability that the ten-day return falls in the third quantile, bucket one.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_one_5,"Probability that the next 10-day return falls in the third quantile, bucket 1.",MATRIX,100%,0,0
+likelihood_third_quantile_ten_day_bucket_one_6,"Probability that the next 10-day return falls in the third quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_one_9,"Probability that the 10-day return falls in the third quantile, bucket 1.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_two_3,Probability that the stock is in the second bucket of the third quantile for ten-day predicted returns.,MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_two_31,"Probability that the stock falls into the third quantile for ten-day return, bucket two.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_two_32,"Probability that the ten-day return falls in the third quantile, bucket two.",MATRIX,98%,0,0
+likelihood_third_quantile_ten_day_bucket_two_4,"Probability that the stock falls into the third quantile for ten-day return, bucket two.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_two_5,"Probability that the next 10-day return falls in the third quantile, bucket 2.",MATRIX,96%,1,1
+likelihood_third_quantile_ten_day_bucket_two_6,"Probability that the next 10-day return falls in the third quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_two_7,"Probability that the next 10-day return falls in the third quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_two_9,"Probability that the 10-day return falls in the third quantile, bucket 2.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_zero_10,"Probability that the 10-day return falls in the third quantile, bucket 0.",MATRIX,100%,0,0
+likelihood_third_quantile_ten_day_bucket_zero_3,Probability that the stock is in the zero-th bucket of the third quantile for ten-day predicted returns.,MATRIX,100%,0,0
+likelihood_third_quantile_ten_day_bucket_zero_31,"Probability that the stock falls into the third quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_zero_32,"Probability that the ten-day return falls in the third quantile, bucket zero.",MATRIX,98%,0,0
+likelihood_third_quantile_ten_day_bucket_zero_4,"Probability that the stock falls into the third quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_zero_41,"Probability that the ten-day return falls in the third quantile, bucket zero.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_zero_5,"Probability that the next 10-day return falls in the third quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_zero_8,"Probability that the 10-day return falls in the third quantile, bucket 0.",MATRIX,96%,0,0
+likelihood_third_quantile_ten_day_bucket_zero_9,"Probability that the 10-day return falls in the third quantile, bucket 0.",MATRIX,96%,0,0
+predicted_fifth_bucket_five_day_return_2,Predicted return for the fifth quantile over a five-day horizon.,MATRIX,100%,1,1
+predicted_fifth_bucket_one_day_return_2,Predicted return for the fifth quantile over a one-day horizon.,MATRIX,100%,1,1
+predicted_fifth_bucket_one_day_return_3,Predicted return for the fifth quantile over a one-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_fifth_bucket_ten_day_return_2,Predicted return for the fifth quantile over a ten-day horizon.,MATRIX,100%,0,0
+predicted_fifth_bucket_ten_day_return_3,Predicted return for the fifth quantile over a ten-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_fifth_quantile_five_day_return,"Predicted quantile label for five-day forward return, indicating the fifth group.",MATRIX,100%,0,0
+predicted_fifth_quantile_five_day_return_11,Predicted five-day return for the fifth quantile group.,MATRIX,100%,2,2
+predicted_fifth_quantile_five_day_return_12,Predicted five-day return for the fifth quantile group.,MATRIX,100%,1,1
+predicted_fifth_quantile_five_day_return_13,Predicted five-day return for the fifth quantile group.,MATRIX,100%,0,0
+predicted_fifth_quantile_five_day_return_2,"Predicted quantile label for five-day forward return, indicating the fifth group (alternate version).",MATRIX,100%,0,0
+predicted_fifth_quantile_five_day_return_32,Model prediction for the fifth quantile of 5-day future return.,MATRIX,100%,0,0
+predicted_fifth_quantile_five_day_return_33,Predicted five-day return for the fifth quantile group.,MATRIX,100%,2,2
+predicted_fifth_quantile_five_day_return_34,Predicted label for the fifth quantile of five-day forward return.,MATRIX,100%,0,0
+predicted_fifth_quantile_five_day_return_35,Predicted five-day return quantile label for the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_five_day_return_4,Predicted five-day return quantile label for the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_five_day_return_5,Predicted label for the next 5-day return in the fifth quantile.,MATRIX,100%,1,1
+predicted_fifth_quantile_five_day_return_8,Model prediction for the fifth quantile of 5-day forward return.,MATRIX,100%,0,0
+predicted_fifth_quantile_five_day_return_9,Model prediction for the fifth quantile of 5-day forward return.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return,"Predicted quantile label for one-day forward return, indicating the fifth group.",MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_11,Predicted next-day return for the fifth quantile group.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_13,Predicted one-day return for a stock classified in the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_14,Predicted one-day return for a stock classified in the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_2,"Predicted quantile label for one-day forward return, indicating the fifth group (alternate version).",MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_32,Model prediction for the fifth quantile of 1-day future return.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_33,Predicted label for the fifth quantile of one-day forward return.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_34,Predicted next-day return quantile label for the fifth quantile.,MATRIX,100%,1,1
+predicted_fifth_quantile_one_day_return_4,Model prediction for the fifth quantile of 1-day future return.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_41,Predicted label for the fifth quantile of one-day forward return.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_42,Predicted next-day return quantile label for the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_5,Predicted label for the next 1-day return in the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_8,Model prediction for the fifth quantile of 1-day forward return.,MATRIX,100%,0,0
+predicted_fifth_quantile_one_day_return_9,Model prediction for the fifth quantile of 1-day forward return.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return,"Predicted quantile label for ten-day forward return, indicating the fifth group.",MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_11,Predicted ten-day return for the fifth quantile group.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_12,Predicted ten-day return for the fifth quantile group.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_13,Predicted ten-day return for a stock classified in the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_2,"Predicted quantile label for ten-day forward return, indicating the fifth group (alternate version).",MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_32,Model prediction for the fifth quantile of 10-day future return.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_33,Predicted ten-day return for the fifth quantile group.,MATRIX,100%,1,1
+predicted_fifth_quantile_ten_day_return_34,Predicted label for the fifth quantile of ten-day forward return.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_35,Predicted ten-day return quantile label for the fifth quantile.,MATRIX,100%,1,1
+predicted_fifth_quantile_ten_day_return_4,Predicted label for the fifth quantile of ten-day forward return.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_41,Predicted ten-day return quantile label for the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_5,Predicted label for the next 10-day return in the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_7,Predicted label for the next 10-day return in the fifth quantile.,MATRIX,100%,0,0
+predicted_fifth_quantile_ten_day_return_9,Model prediction for the fifth quantile of 10-day forward return.,MATRIX,100%,0,0
+predicted_first_bucket_five_day_return_2,Predicted return for the first quantile over a five-day horizon.,MATRIX,96%,4,4
+predicted_first_bucket_five_day_return_3,Predicted return for the first quantile over a five-day horizon (alternate model).,MATRIX,96%,0,0
+predicted_first_bucket_one_day_return_2,Predicted return for the first quantile over a one-day horizon.,MATRIX,96%,1,1
+predicted_first_bucket_one_day_return_3,Predicted return for the first quantile over a one-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_first_bucket_ten_day_return_2,Predicted return for the first quantile over a ten-day horizon.,MATRIX,96%,0,0
+predicted_first_bucket_ten_day_return_3,Predicted return for the first quantile over a ten-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_first_quantile_five_day_return,"Predicted quantile label for five-day forward return, indicating the first group.",MATRIX,96%,0,0
+predicted_first_quantile_five_day_return_11,Predicted five-day return for the first quantile group.,MATRIX,95%,1,1
+predicted_first_quantile_five_day_return_12,Predicted five-day return for the first quantile group.,MATRIX,96%,0,0
+predicted_first_quantile_five_day_return_13,Predicted five-day return for a stock classified in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_five_day_return_2,"Predicted quantile label for five-day forward return, indicating the first group (alternate version).",MATRIX,95%,0,0
+predicted_first_quantile_five_day_return_32,Model prediction for the first quantile of 5-day future return.,MATRIX,96%,0,0
+predicted_first_quantile_five_day_return_33,Predicted five-day return for the first quantile group.,MATRIX,96%,0,0
+predicted_first_quantile_five_day_return_34,Predicted label for the first quantile of five-day forward return.,MATRIX,100%,0,0
+predicted_first_quantile_five_day_return_35,Predicted five-day return quantile label for the first quantile.,MATRIX,98%,1,2
+predicted_first_quantile_five_day_return_4,Predicted label for the first quantile of five-day forward return.,MATRIX,96%,1,1
+predicted_first_quantile_five_day_return_41,Predicted five-day return quantile label for the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_five_day_return_5,Predicted label for the next 5-day return in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_five_day_return_8,Model prediction for the first quantile of 5-day forward return.,MATRIX,96%,0,0
+predicted_first_quantile_five_day_return_9,Model prediction for the first quantile of 5-day forward return.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return,"Predicted quantile label for one-day forward return, indicating the first group.",MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_11,Predicted next-day return for the first quantile group.,MATRIX,95%,0,0
+predicted_first_quantile_one_day_return_12,Predicted next-day return for the first quantile group.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_13,Predicted one-day return for a stock classified in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_2,"Predicted quantile label for one-day forward return, indicating the first group (alternate version).",MATRIX,95%,0,0
+predicted_first_quantile_one_day_return_32,Model prediction for the first quantile of 1-day future return.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_33,Predicted one-day return for the first quantile group.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_34,Predicted label for the first quantile of one-day forward return.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_35,Predicted next-day return quantile label for the first quantile.,MATRIX,98%,0,0
+predicted_first_quantile_one_day_return_4,Predicted label for the first quantile of one-day forward return.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_5,Predicted label for the next 1-day return in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_6,Predicted label for the next 1-day return in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_7,Predicted label for the next 1-day return in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_one_day_return_9,Model prediction for the first quantile of 1-day forward return.,MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return,"Predicted quantile label for ten-day forward return, indicating the first group.",MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return_11,Predicted ten-day return for the first quantile group.,MATRIX,100%,0,0
+predicted_first_quantile_ten_day_return_13,Predicted ten-day return for a stock classified in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return_14,Predicted ten-day return for a stock classified in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return_3,Model prediction for the first quantile of 10-day future return.,MATRIX,95%,0,0
+predicted_first_quantile_ten_day_return_31,Predicted ten-day return quantile label for the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return_42,Model prediction for the first quantile of 10-day future return.,MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return_43,Predicted ten-day return quantile label for the first quantile.,MATRIX,98%,1,1
+predicted_first_quantile_ten_day_return_5,Model prediction for the first quantile of 10-day future return.,MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return_51,Predicted label for the next 10-day return in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return_6,Predicted label for the next 10-day return in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return_7,Predicted label for the next 10-day return in the first quantile.,MATRIX,96%,0,0
+predicted_first_quantile_ten_day_return_9,Model prediction for the first quantile of 10-day forward return.,MATRIX,96%,0,0
+predicted_fourth_bucket_five_day_return_2,Predicted return for the fourth quantile over a five-day horizon.,MATRIX,100%,0,0
+predicted_fourth_bucket_five_day_return_3,Predicted return for the fourth quantile over a five-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_fourth_bucket_one_day_return_2,Predicted return for the fourth quantile over a one-day horizon.,MATRIX,100%,0,0
+predicted_fourth_bucket_one_day_return_3,Predicted return for the fourth quantile over a one-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_fourth_bucket_ten_day_return_2,Predicted return for the fourth quantile over a ten-day horizon.,MATRIX,100%,0,0
+predicted_fourth_bucket_ten_day_return_3,Predicted return for the fourth quantile over a ten-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return,"Predicted quantile label for five-day forward return, indicating the fourth group.",MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_11,Predicted five-day return for the fourth quantile group.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_12,Predicted five-day return for the fourth quantile group.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_13,Predicted five-day return for a stock classified in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_32,Model prediction for the fourth quantile of 5-day future return.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_33,Predicted label for the fourth quantile of five-day forward return.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_34,Predicted five-day return quantile label for the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_4,Model prediction for the fourth quantile of 5-day future return.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_41,Predicted label for the fourth quantile of five-day forward return.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_5,Model prediction for the fourth quantile of 5-day future return.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_51,Predicted label for the next 5-day return in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_6,Predicted label for the next 5-day return in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_7,Predicted label for the next 5-day return in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_five_day_return_9,Model prediction for the fourth quantile of 5-day forward return.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return,"Predicted quantile label for one-day forward return, indicating the fourth group.",MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_11,Predicted next-day return for the fourth quantile group.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_12,Predicted next-day return for the fourth quantile group.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_13,Predicted one-day return for a stock classified in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_32,Model prediction for the fourth quantile of 1-day future return.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_33,Predicted next-day return quantile label for the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_42,Model prediction for the fourth quantile of 1-day future return.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_43,Predicted label for the fourth quantile of one-day forward return.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_44,Predicted next-day return quantile label for the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_5,Model prediction for the fourth quantile of 1-day future return.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_51,Predicted label for the next 1-day return in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_7,Predicted label for the next 1-day return in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_one_day_return_9,Model prediction for the fourth quantile of 1-day forward return.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return,"Predicted quantile label for ten-day forward return, indicating the fourth group.",MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_11,Predicted ten-day return for the fourth quantile group.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_13,Predicted ten-day return for a stock classified in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_14,Predicted ten-day return for a stock classified in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_2,"Predicted quantile label for ten-day forward return, indicating the fourth group (alternate version).",MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_32,Model prediction for the fourth quantile of 10-day future return.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_33,Predicted ten-day return for the fourth quantile group.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_34,Predicted label for the fourth quantile of ten-day forward return.,MATRIX,100%,2,2
+predicted_fourth_quantile_ten_day_return_35,Predicted ten-day return quantile label for the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_4,Predicted label for the fourth quantile of ten-day forward return.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_41,Predicted ten-day return quantile label for the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_6,Predicted label for the next 10-day return in the fourth quantile.,MATRIX,100%,0,0
+predicted_fourth_quantile_ten_day_return_8,Model prediction for the fourth quantile of 10-day forward return.,MATRIX,100%,1,1
+predicted_fourth_quantile_ten_day_return_9,Model prediction for the fourth quantile of 10-day forward return.,MATRIX,100%,1,1
+predicted_label_five_quantile,Predicted quantile label for five-group classification of future returns.,MATRIX,100%,0,0
+predicted_label_four_quantile,Predicted quantile label for four-group classification of future returns.,MATRIX,100%,0,0
+predicted_label_hundred_quantile,Predicted quantile label for hundred-group classification of future returns.,MATRIX,100%,0,0
+predicted_label_three_quantile,Predicted quantile label for three-group classification of future returns.,MATRIX,100%,0,0
+predicted_label_two_quantile,Predicted quantile label for two-group classification of future returns.,MATRIX,100%,0,0
+predicted_second_bucket_five_day_return_4,Predicted return for the second quantile over a five-day horizon.,MATRIX,100%,0,0
+predicted_second_bucket_five_day_return_5,Predicted return for the second quantile over a five-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_second_bucket_one_day_return_2,Predicted return for the second quantile over a one-day horizon.,MATRIX,100%,0,0
+predicted_second_bucket_one_day_return_3,Predicted return for the second quantile over a one-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_second_bucket_ten_day_return_3,Predicted return for the second quantile over a ten-day horizon.,MATRIX,100%,0,0
+predicted_second_bucket_ten_day_return_4,Predicted return for the second quantile over a ten-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return,"Predicted quantile label for five-day forward return, indicating the second group.",MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_11,Predicted five-day return for the second quantile group.,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_12,Predicted five-day return for the second quantile group.,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_13,Predicted five-day return for a stock classified in the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_2,"Predicted quantile label for five-day forward return, indicating the second group (alternate version).",MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_32,Model prediction for the second quantile of 5-day future return.,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_33,Predicted five-day return for the second quantile group.,MATRIX,100%,1,1
+predicted_second_quantile_five_day_return_34,Predicted label for the second quantile of five-day forward return.,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_35,Predicted five-day return quantile label for the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_4,Predicted label for the second quantile of five-day forward return.,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_41,Predicted five-day return quantile label for the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_5,Predicted label for the next 5-day return in the second quantile.,MATRIX,100%,2,2
+predicted_second_quantile_five_day_return_7,Predicted label for the next 5-day return in the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_five_day_return_9,Model prediction for the second quantile of 5-day forward return.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return,"Predicted quantile label for one-day forward return, indicating the second group.",MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_11,Predicted next-day return for the second quantile group.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_12,Predicted next-day return for the second quantile group.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_13,Predicted one-day return for a stock classified in the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_2,"Predicted quantile label for one-day forward return, indicating the second group (alternate version).",MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_32,Model prediction for the second quantile of 1-day future return.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_33,Predicted label for the second quantile of one-day forward return.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_34,Predicted next-day return quantile label for the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_4,Model prediction for the second quantile of 1-day future return.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_41,Predicted label for the second quantile of one-day forward return.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_5,Predicted label for the next 1-day return in the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_6,Predicted label for the next 1-day return in the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_8,Model prediction for the second quantile of 1-day forward return.,MATRIX,100%,0,0
+predicted_second_quantile_one_day_return_9,Model prediction for the second quantile of 1-day forward return.,MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return,"Predicted quantile label for ten-day forward return, indicating the second group.",MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_11,Predicted ten-day return for the second quantile group.,MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_12,Predicted ten-day return for the second quantile group.,MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_13,Predicted ten-day return for a stock classified in the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_2,"Predicted quantile label for ten-day forward return, indicating the second group (alternate version).",MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_3,Model prediction for the second quantile of 10-day future return.,MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_31,Predicted ten-day return for the second quantile group.,MATRIX,100%,1,1
+predicted_second_quantile_ten_day_return_32,Predicted label for the second quantile of ten-day forward return.,MATRIX,100%,1,1
+predicted_second_quantile_ten_day_return_33,Predicted ten-day return quantile label for the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_4,Predicted ten-day return quantile label for the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_5,Predicted ten-day return quantile label for the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_6,Predicted label for the next 10-day return in the second quantile.,MATRIX,100%,0,0
+predicted_second_quantile_ten_day_return_7,Predicted label for the next 10-day return in the second quantile.,MATRIX,100%,1,2
+predicted_second_quantile_ten_day_return_9,Model prediction for the second quantile of 10-day forward return.,MATRIX,100%,0,0
+predicted_third_bucket_five_day_return_2,Predicted return for the third quantile over a five-day horizon.,MATRIX,100%,0,0
+predicted_third_bucket_five_day_return_3,Predicted return for the third quantile over a five-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_third_bucket_one_day_return_2,Predicted return for the third quantile over a one-day horizon.,MATRIX,100%,1,2
+predicted_third_bucket_one_day_return_3,Predicted return for the third quantile over a one-day horizon (alternate model).,MATRIX,100%,0,0
+predicted_third_bucket_ten_day_return_2,Predicted return for the third quantile over a ten-day horizon.,MATRIX,100%,0,0
+predicted_third_bucket_ten_day_return_3,Predicted return for the third quantile over a ten-day horizon (alternate model).,MATRIX,100%,2,2
+predicted_third_quantile_five_day_return,"Predicted quantile label for five-day forward return, indicating the third group.",MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_11,Predicted five-day return for the third quantile group.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_12,Predicted five-day return for the third quantile group.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_13,Predicted five-day return for a stock classified in the third quantile.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_32,Model prediction for the third quantile of 5-day future return.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_33,Predicted five-day return for the third quantile group.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_34,Predicted label for the third quantile of five-day forward return.,MATRIX,100%,2,4
+predicted_third_quantile_five_day_return_35,Predicted five-day return quantile label for the third quantile.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_4,Model prediction for the third quantile of 5-day future return.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_41,Predicted label for the third quantile of five-day forward return.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_5,Predicted label for the next 5-day return in the third quantile.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_6,Predicted label for the next 5-day return in the third quantile.,MATRIX,100%,1,1
+predicted_third_quantile_five_day_return_8,Model prediction for the third quantile of 5-day forward return.,MATRIX,100%,0,0
+predicted_third_quantile_five_day_return_9,Model prediction for the third quantile of 5-day forward return.,MATRIX,100%,0,0
+predicted_third_quantile_one_day_return,"Predicted quantile label for one-day forward return, indicating the third group.",MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_11,Predicted next-day return for the third quantile group.,MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_12,Predicted next-day return for the third quantile group.,MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_13,Predicted one-day return for a stock classified in the third quantile.,MATRIX,100%,1,1
+predicted_third_quantile_one_day_return_2,"Predicted quantile label for one-day forward return, indicating the third group (alternate version).",MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_32,Model prediction for the third quantile of 1-day future return.,MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_33,Predicted label for the third quantile of one-day forward return.,MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_34,Predicted next-day return quantile label for the third quantile.,MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_4,Model prediction for the third quantile of 1-day future return.,MATRIX,100%,1,1
+predicted_third_quantile_one_day_return_41,Predicted label for the third quantile of one-day forward return.,MATRIX,100%,1,1
+predicted_third_quantile_one_day_return_42,Predicted next-day return quantile label for the third quantile.,MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_5,Predicted label for the next 1-day return in the third quantile.,MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_8,Model prediction for the third quantile of 1-day forward return.,MATRIX,100%,0,0
+predicted_third_quantile_one_day_return_9,Model prediction for the third quantile of 1-day forward return.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return,"Predicted quantile label for ten-day forward return, indicating the third group.",MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_11,Predicted ten-day return for the third quantile group.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_12,Predicted ten-day return for the third quantile group.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_13,Predicted ten-day return for a stock classified in the third quantile.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_2,"Predicted quantile label for ten-day forward return, indicating the third group (alternate version).",MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_32,Model prediction for the third quantile of 10-day future return.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_33,Predicted ten-day return for the third quantile group.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_34,Predicted label for the third quantile of ten-day forward return.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_35,Predicted ten-day return quantile label for the third quantile.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_4,Predicted label for the third quantile of ten-day forward return.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_5,Predicted label for the next 10-day return in the third quantile.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_6,Predicted label for the next 10-day return in the third quantile.,MATRIX,100%,1,2
+predicted_third_quantile_ten_day_return_8,Model prediction for the third quantile of 10-day forward return.,MATRIX,100%,0,0
+predicted_third_quantile_ten_day_return_9,Model prediction for the third quantile of 10-day forward return.,MATRIX,100%,1,2
+probability_fifth_bucket_five_day_label_four_3,"Probability that the return falls in the fifth quantile, bucket four, for five days (alternate model).",MATRIX,96%,0,0
+probability_fifth_bucket_five_day_label_one_2,"Probability that the return falls in the fifth quantile, bucket one, for five days.",MATRIX,96%,0,0
+probability_fifth_bucket_five_day_label_one_3,"Probability that the return falls in the fifth quantile, bucket one, for five days (alternate model).",MATRIX,96%,0,0
+probability_fifth_bucket_five_day_label_three_2,"Probability that the return falls in the fifth quantile, bucket three, for five days.",MATRIX,96%,0,0
+probability_fifth_bucket_five_day_label_three_3,"Probability that the return falls in the fifth quantile, bucket three, for five days (alternate model).",MATRIX,96%,0,0
+probability_fifth_bucket_five_day_label_two_3,"Probability that the return falls in the fifth quantile, bucket two, for five days.",MATRIX,96%,0,0
+probability_fifth_bucket_five_day_label_two_4,"Probability that the return falls in the fifth quantile, bucket two, for five days (alternate model).",MATRIX,100%,0,0
+probability_fifth_bucket_five_day_label_zero_4,"Probability that the return falls in the fifth quantile, bucket zero, for five days.",MATRIX,96%,0,0
+probability_fifth_bucket_five_day_label_zero_5,"Probability that the return falls in the fifth quantile, bucket zero, for five days (alternate model).",MATRIX,96%,1,1
+probability_fifth_bucket_one_day_label_four_2,"Probability that the return falls in the fifth quantile, bucket four, for one day.",MATRIX,96%,0,0
+probability_fifth_bucket_one_day_label_four_3,"Probability that the return falls in the fifth quantile, bucket four, for one day (alternate model).",MATRIX,96%,0,0
+probability_fifth_bucket_one_day_label_one_2,"Probability that the return falls in the fifth quantile, bucket one, for one day.",MATRIX,100%,0,0
+probability_fifth_bucket_one_day_label_one_3,"Probability that the return falls in the fifth quantile, bucket one, for one day (alternate model).",MATRIX,100%,0,0
+probability_fifth_bucket_one_day_label_three_3,"Probability that the return falls in the fifth quantile, bucket three, for one day.",MATRIX,100%,0,0
+probability_fifth_bucket_one_day_label_three_4,"Probability that the return falls in the fifth quantile, bucket three, for one day (alternate model).",MATRIX,96%,0,0
+probability_fifth_bucket_one_day_label_two_3,"Probability that the return falls in the fifth quantile, bucket two, for one day.",MATRIX,96%,0,0
+probability_fifth_bucket_one_day_label_two_4,"Probability that the return falls in the fifth quantile, bucket two, for one day (alternate model).",MATRIX,96%,0,0
+probability_fifth_bucket_one_day_label_zero_3,"Probability that the return falls in the fifth quantile, bucket zero, for one day.",MATRIX,96%,0,0
+probability_fifth_bucket_one_day_label_zero_4,"Probability that the return falls in the fifth quantile, bucket zero, for one day (alternate model).",MATRIX,100%,0,0
+probability_fifth_bucket_ten_day_label_five_2,Model-assigned probability that a stock's ten-day return falls into the fifth quantile group.,MATRIX,100%,0,0
+probability_fifth_bucket_ten_day_label_four_2,"Probability that the return falls in the fifth quantile, bucket four, for ten days.",MATRIX,96%,0,0
+probability_fifth_bucket_ten_day_label_four_3,"Probability that the return falls in the fifth quantile, bucket four, for ten days (alternate model).",MATRIX,100%,0,0
+probability_fifth_bucket_ten_day_label_one_2,"Probability that the return falls in the fifth quantile, bucket one, for ten days.",MATRIX,100%,0,0
+probability_fifth_bucket_ten_day_label_one_3,"Probability that the return falls in the fifth quantile, bucket one, for ten days (alternate model).",MATRIX,96%,0,0
+probability_fifth_bucket_ten_day_label_three_3,"Probability that the return falls in the fifth quantile, bucket three, for ten days.",MATRIX,100%,0,0
+probability_fifth_bucket_ten_day_label_three_4,"Probability that the return falls in the fifth quantile, bucket three, for ten days (alternate model).",MATRIX,100%,0,0
+probability_fifth_bucket_ten_day_label_two_3,"Probability that the return falls in the fifth quantile, bucket two, for ten days.",MATRIX,100%,0,0
+probability_fifth_bucket_ten_day_label_two_4,"Probability that the return falls in the fifth quantile, bucket two, for ten days (alternate model).",MATRIX,96%,0,0
+probability_fifth_bucket_ten_day_label_zero_3,"Probability that the return falls in the fifth quantile, bucket zero, for ten days.",MATRIX,100%,0,0
+probability_fifth_bucket_ten_day_label_zero_4,"Probability that the return falls in the fifth quantile, bucket zero, for ten days (alternate model).",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_four,"Probability that the stock is in the fifth quantile for five-day return, specifically for label four.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_four_11,"Probability that the five-day return falls in the fifth quantile, bucket four.",MATRIX,95%,0,0
+probability_fifth_quantile_five_day_bucket_four_13,"Probability that a stock is in the fifth quantile for five-day return, bucket four.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_four_14,"Probability that a stock is in the fifth quantile for five-day return, bucket four.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_four_2,"Probability that the stock is in the fifth quantile for five-day return, specifically for label four (alternate version).",MATRIX,95%,0,0
+probability_fifth_quantile_five_day_bucket_four_3,"Probability that the 5-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_four_4,"Probability that the 5-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,1,3
+probability_fifth_quantile_five_day_bucket_one,"Probability that the stock is in the fifth quantile for five-day return, specifically for label one.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_one_11,"Probability that the five-day return falls in the fifth quantile, bucket one.",MATRIX,95%,0,0
+probability_fifth_quantile_five_day_bucket_one_12,"Probability that the five-day return falls in the fifth quantile, bucket one.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_one_13,"Probability that a stock is in the fifth quantile for five-day return, bucket one.",MATRIX,96%,1,1
+probability_fifth_quantile_five_day_bucket_one_3,"Probability that the 5-day return falls in the fifth quantile, bucket 1.",MATRIX,95%,0,0
+probability_fifth_quantile_five_day_bucket_one_4,"Probability that the 5-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_one_5,"Probability that the 5-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_three,"Probability that the stock is in the fifth quantile for five-day return, specifically for label three.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_three_11,"Probability that the five-day return falls in the fifth quantile, bucket three.",MATRIX,95%,0,0
+probability_fifth_quantile_five_day_bucket_three_13,"Probability that a stock is in the fifth quantile for five-day return, bucket three.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_three_14,"Probability that a stock is in the fifth quantile for five-day return, bucket three.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_three_3,"Probability that the 5-day return falls in the fifth quantile, bucket 3.",MATRIX,95%,0,0
+probability_fifth_quantile_five_day_bucket_three_4,"Probability that the 5-day return falls in the fifth quantile, bucket 3.",MATRIX,100%,0,0
+probability_fifth_quantile_five_day_bucket_three_5,"Probability that the 5-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_two,"Probability that the stock is in the fifth quantile for five-day return, specifically for label two.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_two_11,"Probability that the five-day return falls in the fifth quantile, bucket two.",MATRIX,95%,0,0
+probability_fifth_quantile_five_day_bucket_two_12,"Probability that the five-day return falls in the fifth quantile, bucket two.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_two_13,"Probability that a stock is in the fifth quantile for five-day return, bucket two.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_two_2,"Probability that the stock is in the fifth quantile for five-day return, specifically for label two (alternate version).",MATRIX,95%,0,0
+probability_fifth_quantile_five_day_bucket_two_3,"Probability that the 5-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,1,1
+probability_fifth_quantile_five_day_bucket_zero,"Probability that the stock is in the fifth quantile for five-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_zero_11,"Probability that the five-day return falls in the fifth quantile, bucket zero.",MATRIX,95%,0,0
+probability_fifth_quantile_five_day_bucket_zero_12,"Probability that the five-day return falls in the fifth quantile, bucket zero.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_zero_13,"Probability that a stock is in the fifth quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+probability_fifth_quantile_five_day_bucket_zero_2,"Probability that the stock is in the fifth quantile for five-day return, specifically for label zero (alternate version).",MATRIX,100%,0,0
+probability_fifth_quantile_five_day_bucket_zero_3,"Probability that the 5-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_four,"Probability that the stock is in the fifth quantile for one-day return, specifically for label four.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_four_11,"Probability that the next-day return falls in the fifth quantile, bucket four.",MATRIX,95%,0,0
+probability_fifth_quantile_one_day_bucket_four_12,"Probability that the next-day return falls in the fifth quantile, bucket four.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_four_13,"Probability that a stock is in the fifth quantile for one-day return, bucket four.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_four_2,"Probability that the stock is in the fifth quantile for one-day return, specifically for label four (alternate version).",MATRIX,95%,0,0
+probability_fifth_quantile_one_day_bucket_four_3,"Probability that the 1-day return falls in the fifth quantile, bucket 4.",MATRIX,100%,0,0
+probability_fifth_quantile_one_day_bucket_four_4,"Probability that the 1-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,1,1
+probability_fifth_quantile_one_day_bucket_one,"Probability that the stock is in the fifth quantile for one-day return, specifically for label one.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_one_11,"Probability that the next-day return falls in the fifth quantile, bucket one.",MATRIX,95%,0,0
+probability_fifth_quantile_one_day_bucket_one_13,"Probability that a stock is in the fifth quantile for one-day return, bucket one.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_one_14,"Probability that a stock is in the fifth quantile for one-day return, bucket one.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_one_2,"Probability that the stock is in the fifth quantile for one-day return, specifically for label one (alternate version).",MATRIX,95%,0,0
+probability_fifth_quantile_one_day_bucket_one_3,"Probability that the 1-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_three,"Probability that the stock is in the fifth quantile for one-day return, specifically for label three.",MATRIX,96%,1,1
+probability_fifth_quantile_one_day_bucket_three_11,"Probability that the next-day return falls in the fifth quantile, bucket three.",MATRIX,100%,0,0
+probability_fifth_quantile_one_day_bucket_three_12,"Probability that the next-day return falls in the fifth quantile, bucket three.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_three_13,"Probability that a stock is in the fifth quantile for one-day return, bucket three.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_three_3,"Probability that the 1-day return falls in the fifth quantile, bucket 3.",MATRIX,95%,0,0
+probability_fifth_quantile_one_day_bucket_three_4,"Probability that the 1-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_three_5,"Probability that the 1-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_two,"Probability that the stock is in the fifth quantile for one-day return, specifically for label two.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_two_11,"Probability that the next-day return falls in the fifth quantile, bucket two.",MATRIX,95%,0,0
+probability_fifth_quantile_one_day_bucket_two_12,"Probability that the next-day return falls in the fifth quantile, bucket two.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_two_13,"Probability that a stock is in the fifth quantile for one-day return, bucket two.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_two_2,"Probability that the stock is in the fifth quantile for one-day return, specifically for label two (alternate version).",MATRIX,100%,0,0
+probability_fifth_quantile_one_day_bucket_two_3,"Probability that the 1-day return falls in the fifth quantile, bucket 2.",MATRIX,100%,0,0
+probability_fifth_quantile_one_day_bucket_zero,"Probability that the stock is in the fifth quantile for one-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_zero_11,"Probability that the next-day return falls in the fifth quantile, bucket zero.",MATRIX,95%,0,0
+probability_fifth_quantile_one_day_bucket_zero_13,"Probability that a stock is in the fifth quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_zero_14,"Probability that a stock is in the fifth quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+probability_fifth_quantile_one_day_bucket_zero_2,"Probability that the stock is in the fifth quantile for one-day return, specifically for label zero (alternate version).",MATRIX,100%,0,0
+probability_fifth_quantile_one_day_bucket_zero_3,"Probability that the 1-day return falls in the fifth quantile, bucket 0.",MATRIX,96%,1,1
+probability_fifth_quantile_ten_day_bucket_four,"Probability that the stock is in the fifth quantile for ten-day return, specifically for label four.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_four_11,"Probability that the ten-day return falls in the fifth quantile, bucket four.",MATRIX,95%,0,0
+probability_fifth_quantile_ten_day_bucket_four_12,"Probability that the ten-day return falls in the fifth quantile, bucket four.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_four_13,"Probability that a stock is in the fifth quantile for ten-day return, bucket four.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_four_2,"Probability that the stock is in the fifth quantile for ten-day return, specifically for label four (alternate version).",MATRIX,95%,1,1
+probability_fifth_quantile_ten_day_bucket_four_3,"Probability that the 10-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_four_4,"Probability that the 10-day return falls in the fifth quantile, bucket 4.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_one,"Probability that the stock is in the fifth quantile for ten-day return, specifically for label one.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_one_11,"Probability that the ten-day return falls in the fifth quantile, bucket one.",MATRIX,95%,0,0
+probability_fifth_quantile_ten_day_bucket_one_12,"Probability that the ten-day return falls in the fifth quantile, bucket one.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_one_13,"Probability that a stock is in the fifth quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_one_2,"Probability that the stock is in the fifth quantile for ten-day return, specifically for label one (alternate version).",MATRIX,95%,0,0
+probability_fifth_quantile_ten_day_bucket_one_3,"Probability that the 10-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_one_4,"Probability that the 10-day return falls in the fifth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_three,"Probability that the stock is in the fifth quantile for ten-day return, specifically for label three.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_three_11,"Probability that the ten-day return falls in the fifth quantile, bucket three.",MATRIX,95%,0,0
+probability_fifth_quantile_ten_day_bucket_three_13,"Probability that a stock is in the fifth quantile for ten-day return, bucket three.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_three_14,"Probability that a stock is in the fifth quantile for ten-day return, bucket three.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_three_2,"Probability that the stock is in the fifth quantile for ten-day return, specifically for label three (alternate version).",MATRIX,100%,0,0
+probability_fifth_quantile_ten_day_bucket_three_3,"Probability that the 10-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_three_4,"Probability that the 10-day return falls in the fifth quantile, bucket 3.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_two,"Probability that the stock is in the fifth quantile for ten-day return, specifically for label two.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_two_11,"Probability that the ten-day return falls in the fifth quantile, bucket two.",MATRIX,95%,0,0
+probability_fifth_quantile_ten_day_bucket_two_13,"Probability that a stock is in the fifth quantile for ten-day return, bucket two.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_two_14,"Probability that a stock is in the fifth quantile for ten-day return, bucket two.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_two_3,"Probability that the 10-day return falls in the fifth quantile, bucket 2.",MATRIX,95%,0,0
+probability_fifth_quantile_ten_day_bucket_two_4,"Probability that the 10-day return falls in the fifth quantile, bucket 2.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_zero,"Probability that the stock is in the fifth quantile for ten-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_zero_11,"Probability that the ten-day return falls in the fifth quantile, bucket zero.",MATRIX,95%,0,0
+probability_fifth_quantile_ten_day_bucket_zero_12,"Probability that the ten-day return falls in the fifth quantile, bucket zero.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_zero_13,"Probability that a stock is in the fifth quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+probability_fifth_quantile_ten_day_bucket_zero_2,"Probability that the stock is in the fifth quantile for ten-day return, specifically for label zero (alternate version).",MATRIX,95%,0,0
+probability_fifth_quantile_ten_day_bucket_zero_3,"Probability that the 10-day return falls in the fifth quantile, bucket 0.",MATRIX,100%,0,0
+probability_fourth_bucket_five_day_label_one_2,"Probability that the return falls in the fourth quantile, bucket one, for five days.",MATRIX,100%,0,0
+probability_fourth_bucket_five_day_label_one_3,"Probability that the return falls in the fourth quantile, bucket one, for five days (alternate model).",MATRIX,96%,0,0
+probability_fourth_bucket_five_day_label_three_2,"Probability that the return falls in the fourth quantile, bucket three, for five days.",MATRIX,96%,0,0
+probability_fourth_bucket_five_day_label_three_3,"Probability that the return falls in the fourth quantile, bucket three, for five days (alternate model).",MATRIX,96%,0,0
+probability_fourth_bucket_five_day_label_two_2,"Probability that the return falls in the fourth quantile, bucket two, for five days.",MATRIX,96%,0,0
+probability_fourth_bucket_five_day_label_two_3,"Probability that the return falls in the fourth quantile, bucket two, for five days (alternate model).",MATRIX,96%,0,0
+probability_fourth_bucket_five_day_label_zero_2,"Probability that the return falls in the fourth quantile, bucket zero, for five days.",MATRIX,96%,0,0
+probability_fourth_bucket_five_day_label_zero_3,"Probability that the return falls in the fourth quantile, bucket zero, for five days (alternate model).",MATRIX,96%,0,0
+probability_fourth_bucket_one_day_label_one_2,"Probability that the return falls in the fourth quantile, bucket one, for one day.",MATRIX,96%,0,0
+probability_fourth_bucket_one_day_label_three_3,"Probability that the return falls in the fourth quantile, bucket three, for one day (alternate model).",MATRIX,96%,0,0
+probability_fourth_bucket_one_day_label_two_2,"Probability that the return falls in the fourth quantile, bucket two, for one day.",MATRIX,96%,0,0
+probability_fourth_bucket_one_day_label_two_3,"Probability that the return falls in the fourth quantile, bucket two, for one day (alternate model).",MATRIX,96%,0,0
+probability_fourth_bucket_one_day_label_zero_2,"Probability that the return falls in the fourth quantile, bucket zero, for one day.",MATRIX,96%,0,0
+probability_fourth_bucket_ten_day_label_one_2,"Probability that the return falls in the fourth quantile, bucket one, for ten days.",MATRIX,100%,0,0
+probability_fourth_bucket_ten_day_label_one_3,"Probability that the return falls in the fourth quantile, bucket one, for ten days (alternate model).",MATRIX,100%,0,0
+probability_fourth_bucket_ten_day_label_three_2,"Probability that the return falls in the fourth quantile, bucket three, for ten days.",MATRIX,96%,0,0
+probability_fourth_bucket_ten_day_label_three_3,"Probability that the return falls in the fourth quantile, bucket three, for ten days (alternate model).",MATRIX,96%,0,0
+probability_fourth_bucket_ten_day_label_two_2,"Probability that the return falls in the fourth quantile, bucket two, for ten days.",MATRIX,96%,0,0
+probability_fourth_bucket_ten_day_label_two_3,"Probability that the return falls in the fourth quantile, bucket two, for ten days (alternate model).",MATRIX,96%,0,0
+probability_fourth_bucket_ten_day_label_zero_3,"Probability that the return falls in the fourth quantile, bucket zero, for ten days (alternate model).",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_one,"Probability that the stock is in the fourth quantile for five-day return, specifically for label one.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_one_11,"Probability that the five-day return falls in the fourth quantile, bucket one.",MATRIX,95%,0,0
+probability_fourth_quantile_five_day_bucket_one_12,"Probability that the five-day return falls in the fourth quantile, bucket one.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_one_13,"Probability that a stock is in the fourth quantile for five-day return, bucket one.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_one_2,"Probability that the stock is in the fourth quantile for five-day return, specifically for label one (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_five_day_bucket_one_3,"Probability that the 5-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_three,"Probability that the stock is in the fourth quantile for five-day return, specifically for label three.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_three_11,"Probability that the five-day return falls in the fourth quantile, bucket three.",MATRIX,95%,0,0
+probability_fourth_quantile_five_day_bucket_three_13,"Probability that a stock is in the fourth quantile for five-day return, bucket three.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_three_14,"Probability that a stock is in the fourth quantile for five-day return, bucket three.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_three_2,"Probability that the stock is in the fourth quantile for five-day return, specifically for label three (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_five_day_bucket_three_3,"Probability that the 5-day return falls in the fourth quantile, bucket 3.",MATRIX,100%,0,0
+probability_fourth_quantile_five_day_bucket_two,"Probability that the stock is in the fourth quantile for five-day return, specifically for label two.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_two_11,"Probability that the five-day return falls in the fourth quantile, bucket two.",MATRIX,95%,0,0
+probability_fourth_quantile_five_day_bucket_two_12,"Probability that the five-day return falls in the fourth quantile, bucket two.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_two_13,"Probability that a stock is in the fourth quantile for five-day return, bucket two.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_two_2,"Probability that the stock is in the fourth quantile for five-day return, specifically for label two (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_five_day_bucket_two_3,"Probability that the 5-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,1,1
+probability_fourth_quantile_five_day_bucket_zero,"Probability that the stock is in the fourth quantile for five-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_zero_11,"Probability that the five-day return falls in the fourth quantile, bucket zero.",MATRIX,100%,0,0
+probability_fourth_quantile_five_day_bucket_zero_13,"Probability that a stock is in the fourth quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_zero_14,"Probability that a stock is in the fourth quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_zero_3,"Probability that the 5-day return falls in the fourth quantile, bucket 0.",MATRIX,95%,0,0
+probability_fourth_quantile_five_day_bucket_zero_4,"Probability that the 5-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+probability_fourth_quantile_five_day_bucket_zero_5,"Probability that the 5-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_one,"Probability that the stock is in the fourth quantile for one-day return, specifically for label one.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_one_11,"Probability that the next-day return falls in the fourth quantile, bucket one.",MATRIX,95%,0,0
+probability_fourth_quantile_one_day_bucket_one_12,"Probability that the next-day return falls in the fourth quantile, bucket one.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_one_13,"Probability that a stock is in the fourth quantile for one-day return, bucket one.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_one_2,"Probability that the stock is in the fourth quantile for one-day return, specifically for label one (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_one_day_bucket_one_3,"Probability that the 1-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_one_4,"Probability that the 1-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_one_7,"Probability that the next-day return falls in the fourth quantile, bucket one.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_three,"Probability that the stock is in the fourth quantile for one-day return, specifically for label three.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_three_11,"Probability that the next-day return falls in the fourth quantile, bucket three.",MATRIX,95%,0,0
+probability_fourth_quantile_one_day_bucket_three_13,"Probability that a stock is in the fourth quantile for one-day return, bucket three.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_three_14,"Probability that a stock is in the fourth quantile for one-day return, bucket three.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_three_2,"Probability that the stock is in the fourth quantile for one-day return, specifically for label three (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_one_day_bucket_three_3,"Probability that the 1-day return falls in the fourth quantile, bucket 3.",MATRIX,100%,0,0
+probability_fourth_quantile_one_day_bucket_three_4,"Probability that the 1-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_two,"Probability that the stock is in the fourth quantile for one-day return, specifically for label two.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_two_11,"Probability that the next-day return falls in the fourth quantile, bucket two.",MATRIX,95%,0,0
+probability_fourth_quantile_one_day_bucket_two_13,"Probability that a stock is in the fourth quantile for one-day return, bucket two.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_two_14,"Probability that a stock is in the fourth quantile for one-day return, bucket two.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_two_2,"Probability that the stock is in the fourth quantile for one-day return, specifically for label two (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_one_day_bucket_two_3,"Probability that the 1-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_two_4,"Probability that the 1-day return falls in the fourth quantile, bucket 2.",MATRIX,100%,0,0
+probability_fourth_quantile_one_day_bucket_zero,"Probability that the stock is in the fourth quantile for one-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_zero_11,"Probability that the next-day return falls in the fourth quantile, bucket zero.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_zero_12,"Probability that the next-day return falls in the fourth quantile, bucket zero.",MATRIX,100%,0,0
+probability_fourth_quantile_one_day_bucket_zero_13,"Probability that a stock is in the fourth quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_zero_14,"Probability that a stock is in the fourth quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_zero_2,"Probability that the stock is in the fourth quantile for one-day return, specifically for label zero (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_one_day_bucket_zero_3,"Probability that the 1-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+probability_fourth_quantile_one_day_bucket_zero_4,"Probability that the 1-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_one,"Probability that the stock is in the fourth quantile for ten-day return, specifically for label one.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_one_11,"Probability that the ten-day return falls in the fourth quantile, bucket one.",MATRIX,100%,0,0
+probability_fourth_quantile_ten_day_bucket_one_12,"Probability that the ten-day return falls in the fourth quantile, bucket one.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_one_13,"Probability that a stock is in the fourth quantile for ten-day return, bucket one.",MATRIX,100%,0,0
+probability_fourth_quantile_ten_day_bucket_one_2,"Probability that the stock is in the fourth quantile for ten-day return, specifically for label one (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_ten_day_bucket_one_3,"Probability that the 10-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_one_4,"Probability that the 10-day return falls in the fourth quantile, bucket 1.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_three,"Probability that the stock is in the fourth quantile for ten-day return, specifically for label three.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_three_11,"Probability that the ten-day return falls in the fourth quantile, bucket three.",MATRIX,95%,0,0
+probability_fourth_quantile_ten_day_bucket_three_12,"Probability that the ten-day return falls in the fourth quantile, bucket three.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_three_13,"Probability that a stock is in the fourth quantile for ten-day return, bucket three.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_three_2,"Probability that the stock is in the fourth quantile for ten-day return, specifically for label three (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_ten_day_bucket_three_3,"Probability that the 10-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_three_4,"Probability that the 10-day return falls in the fourth quantile, bucket 3.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_two,"Probability that the stock is in the fourth quantile for ten-day return, specifically for label two.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_two_11,"Probability that the ten-day return falls in the fourth quantile, bucket two.",MATRIX,95%,0,0
+probability_fourth_quantile_ten_day_bucket_two_13,"Probability that a stock is in the fourth quantile for ten-day return, bucket two.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_two_14,"Probability that a stock is in the fourth quantile for ten-day return, bucket two.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_two_2,"Probability that the stock is in the fourth quantile for ten-day return, specifically for label two (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_ten_day_bucket_two_3,"Probability that the 10-day return falls in the fourth quantile, bucket 2.",MATRIX,100%,0,0
+probability_fourth_quantile_ten_day_bucket_two_4,"Probability that the 10-day return falls in the fourth quantile, bucket 2.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_zero,"Probability that the stock is in the fourth quantile for ten-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_zero_11,"Probability that the ten-day return falls in the fourth quantile, bucket zero.",MATRIX,95%,0,0
+probability_fourth_quantile_ten_day_bucket_zero_12,"Probability that the ten-day return falls in the fourth quantile, bucket zero.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_zero_13,"Probability that a stock is in the fourth quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+probability_fourth_quantile_ten_day_bucket_zero_2,"Probability that the stock is in the fourth quantile for ten-day return, specifically for label zero (alternate version).",MATRIX,95%,0,0
+probability_fourth_quantile_ten_day_bucket_zero_3,"Probability that the 10-day return falls in the fourth quantile, bucket 0.",MATRIX,96%,0,0
+probability_second_bucket_five_day_label_one_2,"Probability that the return falls in the second quantile, bucket one, for five days.",MATRIX,100%,0,0
+probability_second_bucket_five_day_label_one_4,"Probability that the return falls in the second quantile, bucket one, for five days (alternate model).",MATRIX,96%,1,1
+probability_second_bucket_five_day_label_zero_4,"Probability that the return falls in the second quantile, bucket zero, for five days.",MATRIX,96%,0,0
+probability_second_bucket_five_day_label_zero_5,"Probability that the return falls in the second quantile, bucket zero, for five days (alternate model).",MATRIX,96%,1,2
+probability_second_bucket_one_day_label_one_3,"Probability that the return falls in the second quantile, bucket one, for one day.",MATRIX,96%,2,3
+probability_second_bucket_one_day_label_one_4,"Probability that the return falls in the second quantile, bucket one, for one day (alternate model).",MATRIX,96%,0,0
+probability_second_bucket_one_day_label_zero_4,"Probability that the return falls in the second quantile, bucket zero, for one day.",MATRIX,100%,0,0
+probability_second_bucket_ten_day_label_one_3,"Probability that the return falls in the second quantile, bucket one, for ten days.",MATRIX,100%,0,0
+probability_second_bucket_ten_day_label_zero_3,"Probability that the return falls in the second quantile, bucket zero, for ten days.",MATRIX,96%,0,0
+probability_second_bucket_ten_day_label_zero_4,"Probability that the return falls in the second quantile, bucket zero, for ten days (alternate model).",MATRIX,96%,0,0
+probability_second_quantile_five_day_bucket_one,"Probability that the stock is in the second quantile for five-day return, specifically for label one.",MATRIX,96%,0,0
+probability_second_quantile_five_day_bucket_one_11,"Probability that the five-day return falls in the second quantile, bucket one.",MATRIX,95%,0,0
+probability_second_quantile_five_day_bucket_one_12,"Probability that the five-day return falls in the second quantile, bucket one.",MATRIX,96%,0,0
+probability_second_quantile_five_day_bucket_one_13,"Probability that a stock is in the second quantile for five-day return, bucket one.",MATRIX,96%,0,0
+probability_second_quantile_five_day_bucket_one_2,"Probability that the stock is in the second quantile for five-day return, specifically for label one (alternate version).",MATRIX,95%,0,0
+probability_second_quantile_five_day_bucket_one_3,"Probability that the 5-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+probability_second_quantile_five_day_bucket_one_4,"Probability that the 5-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+probability_second_quantile_five_day_bucket_zero,"Probability that the stock is in the second quantile for five-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_second_quantile_five_day_bucket_zero_11,"Probability that the five-day return falls in the second quantile, bucket zero.",MATRIX,95%,0,0
+probability_second_quantile_five_day_bucket_zero_13,"Probability that a stock is in the second quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+probability_second_quantile_five_day_bucket_zero_14,"Probability that a stock is in the second quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+probability_second_quantile_five_day_bucket_zero_2,"Probability that the stock is in the second quantile for five-day return, specifically for label zero (alternate version).",MATRIX,95%,0,0
+probability_second_quantile_five_day_bucket_zero_3,"Probability that the 5-day return falls in the second quantile, bucket 0.",MATRIX,100%,0,0
+probability_second_quantile_one_day_bucket_one,"Probability that the stock is in the second quantile for one-day return, specifically for label one.",MATRIX,96%,0,0
+probability_second_quantile_one_day_bucket_one_11,"Probability that the next-day return falls in the second quantile, bucket one.",MATRIX,95%,0,0
+probability_second_quantile_one_day_bucket_one_12,"Probability that the next-day return falls in the second quantile, bucket one.",MATRIX,96%,0,0
+probability_second_quantile_one_day_bucket_one_13,"Probability that a stock is in the second quantile for one-day return, bucket one.",MATRIX,96%,0,0
+probability_second_quantile_one_day_bucket_one_2,"Probability that the stock is in the second quantile for one-day return, specifically for label one (alternate version).",MATRIX,95%,0,0
+probability_second_quantile_one_day_bucket_one_3,"Probability that the 1-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+probability_second_quantile_one_day_bucket_one_4,"Probability that the 1-day return falls in the second quantile, bucket 1.",MATRIX,100%,0,0
+probability_second_quantile_one_day_bucket_zero,"Probability that the stock is in the second quantile for one-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_second_quantile_one_day_bucket_zero_11,"Probability that the next-day return falls in the second quantile, bucket zero.",MATRIX,100%,0,0
+probability_second_quantile_one_day_bucket_zero_13,"Probability that a stock is in the second quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+probability_second_quantile_one_day_bucket_zero_14,"Probability that a stock is in the second quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+probability_second_quantile_one_day_bucket_zero_3,"Probability that the 1-day return falls in the second quantile, bucket 0.",MATRIX,95%,0,0
+probability_second_quantile_one_day_bucket_zero_4,"Probability that the 1-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+probability_second_quantile_one_day_bucket_zero_5,"Probability that the 1-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+probability_second_quantile_one_day_bucket_zero_7,"Probability that the next-day return falls in the second quantile, bucket zero.",MATRIX,96%,0,0
+probability_second_quantile_ten_day_bucket_one,"Probability that the stock is in the second quantile for ten-day return, specifically for label one.",MATRIX,96%,0,0
+probability_second_quantile_ten_day_bucket_one_11,"Probability that the ten-day return falls in the second quantile, bucket one.",MATRIX,100%,0,0
+probability_second_quantile_ten_day_bucket_one_12,"Probability that the ten-day return falls in the second quantile, bucket one.",MATRIX,96%,0,0
+probability_second_quantile_ten_day_bucket_one_13,"Probability that a stock is in the second quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+probability_second_quantile_ten_day_bucket_one_2,"Probability that the stock is in the second quantile for ten-day return, specifically for label one (alternate version).",MATRIX,95%,0,0
+probability_second_quantile_ten_day_bucket_one_3,"Probability that the 10-day return falls in the second quantile, bucket 1.",MATRIX,96%,0,0
+probability_second_quantile_ten_day_bucket_one_7,"Probability that the ten-day return falls in the second quantile, bucket one.",MATRIX,96%,0,0
+probability_second_quantile_ten_day_bucket_zero,"Probability that the stock is in the second quantile for ten-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_second_quantile_ten_day_bucket_zero_11,"Probability that the ten-day return falls in the second quantile, bucket zero.",MATRIX,95%,0,0
+probability_second_quantile_ten_day_bucket_zero_13,"Probability that a stock is in the second quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+probability_second_quantile_ten_day_bucket_zero_14,"Probability that a stock is in the second quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+probability_second_quantile_ten_day_bucket_zero_2,"Probability that the stock is in the second quantile for ten-day return, specifically for label zero (alternate version).",MATRIX,95%,0,0
+probability_second_quantile_ten_day_bucket_zero_3,"Probability that the 10-day return falls in the second quantile, bucket 0.",MATRIX,96%,0,0
+probability_third_bucket_five_day_label_two_2,"Probability that the return falls in the third quantile, bucket two, for five days.",MATRIX,96%,0,0
+probability_third_bucket_five_day_label_two_3,"Probability that the return falls in the third quantile, bucket two, for five days (alternate model).",MATRIX,96%,0,0
+probability_third_bucket_five_day_label_zero_3,"Probability that the return falls in the third quantile, bucket zero, for five days.",MATRIX,96%,0,0
+probability_third_bucket_five_day_label_zero_4,"Probability that the return falls in the third quantile, bucket zero, for five days (alternate model).",MATRIX,96%,0,0
+probability_third_bucket_one_day_label_one_2,"Probability that the return falls in the third quantile, bucket one, for one day.",MATRIX,96%,0,0
+probability_third_bucket_one_day_label_one_3,"Probability that the return falls in the third quantile, bucket one, for one day (alternate model).",MATRIX,96%,0,0
+probability_third_bucket_one_day_label_two_2,"Probability that the return falls in the third quantile, bucket two, for one day.",MATRIX,96%,0,0
+probability_third_bucket_one_day_label_zero_3,"Probability that the return falls in the third quantile, bucket zero, for one day (alternate model).",MATRIX,100%,0,0
+probability_third_bucket_ten_day_label_one_2,"Probability that the return falls in the third quantile, bucket one, for ten days.",MATRIX,96%,0,0
+probability_third_bucket_ten_day_label_one_3,"Probability that the return falls in the third quantile, bucket one, for ten days (alternate model).",MATRIX,96%,0,0
+probability_third_bucket_ten_day_label_two_2,"Probability that the return falls in the third quantile, bucket two, for ten days.",MATRIX,96%,0,0
+probability_third_bucket_ten_day_label_two_3,"Probability that the return falls in the third quantile, bucket two, for ten days (alternate model).",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_one,"Model-assigned probability that the stock falls into the third quantile for five-day return, specifically for label one.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_one_11,"Probability that the five-day return falls in the third quantile, bucket one.",MATRIX,95%,0,0
+probability_third_quantile_five_day_bucket_one_12,"Probability that the five-day return falls in the third quantile, bucket one.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_one_13,"Probability that a stock is in the third quantile for five-day return, bucket one.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_one_2,"Probability that the stock is in the third quantile for five-day return, specifically for label one (alternate version).",MATRIX,95%,0,0
+probability_third_quantile_five_day_bucket_one_3,"Probability that the 5-day return falls in the third quantile, bucket 1.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_one_4,"Probability that the 5-day return falls in the third quantile, bucket 1.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_one_7,"Probability that the five-day return falls in the third quantile, bucket one.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_two,"Probability that the stock is in the third quantile for five-day return, specifically for label two.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_two_11,"Probability that the five-day return falls in the third quantile, bucket two.",MATRIX,100%,0,0
+probability_third_quantile_five_day_bucket_two_13,"Probability that a stock is in the third quantile for five-day return, bucket two.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_two_14,"Probability that a stock is in the third quantile for five-day return, bucket two.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_two_2,"Probability that the stock is in the third quantile for five-day return, specifically for label two (alternate version).",MATRIX,95%,0,0
+probability_third_quantile_five_day_bucket_two_3,"Probability that the 5-day return falls in the third quantile, bucket 2.",MATRIX,96%,1,1
+probability_third_quantile_five_day_bucket_zero,"Probability that the stock is in the third quantile for five-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_zero_11,"Probability that the five-day return falls in the third quantile, bucket zero.",MATRIX,95%,0,0
+probability_third_quantile_five_day_bucket_zero_13,"Probability that a stock falls into the third quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_zero_14,"Probability that a stock is in the third quantile for five-day return, bucket zero.",MATRIX,96%,0,0
+probability_third_quantile_five_day_bucket_zero_2,"Probability that the stock is in the third quantile for five-day return, specifically for label zero (alternate version).",MATRIX,100%,0,0
+probability_third_quantile_five_day_bucket_zero_3,"Probability that the 5-day return falls in the third quantile, bucket 0.",MATRIX,100%,0,0
+probability_third_quantile_one_day_bucket_one,"Probability that the stock is in the third quantile for one-day return, specifically for label one.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_one_11,"Probability that the next-day return falls in the third quantile, bucket one.",MATRIX,95%,0,0
+probability_third_quantile_one_day_bucket_one_12,"Probability that the next-day return falls in the third quantile, bucket one.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_one_13,"Probability that a stock is in the third quantile for one-day return, bucket one.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_one_3,"Probability that the 1-day return falls in the third quantile, bucket 1.",MATRIX,95%,0,0
+probability_third_quantile_one_day_bucket_one_4,"Probability that the 1-day return falls in the third quantile, bucket 1.",MATRIX,100%,0,0
+probability_third_quantile_one_day_bucket_two,"Probability that the stock is in the third quantile for one-day return, specifically for label two.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_two_11,"Probability that the next-day return falls in the third quantile, bucket two.",MATRIX,95%,0,0
+probability_third_quantile_one_day_bucket_two_12,"Probability that the next-day return falls in the third quantile, bucket two.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_two_13,"Probability that a stock is in the third quantile for one-day return, bucket two.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_two_3,"Probability that the 1-day return falls in the third quantile, bucket 2.",MATRIX,95%,0,0
+probability_third_quantile_one_day_bucket_two_4,"Probability that the 1-day return falls in the third quantile, bucket 2.",MATRIX,100%,0,0
+probability_third_quantile_one_day_bucket_two_5,"Probability that the 1-day return falls in the third quantile, bucket 2.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_two_7,"Probability that the next-day return falls in the third quantile, bucket two.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_zero,"Probability that the stock is in the third quantile for one-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_zero_11,"Probability that the next-day return falls in the third quantile, bucket zero.",MATRIX,95%,0,0
+probability_third_quantile_one_day_bucket_zero_12,"Probability that the next-day return falls in the third quantile, bucket zero.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_zero_13,"Probability that a stock is in the third quantile for one-day return, bucket zero.",MATRIX,96%,0,0
+probability_third_quantile_one_day_bucket_zero_3,"Probability that the 1-day return falls in the third quantile, bucket 0.",MATRIX,95%,0,0
+probability_third_quantile_one_day_bucket_zero_4,"Probability that the 1-day return falls in the third quantile, bucket 0.",MATRIX,100%,0,0
+probability_third_quantile_ten_day_bucket_one,"Probability that the stock is in the third quantile for ten-day return, specifically for label one.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_one_11,"Probability that the ten-day return falls in the third quantile, bucket one.",MATRIX,95%,0,0
+probability_third_quantile_ten_day_bucket_one_13,"Probability that a stock is in the third quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_one_14,"Probability that a stock is in the third quantile for ten-day return, bucket one.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_one_3,"Probability that the 10-day return falls in the third quantile, bucket 1.",MATRIX,95%,0,0
+probability_third_quantile_ten_day_bucket_one_4,"Probability that the 10-day return falls in the third quantile, bucket 1.",MATRIX,96%,1,1
+probability_third_quantile_ten_day_bucket_one_5,"Probability that the 10-day return falls in the third quantile, bucket 1.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_two,"Probability that the stock is in the third quantile for ten-day return, specifically for label two.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_two_11,"Probability that the ten-day return falls in the third quantile, bucket two.",MATRIX,95%,0,0
+probability_third_quantile_ten_day_bucket_two_13,"Model-assigned probability for a stock being in the third quantile for ten-day return, bucket two.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_two_14,"Probability that a stock is in the third quantile for ten-day return, bucket two.",MATRIX,96%,1,1
+probability_third_quantile_ten_day_bucket_two_2,"Probability that the stock is in the third quantile for ten-day return, specifically for label two (alternate version).",MATRIX,95%,0,0
+probability_third_quantile_ten_day_bucket_two_3,"Probability that the 10-day return falls in the third quantile, bucket 2.",MATRIX,100%,1,1
+probability_third_quantile_ten_day_bucket_zero,"Probability that the stock is in the third quantile for ten-day return, specifically for label zero.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_zero_11,"Probability that the ten-day return falls in the third quantile, bucket zero.",MATRIX,95%,0,0
+probability_third_quantile_ten_day_bucket_zero_12,"Probability that the ten-day return falls in the third quantile, bucket zero.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_zero_14,"Probability that a stock is in the third quantile for ten-day return, bucket zero.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_zero_2,"Probability that the stock is in the third quantile for ten-day return, specifically for label zero (alternate version).",MATRIX,100%,0,0
+probability_third_quantile_ten_day_bucket_zero_3,"Probability that the 10-day return falls in the third quantile, bucket 0.",MATRIX,96%,0,0
+probability_third_quantile_ten_day_bucket_zero_7,"Probability that the ten-day return falls in the third quantile, bucket zero.",MATRIX,96%,0,0

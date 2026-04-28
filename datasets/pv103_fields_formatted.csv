@@ -1,0 +1,78 @@
+Field,Description,Type,Coverage,Users,Alphas
+market_close_auction_clearing_price,Final price at which the market close auction is executed.,MATRIX,100%,22,28
+market_open_auction_total_volume,Total number of shares or contracts traded during the market open auction.,MATRIX,100%,10,14
+pv103_1m_cusm_mean,Daily mean of cumulative smflow over 1-minute intervals,MATRIX,100%,229,1080
+pv103_1m_insm_mean,daily mean of 1-minute-interval smflow,MATRIX,100%,130,425
+pv103_1m_ivam_mean,daily mean of 1-minute-interval volume above mid quote,MATRIX,100%,96,307
+pv103_1m_lask_mean,Daily mean of 1-minute-interval lowest ask price,MATRIX,100%,66,161
+pv103_1m_lbid_mean,Daily mean of 1-minute interval lowest bid price,MATRIX,100%,64,133
+pv103_1m_maks_mean,Daily mean of average ask size per message over 1-minute intervals,MATRIX,100%,56,251
+pv103_1m_mask_mean,Daily mean of average ask price per message over 1-minute intervals,MATRIX,100%,48,95
+pv103_1m_mbds_mean,daily mean of average bid size per message over 1-minute-intervals,MATRIX,100%,70,152
+pv103_1m_mbid_mean,daily mean of average bid price per message over 1-minute-intervals,MATRIX,100%,70,174
+pv103_1m_mlrt_mean,Daily mean of 1-minute-interval average log(bid size/ask size),MATRIX,100%,63,190
+pv103_1m_task_mean,daily mean of 1-minute-interval time-averaged ask price,MATRIX,100%,51,141
+pv103_1m_tbid_mean,daily mean of 1-minute-interval time-averaged bid price,MATRIX,100%,57,119
+pv103_1m_tlrt_mean,Daily mean of 1-minute interval time-weighted log(bidsize / asksize),MATRIX,100%,40,136
+pv103_c_price,Indicative or clearing price for the U.S. Market-On-Close auction,MATRIX,100%,162,998
+pv103_c_volume,Shares executed in the U.S. Market-On-Close auction (auction trade volume),MATRIX,100%,116,901
+pv103_ctwp_mean,daily mean of time-weighted average price of 1-minute-intervals,MATRIX,100%,54,141
+pv103_hask_mean,Daily mean of interval highest ask price over 1-minute-intervals,MATRIX,100%,38,127
+pv103_hasz_mean,Daily mean of 1-minute interval highest ask size,MATRIX,100%,50,232
+pv103_hbid_mean,Daily mean of 1-minute-interval highest bid price,MATRIX,100%,40,78
+pv103_hbsz_mean,Daily mean of 1-minute-interval highest bid size,MATRIX,100%,54,98
+pv103_htsz_mean,daily mean of max last size of 1-minute-intervals,MATRIX,100%,63,310
+pv103_inam_mean,Daily mean of 1-minute interval number of trades above mid quote,MATRIX,100%,53,295
+pv103_insm_topofbook_insm_mean,daily mean of 5-minute-interval smflow of top of order,MATRIX,100%,107,1000
+pv103_inth_mean,Daily mean of interval high price over 5-minute intervals of top of book,MATRIX,100%,69,460
+pv103_intl_mean,daily mean of interval low price over 5-minute-intervals of top of book,MATRIX,100%,59,233
+pv103_intv_mean,daily mean of interval volume over 5-minute-intervals of top of book,MATRIX,100%,48,139
+pv103_ivam_sum,daily sum of interval volume above mid quote,MATRIX,100%,59,295
+pv103_ivam_topofbook_ivam_mean,daily mean of 5-minute-interval volume above mid quote of top of book,MATRIX,100%,70,609
+pv103_ivwp_mean,Daily mean of 5-minute-interval VWAP of top of order,MATRIX,100%,59,345
+pv103_laks_mean,Daily mean of 5-minute interval last ask size of top of book,MATRIX,100%,37,188
+pv103_lask_topofbook_lask_mean,Daily mean of 5-minute interval last ask size of top of book,MATRIX,100%,52,247
+pv103_lasz_mean,Daily mean of 1-minute interval lowest ask size,MATRIX,100%,31,199
+pv103_lbid_topofbook_lbid_mean,Daily mean of 5-minute-interval lowest bid price of top of book,MATRIX,100%,47,235
+pv103_lbsz_mean,Daily mean of 1-minute interval lowest bid size,MATRIX,100%,33,325
+pv103_lstp_mean,Daily mean of 5-minute interval last trade price of top of book,MATRIX,100%,56,188
+pv103_madt_mean,Full order book: daily mean of time average of mean ask distance from mid per order over 5-minute intervals,MATRIX,100%,32,183
+pv103_maks_topofbook_maks_mean,daily mean of average ask size per message over 5-minute-intervals of top of book,MATRIX,100%,41,238
+pv103_mask_topofbook_mask_mean,daily mean of average ask price per message over 5-minute-intervals of top of book,MATRIX,100%,48,226
+pv103_masz_mean,Full order book: daily mean of time average of mean ask size over 5-minute-intervals of full order book,MATRIX,100%,39,266
+pv103_maud_mean,Full order book: daily mean of mean ask distance from mid per update message over 5-minute intervals,MATRIX,100%,44,230
+pv103_maus_mean,Full order book: daily mean of mean ask size change per update message over 5-minute intervals,MATRIX,100%,36,111
+pv103_mbds_topofbook_mbds_mean,daily mean of average bid size per message over 5-minute-intervals of top of book,MATRIX,100%,36,286
+pv103_mbdt_mean,Full order book: daily mean of time average of mean bid distance from mid per order over 5-minute-intervals,MATRIX,100%,61,553
+pv103_mbid_topofbook_mbid_mean,Daily mean of average bid price per message over 5-minute intervals of top of book,MATRIX,100%,56,444
+pv103_mbsz_mean,Full order book: daily mean of time average of mean bid size over 5-minute intervals,MATRIX,100%,40,189
+pv103_mbud_mean,Full order book: daily mean of mean bid distance from mid per update message over 5-minute-intervals,MATRIX,100%,38,172
+pv103_mbus_mean,Full order book: daily mean of mean bid size change per update message over 5-minute intervals,MATRIX,100%,41,225
+pv103_medn_mean,daily mean of 1-minute-interval median trade price,MATRIX,100%,29,55
+pv103_mlrt_topofbook_mlrt_mean,daily mean of average log(bid size/ask size) per message over 5-minute-intervals of top of book,MATRIX,100%,58,735
+pv103_mtrd_mean,daily mean of 1-minute-interval mean of last price,MATRIX,100%,28,107
+pv103_mtsq_mean,Daily mean of 1-minute interval mean of square root of last price,MATRIX,100%,21,65
+pv103_nalv_mean,Full order book: daily mean of time average of number of ask levels over 5-minute-intervals of full order book,MATRIX,100%,54,303
+pv103_naod_mean,Full order book: daily mean of time average of ask orders over 5-minute-intervals,MATRIX,100%,34,92
+pv103_nask_mean,"Daily mean of 1-minute-interval number of ask changes (+1, -1)",MATRIX,100%,34,55
+pv103_naup_mean,Full order book: daily mean of number of ask updates in the interval over 5-minute-intervals,MATRIX,100%,40,188
+pv103_nbid_mean,"daily mean of 1-minute-interval number of bid changes (+1,-1)",MATRIX,100%,25,44
+pv103_nblv_mean,Full order book: daily mean of time average of number of bid levels over 5-minute-intervals,MATRIX,100%,35,118
+pv103_nbod_mean,Full order book: daily mean of time average of bid orders over 5-minute-intervals,MATRIX,100%,76,210
+pv103_nbup_mean,Full order book: daily mean of number of bid updates in the interval over 5-minute intervals of full order book,MATRIX,100%,30,118
+pv103_ntrd_mean,daily mean of number of trades in the 1-minute-interval,MATRIX,100%,47,132
+pv103_ntrd_sum,Daily sum of interval number of trades,MATRIX,100%,75,485
+pv103_o_price,Open/Close auction indicative price,MATRIX,100%,47,209
+pv103_o_volume,Shares traded in the USA Market-On-Open auction (opening auction volume),MATRIX,100%,46,214
+pv103_saps_mean,"Full order book: daily mean of time average of sum((1 / (asklevel_n)^n) * (asksize_n / max((ask_1 - ask_n)*100,1))) over 5-minute-intervals of full order book",MATRIX,100%,33,336
+pv103_sasz_mean,Full order book: daily mean of time average of sum(asksize_n / (mid - ask_n)) over 5-minute intervals of full order book,MATRIX,100%,36,114
+pv103_sbps_mean,"Full order book: daily mean of time average of sum((1 / (bidlevel_n)^n) * (bidsize_n / max((bid_1 - bid_n) * 100, 1))) over 5-minute intervals",MATRIX,100%,28,87
+pv103_sbsz_mean,Full order book: daily mean of time average of sum(bidsize_n / (mid - bid_n)) over 5-minute intervals,MATRIX,100%,71,186
+pv103_taks_mean,daily mean of time-averaged ask size over 5-minute-intervals of top of book,MATRIX,100%,33,244
+pv103_task_topofbook_task_mean,Daily mean of 5-minute interval time-averaged ask price of top of book,MATRIX,100%,51,287
+pv103_tasz_mean,Daily mean of 1-minute interval time-weighted ask size,MATRIX,100%,25,162
+pv103_tbds_mean,daily mean of time-averaged bid size over 5-minute-intervals of top of book,MATRIX,100%,38,126
+pv103_tbid_topofbook_tbid_mean,Daily mean of 5-minute interval time-averaged bid price of top of book,MATRIX,100%,61,347
+pv103_tbsz_mean,daily mean of 1-minute-interval time-weighted bid size,MATRIX,100%,40,184
+pv103_tlrt_topofbook_tlrt_mean,Daily mean of 5-minute interval time-weighted log(bidsize / asksize) of top of book,MATRIX,100%,60,852
+pv103_vlty_mean,Daily mean of 5-minute-interval volatility of trade price of top of book,MATRIX,100%,99,556

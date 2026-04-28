@@ -1,0 +1,9 @@
+Field,Description,Type,Coverage,Users,Alphas
+shrt2_t12m_volatility_rank,The 1~100 percentile rank of the stock versus all other US trading stocks on trailing 12-month volatility,MATRIX,94%,325,900
+shrt2_t3m_volatility_rank,The 1~100 percentile rank of the stock versus all other US trading stocks on trailing 3-month volatility,MATRIX,97%,390,1367
+star_si_cap_rank,the market cap group 1~100 percentile rank of the stock versus all other US trading stocks,GROUP,83%,85,260
+star_si_country_rank,the 1~100 percentile rank of the stock versus all other US trading stocks,MATRIX,83%,281,879
+star_si_country_rank_unadj,"the 1~100 percentile rank of the stock versus all other US trading stocks, prior to being adjusted for arbitrage trading strategies",MATRIX,83%,268,883
+star_si_insown_pct,institutional ownership percentile for each fund reported in the last 2 years. Divide the total fund holding shares by the primary shares outstanding,MATRIX,83%,444,1880
+star_si_sector_rank,the sector 1~100 percentile rank of the stock versus all other US trading stocks,GROUP,83%,96,271
+star_si_shortsqueeze_rank,"The 1~100 percentile rank of the stock versus all other US trading stocks on the short squeeze indicator, based on volatility and liquidity. For example, a score of 90 indicates that only 10Percentage ofstocks have a higher likelihood of a significant relative price rise in the next 30 days.",MATRIX,84%,345,1267

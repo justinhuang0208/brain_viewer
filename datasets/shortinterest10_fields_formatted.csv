@@ -1,0 +1,59 @@
+Field,Description,Type,Coverage,Users,Alphas
+shrt10_730_standalone_assetsend,"total net assets, in US $ millions, of the selected asset class/manager/fund at the end of that period.",MATRIX,72%,186,531
+shrt10_730_standalone_assetsstart,"the assets, in US $ millions, of a the fund or share class at the beginning of the specified period",MATRIX,72%,108,265
+shrt10_730_standalone_bear,Specifies whether a fund is inversely single leveraged,MATRIX,72%,71,169
+shrt10_730_standalone_bear2x,Specifies whether a fund is inversely leveraged 2x,MATRIX,72%,42,71
+shrt10_730_standalone_bear3x,Specifies whether a fund is inversely leveraged 3x,MATRIX,72%,41,82
+shrt10_730_standalone_commodity,Specifies whether the fund invests solely in physical commodity futures,MATRIX,72%,44,74
+shrt10_730_standalone_dividend,Specifies whether a fund invests in high dividend paying investments,MATRIX,72%,64,142
+shrt10_730_standalone_flow,"the flows into or out of the selected asset class/manager/fund, in US $ millions, by frequency during the specified date range.",MATRIX,70%,57,94
+shrt10_730_standalone_flowpct,"the flows into or out of the selected asset class/manager/fund, as a percentage of the total net assets.",MATRIX,70%,34,67
+shrt10_730_standalone_frontier,Specifies whether the fund invests solely in frontier markets,MATRIX,72%,24,37
+shrt10_730_standalone_fte,Specifies whether a fund is an ETF (Y) or mutual fund (N),MATRIX,72%,47,98
+shrt10_730_standalone_hedge_yn,Specifies whether this fund is directly related to hedge fund investment,MATRIX,72%,76,140
+shrt10_730_standalone_islamic_yn,Specifies whether a fund follows Sharia law,MATRIX,72%,27,39
+shrt10_730_standalone_leverage1x,Specifies whether a fund is positively single leveraged,MATRIX,72%,38,67
+shrt10_730_standalone_leverage2x,Specifies whether a fund is positively leveraged 2x,MATRIX,72%,52,104
+shrt10_730_standalone_leverage3x,Specifies whether a fund is positively leveraged 3x,MATRIX,72%,37,48
+shrt10_730_standalone_portfoliochangepct,"the change in the underlying value of the assets, expressed in %, by frequency during the date range.",MATRIX,69%,29,32
+shrt10_730_standalone_sni,Specifies whether a fund is insurance linked,MATRIX,72%,41,60
+shrt10_730_standalone_syn,"Specifies whether this fund focuses on Socially Responsible Investing (SRI) or Environmental, Social and Governance; ESG factors are a subset of non-financial performance indicators that includes sustainable, ethical, and corporate governance issues",MATRIX,72%,40,69
+shrt10_900_standalone_assetsend,"total net assets, in US $ millions, of the selected asset class/manager/fund at the end of that period.",MATRIX,73%,41,68
+shrt10_900_standalone_assetsstart,"the assets, in US $ millions, of a the fund or share class at the beginning of the specified period",MATRIX,73%,30,55
+shrt10_900_standalone_bear,Specifies whether a fund is inversely single leveraged,MATRIX,73%,24,34
+shrt10_900_standalone_bear2x,Specifies whether a fund is inversely leveraged 2x,MATRIX,73%,17,25
+shrt10_900_standalone_bear3x,Specifies whether a fund is inversely leveraged 3x,MATRIX,73%,16,52
+shrt10_900_standalone_commodity,Specifies whether the fund invests solely in physical commodity futures,MATRIX,73%,17,26
+shrt10_900_standalone_dividend,Specifies whether a fund invests in high dividend paying investments,MATRIX,73%,18,25
+shrt10_900_standalone_flow,"the flows into or out of the selected asset class/manager/fund, in US $ millions, by frequency during the specified date range.",MATRIX,70%,24,31
+shrt10_900_standalone_flowpct,"the flows into or out of the selected asset class/manager/fund, as a percentage of the total net assets.",MATRIX,70%,14,23
+shrt10_900_standalone_frontier,Specifies whether the fund invests solely in frontier markets,MATRIX,73%,11,16
+shrt10_900_standalone_fte,Specifies whether a fund is an ETF (Y) or mutual fund (N),MATRIX,73%,27,32
+shrt10_900_standalone_hedge_yn,Specifies whether this fund is directly related to hedge fund investment,MATRIX,73%,26,44
+shrt10_900_standalone_islamic_yn,Specifies whether a fund follows Sharia law,MATRIX,73%,13,24
+shrt10_900_standalone_leverage1x,Specifies whether a fund is positively single leveraged,MATRIX,73%,10,18
+shrt10_900_standalone_leverage2x,Specifies whether a fund is positively leveraged 2x,MATRIX,73%,23,36
+shrt10_900_standalone_leverage3x,Specifies whether a fund is positively leveraged 3x,MATRIX,73%,22,47
+shrt10_900_standalone_portfoliochangepct,"the change in the underlying value of the assets, expressed in %, by frequency during the date range.",MATRIX,70%,26,64
+shrt10_900_standalone_sni,Specifies whether a fund is insurance linked,MATRIX,73%,23,43
+shrt10_900_standalone_syn,"Specifies whether this fund focuses on Socially Responsible Investing (SRI) or Environmental, Social and Governance; ESG factors are a subset of non-financial performance indicators that includes sustainable, ethical, and corporate governance issues",MATRIX,73%,18,36
+shrt10_standalone_assetsend,"total net assets, in US $ millions, of the selected asset class/manager/fund at the end of that period.",MATRIX,73%,26,42
+shrt10_standalone_assetsstart,"the assets, in US $ millions, of a the fund or share class at the beginning of the specified period",MATRIX,73%,29,39
+shrt10_standalone_bear,Specifies whether a fund is inversely single leveraged,MATRIX,73%,21,34
+shrt10_standalone_bear2x,Specifies whether a fund is inversely leveraged 2x,MATRIX,73%,30,59
+shrt10_standalone_bear3x,Specifies whether a fund is inversely leveraged 3x,MATRIX,73%,16,32
+shrt10_standalone_commodity,Specifies whether the fund invests solely in physical commodity futures,MATRIX,73%,26,43
+shrt10_standalone_dividend,Specifies whether a fund invests in high dividend paying investments,MATRIX,73%,29,49
+shrt10_standalone_flow,"the flows into or out of the selected asset class/manager/fund, in US $ millions, by frequency during the specified date range.",MATRIX,71%,26,43
+shrt10_standalone_flowpct,"the flows into or out of the selected asset class/manager/fund, as a percentage of the total net assets.",MATRIX,71%,24,33
+shrt10_standalone_forexchange,the foreign exchange rate change that has affected the price of the assets.,MATRIX,25%,32,53
+shrt10_standalone_frontier,Specifies whether the fund invests solely in frontier markets,MATRIX,73%,24,61
+shrt10_standalone_fte,Specifies whether a fund is an ETF (Y) or mutual fund (N),MATRIX,73%,22,41
+shrt10_standalone_hedge_yn,Specifies whether this fund is directly related to hedge fund investment,MATRIX,73%,30,46
+shrt10_standalone_islamic_yn,Specifies whether a fund follows Sharia law,MATRIX,73%,32,72
+shrt10_standalone_leverage1x,Specifies whether a fund is positively single leveraged,MATRIX,73%,24,64
+shrt10_standalone_leverage2x,Specifies whether a fund is positively leveraged 2x,MATRIX,73%,24,39
+shrt10_standalone_leverage3x,Specifies whether a fund is positively leveraged 3x,MATRIX,73%,46,70
+shrt10_standalone_portfoliochangepct,"the change in the underlying value of the assets, expressed in %, by frequency during the date range.",MATRIX,69%,23,37
+shrt10_standalone_sni,Specifies whether a fund is insurance linked,MATRIX,73%,31,61
+shrt10_standalone_syn,"Specifies whether this fund focuses on Socially Responsible Investing (SRI) or Environmental, Social and Governance; ESG factors are a subset of non-financial performance indicators that includes sustainable, ethical, and corporate governance issues",MATRIX,73%,42,90

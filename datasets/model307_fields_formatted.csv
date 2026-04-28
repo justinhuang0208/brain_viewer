@@ -1,0 +1,8 @@
+Field,Description,Type,Coverage,Users,Alphas
+mdl307_atlas_unit_name,Atlas unit name,VECTOR,68%,0,0
+mdl307_country,Country Code,VECTOR,68%,1,1
+mdl307_cusip,Point in Time CUSIP,VECTOR,68%,9,9
+mdl307_sales_pct_eu,Fraction of company sales allocated to the European Union excluding Great Britain as a proportion of total revenue,VECTOR,65%,1,1
+mdl307_sales_pct_unclassified,Fraction of the company’s total sales revenue that is unallocated or not classified to any defined geographic region as a proportion (0 to 1),VECTOR,65%,0,0
+mdl307_sales_pct_us,Fraction of the company’s total sales revenue allocated to the United States as a proportion (0 to 1),VECTOR,65%,3,3
+mdl307_sector,Sector,VECTOR,68%,2,2

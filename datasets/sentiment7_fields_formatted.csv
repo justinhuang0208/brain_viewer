@@ -1,0 +1,38 @@
+Field,Description,Type,Coverage,Users,Alphas
+snt7_all_languagescompany_name_69,Company name,VECTOR,0%,16,23
+snt7_niversecompany_url_89,Company wikipage name,VECTOR,0%,7,8
+snt7_sa_all_languagescompany_url,Company wikipage name,VECTOR,0%,9,10
+snt7_sacompany_url_100,Company wikipage name,VECTOR,0%,10,11
+snt7_universe_all_languagesaccess_type,The official website URL of the company across all languages,VECTOR,0%,31,62
+snt7_universe_all_languagescountry,ISO Alpha 2 codes for countries in which the companies are incorporated,VECTOR,0%,5,6
+snt7_universe_all_languagesexchange,Exchange code,VECTOR,0%,6,6
+snt7_universe_all_languagesisin,ISIN for the company,VECTOR,0%,9,10
+snt7_universe_all_languagesproject,The number of views for the Wikipedia pages of subsidiaries,VECTOR,0%,17,22
+snt7_universe_all_languagesticker,The Wikimedia project for data retrieval across all languages,VECTOR,0%,10,10
+snt7_universe_all_languagestimestamp,The precise date and time marker for the data record,VECTOR,0%,9,10
+snt7_universe_all_languagesviews,"The specific Wikimedia project (eg, ""en.wikipedia"") for which data is retrieved",VECTOR,0%,14,16
+snt7_universe_all_languageswebsite,The country associated with the company's subsidiaries,VECTOR,0%,4,4
+snt7_universeaccess_type_86,The timestamp for a data record across all languages,VECTOR,0%,15,16
+snt7_universecountry_84,ISO Alpha 2 codes for countries in which the companies are incorporated,VECTOR,0%,9,9
+snt7_universeexchange_90,Exchange code,VECTOR,0%,9,9
+snt7_universeisin_87,ISIN for the company,VECTOR,0%,14,14
+snt7_universeproject_88,The name of the company or entity,VECTOR,0%,14,15
+snt7_universeticker_83,The ISIN for a company across all languages,VECTOR,0%,9,15
+snt7_universetimestamp_82,The ISIN for a company in the D1 module,VECTOR,0%,14,23
+snt7_universeviews_92,The unique ticker symbol representing the company,VECTOR,0%,20,27
+snt7_universewebsite_91,The type of access used to view Wikipedia for subsidiaries in the D0 module,VECTOR,0%,11,12
+snt7_usa_all_languagesaccess_type,The date of data extraction in the D1 module,VECTOR,0%,11,17
+snt7_usa_all_languagesexchange,Exchange code,VECTOR,0%,6,7
+snt7_usa_all_languagesisin,ISIN for the company,VECTOR,0%,9,16
+snt7_usa_all_languagesproject,The type of access used to view Wikipedia for subsidiaries,VECTOR,0%,7,12
+snt7_usa_all_languagesticker,The name of the company across all languages,VECTOR,0%,11,19
+snt7_usa_all_languagestimestamp,The name of the company or entity,VECTOR,0%,15,15
+snt7_usa_all_languagesviews,The URL of the company's Wikipedia page,VECTOR,0%,15,17
+snt7_usaaccess_type_102,The country associated with the company across all languages,VECTOR,0%,19,23
+snt7_usaexchange_94,Exchange code,VECTOR,0%,4,4
+snt7_usaisin_98,ISIN for the company,VECTOR,0%,5,5
+snt7_usaproject_101,The ISIN for a company's subsidiaries in the D0 module,VECTOR,0%,7,7
+snt7_usaticker_95,The number of views for the company's Wikipedia page across all languages,VECTOR,0%,5,5
+snt7_usatimestamp_99,The timestamp for a data record in the D1 module,VECTOR,0%,10,10
+snt7_usaviews_97,The number of times the company's Wikipedia page was viewed,VECTOR,0%,21,23
+snt7company_name_85,Company name,VECTOR,0%,6,7

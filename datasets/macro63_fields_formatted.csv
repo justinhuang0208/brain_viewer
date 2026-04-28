@@ -1,0 +1,4 @@
+Field,Description,Type,Coverage,Users,Alphas
+mcr63_ldi_membership,"Index membership flag for the WisdomTree WTLDI index on the date (1 = included, 0 = not included)",MATRIX,100%,78,111
+mcr63_mdi_membership,"Membership flag indicating whether the security is included in the WTMDI index on the given date (1=included, 0 or NA=not included)",MATRIX,100%,39,58
+mcr63_sdi_membership,"Index membership flag indicating whether the security is included in the WisdomTree WTSDI index on the given date (1=included, 0/NA=not included)",MATRIX,100%,58,94

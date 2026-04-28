@@ -1,0 +1,4 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd38_ppkm,Mapping between internal dataset keys and actual power plant identifiers,MATRIX,100%,22,45
+fnd38_ppm,"Unique identifier for each power plant, possibly linking registry records",MATRIX,100%,14,48
+fnd38_ppukm,Mapping between dataset keys and specific power plant unit identifiers,MATRIX,100%,21,29

@@ -1,0 +1,592 @@
+Field,Description,Type,Coverage,Users,Alphas
+rsk62_1_100_intercept,"Intercept term of the multi-factor regression used to estimate combined betas in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,100%,344,1293
+rsk62_1_100_ksrs,"Stock-specific idiosyncratic risk (specific risk) per stock in the USA model, for the 1-day horizon using a 100-day rolling window; reported as a risk ratio used in the sparse risk model",MATRIX,99%,140,354
+rsk62_1_return,Returns,MATRIX,100%,715,2840
+rsk62_5_100_intercept,Intercept term of the per-stock combined beta regression in the USA risk model using a 5-day return horizon and a 100-day window,MATRIX,100%,230,832
+rsk62_5_100_ksrs,"Daily stock-specific idiosyncratic risk (risk ratio) for USA model, computed for a 5-day horizon using a 100-day rolling window, used in risk estimation",MATRIX,99%,107,185
+rsk62_5_return,"Forward-looking asset return over a 5-day horizon per stock, used as the target in the risk-model regressions",MATRIX,100%,440,2301
+rsk62_beta_1_100_banks,"Industry beta (exposure) for the Banks industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,58%,101,464
+rsk62_beta_1_100_chemicals,"Industry beta (exposure) for the Chemicals industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,47%,119,550
+rsk62_beta_1_100_commercialservices,"Industry beta (exposure) for the Commercial Services industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,39%,49,95
+rsk62_beta_1_100_computers,"Industry beta (exposure) for the Computers industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,44%,43,111
+rsk62_beta_1_100_curratio,"Regression beta coefficient for the Current Ratio style factor, estimated over a 100-day window using 1-day forward returns",MATRIX,100%,113,476
+rsk62_beta_1_100_diversifiedfinanserv,"Industry beta (exposure) for the Diversified Financial Services industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,44%,50,189
+rsk62_beta_1_100_dividend,"Regression beta coefficient for the Dividend Yield style factor, estimated over a 100-day window using 1-day forward returns",MATRIX,100%,71,235
+rsk62_beta_1_100_electric,"Industry beta (exposure) for the Electric industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,66%,59,185
+rsk62_beta_1_100_electronics,"Industry beta (exposure) for the Electronics industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,39%,46,92
+rsk62_beta_1_100_food,"Industry beta (exposure) for the Food industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,59%,40,226
+rsk62_beta_1_100_growth,"Regression beta coefficient for the Earnings Growth style factor, estimated over a 100-day window using 1-day forward returns",MATRIX,100%,101,433
+rsk62_beta_1_100_healthcare_products,"Industry beta (exposure) for the Healthcare Products industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,53%,58,109
+rsk62_beta_1_100_healthcare_services,"Industry beta (exposure) for the Healthcare Services industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,60%,49,170
+rsk62_beta_1_100_insurance,"Industry beta (exposure) for the Insurance industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,50%,58,185
+rsk62_beta_1_100_internet,"Industry beta (exposure) for the Internet industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,56%,26,55
+rsk62_beta_1_100_logadv20,"Regression beta coefficient for the log of 20-day average dollar volume (liquidity) style factor, estimated over a 100-day window using 1-day forward returns",MATRIX,100%,80,261
+rsk62_beta_1_100_logcap,"Regression beta coefficient for the log of market capitalization (size) style factor, estimated over a 100-day window using 1-day forward returns",MATRIX,100%,54,172
+rsk62_beta_1_100_margin,"Regression beta coefficient for the profit margin (gross margin) style factor, estimated over a 100-day window using 1-day forward returns",MATRIX,100%,37,99
+rsk62_beta_1_100_mining,"Industry beta (exposure) for the Mining industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,72%,33,57
+rsk62_beta_1_100_miscellaneousmanufactur,"Industry beta (exposure) for the Miscellaneous Manufacturing industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,43%,31,56
+rsk62_beta_1_100_mtl,ltm,MATRIX,100%,65,345
+rsk62_beta_1_100_mts,"Regression beta coefficient for the short-term momentum style factor, estimated over a 100-day window using 1-day forward returns",MATRIX,100%,44,122
+rsk62_beta_1_100_nipe,nipe,MATRIX,100%,56,382
+rsk62_beta_1_100_oil_gas,"Industry beta (exposure) for the Oil & Gas industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,67%,19,157
+rsk62_beta_1_100_pb,"Regression beta coefficient for the Book-to-Price style factor, estimated over a 100-day window using 1-day forward returns",MATRIX,100%,64,220
+rsk62_beta_1_100_pharmaceuticals,"Industry beta (exposure) for the Pharmaceuticals industry factor in the USA risk model (1-day horizon, 100-day trailing window)",MATRIX,62%,50,217
+rsk62_beta_1_100_qe2d,d2eq,MATRIX,100%,63,315
+rsk62_beta_1_100_reits,"Per-stock industry factor beta for the REITs industry in the USA risk model, estimated over a 100-day window at a 1-day horizon; represents the stock’s exposure to the REITs industry",MATRIX,64%,22,66
+rsk62_beta_1_100_retail,"Per-stock industry factor beta for the Retail industry in the USA risk model, estimated over a 100-day window at a 1-day horizon; represents the stock’s exposure to the Retail industry",MATRIX,59%,30,80
+rsk62_beta_1_100_semiconductors,"Per-stock industry factor beta for the Semiconductors industry in the USA risk model, estimated over a 100-day window at a 1-day horizon; represents the stock’s exposure to the Semiconductors industry",MATRIX,57%,31,53
+rsk62_beta_1_100_software,"Per-stock industry factor beta for the Software industry in the USA risk model, estimated over a 100-day window at a 1-day horizon; represents the stock’s exposure to the Software industry",MATRIX,47%,20,29
+rsk62_beta_1_100_spe,"Regression beta (loading) on the earnings‑per‑share style factor (earnings yield proxy) for the stock, estimated with a 1‑day horizon over a 100‑day window",MATRIX,100%,49,140
+rsk62_beta_1_100_telecommunications,"Per-stock industry factor beta for the Telecommunications industry in the USA risk model, estimated over a 100-day window at a 1-day horizon; represents the stock’s exposure to the Telecommunications industry",MATRIX,44%,23,26
+rsk62_beta_1_100_transportation,"Per-stock industry factor beta for the Transportation industry in the USA risk model, estimated over a 100-day window at a 1-day horizon; represents the stock’s exposure to the Transportation industry",MATRIX,56%,27,33
+rsk62_beta_1_100_volatility,"Regression beta coefficient for the recent return volatility style factor, estimated over a 100-day window using 1-day forward returns",MATRIX,100%,54,242
+rsk62_beta_5_100_banks,"Per-stock beta coefficient for the Banks industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,55%,43,474
+rsk62_beta_5_100_chemicals,"Per-stock beta coefficient for the Chemicals industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,41%,43,87
+rsk62_beta_5_100_commercialservices,"Per-stock beta coefficient for the Commercial Services industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,31%,19,30
+rsk62_beta_5_100_computers,"Per-stock beta coefficient for the Computers industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,42%,33,75
+rsk62_beta_5_100_curratio,"Per-stock beta coefficient for the current ratio style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,39,208
+rsk62_beta_5_100_diversifiedfinanserv,"Per-stock beta coefficient for the Diversified Financial Services industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,38%,27,38
+rsk62_beta_5_100_dividend,"Per-stock beta coefficient for the dividend yield style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,52,279
+rsk62_beta_5_100_electric,"Per-stock beta coefficient for the Electric industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,65%,35,240
+rsk62_beta_5_100_electronics,"Per-stock beta coefficient for the Electronics industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,33%,32,226
+rsk62_beta_5_100_food,"Per-stock beta coefficient for the Food industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,56%,30,91
+rsk62_beta_5_100_growth,"Per-stock beta coefficient for the earnings growth style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,42,84
+rsk62_beta_5_100_healthcare_products,"Per-stock beta coefficient for the Healthcare Products industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,50%,24,38
+rsk62_beta_5_100_healthcare_services,"Per-stock beta coefficient for the Healthcare Services industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,57%,14,27
+rsk62_beta_5_100_insurance,"Per-stock beta coefficient for the Insurance industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,46%,37,50
+rsk62_beta_5_100_internet,"Per-stock beta coefficient for the Internet industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,51%,22,63
+rsk62_beta_5_100_logadv20,"Per-stock beta coefficient for the log of 20-day average dollar volume style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,195,930
+rsk62_beta_5_100_logcap,"Per-stock beta coefficient for the log of market capitalization style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,75,506
+rsk62_beta_5_100_margin,"Per-stock beta coefficient for the profit or gross margin style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,33,118
+rsk62_beta_5_100_mining,"Per-stock beta coefficient for the Mining industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,69%,54,441
+rsk62_beta_5_100_miscellaneousmanufactur,"Per-stock beta coefficient for the Miscellaneous Manufacturing industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,38%,24,67
+rsk62_beta_5_100_mtl,ltm,MATRIX,100%,43,213
+rsk62_beta_5_100_mts,"Per-stock beta coefficient for the short-term momentum style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,24,36
+rsk62_beta_5_100_nipe,nipe,MATRIX,100%,39,170
+rsk62_beta_5_100_oil_gas,"Per-stock beta coefficient for the Oil and Gas industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,63%,19,61
+rsk62_beta_5_100_pb,"Per-stock beta coefficient for the book-to-price style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,35,108
+rsk62_beta_5_100_pharmaceuticals,"Per-stock beta coefficient for the Pharmaceuticals industry factor in the USA risk model (5-day horizon, 100-day window), capturing exposure to that industry",MATRIX,58%,40,142
+rsk62_beta_5_100_qe2d,d2eq,MATRIX,100%,42,144
+rsk62_beta_5_100_reits,"Industry beta (regression coefficient) for a stock’s exposure to the REITs industry factor in the USA risk model, estimated with a 5-day horizon over a 100-day rolling window",MATRIX,61%,28,90
+rsk62_beta_5_100_retail,"Industry beta (regression coefficient) for a stock’s exposure to the Retail industry factor in the USA risk model, estimated with a 5-day horizon over a 100-day rolling window",MATRIX,55%,21,26
+rsk62_beta_5_100_semiconductors,"Industry beta (regression coefficient) for a stock’s exposure to the Semiconductors industry factor in the USA risk model, estimated with a 5-day horizon over a 100-day rolling window",MATRIX,54%,13,27
+rsk62_beta_5_100_software,"Industry beta (regression coefficient) for a stock’s exposure to the Software industry factor in the USA risk model, estimated with a 5-day horizon over a 100-day rolling window",MATRIX,41%,93,150
+rsk62_beta_5_100_spe,"Per-stock beta coefficient for the earnings yield (EPS over price) style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,32,89
+rsk62_beta_5_100_telecommunications,"Industry beta (regression coefficient) for a stock’s exposure to the Telecommunications industry factor in the USA risk model, estimated with a 5-day horizon over a 100-day rolling window",MATRIX,37%,23,49
+rsk62_beta_5_100_transportation,"Industry beta (regression coefficient) for a stock’s exposure to the Transportation industry factor in the USA risk model, estimated with a 5-day horizon over a 100-day rolling window",MATRIX,51%,12,24
+rsk62_beta_5_100_volatility,"Per-stock beta coefficient for the recent return volatility style factor in the USA risk model (5-day horizon, 100-day window)",MATRIX,100%,40,126
+rsk62_beta_factor_1_100_curratio,"First-stage regression beta coefficient (factor loading) for the current ratio style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,30,78
+rsk62_beta_factor_1_100_dividend,"First-stage regression beta coefficient for the dividend yield style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,21,39
+rsk62_beta_factor_1_100_growth,"First-stage regression beta coefficient for the earnings growth style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,24,81
+rsk62_beta_factor_1_100_logadv20,"First-stage regression beta coefficient for the log of 20-day average dollar volume style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,31,62
+rsk62_beta_factor_1_100_logcap,"First-stage regression beta coefficient for the log market capitalization (size) style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,21,29
+rsk62_beta_factor_1_100_margin,"First-stage regression beta coefficient for the gross profit margin style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,20,56
+rsk62_beta_factor_1_100_mtl,"First-stage regression beta coefficient for the long-term momentum style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,25,73
+rsk62_beta_factor_1_100_mts,"First-stage regression beta coefficient for the short-term momentum style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,20,39
+rsk62_beta_factor_1_100_nipe,nipe,MATRIX,100%,21,31
+rsk62_beta_factor_1_100_pb,"First-stage regression beta coefficient for the book-to-price (value) style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,22,96
+rsk62_beta_factor_1_100_qe2d,d2eq,MATRIX,100%,21,30
+rsk62_beta_factor_1_100_spe,"First-stage regression beta coefficient for the earnings yield/EPS style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,9,16
+rsk62_beta_factor_1_100_volatility,"First-stage regression beta coefficient for the recent return volatility style factor in the USA model (1-day horizon, 100-day window)",MATRIX,100%,18,30
+rsk62_beta_factor_5_100_curratio,"Estimated beta (loading) on the current ratio style factor (current assets to current liabilities) from the first-stage regression (GLOBAL, 5-day horizon, 100-day window), per stock",MATRIX,100%,22,40
+rsk62_beta_factor_5_100_dividend,First-stage regression beta (loading) for the dividend yield style factor at a 5-day return horizon using a 100-day window,MATRIX,100%,24,41
+rsk62_beta_factor_5_100_growth,"Estimated beta (loading) on the earnings growth rate style factor from the first-stage regression (GLOBAL, 5-day horizon, 100-day window), per stock",MATRIX,100%,28,44
+rsk62_beta_factor_5_100_logadv20,First-stage regression beta (loading) for the log of 20-day average dollar volume (ADV20) style factor at a 5-day return horizon using a 100-day window,MATRIX,100%,32,110
+rsk62_beta_factor_5_100_logcap,First-stage regression beta (loading) for the log of market capitalization style factor at a 5-day return horizon using a 100-day window,MATRIX,100%,27,103
+rsk62_beta_factor_5_100_margin,"Estimated beta (loading) on the gross profit margin style factor from the first-stage regression (GLOBAL, 5-day horizon, 100-day window), per stock",MATRIX,100%,18,78
+rsk62_beta_factor_5_100_mtl,"Estimated beta (loading) on the long-term momentum style factor from the first-stage regression (GLOBAL, 5-day horizon, 100-day window), per stock",MATRIX,100%,15,33
+rsk62_beta_factor_5_100_mts,First-stage regression beta (loading) for the short-term momentum style factor at a 5-day return horizon using a 100-day window,MATRIX,100%,14,54
+rsk62_beta_factor_5_100_nipe,nipe,MATRIX,100%,23,44
+rsk62_beta_factor_5_100_pb,"Estimated beta (loading) on the book-to-price value style factor from the first-stage regression (GLOBAL, 5-day horizon, 100-day window), per stock",MATRIX,100%,14,23
+rsk62_beta_factor_5_100_qe2d,First-stage regression beta (loading) for the debt-to-equity style factor at a 5-day return horizon using a 100-day window,MATRIX,100%,24,69
+rsk62_beta_factor_5_100_spe,"Estimated beta (loading) on the earnings per share relative to price (earnings yield) style factor from the first-stage regression (GLOBAL, 5-day horizon, 100-day window), per stock",MATRIX,100%,17,44
+rsk62_beta_factor_5_100_volatility,First-stage regression beta (loading) for the recent return volatility style factor at a 5-day return horizon using a 100-day window,MATRIX,100%,22,86
+rsk62_beta_industry_constr_1_100_banks,Constrained second-stage industry beta (exposure) for the Banks industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,58%,19,56
+rsk62_beta_industry_constr_1_100_chemicals,Constrained second-stage industry beta (exposure) for the Chemicals industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,47%,13,15
+rsk62_beta_industry_constr_1_100_commercialservices,Constrained second-stage industry beta (exposure) for the Commercial Services industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,39%,8,14
+rsk62_beta_industry_constr_1_100_computers,Constrained second-stage industry beta (exposure) for the Computers industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,44%,9,20
+rsk62_beta_industry_constr_1_100_diversifiedfinanserv,Constrained second-stage industry beta (exposure) for the Diversified Financial Services industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,44%,21,31
+rsk62_beta_industry_constr_1_100_electric,Constrained second-stage industry beta (exposure) for the Electric industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,66%,16,20
+rsk62_beta_industry_constr_1_100_electronics,Constrained second-stage industry beta (exposure) for the Electronics industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,39%,10,15
+rsk62_beta_industry_constr_1_100_food,Constrained second-stage industry beta (exposure) for the Food industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,59%,10,11
+rsk62_beta_industry_constr_1_100_healthcare_products,Constrained second-stage industry beta (exposure) for the Healthcare Products industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,53%,12,17
+rsk62_beta_industry_constr_1_100_healthcare_services,Constrained second-stage industry beta (exposure) for the Healthcare Services industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,60%,13,18
+rsk62_beta_industry_constr_1_100_insurance,Constrained second-stage industry beta (exposure) for the Insurance industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,50%,17,24
+rsk62_beta_industry_constr_1_100_internet,Constrained second-stage industry beta (exposure) for the Internet industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,56%,8,11
+rsk62_beta_industry_constr_1_100_mining,Constrained second-stage industry beta (exposure) for the Mining industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,72%,14,33
+rsk62_beta_industry_constr_1_100_miscellaneousmanufactur,Constrained second-stage industry beta (exposure) for the Miscellaneous Manufacturing industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,43%,12,17
+rsk62_beta_industry_constr_1_100_oil_gas,Constrained second-stage industry beta (exposure) for the Oil & Gas industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,67%,12,19
+rsk62_beta_industry_constr_1_100_pharmaceuticals,Constrained second-stage industry beta (exposure) for the Pharmaceuticals industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,62%,25,65
+rsk62_beta_industry_constr_1_100_reits,Constrained second-stage industry beta (exposure) for the REITs industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,64%,7,8
+rsk62_beta_industry_constr_1_100_retail,Constrained second-stage industry beta (exposure) for the Retail industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,59%,15,23
+rsk62_beta_industry_constr_1_100_semiconductors,Constrained second-stage industry beta (exposure) for the Semiconductors industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,57%,18,29
+rsk62_beta_industry_constr_1_100_software,Constrained second-stage industry beta (exposure) for the Software industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,47%,8,8
+rsk62_beta_industry_constr_1_100_telecommunications,Constrained second-stage industry beta (exposure) for the Telecommunications industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,44%,8,11
+rsk62_beta_industry_constr_1_100_transportation,Constrained second-stage industry beta (exposure) for the Transportation industry in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,56%,13,26
+rsk62_beta_industry_constr_5_100_banks,"Constrained industry beta (second-stage regression coefficient) for the Banks industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,54%,12,43
+rsk62_beta_industry_constr_5_100_chemicals,"Constrained industry beta (second-stage regression coefficient) for the Chemicals industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,41%,12,16
+rsk62_beta_industry_constr_5_100_commercialservices,"Constrained industry beta (second-stage regression coefficient) for the Commercial Services industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,31%,10,12
+rsk62_beta_industry_constr_5_100_computers,"Constrained industry beta (second-stage regression coefficient) for the Computers industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,41%,14,21
+rsk62_beta_industry_constr_5_100_diversifiedfinanserv,"Constrained industry beta (second-stage regression coefficient) for the Diversified Financial Services industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,37%,15,103
+rsk62_beta_industry_constr_5_100_electric,"Constrained industry beta (second-stage regression coefficient) for the Electric industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,64%,6,27
+rsk62_beta_industry_constr_5_100_electronics,"Constrained industry beta (second-stage regression coefficient) for the Electronics industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,33%,16,49
+rsk62_beta_industry_constr_5_100_food,"Constrained industry beta (second-stage regression coefficient) for the Food industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,56%,13,15
+rsk62_beta_industry_constr_5_100_healthcare_products,"Constrained industry beta (second-stage regression coefficient) for the Healthcare Products industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,49%,8,13
+rsk62_beta_industry_constr_5_100_healthcare_services,"Constrained industry beta (second-stage regression coefficient) for the Healthcare Services industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,56%,11,63
+rsk62_beta_industry_constr_5_100_insurance,"Constrained industry beta (second-stage regression coefficient) for the Insurance industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,45%,16,24
+rsk62_beta_industry_constr_5_100_internet,"Constrained industry beta (second-stage regression coefficient) for the Internet industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,50%,8,10
+rsk62_beta_industry_constr_5_100_mining,"Constrained industry beta (second-stage regression coefficient) for the Mining industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,69%,18,45
+rsk62_beta_industry_constr_5_100_miscellaneousmanufactur,"Constrained industry beta (second-stage regression coefficient) for the Miscellaneous Manufacturing industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,37%,9,16
+rsk62_beta_industry_constr_5_100_oil_gas,"Constrained industry beta (second-stage regression coefficient) for the Oil & Gas industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,62%,9,17
+rsk62_beta_industry_constr_5_100_pharmaceuticals,"Constrained industry beta (second-stage regression coefficient) for the Pharmaceuticals industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,58%,13,38
+rsk62_beta_industry_constr_5_100_reits,"Constrained industry beta (second-stage regression coefficient) for the REITs industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,60%,23,96
+rsk62_beta_industry_constr_5_100_retail,"Constrained industry beta (second-stage regression coefficient) for the Retail industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,54%,16,22
+rsk62_beta_industry_constr_5_100_semiconductors,"Constrained industry beta (second-stage regression coefficient) for the Semiconductors industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,53%,11,46
+rsk62_beta_industry_constr_5_100_software,"Constrained industry beta (second-stage regression coefficient) for the Software industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,41%,18,25
+rsk62_beta_industry_constr_5_100_telecommunications,"Constrained industry beta (second-stage regression coefficient) for the Telecommunications industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,37%,14,40
+rsk62_beta_industry_constr_5_100_transportation,"Constrained industry beta (second-stage regression coefficient) for the Transportation industry factor in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,50%,13,59
+rsk62_curratio_di,Date Index of current ratio,MATRIX,100%,82,175
+rsk62_dividend_di,Date Index of dividend,MATRIX,100%,74,176
+rsk62_factor_1_100_intercept,"Intercept term of the first-stage style factor regression in the USA model (1-day horizon, 100-day window)",MATRIX,100%,26,89
+rsk62_factor_1_100_val100,Val100,MATRIX,100%,95,156
+rsk62_factor_1_100_val24,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 24th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,24,82
+rsk62_factor_1_100_val25,Val25,MATRIX,100%,26,52
+rsk62_factor_1_100_val26,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 26th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,22,51
+rsk62_factor_1_100_val27,"Lagged style-factor regression input series value number 27 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,14,22
+rsk62_factor_1_100_val28,Val28,MATRIX,100%,14,27
+rsk62_factor_1_100_val29,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 29th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,13,17
+rsk62_factor_1_100_val30,Val30,MATRIX,100%,23,40
+rsk62_factor_1_100_val31,Val31,MATRIX,100%,18,28
+rsk62_factor_1_100_val32,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 32nd lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,14,24
+rsk62_factor_1_100_val33,Val33,MATRIX,100%,20,80
+rsk62_factor_1_100_val34,Val34,MATRIX,100%,28,39
+rsk62_factor_1_100_val35,"Lagged style-factor regression input series value number 35 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,16,34
+rsk62_factor_1_100_val36,Val36,MATRIX,100%,11,19
+rsk62_factor_1_100_val37,"Lagged style-factor regression input series value number 37 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,14,18
+rsk62_factor_1_100_val38,"Lagged style-factor regression input series value number 38 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,13,18
+rsk62_factor_1_100_val39,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 39th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,14,19
+rsk62_factor_1_100_val40,Val40,MATRIX,100%,15,193
+rsk62_factor_1_100_val41,"Lagged style-factor regression input series value number 41 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,16,29
+rsk62_factor_1_100_val42,Val42,MATRIX,100%,11,227
+rsk62_factor_1_100_val43,"Lagged style-factor regression input series value number 43 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,11,18
+rsk62_factor_1_100_val44,Val44,MATRIX,100%,8,10
+rsk62_factor_1_100_val45,"Lagged style-factor regression input series value number 45 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,15,54
+rsk62_factor_1_100_val46,Val46,MATRIX,100%,12,22
+rsk62_factor_1_100_val47,"Lagged style-factor regression input series value number 47 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,13,42
+rsk62_factor_1_100_val48,"Lagged style-factor regression input series value number 48 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,12,16
+rsk62_factor_1_100_val49,Val49,MATRIX,100%,13,30
+rsk62_factor_1_100_val50,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 50th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,10,13
+rsk62_factor_1_100_val51,"Lagged style-factor regression input series value number 51 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,11,26
+rsk62_factor_1_100_val52,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 52nd lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,15,25
+rsk62_factor_1_100_val53,Val53,MATRIX,100%,15,66
+rsk62_factor_1_100_val54,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 54th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,10,12
+rsk62_factor_1_100_val55,"Lagged style-factor regression input series value number 55 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,14,15
+rsk62_factor_1_100_val56,Val56,MATRIX,100%,10,12
+rsk62_factor_1_100_val57,"Lagged style-factor regression input series value number 57 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,12,35
+rsk62_factor_1_100_val58,Val58,MATRIX,100%,11,23
+rsk62_factor_1_100_val59,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 59th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,13,32
+rsk62_factor_1_100_val60,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 60th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,4,11
+rsk62_factor_1_100_val61,"Lagged style-factor regression input series value number 61 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,12,15
+rsk62_factor_1_100_val62,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 62nd lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,12,26
+rsk62_factor_1_100_val63,"Lagged style-factor regression input series value number 63 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,11,25
+rsk62_factor_1_100_val64,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 64th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,11,44
+rsk62_factor_1_100_val65,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 65th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,8,11
+rsk62_factor_1_100_val66,Val66,MATRIX,100%,6,10
+rsk62_factor_1_100_val67,Val67,MATRIX,100%,11,11
+rsk62_factor_1_100_val68,Val68,MATRIX,100%,15,36
+rsk62_factor_1_100_val69,Val69,MATRIX,100%,9,15
+rsk62_factor_1_100_val70,"Lagged style-factor regression input series value number 70 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,11,57
+rsk62_factor_1_100_val71,Val71,MATRIX,100%,17,27
+rsk62_factor_1_100_val72,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 72nd lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,8,19
+rsk62_factor_1_100_val73,"Lagged style-factor regression input series value number 73 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,5,9
+rsk62_factor_1_100_val74,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 74th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,11,33
+rsk62_factor_1_100_val75,"Lagged style-factor regression input series value number 75 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,8,12
+rsk62_factor_1_100_val76,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 76th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,9,27
+rsk62_factor_1_100_val77,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 77th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,9,11
+rsk62_factor_1_100_val78,Val78,MATRIX,100%,13,112
+rsk62_factor_1_100_val79,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 79th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,9,17
+rsk62_factor_1_100_val80,Val80,MATRIX,100%,8,9
+rsk62_factor_1_100_val81,Val81,MATRIX,100%,10,18
+rsk62_factor_1_100_val82,"Lagged style-factor regression input series value number 82 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,10,11
+rsk62_factor_1_100_val83,Val83,MATRIX,100%,12,18
+rsk62_factor_1_100_val84,"Lagged style-factor regression input series value number 84 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,9,19
+rsk62_factor_1_100_val85,Val85,MATRIX,100%,7,17
+rsk62_factor_1_100_val86,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 86th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,7,7
+rsk62_factor_1_100_val87,"Lagged style-factor regression input series value number 87 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,9,19
+rsk62_factor_1_100_val88,Val88,MATRIX,100%,6,10
+rsk62_factor_1_100_val89,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 89th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,12,14
+rsk62_factor_1_100_val90,Val90,MATRIX,100%,4,5
+rsk62_factor_1_100_val91,"Lagged style-factor regression input series value number 91 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,6,6
+rsk62_factor_1_100_val92,Val92,MATRIX,100%,12,103
+rsk62_factor_1_100_val93,"Lagged style-factor regression input series value number 93 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,16,31
+rsk62_factor_1_100_val94,Val94,MATRIX,100%,9,20
+rsk62_factor_1_100_val95,Val95,MATRIX,100%,12,26
+rsk62_factor_1_100_val96,Val96,MATRIX,100%,12,36
+rsk62_factor_1_100_val97,"Lagged style-factor regression input series value number 97 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,6,7
+rsk62_factor_1_100_val98,"Lagged style-factor regression input series value number 98 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,9,12
+rsk62_factor_1_100_val99,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 99th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,13,27
+rsk62_factor_5_100_intercept,Intercept term from the first-stage style regression at a 5-day return horizon using a 100-day window,MATRIX,100%,25,116
+rsk62_factor_5_100_val100,The 100th (oldest) lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,24,132
+rsk62_factor_5_100_val24,Twenty-fourth lag (index 24) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,20,111
+rsk62_factor_5_100_val25,Twenty-fifth lag (index 25) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,12,31
+rsk62_factor_5_100_val26,Twenty-sixth lag (index 26) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,8,19
+rsk62_factor_5_100_val27,Twenty-seventh lag (index 27) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,16,25
+rsk62_factor_5_100_val28,Twenty-eighth lag (index 28) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,14,27
+rsk62_factor_5_100_val29,Twenty-ninth lag (index 29) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,13,22
+rsk62_factor_5_100_val30,Thirtieth lag (index 30) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,14,33
+rsk62_factor_5_100_val31,Lag number 31 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,17,50
+rsk62_factor_5_100_val32,Lag number 32 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,7,17
+rsk62_factor_5_100_val33,Lag number 33 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,12,16
+rsk62_factor_5_100_val34,Lag number 34 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,12,24
+rsk62_factor_5_100_val35,Lag number 35 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,14,31
+rsk62_factor_5_100_val36,Lag number 36 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,19,29
+rsk62_factor_5_100_val37,Lag number 37 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,13,28
+rsk62_factor_5_100_val38,Lag number 38 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,11,13
+rsk62_factor_5_100_val39,Lag number 39 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,13,18
+rsk62_factor_5_100_val40,Lag number 40 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,11,13
+rsk62_factor_5_100_val41,Lag number 41 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,10,26
+rsk62_factor_5_100_val42,Lag number 42 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,13,18
+rsk62_factor_5_100_val43,Lag number 43 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,9,13
+rsk62_factor_5_100_val44,Lag number 44 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,4,12
+rsk62_factor_5_100_val45,Lag number 45 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,9,17
+rsk62_factor_5_100_val46,Lag number 46 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,15,173
+rsk62_factor_5_100_val47,Lag number 47 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,10,14
+rsk62_factor_5_100_val48,Lag number 48 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,12,15
+rsk62_factor_5_100_val49,Lag number 49 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,11,51
+rsk62_factor_5_100_val50,Lag number 50 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,13,16
+rsk62_factor_5_100_val51,Lag number 51 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,10,13
+rsk62_factor_5_100_val52,Lag number 52 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,12,37
+rsk62_factor_5_100_val53,Lag number 53 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,15,73
+rsk62_factor_5_100_val54,Lag number 54 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,9,12
+rsk62_factor_5_100_val55,Lag number 55 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,13,603
+rsk62_factor_5_100_val56,Lag number 56 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,19,46
+rsk62_factor_5_100_val57,Lag number 57 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,11,52
+rsk62_factor_5_100_val58,Lag number 58 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,9,15
+rsk62_factor_5_100_val59,Lag number 59 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,7,11
+rsk62_factor_5_100_val60,Lag number 60 of the style factor return series used as regression input in the USA risk model at 5-day horizon; represents a 5-day factor return,MATRIX,100%,7,14
+rsk62_factor_5_100_val61,"Factor return series element: 5-period model, index 61 (units: return per period)",MATRIX,100%,6,12
+rsk62_factor_5_100_val62,"Factor return series element: 5-period model, index 62 (units: return per period)",MATRIX,100%,8,13
+rsk62_factor_5_100_val63,"Factor return series element: 5-period model, index 63 (units: return per period)",MATRIX,100%,16,30
+rsk62_factor_5_100_val64,"Factor return series element: 5-period model, index 64 (units: return per period)",MATRIX,100%,14,18
+rsk62_factor_5_100_val65,"Factor return series element: 5-period model, index 65 (units: return per period)",MATRIX,100%,14,23
+rsk62_factor_5_100_val66,"Factor return series element: 5-period model, index 66 (units: return per period)",MATRIX,100%,10,26
+rsk62_factor_5_100_val67,"Factor return series element: 5-period model, index 67 (units: return per period)",MATRIX,100%,10,26
+rsk62_factor_5_100_val68,"Factor return series element: 5-period model, index 68 (units: return per period)",MATRIX,100%,9,12
+rsk62_factor_5_100_val69,"Factor return series element: 5-period model, index 69 (units: return per period)",MATRIX,100%,10,14
+rsk62_factor_5_100_val70,"Factor return series element: 5-period model, index 70 (units: return per period)",MATRIX,100%,10,19
+rsk62_factor_5_100_val71,"Factor return series element: 5-period model, index 71 (units: return per period)",MATRIX,100%,15,21
+rsk62_factor_5_100_val72,"Factor return series element: 5-period model, index 72 (units: return per period)",MATRIX,100%,8,10
+rsk62_factor_5_100_val73,"Factor return series element: 5-period model, index 73 (units: return per period)",MATRIX,100%,7,10
+rsk62_factor_5_100_val74,"Factor return series element: 5-period model, index 74 (units: return per period)",MATRIX,100%,11,14
+rsk62_factor_5_100_val75,"Factor return series element: 5-period model, index 75 (units: return per period)",MATRIX,100%,10,18
+rsk62_factor_5_100_val76,"Factor return series element: 5-period model, index 76 (units: return per period)",MATRIX,100%,12,18
+rsk62_factor_5_100_val77,"Factor return series element: 5-period model, index 77 (units: return per period)",MATRIX,100%,6,7
+rsk62_factor_5_100_val78,"Factor return series element: 5-period model, index 78 (units: return per period)",MATRIX,100%,9,15
+rsk62_factor_5_100_val79,"Factor return series element: 5-period model, index 79 (units: return per period)",MATRIX,100%,15,30
+rsk62_factor_5_100_val80,"Factor return series element: 5-period model, index 80 (units: return per period)",MATRIX,100%,11,30
+rsk62_factor_5_100_val81,"Factor return series element: 5-period model, index 81 (units: return per period)",MATRIX,100%,14,20
+rsk62_factor_5_100_val82,"Factor return series element: 5-period model, index 82 (units: return per period)",MATRIX,100%,10,12
+rsk62_factor_5_100_val83,"Factor return series element: 5-period model, index 83 (units: return per period)",MATRIX,100%,12,40
+rsk62_factor_5_100_val84,"Factor return series element: 5-period model, index 84 (units: return per period)",MATRIX,100%,14,39
+rsk62_factor_5_100_val85,"Factor return series element: 5-period model, index 85 (units: return per period)",MATRIX,100%,10,12
+rsk62_factor_5_100_val86,"Factor return series element: 5-period model, index 86 (units: return per period)",MATRIX,100%,13,32
+rsk62_factor_5_100_val87,"Factor return series element: 5-period model, index 87 (units: return per period)",MATRIX,100%,10,14
+rsk62_factor_5_100_val88,"Factor return series element: 5-period model, index 88 (units: return per period)",MATRIX,100%,8,9
+rsk62_factor_5_100_val89,"Factor return series element: 5-period model, index 89 (units: return per period)",MATRIX,100%,13,27
+rsk62_factor_5_100_val90,"Factor return series element: 5-period model, index 90 (units: return per period)",MATRIX,100%,9,17
+rsk62_factor_5_100_val91,The 91st lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,9,14
+rsk62_factor_5_100_val92,The 92nd lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,14,19
+rsk62_factor_5_100_val93,The 93rd lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,16,62
+rsk62_factor_5_100_val94,The 94th lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,9,11
+rsk62_factor_5_100_val95,The 95th lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,5,7
+rsk62_factor_5_100_val96,The 96th lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,16,40
+rsk62_factor_5_100_val97,The 97th lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,8,13
+rsk62_factor_5_100_val98,The 98th lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,8,15
+rsk62_factor_5_100_val99,The 99th lagged value in the 100-element rolling series of style factor input returns for the USA risk model at a 5-day horizon (used as a regressor; return per 5-day period),MATRIX,100%,16,87
+rsk62_growth_di,Date Index of eps growth,MATRIX,100%,77,180
+rsk62_id_mtl,Date Index of long term momentum,MATRIX,100%,80,352
+rsk62_id_mts,Date Index of short term momentum,MATRIX,100%,52,105
+rsk62_id_pb,Date Index of book value,MATRIX,100%,64,385
+rsk62_id_qe2d,Date Index of debt to equity ratio,MATRIX,100%,76,135
+rsk62_id_spe,Date Index of earnings per share,MATRIX,100%,64,107
+rsk62_industry_1_100_val100,100th lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,48,482
+rsk62_industry_1_100_val24,Series element: twenty-fourth value in 1-100 range for industry return series (units: return),MATRIX,100%,18,27
+rsk62_industry_1_100_val25,"Series element: 1-period retseries for industry in 1-100 range, index 25 (units: return)",MATRIX,100%,16,97
+rsk62_industry_1_100_val26,"Series element: 1-period retseries for industry in 1-100 range, index 26 (units: return)",MATRIX,100%,17,29
+rsk62_industry_1_100_val27,"Series element: 1-period retseries for industry in 1-100 range, index 27 (units: return)",MATRIX,100%,14,24
+rsk62_industry_1_100_val28,"Series element: 1-period retseries for industry in 1-100 range, index 28 (units: return)",MATRIX,100%,13,16
+rsk62_industry_1_100_val29,"Series element: 1-period retseries for industry in 1-100 range, index 29 (units: return)",MATRIX,100%,21,52
+rsk62_industry_1_100_val30,"Series element: 1-period retseries for industry in 1-100 range, index 30 (units: return)",MATRIX,100%,20,82
+rsk62_industry_1_100_val31,31st lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,18,29
+rsk62_industry_1_100_val32,32nd lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,18,174
+rsk62_industry_1_100_val33,33rd lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,18,22
+rsk62_industry_1_100_val34,34th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,17,40
+rsk62_industry_1_100_val35,35th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,13,42
+rsk62_industry_1_100_val36,36th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,24,28
+rsk62_industry_1_100_val37,37th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,19,39
+rsk62_industry_1_100_val38,38th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,18,48
+rsk62_industry_1_100_val39,39th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,16,93
+rsk62_industry_1_100_val40,40th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,18,41
+rsk62_industry_1_100_val41,41st lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,18,44
+rsk62_industry_1_100_val42,42nd lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,11,26
+rsk62_industry_1_100_val43,43rd lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,20,33
+rsk62_industry_1_100_val44,44th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,10,28
+rsk62_industry_1_100_val45,45th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,13,31
+rsk62_industry_1_100_val46,46th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,10,28
+rsk62_industry_1_100_val47,47th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,14,26
+rsk62_industry_1_100_val48,48th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,14,27
+rsk62_industry_1_100_val49,49th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,13,38
+rsk62_industry_1_100_val50,50th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,16,55
+rsk62_industry_1_100_val51,51st lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,11,29
+rsk62_industry_1_100_val52,52nd lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,11,14
+rsk62_industry_1_100_val53,53rd lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,11,24
+rsk62_industry_1_100_val54,54th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,16,32
+rsk62_industry_1_100_val55,55th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,14,153
+rsk62_industry_1_100_val56,56th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,13,36
+rsk62_industry_1_100_val57,57th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,9,24
+rsk62_industry_1_100_val58,58th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,11,29
+rsk62_industry_1_100_val59,59th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,20,72
+rsk62_industry_1_100_val60,60th lagged value of the 1-day industry factor return series used as a regressor in the risk model; units: return,MATRIX,100%,10,61
+rsk62_industry_1_100_val61,"Lagged industry return series element at 1-day horizon, index 61 (Val1 most recent; this is the 61st lag; units: return), used as regression input",MATRIX,100%,16,41
+rsk62_industry_1_100_val62,"Lagged industry return series element at 1-day horizon, index 62 (Val1 most recent; this is the 62nd lag; units: return), used as regression input",MATRIX,100%,10,25
+rsk62_industry_1_100_val63,"Lagged industry return series element at 1-day horizon, index 63 (Val1 most recent; this is the 63rd lag; units: return), used as regression input",MATRIX,100%,16,35
+rsk62_industry_1_100_val64,"Lagged industry return series element at 1-day horizon, index 64 (Val1 most recent; this is the 64th lag; units: return), used as regression input",MATRIX,100%,13,87
+rsk62_industry_1_100_val65,"Lagged industry return series element at 1-day horizon, index 65 (Val1 most recent; this is the 65th lag; units: return), used as regression input",MATRIX,100%,7,10
+rsk62_industry_1_100_val66,"Lagged industry return series element at 1-day horizon, index 66 (Val1 most recent; this is the 66th lag; units: return), used as regression input",MATRIX,100%,11,17
+rsk62_industry_1_100_val67,"Lagged industry return series element at 1-day horizon, index 67 (Val1 most recent; this is the 67th lag; units: return), used as regression input",MATRIX,100%,13,24
+rsk62_industry_1_100_val68,"Lagged industry return series element at 1-day horizon, index 68 (Val1 most recent; this is the 68th lag; units: return), used as regression input",MATRIX,100%,12,14
+rsk62_industry_1_100_val69,"Lagged industry return series element at 1-day horizon, index 69 (Val1 most recent; this is the 69th lag; units: return), used as regression input",MATRIX,100%,11,31
+rsk62_industry_1_100_val70,"Lagged industry return series element at 1-day horizon, index 70 (Val1 most recent; this is the 70th lag; units: return), used as regression input",MATRIX,100%,11,20
+rsk62_industry_1_100_val71,"Lagged industry return series element at 1-day horizon, index 71 (Val1 most recent; this is the 71st lag; units: return), used as regression input",MATRIX,100%,9,12
+rsk62_industry_1_100_val72,"Lagged industry return series element at 1-day horizon, index 72 (Val1 most recent; this is the 72nd lag; units: return), used as regression input",MATRIX,100%,14,39
+rsk62_industry_1_100_val73,"Lagged industry return series element at 1-day horizon, index 73 (Val1 most recent; this is the 73rd lag; units: return), used as regression input",MATRIX,100%,14,56
+rsk62_industry_1_100_val74,"Lagged industry return series element at 1-day horizon, index 74 (Val1 most recent; this is the 74th lag; units: return), used as regression input",MATRIX,100%,18,37
+rsk62_industry_1_100_val75,"Lagged industry return series element at 1-day horizon, index 75 (Val1 most recent; this is the 75th lag; units: return), used as regression input",MATRIX,100%,10,22
+rsk62_industry_1_100_val76,"Lagged industry return series element at 1-day horizon, index 76 (Val1 most recent; this is the 76th lag; units: return), used as regression input",MATRIX,100%,10,17
+rsk62_industry_1_100_val77,"Lagged industry return series element at 1-day horizon, index 77 (Val1 most recent; this is the 77th lag; units: return), used as regression input",MATRIX,100%,16,28
+rsk62_industry_1_100_val78,"Lagged industry return series element at 1-day horizon, index 78 (Val1 most recent; this is the 78th lag; units: return), used as regression input",MATRIX,100%,16,47
+rsk62_industry_1_100_val79,"Lagged industry return series element at 1-day horizon, index 79 (Val1 most recent; this is the 79th lag; units: return), used as regression input",MATRIX,100%,15,20
+rsk62_industry_1_100_val80,"Lagged industry return series element at 1-day horizon, index 80 (Val1 most recent; this is the 80th lag; units: return), used as regression input",MATRIX,100%,6,7
+rsk62_industry_1_100_val81,"Lagged industry return series element at 1-day horizon, index 81 (Val1 most recent; this is the 81st lag; units: return), used as regression input",MATRIX,100%,9,28
+rsk62_industry_1_100_val82,"Lagged industry return series element at 1-day horizon, index 82 (Val1 most recent; this is the 82nd lag; units: return), used as regression input",MATRIX,100%,16,17
+rsk62_industry_1_100_val83,"Lagged industry return series element at 1-day horizon, index 83 (Val1 most recent; this is the 83rd lag; units: return), used as regression input",MATRIX,100%,6,8
+rsk62_industry_1_100_val84,"Lagged industry return series element at 1-day horizon, index 84 (Val1 most recent; this is the 84th lag; units: return), used as regression input",MATRIX,100%,12,34
+rsk62_industry_1_100_val85,"Lagged industry return series element at 1-day horizon, index 85 (Val1 most recent; this is the 85th lag; units: return), used as regression input",MATRIX,100%,12,249
+rsk62_industry_1_100_val86,"Lagged industry return series element at 1-day horizon, index 86 (Val1 most recent; this is the 86th lag; units: return), used as regression input",MATRIX,100%,19,42
+rsk62_industry_1_100_val87,"Lagged industry return series element at 1-day horizon, index 87 (Val1 most recent; this is the 87th lag; units: return), used as regression input",MATRIX,100%,10,30
+rsk62_industry_1_100_val88,"Lagged industry return series element at 1-day horizon, index 88 (Val1 most recent; this is the 88th lag; units: return), used as regression input",MATRIX,100%,8,18
+rsk62_industry_1_100_val89,"Lagged industry return series element at 1-day horizon, index 89 (Val1 most recent; this is the 89th lag; units: return), used as regression input",MATRIX,100%,10,16
+rsk62_industry_1_100_val90,"Lagged industry return series element at 1-day horizon, index 90 (Val1 most recent; this is the 90th lag; units: return), used as regression input",MATRIX,100%,9,22
+rsk62_industry_1_100_val91,91st lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,8,11
+rsk62_industry_1_100_val92,92nd lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,8,18
+rsk62_industry_1_100_val93,93rd lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,9,16
+rsk62_industry_1_100_val94,94th lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,8,15
+rsk62_industry_1_100_val95,95th lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,6,11
+rsk62_industry_1_100_val96,96th lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,11,41
+rsk62_industry_1_100_val97,97th lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,12,96
+rsk62_industry_1_100_val98,98th lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,12,40
+rsk62_industry_1_100_val99,99th lag value of the 1-day industry return series used as regression input (units: return),MATRIX,100%,12,27
+rsk62_industry_5_100_val100,100th (oldest) lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 100 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,16,27
+rsk62_industry_5_100_val24,"USA 5-day horizon industry return regressor series, index 24; the 24th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,15,43
+rsk62_industry_5_100_val25,"USA 5-day horizon industry return regressor series, index 25; the 25th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,9,20
+rsk62_industry_5_100_val26,26th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 26 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,11,22
+rsk62_industry_5_100_val27,27th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,11,19
+rsk62_industry_5_100_val28,"USA 5-day horizon industry return regressor series, index 28; the 28th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,10,15
+rsk62_industry_5_100_val29,29th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,8,29
+rsk62_industry_5_100_val30,"USA 5-day horizon industry return regressor series, index 30; the 30th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,12,14
+rsk62_industry_5_100_val31,"USA 5-day horizon industry return regressor series, index 31; the 31st lagged industry return (Val1 most recent; units: return)",MATRIX,100%,11,16
+rsk62_industry_5_100_val32,"USA 5-day horizon industry return regressor series, index 32; the 32nd lagged industry return (Val1 most recent; units: return)",MATRIX,100%,6,11
+rsk62_industry_5_100_val33,Val33,MATRIX,100%,12,20
+rsk62_industry_5_100_val34,Val34,MATRIX,100%,7,10
+rsk62_industry_5_100_val35,35th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 35 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,8,61
+rsk62_industry_5_100_val36,"USA 5-day horizon industry return regressor series, index 36; the 36th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,7,12
+rsk62_industry_5_100_val37,"USA 5-day horizon industry return regressor series, index 37; the 37th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,5,8
+rsk62_industry_5_100_val38,"USA 5-day horizon industry return regressor series, index 38; the 38th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,17,37
+rsk62_industry_5_100_val39,39th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,9,19
+rsk62_industry_5_100_val40,"USA 5-day horizon industry return regressor series, index 40; the 40th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,7,9
+rsk62_industry_5_100_val41,41st element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,5,8
+rsk62_industry_5_100_val42,42nd lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 42 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,10,21
+rsk62_industry_5_100_val43,43rd element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,9,14
+rsk62_industry_5_100_val44,44th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,8,9
+rsk62_industry_5_100_val45,"USA 5-day horizon industry return regressor series, index 45; the 45th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,7,50
+rsk62_industry_5_100_val46,46th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 46 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,9,16
+rsk62_industry_5_100_val47,47th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,6,10
+rsk62_industry_5_100_val48,48th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,6,9
+rsk62_industry_5_100_val49,"USA 5-day horizon industry return regressor series, index 49; the 49th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,18,39
+rsk62_industry_5_100_val50,50th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,7,16
+rsk62_industry_5_100_val51,"USA 5-day horizon industry return regressor series, index 51; the 51st lagged industry return (Val1 most recent; units: return)",MATRIX,100%,16,61
+rsk62_industry_5_100_val52,52nd lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 52 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,12,13
+rsk62_industry_5_100_val53,"USA 5-day horizon industry return regressor series, index 53; the 53rd lagged industry return (Val1 most recent; units: return)",MATRIX,100%,7,13
+rsk62_industry_5_100_val54,"USA 5-day horizon industry return regressor series, index 54; the 54th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,8,17
+rsk62_industry_5_100_val55,"USA 5-day horizon industry return regressor series, index 55; the 55th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,13,20
+rsk62_industry_5_100_val56,56th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,18,61
+rsk62_industry_5_100_val57,57th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,8,15
+rsk62_industry_5_100_val58,58th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,6,7
+rsk62_industry_5_100_val59,59th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,9,13
+rsk62_industry_5_100_val60,60th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,12,17
+rsk62_industry_5_100_val61,61st lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 61 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,10,103
+rsk62_industry_5_100_val62,62nd lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 62 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,14,47
+rsk62_industry_5_100_val63,63rd element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,15,22
+rsk62_industry_5_100_val64,64th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 64 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,9,12
+rsk62_industry_5_100_val65,"USA 5-day horizon industry return regressor series, index 65; the 65th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,14,24
+rsk62_industry_5_100_val66,66th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 66 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,16,37
+rsk62_industry_5_100_val67,67th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 67 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,8,10
+rsk62_industry_5_100_val68,68th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 68 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,16,20
+rsk62_industry_5_100_val69,"USA 5-day horizon industry return regressor series, index 69; the 69th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,9,151
+rsk62_industry_5_100_val70,Val70,MATRIX,100%,15,56
+rsk62_industry_5_100_val71,Val71,MATRIX,100%,9,30
+rsk62_industry_5_100_val72,72nd element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,9,12
+rsk62_industry_5_100_val73,73rd lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 73 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,9,14
+rsk62_industry_5_100_val74,Val74,MATRIX,100%,8,15
+rsk62_industry_5_100_val75,75th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 75 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,15,41
+rsk62_industry_5_100_val76,76th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,4,10
+rsk62_industry_5_100_val77,77th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 77 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,18,46
+rsk62_industry_5_100_val78,78th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 78 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,11,17
+rsk62_industry_5_100_val79,Val79,MATRIX,100%,14,106
+rsk62_industry_5_100_val80,80th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 80 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,12,35
+rsk62_industry_5_100_val81,81st lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 81 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,4,4
+rsk62_industry_5_100_val82,82nd element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,13,143
+rsk62_industry_5_100_val83,83rd lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 83 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,8,23
+rsk62_industry_5_100_val84,84th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,8,10
+rsk62_industry_5_100_val85,Val85,MATRIX,100%,13,115
+rsk62_industry_5_100_val86,"USA 5-day horizon industry return regressor series, index 86; the 86th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,9,17
+rsk62_industry_5_100_val87,"USA 5-day horizon industry return regressor series, index 87; the 87th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,8,11
+rsk62_industry_5_100_val88,88th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 88 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,14,43
+rsk62_industry_5_100_val89,89th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 89 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,12,15
+rsk62_industry_5_100_val90,"USA 5-day horizon industry return regressor series, index 90; the 90th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,11,19
+rsk62_industry_5_100_val91,"USA 5-day horizon industry return regressor series, index 91; the 91st lagged industry return (Val1 most recent; units: return)",MATRIX,100%,11,20
+rsk62_industry_5_100_val92,92nd element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,11,17
+rsk62_industry_5_100_val93,93rd element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,12,59
+rsk62_industry_5_100_val94,94th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,10,47
+rsk62_industry_5_100_val95,95th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 95 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,4,23
+rsk62_industry_5_100_val96,"USA 5-day horizon industry return regressor series, index 96; the 96th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,15,27
+rsk62_industry_5_100_val97,"USA 5-day horizon industry return regressor series, index 97; the 97th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,9,24
+rsk62_industry_5_100_val98,98th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,17,92
+rsk62_industry_5_100_val99,99th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 99 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,9,12
+rsk62_industry_constr_1_100_intercept,Intercept term of the constrained second-stage industry beta regression in the USA risk model using a 1-day horizon and 100-day rolling window,MATRIX,100%,22,47
+rsk62_industry_constr_5_100_intercept,"Intercept term of the constrained second-stage industry regression in the USA risk model, estimated over a 100-day window at a 5-day return horizon",MATRIX,100%,11,12
+rsk62_init_constr_1_val1,Initialization constraint: value 1 for 1-period horizon (units: issue-specific),MATRIX,100%,18,54
+rsk62_init_constr_5_val1,Initialization constraint: value 1 for 5-period horizon model,MATRIX,100%,12,20
+rsk62_logadv20_di,Date Index of log(adv20),MATRIX,100%,75,183
+rsk62_logcap_di,Date Index of log(cap),MATRIX,100%,59,93
+rsk62_margin_di,Date Index of gross margin,MATRIX,100%,61,105
+rsk62_nipe_di,Date Index of net income per employee,MATRIX,100%,98,226
+rsk62_retseries_factor_1_100_val1,Val1,MATRIX,100%,21,79
+rsk62_retseries_factor_1_100_val10,"Lagged style-factor regression input series value number 10 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,19,31
+rsk62_retseries_factor_1_100_val11,Val11,MATRIX,100%,17,30
+rsk62_retseries_factor_1_100_val12,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 12th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,15,23
+rsk62_retseries_factor_1_100_val13,"Lagged style-factor regression input series value number 13 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,12,16
+rsk62_retseries_factor_1_100_val14,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 14th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,13,44
+rsk62_retseries_factor_1_100_val15,"Lagged style-factor regression input series value number 15 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,12,66
+rsk62_retseries_factor_1_100_val16,Val16,MATRIX,100%,8,12
+rsk62_retseries_factor_1_100_val17,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 17th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,13,22
+rsk62_retseries_factor_1_100_val18,Val18,MATRIX,100%,14,19
+rsk62_retseries_factor_1_100_val19,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 19th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,15,26
+rsk62_retseries_factor_1_100_val2,"Lagged style-factor regression input series value number 2 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,15,33
+rsk62_retseries_factor_1_100_val20,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 20th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,13,32
+rsk62_retseries_factor_1_100_val21,Val21,MATRIX,100%,14,41
+rsk62_retseries_factor_1_100_val22,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 22nd lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,15,35
+rsk62_retseries_factor_1_100_val23,"Lagged style-factor regression input series value number 23 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,8,19
+rsk62_retseries_factor_1_100_val3,"Lagged style-factor regression input series value number 3 for USA, 1-day horizon; Val1 is most recent, Val100 oldest",MATRIX,100%,13,75
+rsk62_retseries_factor_1_100_val4,Val4,MATRIX,100%,16,44
+rsk62_retseries_factor_1_100_val5,Val5,MATRIX,100%,15,27
+rsk62_retseries_factor_1_100_val6,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 6th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,8,30
+rsk62_retseries_factor_1_100_val7,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 7th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,10,28
+rsk62_retseries_factor_1_100_val8,Val8,MATRIX,100%,17,39
+rsk62_retseries_factor_1_100_val9,"Per-stock style factor regressor series for the USA 1-day horizon risk model: the 9th lagged value in the 100-length sequence (Val1 most recent, Val100 oldest)",MATRIX,100%,12,22
+rsk62_retseries_factor_5_100_val1,Most recent lag (index 1) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,14,24
+rsk62_retseries_factor_5_100_val10,Tenth lag (index 10) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,6,8
+rsk62_retseries_factor_5_100_val11,Eleventh lag (index 11) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,9,16
+rsk62_retseries_factor_5_100_val12,Twelfth lag (index 12) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,13,25
+rsk62_retseries_factor_5_100_val13,Thirteenth lag (index 13) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,14,31
+rsk62_retseries_factor_5_100_val14,Fourteenth lag (index 14) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,12,23
+rsk62_retseries_factor_5_100_val15,Fifteenth lag (index 15) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,14,34
+rsk62_retseries_factor_5_100_val16,Sixteenth lag (index 16) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,12,20
+rsk62_retseries_factor_5_100_val17,Seventeenth lag (index 17) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,17,56
+rsk62_retseries_factor_5_100_val18,Eighteenth lag (index 18) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,15,22
+rsk62_retseries_factor_5_100_val19,Nineteenth lag (index 19) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,12,19
+rsk62_retseries_factor_5_100_val2,Second lag (index 2) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,32,46
+rsk62_retseries_factor_5_100_val20,Twentieth lag (index 20) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,9,23
+rsk62_retseries_factor_5_100_val21,Twenty-first lag (index 21) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,8,12
+rsk62_retseries_factor_5_100_val22,Twenty-second lag (index 22) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,13,22
+rsk62_retseries_factor_5_100_val23,Twenty-third lag (index 23) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,12,12
+rsk62_retseries_factor_5_100_val3,Third lag (index 3) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,24,32
+rsk62_retseries_factor_5_100_val4,Fourth lag (index 4) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,23,88
+rsk62_retseries_factor_5_100_val5,Fifth lag (index 5) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,12,26
+rsk62_retseries_factor_5_100_val6,Sixth lag (index 6) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,18,24
+rsk62_retseries_factor_5_100_val7,Seventh lag (index 7) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,16,34
+rsk62_retseries_factor_5_100_val8,Eighth lag (index 8) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,20,31
+rsk62_retseries_factor_5_100_val9,Ninth lag (index 9) of the factor return series in the USA 5-day horizon model; units: return per period,MATRIX,100%,16,31
+rsk62_retseries_industry_1_100_val1,Series element: first value in 1-100 range for industry return series (units: return),MATRIX,100%,25,78
+rsk62_retseries_industry_1_100_val10,Series element: tenth value in 1-100 range for industry return series (units: return),MATRIX,100%,25,61
+rsk62_retseries_industry_1_100_val11,Series element: eleventh value in 1-100 range for industry return series (units: return),MATRIX,100%,33,113
+rsk62_retseries_industry_1_100_val12,Series element: twelfth value in 1-100 range for industry return series (units: return),MATRIX,100%,19,63
+rsk62_retseries_industry_1_100_val13,Series element: thirteenth value in 1-100 range for industry return series (units: return),MATRIX,100%,15,75
+rsk62_retseries_industry_1_100_val14,Series element: fourteenth value in 1-100 range for industry return series (units: return),MATRIX,100%,27,85
+rsk62_retseries_industry_1_100_val15,Series element: fifteenth value in 1-100 range for industry return series (units: return),MATRIX,100%,25,73
+rsk62_retseries_industry_1_100_val16,Series element: sixteenth value in 1-100 range for industry return series (units: return),MATRIX,100%,19,64
+rsk62_retseries_industry_1_100_val17,Series element: seventeenth value in 1-100 range for industry return series (units: return),MATRIX,100%,18,43
+rsk62_retseries_industry_1_100_val18,Series element: eighteenth value in 1-100 range for industry return series (units: return),MATRIX,100%,25,97
+rsk62_retseries_industry_1_100_val19,Series element: nineteenth value in 1-100 range for industry return series (units: return),MATRIX,100%,22,64
+rsk62_retseries_industry_1_100_val2,Series element: second value in 1-100 range for industry return series (units: return),MATRIX,100%,14,23
+rsk62_retseries_industry_1_100_val20,Series element: twentieth value in 1-100 range for industry return series (units: return),MATRIX,100%,26,79
+rsk62_retseries_industry_1_100_val21,Series element: twenty-first value in 1-100 range for industry return series (units: return),MATRIX,100%,25,42
+rsk62_retseries_industry_1_100_val22,Series element: twenty-second value in 1-100 range for industry return series (units: return),MATRIX,100%,25,77
+rsk62_retseries_industry_1_100_val23,Series element: twenty-third value in 1-100 range for industry return series (units: return),MATRIX,100%,21,95
+rsk62_retseries_industry_1_100_val3,Series element: third value in 1-100 range for industry return series (units: return),MATRIX,100%,25,195
+rsk62_retseries_industry_1_100_val4,Series element: fourth value in 1-100 range for industry return series (units: return),MATRIX,100%,25,46
+rsk62_retseries_industry_1_100_val5,Series element: fifth value in 1-100 range for industry return series (units: return),MATRIX,100%,14,27
+rsk62_retseries_industry_1_100_val6,Series element: sixth value in 1-100 range for industry return series (units: return),MATRIX,100%,16,25
+rsk62_retseries_industry_1_100_val7,Series element: seventh value in 1-100 range for industry return series (units: return),MATRIX,100%,21,42
+rsk62_retseries_industry_1_100_val8,Series element: eighth value in 1-100 range for industry return series (units: return),MATRIX,100%,12,78
+rsk62_retseries_industry_1_100_val9,Series element: ninth value in 1-100 range for industry return series (units: return),MATRIX,100%,10,15
+rsk62_retseries_industry_5_100_val1,"USA 5-day horizon industry return regressor series, index 1; the most recent lagged industry return (Val1 most recent; units: return)",MATRIX,100%,19,35
+rsk62_retseries_industry_5_100_val10,10th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,17,25
+rsk62_retseries_industry_5_100_val11,11th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,8,10
+rsk62_retseries_industry_5_100_val12,12th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 12 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,8,27
+rsk62_retseries_industry_5_100_val13,13th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 13 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,7,11
+rsk62_retseries_industry_5_100_val14,14th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 14 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,9,18
+rsk62_retseries_industry_5_100_val15,15th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 15 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,7,10
+rsk62_retseries_industry_5_100_val16,16th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,8,10
+rsk62_retseries_industry_5_100_val17,17th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 17 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,12,12
+rsk62_retseries_industry_5_100_val18,"The 18th lag in the 100-length rolling industry return regressor for the USA 5-day horizon risk model (Val1 is most recent, Val100 oldest; units: return over 5 days)",MATRIX,100%,12,72
+rsk62_retseries_industry_5_100_val19,19th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,14,44
+rsk62_retseries_industry_5_100_val2,"USA 5-day horizon industry return regressor series, index 2; the 2nd lagged industry return (Val1 most recent; units: return)",MATRIX,100%,25,68
+rsk62_retseries_industry_5_100_val20,"The 20th lag in the 100-length rolling industry return regressor for the USA 5-day horizon risk model (Val1 is most recent, Val100 oldest; units: return over 5 days)",MATRIX,100%,13,147
+rsk62_retseries_industry_5_100_val21,"USA 5-day horizon industry return regressor series, index 21; the 21st lagged industry return (Val1 most recent; units: return)",MATRIX,100%,11,32
+rsk62_retseries_industry_5_100_val22,"The 22nd lag in the 100-length rolling industry return regressor for the USA 5-day horizon risk model (Val1 is most recent, Val100 oldest; units: return over 5 days)",MATRIX,100%,11,11
+rsk62_retseries_industry_5_100_val23,23rd element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,9,20
+rsk62_retseries_industry_5_100_val3,3rd lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 3 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,34,60
+rsk62_retseries_industry_5_100_val4,4th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,23,86
+rsk62_retseries_industry_5_100_val5,5th lag value of the USA wqriskfactors industry return regressor series for the 5-day horizon; element 5 of the 100-length rolling series (units: return per 5-day period),MATRIX,100%,14,34
+rsk62_retseries_industry_5_100_val6,"USA 5-day horizon industry return regressor series, index 6; the 6th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,17,32
+rsk62_retseries_industry_5_100_val7,"USA 5-day horizon industry return regressor series, index 7; the 7th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,23,73
+rsk62_retseries_industry_5_100_val8,8th element of the 100-length lagged industry return series used as a regressor in the USA 5-day horizon risk model (units: return per 5-day period),MATRIX,100%,14,16
+rsk62_retseries_industry_5_100_val9,"USA 5-day horizon industry return regressor series, index 9; the 9th lagged industry return (Val1 most recent; units: return)",MATRIX,100%,11,40
+rsk62_risk_backfill_curratio,current ratio,MATRIX,97%,51,190
+rsk62_risk_backfill_dividend,dividend,MATRIX,97%,118,421
+rsk62_risk_backfill_growth,eps growth,MATRIX,97%,67,214
+rsk62_risk_backfill_logadv20,log(adv20),MATRIX,91%,32,102
+rsk62_risk_backfill_logcap,log(cap),MATRIX,97%,31,74
+rsk62_risk_backfill_margin,gross margin,MATRIX,97%,19,47
+rsk62_risk_backfill_mtl,long term momentum,MATRIX,97%,16,27
+rsk62_risk_backfill_mts,short term momentum,MATRIX,97%,24,60
+rsk62_risk_backfill_nipe,net income per employee,MATRIX,97%,47,182
+rsk62_risk_backfill_pb,book value,MATRIX,97%,54,96
+rsk62_risk_backfill_qe2d,debt to equity ratio,MATRIX,97%,46,77
+rsk62_risk_backfill_spe,earnings per share,MATRIX,97%,88,163
+rsk62_risk_backfill_volatility,volatility,MATRIX,97%,43,113
+rsk62_risk_curratio,"Current ratio (current assets divided by current liabilities), normalized exposure",MATRIX,96%,30,81
+rsk62_risk_dividend,"Dividend yield (dividends over price), normalized exposure",MATRIX,96%,94,362
+rsk62_risk_growth,growth,MATRIX,96%,76,582
+rsk62_risk_logadv20,"Log of 20-day average dollar trading volume (ADV), normalized exposure",MATRIX,91%,48,207
+rsk62_risk_logcap,Style factor exposure: natural log of market capitalization,MATRIX,96%,27,86
+rsk62_risk_margin,"Gross profit margin (profit margin) factor exposure, normalized across stocks",MATRIX,96%,50,124
+rsk62_risk_mtl,"Style factor exposure: long-term momentum in stock returns, cross-section normalized",MATRIX,96%,35,57
+rsk62_risk_mts,"Style factor exposure: short-term momentum in stock returns, cross-section normalized",MATRIX,96%,18,41
+rsk62_risk_nipe,nipe,MATRIX,96%,81,510
+rsk62_risk_pb,Style factor exposure: book-to-price ratio (value),MATRIX,96%,87,189
+rsk62_risk_qe2d,d2eq,MATRIX,96%,74,177
+rsk62_risk_spe,eps,MATRIX,96%,55,147
+rsk62_risk_volatility,"Recent stock return volatility (e.g., standard deviation), normalized exposure",MATRIX,96%,61,144
+rsk62_volatility_di,Date Index of volatility,MATRIX,100%,186,689

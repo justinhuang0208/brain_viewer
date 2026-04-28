@@ -1,0 +1,28 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv173_ranksatlas_unit_name_203,Atlas unit name,VECTOR,100%,2,2
+pv173_ranksbondreturn20deqwt_220,It is defined as the equally weighted single bond return over last 20 days with the filter of the bonds that mature between 3 years and 7 years.,VECTOR,41%,1,1
+pv173_rankseqbddivrgbdrtn120d_213,It is defined as the difference of market equity return and estimated equity return based on 120-day linear regression of equity return on aggregated bond return and MSCI ACWIIndex return.,VECTOR,40%,2,4
+pv173_rankseqbddivrgsprd5y120dsbst_202,It is defined as the difference of market equity return and estimated equity return based on 120-day linear regression of equity return on 5-year mid z-spread percentage change and MSCI ACWIIndex return,VECTOR,37%,1,1
+pv173_ranksmt5yzspreadchg60dsbst_215,It is defined as the 60-day change of 5-year mid z-spreadIn the bond z-spread curve,VECTOR,37%,4,4
+pv173_ranksmt5yzspreadchgstd20dsbst_200,It is defined as the 20-day standard deviation of changeIn 5-year mid z-spreadIn the bond z-spread curve,VECTOR,38%,5,5
+pv173_ranksmt5yzspreadindrelsbst_209,It is defined as theIndustry relative 5-year mid z-spreadIn the bond z-spread curve,VECTOR,38%,1,1
+pv173_ranksmt5yzspreadsbst_216,It is defined as the region relative 5-year mid z-spreadIn the bond z-spread curve,VECTOR,38%,2,2
+pv173_ranksmt5yzspreadzscore60dsbst_201,It is defined as the 60-day z-score of 5-year mid z-spreadIn the bond z-spread curve,VECTOR,37%,0,0
+pv173_rawratiosatlas_unit_name,Atlas unit name,VECTOR,100%,3,4
+pv173_rawratiosbondreturn20deqwt,It is defined as the equally weighted single bond return over last 20 days with the filter of the bonds that mature between 3 years and 7 years.,VECTOR,41%,1,1
+pv173_rawratioseqbddivrgbdrtn120d,It is defined as the difference of market equity return and estimated equity return based on 120-day linear regression of equity return on aggregated bond return and MSCI ACWIIndex return.,VECTOR,40%,0,0
+pv173_rawratioseqbddivrgsprd5y120dsbst,It is defined as the difference of market equity return and estimated equity return based on 120-day linear regression of equity return on 5-year mid z-spread percentage change and MSCI ACWIIndex return,VECTOR,37%,1,1
+pv173_rawratiosmt5yzspreadchg60dsbst,It is defined as the 60-day change of 5-year mid z-spreadIn the bond z-spread curve,VECTOR,37%,1,1
+pv173_rawratiosmt5yzspreadchgstd20dsbst,It is defined as the 20-day standard deviation of changeIn 5-year mid z-spreadIn the bond z-spread curve,VECTOR,38%,1,1
+pv173_rawratiosmt5yzspreadindrelsbst,It is defined as theIndustry relative 5-year mid z-spreadIn the bond z-spread curve,VECTOR,38%,0,0
+pv173_rawratiosmt5yzspreadsbst,It is defined as the region relative 5-year mid z-spreadIn the bond z-spread curve,VECTOR,38%,0,0
+pv173_rawratiosmt5yzspreadzscore60dsbst,It is defined as the 60-day z-score of 5-year mid z-spreadIn the bond z-spread curve,VECTOR,37%,2,2
+pv173_zscoresatlas_unit_name,Atlas unit name,VECTOR,100%,0,0
+pv173_zscoresbondreturn20deqwt,It is defined as the equally weighted single bond return over last 20 days with the filter of the bonds that mature between 3 years and 7 years.,VECTOR,41%,4,4
+pv173_zscoreseqbddivrgbdrtn120d,It is defined as the difference of market equity return and estimated equity return based on 120-day linear regression of equity return on aggregated bond return and MSCI ACWIIndex return.,VECTOR,40%,3,3
+pv173_zscoreseqbddivrgsprd5y120dsbst,It is defined as the difference of market equity return and estimated equity return based on 120-day linear regression of equity return on 5-year mid z-spread percentage change and MSCI ACWIIndex return,VECTOR,37%,3,3
+pv173_zscoresmt5yzspreadchg60dsbst,It is defined as the 60-day change of 5-year mid z-spreadIn the bond z-spread curve,VECTOR,37%,11,11
+pv173_zscoresmt5yzspreadchgstd20dsbst,It is defined as the 20-day standard deviation of changeIn 5-year mid z-spreadIn the bond z-spread curve,VECTOR,38%,1,1
+pv173_zscoresmt5yzspreadindrelsbst,It is defined as theIndustry relative 5-year mid z-spreadIn the bond z-spread curve,VECTOR,38%,0,0
+pv173_zscoresmt5yzspreadsbst,It is defined as the region relative 5-year mid z-spreadIn the bond z-spread curve,VECTOR,38%,1,1
+pv173_zscoresmt5yzspreadzscore60dsbst,It is defined as the 60-day z-score of 5-year mid z-spreadIn the bond z-spread curve,VECTOR,37%,1,1

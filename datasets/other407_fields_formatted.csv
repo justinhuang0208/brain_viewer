@@ -1,0 +1,9 @@
+Field,Description,Type,Coverage,Users,Alphas
+oth407_composite,Composite score of other factors.,MATRIX,86%,16,54
+oth407_hf_crowding,Crowdness of other hedge fund.,MATRIX,85%,23,65
+oth407_hy_spreads,High yield spread.,MATRIX,86%,5,9
+oth407_interest_lev,Interest levrage.,MATRIX,78%,6,6
+oth407_leverage,Leverage level.,MATRIX,86%,19,72
+oth407_merton_default,Default risk.,MATRIX,76%,8,9
+oth407_sales_expose_euro,Sales exposure to Europe.,MATRIX,26%,8,10
+oth407_short_cash,Short term cash.,MATRIX,86%,14,40

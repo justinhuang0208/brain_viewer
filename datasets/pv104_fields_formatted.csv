@@ -1,0 +1,46 @@
+Field,Description,Type,Coverage,Users,Alphas
+pv104_63000_intv_sum,Sum Of Interval Volume I.E. Sum(Shares)),MATRIX,67%,77,1523
+pv104_abde_mean,Daily mean of the per-minute sum of absolute deviations from the median trade price,MATRIX,100%,60,1004
+pv104_hask_mean,Daily mean of the per-minute highest ask price,MATRIX,100%,49,625
+pv104_hasz_mean,Daily mean of the per-minute highest ask size,MATRIX,100%,48,539
+pv104_hbid_mean,Daily mean of the per-minute highest bid price,MATRIX,100%,58,670
+pv104_hbsz_mean,Daily mean of the per-minute highest bid size,MATRIX,100%,76,1222
+pv104_hlts_mean,Daily mean of the per-minute highest last trade size,MATRIX,100%,63,1730
+pv104_inam_mean,Daily mean of the per-minute number of trades executed above the mid-quote,MATRIX,100%,63,1153
+pv104_insm_mean,Daily mean of the per-minute smflow ratio: sum of bid size increases with bid price unchanged divided by sum of ask size increases with ask price unchanged,MATRIX,100%,87,2367
+pv104_intf_mean,Daily mean of the first trade price in each minute,MATRIX,100%,50,743
+pv104_inth_mean,Daily mean of the per-minute high trade price,MATRIX,100%,51,642
+pv104_intl_mean,Daily mean of the per-minute low trade price,MATRIX,100%,44,601
+pv104_intv_mean,Daily mean of the per-minute traded share volume,MATRIX,100%,76,884
+pv104_intv_sum,"Total shares traded during the US premarket session for the day, computed as the sum of 1-minute interval volumes (irregular premarket pattern)",MATRIX,71%,55,1421
+pv104_ivam_mean,Daily mean of the per-minute volume of trades executed above the mid-quote,MATRIX,100%,73,1112
+pv104_lask_mean,Daily mean of the per-minute lowest ask price,MATRIX,100%,39,614
+pv104_lasz_mean,Daily mean of the per-minute lowest ask size,MATRIX,100%,40,562
+pv104_lbid_mean,Daily mean of the per-minute lowest bid price,MATRIX,100%,49,692
+pv104_lbsz_mean,Daily mean of the per-minute lowest bid size,MATRIX,100%,38,905
+pv104_lilp_last_all,Lit Iso Last Trade Price,MATRIX,57%,44,814
+pv104_lolp_mean,Last Trade Price,MATRIX,41%,43,552
+pv104_lsas_mean,Daily mean of the per-minute last ask size,MATRIX,100%,37,599
+pv104_lsbs_mean,Daily mean of the per-minute last bid size,MATRIX,100%,47,1152
+pv104_lsta_mean,Daily mean of the per-minute last ask price,MATRIX,100%,41,745
+pv104_lstb_mean,Daily mean of the per-minute last bid price,MATRIX,100%,38,600
+pv104_lstp_mean,Daily mean of the per-minute last traded price,MATRIX,100%,44,567
+pv104_lsts_mean,Daily mean of the per-minute last trade size,MATRIX,100%,61,1900
+pv104_mask_mean,Daily mean of the per-minute average ask price per ask message,MATRIX,100%,39,605
+pv104_masz_mean,Daily mean of the per-minute average ask size per ask message,MATRIX,100%,32,713
+pv104_mbid_mean,Daily mean of the per-minute average bid price per bid message,MATRIX,100%,36,659
+pv104_mbsz_mean,Daily mean of the per-minute average bid size per bid message,MATRIX,100%,40,925
+pv104_medn_mean,Daily mean of the per-minute median trade price without filtering,MATRIX,100%,39,694
+pv104_mlrt_mean,Daily mean of the per-minute average of log(bid size over ask size),MATRIX,100%,42,1336
+pv104_nask_mean,"Daily mean of the per-minute signed count of ask quote changes, +1 for uptick and -1 for downtick",MATRIX,100%,49,1280
+pv104_nbid_mean,"Number of bid quote changes in the interval, counting +1 for upticks and -1 for downticks",MATRIX,100%,103,3124
+pv104_ntrd_mean,Number of trades executed in the interval,MATRIX,100%,54,956
+pv104_sprc_mean,Sum of trade prices over the interval,MATRIX,100%,43,480
+pv104_sprv_mean,Sum of shares times price for trades in the interval (dollar volume),MATRIX,100%,42,530
+pv104_spsq_mean,Sum of squared trade prices over the interval,MATRIX,100%,33,517
+pv104_task_mean,Time-weighted ask price during the interval,MATRIX,100%,41,586
+pv104_tasz_mean,Time-weighted ask size during the interval,MATRIX,100%,35,608
+pv104_tbid_mean,Time-weighted bid price during the interval,MATRIX,100%,40,467
+pv104_tbsz_mean,Time-weighted bid size during the interval,MATRIX,100%,45,1086
+pv104_tlrt_mean,Time-weighted log ratio of bid size to ask size during the interval,MATRIX,100%,43,1681
+pv104_tlsp_mean,Time-weighted last traded price during the interval,MATRIX,100%,46,473

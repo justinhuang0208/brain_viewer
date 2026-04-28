@@ -1,18 +1,18 @@
 Field,Description,Type,Coverage,Users,Alphas
-snt1_cored1_score,"bearish: score < 5, bullish: score > 5, neutral: score in [-5, 5]",Matrix,63%,273,3034
-snt1_d1_analystcoverage,# of analysts providing an earnings estimate,Matrix,55%,217,3104
-snt1_d1_buyrecpercent,Ratio of (Number ofanalyst buy) over (Number ofall analysts),Matrix,55%,135,2399
-snt1_d1_downtargetpercent,Ratio of (Number ofdown target) over (Number ofall analysts),Matrix,55%,147,3056
-snt1_d1_dtstsespe,Dispersion among analysts' estimates,Matrix,55%,161,2495
-snt1_d1_dynamicfocusrank,"0-100, high values for buy signal and lower values for sell signal",Matrix,56%,158,1554
-snt1_d1_earningsrevision,1 month change in mean of earnings estimate / price,Matrix,55%,165,3128
-snt1_d1_earningssurprise,(Actual earnings - expected earnings) / price,Matrix,55%,106,2486
-snt1_d1_earningstorpedo,(Expected earnings - previous actual earnings) / price,Matrix,55%,94,1856
-snt1_d1_fundamentalfocusrank,"0-100, high values for buy signal and lower values for sell signal",Matrix,56%,119,2155
-snt1_d1_longtermepsgrowthest,The median of analyst expected growth in operating earnings,Matrix,54%,100,1936
-snt1_d1_netearningsrevision,Ratio of (Number ofanalyst raising est earnings) - (Number ofanalyst lowering est earnings) over (Number ofall analysts),Matrix,55%,93,1787
-snt1_d1_netrecpercent,Ratio of (Number ofanalyst buy) - (Number ofanalyst sell) over (Number ofall analysts),Matrix,55%,160,3480
-snt1_d1_nettargetpercent,Ratio of (Number ofup target) - (Number ofdown target) over (Number ofall analysts),Matrix,55%,93,2646
-snt1_d1_sellrecpercent,Ratio of (Number ofanalyst sell) over (Number ofall analysts),Matrix,55%,123,1940
-snt1_d1_stockrank,"0-100, high values for buy signal and lower values for sell signal",Matrix,56%,118,1888
-snt1_d1_uptargetpercent,Ratio of (Number ofup target) over (Number ofall analysts),Matrix,55%,114,2048
+snt1_cored1_score,"Proprietary composite analyst score; bearish if < 5, bullish if > 5, neutral if between -5 and 5",MATRIX,63%,551,3746
+snt1_d1_analystcoverage,Number of analysts providing an earnings estimate for the stock,MATRIX,56%,537,4131
+snt1_d1_buyrecpercent,"Percentage of analysts recommending a buy, calculated as (# of analysts recommending buy) / (# of all analysts)",MATRIX,56%,320,2746
+snt1_d1_downtargetpercent,"Percent of analysts who have lowered their price target recently, out of all analysts covering the stock",MATRIX,55%,347,3555
+snt1_d1_dtstsespe,Standard deviation (dispersion) among analysts' earnings estimates for the next fiscal year,MATRIX,56%,371,2858
+snt1_d1_dynamicfocusrank,"Composite rank (0-100) emphasizing dynamic, short-term analyst sentiment signals; higher values indicate stronger buy signals, lower values indicate sell signals",MATRIX,57%,298,1878
+snt1_d1_earningsrevision,One-month change in the mean (average) analyst earnings estimate divided by the stock price,MATRIX,56%,356,3527
+snt1_d1_earningssurprise,"Difference between actual reported earnings and expected earnings (consensus), divided by share price",MATRIX,56%,269,2801
+snt1_d1_earningstorpedo,Difference between expected (FY1) earnings and previous four quarters' actual earnings divided by price; flags possible negative inflection,MATRIX,55%,179,2082
+snt1_d1_fundamentalfocusrank,"Rank (0-100) emphasizing longer-term, fundamental/value metrics; higher values for buy signal, lower for sell signal",MATRIX,57%,243,2520
+snt1_d1_longtermepsgrowthest,Median expected long-term (3-5 years) growth rate in operating earnings as forecasted by analysts,MATRIX,54%,242,2173
+snt1_d1_netearningsrevision,"Net percentage of analysts raising minus lowering earnings estimates, out of total analysts covering the stock",MATRIX,56%,200,2013
+snt1_d1_netrecpercent,"Percentage difference between analysts recommending buy and those recommending sell, divided by total number of analysts",MATRIX,56%,327,3986
+snt1_d1_nettargetpercent,"Net percentage of analysts raising minus lowering price targets, divided by total number of analysts",MATRIX,55%,198,2856
+snt1_d1_sellrecpercent,"Percentage of analysts recommending a sell, calculated as (# of analysts recommending sell) / (# of all analysts)",MATRIX,56%,343,2456
+snt1_d1_stockrank,"Rank (0-100) based on equity-style factors, where higher values reflect a stronger buy signal and lower values a sell signal",MATRIX,57%,231,2154
+snt1_d1_uptargetpercent,"Percent of analysts who have increased their price target recently, out of all analysts covering the stock",MATRIX,55%,234,2301

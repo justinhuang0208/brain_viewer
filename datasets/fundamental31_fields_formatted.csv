@@ -1,0 +1,115 @@
+Field,Description,Type,Coverage,Users,Alphas
+fnd31_60dsigma,Stock Return Volatility. It is defined as the standard deviation of a stock's monthly returns in the prior 60 days.,MATRIX,92%,49,75
+fnd31_ad,Total Debt to Total Assets. It is defined as the most recently reported total debt divided by total assets.,MATRIX,95%,49,159
+fnd31_adpmoc,Leverage Composition. The most recent reported DA divided by the DA of the previous quarter. (DA = quarterly total liabilities as a percentage of the reported total assets).,MATRIX,98%,53,97
+fnd31_apgghcm3,Quarterly Change in Gross Profit to Assets. It is defined as the quarter-on-quarter change in gross profit to assets.,MATRIX,63%,34,43
+fnd31_avg10yepinf,"Cyclically and Inflation Adjusted Earnings-to-Price. It is defined as the average inflation-adjusted earnings of the stock over the past 10 years, divided by its current price.",MATRIX,82%,32,66
+fnd31_backfilled_apgghcm3,Quarterly Change in Gross Profit to Assets. It is defined as the quarter-on-quarter change in gross profit to assets.,MATRIX,63%,51,142
+fnd31_backfilled_avg10yepinf,"Cyclically and Inflation Adjusted Earnings-to-Price. It is defined as the average inflation-adjusted earnings of the stock over the past 10 years, divided by its current price.",MATRIX,82%,23,84
+fnd31_backfilled_mpgghcm3,Quarterly Change in Gross Profit Margin. It is defined as the quarter-on-quarter change in gross profit margin.,MATRIX,63%,40,180
+fnd31_capexdeplink,Capital Expenditures to Depreciation Linkage. It is defined as the absolute value of the difference between ranked (1-1000) quarterly capital expenditures to assets and ranked (1-1000) quarterly depreciation to assets.,MATRIX,44%,8,9
+fnd31_chg12mtotdebt,"12-Month Change in Total Debt. It is defined as the 12-month relative change in total debt, where total debt is the sum of long-term and short-term debt.",MATRIX,46%,8,12
+fnd31_chginvavgast,Change in Inventory to Average Assets. It is defined as the 12-month change in the quarterly total inventories scaled by the average of assets at the most recent quarter end and 4 quarters prior.,MATRIX,41%,20,28
+fnd31_chgqtrepssurp,"Change in Real Earnings Surprise. It is defined as the change in quarterly earnings surprise (Actual EPS - Consensus Estimate EPS), scaled by the most recent closing price.",MATRIX,43%,10,14
+fnd31_chgroeart,Yearly Change in ROE - Arithmetic Difference. It is defined as the yearly arithmetic change in the ratio of trailing-twelve-month earnings before extraordinary items divided by current total book equity.,MATRIX,93%,39,88
+fnd31_chgroepct,Yearly Change in ROE - Percentage Method. It is defined as the yearly percentage change in the ratio of trailing-12-month earnings before extraordinary items divided by current total book equity,MATRIX,93%,91,198
+fnd31_coreepsp,"TTM Core Earnings-to-Price. It is defined as the trailing 12-month earnings per share from operations for a stock deflated by its trading price. This item excludes cumulative effect of accounting change, discounted operations, extraordinary items, and special items.",MATRIX,46%,11,12
+fnd31_cpgspea2y,"2-Year Ahead EPS Growth Percentage Change. It is defined as a stock's most recent consensus analysts earnings forecast for fiscal year 2 minus the consensus forecast for year 1, divided by the consensus forecast for year 1.",MATRIX,46%,10,13
+fnd31_devnorthamericaadditionalfactor4_apg,Trailing twelve-month gross profit to total assets ratio,MATRIX,41%,10,11
+fnd31_devnorthamericaadditionalfactor4_apgghcy1,Year-over-year change in gross profit to assets,MATRIX,40%,9,15
+fnd31_devnorthamericaadditionalfactor4_apgghcy3,Three-year change in gross profit to assets,MATRIX,39%,5,5
+fnd31_devnorthamericaadditionalfactor4_divgp,"Dividends paid divided by gross profit, a shareholder payout to gross profit measure",MATRIX,34%,6,6
+fnd31_devnorthamericaadditionalfactor4_dtsm1_rd,Standard deviation of daily stock returns over the past month,MATRIX,46%,4,4
+fnd31_devnorthamericaadditionalfactor4_earningstorpedo,Indicator of large negative earnings event risk based on adverse earnings dynamics,MATRIX,43%,2,2
+fnd31_devnorthamericaadditionalfactor4_fqsurstd60dlag,"Quarterly EPS surprise standardized by dispersion, measured with a 60-day lag",MATRIX,42%,4,4
+fnd31_devnorthamericaadditionalfactor4_fwdebitdaev,Forward 12-month EBITDA divided by enterprise value,MATRIX,44%,18,19
+fnd31_devnorthamericaadditionalfactor4_mpg,Trailing twelve-month gross profit margin (gross profit divided by sales),MATRIX,40%,6,14
+fnd31_devnorthamericaadditionalfactor4_mpgghcy3,"Three-year change in gross profit margin, measured as the three-year year-on-year change in GPM",MATRIX,39%,3,3
+fnd31_devnorthamericaadditionalfactor4_numrevy2,Net number of upward minus downward revisions to FY2 EPS estimates,MATRIX,45%,4,4
+fnd31_devnorthamericaadditionalfactor4_pbdwf,"Forward 12-month book yield, forecast book value per share divided by price",MATRIX,44%,23,24
+fnd31_devnorthamericaadditionalfactor4_pbwt,Time-weighted book yield blending forward book-to-price measures,MATRIX,44%,16,26
+fnd31_devnorthamericaadditionalfactor4_pcdwf,"Forward 12-month cash yield, forecast cash flow per share divided by price",MATRIX,43%,4,4
+fnd31_devnorthamericaadditionalfactor4_pcwt,Time-weighted cash yield blending forward cash-flow-to-price measures,MATRIX,43%,8,8
+fnd31_devnorthamericaadditionalfactor4_ps_wt,Time-weighted sales yield blending forward sales-to-price measures,MATRIX,45%,11,12
+fnd31_devnorthamericaadditionalfactor4_psdwf,Forward 12-month sales yield (forecast sales divided by price),MATRIX,45%,5,6
+fnd31_devnorthamericaadditionalfactor4_pu,"Unexpected profitability, actual profitability minus model-expected profitability",MATRIX,42%,2,4
+fnd31_devnorthamericaadditionalfactor4_rev6fy2,Average change in FY2 EPS estimates over the last six months,MATRIX,45%,3,3
+fnd31_devnorthamericaadditionalfactor4_rp,Profitability ratio: operating income divided by total assets,MATRIX,46%,5,5
+fnd31_devnorthamericaadditionalfactor4_rqi_rd,Interquartile range of daily stock returns over the past month,MATRIX,46%,9,10
+fnd31_devnorthamericaadditionalfactor4_slope4qeps5y,Slope of the five-year trend in trailing four-quarter (TTM) EPS,MATRIX,44%,5,5
+fnd31_devnorthamericaadditionalfactor4_tw_ebitdaev,Time-weighted blend of current and forward EBITDA to enterprise value,MATRIX,44%,4,6
+fnd31_devnorthamericaadditionalfactor4_twepsrev,Time-weighted aggregation of EPS estimate revisions,MATRIX,42%,8,8
+fnd31_devnorthamericaadditionalfactor4_twepsstdrev,Time-weighted dispersion of EPS estimate revisions,MATRIX,40%,3,4
+fnd31_devnorthamericaadditionalfactor4_y5speq4rqsr,R-squared of the 5-year trend line fitted to rolling 4-quarter EPS,MATRIX,44%,3,3
+fnd31_devnorthamericaadditionalfactor4_y5speq4vc,"Coefficient of variation of rolling 4-quarter EPS over the past 5 years, a measure of EPS stability",MATRIX,41%,2,2
+fnd31_devnorthamericaadditionalfactor4_yoychgroeart,Arithmetic year-over-year change in return on equity,MATRIX,43%,5,5
+fnd31_devnorthamericaadditionalfactor4_yoychgroepct,Year-over-year percent change in return on equity,MATRIX,42%,5,9
+fnd31_earnshortfall,"Earnings Shortfall. It is defined as the difference between reported accounting earnings and free cash flow, scaled by average assets.",MATRIX,45%,4,4
+fnd31_ebitdadebt,TTM EBITDA to long-term Debt. It is defined as a stock's trailing 12-month EBITDA divided by the most recently reported total long-term debt.,MATRIX,84%,25,86
+fnd31_ebitdadebtchg,TTM EBITDA to long-term Debt. It is defined as the yearly change in a stock's trailing 12-month EBITDA divided by the most recently reported total long-term debt.,MATRIX,80%,12,18
+fnd31_fc_fqsurstd,Most Recent Quarterly Earnings Surprise. It is defined as a stock's most recent quarterly earnings surprise (actual fiscal quarter EPS less the consensus earnings estimate) adjusted by the standard deviation of its analysts' individual earnings forecasts.,MATRIX,42%,6,7
+fnd31_fc_y2repsg,2-Year Projected EPS Growth. It is defined as a stock's most recent consensus analysts earnings forecast for fiscal year 2 minus the most recent reported fiscal year actual earnings tracked by and then deflated by its month-end trading price.,MATRIX,45%,5,5
+fnd31_grahamnum,Graham Number = Sqrt(22.5 x EPS x BVPS).,MATRIX,81%,71,174
+fnd31_irttmsalesev,Industry-relative TTM Sales to Enterprise Value. It is defined as a stock's trailing 12-month sales-to-enterprise (SEV) value less the average of the SEVs of all stocks in the same industry deflated by the standard deviation of the SEVs of all stocks in the same relative universe.,MATRIX,46%,17,18
+fnd31_md,"Distress Measure. It is defined as the financial distress model employed by Campbell, Hilscher, and Szilagyi (2008) and Chen and Zhang (2009).",MATRIX,39%,5,5
+fnd31_mpgghcm3,Quarterly Change in Gross Profit Margin. It is defined as the quarter-on-quarter change in gross profit margin.,MATRIX,63%,6,6
+fnd31_ohlsonscore,"Ohlson Bankruptcy Score. It is a model assessing a company's probability of bankruptcy by considering firm size, capital structure, financial performance, and liquidity. It is derived from Ohlson (1980).",MATRIX,37%,6,12
+fnd31_pbroeresidual,"Price-to-Book Return-on-Equity Combination (PB-ROE). An adjustment to the classic price-to-book model incorporating firm growth, based on a variation of the model developed by Wilcox and Philips (2005).",MATRIX,38%,31,42
+fnd31_pe_wt,Time Weighted Earnings Yield. This factor uses a time-weighted combination of FY1 and FY2 earnings estimates to create a 12-month forward earnings forecast.,MATRIX,95%,191,521
+fnd31_qsg2_additionalfactor_dtsm1_rd,1-Month Realized Stock Return Volatility. It is defined as the standard deviation of a stock's daily total return over the trailing 1 month.,MATRIX,96%,25,90
+fnd31_qsg2_additionalfactor_fqsurstd60dlag,"60-Day Lagged Quarterly Earnings Surprise. It is defined as the most recent actual fiscal quarter EPS less the consensus earnings estimate 60 days ago, adjusted by the standard deviation of analyst forecasts 60 days ago.",MATRIX,72%,19,33
+fnd31_qsg2_additionalfactor_pu,"Unexpected Profitability. It is defined as the difference between realized profitability and expected profitability, which is calculated from a regression model.",MATRIX,82%,19,25
+fnd31_qsg2_additionalfactor_rp,Profitability Ratio. It is defined as the latest reported quarterly operating income divided by 12-Month lagged total assets.,MATRIX,95%,15,25
+fnd31_qsg2_additionalfactor_rqi_rd,1-Month Stock Return Interquartile Range. It is defined as the interquartile range of a stock's daily total return over the trailing 1 month.,MATRIX,96%,21,24
+fnd31_qsg2_additionalfactor_twepsrev,Time Weighted Earnings Revision. It is defined as the 6-month average of the time-weighted sum of the FY1 and FY2 earnings estimate revisions.,MATRIX,69%,29,55
+fnd31_qsg5additionalfactor3_apg,TTM Gross Profit to Assets. It is defined as the TTM (Sales-COGS)/ Total Assets.,MATRIX,86%,14,25
+fnd31_qsg5additionalfactor3_apgghcy1,1-Year Change in Gross Profit to Assets. It is defined as the year-on-year change in gross profit to assets.,MATRIX,85%,29,50
+fnd31_qsg5additionalfactor3_apgghcy3,3-Year Change in Gross Profit to Assets. It is defined as the 3-Year on Year Change in Gross Profit to Assets.,MATRIX,81%,12,17
+fnd31_qsg5additionalfactor3_backfilled_apg,TTM Gross Profit to Assets. It is defined as the TTM (Sales-COGS)/Total Assets.,MATRIX,86%,19,46
+fnd31_qsg5additionalfactor3_backfilled_apgghcy1,1 Year Change in Gross Profit to Assets. It is defined as the year-on-year change in gross profit to assets.,MATRIX,85%,75,192
+fnd31_qsg5additionalfactor3_backfilled_apgghcy3,3-Year Change in Gross Profit to Assets. It is defined as the 3-year-on-year change in Gross Profit to Assets.,MATRIX,81%,5,6
+fnd31_qsg5additionalfactor3_backfilled_divgp,Shareholder Payout to Gross Profit. It is defined as total dividends paid divided by (revenue - cost of goods sold).,MATRIX,51%,13,58
+fnd31_qsg5additionalfactor3_backfilled_earningstorpedo,"Earnings Torpedo. It is defined as Next 4 Quarter EPS Estimate + TTM Real Earnings Surprise/TTM EPS where TTM Earnings Surprise = Actual EPS - Est EPS, summed over the last 4 quarters.",MATRIX,86%,19,26
+fnd31_qsg5additionalfactor3_backfilled_fwdebitdaev,Leading 12-Month EBITDA/EV. It is defined as the FY1 estimate of EBITDA/Enterprise Value.,MATRIX,83%,46,66
+fnd31_qsg5additionalfactor3_backfilled_mpg,TTM Gross Profit Margin. It is defined as the TTM (Sales-COGS)/Sales.,MATRIX,85%,11,22
+fnd31_qsg5additionalfactor3_backfilled_mpgghcy3,3-Year Change in Gross Profit Margin. It is defined as the 3-Year on Year Change in Gross Profit Margin.,MATRIX,80%,6,9
+fnd31_qsg5additionalfactor3_backfilled_numrevy2,"Net # of Revisions for Fiscal Year 2. It is defined as the weighted average of the number of FY2 analyst earnings forecasts raised less the number lowered within a month, divided by the total number of analyst forecasts.",MATRIX,99%,19,38
+fnd31_qsg5additionalfactor3_backfilled_pbdwf,Leading 12-Month Book Yield. It is defined as the average quarterly forward-looking book value per share divided by close price.,MATRIX,64%,41,81
+fnd31_qsg5additionalfactor3_backfilled_pbwt,Time Weighted Book Yield. It is defined as the time-weighted average of book value per share estimates in fiscal year 1 and fiscal year 2 divided by close price.,MATRIX,81%,41,69
+fnd31_qsg5additionalfactor3_backfilled_pcdwf,Leading 12-Month Cash Yield. It is defined as the average quarterly forward-looking cash flows per share divided by close price.,MATRIX,55%,18,22
+fnd31_qsg5additionalfactor3_backfilled_pcwt,Time Weighted Cash Yield. It is defined as the time-weighted average of cash flows per share estimates in fiscal year 1 and fiscal year 2 divided by close price.,MATRIX,73%,21,23
+fnd31_qsg5additionalfactor3_backfilled_ps_wt,Time Weighted Sales Yield. It is defined as the time-weighted sales per share for FY1 and FY2 divided by its price.,MATRIX,95%,13,19
+fnd31_qsg5additionalfactor3_backfilled_psdwf,Leading 12 Month Sales Yield. It is defined as the FY1 estimate of sales value per share divided by its trading price.,MATRIX,86%,16,26
+fnd31_qsg5additionalfactor3_backfilled_rev6fy2,"Averaged Last 6-M EPS Revisions for FY2. It is defined as the average of prior 6-month monthly changes in a stock's consensus analysts' earnings forecasts for fiscal year 2, scaled by previous month-end trading price.",MATRIX,93%,2,2
+fnd31_qsg5additionalfactor3_backfilled_slope4qeps5y,Slope of 5-Yr TTM EPS Trend Line. It is defined as the slope coefficient between monthly dates and the corresponding trailing 12-month earnings per share before extra items in the prior 20 quarters.,MATRIX,92%,12,16
+fnd31_qsg5additionalfactor3_backfilled_tw_ebitdaev,Time-Weighted EBITDA/EV. It is defined as the time-weighted EBITDA/Enterprise Value for FY1 and FY2.,MATRIX,84%,27,58
+fnd31_qsg5additionalfactor3_backfilled_twepsstdrev,Time Weighted Earnings Revision Dispersion. It is defined as the 6-month average of the time-weighted sum of the FY1 and FY2 earnings estimate revisions adjusted by the standard deviations of earnings estimates.,MATRIX,69%,5,5
+fnd31_qsg5additionalfactor3_backfilled_y5speq4rqsr,R Sqr of 5-Year TTM EPS Trend Line. It is defined as the slope coefficient between monthly dates and the corresponding trailing 12-month earnings per share before extra items in the prior 20 quarters.,MATRIX,92%,7,20
+fnd31_qsg5additionalfactor3_backfilled_y5speq4vc,Stability of 5-yr TTM Earnings per Share. It is defined as the standard deviation of the last 20-Month trailing 12-month earnings per share (EPS) divided by the mean of these EPSs.,MATRIX,77%,6,7
+fnd31_qsg5additionalfactor3_backfilled_yoychgroeart,Yearly Change in ROE - Arithmetic Difference. It is defined as the yearly arithmetic change in the ratio of trailing-twelve-month earnings before extraordinary items divided by current total book equity.,MATRIX,97%,54,84
+fnd31_qsg5additionalfactor3_backfilled_yoychgroepct,Yearly Change in ROE - Percentage Method. It is defined as the yearly percentage change in the ratio of trailing-12-month earnings before extraordinary items divided by current total book equity,MATRIX,71%,17,24
+fnd31_qsg5additionalfactor3_divgp,Shareholder Payout to Gross Profit. It is defined as total dividends paid divided by (revenue - cost of goods sold).,MATRIX,51%,3,4
+fnd31_qsg5additionalfactor3_earningstorpedo,"Earnings Torpedo. It is defined as Next 4 Quarter EPS Estimate + TTM Real Earnings Surprise/TTM EPS where, TTM Earnings Surprise = Actual EPS - Est EPS, summed over the last 4 quarters.",MATRIX,86%,17,28
+fnd31_qsg5additionalfactor3_fwdebitdaev,Leading 12-Month EBITDA/EV. It is defined as the FY1 estimate of EBITDA/Enterprise Value.,MATRIX,83%,34,43
+fnd31_qsg5additionalfactor3_mpg,TTM Gross Profit Margin. It is defined as the TTM (Sales-COGS)/ Sales.,MATRIX,84%,4,12
+fnd31_qsg5additionalfactor3_mpgghcy3,3-Year Change in Gross Profit Margin. It is defined as the 3-Year on Year Change in Gross Profit Margin.,MATRIX,80%,11,14
+fnd31_qsg5additionalfactor3_numrevy2,"Net # of Revisions for Fiscal Year 2. It is defined as the weighted average of the number of FY2 analyst earnings forecasts raised less the number lowered within a month, divided by the total number of analyst forecasts.",MATRIX,99%,23,50
+fnd31_qsg5additionalfactor3_pbdwf,Leading 12-Month Book Yield. It is defined as the average quarterly forward-looking book value per share divided by close price.,MATRIX,64%,15,15
+fnd31_qsg5additionalfactor3_pbwt,Time Weighted Book Yield. It is defined as the time-weighted average of book value per share estimates in fiscal year 1 and fiscal year 2 divided by close price.,MATRIX,81%,43,60
+fnd31_qsg5additionalfactor3_pcdwf,Leading 12-Month Cash Yield. It is defined as the average quarterly forward-looking cash flows per share divided by close price.,MATRIX,55%,9,9
+fnd31_qsg5additionalfactor3_pcwt,"Time Weighted Cash Yield. It is defined as the time-weighted average of cash flows per share estimates in fiscal year 1 and fiscal year 2, divided by close price.",MATRIX,73%,10,13
+fnd31_qsg5additionalfactor3_ps_wt,Time Weighted Sales Yield. It is defined as the time-weighted Sales per share for FY1 and FY2 divided by its price.,MATRIX,95%,10,14
+fnd31_qsg5additionalfactor3_psdwf,Leading 12 Month Sales Yield. It is defined as the FY1 estimate of sales value per share divided by its trading price.,MATRIX,86%,11,13
+fnd31_qsg5additionalfactor3_rev6fy2,"Averaged Last 6-M EPS Revisions for FY2. It is defined as the average of prior 6-month monthly changes in a stock's consensus analysts earnings forecasts for fiscal year 2, scaled by previous month-end trading price.",MATRIX,93%,5,5
+fnd31_qsg5additionalfactor3_slope4qeps5y,Slope of 5-Year TTM EPS Trend Line. It is defined as the slope coefficient between monthly dates and the corresponding trailing 12-month earnings per share before extra items in the prior 20 quarters.,MATRIX,92%,9,9
+fnd31_qsg5additionalfactor3_tw_ebitdaev,Time Weighted EBITDA/EV. It is defined as the time-weighted EBITDA/Enterprise Value for FY1 and FY2.,MATRIX,84%,22,24
+fnd31_qsg5additionalfactor3_twepsstdrev,Time Weighted Earnings Revision Dispersion. It is defined as the 6-month average of the time-weighted sum of the FY1 and FY2 earnings estimate revisions adjusted by the standard deviations of earnings estimates.,MATRIX,69%,14,19
+fnd31_qsg5additionalfactor3_y5speq4rqsr,R Sqr of 5-yr TTM EPS Trend Line. It is defined as the slope coefficient between monthly dates and the corresponding trailing 12-month earnings per share before extra items in the prior 20 quarters.,MATRIX,92%,3,3
+fnd31_qsg5additionalfactor3_y5speq4vc,Stability of 5-yr TTM Earnings per Share. It is defined as the standard deviation of the last 20-Month trailing 12-month earnings per share (EPS) divided by the mean of these EPSs.,MATRIX,77%,14,25
+fnd31_qsg5additionalfactor3_yoychgroeart,Yearly Change in ROE - Arithmetic Difference. It is defined as the yearly arithmetic change in the ratio of trailing-12-month earnings before extraordinary items divided by current total book equity.,MATRIX,97%,48,70
+fnd31_qsg5additionalfactor3_yoychgroepct,Yearly Change in ROE - Percentage Method. It is defined as the yearly percentage change in the ratio of trailing-twelve-month earnings before extraordinary items divided by current total book equity.,MATRIX,70%,13,25
+fnd31_rev3my1std,"3-M Revision in FY1 EPS Forecasts: Dispersion Relative. It is defined as the change in a stock's current analysts mean earnings estimate for fiscal year 1 less that of three months ago, scaled by the standard deviation of analyst forecasts as of three months ago.",MATRIX,44%,2,2
+fnd31_rev3my2std,"3-M Revision in FY2 EPS Forecasts: Dispersion Relative. It is defined as the change in a stock's current analysts' mean earnings estimate for fiscal year 2 less that of three months ago, scaled by the standard deviation of analyst forecasts as of three months ago.",MATRIX,44%,3,3
+fnd31_ttmopincev,TTM Operating Income to Enterprise Value. It is defined as the trailing 12-month operating income (before depreciation and amortization) divided by enterprise value (EV = Equity Market Value + Long-term Debt + Short-term Debt + Preferred Stock + Minority Interest - Cash).,MATRIX,45%,17,24
+fnd31_vefcomtt,TTM Operating Cash Flow-to-Enterprise Value. It is defined as the trailing 12-month operating cash flow per share for a stock divided by its per share Enterprise Value.,MATRIX,46%,36,54
+fnd31_yen,"Normalized Earnings Yield. It is defined as the average of three normalized earnings calculated by ROE, NPM, and EPS FY2, scaled by price.",MATRIX,44%,31,48

@@ -1,0 +1,384 @@
+Field,Description,Type,Coverage,Users,Alphas
+analyst_ari_score_presentation,The ARI score of Sell Side Analysts in Presentation,VECTOR,25%,2,2
+analyst_cli_score_presentation,The CLI score of Sell Side Analysts in Presentation,VECTOR,25%,0,0
+analyst_dcs_score_presentation,The DCS score of Sell Side Analysts in Presentation,VECTOR,25%,0,0
+analyst_fkgl_score_presentation,The FKGL score of Sell Side Analysts in Presentation,VECTOR,25%,0,0
+analyst_forward_looking_sentiment_presentation,Forward-looking sentiment score for sell-side analysts during the presentation section,VECTOR,5%,0,0
+analyst_fre_score_presentation,The FRE score of Sell Side Analysts in Presentation,VECTOR,25%,0,0
+analyst_gfi_score_presentation,The GFI score of Sell Side Analysts in Presentation,VECTOR,25%,0,0
+analyst_lix_score_presentation,LIX readability score of sell-side analysts’ remarks during the presentation section,VECTOR,25%,1,1
+analyst_lix_score_qa,The LIX score of Sell Side analysts during the Q&A section,VECTOR,78%,0,0
+analyst_negative_sentiment_logit_presentation,Logistic model output (logit) for negative sentiment of sell-side analysts during the presentation section,VECTOR,25%,2,2
+analyst_neutral_sentiment_logit_presentation,Logistic model output (logit) for neutral sentiment of sell-side analysts during the presentation section,VECTOR,25%,0,0
+analyst_positive_sentiment_logit_presentation,Logistic model output (logit) for positive sentiment of sell-side analysts during the presentation section,VECTOR,25%,0,0
+analyst_sentence_count_presentation,Number of sentences spoken by sell-side analysts during the presentation section,VECTOR,76%,0,0
+analyst_sentiment_score_presentation,Sentiment score for sell-side analysts during the presentation section,VECTOR,25%,1,1
+analyst_smog_score_presentation,The SMOG score of Sell Side Analysts in Presentation,VECTOR,25%,0,0
+analyst_word_count_presentation,Number of words spoken by sell-side analysts during the presentation section,VECTOR,76%,1,1
+anl83_actinvoratioceopres,Ratio of words spoken by the CEO to total words spoken by executives during the presentation,VECTOR,63%,7,8
+anl83_actinvoratioceoqa,Ratio of CEO words to total executive words during the Q&A,VECTOR,62%,2,2
+anl83_actinvoratiocfopres,Ratio of CFO words to total executive words during the Presentation,VECTOR,58%,1,1
+anl83_actinvoratiocfoqa,Ratio of CFO words to total executive words during the Q&A,VECTOR,57%,0,0
+anl83_analyst_ari_qa,Automated Readability Index score for sell-side analysts during the Q&A section,VECTOR,79%,9,10
+anl83_analyst_cli_qa,Coleman-Liau Index score for sell-side analysts during the Q&A section,VECTOR,79%,6,6
+anl83_analyst_dcs_qa,The DCS score of Sell Side Analysts during the Q&A section,VECTOR,79%,6,7
+anl83_analyst_fkgl_qa,The FKGL score of Sell Side Analysts during the Q&A section,VECTOR,79%,4,4
+anl83_analyst_forw_sent_qa,Forward-looking sentiment score for sell-side analysts during the Q&A section,VECTOR,65%,27,37
+anl83_analyst_fre_qa,The FRE score of Sell Side Analysts during the Q&A section,VECTOR,79%,6,9
+anl83_analyst_gfi_qa,The GFI score of Sell Side Analysts during the Q&A section,VECTOR,78%,1,1
+anl83_analyst_neg_logit_qa,Negative-sentiment logistic model score for sell-side analysts during the Q&A section,VECTOR,78%,6,6
+anl83_analyst_neu_logit_qa,Neutral-sentiment logistic model score for sell-side analysts during the Q&A section,VECTOR,78%,4,11
+anl83_analyst_pos_logit_qa,Logistic model output for positive sentiment of sell-side analysts during the Q&A section,VECTOR,78%,28,50
+anl83_analyst_sent_score_qa,Sentiment score for sell-side analysts during the Q&A section,VECTOR,78%,18,30
+anl83_analyst_smog_qa,The SMOG score of Sell Side Analysts during the Q&A section,VECTOR,78%,3,7
+anl83_analystattendence,Number of sell-side analysts attending the conference,VECTOR,76%,5,6
+anl83_aq_erf,The FRE score in the Q&A section,VECTOR,79%,3,5
+anl83_aq_erf_oec,The FRE score of CEO in Q&A,VECTOR,79%,2,2
+anl83_aq_erf_ofc,Flesch Reading Ease score for the CFO during the Q&A section of the conference call,VECTOR,79%,2,2
+anl83_aq_ifg,The GFI score in the Q&A section,VECTOR,79%,3,3
+anl83_aq_ifg_oec,The GFI score of CEO in Q&A,VECTOR,79%,0,0
+anl83_aq_ifg_ofc,Gunning Fog Index score for the CFO during the Q&A section of the conference call,VECTOR,79%,3,3
+anl83_aq_ilc,The CLI score in the Q&A section,VECTOR,79%,2,5
+anl83_aq_ilc_oec,The CLI score of CEO in Q&A,VECTOR,79%,0,0
+anl83_aq_ilc_ofc,The CLI score of CFO in Q&A,VECTOR,79%,3,3
+anl83_aq_ira,The ARI score in the Q&A section,VECTOR,79%,2,2
+anl83_aq_ira_oec,The ARI score of CEO in Q&A,VECTOR,79%,1,1
+anl83_aq_ira_ofc,The ARI score of CFO in Q&A,VECTOR,79%,1,2
+anl83_aq_lgkf,The FKGL score in the Q&A section,VECTOR,79%,0,0
+anl83_aq_lgkf_oec,The FKGL score of CEO in Q&A,VECTOR,79%,1,1
+anl83_aq_lgkf_ofc,The FKGL score of CFO in Q&A,VECTOR,79%,1,1
+anl83_aq_scd,The DCS score in the Q&A section,VECTOR,79%,2,3
+anl83_aq_scd_oec,The DCS score of CEO in Q&A,VECTOR,79%,1,1
+anl83_aq_scd_ofc,The DCS score of CFO in Q&A,VECTOR,79%,1,1
+anl83_ari_all,The ARI score in the whole conference call,VECTOR,80%,4,4
+anl83_ceo_forw_sent_pres,Forward-looking sentiment score for the CEO during the presentation section,VECTOR,63%,1,1
+anl83_ceo_forw_sent_qa,Forward-looking sentiment score for the CEO during the Q&A section,VECTOR,56%,1,1
+anl83_ceo_neg_logit_pres,Logistic model output (logit) for negative sentiment of the CEO during the presentation section,VECTOR,69%,0,0
+anl83_ceo_neg_logit_qa,Logistic-model output (logit score) for negative sentiment expressed by the CEO during the Q&A section of the conference call,VECTOR,68%,3,3
+anl83_ceo_neu_logit_pres,Logistic model output (logit) for neutral sentiment of the CEO during the presentation section,VECTOR,69%,2,2
+anl83_ceo_neu_logit_qa,Logistic model output for neutral sentiment of the CEO during the Q&A section,VECTOR,68%,1,1
+anl83_ceo_pos_logit_pres,Logistic model output (logit) for positive sentiment of the CEO during the presentation section,VECTOR,69%,9,11
+anl83_ceo_pos_logit_qa,Logistic-model output (logit score) for positive sentiment expressed by the CEO during the Q&A section of the conference call,VECTOR,68%,12,19
+anl83_ceo_sent_score_pres,Classical sentiment score for the CEO during the presentation section,VECTOR,69%,4,4
+anl83_ceo_sent_score_qa,Classical sentiment score for the CEO during the Q&A section of the conference call,VECTOR,68%,5,6
+anl83_ceo_smog_pres,SMOG readability score for the CEO during the presentation section,VECTOR,69%,1,2
+anl83_ceo_smog_qa,The SMOG score of CEO in Q&A,VECTOR,79%,0,0
+anl83_ceoattendence,"Indicator whether the company’s CEO attends (1=yes, 0=no)",VECTOR,76%,4,4
+anl83_cfo_forw_sent_pres,Forward-looking sentiment score for the CFO during the Presentation section,VECTOR,58%,4,4
+anl83_cfo_forw_sent_qa,Forward-looking sentiment score for the CFO during the Q&A section,VECTOR,46%,1,1
+anl83_cfo_neg_logit_pres,Logistic model output (logit) for negative sentiment of the CFO during the presentation section,VECTOR,64%,2,2
+anl83_cfo_neg_logit_qa,Logistic-model output (logit score) for negative sentiment expressed by the CFO during the Q&A section of the conference call,VECTOR,63%,3,3
+anl83_cfo_neu_logit_pres,Logistic model output (logit) for neutral sentiment of the CFO during the presentation section,VECTOR,64%,0,0
+anl83_cfo_neu_logit_qa,Logistic-model output (logit score) for neutral sentiment expressed by the CFO during the Q&A section of the conference call,VECTOR,63%,1,1
+anl83_cfo_pos_logit_pres,Logistic model output (logit) for positive sentiment of the CFO during the presentation section,VECTOR,64%,3,3
+anl83_cfo_pos_logit_qa,Logistic-model output (logit score) for positive sentiment expressed by the CFO during the Q&A section of the conference call,VECTOR,63%,3,3
+anl83_cfo_sent_score_pres,Aggregate mechanical sentiment score for the CFO during the Presentation section,VECTOR,64%,8,8
+anl83_cfo_sent_score_qa,Classical sentiment score for the CFO during the Q&A section of the conference call,VECTOR,63%,1,1
+anl83_cfo_smog_pres,SMOG readability score for the CFO during the presentation section,VECTOR,64%,1,1
+anl83_cfo_smog_qa,SMOG (Simple Measure of Gobbledygook) score for the CFO during the Q&A section of the conference call,VECTOR,79%,1,1
+anl83_cfoattendence,"Indicator whether the company’s CFO attends (1=yes, 0=no)",VECTOR,76%,0,0
+anl83_cli_all,The CLI score in the whole conference call,VECTOR,80%,3,8
+anl83_confcallpart_ari_pres,The ARI score of Conference call Participants in Presentation,VECTOR,38%,0,0
+anl83_confcallpart_ari_qa,Automated Readability Index score for all conference call participants during the Q&A section,VECTOR,79%,1,1
+anl83_confcallpart_cli_pres,The CLI score of Conference call Participants in Presentation,VECTOR,38%,1,1
+anl83_confcallpart_cli_qa,Coleman-Liau Index score for all conference call participants during the Q&A section,VECTOR,79%,0,0
+anl83_confcallpart_dcs_pres,The DCS score of Conference call Participants in Presentation,VECTOR,38%,1,1
+anl83_confcallpart_dcs_qa,Dale–Chall Readability Score for all conference call participants during the Q&A section,VECTOR,79%,2,5
+anl83_confcallpart_fkgl_pres,The FKGL score of Conference call Participants in Presentation,VECTOR,38%,0,0
+anl83_confcallpart_fkgl_qa,Flesch–Kincaid Grade Level score for all conference call participants during the Q&A section,VECTOR,79%,0,0
+anl83_confcallpart_forw_sent_qa,Forward-looking sentiment score for Conference Call Participants during the Q&A section,VECTOR,66%,9,13
+anl83_confcallpart_fre_pres,The FRE score of Conference call Participants in Presentation,VECTOR,38%,1,1
+anl83_confcallpart_fre_qa,Flesch Reading Ease score for all conference call participants during the Q&A section,VECTOR,79%,2,2
+anl83_confcallpart_gfi_pres,The GFI score of Conference call Participants in Presentation,VECTOR,38%,0,0
+anl83_confcallpart_gfi_qa,Gunning Fog Index score for all conference call participants during the Q&A section,VECTOR,79%,0,0
+anl83_confcallpart_neg_logit_pres,Logistic model output for negative sentiment of conference call participants during the presentation section,VECTOR,38%,2,2
+anl83_confcallpart_neg_logit_qa,Logistic-model output (logit score) for negative sentiment expressed by conference call participants collectively during the Q&A section,VECTOR,78%,0,0
+anl83_confcallpart_neu_logit_pres,Logistic-model neutral sentiment score aggregating all conference call participants during the Presentation section,VECTOR,38%,0,0
+anl83_confcallpart_neu_logit_qa,Logistic model output for neutral sentiment of conference call participants during the Q&A section,VECTOR,78%,2,3
+anl83_confcallpart_pos_logit_pres,Logistic model output for positive sentiment of conference call participants during the presentation section,VECTOR,38%,1,1
+anl83_confcallpart_pos_logit_qa,Logistic-model output (logit score) for positive sentiment expressed by conference call participants collectively during the Q&A section,VECTOR,78%,31,44
+anl83_confcallpart_sent_score_pres,Sentiment score for conference call participants during the presentation section,VECTOR,38%,1,1
+anl83_confcallpart_sent_score_qa,Sentiment score for conference call participants during the Q&A section,VECTOR,78%,8,9
+anl83_confcallpart_smog_pres,The SMOG score of Conference call Participants in Presentation,VECTOR,38%,0,0
+anl83_confcallpart_smog_qa,SMOG (Simple Measure of Gobbledygook) score for all conference call participants during the Q&A section,VECTOR,79%,0,0
+anl83_corppart_ari_pres,Automated Readability Index score for corporate participants during the presentation section,VECTOR,79%,2,2
+anl83_corppart_ari_qa,Automated Readability Index score for corporate participants during the Q&A section,VECTOR,79%,2,2
+anl83_corppart_cli_pres,CLI score for corporate participants during the presentation section,VECTOR,79%,0,0
+anl83_corppart_cli_qa,Coleman-Liau Index score for corporate participants during the Q&A section,VECTOR,79%,0,0
+anl83_corppart_dcs_pres,Discourse Complexity Score for corporate participants during the presentation section,VECTOR,79%,0,0
+anl83_corppart_dcs_qa,Dale–Chall Readability Score for corporate participants during the Q&A section,VECTOR,79%,0,0
+anl83_corppart_fkgl_pres,Flesch–Kincaid Grade Level score for corporate participants during the presentation section,VECTOR,79%,3,3
+anl83_corppart_fkgl_qa,Flesch–Kincaid Grade Level score for corporate participants during the Q&A section,VECTOR,79%,1,1
+anl83_corppart_forw_sent_pres,Forward-looking sentiment score for corporate participants during the presentation section,VECTOR,78%,8,9
+anl83_corppart_forw_sent_qa,Forward-looking sentiment score for corporate participants during the Q&A section,VECTOR,74%,3,3
+anl83_corppart_fre_pres,Flesch Reading Ease score for corporate participants during the presentation section,VECTOR,79%,2,2
+anl83_corppart_fre_qa,Flesch Reading Ease score for corporate participants during the Q&A section,VECTOR,79%,1,1
+anl83_corppart_gfi_pres,Gunning Fog Index score for corporate participants during the presentation section,VECTOR,79%,0,0
+anl83_corppart_gfi_qa,Gunning Fog Index score for corporate participants during the Q&A section,VECTOR,79%,0,0
+anl83_corppart_neg_logit_pres,Logistic-model negative sentiment score for corporate participants during the Presentation section,VECTOR,79%,3,4
+anl83_corppart_neg_logit_qa,Logistic model output for negative sentiment of corporate participants during the Q&A section,VECTOR,78%,1,1
+anl83_corppart_neu_logit_pres,Logistic model output for neutral sentiment of corporate participants during the presentation section,VECTOR,79%,3,3
+anl83_corppart_neu_logit_qa,Logistic model output for neutral sentiment of corporate participants during the Q&A section,VECTOR,78%,1,1
+anl83_corppart_pos_logit_pres,Logistic-model positive sentiment score for corporate participants during the Presentation section,VECTOR,79%,1,1
+anl83_corppart_pos_logit_qa,Logistic model output for positive sentiment of corporate participants during the Q&A section,VECTOR,78%,6,6
+anl83_corppart_sent_score_pres,Sentiment score for corporate participants during the presentation section,VECTOR,79%,5,6
+anl83_corppart_sent_score_qa,Classical sentiment score for corporate participants during the Q&A section of the conference call,VECTOR,78%,1,1
+anl83_corppart_smog_pres,SMOG readability score for corporate participants during the presentation section,VECTOR,79%,0,0
+anl83_corppart_smog_qa,SMOG (Simple Measure of Gobbledygook) score for corporate participants during the Q&A section,VECTOR,79%,1,1
+anl83_corppartattendence,Number of corporate participants attending the conference,VECTOR,76%,1,1
+anl83_dcs_all,The DCS score in the whole conference call,VECTOR,80%,2,2
+anl83_fkgl_all,The FKGL score in the whole conference call,VECTOR,80%,1,5
+anl83_fre_all,The FRE score in the whole conference call,VECTOR,80%,2,2
+anl83_gfi_all,The GFI score in the whole conference call,VECTOR,80%,2,4
+anl83_neg_logit_all,Logistic model output for negative sentiment across the entire call (ALL sections),VECTOR,80%,5,6
+anl83_neg_logit_pres,Negative-sentiment logistic model score during the presentation section,VECTOR,80%,2,2
+anl83_neg_logit_qa,Negative-sentiment logistic model score during the Q&A section,VECTOR,79%,3,4
+anl83_neu_logit_all,Neutral-sentiment logistic model score across the entire call (all sections),VECTOR,80%,2,3
+anl83_neu_logit_pres,Neutral-sentiment logistic model score during the presentation section,VECTOR,80%,1,1
+anl83_neu_logit_qa,Neutral-sentiment logistic model score during the Q&A section,VECTOR,79%,1,1
+anl83_numnongaappres,Number of occurrences of the term non-GAAP during the presentation section,VECTOR,76%,0,0
+anl83_numqapair,Number of question-answer pairs (one question followed by two answers counts as 2 QA pairs) (NA if no Q&A),VECTOR,75%,0,0
+anl83_numqueanalyst,Number of questions from Sell Side Analysts during the Q&A segment (NA if no questions),VECTOR,75%,0,0
+anl83_numsentanalystqa,Number of sentences spoken by Sell Side Analysts during the Q&A segment,VECTOR,75%,0,0
+anl83_numsentans,Number of sentences of all answers during Q&A (NA if no Q&A),VECTOR,75%,0,0
+anl83_numsentceopres,Number of sentences spoken by the CEO during the presentation section,VECTOR,63%,2,2
+anl83_numsentceoqa,Number of sentences spoken by the CEO during the Q&A section,VECTOR,62%,1,1
+anl83_numsentcfopres,Number of sentences spoken by the CFO during the presentation section,VECTOR,58%,1,1
+anl83_numsentcfoqa,Number of sentences spoken by the CFO during the Q&A section,VECTOR,57%,1,1
+anl83_numsentconfcallpartqa,Number of sentences spoken by conference call participants during the Q&A segment,VECTOR,75%,2,2
+anl83_numsentexepres,Number of sentences spoken by executives during the presentation,VECTOR,73%,0,0
+anl83_numsentexeqa,Number of sentences spoken by executives during the Q&A section,VECTOR,72%,3,3
+anl83_numsentoperpres,Number of sentences spoken by the operator during the presentation section,VECTOR,76%,1,1
+anl83_numsentoperqa,Number of sentences spoken by the operator during the Q&A segment (NA if no Q&A),VECTOR,75%,0,0
+anl83_numsentque,Number of sentences of all questions during Q&A (NA if no Q&A),VECTOR,75%,0,0
+anl83_numsentqueanalyst,Number of sentences in questions asked by Sell Side Analysts during the Q&A segment (NA if no questions),VECTOR,75%,0,0
+anl83_numsuppans,Number of supplementary answers (one question followed by two answers counts as 1 supplementary answer) (NA if no Q&A),VECTOR,75%,1,1
+anl83_numvswordsratioceopres,Ratio of numerical words to total words spoken by the CEO during the Presentation (NA if CEO did not attend or did not speak),VECTOR,63%,46,80
+anl83_numvswordsratioceoqa,Ratio of numerical words to total words spoken by the CEO in the Q&A (NA if CEO did not attend or did not speak),VECTOR,62%,0,0
+anl83_numvswordsratiocfopres,Ratio of numerical to total words spoken by the CFO during the presentation (NA if CFO did not attend or did not speak),VECTOR,58%,0,0
+anl83_numvswordsratiocfoqa,Ratio of numerical to total words spoken by the CFO during Q&A (NA if CFO did not attend or did not speak in Q&A),VECTOR,57%,3,4
+anl83_numvswordsratioexepres,Ratio of numerical words to total words spoken by executives during the Presentation,VECTOR,73%,3,3
+anl83_numvswordsratioexeqa,Ratio of numerical words to total words spoken by executives in the Q&A (NA if no Q&A),VECTOR,72%,4,4
+anl83_numwordanalystqa,Number of words spoken by Sell Side Analysts during the Q&A segment,VECTOR,75%,0,0
+anl83_numwordans,Total number of words in all answers in the Q&A section (NA if no Q&A),VECTOR,75%,1,1
+anl83_numwordceopres,Number of words spoken by the CEO during the presentation section,VECTOR,63%,2,2
+anl83_numwordceoqa,Number of words spoken by the CEO during the Q&A section,VECTOR,62%,1,1
+anl83_numwordcfopres,Number of words spoken by the CFO during the presentation section,VECTOR,58%,0,0
+anl83_numwordcfoqa,Number of words spoken by the CFO during the Q&A section,VECTOR,57%,0,0
+anl83_numwordconfcallpartqa,Number of words spoken by conference call participants during the Q&A segment,VECTOR,75%,0,0
+anl83_numwordexepres,Number of words spoken by executives during the presentation,VECTOR,73%,0,0
+anl83_numwordexeqa,Number of words spoken by executives during the Q&A section,VECTOR,72%,0,0
+anl83_numwordoperpres,Number of words spoken by the operator during the presentation section,VECTOR,76%,0,0
+anl83_numwordoperqa,Number of words spoken by the operator during the Q&A segment (NA if no Q&A),VECTOR,75%,0,0
+anl83_numwordque,Total number of words in all questions during the Q&A segment (NA if no Q&A),VECTOR,75%,4,4
+anl83_oper_ari_pres,The ARI score of Operator in Presentation,VECTOR,76%,0,0
+anl83_oper_ari_qa,Automated Readability Index score for the operator during the Q&A section,VECTOR,79%,2,2
+anl83_oper_cli_pres,The CLI score of Operator in Presentation,VECTOR,76%,1,1
+anl83_oper_cli_qa,Coleman-Liau Index score for the operator during the Q&A section,VECTOR,79%,0,0
+anl83_oper_dcs_pres,The DCS score of Operator in Presentation,VECTOR,76%,0,0
+anl83_oper_dcs_qa,Dale–Chall Readability Score for the operator during the Q&A section,VECTOR,79%,0,0
+anl83_oper_fkgl_pres,The FKGL score of Operator in Presentation,VECTOR,76%,1,1
+anl83_oper_fkgl_qa,Flesch–Kincaid Grade Level score for the operator during the Q&A section,VECTOR,79%,2,6
+anl83_oper_fre_pres,The FRE score of Operator in Presentation,VECTOR,76%,0,0
+anl83_oper_fre_qa,Flesch Reading Ease score for the operator during the Q&A section,VECTOR,79%,0,0
+anl83_oper_gfi_pres,The GFI score of Operator in Presentation,VECTOR,76%,1,1
+anl83_oper_gfi_qa,Gunning Fog Index score for the operator during the Q&A section,VECTOR,79%,0,0
+anl83_oper_neg_logit_pres,Logistic-model negative sentiment score for the Operator during the Presentation section,VECTOR,76%,3,3
+anl83_oper_neg_logit_qa,Logistic-model output (logit score) for negative sentiment expressed by the operator during the Q&A section of the conference call,VECTOR,76%,2,2
+anl83_oper_neu_logit_pres,Logistic-model neutral sentiment score for the Operator during the Presentation section,VECTOR,76%,0,0
+anl83_oper_neu_logit_qa,Logistic-model output (logit score) for neutral sentiment expressed by the operator during the Q&A section of the conference call,VECTOR,76%,0,0
+anl83_oper_pos_logit_pres,Logistic model output for positive sentiment of the operator during the presentation section,VECTOR,76%,1,1
+anl83_oper_pos_logit_qa,Logistic model output for positive sentiment of the operator during the Q&A section,VECTOR,76%,3,3
+anl83_oper_sent_score_pres,Sentiment score for the Operator during the Presentation section,VECTOR,76%,2,3
+anl83_oper_sent_score_qa,Classical sentiment score for the operator during the Q&A section of the conference call,VECTOR,76%,0,0
+anl83_oper_smog_pres,The SMOG score of Operator in Presentation,VECTOR,76%,2,3
+anl83_oper_smog_qa,SMOG (Simple Measure of Gobbledygook) score for the operator during the Q&A section,VECTOR,79%,1,2
+anl83_pos_logit_all,Positive-sentiment logistic model score across the entire call (all sections),VECTOR,80%,2,2
+anl83_pos_logit_pres,Positive-sentiment logistic model score during the presentation section,VECTOR,80%,0,0
+anl83_pos_logit_qa,Positive-sentiment logistic model score during the Q&A section,VECTOR,79%,14,19
+anl83_qasentratio,Ratio of total sentences in questions to total sentences in answers in the Q&A section (NA if no Q&A),VECTOR,75%,0,0
+anl83_qawordratio,Ratio of total words in questions to total words in answers in the Q&A section (NA if no Q&A),VECTOR,75%,0,0
+anl83_sent_score_all,Overall sentiment score across the entire call (all sections),VECTOR,80%,6,9
+anl83_sent_score_pres,Sentiment score during the presentation section,VECTOR,80%,5,6
+anl83_sent_score_qa,Sentiment score during the Q&A section,VECTOR,79%,7,7
+anl83_serp_erf,The FRE score in the Presentation section,VECTOR,80%,2,2
+anl83_serp_erf_oec,Flesch Reading Ease score for the CEO during the presentation section,VECTOR,69%,1,1
+anl83_serp_erf_ofc,Flesch Reading Ease score for the CFO during the presentation section,VECTOR,64%,2,2
+anl83_serp_ifg,The GFI score in the Presentation section,VECTOR,80%,2,5
+anl83_serp_ifg_oec,Gunning Fog Index score for the CEO during the presentation section,VECTOR,69%,0,0
+anl83_serp_ifg_ofc,Gunning Fog Index score for the CFO during the presentation section,VECTOR,64%,0,0
+anl83_serp_ilc,The CLI score in the Presentation section,VECTOR,80%,0,0
+anl83_serp_ilc_oec,CLI score for the CEO during the presentation section,VECTOR,69%,1,1
+anl83_serp_ilc_ofc,CLI score for the CFO during the presentation section,VECTOR,64%,1,1
+anl83_serp_ira,The ARI score in the Presentation section,VECTOR,80%,3,6
+anl83_serp_ira_oec,Automated Readability Index score for the CEO during the presentation section,VECTOR,69%,2,4
+anl83_serp_ira_ofc,Automated Readability Index score for the CFO during the presentation section,VECTOR,64%,1,2
+anl83_serp_lgkf,The FKGL score in the Presentation section,VECTOR,80%,0,0
+anl83_serp_lgkf_oec,Flesch–Kincaid Grade Level score for the CEO during the presentation section,VECTOR,69%,0,0
+anl83_serp_lgkf_ofc,Flesch–Kincaid Grade Level score for the CFO during the presentation section,VECTOR,64%,0,0
+anl83_serp_scd,The DCS score in the Presentation section,VECTOR,80%,0,0
+anl83_serp_scd_oec,Discourse Complexity Score for the CEO during the presentation section,VECTOR,69%,1,1
+anl83_serp_scd_ofc,Discourse Complexity Score for the CFO during the presentation section,VECTOR,64%,0,0
+anl83_serppaagmun,Number of occurrences of the term GAAP during the presentation section,VECTOR,76%,1,1
+anl83_sinvsplurratioceopres,"Pronoun balance for the CEO in Presentation, computed as (count of I/my/me/mine − count of we/our/us/ours) divided by their sum (NA if no CEO speech)",VECTOR,62%,0,0
+anl83_sinvsplurratioceoqa,"Pronoun ratio for the CEO during Q&A defined as (count of I,my,me,mine minus count of we,our,us,ours) divided by their sum (NA if CEO did not attend or did not speak in Q&A)",VECTOR,62%,2,2
+anl83_sinvsplurratiocfopres,"Pronoun balance for the CFO in Presentation, computed as (singular first-person pronouns − plural pronouns) divided by their sum (NA if no CFO speech)",VECTOR,58%,2,2
+anl83_sinvsplurratiocfoqa,"Pronoun balance for the CFO in Q&A, computed as (singular first-person pronouns − plural pronouns) divided by their sum (NA if no CFO Q&A speech)",VECTOR,56%,2,2
+anl83_sinvsplurratioexepres,"Pronoun balance for executives in Presentation, computed as (singular first-person pronouns − plural pronouns) divided by their sum",VECTOR,73%,1,1
+anl83_sinvsplurratioexeqa,"(count of I,my,me,mine − count of We, our, us, ours) divided by (count of I,my,me,mine + count of We, our, us, ours) for executives during Q&A; NA if no Q&A",VECTOR,72%,3,3
+anl83_smog_all,The SMOG score in the whole conference call,VECTOR,80%,2,5
+anl83_smog_pres,The SMOG score in the Presentation section,VECTOR,80%,1,1
+anl83_smog_qa,The SMOG score in the Q&A section,VECTOR,79%,1,1
+buyside_ari_score_presentation,The ARI score of Buy Side investors in Presentation,VECTOR,0%,0,0
+buyside_ari_score_qa,The ARI score of Buy Side investors during the Q&A section,VECTOR,1%,1,1
+buyside_attendance_count,Number of buy-side investors attending the conference,VECTOR,76%,1,1
+buyside_cli_score_presentation,The CLI score of Buy Side investors in Presentation,VECTOR,0%,0,0
+buyside_cli_score_qa,The CLI (Comment Leniency) score of Buy Side investors during the Q&A section,VECTOR,1%,0,0
+buyside_dcs_score_presentation,The DCS score of Buy Side investors in Presentation,VECTOR,0%,0,0
+buyside_dcs_score_qa,The DCS score of Buy Side investors during the Q&A section,VECTOR,1%,0,0
+buyside_fkgl_score_presentation,The FKGL score of Buy Side investors in Presentation,VECTOR,0%,0,0
+buyside_fkgl_score_qa,The FKGL score of Buy Side investors during the Q&A section,VECTOR,1%,0,0
+buyside_forward_looking_sentiment_qa,Forward-looking sentiment score for buy-side investors during the Q&A section,VECTOR,0%,0,0
+buyside_fre_score_presentation,The FRE score of Buy Side investors in Presentation,VECTOR,0%,0,0
+buyside_fre_score_qa,The FRE score of Buy Side investors during the Q&A section,VECTOR,1%,0,0
+buyside_gfi_score_presentation,The GFI score of Buy Side investors in Presentation,VECTOR,0%,0,0
+buyside_gfi_score_qa,The GFI score of Buy Side investors during the Q&A section,VECTOR,1%,0,0
+buyside_lix_score_presentation,The LIX score of Buy-Side investors in the Presentation section,VECTOR,0%,0,0
+buyside_lix_score_qa,The LIX score of Buy Side investors during the Q&A section,VECTOR,1%,0,0
+buyside_negative_sentiment_logit_presentation,Logistic-model output (logit score) for negative sentiment expressed by Buy Side investors during the Presentation section of the conference call,VECTOR,0%,0,0
+buyside_negative_sentiment_logit_qa,Negative-sentiment logistic model score for buy-side investors during the Q&A section,VECTOR,1%,0,0
+buyside_neutral_sentiment_logit_presentation,Logistic model output for neutral sentiment of buy-side investors during the presentation section,VECTOR,0%,0,0
+buyside_neutral_sentiment_logit_qa,Logistic model output for neutral sentiment of buy-side investors during the Q&A section,VECTOR,1%,0,0
+buyside_positive_sentiment_logit_presentation,Logistic-model output (logit score) for positive sentiment expressed by Buy Side investors during the Presentation section of the conference call,VECTOR,0%,0,0
+buyside_positive_sentiment_logit_qa,Positive-sentiment logistic model score for buy-side investors during the Q&A section,VECTOR,1%,0,0
+buyside_sentence_count_presentation,Number of sentences spoken by buy-side investors during the presentation section,VECTOR,76%,0,0
+buyside_sentence_count_qa,Number of sentences spoken by Buy Side investors during the Q&A segment,VECTOR,75%,0,0
+buyside_sentiment_score_presentation,Classical sentiment score for Buy Side investors during the Presentation section of the conference call,VECTOR,0%,0,0
+buyside_sentiment_score_qa,Sentiment score for buy-side investors during the Q&A section,VECTOR,1%,0,0
+buyside_smog_score_presentation,The SMOG score of Buy Side investors in Presentation,VECTOR,0%,0,0
+buyside_smog_score_qa,The SMOG score of Buy Side investors during the Q&A section,VECTOR,1%,0,0
+buyside_word_count_presentation,Number of words spoken by buy-side investors during the presentation section,VECTOR,76%,2,2
+buyside_word_count_qa,Number of words spoken by buy-side investors during Q&A,VECTOR,75%,0,0
+ceo_lix_score_presentation,LIX readability index score for the CEO during the presentation section,VECTOR,69%,0,0
+ceo_lix_score_qa,The LIX score of CEO in Q&A,VECTOR,79%,2,4
+cfo_lix_score_presentation,LIX readability index score for the CFO during the presentation section,VECTOR,64%,0,0
+cfo_lix_score_qa,"LIX readability score for the CFO during the Q&A section of the conference call (Europe, D0)",VECTOR,79%,0,0
+corp_participant_lix_score_presentation,LIX readability index score for corporate participants during the presentation section,VECTOR,79%,1,1
+corp_participant_lix_score_qa,"LIX readability score for corporate participants during the Q&A section of the conference call (Europe, D0)",VECTOR,79%,0,0
+count_nongaap_mentions_qa_answers,Number of occurrences of non-GAAP in all answers during the Q&A segment (NA if no Q&A),VECTOR,75%,0,0
+count_questions_buyside_qa,Number of questions from Buy Side investors during the Q&A segment (NA if no questions),VECTOR,75%,0,0
+count_questions_other_participants_qa,Number of questions from other participants during the Q&A segment (NA if no questions),VECTOR,75%,0,0
+count_questions_retail_investors_qa,Number of questions from Retail investors during the Q&A segment (NA if no questions),VECTOR,75%,0,0
+gaap_mention_count_qa_answers,Number of occurrences of GAAP in all answers during the Q&A segment (NA if no Q&A),VECTOR,75%,0,0
+gaap_mention_count_qa_questions,Number of occurrences of GAAP in all questions during the Q&A segment (NA if no Q&A),VECTOR,75%,0,0
+laughter_occurrence_count_presentation,Number of occurrences of laughter during the presentation section,VECTOR,76%,0,0
+laughter_occurrence_count_qa,Number of occurrences of laughter during the Q&A segment (NA if no Q&A),VECTOR,75%,0,0
+non_gaap_mention_count_qa_questions,Number of occurrences of non-GAAP in all questions during Q&A (NA if no Q&A),VECTOR,75%,1,1
+operator_forward_looking_sentiment_presentation,Forward-looking sentiment score for the operator during the presentation section of the conference call,VECTOR,28%,0,0
+operator_forward_looking_sentiment_qa,Forward-looking sentiment score for the Operator during the Q&A section,VECTOR,3%,0,0
+operator_lix_score_presentation,The LIX score of Operator in Presentation,VECTOR,76%,0,0
+operator_lix_score_qa,"LIX readability score for the operator during the Q&A section of the conference call (Europe, D0)",VECTOR,79%,0,0
+other_ceo_attendance_count,Number of CEOs from other companies attending the conference,VECTOR,76%,0,0
+other_ceo_numeric_word_ratio_presentation,Ratio of numerical words to all words for other-company CEOs during the Presentation (NA if no other CEO attended or no speech in Presentation),VECTOR,4%,1,1
+other_ceo_numeric_word_ratio_qa,Ratio of numerical words to total words for CEOs from other companies in Q&A; NA if no other CEO attended or no speech in Q&A,VECTOR,4%,1,1
+other_ceo_sentence_count_presentation,Number of sentences spoken by other-company CEOs during the Presentation,VECTOR,4%,0,0
+other_ceo_sentence_count_qa,Number of sentences spoken by CEOs from other companies during Q&A,VECTOR,4%,0,0
+other_ceo_singular_plural_pronoun_ratio_presentation,"Pronoun ratio for other-company CEOs during the presentation defined as (count of I,my,me,mine minus count of we,our,us,ours) divided by their sum (NA if other CEO did not attend or did not speak)",VECTOR,4%,0,0
+other_ceo_singular_plural_pronoun_ratio_qa,"(count of I,my,me,mine − count of We, our, us, ours) divided by (count of I,my,me,mine + count of We, our, us, ours) for CEOs from other companies in Q&A; NA if no other CEO attended or no speech in Q&A",VECTOR,4%,0,0
+other_ceo_word_count_presentation,Number of words spoken by CEOs from other companies during the presentation,VECTOR,4%,0,0
+other_ceo_word_count_qa,Number of words spoken by CEOs from other companies during Q&A,VECTOR,4%,0,0
+other_ceo_word_share_presentation,Ratio of words spoken by other-company CEOs to total words spoken by executives from other companies during the presentation (NA if no other executives),VECTOR,4%,1,1
+other_ceo_word_share_qa,Number of words spoken by other CEOs divided by the number of words spoken by executives from other companies in Q&A; NA if no other executives,VECTOR,4%,0,0
+other_cfo_attendance_count,Number of CFOs from other companies attending the conference,VECTOR,76%,0,0
+other_cfo_numeric_word_ratio_presentation,Ratio of numerical words to total words spoken by CFOs from other companies during the Presentation section (NA if no such CFO attended or spoke in Presentation),VECTOR,3%,1,1
+other_cfo_numeric_word_ratio_qa,Ratio of numerical words to total words for CFOs from other companies in Q&A; NA if no other CFO attended or no speech in Q&A,VECTOR,3%,0,0
+other_cfo_sentence_count_presentation,Number of sentences spoken by other CFOs during the presentation,VECTOR,3%,0,0
+other_cfo_sentence_count_qa,Number of sentences spoken by CFOs from other companies during Q&A,VECTOR,3%,0,0
+other_cfo_singular_plural_pronoun_ratio_presentation,"Pronoun ratio for other-company CFOs during the presentation defined as (count of I,my,me,mine minus count of we,our,us,ours) divided by their sum (NA if other CFO did not attend or did not speak)",VECTOR,3%,0,0
+other_cfo_singular_plural_pronoun_ratio_qa,"(count of I,my,me,mine − count of We, our, us, ours) divided by (count of I,my,me,mine + count of We, our, us, ours) for CFOs from other companies in Q&A; NA if no other CFO attended or no speech in Q&A",VECTOR,3%,0,0
+other_cfo_word_count_presentation,Number of words spoken by CFOs from other companies during the Presentation section,VECTOR,3%,0,0
+other_cfo_word_count_qa,Number of words spoken by CFOs from other companies during Q&A,VECTOR,3%,0,0
+other_cfo_word_share_presentation,Ratio of words spoken by other-company CFOs to total words spoken by all other-company executives during the Presentation (NA if no other executives),VECTOR,3%,0,0
+other_cfo_word_share_qa,Number of words spoken by other CFOs divided by the number of words spoken by executives from other companies in Q&A; NA if no other executives,VECTOR,3%,0,0
+other_corporate_participant_count,Number of corporate participants from other companies attending the conference,VECTOR,76%,0,0
+other_executive_numeric_word_ratio_presentation,Ratio of numerical to total words spoken by executives from other companies during the presentation (NA if no other executives),VECTOR,9%,0,0
+other_executive_numeric_word_ratio_qa,Ratio of numerical words to total words for executives from other companies in Q&A; NA if no other executives,VECTOR,7%,0,0
+other_executive_sentence_count_presentation,Number of sentences spoken by other executives during the Presentation section,VECTOR,9%,0,0
+other_executive_sentence_count_qa,Number of sentences spoken by other executives in Q&A,VECTOR,7%,0,0
+other_executive_singular_plural_pronoun_ratio_presentation,"Pronoun balance for executives from other companies during presentation: (count of I,my,me,mine − count of We,our,us,ours) divided by their sum",VECTOR,9%,0,0
+other_executive_singular_plural_pronoun_ratio_qa,"(count of I,my,me,mine − count of We, our, us, ours) divided by (count of I,my,me,mine + count of We, our, us, ours) for executives from other companies in Q&A; NA if no Q&A",VECTOR,7%,0,0
+other_executive_word_count_presentation,Number of words spoken by other executives during the presentation,VECTOR,9%,0,0
+other_executive_word_count_qa,Number of words spoken by other executives in Q&A,VECTOR,7%,0,0
+other_participant_ari_score_presentation,The ARI score of Other Conference Call Participants in Presentation,VECTOR,21%,0,0
+other_participant_ari_score_qa,The ARI score of Other Conference Call Participants during the Q&A section,VECTOR,29%,0,0
+other_participant_attendance_count,Number of other conference call participants attending the conference,VECTOR,76%,0,0
+other_participant_cli_score_presentation,The CLI score of Other Conference Call Participants in Presentation,VECTOR,21%,0,0
+other_participant_cli_score_qa,The CLI (Comment Leniency) score of Other Conference Call Participants during the Q&A section,VECTOR,29%,2,2
+other_participant_dcs_score_presentation,The DCS score of Other Conference Call Participants in Presentation,VECTOR,21%,0,0
+other_participant_dcs_score_qa,The DCS score of Other Conference Call Participants during the Q&A section,VECTOR,29%,2,2
+other_participant_fkgl_score_presentation,The FKGL score of Other Conference Call Participants in Presentation,VECTOR,21%,0,0
+other_participant_fkgl_score_qa,The FKGL score of Other Conference Call Participants during the Q&A section,VECTOR,29%,0,0
+other_participant_forward_looking_sentiment_presentation,Forward-looking sentiment score for Other Conference Call Participants during the Presentation section,VECTOR,13%,0,0
+other_participant_forward_looking_sentiment_qa,Forward-looking sentiment score for other conference call participants during the Q&A section,VECTOR,11%,0,0
+other_participant_fre_score_presentation,The FRE score of Other Conference Call Participants in Presentation,VECTOR,21%,0,0
+other_participant_fre_score_qa,The FRE score of Other Conference Call Participants during the Q&A section,VECTOR,29%,0,0
+other_participant_gfi_score_presentation,The GFI score of Other Conference Call Participants in Presentation,VECTOR,79%,0,0
+other_participant_gfi_score_qa,The GFI score of Other Conference Call Participants during the Q&A section,VECTOR,29%,1,1
+other_participant_lix_score_presentation,The LIX score of Other Conference Call Participants in Presentation,VECTOR,79%,0,0
+other_participant_lix_score_qa,The LIX score of Other conference call participants during the Q&A section,VECTOR,29%,1,1
+other_participant_negative_sentiment_logit_presentation,Logistic-model output (logit score) for negative sentiment expressed by other conference call participants during the Presentation section,VECTOR,21%,0,0
+other_participant_negative_sentiment_logit_qa,Logit score for negative sentiment of other conference call participants during the Q&A section,VECTOR,29%,0,0
+other_participant_neutral_sentiment_logit_presentation,Logistic-model output (logit score) for neutral sentiment expressed by other conference call participants during the Presentation section,VECTOR,21%,0,0
+other_participant_neutral_sentiment_logit_qa,Neutral-sentiment logistic model score for other conference call participants during the Q&A section,VECTOR,29%,0,0
+other_participant_positive_sentiment_logit_presentation,Logistic-model output (logit score) for positive sentiment expressed by other conference call participants during the Presentation section,VECTOR,21%,0,0
+other_participant_positive_sentiment_logit_qa,Positive-sentiment logistic model score for other conference call participants during the Q&A section,VECTOR,29%,0,0
+other_participant_sentence_count_presentation,Number of sentences spoken by other participants during the presentation section,VECTOR,76%,0,0
+other_participant_sentence_count_qa,Number of sentences spoken by other participants during Q&A (NA if no Q&A),VECTOR,75%,1,1
+other_participant_sentiment_score_presentation,Sentiment score for other conference call participants during the presentation section,VECTOR,21%,1,1
+other_participant_sentiment_score_qa,Sentiment score for other conference call participants during the Q&A section,VECTOR,29%,0,0
+other_participant_smog_score_presentation,The SMOG score of Other Conference Call Participants in Presentation,VECTOR,79%,1,1
+other_participant_smog_score_qa,The SMOG score of Other Conference Call Participants during the Q&A section,VECTOR,29%,1,1
+other_participant_word_count_presentation,Number of words spoken by other participants during the presentation section,VECTOR,76%,0,0
+other_participant_word_count_qa,Number of words spoken by other participants during Q&A (NA if no Q&A),VECTOR,75%,0,0
+overall_lix_score_full_call,The LIX score in the whole conference call,VECTOR,80%,0,0
+overall_lix_score_presentation,The LIX score in the Presentation section,VECTOR,80%,0,0
+overall_lix_score_qa,The LIX score in the Q&A section,VECTOR,79%,0,0
+participant_forward_looking_sentiment_presentation,Forward-looking sentiment score for Conference Call Participants during the Presentation section,VECTOR,17%,0,0
+participant_lix_score_presentation,LIX readability score of all conference call participants’ remarks during the presentation section,VECTOR,38%,0,0
+participant_lix_score_qa,The LIX readability score for all conference call participants during the Q&A section,VECTOR,79%,2,2
+participant_sentence_count_presentation,Number of sentences spoken by conference call participants during the presentation section,VECTOR,76%,0,0
+participant_word_count_presentation,Number of words spoken by conference call participants during the presentation section,VECTOR,76%,2,2
+retail_ari_score_presentation,The ARI score of Retail investors in Presentation,VECTOR,0%,0,0
+retail_ari_score_qa,The ARI score of Retail investors during the Q&A section,VECTOR,0%,0,0
+retail_cli_score_presentation,The CLI score of Retail investors in Presentation,VECTOR,0%,0,0
+retail_cli_score_qa,The CLI (Comment Leniency) score of Retail investors during the Q&A section,VECTOR,0%,0,0
+retail_dcs_score_presentation,The DCS score of Retail investors in Presentation,VECTOR,0%,0,0
+retail_dcs_score_qa,The DCS score of Retail investors during the Q&A section,VECTOR,0%,0,0
+retail_fkgl_score_presentation,The FKGL score of Retail investors in Presentation,VECTOR,0%,0,0
+retail_fkgl_score_qa,The FKGL score of Retail investors during the Q&A section,VECTOR,0%,0,0
+retail_forward_looking_sentiment_presentation,Forward-looking sentiment score for Retail investors during the Presentation section,VECTOR,0%,0,0
+retail_forward_looking_sentiment_qa,Forward-looking sentiment score for retail investors during the Q&A section,VECTOR,0%,0,0
+retail_fre_score_presentation,The FRE score of Retail investors in Presentation,VECTOR,0%,0,0
+retail_fre_score_qa,The FRE score of Retail investors during the Q&A section,VECTOR,0%,0,0
+retail_gfi_score_presentation,The GFI score of Retail investors in Presentation,VECTOR,0%,0,0
+retail_gfi_score_qa,The GFI score of Retail investors during the Q&A section,VECTOR,0%,0,0
+retail_investor_attendance_count,Number of retail investors attending the conference,VECTOR,76%,0,0
+retail_lix_score_presentation,The LIX score of Retail investors in the Presentation section,VECTOR,0%,0,0
+retail_lix_score_qa,The LIX score of Retail investors during the Q&A section,VECTOR,0%,0,0
+retail_negative_sentiment_logit_presentation,Logistic-model output (logit score) for negative sentiment expressed by Retail investors during the Presentation section of the conference call,VECTOR,0%,0,0
+retail_negative_sentiment_logit_qa,Negative-sentiment logistic model score for retail investors during the Q&A section,VECTOR,0%,0,0
+retail_neutral_sentiment_logit_presentation,Logistic model output for neutral sentiment of retail investors during the presentation section,VECTOR,0%,0,0
+retail_neutral_sentiment_logit_qa,Logistic model output for neutral sentiment of retail investors during the Q&A section,VECTOR,0%,0,0
+retail_positive_sentiment_logit_presentation,Logistic-model output (logit score) for positive sentiment expressed by Retail investors during the Presentation section of the conference call,VECTOR,0%,0,0
+retail_positive_sentiment_logit_qa,Logistic model output for positive sentiment of retail investors during the Q&A section,VECTOR,0%,0,0
+retail_sentence_count_presentation,Number of sentences spoken by retail investors during the presentation section,VECTOR,76%,0,0
+retail_sentence_count_qa,Number of sentences spoken by retail investors during Q&A,VECTOR,75%,0,0
+retail_sentiment_score_presentation,Classical sentiment score for Retail investors during the Presentation section of the conference call,VECTOR,0%,1,1
+retail_sentiment_score_qa,Sentiment score for retail investors during the Q&A section,VECTOR,0%,0,0
+retail_smog_score_presentation,The SMOG score of Retail investors in Presentation,VECTOR,0%,0,0
+retail_smog_score_qa,The SMOG score of Retail investors during the Q&A section,VECTOR,0%,0,0
+retail_word_count_presentation,Number of words spoken by retail investors during the presentation section,VECTOR,76%,0,0
+retail_word_count_qa,Number of words spoken by Retail investors during the Q&A segment,VECTOR,75%,0,0
+sentence_count_buyside_questions_qa,Number of sentences in questions asked by Buy Side investors during the Q&A segment (NA if no questions),VECTOR,75%,0,0
+sentence_count_other_participant_questions_qa,Number of sentences in questions asked by other participants during the Q&A segment (NA if no questions),VECTOR,75%,0,0
+sentence_count_retail_investor_questions_qa,Number of sentences in questions asked by Retail investors during the Q&A segment (NA if no questions),VECTOR,75%,1,1

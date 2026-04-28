@@ -1,0 +1,489 @@
+Field,Description,Type,Coverage,Users,Alphas
+anl82_delta_ebtq_q1_mada,Mean of absolute deviation of scaled actual values for Q1 ebitda,MATRIX,56%,16,20
+anl82_delta_ebtq_q1_madp,Mean of absolute deviation of predicted values for Q1 ebitda,MATRIX,100%,26,43
+anl82_delta_ebtq_q1_mae,Mean of absolute error of the model of a particular stock for Q1 ebitda,MATRIX,58%,2,14
+anl82_delta_ebtq_q1_predict,Predicted value of Q1 ebitda,MATRIX,100%,38,76
+anl82_delta_ebtq_q2_mada,Mean of absolute deviation of scaled actual values for Q2 ebitda,MATRIX,56%,2,2
+anl82_delta_ebtq_q2_madp,Mean of absolute deviation of predicted values for Q2 ebitda,MATRIX,100%,10,14
+anl82_delta_ebtq_q2_mae,Mean of absolute error of the model of a particular stock for Q2 ebitda,MATRIX,58%,2,3
+anl82_delta_ebtq_q2_predict,Predicted value of Q2 ebitda,MATRIX,100%,8,16
+anl82_delta_ebtq_q3_mada,Mean of absolute deviation of scaled actual values for Q3 ebitda,MATRIX,56%,2,3
+anl82_delta_ebtq_q3_madp,Mean of absolute deviation of predicted values for Q3 ebitda,MATRIX,100%,5,5
+anl82_delta_ebtq_q3_mae,Mean of absolute error of the model of a particular stock for Q3 ebitda,MATRIX,58%,9,11
+anl82_delta_ebtq_q3_predict,Predicted value of Q3 ebitda,MATRIX,100%,9,27
+anl82_delta_ebtq_q4_mada,Mean of absolute deviation of scaled actual values for Q4 ebitda,MATRIX,56%,3,6
+anl82_delta_ebtq_q4_madp,Mean of absolute deviation of predicted values for Q4 ebitda,MATRIX,100%,7,11
+anl82_delta_ebtq_q4_mae,Mean of absolute error of the model of a particular stock for Q4 ebitda,MATRIX,58%,7,39
+anl82_delta_ebtq_q4_predict,Predicted value of Q4 ebitda,MATRIX,100%,9,12
+anl82_delta_ebty_y1_mada,Mean of absolute deviation of scaled actual values for annual ebitda (delay 0),MATRIX,49%,5,6
+anl82_delta_ebty_y1_madp,Mean absolute deviation of the model’s predicted values for next fiscal year (Y1) annual EBITDA at delay 0,MATRIX,100%,8,9
+anl82_delta_ebty_y1_mae,Mean absolute error of the model’s predictions for next fiscal year (Y1) annual EBITDA at delay 0,MATRIX,51%,1,2
+anl82_delta_ebty_y1_predict,Predicted value for next fiscal year (Y1) annual EBITDA at delay 0,MATRIX,100%,25,38
+anl82_delta_epsq_q1_mada,Mean of absolute deviation of scaled actual values for Q1 eps,MATRIX,72%,6,7
+anl82_delta_epsq_q1_madp,Mean of absolute deviation of predicted values for Q1 eps,MATRIX,100%,3,3
+anl82_delta_epsq_q1_mae,Mean of absolute error of the model of a particular stock for Q1 eps,MATRIX,74%,3,4
+anl82_delta_epsq_q1_predict,Predicted value of Q1 EPS,MATRIX,100%,31,45
+anl82_delta_epsq_q2_mada,Mean of absolute deviation of scaled actual values for Q2 eps,MATRIX,72%,5,9
+anl82_delta_epsq_q2_madp,Mean of absolute deviation of predicted values for Q2 eps,MATRIX,100%,7,7
+anl82_delta_epsq_q2_mae,Mean of absolute error of the model of a particular stock for Q2 eps,MATRIX,74%,6,7
+anl82_delta_epsq_q2_predict,Predicted value of Q2 EPS,MATRIX,100%,13,19
+anl82_delta_epsq_q3_mada,Mean of absolute deviation of scaled actual values for Q3 eps,MATRIX,72%,4,11
+anl82_delta_epsq_q3_madp,Mean of absolute deviation of predicted values for Q3 eps,MATRIX,100%,3,4
+anl82_delta_epsq_q3_mae,Mean of absolute error of the model of a particular stock for Q3 eps,MATRIX,74%,1,2
+anl82_delta_epsq_q3_predict,Predicted value of Q3 EPS,MATRIX,100%,2,2
+anl82_delta_epsq_q4_mada,Mean of absolute deviation of scaled actual values for Q4 eps,MATRIX,72%,2,3
+anl82_delta_epsq_q4_madp,Mean of absolute deviation of predicted values for Q4 eps,MATRIX,100%,6,6
+anl82_delta_epsq_q4_mae,Mean of absolute error of the model of a particular stock for Q4 eps,MATRIX,74%,2,3
+anl82_delta_epsq_q4_predict,Predicted value of Q4 EPS,MATRIX,100%,9,26
+anl82_delta_epsy_y1_mada,Mean absolute deviation of scaled actual annual EPS values,MATRIX,52%,2,3
+anl82_delta_epsy_y1_madp,Mean absolute deviation of predicted annual EPS values,MATRIX,100%,3,14
+anl82_delta_epsy_y1_mae,Mean absolute error of the model for annual EPS for the specific stock,MATRIX,56%,4,7
+anl82_delta_epsy_y1_predict,"Predicted value of annual EPS (point-in-time, D1-lagged)",MATRIX,100%,10,12
+anl82_delta_gpsq_q1_mada,Mean of absolute deviation of scaled actual values for Q1 eps(gaap) (delay 0),MATRIX,65%,4,5
+anl82_delta_gpsq_q1_madp,Mean of absolute deviation of predicted values for Q1 eps(gaap) (delay 0),MATRIX,100%,4,16
+anl82_delta_gpsq_q1_mae,Mean absolute error of the model for Q1 EPS (GAAP) at delay 0 for this stock,MATRIX,67%,1,2
+anl82_delta_gpsq_q1_predict,Predicted value of Q1 EPS (GAAP) at delay 0 for this stock,MATRIX,100%,23,35
+anl82_delta_gpsq_q2_mada,Mean of absolute deviation of scaled actual values for Q2 eps(gaap) (delay 0),MATRIX,65%,1,2
+anl82_delta_gpsq_q2_madp,Mean of absolute deviation of predicted values for Q2 eps(gaap) (delay 0),MATRIX,100%,2,4
+anl82_delta_gpsq_q2_mae,Mean absolute error of the model for Q2 EPS (GAAP) at delay 0 for this stock,MATRIX,67%,5,8
+anl82_delta_gpsq_q2_predict,Predicted value of Q2 EPS (GAAP) at delay 0 for this stock,MATRIX,100%,6,16
+anl82_delta_gpsq_q3_mada,Mean of absolute deviation of scaled actual values for Q3 eps(gaap) (delay 0),MATRIX,65%,2,3
+anl82_delta_gpsq_q3_madp,Mean of absolute deviation of predicted values for Q3 eps(gaap) (delay 0),MATRIX,100%,1,1
+anl82_delta_gpsq_q3_mae,Mean absolute error of the model for Q3 EPS (GAAP) at delay 0 for this stock,MATRIX,67%,0,0
+anl82_delta_gpsq_q3_predict,Predicted value of Q3 EPS (GAAP) at delay 0 for this stock,MATRIX,100%,4,6
+anl82_delta_gpsq_q4_mada,Mean of absolute deviation of scaled actual values for Q4 eps(gaap) (delay 0),MATRIX,65%,3,4
+anl82_delta_gpsq_q4_madp,Mean of absolute deviation of predicted values for Q4 eps(gaap) (delay 0),MATRIX,100%,3,3
+anl82_delta_gpsq_q4_mae,Mean absolute error of the model for Q4 EPS (GAAP) at delay 0 for this stock,MATRIX,67%,1,2
+anl82_delta_gpsq_q4_predict,Predicted value of Q4 EPS (GAAP) at delay 0 for this stock,MATRIX,100%,2,3
+anl82_delta_gpsy_y1_mada,Mean absolute deviation of scaled actual values for annual EPS (GAAP) at delay 0,MATRIX,48%,2,3
+anl82_delta_gpsy_y1_madp,Mean absolute deviation of predicted values for annual EPS (GAAP) at delay 0,MATRIX,100%,7,10
+anl82_delta_gpsy_y1_mae,Mean absolute error of the model’s predictions for annual EPS (GAAP) at delay 0 for the given stock,MATRIX,52%,2,3
+anl82_delta_gpsy_y1_predict,Predicted value of annual EPS (GAAP) at delay 0 for the given stock,MATRIX,100%,11,14
+anl82_delta_netq_q1_mada,Mean of absolute deviation of scaled actual values for Q1 net income (delay 0),MATRIX,71%,6,9
+anl82_delta_netq_q1_madp,Mean of absolute deviation of predicted values for Q1 net income (delay 0),MATRIX,100%,6,8
+anl82_delta_netq_q1_mae,Mean of absolute error of the model of a particular stock for Q1 net income (delay 0),MATRIX,73%,8,9
+anl82_delta_netq_q1_predict,Predicted value of Q1 net income (delay 0),MATRIX,100%,4,5
+anl82_delta_netq_q2_mada,Mean of absolute deviation of scaled actual values for Q2 net income (delay 0),MATRIX,71%,2,3
+anl82_delta_netq_q2_madp,Mean of absolute deviation of predicted values for Q2 net income (delay 0),MATRIX,100%,3,3
+anl82_delta_netq_q2_mae,Mean of absolute error of the model of a particular stock for Q2 net income (delay 0),MATRIX,73%,3,4
+anl82_delta_netq_q2_predict,Predicted value of Q2 net income (delay 0),MATRIX,100%,5,5
+anl82_delta_netq_q3_mada,Mean of absolute deviation of scaled actual values for Q3 net income (delay 0),MATRIX,71%,4,5
+anl82_delta_netq_q3_madp,Mean of absolute deviation of predicted values for Q3 net income (delay 0),MATRIX,100%,2,2
+anl82_delta_netq_q3_mae,Mean of absolute error of the model of a particular stock for Q3 net income (delay 0),MATRIX,73%,1,2
+anl82_delta_netq_q3_predict,Predicted value of Q3 net income (delay 0),MATRIX,100%,4,6
+anl82_delta_netq_q4_mada,Mean of absolute deviation of scaled actual values for Q4 net income (delay 0),MATRIX,71%,6,7
+anl82_delta_netq_q4_madp,Mean of absolute deviation of predicted values for Q4 net income (delay 0),MATRIX,100%,2,2
+anl82_delta_netq_q4_mae,Mean of absolute error of the model of a particular stock for Q4 net income (delay 0),MATRIX,73%,3,5
+anl82_delta_netq_q4_predict,Predicted value of Q4 net income (delay 0),MATRIX,100%,1,2
+anl82_delta_nety_y1_mada,Mean of absolute deviation of scaled actual values for annual net income (delay 0),MATRIX,58%,2,3
+anl82_delta_nety_y1_madp,Mean of absolute deviation of predicted values for annual net income (delay 0),MATRIX,100%,4,4
+anl82_delta_nety_y1_mae,Mean absolute error of the model for annual net income prediction (delay 0),MATRIX,61%,2,3
+anl82_delta_nety_y1_predict,Predicted value of annual net income (delay 0),MATRIX,100%,3,3
+anl82_delta_oprq_q1_madp,Mean of absolute deviation of predicted values for Q1 operating income,MATRIX,100%,5,10
+anl82_delta_oprq_q1_predict,Predicted value of Q1 operating profit,MATRIX,100%,6,10
+anl82_delta_oprq_q2_madp,Mean of absolute deviation of predicted values for Q2 operating income,MATRIX,100%,10,13
+anl82_delta_oprq_q2_predict,Predicted value of Q2 operating profit,MATRIX,100%,3,3
+anl82_delta_oprq_q3_madp,Mean of absolute deviation of predicted values for Q3 operating income,MATRIX,100%,4,6
+anl82_delta_oprq_q3_predict,Predicted value of Q3 operating profit,MATRIX,100%,10,18
+anl82_delta_oprq_q4_madp,Mean of absolute deviation of predicted values for Q4 operating income,MATRIX,100%,2,2
+anl82_delta_oprq_q4_predict,Predicted value of Q4 operating profit,MATRIX,100%,3,3
+anl82_delta_opry_y1_madp,Mean absolute deviation of predicted values for annual operating income (delay 0),MATRIX,100%,4,8
+anl82_delta_opry_y1_predict,Predicted value of annual operating income (delay 0),MATRIX,100%,6,6
+anl82_delta_preq_q1_mada,Mean of absolute deviation of scaled actual values for Q1 pre-tax profit (delay 0),MATRIX,67%,3,4
+anl82_delta_preq_q1_madp,Mean of absolute deviation of predicted values for Q1 pre-tax profit (delay 0),MATRIX,100%,5,7
+anl82_delta_preq_q1_mae,Mean of absolute error of the model of a particular stock for Q1 pre-tax profit (delay 0),MATRIX,69%,3,3
+anl82_delta_preq_q1_predict,Predicted value of Q1 pre-tax profit (delay 0),MATRIX,100%,6,6
+anl82_delta_preq_q2_mada,Mean of absolute deviation of scaled actual values for Q2 pre-tax profit (delay 0),MATRIX,66%,2,3
+anl82_delta_preq_q2_madp,Mean of absolute deviation of predicted values for Q2 pre-tax profit (delay 0),MATRIX,100%,2,2
+anl82_delta_preq_q2_mae,Mean of absolute error of the model of a particular stock for Q2 pre-tax profit (delay 0),MATRIX,69%,3,8
+anl82_delta_preq_q2_predict,Predicted value of Q2 pre-tax profit (delay 0),MATRIX,100%,1,1
+anl82_delta_preq_q3_mada,Mean of absolute deviation of scaled actual values for Q3 pre-tax profit (delay 0),MATRIX,66%,4,9
+anl82_delta_preq_q3_madp,Mean of absolute deviation of predicted values for Q3 pre-tax profit (delay 0),MATRIX,100%,10,18
+anl82_delta_preq_q3_mae,Mean of absolute error of the model of a particular stock for Q3 pre-tax profit (delay 0),MATRIX,69%,0,0
+anl82_delta_preq_q3_predict,Predicted value of Q3 pre-tax profit (delay 0),MATRIX,100%,1,3
+anl82_delta_preq_q4_mada,Mean of absolute deviation of scaled actual values for Q4 pre-tax profit (delay 0),MATRIX,66%,5,6
+anl82_delta_preq_q4_madp,Mean of absolute deviation of predicted values for Q4 pre-tax profit (delay 0),MATRIX,100%,18,25
+anl82_delta_preq_q4_mae,Mean of absolute error of the model of a particular stock for Q4 pre-tax profit (delay 0),MATRIX,69%,6,7
+anl82_delta_preq_q4_predict,Predicted value of Q4 pre-tax profit (delay 0),MATRIX,100%,1,1
+anl82_delta_prey_y1_mada,Mean absolute deviation of scaled actual annual pre-tax profit values at delay 0,MATRIX,54%,2,3
+anl82_delta_prey_y1_madp,Mean absolute deviation of predicted values for annual pre-tax profit at delay 0,MATRIX,100%,6,8
+anl82_delta_prey_y1_mae,Mean absolute error of the model for annual pre-tax profit at delay 0,MATRIX,57%,1,2
+anl82_delta_prey_y1_predict,Predicted value of annual pre-tax profit at delay 0,MATRIX,100%,3,4
+anl82_delta_salq_q1_mada,Mean absolute deviation of scaled actual values for Q1 sales at delay 0,MATRIX,73%,2,3
+anl82_delta_salq_q1_madp,Mean absolute deviation of predicted values for Q1 sales at delay 0,MATRIX,100%,6,10
+anl82_delta_salq_q1_mae,Mean absolute error of the model for Q1 sales at delay 0,MATRIX,75%,5,6
+anl82_delta_salq_q1_predict,Predicted value of Q1 sales at delay 0,MATRIX,100%,7,9
+anl82_delta_salq_q2_mada,Mean absolute deviation of scaled actual values for Q2 sales at delay 0,MATRIX,73%,3,4
+anl82_delta_salq_q2_madp,Mean absolute deviation of predicted values for Q2 sales at delay 0,MATRIX,100%,6,6
+anl82_delta_salq_q2_mae,Mean absolute error of the model for Q2 sales at delay 0,MATRIX,75%,3,4
+anl82_delta_salq_q2_predict,Predicted value of Q2 sales at delay 0,MATRIX,100%,5,8
+anl82_delta_salq_q3_mada,Mean absolute deviation of scaled actual values for Q3 sales at delay 0,MATRIX,73%,4,5
+anl82_delta_salq_q3_madp,Mean absolute deviation of predicted values for Q3 sales at delay 0,MATRIX,100%,7,8
+anl82_delta_salq_q3_mae,Mean absolute error of the model for Q3 sales at delay 0,MATRIX,75%,1,2
+anl82_delta_salq_q3_predict,Predicted value of Q3 sales at delay 0,MATRIX,100%,2,7
+anl82_delta_salq_q4_mada,Mean absolute deviation of scaled actual values for Q4 sales at delay 0,MATRIX,73%,2,3
+anl82_delta_salq_q4_madp,Mean absolute deviation of predicted values for Q4 sales at delay 0,MATRIX,100%,6,6
+anl82_delta_salq_q4_mae,Mean absolute error of the model for Q4 sales at delay 0,MATRIX,75%,3,5
+anl82_delta_salq_q4_predict,Predicted value of Q4 sales at delay 0,MATRIX,100%,4,5
+anl82_delta_saly_y1_mada,Mean absolute deviation of scaled actual values for annual sales,MATRIX,60%,1,2
+anl82_delta_saly_y1_madp,Mean absolute deviation of predicted values for annual sales,MATRIX,100%,2,2
+anl82_delta_saly_y1_mae,Mean absolute error of the annual sales prediction for the stock,MATRIX,63%,2,3
+anl82_delta_saly_y1_predict,Predicted value of annual sales,MATRIX,100%,4,6
+anl82_ebtq_deltaprofitability_profitability1,Profitability measure type 1 based on delta of Q EBITDA,MATRIX,100%,20,32
+anl82_ebtq_deltaprofitability_profitability10,Profitability measure type 10 based on delta of Q EBITDA,MATRIX,63%,7,7
+anl82_ebtq_deltaprofitability_profitability11,Profitability measure type 11 based on delta of Q EBITDA,MATRIX,63%,5,5
+anl82_ebtq_deltaprofitability_profitability12,Profitability Measure Type 12 Based on Delta of Q EBITDA,MATRIX,82%,5,8
+anl82_ebtq_deltaprofitability_profitability2,Profitability measure type 2 based on delta of Q EBITDA,MATRIX,100%,52,165
+anl82_ebtq_deltaprofitability_profitability3,Profitability measure type 3 based on delta of Q EBITDA,MATRIX,99%,117,235
+anl82_ebtq_deltaprofitability_profitability4,Profitability measure type 4 based on delta of Q EBITDA,MATRIX,99%,9,18
+anl82_ebtq_deltaprofitability_profitability5,Profitability measure type 5 based on delta of Q EBITDA,MATRIX,96%,12,15
+anl82_ebtq_deltaprofitability_profitability6,Profitability measure type 6 based on delta of Q EBITDA,MATRIX,85%,11,14
+anl82_ebtq_deltaprofitability_profitability7,Profitability measure type 7 based on delta of Q EBITDA,MATRIX,79%,5,9
+anl82_ebtq_deltaprofitability_profitability8,Profitability measure type 8 based on delta of Q EBITDA,MATRIX,79%,7,8
+anl82_ebtq_deltaprofitability_profitability9,Profitability measure type 9 based on delta of Q EBITDA,MATRIX,87%,5,11
+anl82_ebtq_profitability_profitability1,Profitability measure type 1 based on value of Q EBITDA,MATRIX,60%,0,0
+anl82_ebtq_profitability_profitability10,Profitability measure type 10 based on value of Q EBITDA,MATRIX,43%,1,1
+anl82_ebtq_profitability_profitability11,Profitability measure type 11 based on value of Q EBITDA,MATRIX,42%,2,2
+anl82_ebtq_profitability_profitability12,Profitability measure type 12 based on value of Q EBITDA,MATRIX,55%,2,2
+anl82_ebtq_profitability_profitability2,Profitability measure type 2 based on value of Q EBITDA,MATRIX,60%,4,4
+anl82_ebtq_profitability_profitability3,Profitability measure type 3 based on value of Q EBITDA,MATRIX,60%,20,25
+anl82_ebtq_profitability_profitability4,Profitability measure type 4 based on value of Q EBITDA,MATRIX,60%,0,0
+anl82_ebtq_profitability_profitability5,Profitability measure type 5 based on value of Q EBITDA,MATRIX,58%,1,2
+anl82_ebtq_profitability_profitability6,Profitability measure type 6 based on value of Q EBITDA,MATRIX,54%,2,2
+anl82_ebtq_profitability_profitability7,Profitability measure type 7 based on value of Q EBITDA,MATRIX,52%,2,2
+anl82_ebtq_profitability_profitability8,Profitability measure type 8 based on value of Q EBITDA,MATRIX,52%,0,0
+anl82_ebtq_profitability_profitability9,Profitability measure type 9 based on value of Q EBITDA,MATRIX,57%,1,1
+anl82_ebtq_q1_mada,Mean absolute deviation of scaled actual values for Q1 EBITDA (delay 0),MATRIX,46%,4,6
+anl82_ebtq_q1_madp,Mean absolute deviation of predicted values for Q1 EBITDA (delay 0),MATRIX,58%,1,1
+anl82_ebtq_q1_mae,Mean absolute error of the model for the stock for Q1 EBITDA (delay 0),MATRIX,47%,0,0
+anl82_ebtq_q1_predict,Predicted value for Q1 EBITDA (delay 0),MATRIX,58%,2,2
+anl82_ebtq_q2_mada,Mean absolute deviation of scaled actual values for Q2 EBITDA (delay 0),MATRIX,46%,1,2
+anl82_ebtq_q2_madp,Mean absolute deviation of predicted values for Q2 EBITDA (delay 0),MATRIX,58%,0,0
+anl82_ebtq_q2_mae,Mean absolute error of the model for the stock for Q2 EBITDA (delay 0),MATRIX,47%,0,0
+anl82_ebtq_q2_predict,Predicted value for Q2 EBITDA (delay 0),MATRIX,58%,1,1
+anl82_ebtq_q3_mada,Mean absolute deviation of scaled actual values for Q3 EBITDA (delay 0),MATRIX,46%,2,3
+anl82_ebtq_q3_madp,Mean absolute deviation of predicted values for Q3 EBITDA (delay 0),MATRIX,58%,2,2
+anl82_ebtq_q3_mae,Mean absolute error of the model for the stock for Q3 EBITDA (delay 0),MATRIX,47%,3,4
+anl82_ebtq_q3_predict,Predicted value for Q3 EBITDA (delay 0),MATRIX,58%,1,3
+anl82_ebtq_q4_mada,Mean absolute deviation of scaled actual values for Q4 EBITDA (delay 0),MATRIX,46%,1,2
+anl82_ebtq_q4_madp,Mean absolute deviation of predicted values for Q4 EBITDA (delay 0),MATRIX,58%,0,0
+anl82_ebtq_q4_mae,Mean absolute error of the model for the stock for Q4 EBITDA (delay 0),MATRIX,47%,1,2
+anl82_ebtq_q4_predict,Predicted value for Q4 EBITDA (delay 0),MATRIX,58%,0,0
+anl82_ebty_deltaprofitability_profitability1,Profitability measure type 1 based on delta of annual EBITDA,MATRIX,100%,9,17
+anl82_ebty_deltaprofitability_profitability10,Profitability measure type 10 based on delta of annual EBITDA,MATRIX,61%,0,0
+anl82_ebty_deltaprofitability_profitability11,Profitability measure type 11 based on delta of annual EBITDA,MATRIX,62%,0,0
+anl82_ebty_deltaprofitability_profitability12,Profitability measure type 12 based on delta of annual EBITDA,MATRIX,81%,1,2
+anl82_ebty_deltaprofitability_profitability2,Profitability measure type 2 based on delta of annual EBITDA,MATRIX,100%,18,44
+anl82_ebty_deltaprofitability_profitability3,Profitability Measure Type 3 Based on Delta of Annual EBITDA,MATRIX,98%,8,10
+anl82_ebty_deltaprofitability_profitability4,Profitability measure type 4 based on delta of annual EBITDA,MATRIX,98%,3,3
+anl82_ebty_deltaprofitability_profitability5,Profitability Measure Type 5 Based on Delta of Annual EBITDA,MATRIX,94%,2,2
+anl82_ebty_deltaprofitability_profitability6,Profitability measure type 6 based on delta of annual EBITDA,MATRIX,84%,1,1
+anl82_ebty_deltaprofitability_profitability7,Profitability measure type 7 based on delta of annual EBITDA,MATRIX,78%,1,1
+anl82_ebty_deltaprofitability_profitability8,Profitability measure type 8 based on delta of annual EBITDA,MATRIX,78%,3,3
+anl82_ebty_deltaprofitability_profitability9,Profitability measure type 9 based on delta of annual EBITDA,MATRIX,84%,3,3
+anl82_ebty_profitability_profitability1,Profitability measure type 1 based on value of annual EBITDA,MATRIX,66%,0,0
+anl82_ebty_profitability_profitability10,Profitability measure type 10 based on value of annual EBITDA,MATRIX,46%,0,0
+anl82_ebty_profitability_profitability11,Profitability measure type 11 based on value of annual EBITDA,MATRIX,47%,0,0
+anl82_ebty_profitability_profitability12,Profitability measure type 12 based on value of annual EBITDA,MATRIX,59%,0,0
+anl82_ebty_profitability_profitability2,Profitability measure type 2 based on value of annual EBITDA,MATRIX,66%,6,6
+anl82_ebty_profitability_profitability3,Profitability measure type 3 based on value of annual EBITDA,MATRIX,66%,22,23
+anl82_ebty_profitability_profitability4,Profitability measure type 4 based on value of annual EBITDA,MATRIX,66%,1,1
+anl82_ebty_profitability_profitability5,Profitability measure type 5 based on value of annual EBITDA,MATRIX,64%,0,0
+anl82_ebty_profitability_profitability6,Profitability measure type 6 based on value of annual EBITDA,MATRIX,58%,0,0
+anl82_ebty_profitability_profitability7,Profitability measure type 7 based on value of annual EBITDA,MATRIX,56%,0,0
+anl82_ebty_profitability_profitability8,Profitability measure type 8 based on value of annual EBITDA,MATRIX,56%,0,0
+anl82_ebty_profitability_profitability9,Profitability measure type 9 based on value of annual EBITDA,MATRIX,60%,2,2
+anl82_ebty_y1_mada,Mean absolute deviation of scaled actual values for annual EBITDA (delay 0),MATRIX,40%,4,29
+anl82_ebty_y1_madp,Mean absolute deviation of predicted values for annual EBITDA (delay 0),MATRIX,64%,1,1
+anl82_ebty_y1_mae,Mean absolute error of the model for a given stock’s annual EBITDA (delay 0),MATRIX,42%,1,2
+anl82_ebty_y1_predict,Predicted value of annual EBITDA (delay 0),MATRIX,64%,0,0
+anl82_epsq_q1_mada,Mean absolute deviation of scaled actual EPS values for Q1,MATRIX,58%,3,16
+anl82_epsq_q1_madp,Mean absolute deviation of predicted EPS values for Q1,MATRIX,69%,2,6
+anl82_epsq_q1_mae,Mean absolute error of the model for the stock for Q1 EPS,MATRIX,59%,1,2
+anl82_epsq_q1_predict,Predicted value of Q1 EPS,MATRIX,69%,4,4
+anl82_epsq_q2_mada,Mean absolute deviation of scaled actual EPS values for Q2,MATRIX,58%,2,3
+anl82_epsq_q2_madp,Mean absolute deviation of predicted EPS values for Q2,MATRIX,69%,1,1
+anl82_epsq_q2_mae,Mean absolute error of the model for the stock for Q2 EPS,MATRIX,59%,1,2
+anl82_epsq_q2_predict,Predicted value of Q2 EPS,MATRIX,69%,3,3
+anl82_epsq_q3_mada,Mean absolute deviation of scaled actual EPS values for Q3,MATRIX,58%,2,3
+anl82_epsq_q3_madp,Mean absolute deviation of predicted EPS values for Q3,MATRIX,69%,1,1
+anl82_epsq_q3_mae,Mean absolute error of the model for the stock for Q3 EPS,MATRIX,59%,1,2
+anl82_epsq_q3_predict,Predicted value of Q3 EPS,MATRIX,69%,3,5
+anl82_epsq_q4_mada,Mean absolute deviation of scaled actual EPS values for Q4,MATRIX,58%,1,2
+anl82_epsq_q4_madp,Mean absolute deviation of predicted EPS values for Q4,MATRIX,69%,0,0
+anl82_epsq_q4_mae,Mean absolute error of the model for the stock for Q4 EPS,MATRIX,59%,1,2
+anl82_epsq_q4_predict,Predicted value of Q4 EPS,MATRIX,69%,4,6
+anl82_epsy_y1_mada,Mean absolute deviation of scaled actual values for annual EPS at delay 0,MATRIX,42%,1,2
+anl82_epsy_y1_madp,Mean absolute deviation of predicted values for annual EPS at delay 0,MATRIX,72%,0,0
+anl82_epsy_y1_mae,Mean absolute error of the model for annual EPS at delay 0 for the specific stock,MATRIX,44%,2,3
+anl82_epsy_y1_predict,Predicted value of annual EPS for the stock at delay 0,MATRIX,72%,0,0
+anl82_gpsq_q1_mada,Mean of absolute deviation of scaled actual values for Q1 eps(gaap),MATRIX,52%,1,2
+anl82_gpsq_q1_madp,Mean of absolute deviation of predicted values for Q1 eps(gaap),MATRIX,68%,1,1
+anl82_gpsq_q1_mae,Mean of absolute error of the model of a particular stock for Q1 eps(gaap),MATRIX,54%,2,3
+anl82_gpsq_q1_predict,"Predicted value of Q1 GAAP EPS (embargoed, D1-lagged predictive consensus) for the stock",MATRIX,68%,2,2
+anl82_gpsq_q2_mada,Mean of absolute deviation of scaled actual values for Q2 eps(gaap),MATRIX,52%,1,2
+anl82_gpsq_q2_madp,Mean of absolute deviation of predicted values for Q2 eps(gaap),MATRIX,68%,1,1
+anl82_gpsq_q2_mae,Mean of absolute error of the model of a particular stock for Q2 eps(gaap),MATRIX,54%,3,4
+anl82_gpsq_q2_predict,"Predicted value of Q2 GAAP EPS (embargoed, D1-lagged predictive consensus) for the stock",MATRIX,68%,0,0
+anl82_gpsq_q3_mada,Mean of absolute deviation of scaled actual values for Q3 eps(gaap),MATRIX,52%,1,2
+anl82_gpsq_q3_madp,Mean of absolute deviation of predicted values for Q3 eps(gaap),MATRIX,68%,0,0
+anl82_gpsq_q3_mae,Mean of absolute error of the model of a particular stock for Q3 eps(gaap),MATRIX,54%,2,3
+anl82_gpsq_q3_predict,"Predicted value of Q3 GAAP EPS (embargoed, D1-lagged predictive consensus) for the stock",MATRIX,68%,1,1
+anl82_gpsq_q4_mada,Mean of absolute deviation of scaled actual values for Q4 eps(gaap),MATRIX,52%,2,3
+anl82_gpsq_q4_madp,Mean of absolute deviation of predicted values for Q4 eps(gaap),MATRIX,68%,1,1
+anl82_gpsq_q4_mae,Mean of absolute error of the model of a particular stock for Q4 eps(gaap),MATRIX,54%,1,2
+anl82_gpsq_q4_predict,"Predicted value of Q4 GAAP EPS (embargoed, D1-lagged predictive consensus) for the stock",MATRIX,68%,0,0
+anl82_gpsy_y1_mada,Mean absolute deviation of scaled actual values for annual GAAP EPS at delay 0,MATRIX,39%,1,2
+anl82_gpsy_y1_madp,Mean absolute deviation of predicted values for annual GAAP EPS at delay 0,MATRIX,71%,0,0
+anl82_gpsy_y1_mae,Mean absolute error of the model for annual GAAP EPS at delay 0,MATRIX,41%,1,2
+anl82_gpsy_y1_predict,Predicted value of annual GAAP EPS at delay 0,MATRIX,71%,6,27
+anl82_netq_deltaprofitability_profitability1,Profitability measure type 1 based on delta of Q net income,MATRIX,100%,27,57
+anl82_netq_deltaprofitability_profitability10,Profitability measure type 10 based on delta of Q net income,MATRIX,63%,4,6
+anl82_netq_deltaprofitability_profitability11,Profitability measure type 11 based on delta of Q net income,MATRIX,63%,11,12
+anl82_netq_deltaprofitability_profitability12,Profitability measure type 12 based on delta of Q net income,MATRIX,82%,3,5
+anl82_netq_deltaprofitability_profitability2,Profitability measure type 2 based on delta of Q net income,MATRIX,100%,150,386
+anl82_netq_deltaprofitability_profitability3,Profitability measure type 3 based on delta of Q net income,MATRIX,99%,50,108
+anl82_netq_deltaprofitability_profitability4,Profitability measure type 4 based on delta of Q net income,MATRIX,99%,8,17
+anl82_netq_deltaprofitability_profitability5,Profitability measure type 5 based on delta of Q net income,MATRIX,96%,14,18
+anl82_netq_deltaprofitability_profitability6,Profitability measure type 6 based on delta of Q net income,MATRIX,85%,1,2
+anl82_netq_deltaprofitability_profitability7,Profitability measure type 7 based on delta of Q net income,MATRIX,80%,13,15
+anl82_netq_deltaprofitability_profitability8,Profitability measure type 8 based on delta of Q net income,MATRIX,79%,13,16
+anl82_netq_deltaprofitability_profitability9,Profitability measure type 9 based on delta of Q net income,MATRIX,87%,4,6
+anl82_netq_profitability_profitability1,Profitability measure type 1 based on value of Q net income,MATRIX,69%,0,0
+anl82_netq_profitability_profitability10,Profitability measure type 10 based on value of Q net income,MATRIX,45%,0,0
+anl82_netq_profitability_profitability11,Profitability measure type 11 based on value of Q net income,MATRIX,45%,0,0
+anl82_netq_profitability_profitability12,Profitability measure type 12 based on value of Q net income,MATRIX,59%,0,0
+anl82_netq_profitability_profitability2,Profitability measure type 2 based on value of Q net income,MATRIX,69%,11,19
+anl82_netq_profitability_profitability3,Profitability measure type 3 based on value of Q net income,MATRIX,69%,1,1
+anl82_netq_profitability_profitability4,Profitability measure type 4 based on value of Q net income,MATRIX,69%,0,0
+anl82_netq_profitability_profitability5,Profitability measure type 5 based on value of Q net income,MATRIX,66%,0,0
+anl82_netq_profitability_profitability6,Profitability measure type 6 based on value of Q net income,MATRIX,61%,0,0
+anl82_netq_profitability_profitability7,Profitability measure type 7 based on value of Q net income,MATRIX,55%,0,0
+anl82_netq_profitability_profitability8,Profitability measure type 8 based on value of Q net income,MATRIX,55%,3,3
+anl82_netq_profitability_profitability9,Profitability measure type 9 based on value of Q net income,MATRIX,62%,0,0
+anl82_netq_q1_mada,Mean of absolute deviation of scaled actual values for Q1 net income (delay 0),MATRIX,58%,1,2
+anl82_netq_q1_madp,Mean of absolute deviation of predicted values for Q1 net income (delay 0),MATRIX,68%,1,1
+anl82_netq_q1_mae,Mean absolute error of the model for a particular stock for Q1 net income (delay 0),MATRIX,59%,1,2
+anl82_netq_q1_predict,Predicted value of Q1 net income (delay 0),MATRIX,68%,3,3
+anl82_netq_q2_mada,Mean of absolute deviation of scaled actual values for Q2 net income (delay 0),MATRIX,58%,1,2
+anl82_netq_q2_madp,Mean of absolute deviation of predicted values for Q2 net income (delay 0),MATRIX,68%,0,0
+anl82_netq_q2_mae,Mean absolute error of the model for a particular stock for Q2 net income (delay 0),MATRIX,59%,0,0
+anl82_netq_q2_predict,Predicted value of Q2 net income (delay 0),MATRIX,68%,5,15
+anl82_netq_q3_mada,Mean of absolute deviation of scaled actual values for Q3 net income (delay 0),MATRIX,58%,2,3
+anl82_netq_q3_madp,Mean of absolute deviation of predicted values for Q3 net income (delay 0),MATRIX,68%,1,1
+anl82_netq_q3_mae,Mean absolute error of the model for a particular stock for Q3 net income (delay 0),MATRIX,59%,1,2
+anl82_netq_q3_predict,Predicted value of Q3 net income (delay 0),MATRIX,68%,1,2
+anl82_netq_q4_mada,Mean of absolute deviation of scaled actual values for Q4 net income (delay 0),MATRIX,58%,1,2
+anl82_netq_q4_madp,Mean of absolute deviation of predicted values for Q4 net income (delay 0),MATRIX,68%,0,0
+anl82_netq_q4_mae,Mean absolute error of the model for a particular stock for Q4 net income (delay 0),MATRIX,59%,2,3
+anl82_netq_q4_predict,Predicted value of Q4 net income (delay 0),MATRIX,68%,0,0
+anl82_nety_deltaprofitability_profitability1,Profitability measure type 1 based on delta of annual net income,MATRIX,100%,6,15
+anl82_nety_deltaprofitability_profitability10,Profitability measure type 10 based on delta of annual net income,MATRIX,61%,3,3
+anl82_nety_deltaprofitability_profitability11,Profitability measure type 11 based on delta of annual net income,MATRIX,62%,0,0
+anl82_nety_deltaprofitability_profitability12,Profitability measure type 12 based on delta of annual net income,MATRIX,81%,3,3
+anl82_nety_deltaprofitability_profitability2,Profitability measure type 2 based on delta of annual net income,MATRIX,100%,61,123
+anl82_nety_deltaprofitability_profitability3,Profitability measure type 3 based on delta of annual net income,MATRIX,98%,38,131
+anl82_nety_deltaprofitability_profitability4,Profitability measure type 4 based on delta of annual net income,MATRIX,98%,3,3
+anl82_nety_deltaprofitability_profitability5,Profitability measure type 5 based on delta of annual net income,MATRIX,94%,5,7
+anl82_nety_deltaprofitability_profitability6,Profitability measure type 6 based on delta of annual net income,MATRIX,84%,0,0
+anl82_nety_deltaprofitability_profitability7,Profitability measure type 7 based on delta of annual net income,MATRIX,78%,1,1
+anl82_nety_deltaprofitability_profitability8,Profitability measure type 8 based on delta of annual net income,MATRIX,78%,1,1
+anl82_nety_deltaprofitability_profitability9,Profitability measure type 9 based on delta of annual net income,MATRIX,84%,2,2
+anl82_nety_profitability_profitability1,Profitability measure type 1 based on value of annual net income,MATRIX,72%,1,1
+anl82_nety_profitability_profitability10,Profitability measure type 10 based on value of annual net income,MATRIX,47%,1,2
+anl82_nety_profitability_profitability11,Profitability Measure Type 11 Based on Value of Annual Net Income,MATRIX,47%,0,0
+anl82_nety_profitability_profitability12,Profitability measure type 12 based on value of annual net income,MATRIX,61%,0,0
+anl82_nety_profitability_profitability2,Profitability measure type 2 based on value of annual net income,MATRIX,72%,35,51
+anl82_nety_profitability_profitability3,Profitability measure type 3 based on value of annual net income,MATRIX,72%,25,38
+anl82_nety_profitability_profitability4,Profitability measure type 4 based on value of annual net income,MATRIX,72%,4,4
+anl82_nety_profitability_profitability5,Profitability measure type 5 based on value of annual net income,MATRIX,70%,1,1
+anl82_nety_profitability_profitability6,Profitability measure type 6 based on value of annual net income,MATRIX,64%,1,1
+anl82_nety_profitability_profitability7,Profitability measure type 7 based on value of annual net income,MATRIX,57%,1,1
+anl82_nety_profitability_profitability8,Profitability measure type 8 based on value of annual net income,MATRIX,57%,1,1
+anl82_nety_profitability_profitability9,Profitability measure type 9 based on value of annual net income,MATRIX,63%,1,1
+anl82_nety_y1_mada,Mean absolute deviation of scaled actual annual net income values (Y1) at delay 0,MATRIX,47%,1,2
+anl82_nety_y1_madp,Mean absolute deviation of predicted annual net income values (Y1) at delay 0,MATRIX,71%,0,0
+anl82_nety_y1_mae,Mean absolute error of the model for annual net income (Y1) at delay 0 for the stock,MATRIX,49%,1,2
+anl82_nety_y1_predict,Predicted value of annual net income (Y1) at delay 0 for the stock,MATRIX,71%,0,0
+anl82_oprq_deltaprofitability_profitability1,Profitability measure type 1 based on delta of Q operating profit,MATRIX,100%,9,11
+anl82_oprq_deltaprofitability_profitability10,Profitability measure type 10 based on delta of Q operating profit,MATRIX,63%,0,0
+anl82_oprq_deltaprofitability_profitability11,Profitability measure type 11 based on delta of Q operating profit,MATRIX,63%,0,0
+anl82_oprq_deltaprofitability_profitability12,Profitability measure type 12 based on delta of Q operating profit,MATRIX,82%,4,7
+anl82_oprq_deltaprofitability_profitability2,Profitability measure type 2 based on delta of Q operating profit,MATRIX,100%,12,45
+anl82_oprq_deltaprofitability_profitability3,Profitability measure type 3 based on delta of Q operating profit,MATRIX,99%,7,9
+anl82_oprq_deltaprofitability_profitability4,Profitability measure type 4 based on delta of Q operating profit,MATRIX,99%,6,7
+anl82_oprq_deltaprofitability_profitability5,Profitability measure type 5 based on delta of Q operating profit,MATRIX,96%,3,4
+anl82_oprq_deltaprofitability_profitability6,Profitability measure type 6 based on delta of Q operating profit,MATRIX,85%,0,0
+anl82_oprq_deltaprofitability_profitability7,Profitability measure type 7 based on delta of Q operating profit,MATRIX,79%,1,1
+anl82_oprq_deltaprofitability_profitability8,Profitability measure type 8 based on delta of Q operating profit,MATRIX,79%,1,1
+anl82_oprq_deltaprofitability_profitability9,Profitability measure type 9 based on delta of Q operating profit,MATRIX,87%,6,8
+anl82_oprq_profitability_profitability1,Profitability measure type 1 based on value of Q operating profit,MATRIX,57%,0,0
+anl82_oprq_profitability_profitability10,Profitability measure type 10 based on value of Q operating profit,MATRIX,40%,2,2
+anl82_oprq_profitability_profitability11,Profitability measure type 11 based on value of Q operating profit,MATRIX,40%,0,0
+anl82_oprq_profitability_profitability12,Profitability measure type 12 based on value of Q operating profit,MATRIX,51%,1,1
+anl82_oprq_profitability_profitability2,Profitability Measure Type 2 Based on Value of Q Operating Profit,MATRIX,57%,2,2
+anl82_oprq_profitability_profitability3,Profitability measure type 3 based on value of Q operating profit,MATRIX,57%,0,0
+anl82_oprq_profitability_profitability4,Profitability measure type 4 based on value of Q operating profit,MATRIX,57%,0,0
+anl82_oprq_profitability_profitability5,Profitability measure type 5 based on value of Q operating profit,MATRIX,56%,1,1
+anl82_oprq_profitability_profitability6,Profitability measure type 6 based on value of Q operating profit,MATRIX,50%,0,0
+anl82_oprq_profitability_profitability7,Profitability measure type 7 based on value of Q operating profit,MATRIX,48%,0,0
+anl82_oprq_profitability_profitability8,Profitability measure type 8 based on value of Q operating profit,MATRIX,48%,0,0
+anl82_oprq_profitability_profitability9,Profitability measure type 9 based on value of Q operating profit,MATRIX,53%,2,2
+anl82_oprq_q1_madp,Mean of absolute deviation of predicted values for Q1 operating profit,MATRIX,37%,0,0
+anl82_oprq_q1_predict,Predicted value of Q1 operating profit,MATRIX,37%,0,0
+anl82_oprq_q2_madp,Mean of absolute deviation of predicted values for Q2 operating profit,MATRIX,37%,0,0
+anl82_oprq_q2_predict,Predicted value of Q2 operating profit,MATRIX,37%,0,0
+anl82_oprq_q3_madp,Mean of absolute deviation of predicted values for Q3 operating profit,MATRIX,37%,1,2
+anl82_oprq_q3_predict,Predicted value of Q3 operating profit,MATRIX,37%,1,1
+anl82_oprq_q4_madp,Mean of absolute deviation of predicted values for Q4 operating profit,MATRIX,37%,1,1
+anl82_oprq_q4_predict,Predicted value of Q4 operating profit,MATRIX,37%,1,1
+anl82_opry_deltaprofitability_profitability1,Profitability measure type 1 based on delta of annual operating profit,MATRIX,100%,20,52
+anl82_opry_deltaprofitability_profitability10,Profitability measure type 10 based on delta of annual operating profit,MATRIX,61%,1,1
+anl82_opry_deltaprofitability_profitability11,Profitability measure type 11 based on delta of annual operating profit,MATRIX,62%,1,1
+anl82_opry_deltaprofitability_profitability12,Profitability measure type 12 based on delta of annual operating profit,MATRIX,81%,2,2
+anl82_opry_deltaprofitability_profitability2,Profitability measure type 2 based on delta of annual operating profit,MATRIX,100%,15,65
+anl82_opry_deltaprofitability_profitability3,Profitability measure type 3 based on delta of annual operating profit,MATRIX,98%,14,17
+anl82_opry_deltaprofitability_profitability4,Profitability measure type 4 based on delta of annual operating profit,MATRIX,98%,1,4
+anl82_opry_deltaprofitability_profitability5,Profitability measure type 5 based on delta of annual operating profit,MATRIX,94%,3,4
+anl82_opry_deltaprofitability_profitability6,Profitability measure type 6 based on delta of annual operating profit,MATRIX,84%,0,0
+anl82_opry_deltaprofitability_profitability7,Profitability measure type 7 based on delta of annual operating profit,MATRIX,78%,3,5
+anl82_opry_deltaprofitability_profitability8,Profitability measure type 8 based on delta of annual operating profit,MATRIX,78%,1,1
+anl82_opry_deltaprofitability_profitability9,Profitability measure type 9 based on delta of annual operating profit,MATRIX,84%,0,0
+anl82_opry_profitability_profitability1,Profitability measure type 1 based on value of annual operating profit,MATRIX,63%,0,0
+anl82_opry_profitability_profitability10,Profitability measure type 10 based on value of annual operating profit,MATRIX,42%,1,1
+anl82_opry_profitability_profitability11,Profitability measure type 11 based on value of annual operating profit,MATRIX,43%,1,1
+anl82_opry_profitability_profitability12,Profitability measure type 12 based on value of annual operating profit,MATRIX,55%,0,0
+anl82_opry_profitability_profitability2,Profitability measure type 2 based on value of annual operating profit,MATRIX,63%,0,0
+anl82_opry_profitability_profitability3,Profitability measure type 3 based on value of annual operating profit,MATRIX,62%,0,0
+anl82_opry_profitability_profitability4,Profitability measure type 4 based on value of annual operating profit,MATRIX,62%,1,1
+anl82_opry_profitability_profitability5,Profitability measure type 5 based on value of annual operating profit,MATRIX,60%,0,0
+anl82_opry_profitability_profitability6,Profitability measure type 6 based on value of annual operating profit,MATRIX,54%,0,0
+anl82_opry_profitability_profitability7,Profitability measure type 7 based on value of annual operating profit,MATRIX,52%,0,0
+anl82_opry_profitability_profitability8,Profitability Measure Type 8 Based on Value of Annual Operating Profit,MATRIX,52%,0,0
+anl82_opry_profitability_profitability9,Profitability measure type 9 based on value of annual operating profit,MATRIX,55%,0,0
+anl82_opry_y1_madp,Mean absolute deviation of predicted values for annual operating profit,MATRIX,45%,2,3
+anl82_opry_y1_predict,Predicted value of annual operating profit,MATRIX,45%,0,0
+anl82_preq_deltaprofitability_profitability1,Profitability measure type 1 based on delta of Q pre-tax profit,MATRIX,100%,15,24
+anl82_preq_deltaprofitability_profitability10,Profitability measure type 10 based on delta of Q pre-tax profit,MATRIX,63%,4,5
+anl82_preq_deltaprofitability_profitability11,Profitability measure type 11 based on delta of Q pre-tax profit,MATRIX,63%,4,5
+anl82_preq_deltaprofitability_profitability12,Profitability measure type 12 based on delta of Q pre-tax profit,MATRIX,82%,4,4
+anl82_preq_deltaprofitability_profitability2,Profitability measure type 2 based on delta of Q pre-tax profit,MATRIX,100%,70,127
+anl82_preq_deltaprofitability_profitability3,Profitability measure type 3 based on delta of Q pre-tax profit,MATRIX,99%,46,71
+anl82_preq_deltaprofitability_profitability4,Profitability measure type 4 based on delta of Q pre-tax profit,MATRIX,99%,4,4
+anl82_preq_deltaprofitability_profitability5,Profitability measure type 5 based on delta of Q pre-tax profit,MATRIX,96%,6,15
+anl82_preq_deltaprofitability_profitability6,Profitability measure type 6 based on delta of Q pre-tax profit,MATRIX,85%,2,2
+anl82_preq_deltaprofitability_profitability7,Profitability measure type 7 based on delta of Q pre-tax profit,MATRIX,80%,14,15
+anl82_preq_deltaprofitability_profitability8,Profitability Measure Type 8 Based on Delta of Q Pre-Tax Profit,MATRIX,80%,16,25
+anl82_preq_deltaprofitability_profitability9,Profitability measure type 9 based on delta of Q pre-tax profit,MATRIX,87%,12,17
+anl82_preq_profitability_profitability1,Profitability measure type 1 based on value of Q pre-tax profit,MATRIX,67%,1,1
+anl82_preq_profitability_profitability10,Profitability Measure Type 10 Based on Value of Q Pre-Tax Profit,MATRIX,45%,1,1
+anl82_preq_profitability_profitability11,Profitability measure type 11 based on value of Q pre-tax profit,MATRIX,45%,1,1
+anl82_preq_profitability_profitability12,Profitability measure type 12 based on value of Q pre-tax profit,MATRIX,58%,0,0
+anl82_preq_profitability_profitability2,Profitability measure type 2 based on value of Q pre-tax profit,MATRIX,67%,6,8
+anl82_preq_profitability_profitability3,Profitability measure type 3 based on value of Q pre-tax profit,MATRIX,67%,5,7
+anl82_preq_profitability_profitability4,Profitability measure type 4 based on value of Q pre-tax profit,MATRIX,67%,2,2
+anl82_preq_profitability_profitability5,Profitability measure type 5 based on value of Q pre-tax profit,MATRIX,65%,0,0
+anl82_preq_profitability_profitability6,Profitability measure type 6 based on value of Q pre-tax profit,MATRIX,59%,1,1
+anl82_preq_profitability_profitability7,Profitability Measure Type 7 Based on Value of Q Pre-Tax Profit,MATRIX,54%,3,3
+anl82_preq_profitability_profitability8,Profitability measure type 8 based on value of Q pre-tax profit,MATRIX,54%,2,2
+anl82_preq_profitability_profitability9,Profitability measure type 9 based on value of Q pre-tax profit,MATRIX,60%,2,2
+anl82_preq_q1_mada,Mean absolute deviation of scaled actual values for Q1 pre-tax profit (delay 0),MATRIX,54%,2,3
+anl82_preq_q1_madp,Mean absolute deviation of predicted values for Q1 pre-tax profit (delay 0),MATRIX,66%,0,0
+anl82_preq_q1_mae,Mean absolute error of the model for Q1 pre-tax profit for the stock (delay 0),MATRIX,55%,1,2
+anl82_preq_q1_predict,Predicted value of Q1 pre-tax profit for the stock (delay 0),MATRIX,66%,0,0
+anl82_preq_q2_mada,Mean absolute deviation of scaled actual values for Q2 pre-tax profit (delay 0),MATRIX,54%,1,2
+anl82_preq_q2_madp,Mean absolute deviation of predicted values for Q2 pre-tax profit (delay 0),MATRIX,66%,0,0
+anl82_preq_q2_mae,Mean absolute error of the model for Q2 pre-tax profit for the stock (delay 0),MATRIX,55%,1,2
+anl82_preq_q2_predict,Predicted value of Q2 pre-tax profit for the stock (delay 0),MATRIX,66%,1,2
+anl82_preq_q3_mada,Mean absolute deviation of scaled actual values for Q3 pre-tax profit (delay 0),MATRIX,54%,1,2
+anl82_preq_q3_madp,Mean absolute deviation of predicted values for Q3 pre-tax profit (delay 0),MATRIX,66%,2,2
+anl82_preq_q3_mae,Mean absolute error of the model for Q3 pre-tax profit for the stock (delay 0),MATRIX,55%,1,2
+anl82_preq_q3_predict,Predicted value of Q3 pre-tax profit for the stock (delay 0),MATRIX,66%,0,0
+anl82_preq_q4_mada,Mean absolute deviation of scaled actual values for Q4 pre-tax profit (delay 0),MATRIX,54%,2,3
+anl82_preq_q4_madp,Mean absolute deviation of predicted values for Q4 pre-tax profit (delay 0),MATRIX,66%,1,1
+anl82_preq_q4_mae,Mean absolute error of the model for Q4 pre-tax profit for the stock (delay 0),MATRIX,55%,1,2
+anl82_preq_q4_predict,Predicted value of Q4 pre-tax profit for the stock (delay 0),MATRIX,66%,1,1
+anl82_prey_deltaprofitability_profitability1,Profitability measure type 1 based on delta of annual pre-tax profit,MATRIX,100%,10,26
+anl82_prey_deltaprofitability_profitability10,Profitability measure type 10 based on delta of annual pre-tax profit,MATRIX,61%,1,1
+anl82_prey_deltaprofitability_profitability11,Profitability Measure Type 11 Based on Delta of Annual Pre-Tax Profit,MATRIX,62%,0,0
+anl82_prey_deltaprofitability_profitability12,Profitability measure type 12 based on delta of annual pre-tax profit,MATRIX,81%,5,5
+anl82_prey_deltaprofitability_profitability2,Profitability measure type 2 based on delta of annual pre-tax profit,MATRIX,100%,62,129
+anl82_prey_deltaprofitability_profitability3,Profitability measure type 3 based on delta of annual pre-tax profit,MATRIX,98%,37,65
+anl82_prey_deltaprofitability_profitability4,Profitability measure type 4 based on delta of annual pre-tax profit,MATRIX,98%,3,4
+anl82_prey_deltaprofitability_profitability5,Profitability measure type 5 based on delta of annual pre-tax profit,MATRIX,94%,0,0
+anl82_prey_deltaprofitability_profitability6,Profitability measure type 6 based on delta of annual pre-tax profit,MATRIX,84%,0,0
+anl82_prey_deltaprofitability_profitability7,Profitability measure type 7 based on delta of annual pre-tax profit,MATRIX,78%,1,2
+anl82_prey_deltaprofitability_profitability8,Profitability measure type 8 based on delta of annual pre-tax profit,MATRIX,78%,3,15
+anl82_prey_deltaprofitability_profitability9,Profitability measure type 9 based on delta of annual pre-tax profit,MATRIX,84%,0,0
+anl82_prey_y1_mada,Mean absolute deviation of scaled actual values for annual pre-tax profit,MATRIX,44%,1,2
+anl82_prey_y1_madp,Mean absolute deviation of predicted values for annual pre-tax profit,MATRIX,70%,2,2
+anl82_prey_y1_mae,Mean absolute error of the model for annual pre-tax profit,MATRIX,46%,1,2
+anl82_prey_y1_predict,Predicted value of annual pre-tax profit,MATRIX,70%,3,3
+anl82_salq_deltaprofitability_profitability1,Profitability measure type 1 based on delta of Q sales,MATRIX,100%,18,37
+anl82_salq_deltaprofitability_profitability10,Profitability measure type 10 based on delta of Q sales,MATRIX,63%,1,1
+anl82_salq_deltaprofitability_profitability11,Profitability measure type 11 based on delta of Q sales,MATRIX,63%,3,3
+anl82_salq_deltaprofitability_profitability12,Profitability measure type 12 based on delta of Q sales,MATRIX,82%,4,4
+anl82_salq_deltaprofitability_profitability2,Profitability measure type 2 based on delta of Q sales,MATRIX,100%,10,40
+anl82_salq_deltaprofitability_profitability3,Profitability measure type 3 based on delta of Q sales,MATRIX,98%,9,19
+anl82_salq_deltaprofitability_profitability4,Profitability measure type 4 based on delta of Q sales,MATRIX,98%,16,20
+anl82_salq_deltaprofitability_profitability5,Profitability measure type 5 based on delta of Q sales,MATRIX,95%,18,25
+anl82_salq_deltaprofitability_profitability6,Profitability measure type 6 based on delta of Q sales,MATRIX,85%,11,13
+anl82_salq_deltaprofitability_profitability7,Profitability measure type 7 based on delta of Q sales,MATRIX,79%,4,4
+anl82_salq_deltaprofitability_profitability8,Profitability measure type 8 based on delta of Q sales,MATRIX,79%,3,4
+anl82_salq_deltaprofitability_profitability9,Profitability measure type 9 based on delta of Q sales,MATRIX,86%,5,5
+anl82_salq_profitability_profitability1,Profitability measure type 1 based on value of Q sales,MATRIX,69%,0,0
+anl82_salq_profitability_profitability10,Profitability measure type 10 based on value of Q sales,MATRIX,46%,0,0
+anl82_salq_profitability_profitability11,Profitability measure type 11 based on value of Q sales,MATRIX,46%,1,1
+anl82_salq_profitability_profitability12,Profitability measure type 12 based on value of Q sales,MATRIX,60%,1,1
+anl82_salq_profitability_profitability2,Profitability measure type 2 based on value of Q sales,MATRIX,69%,0,0
+anl82_salq_profitability_profitability3,Profitability measure type 3 based on value of Q sales,MATRIX,69%,9,10
+anl82_salq_profitability_profitability4,Profitability measure type 4 based on value of Q sales,MATRIX,69%,0,0
+anl82_salq_profitability_profitability5,Profitability measure type 5 based on value of Q sales,MATRIX,67%,6,12
+anl82_salq_profitability_profitability6,Profitability Measure Type 6 Based on Value of Q Sales,MATRIX,61%,0,0
+anl82_salq_profitability_profitability7,Profitability measure type 7 based on value of Q sales,MATRIX,55%,3,4
+anl82_salq_profitability_profitability8,Profitability measure type 8 based on value of Q sales,MATRIX,55%,1,1
+anl82_salq_profitability_profitability9,Profitability measure type 9 based on value of Q sales,MATRIX,62%,2,2
+anl82_salq_q1_mada,Mean of absolute deviation of scaled actual values for Q1 sales (delay 0),MATRIX,60%,1,2
+anl82_salq_q1_madp,Mean of absolute deviation of predicted values for Q1 sales (delay 0),MATRIX,68%,0,0
+anl82_salq_q1_mae,Mean of absolute error of the model for a particular stock for Q1 sales (delay 0),MATRIX,61%,1,2
+anl82_salq_q1_predict,Predicted value of Q1 sales (delay 0),MATRIX,68%,1,1
+anl82_salq_q2_mada,Mean of absolute deviation of scaled actual values for Q2 sales (delay 0),MATRIX,60%,1,2
+anl82_salq_q2_madp,Mean of absolute deviation of predicted values for Q2 sales (delay 0),MATRIX,68%,1,1
+anl82_salq_q2_mae,Mean of absolute error of the model for a particular stock for Q2 sales (delay 0),MATRIX,61%,1,2
+anl82_salq_q2_predict,Predicted value of Q2 sales (delay 0),MATRIX,68%,4,4
+anl82_salq_q3_mada,Mean of absolute deviation of scaled actual values for Q3 sales (delay 0),MATRIX,60%,2,3
+anl82_salq_q3_madp,Mean of absolute deviation of predicted values for Q3 sales (delay 0),MATRIX,68%,1,1
+anl82_salq_q3_mae,Mean of absolute error of the model for a particular stock for Q3 sales (delay 0),MATRIX,61%,2,3
+anl82_salq_q3_predict,Predicted value of Q3 sales (delay 0),MATRIX,68%,1,1
+anl82_salq_q4_mada,Mean of absolute deviation of scaled actual values for Q4 sales (delay 0),MATRIX,60%,1,2
+anl82_salq_q4_madp,Mean of absolute deviation of predicted values for Q4 sales (delay 0),MATRIX,68%,0,0
+anl82_salq_q4_mae,Mean of absolute error of the model for a particular stock for Q4 sales (delay 0),MATRIX,61%,1,2
+anl82_salq_q4_predict,Predicted value of Q4 sales (delay 0),MATRIX,68%,1,1
+anl82_saly_deltaprofitability_profitability1,Profitability measure type 1 based on delta of annual sales,MATRIX,100%,7,29
+anl82_saly_deltaprofitability_profitability10,Profitability measure type 10 based on delta of annual sales,MATRIX,61%,0,0
+anl82_saly_deltaprofitability_profitability11,Profitability measure type 11 based on delta of annual sales,MATRIX,62%,0,0
+anl82_saly_deltaprofitability_profitability12,Profitability measure type 12 based on delta of annual sales,MATRIX,81%,2,2
+anl82_saly_deltaprofitability_profitability2,Profitability measure type 2 based on delta of annual sales,MATRIX,100%,12,29
+anl82_saly_deltaprofitability_profitability3,Profitability measure type 3 based on delta of annual sales,MATRIX,97%,4,4
+anl82_saly_deltaprofitability_profitability4,Profitability measure type 4 based on delta of annual sales,MATRIX,97%,2,3
+anl82_saly_deltaprofitability_profitability5,Profitability measure type 5 based on delta of annual sales,MATRIX,94%,4,5
+anl82_saly_deltaprofitability_profitability6,Profitability measure type 6 based on delta of annual sales,MATRIX,84%,3,4
+anl82_saly_deltaprofitability_profitability7,Profitability measure type 7 based on delta of annual sales,MATRIX,78%,2,2
+anl82_saly_deltaprofitability_profitability8,Profitability measure type 8 based on delta of annual sales,MATRIX,78%,5,17
+anl82_saly_deltaprofitability_profitability9,Profitability measure type 9 based on delta of annual sales,MATRIX,84%,5,5
+anl82_saly_profitability_profitability1,Profitability measure type 1 based on value of annual sales,MATRIX,72%,2,2
+anl82_saly_profitability_profitability10,Profitability measure type 10 based on value of annual sales,MATRIX,47%,0,0
+anl82_saly_profitability_profitability11,Profitability measure type 11 based on value of annual sales,MATRIX,48%,3,3
+anl82_saly_profitability_profitability12,Profitability measure type 12 based on value of annual sales,MATRIX,62%,0,0
+anl82_saly_profitability_profitability2,Profitability measure type 2 based on value of annual sales,MATRIX,72%,1,1
+anl82_saly_profitability_profitability3,Profitability measure type 3 based on value of annual sales,MATRIX,72%,1,1
+anl82_saly_profitability_profitability4,Profitability measure type 4 based on value of annual sales,MATRIX,72%,1,1
+anl82_saly_profitability_profitability5,Profitability measure type 5 based on value of annual sales,MATRIX,69%,0,0
+anl82_saly_profitability_profitability6,Profitability measure type 6 based on value of annual sales,MATRIX,64%,0,0
+anl82_saly_profitability_profitability7,Profitability measure type 7 based on value of annual sales,MATRIX,57%,2,3
+anl82_saly_profitability_profitability8,Profitability measure type 8 based on value of annual sales,MATRIX,57%,0,0
+anl82_saly_profitability_profitability9,Profitability measure type 9 based on value of annual sales,MATRIX,63%,2,2
+anl82_saly_y1_mada,Mean of absolute deviation of scaled actual values for annual sales,MATRIX,48%,1,2
+anl82_saly_y1_madp,Mean of absolute deviation of predicted values for annual sales,MATRIX,71%,3,3
+anl82_saly_y1_mae,Mean absolute error of the annual sales prediction model (embargoed meta-feature),MATRIX,50%,1,2
+anl82_saly_y1_predict,Embargoed D1-lagged predictive consensus estimate of annual sales (y1 horizon) for the stock,MATRIX,71%,1,1
