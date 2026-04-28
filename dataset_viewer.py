@@ -4,6 +4,7 @@ import sqlite3
 import pandas as pd
 import json
 import threading
+import time
 import requests
 from dotenv import load_dotenv
 import google.generativeai as genai
@@ -225,6 +226,14 @@ class SemanticSearchWorker(QThread):
 
 
 BRAIN_API_BASE = "https://api.worldquantbrain.com"
+DATASETS_API = f"{BRAIN_API_BASE}/data-sets"
+DATAFIELDS_API = f"{BRAIN_API_BASE}/data-fields"
+DEFAULT_DATA_FIELD_OPTION = {
+    'instrumentType': 'EQUITY',
+    'region': 'USA',
+    'universe': 'TOP3000',
+    'delay': 1,
+}
 
 
 class DatasetRefreshWorker(QThread):
@@ -249,7 +258,7 @@ class DatasetRefreshWorker(QThread):
             if session is None:
                 return
 
-            dataset_ids = self._fetch_all_dataset_ids(session)
+            dataset_ids = self._fetch_dataset_ids(session)
             if not dataset_ids:
                 self.error.emit("No datasets returned from API.")
                 return
@@ -261,7 +270,7 @@ class DatasetRefreshWorker(QThread):
                     break
                 self.progress.emit(f"Fetching fields for {ds_id} ({i+1}/{len(dataset_ids)})…")
                 try:
-                    df = self._fetch_fields(session, ds_id)
+                    df = self._fetch_data_fields(session, ds_id)
                     if df is not None and not df.empty:
                         out_path = os.path.join(
                             self.datasets_dir, f"{ds_id}_fields_formatted.csv"
@@ -325,9 +334,53 @@ class DatasetRefreshWorker(QThread):
             self.error.emit(f"Network error during authentication: {e}")
             return None
 
-    def _fetch_all_dataset_ids(self, session):
-        """Return list of all dataset IDs accessible to the user."""
-        self.progress.emit("Fetching dataset list…")
+    def _request_with_rate_limit_retry(self, session, method, url, *, retry_context, max_retries=5, **kwargs):
+        for attempt in range(max_retries + 1):
+            response = getattr(session, method)(url, **kwargs)
+            if response.status_code == 429:
+                if attempt >= max_retries:
+                    return response
+                retry_after = int(response.headers.get("Retry-After", 300))
+                self.progress.emit(f"Rate limited during {retry_context}; retrying in {retry_after}s…")
+                time.sleep(retry_after)
+                continue
+            if response.status_code in (502, 503, 504):
+                if attempt >= max_retries:
+                    return response
+                self.progress.emit(f"WQ server returned {response.status_code} during {retry_context}; retrying in 10s…")
+                time.sleep(10)
+                continue
+            return response
+        return response
+
+    def _handle_unauthorized(self, response, context, cooldown_key):
+        clear_login_state()
+        persona_url = extract_persona_url(response)
+        if persona_url:
+            send_login_issue_notification(
+                f"Saved session expired during {context}.",
+                detail=persona_url,
+                cooldown_key=f"{cooldown_key}-persona",
+            )
+            self.error.emit(
+                "Saved session expired and Persona verification is required again. "
+                f"Please complete login in the Simulation tab first:\n{persona_url}"
+            )
+        else:
+            send_login_issue_notification(
+                f"Saved session expired during {context}.",
+                detail="Unauthorized response from WQ Brain.",
+                cooldown_key=f"{cooldown_key}-unauthorized",
+            )
+            self.error.emit(f"Unauthorized during {context}.")
+
+    def _fetch_dataset_ids(self, session):
+        """Fetch dataset IDs from WQ data-sets for the default simulation setting."""
+        opt = dict(DEFAULT_DATA_FIELD_OPTION)
+        self.progress.emit(
+            "Fetching dataset list from WQ data-sets "
+            f"({opt['region']}/{opt['universe']}/delay={opt['delay']})."
+        )
         ids = []
         limit = 50
         offset = 0
@@ -335,31 +388,21 @@ class DatasetRefreshWorker(QThread):
             if self._cancelled:
                 break
             params = {
+                **opt,
                 'limit': limit,
                 'offset': offset,
             }
             try:
-                r = session.get(f"{BRAIN_API_BASE}/datasets", params=params, timeout=15)
+                r = self._request_with_rate_limit_retry(
+                    session,
+                    'get',
+                    DATASETS_API,
+                    params=params,
+                    timeout=20,
+                    retry_context='dataset list refresh',
+                )
                 if r.status_code == 401:
-                    clear_login_state()
-                    persona_url = extract_persona_url(r)
-                    if persona_url:
-                        send_login_issue_notification(
-                            "Saved session expired during dataset list refresh.",
-                            detail=persona_url,
-                            cooldown_key="gui-datasets-list-persona",
-                        )
-                        self.error.emit(
-                            "Saved session expired and Persona verification is required again. "
-                            f"Please complete login in the Simulation tab first:\n{persona_url}"
-                        )
-                    else:
-                        send_login_issue_notification(
-                            "Saved session expired during dataset list refresh.",
-                            detail="Unauthorized while fetching dataset list.",
-                            cooldown_key="gui-datasets-list-unauthorized",
-                        )
-                        self.error.emit("Unauthorized while fetching dataset list.")
+                    self._handle_unauthorized(r, 'dataset list refresh', 'gui-datasets-list')
                     return ids
                 r.raise_for_status()
                 body = r.json()
@@ -368,76 +411,82 @@ class DatasetRefreshWorker(QThread):
                 return ids
 
             results = body.get('results', [])
-            for ds in results:
-                ds_id = ds.get('id')
-                if ds_id:
-                    ids.append(ds_id)
+            ids.extend(ds.get('id') for ds in results if ds.get('id'))
 
             if offset + limit >= body.get('count', 0) or not results:
                 break
             offset += limit
+            time.sleep(1)
 
+        ids = sorted(set(ids))
         self.progress.emit(f"Found {len(ids)} datasets.")
         return ids
 
-    def _fetch_fields(self, session, dataset_id):
-        """Fetch all fields for one dataset and return a formatted DataFrame."""
-        rows = []
-        limit = 100
+    def _fetch_data_fields(self, session, dataset_id):
+        """Fetch data fields for one dataset and return a formatted DataFrame."""
+        fields = []
+        opt = dict(DEFAULT_DATA_FIELD_OPTION)
+        limit = 50
         offset = 0
         while True:
             if self._cancelled:
                 break
-            params = {'limit': limit, 'offset': offset}
-            r = session.get(
-                f"{BRAIN_API_BASE}/datasets/{dataset_id}/fields",
-                params=params,
-                timeout=20,
-            )
-            if r.status_code == 401:
-                clear_login_state()
-                persona_url = extract_persona_url(r)
-                if persona_url:
-                    send_login_issue_notification(
-                        f"Saved session expired while refreshing dataset fields for {dataset_id}.",
-                        detail=persona_url,
-                        cooldown_key=f"gui-dataset-fields-persona-{dataset_id}",
+            params = {
+                **opt,
+                'dataset.id': dataset_id,
+                'limit': limit,
+                'offset': offset,
+            }
+            try:
+                r = self._request_with_rate_limit_retry(
+                    session,
+                    'get',
+                    DATAFIELDS_API,
+                    params=params,
+                    timeout=20,
+                    retry_context=f'data fields refresh for {dataset_id}',
+                )
+                if r.status_code == 401:
+                    self._handle_unauthorized(
+                        r,
+                        f'data fields refresh for {dataset_id}',
+                        f'gui-data-fields-{dataset_id}',
                     )
-                    self.error.emit(
-                        "Saved session expired and Persona verification is required again. "
-                        f"Please complete login in the Simulation tab first:\n{persona_url}"
-                    )
-                else:
-                    send_login_issue_notification(
-                        f"Saved session expired while refreshing dataset fields for {dataset_id}.",
-                        detail=f"Unauthorized while fetching fields for {dataset_id}.",
-                        cooldown_key=f"gui-dataset-fields-unauthorized-{dataset_id}",
-                    )
-                    self.error.emit(f"Unauthorized while fetching fields for {dataset_id}.")
+                    return None
+                r.raise_for_status()
+                body = r.json()
+            except Exception as e:
+                self.error.emit(f"Error fetching data fields for {dataset_id}: {e}")
                 return None
-            r.raise_for_status()
-            body = r.json()
+
             results = body.get('results', [])
-
-            for field in results:
-                coverage_raw = field.get('coverage', 0)
-                try:
-                    coverage_pct = f"{int(round(float(coverage_raw) * 100))}%"
-                except (TypeError, ValueError):
-                    coverage_pct = str(coverage_raw)
-
-                rows.append({
-                    'Field': field.get('id', ''),
-                    'Description': field.get('description', ''),
-                    'Type': field.get('type', ''),
-                    'Coverage': coverage_pct,
-                    'Users': field.get('userCount', 0),
-                    'Alphas': field.get('alphaCount', 0),
-                })
+            fields.extend(results)
 
             if offset + limit >= body.get('count', 0) or not results:
                 break
             offset += limit
+            time.sleep(1)
+
+        return self._format_fields(fields)
+
+    def _format_fields(self, fields):
+        """Return a formatted DataFrame for one dataset's data fields."""
+        rows = []
+        for field in fields:
+            coverage_raw = field.get('coverage', 0)
+            try:
+                coverage_pct = f"{int(round(float(coverage_raw) * 100))}%"
+            except (TypeError, ValueError):
+                coverage_pct = str(coverage_raw)
+
+            rows.append({
+                'Field': field.get('id', ''),
+                'Description': field.get('description', ''),
+                'Type': field.get('type', ''),
+                'Coverage': coverage_pct,
+                'Users': field.get('userCount', 0),
+                'Alphas': field.get('alphaCount', 0),
+            })
 
         if not rows:
             return None

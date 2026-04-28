@@ -81,6 +81,8 @@ python app.py
   - The right panel shows a table to browse fields, filter, sort, and visualize distributions
   - After selecting fields, click "Import Selected Fields to Generator" to send them to the Strategy Generator
   - Search modes: Normal (keyword) / AI (Gemini semantic search)
+  - API refresh uses WQ Brain `data-sets` to discover dataset IDs for `EQUITY / USA / TOP3000 / delay=1`, then updates each dataset through `data-fields?dataset.id=...`
+  - WQ rate limits are handled by respecting `Retry-After` on HTTP 429 and retrying transient 502/503/504 responses
 
 - **Backtests**
   - Reads backtest data under `data/` (per your existing data format/process)

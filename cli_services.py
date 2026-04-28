@@ -33,6 +33,8 @@ from wq_session import (
     clear_login_state,
     extract_persona_url,
     get_session_for_request,
+    load_login_cookies,
+    load_pending_persona_session,
     load_persisted_session,
     save_login_cookies,
 )
@@ -50,6 +52,14 @@ CREDS_PATH      = os.path.join(SCRIPT_DIR, "credentials.json")
 CLI_STATE_DIR   = os.path.join(SCRIPT_DIR, ".brain_cli")
 JOBS_DIR        = os.path.join(CLI_STATE_DIR, "jobs")
 STOP_DIR        = os.path.join(CLI_STATE_DIR, "stop")
+DATASETS_API    = f"{BRAIN_API_BASE}/data-sets"
+DATAFIELDS_API  = f"{BRAIN_API_BASE}/data-fields"
+DEFAULT_DATA_FIELD_OPTION = {
+    "instrumentType": "EQUITY",
+    "region": "USA",
+    "universe": "TOP3000",
+    "delay": 1,
+}
 
 # Simulation CSV header (matches WQSession output in simulation.py)
 SIM_CSV_HEADER = [
@@ -67,6 +77,47 @@ PARAM_COLUMNS = ["code", "decay", "delay", "neutralization", "region", "truncati
 def _ensure_dirs():
     for d in [CLI_STATE_DIR, JOBS_DIR, STOP_DIR, DATA_DIR, TEMPLATES_DIR, ALPHAS_DIR, DATASETS_DIR]:
         os.makedirs(d, exist_ok=True)
+
+
+def _request_with_rate_limit_retry(session: requests.Session, method: str, url: str,
+                                   *, max_retries: int = 5, progress_cb=None,
+                                   retry_context: str = "request", **kwargs) -> requests.Response:
+    """Retry transient WQ API throttling/server failures without hiding auth errors."""
+    for attempt in range(max_retries + 1):
+        response = getattr(session, method)(url, **kwargs)
+        if response.status_code == 429:
+            if attempt >= max_retries:
+                return response
+            retry_after = int(response.headers.get("Retry-After", 300))
+            if progress_cb:
+                progress_cb(f"Rate limited during {retry_context}; retrying in {retry_after}s…")
+            time.sleep(retry_after)
+            continue
+        if response.status_code in (502, 503, 504):
+            if attempt >= max_retries:
+                return response
+            if progress_cb:
+                progress_cb(f"WQ server returned {response.status_code} during {retry_context}; retrying in 10s…")
+            time.sleep(10)
+            continue
+        return response
+    return response
+
+
+def _data_field_row(field: dict) -> dict:
+    cov_raw = field.get("coverage", 0)
+    try:
+        cov = f"{int(round(float(cov_raw) * 100))}%"
+    except Exception:
+        cov = str(cov_raw)
+    return {
+        "Field":       field.get("id", ""),
+        "Description": field.get("description", ""),
+        "Type":        field.get("type", ""),
+        "Coverage":    cov,
+        "Users":       field.get("userCount", 0),
+        "Alphas":      field.get("alphaCount", 0),
+    }
 
 _ensure_dirs()
 
@@ -215,14 +266,47 @@ def wq_authenticate(credentials_path: str = CREDS_PATH) -> Tuple[Optional[reques
 
 
 def auth_login_status(credentials_path: str = CREDS_PATH) -> dict:
-    """Return a dict with login status information."""
-    session, kind, detail = wq_authenticate(credentials_path)
-    if kind is None:
-        return {"status": "logged_in", "message": "Authentication successful."}
-    if kind == "persona":
-        return {"status": "persona_required", "persona_url": detail,
-                "message": "Persona biometric verification required."}
-    return {"status": "failed", "message": detail}
+    """Return login status without starting a new Persona inquiry."""
+    pending_session, pending_url = load_pending_persona_session(credentials_path)
+    if pending_session is not None and pending_url:
+        return {
+            "status": "persona_pending",
+            "persona_url": pending_url,
+            "message": "Persona verification is already pending. Complete this URL or run auth persona-complete.",
+        }
+
+    session = load_persisted_session(credentials_path)
+    if session is None:
+        return {
+            "status": "not_logged_in",
+            "message": "No saved WQ session. Run auth login to start a Persona flow.",
+        }
+
+    _, login_time = load_login_cookies(session)
+    login_age = None
+    if login_time is not None:
+        login_age = str(datetime.datetime.now() - login_time).split(".")[0]
+
+    try:
+        response = session.options(f"{BRAIN_API_BASE}/simulations", timeout=10)
+    except requests.exceptions.Timeout:
+        return {"status": "failed", "message": "Connection timed out.", "login_age": login_age}
+    except requests.exceptions.RequestException as exc:
+        return {"status": "failed", "message": f"Network error: {exc}", "login_age": login_age}
+
+    if response.status_code == 200:
+        return {"status": "logged_in", "message": "Saved session is valid.", "login_age": login_age}
+    if response.status_code == 401:
+        return {
+            "status": "expired",
+            "message": "Saved session is expired. Run auth login to start a Persona flow.",
+            "login_age": login_age,
+        }
+    return {
+        "status": "unknown",
+        "message": f"Session check returned HTTP {response.status_code}.",
+        "login_age": login_age,
+    }
 
 
 def auth_persona_complete(session: requests.Session, persona_url: str,
@@ -253,6 +337,16 @@ def auth_complete_from_credentials(credentials_path: str = CREDS_PATH,
     Full login flow including persona polling.  Suitable for CLI --wait mode.
     Returns dict with keys: status, session (or None), message.
     """
+    pending_session, pending_url = load_pending_persona_session(credentials_path)
+    if pending_session is not None and pending_url:
+        if progress_cb:
+            progress_cb(f"Reusing pending Persona URL:\n  {pending_url}\nThen wait…")
+        ok, msg = auth_persona_complete(pending_session, pending_url, poll_interval=poll_interval,
+                                        progress_cb=progress_cb)
+        if ok:
+            return {"status": "logged_in", "session": pending_session, "message": msg}
+        return {"status": "failed", "session": None, "message": msg}
+
     session, kind, detail = wq_authenticate(credentials_path)
     if kind is None:
         return {"status": "logged_in", "session": session, "message": "Authentication successful."}
@@ -319,14 +413,33 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
     refreshed = []
     errors    = []
 
-    # Fetch dataset IDs
-    ids   = []
-    limit = 50
+    opt = dict(DEFAULT_DATA_FIELD_OPTION)
+    dataset_limit = 50
+    field_limit = 50
+    if progress_cb:
+        progress_cb(
+            "Fetching dataset list from WQ data-sets "
+            f"({opt['region']}/{opt['universe']}/delay={opt['delay']})."
+        )
+
+    dataset_ids: List[str] = []
     offset = 0
     while True:
+        params = {
+            **opt,
+            "limit": dataset_limit,
+            "offset": offset,
+        }
         try:
-            r = session.get(f"{BRAIN_API_BASE}/datasets",
-                            params={"limit": limit, "offset": offset}, timeout=15)
+            r = _request_with_rate_limit_retry(
+                session,
+                "get",
+                DATASETS_API,
+                params=params,
+                timeout=20,
+                progress_cb=progress_cb,
+                retry_context="dataset list refresh",
+            )
             if r.status_code == 401:
                 clear_login_state()
                 persona_url = extract_persona_url(r)
@@ -334,7 +447,7 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
                     _notify_login_issue(
                         "Saved session expired during dataset list refresh.",
                         persona_url,
-                        cooldown_key="datasets-list-session-expired",
+                        cooldown_key="datasets-list-persona",
                     )
                     return {"status": "error", "message": f"Persona verification required: {persona_url}"}
                 _notify_login_issue(
@@ -344,67 +457,68 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
                 )
                 return {"status": "error", "message": "Unauthorized while fetching dataset list."}
             r.raise_for_status()
-            body    = r.json()
-            results = body.get("results", [])
-            for ds in results:
-                ds_id = ds.get("id")
-                if ds_id:
-                    ids.append(ds_id)
-            if offset + limit >= body.get("count", 0) or not results:
-                break
-            offset += limit
+            body = r.json()
         except Exception as exc:
             return {"status": "error", "message": f"Error fetching dataset list: {exc}"}
 
-    if progress_cb:
-        progress_cb(f"Found {len(ids)} datasets. Fetching fields…")
+        results = body.get("results", [])
+        dataset_ids.extend(ds["id"] for ds in results if ds.get("id"))
+        if offset + dataset_limit >= body.get("count", 0) or not results:
+            break
+        offset += dataset_limit
+        time.sleep(1)
 
-    for i, ds_id in enumerate(ids):
+    dataset_ids = sorted(set(dataset_ids))
+    if progress_cb:
+        progress_cb(f"Found {len(dataset_ids)} datasets. Fetching data fields.")
+
+    for i, ds_id in enumerate(dataset_ids):
         if progress_cb:
-            progress_cb(f"Fetching {ds_id} ({i+1}/{len(ids)})…")
+            progress_cb(f"Fetching {ds_id} ({i+1}/{len(dataset_ids)})…")
         try:
-            rows  = []
-            lim   = 100
-            off   = 0
+            rows = []
+            offset = 0
             while True:
-                r = session.get(f"{BRAIN_API_BASE}/datasets/{ds_id}/fields",
-                                params={"limit": lim, "offset": off}, timeout=20)
+                params = {
+                    **opt,
+                    "dataset.id": ds_id,
+                    "limit": field_limit,
+                    "offset": offset,
+                }
+                r = _request_with_rate_limit_retry(
+                    session,
+                    "get",
+                    DATAFIELDS_API,
+                    params=params,
+                    timeout=20,
+                    progress_cb=progress_cb,
+                    retry_context=f"data fields refresh for {ds_id}",
+                )
                 if r.status_code == 401:
                     clear_login_state()
                     persona_url = extract_persona_url(r)
                     if persona_url:
                         _notify_login_issue(
-                            f"Saved session expired while refreshing dataset fields for {ds_id}.",
+                            f"Saved session expired while refreshing data fields for {ds_id}.",
                             persona_url,
-                            cooldown_key=f"dataset-fields-persona-{ds_id}",
+                            cooldown_key=f"data-fields-persona-{ds_id}",
                         )
                         return {"status": "error", "message": f"Persona verification required: {persona_url}"}
                     _notify_login_issue(
-                        f"Saved session expired while refreshing dataset fields for {ds_id}.",
+                        f"Saved session expired while refreshing data fields for {ds_id}.",
                         f"Unauthorized while fetching fields for {ds_id}.",
-                        cooldown_key=f"dataset-fields-unauthorized-{ds_id}",
+                        cooldown_key=f"data-fields-unauthorized-{ds_id}",
                     )
                     return {"status": "error", "message": f"Unauthorized while fetching fields for {ds_id}."}
                 r.raise_for_status()
-                body    = r.json()
+                body = r.json()
                 results = body.get("results", [])
                 for field in results:
-                    cov_raw = field.get("coverage", 0)
-                    try:
-                        cov = f"{int(round(float(cov_raw) * 100))}%"
-                    except Exception:
-                        cov = str(cov_raw)
-                    rows.append({
-                        "Field":       field.get("id", ""),
-                        "Description": field.get("description", ""),
-                        "Type":        field.get("type", ""),
-                        "Coverage":    cov,
-                        "Users":       field.get("userCount", 0),
-                        "Alphas":      field.get("alphaCount", 0),
-                    })
-                if off + lim >= body.get("count", 0) or not results:
+                    rows.append(_data_field_row(field))
+                if offset + field_limit >= body.get("count", 0) or not results:
                     break
-                off += lim
+                offset += field_limit
+                time.sleep(1)
             if rows:
                 df  = pd.DataFrame(rows, columns=["Field", "Description", "Type", "Coverage", "Users", "Alphas"])
                 out = os.path.join(datasets_dir, f"{ds_id}_fields_formatted.csv")
@@ -413,7 +527,7 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
         except Exception as exc:
             errors.append(f"{ds_id}: {exc}")
 
-    return {"status": "ok", "refreshed": refreshed, "errors": errors, "total": len(ids)}
+    return {"status": "ok", "refreshed": refreshed, "errors": errors, "total": len(dataset_ids)}
 
 
 def datasets_show(dataset_id: str, datasets_dir: str = DATASETS_DIR) -> Optional[pd.DataFrame]:
@@ -1149,7 +1263,6 @@ class CLISimulationSession(requests.Session):
             return {"uuid": row_uuid, "error": "Failed to submit simulation.", "alpha": alpha}
 
         # Poll for completion
-        sim_start = time.time()
         alpha_link = None
         while True:
             if self._stop_flag.check():
@@ -1179,9 +1292,6 @@ class CLISimulationSession(requests.Session):
                     break
                 progress = rj.get("progress", 0)
                 self._emit(f"  Progress {int(100 * progress)}% — {alpha[:30]}")
-                elapsed = time.time() - sim_start
-                if elapsed > 120 and progress == 0:
-                    return {"uuid": row_uuid, "error": "Simulation timed out (>2 min at 0%).", "alpha": alpha}
             except requests.exceptions.HTTPError as exc:
                 if exc.response.status_code == 429:
                     time.sleep(15)

@@ -1,0 +1,1 @@
+- Simulation jobs can legitimately stay at the same WQ progress value, or even return to 0%, for a long time. Do not add or keep local stagnation/progress timeouts that mark a simulation failed before WQ returns a terminal state.
