@@ -172,6 +172,8 @@ Notes:
 - When biometric verification (persona) is required, the app will try to open the persona page automatically in your browser.
 - After finishing the scan in browser, return to the app and click `我已完成驗證` to complete login confirmation.
 - Successful GUI or CLI login persists WQ cookies into `session.pkl` / `login_time.pkl`, so later Simulation and Dataset refresh flows can reuse the same login state.
+- CLI login stores a pending Persona session in `pending_session.pkl` / `pending_persona.json` while waiting for verification. This avoids creating a new Persona inquiry every time a different CLI command is run.
+- `auth login-status` is a passive check: it validates saved cookies with `OPTIONS /simulations` and does not start a new Persona flow. Use `auth login` or Telegram `/refresh` when a new login is actually needed.
 - If login is not completed, `Run Simulation` will be blocked and ask you to finish `Check Login` first.
 - If credentials are expired/invalid, the UI will notify you and stop subsequent simulations.
 
@@ -268,6 +270,7 @@ python brain_cli.py evolution auto-run \
 # Auth check
 python brain_cli.py auth login-status --json
 python brain_cli.py auth login
+python brain_cli.py auth persona-complete
 
 # Start Telegram bot polling
 python brain_cli.py telegram run
@@ -291,6 +294,14 @@ CLI job state for `simulate` and `evolution` is stored under `.brain_cli/jobs/<j
 
 CLI authentication reuses the same persisted WQ cookie files as the GUI (`session.pkl` / `login_time.pkl`), matching the open_machine-style login flow.
 
+Important authentication behavior:
+- `auth login-status` only checks the current saved session. It does not call `POST /authentication` and therefore does not consume a new Persona inquiry.
+- `auth login` starts or resumes a Persona flow. If a pending Persona URL already exists, it reuses that URL/session instead of generating a new one.
+- `auth persona-complete` is equivalent to resuming the pending Persona flow from the CLI.
+- When login succeeds, saved cookies are written to `session.pkl` and `login_time.pkl`; pending Persona files are cleared.
+
+Telegram `/status` counts jobs directly from the JSON files in `.brain_cli/jobs/`. If an old job remains `pending`, it will be counted as pending even if no process is running. For abandoned simulation jobs with `"pid": null`, mark them `stopped` rather than deleting the file if you want to preserve history.
+
 #### Telegram integration
 
 Telegram support is optional and uses direct Bot API HTTP calls (no extra SDK required). Add these variables to `.env`:
@@ -310,6 +321,16 @@ Supported Telegram commands:
 - `/refresh` / `/refresh_session`: refresh the saved WQ session, including Persona verification handoff with an inline confirmation button
 - `/status` / `/stat`: send the current session state plus simulation/evolution job counts
 - `/help` / `/start`: show available commands
+
+Recommended Telegram login flow:
+
+1. Start the bot polling loop with `python brain_cli.py telegram run`.
+2. Send `/refresh` to the bot in Telegram.
+3. Open the Persona URL sent by the bot and complete verification.
+4. Press the inline `我已完成驗證` button in Telegram.
+5. The same long-running bot process submits the Persona completion request and saves the WQ session.
+
+This is the preferred flow when Persona quota is limited because the Persona URL and pending HTTP session stay in the same process, matching the `open_machine` pattern.
 
 To discover `TELEGRAM_CHAT_ID`, first send a message like `/start` to your bot, then run:
 
