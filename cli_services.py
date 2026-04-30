@@ -23,6 +23,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 from typing import Any, Dict, List, Optional, Tuple
+from urllib.parse import urljoin
 
 import pandas as pd
 import requests
@@ -69,6 +70,13 @@ SIM_CSV_HEADER = [
 ]
 
 PARAM_COLUMNS = ["code", "decay", "delay", "neutralization", "region", "truncation", "universe"]
+SIMULATION_RATE_LIMIT_HEADERS = {
+    "limit": "x-ratelimit-limit",
+    "remaining": "x-ratelimit-remaining",
+    "reset_seconds": "x-ratelimit-reset",
+}
+SIMULATION_ERROR_STATUSES = {"ERROR", "TIMEOUT", "FAIL", "CANCELLED"}
+SIMULATION_DONE_STATUSES = {"COMPLETE", "WARNING"}
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -77,6 +85,59 @@ PARAM_COLUMNS = ["code", "decay", "delay", "neutralization", "region", "truncati
 def _ensure_dirs():
     for d in [CLI_STATE_DIR, JOBS_DIR, STOP_DIR, DATA_DIR, TEMPLATES_DIR, ALPHAS_DIR, DATASETS_DIR]:
         os.makedirs(d, exist_ok=True)
+
+
+def _int_header(headers, name: str) -> Optional[int]:
+    value = headers.get(name)
+    if value is None:
+        return None
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _simulation_rate_limit_from_headers(headers) -> Optional[dict]:
+    values = {
+        key: _int_header(headers, header_name)
+        for key, header_name in SIMULATION_RATE_LIMIT_HEADERS.items()
+    }
+    if all(value is None for value in values.values()):
+        return None
+
+    now = datetime.datetime.now()
+    reset_seconds = values.get("reset_seconds")
+    reset_at = None
+    if reset_seconds is not None:
+        reset_at = (now + datetime.timedelta(seconds=max(reset_seconds, 0))).isoformat()
+
+    return {
+        "limit": values.get("limit"),
+        "remaining": values.get("remaining"),
+        "reset_seconds": reset_seconds,
+        "reset_at": reset_at,
+        "observed_at": now.isoformat(),
+    }
+
+
+def _seconds_until_iso(iso_value: Optional[str]) -> Optional[int]:
+    if not iso_value:
+        return None
+    try:
+        reset_at = datetime.datetime.fromisoformat(iso_value)
+    except (TypeError, ValueError):
+        return None
+    return max(int((reset_at - datetime.datetime.now()).total_seconds()), 0)
+
+
+def _retry_after_seconds(headers, default: float = 10.0) -> float:
+    value = headers.get("Retry-After")
+    if value is None:
+        return default
+    try:
+        return max(float(value), 0.0)
+    except (TypeError, ValueError):
+        return default
 
 
 def _request_with_rate_limit_retry(session: requests.Session, method: str, url: str,
@@ -1050,11 +1111,15 @@ class CLISimulationSession(requests.Session):
         self._stop_flag  = _StopFlag(job_id)
         self._progress_cb = progress_cb
         self._csv_lock   = Lock()
+        self._quota_lock = Lock()
+        self._submit_lock = Lock()
+        self._simulation_quota: Optional[dict] = None
         self._csv_file   = output_csv or os.path.join(
             DATA_DIR, f"{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
         )
         self._log_file   = self._csv_file.replace(".csv", ".log")
         self.login_expired = False
+        self._load_latest_simulation_quota()
 
         if existing_session is not None:
             self.__dict__.update({k: v for k, v in existing_session.__dict__.items()
@@ -1106,6 +1171,61 @@ class CLISimulationSession(requests.Session):
             self._progress_cb(msg)
         else:
             print(f"[simulate] {msg}", file=sys.stderr)
+
+    def _load_latest_simulation_quota(self):
+        try:
+            jobs = JobStore.list_jobs("simulate")
+        except Exception:
+            return
+        jobs.sort(key=lambda job: job.get("updated_at", ""), reverse=True)
+        for job in jobs:
+            quota = job.get("simulation_quota")
+            if isinstance(quota, dict):
+                with self._quota_lock:
+                    self._simulation_quota = quota
+                return
+
+    def _record_simulation_quota(self, response: requests.Response) -> Optional[dict]:
+        quota = _simulation_rate_limit_from_headers(response.headers)
+        if quota is None:
+            return None
+        with self._quota_lock:
+            self._simulation_quota = quota
+        if self._job_id:
+            JobStore.update(self._job_id, simulation_quota=quota)
+        return quota
+
+    def _quota_wait_seconds(self) -> int:
+        with self._quota_lock:
+            quota = dict(self._simulation_quota or {})
+        if quota.get("remaining") != 0:
+            return 0
+        reset_at_seconds = _seconds_until_iso(quota.get("reset_at"))
+        if reset_at_seconds is not None:
+            return reset_at_seconds
+        reset_seconds = quota.get("reset_seconds")
+        if isinstance(reset_seconds, int):
+            return max(reset_seconds, 0)
+        return 0
+
+    def _wait_for_simulation_quota(self) -> bool:
+        wait_seconds = self._quota_wait_seconds()
+        if wait_seconds <= 0:
+            return True
+
+        message = f"Simulation daily limit reached; waiting {wait_seconds}s for reset."
+        self._emit(message)
+        if self._job_id:
+            JobStore.update(self._job_id, progress_message=message)
+
+        deadline = time.monotonic() + wait_seconds
+        while True:
+            if self._stop_flag.check():
+                return False
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                return True
+            time.sleep(min(30, remaining))
 
     def simulate(self, params: List[dict]) -> List[dict]:
         """Run all simulations and write to CSV.  Returns list of result rows."""
@@ -1213,24 +1333,28 @@ class CLISimulationSession(requests.Session):
             if self._stop_flag.check():
                 return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
             try:
-                r = self.post(f"{BRAIN_API_BASE}/simulations", json={
-                    "regular": alpha,
-                    "type":    "REGULAR",
-                    "settings": {
-                        "nanHandling":    nan_handling,
-                        "instrumentType": "EQUITY",
-                        "delay":          delay,
-                        "universe":       universe,
-                        "truncation":     truncation,
-                        "unitHandling":   "VERIFY",
-                        "pasteurization": pasteurization,
-                        "region":         region,
-                        "language":       "FASTEXPR",
-                        "decay":          decay,
-                        "neutralization": neutralization,
-                        "visualization":  False,
-                    },
-                })
+                with self._submit_lock:
+                    if not self._wait_for_simulation_quota():
+                        return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
+                    r = self.post(f"{BRAIN_API_BASE}/simulations", json={
+                        "regular": alpha,
+                        "type":    "REGULAR",
+                        "settings": {
+                            "nanHandling":    nan_handling,
+                            "instrumentType": "EQUITY",
+                            "delay":          delay,
+                            "universe":       universe,
+                            "truncation":     truncation,
+                            "unitHandling":   "VERIFY",
+                            "pasteurization": pasteurization,
+                            "region":         region,
+                            "language":       "FASTEXPR",
+                            "decay":          decay,
+                            "neutralization": neutralization,
+                            "visualization":  False,
+                        },
+                    })
+                    self._record_simulation_quota(r)
                 if r.status_code == 401:
                     clear_login_state()
                     persona_url = extract_persona_url(r)
@@ -1248,12 +1372,23 @@ class CLISimulationSession(requests.Session):
                     )
                     return {"uuid": row_uuid, "error": "Unauthorized while submitting simulation.", "alpha": alpha}
                 r.raise_for_status()
-                nxt = r.headers["Location"]
+                location = r.headers.get("Location")
+                if not location:
+                    return {"uuid": row_uuid, "error": "Simulation response missing Location header.", "alpha": alpha}
+                nxt = urljoin(r.url, location)
                 break
             except requests.exceptions.HTTPError as exc:
                 if exc.response.status_code == 429 and attempt < max_retries - 1:
-                    self._emit(f"429 rate-limit, retrying in 15s ({attempt+1}/{max_retries})…")
-                    time.sleep(15)
+                    wait_seconds = _retry_after_seconds(exc.response.headers, self._quota_wait_seconds() or 15)
+                    self._emit(f"429 rate-limit, retrying in {wait_seconds}s ({attempt+1}/{max_retries})…")
+                    deadline = time.monotonic() + wait_seconds
+                    while True:
+                        if self._stop_flag.check():
+                            return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
+                        remaining = deadline - time.monotonic()
+                        if remaining <= 0:
+                            break
+                        time.sleep(min(30, remaining))
                     continue
                 return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
             except Exception as exc:
@@ -1287,20 +1422,27 @@ class CLISimulationSession(requests.Session):
                     return {"uuid": row_uuid, "error": "Unauthorized while polling simulation.", "alpha": alpha}
                 r.raise_for_status()
                 rj   = r.json()
+                status = str(rj.get("status", "")).upper()
                 if "alpha" in rj:
                     alpha_link = rj["alpha"]
                     break
+                if status in SIMULATION_ERROR_STATUSES:
+                    message = rj.get("message") or f"Simulation ended with status {status}."
+                    return {"uuid": row_uuid, "error": message, "alpha": alpha}
+                if status in SIMULATION_DONE_STATUSES:
+                    return {"uuid": row_uuid, "error": f"Simulation ended with status {status} but no alpha id was returned.", "alpha": alpha}
                 progress = rj.get("progress", 0)
                 self._emit(f"  Progress {int(100 * progress)}% — {alpha[:30]}")
+                wait_seconds = _retry_after_seconds(r.headers)
             except requests.exceptions.HTTPError as exc:
                 if exc.response.status_code == 429:
-                    time.sleep(15)
+                    time.sleep(_retry_after_seconds(exc.response.headers, 15))
                     continue
                 return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
             except Exception as exc:
                 return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
 
-            for _ in range(50):  # 10-second wait in 0.2s chunks
+            for _ in range(max(int(wait_seconds / 0.2), 1)):
                 if self._stop_flag.check():
                     return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
                 time.sleep(0.2)

@@ -142,7 +142,7 @@ def authenticate_with_brain(session: requests.Session,
                             timeout: int = 15) -> Tuple[Optional[requests.Session], Optional[str], Optional[str]]:
     response = session.post(f"{BRAIN_API_BASE}/authentication", timeout=timeout)
     body = _safe_json(response)
-    if response.status_code == 200 and "user" in body:
+    if response.status_code in (200, 201) and "user" in body:
         save_login_cookies(session)
         return session, None, None
     persona_url = extract_persona_url(response, body)

@@ -171,6 +171,43 @@ def build_status_message(credentials_path: str) -> str:
     def _count_status(jobs, status):
         return sum(1 for job in jobs if job.get("status") == status)
 
+    def _simulation_quota_line():
+        jobs_with_quota = [
+            job for job in simulate_jobs
+            if isinstance(job.get("simulation_quota"), dict)
+        ]
+        if not jobs_with_quota:
+            return "Simulation quota: N/A"
+
+        running = [job for job in jobs_with_quota if job.get("status") == "running"]
+        candidates = running or jobs_with_quota
+        candidates.sort(key=lambda job: job.get("updated_at", ""), reverse=True)
+        quota = candidates[0]["simulation_quota"]
+
+        limit = quota.get("limit")
+        remaining = quota.get("remaining")
+        reset_seconds = None
+        reset_at = quota.get("reset_at")
+        if reset_at:
+            try:
+                reset_dt = _dt.datetime.fromisoformat(reset_at)
+                reset_seconds = max(int((reset_dt - _dt.datetime.now()).total_seconds()), 0)
+            except (TypeError, ValueError):
+                reset_seconds = None
+        if reset_seconds is None:
+            reset_seconds = quota.get("reset_seconds")
+        if isinstance(reset_seconds, int):
+            reset_text = _format_duration(_dt.timedelta(seconds=max(reset_seconds, 0)))
+        else:
+            reset_text = "N/A"
+
+        return (
+            "Simulation quota: "
+            f"remaining={remaining if remaining is not None else 'N/A'} "
+            f"limit={limit if limit is not None else 'N/A'} "
+            f"reset_in={reset_text}"
+        )
+
     lines = [
         "brain_viewer 狀態",
         f"Session: {session_info.get('status')}",
@@ -185,6 +222,7 @@ def build_status_message(credentials_path: str) -> str:
             f"failed={_count_status(simulate_jobs, 'failed')} "
             f"stopped={_count_status(simulate_jobs, 'stopped')}"
         ),
+        _simulation_quota_line(),
         (
             "Evolution jobs: "
             f"pending={_count_status(evolution_jobs, 'pending')} "

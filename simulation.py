@@ -116,6 +116,7 @@ import os
 import webbrowser
 from concurrent.futures import ThreadPoolExecutor
 from threading import Lock # Import Lock for thread-safe writing
+from urllib.parse import urljoin
 import cli_services as svc
 from brain_worker import ensure_background_worker_running
 from wq_session import (
@@ -1219,6 +1220,9 @@ class WQSession(requests.Session):
             self.rows_processed = []
             self.latest_csv_file = None
             self._csv_lock = Lock()
+            self._quota_lock = Lock()
+            self._submit_lock = Lock()
+            self._simulation_quota = None
             # 跳過 self.login()
         else:
             super().__init__()
@@ -1244,6 +1248,52 @@ class WQSession(requests.Session):
             self.rows_processed = []
             self.latest_csv_file = None
             self._csv_lock = Lock() # Lock for thread-safe CSV writing
+            self._quota_lock = Lock()
+            self._submit_lock = Lock()
+            self._simulation_quota = None
+
+    def _emit_progress(self, message):
+        logging.info(message)
+        if self.worker_ref:
+            self.worker_ref.progress_updated.emit(message)
+
+    def _sleep_with_stop(self, seconds):
+        deadline = time.monotonic() + max(float(seconds), 0.0)
+        while True:
+            if self.worker_ref and self.worker_ref.stop_requested:
+                return False
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                return True
+            time.sleep(min(0.2, remaining))
+
+    def _record_simulation_quota(self, response):
+        quota = svc._simulation_rate_limit_from_headers(response.headers)
+        if quota is None:
+            return None
+        with self._quota_lock:
+            self._simulation_quota = quota
+        return quota
+
+    def _quota_wait_seconds(self):
+        with self._quota_lock:
+            quota = dict(self._simulation_quota or {})
+        if quota.get("remaining") != 0:
+            return 0
+        reset_at_seconds = svc._seconds_until_iso(quota.get("reset_at"))
+        if reset_at_seconds is not None:
+            return reset_at_seconds
+        reset_seconds = quota.get("reset_seconds")
+        if isinstance(reset_seconds, int):
+            return max(reset_seconds, 0)
+        return 0
+
+    def _wait_for_simulation_quota(self):
+        wait_seconds = self._quota_wait_seconds()
+        if wait_seconds <= 0:
+            return True
+        self._emit_progress(f"Simulation daily limit reached; waiting {wait_seconds}s for reset.")
+        return self._sleep_with_stop(wait_seconds)
 
     def login(self):
         try:
@@ -1329,56 +1379,62 @@ class WQSession(requests.Session):
                     return {'uuid': row_uuid, 'error': '模擬被手動停止', 'alpha': alpha}
 
                 try:
-                    # 在真正開始發送 API 請求前才 emit started
-                    if self.worker_ref:
-                        self.worker_ref.simulation_row_started.emit(row_uuid, simulation)
-                    r = self.post('https://api.worldquantbrain.com/simulations', json={
-                        'regular': alpha,
-                        'type': 'REGULAR',
-                        'settings': {
-                            "nanHandling":nan,
-                            "instrumentType":"EQUITY",
-                            "delay":delay,
-                            "universe":universe,
-                            "truncation":truncation,
-                            "unitHandling":"VERIFY",
-                            "pasteurization":pasteurization,
-                            "region":region,
-                            "language":"FASTEXPR",
-                            "decay":decay,
-                            "neutralization":neutralization,
-                            "visualization":False
-                        }
-                    })
+                    with self._submit_lock:
+                        if not self._wait_for_simulation_quota():
+                            return {'uuid': row_uuid, 'error': '模擬被手動停止', 'alpha': alpha}
+                        # 在真正開始發送 API 請求前才 emit started
+                        if self.worker_ref:
+                            self.worker_ref.simulation_row_started.emit(row_uuid, simulation)
+                        r = self.post('https://api.worldquantbrain.com/simulations', json={
+                            'regular': alpha,
+                            'type': 'REGULAR',
+                            'settings': {
+                                "nanHandling":nan,
+                                "instrumentType":"EQUITY",
+                                "delay":delay,
+                                "universe":universe,
+                                "truncation":truncation,
+                                "unitHandling":"VERIFY",
+                                "pasteurization":pasteurization,
+                                "region":region,
+                                "language":"FASTEXPR",
+                                "decay":decay,
+                                "neutralization":neutralization,
+                                "visualization":False
+                            }
+                        })
+                        self._record_simulation_quota(r)
                     r.raise_for_status() # Check for HTTP errors (including 429 initially)
-                    nxt = r.headers['Location']
+                    location = r.headers.get('Location')
+                    if not location:
+                        error_msg = "Simulation response missing Location header."
+                        if self.worker_ref:
+                            self.worker_ref.error_occurred.emit(row_uuid, error_msg)
+                        return {'uuid': row_uuid, 'error': error_msg, 'alpha': alpha}
+                    nxt = urljoin(r.url, location)
                     break # Success, exit retry loop
                 except requests.exceptions.HTTPError as http_err:
                     if http_err.response.status_code == 429:
-                        retry_msg = f"請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
+                        retry_delay = svc._retry_after_seconds(http_err.response.headers, 15)
+                        retry_msg = f"請求過多 (429)，等待 {retry_delay:g} 秒後重試 ({attempt + 1}/{max_retries})..."
                         logging.warning(f"{thread} -- {retry_msg}")
                         if self.worker_ref:
                             self.worker_ref.progress_updated.emit(retry_msg)
                         if attempt < max_retries - 1:
-                            # 等待時檢查停止請求
-                            for _ in range(retry_delay * 5): # Check every 0.2 seconds
-                                if self.worker_ref and self.worker_ref.stop_requested:
-                                    logging.info(f"{thread} -- 偵測到停止請求，中斷重試等待。")
-                                    return {'error': '模擬被手動停止', 'alpha': alpha}
-                                time.sleep(0.2)
+                            if not self._sleep_with_stop(retry_delay):
+                                logging.info(f"{thread} -- 偵測到停止請求，中斷重試等待。")
+                                return {'uuid': row_uuid, 'error': '模擬被手動停止', 'alpha': alpha}
                             continue # Continue to the next retry attempt
-                        else:
-                            logging.error(f"{thread} -- 達到最大重試次數 ({max_retries})，放棄模擬請求。")
-                            error_msg = f"API 請求過多 (429)，達到最大重試次數 ({max_retries})。"
-                            if self.worker_ref:
-                                self.worker_ref.error_occurred.emit(row_uuid, error_msg) # Emit error signal
-                            return {'error': error_msg, 'alpha': alpha}
-                    else:
-                        # Handle other HTTP errors
-                        logging.error(f"{thread} -- Simulation request failed with HTTP error: {http_err}")
+                        logging.error(f"{thread} -- 達到最大重試次數 ({max_retries})，放棄模擬請求。")
+                        error_msg = f"API 請求過多 (429)，達到最大重試次數 ({max_retries})。"
                         if self.worker_ref:
-                            self.worker_ref.error_occurred.emit(row_uuid, f"模擬請求失敗: {http_err}")
-                        return {'error': f"模擬請求失敗: {http_err}", 'alpha': alpha}
+                            self.worker_ref.error_occurred.emit(row_uuid, error_msg) # Emit error signal
+                        return {'error': error_msg, 'alpha': alpha}
+                    # Handle other HTTP errors
+                    logging.error(f"{thread} -- Simulation request failed with HTTP error: {http_err}")
+                    if self.worker_ref:
+                        self.worker_ref.error_occurred.emit(row_uuid, f"模擬請求失敗: {http_err}")
+                    return {'error': f"模擬請求失敗: {http_err}", 'alpha': alpha}
                 except requests.exceptions.RequestException as req_err: # Handle non-HTTP request errors (e.g., connection error)
                     logging.error(f"{thread} -- Simulation request failed: {req_err}")
                     if self.worker_ref:
@@ -1419,6 +1475,7 @@ class WQSession(requests.Session):
                         r = self.get(nxt)
                         r.raise_for_status() # Check for HTTP errors (including 429)
                         r_json = r.json()
+                        retry_delay = svc._retry_after_seconds(r.headers, 10)
                         status_check_success = True # Flag success for this attempt
                         break # Success, exit retry loop for this status check
                     except requests.exceptions.ConnectionError as conn_err:
@@ -1441,30 +1498,26 @@ class WQSession(requests.Session):
                             break
                     except requests.exceptions.HTTPError as http_err:
                         if http_err.response.status_code == 429:
-                            retry_msg = f"檢查狀態請求過多 (429)，等待 {retry_delay} 秒後重試 ({attempt + 1}/{max_retries})..."
+                            retry_delay = svc._retry_after_seconds(http_err.response.headers, 15)
+                            retry_msg = f"檢查狀態請求過多 (429)，等待 {retry_delay:g} 秒後重試 ({attempt + 1}/{max_retries})..."
                             logging.warning(f"{thread} -- {retry_msg}")
                             if self.worker_ref:
                                 self.worker_ref.progress_updated.emit(retry_msg)
                             if attempt < max_retries - 1:
-                                # 等待時檢查停止請求
-                                for _ in range(retry_delay * 5): # Check every 0.2 seconds
-                                    if self.worker_ref and self.worker_ref.stop_requested:
-                                        logging.info(f"{thread} -- 偵測到停止請求，中斷重試等待。")
-                                        return {'error': '模擬被手動停止', 'alpha': alpha}
-                                    time.sleep(0.2)
+                                if not self._sleep_with_stop(retry_delay):
+                                    logging.info(f"{thread} -- 偵測到停止請求，中斷重試等待。")
+                                    return {'uuid': row_uuid, 'error': '模擬被手動停止', 'alpha': alpha}
                                 status_check_success = False # Mark attempt as failed due to 429
                                 continue # Continue to the next retry attempt
-                            else:
-                                logging.error(f"{thread} -- 達到最大重試次數 ({max_retries})，放棄檢查狀態。")
-                                ok = (False, f"API 請求過多 (429)，達到最大重試次數 ({max_retries})。")
-                                status_check_success = False # Mark as failed
-                                break # Exit retry loop, ok is set to error
-                        else:
-                            # Handle other HTTP errors
-                            logging.error(f"{thread} -- Failed to get simulation status with HTTP error: {http_err}")
-                            ok = (False, f"無法取得模擬狀態: {http_err}")
+                            logging.error(f"{thread} -- 達到最大重試次數 ({max_retries})，放棄檢查狀態。")
+                            ok = (False, f"API 請求過多 (429)，達到最大重試次數 ({max_retries})。")
                             status_check_success = False # Mark as failed
                             break # Exit retry loop, ok is set to error
+                        # Handle other HTTP errors
+                        logging.error(f"{thread} -- Failed to get simulation status with HTTP error: {http_err}")
+                        ok = (False, f"無法取得模擬狀態: {http_err}")
+                        status_check_success = False # Mark as failed
+                        break # Exit retry loop, ok is set to error
                     except requests.exceptions.RequestException as req_err: # Handle non-HTTP request errors
                         logging.error(f"{thread} -- Failed to get simulation status: {req_err}")
                         ok = (False, f"無法取得模擬狀態: {req_err}")
@@ -1484,26 +1537,25 @@ class WQSession(requests.Session):
                 if 'alpha' in r_json:
                     alpha_link = r_json['alpha']
                     break
-                else: # Added else for clarity and correct indentation
-                    # Correct indentation for these lines
-                    progress = r_json.get('progress', 0)
-                    logging.info(f"{thread} -- Waiting for simulation to end ({int(100*progress)}%)")
-                    # 個別進度更新
-                    if self.worker_ref:
-                        self.worker_ref.single_simulation_progress.emit(row_uuid, int(100*progress))
-                    # 新增結束
+                status = str(r_json.get('status', '')).upper()
+                if status in svc.SIMULATION_ERROR_STATUSES:
+                    message = r_json.get('message') or f"Simulation ended with status {status}."
+                    ok = (False, message)
+                    break
+                if status in svc.SIMULATION_DONE_STATUSES:
+                    ok = (False, f"Simulation ended with status {status} but no alpha id was returned.")
+                    break
 
-                # 如果模擬尚未完成，則等待並繼續檢查狀態
-                # 將 10 秒 sleep 拆成 50 次 0.2 秒 sleep，每次檢查是否收到停止請求
-                wait_interval = 0.2
-                total_wait_time = 10 # seconds
-                num_intervals = int(total_wait_time / wait_interval)
+                progress = r_json.get('progress', 0)
+                logging.info(f"{thread} -- Waiting for simulation to end ({int(100*progress)}%)")
+                # 個別進度更新
+                if self.worker_ref:
+                    self.worker_ref.single_simulation_progress.emit(row_uuid, int(100*progress))
+                # 新增結束
 
-                for _ in range(num_intervals):
-                    if self.worker_ref and self.worker_ref.stop_requested:
-                        logging.info(f"{thread} -- 偵測到停止請求，中斷等待。")
-                        return {'error': '模擬被手動停止', 'alpha': alpha}
-                    time.sleep(wait_interval)
+                if not self._sleep_with_stop(retry_delay):
+                    logging.info(f"{thread} -- 偵測到停止請求，中斷等待。")
+                    return {'uuid': row_uuid, 'error': '模擬被手動停止', 'alpha': alpha}
                 # Loop back to check status again
 
 

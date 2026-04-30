@@ -83,6 +83,7 @@ python app.py
   - Search modes: Normal (keyword) / AI (Gemini semantic search)
   - API refresh uses WQ Brain `data-sets` to discover dataset IDs for `EQUITY / USA / TOP3000 / delay=1`, then updates each dataset through `data-fields?dataset.id=...`
   - WQ rate limits are handled by respecting `Retry-After` on HTTP 429 and retrying transient 502/503/504 responses
+  - Simulation workers read `x-ratelimit-limit`, `x-ratelimit-remaining`, and `x-ratelimit-reset` from `POST /simulations`; when the daily remaining count reaches 0, the next submit waits until reset before continuing. Telegram `/status` shows the latest simulation quota.
 
 - **Backtests**
   - Reads backtest data under `data/` (per your existing data format/process)
