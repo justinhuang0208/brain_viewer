@@ -1,0 +1,52 @@
+{
+  "id": "zscore",
+  "title": "zscore",
+  "lastModified": "2025-12-11T08:31:40.086941-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>zscore(x)</b></p>",
+      "id": "54666fe7-7f31-4520-822c-56618fbc46c1"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>Z-score is a statistical tool that indicates how many standard deviations a data point lies from the average of a group of values. Essentially, it measures how unusual a data point is in relation to the mean, making it a handy tool for understanding deviation and comparison.</p><p>The formula to calculate a Z-score is:</p>",
+      "id": "f62886a1-d338-4a75-8773-61d6e8d14441"
+    },
+    {
+      "type": "EQUATION",
+      "value": "$$Z\\textrm{-}score = \\frac{x - mean(x)}{std(x)}$$",
+      "id": "ddd53555-3721-42ab-830a-4dcebc8b7950"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>Where:</p><ul><li>x is an individual data point</li><li>mean(x) is the average of the data set</li><li>std(x) is the standard deviation of the data set</li></ul><p>By this definition, the mean of the Z-scores in a distribution is always 0, and the standard deviation is always 1.</p><p>A Z-score tells you how many standard deviations a particular data point is from the mean. If the Z-score is positive, the data point is above the mean, and if it's negative, it's below the mean.</p><p>Z-scores may be especially useful for normalizing and comparing different data fields for different stocks or different data fields. They allow researchers to calculate the probability of a score occurring within a standard normal distribution and compare two scores that are from different samples (which may have different means and standard deviations).</p><p>This operator may help reduce outliers.</p><p></p><p>Input: Value of 5 instruments at day t: (100, 0, 50, 60, 25)</p><p>Output: (1.57, -1.39, 0.09, 0.39, -0.65) from SD: 33.7, mean: 47</p>",
+      "id": "ca653e3a-6093-4d5c-9d72-0dbd9f4b3efe"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "MARKET",
+          "truncation": 0.03,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "zscore(close)"
+      },
+      "id": "430a5d53-a734-4f86-9147-42c8bf088cdf"
+    }
+  ],
+  "sequence": 105,
+  "category": "Operators"
+}

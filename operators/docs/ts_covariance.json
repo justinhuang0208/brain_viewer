@@ -1,0 +1,14 @@
+{
+  "id": "ts_covariance",
+  "title": "ts_covariance",
+  "lastModified": "2026-03-01T04:51:58.058875-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>Covariance quantifies the direction and strength of the linear relationship between two variables. A positive covariance means the variables tend to move in the same direction, while a negative value means they move in opposite directions. The magnitude reflects the strength of this relationship, but it is sensitive to the scale of the variables.</p><p><b>Example calculations</b></p><p>Suppose you have two time-series:</p><ul><li>y = [2, 4, 6, 8, 10]</li><li>x = [1, 3, 5, 7, 9]</li><li>d = 5 (using all 5 days)</li></ul><p>The covariance is calculated as:</p><ol><li>Compute the mean of y and x:</li></ol><ul><li>mean_y = (2+4+6+8+10)/5 = 6</li><li>mean_x = (1+3+5+7+9)/5 = 5</li></ul><ol><li>For each day, calculate (y_i - mean_y) * (x_i - mean_x):</li></ol><ul><li>(2-6)*(1-5) = 16</li><li>(4-6)*(3-5) = 4</li><li>(6-6)*(5-5) = 0</li><li>(8-6)*(7-5) = 4</li><li>(10-6)*(9-5) = 16</li></ul><ol><li>Sum these values: 16 + 4 + 0 + 4 + 16 = 40</li><li>Divide by the number of days: 40 / 5 = 8</li></ol><p>So, ts_covariance(y, x, 5) returns 8. </p>",
+      "id": "507bd227-51ed-459a-99d2-26894824ef5b"
+    }
+  ],
+  "sequence": 7021,
+  "category": "Operators"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ts_std_dev",
+  "title": "ts_std_dev",
+  "lastModified": "2026-03-01T05:25:21.900967-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The ts_std_dev(x, d) operator returns the standard deviation of the input series x for the last d days. Standard deviation is a key statistical measure that quantifies the amount of variation or dispersion in a dataset. In the context of time series, it helps you understand how volatile or stable a variable (such as returns or prices) has been over a specified window.</p><p>A low standard deviation means values are close to the mean, while a high standard deviation indicates values are more spread out.</p><p><b>Example calculations</b></p><p>Suppose you have daily returns for a stock over the last 5 days:<br/> x = [0.01, 0.02, -0.01, 0.00, 0.03]</p><p>To calculate the 5-day standard deviation:</p><ol><li>Compute the mean:<br/>      (0.01 + 0.02 + -0.01 + 0.00 + 0.03) / 5 = 0.01</li><li>Compute squared deviations:</li></ol><p>(0.01 - 0.01)² = 0</p><p>(0.02 - 0.01)² = 0.0001</p><p>(-0.01 - 0.01)² = 0.0004</p><p>(0.00 - 0.01)² = 0.0001</p><p>(0.03 - 0.01)² = 0.0004</p><ol><li>Average the squared deviations:<br/>      (0 + 0.0001 + 0.0004 + 0.0001 + 0.0004) / 5 = 0.0002</li><li>Take the square root:<br/>      sqrt(0.0002) ≈ 0.0141</li></ol><p>So, ts_std_dev(x, 5) would return approximately 0.0141.</p><p><b>Examples</b></p><p>ts_std_dev(returns, 21)</p><p>Calculates the 21‑day rolling standard deviation of daily returns; a proxy for one‑month stock volatility.</p>",
+      "id": "a853e67a-7f0d-4ee1-891f-baea70e7fe45"
+    }
+  ],
+  "sequence": 7028,
+  "category": "Operators"
+}

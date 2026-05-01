@@ -1,0 +1,88 @@
+{
+  "id": "kth_element",
+  "title": "kth_element",
+  "lastModified": "2026-03-01T04:06:00.407946-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The kth_element(x, d, k) operator retrieves the k-th value from the input series x by searching through the last d days. You can specify which values to ignore (e.g., “NaN”, “0”) using the ignore parameter. This operator is especially useful for filling in missing data points (backfilling), where setting k=1 returns the most recent valid value.</p><p><b>Example Calculations</b></p><p>Suppose your input series for a stock's sales/assets ratio over 5 days is: [0.5, NaN, NaN, 0.7, 0]</p><p>Using kth_element(sales/assets, 5, k=“1”, ignore=“NaN 0”):</p>",
+      "id": "397caa66-63cc-42b3-88fc-d75b9e7c6fee"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Date",
+            "Input Value",
+            "Lookback Window (up to 5 days)",
+            "Output"
+          ],
+          [
+            "2024-06-01",
+            "0.5",
+            "[0.5]",
+            "0.5"
+          ],
+          [
+            "2024-06-02",
+            "NaN",
+            "[0.5, NaN]",
+            "0.5"
+          ],
+          [
+            "2024-06-03",
+            "NaN",
+            "[0.5, NaN, NaN]",
+            "0.5"
+          ],
+          [
+            "2024-06-04",
+            "0.7",
+            "[0.5, NaN, NaN, 0.7]",
+            "0.7"
+          ],
+          [
+            "2024-06-05",
+            "0",
+            "[0.5, NaN, NaN, 0.7, 0]",
+            "0.7"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": false
+      },
+      "id": "7ccfa12a-5333-4100-b37d-b65aa2b306ea"
+    },
+    {
+      "type": "TEXT",
+      "value": "<ul><li>If you have a time series with missing values (NaNs) and want to fill each missing value with the most recent non-NaN value, set k=1 and ignore=“NaN”.</li><li>If you want the second most recent non-zero, non-NaN value, set k=2 and ignore=“NaN 0”.</li></ul><p>While you can achieve the same result with ts_backfill, there are cases where you would prefer the kth_element operator, for example:</p><p>Expression 1: kth_element(dividend,63,k=1,ignore=“NaN 0”)</p><p>Expression 2: ts_backfill(to_nan(sales/assets, value=0), 63)</p><p>Both expressions produce the same result. But using the <b>kth_element</b> operator is more efficient here, as it eliminates the need for an additional operator.</p>",
+      "id": "bf14bfb1-7209-4605-8408-41ba425884e7"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "kth_element(sales/assets,252,k=\"1\",ignore=\"NAN 0\")"
+      },
+      "id": "b8c6d955-4487-48d7-baa2-fc6fb55dcff2"
+    }
+  ],
+  "sequence": 170,
+  "category": "Operators"
+}

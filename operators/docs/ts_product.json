@@ -1,0 +1,37 @@
+{
+  "id": "ts_product",
+  "title": "ts_product",
+  "lastModified": "2026-03-01T05:11:10.018878-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The ts_product(x, d) operator computes the product of the values of x for the last d days. This is especially useful in financial analysis for calculating geometric means, which are often preferred over arithmetic means for averaging rates of return or growth rates. For example, the geometric mean of daily returns over a period can be derived using ts_product.</p><p><b>Example calculations</b></p><p>If you have daily returns for a stock over 5 days:</p><ul><li>Returns: [1.01, 0.99, 1.02, 1.00, 1.03]</li></ul><p>ts_product(returns, 5) will calculate:</p><ul><li>1.01 × 0.99 × 1.02 × 1.00 × 1.03 = 1.0501</li></ul><p><b>Examples</b></p><p>power(ts_product(returns, 10), 1/10)</p><ul><li>Calculate the geometric mean of      daily returns for the past 10 days:</li></ul>",
+      "id": "342a6a71-4fa9-4fbe-aec3-2e2343a34936"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 1,
+          "neutralization": "MARKET",
+          "truncation": 1.0,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "power(ts_product(returns, 10), 1/10)"
+      },
+      "id": "f0cccc04-bc36-49a8-9fb5-d3d5d11ca8be"
+    }
+  ],
+  "sequence": 1233,
+  "category": "Operators"
+}

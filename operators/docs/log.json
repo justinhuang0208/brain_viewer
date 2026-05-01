@@ -1,0 +1,14 @@
+{
+  "id": "log",
+  "title": "log",
+  "lastModified": "2026-02-11T11:39:42.110014-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The log(x) operator computes the natural logarithm (base e) of the input x. This transformation is widely used in finance to normalize data, reduce skewness, or convert multiplicative relationships into additive ones. The input x should be positive, as the logarithm is undefined for zero or negative values.</p><ul><li>If x = 10, then log(10) ≈ 2.3026</li><li>If x = 1, then log(1) = 0</li><li>If x = 0.5, then log(0.5) ≈ -0.6931</li></ul>",
+      "id": "1a6687bc-1e83-48d8-a65a-8fbd6609b50f"
+    }
+  ],
+  "sequence": 7012,
+  "category": "Operators"
+}

@@ -1,0 +1,49 @@
+{
+  "id": "vec_sum",
+  "title": "vec_sum",
+  "lastModified": "2026-03-20T09:01:34.943547-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The vec_sum(x) operator adds up every value in the vector field x and returns the total. This is useful for aggregating data points stored as vectors, such as total daily sentiment volume or total trades for a stock.</p><p><b>Example calculations</b></p>",
+      "id": "26728c43-9a65-44e6-9379-41e86de9ac93"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Date",
+            "X (vector datafield)",
+            "vec_avg(X)"
+          ],
+          [
+            "2024-06-01",
+            "[10, 20, 30]",
+            "10+20+30 = 60"
+          ],
+          [
+            "2024-06-02",
+            "[13, 5, 15]",
+            "13+5+15 = 33"
+          ],
+          [
+            "2024-06-03",
+            "[3, 12, 8, 20, 7]",
+            "3+12+8+20+7 = 50"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": false
+      },
+      "id": "9a38c324-a6ef-499c-bbff-3351c8c5f466"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p><b>Examples</b></p><p>vec_sum(scl12_alltype_buzzvec)</p><ul><li>Sums all entries of the intraday “buzz” vector to get a daily total volume of mentions for each instrument.</li></ul>",
+      "id": "3560be72-49aa-4745-a8da-dd22fbecff93"
+    }
+  ],
+  "sequence": 7781,
+  "category": "Operators"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "jump_decay",
+  "title": "jump_decay",
+  "lastModified": "2025-12-11T09:04:23.186872-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>If there is a huge jump in current data compare to previous one, apply force:</p><p>jump_decay(x) = abs(x-ts_delay(x, 1)) &gt; sensitivity * ts_stddev(x,d) ? ts_delay(x,1) + ts_delta(x, 1) * force: x</p><p>If <b>stddev</b> enabled, jump threshold will be calculated as <b>sensitivity * stddev</b> otherwise it is <b>sensitivity</b></p><p><b>Example:</b></p><p></p><p>Input: Value of 1 instrument in past 2 days: (2, 4), d: 6, sensitivity: 0.5, force: 0.1 where first element is the latest</p><p>Output: 4 + (-2 * 0.1) = 3.8</p>",
+      "id": "8ba183ff-fffd-4feb-a648-3c37255f0029"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "jump_decay(sales/assets,252,stddev=True,sensitivity=0.5,force=0.1)"
+      },
+      "id": "47ff2a84-e5b5-41da-b41d-518410ed753d"
+    }
+  ],
+  "sequence": 6566,
+  "category": "Operators"
+}

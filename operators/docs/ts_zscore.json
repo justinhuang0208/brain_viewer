@@ -1,0 +1,14 @@
+{
+  "id": "ts_zscore",
+  "title": "ts_zscore",
+  "lastModified": "2026-03-01T05:29:17.566228-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The ts_zscore(x, d) operator computes the Z-score for each value in a time series. This tells you how many standard deviations today's value is from the mean of the past d days. It helps to normalize data, making it easier to compare values across different time periods or instruments, and can reduce the impact of outliers.</p><p><b>Example calculations</b></p><p>Suppose you have a time series of daily closing prices for a stock over 5 days: [10, 12, 11, 13, 15]. To calculate the Z-score for the last value (15) with a window of 5 days:</p><ul><li>Mean of last 5 days: (10 + 12 +      11 + 13 + 15) / 5 = 12.2</li><li>Standard deviation of last 5      days: ≈ 1.92</li><li>Z-score for 15: (15 - 12.2) /      1.92 ≈ 1.46</li></ul><p>This means today's value (15) is about 1.46 standard deviations above the recent average.</p><p><b>Examples</b></p><p>ts_zscore(returns, 63)</p><ul><li>What to expect: Standardizes      returns by subtracting the 63‑day mean and dividing by the 63‑day std;      values are in “sigma” units.</li></ul><p><b>Tips</b></p><ul><li>ts_zscore can be useful to      standardize different fields before using them in an Alpha.</li><li>Combining ts_zscore with cross-sectional operators like rank or quantile can produce stronger signals compared to using either method alone, as it incorporates both standardized scaling and relative comparison.</li></ul>",
+      "id": "c434d3de-9ed7-4830-bb23-a6e6b19dd2f1"
+    }
+  ],
+  "sequence": 7030,
+  "category": "Operators"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ts_decay_linear",
+  "title": "ts_decay_linear",
+  "lastModified": "2026-03-01T04:53:37.005174-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>Linear decay means more recent values have a higher weight, and older values have less influence. By default, it operates in sparse mode (dense = false), treating missing (NaN) values as zero. In dense mode, NaNs are not replaced.</p><p>This operator is useful for:</p><ul><li>Reducing turnover by smoothing      out sharp changes in your Alpha.</li><li>Limiting the effect of outliers      and noise in your data.</li><li>Making your strategy more stable      across days.</li></ul><p><b>Example calculations</b></p><p>Suppose you have a time series:<br/> x = [2, 4, 6, 8, 10] and you want to apply ts_decay_linear(x, 3).</p><ul><li>For the most recent value (10),      the calculation uses the last 3 values: 6, 8, 10.</li><li>The weights are linear: 1      (oldest), 2, 3 (most recent).</li><li>Calculation:<br/>      (6*1 + 8*2 + 10*3) / (1+2+3) = (6 + 16 + 30) / 6 = 52 / 6 ≈ 8.67</li></ul><p>So, the output for the last day is about 8.67, showing that recent values have more influence.</p><p><b>Tip: </b>To get the most out of the <b>ts_decay_linear </b>operator, use it in intermediate stages of your alphas, such as in the following example:</p><p>Signal = ts_rank(ts_decay_linear(close, 5), 252);</p><p>Alpha = rank(Signal);</p><p>Otherwise, if you need decay at the end (using it on alpha variable in this case), adjust the decay setting directly in the simulation settings instead of using the operator.</p>",
+      "id": "06595b17-9992-4751-b675-aa061ad43829"
+    }
+  ],
+  "sequence": 6599,
+  "category": "Operators"
+}

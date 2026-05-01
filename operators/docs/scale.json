@@ -1,0 +1,14 @@
+{
+  "id": "scale",
+  "title": "scale",
+  "lastModified": "2026-03-20T08:46:41.030359-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>  The scale(x, scale=1, longscale=1, shortscale=1) operator adjusts the input values so that their total absolute value matches a target book size. By default, it scales so that the sum of absolute values is 1, but you can set a different scale. You can also use longscale and shortscale to apply different scaling to long and short positions, respectively. This operator is useful for normalizing your alpha signals and reducing the impact of outliers.</p><p><b>Example calculations</b></p><ul><li>If you have an input      vector x = [2, -3, 5] and use scale(x), the operator will      scale these values so that abs(2) + abs(-3) + abs(5) =      10 becomes 1. Each value is divided by 10, so the output      is [0.2, -0.3, 0.5].</li><li>Using scale(x, scale=4),      the sum of absolute values will be 4. The output will be [0.8, -1.2,      2.0].</li><li>If you want to scale long and      short positions differently, e.g., scale(x, longscale=2,      shortscale=3), positive values will be scaled so their sum is 2, and      negative values so their sum is 3.</li></ul><p>Examples</p><p>scale(returns, scale=4)</p><ul><li>The vector is rescaled so that the sum of absolute values across instruments equals 4; relative signs and cross‑sectional order are preserved.</li></ul>",
+      "id": "ad97f46f-9624-479d-8320-c65b01dd31c9"
+    }
+  ],
+  "sequence": 6583,
+  "category": "Operators"
+}

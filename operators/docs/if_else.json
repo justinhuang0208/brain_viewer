@@ -1,0 +1,42 @@
+{
+  "id": "if_else",
+  "title": "if_else",
+  "lastModified": "2026-02-11T11:53:54.658684-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>if_else(event_condition, Alpha_expression_1, Alpha_expression_2)</b></p>",
+      "id": "dc612fc0-2482-4db2-a3ed-ae4f894d26d6"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>The if_else operator lets you choose between two expressions depending on whether a condition is met. This is useful for creating Alphas that react to market events, data thresholds, or other logical rules.</p><p><b>Examples</b></p><p>Event = volume &gt; adv20;</p><p>if_else(Event, 2 * ts_delta(close, 3), ts_delta(close, 3))</p><ul><li>When volume spikes above its 20‑day average, your position change doubles; otherwise it stays normal.</li></ul><p><b>Alpha Example</b></p>",
+      "id": "0a237d70-88bd-4665-b67e-310582e1cf0e"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "Event = volume > adv20;\r\nalpha_1 = 2 * (-ts_delta(close, 3));\r\nalpha_2 = (-ts_delta(close, 3));\r\nif_else(event, alpha_1, alpha_2)"
+      },
+      "id": "cd215a47-01b2-4766-8729-9ed20dbe3a96"
+    }
+  ],
+  "sequence": 111,
+  "category": "Operators"
+}

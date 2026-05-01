@@ -1,0 +1,57 @@
+{
+  "id": "days_from_last_change",
+  "title": "days_from_last_change",
+  "lastModified": "2026-03-01T03:56:39.843233-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The days_from_last_change(x) operator returns how many days have passed since the last time the value of x changed. This is useful for tracking the “age” of the current value. Can be used as a trade_when condition.</p><p><b>Example calculations</b></p>",
+      "id": "688dd628-b754-4632-b100-993da5026bb2"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Date",
+            "X"
+          ],
+          [
+            "2024-06-01",
+            "10"
+          ],
+          [
+            "2024-06-02",
+            "10"
+          ],
+          [
+            "2024-06-03",
+            "12"
+          ],
+          [
+            "2024-06-04",
+            "12"
+          ],
+          [
+            "2024-06-05",
+            "12"
+          ],
+          [
+            "2024-06-06",
+            "15"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": false
+      },
+      "id": "7622734b-958a-452d-b5c8-dd19c1fbd04e"
+    },
+    {
+      "type": "TEXT",
+      "value": "<ul><li>On 2024-06-05: days_from_last_change(x) = 2</li><li>On 2024-06-06: days_from_last_change(x) = 0</li></ul><p><b>Examples</b></p><p>Last_earnings_date = days_from_last_change(ern2_earnrelease_d1_calendar_prev);</p><p>alpha = rank(operating_income/cap);</p><p>trade_when(Last_earnings_date == 0, alpha, -1)</p>",
+      "id": "198c2041-13c4-4a7f-8180-4239b6fa717b"
+    }
+  ],
+  "sequence": 7058,
+  "category": "Operators"
+}

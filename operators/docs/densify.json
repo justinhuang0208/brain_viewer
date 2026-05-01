@@ -1,0 +1,14 @@
+{
+  "id": "densify",
+  "title": "densify",
+  "lastModified": "2024-12-30T04:40:23.398901-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>This operator converts a grouping field with many buckets into a lesser number of only the available buckets, making working with grouping fields computationally efficient. The example below will clarify the implementation.</p><p><b>Example:</b></p><p>Say a grouping field is provided as an integer (e.g., industry: tech -&gt; 0, airspace -&gt; 1, ...) and for a certain date, we have instruments with grouping field values among {0, 1, 2, 99}. Instead of creating 100 buckets and keeping 96 of them empty, it is better to just create 4 buckets with values {0, 1, 2, 3}. So, if the number of unique values in x is n, densify maps those values between 0 and (n-1). The order of magnitude need not be preserved.</p>",
+      "id": "769c9c88-1398-45fe-9c63-c2e8472a9e96"
+    }
+  ],
+  "sequence": 6560,
+  "category": "Operators"
+}

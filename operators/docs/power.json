@@ -1,0 +1,60 @@
+{
+  "id": "power",
+  "title": "power",
+  "lastModified": "2025-04-01T05:10:12.015739-04:00",
+  "content": [
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "power (returns, volume/adv20); power (returns, volume/adv20, precise=true)"
+      },
+      "id": "b403f48b-e9ca-43db-bfe7-b8e793c116e4"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p></p><p>power (x, y) operator can be used to implement popular mathematical functions. For example, sigmoid(close) can be implemented using power(x) as:</p>",
+      "id": "3b419dda-7465-4fea-82cd-c89f64c1e4f1"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 1,
+          "neutralization": "MARKET",
+          "truncation": 1.0,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "1/(1+ power(2.7182, -close)"
+      },
+      "id": "548e0887-bc46-4c0e-adbd-425fa6b3a744"
+    }
+  ],
+  "sequence": 6575,
+  "category": "Operators"
+}

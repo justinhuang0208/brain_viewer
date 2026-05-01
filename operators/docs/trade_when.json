@@ -1,0 +1,14 @@
+{
+  "id": "trade_when",
+  "title": "trade_when",
+  "lastModified": "2026-03-21T11:39:50.939065-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p> The trade_when(x, y, z) operator lets you:</p><ul><li>Change Alpha values only when a trigger condition (x) is true.</li><li>Hold (retain) previous Alpha values when the trigger is false.</li><li>Close Alpha positions (set to NaN) when an exit condition (z) is true.</li></ul><p>This operator is especially helpful for event-driven Alphas and for reducing turnover by only trading when certain events occur.</p><p><b>Example calculations</b></p><ul><li>If z (exit condition) is true, Alpha = NaN (no trade).</li><li>If z is false and x (trigger condition) is true, Alpha = y (new value).</li><li>If both z and x are false, Alpha = previous Alpha (hold position).</li></ul><p><b>Examples</b></p><p>trade_when(volume &gt;= ts_mean(volume, 5), rank(-returns), -1)</p><ul><li>If today's volume is higher than the 5-day average, Alpha = rank(-returns).</li><li>If not, Alpha holds its previous value.</li><li>The exit condition is always false (-1), so positions are not closed by this rule.</li></ul>",
+      "id": "fcc421e9-2939-4fda-873a-9bad9bc26c87"
+    }
+  ],
+  "sequence": 6589,
+  "category": "Operators"
+}

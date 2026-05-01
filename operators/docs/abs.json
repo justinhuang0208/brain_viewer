@@ -1,0 +1,14 @@
+{
+  "id": "abs",
+  "title": "abs",
+  "lastModified": "2026-02-11T11:23:30.962881-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>  </p><p>The absolute value is often used to ensure that only the size of a value is considered, not its direction.</p><p><b>Examples:</b></p><p>abs(close - open)</p><p>This expression will output the absolute difference of the daily price change </p>",
+      "id": "e5904844-738c-4a60-ad9b-436b557c57ee"
+    }
+  ],
+  "sequence": 7623,
+  "category": "Operators"
+}

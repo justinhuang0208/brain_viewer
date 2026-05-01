@@ -1,0 +1,42 @@
+{
+  "id": "multiply",
+  "title": "multiply",
+  "lastModified": "2026-02-11T11:34:29.081876-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>Computes the product of all inputs. You can pass any number of scalars or series: multiply(a, b, c) = a × b × c. When filter=true, NaNs are replaced with 1 before the product; when false, any NaN propagates to the result.</p><p>Example calculations:</p><ul><li>multiply(2, 3) = 6</li><li>multiply(2, 3, 4) = 24</li><li>multiply(5, NaN, filter=false) = NaN</li></ul><p>multiply(5, NaN, filter=true) = 5 × 1 = 5</p>",
+      "id": "7d416569-256a-4490-9fd1-007e1168cfa5"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p><b>Alpha Examples</b>:</p>",
+      "id": "9ebf7766-af87-412d-9763-a88f1f150a0e"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "multiply(rank(-returns), rank(volume/adv20), filter=true)"
+      },
+      "id": "4fd1d63a-9d5b-4193-95a0-7cd2370bae3b"
+    }
+  ],
+  "sequence": 6572,
+  "category": "Operators"
+}

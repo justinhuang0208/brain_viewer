@@ -1,0 +1,47 @@
+{
+  "id": "ts_corr",
+  "title": "ts_corr",
+  "lastModified": "2026-03-01T04:46:55.391310-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>This coefficient measures the strength and direction of the linear relationship between the two variables. The value ranges from -1 (perfect negative correlation) to 1 (perfect positive correlation), with 0 indicating no linear relationship. This operator is most effective when the data is normally distributed, and the relationship is linear.</p>",
+      "id": "2dd1886d-dd97-4c19-aab3-8dcfca88e9fc"
+    },
+    {
+      "type": "EQUATION",
+      "value": "$$Correlation(x,y) = \\frac{\\sum_{i=t-d+1}^t (x_i - \\bar{x})(y_i - \\bar{y})}{\\sqrt{\\sum_{i=t-d+1}^t (x_i - \\bar{x})^2 (y_i - \\bar{y})^2}}$$",
+      "id": "826b7600-437f-461d-9a2e-9878bd2c46c8"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p><b>Examples</b></p><p>Input: Value of 1 instrument in past 7 days: (2, 3, 5, 6, 3, 8, 10), and another instrument value in past 7 days: (100, 190, 150, 180, 210, 220, 240), d = 7, where first element is the latest</p><p>Output: 0.6891 (Pearson correlation coefficient formula)</p><p><b>Alpha Example</b></p><p>ts_corr(vwap, close, 20)</p><ul><li>This expression calculates the 20-day rolling Pearson correlation between vwap and close.</li></ul>",
+      "id": "542e9a12-5c25-4012-87f3-6da7c3006697"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "ts_corr(vwap, close, 20)"
+      },
+      "id": "ecbd2cba-c575-4efd-8d31-83277445901b"
+    }
+  ],
+  "sequence": 6595,
+  "category": "Operators"
+}

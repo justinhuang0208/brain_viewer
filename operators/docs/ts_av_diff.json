@@ -1,0 +1,14 @@
+{
+  "id": "ts_av_diff",
+  "title": "ts_av_diff",
+  "lastModified": "2026-03-01T04:18:57.020715-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The ts_av_diff(x, d) operator returns the difference between the current value x and the mean of x over the past d periods, excluding any NaN values from the mean calculation.</p><p><b>Example calculations</b></p><p>Suppose d = 6 and the values for the past 6 days are [6, 2, 8, 5, 9, NaN].</p><p>The mean is calculated as (6 + 2 + 8 + 5 + 9) / 5 = 6 (NaN is ignored).</p><p>Today's value is in the first index which is 6. Hence, 6 - 6 = 0.</p><p><b>Examples</b></p><p>ts_av_diff(close, 20)</p><ul><li>Outputs today’s deviation from the 20‑day mean of close, ignoring NaNs in the mean; positive when above average, negative when below.</li></ul>",
+      "id": "9cb31f83-e655-41b3-a0e5-f7d9487cdcfd"
+    }
+  ],
+  "sequence": 6593,
+  "category": "Operators"
+}

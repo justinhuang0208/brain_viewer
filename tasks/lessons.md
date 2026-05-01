@@ -1,1 +1,4 @@
 - Simulation jobs can legitimately stay at the same WQ progress value, or even return to 0%, for a long time. Do not add or keep local stagnation/progress timeouts that mark a simulation failed before WQ returns a terminal state.
+- CLI JSON envelopes for this project should not include `next_actions`. Keep machine-readable output factual: `ok`, `status`, `data`, `warnings`, and `errors`.
+- WorldQuant Brain `/operators` metadata can return `level: null` for valid operators. Do not treat null level as missing, invalid, or unusable; the website may show a separate access tier such as Genius that is not exposed in this field.
+- CLI maintenance rules belong in this `brain_viewer` project because CLI features are modified here. When the user asks to remember a CLI-update workflow rule, record it in this repo's `AGENTS.md` and keep the `brain_agent` project-local skill/reference in sync as downstream documentation.

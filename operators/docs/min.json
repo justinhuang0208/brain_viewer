@@ -1,0 +1,37 @@
+{
+  "id": "min",
+  "title": "min",
+  "lastModified": "2024-12-30T04:36:21.252157-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>Example:</b></p>",
+      "id": "27f7c300-8b51-43ed-bcb9-4618e5578f42"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "min(close, vwap)"
+      },
+      "id": "6b177fca-d195-44c2-a0d8-bc6ea03cdafd"
+    }
+  ],
+  "sequence": 6571,
+  "category": "Operators"
+}

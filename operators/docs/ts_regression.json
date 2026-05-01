@@ -1,0 +1,150 @@
+{
+  "id": "ts_regression",
+  "title": "ts_regression",
+  "lastModified": "2026-03-11T03:41:28.643754-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>ts_regression(y, x, d, lag = 0, rettype = 0)</b></p><p>Given a set of two variables’ values (X: the independent variable, Y: the dependent variable) over a course of d days, an approximating linear function can be defined, such that sum of squared errors on this set assumes minimal value:</p>",
+      "id": "3e8602ae-712d-4523-a131-f1ea8368c5a5"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "OLS Definition",
+        "width": 386,
+        "height": 76,
+        "fileSize": 3484,
+        "url": "https://api.worldquantbrain.com/content/images/5oDdWFJLKh6KjMna996tEv8N14A=/26/original/OLS_Definition.PNG"
+      },
+      "id": "18c0863b-80c1-4056-8a72-a863b20ab873"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>Beta and Alpha in second line are OLS Linear Regression coefficients.</p><p></p><p>ts_regression operator <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Returns,-Returns\">returns</a> various parameters related to said regression. This is governed by “rettype” keyword argument, which has a default value of 0. Other “rettype” argument values correspond to:</p>",
+      "id": "b0dc8994-4019-428f-ab5f-6fa363346e77"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "OLS Rettype List",
+        "width": 558,
+        "height": 158,
+        "fileSize": 9020,
+        "url": "https://api.worldquantbrain.com/content/images/8VUjMZnI7iWVTp8VD_J1DfnBahI=/27/original/OLS_Rettype_List.PNG"
+      },
+      "id": "40690855-aafd-4a20-a5b7-fe1167c08ea1"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "rettype argument",
+            "return value"
+          ],
+          [
+            "0",
+            "Error Term"
+          ],
+          [
+            "1",
+            "y-intercept (α)"
+          ],
+          [
+            "2",
+            "slope (β)"
+          ],
+          [
+            "3",
+            "y-estimate"
+          ],
+          [
+            "4",
+            "Sum of Squares of Error (SSE)"
+          ],
+          [
+            "5",
+            "Sum of Squares of Total (SST)"
+          ],
+          [
+            "6",
+            "R-Square"
+          ],
+          [
+            "7",
+            "Mean Square Error (MSE)"
+          ],
+          [
+            "8",
+            "Standard Error of β"
+          ],
+          [
+            "9",
+            "Standard Error of α"
+          ]
+        ],
+        "firstRowIsTableHeader": true,
+        "firstColIsHeader": false
+      },
+      "id": "1b634017-9819-46e4-ba74-0abedebb1495"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Regression Plot.png",
+        "width": 1074,
+        "height": 388,
+        "fileSize": 80617,
+        "url": "https://api.worldquantbrain.com/content/images/ZoAbsMtl-jRUhrJtJ_2gj5vNjMo=/261/original/Regression_Plot.png"
+      },
+      "id": "1cc169be-ecf2-4d75-bd19-2a4a2642f490"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>Here, \"di\" is current day index, “n”(may differ from d) is a number of valid (x, y) tuples used for calculation. All summations are over day index, using only valid tuples.</p><p>“lag” keyword argument may be optionally specified (default value is zero) to calculate lagged regression parameters instead:</p>",
+      "id": "5598d8d9-ecb8-46a2-9817-87f4caa1bf72"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "Lagged Regression",
+        "width": 123,
+        "height": 37,
+        "fileSize": 852,
+        "url": "https://api.worldquantbrain.com/content/images/oo3xMLfZKCQGwkNV5YXlOBRFNqw=/28/original/LaggedRegression.PNG"
+      },
+      "id": "669aa867-7378-47b5-84f3-b645b3a5934f"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>Example:</p><ul><li><ul><li>ts_regression(est_netprofit, est_netdebt, 252, lag = 0, rettype = 2)<ul><li>Taking the data from the past 252 trading days (1 year), return the β coefficient from the equation when estimating the est_netprofit using the est_netdebt</li></ul></li></ul></li></ul>",
+      "id": "e5480698-bfaa-4512-960a-fbb7b498696b"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "MARKET",
+          "truncation": 5.0,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "ts_regression(ts_mean(volume, 2), ts_returns(close, 2), 252)"
+      },
+      "id": "ed157a83-0cc6-4181-941b-179301609b1d"
+    }
+  ],
+  "sequence": 6606,
+  "category": "Operators"
+}

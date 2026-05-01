@@ -1,0 +1,37 @@
+{
+  "id": "vector_neut",
+  "title": "vector_neut",
+  "lastModified": "2025-12-11T08:49:49.251288-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>vector_neut(x,y)</p><p></p><p>Input1 neutralize to input2</p><p>For given vector A (i.e., input1) and B (i.e., input2), it finds a new vector A' (i.e., output) such that A' is orthogonal to B. It calculates projection of A onto B, and then subtracts projection vector from A to find the rejection vector (i.e., A') which is perpendicular to the B.</p><p>This operator may help reduce correlation, depending on the neutralization used.</p><p><b>Example</b>:</p><p></p><p>  </p><p>Input: Vector of value of 3 instruments at day t, A: (1, 2, 3) and another vector of value of 3 instruments at day t, B: (3, 4, 5)</p><p>Output: (-0.56, -0.08, 0.4)  from (−0.56)·3 + (−0.08)·4 + 0.4·5 = 0 </p><p>Show that the resulting vector is orthogonal to vector B</p>",
+      "id": "9181880d-4e67-4a71-9343-61f90513479c"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "INDUSTRY",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "vector_neut(open,close)"
+      },
+      "id": "ea0679c2-3d67-402a-9fa9-77729a157c7e"
+    }
+  ],
+  "sequence": 6612,
+  "category": "Operators"
+}

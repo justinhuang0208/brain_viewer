@@ -1,0 +1,14 @@
+{
+  "id": "ts_scale",
+  "title": "ts_scale",
+  "lastModified": "2026-03-01T05:24:21.499066-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The ts_scale(x, d, constant = 0) operator normalizes a time series by scaling each value between 0 and 1, using the minimum and maximum values from the last d days. You can also add a constant to shift the scaled result. This is similar to the scale_down operator but works specifically on time series data.</p><p>The formula is:</p><p>ts_scale(x, d, constant) = (x - ts_min(x, d)) / (ts_max(x, d) - ts_min(x, d)) + constant</p><p><b>Example calculations</b></p><p>Suppose d = 6 and the values for the last 6 days are data = [6, 2, 8, 5, 9, 4] (with the first element being today’s value):</p><ul><li>ts_min(x, d) = 2</li><li>ts_max(x, d) = 9</li></ul><p>If you use ts_scale(x, d, constant = 1) for today's value (6):</p><p>ts_scale(data, 6, 1) = 1 + (6 - 2) / (9 - 2) = 1 + 4 / 7 ≈ 1.57</p><p><b>Examples</b></p><p>ts_scale(close, 252, constant=0)</p><ul><li>Scales today’s close to [0,1] within its 1‑year range; 0 at the 1‑year low, 1 at the 1‑year high.</li></ul><p><b>Tip: </b>When performing regression calculations where the Y variable represents a proportion or percentage, you can apply <b>ts_scale</b> to your X variable if needed. However, keep in mind that this scaling method is highly sensitive to outliers in the time series data, as extreme values can disproportionately affect the minimum and maximum used for normalization.ts_std_dev(x, d).</p>",
+      "id": "bac61b2e-cef9-4612-9004-cb113924fe09"
+    }
+  ],
+  "sequence": 6608,
+  "category": "Operators"
+}

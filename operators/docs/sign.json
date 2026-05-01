@@ -1,0 +1,14 @@
+{
+  "id": "sign",
+  "title": "sign",
+  "lastModified": "2026-02-11T11:41:57.802772-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The sign(x) operator determines whether a value is positive, negative, or zero. It is commonly used to quickly identify the direction of a value. If the input is not a number (NaN), the result will also be NaN.</p><p><b>Example calculations</b></p><ul><li>sign(5) returns 1</li><li>sign(-3.2) returns -1</li><li>sign(0) returns 0</li><li>sign(NaN) returns NaN</li></ul><p><b>Examples</b></p><p>sign(close - open)</p><ul><li>This expression returns:<ul><li>1 if the closing price is higher than the opening price,</li><li>-1 if the closing price is lower,</li></ul></li></ul><p>0 if they are equal.</p>",
+      "id": "b60d395d-0fd2-4cd5-9b1b-9fd749037fa7"
+    }
+  ],
+  "sequence": 7013,
+  "category": "Operators"
+}

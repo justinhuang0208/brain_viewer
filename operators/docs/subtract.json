@@ -1,0 +1,14 @@
+{
+  "id": "subtract",
+  "title": "subtract",
+  "lastModified": "2026-02-11T11:46:39.210240-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>Performs element‑wise subtraction on scalars or series. You can pass more than two inputs; evaluation is left‑to‑right: subtract(a, b, c) = ((a − b) − c). When filter=true, any NaN in the inputs is replaced with 0 before subtraction; when false, NaNs propagate.</p><p>Example calculations for the calculation walkthrough</p><ul><li>subtract(10, 3) = 7</li><li>subtract(10, 3, 2) = 5 (left‑to‑right: (10−3)−2)</li><li>subtract(NaN, 5, filter=true) = 0 − 5 = −5</li></ul><p>subtract(NaN, 5, filter=false) = NaN</p>",
+      "id": "400aac93-8a01-46a9-8346-1338a721e38f"
+    }
+  ],
+  "sequence": 7015,
+  "category": "Operators"
+}

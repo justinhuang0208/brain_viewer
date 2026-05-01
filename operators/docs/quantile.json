@@ -1,0 +1,42 @@
+{
+  "id": "quantile",
+  "title": "quantile",
+  "lastModified": "2026-03-20T08:44:12.245589-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>quantile(x, driver = gaussian, sigma = 1.0)</b></p>",
+      "id": "c5e51524-f93b-4d2c-8192-8ef817a42ebe"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>  The quantile(x, driver = gaussian, sigma = 1.0) operator is a cross-sectional tool that transforms a raw Alpha vector by ranking, shifting, and mapping its values to a specified distribution. This process can help reduce the impact of outliers and can improve the stability and performance of your Alpha.</p><p><b>Example calculations</b></p><ul><li><b>Step 1:</b> Rank the input Alpha vector. Each value is assigned a rank between 0 and 1.</li><li><b>Step 2:</b> Shift the ranked values so that, for N instruments, each value is within [1/N, 1-1/N]:<ul><li>Alpha_value = 1/N + Alpha_value * (1 - 2/N)</li></ul></li><li><b>Step 3:</b> Apply the chosen distribution:<ul><li>If driver = gaussian, map the shifted values to a normal distribution.</li><li>If driver = cauchy, map to a Cauchy distribution.</li><li>If driver = uniform, subtract the mean from each value.</li></ul></li><li><b>Step 4:</b> The sigma parameter scales the final values (only affects scale, not ranking).</li></ul><p><b>Example Calculations</b></p><p>Suppose you have 5 stocks with Alpha values: [0.2, 0.5, -0.1, 0.8, 0.3].</p><p><b>1.Rank:</b> [0.25, 0.75, 0.0, 1.0, 0.5]</p><p><b>2.Shift (N=5):</b></p><p>Each value: 1/5 + value * (1 - 2/5) = 0.2 + value * 0.6</p><p>Result: [0.35, 0.65, 0.2, 0.8, 0.5]</p><p><b>3.Apply gaussian distribution (here we choose in the expression driver = gaussian):</b></p><p>These shifted values are mapped to the corresponding quantiles of a normal distribution (mean 0, std sigma).</p><p><b>4.Final output:</b></p><p>The output vector is now distributed according to the chosen distribution, with reduced outliers.</p><p><b>Examples</b></p><p>quantile(implied_volatility_call_60 - implied_volatility_put_60, driver=cauchy)</p><ul><li>Today’s cross‑section is rank‑mapped to a Cauchy distribution; ranks are preserved while the output becomes heavy‑tailed and less sensitive to extreme raw scales.</li></ul>",
+      "id": "fdacc486-e42d-44ef-a3be-876e95a5f034"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "MARKET",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "quantile(close, driver = gaussian, sigma = 0.5 )"
+      },
+      "id": "fedb09f0-ef99-41e0-91ce-e838643cc7cb"
+    }
+  ],
+  "sequence": 100,
+  "category": "Operators"
+}

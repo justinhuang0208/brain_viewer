@@ -1,0 +1,49 @@
+{
+  "id": "vec_avg",
+  "title": "vec_avg",
+  "lastModified": "2026-03-20T08:54:35.729711-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The vec_avg(x) operator takes a vector field x and computes the arithmetic mean of its elements for each instrument and date. This is useful for summarizing vector data (such as multiple sentiment scores or short interest values in a day) into a single representative value that can be used in further calculations or as input to other operators.</p><p><b>Example calculations</b></p>",
+      "id": "5d9bd231-9bca-409b-a9e0-b9462f9aca73"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Date",
+            "X (vector datafield)",
+            "vec_avg(X)"
+          ],
+          [
+            "2024-06-01",
+            "[10, 20, 30]",
+            "(10+20+30)/3 = 20"
+          ],
+          [
+            "2024-06-02",
+            "[13, 5, 15]",
+            "(13+5+15)/3 = 11"
+          ],
+          [
+            "2024-06-03",
+            "[3, 12, 8, 20, 7]",
+            "(3+12+8+20+7)/5 = 10"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": false
+      },
+      "id": "aa5f7fc1-aca4-4be0-9dda-cfc4c60aa82f"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p><b>Examples</b></p><p>vec_avg(shrt3_bar)</p><ul><li>Get the average short interest for the current day for each stock</li></ul><p><b>Tip:</b> When unsure how to use a vector field, vec_avg() is a simple and effective way to summarize the data.</p>",
+      "id": "18c071df-561f-4a73-bf3d-a3d9920a9eae"
+    }
+  ],
+  "sequence": 7778,
+  "category": "Operators"
+}

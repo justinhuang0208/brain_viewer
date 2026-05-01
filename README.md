@@ -85,6 +85,11 @@ python app.py
   - WQ rate limits are handled by respecting `Retry-After` on HTTP 429 and retrying transient 502/503/504 responses
   - Simulation workers read `x-ratelimit-limit`, `x-ratelimit-remaining`, and `x-ratelimit-reset` from `POST /simulations`; when the daily remaining count reaches 0, the next submit waits until reset before continuing. Telegram `/status` shows the latest simulation quota.
 
+- **Operators**
+  - CLI refresh uses WQ Brain `operators` to cache FASTEXPR operator metadata under `operators/operators.json`
+  - When an operator has a `documentation` path, refresh also caches detailed documentation under `operators/docs/<operator>.json`
+  - `level: null` is valid metadata and should not be interpreted as unavailable; some access tiers are shown in the website UI rather than this API field
+
 - **Backtests**
   - Reads backtest data under `data/` (per your existing data format/process)
   - Can import results to Simulation or Generator (follow the UI prompts)
@@ -192,9 +197,11 @@ python brain_cli.py <group> <command> [options]
 Groups:
   auth       Login status, login, persona completion
   datasets   List, refresh, show, search, export-fields
+  operators  List, refresh, show, search WQ Brain operators
   template   List, show, save, delete, placeholders
   generate   Preview strategies, generate file
   simulate   Enqueue, run, status, stop, results, list
+  alpha      List, show, history, promote, reject registry entries
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
   telegram   Run Telegram bot polling and send status notifications
@@ -205,7 +212,7 @@ Groups:
 
 | Flag | Description |
 |---|---|
-| `--json` | Output as JSON (machine-readable) |
+| `--json` | Output a machine-readable envelope: `ok`, `status`, `data`, `warnings`, `errors` |
 | `--credentials FILE` | Path to `credentials.json` (default: project root) |
 
 #### Examples
@@ -213,6 +220,12 @@ Groups:
 ```bash
 # Check templates
 python brain_cli.py template list --json
+
+# Refresh and inspect WQ Brain operators
+python brain_cli.py operators refresh --json
+python brain_cli.py operators list
+python brain_cli.py operators show ts_rank --json
+python brain_cli.py operators search group --category Group --json
 
 # Show a specific template
 python brain_cli.py template show "[Default] Basic ts_rank"
@@ -247,6 +260,13 @@ python brain_cli.py simulate run --job-id <job_id>
 # Check job status and get results
 python brain_cli.py simulate status <job_id>
 python brain_cli.py simulate results <job_id> --json
+
+# Inspect the local alpha registry
+python brain_cli.py alpha list --json
+python brain_cli.py alpha show <alpha_hash_or_alpha_id> --json
+python brain_cli.py alpha history <alpha_hash_or_alpha_id> --json
+python brain_cli.py alpha promote <alpha_hash_or_alpha_id> --reason "good simulation metrics" --json
+python brain_cli.py alpha reject <alpha_hash_or_alpha_id> --reason "turnover too high" --json
 
 # Run evolution to generate diverse candidates
 python brain_cli.py evolution run \
@@ -292,6 +312,8 @@ python brain_cli.py worker status --json
 #### CLI job state
 
 CLI job state for `simulate` and `evolution` is stored under `.brain_cli/jobs/<job_id>.json`. Use `simulate list` / `evolution list` to view all jobs. Stop a running job from another terminal with `simulate stop <job_id>` or `evolution stop <job_id>`.
+
+Alpha registry state is stored in `.brain_cli/alphas.sqlite`. This registry is an index over alpha code, WQ alpha IDs, simulation attempts, and lifecycle events; it does not replace job JSON or result CSV files. `simulate enqueue` records candidate alphas, and completed/failed simulations update the registry with metrics, links, errors, and history events.
 
 CLI authentication reuses the same persisted WQ cookie files as the GUI (`session.pkl` / `login_time.pkl`), matching the open_machine-style login flow.
 

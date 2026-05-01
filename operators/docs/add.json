@@ -1,0 +1,14 @@
+{
+  "id": "add",
+  "title": "add",
+  "lastModified": "2026-02-11T11:40:06.603150-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The add operator performs element-wise addition on two or more inputs. If the optional filter parameter is set to true, any NaN values in the inputs are treated as zero before the addition.</p><p><b>Example calculations</b></p><p>Suppose you have two vectors:</p><ul><li>x = [1, NaN, 3]</li><li>y = [4, 5, NaN]</li><li>add(x, y) returns [1+4, NaN+5, 3+NaN] = [5, NaN, NaN]</li><li>add(x, y, filter=true) returns [1+4, 0+5, 3+0] = [5, 5, 3]</li></ul><p><b>Tips</b></p><p>Use filter=true to treat NaNs as zeros. This can improve coverage and performance without the need to backfill the data.</p>",
+      "id": "7e53e62a-9bff-458c-8013-86399c3053a0"
+    }
+  ],
+  "sequence": 7321,
+  "category": "Operators"
+}

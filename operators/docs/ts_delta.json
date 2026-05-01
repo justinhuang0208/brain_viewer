@@ -1,0 +1,53 @@
+{
+  "id": "ts_delta",
+  "title": "ts_delta",
+  "lastModified": "2026-03-01T05:06:52.459532-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The ts_delta(x, d) operator computes the difference between the current value of x and its value d periods ago. This is a simple way to measure how much a variable has changed over a given time window, making it useful for detecting trends, momentum, or reversals in time-series data.</p><p><b>Example calculations</b></p><p>Suppose you have a time series of daily closing prices for a stock:</p>",
+      "id": "f41b5c88-792b-438f-9045-c39c2e6dfe83"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Day",
+            "Price"
+          ],
+          [
+            "2024-06-01",
+            "100"
+          ],
+          [
+            "2024-06-02",
+            "102"
+          ],
+          [
+            "2024-06-03",
+            "105"
+          ],
+          [
+            "2024-06-04",
+            "103"
+          ],
+          [
+            "2024-06-05",
+            "108"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": false
+      },
+      "id": "68912dc1-630c-4b43-a54e-69956eca2d06"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>  </p><p>If you want to calculate the 3-day delta for Day 5:</p><p>ts_delta(price, 3) on Day 5 = price on Day 5 - price on Day 3 = 108 - 105 = 3</p><p><b>Examples</b></p><p>ts_delta(close, 5)</p><p><b>What to expect: </b>Today’s close minus the close five days ago; positive for 5‑day up moves, negative for down moves. </p>",
+      "id": "064d117d-c66b-48e2-8902-6d62ee0367df"
+    }
+  ],
+  "sequence": 7023,
+  "category": "Operators"
+}

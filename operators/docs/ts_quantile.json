@@ -1,0 +1,14 @@
+{
+  "id": "ts_quantile",
+  "title": "ts_quantile",
+  "lastModified": "2026-03-01T05:15:51.490075-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>  </p><p>The ts_quantile(x, d, driver=“gaussian”) operator first computes the time-series rank of the input x over the past d days for each instrument. It then applies the inverse cumulative distribution function (quantile function) of the chosen distribution (driver) to these ranks. Supported distributions are ”gaussian” (default), ”uniform”, and ”cauchy”. </p><p><b>Example 1 </b></p><ul><li><b>Input: </b>Value of 1 instrument in past 7 days where first element is the latest: (8, 10, 4, 6, 5, 3, 2), d: 7, driver: ’gaussian’ Output: quantile = 0.82 from SD = 2.82, mean = 5.43, zscore = 0.911</li></ul><p>- ts_quantile(anl14_mean_div_fy1/cap, 252, driver=“gaussian”)</p><p>The past‑252‑day history is mapped to a Gaussian‑like shape while preserving time‑series order, often making the series more symmetric and comparable over time. </p>",
+      "id": "89922ef7-3c9a-4c8b-975b-2f8918128f72"
+    }
+  ],
+  "sequence": 7026,
+  "category": "Operators"
+}

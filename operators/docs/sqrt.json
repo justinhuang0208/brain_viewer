@@ -1,0 +1,14 @@
+{
+  "id": "sqrt",
+  "title": "sqrt",
+  "lastModified": "2026-02-11T11:44:41.932920-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>sqrt(x) = power(x, 0.5) for x ≥ 0. It reduces skew and compresses large positive values while keeping order. It returns NaN for x &lt; 0. If you need a root‑like transform that keeps the sign for negative inputs, use signed_power(x, 0.5), which computes sign(x)*sqrt(abs(x)).</p><p><b>Example calculations</b></p><ul><li>sqrt(9) = 3</li><li>sqrt(0.25) = 0.5</li><li>sqrt(0) = 0</li></ul><p>sqrt(-4) = NaN (use signed_power(-4, 0.5) = -2 for a sign‑preserving root)</p>",
+      "id": "24608c1b-c744-4f44-8bf2-b84d4eec7e45"
+    }
+  ],
+  "sequence": 7014,
+  "category": "Operators"
+}

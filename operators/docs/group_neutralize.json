@@ -1,0 +1,14 @@
+{
+  "id": "group_neutralize",
+  "title": "group_neutralize",
+  "lastModified": "2026-03-21T11:47:13.310613-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The group_neutralize(x, group) operator adjusts Alpha values so that, within each group, the mean is zero. This is done by subtracting the mean of the group from each value in that group. This helps remove group-level effects and can reduce unwanted correlations in your Alpha.</p><p><b>Example calculations</b></p><p>Suppose you have 10 instruments with values:<br/> [3, 2, 6, 5, 8, 9, 1, 4, 8, 0]</p><ul><li>First 5 instruments belong to group A, last 5 to group B.</li><li>Mean of group A: (3+2+6+5+8)/5 = 4.8</li><li>Mean of group B: (9+1+4+8+0)/5 = 4.4</li><li>Subtract group means:<ul><li>Group A: [3-4.8, 2-4.8, 6-4.8, 5-4.8, 8-4.8] = [-1.8, -2.8, 1.2, 0.2, 3.2]</li><li>Group B: [9-4.4, 1-4.4, 4-4.4, 8-4.4, 0-4.4] = [4.6, -3.4, -0.4, 3.6, -4.4]</li></ul></li></ul><p><b>Examples</b></p><p>alpha1 = group_neutralize(ts_returns(close, 5), industry);</p><ul><li>Simply neutralize the signal within industry</li></ul><p>custom_group = bucket(rank(cap), range=“0,1,0.2”);</p><p>alpha2 = group_neutralize(ts_returns(close, 5), custom_group);</p><ul><li>This divides stocks into 5 buckets by market cap and neutralizes within each bucket.</li></ul><p>group = densify(group_cartesian_product(industry, country));</p><p>alpha3 = group_neutralize(ts_returns(close, 5), group);</p><ul><li>This creates a unique group for each industry-country pair and neutralizes within those.</li></ul><p><b>Tip:</b> If you are having trouble simulating because it takes too long to simulate. Try using the densify() operator on your group variable before passing it to the group operators. This removes empty groups and improves performance.</p>",
+      "id": "558074f0-ccdb-46f7-9c84-73ab1dd2175e"
+    }
+  ],
+  "sequence": 108,
+  "category": "Operators"
+}

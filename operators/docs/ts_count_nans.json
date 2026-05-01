@@ -1,0 +1,14 @@
+{
+  "id": "ts_count_nans",
+  "title": "ts_count_nans",
+  "lastModified": "2026-03-01T04:50:16.090378-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>Example calculations</b></p><p>Suppose you have a data series for a stock's daily volume over 5 days, first element is the latest:<br/> [100, NaN, 200, NaN, 300]</p><ul><li>Using ts_count_nans(volume,      5) on the last day will return 2, since there are two NaN values      in the last 5 days.</li></ul><p>If your data for the last 10 days is:<br/> [NaN, 50, 60, NaN, NaN, 80, 90, 100, NaN, 110]</p><ul><li>ts_count_nans(x, 10) will      return 4 (four NaNs in the last 10 days).</li></ul>",
+      "id": "23f72bdf-fdfc-44d2-a8f9-94972c693554"
+    }
+  ],
+  "sequence": 7020,
+  "category": "Operators"
+}

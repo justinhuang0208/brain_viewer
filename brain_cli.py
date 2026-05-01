@@ -3,12 +3,14 @@
 """
 brain_cli.py — WorldQuant Brain Toolbox Command-Line Interface.
 
-Provides nine command groups for AI-agent usage:
+Provides eleven command groups for AI-agent usage:
   auth       Login status, login, persona completion
   datasets   List, refresh, show, search, export-fields
+  operators  List, refresh, show, search WQ Brain operators
   template   List, show, save, delete, placeholders
   generate   Preview strategies, generate file
   simulate   Enqueue, run, status, stop, results, list
+  alpha      List, show, history, promote, reject registry entries
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
   telegram   Run Telegram bot polling and send status notifications
@@ -43,9 +45,40 @@ import telegram_integration as tg
 # Output helpers
 # ---------------------------------------------------------------------------
 
+_JSON_MODE = False
+
+
+def _envelope(data: Any, ok: bool = True, status: str = "ok",
+              warnings: Optional[list] = None, errors: Optional[list] = None) -> dict:
+    return {
+        "ok": ok,
+        "status": status,
+        "data": data,
+        "warnings": warnings or [],
+        "errors": errors or [],
+    }
+
+
+def _service_error(data: Any) -> Optional[str]:
+    if isinstance(data, dict) and str(data.get("status", "")).lower() == "error":
+        return str(data.get("message") or data.get("error") or "Command failed.")
+    return None
+
+
 def _out(data: Any, as_json: bool, indent: int = 2):
+    service_error = _service_error(data)
+    if service_error:
+        if as_json:
+            print(json.dumps(
+                _envelope(None, ok=False, status="error", errors=[{"message": service_error}]),
+                ensure_ascii=False,
+                indent=indent,
+                default=str,
+            ))
+            sys.exit(1)
+        _err(service_error)
     if as_json:
-        print(json.dumps(data, ensure_ascii=False, indent=indent, default=str))
+        print(json.dumps(_envelope(data), ensure_ascii=False, indent=indent, default=str))
     elif isinstance(data, list):
         for item in data:
             _print_item(item)
@@ -102,12 +135,33 @@ def _table(rows: list, columns: Optional[list] = None, max_col_width: int = 40):
 
 
 def _err(msg: str):
+    if _JSON_MODE:
+        print(json.dumps(
+            _envelope(None, ok=False, status="error", errors=[{"message": msg}]),
+            ensure_ascii=False,
+            indent=2,
+            default=str,
+        ))
+        sys.exit(1)
     print(f"Error: {msg}", file=sys.stderr)
     sys.exit(1)
 
 
 def _progress(msg: str):
     print(f"  … {msg}", file=sys.stderr)
+
+
+class BrainArgumentParser(argparse.ArgumentParser):
+    def error(self, message):
+        if _JSON_MODE:
+            print(json.dumps(
+                _envelope(None, ok=False, status="error", errors=[{"message": message}]),
+                ensure_ascii=False,
+                indent=2,
+                default=str,
+            ))
+            self.exit(2)
+        super().error(message)
 
 
 # ---------------------------------------------------------------------------
@@ -198,6 +252,56 @@ def cmd_datasets(args):
 
     else:
         _err(f"Unknown datasets sub-command: {sub}")
+
+
+# ---------------------------------------------------------------------------
+# operators group
+# ---------------------------------------------------------------------------
+
+def cmd_operators(args):
+    sub = args.operators_cmd
+
+    if sub == "list":
+        items = svc.operators_list(args.operators_dir)
+        if args.json:
+            _out(items, True)
+        else:
+            _table(items, ["name", "category", "scope", "definition", "level"])
+
+    elif sub == "refresh":
+        print("Refreshing operators from WQ Brain API…", file=sys.stderr)
+        result = svc.operators_refresh(
+            operators_dir=args.operators_dir,
+            credentials_path=args.credentials,
+            include_docs=not getattr(args, "metadata_only", False),
+            progress_cb=_progress,
+        )
+        _out(result, args.json)
+
+    elif sub == "show":
+        operator = svc.operators_show(
+            args.name,
+            operators_dir=args.operators_dir,
+            include_doc=not getattr(args, "metadata_only", False),
+        )
+        if operator is None:
+            _err(f"Operator '{args.name}' not found locally. Try: operators refresh")
+        _out(operator, args.json)
+
+    elif sub == "search":
+        results = svc.operators_search(
+            args.query,
+            operators_dir=args.operators_dir,
+            category=getattr(args, "category", None),
+        )
+        if args.json:
+            _out(results, True)
+        else:
+            print(f"Found {len(results)} operators matching '{args.query}':")
+            _table(results, ["name", "category", "scope", "definition", "level"])
+
+    else:
+        _err(f"Unknown operators sub-command: {sub}")
 
 
 # ---------------------------------------------------------------------------
@@ -430,6 +534,54 @@ def cmd_simulate(args):
 
     else:
         _err(f"Unknown simulate sub-command: {sub}")
+
+
+# ---------------------------------------------------------------------------
+# alpha group
+# ---------------------------------------------------------------------------
+
+def cmd_alpha(args):
+    sub = args.alpha_cmd
+
+    if sub == "list":
+        items = svc.alpha_list(
+            status=getattr(args, "status", None),
+            source=getattr(args, "source", None),
+            min_sharpe=getattr(args, "min_sharpe", None),
+            min_fitness=getattr(args, "min_fitness", None),
+            limit=getattr(args, "limit", 50),
+        )
+        if args.json:
+            _out(items, True)
+        else:
+            _table(items, ["alpha_hash", "alpha_id", "status", "source", "latest_result_link", "code"])
+
+    elif sub == "show":
+        alpha = svc.alpha_show(args.identifier)
+        if alpha is None:
+            _err(f"Alpha '{args.identifier}' not found.")
+        _out(alpha, args.json)
+
+    elif sub == "history":
+        data = svc.alpha_history(args.identifier)
+        if data is None:
+            _err(f"Alpha '{args.identifier}' not found.")
+        _out(data, args.json)
+
+    elif sub == "promote":
+        alpha = svc.alpha_promote(args.identifier, reason=getattr(args, "reason", None))
+        if alpha is None:
+            _err(f"Alpha '{args.identifier}' not found.")
+        _out(alpha, args.json)
+
+    elif sub == "reject":
+        alpha = svc.alpha_reject(args.identifier, reason=args.reason)
+        if alpha is None:
+            _err(f"Alpha '{args.identifier}' not found.")
+        _out(alpha, args.json)
+
+    else:
+        _err(f"Unknown alpha sub-command: {sub}")
 
 
 # ---------------------------------------------------------------------------
@@ -700,7 +852,7 @@ def cmd_worker(args):
 # ---------------------------------------------------------------------------
 
 def build_parser() -> argparse.ArgumentParser:
-    root = argparse.ArgumentParser(
+    root = BrainArgumentParser(
         prog="brain_cli",
         description="WorldQuant Brain Toolbox CLI — AI-agent friendly interface.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -752,6 +904,30 @@ def build_parser() -> argparse.ArgumentParser:
         help="Export a dataset's fields to a CSV file.")
     p_ds_export.add_argument("dataset_id")
     p_ds_export.add_argument("output", help="Output CSV path.")
+
+    # ── operators ────────────────────────────────────────────────────────────
+    p_ops = sub_root.add_parser("operators", help="WQ Brain operator metadata commands.")
+    p_ops.add_argument("--operators-dir", default=svc.OPERATORS_DIR, dest="operators_dir")
+    ops_sub = p_ops.add_subparsers(dest="operators_cmd", metavar="<cmd>")
+    ops_sub.required = True
+
+    ops_sub.add_parser("list", help="List locally cached operators.")
+
+    p_ops_refresh = ops_sub.add_parser("refresh",
+        help="Fetch operator metadata and detailed docs from WQ Brain API.")
+    p_ops_refresh.add_argument("--metadata-only", action="store_true",
+                               help="Only refresh operators.json; skip per-operator docs.")
+
+    p_ops_show = ops_sub.add_parser("show", help="Show one operator by name.")
+    p_ops_show.add_argument("name", help="Operator name (e.g., ts_rank).")
+    p_ops_show.add_argument("--metadata-only", action="store_true",
+                            help="Do not include cached detailed doc JSON.")
+
+    p_ops_search = ops_sub.add_parser("search",
+        help="Search operator names, definitions, descriptions, and metadata.")
+    p_ops_search.add_argument("query", help="Search term.")
+    p_ops_search.add_argument("--category", default=None,
+                              help="Restrict search to one category (e.g., Group).")
 
     # ── template ─────────────────────────────────────────────────────────────
     p_tpl = sub_root.add_parser("template", help="Code template management.")
@@ -858,6 +1034,39 @@ def build_parser() -> argparse.ArgumentParser:
     p_res.add_argument("--limit", type=int, default=100)
 
     sim_sub.add_parser("list", help="List all simulation jobs.")
+
+    # ── alpha ─────────────────────────────────────────────────────────────────
+    p_alpha = sub_root.add_parser("alpha", help="Alpha registry commands.")
+    alpha_sub = p_alpha.add_subparsers(dest="alpha_cmd", metavar="<cmd>")
+    alpha_sub.required = True
+
+    p_alpha_list = alpha_sub.add_parser("list", help="List alpha registry entries.")
+    p_alpha_list.add_argument("--status", default=None,
+                              choices=["candidate", "simulated", "promoted", "rejected", "failed"],
+                              help="Filter by alpha status (candidate, simulated, promoted, rejected, failed).")
+    p_alpha_list.add_argument("--source", default=None,
+                              choices=[
+                                  "queued", "simulation", "ga", "template", "manual",
+                                  "evolution", "backtest", "import", "unknown",
+                              ],
+                              help="Filter by alpha source.")
+    p_alpha_list.add_argument("--min-sharpe", type=float, default=None, dest="min_sharpe")
+    p_alpha_list.add_argument("--min-fitness", type=float, default=None, dest="min_fitness")
+    p_alpha_list.add_argument("--limit", type=int, default=50)
+
+    p_alpha_show = alpha_sub.add_parser("show", help="Show one alpha by hash or WQ alpha ID.")
+    p_alpha_show.add_argument("identifier", help="alpha_hash or alpha_id")
+
+    p_alpha_history = alpha_sub.add_parser("history", help="Show alpha simulation and event history.")
+    p_alpha_history.add_argument("identifier", help="alpha_hash or alpha_id")
+
+    p_alpha_promote = alpha_sub.add_parser("promote", help="Mark an alpha as promoted.")
+    p_alpha_promote.add_argument("identifier", help="alpha_hash or alpha_id")
+    p_alpha_promote.add_argument("--reason", default=None)
+
+    p_alpha_reject = alpha_sub.add_parser("reject", help="Mark an alpha as rejected.")
+    p_alpha_reject.add_argument("identifier", help="alpha_hash or alpha_id")
+    p_alpha_reject.add_argument("--reason", required=True)
 
     # ── backtest ─────────────────────────────────────────────────────────────
     p_bt = sub_root.add_parser("backtest", help="Backtest data commands.")
@@ -990,9 +1199,11 @@ def build_parser() -> argparse.ArgumentParser:
 DISPATCH = {
     "auth":      cmd_auth,
     "datasets":  cmd_datasets,
+    "operators": cmd_operators,
     "template":  cmd_template,
     "generate":  cmd_generate,
     "simulate":  cmd_simulate,
+    "alpha":     cmd_alpha,
     "backtest":  cmd_backtest,
     "evolution": cmd_evolution,
     "telegram":  cmd_telegram,
@@ -1026,8 +1237,10 @@ def _preprocess_global_flags(argv: list) -> tuple:
 
 
 def main():
+    global _JSON_MODE
     raw_argv     = sys.argv[1:]
     cleaned_argv, json_flag, credentials = _preprocess_global_flags(raw_argv)
+    _JSON_MODE = json_flag
 
     parser = build_parser()
     args   = parser.parse_args(cleaned_argv)
@@ -1039,6 +1252,8 @@ def main():
     # Propagate shared flags down
     if not hasattr(args, "datasets_dir"):
         args.datasets_dir = svc.DATASETS_DIR
+    if not hasattr(args, "operators_dir"):
+        args.operators_dir = svc.OPERATORS_DIR
     if not hasattr(args, "templates_dir"):
         args.templates_dir = svc.TEMPLATES_DIR
     if not hasattr(args, "data_dir"):

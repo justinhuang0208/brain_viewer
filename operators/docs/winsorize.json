@@ -1,0 +1,14 @@
+{
+  "id": "winsorize",
+  "title": "winsorize",
+  "lastModified": "2026-03-20T08:49:49.138513-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p> The winsorize(x, std=4) operator adjusts   all values in the input vector x so that they fall within the lower   and upper bounds, which are set as multiples of the standard deviation from   the mean. By default, values beyond ±4 standard deviations are replaced with   the nearest boundary value. This helps to reduce the influence of extreme   outliers, making your data more robust for further analysis or modeling.</p><p><b>Example calculations</b></p><p>Suppose you have a vector of daily returns for a set   of stocks:</p><ul><li>Input: x = [2, 3, 4, 5, 100]</li><li>Mean of x = 22.8</li><li>Standard deviation of x ≈ 38.61</li></ul><p>With std=1, the bounds would be:</p><ul><li>Lower bound: 22.8 - 1*38.61 = -15.8</li><li>Upper bound: 22.8 + 1*38.61 = 61.4</li></ul><p>Applying winsorize:</p><ul><li>Values below -15.8 are set to -15.8 (none in this example)</li><li>Values above 61.4 are set to 61.4 (100 becomes 61.4)</li><li>Output: [2,  3, 4, 5, 61.4]</li></ul><p>Examples<br/>   data = winsorize(ts_backfill(fn_op_lease_min_pay_due_a/enterprise_value, 63),   std=4.0);<br/>   data_gpm = group_mean(data, log(ts_mean(cap, 21)), sector);<br/>   resid = ts_regression(data, data_gpm, 252, rettype=0);<br/>   resid</p><p><i>Extreme ratios beyond ±4σ from the rolling   mean are clamped to the boundary; mid‑range values remain unchanged, reducing   the influence of outliers.</i></p>",
+      "id": "5763ee9d-eef4-44aa-85c5-6934fbe59410"
+    }
+  ],
+  "sequence": 7777,
+  "category": "Operators"
+}

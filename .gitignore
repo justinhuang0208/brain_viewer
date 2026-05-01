@@ -10,3 +10,4 @@ session.pkl
 login_time.pkl
 .brain_cli/
 brain_api_docs.md
+AGENTS.md

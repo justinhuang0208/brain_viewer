@@ -1,0 +1,37 @@
+{
+  "id": "group_mean",
+  "title": "group_mean",
+  "lastModified": "2026-03-21T11:45:16.748642-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The group_mean(x, weight, group) operator computes the harmonic mean of the values of x for each group defined by group, optionally using a weight parameter. This is especially helpful for financial ratios, where the harmonic mean provides a more accurate average than the arithmetic mean.</p><p><b>Example calculations</b></p><p>Suppose you want to calculate the harmonic mean of the P/E ratio (pe_ratio) for each industry:</p><ul><li>If you have three stocks in an industry with P/E ratios of 10, 15, and 20:<ul><li>Harmonic mean = 3 / (1/10 + 1/15 + 1/20) ≈ 13.85</li></ul></li><li>All stocks in that industry will be assigned the value 13.85.</li></ul><p><b>Examples</b></p><p>group_mean(close/eps, 1, industry)</p><ul><li>This assigns the harmonic mean of P/E ratio within each industry group to all stocks in that group.</li></ul><p><b>Tip :</b> If you are having trouble simulating because it takes too long to simulate. Try using the densify() operator on your group variable before passing it to the group operators. This removes empty groups and improves performance.</p>",
+      "id": "979d6cdd-ffab-4f0e-b39d-87b4c3967a34"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 1,
+          "neutralization": "MARKET",
+          "truncation": 1.0,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "1 /(group_mean(eps/close,1, industry))"
+      },
+      "id": "9afebb46-2423-44f9-abc9-52d0749df6dd"
+    }
+  ],
+  "sequence": 1234,
+  "category": "Operators"
+}

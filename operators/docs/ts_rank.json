@@ -1,0 +1,14 @@
+{
+  "id": "ts_rank",
+  "title": "ts_rank",
+  "lastModified": "2026-03-01T05:21:48.584271-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The ts_rank operator evaluates how the current value of a variable compares to its values over a defined lookback period (d days) for each instrument. It returns a normalized rank (between 0 and 1) of the current value within that window, optionally shifted by a constant. This is helpful for identifying trends, momentum, or reversals in time-series data.</p><p><b>Example calculations</b></p><p>Suppose you have the following closing prices for a stock over 5 days:<br/> [10, 12, 11, 15, 13]</p><ul><li>To calculate ts_rank(close,      5) for the last day:<ul><li>Rank the last value (13)       among [10, 12, 11, 15, 13]</li><li>Sorted: [10, 11, 12, 13, 15]</li><li>13 is the 4th value out of 5       (0-based index: 3)</li><li>Normalized rank: 3 / (5 - 1) =       0.75</li></ul></li></ul><p>If you use a constant, e.g., ts_rank(close, 5, 0.1), the result would be 0.75 + 0.1 = 0.85.</p><p><b>Examples</b></p><p>ts_rank(pretax_income, 252)</p><ul><li>This ranks a company's current pretax income within its own historical range from the past year.</li></ul><p>rank(ts_rank(cap/income, 252))</p><ul><li>This formula first normalizes each stock's P/E ratio by ranking it against its own one-year history (ts_rank). Then, it performs a cross-sectional rank on those historical percentiles, allowing us to identify which stocks are most expensive or inexpensive relative to their own past valuation, rather than comparing their absolute P/E ratios.</li></ul>",
+      "id": "2edb0876-9022-4e3d-833b-6e4b6eaf4e0b"
+    }
+  ],
+  "sequence": 7027,
+  "category": "Operators"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "rank",
+  "title": "rank",
+  "lastModified": "2026-03-20T08:45:29.112681-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>  The rank(x) operator assigns a rank to each value in the input x across all instruments for a given date, mapping the lowest value to 0.0 and the highest to 1.0, with all other values evenly distributed in between. This helps normalize data, limit extreme values, and can improve the stability of your Alpha by reducing outliers and drawdown. The optional rate parameter controls the precision of sorting (default is 2; set to 0 for exact sorting).</p><p><b>Example calculations</b></p><p>Suppose you have the following values for five stocks on a given day:</p><ul><li>x = (4, 3, 6, 10, 2)</li></ul><p>Applying rank(x):</p><ul><li>The lowest value (2) gets 0.0</li><li>The next lowest (3) gets 0.25</li><li>Then 4 gets 0.5</li><li>6 gets 0.75</li><li>The highest (10) gets 1.0</li></ul><p>So, rank(x) returns: (0.5, 0.25, 0.75, 1, 0)</p><p><b>Examples</b></p><p>rank(ts_returns(close, 5))</p><ul><li>What to expect: Maps each      stock’s 5‑day return to [0,1] across the universe for the day; 0 for the      worst, 1 for the best, uniformly spaced in between.</li></ul><p><b>Tip: </b>A good robustness check is to evaluate how your Alpha performs after applying <b>rank()</b> at the end. If the performance doesn’t fall off dramatically, it is a good sign.</p>",
+      "id": "b4ac9afe-7d3a-498e-883b-b679d5136f4d"
+    }
+  ],
+  "sequence": 6577,
+  "category": "Operators"
+}

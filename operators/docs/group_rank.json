@@ -1,0 +1,59 @@
+{
+  "id": "group_rank",
+  "title": "group_rank",
+  "lastModified": "2026-03-21T11:49:50.439713-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p> The group_rank(x, group) operator assigns a rank to each element within its specified group, based on the values of x. The ranking is normalized to a range between 0.0 (lowest) and 1.0 (highest) within each group. This operator is useful for comparing items within similar categories (e.g., subindustries), focusing on intra-group differences.</p><p>Example calculations</p><p>Suppose you have five stocks in the “Tech” group with the following momentum values:</p>",
+      "id": "200535c0-ba9e-4049-bec5-ac8824e240d2"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Stock",
+            "Momentum",
+            "group_rank(mom, “Tech”)"
+          ],
+          [
+            "A",
+            "10",
+            "0.0"
+          ],
+          [
+            "B",
+            "20",
+            "0.25"
+          ],
+          [
+            "C",
+            "30",
+            "0.5"
+          ],
+          [
+            "D",
+            "40",
+            "0.75"
+          ],
+          [
+            "E",
+            "50",
+            "1.0"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": false
+      },
+      "id": "a45adecf-c1d3-43b2-ab61-78325a9eec9e"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>Each stock is ranked within the “Tech” group, with the lowest value assigned 0.0 and the highest 1.0.</p><p>Examples</p><p>group_rank(close, subindustry)</p><ul><li>Ranks each stock's closing price within its subindustry group.</li></ul><p>group_rank(ts_rank(eps, 252), industry)</p><ul><li>First, computes the 252-day time-series rank of EPS for each stock, then ranks these values within each industry group.</li></ul><p><b>Tip: </b>If you are having trouble simulating because it takes too long to simulate. Try using the densify() operator on your group variable before passing it to the group operators. This removes empty groups and improves performance.</p>",
+      "id": "c58422e1-bb96-46e0-8455-aefb4bd5a295"
+    }
+  ],
+  "sequence": 110,
+  "category": "Operators"
+}

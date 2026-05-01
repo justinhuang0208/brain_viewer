@@ -1,0 +1,14 @@
+{
+  "id": "group_zscore",
+  "title": "group_zscore",
+  "lastModified": "2026-03-21T11:55:18.038570-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The group_zscore(x, group) operator computes the Z-score for each value of x within the specified group. This means it measures how many standard deviations a value is from the mean of its group, allowing you to compare values on a normalized scale within each group. This is especially helpful when you want to standardize data for cross-sectional analysis within categories like industry, sector, or custom groupings.</p><p>The formula is:</p><p>group_zscore(x, group) = (x - mean(x in group)) / stddev(x in group)</p><p>This operator is commonly used to normalize data within groups, making it easier to compare instruments that belong to the same group but may have different scales or distributions.</p><p><b>Example calculations</b></p><p>Suppose you have three stocks in a group with the following values for x:</p><ul><li>Stock A: 10</li><li>Stock B: 20</li><li>Stock C: 30</li></ul><p>Mean of group = (10 + 20 + 30) / 3 = 20<br/> Standard deviation of group ≈ 8.16</p><ul><li>Stock A Z-score: (10 - 20) /      8.16 ≈ -1.22</li><li>Stock B Z-score: (20 - 20) /      8.16 = 0</li><li>Stock C Z-score: (30 - 20) /      8.16 ≈ 1.22</li></ul><p><b>Examples</b></p><p>asset_group = bucket(rank(operating_income/assets), range=“0.1, 1, 0.1”)</p><p>alpha = group_zscore(cap/income, densify(asset_group))</p><ul><li>This creates groups based on      ranks of operating_income/assets, and then computes the Z-score      of P/E within each group.</li></ul>",
+      "id": "79ac9c43-d529-419f-86c9-700401a69b02"
+    }
+  ],
+  "sequence": 7783,
+  "category": "Operators"
+}

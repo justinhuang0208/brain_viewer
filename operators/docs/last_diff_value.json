@@ -1,0 +1,14 @@
+{
+  "id": "last_diff_value",
+  "title": "last_diff_value",
+  "lastModified": "2026-03-01T04:09:56.183854-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The last_diff_value(x, d) operator helps you find the last value of a variable x within the previous d days that is not equal to its current value. This is useful for detecting when a value has changed and what the previous value was.</p><p><b>Examples</b></p><p>last_diff_value(eps, 63)</p><ul><li>Returns the most recent eps (earnings per share) in the last 60 days (~quarter) that differs from today’s eps; if no change within 63 days, returns NaN.</li></ul>",
+      "id": "af19090e-c551-4bea-84ca-f07c86044b05"
+    }
+  ],
+  "sequence": 7019,
+  "category": "Operators"
+}

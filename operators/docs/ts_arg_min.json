@@ -1,0 +1,14 @@
+{
+  "id": "ts_arg_min",
+  "title": "ts_arg_min",
+  "lastModified": "2026-03-01T04:14:49.431857-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>  The ts_arg_min(x, d) operator finds how many days ago the minimum value appeared in the last d days of the time series x.</p><p><b>Example calculations</b></p><p>Suppose you have the following values for the past 6 days (with the first element being today):</p><p>data = [6, 2, 8, 5, 9, 4]</p><p>The minimum value is 2. It occurred 1 day before today. So, ts_arg_min(data, 6) returns 1.</p><p><b>Examples</b></p><p>ts_arg_min(close, 10)</p><p>This expression returns the number of days since the lowest closing price in the last 10 days. </p>",
+      "id": "363c4ac8-f2e5-430c-bd4b-9f39bba7a0d1"
+    }
+  ],
+  "sequence": 6592,
+  "category": "Operators"
+}

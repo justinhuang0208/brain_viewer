@@ -1,0 +1,14 @@
+{
+  "id": "group_backfill",
+  "title": "group_backfill",
+  "lastModified": "2026-03-21T11:47:29.983008-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The group_backfill operator is used to handle missing data (NaN values) for instruments that belong to the same group. When a value is missing for a specific instrument and date, the operator:</p><ul><li>Looks at all instruments in the same group.</li><li>Collects all non-NaN values for the past d days.</li><li>Computes the simple average after trimming (winsorizing) values that are further than std times the standard deviation from the mean.</li><li>Uses this winsorized mean to fill the missing value.</li></ul><p>This approach helps maintain data coverage and reduces the impact of outliers, making it especially useful for fundamental or low-frequency datasets where missing values are common.</p><p><b>Example calculations</b></p><p>Suppose you have three instruments (i1, i2, i3) in the same group, and their values for the past 4 days are:</p><ul><li>x[i1] = [4, 2, 5, 5]</li><li>x[i2] = [7, NaN, 2, 9]</li><li>x[i3] = [NaN, -4, 2, NaN]</li></ul><p>The first element is the most recent. If you want to backfill x’s recent value.</p><ul><li>Gather all non-NaN values: [4, 2, 5, 5, 7, 2, 9, -4, 2]</li><li>Calculate mean = 3.56, standard deviation = 3.71</li><li>Winsorization range: 3.56 ± 4 × 3.71 (no values are outside this range, so no trimming)</li><li>The backfilled value for x[i3][0] is 3.56</li></ul><p>So, group_backfill(x, group, 4 std=4.0) would output: [4, 7, 3.56]</p><p><b>Examples</b></p><p>group_backfill(fnd94_rt_gross_mgn_q, subindustry, 21)</p><p>This fills missing values for each industry group using the winsorized mean over the last 21 days. The data field fnd94_rt_gross_mgn_q represent gross margin, it is recommended for the data field that is being backfilled is in the same scale for all stocks.</p><p><b>Tip :</b> If you are having trouble simulating because it takes too long to simulate. Try using the densify() operator on your group variable before passing it to the group operators. This removes empty groups and improves performance.</p>",
+      "id": "f8502895-cdef-42ae-9f1a-66701afadc67"
+    }
+  ],
+  "sequence": 106,
+  "category": "Operators"
+}

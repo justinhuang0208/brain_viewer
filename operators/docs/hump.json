@@ -1,0 +1,48 @@
+{
+  "id": "hump",
+  "title": "hump",
+  "lastModified": "2026-03-11T03:48:00.189677-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>hump(x, hump = 0.01)</b></p><p>This operator limits the frequency and magnitude of changes in the Alpha (thus reducing <a href=\"https://support.worldquantbrain.com/hc/en-us/articles/4902349883927-Click-here-for-a-list-of-terms-and-their-definitions#:~:text=details.-,Turnover,-Average\">turnover</a>). If today's values show only a minor change (not exceeding the Threshold) from yesterday's value, the output of the hump operator stays the same as yesterday. If the change is bigger than the limit, the output is yesterday's value plus the limit in the direction of the change.</p><p>This operator may help reduce turnover and drawdown.</p><p></p><p>Input: Value of 1 instrument in past 2 days where first element is the latest: (2, 5), hump: 0.1, assuming limit: 1.5</p><p>Output: 3.5 (from 5-1.5 instead of 2 as abs(2 - 5) greater than limit)</p><p></p><p>Flowchart of the Hump operator:</p>",
+      "id": "b5b5d49b-9d54-45c4-bc98-117d8b958edd"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "LFlow_chart.PNG",
+        "width": 1401,
+        "height": 827,
+        "fileSize": 49020,
+        "url": "https://api.worldquantbrain.com/content/images/-3BnAawkCAi5iE6UV830IP9la6A=/301/original/LFlow_chart.PNG"
+      },
+      "id": "33ddcaaa-6163-4dd7-a81c-796f9b80d1da"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 3,
+          "neutralization": "MARKET",
+          "truncation": 0.01,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "hump(-ts_delta(close, 5), hump = 0.00001)"
+      },
+      "id": "3bf4aabf-7ff4-4f99-a2a9-c72e807cffa3"
+    }
+  ],
+  "sequence": 6564,
+  "category": "Operators"
+}

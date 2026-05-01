@@ -1,0 +1,14 @@
+{
+  "id": "group_scale",
+  "title": "group_scale",
+  "lastModified": "2026-03-21T11:53:55.874721-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The group_scale(x, group) operator rescales the values of x within each specified group so that the minimum value in the group becomes 0 and the maximum becomes 1. This is done using the formula:</p><p>group_scale(x, group) = (x - groupmin) / (groupmax - groupmin)</p><p>This normalization is useful for standardizing data within groups, allowing for fair comparisons and consistent data representation across different segments (such as industries, sectors, or custom buckets).</p><p><b>Example calculations</b></p><p>Suppose you have the following values for x in a group:</p><ul><li>Group A: [10, 20, 30]</li><li>Group B: [5, 15, 25]</li></ul><p>For Group A:</p><ul><li>groupmin = 10, groupmax = 30</li><li>Scaled values:<ul><li>(10-10)/(30-10) = 0</li><li>(20-10)/(30-10) = 0.5</li><li>(30-10)/(30-10) = 1</li></ul></li></ul><p>For Group B:</p><ul><li>groupmin = 5, groupmax = 25</li><li>Scaled values:<ul><li>(5-5)/(25-5) = 0</li><li>(15-5)/(25-5) = 0.5</li><li>(25-5)/(25-5) = 1</li></ul></li></ul><p>Examples</p><p>group_scale(return_equity, industry)</p><p>This will scale the return_equity within each industry group so that the lowest return_equity in each industry is 0 and the highest is 1. Making it comparable across industries with varying levels of capital intensity or profitability.</p>",
+      "id": "62e99383-f273-4a38-a12b-3abb4bd1211e"
+    }
+  ],
+  "sequence": 7782,
+  "category": "Operators"
+}

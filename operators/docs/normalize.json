@@ -1,0 +1,19 @@
+{
+  "id": "normalize",
+  "title": "normalize",
+  "lastModified": "2026-03-20T08:41:26.418304-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>normalize(x, useStd = false, limit = 0.0)</b></p>",
+      "id": "35da9b48-e259-402c-a801-0fb5916cbecf"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>normalize(x, useStd=false, limit=0.0) operates cross‑sectionally for each date:</p><ul><li>Compute the mean of all valid (non‑NaN) x values across instruments.</li><li>Subtract that mean from each instrument’s value.</li><li>If useStd=true, compute the cross‑sectional standard deviation (std) of the mean‑centered values and divide each by std.</li><li>If limit ≠ 0.0, clamp each result to the range [−limit, +limit] (applied after optional std scaling).</li></ul><p>Mean and standard deviation are computed each day on the same set of valid (non‑NaN) instruments; NaNs are excluded from the calculations and remain NaN in the output.</p><p>The limit parameter applies a symmetric cap to the final values; with useStd=true, this is equivalent to capping Z‑scores at ±limit.</p><p>Example calculations for the calculation walkthrough Given a single day with four instruments:</p><p>x = [3, 5, 6, 2]</p><p>Valid set = all four</p><p>Mean = (3 + 5 + 6 + 2) / 4 = 4</p><p>Mean‑centered = [−1, 1, 2, −2]</p><p>1.normalize(x, useStd=false, limit=0.0)</p><ul><li>Output = [−1, 1, 2, −2]</li></ul><p>2.normalize(x, useStd=true, limit=0.0)</p><ul><li>Cross‑sectional std of mean‑centered: std ≈ 1.82</li><li>Divide: [−1/1.82, 1/1.82, 2/1.82, −2/1.82] ≈ [−0.55, 0.55, 1.10, −1.10]</li></ul><p>3.normalize(x, useStd=true, limit=1.0)</p><ul><li>From step (2): [−0.55, 0.55, 1.10, −1.10]</li><li>Clamp to [−1, 1] → [−0.55, 0.55, 1.00, −1.00]</li></ul><p>4.normalize(x, useStd=false, limit=1.5)</p><ul><li>From step (1): [−1, 1, 2, −2]</li><li>Clamp to [−1.5, 1.5] → [−1, 1, 1.5, −1.5]</li></ul><p><b>Examples</b></p><p>normalize(rank(returns), useStd=true, limit=3)</p><ul><li>Here The normalize function act like a zscore operator, it computes cross‑sectional Z‑scores on ranked daily returns and caps them at ±3.</li></ul>",
+      "id": "64062b0e-a150-491e-85ec-d2a748e517c5"
+    }
+  ],
+  "sequence": 101,
+  "category": "Operators"
+}

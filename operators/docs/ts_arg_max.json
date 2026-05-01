@@ -1,0 +1,14 @@
+{
+  "id": "ts_arg_max",
+  "title": "ts_arg_max",
+  "lastModified": "2026-03-01T04:12:44.913838-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>The ts_arg_max(x, d) operator finds the relative index (number of days ago) of the maximum value in the time series x over the past d days.</p><p><b>Example calculations</b></p><p>Suppose you have the following values for the past 6 days (with the first element being today):</p><p>x = [6, 2, 8, 5, 9, 4]; d = 6</p><ul><li>The maximum value is 9.</li><li>9 occurred 4 days before today.</li><li>So, ts_arg_max(x,      6) returns 4.</li></ul><p>If today's value is the maximum, the operator returns 0.</p><p><b>Examples</b></p><p>ts_arg_max(close, 10)</p><ul><li>This expression returns how many days ago the highest closing price occurred in the last 10 days.</li></ul>",
+      "id": "cd755966-731c-4e08-864a-cf48648e9a4a"
+    }
+  ],
+  "sequence": 6591,
+  "category": "Operators"
+}

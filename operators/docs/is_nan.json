@@ -1,0 +1,42 @@
+{
+  "id": "is_nan",
+  "title": "is_nan",
+  "lastModified": "2025-04-01T05:12:42.251246-04:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p></p><p>is_nan(x) operator can be used to identify NaN values and replace them to a default value using if_else statement. For example:</p>",
+      "id": "3037aea2-a13f-4b44-9e41-f99629459a3c"
+    },
+    {
+      "type": "SIMULATION_EXAMPLE",
+      "value": {
+        "settings": {
+          "instrumentType": "EQUITY",
+          "region": "USA",
+          "universe": "TOP3000",
+          "delay": 1,
+          "decay": 1,
+          "neutralization": "MARKET",
+          "truncation": 1.0,
+          "pasteurization": "ON",
+          "unitHandling": "VERIFY",
+          "nanHandling": "OFF",
+          "language": "FASTEXPR",
+          "maxTrade": "OFF",
+          "maxPosition": "OFF"
+        },
+        "type": "REGULAR",
+        "regular": "if_else(is_nan(rank(sales)), 0.5, rank(sales))"
+      },
+      "id": "051070fa-2f46-417f-9aee-fb6997d4d850"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>In this example, in case sales value is NaN for any instrument, then the expression will replace it with the mean value of rank, that is 0.5.</p>",
+      "id": "67188e86-609b-41dc-8a5c-b89ae1c5790b"
+    }
+  ],
+  "sequence": 1232,
+  "category": "Operators"
+}

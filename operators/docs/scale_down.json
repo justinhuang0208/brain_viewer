@@ -1,0 +1,14 @@
+{
+  "id": "scale_down",
+  "title": "scale_down",
+  "lastModified": "2024-12-30T04:39:36.638693-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>scale_down(x,constant=0)</p><p>Scales all values in each day proportionately between 0 and 1 such that minimum value maps to 0 and maximum value maps to 1. constant is the offset by which final result is subtracted<br/></p><p><b>Example:</b><br/>If for a certain date, instrument values of certain input x is [15,7,0,20], max = 20 and min = 0<br/>scale_down(x,constant=0) = [(15-0)/20,(7-0)/20,(0-0)/’20,(20-0)/20] = [0.75,0.35,0,1]<br/>scale_down(x,constant=1) = [0.75-1,0.35-1,0-1,1-1] = [-0.25,-0.65,-1,0]</p>",
+      "id": "84763c98-9d50-437f-956d-9e70e0a07cf9"
+    }
+  ],
+  "sequence": 6584,
+  "category": "Operators"
+}

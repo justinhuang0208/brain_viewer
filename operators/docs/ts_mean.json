@@ -1,0 +1,53 @@
+{
+  "id": "ts_mean",
+  "title": "ts_mean",
+  "lastModified": "2026-03-01T05:09:37.387085-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p> The ts_mean(x, d) operator computes the simple average of the values of x for the most recent d days. This is useful for smoothing out short-term fluctuations and identifying longer-term trends in time-series data.</p><p><b>Example calculations</b></p><p>Suppose you have the following values for x over the last 5 days:</p>",
+      "id": "38679ec7-bd0d-429c-98c2-d930e8957140"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Day",
+            "Value of x"
+          ],
+          [
+            "2024-06-01",
+            "6"
+          ],
+          [
+            "2024-06-02",
+            "2"
+          ],
+          [
+            "2024-06-03",
+            "8"
+          ],
+          [
+            "2024-06-04",
+            "5"
+          ],
+          [
+            "2024-06-05",
+            "9"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": false
+      },
+      "id": "58184b51-b707-4e58-b66b-4a184be53d5a"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p>  </p><p>If you use ts_mean(x, 5), the calculation is:</p><p>(6 + 2 + 8 + 5 + 9) / 5 = 30 / 5 = 6</p><p>So, ts_mean(x, 5) returns 6.</p><p><b>Examples</b></p><p>ts_mean(returns, 21)</p><ul><li>What to expect: Computes the 1‑month      average daily return; smooths day‑to‑day noise.</li></ul>",
+      "id": "18518c99-a5e3-4198-8552-4308767821c5"
+    }
+  ],
+  "sequence": 7025,
+  "category": "Operators"
+}

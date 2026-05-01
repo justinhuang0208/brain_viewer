@@ -1,0 +1,53 @@
+{
+  "id": "ts_backfill",
+  "title": "ts_backfill",
+  "lastModified": "2026-03-01T04:38:06.560667-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>This helps maintain data integrity, increases coverage, and can reduce drawdown risk in your Alpha. You can also specify which recent value to use with the k parameter (e.g., the 2nd most recent non-NaN value).</p><p>The ts_backfill function takes x (input data or expression), lookback = d (number of days to look back), and an optional k (kth most recent valid value, default is 1).</p><p><b>Example calculations</b></p><p>Suppose you have a time series for a stock's daily volume over 5 days:</p>",
+      "id": "831f9762-e976-4831-848d-235615125a33"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Day",
+            "Volumn"
+          ],
+          [
+            "2024-06-01",
+            "100"
+          ],
+          [
+            "2024-06-02",
+            "NaN"
+          ],
+          [
+            "2024-06-03",
+            "120"
+          ],
+          [
+            "2024-06-04",
+            "NaN"
+          ],
+          [
+            "2024-06-05",
+            "NaN"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": false
+      },
+      "id": "d6b99673-b41d-4cd1-8f70-09d61493af63"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p></p><p>Using ts_backfill(volume, 3) on Day 5:</p><p>Looks back up to 3 days for the most recent non-NaN value.</p><p>Finds 120 on Day 3, so Day 5's value becomes 120.</p><p>Using ts_backfill(volume, 3, k=2) on Day 5:</p><p>Looks for the 2nd most recent non-NaN value within 3 days.</p><p>Finds 100 on Day 1, so Day 5's value becomes 100.</p><p><b>Examples</b></p><p>ts_backfill(fnd6_newqv1300_xrdq, 252)</p><ul><li>Each NaN is replaced with the most recent non‑NaN value found within the last 252 trading days; if none exists within the window, the output stays NaN</li></ul><p><b>Tip:</b> Avoid setting the lookback period too long, as this may introduce outdated values and reduce signal quality.</p>",
+      "id": "7c9e56cd-25d2-446a-ae9a-17be3f12deee"
+    }
+  ],
+  "sequence": 6594,
+  "category": "Operators"
+}

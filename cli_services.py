@@ -27,6 +27,7 @@ from urllib.parse import urljoin
 
 import pandas as pd
 import requests
+from alpha_registry import get_registry
 from wq_session import (
     BRAIN_API_BASE,
     authenticate_with_brain,
@@ -46,6 +47,7 @@ from wq_session import (
 
 SCRIPT_DIR      = os.path.dirname(os.path.abspath(__file__))
 DATASETS_DIR    = os.path.join(SCRIPT_DIR, "datasets")
+OPERATORS_DIR   = os.path.join(SCRIPT_DIR, "operators")
 TEMPLATES_DIR   = os.path.join(SCRIPT_DIR, "templates")
 ALPHAS_DIR      = os.path.join(SCRIPT_DIR, "alphas")
 DATA_DIR        = os.path.join(SCRIPT_DIR, "data")
@@ -55,6 +57,9 @@ JOBS_DIR        = os.path.join(CLI_STATE_DIR, "jobs")
 STOP_DIR        = os.path.join(CLI_STATE_DIR, "stop")
 DATASETS_API    = f"{BRAIN_API_BASE}/data-sets"
 DATAFIELDS_API  = f"{BRAIN_API_BASE}/data-fields"
+OPERATORS_API   = f"{BRAIN_API_BASE}/operators"
+OPERATORS_FILE  = os.path.join(OPERATORS_DIR, "operators.json")
+OPERATOR_DOCS_DIR = os.path.join(OPERATORS_DIR, "docs")
 DEFAULT_DATA_FIELD_OPTION = {
     "instrumentType": "EQUITY",
     "region": "USA",
@@ -83,7 +88,17 @@ SIMULATION_DONE_STATUSES = {"COMPLETE", "WARNING"}
 # ---------------------------------------------------------------------------
 
 def _ensure_dirs():
-    for d in [CLI_STATE_DIR, JOBS_DIR, STOP_DIR, DATA_DIR, TEMPLATES_DIR, ALPHAS_DIR, DATASETS_DIR]:
+    for d in [
+        CLI_STATE_DIR,
+        JOBS_DIR,
+        STOP_DIR,
+        DATA_DIR,
+        TEMPLATES_DIR,
+        ALPHAS_DIR,
+        DATASETS_DIR,
+        OPERATORS_DIR,
+        OPERATOR_DOCS_DIR,
+    ]:
         os.makedirs(d, exist_ok=True)
 
 
@@ -179,6 +194,19 @@ def _data_field_row(field: dict) -> dict:
         "Users":       field.get("userCount", 0),
         "Alphas":      field.get("alphaCount", 0),
     }
+
+
+def _operator_metadata_row(operator: dict) -> dict:
+    return {
+        "name": operator.get("name", ""),
+        "category": operator.get("category", ""),
+        "scope": operator.get("scope") or [],
+        "definition": operator.get("definition", ""),
+        "description": operator.get("description", ""),
+        "documentation": operator.get("documentation"),
+        "level": operator.get("level"),
+    }
+
 
 _ensure_dirs()
 
@@ -635,6 +663,179 @@ def datasets_export_fields(dataset_id: str, output_path: str,
         return {"status": "error", "message": f"Dataset '{dataset_id}' not found locally."}
     df.to_csv(output_path, index=False)
     return {"status": "ok", "rows": len(df), "output": output_path}
+
+
+# ---------------------------------------------------------------------------
+# Operator service
+# ---------------------------------------------------------------------------
+
+def operators_list(operators_dir: str = OPERATORS_DIR) -> List[dict]:
+    """List locally cached WQ Brain operator metadata."""
+    fp = os.path.join(operators_dir, "operators.json")
+    if not os.path.exists(fp):
+        return []
+    try:
+        with open(fp, "r", encoding="utf-8") as fh:
+            data = json.load(fh)
+    except Exception:
+        return []
+    if isinstance(data, dict):
+        data = data.get("operators", [])
+    if not isinstance(data, list):
+        return []
+    return [_operator_metadata_row(op) for op in data if isinstance(op, dict)]
+
+
+def operators_refresh(operators_dir: str = OPERATORS_DIR,
+                      credentials_path: str = CREDS_PATH,
+                      include_docs: bool = True,
+                      progress_cb=None) -> dict:
+    """Fetch WQ Brain operator metadata and optional detailed docs."""
+    try:
+        session, kind, detail = get_session_for_request(credentials_path)
+    except FileNotFoundError:
+        return {"status": "error", "message": f"Credentials file not found: {credentials_path}"}
+    except Exception as exc:
+        return {"status": "error", "message": f"Error preparing session: {exc}"}
+    if kind == "persona":
+        _notify_login_issue(
+            "Operator refresh requires Persona verification.",
+            detail,
+            cooldown_key="operators-persona-required",
+        )
+        return {"status": "error", "message": f"Persona verification required: {detail}"}
+    if kind == "error":
+        _notify_login_issue(
+            "Operator refresh failed because login is invalid.",
+            detail,
+            cooldown_key="operators-login-invalid",
+        )
+        return {"status": "error", "message": detail}
+
+    os.makedirs(operators_dir, exist_ok=True)
+    docs_dir = os.path.join(operators_dir, "docs")
+    os.makedirs(docs_dir, exist_ok=True)
+
+    if progress_cb:
+        progress_cb("Fetching operator list from WQ operators.")
+    try:
+        response = _request_with_rate_limit_retry(
+            session,
+            "get",
+            OPERATORS_API,
+            timeout=20,
+            progress_cb=progress_cb,
+            retry_context="operator list refresh",
+        )
+        if response.status_code == 401:
+            clear_login_state()
+            persona_url = extract_persona_url(response)
+            if persona_url:
+                _notify_login_issue(
+                    "Saved session expired during operator refresh.",
+                    persona_url,
+                    cooldown_key="operators-persona",
+                )
+                return {"status": "error", "message": f"Persona verification required: {persona_url}"}
+            _notify_login_issue(
+                "Saved session expired during operator refresh.",
+                "Unauthorized while fetching operators.",
+                cooldown_key="operators-unauthorized",
+            )
+            return {"status": "error", "message": "Unauthorized while fetching operators."}
+        response.raise_for_status()
+        body = response.json()
+    except Exception as exc:
+        return {"status": "error", "message": f"Error fetching operators: {exc}"}
+
+    if not isinstance(body, list):
+        return {"status": "error", "message": "Unexpected operators response shape."}
+
+    operators = sorted(
+        (_operator_metadata_row(op) for op in body if isinstance(op, dict)),
+        key=lambda item: item.get("name", ""),
+    )
+    list_path = os.path.join(operators_dir, "operators.json")
+    with open(list_path, "w", encoding="utf-8") as fh:
+        json.dump(operators, fh, ensure_ascii=False, indent=2)
+
+    docs_refreshed = []
+    errors = []
+    if include_docs:
+        for i, op in enumerate(operators):
+            name = op.get("name", "")
+            doc_path = op.get("documentation")
+            if not name or not doc_path:
+                continue
+            if progress_cb:
+                progress_cb(f"Fetching operator doc {name} ({i+1}/{len(operators)})…")
+            try:
+                doc_response = _request_with_rate_limit_retry(
+                    session,
+                    "get",
+                    urljoin(BRAIN_API_BASE, doc_path),
+                    timeout=20,
+                    progress_cb=progress_cb,
+                    retry_context=f"operator doc refresh for {name}",
+                )
+                if doc_response.status_code == 401:
+                    clear_login_state()
+                    return {"status": "error", "message": "Unauthorized while fetching operator docs."}
+                doc_response.raise_for_status()
+                doc_body = doc_response.json()
+                with open(os.path.join(docs_dir, f"{_sanitize_filename(name)}.json"), "w", encoding="utf-8") as fh:
+                    json.dump(doc_body, fh, ensure_ascii=False, indent=2)
+                docs_refreshed.append(name)
+            except Exception as exc:
+                errors.append(f"{name}: {exc}")
+
+    return {
+        "status": "ok",
+        "total": len(operators),
+        "output": list_path,
+        "docs_refreshed": docs_refreshed,
+        "docs_total": len(docs_refreshed),
+        "errors": errors,
+    }
+
+
+def operators_show(name: str, operators_dir: str = OPERATORS_DIR,
+                   include_doc: bool = True) -> Optional[dict]:
+    """Return one cached operator by name."""
+    for op in operators_list(operators_dir):
+        if op.get("name") == name:
+            result = dict(op)
+            if include_doc:
+                doc_file = os.path.join(operators_dir, "docs", f"{_sanitize_filename(name)}.json")
+                if os.path.exists(doc_file):
+                    try:
+                        with open(doc_file, "r", encoding="utf-8") as fh:
+                            result["doc"] = json.load(fh)
+                    except Exception:
+                        result["doc"] = None
+            return result
+    return None
+
+
+def operators_search(query: str, operators_dir: str = OPERATORS_DIR,
+                     category: Optional[str] = None) -> List[dict]:
+    """Search cached operator names, definitions, descriptions, and metadata."""
+    q = query.lower()
+    results = []
+    for op in operators_list(operators_dir):
+        if category and str(op.get("category", "")).lower() != category.lower():
+            continue
+        haystack = " ".join([
+            str(op.get("name", "")),
+            str(op.get("category", "")),
+            str(op.get("definition", "")),
+            str(op.get("description", "")),
+            str(op.get("level", "")),
+            " ".join(str(s) for s in op.get("scope", [])),
+        ]).lower()
+        if q in haystack:
+            results.append(op)
+    return results
 
 
 # ---------------------------------------------------------------------------
@@ -1267,25 +1468,75 @@ class CLISimulationSession(requests.Session):
                             with self._csv_lock:
                                 writer.writerow(result["row"])
                                 csv_fh.flush()
-                            completed.append(result)
-                            if self._job_id:
-                                def _mark_completed(job):
-                                    completed_rows = list(job.get("completed_rows", []))
-                                    failed_items = list(job.get("failed_items", []))
-                                    completed_rows.append({
-                                        "uuid": result.get("uuid"),
-                                        "row": result["row"],
-                                    })
-                                    processed = len(completed_rows) + len(failed_items)
-                                    job["completed_rows"] = completed_rows
-                                    job["completed_count"] = len(completed_rows)
-                                    job["failed_count"] = len(failed_items)
-                                    job["processed_count"] = processed
-                                    job["progress_message"] = f"Running {processed}/{total}"
-                                JobStore.mutate(self._job_id, _mark_completed)
-                            self._emit(f"Completed {len(completed)}/{len(params)}: "
-                                       f"{str(result['row'][14])[:40]}")
+                            if result.get("status") == "failed":
+                                row = result["row"]
+                                try:
+                                    get_registry().record_simulation(
+                                        str(row[14]) if len(row) > 14 else str(result.get("alpha", "")),
+                                        job_id=self._job_id,
+                                        status="failed",
+                                        params=result.get("simulation") or futures.get(fut) or {},
+                                        result_link=str(row[13]) if len(row) > 13 else None,
+                                        error=result.get("error", "Simulation failed."),
+                                    )
+                                except Exception as exc:
+                                    self._emit(f"Alpha registry update failed: {exc}")
+                                if self._job_id:
+                                    def _mark_failed_row(job):
+                                        completed_rows = list(job.get("completed_rows", []))
+                                        failed_items = list(job.get("failed_items", []))
+                                        failed_items.append({
+                                            "uuid": result.get("uuid"),
+                                            "error": result.get("error", "Simulation failed."),
+                                            "alpha": result.get("alpha"),
+                                            "row": row,
+                                        })
+                                        processed = len(completed_rows) + len(failed_items)
+                                        job["failed_items"] = failed_items
+                                        job["completed_count"] = len(completed_rows)
+                                        job["failed_count"] = len(failed_items)
+                                        job["processed_count"] = processed
+                                        job["progress_message"] = f"Running {processed}/{total}"
+                                    JobStore.mutate(self._job_id, _mark_failed_row)
+                                self._emit(f"Error: {result.get('error', 'Simulation failed.')}")
+                            else:
+                                completed.append(result)
+                                try:
+                                    get_registry().record_simulation_row(
+                                        result["row"],
+                                        job_id=self._job_id,
+                                        params=result.get("simulation") or {},
+                                    )
+                                except Exception as exc:
+                                    self._emit(f"Alpha registry update failed: {exc}")
+                                if self._job_id:
+                                    def _mark_completed(job):
+                                        completed_rows = list(job.get("completed_rows", []))
+                                        failed_items = list(job.get("failed_items", []))
+                                        completed_rows.append({
+                                            "uuid": result.get("uuid"),
+                                            "row": result["row"],
+                                        })
+                                        processed = len(completed_rows) + len(failed_items)
+                                        job["completed_rows"] = completed_rows
+                                        job["completed_count"] = len(completed_rows)
+                                        job["failed_count"] = len(failed_items)
+                                        job["processed_count"] = processed
+                                        job["progress_message"] = f"Running {processed}/{total}"
+                                    JobStore.mutate(self._job_id, _mark_completed)
+                                self._emit(f"Completed {len(completed)}/{len(params)}: "
+                                           f"{str(result['row'][14])[:40]}")
                         elif result and "error" in result:
+                            try:
+                                get_registry().record_simulation(
+                                    str(result.get("alpha", "")),
+                                    job_id=self._job_id,
+                                    status="failed",
+                                    params=futures.get(fut) or {},
+                                    error=result["error"],
+                                )
+                            except Exception as exc:
+                                self._emit(f"Alpha registry update failed: {exc}")
                             if self._job_id:
                                 def _mark_failed(job):
                                     completed_rows = list(job.get("completed_rows", []))
@@ -1472,7 +1723,14 @@ class CLISimulationSession(requests.Session):
             row = [0, delay, region, neutralization, decay, truncation,
                    0, 0, 0, "FAIL", 0, -1, universe,
                    f"https://platform.worldquantbrain.com/alpha/{alpha_link}", alpha]
-            return {"uuid": row_uuid, "row": row, "simulation": simulation}
+            return {
+                "uuid": row_uuid,
+                "row": row,
+                "simulation": simulation,
+                "alpha": alpha,
+                "status": "failed",
+                "error": f"Failed to fetch alpha details: {exc}",
+            }
 
         passed     = 0
         weight_chk = "N/A"
@@ -1494,7 +1752,7 @@ class CLISimulationSession(requests.Session):
             f"https://platform.worldquantbrain.com/alpha/{alpha_link}",
             alpha,
         ]
-        return {"uuid": row_uuid, "row": row, "simulation": simulation}
+        return {"uuid": row_uuid, "row": row, "simulation": simulation, "status": "done"}
 
 
 # ---------------------------------------------------------------------------
@@ -1507,6 +1765,11 @@ def simulate_enqueue(params: List[dict], credentials_path: str = CREDS_PATH) -> 
         "params":           params,
         "credentials_path": credentials_path,
     })
+    registry = get_registry()
+    for item in params:
+        code = str(item.get("code", "")).strip()
+        if code:
+            registry.record_queued(code, job_id=job_id, params=item)
     return job_id
 
 
@@ -1593,6 +1856,45 @@ def simulate_results(job_id: str, limit: int = 100) -> Optional[dict]:
 def simulate_list() -> List[dict]:
     """List all simulation jobs."""
     return JobStore.list_jobs("simulate")
+
+
+# ---------------------------------------------------------------------------
+# Alpha registry service
+# ---------------------------------------------------------------------------
+
+def alpha_list(status: Optional[str] = None,
+               source: Optional[str] = None,
+               min_sharpe: Optional[float] = None,
+               min_fitness: Optional[float] = None,
+               limit: int = 50) -> List[dict]:
+    """List alpha records from the SQLite registry."""
+    return get_registry().list_alphas(
+        status=status,
+        source=source,
+        min_sharpe=min_sharpe,
+        min_fitness=min_fitness,
+        limit=limit,
+    )
+
+
+def alpha_show(identifier: str) -> Optional[dict]:
+    """Return a single alpha by hash or WQ alpha ID."""
+    return get_registry().get_alpha(identifier)
+
+
+def alpha_history(identifier: str) -> Optional[dict]:
+    """Return an alpha plus simulation and event history."""
+    return get_registry().history(identifier)
+
+
+def alpha_promote(identifier: str, reason: Optional[str] = None) -> Optional[dict]:
+    """Mark an alpha as promoted and append an event."""
+    return get_registry().promote(identifier, reason=reason)
+
+
+def alpha_reject(identifier: str, reason: str) -> Optional[dict]:
+    """Mark an alpha as rejected and append an event."""
+    return get_registry().reject(identifier, reason=reason)
 
 
 # ---------------------------------------------------------------------------

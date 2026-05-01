@@ -1,0 +1,30 @@
+{
+  "id": "signed_power",
+  "title": "signed_power",
+  "lastModified": "2024-12-30T04:40:14.620305-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>sign(x) * (abs(x) ^ y)</b><br/>x raised to the power of y such that final result preserves sign of x. For power of 2, x ^ y will be a parabola but signed_power(x, y) will be odd and one-to-one function (unique value of x for certain value of signed_power(x, y)) unlike parabola.</p>",
+      "id": "a87fcfda-ba37-4d65-adef-5f56c7d082ef"
+    },
+    {
+      "type": "IMAGE",
+      "value": {
+        "title": "signed_power.max-165x165.png",
+        "width": 165,
+        "height": 164,
+        "fileSize": 9198,
+        "url": "https://api.worldquantbrain.com/content/images/ajQEQ1jyo_cQ9fKSSpERmtkLDYI=/321/original/signed_power.max-165x165.png"
+      },
+      "id": "2e0293f9-2f51-4615-928e-3bc5c4319f90"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p><b>Example:</b><br/>If x = 3, y = 2 ⇒ abs(x) = 3 ⇒ abs(x) ^ y = 9 and sign(x) = +1 ⇒ sign(x) * (abs(x) ^ y) = signed_power(x, y) = 9<br/>If x = -9, y = 0.5 ⇒ abs(x) = 9 ⇒ abs(x) ^ y = 3 and sign(x) = -1 ⇒ sign(x) * (abs(x) ^ y) = signed_power(x, y)</p>",
+      "id": "e7ace4d3-f057-461a-b230-debeb092efe7"
+    }
+  ],
+  "sequence": 6585,
+  "category": "Operators"
+}

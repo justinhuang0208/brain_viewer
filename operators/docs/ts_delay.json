@@ -1,0 +1,53 @@
+{
+  "id": "ts_delay",
+  "title": "ts_delay",
+  "lastModified": "2026-03-01T04:56:33.577205-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p>This is useful for referencing past data in time series analysis, such as comparing current values to previous values or constructing lagged features for modeling.</p><p><b>Example calculations</b></p><ul><li>For a time series:</li></ul><p>Suppose you have the following daily closing prices for a stock:</p>",
+      "id": "dd5502b2-9807-445c-8497-1821fb703504"
+    },
+    {
+      "type": "TABLE",
+      "value": {
+        "data": [
+          [
+            "Day",
+            "close"
+          ],
+          [
+            "2024-06-01",
+            "100"
+          ],
+          [
+            "2024-06-02",
+            "102"
+          ],
+          [
+            "2024-06-03",
+            "101"
+          ],
+          [
+            "2024-06-04",
+            "105"
+          ],
+          [
+            "2024-06-05",
+            "107"
+          ]
+        ],
+        "firstRowIsTableHeader": false,
+        "firstColIsHeader": false
+      },
+      "id": "b4182b54-1781-4c43-a765-eefc5e0ce329"
+    },
+    {
+      "type": "TEXT",
+      "value": "<p></p><p>ts_delay(close, 3) and today is day 2024-06-05, returns 101 (the value from Day 3).</p><p><b>Examples</b></p><p>ts_delay(close, 5)</p><ul><li>Returns the closing price from five trading days ago; use it to form lags for deltas and returns.</li></ul>",
+      "id": "6c265a07-193e-456d-bf3b-9338576e1144"
+    }
+  ],
+  "sequence": 7022,
+  "category": "Operators"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "ts_step",
+  "title": "ts_step",
+  "lastModified": "2026-03-01T05:26:32.467255-05:00",
+  "content": [
+    {
+      "type": "TEXT",
+      "value": "<p><b>ts_step(1) </b>is most commonly used as an x variable in functions like ts_regression, where it serves as a day counter. It helps represent time intervals in the regression analysis.</p><p>Examples</p><p>ts_regression(returns, ts_step(1), 60, rettype=0)</p><ul><li>ts_step(1) acts as the independent variable (x), counting days backward in the simulation. This allows the function to regress the returns over a 60-day window.</li></ul>",
+      "id": "38697aad-2d4d-4ce6-99ee-f89056fd16b6"
+    }
+  ],
+  "sequence": 7029,
+  "category": "Operators"
+}
