@@ -21,7 +21,7 @@ import time
 import uuid as _uuid_mod
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from threading import Lock
+from threading import Lock, RLock
 from typing import Any, Dict, List, Optional, Tuple
 from urllib.parse import urljoin
 
@@ -82,6 +82,9 @@ SIMULATION_RATE_LIMIT_HEADERS = {
 }
 SIMULATION_ERROR_STATUSES = {"ERROR", "TIMEOUT", "FAIL", "CANCELLED"}
 SIMULATION_DONE_STATUSES = {"COMPLETE", "WARNING"}
+SIMULATION_TRANSIENT_POLL_STATUSES = {500, 502, 503, 504}
+SIMULATION_POLL_BACKOFF_MAX_SECONDS = 60.0
+_JOB_STORE_LOCK = RLock()
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -155,6 +158,59 @@ def _retry_after_seconds(headers, default: float = 10.0) -> float:
         return default
 
 
+def _now_iso() -> str:
+    return datetime.datetime.now().isoformat()
+
+
+def _sleep_with_stop(stop_flag, seconds: float) -> bool:
+    deadline = time.monotonic() + max(float(seconds), 0.0)
+    while True:
+        if stop_flag.check():
+            return False
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
+            return True
+        time.sleep(min(30, remaining))
+
+
+def _simulation_params_by_uuid_or_alpha(job: dict, item: dict) -> dict:
+    params = ((job.get("params") or {}).get("params") or [])
+    item_uuid = item.get("uuid")
+    item_alpha = str(item.get("alpha") or "").strip()
+    for candidate in params:
+        if item_uuid and candidate.get("uuid") == item_uuid:
+            return dict(candidate)
+    for candidate in params:
+        if item_alpha and str(candidate.get("code") or "").strip() == item_alpha:
+            return dict(candidate)
+    return dict(item.get("simulation") or {})
+
+
+def _refresh_simulation_summary(job: dict):
+    completed_rows = list(job.get("completed_rows", []))
+    failed_items = list(job.get("failed_items", []))
+    recovered_items = list(job.get("recovered_items", []))
+    params = ((job.get("params") or {}).get("params") or [])
+    total = job.get("total_count") or len(params)
+    completed_count = len(completed_rows)
+    failed_count = len(failed_items)
+    recovered_count = len(recovered_items)
+    processed_count = completed_count + failed_count
+    job["total_count"] = total
+    job["completed_count"] = completed_count
+    job["failed_count"] = failed_count
+    job["recovered_count"] = recovered_count
+    job["processed_count"] = processed_count
+    job["summary"] = {
+        "status": job.get("status"),
+        "total_count": total,
+        "processed_count": processed_count,
+        "completed_count": completed_count,
+        "failed_count": failed_count,
+        "recovered_count": recovered_count,
+    }
+
+
 def _request_with_rate_limit_retry(session: requests.Session, method: str, url: str,
                                    *, max_retries: int = 5, progress_cb=None,
                                    retry_context: str = "request", **kwargs) -> requests.Response:
@@ -169,7 +225,7 @@ def _request_with_rate_limit_retry(session: requests.Session, method: str, url: 
                 progress_cb(f"Rate limited during {retry_context}; retrying in {retry_after}s…")
             time.sleep(retry_after)
             continue
-        if response.status_code in (502, 503, 504):
+        if response.status_code in SIMULATION_TRANSIENT_POLL_STATUSES:
             if attempt >= max_retries:
                 return response
             if progress_cb:
@@ -245,70 +301,76 @@ class JobStore:
 
     @staticmethod
     def create(job_type: str, params: dict) -> str:
-        job_id = _uuid_mod.uuid4().hex[:12]
-        now    = datetime.datetime.now().isoformat()
-        job    = {
-            "id":         job_id,
-            "type":       job_type,
-            "status":     "pending",
-            "created_at": now,
-            "updated_at": now,
-            "params":     params,
-            "result_file": None,
-            "error":      None,
-            "pid":        None,
-        }
-        JobStore._write(job_id, job)
-        return job_id
+        with _JOB_STORE_LOCK:
+            job_id = _uuid_mod.uuid4().hex[:12]
+            now    = datetime.datetime.now().isoformat()
+            job    = {
+                "id":         job_id,
+                "type":       job_type,
+                "status":     "pending",
+                "created_at": now,
+                "updated_at": now,
+                "params":     params,
+                "result_file": None,
+                "error":      None,
+                "pid":        None,
+            }
+            JobStore._write(job_id, job)
+            return job_id
 
     @staticmethod
     def get(job_id: str) -> Optional[dict]:
-        p = os.path.join(JOBS_DIR, f"{job_id}.json")
-        if not os.path.exists(p):
-            return None
-        with open(p, "r", encoding="utf-8") as fh:
-            return json.load(fh)
+        with _JOB_STORE_LOCK:
+            p = os.path.join(JOBS_DIR, f"{job_id}.json")
+            if not os.path.exists(p):
+                return None
+            with open(p, "r", encoding="utf-8") as fh:
+                return json.load(fh)
 
     @staticmethod
     def update(job_id: str, **kwargs):
-        job = JobStore.get(job_id)
-        if job is None:
-            return
-        job.update(kwargs)
-        job["updated_at"] = datetime.datetime.now().isoformat()
-        JobStore._write(job_id, job)
+        with _JOB_STORE_LOCK:
+            job = JobStore.get(job_id)
+            if job is None:
+                return
+            job.update(kwargs)
+            job["updated_at"] = datetime.datetime.now().isoformat()
+            JobStore._write(job_id, job)
 
     @staticmethod
     def mutate(job_id: str, mutator):
-        job = JobStore.get(job_id)
-        if job is None:
-            return None
-        mutator(job)
-        job["updated_at"] = datetime.datetime.now().isoformat()
-        JobStore._write(job_id, job)
-        return job
+        with _JOB_STORE_LOCK:
+            job = JobStore.get(job_id)
+            if job is None:
+                return None
+            mutator(job)
+            job["updated_at"] = datetime.datetime.now().isoformat()
+            JobStore._write(job_id, job)
+            return job
 
     @staticmethod
     def list_jobs(job_type: Optional[str] = None) -> List[dict]:
-        jobs = []
-        for fn in os.listdir(JOBS_DIR):
-            if fn.endswith(".json"):
-                p = os.path.join(JOBS_DIR, fn)
-                try:
-                    with open(p, "r", encoding="utf-8") as fh:
-                        j = json.load(fh)
-                    if job_type is None or j.get("type") == job_type:
-                        jobs.append(j)
-                except Exception:
-                    pass
-        jobs.sort(key=lambda x: x.get("created_at", ""), reverse=True)
-        return jobs
+        with _JOB_STORE_LOCK:
+            jobs = []
+            for fn in os.listdir(JOBS_DIR):
+                if fn.endswith(".json"):
+                    p = os.path.join(JOBS_DIR, fn)
+                    try:
+                        with open(p, "r", encoding="utf-8") as fh:
+                            j = json.load(fh)
+                        if job_type is None or j.get("type") == job_type:
+                            jobs.append(j)
+                    except Exception:
+                        pass
+            jobs.sort(key=lambda x: x.get("created_at", ""), reverse=True)
+            return jobs
 
     @staticmethod
     def _write(job_id: str, job: dict):
-        p = os.path.join(JOBS_DIR, f"{job_id}.json")
-        with open(p, "w", encoding="utf-8") as fh:
-            json.dump(job, fh, indent=2)
+        with _JOB_STORE_LOCK:
+            p = os.path.join(JOBS_DIR, f"{job_id}.json")
+            with open(p, "w", encoding="utf-8") as fh:
+                json.dump(job, fh, indent=2)
 
     @staticmethod
     def request_stop(job_id: str):
@@ -1373,6 +1435,71 @@ class CLISimulationSession(requests.Session):
         else:
             print(f"[simulate] {msg}", file=sys.stderr)
 
+    def _set_item_state(self, row_uuid: str, alpha: str, **updates):
+        if not self._job_id:
+            return
+
+        def _mutate(job):
+            items = list(job.get("simulation_items", []))
+            for item in items:
+                if item.get("uuid") == row_uuid:
+                    item.update(updates)
+                    break
+            else:
+                item = {"uuid": row_uuid, "alpha": alpha}
+                item.update(updates)
+                items.append(item)
+            item.setdefault("alpha", alpha)
+            job["simulation_items"] = items
+
+        JobStore.mutate(self._job_id, _mutate)
+
+    def _record_poll_state(
+        self,
+        row_uuid: str,
+        alpha: str,
+        *,
+        simulation_url: Optional[str] = None,
+        http_status: Optional[int] = None,
+        simulation_status: Optional[str] = None,
+        progress: Any = None,
+        alpha_id: Optional[str] = None,
+        state: Optional[str] = None,
+        error: Optional[str] = None,
+    ):
+        updates = {"last_poll_at": _now_iso()}
+        if simulation_url:
+            updates["simulation_url"] = simulation_url
+        if http_status is not None:
+            updates["last_poll_status"] = http_status
+        if simulation_status:
+            updates["simulation_status"] = simulation_status
+        if progress is not None:
+            updates["last_progress"] = progress
+        if alpha_id:
+            updates["alpha_id"] = alpha_id
+        if state:
+            updates["state"] = state
+        if error:
+            updates["error"] = error
+        self._set_item_state(row_uuid, alpha, **updates)
+
+    def _simulation_item_state(self, row_uuid: str) -> dict:
+        if not self._job_id:
+            return {}
+        job = JobStore.get(self._job_id) or {}
+        for item in job.get("simulation_items", []):
+            if item.get("uuid") == row_uuid:
+                return dict(item)
+        return {}
+
+    def _result_with_state(self, row_uuid: str, result: dict) -> dict:
+        item = self._simulation_item_state(row_uuid)
+        for key in ("simulation_url", "last_poll_status", "last_progress", "last_poll_at", "alpha_id"):
+            if key in item and key not in result:
+                result[key] = item[key]
+        return result
+
     def _load_latest_simulation_quota(self):
         try:
             jobs = JobStore.list_jobs("simulate")
@@ -1428,6 +1555,92 @@ class CLISimulationSession(requests.Session):
                 return True
             time.sleep(min(30, remaining))
 
+    def _alpha_row_from_payload(self, alpha_id: str, simulation: dict, payload: dict) -> list:
+        alpha          = simulation.get("code", "").strip()
+        delay          = simulation.get("delay", 1)
+        universe       = simulation.get("universe", "TOP3000")
+        truncation     = simulation.get("truncation", 0.1)
+        region         = simulation.get("region", "USA")
+        decay          = simulation.get("decay", 6)
+        neutralization = simulation.get("neutralization", "SUBINDUSTRY").upper()
+
+        passed     = 0
+        weight_chk = "N/A"
+        subsharpe  = -1
+        for chk in payload.get("is", {}).get("checks", []):
+            passed += chk.get("result") == "PASS"
+            if chk.get("name") == "CONCENTRATED_WEIGHT":
+                weight_chk = chk.get("result", "N/A")
+            if chk.get("name") == "LOW_SUB_UNIVERSE_SHARPE":
+                subsharpe = chk.get("value", -1)
+
+        return [
+            passed, delay, region, neutralization, decay, truncation,
+            payload.get("is", {}).get("sharpe", 0),
+            payload.get("is", {}).get("fitness", 0),
+            round(100 * payload.get("is", {}).get("turnover", 0), 2),
+            weight_chk, subsharpe, -1,
+            universe,
+            f"https://platform.worldquantbrain.com/alpha/{alpha_id}",
+            alpha,
+        ]
+
+    def _fetch_alpha_row(
+        self,
+        alpha_id: str,
+        simulation: dict,
+        *,
+        row_uuid: str,
+        simulation_url: Optional[str] = None,
+    ) -> dict:
+        alpha = simulation.get("code", "").strip()
+        try:
+            r = self.get(f"{BRAIN_API_BASE}/alphas/{alpha_id}", timeout=30)
+            if r.status_code == 401:
+                clear_login_state()
+                persona_url = extract_persona_url(r)
+                if persona_url:
+                    _notify_login_issue(
+                        "Saved session expired while fetching alpha details.",
+                        persona_url,
+                        cooldown_key="cli-sim-alpha-persona",
+                    )
+                    return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
+                _notify_login_issue(
+                    "Saved session expired while fetching alpha details.",
+                    "Unauthorized while fetching alpha details.",
+                    cooldown_key="cli-sim-alpha-unauthorized",
+                )
+                return {"uuid": row_uuid, "error": "Unauthorized while fetching alpha details.", "alpha": alpha}
+            r.raise_for_status()
+            payload = r.json()
+        except Exception as exc:
+            row = [0, simulation.get("delay", 1), simulation.get("region", "USA"),
+                   simulation.get("neutralization", "SUBINDUSTRY").upper(),
+                   simulation.get("decay", 6), simulation.get("truncation", 0.1),
+                   0, 0, 0, "FAIL", 0, -1, simulation.get("universe", "TOP3000"),
+                   f"https://platform.worldquantbrain.com/alpha/{alpha_id}", alpha]
+            return {
+                "uuid": row_uuid,
+                "row": row,
+                "simulation": simulation,
+                "alpha": alpha,
+                "alpha_id": alpha_id,
+                "simulation_url": simulation_url,
+                "status": "failed",
+                "error": f"Failed to fetch alpha details: {exc}",
+            }
+
+        row = self._alpha_row_from_payload(alpha_id, simulation, payload)
+        return {
+            "uuid": row_uuid,
+            "row": row,
+            "simulation": simulation,
+            "status": "done",
+            "alpha_id": alpha_id,
+            "simulation_url": simulation_url,
+        }
+
     def simulate(self, params: List[dict]) -> List[dict]:
         """Run all simulations and write to CSV.  Returns list of result rows."""
         if self.login_expired:
@@ -1444,9 +1657,20 @@ class CLISimulationSession(requests.Session):
                 processed_count=0,
                 completed_count=0,
                 failed_count=0,
+                recovered_count=0,
                 progress_message=f"Running 0/{total}",
                 completed_rows=[],
                 failed_items=[],
+                recovered_items=[],
+                simulation_items=[],
+                summary={
+                    "status": "running",
+                    "total_count": total,
+                    "processed_count": 0,
+                    "completed_count": 0,
+                    "failed_count": 0,
+                    "recovered_count": 0,
+                },
             )
 
         with open(self._csv_file, "w", newline="", encoding="utf-8") as csv_fh:
@@ -1489,14 +1713,16 @@ class CLISimulationSession(requests.Session):
                                             "uuid": result.get("uuid"),
                                             "error": result.get("error", "Simulation failed."),
                                             "alpha": result.get("alpha"),
+                                            "simulation_url": result.get("simulation_url"),
+                                            "last_poll_status": result.get("last_poll_status"),
+                                            "last_progress": result.get("last_progress"),
+                                            "last_poll_at": result.get("last_poll_at"),
+                                            "alpha_id": result.get("alpha_id"),
                                             "row": row,
                                         })
-                                        processed = len(completed_rows) + len(failed_items)
                                         job["failed_items"] = failed_items
-                                        job["completed_count"] = len(completed_rows)
-                                        job["failed_count"] = len(failed_items)
-                                        job["processed_count"] = processed
-                                        job["progress_message"] = f"Running {processed}/{total}"
+                                        _refresh_simulation_summary(job)
+                                        job["progress_message"] = f"Running {job['processed_count']}/{total}"
                                     JobStore.mutate(self._job_id, _mark_failed_row)
                                 self._emit(f"Error: {result.get('error', 'Simulation failed.')}")
                             else:
@@ -1516,13 +1742,15 @@ class CLISimulationSession(requests.Session):
                                         completed_rows.append({
                                             "uuid": result.get("uuid"),
                                             "row": result["row"],
+                                            "simulation_url": result.get("simulation_url"),
+                                            "last_poll_status": result.get("last_poll_status"),
+                                            "last_progress": result.get("last_progress"),
+                                            "last_poll_at": result.get("last_poll_at"),
+                                            "alpha_id": result.get("alpha_id"),
                                         })
-                                        processed = len(completed_rows) + len(failed_items)
                                         job["completed_rows"] = completed_rows
-                                        job["completed_count"] = len(completed_rows)
-                                        job["failed_count"] = len(failed_items)
-                                        job["processed_count"] = processed
-                                        job["progress_message"] = f"Running {processed}/{total}"
+                                        _refresh_simulation_summary(job)
+                                        job["progress_message"] = f"Running {job['processed_count']}/{total}"
                                     JobStore.mutate(self._job_id, _mark_completed)
                                 self._emit(f"Completed {len(completed)}/{len(params)}: "
                                            f"{str(result['row'][14])[:40]}")
@@ -1545,19 +1773,21 @@ class CLISimulationSession(requests.Session):
                                         "uuid": result.get("uuid"),
                                         "error": result["error"],
                                         "alpha": result.get("alpha"),
+                                        "simulation_url": result.get("simulation_url"),
+                                        "last_poll_status": result.get("last_poll_status"),
+                                        "last_progress": result.get("last_progress"),
+                                        "last_poll_at": result.get("last_poll_at"),
+                                        "alpha_id": result.get("alpha_id"),
                                     })
-                                    processed = len(completed_rows) + len(failed_items)
                                     job["failed_items"] = failed_items
-                                    job["completed_count"] = len(completed_rows)
-                                    job["failed_count"] = len(failed_items)
-                                    job["processed_count"] = processed
-                                    job["progress_message"] = f"Running {processed}/{total}"
+                                    _refresh_simulation_summary(job)
+                                    job["progress_message"] = f"Running {job['processed_count']}/{total}"
                                 JobStore.mutate(self._job_id, _mark_failed)
                             self._emit(f"Error: {result['error']}")
                     except Exception as exc:
                         self._emit(f"Future error: {exc}")
 
-        if JobStore.get(self._job_id) is not None:
+        if self._job_id and JobStore.get(self._job_id) is not None:
             JobStore.update(self._job_id, result_file=self._csv_file)
         return completed
 
@@ -1627,6 +1857,13 @@ class CLISimulationSession(requests.Session):
                 if not location:
                     return {"uuid": row_uuid, "error": "Simulation response missing Location header.", "alpha": alpha}
                 nxt = urljoin(r.url, location)
+                self._record_poll_state(
+                    row_uuid,
+                    alpha,
+                    simulation_url=nxt,
+                    http_status=r.status_code,
+                    state="submitted",
+                )
                 break
             except requests.exceptions.HTTPError as exc:
                 if exc.response.status_code == 429 and attempt < max_retries - 1:
@@ -1641,20 +1878,39 @@ class CLISimulationSession(requests.Session):
                             break
                         time.sleep(min(30, remaining))
                     continue
-                return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
+                return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": str(exc), "alpha": alpha})
             except Exception as exc:
-                return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
+                return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": str(exc), "alpha": alpha})
 
         if nxt is None:
             return {"uuid": row_uuid, "error": "Failed to submit simulation.", "alpha": alpha}
 
         # Poll for completion
         alpha_link = None
+        transient_poll_errors = 0
         while True:
             if self._stop_flag.check():
-                return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
+                return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
             try:
                 r    = self.get(nxt, timeout=30)
+                if r.status_code in SIMULATION_TRANSIENT_POLL_STATUSES:
+                    transient_poll_errors += 1
+                    self._record_poll_state(
+                        row_uuid,
+                        alpha,
+                        simulation_url=nxt,
+                        http_status=r.status_code,
+                        state="polling",
+                    )
+                    default_wait = min(2 ** min(transient_poll_errors, 6), SIMULATION_POLL_BACKOFF_MAX_SECONDS)
+                    wait_seconds = _retry_after_seconds(r.headers, default_wait)
+                    self._emit(
+                        f"WQ simulation polling returned {r.status_code}; "
+                        f"retrying same simulation URL in {wait_seconds}s — {alpha[:30]}"
+                    )
+                    if not _sleep_with_stop(self._stop_flag, wait_seconds):
+                        return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
+                    continue
                 if r.status_code == 401:
                     clear_login_state()
                     persona_url = extract_persona_url(r)
@@ -1664,95 +1920,75 @@ class CLISimulationSession(requests.Session):
                             persona_url,
                             cooldown_key="cli-sim-poll-persona",
                         )
-                        return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
+                        return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha})
                     _notify_login_issue(
                         "Saved session expired while polling simulation status.",
                         "Unauthorized while polling simulation.",
                         cooldown_key="cli-sim-poll-unauthorized",
                     )
-                    return {"uuid": row_uuid, "error": "Unauthorized while polling simulation.", "alpha": alpha}
+                    return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Unauthorized while polling simulation.", "alpha": alpha})
                 r.raise_for_status()
                 rj   = r.json()
+                transient_poll_errors = 0
                 status = str(rj.get("status", "")).upper()
+                progress = rj.get("progress", 0)
                 if "alpha" in rj:
                     alpha_link = rj["alpha"]
+                    self._record_poll_state(
+                        row_uuid,
+                        alpha,
+                        simulation_url=nxt,
+                        http_status=r.status_code,
+                        simulation_status=status,
+                        progress=progress,
+                        alpha_id=alpha_link,
+                        state="completed",
+                    )
                     break
+                self._record_poll_state(
+                    row_uuid,
+                    alpha,
+                    simulation_url=nxt,
+                    http_status=r.status_code,
+                    simulation_status=status,
+                    progress=progress,
+                    state="polling",
+                )
                 if status in SIMULATION_ERROR_STATUSES:
                     message = rj.get("message") or f"Simulation ended with status {status}."
-                    return {"uuid": row_uuid, "error": message, "alpha": alpha}
+                    self._record_poll_state(row_uuid, alpha, state="failed", error=message)
+                    return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": message, "alpha": alpha})
                 if status in SIMULATION_DONE_STATUSES:
-                    return {"uuid": row_uuid, "error": f"Simulation ended with status {status} but no alpha id was returned.", "alpha": alpha}
-                progress = rj.get("progress", 0)
+                    message = f"Simulation ended with status {status} but no alpha id was returned."
+                    self._record_poll_state(row_uuid, alpha, state="failed", error=message)
+                    return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": message, "alpha": alpha})
                 self._emit(f"  Progress {int(100 * progress)}% — {alpha[:30]}")
                 wait_seconds = _retry_after_seconds(r.headers)
             except requests.exceptions.HTTPError as exc:
                 if exc.response.status_code == 429:
-                    time.sleep(_retry_after_seconds(exc.response.headers, 15))
+                    wait_seconds = _retry_after_seconds(exc.response.headers, 15)
+                    self._record_poll_state(
+                        row_uuid,
+                        alpha,
+                        simulation_url=nxt,
+                        http_status=exc.response.status_code,
+                        state="polling",
+                    )
+                    if not _sleep_with_stop(self._stop_flag, wait_seconds):
+                        return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
                     continue
-                return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
+                return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": str(exc), "alpha": alpha})
             except Exception as exc:
-                return {"uuid": row_uuid, "error": str(exc), "alpha": alpha}
+                return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": str(exc), "alpha": alpha})
 
-            for _ in range(max(int(wait_seconds / 0.2), 1)):
-                if self._stop_flag.check():
-                    return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
-                time.sleep(0.2)
+            if not _sleep_with_stop(self._stop_flag, wait_seconds):
+                return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
 
         # Fetch alpha details
-        try:
-            r  = self.get(f"{BRAIN_API_BASE}/alphas/{alpha_link}", timeout=30)
-            if r.status_code == 401:
-                clear_login_state()
-                persona_url = extract_persona_url(r)
-                if persona_url:
-                    _notify_login_issue(
-                        "Saved session expired while fetching alpha details.",
-                        persona_url,
-                        cooldown_key="cli-sim-alpha-persona",
-                    )
-                    return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
-                _notify_login_issue(
-                    "Saved session expired while fetching alpha details.",
-                    "Unauthorized while fetching alpha details.",
-                    cooldown_key="cli-sim-alpha-unauthorized",
-                )
-                return {"uuid": row_uuid, "error": "Unauthorized while fetching alpha details.", "alpha": alpha}
-            r.raise_for_status()
-            rj = r.json()
-        except Exception as exc:
-            row = [0, delay, region, neutralization, decay, truncation,
-                   0, 0, 0, "FAIL", 0, -1, universe,
-                   f"https://platform.worldquantbrain.com/alpha/{alpha_link}", alpha]
-            return {
-                "uuid": row_uuid,
-                "row": row,
-                "simulation": simulation,
-                "alpha": alpha,
-                "status": "failed",
-                "error": f"Failed to fetch alpha details: {exc}",
-            }
-
-        passed     = 0
-        weight_chk = "N/A"
-        subsharpe  = -1
-        for chk in rj.get("is", {}).get("checks", []):
-            passed += chk.get("result") == "PASS"
-            if chk.get("name") == "CONCENTRATED_WEIGHT":
-                weight_chk = chk.get("result", "N/A")
-            if chk.get("name") == "LOW_SUB_UNIVERSE_SHARPE":
-                subsharpe = chk.get("value", -1)
-
-        row = [
-            passed, delay, region, neutralization, decay, truncation,
-            rj.get("is", {}).get("sharpe", 0),
-            rj.get("is", {}).get("fitness", 0),
-            round(100 * rj.get("is", {}).get("turnover", 0), 2),
-            weight_chk, subsharpe, -1,
-            universe,
-            f"https://platform.worldquantbrain.com/alpha/{alpha_link}",
-            alpha,
-        ]
-        return {"uuid": row_uuid, "row": row, "simulation": simulation, "status": "done"}
+        return self._result_with_state(
+            row_uuid,
+            self._fetch_alpha_row(alpha_link, simulation, row_uuid=row_uuid, simulation_url=nxt),
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -1793,9 +2029,20 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
         processed_count=0,
         completed_count=0,
         failed_count=0,
+        recovered_count=0,
         progress_message="Queued for worker execution.",
         completed_rows=[],
         failed_items=[],
+        recovered_items=[],
+        simulation_items=[],
+        summary={
+            "status": "running",
+            "total_count": len(job["params"]["params"]),
+            "processed_count": 0,
+            "completed_count": 0,
+            "failed_count": 0,
+            "recovered_count": 0,
+        },
     )
     JobStore.clear_stop(job_id)
 
@@ -1817,12 +2064,18 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
 
         results = session.simulate(params)
         stopped = JobStore.is_stop_requested(job_id)
-        JobStore.update(
-            job_id,
-            status="stopped" if stopped else "done",
-            result_file=output_csv,
-            progress_message="Stopped." if stopped else "Completed.",
-        )
+        def _finish_job(done_job):
+            done_job["status"] = "stopped" if stopped else "done"
+            done_job["result_file"] = output_csv
+            _refresh_simulation_summary(done_job)
+            done_job["summary"]["status"] = done_job["status"]
+            done_job["progress_message"] = (
+                "Stopped."
+                if stopped else
+                f"Completed. completed={done_job['completed_count']} "
+                f"failed={done_job['failed_count']} recovered={done_job['recovered_count']}"
+            )
+        JobStore.mutate(job_id, _finish_job)
     except Exception as exc:
         JobStore.update(job_id, status="failed", error=str(exc), progress_message=str(exc))
 
@@ -1851,6 +2104,221 @@ def simulate_results(job_id: str, limit: int = 100) -> Optional[dict]:
         return {"job": job, "rows": [], "message": "No result file found."}
     df = pd.read_csv(result_file)
     return {"job": job, "rows": df.head(limit).to_dict(orient="records"), "total": len(df)}
+
+
+def _simulation_csv_contains_link(path: str, result_link: str) -> bool:
+    if not result_link or not os.path.exists(path):
+        return False
+    try:
+        with open(path, "r", newline="", encoding="utf-8") as fh:
+            reader = csv.DictReader(fh)
+            return any(str(row.get("link") or "") == result_link for row in reader)
+    except Exception:
+        return False
+
+
+def _append_simulation_csv_row(path: str, row: list) -> bool:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    result_link = str(row[13]) if len(row) > 13 else ""
+    if _simulation_csv_contains_link(path, result_link):
+        return False
+    needs_header = not os.path.exists(path) or os.path.getsize(path) == 0
+    with open(path, "a", newline="", encoding="utf-8") as fh:
+        writer = csv.writer(fh)
+        if needs_header:
+            writer.writerow(SIM_CSV_HEADER)
+        writer.writerow(row)
+    return True
+
+
+def simulate_reconcile(job_id: str, credentials_path: str = CREDS_PATH, progress_cb=None) -> dict:
+    """Recover failed simulation items whose WQ simulation URL later completed."""
+    job = JobStore.get(job_id)
+    if job is None:
+        return {"status": "error", "message": f"Job {job_id} not found."}
+
+    failed_items = [item for item in job.get("failed_items", []) if item.get("simulation_url")]
+    if not failed_items:
+        return {
+            "status": "ok",
+            "job_id": job_id,
+            "checked_count": 0,
+            "recovered_count": 0,
+            "message": "No failed items with simulation_url to reconcile.",
+        }
+
+    output_csv = job.get("result_file") or os.path.join(
+        DATA_DIR, f"job_{job_id}_reconciled_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    )
+    session = CLISimulationSession(
+        credentials_path=(job.get("params") or {}).get("credentials_path", credentials_path),
+        job_id=job_id,
+        output_csv=output_csv,
+        progress_cb=progress_cb,
+    )
+    if session.login_expired:
+        return {"status": "error", "message": "Login failed."}
+
+    recovered = []
+    skipped = []
+    errors = []
+
+    for item in failed_items:
+        simulation_url = item.get("simulation_url")
+        row_uuid = item.get("uuid") or _uuid_mod.uuid4().hex
+        alpha = str(item.get("alpha") or "")
+        simulation = _simulation_params_by_uuid_or_alpha(job, item)
+        if not alpha:
+            alpha = str(simulation.get("code") or "")
+        try:
+            response = session.get(simulation_url, timeout=30)
+            session._record_poll_state(
+                row_uuid,
+                alpha,
+                simulation_url=simulation_url,
+                http_status=response.status_code,
+                state="reconcile",
+            )
+            if response.status_code == 401:
+                skipped.append({
+                    "uuid": row_uuid,
+                    "simulation_url": simulation_url,
+                    "reason": "Unauthorized while reconciling simulation.",
+                })
+                continue
+            if response.status_code in SIMULATION_TRANSIENT_POLL_STATUSES:
+                skipped.append({
+                    "uuid": row_uuid,
+                    "simulation_url": simulation_url,
+                    "reason": f"Transient HTTP {response.status_code}; retry reconcile later.",
+                })
+                continue
+            response.raise_for_status()
+            payload = response.json()
+        except Exception as exc:
+            errors.append({
+                "uuid": row_uuid,
+                "simulation_url": simulation_url,
+                "error": str(exc),
+            })
+            continue
+
+        status = str(payload.get("status", "")).upper()
+        progress = payload.get("progress")
+        alpha_id = payload.get("alpha")
+        session._record_poll_state(
+            row_uuid,
+            alpha,
+            simulation_url=simulation_url,
+            http_status=response.status_code,
+            simulation_status=status,
+            progress=progress,
+            alpha_id=alpha_id,
+            state="reconcile",
+        )
+
+        if status not in SIMULATION_DONE_STATUSES or not alpha_id:
+            skipped.append({
+                "uuid": row_uuid,
+                "simulation_url": simulation_url,
+                "status": status,
+                "progress": progress,
+                "reason": "Simulation is not COMPLETE/WARNING with alpha id yet.",
+            })
+            continue
+
+        result = session._fetch_alpha_row(
+            alpha_id,
+            simulation,
+            row_uuid=row_uuid,
+            simulation_url=simulation_url,
+        )
+        if result.get("status") != "done" or "row" not in result:
+            errors.append({
+                "uuid": row_uuid,
+                "simulation_url": simulation_url,
+                "alpha_id": alpha_id,
+                "error": result.get("error", "Failed to fetch alpha details."),
+            })
+            continue
+
+        row = result["row"]
+        appended = _append_simulation_csv_row(output_csv, row)
+        try:
+            get_registry().record_simulation_row(row, job_id=job_id, params=simulation)
+        except Exception as exc:
+            errors.append({
+                "uuid": row_uuid,
+                "simulation_url": simulation_url,
+                "alpha_id": alpha_id,
+                "error": f"Alpha registry update failed: {exc}",
+            })
+            continue
+
+        recovered_item = {
+            "uuid": row_uuid,
+            "alpha": alpha,
+            "alpha_id": alpha_id,
+            "simulation_url": simulation_url,
+            "last_poll_status": response.status_code,
+            "last_progress": progress,
+            "last_poll_at": _now_iso(),
+            "row": row,
+            "csv_appended": appended,
+            "previous_error": item.get("error"),
+        }
+        recovered.append(recovered_item)
+
+        def _mark_recovered(done_job):
+            failed = []
+            for failed_item in done_job.get("failed_items", []):
+                same_uuid = row_uuid and failed_item.get("uuid") == row_uuid
+                same_url = simulation_url and failed_item.get("simulation_url") == simulation_url
+                if same_uuid or same_url:
+                    continue
+                failed.append(failed_item)
+            completed_rows = list(done_job.get("completed_rows", []))
+            completed_rows.append({
+                "uuid": row_uuid,
+                "row": row,
+                "simulation_url": simulation_url,
+                "last_poll_status": response.status_code,
+                "last_progress": progress,
+                "last_poll_at": recovered_item["last_poll_at"],
+                "alpha_id": alpha_id,
+                "recovered": True,
+            })
+            recovered_items = list(done_job.get("recovered_items", []))
+            recovered_items.append(recovered_item)
+            done_job["failed_items"] = failed
+            done_job["completed_rows"] = completed_rows
+            done_job["recovered_items"] = recovered_items
+            done_job["result_file"] = output_csv
+            if not failed and done_job.get("status") == "failed":
+                done_job["status"] = "done"
+            _refresh_simulation_summary(done_job)
+            done_job["summary"]["status"] = done_job.get("status")
+            done_job["progress_message"] = (
+                f"Reconciled. completed={done_job['completed_count']} "
+                f"failed={done_job['failed_count']} recovered={done_job['recovered_count']}"
+            )
+
+        JobStore.mutate(job_id, _mark_recovered)
+        session._record_poll_state(row_uuid, alpha, state="recovered", alpha_id=alpha_id)
+
+    final_job = JobStore.get(job_id) or {}
+    return {
+        "status": "ok",
+        "job_id": job_id,
+        "checked_count": len(failed_items),
+        "recovered_count": len(recovered),
+        "skipped_count": len(skipped),
+        "error_count": len(errors),
+        "recovered": recovered,
+        "skipped": skipped,
+        "errors": errors,
+        "job": final_job,
+    }
 
 
 def simulate_list() -> List[dict]:

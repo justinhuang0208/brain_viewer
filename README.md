@@ -82,7 +82,7 @@ python app.py
   - After selecting fields, click "Import Selected Fields to Generator" to send them to the Strategy Generator
   - Search modes: Normal (keyword) / AI (Gemini semantic search)
   - API refresh uses WQ Brain `data-sets` to discover dataset IDs for `EQUITY / USA / TOP3000 / delay=1`, then updates each dataset through `data-fields?dataset.id=...`
-  - WQ rate limits are handled by respecting `Retry-After` on HTTP 429 and retrying transient 502/503/504 responses
+  - WQ rate limits are handled by respecting `Retry-After` on HTTP 429 and retrying transient 500/502/503/504 responses
   - Simulation workers read `x-ratelimit-limit`, `x-ratelimit-remaining`, and `x-ratelimit-reset` from `POST /simulations`; when the daily remaining count reaches 0, the next submit waits until reset before continuing. Telegram `/status` shows the latest simulation quota.
 
 - **Operators**
@@ -200,7 +200,7 @@ Groups:
   operators  List, refresh, show, search WQ Brain operators
   template   List, show, save, delete, placeholders
   generate   Preview strategies, generate file
-  simulate   Enqueue, run, status, stop, results, list
+  simulate   Enqueue, run, status, stop, results, reconcile, list
   alpha      List, show, history, promote, reject registry entries
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
@@ -261,6 +261,9 @@ python brain_cli.py simulate run --job-id <job_id>
 python brain_cli.py simulate status <job_id>
 python brain_cli.py simulate results <job_id> --json
 
+# Reconcile failed items whose WQ simulation URL later completed
+python brain_cli.py simulate reconcile <job_id> --json
+
 # Inspect the local alpha registry
 python brain_cli.py alpha list --json
 python brain_cli.py alpha show <alpha_hash_or_alpha_id> --json
@@ -314,6 +317,10 @@ python brain_cli.py worker status --json
 #### CLI job state
 
 CLI job state for `simulate` and `evolution` is stored under `.brain_cli/jobs/<job_id>.json`. Use `simulate list` / `evolution list` to view all jobs. Stop a running job from another terminal with `simulate stop <job_id>` or `evolution stop <job_id>`.
+
+Simulation jobs keep `completed_count`, `failed_count`, and `recovered_count` in the job summary. `status=done` means the worker has finished processing the queued items; inspect the summary counts to distinguish full success from completed jobs with failed items. During polling, each simulation item preserves `simulation_url`, `last_poll_status`, `last_progress`, `last_poll_at`, and `alpha_id` when available. Polling retries transient `500`, `502`, `503`, and `504` responses on the same simulation URL using `Retry-After` when present, otherwise capped exponential backoff.
+
+If a previous item failed after WQ accepted the simulation, run `simulate reconcile <job_id> --json`. Reconcile checks failed items with `simulation_url`; when WQ now returns `COMPLETE` or `WARNING` with an alpha ID, it fetches `/alphas/<alpha_id>`, appends the result CSV row if missing, updates the alpha registry, moves the item to completed, and increments `recovered_count`.
 
 Alpha registry state is stored in `.brain_cli/alphas.sqlite`. This registry is an index over alpha code, WQ alpha IDs, simulation attempts, and lifecycle events; it does not replace job JSON or result CSV files. `simulate enqueue` records candidate alphas, and completed/failed simulations update the registry with metrics, links, errors, and history events.
 

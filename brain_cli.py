@@ -9,7 +9,7 @@ Provides eleven command groups for AI-agent usage:
   operators  List, refresh, show, search WQ Brain operators
   template   List, show, save, delete, placeholders
   generate   Preview strategies, generate file
-  simulate   Enqueue, run, status, stop, results, list
+  simulate   Enqueue, run, status, stop, results, reconcile, list
   alpha      List, show, history, promote, reject registry entries
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
@@ -533,17 +533,36 @@ def cmd_simulate(args):
             job = data.get("job", {})
             print(f"Job {job.get('id')}  status={job.get('status')}  "
                   f"result_file={job.get('result_file')}")
+            summary = job.get("summary") or {}
+            if summary:
+                print(
+                    "Summary: "
+                    f"completed={summary.get('completed_count', 0)}  "
+                    f"failed={summary.get('failed_count', 0)}  "
+                    f"recovered={summary.get('recovered_count', 0)}"
+                )
             rows = data.get("rows", [])
             print(f"\n{len(rows)} rows (of {data.get('total', '?')} total):")
             if rows:
                 _table(rows[:25], ["passed", "sharpe", "fitness", "turnover", "universe", "code"])
+
+    elif sub == "reconcile":
+        result = svc.simulate_reconcile(
+            args.job_id,
+            credentials_path=args.credentials,
+            progress_cb=_progress,
+        )
+        _out(result, args.json)
 
     elif sub == "list":
         jobs = svc.simulate_list()
         if args.json:
             _out(jobs, True)
         else:
-            _table(jobs, ["id", "status", "created_at", "updated_at", "result_file"])
+            _table(jobs, [
+                "id", "status", "completed_count", "failed_count",
+                "recovered_count", "created_at", "updated_at", "result_file"
+            ])
 
     else:
         _err(f"Unknown simulate sub-command: {sub}")
@@ -1047,6 +1066,11 @@ def build_parser() -> argparse.ArgumentParser:
     p_res = sim_sub.add_parser("results", help="Show simulation results.")
     p_res.add_argument("job_id")
     p_res.add_argument("--limit", type=int, default=100)
+
+    p_reconcile = sim_sub.add_parser(
+        "reconcile",
+        help="Recover failed job items whose simulation URL later completed.")
+    p_reconcile.add_argument("job_id")
 
     sim_sub.add_parser("list", help="List all simulation jobs.")
 
