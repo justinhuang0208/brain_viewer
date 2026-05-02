@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import ast
 import json
+import logging
 import os
 import sys
 from typing import Any, Optional
@@ -145,6 +146,18 @@ def _err(msg: str):
         sys.exit(1)
     print(f"Error: {msg}", file=sys.stderr)
     sys.exit(1)
+
+
+def _configure_foreground_logging(level_name: str):
+    level = getattr(logging, str(level_name).upper(), None)
+    if not isinstance(level, int):
+        _err(f"Invalid log level: {level_name}")
+    logging.basicConfig(
+        level=level,
+        format="%(asctime)s %(levelname)s [%(threadName)s] %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+        force=True,
+    )
 
 
 def _progress(msg: str):
@@ -794,6 +807,7 @@ def cmd_telegram(args):
     sub = args.telegram_cmd
 
     if sub == "run":
+        _configure_foreground_logging(getattr(args, "log_level", "INFO"))
         try:
             runner = tg.TelegramBotRunner(
                 credentials_path=args.credentials,
@@ -833,6 +847,7 @@ def cmd_worker(args):
     sub = args.worker_cmd
 
     if sub == "run":
+        _configure_foreground_logging(getattr(args, "log_level", "INFO"))
         print("Starting persistent brain worker…", file=sys.stderr)
         runner = worker.BrainWorker(
             credentials_path=args.credentials,
@@ -1169,6 +1184,9 @@ def build_parser() -> argparse.ArgumentParser:
                           help="Long-poll timeout in seconds (default: 60).")
     p_tg_run.add_argument("--once", action="store_true",
                           help="Process at most one polling cycle and exit.")
+    p_tg_run.add_argument("--log-level", default="INFO",
+                          choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+                          help="Console log level for the polling loop (default: INFO).")
 
     tg_sub.add_parser("status", help="Send the current system status to the configured Telegram chat.")
 
@@ -1186,6 +1204,9 @@ def build_parser() -> argparse.ArgumentParser:
     p_worker_run = worker_sub.add_parser("run", help="Run the persistent worker loop.")
     p_worker_run.add_argument("--poll-interval", type=int, default=worker.DEFAULT_POLL_INTERVAL, dest="poll_interval",
                               help="Seconds between pending-job scans (default: 3).")
+    p_worker_run.add_argument("--log-level", default="INFO",
+                              choices=["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"],
+                              help="Console log level for the worker loop (default: INFO).")
 
     worker_sub.add_parser("status", help="Show whether the persistent worker is running.")
 

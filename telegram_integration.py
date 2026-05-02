@@ -70,6 +70,13 @@ def _load_token() -> str:
     return token
 
 
+def _mask_chat_id(chat_id: Optional[str]) -> str:
+    value = str(chat_id or "")
+    if len(value) <= 4:
+        return "****" if value else "-"
+    return f"...{value[-4:]}"
+
+
 def _api_request(method: str,
                  *,
                  http_method: str = "GET",
@@ -356,6 +363,11 @@ class TelegramBotRunner:
         self.authorized_chat_id = str(chat_id)
         self.pending_persona_session: Optional[requests.Session] = None
         self.pending_persona_url: Optional[str] = None
+        logging.info(
+            "Telegram bot runner initialized: chat_id=%s credentials=%s",
+            _mask_chat_id(self.authorized_chat_id),
+            self.credentials_path,
+        )
 
     def _load_offset(self) -> Optional[int]:
         if not os.path.exists(OFFSET_FILE):
@@ -376,6 +388,7 @@ class TelegramBotRunner:
         }
         if offset is not None:
             params["offset"] = offset
+        logging.debug("Telegram getUpdates request: offset=%s timeout=%ss", offset, self.poll_timeout)
         result = _api_request("getUpdates", params=params, timeout=self.poll_timeout + 10)
         return result if isinstance(result, list) else []
 
@@ -462,12 +475,15 @@ class TelegramBotRunner:
     def _handle_message(self, message: dict):
         chat_id = str(message.get("chat", {}).get("id", ""))
         if not self._is_authorized_chat(chat_id):
+            logging.warning("Ignored Telegram message from unauthorized chat_id=%s", _mask_chat_id(chat_id))
             return
         text = (message.get("text") or "").strip()
         if not text:
+            logging.info("Ignored Telegram message without text from authorized chat.")
             return
 
         command = text.split()[0].split("@")[0].lower()
+        logging.info("Handling Telegram command: %s", command)
         if command in ("/refresh", "/refresh_session"):
             self._handle_refresh()
         elif command in ("/status", "/stat"):
@@ -481,6 +497,7 @@ class TelegramBotRunner:
         message = callback.get("message", {})
         chat_id = str(message.get("chat", {}).get("id", ""))
         if not self._is_authorized_chat(chat_id):
+            logging.warning("Ignored Telegram callback from unauthorized chat_id=%s", _mask_chat_id(chat_id))
             return
 
         callback_id = callback.get("id")
@@ -488,12 +505,25 @@ class TelegramBotRunner:
             self._answer_callback(callback_id, "收到，正在確認驗證狀態…")
 
         if callback.get("data") == PERSONA_CALLBACK_DATA:
+            logging.info("Handling Telegram Persona completion callback.")
             self._handle_persona_complete()
 
     def run(self, once: bool = False):
         offset = self._load_offset()
+        logging.info("Telegram polling loop started: offset=%s poll_timeout=%ss", offset, self.poll_timeout)
         while True:
-            updates = self._get_updates(offset)
+            try:
+                updates = self._get_updates(offset)
+            except Exception:
+                logging.exception("Telegram polling failed.")
+                if once:
+                    raise
+                time.sleep(5)
+                continue
+            if updates:
+                logging.info("Telegram received %s update(s).", len(updates))
+            else:
+                logging.info("Telegram polling active; no updates.")
             for update in updates:
                 offset = update["update_id"] + 1
                 self._save_offset(offset)

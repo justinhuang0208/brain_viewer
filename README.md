@@ -295,6 +295,7 @@ python brain_cli.py auth persona-complete
 
 # Start Telegram bot polling
 python brain_cli.py telegram run
+python brain_cli.py telegram run --log-level DEBUG
 
 # Discover chat IDs from recent bot updates
 python brain_cli.py telegram chat-id --json
@@ -304,6 +305,7 @@ python brain_cli.py telegram chat-id --write-env
 
 # Start the persistent worker
 python brain_cli.py worker run
+python brain_cli.py worker run --log-level DEBUG
 
 # Check worker status
 python brain_cli.py worker status --json
@@ -377,6 +379,18 @@ When GUI/CLI dataset refresh or simulation flows detect invalid login or expired
 
 1. Starts Telegram monitoring (if Telegram is configured)
 2. Repeatedly scans `.brain_cli/jobs/` for pending simulation jobs and runs them
+
+Foreground `worker run` enables console logging by default. You should see startup lines for the worker state, Telegram monitoring, and simulation job scans, for example:
+
+```text
+Starting persistent brain worker…
+2026-05-02 10:00:00 INFO [MainThread] Brain worker state written: pid=12345 poll_interval=3s state_file=...
+2026-05-02 10:00:00 INFO [MainThread] Telegram monitoring configured: chat_id_configured=yes poll_timeout=60s
+2026-05-02 10:00:00 INFO [MainThread] Worker scan: total=0 pending=0 running=0 done=0 failed=0 stopped=0 next_pending=-
+2026-05-02 10:01:01 INFO [brain-telegram-worker] Telegram polling active; no updates.
+```
+
+Use `--log-level DEBUG` for lower-level Telegram polling details, or `--log-level WARNING` to quiet normal heartbeat logs.
 
 This mirrors the open_machine-style worker pattern: one always-on process watches commands and pending work together.
 
