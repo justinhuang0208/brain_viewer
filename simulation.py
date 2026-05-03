@@ -132,6 +132,8 @@ from telegram_integration import send_login_issue_notification
 PARAM_COLUMNS = [
     "code", "decay", "delay", "neutralization", "region", "truncation", "universe"
 ]
+SIMULATION_MAX_WORKERS = 7
+
 # Add a placeholder for the checkbox column default value (None, as it's handled differently)
 DEFAULT_VALUES = [None, "", 4, 1, "SUBINDUSTRY", "USA", 0.08, "TOP3000"]
 
@@ -1712,7 +1714,7 @@ class WQSession(requests.Session):
 
                 # Use ThreadPoolExecutor to run simulations concurrently
                 from concurrent.futures import as_completed
-                with ThreadPoolExecutor(max_workers=3) as executor:
+                with ThreadPoolExecutor(max_workers=SIMULATION_MAX_WORKERS) as executor:
                     futures = []
                     for simulation in data:
                         future = executor.submit(self._process_single_simulation, simulation)

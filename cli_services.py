@@ -86,6 +86,7 @@ SIMULATION_ERROR_STATUSES = {"ERROR", "TIMEOUT", "FAIL", "CANCELLED"}
 SIMULATION_DONE_STATUSES = {"COMPLETE", "WARNING"}
 SIMULATION_TRANSIENT_POLL_STATUSES = {500, 502, 503, 504}
 SIMULATION_POLL_BACKOFF_MAX_SECONDS = 60.0
+SIMULATION_MAX_WORKERS = 7
 _JOB_STORE_LOCK = RLock()
 
 # ---------------------------------------------------------------------------
@@ -1754,7 +1755,7 @@ class CLISimulationSession(requests.Session):
             writer = csv.writer(csv_fh)
             writer.writerow(SIM_CSV_HEADER)
 
-            with ThreadPoolExecutor(max_workers=3) as executor:
+            with ThreadPoolExecutor(max_workers=SIMULATION_MAX_WORKERS) as executor:
                 futures = {
                     executor.submit(self._process_one, sim): sim
                     for sim in params
