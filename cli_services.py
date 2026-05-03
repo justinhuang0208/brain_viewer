@@ -86,6 +86,7 @@ SIMULATION_ERROR_STATUSES = {"ERROR", "TIMEOUT", "FAIL", "CANCELLED"}
 SIMULATION_DONE_STATUSES = {"COMPLETE", "WARNING"}
 SIMULATION_TRANSIENT_POLL_STATUSES = {500, 502, 503, 504}
 SIMULATION_POLL_BACKOFF_MAX_SECONDS = 60.0
+SIMULATION_AUTH_REFRESH_POLL_SECONDS = 10.0
 SIMULATION_MAX_WORKERS = 7
 _JOB_STORE_LOCK = RLock()
 
@@ -1452,6 +1453,7 @@ class CLISimulationSession(requests.Session):
         self._csv_lock   = Lock()
         self._quota_lock = Lock()
         self._submit_lock = Lock()
+        self._auth_refresh_lock = Lock()
         self._simulation_quota: Optional[dict] = None
         self._csv_file   = output_csv or os.path.join(
             DATA_DIR, f"{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
@@ -1510,6 +1512,49 @@ class CLISimulationSession(requests.Session):
             self._progress_cb(msg)
         else:
             print(f"[simulate] {msg}", file=sys.stderr)
+
+    def _adopt_session(self, session: requests.Session):
+        self.__dict__.update({k: v for k, v in session.__dict__.items()
+                               if not k.startswith("_") or k in ("_cookies",)})
+        self.cookies = requests.cookies.cookiejar_from_dict(
+            requests.utils.dict_from_cookiejar(session.cookies))
+        self.headers = session.headers.copy()
+        self.auth = getattr(session, "auth", None)
+
+    def _wait_for_session_refresh(self, reason: str, response: Optional[requests.Response] = None,
+                                  *, cooldown_key: str = "cli-sim-auth-refresh") -> bool:
+        """
+        Pause this running job on auth expiry until the user refreshes the saved WQ session.
+        Returns True after a valid refreshed session is adopted, False if the job is stopped.
+        """
+        with self._auth_refresh_lock:
+            if self._stop_flag.check():
+                return False
+
+            clear_login_state()
+            persona_url = extract_persona_url(response) if response is not None else None
+            detail = persona_url or "Use Telegram /refresh or GUI Check Login to refresh the WQ session."
+            _notify_login_issue(reason, detail, cooldown_key=cooldown_key)
+
+            message = f"{reason} Waiting for refreshed WQ session."
+            self._emit(message)
+            if self._job_id:
+                JobStore.update(self._job_id, progress_message=message)
+
+            while not self._stop_flag.check():
+                status = auth_login_status()
+                if status.get("status") == "logged_in":
+                    refreshed = load_persisted_session()
+                    if refreshed is not None:
+                        self._adopt_session(refreshed)
+                        resume_message = "WQ session refreshed; resuming simulation job."
+                        self._emit(resume_message)
+                        if self._job_id:
+                            JobStore.update(self._job_id, progress_message=resume_message)
+                        return True
+                time.sleep(SIMULATION_AUTH_REFRESH_POLL_SECONDS)
+
+            return False
 
     def _set_item_state(self, row_uuid: str, alpha: str, **updates):
         if not self._job_id:
@@ -1673,21 +1718,15 @@ class CLISimulationSession(requests.Session):
         try:
             r = self.get(f"{BRAIN_API_BASE}/alphas/{alpha_id}", timeout=30)
             if r.status_code == 401:
-                clear_login_state()
-                persona_url = extract_persona_url(r)
-                if persona_url:
-                    _notify_login_issue(
-                        "Saved session expired while fetching alpha details.",
-                        persona_url,
-                        cooldown_key="cli-sim-alpha-persona",
-                    )
-                    return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
-                _notify_login_issue(
+                if not self._wait_for_session_refresh(
                     "Saved session expired while fetching alpha details.",
-                    "Unauthorized while fetching alpha details.",
-                    cooldown_key="cli-sim-alpha-unauthorized",
-                )
-                return {"uuid": row_uuid, "error": "Unauthorized while fetching alpha details.", "alpha": alpha}
+                    r,
+                    cooldown_key="cli-sim-alpha-auth-refresh",
+                ):
+                    return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
+                r = self.get(f"{BRAIN_API_BASE}/alphas/{alpha_id}", timeout=30)
+                if r.status_code == 401:
+                    raise requests.exceptions.HTTPError("Unauthorized after WQ session refresh.", response=r)
             r.raise_for_status()
             payload = r.json()
             alpha_details_file = _write_alpha_details_payload(alpha_id, payload)
@@ -1914,23 +1953,15 @@ class CLISimulationSession(requests.Session):
                             "visualization":  False,
                         },
                     })
-                    self._record_simulation_quota(r)
+                self._record_simulation_quota(r)
                 if r.status_code == 401:
-                    clear_login_state()
-                    persona_url = extract_persona_url(r)
-                    if persona_url:
-                        _notify_login_issue(
-                            "Saved session expired while submitting a simulation.",
-                            persona_url,
-                            cooldown_key="cli-sim-submit-persona",
-                        )
-                        return {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha}
-                    _notify_login_issue(
+                    if not self._wait_for_session_refresh(
                         "Saved session expired while submitting a simulation.",
-                        "Unauthorized while submitting simulation.",
-                        cooldown_key="cli-sim-submit-unauthorized",
-                    )
-                    return {"uuid": row_uuid, "error": "Unauthorized while submitting simulation.", "alpha": alpha}
+                        r,
+                        cooldown_key="cli-sim-submit-auth-refresh",
+                    ):
+                        return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
+                    continue
                 r.raise_for_status()
                 location = r.headers.get("Location")
                 if not location:
@@ -1991,21 +2022,13 @@ class CLISimulationSession(requests.Session):
                         return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
                     continue
                 if r.status_code == 401:
-                    clear_login_state()
-                    persona_url = extract_persona_url(r)
-                    if persona_url:
-                        _notify_login_issue(
-                            "Saved session expired while polling simulation status.",
-                            persona_url,
-                            cooldown_key="cli-sim-poll-persona",
-                        )
-                        return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": f"Persona verification required: {persona_url}", "alpha": alpha})
-                    _notify_login_issue(
+                    if not self._wait_for_session_refresh(
                         "Saved session expired while polling simulation status.",
-                        "Unauthorized while polling simulation.",
-                        cooldown_key="cli-sim-poll-unauthorized",
-                    )
-                    return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Unauthorized while polling simulation.", "alpha": alpha})
+                        r,
+                        cooldown_key="cli-sim-poll-auth-refresh",
+                    ):
+                        return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
+                    continue
                 r.raise_for_status()
                 rj   = r.json()
                 transient_poll_errors = 0
