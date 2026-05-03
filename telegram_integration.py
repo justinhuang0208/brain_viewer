@@ -250,6 +250,131 @@ def send_status_message(credentials_path: str) -> dict:
     return {"status": "sent", "message": text}
 
 
+def _short_text(value: Any, limit: int = 90) -> str:
+    text = str(value or "").strip().replace("\n", " ")
+    if len(text) <= limit:
+        return text
+    return text[:limit - 3] + "..."
+
+
+def _format_progress_value(value: Any) -> str:
+    if value is None:
+        return "N/A"
+    try:
+        numeric = float(value)
+    except (TypeError, ValueError):
+        return str(value)
+    if 0 <= numeric <= 1:
+        numeric *= 100
+    return f"{int(round(numeric))}%"
+
+
+def _format_iso_age(iso_value: Optional[str]) -> str:
+    if not iso_value:
+        return "N/A"
+    try:
+        observed = _dt.datetime.fromisoformat(iso_value)
+    except (TypeError, ValueError):
+        return str(iso_value)
+    return f"{_format_duration(_dt.datetime.now() - observed)} ago"
+
+
+def _job_counts(job: dict) -> tuple[int, int, int, int, int]:
+    summary = job.get("summary") or {}
+    total = summary.get("total_count", job.get("total_count"))
+    if total is None:
+        total = len(((job.get("params") or {}).get("params") or []))
+    processed = summary.get("processed_count", job.get("processed_count", 0))
+    completed = summary.get("completed_count", job.get("completed_count", 0))
+    failed = summary.get("failed_count", job.get("failed_count", 0))
+    recovered = summary.get("recovered_count", job.get("recovered_count", 0))
+    return int(total or 0), int(processed or 0), int(completed or 0), int(failed or 0), int(recovered or 0)
+
+
+def _active_simulation_items(job: dict) -> list:
+    finished_uuids = {
+        item.get("uuid")
+        for item in (job.get("completed_rows", []) or []) + (job.get("failed_items", []) or [])
+        if item.get("uuid")
+    }
+    active = []
+    for item in job.get("simulation_items", []) or []:
+        if item.get("uuid") in finished_uuids:
+            continue
+        state = str(item.get("state") or "").lower()
+        if state in ("submitted", "polling"):
+            active.append(item)
+    return active
+
+
+def _format_running_job_progress(job: dict, *, max_items: int = 5) -> list[str]:
+    total, processed, completed, failed, recovered = _job_counts(job)
+    active = _active_simulation_items(job)
+    lines = [
+        f"Job {job.get('id', 'N/A')} ({job.get('status', 'unknown')})",
+        f"Progress: {processed}/{total} processed, active={len(active)}",
+        f"Completed={completed} failed={failed} recovered={recovered}",
+    ]
+    if job.get("progress_message"):
+        lines.append(f"Message: {job['progress_message']}")
+    quota = job.get("simulation_quota")
+    if isinstance(quota, dict):
+        remaining = quota.get("remaining", "N/A")
+        limit = quota.get("limit", "N/A")
+        lines.append(f"Quota: remaining={remaining} limit={limit}")
+
+    if not active:
+        lines.append("Active items: none recorded yet.")
+        return lines
+
+    lines.append("Active items:")
+    for index, item in enumerate(active[:max_items], start=1):
+        state = item.get("state") or "unknown"
+        progress = _format_progress_value(item.get("last_progress"))
+        poll_status = item.get("simulation_status") or item.get("last_poll_status") or "N/A"
+        age = _format_iso_age(item.get("last_poll_at"))
+        alpha = _short_text(item.get("alpha"), 80)
+        lines.append(f"{index}. {progress} {state} poll={poll_status} last={age}")
+        if item.get("simulation_url"):
+            lines.append(f"   url={item['simulation_url']}")
+        if alpha:
+            lines.append(f"   code={alpha}")
+    if len(active) > max_items:
+        lines.append(f"... {len(active) - max_items} more active item(s)")
+    return lines
+
+
+def build_simulation_progress_message(job_id: Optional[str] = None) -> str:
+    import cli_services as svc
+
+    if job_id:
+        job = svc.simulate_status(job_id)
+        if job is None:
+            return f"找不到 simulation job: {job_id}"
+        jobs = [job]
+    else:
+        jobs = [job for job in svc.simulate_list() if job.get("status") == "running"]
+        jobs.sort(key=lambda item: item.get("updated_at", ""), reverse=True)
+
+    if not jobs:
+        return "目前沒有正在執行的 simulation job。"
+
+    lines = ["Simulation progress"]
+    for index, job in enumerate(jobs[:3]):
+        if index:
+            lines.append("")
+        lines.extend(_format_running_job_progress(job))
+    if len(jobs) > 3:
+        lines.append(f"\n... {len(jobs) - 3} more running job(s)")
+    return "\n".join(lines)
+
+
+def send_simulation_progress_message(job_id: Optional[str] = None) -> dict:
+    text = build_simulation_progress_message(job_id=job_id)
+    send_telegram_message(text)
+    return {"status": "sent", "message": text}
+
+
 def _extract_chat_from_update(update: dict) -> Optional[dict]:
     candidates = [
         update.get("message", {}).get("chat"),
@@ -407,6 +532,7 @@ class TelegramBotRunner:
             "brain_viewer Telegram 指令\n"
             "/refresh 或 /refresh_session - 重新整理 WQ session\n"
             "/status 或 /stat - 查詢目前 session 與 job 狀態\n"
+            "/progress 或 /sim_progress [job_id] - 查詢正在模擬的 job 進度\n"
             "/help 或 /start - 顯示這份說明"
         )
 
@@ -454,6 +580,9 @@ class TelegramBotRunner:
     def _handle_status(self):
         send_telegram_message(build_status_message(self.credentials_path))
 
+    def _handle_progress(self, job_id: Optional[str] = None):
+        send_telegram_message(build_simulation_progress_message(job_id=job_id))
+
     def _handle_persona_complete(self):
         if self.pending_persona_session is None or not self.pending_persona_url:
             send_telegram_message("目前沒有待完成的 Persona 驗證，請重新執行 /refresh。")
@@ -488,6 +617,9 @@ class TelegramBotRunner:
             self._handle_refresh()
         elif command in ("/status", "/stat"):
             self._handle_status()
+        elif command in ("/progress", "/sim_progress", "/simulation_progress"):
+            parts = text.split(maxsplit=1)
+            self._handle_progress(parts[1].strip() if len(parts) > 1 else None)
         elif command in ("/help", "/start"):
             send_telegram_message(self._help_text())
         else:

@@ -201,7 +201,7 @@ Groups:
   template   List, show, save, delete, placeholders
   generate   Preview strategies, generate file
   simulate   Enqueue, run, status, stop, results, reconcile, list
-  alpha      List, show, history, promote, reject registry entries
+  alpha      List, show, history, pnl, promote, reject registry entries
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
   telegram   Run Telegram bot polling and send status notifications
@@ -253,8 +253,16 @@ python brain_cli.py simulate run \
   --code "rank(ts_mean(close, 20) / close)" \
   --universe TOP3000 --region USA
 
+# Send Telegram after the simulation job completes
+python brain_cli.py simulate run \
+  --code "rank(ts_mean(close, 20) / close)" \
+  --notify-job-complete
+
 # Enqueue a batch from a generated .py/.csv/.json strategy file, then run
-python brain_cli.py simulate enqueue --params-file alphas/my_strategies.py --json
+python brain_cli.py simulate enqueue \
+  --params-file alphas/my_strategies.py \
+  --decay 4 --truncation 0.08 \
+  --json
 python brain_cli.py simulate run --job-id <job_id>
 
 # Check job status and get results
@@ -268,6 +276,7 @@ python brain_cli.py simulate reconcile <job_id> --json
 python brain_cli.py alpha list --json
 python brain_cli.py alpha show <alpha_hash_or_alpha_id> --json
 python brain_cli.py alpha history <alpha_hash_or_alpha_id> --json
+python brain_cli.py alpha pnl <alpha_hash_or_alpha_id> --format csv --json
 python brain_cli.py alpha promote <alpha_hash_or_alpha_id> --reason "good simulation metrics" --json
 python brain_cli.py alpha reject <alpha_hash_or_alpha_id> --reason "turnover too high" --json
 
@@ -300,6 +309,10 @@ python brain_cli.py auth persona-complete
 python brain_cli.py telegram run
 python brain_cli.py telegram run --log-level DEBUG
 
+# Send running simulation job progress to Telegram
+python brain_cli.py telegram progress
+python brain_cli.py telegram progress --job-id <job_id>
+
 # Discover chat IDs from recent bot updates
 python brain_cli.py telegram chat-id --json
 
@@ -319,6 +332,14 @@ python brain_cli.py worker status --json
 CLI job state for `simulate` and `evolution` is stored under `.brain_cli/jobs/<job_id>.json`. Use `simulate list` / `evolution list` to view all jobs. Stop a running job from another terminal with `simulate stop <job_id>` or `evolution stop <job_id>`.
 
 Simulation jobs keep `completed_count`, `failed_count`, and `recovered_count` in the job summary. `status=done` means the worker has finished processing the queued items; inspect the summary counts to distinguish full success from completed jobs with failed items. During polling, each simulation item preserves `simulation_url`, `last_poll_status`, `last_progress`, `last_poll_at`, and `alpha_id` when available. Polling retries transient `500`, `502`, `503`, and `504` responses on the same simulation URL using `Retry-After` when present, otherwise capped exponential backoff.
+
+When alpha detail fetch succeeds, the raw `/alphas/<alpha_id>` JSON payload is saved under `data/alpha_details/<alpha_id>.json`; completed job items include `alpha_details_file` when available.
+
+Use `alpha pnl <alpha_hash_or_alpha_id>` to fetch the official daily PnL recordset for one completed alpha from `/alphas/<alpha_id>/recordsets/pnl`. The command saves the full payload under `data/alpha_pnl/<alpha_id>.json` by default, or `data/alpha_pnl/<alpha_id>.csv` with `--format csv`; CLI output returns a summary unless `--include-records` is used.
+
+When using `simulate enqueue` or `simulate run` with `--params-file` / `--params-json`, command-level simulation settings such as `--decay`, `--delay`, `--neutralization`, `--region`, `--truncation`, and `--universe` are written into each queued params item. This keeps job JSON aligned with the settings that will actually be submitted.
+
+Use `--notify-job-complete` on `simulate enqueue` or `simulate run` to send one Telegram message after the simulation job finishes, regardless of how many simulation items it contains. The option is off by default; for an existing pending job, `simulate run --job-id <job_id> --notify-job-complete` enables it and `--no-notify-job-complete` disables it before the run starts.
 
 If a previous item failed after WQ accepted the simulation, run `simulate reconcile <job_id> --json`. Reconcile checks failed items with `simulation_url`; when WQ now returns `COMPLETE` or `WARNING` with an alpha ID, it fetches `/alphas/<alpha_id>`, appends the result CSV row if missing, updates the alpha registry, moves the item to completed, and increments `recovered_count`.
 
@@ -352,6 +373,7 @@ python brain_cli.py telegram run
 Supported Telegram commands:
 - `/refresh` / `/refresh_session`: refresh the saved WQ session, including Persona verification handoff with an inline confirmation button
 - `/status` / `/stat`: send the current session state plus simulation/evolution job counts
+- `/progress` / `/sim_progress [job_id]`: send progress for running simulation jobs, including processed count and active simulation item polling progress
 - `/help` / `/start`: show available commands
 
 Recommended Telegram login flow:

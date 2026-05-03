@@ -51,6 +51,8 @@ OPERATORS_DIR   = os.path.join(SCRIPT_DIR, "operators")
 TEMPLATES_DIR   = os.path.join(SCRIPT_DIR, "templates")
 ALPHAS_DIR      = os.path.join(SCRIPT_DIR, "alphas")
 DATA_DIR        = os.path.join(SCRIPT_DIR, "data")
+ALPHA_DETAILS_DIR = os.path.join(DATA_DIR, "alpha_details")
+ALPHA_PNL_DIR = os.path.join(DATA_DIR, "alpha_pnl")
 CREDS_PATH      = os.path.join(SCRIPT_DIR, "credentials.json")
 CLI_STATE_DIR   = os.path.join(SCRIPT_DIR, ".brain_cli")
 JOBS_DIR        = os.path.join(CLI_STATE_DIR, "jobs")
@@ -96,6 +98,8 @@ def _ensure_dirs():
         JOBS_DIR,
         STOP_DIR,
         DATA_DIR,
+        ALPHA_DETAILS_DIR,
+        ALPHA_PNL_DIR,
         TEMPLATES_DIR,
         ALPHAS_DIR,
         DATASETS_DIR,
@@ -290,6 +294,77 @@ def _notify_login_issue(reason: str, detail: str = "", cooldown_key: str = "auth
         send_login_issue_notification(reason, detail=detail, cooldown_key=cooldown_key)
     except Exception as exc:
         logging.warning("Unable to send Telegram auth notification: %s", exc)
+
+
+def _short_alpha(text: Any, limit: int = 500) -> str:
+    value = str(text or "").strip()
+    if len(value) <= limit:
+        return value
+    return value[:limit - 3] + "..."
+
+
+def _write_alpha_details_payload(alpha_id: str, payload: dict) -> str:
+    os.makedirs(ALPHA_DETAILS_DIR, exist_ok=True)
+    output_path = os.path.join(ALPHA_DETAILS_DIR, f"{alpha_id}.json")
+    with open(output_path, "w", encoding="utf-8") as fh:
+        json.dump(payload, fh, ensure_ascii=False, indent=2)
+    return output_path
+
+
+def _alpha_pnl_headers(payload: dict) -> List[str]:
+    properties = ((payload.get("schema") or {}).get("properties") or [])
+    headers = [str(prop.get("name") or "").strip() for prop in properties if prop.get("name")]
+    return headers or ["date", "pnl", "risk-neutralized-pnl", "investability-constrained-pnl"]
+
+
+def _write_alpha_pnl_payload(alpha_id: str, payload: dict, *, output_path: Optional[str] = None,
+                             output_format: str = "json") -> str:
+    output_format = (output_format or "json").lower()
+    os.makedirs(ALPHA_PNL_DIR, exist_ok=True)
+    output_path = output_path or os.path.join(ALPHA_PNL_DIR, f"{alpha_id}.{output_format}")
+
+    if output_format == "json":
+        with open(output_path, "w", encoding="utf-8") as fh:
+            json.dump(payload, fh, ensure_ascii=False, indent=2)
+        return output_path
+
+    if output_format == "csv":
+        records = payload.get("records") or []
+        headers = _alpha_pnl_headers(payload)
+        with open(output_path, "w", encoding="utf-8", newline="") as fh:
+            writer = csv.writer(fh)
+            writer.writerow(headers)
+            writer.writerows(records)
+        return output_path
+
+    raise ValueError(f"Unsupported PnL output format: {output_format}")
+
+
+def _notify_simulation_job_complete(job: dict):
+    try:
+        from telegram_integration import send_telegram_message
+
+        summary = job.get("summary") or {}
+        result_file = job.get("result_file") or "N/A"
+        lines = [
+            "Simulation job completed",
+            f"Job: {job.get('id', 'N/A')}",
+            f"Status: {job.get('status', 'unknown')}",
+            (
+                "Summary: "
+                f"processed={summary.get('processed_count', job.get('processed_count', 0))}/"
+                f"{summary.get('total_count', job.get('total_count', 0))} "
+                f"completed={summary.get('completed_count', job.get('completed_count', 0))} "
+                f"failed={summary.get('failed_count', job.get('failed_count', 0))} "
+                f"recovered={summary.get('recovered_count', job.get('recovered_count', 0))}"
+            ),
+            f"Result file: {result_file}",
+        ]
+        if job.get("error"):
+            lines.append(f"Error: {_short_alpha(job['error'], 1000)}")
+        send_telegram_message("\n".join(lines))
+    except Exception as exc:
+        logging.warning("Unable to send Telegram simulation job notification: %s", exc)
 
 
 # ---------------------------------------------------------------------------
@@ -1614,6 +1689,7 @@ class CLISimulationSession(requests.Session):
                 return {"uuid": row_uuid, "error": "Unauthorized while fetching alpha details.", "alpha": alpha}
             r.raise_for_status()
             payload = r.json()
+            alpha_details_file = _write_alpha_details_payload(alpha_id, payload)
         except Exception as exc:
             row = [0, simulation.get("delay", 1), simulation.get("region", "USA"),
                    simulation.get("neutralization", "SUBINDUSTRY").upper(),
@@ -1636,9 +1712,10 @@ class CLISimulationSession(requests.Session):
             "uuid": row_uuid,
             "row": row,
             "simulation": simulation,
-            "status": "done",
-            "alpha_id": alpha_id,
-            "simulation_url": simulation_url,
+                "status": "done",
+                "alpha_id": alpha_id,
+                "simulation_url": simulation_url,
+                "alpha_details_file": alpha_details_file,
         }
 
     def simulate(self, params: List[dict]) -> List[dict]:
@@ -1747,6 +1824,7 @@ class CLISimulationSession(requests.Session):
                                             "last_progress": result.get("last_progress"),
                                             "last_poll_at": result.get("last_poll_at"),
                                             "alpha_id": result.get("alpha_id"),
+                                            "alpha_details_file": result.get("alpha_details_file"),
                                         })
                                         job["completed_rows"] = completed_rows
                                         _refresh_simulation_summary(job)
@@ -1995,11 +2073,16 @@ class CLISimulationSession(requests.Session):
 # Simulate service
 # ---------------------------------------------------------------------------
 
-def simulate_enqueue(params: List[dict], credentials_path: str = CREDS_PATH) -> str:
+def simulate_enqueue(
+    params: List[dict],
+    credentials_path: str = CREDS_PATH,
+    notify_job_complete: bool = False,
+) -> str:
     """Create a new simulation job and return its job_id."""
     job_id = JobStore.create("simulate", {
         "params":           params,
         "credentials_path": credentials_path,
+        "notify_job_complete": bool(notify_job_complete),
     })
     registry = get_registry()
     for item in params:
@@ -2007,6 +2090,23 @@ def simulate_enqueue(params: List[dict], credentials_path: str = CREDS_PATH) -> 
         if code:
             registry.record_queued(code, job_id=job_id, params=item)
     return job_id
+
+
+def simulate_set_notify_job_complete(job_id: str, enabled: bool) -> dict:
+    """Update job-completion Telegram notification setting for a queued job."""
+    job = JobStore.get(job_id)
+    if job is None:
+        return {"status": "error", "message": f"Job {job_id} not found."}
+    if job.get("status") != "pending":
+        return {"status": "error", "message": f"Job {job_id} is already {job.get('status')}."}
+
+    def _mutate(existing_job):
+        params = dict(existing_job.get("params") or {})
+        params["notify_job_complete"] = bool(enabled)
+        existing_job["params"] = params
+
+    JobStore.mutate(job_id, _mutate)
+    return {"status": "ok", "job_id": job_id, "notify_job_complete": bool(enabled)}
 
 
 def simulate_run(job_id: str, progress_cb=None) -> dict:
@@ -2048,6 +2148,7 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
 
     params           = job["params"]["params"]
     credentials_path = job["params"].get("credentials_path", CREDS_PATH)
+    notify_job_complete = bool(job["params"].get("notify_job_complete", False))
     output_csv       = os.path.join(DATA_DIR,
                                     f"job_{job_id}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv")
 
@@ -2079,7 +2180,10 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
     except Exception as exc:
         JobStore.update(job_id, status="failed", error=str(exc), progress_message=str(exc))
 
-    return JobStore.get(job_id)
+    final_job = JobStore.get(job_id)
+    if notify_job_complete and final_job is not None:
+        _notify_simulation_job_complete(final_job)
+    return final_job
 
 
 def simulate_status(job_id: str) -> Optional[dict]:
@@ -2259,6 +2363,7 @@ def simulate_reconcile(job_id: str, credentials_path: str = CREDS_PATH, progress
             "uuid": row_uuid,
             "alpha": alpha,
             "alpha_id": alpha_id,
+            "alpha_details_file": result.get("alpha_details_file"),
             "simulation_url": simulation_url,
             "last_poll_status": response.status_code,
             "last_progress": progress,
@@ -2286,6 +2391,7 @@ def simulate_reconcile(job_id: str, credentials_path: str = CREDS_PATH, progress
                 "last_progress": progress,
                 "last_poll_at": recovered_item["last_poll_at"],
                 "alpha_id": alpha_id,
+                "alpha_details_file": result.get("alpha_details_file"),
                 "recovered": True,
             })
             recovered_items = list(done_job.get("recovered_items", []))
@@ -2353,6 +2459,98 @@ def alpha_show(identifier: str) -> Optional[dict]:
 def alpha_history(identifier: str) -> Optional[dict]:
     """Return an alpha plus simulation and event history."""
     return get_registry().history(identifier)
+
+
+def alpha_pnl(identifier: str, *, output_path: Optional[str] = None,
+              output_format: str = "json", include_records: bool = False,
+              credentials_path: str = CREDS_PATH) -> dict:
+    """Fetch and persist the daily PnL recordset for one WQ alpha."""
+    alpha = get_registry().get_alpha(identifier)
+    alpha_id = None
+    alpha_hash = None
+    if alpha:
+        alpha_id = alpha.get("alpha_id")
+        alpha_hash = alpha.get("alpha_hash")
+    if not alpha_id:
+        alpha_id = str(identifier or "").strip()
+    if not alpha_id:
+        return {"status": "error", "message": "Alpha ID is required."}
+
+    output_format = (output_format or "json").lower()
+    if output_format not in {"json", "csv"}:
+        return {"status": "error", "message": f"Unsupported PnL output format: {output_format}"}
+
+    session = CLISimulationSession(credentials_path=credentials_path)
+    if session.login_expired:
+        return {
+            "status": "error",
+            "message": "WQ Brain login is not available. Run auth login-status or auth login first.",
+        }
+
+    url = f"{BRAIN_API_BASE}/alphas/{alpha_id}/recordsets/pnl"
+    try:
+        response = _request_with_rate_limit_retry(
+            session,
+            "get",
+            url,
+            timeout=30,
+            retry_context=f"alpha-pnl:{alpha_id}",
+        )
+        if response.status_code == 401:
+            clear_login_state()
+            _notify_login_issue(
+                "Alpha PnL fetch requires a fresh login.",
+                f"GET {url} returned HTTP 401.",
+                cooldown_key="alpha-pnl-login-expired",
+            )
+            return {
+                "status": "error",
+                "message": "WQ Brain session expired. Run auth login to refresh it.",
+                "alpha_id": alpha_id,
+            }
+        if response.status_code == 404:
+            return {
+                "status": "error",
+                "message": f"PnL recordset not found for alpha {alpha_id}.",
+                "alpha_id": alpha_id,
+            }
+        response.raise_for_status()
+        payload = response.json()
+    except requests.exceptions.Timeout:
+        return {"status": "error", "message": "Alpha PnL request timed out.", "alpha_id": alpha_id}
+    except requests.exceptions.RequestException as exc:
+        return {"status": "error", "message": f"Alpha PnL request failed: {exc}", "alpha_id": alpha_id}
+    except ValueError as exc:
+        return {"status": "error", "message": f"Alpha PnL response was not valid JSON: {exc}", "alpha_id": alpha_id}
+
+    try:
+        saved_path = _write_alpha_pnl_payload(
+            alpha_id,
+            payload,
+            output_path=output_path,
+            output_format=output_format,
+        )
+    except OSError as exc:
+        return {"status": "error", "message": f"Unable to write alpha PnL file: {exc}", "alpha_id": alpha_id}
+    except ValueError as exc:
+        return {"status": "error", "message": str(exc), "alpha_id": alpha_id}
+
+    records = payload.get("records") or []
+    result = {
+        "status": "ok",
+        "alpha_id": alpha_id,
+        "alpha_hash": alpha_hash,
+        "record_count": len(records),
+        "schema_fields": _alpha_pnl_headers(payload),
+        "output_file": saved_path,
+        "source_url": url,
+        "first_record": records[0] if records else None,
+        "last_record": records[-1] if records else None,
+    }
+    if include_records:
+        result["schema"] = payload.get("schema")
+        result["records"] = records
+    return result
 
 
 def alpha_promote(identifier: str, reason: Optional[str] = None) -> Optional[dict]:

@@ -10,7 +10,7 @@ Provides eleven command groups for AI-agent usage:
   template   List, show, save, delete, placeholders
   generate   Preview strategies, generate file
   simulate   Enqueue, run, status, stop, results, reconcile, list
-  alpha      List, show, history, promote, reject registry entries
+  alpha      List, show, history, pnl, promote, reject registry entries
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
   telegram   Run Telegram bot polling and send status notifications
@@ -450,13 +450,45 @@ def cmd_generate(args):
 # simulate group
 # ---------------------------------------------------------------------------
 
+_SIM_PARAM_DEFAULTS = {
+    "decay": 4,
+    "delay": 1,
+    "neutralization": "SUBINDUSTRY",
+    "region": "USA",
+    "truncation": 0.08,
+    "universe": "TOP3000",
+}
+
+
+def _explicit_sim_param_overrides(args) -> dict:
+    return {
+        key: getattr(args, key)
+        for key in _SIM_PARAM_DEFAULTS
+        if getattr(args, key, None) is not None
+    }
+
+
+def _apply_sim_param_overrides(params: list, overrides: dict) -> list:
+    if not overrides:
+        return params
+    result = []
+    for item in params:
+        if not isinstance(item, dict):
+            _err("Simulation parameter entries must be dicts.")
+        merged = dict(item)
+        merged.update(overrides)
+        result.append(merged)
+    return result
+
+
 def _load_params_from_arg(args) -> list:
     """Load simulation parameters from CSV or JSON file, or inline JSON."""
+    overrides = _explicit_sim_param_overrides(args)
     if getattr(args, "params_file", None):
         fp = args.params_file
         if fp.endswith(".json"):
             with open(fp, "r", encoding="utf-8") as fh:
-                return json.load(fh)
+                return _apply_sim_param_overrides(json.load(fh), overrides)
         elif fp.endswith(".py"):
             with open(fp, "r", encoding="utf-8") as fh:
                 module_ast = ast.parse(fh.read(), filename=fp)
@@ -467,25 +499,21 @@ def _load_params_from_arg(args) -> list:
                             value = ast.literal_eval(node.value)
                             if not isinstance(value, list):
                                 _err("Python strategy file DATA must be a list of strategy dicts.")
-                            return value
+                            return _apply_sim_param_overrides(value, overrides)
             _err("Python strategy file is missing a top-level DATA = [...] assignment.")
         else:  # CSV
             import pandas as pd
             df = pd.read_csv(fp)
-            return df.to_dict(orient="records")
+            return _apply_sim_param_overrides(df.to_dict(orient="records"), overrides)
     if getattr(args, "params_json", None):
-        return json.loads(args.params_json)
+        return _apply_sim_param_overrides(json.loads(args.params_json), overrides)
     if getattr(args, "code", None):
         # Quick inline single-alpha shorthand
         defaults = {
             "code":          args.code,
-            "decay":         getattr(args, "decay", 4),
-            "delay":         getattr(args, "delay", 1),
-            "neutralization":getattr(args, "neutralization", "SUBINDUSTRY"),
-            "region":        getattr(args, "region", "USA"),
-            "truncation":    getattr(args, "truncation", 0.08),
-            "universe":      getattr(args, "universe", "TOP3000"),
+            **_SIM_PARAM_DEFAULTS,
         }
+        defaults.update(overrides)
         return [defaults]
     _err("Provide --params-file, --params-json, or --code.")
 
@@ -495,7 +523,11 @@ def cmd_simulate(args):
 
     if sub == "enqueue":
         params = _load_params_from_arg(args)
-        job_id = svc.simulate_enqueue(params, credentials_path=args.credentials)
+        job_id = svc.simulate_enqueue(
+            params,
+            credentials_path=args.credentials,
+            notify_job_complete=bool(args.notify_job_complete),
+        )
         result = {"job_id": job_id, "queued": len(params), "status": "pending"}
         _out(result, args.json)
 
@@ -503,9 +535,18 @@ def cmd_simulate(args):
         # Support running immediately (no pre-enqueue required)
         if getattr(args, "job_id", None):
             job_id = args.job_id
+            if args.notify_job_complete is not None:
+                svc.simulate_set_notify_job_complete(
+                    job_id,
+                    bool(args.notify_job_complete),
+                )
         else:
             params = _load_params_from_arg(args)
-            job_id = svc.simulate_enqueue(params, credentials_path=args.credentials)
+            job_id = svc.simulate_enqueue(
+                params,
+                credentials_path=args.credentials,
+                notify_job_complete=bool(args.notify_job_complete),
+            )
             print(f"Created job: {job_id}", file=sys.stderr)
 
         print(f"Running simulation job {job_id}…", file=sys.stderr)
@@ -598,6 +639,16 @@ def cmd_alpha(args):
         data = svc.alpha_history(args.identifier)
         if data is None:
             _err(f"Alpha '{args.identifier}' not found.")
+        _out(data, args.json)
+
+    elif sub == "pnl":
+        data = svc.alpha_pnl(
+            args.identifier,
+            output_path=getattr(args, "output", None),
+            output_format=getattr(args, "format", "json"),
+            include_records=getattr(args, "include_records", False),
+            credentials_path=args.credentials,
+        )
         _out(data, args.json)
 
     elif sub == "promote":
@@ -844,6 +895,15 @@ def cmd_telegram(args):
             _err(str(exc))
         _out(result, args.json)
 
+    elif sub == "progress":
+        try:
+            result = tg.send_simulation_progress_message(
+                job_id=getattr(args, "job_id", None),
+            )
+        except tg.TelegramConfigError as exc:
+            _err(str(exc))
+        _out(result, args.json)
+
     elif sub == "chat-id":
         try:
             result = tg.discover_chat_id(
@@ -1040,12 +1100,18 @@ def build_parser() -> argparse.ArgumentParser:
         pg.add_argument("--params-json", dest="params_json", metavar="JSON",
                          help="Inline JSON array of parameter dicts.")
         pg.add_argument("--code", help="Single alpha expression (shorthand).")
-        p.add_argument("--decay",          type=int,   default=4)
-        p.add_argument("--delay",          type=int,   default=1)
-        p.add_argument("--neutralization", default="SUBINDUSTRY")
-        p.add_argument("--region",         default="USA")
-        p.add_argument("--truncation",     type=float, default=0.08)
-        p.add_argument("--universe",       default="TOP3000")
+        p.add_argument("--decay",          type=int,   default=None)
+        p.add_argument("--delay",          type=int,   default=None)
+        p.add_argument("--neutralization", default=None)
+        p.add_argument("--region",         default=None)
+        p.add_argument("--truncation",     type=float, default=None)
+        p.add_argument("--universe",       default=None)
+        p.add_argument(
+            "--notify-job-complete",
+            action=argparse.BooleanOptionalAction,
+            default=None,
+            help="Send one Telegram message after the simulation job completes.",
+        )
 
     p_enq = sim_sub.add_parser("enqueue",
         help="Enqueue a simulation job without running it.")
@@ -1098,6 +1164,18 @@ def build_parser() -> argparse.ArgumentParser:
 
     p_alpha_history = alpha_sub.add_parser("history", help="Show alpha simulation and event history.")
     p_alpha_history.add_argument("identifier", help="alpha_hash or alpha_id")
+
+    p_alpha_pnl = alpha_sub.add_parser(
+        "pnl",
+        help="Fetch daily PnL recordset for one completed WQ alpha.",
+    )
+    p_alpha_pnl.add_argument("identifier", help="alpha_hash or alpha_id")
+    p_alpha_pnl.add_argument("--format", choices=["json", "csv"], default="json",
+                             help="Persist PnL as JSON or CSV (default: json).")
+    p_alpha_pnl.add_argument("--output", default=None,
+                             help="Output file path (default: data/alpha_pnl/<alpha_id>.<format>).")
+    p_alpha_pnl.add_argument("--include-records", action="store_true",
+                             help="Include all PnL records in CLI JSON output as well as the saved file.")
 
     p_alpha_promote = alpha_sub.add_parser("promote", help="Mark an alpha as promoted.")
     p_alpha_promote.add_argument("identifier", help="alpha_hash or alpha_id")
@@ -1213,6 +1291,13 @@ def build_parser() -> argparse.ArgumentParser:
                           help="Console log level for the polling loop (default: INFO).")
 
     tg_sub.add_parser("status", help="Send the current system status to the configured Telegram chat.")
+
+    p_tg_progress = tg_sub.add_parser(
+        "progress",
+        help="Send running simulation job progress to the configured Telegram chat.",
+    )
+    p_tg_progress.add_argument("--job-id", dest="job_id", default=None,
+                               help="Show progress for one simulation job instead of all running jobs.")
 
     p_tg_chat = tg_sub.add_parser("chat-id", help="Discover recent Telegram chat IDs from getUpdates.")
     p_tg_chat.add_argument("--limit", type=int, default=20,
