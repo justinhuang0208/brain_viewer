@@ -16,8 +16,10 @@ from wq_session import (
     build_session_from_credentials,
     extract_persona_url,
     load_login_cookies,
+    load_pending_persona_session,
     load_persisted_session,
     save_login_cookies,
+    save_pending_persona_session,
 )
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -108,6 +110,95 @@ def send_telegram_message(text: str,
     if reply_markup is not None:
         payload["reply_markup"] = reply_markup
     return _api_request("sendMessage", http_method="POST", payload=payload)
+
+
+def _persona_complete_markup() -> dict:
+    return {
+        "inline_keyboard": [[
+            {"text": "我已完成驗證", "callback_data": PERSONA_CALLBACK_DATA}
+        ]]
+    }
+
+
+def _send_persona_prompt(persona_url: str, *, reason: str = "") -> dict:
+    lines = []
+    if reason:
+        lines.extend(["brain_viewer 需要刷新 WQ session", reason])
+    lines.extend([
+        "請先完成 Persona 生物辨識驗證，完成後按下方按鈕繼續：",
+        persona_url,
+    ])
+    return send_telegram_message(
+        "\n".join(lines),
+        reply_markup=_persona_complete_markup(),
+    )
+
+
+def request_session_refresh(credentials_path: str,
+                            *,
+                            reason: str = "",
+                            response: Optional[requests.Response] = None,
+                            session: Optional[requests.Session] = None,
+                            persona_url: Optional[str] = None) -> dict:
+    """
+    Start the same interactive refresh flow used by Telegram /refresh.
+
+    The Persona session/url are persisted so a later Telegram callback can
+    complete a flow started by a worker thread instead of only one started by
+    the Telegram polling object itself.
+    """
+    persona_url = persona_url or (extract_persona_url(response) if response is not None else None)
+    if persona_url and session is not None:
+        persisted = save_pending_persona_session(session, persona_url)
+        _send_persona_prompt(persona_url, reason=reason)
+        if not persisted:
+            logging.warning("Persona pending session was not persisted; callback must use runner memory.")
+        return {
+            "status": "persona_required",
+            "persona_url": persona_url,
+            "session": session,
+            "persisted": persisted,
+        }
+
+    try:
+        refresh_session = load_persisted_session(credentials_path)
+        if refresh_session is None:
+            refresh_session = build_session_from_credentials(credentials_path)
+    except FileNotFoundError:
+        message = f"找不到憑證檔案: {credentials_path}"
+        send_telegram_message(message)
+        return {"status": "error", "message": message}
+    except Exception as exc:
+        message = f"無法準備登入 session: {exc}"
+        send_telegram_message(message)
+        return {"status": "error", "message": message}
+
+    try:
+        authed_session, kind, detail = authenticate_with_brain(refresh_session)
+    except requests.exceptions.RequestException as exc:
+        message = f"刷新 session 時發生網路錯誤: {exc}"
+        send_telegram_message(message)
+        return {"status": "error", "message": message}
+
+    if kind is None and authed_session is not None:
+        send_telegram_message("Session 刷新成功。")
+        return {"status": "logged_in"}
+
+    if kind == "persona":
+        persisted = save_pending_persona_session(refresh_session, detail)
+        if not persisted:
+            logging.warning("Persona pending session was not persisted; callback must use runner memory.")
+        _send_persona_prompt(detail, reason=reason)
+        return {
+            "status": "persona_required",
+            "persona_url": detail,
+            "session": refresh_session,
+            "persisted": persisted,
+        }
+
+    message = f"Session 刷新失敗：{detail}"
+    send_telegram_message(message)
+    return {"status": "error", "message": detail}
 
 
 def _format_duration(delta: _dt.timedelta) -> str:
@@ -307,7 +398,59 @@ def _active_simulation_items(job: dict) -> list:
     return active
 
 
-def _format_running_job_progress(job: dict, *, max_items: int = 5) -> list[str]:
+def _autorun_context_for_simulation_job(job: dict, evolution_jobs: list[dict]) -> Optional[dict]:
+    job_id = str(job.get("id") or "")
+    if not job_id:
+        return None
+
+    for evolution_job in evolution_jobs:
+        params = evolution_job.get("params") or {}
+        if params.get("mode") != "auto-run" and not evolution_job.get("current_simulation_job_id"):
+            continue
+
+        rounds_total = evolution_job.get("rounds_total") or params.get("rounds")
+        current_job_id = str(evolution_job.get("current_simulation_job_id") or "")
+        if current_job_id == job_id:
+            run_index = evolution_job.get("current_round")
+            if run_index is None:
+                run_index = len(evolution_job.get("history") or []) + 1
+            return {
+                "evolution_job_id": evolution_job.get("id"),
+                "run_index": run_index,
+                "rounds_total": rounds_total,
+                "phase": evolution_job.get("current_phase"),
+            }
+
+        for history_item in evolution_job.get("history") or []:
+            if str(history_item.get("simulation_job_id") or "") != job_id:
+                continue
+            return {
+                "evolution_job_id": evolution_job.get("id"),
+                "run_index": history_item.get("round"),
+                "rounds_total": rounds_total,
+                "phase": "history",
+            }
+
+    return None
+
+
+def _format_autorun_context(context: Optional[dict]) -> Optional[str]:
+    if not context:
+        return None
+    run_index = context.get("run_index")
+    rounds_total = context.get("rounds_total")
+    if run_index is None or rounds_total is None:
+        run_text = "run=N/A"
+    else:
+        run_text = f"run={run_index}/{rounds_total}"
+    evolution_job_id = context.get("evolution_job_id") or "N/A"
+    phase = context.get("phase")
+    phase_text = f" phase={phase}" if phase else ""
+    return f"Auto-run: {run_text} evolution_job={evolution_job_id}{phase_text}"
+
+
+def _format_running_job_progress(job: dict, *, max_items: int = 5,
+                                 autorun_context: Optional[dict] = None) -> list[str]:
     total, processed, completed, failed, recovered = _job_counts(job)
     active = _active_simulation_items(job)
     lines = [
@@ -315,6 +458,9 @@ def _format_running_job_progress(job: dict, *, max_items: int = 5) -> list[str]:
         f"Progress: {processed}/{total} processed, active={len(active)}",
         f"Completed={completed} failed={failed} recovered={recovered}",
     ]
+    autorun_line = _format_autorun_context(autorun_context)
+    if autorun_line:
+        lines.insert(1, autorun_line)
     if job.get("progress_message"):
         lines.append(f"Message: {job['progress_message']}")
     quota = job.get("simulation_quota")
@@ -359,11 +505,16 @@ def build_simulation_progress_message(job_id: Optional[str] = None) -> str:
     if not jobs:
         return "目前沒有正在執行的 simulation job。"
 
+    evolution_jobs = svc.evolution_list()
+
     lines = ["Simulation progress"]
     for index, job in enumerate(jobs[:3]):
         if index:
             lines.append("")
-        lines.extend(_format_running_job_progress(job))
+        lines.extend(_format_running_job_progress(
+            job,
+            autorun_context=_autorun_context_for_simulation_job(job, evolution_jobs),
+        ))
     if len(jobs) > 3:
         lines.append(f"\n... {len(jobs) - 3} more running job(s)")
     return "\n".join(lines)
@@ -538,44 +689,17 @@ class TelegramBotRunner:
 
     def _handle_refresh(self):
         send_telegram_message("開始刷新 WQ session…")
-        try:
-            session = load_persisted_session(self.credentials_path)
-            if session is None:
-                session = build_session_from_credentials(self.credentials_path)
-        except FileNotFoundError:
-            send_telegram_message(f"找不到憑證檔案: {self.credentials_path}")
-            return
-        except Exception as exc:
-            send_telegram_message(f"無法準備登入 session: {exc}")
-            return
-
-        try:
-            authed_session, kind, detail = authenticate_with_brain(session)
-        except requests.exceptions.RequestException as exc:
-            send_telegram_message(f"刷新 session 時發生網路錯誤: {exc}")
-            return
-
-        if kind is None and authed_session is not None:
+        result = request_session_refresh(self.credentials_path)
+        if result.get("status") == "logged_in":
             self.pending_persona_session = None
             self.pending_persona_url = None
-            send_telegram_message("Session 刷新成功。")
-            return
-
-        if kind == "persona":
-            self.pending_persona_session = session
-            self.pending_persona_url = detail
-            send_telegram_message(
-                "請先完成 Persona 生物辨識驗證，完成後按下方按鈕繼續：\n"
-                f"{detail}",
-                reply_markup={
-                    "inline_keyboard": [[
-                        {"text": "我已完成驗證", "callback_data": PERSONA_CALLBACK_DATA}
-                    ]]
-                },
-            )
-            return
-
-        send_telegram_message(f"Session 刷新失敗：{detail}")
+        elif result.get("status") == "persona_required":
+            self.pending_persona_session = result.get("session")
+            self.pending_persona_url = result.get("persona_url")
+            if self.pending_persona_session is None or not self.pending_persona_url:
+                self.pending_persona_session, self.pending_persona_url = load_pending_persona_session(
+                    self.credentials_path
+                )
 
     def _handle_status(self):
         send_telegram_message(build_status_message(self.credentials_path))
@@ -584,15 +708,20 @@ class TelegramBotRunner:
         send_telegram_message(build_simulation_progress_message(job_id=job_id))
 
     def _handle_persona_complete(self):
-        if self.pending_persona_session is None or not self.pending_persona_url:
+        session = self.pending_persona_session
+        persona_url = self.pending_persona_url
+        if session is None or not persona_url:
+            session, persona_url = load_pending_persona_session(self.credentials_path)
+
+        if session is None or not persona_url:
             send_telegram_message("目前沒有待完成的 Persona 驗證，請重新執行 /refresh。")
             return
         try:
-            response = self.pending_persona_session.post(self.pending_persona_url, timeout=15)
+            response = session.post(persona_url, timeout=15)
             if not response.ok:
                 send_telegram_message(f"Persona 驗證提交失敗：HTTP {response.status_code}")
                 return
-            save_login_cookies(self.pending_persona_session)
+            save_login_cookies(session)
             self.pending_persona_session = None
             self.pending_persona_url = None
             send_telegram_message("Persona 驗證完成，Session 已刷新成功。")

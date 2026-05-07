@@ -298,6 +298,32 @@ def _notify_login_issue(reason: str, detail: str = "", cooldown_key: str = "auth
         logging.warning("Unable to send Telegram auth notification: %s", exc)
 
 
+def _request_interactive_session_refresh(credentials_path: str,
+                                         *,
+                                         reason: str,
+                                         response: Optional[requests.Response] = None,
+                                         session: Optional[requests.Session] = None,
+                                         persona_url: Optional[str] = None) -> dict:
+    try:
+        from telegram_integration import request_session_refresh
+
+        return request_session_refresh(
+            credentials_path,
+            reason=reason,
+            response=response,
+            session=session,
+            persona_url=persona_url,
+        )
+    except Exception as exc:
+        logging.warning("Unable to start Telegram session refresh flow: %s", exc)
+        _notify_login_issue(
+            reason,
+            detail="Use Telegram /refresh or GUI Check Login to refresh the WQ session.",
+            cooldown_key="interactive-session-refresh-fallback",
+        )
+        return {"status": "notification_failed", "message": str(exc)}
+
+
 def _short_alpha(text: Any, limit: int = 500) -> str:
     value = str(text or "").strip()
     if len(value) <= limit:
@@ -1448,6 +1474,7 @@ class CLISimulationSession(requests.Session):
                  progress_cb=None):
         super().__init__()
         self._job_id     = job_id
+        self._credentials_path = credentials_path
         self._stop_flag  = _StopFlag(job_id)
         self._progress_cb = progress_cb
         self._csv_lock   = Lock()
@@ -1484,12 +1511,14 @@ class CLISimulationSession(requests.Session):
                 self.auth = getattr(session, "auth", None)
                 return
             if kind == "persona":
-                _notify_login_issue(
-                    "CLI simulation requires Persona verification.",
-                    detail,
-                    cooldown_key="cli-sim-persona-required",
-                )
                 self._emit(f"Persona verification required: {detail}")
+                if self._wait_for_session_refresh(
+                    "CLI simulation requires Persona verification.",
+                    session=session,
+                    persona_url=detail,
+                    cooldown_key="cli-sim-persona-required",
+                ):
+                    return
             else:
                 _notify_login_issue(
                     "CLI simulation login failed.",
@@ -1522,7 +1551,9 @@ class CLISimulationSession(requests.Session):
         self.auth = getattr(session, "auth", None)
 
     def _wait_for_session_refresh(self, reason: str, response: Optional[requests.Response] = None,
-                                  *, cooldown_key: str = "cli-sim-auth-refresh") -> bool:
+                                  *, cooldown_key: str = "cli-sim-auth-refresh",
+                                  session: Optional[requests.Session] = None,
+                                  persona_url: Optional[str] = None) -> bool:
         """
         Pause this running job on auth expiry until the user refreshes the saved WQ session.
         Returns True after a valid refreshed session is adopted, False if the job is stopped.
@@ -1531,27 +1562,56 @@ class CLISimulationSession(requests.Session):
             if self._stop_flag.check():
                 return False
 
-            clear_login_state()
-            persona_url = extract_persona_url(response) if response is not None else None
-            detail = persona_url or "Use Telegram /refresh or GUI Check Login to refresh the WQ session."
-            _notify_login_issue(reason, detail, cooldown_key=cooldown_key)
+            refresh_instruction = "請在 Telegram 使用 /refresh 重新建立 WQ session；worker 會等待刷新完成後繼續。"
+            _notify_login_issue(
+                reason,
+                detail=refresh_instruction,
+                cooldown_key=cooldown_key,
+            )
 
-            message = f"{reason} Waiting for refreshed WQ session."
+            message = f"{reason} Waiting for user-triggered WQ session refresh."
             self._emit(message)
             if self._job_id:
-                JobStore.update(self._job_id, progress_message=message)
+                JobStore.update(
+                    self._job_id,
+                    progress_message=message,
+                    auth_waiting=True,
+                    auth_waiting_since=_now_iso(),
+                    auth_refresh_reason=reason,
+                    auth_refresh_status="waiting_for_user_refresh",
+                    auth_refresh_persona_url=None,
+                )
 
+            last_status_message = None
             while not self._stop_flag.check():
-                status = auth_login_status()
+                status = auth_login_status(self._credentials_path)
                 if status.get("status") == "logged_in":
-                    refreshed = load_persisted_session()
+                    refreshed = load_persisted_session(self._credentials_path)
                     if refreshed is not None:
                         self._adopt_session(refreshed)
                         resume_message = "WQ session refreshed; resuming simulation job."
                         self._emit(resume_message)
                         if self._job_id:
-                            JobStore.update(self._job_id, progress_message=resume_message)
+                            JobStore.update(
+                                self._job_id,
+                                progress_message=resume_message,
+                                auth_waiting=False,
+                                auth_refresh_status="logged_in",
+                            )
                         return True
+                status_message = (
+                    f"{reason} Waiting for user-triggered WQ session refresh. "
+                    f"auth_status={status.get('status')} {status.get('message', '')}"
+                )
+                if status_message != last_status_message:
+                    self._emit(status_message)
+                    if self._job_id:
+                        JobStore.update(
+                            self._job_id,
+                            progress_message=status_message,
+                            auth_refresh_status=status.get("status"),
+                        )
+                    last_status_message = status_message
                 time.sleep(SIMULATION_AUTH_REFRESH_POLL_SECONDS)
 
             return False
@@ -2184,7 +2244,21 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
             progress_cb=progress_cb,
         )
         if session.login_expired:
-            JobStore.update(job_id, status="failed", error="Login failed.", progress_message="Login failed.")
+            if JobStore.is_stop_requested(job_id):
+                JobStore.update(
+                    job_id,
+                    status="stopped",
+                    progress_message="Stopped while waiting for WQ session refresh.",
+                    auth_waiting=False,
+                )
+            else:
+                JobStore.update(
+                    job_id,
+                    status="failed",
+                    error="Login failed.",
+                    progress_message="Login failed.",
+                    auth_waiting=False,
+                )
             return JobStore.get(job_id)
 
         results = session.simulate(params)
@@ -2192,6 +2266,7 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
         def _finish_job(done_job):
             done_job["status"] = "stopped" if stopped else "done"
             done_job["result_file"] = output_csv
+            done_job["auth_waiting"] = False
             _refresh_simulation_summary(done_job)
             done_job["summary"]["status"] = done_job["status"]
             done_job["progress_message"] = (
@@ -2744,6 +2819,65 @@ def evolution_run(template: str, pools: Dict[str, List[str]],
     return results
 
 
+def _run_or_wait_for_simulation_job(job_id: str,
+                                    *,
+                                    parent_job_id: Optional[str] = None,
+                                    progress_cb=None,
+                                    progress_prefix: str = "",
+                                    poll_seconds: float = 5.0) -> dict:
+    """
+    Run a child simulation, or wait if the persistent worker claimed it first.
+
+    The worker can observe a newly-created pending job before auto-run calls
+    simulate_run(). In that race, simulate_run() returns a service-level
+    ``status=error`` because the job is already running, while the actual
+    simulation remains active in JobStore. Treat JobStore as authoritative.
+    """
+
+    def _emit(message: str):
+        if progress_cb:
+            progress_cb(f"{progress_prefix}{message}" if progress_prefix else message)
+
+    def _current_job() -> dict:
+        return simulate_status(job_id) or {
+            "status": "error",
+            "message": f"Simulation job {job_id} not found.",
+        }
+
+    def _wait_for_terminal() -> dict:
+        last_message = None
+        while True:
+            job = _current_job()
+            status = job.get("status")
+            if status not in ("pending", "running"):
+                return job
+
+            if parent_job_id and JobStore.is_stop_requested(parent_job_id):
+                simulate_stop(job_id)
+
+            message = job.get("progress_message") or f"Simulation job {job_id}: {status}"
+            if message != last_message:
+                _emit(message)
+                last_message = message
+            time.sleep(max(float(poll_seconds), 0.1))
+
+    result = simulate_run(job_id, progress_cb=progress_cb)
+    result_status = (result or {}).get("status")
+    if result_status != "error":
+        if result_status in ("pending", "running"):
+            return _wait_for_terminal()
+        return result or _current_job()
+
+    current = _current_job()
+    current_status = current.get("status")
+    if current_status in ("pending", "running"):
+        _emit(current.get("progress_message") or f"Simulation job {job_id} is {current_status}; waiting.")
+        return _wait_for_terminal()
+    if current_status in ("done", "failed", "stopped"):
+        return current
+    return result or current
+
+
 def evolution_auto_run(template: str, pools: Dict[str, List[str]],
                        rounds: int = 3,
                        pop_size: int = 40, generations: int = 10,
@@ -2752,7 +2886,8 @@ def evolution_auto_run(template: str, pools: Dict[str, List[str]],
                        top_k: int = 20,
                        credentials_path: str = CREDS_PATH,
                        sim_params: Optional[Dict[str, object]] = None,
-                       progress_cb=None) -> dict:
+                       progress_cb=None,
+                       job_id: Optional[str] = None) -> dict:
     """
     Run a closed loop:
       evolution -> simulation -> backtest-style fitness feedback -> next round
@@ -2774,133 +2909,242 @@ def evolution_auto_run(template: str, pools: Dict[str, List[str]],
     final_candidates: List[dict] = []
     final_status = "ok"
     final_error: Optional[str] = None
+    tracked_job_id = job_id or JobStore.create("evolution", {
+        "mode": "auto-run",
+        "template": template,
+        "pools": pools,
+        "rounds": rounds,
+        "pop_size": pop_size,
+        "generations": generations,
+        "mutation_rate": mutation_rate,
+        "diversity_weight": diversity_weight,
+        "top_k": top_k,
+        "credentials_path": credentials_path,
+        "sim_params": sim_defaults,
+    })
+    JobStore.clear_stop(tracked_job_id)
+    JobStore.update(
+        tracked_job_id,
+        status="running",
+        pid=os.getpid(),
+        progress_message=f"Auto-run starting: 0/{max(1, rounds)} rounds complete.",
+        rounds_total=max(1, rounds),
+        rounds_completed=0,
+        history=[],
+    )
 
-    for round_idx in range(1, max(1, rounds) + 1):
-        if progress_cb:
-            progress_cb(f"[auto-run] Evolution round {round_idx}/{rounds}")
+    def _update_tracked_job(**kwargs):
+        if tracked_job_id:
+            JobStore.update(tracked_job_id, **kwargs)
 
-        candidates = evolution_run(
-            template=template,
-            pools=pools,
-            pop_size=pop_size,
-            generations=generations,
-            mutation_rate=mutation_rate,
-            diversity_weight=diversity_weight,
-            top_k=top_k,
-            seed_population=seed_population,
-            known_real_fitness=known_real_fitness,
-            progress_cb=(lambda gen, total: progress_cb(
-                f"[auto-run] round {round_idx}: generation {gen}/{total}"
-            )) if progress_cb else None,
-        )
-        final_candidates = candidates
-        if not candidates:
-            history.append({
-                "round": round_idx,
-                "candidate_count": 0,
-                "simulation_job_id": None,
-                "matched_results": 0,
-                "top_results": [],
-            })
-            break
+    try:
+        for round_idx in range(1, max(1, rounds) + 1):
+            if JobStore.is_stop_requested(tracked_job_id):
+                final_status = "stopped"
+                final_error = "Stop requested"
+                break
 
-        round_params: List[dict] = []
-        candidate_by_code: Dict[str, Dict[str, str]] = {}
-        for item in candidates:
-            strategy = dict(sim_defaults)
-            strategy["code"] = item["code"]
-            round_params.append(strategy)
-            candidate_by_code[_normalize_code(item["code"])] = item["candidate"]
+            if progress_cb:
+                progress_cb(f"[auto-run] Evolution round {round_idx}/{rounds}")
+            _update_tracked_job(
+                progress_message=f"Auto-run round {round_idx}/{max(1, rounds)}: evolving candidates.",
+                current_round=round_idx,
+                current_phase="evolution",
+                rounds_completed=len(history),
+                history=history,
+            )
 
-        sim_job_id = simulate_enqueue(round_params, credentials_path=credentials_path)
-        if progress_cb:
-            progress_cb(f"[auto-run] round {round_idx}: simulate job {sim_job_id}")
-        sim_job = simulate_run(
-            sim_job_id,
-            progress_cb=(lambda msg: progress_cb(
-                f"[auto-run] round {round_idx}: {msg}"
-            )) if progress_cb else None,
-        )
-        sim_status = (sim_job or {}).get("status")
-        if sim_status != "done":
-            final_status = sim_status or "failed"
-            final_error = (sim_job or {}).get("error") or f"Simulation job {sim_job_id} ended with status {sim_status}."
+            def _evolution_progress(gen, total):
+                if progress_cb:
+                    progress_cb(f"[auto-run] round {round_idx}: generation {gen}/{total}")
+                _update_tracked_job(
+                    progress_message=(
+                        f"Auto-run round {round_idx}/{max(1, rounds)}: "
+                        f"generation {gen}/{total}."
+                    ),
+                    current_generation=gen,
+                    generations_total=total,
+                )
+
+            candidates = evolution_run(
+                template=template,
+                pools=pools,
+                pop_size=pop_size,
+                generations=generations,
+                mutation_rate=mutation_rate,
+                diversity_weight=diversity_weight,
+                top_k=top_k,
+                seed_population=seed_population,
+                known_real_fitness=known_real_fitness,
+                progress_cb=_evolution_progress,
+            )
+            final_candidates = candidates
+            if not candidates:
+                history.append({
+                    "round": round_idx,
+                    "candidate_count": 0,
+                    "simulation_job_id": None,
+                    "matched_results": 0,
+                    "top_results": [],
+                })
+                break
+
+            if JobStore.is_stop_requested(tracked_job_id):
+                final_status = "stopped"
+                final_error = "Stop requested"
+                break
+
+            round_params: List[dict] = []
+            candidate_by_code: Dict[str, Dict[str, str]] = {}
+            for item in candidates:
+                strategy = dict(sim_defaults)
+                strategy["code"] = item["code"]
+                round_params.append(strategy)
+                candidate_by_code[_normalize_code(item["code"])] = item["candidate"]
+
+            sim_job_id = simulate_enqueue(round_params, credentials_path=credentials_path)
+            if progress_cb:
+                progress_cb(f"[auto-run] round {round_idx}: simulate job {sim_job_id}")
+            _update_tracked_job(
+                progress_message=(
+                    f"Auto-run round {round_idx}/{max(1, rounds)}: "
+                    f"simulation job {sim_job_id} running."
+                ),
+                current_phase="simulation",
+                current_simulation_job_id=sim_job_id,
+            )
+
+            def _simulation_progress(msg):
+                if progress_cb:
+                    progress_cb(f"[auto-run] round {round_idx}: {msg}")
+                _update_tracked_job(
+                    progress_message=f"Auto-run round {round_idx}/{max(1, rounds)}: {msg}",
+                    current_simulation_job_id=sim_job_id,
+                )
+
+            sim_job = _run_or_wait_for_simulation_job(
+                sim_job_id,
+                parent_job_id=tracked_job_id,
+                progress_cb=_simulation_progress,
+            )
+            sim_status = (sim_job or {}).get("status")
+            if sim_status != "done":
+                final_status = sim_status or "failed"
+                final_error = (
+                    (sim_job or {}).get("error")
+                    or (sim_job or {}).get("message")
+                    or f"Simulation job {sim_job_id} ended with status {sim_status}."
+                )
+                history.append({
+                    "round": round_idx,
+                    "candidate_count": len(candidates),
+                    "simulation_job_id": sim_job_id,
+                    "simulation_status": sim_status,
+                    "matched_results": 0,
+                    "top_results": final_candidates[:min(5, len(final_candidates))],
+                    "error": final_error,
+                })
+                break
+
+            sim_output = simulate_results(sim_job_id, limit=max(1000, top_k * 5)) or {}
+            rows = sim_output.get("rows", [])
+
+            matched: List[Tuple[float, Dict[str, str], dict]] = []
+            next_known_real_fitness: Dict[tuple, float] = {}
+            row_by_code: Dict[str, dict] = {}
+            for row in rows:
+                code = str(row.get("code", "")).strip()
+                if not code:
+                    continue
+                norm_code = _normalize_code(code)
+                candidate = candidate_by_code.get(norm_code)
+                if candidate is None:
+                    continue
+                score = _compute_composite_score(row)
+                matched.append((score, candidate, row))
+                next_known_real_fitness[_candidate_key(candidate)] = score
+                row_by_code[norm_code] = row
+
+            matched.sort(key=lambda x: -x[0])
+            if not matched:
+                final_status = "failed"
+                final_error = f"Simulation job {sim_job_id} produced no feedback rows for evolution."
+                history.append({
+                    "round": round_idx,
+                    "candidate_count": len(candidates),
+                    "simulation_job_id": sim_job_id,
+                    "simulation_status": sim_status,
+                    "matched_results": 0,
+                    "top_results": final_candidates[:min(5, len(final_candidates))],
+                    "error": final_error,
+                })
+                break
+
+            seed_population = [candidate for _, candidate, _ in matched[:max(2, min(top_k, pop_size))]]
+            known_real_fitness = next_known_real_fitness
+
+            for item in final_candidates:
+                matched_row = row_by_code.get(_normalize_code(item["code"]))
+                if matched_row is not None:
+                    item["real_fitness"] = round(_compute_composite_score(matched_row), 6)
+                    item["simulation"] = {
+                        "passed": matched_row.get("passed"),
+                        "sharpe": matched_row.get("sharpe"),
+                        "fitness": matched_row.get("fitness"),
+                        "turnover": matched_row.get("turnover"),
+                        "subsharpe": matched_row.get("subsharpe"),
+                        "link": matched_row.get("link"),
+                    }
+
             history.append({
                 "round": round_idx,
                 "candidate_count": len(candidates),
                 "simulation_job_id": sim_job_id,
-                "simulation_status": sim_status,
-                "matched_results": 0,
+                "matched_results": len(matched),
                 "top_results": final_candidates[:min(5, len(final_candidates))],
-                "error": final_error,
             })
-            break
+            _update_tracked_job(
+                progress_message=(
+                    f"Auto-run round {round_idx}/{max(1, rounds)} complete: "
+                    f"{len(matched)} matched feedback row(s)."
+                ),
+                current_phase="feedback",
+                rounds_completed=len(history),
+                history=history,
+                final_results=final_candidates,
+            )
+    except Exception as exc:
+        final_status = "failed"
+        final_error = str(exc)
+        _update_tracked_job(status="failed", error=final_error, progress_message=final_error)
+        raise
 
-        sim_output = simulate_results(sim_job_id, limit=max(1000, top_k * 5)) or {}
-        rows = sim_output.get("rows", [])
-
-        matched: List[Tuple[float, Dict[str, str], dict]] = []
-        next_known_real_fitness: Dict[tuple, float] = {}
-        row_by_code: Dict[str, dict] = {}
-        for row in rows:
-            code = str(row.get("code", "")).strip()
-            if not code:
-                continue
-            norm_code = _normalize_code(code)
-            candidate = candidate_by_code.get(norm_code)
-            if candidate is None:
-                continue
-            score = _compute_composite_score(row)
-            matched.append((score, candidate, row))
-            next_known_real_fitness[_candidate_key(candidate)] = score
-            row_by_code[norm_code] = row
-
-        matched.sort(key=lambda x: -x[0])
-        if not matched:
-            final_status = "failed"
-            final_error = f"Simulation job {sim_job_id} produced no feedback rows for evolution."
-            history.append({
-                "round": round_idx,
-                "candidate_count": len(candidates),
-                "simulation_job_id": sim_job_id,
-                "simulation_status": sim_status,
-                "matched_results": 0,
-                "top_results": final_candidates[:min(5, len(final_candidates))],
-                "error": final_error,
-            })
-            break
-
-        seed_population = [candidate for _, candidate, _ in matched[:max(2, min(top_k, pop_size))]]
-        known_real_fitness = next_known_real_fitness
-
-        for item in final_candidates:
-            matched_row = row_by_code.get(_normalize_code(item["code"]))
-            if matched_row is not None:
-                item["real_fitness"] = round(_compute_composite_score(matched_row), 6)
-                item["simulation"] = {
-                    "passed": matched_row.get("passed"),
-                    "sharpe": matched_row.get("sharpe"),
-                    "fitness": matched_row.get("fitness"),
-                    "turnover": matched_row.get("turnover"),
-                    "subsharpe": matched_row.get("subsharpe"),
-                    "link": matched_row.get("link"),
-                }
-
-        history.append({
-            "round": round_idx,
-            "candidate_count": len(candidates),
-            "simulation_job_id": sim_job_id,
-            "matched_results": len(matched),
-            "top_results": final_candidates[:min(5, len(final_candidates))],
-        })
-
-    return {
+    summary = {
+        "job_id": tracked_job_id,
         "status": final_status,
         "rounds_completed": len(history),
         "history": history,
         "final_results": final_candidates,
         "error": final_error,
     }
+    ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    result_file = os.path.join(CLI_STATE_DIR, f"evo_{tracked_job_id}_{ts}.json")
+    with open(result_file, "w", encoding="utf-8") as fh:
+        json.dump(summary, fh, ensure_ascii=False, indent=2)
+    job_status = "done" if final_status == "ok" else final_status
+    _update_tracked_job(
+        status=job_status,
+        error=final_error,
+        result_file=result_file,
+        progress_message=(
+            f"Auto-run finished: status={final_status} "
+            f"rounds_completed={len(history)}/{max(1, rounds)}."
+        ),
+        rounds_completed=len(history),
+        history=history,
+        final_results=final_candidates,
+    )
+    return summary
 
 
 def evolution_run_job(job_id: str, progress_cb=None) -> dict:
@@ -3039,7 +3283,14 @@ def evolution_enqueue(template: str, pools: Dict[str, List[str]],
 
 
 def evolution_status(job_id: str) -> Optional[dict]:
-    return JobStore.get(job_id)
+    job = JobStore.get(job_id)
+    if job is not None:
+        return job
+    if job_id.startswith("proc-"):
+        for process_job in _running_evolution_auto_run_process_jobs([]):
+            if process_job.get("id") == job_id:
+                return process_job
+    return None
 
 
 def evolution_stop(job_id: str) -> dict:
@@ -3063,5 +3314,65 @@ def evolution_results(job_id: str) -> Optional[dict]:
     return {"job": job, "results": results}
 
 
+def _running_evolution_auto_run_process_jobs(existing_jobs: List[dict]) -> List[dict]:
+    """Expose legacy auto-run processes that predate JobStore tracking."""
+    proc_root = Path("/proc")
+    if not proc_root.exists():
+        return []
+
+    tracked_pids = set()
+    for job in existing_jobs:
+        if job.get("pid") is None or job.get("status") not in ("pending", "running"):
+            continue
+        try:
+            tracked_pids.add(int(job["pid"]))
+        except (TypeError, ValueError):
+            continue
+    process_jobs: List[dict] = []
+    for proc_dir in proc_root.iterdir():
+        if not proc_dir.name.isdigit():
+            continue
+        pid = int(proc_dir.name)
+        if pid in tracked_pids:
+            continue
+        try:
+            cwd = os.path.realpath(os.readlink(proc_dir / "cwd"))
+            if cwd != SCRIPT_DIR:
+                continue
+            raw_cmdline = (proc_dir / "cmdline").read_bytes()
+        except (FileNotFoundError, PermissionError, ProcessLookupError, OSError):
+            continue
+
+        args = [arg.decode("utf-8", errors="replace") for arg in raw_cmdline.split(b"\0") if arg]
+        script_indexes = [
+            index for index, arg in enumerate(args)
+            if os.path.basename(arg) == "brain_cli.py"
+        ]
+        if not any(args[index + 1:index + 3] == ["evolution", "auto-run"] for index in script_indexes):
+            continue
+
+        now = datetime.datetime.now().isoformat()
+        process_jobs.append({
+            "id": f"proc-{pid}",
+            "type": "evolution",
+            "status": "running",
+            "created_at": "",
+            "updated_at": now,
+            "params": {
+                "mode": "auto-run",
+                "source": "process",
+                "cmd": args,
+            },
+            "result_file": None,
+            "error": None,
+            "pid": pid,
+            "progress_message": "Detected running evolution auto-run process not tracked in JobStore.",
+        })
+    return process_jobs
+
+
 def evolution_list() -> List[dict]:
-    return JobStore.list_jobs("evolution")
+    jobs = JobStore.list_jobs("evolution")
+    jobs.extend(_running_evolution_auto_run_process_jobs(jobs))
+    jobs.sort(key=lambda x: x.get("created_at", ""), reverse=True)
+    return jobs
