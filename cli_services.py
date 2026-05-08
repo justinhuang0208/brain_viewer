@@ -87,6 +87,7 @@ SIMULATION_DONE_STATUSES = {"COMPLETE", "WARNING"}
 SIMULATION_TRANSIENT_POLL_STATUSES = {500, 502, 503, 504}
 SIMULATION_POLL_BACKOFF_MAX_SECONDS = 60.0
 SIMULATION_AUTH_REFRESH_POLL_SECONDS = 10.0
+SIMULATION_ACTIVE_TIMEOUT_SECONDS = 60 * 60
 SIMULATION_MAX_WORKERS = 7
 _JOB_STORE_LOCK = RLock()
 
@@ -162,6 +163,17 @@ def _retry_after_seconds(headers, default: float = 10.0) -> float:
         return max(float(value), 0.0)
     except (TypeError, ValueError):
         return default
+
+
+def _format_seconds(seconds: float) -> str:
+    total = max(int(round(seconds)), 0)
+    hours, rem = divmod(total, 3600)
+    minutes, secs = divmod(rem, 60)
+    if hours:
+        return f"{hours}h {minutes}m {secs}s"
+    if minutes:
+        return f"{minutes}m {secs}s"
+    return f"{secs}s"
 
 
 def _now_iso() -> str:
@@ -1647,6 +1659,9 @@ class CLISimulationSession(requests.Session):
         alpha_id: Optional[str] = None,
         state: Optional[str] = None,
         error: Optional[str] = None,
+        active_runtime_seconds: Optional[float] = None,
+        active_timeout_seconds: Optional[int] = None,
+        active_timer_state: Optional[str] = None,
     ):
         updates = {"last_poll_at": _now_iso()}
         if simulation_url:
@@ -1663,6 +1678,12 @@ class CLISimulationSession(requests.Session):
             updates["state"] = state
         if error:
             updates["error"] = error
+        if active_runtime_seconds is not None:
+            updates["active_runtime_seconds"] = round(float(active_runtime_seconds), 3)
+        if active_timeout_seconds is not None:
+            updates["active_timeout_seconds"] = int(active_timeout_seconds)
+        if active_timer_state:
+            updates["active_timer_state"] = active_timer_state
         self._set_item_state(row_uuid, alpha, **updates)
 
     def _simulation_item_state(self, row_uuid: str) -> dict:
@@ -1676,7 +1697,16 @@ class CLISimulationSession(requests.Session):
 
     def _result_with_state(self, row_uuid: str, result: dict) -> dict:
         item = self._simulation_item_state(row_uuid)
-        for key in ("simulation_url", "last_poll_status", "last_progress", "last_poll_at", "alpha_id"):
+        for key in (
+            "simulation_url",
+            "last_poll_status",
+            "last_progress",
+            "last_poll_at",
+            "alpha_id",
+            "active_runtime_seconds",
+            "active_timeout_seconds",
+            "active_timer_state",
+        ):
             if key in item and key not in result:
                 result[key] = item[key]
         return result
@@ -1895,6 +1925,9 @@ class CLISimulationSession(requests.Session):
                                             "last_progress": result.get("last_progress"),
                                             "last_poll_at": result.get("last_poll_at"),
                                             "alpha_id": result.get("alpha_id"),
+                                            "active_runtime_seconds": result.get("active_runtime_seconds"),
+                                            "active_timeout_seconds": result.get("active_timeout_seconds"),
+                                            "active_timer_state": result.get("active_timer_state"),
                                             "row": row,
                                         })
                                         job["failed_items"] = failed_items
@@ -1925,6 +1958,9 @@ class CLISimulationSession(requests.Session):
                                             "last_poll_at": result.get("last_poll_at"),
                                             "alpha_id": result.get("alpha_id"),
                                             "alpha_details_file": result.get("alpha_details_file"),
+                                            "active_runtime_seconds": result.get("active_runtime_seconds"),
+                                            "active_timeout_seconds": result.get("active_timeout_seconds"),
+                                            "active_timer_state": result.get("active_timer_state"),
                                         })
                                         job["completed_rows"] = completed_rows
                                         _refresh_simulation_summary(job)
@@ -1956,6 +1992,9 @@ class CLISimulationSession(requests.Session):
                                         "last_progress": result.get("last_progress"),
                                         "last_poll_at": result.get("last_poll_at"),
                                         "alpha_id": result.get("alpha_id"),
+                                        "active_runtime_seconds": result.get("active_runtime_seconds"),
+                                        "active_timeout_seconds": result.get("active_timeout_seconds"),
+                                        "active_timer_state": result.get("active_timer_state"),
                                     })
                                     job["failed_items"] = failed_items
                                     _refresh_simulation_summary(job)
@@ -1984,6 +2023,102 @@ class CLISimulationSession(requests.Session):
         pasteurization = simulation.get("pasteurization", "ON")
         nan_handling   = simulation.get("nanHandling", "OFF")
         row_uuid       = simulation.get("uuid", _uuid_mod.uuid4().hex)
+
+        active_elapsed_seconds = 0.0
+        active_started_at_monotonic: Optional[float] = None
+
+        def _start_active_timer():
+            nonlocal active_started_at_monotonic
+            if active_started_at_monotonic is None:
+                active_started_at_monotonic = time.monotonic()
+
+        def _active_elapsed() -> float:
+            if active_started_at_monotonic is None:
+                return active_elapsed_seconds
+            return active_elapsed_seconds + (time.monotonic() - active_started_at_monotonic)
+
+        def _pause_active_timer() -> float:
+            nonlocal active_elapsed_seconds, active_started_at_monotonic
+            if active_started_at_monotonic is not None:
+                active_elapsed_seconds += time.monotonic() - active_started_at_monotonic
+                active_started_at_monotonic = None
+            return active_elapsed_seconds
+
+        def _active_fields(timer_state: str) -> dict:
+            return {
+                "active_runtime_seconds": _active_elapsed(),
+                "active_timeout_seconds": SIMULATION_ACTIVE_TIMEOUT_SECONDS,
+                "active_timer_state": timer_state,
+            }
+
+        def _job_auth_waiting() -> bool:
+            if not self._job_id:
+                return False
+            job = JobStore.get(self._job_id) or {}
+            return bool(job.get("auth_waiting"))
+
+        def _timeout_result() -> dict:
+            elapsed = _pause_active_timer()
+            message = (
+                "Simulation active runtime exceeded "
+                f"{_format_seconds(SIMULATION_ACTIVE_TIMEOUT_SECONDS)} "
+                f"(active={_format_seconds(elapsed)})."
+            )
+            self._record_poll_state(
+                row_uuid,
+                alpha,
+                simulation_url=nxt,
+                state="failed",
+                error=message,
+                **_active_fields("timed_out"),
+            )
+            return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": message, "alpha": alpha})
+
+        def _check_active_timeout() -> Optional[dict]:
+            if _active_elapsed() >= SIMULATION_ACTIVE_TIMEOUT_SECONDS:
+                return _timeout_result()
+            return None
+
+        def _sleep_while_active(seconds: float) -> str:
+            remaining = SIMULATION_ACTIVE_TIMEOUT_SECONDS - _active_elapsed()
+            if remaining <= 0:
+                return "timeout"
+            requested = max(float(seconds), 0.0)
+            if requested <= 0:
+                return "ok"
+            active_sleep_seconds = min(requested, remaining)
+            target_elapsed = _active_elapsed() + active_sleep_seconds
+            paused_for_auth = False
+            while _active_elapsed() < target_elapsed:
+                if self._stop_flag.check():
+                    return "stopped"
+                if _job_auth_waiting():
+                    _pause_active_timer()
+                    if not paused_for_auth:
+                        self._record_poll_state(
+                            row_uuid,
+                            alpha,
+                            simulation_url=nxt,
+                            state="auth_waiting",
+                            **_active_fields("paused"),
+                        )
+                        paused_for_auth = True
+                    time.sleep(1.0)
+                    continue
+                if paused_for_auth:
+                    _start_active_timer()
+                    self._record_poll_state(
+                        row_uuid,
+                        alpha,
+                        simulation_url=nxt,
+                        state="polling",
+                        **_active_fields("active"),
+                    )
+                    paused_for_auth = False
+                time.sleep(min(1.0, max(target_elapsed - _active_elapsed(), 0.0)))
+            if _active_elapsed() >= SIMULATION_ACTIVE_TIMEOUT_SECONDS:
+                return "timeout"
+            return "ok"
 
         max_retries = 3
         nxt         = None
@@ -2027,12 +2162,14 @@ class CLISimulationSession(requests.Session):
                 if not location:
                     return {"uuid": row_uuid, "error": "Simulation response missing Location header.", "alpha": alpha}
                 nxt = urljoin(r.url, location)
+                _start_active_timer()
                 self._record_poll_state(
                     row_uuid,
                     alpha,
                     simulation_url=nxt,
                     http_status=r.status_code,
                     state="submitted",
+                    **_active_fields("active"),
                 )
                 break
             except requests.exceptions.HTTPError as exc:
@@ -2060,7 +2197,18 @@ class CLISimulationSession(requests.Session):
         transient_poll_errors = 0
         while True:
             if self._stop_flag.check():
+                _pause_active_timer()
+                self._record_poll_state(
+                    row_uuid,
+                    alpha,
+                    simulation_url=nxt,
+                    state="stopped",
+                    **_active_fields("stopped"),
+                )
                 return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
+            timeout_result = _check_active_timeout()
+            if timeout_result:
+                return timeout_result
             try:
                 r    = self.get(nxt, timeout=30)
                 if r.status_code in SIMULATION_TRANSIENT_POLL_STATUSES:
@@ -2071,6 +2219,7 @@ class CLISimulationSession(requests.Session):
                         simulation_url=nxt,
                         http_status=r.status_code,
                         state="polling",
+                        **_active_fields("active"),
                     )
                     default_wait = min(2 ** min(transient_poll_errors, 6), SIMULATION_POLL_BACKOFF_MAX_SECONDS)
                     wait_seconds = _retry_after_seconds(r.headers, default_wait)
@@ -2078,16 +2227,36 @@ class CLISimulationSession(requests.Session):
                         f"WQ simulation polling returned {r.status_code}; "
                         f"retrying same simulation URL in {wait_seconds}s — {alpha[:30]}"
                     )
-                    if not _sleep_with_stop(self._stop_flag, wait_seconds):
+                    sleep_state = _sleep_while_active(wait_seconds)
+                    if sleep_state == "stopped":
                         return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
+                    if sleep_state == "timeout":
+                        return _timeout_result()
                     continue
                 if r.status_code == 401:
+                    _pause_active_timer()
+                    self._record_poll_state(
+                        row_uuid,
+                        alpha,
+                        simulation_url=nxt,
+                        http_status=r.status_code,
+                        state="auth_waiting",
+                        **_active_fields("paused"),
+                    )
                     if not self._wait_for_session_refresh(
                         "Saved session expired while polling simulation status.",
                         r,
                         cooldown_key="cli-sim-poll-auth-refresh",
                     ):
                         return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
+                    _start_active_timer()
+                    self._record_poll_state(
+                        row_uuid,
+                        alpha,
+                        simulation_url=nxt,
+                        state="polling",
+                        **_active_fields("active"),
+                    )
                     continue
                 r.raise_for_status()
                 rj   = r.json()
@@ -2096,6 +2265,7 @@ class CLISimulationSession(requests.Session):
                 progress = rj.get("progress", 0)
                 if "alpha" in rj:
                     alpha_link = rj["alpha"]
+                    _pause_active_timer()
                     self._record_poll_state(
                         row_uuid,
                         alpha,
@@ -2105,6 +2275,7 @@ class CLISimulationSession(requests.Session):
                         progress=progress,
                         alpha_id=alpha_link,
                         state="completed",
+                        **_active_fields("stopped"),
                     )
                     break
                 self._record_poll_state(
@@ -2115,14 +2286,29 @@ class CLISimulationSession(requests.Session):
                     simulation_status=status,
                     progress=progress,
                     state="polling",
+                    **_active_fields("active"),
                 )
                 if status in SIMULATION_ERROR_STATUSES:
                     message = rj.get("message") or f"Simulation ended with status {status}."
-                    self._record_poll_state(row_uuid, alpha, state="failed", error=message)
+                    _pause_active_timer()
+                    self._record_poll_state(
+                        row_uuid,
+                        alpha,
+                        state="failed",
+                        error=message,
+                        **_active_fields("stopped"),
+                    )
                     return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": message, "alpha": alpha})
                 if status in SIMULATION_DONE_STATUSES:
                     message = f"Simulation ended with status {status} but no alpha id was returned."
-                    self._record_poll_state(row_uuid, alpha, state="failed", error=message)
+                    _pause_active_timer()
+                    self._record_poll_state(
+                        row_uuid,
+                        alpha,
+                        state="failed",
+                        error=message,
+                        **_active_fields("stopped"),
+                    )
                     return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": message, "alpha": alpha})
                 self._emit(f"  Progress {int(100 * progress)}% — {alpha[:30]}")
                 wait_seconds = _retry_after_seconds(r.headers)
@@ -2135,16 +2321,41 @@ class CLISimulationSession(requests.Session):
                         simulation_url=nxt,
                         http_status=exc.response.status_code,
                         state="polling",
+                        **_active_fields("active"),
                     )
-                    if not _sleep_with_stop(self._stop_flag, wait_seconds):
+                    sleep_state = _sleep_while_active(wait_seconds)
+                    if sleep_state == "stopped":
                         return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
+                    if sleep_state == "timeout":
+                        return _timeout_result()
                     continue
+                _pause_active_timer()
+                self._record_poll_state(
+                    row_uuid,
+                    alpha,
+                    simulation_url=nxt,
+                    state="failed",
+                    error=str(exc),
+                    **_active_fields("stopped"),
+                )
                 return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": str(exc), "alpha": alpha})
             except Exception as exc:
+                _pause_active_timer()
+                self._record_poll_state(
+                    row_uuid,
+                    alpha,
+                    simulation_url=nxt,
+                    state="failed",
+                    error=str(exc),
+                    **_active_fields("stopped"),
+                )
                 return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": str(exc), "alpha": alpha})
 
-            if not _sleep_with_stop(self._stop_flag, wait_seconds):
+            sleep_state = _sleep_while_active(wait_seconds)
+            if sleep_state == "stopped":
                 return self._result_with_state(row_uuid, {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha})
+            if sleep_state == "timeout":
+                return _timeout_result()
 
         # Fetch alpha details
         return self._result_with_state(

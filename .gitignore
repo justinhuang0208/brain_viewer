@@ -8,6 +8,8 @@ templates
 .env
 session.pkl
 login_time.pkl
+pending_session.pkl
+pending_persona.json
 .brain_cli/
 brain_api_docs.md
 AGENTS.md

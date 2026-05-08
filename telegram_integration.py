@@ -35,6 +35,10 @@ class TelegramConfigError(RuntimeError):
     pass
 
 
+class TelegramConflictError(RuntimeError):
+    pass
+
+
 def _ensure_state_dir():
     os.makedirs(STATE_DIR, exist_ok=True)
 
@@ -89,7 +93,12 @@ def _api_request(method: str,
     url = f"https://api.telegram.org/bot{token}/{method}"
     request = requests.get if http_method == "GET" else requests.post
     response = request(url, params=params, json=payload, timeout=timeout)
-    response.raise_for_status()
+    if response.status_code == 409:
+        raise TelegramConflictError(
+            f"Telegram API {method} returned HTTP 409 Conflict; another polling client is using this bot token."
+        )
+    if response.status_code >= 400:
+        raise RuntimeError(f"Telegram API {method} returned HTTP {response.status_code}.")
     body = response.json()
     if not body.get("ok"):
         raise RuntimeError(body.get("description", f"Telegram API {method} failed."))
@@ -208,6 +217,20 @@ def _format_duration(delta: _dt.timedelta) -> str:
     if hours:
         return f"{hours}h {minutes}m"
     return f"{minutes}m"
+
+
+def _format_seconds(value: Any) -> str:
+    try:
+        total_seconds = max(int(round(float(value))), 0)
+    except (TypeError, ValueError):
+        return "N/A"
+    hours, remainder = divmod(total_seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    if hours:
+        return f"{hours}h {minutes}m {seconds}s"
+    if minutes:
+        return f"{minutes}m {seconds}s"
+    return f"{seconds}s"
 
 
 def _session_status(credentials_path: str) -> dict:
@@ -479,8 +502,13 @@ def _format_running_job_progress(job: dict, *, max_items: int = 5,
         progress = _format_progress_value(item.get("last_progress"))
         poll_status = item.get("simulation_status") or item.get("last_poll_status") or "N/A"
         age = _format_iso_age(item.get("last_poll_at"))
+        active_runtime = _format_seconds(item.get("active_runtime_seconds"))
+        active_timeout = _format_seconds(item.get("active_timeout_seconds"))
         alpha = _short_text(item.get("alpha"), 80)
-        lines.append(f"{index}. {progress} {state} poll={poll_status} last={age}")
+        lines.append(
+            f"{index}. {progress} {state} poll={poll_status} "
+            f"active={active_runtime}/{active_timeout} last={age}"
+        )
         if item.get("simulation_url"):
             lines.append(f"   url={item['simulation_url']}")
         if alpha:
@@ -775,6 +803,12 @@ class TelegramBotRunner:
         while True:
             try:
                 updates = self._get_updates(offset)
+            except TelegramConflictError as exc:
+                logging.warning("%s", exc)
+                if once:
+                    raise
+                time.sleep(5)
+                continue
             except Exception:
                 logging.exception("Telegram polling failed.")
                 if once:
