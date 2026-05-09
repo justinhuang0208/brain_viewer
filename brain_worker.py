@@ -112,13 +112,21 @@ class BrainWorker:
     def _next_pending_simulation_job(self, jobs: list[dict]) -> Optional[dict]:
         if any(job.get("status") == "running" for job in jobs):
             return None
-        pending_jobs = [job for job in jobs if job.get("status") == "pending"]
+        pending_jobs = [
+            job for job in jobs
+            if job.get("status") == "pending"
+            and svc._simulation_job_executor(job) == "worker"
+        ]
         pending_jobs.sort(key=lambda job: job.get("created_at", ""))
         return pending_jobs[0] if pending_jobs else None
 
     def _log_scan_summary(self, jobs: list[dict], *, force: bool = False):
         counts = _status_counts(jobs)
-        pending_jobs = [job for job in jobs if job.get("status") == "pending"]
+        pending_jobs = [
+            job for job in jobs
+            if job.get("status") == "pending"
+            and svc._simulation_job_executor(job) == "worker"
+        ]
         pending_jobs.sort(key=lambda job: job.get("created_at", ""))
         pending_ids = tuple(job.get("id") for job in pending_jobs)
         running_ids = tuple(job.get("id") for job in jobs if job.get("status") == "running")

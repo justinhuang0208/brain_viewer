@@ -89,6 +89,10 @@ SIMULATION_POLL_BACKOFF_MAX_SECONDS = 60.0
 SIMULATION_AUTH_REFRESH_POLL_SECONDS = 10.0
 SIMULATION_ACTIVE_TIMEOUT_SECONDS = 60 * 60
 SIMULATION_MAX_WORKERS = 7
+SIMULATION_SUBMIT_INTERVAL_SECONDS = 5.0
+SIMULATION_429_FALLBACK_WAIT_SECONDS = 60
+SIMULATION_JOB_WAIT_STALE_SECONDS = 15 * 60
+SIMULATION_JOB_WAIT_TIMEOUT_SECONDS = 6 * 60 * 60
 _JOB_STORE_LOCK = RLock()
 
 # ---------------------------------------------------------------------------
@@ -178,6 +182,45 @@ def _format_seconds(seconds: float) -> str:
 
 def _now_iso() -> str:
     return datetime.datetime.now().isoformat()
+
+
+def _parse_iso_datetime(value: Any) -> Optional[datetime.datetime]:
+    if not value:
+        return None
+    try:
+        parsed = datetime.datetime.fromisoformat(str(value))
+    except (TypeError, ValueError):
+        return None
+    if parsed.tzinfo is not None:
+        parsed = parsed.astimezone().replace(tzinfo=None)
+    return parsed
+
+
+def _seconds_since_iso(value: Any) -> Optional[float]:
+    parsed = _parse_iso_datetime(value)
+    if parsed is None:
+        return None
+    return max((datetime.datetime.now() - parsed).total_seconds(), 0.0)
+
+
+def _is_process_running(pid: Any) -> bool:
+    try:
+        pid_int = int(pid)
+    except (TypeError, ValueError):
+        return False
+    if pid_int <= 0:
+        return False
+    try:
+        os.kill(pid_int, 0)
+    except OSError:
+        return False
+    return True
+
+
+def _simulation_job_executor(job: dict) -> str:
+    params = job.get("params") or {}
+    executor = job.get("executor") or params.get("executor") or "worker"
+    return str(executor or "worker")
 
 
 def _sleep_with_stop(stop_flag, seconds: float) -> bool:
@@ -1494,6 +1537,7 @@ class CLISimulationSession(requests.Session):
         self._submit_lock = Lock()
         self._auth_refresh_lock = Lock()
         self._simulation_quota: Optional[dict] = None
+        self._last_simulation_submit_at: Optional[float] = None
         self._csv_file   = output_csv or os.path.join(
             DATA_DIR, f"{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
         )
@@ -1765,6 +1809,29 @@ class CLISimulationSession(requests.Session):
             if remaining <= 0:
                 return True
             time.sleep(min(30, remaining))
+
+    def _wait_for_submit_pace_locked(self) -> bool:
+        if self._last_simulation_submit_at is None:
+            return True
+
+        elapsed = time.monotonic() - self._last_simulation_submit_at
+        wait_seconds = SIMULATION_SUBMIT_INTERVAL_SECONDS - elapsed
+        if wait_seconds <= 0:
+            return True
+
+        message = f"Waiting {wait_seconds:.1f}s before next simulation submit."
+        self._emit(message)
+        if self._job_id:
+            JobStore.update(self._job_id, progress_message=message)
+
+        deadline = time.monotonic() + wait_seconds
+        while True:
+            if self._stop_flag.check():
+                return False
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                return True
+            time.sleep(min(1.0, remaining))
 
     def _alpha_row_from_payload(self, alpha_id: str, simulation: dict, payload: dict) -> list:
         alpha          = simulation.get("code", "").strip()
@@ -2130,24 +2197,29 @@ class CLISimulationSession(requests.Session):
                 with self._submit_lock:
                     if not self._wait_for_simulation_quota():
                         return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
-                    r = self.post(f"{BRAIN_API_BASE}/simulations", json={
-                        "regular": alpha,
-                        "type":    "REGULAR",
-                        "settings": {
-                            "nanHandling":    nan_handling,
-                            "instrumentType": "EQUITY",
-                            "delay":          delay,
-                            "universe":       universe,
-                            "truncation":     truncation,
-                            "unitHandling":   "VERIFY",
-                            "pasteurization": pasteurization,
-                            "region":         region,
-                            "language":       "FASTEXPR",
-                            "decay":          decay,
-                            "neutralization": neutralization,
-                            "visualization":  False,
-                        },
-                    })
+                    if not self._wait_for_submit_pace_locked():
+                        return {"uuid": row_uuid, "error": "Stopped by user", "alpha": alpha}
+                    try:
+                        r = self.post(f"{BRAIN_API_BASE}/simulations", json={
+                            "regular": alpha,
+                            "type":    "REGULAR",
+                            "settings": {
+                                "nanHandling":    nan_handling,
+                                "instrumentType": "EQUITY",
+                                "delay":          delay,
+                                "universe":       universe,
+                                "truncation":     truncation,
+                                "unitHandling":   "VERIFY",
+                                "pasteurization": pasteurization,
+                                "region":         region,
+                                "language":       "FASTEXPR",
+                                "decay":          decay,
+                                "neutralization": neutralization,
+                                "visualization":  False,
+                            },
+                        })
+                    finally:
+                        self._last_simulation_submit_at = time.monotonic()
                 self._record_simulation_quota(r)
                 if r.status_code == 401:
                     if not self._wait_for_session_refresh(
@@ -2174,7 +2246,9 @@ class CLISimulationSession(requests.Session):
                 break
             except requests.exceptions.HTTPError as exc:
                 if exc.response.status_code == 429 and attempt < max_retries - 1:
-                    wait_seconds = _retry_after_seconds(exc.response.headers, self._quota_wait_seconds() or 15)
+                    quota_wait_seconds = self._quota_wait_seconds()
+                    fallback_seconds = quota_wait_seconds or SIMULATION_429_FALLBACK_WAIT_SECONDS
+                    wait_seconds = _retry_after_seconds(exc.response.headers, fallback_seconds)
                     self._emit(f"429 rate-limit, retrying in {wait_seconds}s ({attempt+1}/{max_retries})…")
                     deadline = time.monotonic() + wait_seconds
                     while True:
@@ -2372,13 +2446,19 @@ def simulate_enqueue(
     params: List[dict],
     credentials_path: str = CREDS_PATH,
     notify_job_complete: bool = False,
+    executor: str = "worker",
+    owner_job_id: Optional[str] = None,
 ) -> str:
     """Create a new simulation job and return its job_id."""
-    job_id = JobStore.create("simulate", {
+    job_payload = {
         "params":           params,
         "credentials_path": credentials_path,
         "notify_job_complete": bool(notify_job_complete),
-    })
+        "executor":         executor or "worker",
+    }
+    if owner_job_id:
+        job_payload["owner_job_id"] = owner_job_id
+    job_id = JobStore.create("simulate", job_payload)
     registry = get_registry()
     for item in params:
         code = str(item.get("code", "")).strip()
@@ -2416,6 +2496,7 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
     if job["status"] not in ("pending",):
         return {"status": "error", "message": f"Job {job_id} is already {job['status']}."}
 
+    executor = _simulation_job_executor(job)
     JobStore.update(
         job_id,
         status="running",
@@ -2425,7 +2506,11 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
         completed_count=0,
         failed_count=0,
         recovered_count=0,
-        progress_message="Queued for worker execution.",
+        progress_message=(
+            "Worker claimed simulation job."
+            if executor == "worker" else
+            "Running parent-owned simulation job."
+        ),
         completed_rows=[],
         failed_items=[],
         recovered_items=[],
@@ -2438,6 +2523,9 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
             "failed_count": 0,
             "recovered_count": 0,
         },
+        executor=executor,
+        owner_job_id=(job.get("params") or {}).get("owner_job_id"),
+        started_at=_now_iso(),
     )
     JobStore.clear_stop(job_id)
 
@@ -3057,6 +3145,7 @@ def _run_or_wait_for_simulation_job(job_id: str,
 
     def _wait_for_terminal() -> dict:
         last_message = None
+        wait_started_at = time.monotonic()
         while True:
             job = _current_job()
             status = job.get("status")
@@ -3065,6 +3154,46 @@ def _run_or_wait_for_simulation_job(job_id: str,
 
             if parent_job_id and JobStore.is_stop_requested(parent_job_id):
                 simulate_stop(job_id)
+
+            if job.get("auth_waiting"):
+                message = (
+                    f"Simulation job {job_id} is waiting for WQ session refresh. "
+                    "Use Telegram /refresh; the running job can resume after login."
+                )
+                _emit(message)
+                paused_job = dict(job)
+                paused_job["status"] = "auth_waiting"
+                paused_job["message"] = message
+                return paused_job
+
+            if status == "running":
+                updated_age = _seconds_since_iso(job.get("updated_at"))
+                pid = job.get("pid")
+                if (
+                    pid
+                    and not _is_process_running(pid)
+                    and updated_age is not None
+                    and updated_age >= SIMULATION_JOB_WAIT_STALE_SECONDS
+                ):
+                    message = (
+                        f"Simulation job {job_id} is stale: pid={pid} is not running "
+                        f"and updated_at is {_format_seconds(updated_age)} old."
+                    )
+                    JobStore.update(job_id, status="failed", error=message, progress_message=message)
+                    stale_job = _current_job()
+                    _emit(message)
+                    return stale_job
+
+            if time.monotonic() - wait_started_at >= SIMULATION_JOB_WAIT_TIMEOUT_SECONDS:
+                message = (
+                    f"Timed out waiting for simulation job {job_id} after "
+                    f"{_format_seconds(SIMULATION_JOB_WAIT_TIMEOUT_SECONDS)}."
+                )
+                _emit(message)
+                timeout_job = dict(job)
+                timeout_job["status"] = "wait_timeout"
+                timeout_job["message"] = message
+                return timeout_job
 
             message = job.get("progress_message") or f"Simulation job {job_id}: {status}"
             if message != last_message:
@@ -3213,7 +3342,12 @@ def evolution_auto_run(template: str, pools: Dict[str, List[str]],
                 round_params.append(strategy)
                 candidate_by_code[_normalize_code(item["code"])] = item["candidate"]
 
-            sim_job_id = simulate_enqueue(round_params, credentials_path=credentials_path)
+            sim_job_id = simulate_enqueue(
+                round_params,
+                credentials_path=credentials_path,
+                executor="parent",
+                owner_job_id=tracked_job_id,
+            )
             if progress_cb:
                 progress_cb(f"[auto-run] round {round_idx}: simulate job {sim_job_id}")
             _update_tracked_job(

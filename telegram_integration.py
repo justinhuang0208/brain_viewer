@@ -29,6 +29,12 @@ NOTIFICATION_STATE_FILE = os.path.join(STATE_DIR, "notification_state.json")
 DEFAULT_POLL_TIMEOUT = 60
 DEFAULT_NOTIFICATION_COOLDOWN = 600
 PERSONA_CALLBACK_DATA = "persona_complete"
+TELEGRAM_COMMANDS = (
+    {"command": "refresh", "description": "重新整理 WQ session"},
+    {"command": "status", "description": "查詢 session 與 job 狀態"},
+    {"command": "progress", "description": "查詢 simulation job 進度"},
+    {"command": "help", "description": "顯示指令說明"},
+)
 
 
 class TelegramConfigError(RuntimeError):
@@ -119,6 +125,12 @@ def send_telegram_message(text: str,
     if reply_markup is not None:
         payload["reply_markup"] = reply_markup
     return _api_request("sendMessage", http_method="POST", payload=payload)
+
+
+def set_telegram_commands() -> dict:
+    commands = [dict(command) for command in TELEGRAM_COMMANDS]
+    _api_request("setMyCommands", http_method="POST", payload={"commands": commands})
+    return {"status": "updated", "commands": commands}
 
 
 def _persona_complete_markup() -> dict:
@@ -672,6 +684,15 @@ class TelegramBotRunner:
             _mask_chat_id(self.authorized_chat_id),
             self.credentials_path,
         )
+        self._register_command_menu()
+
+    def _register_command_menu(self):
+        try:
+            result = set_telegram_commands()
+            commands = ", ".join(f"/{item['command']}" for item in result["commands"])
+            logging.info("Telegram command menu registered: %s", commands)
+        except Exception as exc:
+            logging.warning("Unable to register Telegram command menu: %s", exc)
 
     def _load_offset(self) -> Optional[int]:
         if not os.path.exists(OFFSET_FILE):
