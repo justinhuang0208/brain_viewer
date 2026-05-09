@@ -269,6 +269,11 @@ python brain_cli.py simulate run --job-id <job_id>
 python brain_cli.py simulate status <job_id>
 python brain_cli.py simulate results <job_id> --json
 
+# Fetch official WQ Brain simulation parameter options
+python brain_cli.py simulate options
+python brain_cli.py simulate options --region USA
+python brain_cli.py simulate options --raw --json
+
 # Reconcile failed items whose WQ simulation URL later completed
 python brain_cli.py simulate reconcile <job_id> --json
 
@@ -338,6 +343,8 @@ When alpha detail fetch succeeds, the raw `/alphas/<alpha_id>` JSON payload is s
 Use `alpha pnl <alpha_hash_or_alpha_id>` to fetch the official daily PnL recordset for one completed alpha from `/alphas/<alpha_id>/recordsets/pnl`. The command saves the full payload under `data/alpha_pnl/<alpha_id>.json` by default, or `data/alpha_pnl/<alpha_id>.csv` with `--format csv`; CLI output returns a summary unless `--include-records` is used.
 
 When using `simulate enqueue` or `simulate run` with `--params-file` / `--params-json`, command-level simulation settings such as `--decay`, `--delay`, `--neutralization`, `--region`, `--truncation`, and `--universe` are written into each queued params item. This keeps job JSON aligned with the settings that will actually be submitted.
+
+Use `simulate options` to fetch the official `OPTIONS /simulations` schema from WQ Brain using the saved session. The command summarizes allowed settings such as `region`, `universe`, `delay`, `decay`, `neutralization`, `truncation`, `pasteurization`, `nanHandling`, `lookback`, and `testPeriod`; add `--region <REGION>` to show dependent choices for one region, or `--raw --json` for the unmodified API schema.
 
 Use `--notify-job-complete` on `simulate enqueue` or `simulate run` to send one Telegram message after the simulation job finishes, regardless of how many simulation items it contains. The option is off by default; for an existing pending job, `simulate run --job-id <job_id> --notify-job-complete` enables it and `--no-notify-job-complete` disables it before the run starts.
 

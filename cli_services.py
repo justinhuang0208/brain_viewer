@@ -2467,6 +2467,154 @@ def simulate_enqueue(
     return job_id
 
 
+def _choice_values(choices) -> List[Any]:
+    if not isinstance(choices, list):
+        return []
+    return [item.get("value") for item in choices if isinstance(item, dict) and "value" in item]
+
+
+def _choice_map_by_region(setting_schema: dict) -> Dict[str, List[Any]]:
+    choices = setting_schema.get("choices")
+    try:
+        region_map = choices["instrumentType"]["EQUITY"]["region"]
+    except (TypeError, KeyError):
+        return {}
+    if not isinstance(region_map, dict):
+        return {}
+    return {
+        str(region): _choice_values(values)
+        for region, values in region_map.items()
+    }
+
+
+def _setting_summary(setting_schema: dict) -> dict:
+    summary = {
+        "type": setting_schema.get("type"),
+        "required": bool(setting_schema.get("required")),
+    }
+    if "minValue" in setting_schema:
+        summary["min"] = setting_schema.get("minValue")
+    if "maxValue" in setting_schema:
+        summary["max"] = setting_schema.get("maxValue")
+    choices = setting_schema.get("choices")
+    if isinstance(choices, list):
+        summary["choices"] = _choice_values(choices)
+    return summary
+
+
+def _parse_simulation_options_schema(schema: dict, region: Optional[str] = None) -> dict:
+    try:
+        post_schema = schema["actions"]["POST"]
+        settings = post_schema["settings"]["children"]
+    except (TypeError, KeyError):
+        return {
+            "status": "error",
+            "message": "Unexpected /simulations OPTIONS schema format.",
+        }
+
+    region_choices = []
+    try:
+        region_choices = _choice_values(settings["region"]["choices"]["instrumentType"]["EQUITY"])
+    except (TypeError, KeyError):
+        pass
+
+    selected_region = region.upper() if region else None
+    if selected_region and selected_region not in region_choices:
+        return {
+            "status": "error",
+            "message": (
+                f"Unknown region '{region}'. Available regions: "
+                + ", ".join(str(item) for item in region_choices)
+            ),
+            "regions": region_choices,
+        }
+
+    result = {
+        "status": "ok",
+        "source": f"OPTIONS {BRAIN_API_BASE}/simulations",
+        "type_choices": _choice_values(post_schema.get("type", {}).get("choices")),
+        "regions": region_choices,
+        "selected_region": selected_region,
+        "settings": {},
+    }
+
+    for name, setting_schema in settings.items():
+        if name in {"region", "universe", "delay", "neutralization"}:
+            continue
+        result["settings"][name] = _setting_summary(setting_schema)
+
+    universe_by_region = _choice_map_by_region(settings.get("universe", {}))
+    delay_by_region = _choice_map_by_region(settings.get("delay", {}))
+    neutralization_by_region = _choice_map_by_region(settings.get("neutralization", {}))
+
+    result["settings"]["region"] = _setting_summary(settings.get("region", {}))
+    result["settings"]["region"]["choices"] = region_choices
+    result["universe_by_region"] = universe_by_region
+    result["delay_by_region"] = delay_by_region
+    result["neutralization_by_region"] = neutralization_by_region
+
+    if selected_region:
+        result["region_options"] = {
+            "region": selected_region,
+            "universe": universe_by_region.get(selected_region, []),
+            "delay": delay_by_region.get(selected_region, []),
+            "neutralization": neutralization_by_region.get(selected_region, []),
+        }
+
+    return result
+
+
+def simulation_options(
+    credentials_path: str = CREDS_PATH,
+    region: Optional[str] = None,
+    raw: bool = False,
+) -> dict:
+    """Fetch official WQ Brain simulation OPTIONS schema and summarize it."""
+    session = load_persisted_session(credentials_path)
+    if session is None:
+        return {
+            "status": "error",
+            "message": "No saved WQ session. Run auth login to start a Persona flow.",
+        }
+
+    try:
+        response = session.options(f"{BRAIN_API_BASE}/simulations", timeout=20)
+    except requests.exceptions.Timeout:
+        return {"status": "error", "message": "Connection timed out."}
+    except requests.exceptions.RequestException as exc:
+        return {"status": "error", "message": f"Network error: {exc}"}
+
+    if response.status_code == 401:
+        return {
+            "status": "error",
+            "message": "Saved session is expired. Run auth login to start a Persona flow.",
+        }
+    if response.status_code != 200:
+        return {
+            "status": "error",
+            "message": f"OPTIONS /simulations returned HTTP {response.status_code}.",
+            "body": response.text[:1000],
+        }
+
+    try:
+        schema = response.json()
+    except ValueError:
+        return {
+            "status": "error",
+            "message": "OPTIONS /simulations did not return JSON.",
+            "body": response.text[:1000],
+        }
+
+    if raw:
+        return {
+            "status": "ok",
+            "source": f"OPTIONS {BRAIN_API_BASE}/simulations",
+            "schema": schema,
+        }
+
+    return _parse_simulation_options_schema(schema, region=region)
+
+
 def simulate_set_notify_job_complete(job_id: str, enabled: bool) -> dict:
     """Update job-completion Telegram notification setting for a queued job."""
     job = JobStore.get(job_id)

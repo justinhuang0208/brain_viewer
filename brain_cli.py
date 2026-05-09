@@ -518,6 +518,53 @@ def _load_params_from_arg(args) -> list:
     _err("Provide --params-file, --params-json, or --code.")
 
 
+def _join_values(values) -> str:
+    if not values:
+        return "-"
+    return ", ".join(str(item) for item in values)
+
+
+def _print_setting_summary(name: str, setting: dict):
+    parts = [str(setting.get("type", "-"))]
+    if setting.get("required"):
+        parts.append("required")
+    if "min" in setting or "max" in setting:
+        parts.append(f"range={setting.get('min')}..{setting.get('max')}")
+    if setting.get("choices"):
+        parts.append(f"choices={_join_values(setting.get('choices'))}")
+    print(f"{name}: " + "  ".join(parts))
+
+
+def _print_simulation_options(data: dict):
+    print(data.get("source", "OPTIONS /simulations"))
+    if data.get("type_choices"):
+        print(f"type: {_join_values(data.get('type_choices'))}")
+    print(f"regions: {_join_values(data.get('regions'))}")
+
+    selected = data.get("region_options")
+    if selected:
+        print(f"\n{selected.get('region')}:")
+        print(f"  universe: {_join_values(selected.get('universe'))}")
+        print(f"  delay: {_join_values(selected.get('delay'))}")
+        print(f"  neutralization: {_join_values(selected.get('neutralization'))}")
+    else:
+        print("\nregion choices:")
+        universe_by_region = data.get("universe_by_region", {})
+        delay_by_region = data.get("delay_by_region", {})
+        neutralization_by_region = data.get("neutralization_by_region", {})
+        for region in data.get("regions", []):
+            print(f"  {region}:")
+            print(f"    universe: {_join_values(universe_by_region.get(region))}")
+            print(f"    delay: {_join_values(delay_by_region.get(region))}")
+            print(f"    neutralization: {_join_values(neutralization_by_region.get(region))}")
+
+    print("\nsettings:")
+    for name, setting in data.get("settings", {}).items():
+        if name == "region":
+            continue
+        _print_setting_summary(name, setting)
+
+
 def cmd_simulate(args):
     sub = args.simulate_cmd
 
@@ -586,6 +633,22 @@ def cmd_simulate(args):
             print(f"\n{len(rows)} rows (of {data.get('total', '?')} total):")
             if rows:
                 _table(rows[:25], ["passed", "sharpe", "fitness", "turnover", "universe", "code"])
+
+    elif sub == "options":
+        if args.raw and not args.json:
+            _err("Use --json with --raw to print the official OPTIONS schema.")
+        result = svc.simulation_options(
+            credentials_path=args.credentials,
+            region=getattr(args, "region", None),
+            raw=bool(getattr(args, "raw", False)),
+        )
+        if args.json:
+            _out(result, True)
+        else:
+            service_error = _service_error(result)
+            if service_error:
+                _err(service_error)
+            _print_simulation_options(result)
 
     elif sub == "reconcile":
         result = svc.simulate_reconcile(
@@ -1132,6 +1195,14 @@ def build_parser() -> argparse.ArgumentParser:
     p_res = sim_sub.add_parser("results", help="Show simulation results.")
     p_res.add_argument("job_id")
     p_res.add_argument("--limit", type=int, default=100)
+
+    p_opts = sim_sub.add_parser(
+        "options",
+        help="Fetch official WQ Brain simulation parameter options.")
+    p_opts.add_argument("--region", default=None,
+                        help="Show dependent universe/delay/neutralization choices for one region.")
+    p_opts.add_argument("--raw", action="store_true",
+                        help="Return the raw OPTIONS /simulations schema; use with --json.")
 
     p_reconcile = sim_sub.add_parser(
         "reconcile",
