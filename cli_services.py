@@ -3015,7 +3015,11 @@ def alpha_pnl(identifier: str, *, output_path: Optional[str] = None,
     alpha_id = None
     alpha_hash = None
     if alpha:
-        alpha_id = alpha.get("alpha_id")
+        alpha_id = (
+            alpha.get("resolved_alpha_id")
+            or alpha.get("canonical_alpha_id")
+            or alpha.get("alpha_id")
+        )
         alpha_hash = alpha.get("alpha_hash")
     if not alpha_id:
         alpha_id = str(identifier or "").strip()

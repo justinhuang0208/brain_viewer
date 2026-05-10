@@ -279,11 +279,11 @@ python brain_cli.py simulate reconcile <job_id> --json
 
 # Inspect the local alpha registry
 python brain_cli.py alpha list --json
-python brain_cli.py alpha show <alpha_hash_or_alpha_id> --json
-python brain_cli.py alpha history <alpha_hash_or_alpha_id> --json
-python brain_cli.py alpha pnl <alpha_hash_or_alpha_id> --format csv --json
-python brain_cli.py alpha promote <alpha_hash_or_alpha_id> --reason "good simulation metrics" --json
-python brain_cli.py alpha reject <alpha_hash_or_alpha_id> --reason "turnover too high" --json
+python brain_cli.py alpha show <alpha_hash_or_platform_alpha_id> --json
+python brain_cli.py alpha history <alpha_hash_or_platform_alpha_id> --json
+python brain_cli.py alpha pnl <alpha_hash_or_platform_alpha_id> --format csv --json
+python brain_cli.py alpha promote <alpha_hash_or_platform_alpha_id> --reason "good simulation metrics" --json
+python brain_cli.py alpha reject <alpha_hash_or_platform_alpha_id> --reason "turnover too high" --json
 
 # Run evolution to generate diverse candidates
 python brain_cli.py evolution run \
@@ -340,7 +340,7 @@ Simulation jobs keep `completed_count`, `failed_count`, and `recovered_count` in
 
 When alpha detail fetch succeeds, the raw `/alphas/<alpha_id>` JSON payload is saved under `data/alpha_details/<alpha_id>.json`; completed job items include `alpha_details_file` when available.
 
-Use `alpha pnl <alpha_hash_or_alpha_id>` to fetch the official daily PnL recordset for one completed alpha from `/alphas/<alpha_id>/recordsets/pnl`. The command saves the full payload under `data/alpha_pnl/<alpha_id>.json` by default, or `data/alpha_pnl/<alpha_id>.csv` with `--format csv`; CLI output returns a summary unless `--include-records` is used.
+Use `alpha pnl <alpha_hash_or_platform_alpha_id>` to fetch the official daily PnL recordset for one completed alpha from `/alphas/<alpha_id>/recordsets/pnl`. If the identifier is a platform alpha ID, that exact ID is used; if the identifier is a formula hash, the registry uses the formula's `canonical_alpha_id`. The command saves the full payload under `data/alpha_pnl/<alpha_id>.json` by default, or `data/alpha_pnl/<alpha_id>.csv` with `--format csv`; CLI output returns a summary unless `--include-records` is used.
 
 When using `simulate enqueue` or `simulate run` with `--params-file` / `--params-json`, command-level simulation settings such as `--decay`, `--delay`, `--neutralization`, `--region`, `--truncation`, and `--universe` are written into each queued params item. This keeps job JSON aligned with the settings that will actually be submitted.
 
@@ -350,7 +350,9 @@ Use `--notify-job-complete` on `simulate enqueue` or `simulate run` to send one 
 
 If a previous item failed after WQ accepted the simulation, run `simulate reconcile <job_id> --json`. Reconcile checks failed items with `simulation_url`; when WQ now returns `COMPLETE` or `WARNING` with an alpha ID, it fetches `/alphas/<alpha_id>`, appends the result CSV row if missing, updates the alpha registry, moves the item to completed, and increments `recovered_count`.
 
-Alpha registry state is stored in `.brain_cli/alphas.sqlite`. This registry is an index over alpha code, WQ alpha IDs, simulation attempts, and lifecycle events; it does not replace job JSON or result CSV files. `simulate enqueue` records candidate alphas, and completed/failed simulations update the registry with metrics, links, errors, and history events.
+Alpha registry state is stored in `.brain_cli/alphas.sqlite`. This registry is an index over alpha code, WQ platform alpha IDs, simulation attempts, and lifecycle events; it does not replace job JSON or result CSV files. `simulate enqueue` records candidate alphas, and completed/failed simulations update the registry with metrics, links, errors, and history events.
+
+The registry is formula-family oriented: `alphas.alpha_hash` identifies normalized formula code, while `alpha_platform_ids.alpha_id` tracks every WQ platform alpha generated for that formula. A formula may have many platform alpha IDs because reruns and settings sweeps can create duplicate IDs. `canonical_alpha_id` is the stable representative used for formula-hash operations such as `alpha pnl <alpha_hash>`; `latest_alpha_id` and `latest_result_link` point to the newest observed platform result. `alpha show/history/promote/reject/pnl` accept either a formula hash or any known platform alpha ID.
 
 CLI authentication reuses the same persisted WQ cookie files as the GUI (`session.pkl` / `login_time.pkl`), matching the open_machine-style login flow.
 

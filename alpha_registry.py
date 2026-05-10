@@ -97,6 +97,8 @@ class AlphaRegistry:
                 CREATE TABLE IF NOT EXISTS alphas (
                     alpha_hash TEXT PRIMARY KEY,
                     alpha_id TEXT UNIQUE,
+                    canonical_alpha_id TEXT,
+                    latest_alpha_id TEXT,
                     code TEXT NOT NULL,
                     normalized_code TEXT NOT NULL,
                     source TEXT NOT NULL DEFAULT 'unknown',
@@ -118,6 +120,27 @@ class AlphaRegistry:
                     ON alphas(status);
                 CREATE INDEX IF NOT EXISTS idx_alphas_source
                     ON alphas(source);
+
+                CREATE TABLE IF NOT EXISTS alpha_platform_ids (
+                    alpha_id TEXT PRIMARY KEY,
+                    alpha_hash TEXT NOT NULL,
+                    simulation_id TEXT,
+                    job_id TEXT,
+                    result_link TEXT,
+                    settings_json TEXT,
+                    metrics_json TEXT,
+                    role TEXT NOT NULL DEFAULT 'observed',
+                    source TEXT,
+                    created_at TEXT NOT NULL,
+                    completed_at TEXT,
+                    last_seen_at TEXT NOT NULL,
+                    FOREIGN KEY(alpha_hash) REFERENCES alphas(alpha_hash)
+                );
+
+                CREATE INDEX IF NOT EXISTS idx_alpha_platform_ids_alpha_hash
+                    ON alpha_platform_ids(alpha_hash);
+                CREATE INDEX IF NOT EXISTS idx_alpha_platform_ids_role
+                    ON alpha_platform_ids(role);
 
                 CREATE TABLE IF NOT EXISTS simulations (
                     simulation_id TEXT PRIMARY KEY,
@@ -141,6 +164,8 @@ class AlphaRegistry:
                     ON simulations(job_id);
                 CREATE INDEX IF NOT EXISTS idx_simulations_status
                     ON simulations(status);
+                CREATE INDEX IF NOT EXISTS idx_simulations_alpha_id
+                    ON simulations(alpha_id);
 
                 CREATE TABLE IF NOT EXISTS alpha_events (
                     event_id TEXT PRIMARY KEY,
@@ -158,6 +183,195 @@ class AlphaRegistry:
                     ON alpha_events(event_type);
                 """
             )
+            self._migrate_schema(conn)
+
+    @staticmethod
+    def _column_exists(conn: sqlite3.Connection, table: str, column: str) -> bool:
+        rows = conn.execute(f"PRAGMA table_info({table})").fetchall()
+        return any(row["name"] == column for row in rows)
+
+    def _migrate_schema(self, conn: sqlite3.Connection) -> None:
+        if not self._column_exists(conn, "alphas", "canonical_alpha_id"):
+            conn.execute("ALTER TABLE alphas ADD COLUMN canonical_alpha_id TEXT")
+        if not self._column_exists(conn, "alphas", "latest_alpha_id"):
+            conn.execute("ALTER TABLE alphas ADD COLUMN latest_alpha_id TEXT")
+
+        conn.execute(
+            """
+            UPDATE alphas
+            SET latest_alpha_id = COALESCE(latest_alpha_id, alpha_id)
+            WHERE alpha_id IS NOT NULL
+            """
+        )
+
+        rows = conn.execute(
+            """
+            SELECT
+                simulation_id, alpha_hash, alpha_id, job_id, result_link,
+                params_json, metrics_json, source, created_at, completed_at
+            FROM simulations
+            WHERE alpha_id IS NOT NULL AND alpha_id != ''
+            ORDER BY COALESCE(completed_at, created_at), created_at
+            """
+        ).fetchall()
+        for row in rows:
+            self._upsert_platform_alpha_conn(
+                conn,
+                alpha_id=row["alpha_id"],
+                alpha_hash=row["alpha_hash"],
+                simulation_id=row["simulation_id"],
+                job_id=row["job_id"],
+                result_link=row["result_link"],
+                settings_json=row["params_json"],
+                metrics_json=row["metrics_json"],
+                role="observed",
+                source=row["source"],
+                created_at=row["created_at"],
+                completed_at=row["completed_at"],
+            )
+
+        alpha_hashes = [
+            row["alpha_hash"]
+            for row in conn.execute("SELECT DISTINCT alpha_hash FROM alpha_platform_ids").fetchall()
+        ]
+        for alpha_hash in alpha_hashes:
+            explicit = conn.execute(
+                """
+                SELECT p.alpha_id
+                FROM alpha_platform_ids p
+                WHERE p.alpha_hash = ?
+                  AND p.role IN ('submitted', 'canonical')
+                  AND EXISTS (
+                      SELECT 1
+                      FROM alpha_events e
+                      WHERE e.alpha_hash = p.alpha_hash
+                        AND e.event_type = 'promoted'
+                        AND json_extract(e.payload_json, '$.alpha_id') = p.alpha_id
+                  )
+                ORDER BY p.last_seen_at DESC
+                LIMIT 1
+                """,
+                (alpha_hash,),
+            ).fetchone()
+            first = conn.execute(
+                """
+                SELECT alpha_id
+                FROM alpha_platform_ids
+                WHERE alpha_hash = ?
+                ORDER BY created_at, COALESCE(completed_at, created_at)
+                LIMIT 1
+                """,
+                (alpha_hash,),
+            ).fetchone()
+            latest = conn.execute(
+                """
+                SELECT alpha_id
+                FROM alpha_platform_ids
+                WHERE alpha_hash = ?
+                ORDER BY COALESCE(completed_at, created_at) DESC, created_at DESC
+                LIMIT 1
+                """,
+                (alpha_hash,),
+            ).fetchone()
+            canonical_alpha_id = (
+                explicit["alpha_id"] if explicit else
+                first["alpha_id"] if first else
+                None
+            )
+            conn.execute(
+                """
+                UPDATE alphas
+                SET canonical_alpha_id = COALESCE(?, ?),
+                    latest_alpha_id = COALESCE(?, latest_alpha_id, alpha_id),
+                    alpha_id = COALESCE(?, alpha_id)
+                WHERE alpha_hash = ?
+                """,
+                (
+                    canonical_alpha_id,
+                    canonical_alpha_id,
+                    latest["alpha_id"] if latest else None,
+                    latest["alpha_id"] if latest else None,
+                    alpha_hash,
+                ),
+            )
+            if canonical_alpha_id:
+                conn.execute(
+                    """
+                    UPDATE alpha_platform_ids
+                    SET role = 'observed'
+                    WHERE alpha_hash = ?
+                      AND role = 'canonical'
+                      AND alpha_id != ?
+                    """,
+                    (alpha_hash, canonical_alpha_id),
+                )
+                conn.execute(
+                    """
+                    UPDATE alpha_platform_ids
+                    SET role = 'canonical'
+                    WHERE alpha_id = ?
+                    """,
+                    (canonical_alpha_id,),
+                )
+
+    def _upsert_platform_alpha_conn(
+        self,
+        conn: sqlite3.Connection,
+        *,
+        alpha_id: Optional[str],
+        alpha_hash: str,
+        simulation_id: Optional[str] = None,
+        job_id: Optional[str] = None,
+        result_link: Optional[str] = None,
+        settings_json: Optional[str] = None,
+        metrics_json: Optional[str] = None,
+        role: str = "observed",
+        source: Optional[str] = None,
+        created_at: Optional[str] = None,
+        completed_at: Optional[str] = None,
+    ) -> None:
+        if not alpha_id:
+            return
+        now = utc_now()
+        created_at = created_at or now
+        conn.execute(
+            """
+            INSERT INTO alpha_platform_ids (
+                alpha_id, alpha_hash, simulation_id, job_id, result_link,
+                settings_json, metrics_json, role, source, created_at,
+                completed_at, last_seen_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(alpha_id) DO UPDATE SET
+                alpha_hash = excluded.alpha_hash,
+                simulation_id = COALESCE(excluded.simulation_id, alpha_platform_ids.simulation_id),
+                job_id = COALESCE(excluded.job_id, alpha_platform_ids.job_id),
+                result_link = COALESCE(excluded.result_link, alpha_platform_ids.result_link),
+                settings_json = COALESCE(excluded.settings_json, alpha_platform_ids.settings_json),
+                metrics_json = COALESCE(excluded.metrics_json, alpha_platform_ids.metrics_json),
+                role = CASE
+                    WHEN alpha_platform_ids.role IN ('canonical', 'submitted', 'rejected_variant')
+                        THEN alpha_platform_ids.role
+                    ELSE COALESCE(excluded.role, alpha_platform_ids.role)
+                END,
+                source = COALESCE(excluded.source, alpha_platform_ids.source),
+                completed_at = COALESCE(excluded.completed_at, alpha_platform_ids.completed_at),
+                last_seen_at = excluded.last_seen_at
+            """,
+            (
+                alpha_id,
+                alpha_hash,
+                simulation_id,
+                job_id,
+                result_link,
+                settings_json,
+                metrics_json,
+                role or "observed",
+                source,
+                created_at,
+                completed_at,
+                now,
+            ),
+        )
 
     def register_alpha(
         self,
@@ -184,12 +398,15 @@ class AlphaRegistry:
                 conn.execute(
                     """
                     INSERT INTO alphas (
-                        alpha_hash, alpha_id, code, normalized_code, source,
-                        template_id, status, created_at, updated_at
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        alpha_hash, alpha_id, canonical_alpha_id, latest_alpha_id,
+                        code, normalized_code, source, template_id, status,
+                        created_at, updated_at
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     """,
                     (
                         alpha_hash,
+                        alpha_id,
+                        alpha_id,
                         alpha_id,
                         code,
                         normalized,
@@ -216,6 +433,12 @@ class AlphaRegistry:
                 if alpha_id and not existing["alpha_id"]:
                     updates.append("alpha_id = ?")
                     values.append(alpha_id)
+                if alpha_id and not existing["canonical_alpha_id"]:
+                    updates.append("canonical_alpha_id = ?")
+                    values.append(alpha_id)
+                if alpha_id:
+                    updates.append("latest_alpha_id = ?")
+                    values.append(alpha_id)
                 if template_id and not existing["template_id"]:
                     updates.append("template_id = ?")
                     values.append(template_id)
@@ -226,6 +449,15 @@ class AlphaRegistry:
                 conn.execute(
                     f"UPDATE alphas SET {', '.join(updates)} WHERE alpha_hash = ?",
                     values,
+                )
+            if alpha_id:
+                self._upsert_platform_alpha_conn(
+                    conn,
+                    alpha_id=alpha_id,
+                    alpha_hash=alpha_hash,
+                    role="observed",
+                    source=source,
+                    created_at=now,
                 )
             return self.get_alpha(alpha_hash, conn=conn) or {}
 
@@ -299,6 +531,8 @@ class AlphaRegistry:
                 """
                 UPDATE alphas
                 SET alpha_id = COALESCE(?, alpha_id),
+                    canonical_alpha_id = COALESCE(canonical_alpha_id, ?),
+                    latest_alpha_id = COALESCE(?, latest_alpha_id),
                     status = CASE
                         WHEN status IN ('promoted', 'rejected') THEN status
                         ELSE ?
@@ -311,6 +545,8 @@ class AlphaRegistry:
                 """,
                 (
                     alpha_id,
+                    alpha_id,
+                    alpha_id,
                     alpha_status,
                     simulation_id,
                     _json_dumps(metrics or {}),
@@ -318,6 +554,20 @@ class AlphaRegistry:
                     now,
                     alpha["alpha_hash"],
                 ),
+            )
+            self._upsert_platform_alpha_conn(
+                conn,
+                alpha_id=alpha_id,
+                alpha_hash=alpha["alpha_hash"],
+                simulation_id=simulation_id,
+                job_id=job_id,
+                result_link=result_link,
+                settings_json=_json_dumps(params or {}),
+                metrics_json=_json_dumps(metrics or {}),
+                role="observed",
+                source=source,
+                created_at=now,
+                completed_at=now,
             )
             self._add_event_conn(
                 conn,
@@ -328,6 +578,7 @@ class AlphaRegistry:
                     "simulation_id": simulation_id,
                     "job_id": job_id,
                     "status": status,
+                    "alpha_id": alpha_id,
                     "metrics": metrics or {},
                     "result_link": result_link,
                 },
@@ -369,21 +620,44 @@ class AlphaRegistry:
         alpha = self.get_alpha(identifier)
         if alpha is None:
             return None
+        matched_alpha_id = alpha.get("resolved_alpha_id")
         now = utc_now()
         with self._connect() as conn:
             if status == "promoted":
+                if matched_alpha_id:
+                    conn.execute(
+                        """
+                        UPDATE alpha_platform_ids
+                        SET role = 'observed'
+                        WHERE alpha_hash = ?
+                          AND role = 'canonical'
+                          AND alpha_id != ?
+                        """,
+                        (alpha["alpha_hash"], matched_alpha_id),
+                    )
                 conn.execute(
                     """
                     UPDATE alphas
                     SET status = ?,
+                        canonical_alpha_id = COALESCE(?, canonical_alpha_id),
                         promoted_at = ?,
                         rejected_at = NULL,
                         reject_reason = NULL,
                         updated_at = ?
                     WHERE alpha_hash = ?
                     """,
-                    (status, now, now, alpha["alpha_hash"]),
+                    (status, matched_alpha_id, now, now, alpha["alpha_hash"]),
                 )
+                if matched_alpha_id:
+                    conn.execute(
+                        """
+                        UPDATE alpha_platform_ids
+                        SET role = 'canonical',
+                            last_seen_at = ?
+                        WHERE alpha_id = ?
+                        """,
+                        (now, matched_alpha_id),
+                    )
             else:
                 conn.execute(
                     """
@@ -397,12 +671,22 @@ class AlphaRegistry:
                     """,
                     (status, now, reason, now, alpha["alpha_hash"]),
                 )
+                if matched_alpha_id:
+                    conn.execute(
+                        """
+                        UPDATE alpha_platform_ids
+                        SET role = 'rejected_variant',
+                            last_seen_at = ?
+                        WHERE alpha_id = ?
+                        """,
+                        (now, matched_alpha_id),
+                    )
             self._add_event_conn(
                 conn,
                 alpha["alpha_hash"],
                 event_type,
                 reason=reason,
-                payload={"status": status},
+                payload={"status": status, "alpha_id": matched_alpha_id},
             )
         return self.get_alpha(alpha["alpha_hash"])
 
@@ -430,7 +714,10 @@ class AlphaRegistry:
         sql += " ORDER BY updated_at DESC"
 
         with self._connect() as conn:
-            rows = [self._alpha_row_to_dict(row) for row in conn.execute(sql, values).fetchall()]
+            rows = [
+                self._alpha_row_to_dict(row, conn=conn, include_alpha_ids=False)
+                for row in conn.execute(sql, values).fetchall()
+            ]
 
         def passes_metric(alpha: Dict[str, Any]) -> bool:
             metrics = alpha.get("latest_metrics") or {}
@@ -457,11 +744,50 @@ class AlphaRegistry:
             row = conn.execute(
                 """
                 SELECT * FROM alphas
-                WHERE alpha_hash = ? OR alpha_id = ?
+                WHERE alpha_hash = ?
                 """,
-                (identifier, identifier),
+                (identifier,),
             ).fetchone()
-            return self._alpha_row_to_dict(row) if row else None
+            if row:
+                data = self._alpha_row_to_dict(row, conn=conn)
+                data["resolved_by"] = "alpha_hash"
+                return data
+
+            platform = conn.execute(
+                """
+                SELECT * FROM alpha_platform_ids
+                WHERE alpha_id = ?
+                """,
+                (identifier,),
+            ).fetchone()
+            if platform:
+                row = conn.execute(
+                    """
+                    SELECT * FROM alphas
+                    WHERE alpha_hash = ?
+                    """,
+                    (platform["alpha_hash"],),
+                ).fetchone()
+                if row:
+                    data = self._alpha_row_to_dict(row, conn=conn)
+                    data["resolved_by"] = "platform_alpha_id"
+                    data["resolved_alpha_id"] = platform["alpha_id"]
+                    data["matched_platform_alpha"] = self._platform_alpha_row_to_dict(platform)
+                    return data
+
+            row = conn.execute(
+                """
+                SELECT * FROM alphas
+                WHERE alpha_id = ? OR canonical_alpha_id = ? OR latest_alpha_id = ?
+                """,
+                (identifier, identifier, identifier),
+            ).fetchone()
+            if row:
+                data = self._alpha_row_to_dict(row, conn=conn)
+                data["resolved_by"] = "alpha_legacy_id"
+                data["resolved_alpha_id"] = identifier
+                return data
+            return None
         finally:
             if owns_conn:
                 conn.close()
@@ -472,6 +798,7 @@ class AlphaRegistry:
             return None
         alpha_hash = alpha["alpha_hash"]
         with self._connect() as conn:
+            platform_alphas = self._platform_alpha_rows_for_hash(conn, alpha_hash)
             simulations = [
                 self._simulation_row_to_dict(row)
                 for row in conn.execute(
@@ -486,7 +813,13 @@ class AlphaRegistry:
                     (alpha_hash,),
                 ).fetchall()
             ]
-        return {"alpha": alpha, "simulations": simulations, "events": events}
+        return {
+            "alpha": alpha,
+            "platform_alphas": platform_alphas,
+            "matched_platform_alpha": alpha.get("matched_platform_alpha"),
+            "simulations": simulations,
+            "events": events,
+        }
 
     def _add_event_conn(
         self,
@@ -506,9 +839,51 @@ class AlphaRegistry:
             (uuid.uuid4().hex, alpha_hash, event_type, reason, _json_dumps(payload or {}), utc_now()),
         )
 
-    def _alpha_row_to_dict(self, row: sqlite3.Row) -> Dict[str, Any]:
+    def _platform_alpha_row_to_dict(self, row: sqlite3.Row) -> Dict[str, Any]:
+        data = dict(row)
+        data["settings"] = _json_loads(data.pop("settings_json", None), {})
+        data["metrics"] = _json_loads(data.pop("metrics_json", None), {})
+        return data
+
+    def _platform_alpha_rows_for_hash(
+        self,
+        conn: sqlite3.Connection,
+        alpha_hash: str,
+    ) -> List[Dict[str, Any]]:
+        rows = conn.execute(
+            """
+            SELECT *
+            FROM alpha_platform_ids
+            WHERE alpha_hash = ?
+            ORDER BY COALESCE(completed_at, created_at) DESC, created_at DESC
+            """,
+            (alpha_hash,),
+        ).fetchall()
+        return [self._platform_alpha_row_to_dict(row) for row in rows]
+
+    def _alpha_row_to_dict(
+        self,
+        row: sqlite3.Row,
+        *,
+        conn: Optional[sqlite3.Connection] = None,
+        include_alpha_ids: bool = True,
+        include_platforms: bool = False,
+    ) -> Dict[str, Any]:
         data = dict(row)
         data["latest_metrics"] = _json_loads(data.pop("latest_metrics_json", None), {})
+        if conn is not None:
+            platform_alphas = self._platform_alpha_rows_for_hash(conn, data["alpha_hash"])
+            data["platform_alpha_count"] = len(platform_alphas)
+            if include_alpha_ids:
+                data["alpha_ids"] = [row["alpha_id"] for row in platform_alphas]
+            if include_platforms:
+                data["platform_alphas"] = platform_alphas
+        else:
+            data["platform_alpha_count"] = 0
+            if include_alpha_ids:
+                data["alpha_ids"] = []
+            if include_platforms:
+                data["platform_alphas"] = []
         return data
 
     def _simulation_row_to_dict(self, row: sqlite3.Row) -> Dict[str, Any]:

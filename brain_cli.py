@@ -690,7 +690,10 @@ def cmd_alpha(args):
         if args.json:
             _out(items, True)
         else:
-            _table(items, ["alpha_hash", "alpha_id", "status", "source", "latest_result_link", "code"])
+            _table(items, [
+                "alpha_hash", "canonical_alpha_id", "latest_alpha_id",
+                "status", "source", "latest_result_link", "code"
+            ])
 
     elif sub == "show":
         alpha = svc.alpha_show(args.identifier)
