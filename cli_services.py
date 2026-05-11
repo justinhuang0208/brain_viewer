@@ -16,9 +16,11 @@ import json
 import logging
 import os
 import re
+import sqlite3
 import sys
 import time
 import uuid as _uuid_mod
+from contextlib import contextmanager
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock, RLock
@@ -59,6 +61,7 @@ JOBS_DIR        = os.path.join(CLI_STATE_DIR, "jobs")
 STOP_DIR        = os.path.join(CLI_STATE_DIR, "stop")
 DATASETS_API    = f"{BRAIN_API_BASE}/data-sets"
 DATAFIELDS_API  = f"{BRAIN_API_BASE}/data-fields"
+DATASETS_DB_NAME = "datasets.sqlite"
 OPERATORS_API   = f"{BRAIN_API_BASE}/operators"
 OPERATORS_FILE  = os.path.join(OPERATORS_DIR, "operators.json")
 OPERATOR_DOCS_DIR = os.path.join(OPERATORS_DIR, "docs")
@@ -68,6 +71,17 @@ DEFAULT_DATA_FIELD_OPTION = {
     "universe": "TOP3000",
     "delay": 1,
 }
+DATASET_FIELD_COLUMNS = [
+    "Field",
+    "Description",
+    "Type",
+    "Region",
+    "Delay",
+    "Universe",
+    "Coverage",
+    "Users",
+    "Alphas",
+]
 
 # Simulation CSV header (matches WQSession output in simulation.py)
 SIM_CSV_HEADER = [
@@ -297,20 +311,13 @@ def _request_with_rate_limit_retry(session: requests.Session, method: str, url: 
     return response
 
 
-def _data_field_row(field: dict) -> dict:
-    cov_raw = field.get("coverage", 0)
+def _format_coverage(coverage_raw: Any) -> str:
+    if coverage_raw is None:
+        return ""
     try:
-        cov = f"{int(round(float(cov_raw) * 100))}%"
+        return f"{int(round(float(coverage_raw) * 100))}%"
     except Exception:
-        cov = str(cov_raw)
-    return {
-        "Field":       field.get("id", ""),
-        "Description": field.get("description", ""),
-        "Type":        field.get("type", ""),
-        "Coverage":    cov,
-        "Users":       field.get("userCount", 0),
-        "Alphas":      field.get("alphaCount", 0),
-    }
+        return str(coverage_raw)
 
 
 def _operator_metadata_row(operator: dict) -> dict:
@@ -674,8 +681,128 @@ def auth_complete_from_credentials(credentials_path: str = CREDS_PATH,
 # Dataset service
 # ---------------------------------------------------------------------------
 
-def datasets_list(datasets_dir: str = DATASETS_DIR) -> List[dict]:
-    """List available local dataset CSVs."""
+def _datasets_db_path(datasets_dir: str = DATASETS_DIR) -> str:
+    return os.path.join(datasets_dir, DATASETS_DB_NAME)
+
+
+def _connect_datasets_db(datasets_dir: str = DATASETS_DIR) -> sqlite3.Connection:
+    os.makedirs(datasets_dir, exist_ok=True)
+    conn = sqlite3.connect(_datasets_db_path(datasets_dir))
+    conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA journal_mode=WAL")
+    conn.execute("PRAGMA foreign_keys=ON")
+    _init_datasets_db(conn)
+    return conn
+
+
+@contextmanager
+def _datasets_db(datasets_dir: str = DATASETS_DIR):
+    conn = _connect_datasets_db(datasets_dir)
+    try:
+        yield conn
+    finally:
+        conn.close()
+
+
+def _init_datasets_db(conn: sqlite3.Connection) -> None:
+    conn.execute(
+        """
+        CREATE TABLE IF NOT EXISTS dataset_fields (
+            dataset_id TEXT NOT NULL,
+            field_id TEXT NOT NULL,
+            description TEXT NOT NULL DEFAULT '',
+            type TEXT NOT NULL DEFAULT '',
+            region TEXT NOT NULL,
+            delay INTEGER NOT NULL,
+            universe TEXT NOT NULL,
+            coverage REAL,
+            user_count INTEGER NOT NULL DEFAULT 0,
+            alpha_count INTEGER NOT NULL DEFAULT 0,
+            updated_at TEXT NOT NULL,
+            PRIMARY KEY (dataset_id, field_id, region, delay, universe)
+        )
+        """
+    )
+    conn.execute(
+        """
+        CREATE TABLE IF NOT EXISTS refresh_runs (
+            id TEXT PRIMARY KEY,
+            instrument_type TEXT NOT NULL,
+            region TEXT NOT NULL,
+            delay INTEGER NOT NULL,
+            universes_json TEXT NOT NULL,
+            started_at TEXT NOT NULL,
+            finished_at TEXT,
+            status TEXT NOT NULL,
+            error TEXT
+        )
+        """
+    )
+    conn.execute(
+        """
+        CREATE INDEX IF NOT EXISTS idx_dataset_fields_scope_dataset
+        ON dataset_fields(region, delay, universe, dataset_id)
+        """
+    )
+    conn.execute(
+        """
+        CREATE INDEX IF NOT EXISTS idx_dataset_fields_search
+        ON dataset_fields(field_id, description)
+        """
+    )
+    conn.commit()
+
+
+def _normal_dataset_scope(region: Optional[str], delay: Optional[int]) -> Tuple[str, int]:
+    opt = dict(DEFAULT_DATA_FIELD_OPTION)
+    return (region or str(opt["region"])).upper(), int(delay if delay is not None else opt["delay"])
+
+
+def _dataset_scope_where(
+    region: Optional[str],
+    delay: Optional[int],
+    universe: Optional[str] = None,
+) -> Tuple[str, List[Any]]:
+    region_value, delay_value = _normal_dataset_scope(region, delay)
+    clauses = ["region = ?", "delay = ?"]
+    params: List[Any] = [region_value, delay_value]
+    if universe:
+        clauses.append("universe = ?")
+        params.append(universe)
+    return " AND ".join(clauses), params
+
+
+def _field_to_db_row(dataset_id: str, field: dict, updated_at: str) -> Tuple[Any, ...]:
+    return (
+        dataset_id,
+        field.get("id", ""),
+        field.get("description", ""),
+        field.get("type", ""),
+        field.get("region", ""),
+        int(field.get("delay", 0)),
+        field.get("universe", ""),
+        field.get("coverage"),
+        int(field.get("userCount") or 0),
+        int(field.get("alphaCount") or 0),
+        updated_at,
+    )
+
+
+def _db_row_to_dataset_record(row: sqlite3.Row) -> dict:
+    return {
+        "Field": row["field_id"],
+        "Description": row["description"],
+        "Type": row["type"],
+        "Region": row["region"],
+        "Delay": row["delay"],
+        "Universe": row["universe"],
+        "Coverage": _format_coverage(row["coverage"]),
+        "Users": row["user_count"],
+        "Alphas": row["alpha_count"],
+    }
+
+
+def _legacy_datasets_list(datasets_dir: str = DATASETS_DIR) -> List[dict]:
     out = []
     if not os.path.isdir(datasets_dir):
         return out
@@ -693,8 +820,222 @@ def datasets_list(datasets_dir: str = DATASETS_DIR) -> List[dict]:
     return out
 
 
+def datasets_list(
+    datasets_dir: str = DATASETS_DIR,
+    region: Optional[str] = None,
+    delay: Optional[int] = None,
+    universe: Optional[str] = None,
+) -> List[dict]:
+    """List available local dataset metadata from the SQLite cache."""
+    db_path = _datasets_db_path(datasets_dir)
+    if not os.path.exists(db_path):
+        return _legacy_datasets_list(datasets_dir)
+
+    where, params = _dataset_scope_where(region, delay, universe)
+    with _datasets_db(datasets_dir) as conn:
+        rows = conn.execute(
+            f"""
+            SELECT
+                dataset_id,
+                COUNT(*) AS rows,
+                COUNT(DISTINCT field_id) AS fields,
+                GROUP_CONCAT(DISTINCT universe) AS universes,
+                MAX(updated_at) AS updated_at
+            FROM dataset_fields
+            WHERE {where}
+            GROUP BY dataset_id
+            ORDER BY dataset_id
+            """,
+            params,
+        ).fetchall()
+
+    size = os.path.getsize(db_path) if os.path.exists(db_path) else 0
+    return [
+        {
+            "dataset_id": row["dataset_id"],
+            "rows": row["rows"],
+            "fields": row["fields"],
+            "universes": row["universes"] or "",
+            "updated_at": row["updated_at"] or "",
+            "db": DATASETS_DB_NAME,
+            "size_bytes": size,
+        }
+        for row in rows
+    ]
+
+
+def datasets_scopes(datasets_dir: str = DATASETS_DIR) -> List[dict]:
+    """List region/delay scopes available in the SQLite dataset cache."""
+    db_path = _datasets_db_path(datasets_dir)
+    if not os.path.exists(db_path):
+        return []
+
+    with _datasets_db(datasets_dir) as conn:
+        rows = conn.execute(
+            """
+            SELECT
+                region,
+                delay,
+                GROUP_CONCAT(DISTINCT universe) AS universes,
+                COUNT(DISTINCT dataset_id) AS datasets,
+                COUNT(DISTINCT field_id) AS fields,
+                COUNT(*) AS rows,
+                MAX(updated_at) AS updated_at
+            FROM dataset_fields
+            GROUP BY region, delay
+            ORDER BY region, delay
+            """
+        ).fetchall()
+
+    return [
+        {
+            "region": row["region"],
+            "delay": row["delay"],
+            "universes": row["universes"] or "",
+            "datasets": row["datasets"],
+            "fields": row["fields"],
+            "rows": row["rows"],
+            "updated_at": row["updated_at"] or "",
+        }
+        for row in rows
+    ]
+
+
+def _ordered_unique(values: List[Any]) -> List[str]:
+    out: List[str] = []
+    seen = set()
+    for value in values:
+        if value is None:
+            continue
+        text = str(value).strip()
+        if not text or text in seen:
+            continue
+        seen.add(text)
+        out.append(text)
+    return out
+
+
+def _wait_for_dataset_session_refresh(
+    credentials_path: str,
+    reason: str,
+    *,
+    response: Optional[requests.Response] = None,
+    progress_cb=None,
+    cooldown_key: str = "datasets-auth-refresh",
+) -> requests.Session:
+    refresh_instruction = (
+        "請在 Telegram 使用 /refresh 或透過 GUI/CLI 重新建立 WQ session；"
+        "datasets refresh 會等待刷新完成後繼續。"
+    )
+    persona_url = extract_persona_url(response) if response is not None else None
+    _notify_login_issue(
+        reason,
+        detail=persona_url or refresh_instruction,
+        cooldown_key=cooldown_key,
+    )
+    if progress_cb:
+        progress_cb(f"{reason} Waiting for user-triggered WQ session refresh.")
+
+    last_status_message = None
+    while True:
+        status = auth_login_status(credentials_path)
+        if status.get("status") == "logged_in":
+            refreshed = load_persisted_session(credentials_path)
+            if refreshed is not None:
+                if progress_cb:
+                    progress_cb("WQ session refreshed; resuming datasets refresh.")
+                return refreshed
+
+        status_message = (
+            f"{reason} Waiting for user-triggered WQ session refresh. "
+            f"auth_status={status.get('status')} {status.get('message', '')}"
+        )
+        if status_message != last_status_message:
+            if progress_cb:
+                progress_cb(status_message)
+            last_status_message = status_message
+        time.sleep(SIMULATION_AUTH_REFRESH_POLL_SECONDS)
+
+
+def _dataset_api_request(
+    session: requests.Session,
+    credentials_path: str,
+    method: str,
+    url: str,
+    *,
+    retry_context: str,
+    progress_cb=None,
+    auth_reason: str,
+    cooldown_key: str,
+    **kwargs,
+) -> Tuple[requests.Session, requests.Response]:
+    while True:
+        response = _request_with_rate_limit_retry(
+            session,
+            method,
+            url,
+            progress_cb=progress_cb,
+            retry_context=retry_context,
+            **kwargs,
+        )
+        if response.status_code != 401:
+            return session, response
+        session = _wait_for_dataset_session_refresh(
+            credentials_path,
+            auth_reason,
+            response=response,
+            progress_cb=progress_cb,
+            cooldown_key=cooldown_key,
+        )
+
+
+def _discover_data_field_universes(
+    session: requests.Session,
+    credentials_path: str,
+    region: str,
+    default_universe: str,
+    progress_cb=None,
+) -> Tuple[List[str], requests.Session]:
+    session, response = _dataset_api_request(
+        session,
+        credentials_path,
+        "options",
+        f"{BRAIN_API_BASE}/simulations",
+        timeout=20,
+        retry_context="simulation options for dataset universes",
+        progress_cb=progress_cb,
+        auth_reason="Saved session expired while fetching simulation options for datasets refresh.",
+        cooldown_key="datasets-options-auth-refresh",
+    )
+    if response.status_code != 200:
+        raise RuntimeError(
+            f"OPTIONS /simulations returned HTTP {response.status_code}: "
+            f"{response.text[:300]}"
+        )
+    try:
+        schema = response.json()
+    except ValueError as exc:
+        raise RuntimeError("OPTIONS /simulations did not return JSON.") from exc
+
+    parsed = _parse_simulation_options_schema(schema, region=region)
+    if parsed.get("status") != "ok":
+        raise RuntimeError(str(parsed.get("message", "Unable to parse simulation options.")))
+
+    region_options = parsed.get("region_options") or {}
+    universe_choices = _ordered_unique(region_options.get("universe", []))
+    universes = universe_choices or _ordered_unique([default_universe])
+    if not universes:
+        raise RuntimeError(f"No universe choices found for region {region}.")
+    return universes, session
+
+
 def datasets_refresh(datasets_dir: str = DATASETS_DIR,
                      credentials_path: str = CREDS_PATH,
+                     region: Optional[str] = None,
+                     delay: Optional[int] = None,
+                     universes: Optional[List[str]] = None,
+                     dataset_id: Optional[str] = None,
+                     max_datasets: Optional[int] = None,
                      progress_cb=None) -> dict:
     """Fetch all dataset field metadata from WQ Brain API and save locally."""
     try:
@@ -719,137 +1060,350 @@ def datasets_refresh(datasets_dir: str = DATASETS_DIR,
         return {"status": "error", "message": detail}
 
     os.makedirs(datasets_dir, exist_ok=True)
-    refreshed = []
     errors    = []
+    started_at = datetime.datetime.now(datetime.UTC).isoformat()
+    updated_at = started_at
 
     opt = dict(DEFAULT_DATA_FIELD_OPTION)
-    dataset_limit = 50
-    field_limit = 50
-    if progress_cb:
-        progress_cb(
-            "Fetching dataset list from WQ data-sets "
-            f"({opt['region']}/{opt['universe']}/delay={opt['delay']})."
-        )
-
-    dataset_ids: List[str] = []
-    offset = 0
-    while True:
-        params = {
-            **opt,
-            "limit": dataset_limit,
-            "offset": offset,
-        }
-        try:
-            r = _request_with_rate_limit_retry(
-                session,
-                "get",
-                DATASETS_API,
-                params=params,
-                timeout=20,
-                progress_cb=progress_cb,
-                retry_context="dataset list refresh",
-            )
-            if r.status_code == 401:
-                clear_login_state()
-                persona_url = extract_persona_url(r)
-                if persona_url:
-                    _notify_login_issue(
-                        "Saved session expired during dataset list refresh.",
-                        persona_url,
-                        cooldown_key="datasets-list-persona",
-                    )
-                    return {"status": "error", "message": f"Persona verification required: {persona_url}"}
-                _notify_login_issue(
-                    "Saved session expired during dataset list refresh.",
-                    "Unauthorized while fetching dataset list.",
-                    cooldown_key="datasets-list-unauthorized",
-                )
-                return {"status": "error", "message": "Unauthorized while fetching dataset list."}
-            r.raise_for_status()
-            body = r.json()
-        except Exception as exc:
-            return {"status": "error", "message": f"Error fetching dataset list: {exc}"}
-
-        results = body.get("results", [])
-        dataset_ids.extend(ds["id"] for ds in results if ds.get("id"))
-        if offset + dataset_limit >= body.get("count", 0) or not results:
-            break
-        offset += dataset_limit
-        time.sleep(1)
-
-    dataset_ids = sorted(set(dataset_ids))
-    if progress_cb:
-        progress_cb(f"Found {len(dataset_ids)} datasets. Fetching data fields.")
-
-    for i, ds_id in enumerate(dataset_ids):
+    opt["region"] = (region or opt["region"]).upper()
+    opt["delay"] = delay if delay is not None else opt["delay"]
+    selected_dataset_id = dataset_id.strip() if dataset_id else None
+    if max_datasets is not None and max_datasets <= 0:
+        return {"status": "error", "message": "--max-datasets must be greater than 0."}
+    default_universe = str(opt["universe"])
+    target_universes = _ordered_unique(universes or [])
+    if not target_universes:
         if progress_cb:
-            progress_cb(f"Fetching {ds_id} ({i+1}/{len(dataset_ids)})…")
+            progress_cb(
+                "Fetching official simulation options to discover "
+                f"{opt['region']} universe choices."
+            )
         try:
-            rows = []
+            target_universes, session = _discover_data_field_universes(
+                session,
+                credentials_path,
+                str(opt["region"]),
+                default_universe,
+                progress_cb=progress_cb,
+            )
+        except Exception as exc:
+            return {
+                "status": "error",
+                "message": f"Error fetching simulation universe choices: {exc}",
+            }
+
+    dataset_ids_by_universe: Dict[str, List[str]] = {}
+    if selected_dataset_id:
+        if progress_cb:
+            progress_cb(
+                f"Refreshing only dataset {selected_dataset_id} "
+                f"({opt['region']}/delay={opt['delay']}; "
+                f"universes={', '.join(target_universes)})."
+            )
+        dataset_ids_by_universe = {
+            universe: [selected_dataset_id]
+            for universe in target_universes
+        }
+        dataset_ids = [selected_dataset_id]
+    else:
+        dataset_limit = 50
+        if progress_cb:
+            progress_cb(
+                "Fetching dataset list from WQ data-sets "
+                f"({opt['region']}/delay={opt['delay']}; "
+                f"universes={', '.join(target_universes)})."
+            )
+
+        for universe in target_universes:
+            dataset_ids_for_universe: List[str] = []
             offset = 0
             while True:
                 params = {
                     **opt,
-                    "dataset.id": ds_id,
-                    "limit": field_limit,
+                    "universe": universe,
+                    "limit": dataset_limit,
                     "offset": offset,
                 }
-                r = _request_with_rate_limit_retry(
-                    session,
-                    "get",
-                    DATAFIELDS_API,
-                    params=params,
-                    timeout=20,
-                    progress_cb=progress_cb,
-                    retry_context=f"data fields refresh for {ds_id}",
-                )
-                if r.status_code == 401:
-                    clear_login_state()
-                    persona_url = extract_persona_url(r)
-                    if persona_url:
-                        _notify_login_issue(
-                            f"Saved session expired while refreshing data fields for {ds_id}.",
-                            persona_url,
-                            cooldown_key=f"data-fields-persona-{ds_id}",
-                        )
-                        return {"status": "error", "message": f"Persona verification required: {persona_url}"}
-                    _notify_login_issue(
-                        f"Saved session expired while refreshing data fields for {ds_id}.",
-                        f"Unauthorized while fetching fields for {ds_id}.",
-                        cooldown_key=f"data-fields-unauthorized-{ds_id}",
+                try:
+                    session, r = _dataset_api_request(
+                        session,
+                        credentials_path,
+                        "get",
+                        DATASETS_API,
+                        params=params,
+                        timeout=20,
+                        progress_cb=progress_cb,
+                        retry_context=f"dataset list refresh for {universe}",
+                        auth_reason="Saved session expired during dataset list refresh.",
+                        cooldown_key=f"datasets-list-auth-refresh-{universe}",
                     )
-                    return {"status": "error", "message": f"Unauthorized while fetching fields for {ds_id}."}
-                r.raise_for_status()
-                body = r.json()
+                    r.raise_for_status()
+                    body = r.json()
+                except Exception as exc:
+                    return {"status": "error", "message": f"Error fetching dataset list for {universe}: {exc}"}
+
                 results = body.get("results", [])
-                for field in results:
-                    rows.append(_data_field_row(field))
-                if offset + field_limit >= body.get("count", 0) or not results:
+                dataset_ids_for_universe.extend(ds["id"] for ds in results if ds.get("id"))
+                if offset + dataset_limit >= body.get("count", 0) or not results:
                     break
-                offset += field_limit
+                offset += dataset_limit
                 time.sleep(1)
-            if rows:
-                df  = pd.DataFrame(rows, columns=["Field", "Description", "Type", "Coverage", "Users", "Alphas"])
-                out = os.path.join(datasets_dir, f"{ds_id}_fields_formatted.csv")
-                df.to_csv(out, index=False)
-                refreshed.append(ds_id)
+            dataset_ids_by_universe[universe] = sorted(set(dataset_ids_for_universe))
+
+        dataset_ids = sorted({ds_id for ids in dataset_ids_by_universe.values() for ds_id in ids})
+        if max_datasets is not None:
+            dataset_ids = dataset_ids[:max_datasets]
+            selected = set(dataset_ids)
+            dataset_ids_by_universe = {
+                universe: [ds_id for ds_id in ids if ds_id in selected]
+                for universe, ids in dataset_ids_by_universe.items()
+            }
+
+    field_limit = 50
+    if progress_cb:
+        progress_cb(
+            f"Found {len(dataset_ids)} datasets across {len(target_universes)} universes. "
+            "Fetching data fields."
+        )
+
+    db_rows: List[Tuple[Any, ...]] = []
+    for i, ds_id in enumerate(dataset_ids):
+        if progress_cb:
+            progress_cb(f"Fetching {ds_id} ({i+1}/{len(dataset_ids)})…")
+        try:
+            for universe in target_universes:
+                if ds_id not in dataset_ids_by_universe.get(universe, []):
+                    continue
+                offset = 0
+                while True:
+                    params = {
+                        **opt,
+                        "universe": universe,
+                        "dataset.id": ds_id,
+                        "limit": field_limit,
+                        "offset": offset,
+                    }
+                    session, r = _dataset_api_request(
+                        session,
+                        credentials_path,
+                        "get",
+                        DATAFIELDS_API,
+                        params=params,
+                        timeout=20,
+                        progress_cb=progress_cb,
+                        retry_context=f"data fields refresh for {ds_id}/{universe}",
+                        auth_reason=f"Saved session expired while refreshing data fields for {ds_id}.",
+                        cooldown_key=f"data-fields-auth-refresh-{ds_id}-{universe}",
+                    )
+                    r.raise_for_status()
+                    body = r.json()
+                    results = body.get("results", [])
+                    for field in results:
+                        field = {
+                            **field,
+                            "region": field.get("region", str(opt["region"])),
+                            "delay": field.get("delay", int(opt["delay"])),
+                            "universe": field.get("universe", universe),
+                        }
+                        db_rows.append(_field_to_db_row(ds_id, field, updated_at))
+                    if offset + field_limit >= body.get("count", 0) or not results:
+                        break
+                    offset += field_limit
+                    time.sleep(1)
         except Exception as exc:
             errors.append(f"{ds_id}: {exc}")
 
-    return {"status": "ok", "refreshed": refreshed, "errors": errors, "total": len(dataset_ids)}
+    if errors:
+        return {
+            "status": "error",
+            "message": "One or more datasets failed during refresh; SQLite cache was not updated.",
+            "errors": errors,
+            "total": len(dataset_ids),
+            "region": opt["region"],
+            "delay": opt["delay"],
+            "universes": target_universes,
+        }
+
+    refreshed = sorted({row[0] for row in db_rows})
+    run_id = _uuid_mod.uuid4().hex
+    finished_at = datetime.datetime.now(datetime.UTC).isoformat()
+    placeholders = ",".join("?" for _ in target_universes)
+    partial_refresh = bool(selected_dataset_id or max_datasets is not None)
+    try:
+        with _datasets_db(datasets_dir) as conn:
+            conn.execute("BEGIN")
+            conn.execute(
+                """
+                INSERT INTO refresh_runs (
+                    id, instrument_type, region, delay, universes_json,
+                    started_at, finished_at, status, error
+                )
+                VALUES (?, ?, ?, ?, ?, ?, NULL, ?, NULL)
+                """,
+                (
+                    run_id,
+                    str(opt["instrumentType"]),
+                    str(opt["region"]),
+                    int(opt["delay"]),
+                    json.dumps(target_universes),
+                    started_at,
+                    "running",
+                ),
+            )
+            if partial_refresh:
+                dataset_placeholders = ",".join("?" for _ in dataset_ids)
+                if dataset_ids:
+                    conn.execute(
+                        f"""
+                        DELETE FROM dataset_fields
+                        WHERE region = ? AND delay = ?
+                          AND universe IN ({placeholders})
+                          AND dataset_id IN ({dataset_placeholders})
+                        """,
+                        [
+                            str(opt["region"]),
+                            int(opt["delay"]),
+                            *target_universes,
+                            *dataset_ids,
+                        ],
+                    )
+            else:
+                conn.execute(
+                    f"""
+                    DELETE FROM dataset_fields
+                    WHERE region = ? AND delay = ? AND universe IN ({placeholders})
+                    """,
+                    [str(opt["region"]), int(opt["delay"]), *target_universes],
+                )
+            conn.executemany(
+                """
+                INSERT INTO dataset_fields (
+                    dataset_id, field_id, description, type, region, delay,
+                    universe, coverage, user_count, alpha_count, updated_at
+                )
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(dataset_id, field_id, region, delay, universe)
+                DO UPDATE SET
+                    description = excluded.description,
+                    type = excluded.type,
+                    coverage = excluded.coverage,
+                    user_count = excluded.user_count,
+                    alpha_count = excluded.alpha_count,
+                    updated_at = excluded.updated_at
+                """,
+                db_rows,
+            )
+            conn.execute(
+                """
+                UPDATE refresh_runs
+                SET finished_at = ?, status = ?
+                WHERE id = ?
+                """,
+                (finished_at, "ok", run_id),
+            )
+            conn.commit()
+    except Exception as exc:
+        return {
+            "status": "error",
+            "message": f"Error writing SQLite dataset cache: {exc}",
+            "errors": errors,
+            "total": len(dataset_ids),
+            "region": opt["region"],
+            "delay": opt["delay"],
+            "universes": target_universes,
+        }
+
+    return {
+        "status": "ok",
+        "refreshed": refreshed,
+        "errors": errors,
+        "total": len(dataset_ids),
+        "rows": len(db_rows),
+        "region": opt["region"],
+        "delay": opt["delay"],
+        "universes": target_universes,
+        "partial": partial_refresh,
+        "db": _datasets_db_path(datasets_dir),
+    }
 
 
-def datasets_show(dataset_id: str, datasets_dir: str = DATASETS_DIR) -> Optional[pd.DataFrame]:
-    """Return DataFrame of fields for *dataset_id*, or None if not found."""
+def _legacy_datasets_show(dataset_id: str, datasets_dir: str = DATASETS_DIR) -> Optional[pd.DataFrame]:
     fp = os.path.join(datasets_dir, f"{dataset_id}_fields_formatted.csv")
     if not os.path.exists(fp):
         return None
     return pd.read_csv(fp)
 
 
+def datasets_show(
+    dataset_id: str,
+    datasets_dir: str = DATASETS_DIR,
+    region: Optional[str] = None,
+    delay: Optional[int] = None,
+    universe: Optional[str] = None,
+) -> Optional[pd.DataFrame]:
+    """Return DataFrame of fields for *dataset_id*, or None if not found."""
+    db_path = _datasets_db_path(datasets_dir)
+    if not os.path.exists(db_path):
+        return _legacy_datasets_show(dataset_id, datasets_dir)
+
+    where, params = _dataset_scope_where(region, delay, universe)
+    with _datasets_db(datasets_dir) as conn:
+        rows = conn.execute(
+            f"""
+            SELECT *
+            FROM dataset_fields
+            WHERE dataset_id = ? AND {where}
+            ORDER BY field_id, universe
+            """,
+            [dataset_id, *params],
+        ).fetchall()
+    if not rows:
+        return None
+    return pd.DataFrame([_db_row_to_dataset_record(row) for row in rows], columns=DATASET_FIELD_COLUMNS)
+
+
 def datasets_search(query: str, datasets_dir: str = DATASETS_DIR,
-                    dataset_id: Optional[str] = None) -> List[dict]:
+                    dataset_id: Optional[str] = None,
+                    region: Optional[str] = None,
+                    delay: Optional[int] = None,
+                    universe: Optional[str] = None) -> List[dict]:
     """Simple text search across field names and descriptions."""
+    db_path = _datasets_db_path(datasets_dir)
+    if os.path.exists(db_path):
+        where, params = _dataset_scope_where(region, delay, universe)
+        search = f"%{query.lower()}%"
+        extra = ""
+        extra_params: List[Any] = []
+        if dataset_id:
+            extra = " AND dataset_id = ?"
+            extra_params.append(dataset_id)
+        with _datasets_db(datasets_dir) as conn:
+            rows = conn.execute(
+                f"""
+                SELECT *
+                FROM dataset_fields
+                WHERE {where}{extra}
+                  AND (LOWER(field_id) LIKE ? OR LOWER(description) LIKE ?)
+                ORDER BY dataset_id, field_id, universe
+                """,
+                [*params, *extra_params, search, search],
+            ).fetchall()
+        return [
+            {
+                "dataset_id": row["dataset_id"],
+                "field": row["field_id"],
+                "description": row["description"],
+                "type": row["type"],
+                "region": row["region"],
+                "delay": row["delay"],
+                "universe": row["universe"],
+                "coverage": _format_coverage(row["coverage"]),
+                "users": row["user_count"],
+                "alphas": row["alpha_count"],
+            }
+            for row in rows
+        ]
+
     results = []
     if dataset_id:
         targets = [dataset_id]
@@ -858,7 +1412,7 @@ def datasets_search(query: str, datasets_dir: str = DATASETS_DIR,
 
     q = query.lower()
     for ds_id in targets:
-        df = datasets_show(ds_id, datasets_dir)
+        df = _legacy_datasets_show(ds_id, datasets_dir)
         if df is None:
             continue
         for _, row in df.iterrows():
@@ -870,15 +1424,29 @@ def datasets_search(query: str, datasets_dir: str = DATASETS_DIR,
                     "field":       row.get("Field", ""),
                     "description": row.get("Description", ""),
                     "type":        row.get("Type", ""),
+                    "region":      row.get("Region", ""),
+                    "delay":       row.get("Delay", ""),
+                    "universe":    row.get("Universe", ""),
                     "coverage":    row.get("Coverage", ""),
+                    "users":       row.get("Users", ""),
+                    "alphas":      row.get("Alphas", ""),
                 })
     return results
 
 
 def datasets_export_fields(dataset_id: str, output_path: str,
-                           datasets_dir: str = DATASETS_DIR) -> dict:
+                           datasets_dir: str = DATASETS_DIR,
+                           region: Optional[str] = None,
+                           delay: Optional[int] = None,
+                           universe: Optional[str] = None) -> dict:
     """Export dataset fields CSV to *output_path*."""
-    df = datasets_show(dataset_id, datasets_dir)
+    df = datasets_show(
+        dataset_id,
+        datasets_dir,
+        region=region,
+        delay=delay,
+        universe=universe,
+    )
     if df is None:
         return {"status": "error", "message": f"Dataset '{dataset_id}' not found locally."}
     df.to_csv(output_path, index=False)

@@ -81,7 +81,9 @@ python app.py
   - The right panel shows a table to browse fields, filter, sort, and visualize distributions
   - After selecting fields, click "Import Selected Fields to Generator" to send them to the Strategy Generator
   - Search modes: Normal (keyword) / AI (Gemini semantic search)
-  - API refresh uses WQ Brain `data-sets` to discover dataset IDs for `EQUITY / USA / TOP3000 / delay=1`, then updates each dataset through `data-fields?dataset.id=...`
+  - CLI API refresh uses WQ Brain `OPTIONS /simulations` to discover region-specific universes, then queries `data-sets` / `data-fields` per universe and caches field metadata in `datasets/datasets.sqlite`
+  - CLI and GUI dataset caches are separate: the GUI continues to browse `*_fields_formatted.csv`; the CLI reads `datasets/datasets.sqlite` after `datasets refresh`
+  - CLI dataset refresh waits for a user-triggered WQ session refresh and retries the same API request when a saved session expires mid-refresh
   - WQ rate limits are handled by respecting `Retry-After` on HTTP 429 and retrying transient 500/502/503/504 responses
   - Simulation workers read `x-ratelimit-limit`, `x-ratelimit-remaining`, and `x-ratelimit-reset` from `POST /simulations`; when the daily remaining count reaches 0, the next submit waits until reset before continuing. Telegram `/status` shows the latest simulation quota.
 
@@ -137,7 +139,7 @@ Common issues:
 
 Location: `datasets/`
 
-Filename rule: Must match `*_fields_formatted.csv`, for example: `custom_demo_fields_formatted.csv`
+GUI CSV filename rule: Must match `*_fields_formatted.csv`, for example: `custom_demo_fields_formatted.csv`
 
 Required columns (case-sensitive):
 - `Field` (string, field name)
@@ -147,15 +149,28 @@ Required columns (case-sensitive):
 - `Users` (integer)
 - `Alphas` (integer)
 
+CLI refresh writes to `datasets/datasets.sqlite` and also exposes these metadata columns through `datasets show`, `datasets search`, and `datasets export-fields`:
+- `Region` (simulation region, for example `USA`)
+- `Delay` (simulation delay, for example `1`)
+- `Universe` (simulation universe, for example `TOP3000`)
+
+Use `datasets scopes` to see which region/delay combinations are cached. For live smoke tests, refresh a small slice first:
+
+```bash
+python brain_cli.py datasets refresh --dataset-id analyst10 --universes TOP3000,TOP1000
+python brain_cli.py datasets scopes
+python brain_cli.py datasets show analyst10 --region USA --delay 1
+```
+
 Minimal viable example (CSV content):
 
 ```csv
-Field,Description,Type,Coverage,Users,Alphas
-demo_close,Daily close price,Vector,95%,120,300
-demo_volume,Daily volume,Vector,92%,110,280
-demo_return_5d,5-day return,Vector,88%,90,250
-demo_beta,Market beta estimate,Scalar,80%,60,180
-demo_inst_density,Institutional density,Matrix,75%,40,120
+Field,Description,Type,Region,Delay,Universe,Coverage,Users,Alphas
+demo_close,Daily close price,Vector,USA,1,TOP3000,95%,120,300
+demo_volume,Daily volume,Vector,USA,1,TOP3000,92%,110,280
+demo_return_5d,5-day return,Vector,USA,1,TOP1000,88%,90,250
+demo_beta,Market beta estimate,Scalar,USA,1,TOP500,80%,60,180
+demo_inst_density,Institutional density,Matrix,USA,1,TOPSP500,75%,40,120
 ```
 
 Save the above as `datasets/custom_demo_fields_formatted.csv`, then return to the app and click it in the left list to load. The app will automatically create a corresponding `.db` (SQLite) in the same directory to accelerate browsing and sorting.
@@ -196,7 +211,7 @@ python brain_cli.py <group> <command> [options]
 
 Groups:
   auth       Login status, login, persona completion
-  datasets   List, refresh, show, search, export-fields
+  datasets   List, scopes, refresh, show, search, export-fields
   operators  List, refresh, show, search WQ Brain operators
   template   List, show, save, delete, placeholders
   generate   Preview strategies, generate file

@@ -3,6 +3,7 @@ credentials.json
 data
 alphas
 *.db
+datasets/datasets.sqlite*
 templates
 .cursor/rules/structure.mdc
 .env

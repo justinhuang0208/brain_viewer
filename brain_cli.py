@@ -218,23 +218,55 @@ def cmd_datasets(args):
     sub = args.datasets_cmd
 
     if sub == "list":
-        items = svc.datasets_list(args.datasets_dir)
+        items = svc.datasets_list(
+            args.datasets_dir,
+            region=getattr(args, "region", None),
+            delay=getattr(args, "delay", None),
+            universe=getattr(args, "universe", None),
+        )
         if args.json:
             _out(items, True)
         else:
-            _table(items, ["dataset_id", "rows", "size_bytes"])
+            columns = (
+                ["dataset_id", "rows", "fields", "universes", "updated_at"]
+                if items and "fields" in items[0]
+                else ["dataset_id", "rows", "size_bytes"]
+            )
+            _table(items, columns)
+
+    elif sub == "scopes":
+        items = svc.datasets_scopes(args.datasets_dir)
+        if args.json:
+            _out(items, True)
+        else:
+            _table(items, ["region", "delay", "universes", "datasets", "fields", "rows", "updated_at"])
 
     elif sub == "refresh":
         print("Refreshing datasets from WQ Brain API…", file=sys.stderr)
         result = svc.datasets_refresh(
             datasets_dir=args.datasets_dir,
             credentials_path=args.credentials,
+            region=getattr(args, "region", None),
+            delay=getattr(args, "delay", None),
+            universes=(
+                [item.strip() for item in args.universes.split(",") if item.strip()]
+                if getattr(args, "universes", None)
+                else None
+            ),
+            dataset_id=getattr(args, "dataset_id", None),
+            max_datasets=getattr(args, "max_datasets", None),
             progress_cb=_progress,
         )
         _out(result, args.json)
 
     elif sub == "show":
-        df = svc.datasets_show(args.dataset_id, args.datasets_dir)
+        df = svc.datasets_show(
+            args.dataset_id,
+            args.datasets_dir,
+            region=getattr(args, "region", None),
+            delay=getattr(args, "delay", None),
+            universe=getattr(args, "universe", None),
+        )
         if df is None:
             _err(f"Dataset '{args.dataset_id}' not found locally. Try: datasets refresh")
         limit = getattr(args, "limit", 50)
@@ -242,24 +274,32 @@ def cmd_datasets(args):
         if args.json:
             _out({"dataset_id": args.dataset_id, "total": len(df), "rows": rows}, True)
         else:
-            print(f"Dataset: {args.dataset_id}  ({len(df)} fields)")
-            _table(rows, ["Field", "Description", "Type", "Coverage"])
+            print(f"Dataset: {args.dataset_id}  ({len(df)} rows)")
+            _table(rows, ["Field", "Description", "Type", "Region", "Delay", "Universe", "Coverage", "Alphas"])
 
     elif sub == "search":
         results = svc.datasets_search(
             args.query,
             datasets_dir=args.datasets_dir,
             dataset_id=getattr(args, "dataset_id", None),
+            region=getattr(args, "region", None),
+            delay=getattr(args, "delay", None),
+            universe=getattr(args, "universe", None),
         )
         if args.json:
             _out(results, True)
         else:
             print(f"Found {len(results)} fields matching '{args.query}':")
-            _table(results, ["dataset_id", "field", "description", "coverage"])
+            _table(results, ["dataset_id", "field", "description", "universe", "coverage", "alphas"])
 
     elif sub == "export-fields":
         result = svc.datasets_export_fields(
-            args.dataset_id, args.output, args.datasets_dir
+            args.dataset_id,
+            args.output,
+            args.datasets_dir,
+            region=getattr(args, "region", None),
+            delay=getattr(args, "delay", None),
+            universe=getattr(args, "universe", None),
         )
         _out(result, args.json)
 
@@ -1045,25 +1085,52 @@ def build_parser() -> argparse.ArgumentParser:
     ds_sub = p_ds.add_subparsers(dest="datasets_cmd", metavar="<cmd>")
     ds_sub.required = True
 
-    ds_sub.add_parser("list", help="List locally cached datasets.")
+    p_ds_list = ds_sub.add_parser("list", help="List locally cached datasets.")
+    p_ds_list.add_argument("--region", default=None, help="Region to query. Defaults to USA.")
+    p_ds_list.add_argument("--delay", type=int, default=None, help="Delay to query. Defaults to 1.")
+    p_ds_list.add_argument("--universe", default=None, help="Restrict results to one universe.")
 
-    ds_sub.add_parser("refresh",
+    ds_sub.add_parser("scopes", help="List cached SQLite dataset region/delay scopes.")
+
+    p_ds_refresh = ds_sub.add_parser("refresh",
         help="Fetch all dataset field metadata from WQ Brain API and cache locally.")
+    p_ds_refresh.add_argument("--region", default=None,
+                              help="Region to refresh. Defaults to USA.")
+    p_ds_refresh.add_argument("--delay", type=int, default=None,
+                              help="Delay to refresh. Defaults to 1.")
+    p_ds_refresh.add_argument("--universes", default=None,
+                              help=(
+                                  "Comma-separated universes to refresh. "
+                                  "Defaults to the official OPTIONS /simulations choices for the region."
+                              ))
+    p_ds_refresh.add_argument("--dataset-id", default=None, dest="dataset_id",
+                              help="Refresh only one dataset ID, useful for live smoke tests.")
+    p_ds_refresh.add_argument("--max-datasets", type=int, default=None, dest="max_datasets",
+                              help="Refresh only the first N discovered datasets.")
 
     p_ds_show = ds_sub.add_parser("show", help="Show fields for a dataset.")
     p_ds_show.add_argument("dataset_id", help="Dataset ID (e.g., fundamental6).")
     p_ds_show.add_argument("--limit", type=int, default=50)
+    p_ds_show.add_argument("--region", default=None, help="Region to query. Defaults to USA.")
+    p_ds_show.add_argument("--delay", type=int, default=None, help="Delay to query. Defaults to 1.")
+    p_ds_show.add_argument("--universe", default=None, help="Restrict results to one universe.")
 
     p_ds_search = ds_sub.add_parser("search",
         help="Search field names and descriptions across all/one dataset.")
     p_ds_search.add_argument("query", help="Search term.")
     p_ds_search.add_argument("--dataset-id", default=None, dest="dataset_id",
                               help="Restrict search to one dataset.")
+    p_ds_search.add_argument("--region", default=None, help="Region to query. Defaults to USA.")
+    p_ds_search.add_argument("--delay", type=int, default=None, help="Delay to query. Defaults to 1.")
+    p_ds_search.add_argument("--universe", default=None, help="Restrict results to one universe.")
 
     p_ds_export = ds_sub.add_parser("export-fields",
         help="Export a dataset's fields to a CSV file.")
     p_ds_export.add_argument("dataset_id")
     p_ds_export.add_argument("output", help="Output CSV path.")
+    p_ds_export.add_argument("--region", default=None, help="Region to export. Defaults to USA.")
+    p_ds_export.add_argument("--delay", type=int, default=None, help="Delay to export. Defaults to 1.")
+    p_ds_export.add_argument("--universe", default=None, help="Restrict export to one universe.")
 
     # ── operators ────────────────────────────────────────────────────────────
     p_ops = sub_root.add_parser("operators", help="WQ Brain operator metadata commands.")
