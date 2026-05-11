@@ -3028,10 +3028,7 @@ def simulate_enqueue(
         job_payload["owner_job_id"] = owner_job_id
     job_id = JobStore.create("simulate", job_payload)
     registry = get_registry()
-    for item in params:
-        code = str(item.get("code", "")).strip()
-        if code:
-            registry.record_queued(code, job_id=job_id, params=item)
+    registry.record_queued_many(params, job_id=job_id)
     return job_id
 
 
@@ -3322,6 +3319,52 @@ def simulate_results(job_id: str, limit: int = 100) -> Optional[dict]:
         return {"job": job, "rows": [], "message": "No result file found."}
     df = pd.read_csv(result_file)
     return {"job": job, "rows": df.head(limit).to_dict(orient="records"), "total": len(df)}
+
+
+def simulate_cleanup_stale(job_id: Optional[str] = None) -> dict:
+    """Mark running simulation jobs with dead PIDs as stopped.
+
+    A crashed foreground `simulate run` can leave a job marked `running`.
+    The persistent worker intentionally avoids picking pending work while any
+    simulation is running, so stale jobs need explicit cleanup.
+    """
+    jobs = [JobStore.get(job_id)] if job_id else JobStore.list_jobs("simulate")
+    cleaned = []
+    skipped = []
+    for job in jobs:
+        if not job or job.get("status") != "running":
+            continue
+        pid = job.get("pid")
+        if pid and _is_process_running(pid):
+            skipped.append({
+                "job_id": job.get("id"),
+                "pid": pid,
+                "reason": "pid_running",
+            })
+            continue
+
+        target_job_id = job["id"]
+
+        def _mark_stopped(existing_job):
+            existing_job["status"] = "stopped"
+            existing_job["auth_waiting"] = False
+            existing_job["progress_message"] = (
+                f"Stopped stale running job; pid={pid or 'null'} is not running."
+            )
+            summary = existing_job.get("summary") or {}
+            summary["status"] = "stopped"
+            existing_job["summary"] = summary
+
+        JobStore.mutate(target_job_id, _mark_stopped)
+        cleaned.append({"job_id": target_job_id, "pid": pid})
+
+    return {
+        "status": "ok",
+        "checked_count": len([job for job in jobs if job]),
+        "cleaned_count": len(cleaned),
+        "cleaned": cleaned,
+        "skipped": skipped,
+    }
 
 
 def _simulation_csv_contains_link(path: str, result_link: str) -> bool:

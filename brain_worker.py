@@ -154,6 +154,9 @@ class BrainWorker:
         )
 
     def _run_pending_jobs_once(self):
+        cleanup = svc.simulate_cleanup_stale()
+        if cleanup.get("cleaned_count"):
+            logging.info("Cleaned stale simulation jobs: %s", cleanup.get("cleaned"))
         jobs = svc.simulate_list()
         self._log_scan_summary(jobs)
         job = self._next_pending_simulation_job(jobs)

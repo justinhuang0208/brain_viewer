@@ -17,6 +17,7 @@ from typing import Any, Dict, List, Optional
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 CLI_STATE_DIR = os.path.join(SCRIPT_DIR, ".brain_cli")
 DEFAULT_DB_PATH = os.path.join(CLI_STATE_DIR, "alphas.sqlite")
+SQLITE_BUSY_TIMEOUT_MS = 30000
 
 
 def utc_now() -> str:
@@ -85,8 +86,10 @@ class AlphaRegistry:
         self._ensure_schema()
 
     def _connect(self) -> sqlite3.Connection:
-        conn = sqlite3.connect(self.db_path)
+        conn = sqlite3.connect(self.db_path, timeout=SQLITE_BUSY_TIMEOUT_MS / 1000)
         conn.row_factory = sqlite3.Row
+        conn.execute(f"PRAGMA busy_timeout = {SQLITE_BUSY_TIMEOUT_MS}")
+        conn.execute("PRAGMA journal_mode = WAL")
         conn.execute("PRAGMA foreign_keys = ON")
         return conn
 
@@ -384,82 +387,105 @@ class AlphaRegistry:
         event_type: Optional[str] = "created",
         event_payload: Optional[Dict[str, Any]] = None,
     ) -> Dict[str, Any]:
+        with self._connect() as conn:
+            return self._register_alpha_conn(
+                conn,
+                code,
+                source=source,
+                template_id=template_id,
+                status=status,
+                alpha_id=alpha_id,
+                event_type=event_type,
+                event_payload=event_payload,
+            )
+
+    def _register_alpha_conn(
+        self,
+        conn: sqlite3.Connection,
+        code: str,
+        *,
+        source: str = "unknown",
+        template_id: Optional[str] = None,
+        status: str = "candidate",
+        alpha_id: Optional[str] = None,
+        event_type: Optional[str] = "created",
+        event_payload: Optional[Dict[str, Any]] = None,
+    ) -> Dict[str, Any]:
         normalized = normalize_code(code)
         if not normalized:
             raise ValueError("Alpha code is empty.")
         alpha_hash = alpha_hash_for_code(normalized)
         now = utc_now()
-        with self._connect() as conn:
-            existing = conn.execute(
-                "SELECT * FROM alphas WHERE alpha_hash = ?",
-                (alpha_hash,),
-            ).fetchone()
-            if existing is None:
-                conn.execute(
-                    """
-                    INSERT INTO alphas (
-                        alpha_hash, alpha_id, canonical_alpha_id, latest_alpha_id,
-                        code, normalized_code, source, template_id, status,
-                        created_at, updated_at
-                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                    """,
-                    (
-                        alpha_hash,
-                        alpha_id,
-                        alpha_id,
-                        alpha_id,
-                        code,
-                        normalized,
-                        source or "unknown",
-                        template_id,
-                        status,
-                        now,
-                        now,
-                    ),
-                )
-                if event_type:
-                    self._add_event_conn(
-                        conn,
-                        alpha_hash,
-                        event_type,
-                        payload=event_payload or {
-                            "source": source,
-                            "template_id": template_id,
-                        },
-                    )
-            else:
-                updates = ["updated_at = ?"]
-                values: List[Any] = [now]
-                if alpha_id and not existing["alpha_id"]:
-                    updates.append("alpha_id = ?")
-                    values.append(alpha_id)
-                if alpha_id and not existing["canonical_alpha_id"]:
-                    updates.append("canonical_alpha_id = ?")
-                    values.append(alpha_id)
-                if alpha_id:
-                    updates.append("latest_alpha_id = ?")
-                    values.append(alpha_id)
-                if template_id and not existing["template_id"]:
-                    updates.append("template_id = ?")
-                    values.append(template_id)
-                if source and existing["source"] == "unknown":
-                    updates.append("source = ?")
-                    values.append(source)
-                values.append(alpha_hash)
-                conn.execute(
-                    f"UPDATE alphas SET {', '.join(updates)} WHERE alpha_hash = ?",
-                    values,
-                )
-            if alpha_id:
-                self._upsert_platform_alpha_conn(
+        existing = conn.execute(
+            "SELECT * FROM alphas WHERE alpha_hash = ?",
+            (alpha_hash,),
+        ).fetchone()
+        if existing is None:
+            conn.execute(
+                """
+                INSERT INTO alphas (
+                    alpha_hash, alpha_id, canonical_alpha_id, latest_alpha_id,
+                    code, normalized_code, source, template_id, status,
+                    created_at, updated_at
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    alpha_hash,
+                    alpha_id,
+                    alpha_id,
+                    alpha_id,
+                    code,
+                    normalized,
+                    source or "unknown",
+                    template_id,
+                    status,
+                    now,
+                    now,
+                ),
+            )
+            if event_type:
+                self._add_event_conn(
                     conn,
-                    alpha_id=alpha_id,
-                    alpha_hash=alpha_hash,
-                    role="observed",
-                    source=source,
-                    created_at=now,
+                    alpha_hash,
+                    event_type,
+                    payload=event_payload or {
+                        "source": source,
+                        "template_id": template_id,
+                    },
                 )
-            return self.get_alpha(alpha_hash, conn=conn) or {}
+        else:
+            updates = ["updated_at = ?"]
+            values: List[Any] = [now]
+            if alpha_id and not existing["alpha_id"]:
+                updates.append("alpha_id = ?")
+                values.append(alpha_id)
+            if alpha_id and not existing["canonical_alpha_id"]:
+                updates.append("canonical_alpha_id = ?")
+                values.append(alpha_id)
+            if alpha_id:
+                updates.append("latest_alpha_id = ?")
+                values.append(alpha_id)
+            if template_id and not existing["template_id"]:
+                updates.append("template_id = ?")
+                values.append(template_id)
+            if source and existing["source"] == "unknown":
+                updates.append("source = ?")
+                values.append(source)
+            values.append(alpha_hash)
+            conn.execute(
+                f"UPDATE alphas SET {', '.join(updates)} WHERE alpha_hash = ?",
+                values,
+            )
+        if alpha_id:
+            self._upsert_platform_alpha_conn(
+                conn,
+                alpha_id=alpha_id,
+                alpha_hash=alpha_hash,
+                role="observed",
+                source=source,
+                created_at=now,
+            )
+        return self.get_alpha(alpha_hash, conn=conn) or {}
 
     def record_queued(self, code: str, *, job_id: str, params: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         alpha = self.register_alpha(
@@ -477,6 +503,30 @@ class AlphaRegistry:
                 payload={"job_id": job_id, "params": params or {}},
             )
         return alpha
+
+    def record_queued_many(self, items: List[Dict[str, Any]], *, job_id: str) -> int:
+        recorded = 0
+        with self._connect() as conn:
+            for item in items:
+                code = str(item.get("code", "")).strip()
+                if not code:
+                    continue
+                alpha = self._register_alpha_conn(
+                    conn,
+                    code,
+                    source=item.get("source", "queued"),
+                    template_id=item.get("template_id"),
+                    status="candidate",
+                    event_type="created",
+                )
+                self._add_event_conn(
+                    conn,
+                    alpha["alpha_hash"],
+                    "queued",
+                    payload={"job_id": job_id, "params": item},
+                )
+                recorded += 1
+        return recorded
 
     def record_simulation(
         self,

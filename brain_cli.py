@@ -698,6 +698,10 @@ def cmd_simulate(args):
         )
         _out(result, args.json)
 
+    elif sub == "cleanup-stale":
+        result = svc.simulate_cleanup_stale(getattr(args, "job_id", None))
+        _out(result, args.json)
+
     elif sub == "list":
         jobs = svc.simulate_list()
         if args.json:
@@ -1278,6 +1282,12 @@ def build_parser() -> argparse.ArgumentParser:
         "reconcile",
         help="Recover failed job items whose simulation URL later completed.")
     p_reconcile.add_argument("job_id")
+
+    p_cleanup_stale = sim_sub.add_parser(
+        "cleanup-stale",
+        help="Mark running simulation jobs with dead PIDs as stopped.")
+    p_cleanup_stale.add_argument("--job-id", default=None,
+                                 help="Clean one job instead of scanning all simulation jobs.")
 
     sim_sub.add_parser("list", help="List all simulation jobs.")
 
