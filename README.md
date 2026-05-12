@@ -268,11 +268,6 @@ python brain_cli.py simulate run \
   --code "rank(ts_mean(close, 20) / close)" \
   --universe TOP3000 --region USA
 
-# Send Telegram after the simulation job completes
-python brain_cli.py simulate run \
-  --code "rank(ts_mean(close, 20) / close)" \
-  --notify-job-complete
-
 # Enqueue a batch from a generated .py/.csv/.json strategy file, then run
 python brain_cli.py simulate enqueue \
   --params-file alphas/my_strategies.py \
@@ -361,7 +356,7 @@ When using `simulate enqueue` or `simulate run` with `--params-file` / `--params
 
 Use `simulate options` to fetch the official `OPTIONS /simulations` schema from WQ Brain using the saved session. The command summarizes allowed settings such as `region`, `universe`, `delay`, `decay`, `neutralization`, `truncation`, `pasteurization`, `nanHandling`, `lookback`, and `testPeriod`; add `--region <REGION>` to show dependent choices for one region, or `--raw --json` for the unmodified API schema.
 
-Use `--notify-job-complete` on `simulate enqueue` or `simulate run` to send one Telegram message after the simulation job finishes, regardless of how many simulation items it contains. The option is off by default; for an existing pending job, `simulate run --job-id <job_id> --notify-job-complete` enables it and `--no-notify-job-complete` disables it before the run starts.
+Simulation jobs send one Telegram message after the job finishes, regardless of how many simulation items it contains. Telegram must be configured with `TELEGRAM_BOT_API_TOKEN` or `TELEGRAM_BOT_TOKEN`, plus `TELEGRAM_CHAT_ID`; if it is not configured, the completion notification is skipped and logged.
 
 If a previous item failed after WQ accepted the simulation, run `simulate reconcile <job_id> --json`. Reconcile checks failed items with `simulation_url`; when WQ now returns `COMPLETE` or `WARNING` with an alpha ID, it fetches `/alphas/<alpha_id>`, appends the result CSV row if missing, updates the alpha registry, moves the item to completed, and increments `recovered_count`.
 

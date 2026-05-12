@@ -613,7 +613,6 @@ def cmd_simulate(args):
         job_id = svc.simulate_enqueue(
             params,
             credentials_path=args.credentials,
-            notify_job_complete=bool(args.notify_job_complete),
         )
         result = {"job_id": job_id, "queued": len(params), "status": "pending"}
         _out(result, args.json)
@@ -622,17 +621,11 @@ def cmd_simulate(args):
         # Support running immediately (no pre-enqueue required)
         if getattr(args, "job_id", None):
             job_id = args.job_id
-            if args.notify_job_complete is not None:
-                svc.simulate_set_notify_job_complete(
-                    job_id,
-                    bool(args.notify_job_complete),
-                )
         else:
             params = _load_params_from_arg(args)
             job_id = svc.simulate_enqueue(
                 params,
                 credentials_path=args.credentials,
-                notify_job_complete=bool(args.notify_job_complete),
             )
             print(f"Created job: {job_id}", file=sys.stderr)
 
@@ -1243,12 +1236,6 @@ def build_parser() -> argparse.ArgumentParser:
         p.add_argument("--region",         default=None)
         p.add_argument("--truncation",     type=float, default=None)
         p.add_argument("--universe",       default=None)
-        p.add_argument(
-            "--notify-job-complete",
-            action=argparse.BooleanOptionalAction,
-            default=None,
-            help="Send one Telegram message after the simulation job completes.",
-        )
 
     p_enq = sim_sub.add_parser("enqueue",
         help="Enqueue a simulation job without running it.")

@@ -3013,7 +3013,6 @@ class CLISimulationSession(requests.Session):
 def simulate_enqueue(
     params: List[dict],
     credentials_path: str = CREDS_PATH,
-    notify_job_complete: bool = False,
     executor: str = "worker",
     owner_job_id: Optional[str] = None,
 ) -> str:
@@ -3021,7 +3020,6 @@ def simulate_enqueue(
     job_payload = {
         "params":           params,
         "credentials_path": credentials_path,
-        "notify_job_complete": bool(notify_job_complete),
         "executor":         executor or "worker",
     }
     if owner_job_id:
@@ -3180,23 +3178,6 @@ def simulation_options(
     return _parse_simulation_options_schema(schema, region=region)
 
 
-def simulate_set_notify_job_complete(job_id: str, enabled: bool) -> dict:
-    """Update job-completion Telegram notification setting for a queued job."""
-    job = JobStore.get(job_id)
-    if job is None:
-        return {"status": "error", "message": f"Job {job_id} not found."}
-    if job.get("status") != "pending":
-        return {"status": "error", "message": f"Job {job_id} is already {job.get('status')}."}
-
-    def _mutate(existing_job):
-        params = dict(existing_job.get("params") or {})
-        params["notify_job_complete"] = bool(enabled)
-        existing_job["params"] = params
-
-    JobStore.mutate(job_id, _mutate)
-    return {"status": "ok", "job_id": job_id, "notify_job_complete": bool(enabled)}
-
-
 def simulate_run(job_id: str, progress_cb=None) -> dict:
     """
     Execute a queued simulation job synchronously.
@@ -3244,7 +3225,6 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
 
     params           = job["params"]["params"]
     credentials_path = job["params"].get("credentials_path", CREDS_PATH)
-    notify_job_complete = bool(job["params"].get("notify_job_complete", False))
     output_csv       = os.path.join(DATA_DIR,
                                     f"job_{job_id}_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.csv")
 
@@ -3271,7 +3251,10 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
                     progress_message="Login failed.",
                     auth_waiting=False,
                 )
-            return JobStore.get(job_id)
+            final_job = JobStore.get(job_id)
+            if final_job is not None:
+                _notify_simulation_job_complete(final_job)
+            return final_job
 
         results = session.simulate(params)
         stopped = JobStore.is_stop_requested(job_id)
@@ -3292,7 +3275,7 @@ def simulate_run(job_id: str, progress_cb=None) -> dict:
         JobStore.update(job_id, status="failed", error=str(exc), progress_message=str(exc))
 
     final_job = JobStore.get(job_id)
-    if notify_job_complete and final_job is not None:
+    if final_job is not None:
         _notify_simulation_job_complete(final_job)
     return final_job
 
