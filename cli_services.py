@@ -14,6 +14,7 @@ import datetime
 import itertools
 import json
 import logging
+import math
 import os
 import re
 import sqlite3
@@ -101,13 +102,23 @@ SIMULATION_DONE_STATUSES = {"COMPLETE", "WARNING"}
 SIMULATION_TRANSIENT_POLL_STATUSES = {500, 502, 503, 504}
 SIMULATION_POLL_BACKOFF_MAX_SECONDS = 60.0
 SIMULATION_AUTH_REFRESH_POLL_SECONDS = 10.0
-SIMULATION_ACTIVE_TIMEOUT_SECONDS = 60 * 60
+SIMULATION_ACTIVE_TIMEOUT_SECONDS = 30 * 60
 SIMULATION_MAX_WORKERS = 7
 SIMULATION_SUBMIT_INTERVAL_SECONDS = 5.0
 SIMULATION_429_FALLBACK_WAIT_SECONDS = 60
 SIMULATION_JOB_WAIT_STALE_SECONDS = 15 * 60
 SIMULATION_JOB_WAIT_TIMEOUT_SECONDS = 6 * 60 * 60
 _JOB_STORE_LOCK = RLock()
+SIMULATION_EXPERIMENT_KEYS = ["concept", "branch", "params_file", "meta_file"]
+SIMULATION_META_ALIGNMENT_KEYS = [
+    "code",
+    "region",
+    "delay",
+    "universe",
+    "neutralization",
+    "decay",
+    "truncation",
+]
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -430,6 +441,163 @@ def _write_alpha_pnl_payload(alpha_id: str, payload: dict, *, output_path: Optio
     raise ValueError(f"Unsupported PnL output format: {output_format}")
 
 
+def _resolve_alpha_pnl_identifier(identifier: str) -> dict:
+    identifier = str(identifier or "").strip()
+    alpha = get_registry().get_alpha(identifier) if identifier else None
+    alpha_id = None
+    alpha_hash = None
+    resolved_by = None
+    if alpha:
+        alpha_id = (
+            alpha.get("resolved_alpha_id")
+            or alpha.get("canonical_alpha_id")
+            or alpha.get("alpha_id")
+        )
+        alpha_hash = alpha.get("alpha_hash")
+        resolved_by = alpha.get("resolved_by")
+    if not alpha_id:
+        alpha_id = identifier
+    return {
+        "identifier": identifier,
+        "alpha_id": alpha_id,
+        "alpha_hash": alpha_hash,
+        "resolved_by": resolved_by,
+        "registry_match": bool(alpha),
+    }
+
+
+def _alpha_pnl_cache_path(alpha_id: str) -> str:
+    return os.path.join(ALPHA_PNL_DIR, f"{alpha_id}.json")
+
+
+def _load_cached_alpha_pnl_payload(alpha_id: str) -> Optional[dict]:
+    cache_path = _alpha_pnl_cache_path(alpha_id)
+    if not os.path.exists(cache_path):
+        return None
+    with open(cache_path, "r", encoding="utf-8") as fh:
+        payload = json.load(fh)
+    if not isinstance(payload, dict):
+        raise ValueError(f"Cached PnL payload is not a JSON object: {cache_path}")
+    return payload
+
+
+def _load_or_fetch_alpha_pnl_payload(identifier: str, *, credentials_path: str = CREDS_PATH,
+                                     use_cache: bool = True, refresh_pnl: bool = False) -> dict:
+    resolved = _resolve_alpha_pnl_identifier(identifier)
+    alpha_id = resolved.get("alpha_id")
+    if not alpha_id:
+        return {"status": "error", "message": "Alpha ID is required.", **resolved}
+
+    if use_cache and not refresh_pnl:
+        try:
+            payload = _load_cached_alpha_pnl_payload(alpha_id)
+        except (OSError, ValueError) as exc:
+            return {
+                "status": "error",
+                "message": f"Unable to load cached PnL for alpha {alpha_id}: {exc}",
+                **resolved,
+            }
+        if payload is not None:
+            return {
+                "status": "ok",
+                "payload": payload,
+                "source": "cache",
+                "output_file": _alpha_pnl_cache_path(alpha_id),
+                **resolved,
+            }
+
+    fetched = alpha_pnl(
+        identifier,
+        output_format="json",
+        include_records=True,
+        credentials_path=credentials_path,
+    )
+    if str(fetched.get("status", "")).lower() == "error":
+        return {
+            "status": "error",
+            "message": fetched.get("message") or "Unable to fetch alpha PnL.",
+            **resolved,
+        }
+    payload = {
+        "schema": fetched.get("schema"),
+        "records": fetched.get("records") or [],
+    }
+    return {
+        "status": "ok",
+        "payload": payload,
+        "source": "api",
+        "output_file": fetched.get("output_file"),
+        "alpha_id": fetched.get("alpha_id") or alpha_id,
+        "alpha_hash": fetched.get("alpha_hash") or resolved.get("alpha_hash"),
+        "identifier": resolved.get("identifier"),
+        "resolved_by": resolved.get("resolved_by"),
+        "registry_match": resolved.get("registry_match"),
+    }
+
+
+def _alpha_pnl_series_by_date(payload: dict, field: str = "pnl") -> Tuple[Dict[str, float], int]:
+    headers = _alpha_pnl_headers(payload)
+    if "date" not in headers:
+        raise ValueError("PnL payload does not include a date field.")
+    if field not in headers:
+        raise ValueError(
+            f"PnL payload does not include field {field!r}. "
+            f"Available fields: {', '.join(headers)}"
+        )
+
+    date_idx = headers.index("date")
+    value_idx = headers.index(field)
+    series: Dict[str, float] = {}
+    skipped = 0
+
+    for record in payload.get("records") or []:
+        if isinstance(record, dict):
+            date_value = record.get("date")
+            raw_value = record.get(field)
+        elif isinstance(record, (list, tuple)) and len(record) > max(date_idx, value_idx):
+            date_value = record[date_idx]
+            raw_value = record[value_idx]
+        else:
+            skipped += 1
+            continue
+
+        date = str(date_value or "").strip()
+        if not date:
+            skipped += 1
+            continue
+        try:
+            value = float(raw_value)
+        except (TypeError, ValueError):
+            skipped += 1
+            continue
+        if not math.isfinite(value):
+            skipped += 1
+            continue
+        series[date] = value
+
+    return series, skipped
+
+
+def _pearson_correlation(left: List[float], right: List[float]) -> Optional[float]:
+    if len(left) != len(right) or len(left) < 2:
+        return None
+    left_mean = sum(left) / len(left)
+    right_mean = sum(right) / len(right)
+    numerator = 0.0
+    left_sum_sq = 0.0
+    right_sum_sq = 0.0
+    for left_value, right_value in zip(left, right):
+        left_delta = left_value - left_mean
+        right_delta = right_value - right_mean
+        numerator += left_delta * right_delta
+        left_sum_sq += left_delta * left_delta
+        right_sum_sq += right_delta * right_delta
+    denominator = math.sqrt(left_sum_sq * right_sum_sq)
+    if denominator == 0:
+        return None
+    return numerator / denominator
+
+
 def _notify_simulation_job_complete(job: dict):
     try:
         from telegram_integration import send_telegram_message
@@ -465,7 +633,7 @@ class JobStore:
     """Simple file-backed job state manager under .brain_cli/jobs/."""
 
     @staticmethod
-    def create(job_type: str, params: dict) -> str:
+    def create(job_type: str, params: dict, extra: Optional[dict] = None) -> str:
         with _JOB_STORE_LOCK:
             job_id = _uuid_mod.uuid4().hex[:12]
             now    = datetime.datetime.now().isoformat()
@@ -480,6 +648,8 @@ class JobStore:
                 "error":      None,
                 "pid":        None,
             }
+            if extra:
+                job.update(extra)
             JobStore._write(job_id, job)
             return job_id
 
@@ -3010,11 +3180,228 @@ class CLISimulationSession(requests.Session):
 # Simulate service
 # ---------------------------------------------------------------------------
 
+def _balanced_delimiters(text: str) -> dict:
+    """Return delimiter-balance diagnostics for a FASTEXPR-like string."""
+    stack = []
+    pairs = {")": "(", "]": "["}
+    quote_count = 0
+    for char in text:
+        if char == '"':
+            quote_count += 1
+        elif char in "([":
+            stack.append(char)
+        elif char in ")]":
+            if not stack or stack[-1] != pairs[char]:
+                return {
+                    "ok": False,
+                    "reason": f"unmatched closing delimiter {char!r}",
+                }
+            stack.pop()
+    if stack:
+        return {"ok": False, "reason": f"unclosed delimiter {stack[-1]!r}"}
+    if quote_count % 2:
+        return {"ok": False, "reason": "unbalanced double quotes"}
+    return {"ok": True}
+
+
+def _normalise_validation_value(value: Any) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, float) and value.is_integer():
+        return str(int(value))
+    return str(value)
+
+
+def _distribution(values: list[Any]) -> dict:
+    counts: dict[str, int] = {}
+    for value in values:
+        key = _normalise_validation_value(value)
+        counts[key] = counts.get(key, 0) + 1
+    return dict(sorted(counts.items(), key=lambda item: item[0]))
+
+
+def validate_simulation_params_payload(params: Any, meta: Any = None) -> dict:
+    """Validate simulation params and optional experiment metadata.
+
+    This function is intentionally local and schema-light: it catches malformed
+    batches before enqueue without calling WQ Brain or depending on live API
+    choices.
+    """
+    errors: list[dict] = []
+    warnings: list[dict] = []
+
+    if not isinstance(params, list):
+        return {
+            "status": "invalid",
+            "valid": False,
+            "params_count": 0,
+            "meta_count": None,
+            "errors": [{"message": "params payload must be a list"}],
+            "warnings": [],
+        }
+
+    code_counts: dict[str, int] = {}
+    settings_values: dict[str, list[Any]] = {
+        key: [] for key in ["region", "delay", "universe", "neutralization", "decay", "truncation"]
+    }
+    full_key_counts: dict[tuple[str, ...], int] = {}
+
+    for idx, item in enumerate(params):
+        if not isinstance(item, dict):
+            errors.append({"index": idx, "message": "parameter entry must be a dict"})
+            continue
+
+        code = str(item.get("code") or "").strip()
+        if not code:
+            errors.append({"index": idx, "message": "missing code"})
+        else:
+            code_counts[code] = code_counts.get(code, 0) + 1
+            balanced = _balanced_delimiters(code)
+            if not balanced.get("ok"):
+                errors.append({
+                    "index": idx,
+                    "message": f"code delimiter check failed: {balanced.get('reason')}",
+                })
+
+        for key in settings_values:
+            if key in item:
+                settings_values[key].append(item.get(key))
+
+        full_key = tuple(
+            _normalise_validation_value(item.get(key))
+            for key in SIMULATION_META_ALIGNMENT_KEYS
+        )
+        full_key_counts[full_key] = full_key_counts.get(full_key, 0) + 1
+
+    duplicate_codes = [
+        {"code": code, "count": count}
+        for code, count in sorted(code_counts.items(), key=lambda item: (-item[1], item[0]))
+        if count > 1
+    ]
+    duplicate_param_keys = [
+        {"key": list(key), "count": count}
+        for key, count in sorted(full_key_counts.items(), key=lambda item: (-item[1], item[0]))
+        if count > 1
+    ]
+
+    if duplicate_codes:
+        warnings.append({
+            "message": "duplicate code values found",
+            "count": len(duplicate_codes),
+        })
+    if duplicate_param_keys:
+        warnings.append({
+            "message": "duplicate code/settings parameter keys found",
+            "count": len(duplicate_param_keys),
+        })
+
+    meta_count = None
+    if meta is not None:
+        if not isinstance(meta, list):
+            errors.append({"message": "meta payload must be a list"})
+        else:
+            meta_count = len(meta)
+            if len(meta) != len(params):
+                errors.append({
+                    "message": "meta length does not match params length",
+                    "params_count": len(params),
+                    "meta_count": len(meta),
+                })
+            for idx, meta_item in enumerate(meta):
+                if not isinstance(meta_item, dict):
+                    errors.append({"index": idx, "message": "meta entry must be a dict"})
+                    continue
+                if idx >= len(params) or not isinstance(params[idx], dict):
+                    continue
+                param_item = params[idx]
+                for key in SIMULATION_META_ALIGNMENT_KEYS:
+                    if key not in meta_item or key not in param_item:
+                        continue
+                    left = _normalise_validation_value(param_item.get(key))
+                    right = _normalise_validation_value(meta_item.get(key))
+                    if left != right:
+                        errors.append({
+                            "index": idx,
+                            "field": key,
+                            "message": "meta value does not match params value",
+                            "params_value": param_item.get(key),
+                            "meta_value": meta_item.get(key),
+                        })
+
+    settings_distribution = {
+        key: _distribution(values)
+        for key, values in settings_values.items()
+        if values
+    }
+
+    valid = not errors
+    return {
+        "status": "ok" if valid else "invalid",
+        "valid": valid,
+        "params_count": len(params),
+        "meta_count": meta_count,
+        "unique_code_count": len(code_counts),
+        "duplicate_code_count": len(duplicate_codes),
+        "duplicate_param_key_count": len(duplicate_param_keys),
+        "duplicate_codes": duplicate_codes[:20],
+        "duplicate_param_keys": duplicate_param_keys[:20],
+        "settings_distribution": settings_distribution,
+        "errors": errors,
+        "warnings": warnings,
+    }
+
+
+def simulation_experiment_manifest(
+    *,
+    concept: Optional[str] = None,
+    branch: Optional[str] = None,
+    params_file: Optional[str] = None,
+    meta_file: Optional[str] = None,
+) -> Optional[dict]:
+    manifest = {
+        "concept": concept,
+        "branch": branch,
+        "params_file": os.path.abspath(params_file) if params_file else None,
+        "meta_file": os.path.abspath(meta_file) if meta_file else None,
+    }
+    compact = {key: value for key, value in manifest.items() if value}
+    return compact or None
+
+
+def simulation_job_summary(job: dict) -> dict:
+    """Return a small job summary suitable for list/status overviews."""
+    summary = job.get("summary") or {}
+    experiment = job.get("experiment") or {}
+    params = (job.get("params") or {}).get("params") or []
+    return {
+        "id": job.get("id"),
+        "type": job.get("type"),
+        "status": job.get("status"),
+        "created_at": job.get("created_at"),
+        "updated_at": job.get("updated_at"),
+        "total_count": summary.get("total_count", job.get("total_count", len(params))),
+        "processed_count": summary.get("processed_count", job.get("processed_count")),
+        "completed_count": summary.get("completed_count", job.get("completed_count")),
+        "failed_count": summary.get("failed_count", job.get("failed_count")),
+        "recovered_count": summary.get("recovered_count", job.get("recovered_count")),
+        "progress_message": job.get("progress_message"),
+        "result_file": job.get("result_file"),
+        "error": job.get("error"),
+        "executor": _simulation_job_executor(job),
+        "owner_job_id": job.get("owner_job_id") or (job.get("params") or {}).get("owner_job_id"),
+        "concept": experiment.get("concept"),
+        "branch": experiment.get("branch"),
+        "params_file": experiment.get("params_file"),
+        "meta_file": experiment.get("meta_file"),
+    }
+
+
 def simulate_enqueue(
     params: List[dict],
     credentials_path: str = CREDS_PATH,
     executor: str = "worker",
     owner_job_id: Optional[str] = None,
+    experiment: Optional[dict] = None,
 ) -> str:
     """Create a new simulation job and return its job_id."""
     job_payload = {
@@ -3024,7 +3411,8 @@ def simulate_enqueue(
     }
     if owner_job_id:
         job_payload["owner_job_id"] = owner_job_id
-    job_id = JobStore.create("simulate", job_payload)
+    extra = {"experiment": experiment} if experiment else None
+    job_id = JobStore.create("simulate", job_payload, extra=extra)
     registry = get_registry()
     registry.record_queued_many(params, job_id=job_id)
     return job_id
@@ -3567,9 +3955,19 @@ def simulate_reconcile(job_id: str, credentials_path: str = CREDS_PATH, progress
     }
 
 
-def simulate_list() -> List[dict]:
-    """List all simulation jobs."""
-    return JobStore.list_jobs("simulate")
+def simulate_list(statuses: Optional[list[str]] = None,
+                  limit: Optional[int] = None,
+                  summary: bool = False) -> List[dict]:
+    """List simulation jobs, optionally filtered and summarized."""
+    jobs = JobStore.list_jobs("simulate")
+    if statuses:
+        wanted = {str(status).strip().lower() for status in statuses if str(status).strip()}
+        jobs = [job for job in jobs if str(job.get("status") or "").lower() in wanted]
+    if limit is not None:
+        jobs = jobs[:max(int(limit), 0)]
+    if summary:
+        return [simulation_job_summary(job) for job in jobs]
+    return jobs
 
 
 # ---------------------------------------------------------------------------
@@ -3605,18 +4003,9 @@ def alpha_pnl(identifier: str, *, output_path: Optional[str] = None,
               output_format: str = "json", include_records: bool = False,
               credentials_path: str = CREDS_PATH) -> dict:
     """Fetch and persist the daily PnL recordset for one WQ alpha."""
-    alpha = get_registry().get_alpha(identifier)
-    alpha_id = None
-    alpha_hash = None
-    if alpha:
-        alpha_id = (
-            alpha.get("resolved_alpha_id")
-            or alpha.get("canonical_alpha_id")
-            or alpha.get("alpha_id")
-        )
-        alpha_hash = alpha.get("alpha_hash")
-    if not alpha_id:
-        alpha_id = str(identifier or "").strip()
+    resolved = _resolve_alpha_pnl_identifier(identifier)
+    alpha_id = resolved.get("alpha_id")
+    alpha_hash = resolved.get("alpha_hash")
     if not alpha_id:
         return {"status": "error", "message": "Alpha ID is required."}
 
@@ -3695,6 +4084,140 @@ def alpha_pnl(identifier: str, *, output_path: Optional[str] = None,
         result["schema"] = payload.get("schema")
         result["records"] = records
     return result
+
+
+def alpha_correlation(identifier: str, targets: List[str], *, field: str = "pnl",
+                      min_overlap: int = 2, refresh_pnl: bool = False,
+                      credentials_path: str = CREDS_PATH) -> dict:
+    """Compute Pearson correlation between one alpha's daily PnL and target alphas."""
+    clean_targets = [str(target or "").strip() for target in targets or [] if str(target or "").strip()]
+    if not clean_targets:
+        return {"status": "error", "message": "At least one target alpha ID is required."}
+    try:
+        min_overlap = int(min_overlap)
+    except (TypeError, ValueError):
+        return {"status": "error", "message": "min_overlap must be an integer."}
+    if min_overlap < 2:
+        return {"status": "error", "message": "min_overlap must be at least 2."}
+
+    field = str(field or "pnl").strip() or "pnl"
+    base = _load_or_fetch_alpha_pnl_payload(
+        identifier,
+        credentials_path=credentials_path,
+        refresh_pnl=refresh_pnl,
+    )
+    if str(base.get("status", "")).lower() == "error":
+        return {
+            "status": "error",
+            "message": base.get("message") or "Unable to load base alpha PnL.",
+            "base_identifier": str(identifier or "").strip(),
+        }
+
+    try:
+        base_series, base_skipped = _alpha_pnl_series_by_date(base["payload"], field=field)
+    except ValueError as exc:
+        return {
+            "status": "error",
+            "message": f"Unable to parse base alpha PnL: {exc}",
+            "base_identifier": base.get("identifier"),
+            "base_alpha_id": base.get("alpha_id"),
+            "field": field,
+        }
+    if len(base_series) < min_overlap:
+        return {
+            "status": "error",
+            "message": (
+                f"Base alpha has only {len(base_series)} usable {field!r} records; "
+                f"min_overlap is {min_overlap}."
+            ),
+            "base_identifier": base.get("identifier"),
+            "base_alpha_id": base.get("alpha_id"),
+            "field": field,
+        }
+
+    correlations: List[dict] = []
+    for target in clean_targets:
+        target_payload = _load_or_fetch_alpha_pnl_payload(
+            target,
+            credentials_path=credentials_path,
+            refresh_pnl=refresh_pnl,
+        )
+        row = {
+            "target_identifier": target,
+            "target_alpha_id": target_payload.get("alpha_id"),
+            "target_alpha_hash": target_payload.get("alpha_hash"),
+            "target_pnl_source": target_payload.get("source"),
+            "status": "ok",
+        }
+        if str(target_payload.get("status", "")).lower() == "error":
+            row.update({
+                "status": "error",
+                "message": target_payload.get("message") or "Unable to load target alpha PnL.",
+            })
+            correlations.append(row)
+            continue
+
+        try:
+            target_series, target_skipped = _alpha_pnl_series_by_date(
+                target_payload["payload"],
+                field=field,
+            )
+        except ValueError as exc:
+            row.update({"status": "error", "message": str(exc)})
+            correlations.append(row)
+            continue
+
+        overlap_dates = sorted(set(base_series).intersection(target_series))
+        overlap_count = len(overlap_dates)
+        row.update({
+            "base_record_count": len(base_series),
+            "target_record_count": len(target_series),
+            "base_skipped_record_count": base_skipped,
+            "target_skipped_record_count": target_skipped,
+            "overlap_count": overlap_count,
+            "first_overlap_date": overlap_dates[0] if overlap_dates else None,
+            "last_overlap_date": overlap_dates[-1] if overlap_dates else None,
+        })
+        if overlap_count < min_overlap:
+            row.update({
+                "status": "error",
+                "message": f"Only {overlap_count} overlapping dates; min_overlap is {min_overlap}.",
+            })
+            correlations.append(row)
+            continue
+
+        left = [base_series[date] for date in overlap_dates]
+        right = [target_series[date] for date in overlap_dates]
+        correlation = _pearson_correlation(left, right)
+        if correlation is None:
+            row.update({
+                "status": "error",
+                "message": "Correlation is undefined because one series has zero variance.",
+            })
+            correlations.append(row)
+            continue
+
+        row["correlation"] = correlation
+        correlations.append(row)
+
+    computed_count = sum(1 for row in correlations if row.get("status") == "ok")
+    failed_count = len(correlations) - computed_count
+    return {
+        "status": "ok",
+        "base_identifier": base.get("identifier"),
+        "base_alpha_id": base.get("alpha_id"),
+        "base_alpha_hash": base.get("alpha_hash"),
+        "base_resolved_by": base.get("resolved_by"),
+        "base_pnl_source": base.get("source"),
+        "base_record_count": len(base_series),
+        "base_skipped_record_count": base_skipped,
+        "field": field,
+        "min_overlap": min_overlap,
+        "target_count": len(clean_targets),
+        "computed_count": computed_count,
+        "failed_count": failed_count,
+        "correlations": correlations,
+    }
 
 
 def alpha_promote(identifier: str, reason: Optional[str] = None) -> Optional[dict]:

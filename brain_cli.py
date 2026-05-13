@@ -10,7 +10,7 @@ Provides eleven command groups for AI-agent usage:
   template   List, show, save, delete, placeholders
   generate   Preview strategies, generate file
   simulate   Enqueue, run, status, stop, results, reconcile, list
-  alpha      List, show, history, pnl, promote, reject registry entries
+  alpha      List, show, history, pnl, correlation, promote, reject registry entries
   backtest   List, show, filter, score, diversity, export
   evolution  Run, from-backtest, auto-run, status, stop, results, list
   telegram   Run Telegram bot polling and send status notifications
@@ -87,6 +87,23 @@ def _out(data: Any, as_json: bool, indent: int = 2):
         _print_dict(data)
     else:
         print(str(data))
+
+
+def _validation_err(validation: dict, as_json: bool, indent: int = 2):
+    message = "Simulation params validation failed."
+    errors = validation.get("errors") or [{"message": message}]
+    warnings = validation.get("warnings") or []
+    if as_json:
+        print(json.dumps(
+            _envelope(validation, ok=False, status="error", warnings=warnings, errors=errors),
+            ensure_ascii=False,
+            indent=indent,
+            default=str,
+        ))
+        sys.exit(1)
+    print(message, file=sys.stderr)
+    _print_dict(validation)
+    sys.exit(1)
 
 
 def _print_dict(d: dict, prefix: str = ""):
@@ -558,6 +575,52 @@ def _load_params_from_arg(args) -> list:
     _err("Provide --params-file, --params-json, or --code.")
 
 
+def _load_meta_file(path: Optional[str]) -> Optional[list]:
+    if not path:
+        return None
+    with open(path, "r", encoding="utf-8") as fh:
+        payload = json.load(fh)
+    if not isinstance(payload, list):
+        _err("Meta file must contain a JSON array.")
+    return payload
+
+
+def _parse_status_filter(value: Optional[str]) -> Optional[list[str]]:
+    if not value:
+        return None
+    return [item.strip() for item in str(value).split(",") if item.strip()]
+
+
+def _load_alpha_targets(positional: Optional[list], targets_file: Optional[str]) -> list[str]:
+    targets = [str(item).strip() for item in positional or [] if str(item).strip()]
+    if targets_file:
+        with open(targets_file, "r", encoding="utf-8") as fh:
+            content = fh.read()
+        stripped = content.strip()
+        if stripped.startswith("["):
+            try:
+                payload = json.loads(stripped)
+            except json.JSONDecodeError as exc:
+                _err(f"Targets file JSON is invalid: {exc}")
+            if not isinstance(payload, list):
+                _err("Targets file JSON must be an array of alpha IDs.")
+            targets.extend(str(item).strip() for item in payload if str(item).strip())
+        else:
+            for line in content.splitlines():
+                value = line.strip()
+                if value and not value.startswith("#"):
+                    targets.append(value)
+
+    deduped = []
+    seen = set()
+    for target in targets:
+        if target in seen:
+            continue
+        seen.add(target)
+        deduped.append(target)
+    return deduped
+
+
 def _join_values(values) -> str:
     if not values:
         return "-"
@@ -610,11 +673,30 @@ def cmd_simulate(args):
 
     if sub == "enqueue":
         params = _load_params_from_arg(args)
+        meta = _load_meta_file(getattr(args, "meta_file", None))
+        validation = svc.validate_simulation_params_payload(params, meta)
+        if not validation.get("valid"):
+            _validation_err(validation, args.json)
+        experiment = svc.simulation_experiment_manifest(
+            concept=getattr(args, "concept", None),
+            branch=getattr(args, "branch", None),
+            params_file=getattr(args, "params_file", None),
+            meta_file=getattr(args, "meta_file", None),
+        )
         job_id = svc.simulate_enqueue(
             params,
             credentials_path=args.credentials,
+            experiment=experiment,
         )
         result = {"job_id": job_id, "queued": len(params), "status": "pending"}
+        if experiment:
+            result["experiment"] = experiment
+        _out(result, args.json)
+
+    elif sub == "validate-params":
+        params = _load_params_from_arg(args)
+        meta = _load_meta_file(getattr(args, "meta_file", None))
+        result = svc.validate_simulation_params_payload(params, meta)
         _out(result, args.json)
 
     elif sub == "run":
@@ -696,14 +778,24 @@ def cmd_simulate(args):
         _out(result, args.json)
 
     elif sub == "list":
-        jobs = svc.simulate_list()
+        jobs = svc.simulate_list(
+            statuses=_parse_status_filter(getattr(args, "status", None)),
+            limit=getattr(args, "limit", None),
+            summary=bool(getattr(args, "summary", False)),
+        )
         if args.json:
             _out(jobs, True)
         else:
-            _table(jobs, [
+            columns = [
                 "id", "status", "completed_count", "failed_count",
                 "recovered_count", "created_at", "updated_at", "result_file"
-            ])
+            ]
+            if getattr(args, "summary", False):
+                columns = [
+                    "id", "status", "total_count", "completed_count",
+                    "failed_count", "concept", "branch", "meta_file",
+                ]
+            _table(jobs, columns)
 
     else:
         _err(f"Unknown simulate sub-command: {sub}")
@@ -753,6 +845,41 @@ def cmd_alpha(args):
             credentials_path=args.credentials,
         )
         _out(data, args.json)
+
+    elif sub in {"correlation", "corr"}:
+        targets = _load_alpha_targets(
+            getattr(args, "target_identifiers", []),
+            getattr(args, "targets_file", None),
+        )
+        data = svc.alpha_correlation(
+            args.identifier,
+            targets,
+            field=getattr(args, "field", "pnl"),
+            min_overlap=getattr(args, "min_overlap", 2),
+            refresh_pnl=getattr(args, "refresh_pnl", False),
+            credentials_path=args.credentials,
+        )
+        if args.json:
+            _out(data, True)
+        else:
+            service_error = _service_error(data)
+            if service_error:
+                _err(service_error)
+            print(f"base_alpha_id: {data.get('base_alpha_id')}")
+            print(f"field: {data.get('field')}")
+            print(f"computed_count: {data.get('computed_count')}")
+            print(f"failed_count: {data.get('failed_count')}")
+            rows = []
+            for row in data.get("correlations") or []:
+                display = dict(row)
+                if display.get("correlation") is not None:
+                    display["correlation"] = f"{display['correlation']:.6f}"
+                rows.append(display)
+            _table(rows, [
+                "target_identifier", "target_alpha_id", "correlation",
+                "overlap_count", "first_overlap_date", "last_overlap_date",
+                "status", "message",
+            ])
 
     elif sub == "promote":
         alpha = svc.alpha_promote(args.identifier, reason=getattr(args, "reason", None))
@@ -1240,6 +1367,19 @@ def build_parser() -> argparse.ArgumentParser:
     p_enq = sim_sub.add_parser("enqueue",
         help="Enqueue a simulation job without running it.")
     _add_param_args(p_enq)
+    p_enq.add_argument("--meta-file", default=None,
+                       help="JSON metadata file aligned one-to-one with params.")
+    p_enq.add_argument("--concept", default=None,
+                       help="Experiment concept name saved into the job manifest.")
+    p_enq.add_argument("--branch", default=None,
+                       help="Experiment branch name saved into the job manifest.")
+
+    p_validate_params = sim_sub.add_parser(
+        "validate-params",
+        help="Validate simulation params and optional aligned metadata without enqueueing.")
+    _add_param_args(p_validate_params)
+    p_validate_params.add_argument("--meta-file", default=None,
+                                   help="JSON metadata file aligned one-to-one with params.")
 
     p_run = sim_sub.add_parser("run",
         help="Run a simulation job (creates + runs in one step if no --job-id).")
@@ -1276,7 +1416,13 @@ def build_parser() -> argparse.ArgumentParser:
     p_cleanup_stale.add_argument("--job-id", default=None,
                                  help="Clean one job instead of scanning all simulation jobs.")
 
-    sim_sub.add_parser("list", help="List all simulation jobs.")
+    p_sim_list = sim_sub.add_parser("list", help="List simulation jobs.")
+    p_sim_list.add_argument("--summary", action="store_true",
+                            help="Return lightweight job summaries instead of full job payloads.")
+    p_sim_list.add_argument("--status", default=None,
+                            help="Comma-separated job statuses to include, e.g. running,pending,done.")
+    p_sim_list.add_argument("--limit", type=int, default=None,
+                            help="Maximum number of jobs to return after filtering.")
 
     # ── alpha ─────────────────────────────────────────────────────────────────
     p_alpha = sub_root.add_parser("alpha", help="Alpha registry commands.")
@@ -1314,6 +1460,23 @@ def build_parser() -> argparse.ArgumentParser:
                              help="Output file path (default: data/alpha_pnl/<alpha_id>.<format>).")
     p_alpha_pnl.add_argument("--include-records", action="store_true",
                              help="Include all PnL records in CLI JSON output as well as the saved file.")
+
+    p_alpha_corr = alpha_sub.add_parser(
+        "correlation",
+        aliases=["corr"],
+        help="Compute daily PnL correlation between one alpha and one or more target alphas.",
+    )
+    p_alpha_corr.add_argument("identifier", help="Base alpha_hash or alpha_id")
+    p_alpha_corr.add_argument("target_identifiers", nargs="*",
+                              help="Target alpha_hash or alpha_id values.")
+    p_alpha_corr.add_argument("--targets-file", default=None,
+                              help="Newline text file or JSON array of target alpha IDs.")
+    p_alpha_corr.add_argument("--field", default="pnl",
+                              help="PnL field to correlate (default: pnl).")
+    p_alpha_corr.add_argument("--min-overlap", type=int, default=2,
+                              help="Minimum overlapping dates required per target (default: 2).")
+    p_alpha_corr.add_argument("--refresh-pnl", action="store_true",
+                              help="Ignore cached data/alpha_pnl JSON and fetch fresh PnL.")
 
     p_alpha_promote = alpha_sub.add_parser("promote", help="Mark an alpha as promoted.")
     p_alpha_promote.add_argument("identifier", help="alpha_hash or alpha_id")
